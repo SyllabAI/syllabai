@@ -39,3 +39,38 @@
 - κ-gate marker capacity for double-marking (recruiting task, Wave 4).
 
 **Next action:** TODO T-001 — bootstrap `syllabai-core` (Spring Boot 4.1 + Java 25 + Spring AI 2.0 skeleton).
+
+---
+
+## 2026-09-03 — Build session: Wave 0 + science core (T-001…T-018, T-020, T-023)
+
+**Repos / commits:**
+
+- `syllabai-core` @ `71f873d` — T-001…T-007 + T-012/T-014…T-018/T-020/T-023 (see core README "Implemented so far").
+- `syllabai-web` @ `3c410ed` — T-005 Learner Workbench (login, practice, mastery map, my state).
+
+**What landed:**
+
+- Java 25 + Spring Boot 4.1.1 + Spring AI 2.0.1 modular monolith; 13-module package map per ADR-012.
+- Flyway V1–V7: identity (roles/users/user_roles), curriculum + KG nodes/edges, question bank + attempts, learner states, research telemetry/registries, seed (Edexcel IAL Chemistry WCH11: 3 topics × 2 subtopics, 4 documented misconceptions, 8 MCQs with distractor→misconception tags, model registry v1-cycle1 rows).
+- JWT auth + RBAC; springdoc OpenAPI; global error handling; GH Actions CI (JDK 25).
+- Science: BKT engine (paper params, config + model_versions registry), BDT engine (prior 0.3), Ebbinghaus decay (τ 30/90/365 by band, floor, review threshold) + nightly job; evidence contract as domain events (Observer): attempts → `AssessmentEvidenceRecordedEvent` → learner model + telemetry.
+- KG: recursive-CTE prerequisite closure, subtree, misconceptions; tree/prereq/misconception endpoints.
+- LLM: `LlmProvider` port + Spring AI adapters + `FailoverLlmChain` (Groq → Gemini → OpenRouter, health/cooldown/failover, admin health endpoint) — app boots with zero keys.
+- Storage: `ObjectStorage` port + local + R2 (S3 SDK) adapters.
+- Web: single-page workbench, typed API client, mobile-first responsive, a11y, CI (lint + type-checked build).
+
+**Mistakes / regressions (caught and fixed):**
+
+- MISCONCEPTION_OF edge direction inverted in `KnowledgeEdgeRepository` query → misconceptions silently absent from trees; fixed + re-verified.
+- Spring AI autoconfig requires keys at boot → excluded all model autoconfigs; manual provider construction.
+- Unauthenticated requests returned 403 via the /error dispatch → permitted `/error` + explicit 401 entry point.
+- BKT/BDT unit-test expected values initially wrong (my arithmetic, not the engine) — corrected against hand-computed posteriors.
+- Web `apiPath()` double-`?` when the path already carried a query (tree 404) — fixed with `&`-aware separator.
+
+**Verification:**
+
+- `mvn verify`: 32/32 unit tests green.
+- Live end-to-end smoke (portable Postgres 17.11 + `local` profile): login → tree → prerequisites (depth-3 chain) → wrong answer (BKT 0.1131, BDT 0.75 exact) → correct answer (0.3832) → telemetry rows; RBAC 401/403; OpenAPI reachable; browser-verified via agent-browser (login, quiz submit, misconception alert, mastery map, state views, mobile viewport).
+
+**Next action:** Wave 1 — T-008/T-009 canonical format + opendataloader-pdf; T-010/T-011 ingestion; T-013 pgvector; then T-019/T-021/T-022.
