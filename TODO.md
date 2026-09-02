@@ -1,0 +1,61 @@
+# TODO.md — SyllabAI Master Work Queue (Cycle 1 first)
+
+**Scope guard:** only rows marked `Cycle 1` in `backlog/syllabai-master-project.xlsx` belong in the current execution window. The 12-spine critical path is F-020 → F-032 → F-033 → F-040 → F-041/F-043 → F-047 → F-055 → F-137/F-138 → F-148 → F-160.
+
+## Wave 0 — foundations (this week)
+
+- [ ] T-001 Bootstrap `syllabai-core`: Spring Boot 4.1.x + Java 25 + Spring AI 2.0 skeleton, Maven, package structure per Master Spec §30. (F-002, F-008)
+- [ ] T-002 Flyway + Neon connection; pgvector extension enabled; dev profile with local Postgres via Docker Compose.
+- [ ] T-003 Spring Security + JWT auth skeleton; RBAC roles (STUDENT, TEACHER, ADMIN). (F-012, F-013)
+- [ ] T-004 REST conventions: `/api/v1` base, DTO boundaries, springdoc OpenAPI, error handling. (F-122)
+- [ ] T-005 `syllabai-web`: Next.js 16 + TypeScript + Tailwind scaffold on Vercel; API client typed from OpenAPI.
+- [ ] T-006 CI: GitHub Actions (build + test) on `syllabai-core` and `syllabai-web`.
+- [ ] T-007 Object storage adapter + Cloudflare R2 free bucket for past-paper PDFs. (F-021, F-149)
+
+## Wave 1 — knowledge & content fabric
+
+- [ ] T-008 Canonical document format schema (JSON) + `DocumentParser` contract. (F-134, F-147)
+- [ ] T-009 In-process opendataloader-pdf integration (Maven) for text PDFs; bounding boxes retained. 
+- [ ] T-010 Syllabus ingestion: Edexcel IAL Chemistry spec → curriculum tables → KG seed (offline LLM-assisted structuring in `syllabai-parser`). (F-020, F-032)
+- [ ] T-011 Past-paper + mark-scheme ingestion: question metadata, multi-topic tags, misconception/distractor links. (F-028, F-029, F-152)
+- [ ] T-012 `KnowledgeGraphRepository` with recursive-CTE traversals; prerequisite queries. (F-032, F-135)
+- [ ] T-013 pgvector embedding pipeline (Gemini embeddings) over mark schemes/notes. (F-039, F-136)
+
+## Wave 2 — learner & assessment engine
+
+- [ ] T-014 `AssessmentEvidence` contract + attempt logging with timing, confidence, doubt flags. (F-053, F-055, F-056, F-153)
+- [ ] T-015 BKT engine with configurable params (L0=0.1, slip=0.1, guess=0.25, T=0.1) + parameter registry. (F-138)
+- [ ] T-016 Learner state aggregate: mastery, misconceptions, exam literacy, fluency, confidence. (F-137, F-033)
+- [ ] T-017 BDT misconception engine driven by distractor evidence. (F-140)
+- [ ] T-018 Ebbinghaus decay nightly job (τ 30/90/365) + review-schedule feed. (F-159)
+- [ ] T-019 Timed vs untimed paired conditions + procedural_fluency_gap. (F-162)
+- [ ] T-020 Learning-log telemetry: Paper B §3.5 fields, append-only event store. (F-160)
+- [ ] T-021 Smart Mark: mark-scheme decomposition, evidence alignment, partial credit. (F-047)
+- [ ] T-022 Human mark override + κ agreement gate workflow. (F-144, F-161)
+
+## Wave 3 — tutor & diagnostic intelligence
+
+- [ ] T-023 `LlmProvider` + free chain (Groq → Gemini → OpenRouter) with failover and rate tracking. (F-148, F-163)
+- [ ] T-024 KA-RAG orchestration: intent → KG context → hybrid retrieval → grounded generation. (F-040)
+- [ ] T-025 Tutor chat UI with verbatim citations + PDF deep-links. (F-041, F-043, F-022)
+- [ ] T-026 Tutor policy: diagnosis-aware intervention selection (Scientific-learning-skills prompts). 
+- [ ] T-027 Struggle inference v0: rule-based signals over learning log. (F-141)
+- [ ] T-028 Mastery map UI (KG visualizer, simplified 2D first) + student dashboard. (F-036, F-060, F-034)
+
+## Wave 4 — pilot hardening
+
+- [ ] T-029 Teacher minimal surface: class list, Smart Mark review queue, overrides.
+- [ ] T-030 Research export (anonymized) + experiment registry v0. (F-146, F-154)
+- [ ] T-031 Render deployment (Docker, keep-alive, cold-start UX) + Vercel production env. (F-001, F-156)
+- [ ] T-032 Cycle-1 pilot readiness review against Master Spec §39a exit criteria.
+
+## Deferred (do not start — Cycle 2+)
+
+DAT / teacher analytics depth · gamification · mock-exam blueprints & Mock Drop · spaced-repetition scheduler UI · PWA/offline/mobile · community features · multimodal input · handwriting OCR · podcast/voice · LTI/white-labeling · full recommender · MLE/EM BKT recalibration (stretch: Apache Commons Math).
+
+## Program-management tasks
+
+- [ ] P-001 Review `PROGRESS.md` + update `WORKLOG.md` after each substantial task (protocol in `AGENT.md`).
+- [ ] P-002 Update backlog row status/owner as work lands (spreadsheet is definitive).
+- [ ] P-003 Re-verify Groq/Gemini free-tier limits at build time (limits drift).
+- [ ] P-004 Pin exact opendataloader-pdf version + record license check in worklog.
