@@ -1,13 +1,14 @@
 # PROGRESS.md — Current SyllabAI State
 
-**Last updated:** 2026-09-03 (Wave 0 + science core landed)
+**Last updated:** 2026-09-03 (audit fixes 1–3 landed: BDT correct-answer evidence, experiment pinning, full telemetry stream)
 
 ## Overall state
 
 - Planning phase: **complete and converged** (stack verified, backlog merged, scope locked).
 - Repositories: **bootstrapped on GitHub** (`syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser` — private).
-- Implementation: **started and green** — Wave 0 foundations (T-001…T-007) plus the science core (T-012, T-014…T-018, T-020, T-023) are implemented, unit-tested (32/32) and **live-verified end-to-end** against a real Postgres.
-- `syllabai-core` @ `71f873d`: Spring Boot 4.1.1 / Java 25 / Spring AI 2.0.1; Flyway V1–V7 (identity, KG, assessment, learner, research + Edexcel IAL Chemistry WCH11 seed + 8 misconception-tagged MCQs); JWT RBAC (401/403 verified); recursive-CTE prerequisite closure; BKT/BDT/Ebbinghaus engines with paper parameters; evidence contract via domain events; free-LLM chain (boots with zero API keys); ObjectStorage (local + R2); CI.
+- Implementation: **started and green** — Wave 0 foundations (T-001…T-007) plus the science core (T-012, T-014…T-018, T-020, T-023) are implemented, unit-tested (60/60) and **live-verified end-to-end** against a real Postgres.
+- **Audit fixes 1–3 landed (session 2, core @ `508d95d`):** BDT correct answers now weaken monitored misconceptions; experiment pinning is real and fail-loud (config + experiments registry); all six V5 telemetry event types are emitted.
+- `syllabai-core` @ `508d95d`: Spring Boot 4.1.1 / Java 25 / Spring AI 2.0.1; Flyway V1–V7 (identity, KG, assessment, learner, research + Edexcel IAL Chemistry WCH11 seed + 8 misconception-tagged MCQs); JWT RBAC (401/403 verified); recursive-CTE prerequisite closure; BKT/BDT/Ebbinghaus engines with paper parameters; evidence contract via domain events; free-LLM chain (boots with zero API keys); ObjectStorage (local + R2); CI.
 - `syllabai-web` @ `3c410ed`: Next.js 16 Learner Workbench — login/register, practice player (confidence/doubt/timed), mastery map (tree + bars + prerequisite chain), my-state view; browser-verified against the live backend.
 
 ## Completed planning work
@@ -34,6 +35,7 @@ Java 25 + Spring Boot 4.1 + Spring AI 2.0 modular monolith (`syllabai-core`) · 
 
 - Verified live (2026-09): the full science loop runs correctly — wrong answer on the mole/grams distractor produced BKT 0.1131 → 0.3832 and BDT 0.3 → 0.75/0.95, exactly matching hand-computed posteriors; telemetry observer logged ATTEMPT_SUBMITTED + SELF_DOUBT_FLAGGED.
 - Fixed during live verification: MISCONCEPTION_OF edge direction was inverted in one repository query (misconceptions silently missing from trees); 403→401 error dispatch; CORS origin patterns for gateway previews.
+- Audit fix session (2026-09-03, external audit verified line-by-line first): BDT `updateOnCorrect` was dead code (correct options never tagged) — evidence now carries the monitored misconception set so correct answers weaken them (live: 0.9545→0.875 exact); experiment pinning implemented fail-loud (`ExperimentPinResolver` port, config + V5 registry); `BKT_UPDATED`/`BDT_UPDATED`/`REVIEW_SCHEDULED`/`DECAY_APPLIED` telemetry now flow; decay job review-threshold double-decay fixed.
 - Spring AI 2.0 model autoconfiguration activates even without API keys — all model autoconfigs are excluded and providers are constructed manually in `LlmChainConfig` (§26.1 chain stays in our control).
 
 - Finding: Spring Boot 3.x reached EOL 2026-06-30; Spring AI 2.0 requires Boot 4.x — v1.0 pack's Java 25/Boot 4.1 picks were correct and more current than earlier plans.

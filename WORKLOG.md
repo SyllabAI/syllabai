@@ -74,3 +74,30 @@
 - Live end-to-end smoke (portable Postgres 17.11 + `local` profile): login → tree → prerequisites (depth-3 chain) → wrong answer (BKT 0.1131, BDT 0.75 exact) → correct answer (0.3832) → telemetry rows; RBAC 401/403; OpenAPI reachable; browser-verified via agent-browser (login, quiz submit, misconception alert, mastery map, state views, mobile viewport).
 
 **Next action:** Wave 1 — T-008/T-009 canonical format + opendataloader-pdf; T-010/T-011 ingestion; T-013 pgvector; then T-019/T-021/T-022.
+
+## 2026-09-03 — Build session 2: code audit + fixes 1–3
+
+**Task:** Independent code-level audit of the five repositories (external audit cross-checked line-by-line), then implement the three highest-risk audit findings in `syllabai-core`.
+
+**Audit verdict (all 19 external findings verified true; 5 highest-risk):**
+1. BDT `updateOnCorrect` was provably dead code — `misconceptionIds` assembled only from the *chosen* option, and correct options are never tagged (V7 seed).
+2. `FailoverLlmChain.pinnedProvider()` returned `null` — experiment pinning claimed but not implemented (schema + config existed, nobody consulted them).
+3. Telemetry emitted only 2 of the 6 event types declared in the V5 schema.
+4. (lower priority, deferred) `SHORT_ANSWER` declared in schema but MCQ-only submission API.
+5. (docs, deferred) Master Spec says 4 repositories; `Past-Papers` (public, 689 MB, IAL/IGCSE) makes 5.
+
+**What landed (`syllabai-core` @ `508d95d`):**
+
+- **Fix 1 — BDT evidence assembly:** `AssessmentEvidenceRecordedEvent` now carries `observedMisconceptionIds` (every misconception the item's distractors monitor) alongside the expressed list. `LearnerModelService`: correct answer weakens all monitored misconceptions (`updateOnCorrect`), tagged wrong answer strengthens the expressed one, untagged wrong stays neutral.
+- **Fix 2 — experiment pinning, fail-loud:** new `ExperimentPinResolver` port; `PropertiesExperimentPinResolver` (`syllabai.llm.experiment-pins`, `"provider"` or `"provider:model"`) + `JpaExperimentPinResolver` (V5 `experiments` registry, `RUNNING` only, read-only entity) composed config-first. Unpinned experiment ids throw with a self-documenting message; pinned experiments never fail over; pinned model flows through a new `LlmRequest.model` field into Spring AI runtime options.
+- **Fix 3 — full telemetry stream:** four new domain events (`MasteryUpdated`, `MisconceptionUpdated`, `DecayApplied`, `ReviewScheduled`) published by the learner model and the nightly decay job; `TelemetryService` persists them as `BKT_UPDATED` / `BDT_UPDATED` / `DECAY_APPLIED` / `REVIEW_SCHEDULED`. All six V5 event types now flow.
+- Side-fix discovered while wiring: the decay job evaluated the review threshold by re-decaying the already-decayed stored value (double-decay) — now compares the effective mastery directly.
+
+**Verification:**
+
+- `mvn test`: **60/60 green** (was 32): +14 chain/pinning, +4 pin parsing, +6 learner model BDT wiring, +2 evidence assembly, +6 telemetry coverage, +3 decay-job events.
+- Live end-to-end on Postgres 17 (portable, `local` profile): login → Q1 wrong (BDT 0.3→0.75) → Q1 wrong again (0.75→0.9545) → **Q2 correct weakened the monitored misconception 0.9545→0.875** (hand-checked exact) with `BDT_UPDATED` evidence `CORRECT_ANSWER`, `BKT_UPDATED` mastery 0.1131→0.3869; app boots with the `experiments` entity validated by Hibernate (`ddl-auto: validate`).
+
+**Known follow-ups (audit items 4–5, deliberately deferred):** short-answer submission strategy, 5-repo topology doc refresh (Master Spec §3 + AGENT), T-016 wording, seeder password log line, localStorage→httpOnly cookie hardening.
+
+**Next action:** Wave 1 — T-008/T-009 canonical document format + opendataloader-pdf; T-010/T-011 syllabus/past-paper ingestion; T-013 pgvector embeddings.
