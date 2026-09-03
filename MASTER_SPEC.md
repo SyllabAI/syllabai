@@ -112,7 +112,7 @@ Never introduce a paid-only infrastructure dependency when an equivalent free/op
 SyllabAI is a multi-repository project. Repositories are separated only where a component has an independent responsibility, lifecycle, runtime, language, test strategy, or deployment model.
 
 ```text
-SyllabAI GitHub account (github.com/SyllabAI) — 4 repositories (ADR-012)
+SyllabAI GitHub account (github.com/SyllabAI) — 5 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`))
 │
 ├── syllabai  (this repo — the "main repo")
 │   └── master project pack: spec, ADRs, backlog, research dossiers, papers
@@ -126,10 +126,16 @@ SyllabAI GitHub account (github.com/SyllabAI) — 4 repositories (ADR-012)
 │       smartmark, learner (BKT/BDT/decay), tutor (KA-RAG), diagnostic,
 │       recommendation, teacher, research/telemetry, infrastructure
 │
-└── syllabai-parser
-    └── polyglot offline content pipeline: Java in-process
-        (opendataloader-pdf via Maven) + Python/Rust offline engines
-        (MinerU / Surya / anydoc / pdf-inspector)
+├── syllabai-parser
+│   └── polyglot offline content pipeline: Java in-process
+│       (opendataloader-pdf via Maven) + Python/Rust offline engines
+│       (MinerU / Surya / anydoc / pdf-inspector)
+│
+└── Past-Papers  (public, 689 MB)
+    └── official content corpus: Edexcel IAL/IGCSE past papers +
+        mark schemes (QP/MS PDFs) — ingestion source for T-010/T-011;
+        licensing: pilot use under institution/own-use terms
+        (ADR-013 posture; re-check before any redistribution)
 ```
 
 The former `syllabai-knowledge` / `-assessment` / `-learner-model` / `-ai` / `-research` / `-infrastructure` repositories from spec v1.0 are **modules inside `syllabai-core`**. They graduate to separate repositories only when a genuine runtime/lifecycle boundary appears (ADR-012). Polyglot policy (ADR-011): languages other than Java are welcome where they are clearly better — OCR/ML parsing tooling (Python/Rust) and the web frontend (TypeScript) — but the domain core stays Java.

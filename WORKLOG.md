@@ -101,3 +101,55 @@
 **Known follow-ups (audit items 4–5, deliberately deferred):** short-answer submission strategy, 5-repo topology doc refresh (Master Spec §3 + AGENT), T-016 wording, seeder password log line, localStorage→httpOnly cookie hardening.
 
 **Next action:** Wave 1 — T-008/T-009 canonical document format + opendataloader-pdf; T-010/T-011 syllabus/past-paper ingestion; T-013 pgvector embeddings.
+
+## 2026-09-03 — Build session 3: content/assessment fabric (T-008–T-011, T-019, T-021, T-022 + audit fix 4)
+
+**Task:** Execute the next build phase with a content/assessment-first strategy (no tutor UI, no broad feature expansion): multi-part assessment model, Smart Mark pipeline with the κ agreement gate, timed/untimed conditions, ingestion bridge, Testcontainers CI, structured player.
+
+**Repos / commits:**
+
+- `syllabai-core` @ `b745bf4` (audit fix 4) → `003b6c0` (V8–V10 + services + 91/91 tests) → `1803988` (Testcontainers IT + CI).
+- `syllabai-parser` @ `a43ad24` — T-008/T-009 recovered from the interrupted session and pushed (was local-only).
+- `syllabai-web` @ `3b1b5cd` — structured question player + fluency-gap Δ.
+- `syllabai` — this update (5-repo topology, T-016 wording, status).
+
+**What landed:**
+
+- **Audit fix 4 (in-flight when the previous session died):** experiment-pin model precedence — a caller-supplied model can no longer override a registered experiment's pinned model (§26.1 precedence: pin > caller model > provider default); `LlmResponse` now reports the model actually used so telemetry never misattributes pinned requests. 61/61 at the time.
+- **V8 multi-part assessment model:** exam_papers, question_versions (immutable snapshots, SUGGESTED/VALIDATED lifecycle), question_parts, mark_schemes/mark_points (decomposition + teacher-authored acceptance criteria, JSONB), answers (per-part PENDING → SMART_MARKED → HUMAN_MARKED/OVERRIDDEN), smart_mark_results + human_marks (append-only), smart_mark_agreement_evaluations, attempts marking lifecycle + `evidence_emitted` single-fire guard, skill_states.procedural_fluency_gap. Existing MCQ flow unchanged; V7 seed MCQs backfilled as VALIDATED v1.
+- **Smart Mark pipeline (Strategy + validators):** `MarkingCandidateGenerator` port (LLM adapter: pinned prompt v1, temp 0.1, strict-JSON parsing, temperature provenance) → deterministic validators (bounds: no invented/duplicate point ids; coverage: every in-scope point decided; mark-sum: awards ≤ scheme bound) → append-only `SmartMarkResult` with per-point breakdown (evidence + rationale) and failure codes. Blank answers short-circuit to a deterministic zero-mark decision — no LLM call, no hallucination surface.
+- **κ agreement gate (F-161):** Cohen's κ over paired per-mark-point binary decisions (latest accepted smart run × latest human mark); degenerate-marginals convention documented (κ = 1 when pe = 1 and agreement perfect); threshold 0.60 recorded per evaluation row; **fail-closed** — no evaluation rows = gated. Pre-gate smart marks are provisional (never fire evidence); post-gate smart marks are authoritative; human overrides revise marks for research and never re-fire BKT.
+- **Structured submission (audit item 4 closed):** POST /api/v1/attempts/structured — one answer per part of the current version, Paper B §3.5 fields, timed/untimed tag. Evidence fires exactly once at first authoritative marking; documented conservative correctness rule for partial credit (full marks = mastery evidence; raw marks ride in the event).
+- **T-011 ingestion bridge:** parser's past-paper-draft.json (schema 1.0) → POST /api/v1/teacher/content/past-papers → exam paper + STRUCTURED questions + v1 versions + parts + scheme + points, all SUGGESTED, single transaction, idempotent (409 on paper+session re-ingest). Ingestion-anchor KG topic per paper (the pipeline never guesses curriculum placement); teachers remap during review. Teacher review workflow: review queue, validate/reject paper (all-versions-first guard), version, scheme (with atomic acceptance-criteria authoring).
+- **Fluency gap (T-019, F-162):** skill_states.procedural_fluency_gap = untimed accuracy − timed accuracy over graded attempts per node, recomputed on evidence, null until both conditions observed. Exposed in /learners/me/state.
+- **ServableQuestionSpec (Specification pattern):** unvalidated structured content never serves — the student API filters by active + current-version VALIDATED.
+- **Testcontainers IT (CI):** `MultipartMarkingFlowIT` walks the whole loop on pgvector/pgvector:pg17 via @ServiceConnection; failsafe plugin; skipped locally without Docker (this sandbox), runs in CI. TC 2.0.5 coordinates (artifacts renamed testcontainers-junit-jupiter / testcontainers-postgresql).
+- **Web:** structured player (per-part textareas, submit-for-marking, pending-marks panel), Δ fluency gap in My-state. Practice submit guard bug fixed (structured path blocked by the MCQ `chosen` guard).
+
+**Mistakes / regressions (caught and fixed):**
+
+- LazyInitializationExceptions on detached DTO access (open-in-view is intentionally false): fixed with the repo's established pattern — EntityGraphs on the lazy collections used by controllers + read-only FK mirror columns (question_id / question_version_id) so detached views read FKs without touching proxies. First attempt preferred the proxy (non-null even when detached) — corrected to prefer the mirror.
+- Scheme validation NPE on `{}` body (missing @Valid + missing null-guard) — both added.
+- `Map.copyOf` in TelemetryEvent rejects null payload values → NPE for null modelId/failureReason; handlers now omit null entries.
+- My κ hand-computation in a test was wrong (expected −0.4; correct 0.0 for (1,1),(0,1) with human marginal 1.0) — fixed against the formula.
+- Test pitfalls: entities without ids outside JPA (TestIds reflection helper), a mock EvidencePublisher that never flips the single-fire guard (switched to the real publisher in tests), event-index assumption in the override test (select last, not get(1)).
+- Testcontainers 2.x artifact rename broke the pom (junit-jupiter → testcontainers-junit-jupiter) — BOM 2.0.5 + renamed coordinates.
+- Session recovery: the previous session died mid-fix with the pin-precedence diff uncommitted and T-008/T-009 committed only locally — both recovered, tested, pushed. The portable Postgres data dir had been corrupted by the tmp cleaner (pg_notify missing) — re-initialized (dev data only, re-seeded via Flyway).
+- A wedged backend instance (stuck OPTIONS/health requests after heavy e2e + a logback ThrowableProxy ClassNotFound in error dispatch) — resolved by restart; the fresh instance serves identical traffic correctly. Root not fully diagnosed; watch for recurrence.
+
+**Verification:**
+
+- `mvn verify`: **91/91 unit tests** (was 61; +30 κ hand-computed, pipeline validators, authority/gate, human-mark evidence + override, ingestion, structured submit, telemetry marking, servable spec) + IT correctly skipped without Docker.
+- Live end-to-end (portable Postgres 17.11, `local` profile): real 4CH0/1C Jan 2012 parser draft ingested (27 questions / 62 parts / 33 mark points, all SUGGESTED; duplicate ingestion → 409) → student sees 0 structured questions pre-validation (8 MCQs only) → teacher validates q7's version + scheme → paper validation correctly blocked (409, 26 versions still SUGGESTED) → student sees q7 with 3 parts → timed structured submit (blank part) → smart-mark the blank answer (deterministic, no LLM: accepted, 0 marks, provisional — no evidence) → human mark (0 marks, per-point decisions) → evidence fired exactly once, BKT 0.1151 after 2 attempts, fluencyGap computed → κ evaluation (sample=1, κ=1.00, gate PASSED) → second blank-answer smart mark became AUTHORITATIVE (evidence fired without human) → telemetry shows SMART_MARK_COMPLETED + HUMAN_MARK_RECORDED.
+- Browser (agent-browser): login → 8 MCQ answers (BKT live-updating in My-state) → structured q7 player (3 part textareas) → submit for marking (201, pending-marks panel) → My-state renders Δ on the paired anchor node.
+
+**Known follow-ups:**
+
+- T-013 pgvector embeddings — next session (prerequisite for KA-RAG).
+- Real Smart Mark LLM runs need free-tier keys (Groq/Gemini; ADR-009); no-key path fails honestly (PROVIDER_UNAVAILABLE) by design.
+- Parser v0 draft quality: non-unique externalRefs, many unsplit stems, marks=0 parts (confidence ~0.55) — all SUGGESTED by design; the validation workflow is the mitigation. Parser refinement + IAL Chemistry syllabus ingestion (T-010 core side) pending.
+- localStorage JWT → httpOnly cookie hardening still deferred (Wave 4).
+- Teacher marking/content UI is API-only (the web workbench is learner-facing); build when Wave 4 starts.
+- Webhook drift: MASTER_SPEC 5-repo topology now fixed; ADR-012 amendment noted inline.
+
+**Next action:** T-013 pgvector embedding pipeline (Gemini embeddings, mark schemes + notes) → then T-024 KA-RAG orchestration.

@@ -1,6 +1,6 @@
 # PROGRESS.md — Current SyllabAI State
 
-**Last updated:** 2026-09-03 (audit fixes 1–3 landed: BDT correct-answer evidence, experiment pinning, full telemetry stream)
+**Last updated:** 2026-09-03 (build session 3 — content/assessment fabric: multi-part model, Smart Mark pipeline, κ gate, structured player; audit fixes 1–4 landed)
 
 ## Overall state
 
@@ -8,8 +8,12 @@
 - Repositories: **bootstrapped on GitHub** (`syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser` — private).
 - Implementation: **started and green** — Wave 0 foundations (T-001…T-007) plus the science core (T-012, T-014…T-018, T-020, T-023) are implemented, unit-tested (60/60) and **live-verified end-to-end** against a real Postgres.
 - **Audit fixes 1–3 landed (session 2, core @ `508d95d`):** BDT correct answers now weaken monitored misconceptions; experiment pinning is real and fail-loud (config + experiments registry); all six V5 telemetry event types are emitted.
-- `syllabai-core` @ `508d95d`: Spring Boot 4.1.1 / Java 25 / Spring AI 2.0.1; Flyway V1–V7 (identity, KG, assessment, learner, research + Edexcel IAL Chemistry WCH11 seed + 8 misconception-tagged MCQs); JWT RBAC (401/403 verified); recursive-CTE prerequisite closure; BKT/BDT/Ebbinghaus engines with paper parameters; evidence contract via domain events; free-LLM chain (boots with zero API keys); ObjectStorage (local + R2); CI.
-- `syllabai-web` @ `3c410ed`: Next.js 16 Learner Workbench — login/register, practice player (confidence/doubt/timed), mastery map (tree + bars + prerequisite chain), my-state view; browser-verified against the live backend.
+- `syllabai-core` @ `1803988`: Spring Boot 4.1.1 / Java 25 / Spring AI 2.0.1; Flyway V1–V10 (V8 multi-part assessment + marking, V9 telemetry marking events, V10 prompt/model registry); Flyway V1–V7 (identity, KG, assessment, learner, research + Edexcel IAL Chemistry WCH11 seed + 8 misconception-tagged MCQs); JWT RBAC (401/403 verified); recursive-CTE prerequisite closure; BKT/BDT/Ebbinghaus engines with paper parameters; evidence contract via domain events; free-LLM chain (boots with zero API keys); ObjectStorage (local + R2); CI.
+- `syllabai-web` @ `3b1b5cd`: Next.js 16 Learner Workbench — login/register, practice player (MCQ + structured multi-part with pending-marks feedback, confidence/doubt/timed), mastery map (tree + bars + prerequisite chain), my-state view (incl. fluency-gap Δ); browser-verified against the live backend.
+- `syllabai-parser` @ `a43ad24`: canonical document format (schema 1.0) + in-process OpenDataLoader adapter (Apache-2.0, opendataloader-pdf-core 2.5.7) + structure extractors v0; verified on the real 4CH0/1C Jan 2012 corpus (23/23 tests).
+- **Build session 3 (content/assessment-first):** V8 multi-part assessment model (ExamPaper/QuestionVersion/QuestionPart/MarkScheme/MarkPoint/Answer/SmartMarkResult/HumanMark + κ evaluations); structured submission with timed/untimed pairing and single-fire evidence; Smart Mark as a Strategy pipeline (candidate generation → deterministic bounds/coverage/mark-sum validation → append-only results — LLM never final truth); Cohen's κ release gate (≥ 0.60, fail-closed, per-point pairing, threshold recorded); T-011 ingestion bridge (parser draft JSON → all-SUGGESTED content, teacher validation workflow, ingestion-anchor topic, idempotent); ServableQuestionSpec (unvalidated content never serves); fluency gap in skill states; Testcontainers integration test in CI. 91/91 unit tests.
+- **Live-verified (session 3):** real 4CH0 draft ingested (27 q / 62 parts / 33 mark points) → version+scheme validated → student sees only validated structured question → timed structured submit → deterministic blank-answer smart mark → human mark (evidence once, BKT update, fluency gap paired) → κ = 1.00 gate PASSED → second smart mark authoritative (evidence without human) → telemetry SMART_MARK_COMPLETED / HUMAN_MARK_RECORDED. Browser: structured player submit → pending-marks panel; My-state renders Δ.
+- **Audit fix 4:** experiment-pin model precedence hardened (pin > caller model > provider default); LlmResponse reports the model actually used; telemetry can no longer misattribute pinned-request models.
 
 ## Completed planning work
 
@@ -44,4 +48,4 @@ Java 25 + Spring Boot 4.1 + Spring AI 2.0 modular monolith (`syllabai-core`) · 
 
 ## Next highest-value work
 
-Wave 1 — content fabric: T-008 (canonical document format), T-009 (opendataloader-pdf in-process), T-010/T-011 (Edexcel IAL spec + past-paper ingestion in `syllabai-parser`), T-013 (pgvector embeddings). Then Wave 2 remainder: T-019, T-021 Smart Mark, T-022 κ-gate workflow, and integration tests with Testcontainers in CI.
+Wave 1 remainder: **T-013 (pgvector embedding pipeline, Gemini embeddings)** and T-010 core-side syllabus ingestion (parser-side extractor exists; IAL Chemistry spec → KG seed). Then Wave 3: T-024 KA-RAG orchestration (hybrid KG + vector retrieval — T-013 is its prerequisite), T-025 tutor chat UI with citations, T-027 struggle inference v0. Wave 4: T-029 teacher marking UI (APIs exist), T-031 Render deployment. LLM keys needed for real Smart Mark runs (Groq/Gemini free tier, ADR-009) — the no-key path fails honestly by design.

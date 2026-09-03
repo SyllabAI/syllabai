@@ -14,10 +14,10 @@
 
 ## Wave 1 — knowledge & content fabric
 
-- [ ] T-008 Canonical document format schema (JSON) + `DocumentParser` contract. (F-134, F-147)
-- [ ] T-009 In-process opendataloader-pdf integration (Maven) for text PDFs; bounding boxes retained. 
+- [x] T-008 Canonical document format schema (JSON) + `DocumentParser` contract. (F-134, F-147) — syllabai-parser @ a43ad24, schema 1.0, 23/23 tests
+- [x] T-009 In-process opendataloader-pdf integration (Maven) for text PDFs; bounding boxes retained. — opendataloader-pdf-core 2.5.7 (Apache-2.0, Central) 
 - [ ] T-010 Syllabus ingestion: Edexcel IAL Chemistry spec → curriculum tables → KG seed (offline LLM-assisted structuring in `syllabai-parser`). (F-020, F-032)
-- [ ] T-011 Past-paper + mark-scheme ingestion: question metadata, multi-topic tags, misconception/distractor links. (F-028, F-029, F-152)
+- [x] T-011 Past-paper + mark-scheme ingestion bridge: parser draft JSON → all-SUGGESTED content bank (paper/version/parts/scheme/points), teacher validation workflow, ingestion-anchor KG topic. Live-verified on real 4CH0/1C Jan 2012 (27 q / 62 parts / 33 points). Misconception/distractor links on structured items: Wave 3 (needs validated content). (F-028, F-029, F-152)
 - [x] T-012 `KnowledgeGraphRepository` with recursive-CTE traversals; prerequisite queries. (F-032, F-135)
 - [ ] T-013 pgvector embedding pipeline (Gemini embeddings) over mark schemes/notes. (F-039, F-136)
 
@@ -25,13 +25,13 @@
 
 - [x] T-014 `AssessmentEvidence` contract + attempt logging with timing, confidence, doubt flags. (F-053, F-055, F-056, F-153)
 - [x] T-015 BKT engine with configurable params (L0=0.1, slip=0.1, guess=0.25, T=0.1) + parameter registry. (F-138)
-- [x] T-016 Learner state aggregate: mastery, misconceptions, exam literacy, fluency, confidence. (F-137, F-033)
+- [x] T-016 Learner state aggregate: mastery, misconceptions, fluency (timed-vs-untimed gap, V8), confidence + self-doubt evidence. (F-137, F-033) — exam-literacy aggregate deferred to Wave 4 (needs marked structured data first)
 - [x] T-017 BDT misconception engine driven by distractor evidence. (F-140)
 - [x] T-018 Ebbinghaus decay nightly job (τ 30/90/365) + review-schedule feed. (F-159)
-- [ ] T-019 Timed vs untimed paired conditions + procedural_fluency_gap. (F-162)
+- [x] T-019 Timed vs untimed paired conditions + procedural_fluency_gap (V8 skill_states column, recomputed per node on evidence; null until paired). (F-162)
 - [x] T-020 Learning-log telemetry: Paper B §3.5 fields, append-only event store. (F-160)
-- [ ] T-021 Smart Mark: mark-scheme decomposition, evidence alignment, partial credit. (F-047)
-- [ ] T-022 Human mark override + κ agreement gate workflow. (F-144, F-161)
+- [x] T-021 Smart Mark pipeline: candidate generation (LLM, pinned prompt v1) → deterministic bounds/coverage/mark-sum validation → append-only results; blank answers deterministic (no LLM). LLM never final truth. (F-047)
+- [x] T-022 Human mark override + κ agreement gate: per-point paired Cohen's κ, threshold 0.60 recorded per evaluation, fail-closed gate; pre-gate smart marks provisional, post-gate authoritative; overrides never re-fire BKT. (F-144, F-161)
 
 ## Wave 3 — tutor & diagnostic intelligence
 
