@@ -38,8 +38,8 @@
 - [x] T-023 `LlmProvider` + free chain (Groq → Gemini → OpenRouter) with failover and rate tracking. (F-148, F-163)
 - [x] T-024 KA-RAG orchestration: intent → KG context → hybrid retrieval → grounded generation. (F-040) — v0 foundation: deterministic intent (VALIDATED nodes only), KG+vector RRF fusion (rank-only, k=60), NoReranker Strategy, learner-state context assembly, grounded generation (prompt tutor-grounded/v1, free-LLM chain), citations with deep links, KA_RAG_COMPLETED telemetry (V12), deterministic refusal on empty evidence; POST /api/v1/tutor/ask (backend surface — chat UI stays T-025)
 - [ ] T-025 Tutor chat UI with verbatim citations + PDF deep-links. (F-041, F-043, F-022)
-- [ ] T-026 Tutor policy: diagnosis-aware intervention selection (Scientific-learning-skills prompts). — v0.2 on branch `codex/session-6-diagnosis-policy` (session-6 audited + hardened: compile break fixed, precedence documented, teacher-override reads, 195/195 unit; merge blocked on CI with Docker ITs)
-- [ ] T-027 Struggle inference v0: rule-based signals over learning log. (F-141) — v0.2 on branch `codex/session-6-diagnosis-policy` (prereq-gap / 3b fluency / 5a self-doubt; supersede-keeps-history, 7-day expiry enforced on reads, Map.entry NPE fixed; unsupported types never emitted, tested)
+- [ ] T-026 Tutor policy: diagnosis-aware intervention selection (Scientific-learning-skills prompts). — v0.2 on branch `codex/session-6-diagnosis-policy` (PR #1: open/draft/mergeable, head `81f9906`, 5 commits/21 files; session-6 audited + hardened: compile break fixed, precedence documented, teacher-override reads, 195/195 unit; **merge gate MET — CI run 33898467857 SUCCESS incl. Docker ITs**; task stays open until PR #1 merges — merge is a human decision, never automatic)
+- [ ] T-027 Struggle inference v0: rule-based signals over learning log. (F-141) — v0.2 on branch `codex/session-6-diagnosis-policy` (PR #1, CI green at `81f9906`; prereq-gap / 3b fluency / 5a self-doubt; supersede-keeps-history, 7-day expiry enforced on reads, Map.entry NPE fixed; unsupported types never emitted, tested; stays open until PR #1 merges)
 - [ ] T-028 Mastery map UI (KG visualizer, simplified 2D first) + student dashboard. (F-036, F-060, F-034)
 
 ## Wave 4 — pilot hardening
@@ -48,6 +48,12 @@
 - [ ] T-030 Research export (anonymized) + experiment registry v0. (F-146, F-154)
 - [ ] T-031 Render deployment (Docker, keep-alive, cold-start UX) + Vercel production env. (F-001, F-156)
 - [ ] T-032 Cycle-1 pilot readiness review against Master Spec §39a exit criteria.
+
+## Content-ops track (parallel)
+
+- [x] T-C01 GLM-OCR parser pipeline: real-corpus Markdown adapter + QP/MS extraction + mark reconciliation + image-reality handling + deterministic canonical identity + Python/Java conformance. (Session 8/9 — syllabai-parser @ `9eb35ab`, 68/68 tests + 12/12 conformance in CI; validation report `docs/validation/session9-real-corpus-validation.md`)
+- [ ] T-C02 GLM-OCR → core ingestion bridge: parser verified drafts → existing T-011 ingestion path → canonical persistence → T-013 chunk pipeline → pgvector. No new architecture; no embedding changes.
+- [ ] T-C03 ONE controlled Past-Papers batch end-to-end + human review, before any wider corpus run (the 3-pair proof is done; 40 batches stay parked until T-C02/T-C03 review).
 
 ## Deferred (do not start — Cycle 2+)
 
