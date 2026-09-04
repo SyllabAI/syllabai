@@ -1,6 +1,6 @@
 # PROGRESS.md — Current SyllabAI State
 
-**Last updated:** 2026-09-03 (build session 3 — content/assessment fabric: multi-part model, Smart Mark pipeline, κ gate, structured player; audit fixes 1–4 landed)
+**Last updated:** 2026-09-04 (build session 4 — T-013 retrieval spine: canonical document store, deterministic chunking, Gemini embeddings, pgvector cosine search; The-Brain repo assessed)
 
 ## Overall state
 
@@ -14,6 +14,8 @@
 - **Build session 3 (content/assessment-first):** V8 multi-part assessment model (ExamPaper/QuestionVersion/QuestionPart/MarkScheme/MarkPoint/Answer/SmartMarkResult/HumanMark + κ evaluations); structured submission with timed/untimed pairing and single-fire evidence; Smart Mark as a Strategy pipeline (candidate generation → deterministic bounds/coverage/mark-sum validation → append-only results — LLM never final truth); Cohen's κ release gate (≥ 0.60, fail-closed, per-point pairing, threshold recorded); T-011 ingestion bridge (parser draft JSON → all-SUGGESTED content, teacher validation workflow, ingestion-anchor topic, idempotent); ServableQuestionSpec (unvalidated content never serves); fluency gap in skill states; Testcontainers integration test in CI. 91/91 unit tests.
 - **Live-verified (session 3):** real 4CH0 draft ingested (27 q / 62 parts / 33 mark points) → version+scheme validated → student sees only validated structured question → timed structured submit → deterministic blank-answer smart mark → human mark (evidence once, BKT update, fluency gap paired) → κ = 1.00 gate PASSED → second smart mark authoritative (evidence without human) → telemetry SMART_MARK_COMPLETED / HUMAN_MARK_RECORDED. Browser: structured player submit → pending-marks panel; My-state renders Δ.
 - **Audit fix 4:** experiment-pin model precedence hardened (pin > caller model > provider default); LlmResponse reports the model actually used; telemetry can no longer misattribute pinned-request models.
+- **Build session 4 (T-013 retrieval spine, content-first):** V11 content module — canonical document store (parser schema 1.0 verbatim JSONB, checksum-idempotent, §8 invariants re-validated core-side), deterministic chunking (page+reading_order, block boundaries, element_ids provenance), `EmbeddingProvider` port + Gemini text-embedding-004 (768-dim; RETRIEVAL_DOCUMENT/RETRIEVAL_QUERY; **no failover by design** — a mixed-model index is inconsistent), `document_chunks.embedding vector(768)` + HNSW cosine search, teacher content APIs (ingest / embed / search), model-registry seed `content-embedding` (§19). 121/121 unit tests locally; `ContentPipelineIT` runs the real 4CH0/1C Jan 2012 fixtures end-to-end in CI (deterministic hashing embeddings — no network). The `spring-ai-google-genai-embedding` artifact was verified from Central before the adapter was written (chat starter does not pull it).
+- **The-Brain (Hastur-HP, MIT) assessed:** 3D force-graph KG explorer + LightRAG/RAG-Anything pipeline dashboard — Tier-A reference for T-028 mastery-map UI and ingestion job/progress UX; not adoptable as runtime (Python/Docker/Neo4j, not free-tier-hostable). Verdict recorded in REPOSITORY_RESEARCH.md.
 
 ## Completed planning work
 
@@ -48,4 +50,4 @@ Java 25 + Spring Boot 4.1 + Spring AI 2.0 modular monolith (`syllabai-core`) · 
 
 ## Next highest-value work
 
-Wave 1 remainder: **T-013 (pgvector embedding pipeline, Gemini embeddings)** and T-010 core-side syllabus ingestion (parser-side extractor exists; IAL Chemistry spec → KG seed). Then Wave 3: T-024 KA-RAG orchestration (hybrid KG + vector retrieval — T-013 is its prerequisite), T-025 tutor chat UI with citations, T-027 struggle inference v0. Wave 4: T-029 teacher marking UI (APIs exist), T-031 Render deployment. LLM keys needed for real Smart Mark runs (Groq/Gemini free tier, ADR-009) — the no-key path fails honestly by design.
+**T-010 core-side syllabus ingestion** (parser-side CurriculumDraft extractor exists; IAL Chemistry spec → curriculum tables + KG seed) and the Past-Papers corpus batch run (parser CLI over the 689 MB corpus → canonical JSONs → teacher ingestion API). Then Wave 3: T-024 KA-RAG orchestration (hybrid KG + vector retrieval — its prerequisite T-013 landed in session 4), T-025 tutor chat UI with citations, T-027 struggle inference v0. Wave 4: T-029 teacher marking UI (APIs exist), T-031 Render deployment. LLM keys needed for real Smart Mark runs (Groq/Gemini free tier, ADR-009) — the no-key path fails honestly by design.

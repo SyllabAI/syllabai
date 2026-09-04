@@ -19,7 +19,7 @@
 - [ ] T-010 Syllabus ingestion: Edexcel IAL Chemistry spec → curriculum tables → KG seed (offline LLM-assisted structuring in `syllabai-parser`). (F-020, F-032)
 - [x] T-011 Past-paper + mark-scheme ingestion bridge: parser draft JSON → all-SUGGESTED content bank (paper/version/parts/scheme/points), teacher validation workflow, ingestion-anchor KG topic. Live-verified on real 4CH0/1C Jan 2012 (27 q / 62 parts / 33 points). Misconception/distractor links on structured items: Wave 3 (needs validated content). (F-028, F-029, F-152)
 - [x] T-012 `KnowledgeGraphRepository` with recursive-CTE traversals; prerequisite queries. (F-032, F-135)
-- [ ] T-013 pgvector embedding pipeline (Gemini embeddings) over mark schemes/notes. (F-039, F-136)
+- [x] T-013 pgvector embedding pipeline (Gemini embeddings) over mark schemes/notes. (F-039, F-136) — core @ V11: canonical document store + deterministic chunking + Gemini text-embedding-004 (768-dim, `EmbeddingProvider` port, no failover by design) + HNSW cosine search; 121 unit tests + ContentPipelineIT
 
 ## Wave 2 — learner & assessment engine
 

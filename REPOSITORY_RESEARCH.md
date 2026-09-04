@@ -94,6 +94,7 @@ This section was added when the pack was merged and corrected. It is the **autho
 | HKUDS/DeepTutor | Apache-2.0 | Python + Next 16 | **REFERENCE.** Closest cousin (personalized deep-doc tutoring); study retrieval fusion + tutor orchestration. Too large to deploy parts of. |
 | lfnovo/open-notebook | MIT | Python + Next + SurrealDB(Docker) | **REFERENCE only.** Uses BSL-licensed SurrealDB + Docker — not free-tier-hostable; run locally as internal examiner-report mining tool. |
 | Egonex-AI/Understand-Anything | MIT | TypeScript | **REFERENCE.** Interactive KG explorer UI patterns for the mastery map. |
+| Hastur-HP/The-Brain | MIT | Python (FastAPI) + vanilla JS | **REFERENCE (+ selective code reuse).** Multimodal RAG dashboard + 3D force-graph KG explorer (LightRAG + RAG-Anything + MinerU + Neo4j). 3D KG visualizer + SSE job-progress patterns for T-028 and ingestion ops; NOT free-tier-hostable runtime. |
 | beltromatti/get-it | Apache-2.0 | Next 16 + React 19 + Tailwind 4 | **REFERENCE.** "PDF→mastery map" product twin — UX reference for the student dashboard. |
 | Ljyustc/SocraticLM | Code Apache-2.0; **dataset CC-BY-NC** | Python research | **REFERENCE.** 35K Socratic dialogues, 6 student types — informs Cycle-2 Socratic agent prompts. Dataset: inspiration only, no redistribution. |
 | CaviraOSS/PageLM | Custom Community License | Node/TS | **REFERENCE (UX only).** License forbids copying into SyllabAI. |
@@ -2138,6 +2139,34 @@ If forced to construct a new system from these projects rather than inventing ev
 
 ### Practice
 **HouseLearning-style interactive exercises**
+
+---
+
+---
+
+## 15a. The Brain (added 2026-09-04, session 4)
+
+**Repository:** https://github.com/Hastur-HP/The-Brain
+
+**Category:** RAG dashboard / knowledge-graph visualizer
+
+**License:** MIT (verified via GitHub API) — code is safe to study, port, and copy with attribution. Dependencies (LightRAG, RAG-Anything: MIT; MinerU: custom Apache-2.0-based; Neo4j: GPLv3, containerized, internal use) do not contaminate the pieces we would reuse.
+
+**What it is:**  
+A local-first multimodal RAG workbench: FastAPI backend wrapping HKUDS LightRAG + RAG-Anything, MinerU as the document parser, Neo4j as the graph store, NanoVectorDB for vectors, `bge-reranker-v2-m3` reranking, and a single-page vanilla-JS frontend with a **3D force-graph knowledge explorer** (3d-force-graph + Three.js, bloom postprocessing, node search, per-type visibility toggles, click-to-details, 1–2-hop neighborhood isolation). ~3,850 LOC total. Deployed via Docker Compose; LLM engine is env-var routed (ollama / llamacpp / vllm / lmstudio / openai-compatible).
+
+**Why it matters to SyllabAI (per-repo verdicts):**
+- **3D KG visualizer (frontend/main.js, ~600 lines of graph logic)** — exactly the interaction model T-028's mastery map wants: type-colored nodes, degree-based sizing, explore-neighborhood, details panel. Vanilla JS ports cleanly into a React canvas mount.
+- **Job/progress telemetry via structured SSE events** (jobs.py: chunk/node/relation/multimodal progress parsed from pipeline logs and streamed) — the event schema behind our ingestion dashboard UX.
+- **Query-log capture → highlighted graph nodes** (routers/graph.py) — retrieves "which entities did the LLM use" per answer; a research-grade XAI pattern matching Paper B's explainability stance, portable to the tutor citation panel.
+- **Architecture convergence check:** independently validates our picks — hybrid graph+vector retrieval (LightRAG "mix" mode ≈ our KG + pgvector), MinerU in the offline content pipeline, OpenAI-compatible provider routing.
+
+**Why we do NOT adopt it as a runtime:**
+- Python + Docker + Neo4j + local models — does not fit the free-tier deployment (Render free 512 MB cannot host it; Neo4j Aura Free is a separate DB). It is a desktop-class local tool.
+- LightRAG's auto-extracted entity graph is NOT a pedagogical KG — Paper B's §3.2 graph is curriculum-structured, human-validated, mastery-tracked. Feeding past papers through LightRAG to "build our KG" would violate the canonical-schema + provenance + curation requirements (§7/§8/§17).
+- No assessment, no learner telemetry, no BKT/BDT — nothing for the science core.
+
+**Actions:** add to the reference tier alongside Understand-Anything (3D variant) and DeepTutor (RAG pipeline); reuse the graph-UI and SSE progress patterns in T-028 and ingestion ops; optionally run it locally over examiner reports as an offline misconception-mining sandbox alongside NotebookLM (internal use, no product dependency).
 
 ---
 
