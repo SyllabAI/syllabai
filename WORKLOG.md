@@ -181,3 +181,13 @@
 - Doc drift fixed (external audit findings): core README (smartmark "placeholder" label, module map, task table, API tour, test counts), AGENT.md (five-repo topology incl. Past-Papers).
 - Both repos CI green: core @ 1267265, parser @ 9fe052c.
 - Next: T-026 tutor policy + T-027 struggle inference v0 (intelligence layer BEFORE the T-025 chat UI), plus the Past-Papers corpus batch pipeline as the parallel content-ops track.
+
+## Session 6 — T-026/T-027 branch audit & hardening
+
+- Resynced from live repos (four private repos cloned with read/write PAT; Past-Papers public at d198223).
+- Audited `codex/session-6-diagnosis-policy` (3 commits over main @1267265) before editing: read diagnostic + tutor packages, V13, events, learner model, telemetry, all affected tests.
+- Found and PROVED with `mvn compile`: branch did not compile (enum/DB drift after the telemetry-revert commit); existing tests not updated for prompt v2 → branch tests had never run.
+- Hardened (commit e9ef476, pushed to the remote branch): compile fix, listener ordering, Map.entry NPE fix, supersede-keeps-history, deterministic ordering, teacher-override reads, anonymous sentinel, V13 superseded_at + partial index, rules-v0.2 registration.
+- Added 36 tests covering the mandated matrix (boundaries, absence of evidence, multi-signal, unsupported-not-emitted, precedence, determinism, anonymous, expiry, telemetry). 195/195 unit green locally on JDK 25.0.4; 10 Testcontainers ITs skipped (no Docker in sandbox) — merge gate = CI green with Docker.
+- Control docs updated: TODO.md (T-026/T-027 annotated, still open until CI+merge), PROGRESS.md (session record).
+- Remaining before merge: CI run on the branch (unit + ITs + Flyway V13 against real Postgres), then T-025 UI may start on top.
