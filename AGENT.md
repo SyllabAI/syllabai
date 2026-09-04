@@ -36,6 +36,7 @@ syllabai           (main repo - spec, ADRs, backlog, research dossiers, papers)
 syllabai-web       (Next.js 16 / React 19 / TypeScript, Vercel)
 syllabai-core      (Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith)
 syllabai-parser    (polyglot offline content pipeline)
+Past-Papers        (raw corpus asset repo - IAL/IGCSE Edexcel QP/MS PDFs; no code)
 ```
 
 All domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live **inside `syllabai-core`** as strongly-separated packages. They graduate to separate repositories only when a genuine runtime/lifecycle boundary appears (ADR-012).

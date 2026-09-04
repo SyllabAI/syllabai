@@ -16,7 +16,7 @@
 
 - [x] T-008 Canonical document format schema (JSON) + `DocumentParser` contract. (F-134, F-147) — syllabai-parser @ a43ad24, schema 1.0, 23/23 tests
 - [x] T-009 In-process opendataloader-pdf integration (Maven) for text PDFs; bounding boxes retained. — opendataloader-pdf-core 2.5.7 (Apache-2.0, Central) 
-- [ ] T-010 Syllabus ingestion: Edexcel IAL Chemistry spec → curriculum tables → KG seed (offline LLM-assisted structuring in `syllabai-parser`). (F-020, F-032)
+- [x] T-010 Syllabus ingestion: Edexcel IAL Chemistry spec → curriculum tables → KG seed. (F-020, F-032) — parser `edexcel-numbered-outline-v1` (deterministic, per-node §17 provenance; real Pearson 2018 spec: 6 units / 20 topics / 15 subtopics) + core `CurriculumIngestionService` (idempotent, all-SUGGESTED) + teacher validation gate; prerequisites stay teacher-curated (never derived from an outline)
 - [x] T-011 Past-paper + mark-scheme ingestion bridge: parser draft JSON → all-SUGGESTED content bank (paper/version/parts/scheme/points), teacher validation workflow, ingestion-anchor KG topic. Live-verified on real 4CH0/1C Jan 2012 (27 q / 62 parts / 33 points). Misconception/distractor links on structured items: Wave 3 (needs validated content). (F-028, F-029, F-152)
 - [x] T-012 `KnowledgeGraphRepository` with recursive-CTE traversals; prerequisite queries. (F-032, F-135)
 - [x] T-013 pgvector embedding pipeline (Gemini embeddings) over mark schemes/notes. (F-039, F-136) — core @ V11: canonical document store + deterministic chunking + Gemini text-embedding-004 (768-dim, `EmbeddingProvider` port, no failover by design) + HNSW cosine search; 121 unit tests + ContentPipelineIT
@@ -36,7 +36,7 @@
 ## Wave 3 — tutor & diagnostic intelligence
 
 - [x] T-023 `LlmProvider` + free chain (Groq → Gemini → OpenRouter) with failover and rate tracking. (F-148, F-163)
-- [ ] T-024 KA-RAG orchestration: intent → KG context → hybrid retrieval → grounded generation. (F-040)
+- [x] T-024 KA-RAG orchestration: intent → KG context → hybrid retrieval → grounded generation. (F-040) — v0 foundation: deterministic intent (VALIDATED nodes only), KG+vector RRF fusion (rank-only, k=60), NoReranker Strategy, learner-state context assembly, grounded generation (prompt tutor-grounded/v1, free-LLM chain), citations with deep links, KA_RAG_COMPLETED telemetry (V12), deterministic refusal on empty evidence; POST /api/v1/tutor/ask (backend surface — chat UI stays T-025)
 - [ ] T-025 Tutor chat UI with verbatim citations + PDF deep-links. (F-041, F-043, F-022)
 - [ ] T-026 Tutor policy: diagnosis-aware intervention selection (Scientific-learning-skills prompts). 
 - [ ] T-027 Struggle inference v0: rule-based signals over learning log. (F-141)
