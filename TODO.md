@@ -52,7 +52,7 @@
 ## Content-ops track (parallel)
 
 - [x] T-C01 GLM-OCR parser pipeline: real-corpus Markdown adapter + QP/MS extraction + mark reconciliation + image-reality handling + deterministic canonical identity + Python/Java conformance. (Session 8/9 — syllabai-parser @ `9eb35ab`, 68/68 tests + 12/12 conformance in CI; validation report `docs/validation/session9-real-corpus-validation.md`)
-- [ ] T-C02 GLM-OCR → core ingestion bridge: parser verified drafts → existing T-011 ingestion path → canonical persistence → T-013 chunk pipeline → pgvector. No new architecture; no embedding changes.
+- [x] T-C02 GLM-OCR → core ingestion bridge: parser verified drafts → existing T-011 ingestion path → canonical persistence → T-013 chunk pipeline. — implemented on branch `codex/t-c02-glmocr-bridge` (PR #3, head `02a7088`, CI run 33912946878 SUCCESS: 185/185 unit + 16/16 IT incl. GlmOcrBridgeIT on the 3 real WPH11 pairs; V13 bridge record keeps the verbatim parser contract — October Q18 + 1A 80-vs-120 conflicts review-visible; rerun-idempotent; embedding structurally separate; controlled entries = teacher endpoint + ops CLI; `docs/t-c02-bridge.md`). Stays "on branch" until PR #3 merges — human decision, same policy as PR #1. No new architecture; no embedding changes.
 - [ ] T-C03 ONE controlled Past-Papers batch end-to-end + human review, before any wider corpus run (the 3-pair proof is done; 40 batches stay parked until T-C02/T-C03 review).
 
 ## Deferred (do not start — Cycle 2+)
