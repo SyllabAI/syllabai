@@ -24,9 +24,10 @@ This is the **main repository**: the master project pack (specification, decisio
 3. `backlog/syllabai-master-project.xlsx` — **definitive feature tracker** (TSV export alongside; `Cycle` column = Paper B Cycle-1 pilot cut; green = Cycle 1, amber = critical-path spine)
 4. `DECISIONS.md` — architecture decision records (ADR-001…013)
 5. `REPOSITORY_RESEARCH.md` — external repo dossier (section 0 = verified integration verdicts & license corrections)
-6. `PLATFORM_RESEARCH.md` — verified platform/free-tier research
-7. `papers/` — scientific source material (Paper A conceptual model, Paper B system design)
-8. `PROJECT_CONTEXT.md` / `PROGRESS.md` / `TODO.md` / `WORKLOG.md` — living project state
+6. `ARCHITECTURE_REFERENCE_REGISTER.md` — curated architecture/UX/orchestration reference list (OpenHuman added 2026-09-05)
+7. `PLATFORM_RESEARCH.md` — verified platform/free-tier research
+8. `papers/` — scientific source material (Paper A conceptual model, Paper B system design)
+9. `PROJECT_CONTEXT.md` / `PROGRESS.md` / `TODO.md` / `WORKLOG.md` — living project state
 
 ## Execution scope
 
