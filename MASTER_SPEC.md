@@ -1120,6 +1120,7 @@ DocumentParser
  ├── OpenDataLoaderParser
  ├── SuryaOcrParser
  ├── AnyDocParser
+ ├── GlmOcrMarkdownParser
  └── PdfInspectorRouter
 ```
 
