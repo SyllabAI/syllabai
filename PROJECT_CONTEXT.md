@@ -11,7 +11,7 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 
 ## Canonical project documents
 
-- `MASTER_SPEC.md`: engineering truth (v1.2.0; controlled revision with 2026-09-07 architecture synchronization).
+- `MASTER_SPEC.md`: engineering truth (v1.2.1; 2026-09-07 architecture synchronization + 2026-09-08 ADR-018 documentation sync).
 - `AGENT.md`: agent behavior and mandatory implementation workflow.
 - `DECISIONS.md`: architecture decision records (ADR-001…018 in the consolidated ledger).
 - `DECISION_018_MOCK_EXAM_GENERATOR.md`: ADR-018 for the blueprint-driven Mock Exam Generator.
@@ -33,9 +33,9 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `backlog/syllabai-master-project.xlsx`: definitive feature/project tracker (Cycle column = pilot cut).
 - `backlog/subject-architecture-feature-addendum.tsv`: committed text-form feature tracker addendum for the 2026-09-07 subject-first/specification-point decision.
 - `backlog/teacher-lms-feature-addendum.tsv`: committed text-form feature addendum for the 2026-09-07 teacher/classroom/LMS architecture discussion. It extends existing F-050/F-072/F-073/F-074/F-075 and records genuinely new gaps without duplicating existing feature IDs.
-- `backlog/learning-evidence-feature-addendum.tsv`: committed feature-tracker addendum for F-055/F-056/F-057/F-058/F-059 and their integrations, pending the next controlled workbook sync.
-- `backlog/recommendation-system-feature-addendum.tsv`: committed feature-tracker addendum for the learning-first recommendation architecture, pending the next controlled workbook sync.
-- `backlog/mock-exam-generator-feature-addendum.tsv`: committed feature-tracker addendum extending F-051 with F-171…F-176, pending the next controlled workbook sync.
+- `backlog/learning-evidence-feature-addendum.tsv`: committed feature-tracker addendum for F-055/F-056/F-057/F-058/F-059 and their integrations; folded into the master workbook in session 17 (2026-09-07) as decision notes and priority updates — it remains the detailed supplement, not a competing inventory.
+- `backlog/recommendation-system-feature-addendum.tsv`: committed feature-tracker addendum for the learning-first recommendation architecture; folded into the master workbook in session 17 (2026-09-07) as decision notes and priority updates — it remains the detailed supplement, not a competing inventory.
+- `backlog/mock-exam-generator-feature-addendum.tsv`: committed feature-tracker addendum extending F-051 with F-171…F-176; folded into the master workbook in session 18 (2026-09-08: F-051 updated in place, six rows appended, TSV/XLSX parity 181=181) — it remains the detailed supplement, not a competing inventory.
 
 ## Repositories
 

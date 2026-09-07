@@ -1,7 +1,7 @@
 # SyllabAI Master Technical Specification
 
 **Document status:** Canonical project specification  
-**Specification version:** 1.2.0 (architecture-extension revision, 2026-09-07 — executes the reconciliation plan of `DOCUMENTATION_CONTRADICTION_AUDIT_2026-09-07.md`: ADR-014 subject-first / `SpecificationPoint` canonicalization, ADR-015 teacher/classroom LMS layer, ADR-016 question-attempt & learning evidence, ADR-017 learning-first recommendations; v1.1.0 engineering core unchanged)  
+**Specification version:** 1.2.1 (documentation-sync revision, 2026-09-08 — closes the residual list in `FINAL_SANITY_CONTRADICTION_CHECK_2026-09-07.md`: registers ADR-018 blueprint-driven Mock Exam Generator in the §0 addenda hierarchy, §6.5 assessment-layer principle, §39a Cycle-2+ scope guard and §43 documentation index; the master workbook absorbed F-171–F-176 the same day (TSV/XLSX parity 181=181); v1.2.0 architecture content unchanged)  
 **Research date:** 2026-09-02  
 **Project:** SyllabAI  
 **Academic context:** Advanced Object Oriented Programming (Java backend)  
@@ -19,7 +19,7 @@ The two research papers remain authoritative for scientific claims, hypotheses, 
 
 1. **Current research papers** - authority for scientific framing, hypotheses, operational definitions, and research claims.
 2. **This Master Technical Specification** - authority for the current software architecture and engineering decisions.
-3. **Canonical architecture addenda** (`SUBJECT_ARCHITECTURE.md`, `TEACHER_ARCHITECTURE.md`, `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`, `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`, with ADR-014–ADR-017 in `DECISIONS.md`) - authority for their named architecture layers. Where this spec and an addendum disagree, the addendum governs for its layer; record the discrepancy in `WORKLOG.md` and fold it back at the next controlled spec revision.
+3. **Canonical architecture addenda** (`SUBJECT_ARCHITECTURE.md`, `TEACHER_ARCHITECTURE.md`, `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`, `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`, `MOCK_EXAM_GENERATOR_ARCHITECTURE.md`, with ADR-014–ADR-018 in `DECISIONS.md`) - authority for their named architecture layers. Where this spec and an addendum disagree, the addendum governs for its layer; record the discrepancy in `WORKLOG.md` and fold it back at the next controlled spec revision.
 4. **Definitive project spreadsheet** - authority for feature inventory, dependencies, implementation status, priority, owner, and execution tracking.
 5. **Repository Research Dossier** - implementation-reference knowledge about external/open-source projects.
 6. **AGENT.md** - operating procedure for coding agents and maintenance rules.
@@ -321,6 +321,8 @@ Entities:
 - Answer
 - SmartMarkResult
 - HumanMark
+
+**Blueprint-driven mock-exam principle (ADR-018, 2026-09-07):** the Mock Exam Generator is a versioned exam-blueprint engine scoped by `Board → Qualification → Subject → CurriculumVersion → PaperCode → PaperType/Variant → BlueprintVersion`, not an LLM-writes-an-exam prompt. Blueprints keep official board rules and historical corpus patterns as separately provenance-bearing evidence classes (F-051, extended); paper assembly draws only validated Question/QuestionPart candidates and AssessmentBlock groupings where shared stems/data/diagrams create atomic semantics (F-171/F-172); hard validity constraints are enforced separately from soft optimization objectives and a scalar fidelity score can never hide a hard failure (F-173); Exam Simulation and Adaptive Diagnostic Mock are explicit policies in which blueprint validity stays a hard floor while learner evidence may guide valid item selection (F-174); AI-generated variants pass a gated source→generation→deterministic/domain validation→mark-scheme validation→review→servable pipeline and are never canonical board truth (F-175, Cycle 2+); mock attempts reuse the existing Learning Evidence subsystem with no parallel attempt ledger, and predicted grades remain research outputs until a validated model exists (F-176). Difficulty is contextual evidence; universal `marks × 1.5 minutes` timing is rejected. Canonical design: `MOCK_EXAM_GENERATOR_ARCHITECTURE.md`.
 
 ## 6.6 Learner model
 
@@ -1477,7 +1479,7 @@ The build waves in section 39 describe the full-system roadmap. The **authoritat
 - **Agents in scope:** **Tutor + Assessor only** (Paper B Cycle 1). No coach/counselor agents.
 - **Study:** pre-registered predictions P1–P8 evaluated against learning-log telemetry.
 - **Feature cut:** the rows marked `Cycle 1` in the definitive backlog (34 rows; 12 of them are the critical-path spine: F-020 syllabus parser → F-032 KG → F-033 overlay → F-040 KA-RAG → F-041/F-043 tutor chat with citations → F-047 Smart Mark → F-055 attempt logging → F-137/F-138 learner model + BKT → F-148 LLM provider → F-160 learning log).
-- **Everything else** (teacher analytics depth, DAT, gamification, mobile, community, multimodal, mock-exam blueprints) is Cycle 2+ and must not be pulled into Cycle 1. The 2026-09-07 architecture extensions — subject-first workspaces (F-164+), the teacher/classroom LMS layer (TFA-01…TFA-08), point-level question tagging (F-168) and the learning-first recommender (ADR-017) — are likewise Cycle 2+ unless individually promoted by an explicit scope decision.
+- **Everything else** (teacher analytics depth, DAT, gamification, mobile, community, multimodal, mock-exam blueprints) is Cycle 2+ and must not be pulled into Cycle 1. The 2026-09-07 architecture extensions — subject-first workspaces (F-164+), the teacher/classroom LMS layer (TFA-01…TFA-08), point-level question tagging (F-168), the learning-first recommender (ADR-017) and the blueprint-driven Mock Exam Generator (ADR-018, F-171…F-176) — are likewise Cycle 2+ unless individually promoted by an explicit scope decision.
 
 **Cycle-1 exit criteria:** BKT updates live for all pilot topics; KA-RAG answers carry verbatim citations; Smart Mark released to students only after the κ ≥ 0.60 agreement gate (F-161) vs human double-marking; the learning log captures the Paper B §3.5 research fields (keystroke/dwell timing, self-doubt flag, response latency, IRT item parameters); the timed-vs-untimed fluency-gap construct (F-162) is computed for every pilot student.
 
@@ -1566,15 +1568,20 @@ The project should maintain:
 - `WORKLOG.md` - chronological execution history.
 - `PROGRESS.md` - current-state dashboard narrative.
 - `TODO.md` - actionable work queue.
-- `DECISIONS.md` - architectural decision records (ADR-001…ADR-017).
+- `DECISIONS.md` - architectural decision records (ADR-001…ADR-018).
 - `REPOSITORY_RESEARCH.md` - researched external repository dossier.
 - `README.md` - project entry point and navigation.
 - `PROJECT_CONTEXT.md` - concise cross-document orientation for humans/agents.
+- `ARCHITECTURE_DISCUSSION_SYNC_2026-09-07.md` - durable index of the 2026-09-07 architecture discussions (subject-first, teacher/LMS, learning evidence, recommendations, mock exams).
 - `SUBJECT_ARCHITECTURE.md` - canonical subject-first / specification-point architecture (ADR-014).
 - `TEACHER_ARCHITECTURE.md` - canonical teacher/classroom LMS blueprint (ADR-015).
 - `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` - canonical evidence-subsystem contract (ADR-016).
 - `RECOMMENDATION_SYSTEM_ARCHITECTURE.md` - canonical learning-first recommender design (ADR-017).
-- `backlog/*-feature-addendum.tsv` - detailed feature-tracker addenda feeding the definitive master workbook.
+- `MOCK_EXAM_GENERATOR_ARCHITECTURE.md` - canonical blueprint-driven mock-exam architecture (ADR-018).
+- `MOCK_EXAM_GENERATOR_AGENT_ADDENDUM.md` - mandatory implementation rules for F-051 and the mock feature family.
+- `DECISION_018_MOCK_EXAM_GENERATOR.md` - dedicated ADR-018 decision record.
+- `WORKBOOK_SYNC_2026-09-07.md` - record of the canonical workbook consolidation and cleanup.
+- `backlog/*-feature-addendum.tsv` - detailed feature-tracker addenda feeding the definitive master workbook (folded: subject/teacher/learning-evidence/recommendation in session 17, mock-exam in session 18; the addenda remain detailed supplements, not competing inventories).
 
 The research papers themselves should remain in the context pack and project source archive.
 

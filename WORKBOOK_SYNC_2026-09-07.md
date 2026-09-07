@@ -32,3 +32,9 @@ The definitive tracker remains the project workbook. The committed TSV addenda r
 ## Binary artifact note
 
 The cleaned canonical workbook is generated and verified in the current workspace. The GitHub connector available to this session does not provide a direct local-file upload operation for binary XLSX content, so this synchronization record is committed now rather than falsely claiming that the binary workbook has been pushed to GitHub.
+
+## Follow-up — repository binary sync completed (2026-09-08, session 18)
+
+The binary-artifact gap recorded above is closed: the controlled master-workbook synchronization folded the canonical mock addendum (F-051 updated in place per ADR-018 + F-171…F-176 appended) into `backlog/syllabai-master-project.xlsx` and `backlog/syllabai-master-project.tsv` in the same controlled change, restoring XLSX/TSV parity (181 = 181 data rows; 173 F-rows + 8 TFA-rows; verified cell-by-cell across all 25 columns; structural validation passed).
+
+Reconciliation against this record, per the authority rule in `FINAL_SANITY_CONTRADICTION_CHECK_2026-09-07.md`: the authoritative repo tracker (the GitHub TSV) contained no duplicate F-059/F-078/F-154 rows and no duplicated Governance entry — those cleanup items applied to the non-authoritative local snapshot described above, which also carried the superseded F-169…F-174 mock numbering. The repository workbook therefore required no row removals; the F-171…F-176 fold-in (plus the F-051 ADR-018 extension) is the complete controlled change. The repository-mapping consolidation to the five-repository architecture was already the state of the repo tracker.
