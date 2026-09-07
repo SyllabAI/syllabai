@@ -147,3 +147,64 @@ The existing F-050 Test Builder remains the canonical feature identity for teach
 The complete teacher/classroom/LMS blueprint is canonical in `TEACHER_ARCHITECTURE.md`.
 
 **Scope guard:** ADR-015 defines the long-term product architecture and does not expand Cycle 1. Cycle 1 remains Edexcel IAL Chemistry with Tutor + Assessor focus under ADR-010.
+
+## ADR-016: Question Attempt & Learning Evidence as a first-class subsystem
+
+**Status:** Accepted
+**Date:** 2026-09-07
+
+SyllabAI will treat question-level learner interaction as a first-class **Question Attempt & Learning Evidence** subsystem, also called the **Learning Log** in Paper B.
+
+The subsystem is the canonical bridge between the assessment/question domain and learner modeling, diagnostic inference, Knowledge Graph learner overlays, recommendation/intervention, spaced review, the student Review Hub, teacher/class evidence analytics, and research telemetry.
+
+### Semantic separation
+
+```text
+Immutable assessment evidence
+        ≠
+Mutable learner review state
+        ≠
+Derived learner mastery
+```
+
+A QuestionAttempt records what happened. A review state records how the learner currently relates to the question (problematic, doubtful, resolved, etc.). Mastery is inferred by the learner model from evidence and must not be directly mutated by UI actions.
+
+### Canonical question identity
+
+The same Question/QuestionPart may appear in Past Papers, Target Tests, Test Builder quizzes, Mock Exams, Teacher Assignments, Smart Lessons, and future generated/variant sessions. A source session is provenance/context, not a new academic question identity.
+
+### Granularity and evidence
+
+Evidence should use QuestionPart granularity whenever feasible because marking and SpecificationPoint coverage may be part-specific. Raw assessment evidence must preserve `awardedMarks` and `maximumMarks`; a normalized percentage may be derived but is not sufficient as the canonical record.
+
+QuestionPart → SpecificationPoint is many-to-many. Multi-specification coverage must never be collapsed to one topic purely for storage convenience.
+
+### Learner self-report
+
+Confidence, self-doubt, problem flags and resolution are legitimate learner signals, especially for metacognition research, but are not assessor truth. The following older brainstorm rules are explicitly rejected as deterministic learner-model arithmetic:
+
+```text
+flag → mastery -0.02
+resolve → mastery +0.01
+self-doubt → halve mastery gain
+```
+
+Such signals may be weighted by the learner model, but UI clicks do not directly change mastery.
+
+### Previously attempted / skipped work
+
+A previously-attempted indicator must query canonical question identity across sources. A “paper completed” state must never imply that all questions were attempted. Skipped/unattempted parts must remain detectable and resurfaced when the learner encounters the material again.
+
+### Integrations
+
+Smart Mark and normal test submission are automatic producers of attempt evidence. The same evidence substrate feeds the learner model, KG overlay, recommendations, Review Hub, spaced review, and teacher analytics. No parallel tracking model should be created for any of those features.
+
+Research-only telemetry such as IRT parameters or keystroke timing must be versioned, privacy-aware, and explicitly justified by the research protocol before it becomes product-critical.
+
+### Research basis
+
+Paper B §3.5 explicitly defines the Learning Log and explains the 80%-of-a-paper / skipped-hard-questions failure mode. Paper B §3.13 maps richer telemetry to the project's struggle types. Changes that alter these semantics are research-sensitive and must be checked against the relevant paper section.
+
+The full implementation contract is canonical in `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`; agent-specific rules are in `LEARNING_EVIDENCE_AGENT_ADDENDUM.md`.
+
+**Scope guard:** ADR-016 defines long-term product and research architecture and does not expand Cycle 1. Cycle 1 remains Edexcel IAL Chemistry with Tutor + Assessor focus under ADR-010.
