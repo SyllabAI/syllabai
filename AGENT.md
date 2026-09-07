@@ -12,7 +12,8 @@ Before making substantial changes:
 2. Read the relevant rows in the definitive project spreadsheet (`backlog/syllabai-master-project.xlsx`, TSV export alongside it).
 3. Read the relevant repository/module documentation.
 4. Read `PROJECT_CONTEXT.md` if the task is cross-cutting or unclear.
-5. Read the relevant section of the research papers when the task changes research constructs, hypotheses, metrics, operational definitions, or learning-model behavior.
+5. Read `SUBJECT_ARCHITECTURE.md` for any product, curriculum, content-linking, assessment-tagging, knowledge-graph, student-dashboard, or subject-enrollment task.
+6. Read the relevant section of the research papers when the task changes research constructs, hypotheses, metrics, operational definitions, or learning-model behavior.
 
 The Master Spec is the **engineering source of truth**, but it does **not** replace the papers for research claims. Agents do not need to reread both papers for ordinary CRUD/UI/infrastructure work. They must reread the relevant paper section for research-sensitive work.
 
@@ -23,7 +24,8 @@ The Master Spec is the **engineering source of truth**, but it does **not** repl
 3. Spreadsheet: feature inventory and execution state.
 4. REPOSITORY_RESEARCH.md: external implementation references.
 5. DECISIONS.md: explicit architecture decisions.
-6. WORKLOG/PROGRESS/TODO: living execution state.
+6. SUBJECT_ARCHITECTURE.md: canonical product boundary and specification-point model for subject-first work.
+7. WORKLOG/PROGRESS/TODO: living execution state and history.
 
 Do not silently resolve conflicts. Record them and update the appropriate source through a documented decision.
 
@@ -151,6 +153,50 @@ The spreadsheet is not a substitute for code or docs; it is the execution index.
 
 ---
 
+# Subject-first architecture protocol
+
+`SUBJECT_ARCHITECTURE.md` is mandatory reading for any work that changes how students choose, view, study, practice, assess, or visualize a subject.
+
+The long-term product boundary is:
+
+```text
+Student
+  └── Subject Enrollment
+       └── Board → Qualification → Subject → Curriculum/Specification Version
+            └── Subject Workspace
+                 ├── Overview / Dashboard
+                 ├── Revision Notes
+                 ├── Exam Questions
+                 ├── Past Papers
+                 ├── Flashcards
+                 ├── Target Test
+                 ├── Mock Exams
+                 ├── Smart Lesson
+                 ├── Tutor
+                 └── Knowledge Graph
+```
+
+A student may begin with zero subjects. Do not assume every student is enrolled in every course.
+
+The curriculum hierarchy is:
+
+```text
+Board → Qualification → Subject → CurriculumVersion
+  → Unit/Section → Topic/SubTopic → SpecificationPoint
+```
+
+`SpecificationPoint` is a first-class canonical curriculum/knowledge anchor for official numbered learning objectives such as `1.1`, `1.2`, `1.3`. Preserve official code, wording, ordering, version, provenance, and explicitly stated applicability metadata. Do not replace specification points with generic topic tags.
+
+Resources should map to specification points. Future QuestionVersion/QuestionPart tagging may map one item to multiple specification points; never force multi-topic coverage into a single tag. Uncertainty and review state must remain explicit.
+
+Learner state is a separate time-aware overlay on the subject graph: mastery, misconceptions, confidence, procedural fluency, exposure/evidence, and review/decay. Never mutate official curriculum nodes with student-specific state.
+
+The subject-first architecture is broader than the current pilot. **Cycle 1 remains Edexcel IAL Chemistry** under ADR-010. The IGCSE Chemistry examples in `SUBJECT_ARCHITECTURE.md` do not authorize IGCSE bulk ingestion or other scope expansion.
+
+When an agent discovers a new subject-scoped capability, it must be added to the definitive tracker (or recorded in the current feature-tracker addendum pending the next controlled workbook sync) rather than existing only in prose.
+
+---
+
 # Engineering rules
 
 ## 1. Preserve boundaries
@@ -211,6 +257,8 @@ Locate feature in spreadsheet
   ↓
 Read Master Spec sections
   ↓
+Read SUBJECT_ARCHITECTURE.md when subject/product/curriculum/graph related
+  ↓
 Read research section if needed
   ↓
 Inspect existing code/tests
@@ -229,7 +277,7 @@ Update PROGRESS
   ↓
 Update TODO
   ↓
-Update spreadsheet
+Update spreadsheet / current feature addendum
 ```
 
 ## Before finishing any task
@@ -241,6 +289,8 @@ Ask internally:
 - Did I document a new finding/mistake/breakthrough?
 - Did I introduce a new assumption?
 - Does that assumption require a research-paper check?
+- If subject-scoped: did I preserve Board/Qualification/Subject/CurriculumVersion isolation?
+- If curriculum-scoped: did I preserve official SpecificationPoint numbering and provenance?
 
 ---
 
@@ -262,6 +312,9 @@ Ask internally:
 - Introducing microservices without a real boundary justification.
 - Adding paid infrastructure under the free-tier constraint without an explicit decision.
 - Updating code without updating worklog/progress/TODO/spreadsheet state.
+- Treating Unit/Topic/SubTopic as the maximum useful curriculum granularity when the official specification provides numbered learning objectives.
+- Using free-form filenames/topic strings as the authoritative subject identity.
+- Mutating curriculum nodes with learner-specific mastery or diagnostic state.
 
 ---
 
