@@ -14,7 +14,8 @@ Before making substantial changes:
 4. Read `PROJECT_CONTEXT.md` if the task is cross-cutting or unclear.
 5. Read `SUBJECT_ARCHITECTURE.md` for any product, curriculum, content-linking, assessment-tagging, knowledge-graph, student-dashboard, teacher-subject-workspace, or subject-enrollment task.
 6. Read `TEACHER_ARCHITECTURE.md` for any teacher, class, classroom-student, LMS, Test Builder, assignment, announcement, teacher-analytics, teacher-AI, Data Assistant, At-Risk Students, teaching-coverage, class-KG, or teacher-to-student-graph task.
-7. Read the relevant section of the research papers when the task changes research constructs, hypotheses, metrics, operational definitions, or learning-model behavior.
+7. Read `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` and `LEARNING_EVIDENCE_AGENT_ADDENDUM.md` for any work involving questions, attempts, assessment evidence, Smart Mark, Test Builder/Target Tests, mocks, learner telemetry, review/flags, spaced review, recommendation inputs, question-level Knowledge Graph behavior, Review Hub, or teacher question-level analytics.
+8. Read the relevant section of the research papers when the task changes research constructs, hypotheses, metrics, operational definitions, or learning-model behavior.
 
 The Master Spec is the **engineering source of truth**, but it does **not** replace the papers for research claims. Agents do not need to reread both papers for ordinary CRUD/UI/infrastructure work. They must reread the relevant paper section for research-sensitive work.
 
@@ -27,7 +28,9 @@ The Master Spec is the **engineering source of truth**, but it does **not** repl
 5. DECISIONS.md: explicit architecture decisions.
 6. SUBJECT_ARCHITECTURE.md: canonical product boundary and specification-point model for subject-first work.
 7. TEACHER_ARCHITECTURE.md: canonical teacher/classroom/LMS product layer over the shared subject/knowledge architecture.
-8. WORKLOG/PROGRESS/TODO: living execution state and history.
+8. QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md: canonical question-level evidence and Learning Log architecture.
+9. LEARNING_EVIDENCE_AGENT_ADDENDUM.md: mandatory implementation rules for question attempts, review state and evidence integrations.
+10. WORKLOG/PROGRESS/TODO: living execution state and history.
 
 Do not silently resolve conflicts. Record them and update the appropriate source through a documented decision.
 
@@ -238,6 +241,39 @@ The teacher architecture is long-term and **does not expand Cycle 1** merely bec
 
 ---
 
+# Question / Learning Evidence architecture protocol
+
+`QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` is mandatory reading for any question-level or assessment-interaction work.
+
+The key invariant is:
+
+```text
+Immutable assessment evidence
+        ≠
+Mutable learner review state
+        ≠
+Derived learner mastery
+```
+
+Agents must:
+
+- preserve canonical Question/QuestionPart identity across Past Papers, Target Tests, Test Builder, Mock Exams, Teacher Assignments and Smart Lessons;
+- prefer QuestionPart-level evidence when marking or SpecificationPoint coverage is part-specific;
+- preserve `awardedMarks` and `maximumMarks` rather than only a normalized percentage;
+- preserve source/session provenance, attempt number, timing, confidence, answer evidence, marking method and AI execution metadata as applicable;
+- auto-log normal test submissions and Smart Mark attempts;
+- make “previously attempted” work across all question sources;
+- keep skipped/unattempted questions detectable even when a paper session is marked complete;
+- store problematic/doubt/self-doubt/resolved state as learner review state around immutable evidence;
+- never implement the old brainstorming `flag → mastery -0.02`, `resolve → mastery +0.01`, or “self-doubt halves mastery gain” rules as deterministic learner-model arithmetic;
+- never let UI button clicks directly mutate learner mastery;
+- keep Review Hub, spaced review, recommendations, KG learner-state inference and teacher analytics on the same evidence substrate rather than creating parallel tracking tables/models;
+- distinguish product-critical evidence from research-only telemetry such as IRT or keystroke timing.
+
+**Research-sensitive rule:** Paper B §3.5 explicitly defines the Learning Log and its rich telemetry schema and explains the 80%-of-a-paper / skipped-hard-questions failure mode. Any change to these semantics requires checking the relevant Paper B section.
+
+---
+
 # Engineering rules
 
 ## 1. Preserve boundaries
@@ -302,6 +338,8 @@ Read SUBJECT_ARCHITECTURE.md when subject/product/curriculum/graph related
   ↓
 Read TEACHER_ARCHITECTURE.md when teacher/class/LMS/teacher-KG/analytics related
   ↓
+Read QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md when question/assessment/evidence related
+  ↓
 Read research section if needed
   ↓
 Inspect existing code/tests
@@ -336,6 +374,7 @@ Ask internally:
 - If curriculum-scoped: did I preserve official SpecificationPoint numbering and provenance?
 - If teacher-scoped: did I enforce class/teacher authorization at the backend?
 - If analytics-scoped: can every aggregate/flag be traced to evidence and a time window?
+- If question/evidence-scoped: did I preserve immutable attempt history, raw marks, canonical QuestionPart identity, source/session provenance and separation from learner review state?
 
 ---
 
@@ -364,6 +403,11 @@ Ask internally:
 - Treating NOT_TAUGHT as equivalent to LOW_MASTERY.
 - Using an LLM to invent class statistics, marks, attendance, risk labels, or evidence.
 - Exposing student data to a teacher solely because the student and teacher share a subject; class/teaching authorization must still be checked.
+- Treating a paper-completion flag as proof that every question was attempted.
+- Storing learner mastery as a direct consequence of “flagged” or “resolved” UI actions.
+- Recreating question identities separately for Past Papers, Test Builder, Target Tests, mocks or assignments.
+- Reducing question evidence to a single float when raw awarded/max marks are available.
+- Building a second parallel question-tracking system for the Review Hub, Teacher Hub or recommendation engine.
 
 ---
 
