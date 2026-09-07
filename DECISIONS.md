@@ -221,3 +221,24 @@ Rules: rule-based recommendations are the canonical baseline (F-087); content-ba
 The full design is canonical in `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`; agent rules are in `RECOMMENDATION_SYSTEM_AGENT_ADDENDUM.md`; the decision record is also mirrored in `ADR_017_LEARNING_FIRST_RECOMMENDATION_SYSTEM.md`.
 
 **Scope guard:** ADR-017 defines long-term product architecture and does not expand Cycle 1. Cycle 1 remains Edexcel IAL Chemistry with Tutor + Assessor focus under ADR-010.
+
+## ADR-018: Blueprint-driven Mock Exam Generator
+
+**Status:** Accepted
+**Date:** 2026-09-07
+
+SyllabAI will treat the Mock Exam Generator as a **versioned exam-blueprint-driven assessment system** rather than an LLM-only text-generation feature. It shares the canonical question bank and assessment substrate with F-050 Test Builder, F-049 Target Test, F-053 Timed Exam Mode, F-047 Smart Mark and the F-055+ Question Attempt/Learning Evidence subsystem, while remaining a distinct product policy.
+
+The blueprint is scoped and versioned by `Board → Qualification → Subject → CurriculumVersion → PaperCode → PaperVariant/PaperType → BlueprintVersion`. Official board rules and historical corpus-derived patterns must remain separately identified and provenance-bearing; historical frequency must not silently become board truth.
+
+Paper assembly uses validated Question/QuestionPart candidates and AssessmentBlock/QuestionGroup groupings where shared stimulus/data/context creates atomic assessment semantics. Hard validity constraints are distinct from soft optimization objectives. The solver implementation is replaceable; knapsack/CP-SAT/integer programming/dynamic programming are implementation options, not architectural commitments. Unsatisfiable hard constraints fail explicitly.
+
+Difficulty is contextual evidence rather than a universal immutable 1–5 fact; Bloom is optional annotation; universal `marks × 1.5 minutes` timing is rejected. Exam Simulation and Adaptive Diagnostic Mock are explicit policies: personalization may affect valid item selection in the latter, but blueprint validity remains a hard floor.
+
+AI-generated or AI-modified variants are later and higher-risk. They must pass deterministic structural checks, numerical/domain/unit validation, answer/mark-scheme alignment and provenance/AI-execution metadata, plus human review where required, before being learner-served. Generated questions never become canonical board truth merely because they are plausible.
+
+Mock attempts use the existing immutable-evidence / review-state / derived-mastery separation. Paper completion never implies every question was attempted. Predicted grades/readiness values remain future research/evaluation outputs until a validated model exists; no fabricated prediction UI is permitted.
+
+The complete implementation blueprint is canonical in `MOCK_EXAM_GENERATOR_ARCHITECTURE.md`, with agent rules in `MOCK_EXAM_GENERATOR_AGENT_ADDENDUM.md` and the dedicated decision record in `DECISION_018_MOCK_EXAM_GENERATOR.md`.
+
+**Scope guard:** ADR-018 defines long-term product architecture and does not expand Cycle 1. Cycle 1 remains Edexcel IAL Chemistry with Tutor + Assessor focus under ADR-010.
