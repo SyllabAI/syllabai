@@ -11,9 +11,9 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 
 ## Canonical project documents
 
-- `MASTER_SPEC.md`: engineering truth (v1.1, merged & verified 2026-09-03).
+- `MASTER_SPEC.md`: engineering truth (v1.2.0; controlled revision with 2026-09-07 architecture synchronization).
 - `AGENT.md`: agent behavior and mandatory implementation workflow.
-- `DECISIONS.md`: architecture decision records (ADR-001…017 in the consolidated ledger; ADR-018 is maintained as its dedicated decision record below pending ledger synchronization).
+- `DECISIONS.md`: architecture decision records (ADR-001…018 in the consolidated ledger).
 - `DECISION_018_MOCK_EXAM_GENERATOR.md`: ADR-018 for the blueprint-driven Mock Exam Generator.
 - `ARCHITECTURE_DISCUSSION_SYNC_2026-09-07.md`: consolidated durable index of the subject-first, teacher/classroom, learning-evidence, recommendation and mock-exam architecture discussions.
 - `SUBJECT_ARCHITECTURE.md`: canonical subject-first product boundary and specification-point graph model (2026-09-07).
