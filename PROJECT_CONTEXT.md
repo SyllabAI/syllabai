@@ -16,6 +16,9 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `DECISIONS.md`: architecture decision records (ADR-001…015).
 - `SUBJECT_ARCHITECTURE.md`: canonical subject-first product boundary and specification-point graph model (2026-09-07).
 - `TEACHER_ARCHITECTURE.md`: canonical teacher/classroom/LMS product model layered over the shared subject/graph/evidence substrate (2026-09-07).
+- `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`: canonical Question Attempt / Learning Log and question-level evidence architecture (2026-09-07).
+- `LEARNING_EVIDENCE_AGENT_ADDENDUM.md`: mandatory implementation rules for question-attempt evidence, review state, Smart Mark/test auto-logging, KG integration and teacher/research analytics.
+- `DECISION_016_QUESTION_ATTEMPT_EVIDENCE.md`: ADR-016 decision record for the learning-evidence subsystem.
 - `WORKLOG.md`: history.
 - `PROGRESS.md`: current state.
 - `TODO.md`: current work queue (Cycle 1 first).
@@ -24,6 +27,7 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `backlog/syllabai-master-project.xlsx`: definitive feature/project tracker (Cycle column = pilot cut).
 - `backlog/subject-architecture-feature-addendum.tsv`: committed text-form feature tracker addendum for the 2026-09-07 subject-first/specification-point decision.
 - `backlog/teacher-lms-feature-addendum.tsv`: committed text-form feature addendum for the 2026-09-07 teacher/classroom/LMS architecture discussion. It extends existing F-050/F-072/F-073/F-074/F-075 and records genuinely new gaps without duplicating existing feature IDs.
+- `backlog/learning-evidence-feature-addendum.tsv`: committed feature-tracker addendum for F-055/F-056/F-057/F-058/F-059 and their integrations, pending the next controlled workbook sync.
 
 ## Repositories
 
@@ -62,10 +66,24 @@ For teacher-facing workflows, this expands into:
 class evidence → class/student graph → teacher action → assignment/test/resource → new evidence → updated aggregation
 ```
 
+For question-level learning evidence, the canonical loop is:
+
+```text
+question/question-part
+  → learner attempt
+  → immutable QuestionAttempt / Learning Log evidence
+  → AssessmentEvidence
+  → learner model + diagnosis
+  → KG overlay + recommendation
+  → review / intervention
+  → new attempt
+```
+
+`QuestionAttempt` is an evidence event, not merely a completion flag. Learner review state (problematic, doubt, self-doubt, resolved, review priority) is a separate mutable state around the immutable evidence. Mastery remains an inference produced by the learner model; UI actions must not directly add/subtract mastery.
+
 ## Central research constructs
 
-Four layers: Content Knowledge · Exam Literacy · Learning Strategy · Self-Regulation.
-Six struggle types: 1 Prerequisite gap · 2 Surface engagement · 3 Exam literacy · 4 Metacognitive · 5 Motivational · 6 Instructional environment. Research-proposed splits: 3a/3b, 5a/5b.
+Four layers: Content Knowledge · Exam Literacy · Learning Strategy · Self-Regulation. Six struggle types: 1 Prerequisite gap · 2 Surface engagement · 3 Exam literacy · 4 Metacognitive · 5 Motivational · 6 Instructional environment. Research-proposed splits: 3a/3b, 5a/5b.
 
 ## Product architecture — subject-first
 
@@ -86,7 +104,7 @@ Board → Qualification → Subject → CurriculumVersion
 
 `SpecificationPoint` is a first-class node for the official numbered learning objectives in detailed specifications (e.g. `1.1`, `1.2`, `1.3`). It is the canonical bridge between official syllabus content, the user's specification-point-based Revision Notes, future question tagging, assessment evidence, and learner-state overlays.
 
-Resources map to specification points. Future QuestionVersion/QuestionPart tagging may map one item to multiple specification points; multi-topic coverage and uncertainty must be preserved. Learner state (mastery, misconceptions, confidence, fluency, review/decay, evidence) overlays the curriculum graph and does not mutate official curriculum content.
+Resources map to specification points. Future QuestionVersion/QuestionPart tagging may map one item to multiple SpecificationPoints; multi-topic coverage and uncertainty must be preserved. Learner state (mastery, misconceptions, confidence, fluency, review/decay, evidence) overlays the curriculum graph and does not mutate official curriculum content.
 
 ### Teacher and classroom layer
 
@@ -119,12 +137,32 @@ Teacher Data Assistant is analytics/evidence-oriented; Teacher AI Assistant is a
 
 **Canonical detail:** `SUBJECT_ARCHITECTURE.md` + `TEACHER_ARCHITECTURE.md`.
 
+## Learning evidence / Learning Log architecture
+
+The Question Attempt & Learning Evidence subsystem is a foundational cross-cutting layer. Its detailed contract is canonical in `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` and `LEARNING_EVIDENCE_AGENT_ADDENDUM.md`.
+
+Important implementation facts:
+
+- Preserve canonical Question and QuestionPart identity across Past Papers, Target Tests, Test Builder, Mock Exams, Teacher Assignments and Smart Lessons.
+- Prefer QuestionPart-level evidence because a part may map to multiple SpecificationPoints and may carry its own marking evidence.
+- Preserve `awardedMarks` + `maximumMarks`; percentages are derived.
+- Preserve source/session provenance, attempt number, timing, confidence, answer evidence, marking method and AI execution metadata where applicable.
+- Smart Mark and normal test submission should auto-log attempts.
+- “Previously attempted” must work across all question sources.
+- A paper-completed flag is not equivalent to every question being attempted; skipped questions must remain detectable.
+- Problematic/doubt/self-doubt/resolved state is learner review state around immutable attempts.
+- Flagging or resolution is never a deterministic mastery update. The old brainstorm `-0.02/+0.01` rule is rejected.
+- Review Hub, spaced review, recommendations, KG learner-state inference and teacher analytics all consume the same evidence substrate; do not create parallel tracking models.
+- Research-only telemetry (such as IRT or keystroke timing) must be versioned, privacy-aware and explicitly justified by the research protocol.
+
+The research basis is Paper B §3.5 (“The Learning Log”) and §3.13, including the explicit reason for preserving rich attempt telemetry and the 80%-of-a-paper / skipped-hard-questions failure mode.
+
 ## Execution scope
 
 Cycle 1 (authoritative, Master Spec §39a): Edexcel IAL Chemistry, ~50 students, 8 weeks, Tutor + Assessor agents only, predictions P1–P8. Cycle-1 rows in the backlog define the cut; everything else is Cycle 2+.
 
-The subject-first and teacher/classroom architectures are broader than Cycle 1 and do **not** authorize IGCSE bulk ingestion or other scope expansion by themselves. IGCSE Chemistry is an important target course/example for the long-term platform architecture.
+The subject-first, teacher/classroom and learning-evidence architectures are broader than Cycle 1 and do **not** authorize IGCSE bulk ingestion or other scope expansion by themselves. IGCSE Chemistry is an important target course/example for the long-term platform architecture.
 
 ## Important engineering insight
 
-The papers remain the authority for scientific definitions. The Master Spec is the engineering translation. `SUBJECT_ARCHITECTURE.md` is the canonical product/graph decision for subject scoping and specification-point granularity. `TEACHER_ARCHITECTURE.md` is the canonical teacher/classroom/LMS product-layer decision. Agents should not reread the entire papers for every ordinary task, but they must reread the relevant sections for research-sensitive changes.
+The papers remain the authority for scientific definitions and research constructs. The Master Spec is the engineering translation. `SUBJECT_ARCHITECTURE.md` is the canonical product/graph decision for subject scoping and specification-point granularity. `TEACHER_ARCHITECTURE.md` is the canonical teacher/classroom/LMS product-layer decision. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` is the canonical question-level evidence decision. Agents should not reread the entire papers for every ordinary task, but they must reread the relevant sections for research-sensitive changes.
