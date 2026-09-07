@@ -85,3 +85,27 @@ Repositories: `syllabai` (main pack), `syllabai-core`, `syllabai-web`, `syllabai
 **Date:** 2026-09-03
 
 Only permissively licensed code/data (MIT, Apache-2.0, ISC, ODbL with attribution) may be embedded in SyllabAI. BSL 1.1, AGPL, GPL, source-available-with-conditions, and custom/community licenses are reference-only. **SurrealDB is struck from all tiers** (spec v1.0 dossier listed it as "Apache-2.0" — verified false: it is BSL 1.1; surrealdb.com and GitHub confirm). Also reference-only: Chat2DB, PageLM, Blockify, SurfSense, open-knowledge, Leantime. Surya model weights (modified-OpenRAIL) and the SocraticLM dataset (CC-BY-NC) carry separate non-permissive terms — inspiration, never redistribution.
+
+## ADR-014: Subject-first student experience and first-class specification points
+
+**Status:** Accepted
+**Date:** 2026-09-07
+
+SyllabAI's long-term student product is organized around **subject enrollments**, not a single mixed-subject dashboard. A student can begin with zero subjects, then add courses through `Board → Qualification → Subject → Curriculum/Specification Version`. Each enrolled subject becomes a self-contained workspace containing its academic resources, assessment tools, tutor context, learner state, and subject knowledge graph.
+
+The curriculum model is extended from `Subject → Unit → Topic → SubTopic` to:
+
+```text
+Board → Qualification → Subject → CurriculumVersion
+  → Unit/Section → Topic/SubTopic → SpecificationPoint
+```
+
+A `SpecificationPoint` is a first-class curriculum/knowledge anchor for the official numbered learning objectives found in detailed board specifications (for example `1.1`, `1.2`, `1.3`). It preserves the official code, verbatim objective statement, ordering, curriculum version, source provenance, and explicitly stated applicability metadata. Agents must not flatten these objectives into generic tags or invent numbering.
+
+Resources such as Revision Notes, Flashcards, and Smart Lesson steps should map to specification points. Future QuestionVersion/QuestionPart tagging may map one question to multiple specification points and must preserve uncertainty/review state. This extends F-152 rather than replacing it.
+
+The stable curriculum graph and mutable learner state remain separate. Mastery, misconception, confidence, procedural fluency, evidence, and review state are overlays keyed to the relevant subject/curriculum graph nodes; they never mutate official curriculum content.
+
+The detailed decision and implementation blueprint is canonical in `SUBJECT_ARCHITECTURE.md`.
+
+**Scope guard:** this ADR changes the product architecture, not the active pilot scope. Cycle 1 remains Edexcel IAL Chemistry under ADR-010. IGCSE Chemistry is a supported target architecture/example, not authorization to begin IGCSE bulk ingestion.
