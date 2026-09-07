@@ -281,12 +281,12 @@ Existing feature identities were preserved:
 
 F-051 is expanded rather than duplicated. New supporting rows are registered in `backlog/mock-exam-generator-feature-addendum.tsv`:
 
-- F-169 Exam Blueprint Registry & Versioning
-- F-170 Assessment Block / Shared Context Modeling
-- F-171 Mock Blueprint Fidelity Validation
-- F-172 Personalized Mock Allocation
-- F-173 Validated AI Question Variant Pipeline
-- F-174 Mock Prediction & Readiness Evaluation
+- F-171 Exam Blueprint Registry & Versioning
+- F-172 Assessment Block / Shared Context Modeling
+- F-173 Mock Blueprint Fidelity Validation
+- F-174 Personalized Mock Allocation
+- F-175 Validated AI Question Variant Pipeline
+- F-176 Mock Prediction & Readiness Evaluation
 
 ## 8. Architectural integration
 
