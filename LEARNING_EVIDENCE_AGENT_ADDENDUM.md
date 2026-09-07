@@ -6,6 +6,8 @@ This document is mandatory reading for work involving questions, assessment atte
 
 Read `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` before implementation. The canonical feature IDs are F-055 through F-059, with integration through F-029, F-033, F-047, F-050, F-054, F-078, F-091, F-153, F-154 and F-168.
 
+For recommendation-specific work, also read `RECOMMENDATION_SYSTEM_ARCHITECTURE.md` and `RECOMMENDATION_SYSTEM_AGENT_ADDENDUM.md`.
+
 ## Non-negotiable rules
 
 1. Treat Question Attempt history as immutable evidence, not a mutable status table.
@@ -23,6 +25,10 @@ Read `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` before implementation. The cano
 13. Recommendation outputs must remain distinct from measured learner facts.
 14. Teacher aggregates require class/subject authorization, an explicit time window, and evidence lineage.
 15. Research-only telemetry such as IRT or keystroke timing requires explicit research/privacy justification; do not add it casually to product-critical flows.
+
+## Recommendation integration rule
+
+The Learning Log is a downstream-outcome substrate for recommendations. A recommendation is not validated merely because a learner clicked or watched it. Where possible, evaluate recommendations against subsequent assessment evidence, retrieval success, prerequisite correction, retention and syllabus coverage. Read the recommendation architecture before modifying ranking or exploration behavior.
 
 ## Research-sensitive requirement
 
