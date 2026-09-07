@@ -13,7 +13,7 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 
 - `MASTER_SPEC.md`: engineering truth (v1.1, merged & verified 2026-09-03).
 - `AGENT.md`: agent behavior and mandatory implementation workflow.
-- `DECISIONS.md`: architecture decision records (ADR-001…017 in the consolidated ledger).
+- `DECISIONS.md`: architecture decision records (ADR-001…017 in the consolidated ledger; ADR-018 is maintained as its dedicated decision record below pending ledger synchronization).
 - `DECISION_018_MOCK_EXAM_GENERATOR.md`: ADR-018 for the blueprint-driven Mock Exam Generator.
 - `ARCHITECTURE_DISCUSSION_SYNC_2026-09-07.md`: consolidated durable index of the subject-first, teacher/classroom, learning-evidence, recommendation and mock-exam architecture discussions.
 - `SUBJECT_ARCHITECTURE.md`: canonical subject-first product boundary and specification-point graph model (2026-09-07).
@@ -35,7 +35,7 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `backlog/teacher-lms-feature-addendum.tsv`: committed text-form feature addendum for the 2026-09-07 teacher/classroom/LMS architecture discussion. It extends existing F-050/F-072/F-073/F-074/F-075 and records genuinely new gaps without duplicating existing feature IDs.
 - `backlog/learning-evidence-feature-addendum.tsv`: committed feature-tracker addendum for F-055/F-056/F-057/F-058/F-059 and their integrations, pending the next controlled workbook sync.
 - `backlog/recommendation-system-feature-addendum.tsv`: committed feature-tracker addendum for the learning-first recommendation architecture, pending the next controlled workbook sync.
-- `backlog/mock-exam-generator-feature-addendum.tsv`: committed feature-tracker addendum extending F-051 with F-169…F-174, pending the next controlled workbook sync.
+- `backlog/mock-exam-generator-feature-addendum.tsv`: committed feature-tracker addendum extending F-051 with F-171…F-176, pending the next controlled workbook sync.
 
 ## Repositories
 
@@ -264,7 +264,7 @@ Existing feature identities were preserved and extended rather than duplicated:
 - Teacher architecture: existing F-050/F-072/F-073/F-074/F-075 family extended; no duplicate teacher features.
 - Learning evidence: F-055/F-056/F-057/F-058/F-059 plus related assessment/recommendation integrations.
 - Recommendation: existing F-087–F-093 family extended with learning-first constraints and evaluation.
-- Mock exams: **F-051 remains canonical** and is extended by F-169…F-174 in `backlog/mock-exam-generator-feature-addendum.tsv`.
+- Mock exams: **F-051 remains canonical** and is extended by F-171…F-176 in `backlog/mock-exam-generator-feature-addendum.tsv`.
 
 ## Execution scope
 
