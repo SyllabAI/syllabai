@@ -13,13 +13,15 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 
 - `MASTER_SPEC.md`: engineering truth (v1.1, merged & verified 2026-09-03).
 - `AGENT.md`: agent behavior.
-- `DECISIONS.md`: architecture decision records (ADR-001…013).
+- `DECISIONS.md`: architecture decision records (ADR-001…014).
+- `SUBJECT_ARCHITECTURE.md`: canonical subject-first product boundary and specification-point graph model (2026-09-07).
 - `WORKLOG.md`: history.
 - `PROGRESS.md`: current state.
 - `TODO.md`: current work queue (Cycle 1 first).
 - `REPOSITORY_RESEARCH.md`: external repository dossier (section 0 = integration verdicts).
 - `PLATFORM_RESEARCH.md`: verified platform/free-tier research.
 - `backlog/syllabai-master-project.xlsx`: definitive feature/project tracker (Cycle column = pilot cut).
+- `backlog/subject-architecture-feature-addendum.xlsx`: feature-tracker addendum for the 2026-09-07 subject-first/specification-point decision; integrate these rows into the definitive workbook on the next controlled tracker sync.
 
 ## Repositories (ADR-012)
 
@@ -54,10 +56,35 @@ content → knowledge → learner state → diagnosis → intervention → asses
 Four layers: Content Knowledge · Exam Literacy · Learning Strategy · Self-Regulation.
 Six struggle types: 1 Prerequisite gap · 2 Surface engagement · 3 Exam literacy · 4 Metacognitive · 5 Motivational · 6 Instructional environment. Research-proposed splits: 3a/3b, 5a/5b.
 
+## Product architecture — subject-first
+
+The student experience is organized around explicit **subject enrollments**. A new student may have zero subjects. Adding one follows:
+
+```text
+Board → Qualification → Subject → Curriculum / Specification Version
+```
+
+Each enrolled subject is a self-contained academic workspace containing Overview, Revision Notes, Exam Questions, Past Papers, Flashcards, Target Test, Mock Exams, Smart Lesson, Tutor, and Knowledge Graph.
+
+The curriculum graph is more granular than the old Unit/Topic/SubTopic model:
+
+```text
+Board → Qualification → Subject → CurriculumVersion
+  → Unit/Section → Topic/SubTopic → SpecificationPoint
+```
+
+`SpecificationPoint` is a first-class node for the official numbered learning objectives in detailed specifications (e.g. `1.1`, `1.2`, `1.3`). It is the canonical bridge between official syllabus content, the user's specification-point-based Revision Notes, future question tagging, assessment evidence, and learner-state overlays.
+
+Resources map to specification points. Future QuestionVersion/QuestionPart tagging may map one item to multiple specification points; multi-topic coverage and uncertainty must be preserved. Learner state (mastery, misconceptions, confidence, fluency, review/decay, evidence) overlays the curriculum graph and does not mutate official curriculum content.
+
+**Canonical detail:** `SUBJECT_ARCHITECTURE.md`.
+
 ## Execution scope
 
 Cycle 1 (authoritative, Master Spec §39a): Edexcel IAL Chemistry, ~50 students, 8 weeks, Tutor + Assessor agents only, predictions P1–P8. Cycle-1 rows in the backlog define the cut; everything else is Cycle 2+.
 
+The subject-first architecture is broader than Cycle 1 and does **not** authorize IGCSE bulk ingestion or other scope expansion by itself. IGCSE Chemistry is an important target course/example for the long-term platform architecture.
+
 ## Important engineering insight
 
-The papers remain the authority for scientific definitions. The Master Spec is the engineering translation. Agents should not reread the entire papers for every ordinary task, but they must reread the relevant sections for research-sensitive changes.
+The papers remain the authority for scientific definitions. The Master Spec is the engineering translation. `SUBJECT_ARCHITECTURE.md` is the canonical product/graph decision for subject scoping and specification-point granularity. Agents should not reread the entire papers for every ordinary task, but they must reread the relevant sections for research-sensitive changes.
