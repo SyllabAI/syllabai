@@ -1,7 +1,7 @@
 # SyllabAI Master Technical Specification
 
 **Document status:** Canonical project specification  
-**Specification version:** 1.1.0 (merged & verified 2026-09-03)  
+**Specification version:** 1.2.0 (architecture-extension revision, 2026-09-07 — executes the reconciliation plan of `DOCUMENTATION_CONTRADICTION_AUDIT_2026-09-07.md`: ADR-014 subject-first / `SpecificationPoint` canonicalization, ADR-015 teacher/classroom LMS layer, ADR-016 question-attempt & learning evidence, ADR-017 learning-first recommendations; v1.1.0 engineering core unchanged)  
 **Research date:** 2026-09-02  
 **Project:** SyllabAI  
 **Academic context:** Advanced Object Oriented Programming (Java backend)  
@@ -19,10 +19,11 @@ The two research papers remain authoritative for scientific claims, hypotheses, 
 
 1. **Current research papers** - authority for scientific framing, hypotheses, operational definitions, and research claims.
 2. **This Master Technical Specification** - authority for the current software architecture and engineering decisions.
-3. **Definitive project spreadsheet** - authority for feature inventory, dependencies, implementation status, priority, owner, and execution tracking.
-4. **Repository Research Dossier** - implementation-reference knowledge about external/open-source projects.
-5. **AGENT.md** - operating procedure for coding agents and maintenance rules.
-6. **Worklog / Progress / TODO / Decisions** - living project state and history.
+3. **Canonical architecture addenda** (`SUBJECT_ARCHITECTURE.md`, `TEACHER_ARCHITECTURE.md`, `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`, `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`, with ADR-014–ADR-017 in `DECISIONS.md`) - authority for their named architecture layers. Where this spec and an addendum disagree, the addendum governs for its layer; record the discrepancy in `WORKLOG.md` and fold it back at the next controlled spec revision.
+4. **Definitive project spreadsheet** - authority for feature inventory, dependencies, implementation status, priority, owner, and execution tracking.
+5. **Repository Research Dossier** - implementation-reference knowledge about external/open-source projects.
+6. **AGENT.md** - operating procedure for coding agents and maintenance rules.
+7. **Worklog / Progress / TODO / Decisions** - living project state and history.
 
 If these sources disagree, do not silently resolve the conflict. Record the discrepancy in `WORKLOG.md`, update `DECISIONS.md` if a decision is required, and escalate the relevant scientific question to the papers before changing research semantics.
 
@@ -156,17 +157,16 @@ The former `syllabai-knowledge` / `-assessment` / `-learner-model` / `-ai` / `-r
                                   │ HTTPS
                                   ▼
                     ┌───────────────────────────┐
-                    │       syllabai-core       │
-                    │ Java 25 / Spring Boot     │
-                    │ Modular Monolith          │
+                    │       syllabai-core        │
+                    │ Java 25 / Spring Boot      │
+                    │ Modular Monolith           │
                     └─────────────┬─────────────┘
                                   │
        ┌──────────────────────────┼──────────────────────────┐
        ▼                          ▼                          ▼
- Assessment                 Learner/Diagnosis            Tutor/AI
-       │                          │                          │
-       ▼                          ▼                          ▼
- syllabai-assessment       syllabai-learner-model     syllabai-ai
+ Assessment module         Learner/Diagnosis           Tutor/AI modules
+ (bounded context          modules (bounded             (bounded context
+  inside core)              contexts inside core)        inside core)
        │                          │                          │
        └──────────────────────────┼──────────────────────────┘
                                   ▼
@@ -187,6 +187,8 @@ The former `syllabai-knowledge` / `-assessment` / `-learner-model` / `-ai` / `-r
                                anydoc / pdf-inspector
 ```
 
+The three labels above the data layer (`Assessment module`, `Learner/Diagnosis modules`, `Tutor/AI modules`) are **bounded-context modules inside `syllabai-core`**, not separate repositories — ADR-012 consolidated the former `syllabai-assessment` / `syllabai-learner-model` / `syllabai-ai` spec-v1.0 repositories as modules of the monolith. The current repository set is `syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser`, plus the public `Past-Papers` corpus repository (section 3). Never describe internal modules as deployable repositories.
+
 ---
 
 All AI calls flow through `LlmProvider` / `EmbeddingProvider` ports; the default implementation is the free-tier chain Groq → Gemini 2.5 Flash → OpenRouter (section 26.1). Binary sources live in object storage (Cloudflare R2 free tier, no credit card), never on the Render filesystem.
@@ -196,6 +198,8 @@ All AI calls flow through `LlmProvider` / `EmbeddingProvider` ports; the default
 ## 5.1 Experience layer
 
 Student, teacher, administrator, and later parent/school experiences.
+
+Long-term product shape (ADR-014/015): a student starts with zero subjects and enrolls via `Board → Qualification → Subject → Curriculum/Specification Version`; each enrolled subject opens a self-contained workspace (dashboard, revision notes, exam questions, past papers, flashcards, Target Test, mock exams, Smart Lesson, tutor, knowledge graph — F-164/F-165). Class-enrolled students see Announcements/Assignments/My Results in the same workspace. Teachers get a subject-scoped workspace over the same substrate (section 6.10).
 
 ## 5.2 Application layer
 
@@ -246,11 +250,13 @@ Entities:
 - Board
 - Qualification
 - Subject
-- Unit
+- CurriculumVersion (SpecificationVersion)
+- Unit / Section
 - Topic
 - SubTopic
-- LearningObjective
-- CurriculumVersion
+- SpecificationPoint
+
+The canonical hierarchy is `Board → Qualification → Subject → CurriculumVersion → Unit/Section → Topic/SubTopic → SpecificationPoint` (ADR-014). A `SpecificationPoint` is the first-class anchor for the official numbered learning objectives of a board specification (e.g. `1.1`, `1.2`): it preserves the official code, verbatim objective statement, ordering, curriculum version, source provenance, and applicability metadata; agents must never flatten points into generic tags or invent numbering. The v1.1 term `LearningObjective` is a **legacy alias** of `SpecificationPoint` — existing code and migrations may keep the older name, but both must never appear as competing canonical entities.
 
 Relationships:
 - PART_OF
@@ -384,6 +390,8 @@ Candidate sources:
 
 The final system supports a layered recommender rather than a single algorithm.
 
+**Learning-first principle (ADR-017, 2026-09-07):** recommendations maximize expected learning progress and appropriate syllabus coverage under subject/curriculum, validation, authorization, prerequisite and teacher constraints — never engagement. Rule-based candidates are the canonical baseline (F-087); content-based similarity only expands candidates (F-088); collaborative filtering is a later experiment that can never override hard pedagogical constraints (F-089); the long-term architecture is a hybrid cascade — hard constraints → rule candidates → content-based expansion → optional learned ranking → constrained exploration → explainable next-best action (F-090). Recommendations are actions, not just resources (F-092); every recommendation carries structured evidence-backed reason codes (F-093); LLMs never invent learner statistics or causal explanations. The old hard-coded 10% random epsilon-greedy exploration rule is rejected as a product rule; educational video discovery and watch telemetry are redesigns under the same decision (F-025/F-026). Canonical design: `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`.
+
 ## 6.10 Teacher intelligence
 
 Responsibilities:
@@ -396,6 +404,8 @@ Responsibilities:
 - Smart Mark review
 - teacher overrides
 - professional development recommendations
+
+**Teacher/classroom LMS layer (ADR-015, 2026-09-07):** the long-term product adds a role-specific teacher layer over the **same** subject graph, question bank, evidence and learner-model substrate used by students — never a second curriculum or parallel graph. Teachers are subject-scoped (teacher workspace per taught subject); class-enrolled students keep one identity/learner state and gain Announcements/Assignments/My Results inside the same subject workspace. The teacher KG is a different lens over one shared graph: a teaching-coverage overlay (`NOT_TAUGHT` is semantically distinct from `LOW_MASTERY` — grey nodes mean absent teaching coverage, not weak understanding) plus class-level aggregation with drill-down from class node → affected students → individual graph → evidence → action. The Teacher AI Assistant (grounded academic/content copilot) and the Data Assistant (authorized structured analytics that never invents counts, marks, dates, or risk labels) are separate systems. At-Risk Students is evidence-first: every flag exposes contributing evidence, time window, and rule/model version (F-073 + TFA-08). The existing F-050 Test Builder remains the canonical test-creation identity; the new requirement is an evidence-driven enhancement (TFA-06), not a duplicate feature. `T-029` is the current minimal teacher review surface — its Cycle-1 enabled-STUDENT cohort roster is a pilot shortcut, not the final Class domain model (future class management introduces the explicit class/membership model with authorization boundaries). Canonical blueprint: `TEACHER_ARCHITECTURE.md`; tracker rows: `backlog/teacher-lms-feature-addendum.tsv` (TFA-01…TFA-08, synced into the master workbook 2026-09-07). This layer is long-term architecture and does not expand Cycle 1.
 
 ## 6.11 Research
 
@@ -412,18 +422,23 @@ Responsibilities:
 
 # 7. Knowledge graph specification
 
-The canonical educational hierarchy is:
+The canonical educational hierarchy is (ADR-014):
 
 ```text
-Subject
-  └── Unit
-       └── Topic
-            └── SubTopic
-                 ├── Misconception
-                 ├── LearningObjective
-                 ├── Question
-                 └── Resource
+Board
+  └── Qualification
+       └── Subject
+            └── CurriculumVersion / SpecificationVersion
+                 └── Unit / Section
+                      └── Topic
+                           └── SubTopic
+                                ├── SpecificationPoint
+                                ├── Misconception
+                                ├── Question
+                                └── Resource
 ```
+
+`SpecificationPoint` is the canonical fine-grained curriculum entity (the spec-v1.1 term `LearningObjective` is a legacy alias — keep at most one canonical entity in code and docs). Resources, questions, learner evidence and adaptive surfaces map to SpecificationPoints; learner state (mastery, misconceptions, confidence, fluency, review) is a separate time-aware **overlay** on this stable graph and never mutates official curriculum nodes. The subject-first student product (subject enrollment → subject workspace; F-164/F-165) and the teacher lens (section 6.10) are both built over this one shared graph.
 
 Minimum edge types:
 
@@ -535,6 +550,7 @@ command_word
 difficulty
 primary_topic
 secondary_topics[]
+specification_points[]
 prerequisites[]
 misconceptions[]
 mark_points[]
@@ -545,6 +561,8 @@ version
 ```
 
 The system must not force a multi-topic question into one topic. Secondary mappings are first-class.
+
+**Specification-point mapping (ADR-014 / F-168):** `QuestionVersion` / `QuestionPart` may map to one or more `SpecificationPoint`s, preserving multi-point coverage, mapping confidence, provenance, and validation state — unreviewed/suggested mappings never become authoritative. Topic-level placement (above) remains valid and is extended, not replaced, by point-level mapping.
 
 ---
 
@@ -607,6 +625,14 @@ LearnerModel.update(evidence)
 ```
 
 This keeps assessment, learner modeling, and research instrumentation decoupled.
+
+**Question Attempt & Learning Evidence subsystem (ADR-016, 2026-09-07):** F-055 is promoted to a foundational evidence subsystem with the invariant
+
+```text
+Immutable assessment evidence  ≠  Mutable learner review state  ≠  Derived learner mastery
+```
+
+Canonical `Question`/`QuestionPart` identity is preserved across Past Papers, Target Tests, Test Builder, Mock Exams, teacher assignments and Smart Lessons; normal submissions and Smart Mark attempts auto-log as evidence (with AI execution metadata kept separate from human overrides); `awardedMarks`/`maximumMarks` are preserved, not only percentages; skipped/unattempted parts stay detectable even when a paper session is marked complete; problematic/doubt/self-doubt/resolved flags are mutable review state around immutable attempts — evidence, never deterministic mastery arithmetic (the old `flag → -0.02` / `resolve → +0.01` / "self-doubt halves mastery gain" rules are rejected). Review Hub, spaced review, recommendations, KG inference and teacher analytics all consume this one evidence substrate — no parallel tracking models. Full contract: `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`.
 
 ---
 
@@ -1451,7 +1477,7 @@ The build waves in section 39 describe the full-system roadmap. The **authoritat
 - **Agents in scope:** **Tutor + Assessor only** (Paper B Cycle 1). No coach/counselor agents.
 - **Study:** pre-registered predictions P1–P8 evaluated against learning-log telemetry.
 - **Feature cut:** the rows marked `Cycle 1` in the definitive backlog (34 rows; 12 of them are the critical-path spine: F-020 syllabus parser → F-032 KG → F-033 overlay → F-040 KA-RAG → F-041/F-043 tutor chat with citations → F-047 Smart Mark → F-055 attempt logging → F-137/F-138 learner model + BKT → F-148 LLM provider → F-160 learning log).
-- **Everything else** (teacher analytics depth, DAT, gamification, mobile, community, multimodal, mock-exam blueprints) is Cycle 2+ and must not be pulled into Cycle 1.
+- **Everything else** (teacher analytics depth, DAT, gamification, mobile, community, multimodal, mock-exam blueprints) is Cycle 2+ and must not be pulled into Cycle 1. The 2026-09-07 architecture extensions — subject-first workspaces (F-164+), the teacher/classroom LMS layer (TFA-01…TFA-08), point-level question tagging (F-168) and the learning-first recommender (ADR-017) — are likewise Cycle 2+ unless individually promoted by an explicit scope decision.
 
 **Cycle-1 exit criteria:** BKT updates live for all pilot topics; KA-RAG answers carry verbatim citations; Smart Mark released to students only after the κ ≥ 0.60 agreement gate (F-161) vs human double-marking; the learning log captures the Paper B §3.5 research fields (keystroke/dwell timing, self-doubt flag, response latency, IRT item parameters); the timed-vs-untimed fluency-gap construct (F-162) is computed for every pilot student.
 
@@ -1540,10 +1566,15 @@ The project should maintain:
 - `WORKLOG.md` - chronological execution history.
 - `PROGRESS.md` - current-state dashboard narrative.
 - `TODO.md` - actionable work queue.
-- `DECISIONS.md` - architectural decision records.
+- `DECISIONS.md` - architectural decision records (ADR-001…ADR-017).
 - `REPOSITORY_RESEARCH.md` - researched external repository dossier.
 - `README.md` - project entry point and navigation.
 - `PROJECT_CONTEXT.md` - concise cross-document orientation for humans/agents.
+- `SUBJECT_ARCHITECTURE.md` - canonical subject-first / specification-point architecture (ADR-014).
+- `TEACHER_ARCHITECTURE.md` - canonical teacher/classroom LMS blueprint (ADR-015).
+- `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` - canonical evidence-subsystem contract (ADR-016).
+- `RECOMMENDATION_SYSTEM_ARCHITECTURE.md` - canonical learning-first recommender design (ADR-017).
+- `backlog/*-feature-addendum.tsv` - detailed feature-tracker addenda feeding the definitive master workbook.
 
 The research papers themselves should remain in the context pack and project source archive.
 

@@ -72,10 +72,10 @@ The authoritative execution scope is Paper B's Cycle-1 pilot: Edexcel IAL Chemis
 
 Java (25, Spring Boot 4.1, Spring AI 2.0) owns the domain core — the Advanced OOP course requirement and the strongest domain-model fit. Components where another ecosystem is clearly better may use that language: web frontend in TypeScript (Next.js), offline OCR/ML parsing in Python/Rust (MinerU/Surya) inside `syllabai-parser`. Where the choice is a tie, Java wins (e.g. opendataloader-pdf — Java + Apache-2.0, embeddable in-process via Maven, no extra runtime).
 
-## ADR-012: Four repositories now; module repos deferred
+## ADR-012: Four application repositories now; module repos deferred (public corpus repository tracked separately)
 
 **Status:** Accepted
-**Date:** 2026-09-03
+**Date:** 2026-09-03 (title clarified 2026-09-07 per the documentation contradiction audit — the historical decision is unchanged)
 
 Repositories are `syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser`, plus the public `Past-Papers` corpus repository described in the current Master Spec and Project Context. The former syllabai-knowledge/-assessment/-learner-model/-ai/-research/-infrastructure repos become strongly-separated modules inside the `syllabai-core` monolith. They graduate to repositories only when a genuine runtime/lifecycle boundary appears. Rationale: solo + AI-agent development; many repos of mostly-empty stubs create process overhead at pilot scale.
 
@@ -208,3 +208,16 @@ Paper B §3.5 explicitly defines the Learning Log and explains the 80%-of-a-pape
 The full implementation contract is canonical in `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`; agent-specific rules are in `LEARNING_EVIDENCE_AGENT_ADDENDUM.md`.
 
 **Scope guard:** ADR-016 defines long-term product and research architecture and does not expand Cycle 1. Cycle 1 remains Edexcel IAL Chemistry with Tutor + Assessor focus under ADR-010.
+
+## ADR-017: Learning-first recommendation system
+
+**Status:** Accepted
+**Date:** 2026-09-07
+
+SyllabAI implements recommendations as a **learning-first adaptive action-selection system**, not an engagement-maximizing feed. The objective is expected learning progress and appropriate syllabus coverage under subject/curriculum, validation, authorization, prerequisite and teacher constraints. The canonical model is a cascade: learner evidence/state + subject/specification graph → constrained candidate generation → content-based expansion → optional learned ranking → constrained exploration → explainable next-best learning action → new learner evidence.
+
+Rules: rule-based recommendations are the canonical baseline (F-087); content-based similarity is candidate expansion, not the objective (F-088); collaborative filtering is a later experiment that can never override hard pedagogical/curriculum constraints (F-089); the hybrid cascade is the canonical long-term architecture (F-090); the old hard-coded 10% random epsilon-greedy exploration proposal is rejected as a product rule and the old 0–5/5–20/20+ interaction thresholds are heuristic examples, not scientific constants (F-091); personalized next steps are the primary learner-facing orchestration — recommendations are actions, not just resources (F-092); reasons derive from structured evidence and reason codes, never invented statistics (F-093); recommendation quality is ultimately evaluated with learning outcomes, not CTR/watch time (F-154); educational video discovery is subject-scoped and validated, with generic YouTube recommendation feeds explicitly rejected as SyllabAI's learning policy and watch time treated as telemetry, never mastery (F-025/F-026). No recommendation microservice is needed under the modular-monolith architecture. The decision extends the existing tracker rows rather than duplicating them; the recommendation engine consumes the ADR-016 evidence subsystem.
+
+The full design is canonical in `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`; agent rules are in `RECOMMENDATION_SYSTEM_AGENT_ADDENDUM.md`; the decision record is also mirrored in `ADR_017_LEARNING_FIRST_RECOMMENDATION_SYSTEM.md`.
+
+**Scope guard:** ADR-017 defines long-term product architecture and does not expand Cycle 1. Cycle 1 remains Edexcel IAL Chemistry with Tutor + Assessor focus under ADR-010.
