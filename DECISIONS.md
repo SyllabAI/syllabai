@@ -74,17 +74,17 @@ Java (25, Spring Boot 4.1, Spring AI 2.0) owns the domain core — the Advanced 
 
 ## ADR-012: Four repositories now; module repos deferred
 
-**Status:** Accepted (supersedes the 10-repo tree in spec v1.0 §3)
+**Status:** Accepted
 **Date:** 2026-09-03
 
-Repositories: `syllabai` (main pack), `syllabai-core`, `syllabai-web`, `syllabai-parser`. The former syllabai-knowledge/-assessment/-learner-model/-ai/-research/-infrastructure repos become strongly-separated modules inside the `syllabai-core` monolith. They graduate to repositories only when a genuine runtime/lifecycle boundary appears. Rationale: solo + AI-agent development; 10 repos of mostly-empty stubs is process overhead with zero payoff at pilot scale.
+Repositories are `syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser`, plus the public `Past-Papers` corpus repository described in the current Master Spec and Project Context. The former syllabai-knowledge/-assessment/-learner-model/-ai/-research/-infrastructure repos become strongly-separated modules inside the `syllabai-core` monolith. They graduate to repositories only when a genuine runtime/lifecycle boundary appears. Rationale: solo + AI-agent development; many repos of mostly-empty stubs create process overhead at pilot scale.
 
 ## ADR-013: License wall for external code and data
 
 **Status:** Accepted
 **Date:** 2026-09-03
 
-Only permissively licensed code/data (MIT, Apache-2.0, ISC, ODbL with attribution) may be embedded in SyllabAI. BSL 1.1, AGPL, GPL, source-available-with-conditions, and custom/community licenses are reference-only. **SurrealDB is struck from all tiers** (spec v1.0 dossier listed it as "Apache-2.0" — verified false: it is BSL 1.1; surrealdb.com and GitHub confirm). Also reference-only: Chat2DB, PageLM, Blockify, SurfSense, open-knowledge, Leantime. Surya model weights (modified-OpenRAIL) and the SocraticLM dataset (CC-BY-NC) carry separate non-permissive terms — inspiration, never redistribution.
+Only permissively licensed code/data (MIT, Apache-2.0, ISC, ODbL with attribution) may be embedded in SyllabAI. BSL 1.1, AGPL, GPL, source-available, and custom/community licenses are reference-only. **SurrealDB is reference-only** (BSL 1.1). Also reference-only: Chat2DB, PageLM, Blockify, SurfSense, open-knowledge, Leantime. Surya model weights and the SocraticLM dataset carry separate non-permissive terms.
 
 ## ADR-014: Subject-first student experience and first-class specification points
 
@@ -100,7 +100,7 @@ Board → Qualification → Subject → CurriculumVersion
   → Unit/Section → Topic/SubTopic → SpecificationPoint
 ```
 
-A `SpecificationPoint` is a first-class curriculum/knowledge anchor for the official numbered learning objectives found in detailed board specifications (for example `1.1`, `1.2`, `1.3`). It preserves the official code, verbatim objective statement, ordering, curriculum version, source provenance, and explicitly stated applicability metadata. Agents must not flatten these objectives into generic tags or invent numbering.
+A `SpecificationPoint` is a first-class curriculum/knowledge anchor for the official numbered learning objectives found in detailed board specifications. It preserves official code, verbatim objective statement, ordering, curriculum version, source provenance, and applicability metadata. Agents must not flatten these objectives into generic tags or invent numbering.
 
 Resources such as Revision Notes, Flashcards, and Smart Lesson steps should map to specification points. Future QuestionVersion/QuestionPart tagging may map one question to multiple specification points and must preserve uncertainty/review state. This extends F-152 rather than replacing it.
 
@@ -109,3 +109,41 @@ The stable curriculum graph and mutable learner state remain separate. Mastery, 
 The detailed decision and implementation blueprint is canonical in `SUBJECT_ARCHITECTURE.md`.
 
 **Scope guard:** this ADR changes the product architecture, not the active pilot scope. Cycle 1 remains Edexcel IAL Chemistry under ADR-010. IGCSE Chemistry is a supported target architecture/example, not authorization to begin IGCSE bulk ingestion.
+
+## ADR-015: Role-aware teacher/classroom LMS layer over the shared subject graph
+
+**Status:** Accepted
+**Date:** 2026-09-07
+
+SyllabAI's long-term product includes a role-specific **Teacher/Classroom/LMS layer** built over the same Board → Qualification → Subject → CurriculumVersion → SpecificationPoint graph, question bank, content system, assessment evidence, and learner-model substrate used by students.
+
+Teachers are subject-scoped. Clicking a taught subject opens a teacher workspace containing subject resources plus teacher workflows such as Classes, Assignments, Test Builder, Mock Exams, Announcements, Knowledge Graph, At-Risk Students, reports, Teacher AI Assistant, and Data Assistant. Smart Lesson remains primarily a student-facing adaptive workflow unless a later decision adds a teacher-specific variant.
+
+There are two student interface modes over one identity and learner model:
+
+```text
+Independent student
+  └── subject workspace
+
+Classroom-enrolled student
+  └── same subject workspace
+       └── Announcements + Assignments + My Results/Feedback
+```
+
+Class enrollment is an additional capability/authorization relationship, not a second account or second learner model.
+
+The teacher Knowledge Graph is a **different lens over the same graph**, not a separate curriculum graph. It adds a teaching-coverage overlay and class-level aggregation of learner state. `NOT_TAUGHT` is semantically distinct from `LOW_MASTERY`; grey nodes may indicate absent teaching coverage, while taught nodes may be colored by class understanding. Class aggregates should preserve distributions, evidence counts, and misconception prevalence rather than relying on mean mastery alone. Teachers must be able to drill down from class node → affected students → individual student graph → evidence → teacher action.
+
+The Teacher AI Assistant and Data Assistant are separate capabilities:
+- Teacher AI Assistant: grounded academic/content/teaching copilot.
+- Data Assistant: authorized structured analytics assistant that summarizes class/student evidence and never invents marks, counts, dates, or risk labels.
+
+At-Risk Students is evidence-first. Every flag must be inspectable and should expose contributing evidence plus the relevant rule/model version. Teacher-facing AI-generated questions/resources remain drafts until they satisfy the project's validation/content-serving policy.
+
+The existing F-050 Test Builder remains the canonical feature identity for teacher test creation. The new requirement is an **evidence-driven enhancement**, not a duplicate feature: specification-point, skill, misconception, class-weakness and teaching-coverage targeting may augment the existing builder while retaining manual question selection, reuse/edit behavior and PDF export.
+
+`T-029` is a minimal current teacher review surface, not the complete teacher product. Its Cycle-1-era roster implementation intentionally uses the enabled STUDENT cohort because a persistent Class domain entity is not yet part of the pilot. Future Class Management must introduce the explicit class/membership model rather than treating the pilot shortcut as final architecture.
+
+The complete teacher/classroom/LMS blueprint is canonical in `TEACHER_ARCHITECTURE.md`.
+
+**Scope guard:** ADR-015 defines the long-term product architecture and does not expand Cycle 1. Cycle 1 remains Edexcel IAL Chemistry with Tutor + Assessor focus under ADR-010.
