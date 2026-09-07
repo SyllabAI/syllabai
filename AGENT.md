@@ -12,8 +12,9 @@ Before making substantial changes:
 2. Read the relevant rows in the definitive project spreadsheet (`backlog/syllabai-master-project.xlsx`, TSV export alongside it).
 3. Read the relevant repository/module documentation.
 4. Read `PROJECT_CONTEXT.md` if the task is cross-cutting or unclear.
-5. Read `SUBJECT_ARCHITECTURE.md` for any product, curriculum, content-linking, assessment-tagging, knowledge-graph, student-dashboard, or subject-enrollment task.
-6. Read the relevant section of the research papers when the task changes research constructs, hypotheses, metrics, operational definitions, or learning-model behavior.
+5. Read `SUBJECT_ARCHITECTURE.md` for any product, curriculum, content-linking, assessment-tagging, knowledge-graph, student-dashboard, teacher-subject-workspace, or subject-enrollment task.
+6. Read `TEACHER_ARCHITECTURE.md` for any teacher, class, classroom-student, LMS, Test Builder, assignment, announcement, teacher-analytics, teacher-AI, Data Assistant, At-Risk Students, teaching-coverage, class-KG, or teacher-to-student-graph task.
+7. Read the relevant section of the research papers when the task changes research constructs, hypotheses, metrics, operational definitions, or learning-model behavior.
 
 The Master Spec is the **engineering source of truth**, but it does **not** replace the papers for research claims. Agents do not need to reread both papers for ordinary CRUD/UI/infrastructure work. They must reread the relevant paper section for research-sensitive work.
 
@@ -25,7 +26,8 @@ The Master Spec is the **engineering source of truth**, but it does **not** repl
 4. REPOSITORY_RESEARCH.md: external implementation references.
 5. DECISIONS.md: explicit architecture decisions.
 6. SUBJECT_ARCHITECTURE.md: canonical product boundary and specification-point model for subject-first work.
-7. WORKLOG/PROGRESS/TODO: living execution state and history.
+7. TEACHER_ARCHITECTURE.md: canonical teacher/classroom/LMS product layer over the shared subject/knowledge architecture.
+8. WORKLOG/PROGRESS/TODO: living execution state and history.
 
 Do not silently resolve conflicts. Record them and update the appropriate source through a documented decision.
 
@@ -197,6 +199,45 @@ When an agent discovers a new subject-scoped capability, it must be added to the
 
 ---
 
+# Teacher / classroom architecture protocol
+
+`TEACHER_ARCHITECTURE.md` is mandatory reading for any work involving:
+
+- teacher subject dashboards/workspaces
+- classes and class membership
+- classroom-enrolled student experiences
+- Assignments and submission portals
+- Test Builder or teacher-created assessments
+- Announcements
+- teacher resource access
+- Teacher AI Assistant
+- Teacher Data Assistant
+- At-Risk Students / early warning
+- class Knowledge Graph heatmaps
+- teaching coverage / taught-state overlays
+- individual student graphs viewed by teachers
+- teacher analytics or class aggregation
+
+The core product principle is:
+
+```text
+Student = individual learner lens
+Teacher = teaching/class lens
+Shared substrate = same Board → Qualification → Subject → CurriculumVersion → SpecificationPoint graph + assessment/evidence system
+```
+
+Teacher and student interfaces must not create duplicate curricula or parallel graph models. A class graph is an aggregation/lens over individual learner state and the shared subject graph.
+
+`NOT_TAUGHT` is semantically different from `LOW_MASTERY`. Grey teacher-graph nodes represent absent teaching coverage, not weak student understanding. Taught nodes may use class-understanding bands based on measured evidence.
+
+At-Risk Students must be evidence-first and inspectable. Data Assistant must answer from authorized structured data and expose scope/time window/data freshness; it must not hallucinate statistics. Teacher AI Assistant is a separate grounded academic copilot for teaching/resource creation.
+
+`T-029` is the current minimal teacher review surface. Its Cycle-1-era cohort roster shortcut is not the final Class domain model.
+
+The teacher architecture is long-term and **does not expand Cycle 1** merely because these capabilities are documented.
+
+---
+
 # Engineering rules
 
 ## 1. Preserve boundaries
@@ -259,6 +300,8 @@ Read Master Spec sections
   ↓
 Read SUBJECT_ARCHITECTURE.md when subject/product/curriculum/graph related
   ↓
+Read TEACHER_ARCHITECTURE.md when teacher/class/LMS/teacher-KG/analytics related
+  ↓
 Read research section if needed
   ↓
 Inspect existing code/tests
@@ -291,6 +334,8 @@ Ask internally:
 - Does that assumption require a research-paper check?
 - If subject-scoped: did I preserve Board/Qualification/Subject/CurriculumVersion isolation?
 - If curriculum-scoped: did I preserve official SpecificationPoint numbering and provenance?
+- If teacher-scoped: did I enforce class/teacher authorization at the backend?
+- If analytics-scoped: can every aggregate/flag be traced to evidence and a time window?
 
 ---
 
@@ -315,6 +360,10 @@ Ask internally:
 - Treating Unit/Topic/SubTopic as the maximum useful curriculum granularity when the official specification provides numbered learning objectives.
 - Using free-form filenames/topic strings as the authoritative subject identity.
 - Mutating curriculum nodes with learner-specific mastery or diagnostic state.
+- Treating the teacher graph as a second curriculum graph instead of an authorized aggregation/overlay.
+- Treating NOT_TAUGHT as equivalent to LOW_MASTERY.
+- Using an LLM to invent class statistics, marks, attendance, risk labels, or evidence.
+- Exposing student data to a teacher solely because the student and teacher share a subject; class/teaching authorization must still be checked.
 
 ---
 
