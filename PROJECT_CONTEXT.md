@@ -12,13 +12,19 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 ## Canonical project documents
 
 - `MASTER_SPEC.md`: engineering truth (v1.1, merged & verified 2026-09-03).
-- `AGENT.md`: agent behavior.
-- `DECISIONS.md`: architecture decision records (ADR-001…015).
+- `AGENT.md`: agent behavior and mandatory implementation workflow.
+- `DECISIONS.md`: architecture decision records (ADR-001…017 in the consolidated ledger).
+- `DECISION_018_MOCK_EXAM_GENERATOR.md`: ADR-018 for the blueprint-driven Mock Exam Generator.
+- `ARCHITECTURE_DISCUSSION_SYNC_2026-09-07.md`: consolidated durable index of the subject-first, teacher/classroom, learning-evidence, recommendation and mock-exam architecture discussions.
 - `SUBJECT_ARCHITECTURE.md`: canonical subject-first product boundary and specification-point graph model (2026-09-07).
 - `TEACHER_ARCHITECTURE.md`: canonical teacher/classroom/LMS product model layered over the shared subject/graph/evidence substrate (2026-09-07).
 - `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`: canonical Question Attempt / Learning Log and question-level evidence architecture (2026-09-07).
 - `LEARNING_EVIDENCE_AGENT_ADDENDUM.md`: mandatory implementation rules for question-attempt evidence, review state, Smart Mark/test auto-logging, KG integration and teacher/research analytics.
-- `DECISION_016_QUESTION_ATTEMPT_EVIDENCE.md`: ADR-016 decision record for the learning-evidence subsystem.
+- `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`: canonical learning-first recommendation architecture.
+- `RECOMMENDATION_SYSTEM_AGENT_ADDENDUM.md`: mandatory recommendation implementation rules.
+- `ADR_017_LEARNING_FIRST_RECOMMENDATION_SYSTEM.md`: ADR-017 decision record.
+- `MOCK_EXAM_GENERATOR_ARCHITECTURE.md`: canonical blueprint-driven mock-exam architecture.
+- `MOCK_EXAM_GENERATOR_AGENT_ADDENDUM.md`: mandatory implementation rules for F-051 and related mock features.
 - `WORKLOG.md`: history.
 - `PROGRESS.md`: current state.
 - `TODO.md`: current work queue (Cycle 1 first).
@@ -28,6 +34,8 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `backlog/subject-architecture-feature-addendum.tsv`: committed text-form feature tracker addendum for the 2026-09-07 subject-first/specification-point decision.
 - `backlog/teacher-lms-feature-addendum.tsv`: committed text-form feature addendum for the 2026-09-07 teacher/classroom/LMS architecture discussion. It extends existing F-050/F-072/F-073/F-074/F-075 and records genuinely new gaps without duplicating existing feature IDs.
 - `backlog/learning-evidence-feature-addendum.tsv`: committed feature-tracker addendum for F-055/F-056/F-057/F-058/F-059 and their integrations, pending the next controlled workbook sync.
+- `backlog/recommendation-system-feature-addendum.tsv`: committed feature-tracker addendum for the learning-first recommendation architecture, pending the next controlled workbook sync.
+- `backlog/mock-exam-generator-feature-addendum.tsv`: committed feature-tracker addendum extending F-051 with F-169…F-174, pending the next controlled workbook sync.
 
 ## Repositories
 
@@ -79,7 +87,21 @@ question/question-part
   → new attempt
 ```
 
-`QuestionAttempt` is an evidence event, not merely a completion flag. Learner review state (problematic, doubt, self-doubt, resolved, review priority) is a separate mutable state around the immutable evidence. Mastery remains an inference produced by the learner model; UI actions must not directly add/subtract mastery.
+For mock examinations, the assessment loop is:
+
+```text
+Board / paper identity
+  → versioned exam blueprint
+  → validated candidate pool / assessment blocks
+  → constrained mock assembly
+  → blueprint fidelity validation
+  → interactive/PDF paper
+  → QuestionAttempt evidence
+  → learner model / diagnosis
+  → future mock or next-best action
+```
+
+`QuestionAttempt` is an evidence event, not merely a completion flag. Learner review state (problematic, doubt, self-doubt, resolved, review priority) is a separate mutable state around the immutable evidence. Mastery is an inference produced by the learner model; UI actions must not directly add/subtract mastery.
 
 ## Central research constructs
 
@@ -157,12 +179,101 @@ Important implementation facts:
 
 The research basis is Paper B §3.5 (“The Learning Log”) and §3.13, including the explicit reason for preserving rich attempt telemetry and the 80%-of-a-paper / skipped-hard-questions failure mode.
 
+## Learning-first recommendation architecture
+
+Recommendations are a **Next Best Learning Action** system rather than an engagement-maximizing feed.
+
+The canonical cascade is:
+
+```text
+Learner evidence/state
+→ subject/specification graph
+→ constrained candidate generation
+→ content-based expansion
+→ optional learned ranking
+→ constrained exploration/diversification
+→ next-best learning action
+→ interaction
+→ learning evidence
+```
+
+Hard boundaries include subject/curriculum isolation, validated/servable content, authorization, prerequisite safety and teacher-pinned/assigned work where applicable. Rule-based recommendation is the deterministic baseline; collaborative and learned ranking are later experiments and cannot override hard constraints. Fixed random epsilon-greedy exploration and arbitrary interaction-count thresholds are not product/scientific constants.
+
+Recommendation reasons are structured, evidence-backed and auditable. Educational video discovery is subject-scoped and validated; watch time is telemetry, not mastery.
+
+**Canonical detail:** `RECOMMENDATION_SYSTEM_ARCHITECTURE.md` + `RECOMMENDATION_SYSTEM_AGENT_ADDENDUM.md` + `ADR_017_LEARNING_FIRST_RECOMMENDATION_SYSTEM.md`.
+
+## Mock Exam Generator architecture
+
+The Mock Exam Generator is a **blueprint-driven paper construction system**, not simply an LLM prompt that writes a plausible exam.
+
+Its canonical identity is:
+
+```text
+Board
+→ Qualification
+→ Subject
+→ CurriculumVersion
+→ PaperCode
+→ PaperVariant / PaperType
+→ BlueprintVersion
+```
+
+The blueprint may contain official structural rules and evidence-backed historical patterns, but those categories must remain distinguishable. Historical frequency does not automatically become board truth.
+
+Paper construction uses a validated candidate pool and explicit constraint solving:
+
+```text
+Blueprint
+→ candidates / assessment blocks
+→ hard constraints
+→ soft optimization objectives
+→ candidate paper
+→ fidelity validation
+→ valid paper
+```
+
+AssessmentBlock / QuestionGroup is required where parts depend on common data, graphs, diagrams, passages or shared stems. The solver must not invalidate assessment semantics by shuffling dependent parts independently.
+
+Difficulty is contextual evidence. A simple 1–5 UI band may be derived, but it is not the canonical truth. Bloom is optional annotation. Universal `marks × 1.5 minutes` is rejected.
+
+Two explicit mock policies are recognized:
+
+```text
+Exam Simulation
+  → blueprint fidelity dominates
+
+Adaptive Diagnostic Mock
+  → blueprint validity remains a hard floor
+  → learner evidence influences valid item selection
+```
+
+AI-generated/modified variants use a gated validation pipeline and retain source lineage + AI execution metadata. Unvalidated variants cannot be learner-served.
+
+Every mock attempt uses the existing Question Attempt / Learning Evidence subsystem. A completed paper does not imply every question was attempted.
+
+Mock prediction/readiness evaluation is a future research capability. The UI must not fabricate predicted grades.
+
+**Canonical detail:** `MOCK_EXAM_GENERATOR_ARCHITECTURE.md` + `MOCK_EXAM_GENERATOR_AGENT_ADDENDUM.md` + `DECISION_018_MOCK_EXAM_GENERATOR.md`.
+
+## Feature tracker consequences from the 2026-09-07 discussions
+
+Existing feature identities were preserved and extended rather than duplicated:
+
+- Subject architecture: existing subject/curriculum features plus specification-point extension.
+- Teacher architecture: existing F-050/F-072/F-073/F-074/F-075 family extended; no duplicate teacher features.
+- Learning evidence: F-055/F-056/F-057/F-058/F-059 plus related assessment/recommendation integrations.
+- Recommendation: existing F-087–F-093 family extended with learning-first constraints and evaluation.
+- Mock exams: **F-051 remains canonical** and is extended by F-169…F-174 in `backlog/mock-exam-generator-feature-addendum.tsv`.
+
 ## Execution scope
 
 Cycle 1 (authoritative, Master Spec §39a): Edexcel IAL Chemistry, ~50 students, 8 weeks, Tutor + Assessor agents only, predictions P1–P8. Cycle-1 rows in the backlog define the cut; everything else is Cycle 2+.
 
-The subject-first, teacher/classroom and learning-evidence architectures are broader than Cycle 1 and do **not** authorize IGCSE bulk ingestion or other scope expansion by themselves. IGCSE Chemistry is an important target course/example for the long-term platform architecture.
+The subject-first, teacher/classroom, learning-evidence, recommendation and mock-exam architectures are broader than Cycle 1 and **do not authorize IGCSE bulk ingestion or implementation of long-term features inside the pilot unless the tracker explicitly marks them `Cycle 1`.**
 
 ## Important engineering insight
 
-The papers remain the authority for scientific definitions and research constructs. The Master Spec is the engineering translation. `SUBJECT_ARCHITECTURE.md` is the canonical product/graph decision for subject scoping and specification-point granularity. `TEACHER_ARCHITECTURE.md` is the canonical teacher/classroom/LMS product-layer decision. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` is the canonical question-level evidence decision. Agents should not reread the entire papers for every ordinary task, but they must reread the relevant sections for research-sensitive changes.
+The papers remain the authority for scientific definitions and research constructs. The Master Spec is the engineering translation. `SUBJECT_ARCHITECTURE.md` is the canonical product/graph decision for subject scoping and specification-point granularity. `TEACHER_ARCHITECTURE.md` is the canonical teacher/classroom/LMS product-layer decision. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` is the canonical question-level evidence decision. `RECOMMENDATION_SYSTEM_ARCHITECTURE.md` is the canonical learning-first action-selection decision. `MOCK_EXAM_GENERATOR_ARCHITECTURE.md` is the canonical blueprint/constraint-based mock-exam decision.
+
+Agents should not reread the entire papers for every ordinary task, but they must reread the relevant sections for research-sensitive changes. `ARCHITECTURE_DISCUSSION_SYNC_2026-09-07.md` is the durable cross-cutting discussion index; it does not replace the more detailed canonical documents.
