@@ -21,7 +21,7 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `REPOSITORY_RESEARCH.md`: external repository dossier (section 0 = integration verdicts).
 - `PLATFORM_RESEARCH.md`: verified platform/free-tier research.
 - `backlog/syllabai-master-project.xlsx`: definitive feature/project tracker (Cycle column = pilot cut).
-- `backlog/subject-architecture-feature-addendum.xlsx`: feature-tracker addendum for the 2026-09-07 subject-first/specification-point decision; integrate these rows into the definitive workbook on the next controlled tracker sync.
+- `backlog/subject-architecture-feature-addendum.tsv`: committed text-form feature tracker addendum for the 2026-09-07 subject-first/specification-point decision. A formatted `.xlsx` companion was generated as a local working artifact; do not replace the canonical master workbook with a stale exported copy.
 
 ## Repositories (ADR-012)
 
