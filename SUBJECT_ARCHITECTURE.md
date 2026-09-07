@@ -26,7 +26,7 @@ The global account remains separate from academic state. Shared curriculum/conte
 
 ## 2. Subject workspace
 
-A subject workspace is expected to expose:
+A student subject workspace is expected to expose:
 
 - Overview / subject dashboard
 - Revision Notes
@@ -296,30 +296,138 @@ A subject must not accidentally leak:
 
 The API should therefore prefer explicit subject/curriculum identifiers over free-form topic names.
 
-## 12. Current product architecture vs Cycle-1 scope
+## 12. Teacher subject workspaces use the same subject boundary
 
-This document defines the **long-term product architecture**.
+Teachers are also subject-scoped. A teacher may teach multiple subjects and multiple specifications, but each teacher workspace is entered through an explicit:
 
-It does not authorize scope expansion of the current pilot.
+```text
+Board → Qualification → Subject → Curriculum / Specification Version
+```
 
-Current Cycle-1 execution remains Edexcel IAL Chemistry according to ADR-010 and the Master Spec. The same subject-first architecture is designed to support IGCSE Chemistry and other board/qualification combinations later.
+The teacher subject workspace can expose the resource families used by students plus teacher-only operations:
 
-Do not start bulk IGCSE ingestion merely because this document now models IGCSE explicitly.
+```text
+Overview
+Resources
+  ├── Revision Notes
+  ├── Exam Questions
+  ├── Past Papers
+  └── Flashcards
+Assessment
+  ├── Test Builder
+  ├── Mock Exams
+  └── Assignments
+Teaching
+  ├── Classes
+  └── Announcements
+Analytics
+  ├── Class Performance
+  ├── Knowledge Graph
+  ├── At-Risk Students
+  └── Reports
+AI
+  ├── Teacher AI Assistant
+  └── Data Assistant
+```
 
-## 13. Required future implementation sequence
+Smart Lesson remains primarily a student-facing adaptive workflow. Teachers may inspect its underlying evidence or learning logic through analytics, but the teacher product does not need a separate teacher Smart Lesson surface unless explicitly decided later.
+
+See `TEACHER_ARCHITECTURE.md` for the full teacher/LMS product model.
+
+## 13. Classroom-enrolled student mode
+
+There are two student interface modes over one student identity and learner model:
+
+```text
+Independent student
+  └── Subject workspace
+
+Classroom-enrolled student
+  └── Same subject workspace
+       └── additional classroom surfaces
+```
+
+A classroom-enrolled student receives, as authorized by the class relationship:
+
+- Announcements
+- Assignments
+- My Results / teacher feedback
+
+The student retains access to the core adaptive features such as Revision Notes, Exam Questions, Flashcards, Smart Lesson, Target Test, Mock Exams, Tutor and Knowledge Graph.
+
+Class membership is an overlay/capability relationship, not a second account and not a second learner model.
+
+## 14. Teacher knowledge graph is a different lens, not a different graph
+
+The same subject graph supports two major lenses:
+
+```text
+Student lens:
+  What do I know and what should I do next?
+
+Teacher lens:
+  What have I taught, what does my class understand, and who needs attention?
+```
+
+The teacher graph adds two important overlays:
+
+1. Teaching coverage
+2. Aggregated class learner state
+
+Suggested semantics:
+
+```text
+GREY / NOT_TAUGHT
+    = teaching coverage has not been recorded for this subject/class node
+
+COLOURED TAUGHT NODE
+    = current class understanding band based on measured evidence
+```
+
+`NOT_TAUGHT` must never be interpreted as `LOW_MASTERY`.
+
+Class understanding should support distributions rather than only a single mean. A node can expose mean mastery, proficient/developing/struggling shares, evidence count, and misconception prevalence.
+
+Teacher drill-down should support:
+
+```text
+Class KG node
+   ↓
+Affected students
+   ↓
+Individual student subject graph
+   ↓
+Evidence / attempts / assignments
+   ↓
+Teacher action
+```
+
+The individual student graph is the same graph/learner-state model as the student's own graph with additional teacher-authorized context.
+
+## 15. Long-term product and scope guard
+
+This document defines the **long-term subject-first product architecture**. It does not authorize scope expansion of the current pilot.
+
+Current Cycle-1 execution remains Edexcel IAL Chemistry according to ADR-010. The teacher/classroom architecture and IGCSE examples describe the target platform, not permission to ingest all supported courses immediately.
+
+Feature additions discovered from the subject-first architecture or teacher/classroom discussions must be entered into the definitive project tracker or the controlled addenda under `backlog/` and must not live only in chat history.
+
+## 16. Required future implementation sequence
 
 1. Preserve/strengthen the Board → Qualification → Subject → CurriculumVersion identity model.
 2. Make SpecificationPoint a canonical curriculum object/node.
 3. Map the user's existing revision notes to SpecificationPoints.
-4. Expose subject enrollment and subject-scoped navigation.
+4. Expose student subject enrollment and subject-scoped navigation.
 5. Refactor feature surfaces to consume subject/curriculum context.
 6. Add reviewed question → SpecificationPoint mapping.
 7. Extend the personalized KG read model to expose specification points cleanly.
 8. Build Smart Lesson on these shared anchors.
+9. Introduce the teacher Class domain model and classroom student capability overlay.
+10. Add teaching coverage and teacher class-graph aggregation without mutating curriculum.
 
 Do not implement these all at once. Follow the project backlog and Cycle-1 gate.
 
-## 14. Non-negotiable agent rules for this architecture
+## 17. Non-negotiable agent rules for this architecture
 
 - Treat this document as canonical for the subject-first product boundary and SpecificationPoint concept.
 - Read the selected board/qualification's **official current specification** before inventing or manually encoding its hierarchy.
@@ -329,4 +437,7 @@ Do not implement these all at once. Follow the project backlog and Cycle-1 gate.
 - Preserve unmapped/uncertain links instead of fabricating tags.
 - Keep curriculum versioning and provenance intact.
 - Keep learner state separate from curriculum content.
+- Teacher and student must use the same academic graph model; do not build a second teacher-only curriculum graph.
+- Treat `NOT_TAUGHT` as different from low class understanding.
+- Keep classroom student capabilities as a class-enrollment overlay rather than forking the student learner model.
 - Do not pull IGCSE into Cycle 1 without an explicit scope decision.
