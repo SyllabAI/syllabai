@@ -440,3 +440,22 @@ Stage summary:
 - **Deployment remains the open critical item:** Render/Vercel/Neon/R2 need operator credentials (outside the repos; never fabricated). The runbook's Vercel env var instruction was WRONG and is fixed in PR #11 — following the old text verbatim would have broken every API call in production.
 - Lessons: (1) **mocked-boundary tests hide repository-direction bugs** — the KG unit tests mocked the very layer that was broken; real-Postgres ITs are the only proof; (2) runbook env-var instructions must be executed end-to-end before they ship — the doubling bug sat in the canonical deployment doc; (3) the local no-Docker stack (portable PG + deb pgvector + staged JDK) is reproducible tooling for future sessions.
 - Open: deploy (operator), then re-run the browser E2E against the deployed URLs (T-031 runbook checklist); LLM keys for tutor/Smart Mark value paths (optional — honest degradation verified); T-C04 content validation gate unchanged; T-030 research export.
+
+## Session 21 — hardening PRs MERGED on explicit user authorization; post-merge CI green + log-inspected; zero open PRs
+
+**Directive:** user merge decision received in chat ("merge the two hardening PRs") — the explicit current authorization required by the merge policy.
+
+Work performed:
+
+- **Pre-merge verification (fresh, API-first):** both PRs open/mergeable with fast-forward possible (core #11 head `c4af544`, 1 commit, 5 files, +175/−10; web #6 head `e4a06cb`, 1 commit, 3 files, +31/−8); head-branch CI green (core 34207204653, web 34207223589).
+- **Pre-merge review (diffs read, not just messages):** core = the MISCONCEPTION_OF read-direction fix (`findMisconceptionEdgesFrom/topic→target` corrected to `findMisconceptionEdgesTo/source`, matching the §7 seed contract misconception→topic) + `MisconceptionSurfaceFlowIT` (real-Postgres regression pinning repo query → tree → ranked MISCONCEPTION_SUSPECTED with measured 0.75/1-evidence/parent → F-034 annotation) + `NightlyDecayJobTest` tolerance 1e-6 + `DEPLOYMENT.md` env-var correction (bare origin, no `/api/v1` suffix); web = `apiPath()` trailing-`/api/v1` normalization + `/auth/*` exempted from the blanket 401 rewrite (real backend message surfaces on wrong password) + HistoryView badge distinguishing PENDING vs marked. Scope verified: exactly the four browser-found bugs, no new features, no architecture drift.
+- **Merged (fast-forward, linear history preserved, core-first per runtime dependency):** core `14cc866 → c4af544` pushed to main; web `99194af → e4a06cb` pushed to main. Local checkouts synced (`syllabai-web` re-cloned into the workspace; core checked out to main).
+- **Post-merge verification (GitHub API + CI logs):** both PRs `state=closed merged=True`; post-merge CI on main — core run 34228311619 @ `c4af544` **success**, web run 34228321719 @ `e4a06cb` **success**. Log-inspected (scripts downloaded and parsed the real logs): core surefire **270/270 unit** + failsafe **30/30 IT** across 10 IT suites (incl. the new `MisconceptionSurfaceFlowIT`), 0 failures/errors/skipped, BUILD SUCCESS; web "Compiled successfully" (lint + type-checked production build).
+- **Docs synced:** TODO T-035 → complete with full evidence; TODO T-031 note updated (runbook fix merged); PROGRESS headline → Session 21, "PRs currently open: none", repo main SHAs updated (core `c4af544`, web `e4a06cb`), stale PR-#1 sub-bullet corrected to merged (session 19); this WORKLOG entry.
+- **Workspace hygiene:** `scripts/check_remote_state.py`, `scripts/premerge_check.py`, `scripts/postmerge_verify.py`, `scripts/ci_log_inspect.py` persisted under `/home/z/my-project/scripts/` (token never printed — extracted from git config at runtime).
+
+Stage summary:
+
+- **Zero open PRs; both mains carry the browser-found bug fixes with regression proofs; CI green end-to-end.** The misconception rule family, mastery-map annotations, tree walks, and honest auth/history UX are now correct on main.
+- Remaining critical path is unchanged: T-036 operator deployment (Neon/Render/Vercel + at least one LLM key), then re-run the full browser E2E against the deployed URLs; T-037 pilot seeding decision; T-C04 gate unchanged; T-030 research export.
+- No product code changed by this session beyond the two reviewed merges; no architecture changes; no new feature IDs.
