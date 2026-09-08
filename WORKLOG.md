@@ -520,3 +520,22 @@ health 6 ms · subjects 12 ms · questions 10 ms · tutor refusal 11 ms · **NBA
 - **Deployment is rehearsed end-to-end at production fidelity with two real bugs found, fixed, and regression-proven on CI-green PRs.** The remaining critical path is exactly one operator action set: merge PRs #12 + #7, then execute the operator package (Neon → Render → Vercel → optional LLM key), then re-run the runbook checklist against the deployed URLs.
 - Adaptive loop, isolation, honest failure modes: **re-proven on the production-mode stack with identical engine numbers** — deterministic and deployment-portable.
 - Known limitations recorded honestly: no structured questions until T-C04 validation (marking research needs them); teacher KG lens = Cycle 2+; swagger public in prod (hardening candidate); 03:00 decay run observable only on the real deployment.
+
+## Session 23 — T-036a executed: rehearsal fix PRs MERGED on explicit authorization; operator accounts created; deployment package regenerated
+
+**Date:** 2026-09-09 · **Mode:** deploy/verify (T-036)
+
+**Directive:** user message — "Merge. And also I have created vercel, neon, render accounts."
+
+Work performed:
+
+- **Pre-merge (fresh, API-first, 18 checks):** both PRs open/mergeable, heads exactly as reviewed (core #12 `8e1f093`, web #7 `376f4c5`), base mains unmoved (core `c4af544`, web `e4a06cb`), base-is-ancestor (fast-forward possible), single-commit shape, head CIs green (core 34243546661, web 34244900527).
+- **Merges (documented order, fast-forward pushes, linear history preserved):** core `c4af544` → `8e1f093` (2026-09-08T18:27:42Z), then web `e4a06cb` → `376f4c5` (2026-09-08T18:28:02Z). GitHub marked both PRs closed+merged with merge_commit_sha = pushed heads — main is exactly the CI-verified head in both repos.
+- **Post-merge verification (observed, not assumed):** API re-read confirms merged=True + main = heads; post-merge push CIs polled to completion and green — **core-ci run 34263167841 SUCCESS** (unit + IT on the new main), **web-ci run 34263199468 SUCCESS** (lint + type-checked build). Zero open PRs now exist in any repo.
+- **Operator state:** the user created Neon / Render / Vercel accounts (chat confirmation). The workspace reset had lost the session-22 `download/t036/` artifacts — **OPERATOR_DEPLOYMENT_PACKAGE.md regenerated** at `download/t036/` from the merged repo state (verified render.yaml, DEPLOYMENT.md, Dockerfile, application-prod.yml, application.yml, web .env.example/next.config.ts): safe-config vs secrets table, Neon→Render→Vercel sequence with the corrected `NEXT_PUBLIC_API_BASE_URL` (bare origin) instruction, CORS-origin note, optional Groq/R2 paths, T-032 gate checklist, pilot ops notes, send-back format.
+- **Verification detail (for the record):** Flyway V11 self-creates `EXTENSION vector` idempotently — Neon pre-enabling is belt-and-braces only; JDBC URL requires `?sslmode=require`; JWT secret must be operator-rotated ≥32 chars (fail-fast by design).
+- Local workspaces synced: core main → `8e1f093`, web cloned → `376f4c5`, project-state fast-forwarded `952bd8b` → `b9535fe` before this commit.
+
+Stage summary:
+
+- **T-036a complete: zero open PRs across all repos; both mains are CI-green at the merged heads.** The remaining critical path is exactly the operator execution (Neon → Render → Vercel per the regenerated package) followed by the re-run of the §3 checklist + browser E2E against the real URLs (T-036 completion evidence). Recorded open items: springdoc-public-in-prod hardening candidate (one-line fix, offered); teacher provisioning one-off; T-C04 resumption next product milestone.
