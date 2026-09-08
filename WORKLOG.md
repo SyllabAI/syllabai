@@ -459,3 +459,64 @@ Stage summary:
 - **Zero open PRs; both mains carry the browser-found bug fixes with regression proofs; CI green end-to-end.** The misconception rule family, mastery-map annotations, tree walks, and honest auth/history UX are now correct on main.
 - Remaining critical path is unchanged: T-036 operator deployment (Neon/Render/Vercel + at least one LLM key), then re-run the full browser E2E against the deployed URLs; T-037 pilot seeding decision; T-C04 gate unchanged; T-030 research export.
 - No product code changed by this session beyond the two reviewed merges; no architecture changes; no new feature IDs.
+
+---
+
+## Session 22 — T-036 deployment rehearsal at production fidelity: 2 deployment-blocker bugs found/fixed/PR'd, full browser E2E re-proven, operator package delivered
+
+**Date:** 2026-09-08 · **Mode:** deploy → verify → fix → harden (T-036)
+
+### Environment ground truth (established first, honestly)
+
+- Re-verified remote state via GitHub API before any work: core main `c4af544`, web main `e4a06cb`, docs `053f6a6`, parser `ba36ceb` — no drift since session 21; zero open PRs.
+- **No Render/Vercel/Neon/Cloudflare credentials exist in this workspace** (checked env vars, CLI tools, config dirs — nothing; the sandbox `DATABASE_URL` is an unrelated local SQLite). Actual cloud deployment is therefore **REQUIRES OPERATOR ACTION** — never fabricated. Everything short of that was executed and verified.
+
+### Deployment rehearsal (the cloud deploy, minus the clouds)
+
+- Toolchain rebuilt from scratch: Temurin JDK 25.0.4.1 (matches the Dockerfile's temurin-25 family), Maven 3.9.16 (Dockerfile pins 3.9.9 — image-tag vs dlcdn mirror; identical artifact semantics), portable Postgres 17.11 + pgvector 0.8.0 (distro debs extracted rootless — pgvector parity with Neon), listening on 127.0.0.1:5433.
+- **Dockerfile-parity build:** `mvn -B package` with JDK 25 (the Dockerfile's exact `mvn package -DskipTests` shape, then with tests) → `syllabai-core-0.1.0-SNAPSHOT.jar` (sha `b9e7cf77…`).
+- **Prod-profile boot with render.yaml's exact env shape** (`SPRING_PROFILES_ACTIVE=prod`, `SYLLABAI_STORAGE_TYPE=r2`, no R2/LLM/embedding secrets, runtime-generated JWT secret): Flyway V1–V14 **all success on a fresh DB in 0.17 s**, health `{"status":"UP"}` in 16 s.
+
+### Bug 1 (deployment blocker) — found, fixed, regression-tested, PR'd
+
+- **Reproduced:** first prod-profile boot **failed** — `Error creating bean 'objectStorage' … Access key ID cannot be blank`. render.yaml hardcodes `SYLLABAI_STORAGE_TYPE=r2` unconditionally while the R2 secrets are `sync: false` optional; every operator deploying per the runbook without pre-configured R2 gets a boot-failing deployment. DEPLOYMENT.md had no R2 section at all.
+- **Fix (smallest correct layer — the storage bean):** `R2ObjectStorage` builds its S3Client **lazily on first use**; blank credentials → boot-time WARN naming the missing env vars; first storage op → `StorageException` with the exact setting names; **no silent fallback** to local/ephemeral disk (that would write production objects to Render's ephemeral filesystem). `render.yaml` comment updated; DEPLOYMENT.md §1 gains the R2-optional provisioning note.
+- **Regression:** `R2ObjectStorageTest` (boot-safe construction with render.yaml's exact shape; loud per-op failure message; `isConfigured` matrix) — unit suite **273/273** (270 + 3 new).
+- **PR #12** `codex/t-036-r2-boot-fix` @ `8e1f093` — CI 34243546661 SUCCESS (full 273 + 30 IT on GitHub runners). **Open, awaiting operator merge.**
+- **Re-verified live post-fix:** the same env shape now boots (WARN + UP) and the 19-check backend suite passes against it.
+
+### Bug 2 (production UX/honesty) — found, fixed, rebuilt, PR'd
+
+- **Reproduced** in the production web build: the login screen unconditionally rendered "Demo accounts (local profile)" credentials — those accounts exist **only** under the local profile, so the deployed product advertised non-working credentials on its first screen.
+- **Fix:** NODE_ENV-gated rendering (dev keeps the convenience; production build hides the box and the "demo credentials below" description). Production bundle rebuilt, browser re-verified: "Use your SyllabAI account."
+- **PR #7** `codex/t-036-login-demo-creds-prod` @ `376f4c5` — CI 34244900527 SUCCESS (lint + type-checked build). **Open, awaiting operator merge.**
+
+### Production-mode browser E2E (web standalone build → prod-profile API → external PG)
+
+- Full student loop: register → workspace → honest empty states → practice (moles MCQ) → **deliberately wrong (misconception-matching distractor A)** → honest marking ("Not correct — 0/1", correct answer revealed, misconception signal explained) → **My state** (BKT 11%, misconception "Moles and grams are interchangeable" active 0.75) → **Dashboard NBA changed** (uncovered-starter → MISCONCEPTION_SUSPECTED ranked 1 with "Ask Tutor" deep link) → tutor deep link → honest deterministic refusal ("answering would mean guessing — which SyllabAI never does"; "Deterministic refusal — no model was called") → **retry with the correct answer under timed conditions** → BKT **0.113→0.383** (identical to session 20 — deterministic engines), BDT 0.75→0.50, `proceduralFluencyGap` **−1.0** (untimed/timed pair) → **NBA changed again** (+ fluency-gap "Timed exercise" action) → **History** (both attempts: marks, timing, source refs, marking state, misconception annotation) → **Mastery map** (curriculum tree + learner overlay; "not practised" ≠ mastery-0, misconception annotation on-node).
+- §10 chain proven at each transition: browser action → network request (CORS preflight + call) → backend response → **persisted rows** (attempts/skill_states/misconception_states verified by direct SQL) → UI state.
+- **Isolation:** student B registered — empty state everywhere, zero rows in DB; student→teacher/admin routes 403 (API-verified + regression ITs).
+- **Teacher E2E:** teacher provisioned via the runbook's documented one-off local-profile procedure; roster (6 real learners), marking queue (honest empty across 4 states), **κ fails closed** (409 "needs paired per-point decisions"). Honest scope finding: **no seeded structured questions exist** — the Smart Mark/human-mark/κ cycle needs T-C04-validated content first; teacher KG lens is Cycle-2+ by tracker design (F-035/TFA-03).
+- **Error states:** invalid login → verbatim "invalid credentials"; corrupt-token reload → session cleared + "Dashboard unavailable — try signing in again" (no fabricated data); backend unreachable (routes aborted) → "Cannot reach the SyllabAI backend. Is it running?"
+
+### Security pass (source + empirical)
+
+- SecurityConfig (stateless JWT, route RBAC, exact-origin CORS), JwtService (≥32-byte fail-fast, HS256, 12 h), JwtAuthenticationFilter (no token logging), GlobalExceptionHandler (opaque 500s; stacktraces never exposed — belt-and-braces `include-stacktrace: never`), AuthService (self-register → STUDENT only), UserView (no hash exposure), all learner routes `/me`-scoped (no tamperable ids), teacher/admin surfaces route-protected + regression-proven. No secret logging found.
+- Empirical boundaries: 401/403 matrices, CORS allow+reject, content gate (only VALIDATED versions exist; serving rule regression-proven in ITs).
+- **Hardening candidate (not fixed — small change, operator's call):** springdoc/OpenAPI endpoints are `permitAll` in prod; the schema is publicly reachable on a deployed Render URL. Candidate fix: disable springdoc in `application-prod.yml`. No credentials/PII in the schema (DTOs only), so low severity for the pilot.
+
+### Performance (rehearsal, warm)
+
+health 6 ms · subjects 12 ms · questions 10 ms · tutor refusal 11 ms · **NBA 62 ms** · **KG 76 ms**. Expect +RTT and Render free-tier cold start 30–60 s (documented in the runbook + surfaced honestly by the web client). No premature optimization warranted.
+
+### Deliverables
+
+- `download/t036/OPERATOR_DEPLOYMENT_PACKAGE.md` — accounts table, **safe-config vs secrets checklist**, exact Neon/Render/Vercel sequence, post-deploy verification checklist, pilot ops (teacher provisioning, data classification DEMO/TEST/PILOT, weekly rhythm, failure procedures table incl. LLM outage / Neon suspend / Flyway collision / CORS mismatch), content-pipeline notes.
+- E2E screenshots: `download/t036/e2e-01…07` (dashboard fresh/wrong-answer result/NBA evolution/history/student KG tree+graph/tutor refusal/teacher surface).
+- Scripts persisted: `scripts/t036_build_core.sh`, `t036_boot_core.sh`, `t036_verify_backend.py` (19-check operator checklist), `t036_open_pr.py`, `t036_open_web_pr.py`.
+
+### Stage summary
+
+- **Deployment is rehearsed end-to-end at production fidelity with two real bugs found, fixed, and regression-proven on CI-green PRs.** The remaining critical path is exactly one operator action set: merge PRs #12 + #7, then execute the operator package (Neon → Render → Vercel → optional LLM key), then re-run the runbook checklist against the deployed URLs.
+- Adaptive loop, isolation, honest failure modes: **re-proven on the production-mode stack with identical engine numbers** — deterministic and deployment-portable.
+- Known limitations recorded honestly: no structured questions until T-C04 validation (marking research needs them); teacher KG lens = Cycle 2+; swagger public in prod (hardening candidate); 03:00 decay run observable only on the real deployment.
