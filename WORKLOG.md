@@ -631,3 +631,49 @@ not the 192-page 2-up.
 
 Committed and pushed: `syllabai-resources` `8b9b5c3` → `c2b0e69` (repairs +
 `CORPUS_REVIEW_2026-09-10.md` + maintenance scripts). No code repos touched; Cycle 1 untouched.
+
+---
+
+## Session 27 — Knowledge-graph build plan (T-C09/T-C10/T-C11 registered): external proposal assessed, `KNOWLEDGE_GRAPH_BUILD_PLAN.md` landed
+
+**Context:** the operator forwarded an external (ChatGPT) proposal for the academic knowledge
+graph — "specification = canonical skeleton, revision notes = enrichment layer", four phases,
+learner-lens overlay. Asked for a critical assessment and a full plan.
+
+**Assessment (full verdict table in the doc §1):** the proposal independently converges on the
+Session-25 corpus architecture (source-role spine, many-to-many §7 mapping, contamination
+guards) — good validation; adopted the phase skeleton. Amended where it is wrong or silent:
+(1) no provenance model for extracted edges — we already own the four §7 tiers; (2)
+`prerequisite_of` presented as free when no 4CH1 source declares prerequisites — lifecycle
+AI_SUGGESTED→HUMAN_VALIDATED, serving side (recursive-CTE closure) already live in core;
+(3) "enough corpus to start now" is true only for phases 1–3 — the assessment graph is
+corpus-blocked (no past papers converted; 11 SME topic-question pages are a seed); (4) the
+learner-lens diagram restates what is in production today (BKT/BDT/Ebbinghaus, misconception
+evidence loop, NBA, personalized KG read model); (5) its example "SpecPoint 3.4 → moles" is
+factually wrong for 4CH1 (moles = 1.26–1.35C) — the concrete lesson: parse, never transcribe.
+
+**Grounding work before writing:** verified push state (syllabai `f230c6d`, resources
+`53656a9` — everything from sessions 25/26 including the book-OCR tooling is pushed); silenced
+local mode-bit noise in resources (376 files 644→755, zero content change, `core.fileMode=false`);
+parsed the real spec md — **167 unique spec-point codes** (S1:60/S2:46/S3:22/S4:39, 40
+C-points, zero duplicates) across 45 HTML tables, two row shapes (128 two-col + 39 colspan);
+confirmed SME note source URLs embed spec-aligned slugs (PROVIDER-tier mapping signal) and 14
+notes carry Test-yourself links.
+
+**Plan (doc, 13 sections):** Phase 1 (T-C09, READY TO START, zero-LLM): deterministic
+table-aware parser → `graph/spec_points.yaml` + `graph/topics.yaml` graph-as-code in the
+private resources repo + `graph_check.py` validator + 20-statement PDF spot-check sheet; DB
+wiring rides T-C06's CurriculumDraftDto path (built in T-010). Phase 2 (T-C10): 112-note
+many-to-many mapping (PROVIDER slug signal + AI_SUGGESTED candidates with evidence quotes +
+front-matter `spec_points:` + PR-review validation + coverage report). Phase 3 (T-C11):
+concepts (split-first identity policy + alias tables), prerequisites (evidence-anchored,
+human-promoted), misconceptions (source quotes mandatory), Student Book page-level
+`EXPLAINED_BY` after the full OCR run. Phase 4 stays T-C06/F-168 territory (blocked on past
+papers + T-C04; 4CH0 fixture hard-separated). Cross-cutting: no Neo4j (Postgres + existing KG
+machinery), git PR = the human validation gate, copyrighted verbatim text stays in the private
+repo, hard gates per phase.
+
+**Committed and pushed:** syllabai main `f230c6d` → new head (`KNOWLEDGE_GRAPH_BUILD_PLAN.md`
++ TODO T-C09/C10/C11 + PROGRESS session-27 header/headline + this entry). Resources repo
+untouched (clean tree). T-036 critical path unchanged: teacher account + human six-tab
+browser E2E.
