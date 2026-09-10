@@ -561,3 +561,21 @@ Stage summary:
 - **T-036 backend half COMPLETE: the deployed environment is real and verified** — Neon (PostgreSQL 18.6 @ V14) + Render (`https://syllabai-core.onrender.com`, 4 deploys, 3 production-only bug classes fixed: base-image tag, with-key construction, cgroup memory) + the full LLM failover chain live.
 - Remaining for T-036: Vercel import (operator, guided this session: name the project `syllabai`, env `NEXT_PUBLIC_API_BASE_URL=https://syllabai-core.onrender.com` bare origin, then CORS via project name or Render env), teacher account (runbook one-time path), full browser E2E against the deployed URLs with recorded evidence.
 - Fix commits on core main this session: `9d18303` (previous session) → `91441c0` (previous session) → **`b35aa62`**.
+
+## Session 24 (follow-up) — Vercel frontend LIVE and verified; CORS 403 isolated as the single remaining break; docs synced across three repos
+
+**Date:** 2026-09-10 (later) · **Mode:** deploy-verify (T-036 frontend half)
+
+**Directive:** user posted `https://syllabai-web.vercel.app/` — the operator imported the web project themselves.
+
+Work performed:
+
+- **Frontend live-verified:** HTTP 200 from the Vercel edge (Next.js prerender, "SyllabAI — Learner Workbench").
+- **Decisive build-time env check:** downloaded all 9 deployed JS chunks from the production URL; the main chunk contains `e3="https://syllabai-core.onrender.com".replace(/\/$/,"")??""` — `NEXT_PUBLIC_API_BASE_URL` was set correctly at Vercel build time (the runbook's bare-origin guidance executed exactly); the sandbox `XTransformPort=8080` fallback branch is present-but-dead in the minified code. The earlier "name the project `syllabai`" suggestion was NOT taken — the project is `syllabai-web`, which makes the CORS default mismatch real.
+- **CORS re-verified as an actual blocker:** preflight `OPTIONS /api/v1/auth/login` with `Origin: https://syllabai-web.vercel.app` → 403, no ACAO. Control tests: `Origin: http://localhost:3000` → 200 + full ACAO echo; `Origin: https://syllabai.vercel.app` (default-listed wrong domain) → 200; no-origin request → 401 auth challenge (app healthy). Mechanism healthy; one allow-list entry missing. In-browser symptom: the app loads and renders, but sign-in fails — easy to misdiagnose, so the fix instruction is now explicit in three docs.
+- **Backend cold start re-observed:** ~3.5 min idle → spin-down; wake-up succeeded (health 0.44 s warm) — consistent with ADR-009 and the triage doc's guidance.
+- **Docs synced (this commit):** TODO.md T-036 follow-up status (Vercel half DONE; the single CORS setting; then teacher + browser E2E); PROGRESS.md Last-updated + Session-24 headline updated to both-halves-live; this WORKLOG follow-up. Also in the other repos this session: core `docs/DEPLOYMENT.md` §1.3 (CORS warning hardened with the empirical confirmation + build-time-inlining note; §3 checklist annotated with the 2026-09-10 12/12 automated pass), core `README.md` (LIVE line + triage/JVM-recipe pointers), web `README.md` (LIVE status; CORS step upgraded from "ensure" to required-with-evidence).
+
+Stage summary:
+
+- **T-036 is one dashboard setting away from closure:** set `SYLLABAI_CORS_ORIGINS=https://syllabai-web.vercel.app,http://localhost:3000` on Render (auto-redeploy, ~3 min), verify the preflight returns ACAO, then run the browser E2E pass + teacher provisioning. No code changes required anywhere; both mains stay at `b35aa62` (core) / `376f4c5` (web).
