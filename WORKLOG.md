@@ -833,3 +833,18 @@ this entry.
 PR — medium/low confidence mappings and the 1 cross-subsection flag first; (2) spot-check
 the 20 sampled mappings via PHASE2_SPOT_CHECK_SHEET.md. DB wiring still rides T-C06.
 T-036 critical path unchanged.
+
+## Session 30 — T-C10 operator spot-check review processed: 4.15 remapped, sheet verdicts recorded (2026-09-11)
+
+The operator (human gate) reviewed the Phase-2 20-sample spot-check sheet in chat and delivered verdicts: 18 clearly valid, 1 confirmed-pending-visual-check (#18 / 4CH1-1.52C), 1 REJECT (#7 / 4CH1-4.15). Notably NOT 20/20 as issued.
+
+Actions executed (syllabai-resources):
+
+- **Verdicts recorded** on the issued `PHASE2_SPOT_CHECK_SHEET.md` (20 per-entry verdict lines with operator attribution + appended review record). The sheet is now an immutable review artifact: `c10_map_notes.py` gained a lock check (`operator-review-locked` marker) so re-runs never silently regenerate a reviewed sheet; explicit `--regen-spot-check` required to discard.
+- **#7 REJECT acted on** (`scripts/c10_rework_415.py`, idempotent): removed `4CH1-4.15` from *Definition of combustion* (kept 4.11/4.12/4.13); added it to *Nitrogen Oxides & Sulfur Dioxide* (S4-b sibling) with in-note causal evidence "The sulfur dioxide produced from the combustion of fossil fuels", confidence medium. The operator's finding verified before acting: the combustion note states the impurity premise and lists "oxides of sulfur" as products but never links them (4.15 demands the impurity → combustion → SO₂ causal chain); the registry's 4.15 wording confirmed the operator's spec reading.
+- **#18 conditional resolved**: VLM (glm-5v-turbo) visually verified `assets/Metallic-lattice-structure_.png` IS the 2-D metallic-lattice representation (regular plane array of positive ions; delocalised electrons as labelled minus signs; "ELECTRONS ARE DELOCALIZED; THEY ARE FREE TO MOVE THROUGHOUT THE STRUCTURE") — the 1.52C condition is met; operator may re-eyeball at PR review.
+- **Gates re-run after the rework**: applier ALL GREEN (112 notes / 211 mappings high 176 / medium 34 / low 1; cross-subsection flag still only 4CH1-1.17; zero-coverage queue still EMPTY — 182/182); `graph_check.py` 9/9 PASS; `c10_negative_test.py` 8/8 caught. Decisions diff surgical (2 lines) after fixing the JSON formatter to preserve the compact mapping style.
+- **PR review guide** (coverage report, regenerated) now states the spot-check outcome (step 3) and the operator's lesson as rule 5: *evidence-existence is not semantic validity* — the automated G3 gate proves the quote exists, not that it covers the point's semantics; the 4.15 case is the canonical example.
+- Trackers: TODO.md T-C10 gate status (spot-check done, PR review remaining); PROGRESS.md session-30 header + headline; this entry.
+
+Standing state: 19 confirmed / 1 rejected-and-remapped; all mappings still `validation_status: SUGGESTED` pending the git PR front-matter review (the HUMAN_VALIDATED promotion). The remapped 4.15 and the medium/low-confidence set should be read first at PR review. T-C11 (Phase 3) remains next after the operator PR review.
