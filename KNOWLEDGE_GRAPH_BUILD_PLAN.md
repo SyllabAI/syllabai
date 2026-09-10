@@ -80,17 +80,18 @@ Nodes (all codes namespaced `4CH1-*`; `knowledge_nodes.code` is globally unique)
 | `MISCONCEPTION` | `4CH1-MIS-…` | SME note text or question distractors — **source quote mandatory** | `AI_SUGGESTED` → `HUMAN_VALIDATED` |
 | `SKILL` | `4CH1-SK-…` | leading verbs of spec statements (know/understand/calculate/draw/explain…) + Appendix 5 + practicals | `RULE_DERIVED` skeleton, `AI_SUGGESTED` refinement |
 
-Edges (every edge: `type`, `provenance tier`, `confidence`, `evidence quote + anchor`, `validation state`):
+Edges (relation_type must use the **live V2 `knowledge_edges` enum** — `PART_OF`, `REQUIRES_PREREQUISITE`, `RELATED_TO`, `MISCONCEPTION_OF`, `EXPLAINED_BY`, `REMEDIATED_BY` — extended only via T-C06; edge columns already exist: `strength`, `rationale`, `validation_status`, `provenance`, `created_by`, `version`):
 
 | Edge | From → To | Notes |
 |---|---|---|
-| `CONTAINS` (ordered) | TOPIC → SUBTOPIC → SPEC_POINT | deterministic; ordering = spec's own print order |
-| `COVERS` | SPEC_POINT ↔ CONCEPT | many-to-many; the anchor edge of the whole graph |
-| `PREREQ_OF` | CONCEPT → CONCEPT | lifecycle: `AI_SUGGESTED` (never served) → `HUMAN_VALIDATED` (serves through the existing CTE closure) |
+| `PART_OF` (ordered via spec order) | TOPIC → SUBTOPIC → SPEC_POINT | deterministic; ordering = spec's own print order |
+| `REQUIRES_PREREQUISITE` | CONCEPT → CONCEPT (or SPEC_POINT → SPEC_POINT) | lifecycle: `AI_SUGGESTED` (never served) → `HUMAN_VALIDATED` (serves through the existing CTE closure) |
 | `RELATED_TO` | CONCEPT ↔ CONCEPT | suggested-tier only unless human-confirmed |
 | `EXPLAINED_BY` | SPEC_POINT/CONCEPT → ContentSection (note or book page) | Phase 2 (notes) + Phase 3 (book pages, page-level provenance) |
 | `MISCONCEPTION_OF` | MISCONCEPTION → CONCEPT | existing serving family |
-| `ASSESSED_BY` | SPEC_POINT/CONCEPT → QuestionPart | Phase 4; rides F-168 mapping provenance |
+| `REMEDIATED_BY` | CONCEPT/SP → Resource | future; rides T-C06 resource linking |
+
+Resource/question mapping does **not** ride `knowledge_edges` — it uses the mapping side (F-168 content-unit → spec-point provenance on `question_topics`-style mappings for assessment; the planned `COVERS` relation for revision notes/book pages is a T-C06 enum extension on whichever table the converter owns). Assessment mapping stays QuestionPart → SPEC_POINT under F-168's four-tier provenance.
 
 ---
 
@@ -111,7 +112,7 @@ Gates: lint report with ≥95% of damage instances classified fixable/unfixable;
 - 45 HTML tables, classified: spec-statement tables vs. AO grids vs. appendix tables vs. front-matter tables.
 - Two row shapes: `<td>1.25</td><td>statement</td>` (128 rows) and `<td colspan="2">1.34C statement</td>` (39 rows) — both must parse, plus subsection header rows (`(e) Chemical formulae…`) and "Students should:" markers.
 - Appendices: 12 practicals, Appendix 5 command words, AO tables, the 29-subsection topic tree.
-- Output: `graph/spec_points.yaml` + `graph/topics.yaml` (graph-as-code, CMC front matter, per-node provenance: spec issue, md line anchor, table index), plus a **completeness report** and a **spot-check sheet** (20 random statements vs. the PDF) for the operator.
+- Output: `graph/specification_points.yaml` + `graph/topics.yaml` (graph-as-code, layout per `KNOWLEDGE_GRAPH_CONTEXT.md` §8A.14; CMC front matter, per-node provenance: spec issue, md line anchor, table index), plus a **completeness report** and a **spot-check sheet** (20 random statements vs. the PDF) for the operator.
 
 Acceptance gates (hard):
 
@@ -198,7 +199,7 @@ Blocked on past-paper material (none converted yet) and the T-C04 verdict — **
 
 Unchanged operator-critical path first: **T-036 close-out (teacher account + human six-tab browser E2E)** — this plan does not touch it and runs in parallel.
 
-1. **Now (agent, next session):** build Phase 1 — `c09_spec_graph_extract.py` + `graph_check.py` in the resources repo; produce `spec_points.yaml` + completeness + spot-check report.
+1. **Now (agent, next session):** build Phase 1 — `c09_spec_graph_extract.py` + `graph_check.py` in the resources repo; produce `graph/specification_points.yaml` + completeness + spot-check report.
 2. **Now (operator):** T-036 close-out; spec lint review when the pilot report lands; re-clip 3 images.
 3. **When operator is ready:** Student Book full run (runbook Path A or B).
 4. **After Phase 1 report:** Phase 2 mapping pilot on ~10 notes (slug signal + AI candidates + PR review), then scale to 112.
@@ -210,3 +211,49 @@ Unchanged operator-critical path first: **T-036 close-out (teacher account + hum
 - No hand-authored spec statements or examples (parse, never transcribe — see the "3.4 → moles" lesson).
 - No ingestion of unvalidated content; no cross-curriculum edges; no public exposure of copyrighted text.
 - No graph work that gates T-036 or any Cycle 1 task.
+
+---
+
+## 14. Reconciliation with `KNOWLEDGE_GRAPH_CONTEXT.md` (imported 2026-09-10, Session 27)
+
+The operator forwarded an external canonical KG context document (3,172 lines); after full review it was imported verbatim into this repo as `KNOWLEDGE_GRAPH_CONTEXT.md` and adopted as **the semantic contract** (WHAT the graph means). This plan remains the **execution sequence** (HOW it gets built from the 4CH1 corpus). `CONTENT_CORPUS_ARCHITECTURE.md` remains the **ingestion contract** (how corpus files are shaped and validated). Three docs, three roles, one graph.
+
+### 14.1 What the review found
+
+- **~95% semantic agreement** with our existing architecture — it independently restates the source-role model, the four provenance tiers (§8A.4), graph-as-code before any graph DB (§8A.14), incremental staged construction (§8A.16), IGCSE/IAL isolation (§8A.2), and learner-state-as-overlay. Good validation; no architectural conflict.
+- **Its §5 edge vocabulary is the live V2 schema, not a proposal** — `knowledge_edges.relation_type` CHECK = (`PART_OF`, `REQUIRES_PREREQUISITE`, `RELATED_TO`, `MISCONCEPTION_OF`, `EXPLAINED_BY`, `REMEDIATED_BY`) with `strength/rationale/provenance/validation_status/created_by/version` — verified against `V2__curriculum_knowledge.sql` on import. **This caught a real defect in the first draft of this plan** (§3 had invented `CONTAINS`/`PREREQ_OF`/`ASSESSED_BY`); §3 above is corrected to the live enum. All agents building graph artifacts must use the live vocabulary.
+- Its provenance/date is slightly inconsistent (dated 2026-09-08, references 2026-09-10 corpus facts: 112 notes, 167 anchors) — content treated as current; noted in the import header.
+- All ten §54 source documents exist in this repo (verified). It does not reference the corpus architecture or this plan (authored in a parallel thread that had absorbed session outputs) — §14 here closes that loop.
+
+### 14.2 Adopted from the context doc (delta absorbed into this plan)
+
+- **Edge metadata**: `validFrom`/`validTo` and `rationale` on every consequential edge (rationale already live; validFrom/validTo = T-C06 extension candidate).
+- **Misconception triple distinction** (§8A.11): `COMMONLY_CONFUSED_WITH` ≠ `MISCONCEPTION_OF` ≠ `WRONG_ANSWER_PATTERN` — T-C11 must model all three separately; wrong-answer patterns are observed evidence, not misconceptions.
+- **Empty-state vocabulary** (§41): `NO_DATA / NOT_MEASURED / NOT_TAUGHT / NOT_APPLICABLE / UNMAPPED / UNKNOWN` — never interchangeable; the read-model honesty rules already pinned live (F-034) cover the student subset; teacher subset applies when the lens ships (Cycle 2+).
+- **Output layout** (§8A.14): `graph/specification_points.yaml` naming adopted (supersedes the first draft's `spec_points.yaml`).
+- **Coverage provenance model** (§19): teaching coverage carries its own provenance and "student can know it before it is taught" / "taught ≠ understood" separation — registered as target semantics for the Cycle-2+ teacher lens (F-035/TFA-03), not a commitment.
+
+### 14.3 Scoped (explicitly NOT current commitments)
+
+- The full teacher-lens surface (§15–§22, §30, §36–§40): class graphs, coverage overlays, class aggregates, at-risk signals, Data/AI assistants, Test Builder — **Cycle 2+ by tracker design**; the doc itself says so (§31, rule 18). No implementation work is authorized by this plan.
+- Layer B's richer ontology (Concept, Skill, PracticalSkill, Procedure, Definition, Example, CounterExample, Formula/Rule) and Layer D resource types (Flashcard, WorkedExample, InteractiveResource, VideoResource, SmartLessonStep): future enum extensions only as evidence demands; T-C06 registers only `SPEC_POINT` + `documents.kind` — the minimal set. The doc's own §3 warning ("not every deployment needs every type immediately") governs.
+
+### 14.4 Concept-identity policy (reconciled)
+
+The doc's §8A.8 ("prefer a smaller number of well-supported concepts"; don't auto-split molar mass / relative formula mass / amount of substance) and this plan's split-first rule (§7) operate at **different pipeline stages** and are both kept: extraction generates candidates **split-first** (over-splitting is recoverable at review; over-merging silently corrupts mastery attribution), while §8A.8's "fewer, well-supported" governs the **validated end-state** — identity resolution (split vs merge) is always a human review decision made "according to their actual academic meaning and curriculum usage", never an embedding-similarity decision. Neither auto-split nor auto-merge.
+
+### 14.5 Phase mapping
+
+| Context doc §8A stages | This plan | Task |
+|---|---|---|
+| Stage A — SpecPoint registry (§8A.6) | Phase 1 | T-C09 |
+| Stage B — resource → point mapping (§8A.7) | Phase 2 | T-C10 |
+| Stages C–D — concepts/skills + candidate relations (§8A.8–§8A.9) | Phase 3 | T-C11 |
+| Stage E — evidence/provenance attachment | per-phase (built into every phase's gates) | — |
+| Stage F — validate high-value relationships | per-phase human gates (PR review) | — |
+| Stage G — assessment evidence | Phase 4 | T-C06/F-168 (corpus-blocked) |
+| Stage H — expose to learner/reco/tutor/teacher | DB wiring + serving via T-C06 → existing read models | — |
+
+### 14.6 One hygiene flag
+
+The forwarded doc lives on a public GitHub repo. Sharing architecture docs that way is the operator's choice, but the **corpus repo stays private** — no spec/book/SME content or verbatim statements into public repos; only structure, schemas, and counts.

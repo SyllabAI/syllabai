@@ -677,3 +677,30 @@ repo, hard gates per phase.
 + TODO T-C09/C10/C11 + PROGRESS session-27 header/headline + this entry). Resources repo
 untouched (clean tree). T-036 critical path unchanged: teacher account + human six-tab
 browser E2E.
+
+---
+
+## Session 27 (continued) — KNOWLEDGE_GRAPH_CONTEXT.md imported + reconciled
+
+The operator forwarded an external canonical KG context document (3,172 lines, hosted on a
+public FileUpload repo) and asked for a full critical read before proceeding. Read all of it.
+
+**Findings:** ~95% semantic agreement with the existing architecture (it restates the source-role
+model, four provenance tiers, graph-as-code, staged construction, IGCSE/IAL isolation,
+learner-state-as-overlay). Key discovery: its §5 edge vocabulary is the LIVE V2
+`knowledge_edges` CHECK enum — verified against `V2__curriculum_knowledge.sql`
+(PART_OF / REQUIRES_PREREQUISITE / RELATED_TO / MISCONCEPTION_OF / EXPLAINED_BY /
+REMEDIATED_BY + strength/rationale/provenance/validation_status/created_by/version). That
+caught a real defect in yesterday's plan draft: §3 had invented CONTAINS/PREREQ_OF/ASSESSED_BY —
+corrected to the live enum. Provenance oddity: dated 2026-09-08 but cites 2026-09-10 corpus
+facts (112 notes, 167 anchors); all ten §54 referenced docs verified present in this repo.
+
+**Actions:** imported the doc verbatim as `KNOWLEDGE_GRAPH_CONTEXT.md` with a provenance header
+(adopted as the semantic contract; plan = execution sequence; corpus architecture = ingestion
+contract); plan §14 added (findings, adopted deltas, scoped non-commitments, concept-identity
+reconciliation, phase mapping to §8A stages A–H, public-repo hygiene flag); adopted deltas:
+validFrom/validTo edge metadata, the misconception triple (COMMONLY_CONFUSED_WITH ≠
+MISCONCEPTION_OF ≠ WRONG_ANSWER_PATTERN), §41 empty-state vocabulary, §8A.14 output layout
+(`graph/specification_points.yaml`), §19 coverage-provenance semantics; teacher-lens surface
+explicitly scoped Cycle-2+ (F-035/TFA-03) — the doc itself agrees (§31, rule 18); TODO T-C09/
+C10/C11 descriptions synced; PROGRESS session-27 addendum. Committed + pushed.
