@@ -771,3 +771,65 @@ after the operator spot-check/PR gate; PROGRESS session-28 header + headline; th
 seeded statements against the PDF; (2) git PR review of `graph/*.yaml`. DB wiring rides
 T-C06 (CurriculumDraftDto → SPEC_POINT, built in T-010). Next in the KG track: T-C10
 (112-note → spec-point mapping). T-036 critical path unchanged.
+
+## Session 29 — T-C10 EXECUTED: Phase-2 revision-note mapping built, gated, negative-tested (syllabai-resources)
+
+Executed on the operator's explicit "Proceed with T-C10" instruction (the TODO's
+"after operator review" condition for Phase 1 is thereby superseded by the operator's
+own sequencing decision; the T-C09 spot-check/PR gates remain open for the operator).
+
+**Method (per KNOWLEDGE_GRAPH_BUILD_PLAN §6 + CONTEXT §8A.7, slug signal above semantic
+similarity, uncertainty preserved):**
+1. `scripts/c10_worksheets.py` (deterministic, zero-LLM): parsed all 112 notes' source
+   URLs, HARD-verified the 28 SME topic-group slugs align 1:1 (count AND ordering) with
+   the 28 spec subsections, then emitted 28 per-subsection worksheets (spec statements +
+   note headings/excerpts) + a full 182-point registry appendix for the AI pass.
+2. AI mapping pass (GLM, Super Z agent): read every worksheet, wrote 211 point-level
+   mapping decisions to `scripts/c10_decisions/S{1..4}.json` — each with code,
+   confidence (high/medium/low), verbatim evidence quote, and rationale.
+3. `scripts/c10_map_notes.py` (gated applier): injected a `spec_map:` front-matter block
+   into each note — PROVIDER subsection anchor (tier/signal/slug, recomputed from the
+   URL) + AI_SUGGESTED spec_points with per-mapping provenance (confidence,
+   model_version, evidence, rationale, validation_status SUGGESTED).
+
+**Hard gates (all green; the evidence gate caught 2 real quote defects during the build —
+wrong-case/paraphrased quotes fixed to verbatim):**
+- G3 anti-hallucination: every evidence quote verified to appear in the note after
+  normalisation (markdown emphasis/HTML sub-sup tags/links/whitespace/curly variants).
+- G2: every code ∈ the 182-point registry (foreign/4CH0 codes structurally impossible).
+- G4: ≥1 mapping per note, confidence vocabulary, no duplicate codes.
+- G5: note bodies byte-identical — 112 files changed, +3242 front-matter lines,
+  0 deletions; front matter still parses; existing keys untouched; idempotent re-run.
+
+**Results:** 112/112 notes mapped · **211 mappings** (high 176 / medium 34 / low 1) ·
+**182/182 spec points covered — the Phase-3/4 zero-coverage queue is EMPTY** (quality
+gaps still flagged, e.g. poly(tetrafluoroethene) absent from the polymer note's
+examples) · 1 cross-subsection flag (4CH1-1.17: the 1-5-2 relative-mass note teaches
+the S1-c Ar-from-abundances calculation — legitimate, flagged for PR attention).
+
+**Validator:** `graph_check.py` extended with check group 6 `c10-notes-mapping`
+(schema, registry membership, provenance vocabulary, anchor-vs-slug recomputation,
+foreign-code scan, totals 112/211/182) — 9 groups ALL PASS on the real tree;
+`scripts/c10_negative_test.py` injects 8 corruption classes into a throwaway copy
+(spec_map removal, invented code, emptied evidence, corrupted anchor, emptied
+mappings, planted 4CH0, deleted note, premature HUMAN_VALIDATED tier) — all 8 caught.
+
+**Deliverables (syllabai-resources, private repo, zero core changes):**
+- 112 notes with `spec_map:` front matter (the mapping source of truth; git PR diff =
+  the review surface).
+- `graph/reports/PHASE2_MAPPING_COVERAGE.md` — method, totals, zero-coverage queue,
+  per-subsection table, per-point detail (which notes, which confidence), PR review
+  guide incl. cross-subsection flags.
+- `graph/reports/PHASE2_SPOT_CHECK_SHEET.md` — 20 randomly-sampled mappings
+  (seeded, reproducible) with verdict checkboxes for the operator.
+- `scripts/c10_worksheets.py`, `scripts/c10_map_notes.py`, `scripts/c10_decisions/`
+  (the AI decision record), `scripts/c10_negative_test.py`, updated `scripts/README.md`.
+
+**Tracker updates:** TODO T-C10 → [x] COMPLETE with full evidence (T-C11 next in the KG
+track after the operator's Phase-2 PR review); PROGRESS session-29 header + headline;
+this entry.
+
+**Operator gates (HUMAN_VALIDATED promotion):** (1) review the front-matter diff in the
+PR — medium/low confidence mappings and the 1 cross-subsection flag first; (2) spot-check
+the 20 sampled mappings via PHASE2_SPOT_CHECK_SHEET.md. DB wiring still rides T-C06.
+T-036 critical path unchanged.
