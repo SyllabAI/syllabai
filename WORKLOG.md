@@ -539,3 +539,25 @@ Work performed:
 Stage summary:
 
 - **T-036a complete: zero open PRs across all repos; both mains are CI-green at the merged heads.** The remaining critical path is exactly the operator execution (Neon → Render → Vercel per the regenerated package) followed by the re-run of the §3 checklist + browser E2E against the real URLs (T-036 completion evidence). Recorded open items: springdoc-public-in-prod hardening candidate (one-line fix, offered); teacher provisioning one-off; T-C04 resumption next product milestone.
+
+## Session 24 — Render backend LIVE (deploy 4) + 12/12 live-API verification; docs updated for the Vercel half
+
+**Date:** 2026-09-10 · **Mode:** deploy/verify (T-036)
+
+**Directive:** user messages — deploy logs (3 attempts) + "This time it deployed successfully" + "Update all the docs now. TODO, progress etc. And also guide me through the vercel deployment."
+
+Work performed:
+
+- **Deploy 3 diagnosed** (commit `91441c0` — the Groq-with-key fix from deploy 2's finding): build OK, httpClient error GONE, but the app stalled silently ≥10 min after `HHH10001005` (mid-EntityManagerFactory) — no crash, no exit line — until Render's port scan timed out. Root cause: JVM footprint maxima ~850 MB (heap 75 % = 384 MB + UNBOUNDED metaspace + 240 MB code cache) against the 512 MB free-instance cgroup → kernel reclaim + full-GC thrash during SessionFactory construction (36 entities; Hibernate 7 + Spring AI 2 + Kotlin class loading); GC is CPU-bound on the 0.1-CPU quota, so each full GC takes minutes of wall time → zero progress, zero logs, process alive.
+- **Fix `b35aa62`** (Dockerfile only): MaxRAMPercentage=42, MaxMetaspaceSize=160m, ReservedCodeCacheSize=48m, ActiveProcessorCount=1, UseSerialGC, TieredStopAtLevel=1 (C1-only — startup is CPU-bound on 0.1 CPU and C2 compilation was eating the quota), Xss512k, ExitOnOutOfMemoryError (future walls fail fast + visibly instead of stalling silently), EXPOSE 10000 (the real Render port). Pushed; core-ci green.
+- **Deploy 4 verified from the operator's log:** `Started SyllabAiApplication in 135.598 seconds` (was: never), `Tomcat started on port 10000`, ALL THREE LLM providers registered (groq llama-3.3-70b-versatile / gemini-2.5-flash / openrouter — the operator configured all keys), R2-less boot WARN as designed, health check passed, deploy Live.
+- **Post-deploy API verification 12/12 GREEN** (`scripts/t036_verify_deploy.py`, fresh throwaway user per run): health UP; register 201 + JWT → login 200 → me 200; 8 seeded MCQs (type `MCQ_SINGLE`) with no answer-key/misconception leakage in the DTO; wrong answer on Q1 distractor A → `correct=false`, `implicatedMisconceptionIds=[MIS-T1.1-01]` (the Paper-B evidence loop, live); correct answer → marks 1/1; attempt-history read model total=2; NBA 4 actions (ASK_TUTOR + 3×PRACTISE_QUESTIONS) off the weak-mastery signal; teacher 403 / admin 403 / anonymous 401. Two initial script-side assertion mismatches (type literal, wrapped history object) probed against the live JSON and corrected — app behavior was correct both times.
+- **Tutor probe** `POST /api/v1/tutor/ask` → honest deterministic-refusal with guidance (no course material ingested — designed behavior; the LLM chain itself constructs cleanly with real keys, which was deploy 2's exact failure point).
+- **CORS live-probed** (OPTIONS preflights against the deployed URL): allow-list = the application.yml DEFAULT (`http://localhost:3000`, `https://syllabai.vercel.app`); `syllabai-web.vercel.app` is rejected (403). Consequence: the Vercel project must be NAMED `syllabai` (URL `https://syllabai.vercel.app`) for zero-backend-change CORS, or the operator sets `SYLLABAI_CORS_ORIGINS` in Render.
+- **Docs updated (this commit):** TODO.md T-036 session-24 status (backend half done + verified; remaining = Vercel import, teacher account, browser E2E); PROGRESS.md headline + Last-updated + 2 new findings (production-only failure classes; CORS default allow-list) + Next-work ACTIVE paragraph corrected; this WORKLOG entry. `download/t036/RENDER_FAILED_DEPLOY_TRIAGE.md` rewritten earlier this session (RESOLVED AND VERIFIED + 3-failure history + deploy-4 results table).
+
+Stage summary:
+
+- **T-036 backend half COMPLETE: the deployed environment is real and verified** — Neon (PostgreSQL 18.6 @ V14) + Render (`https://syllabai-core.onrender.com`, 4 deploys, 3 production-only bug classes fixed: base-image tag, with-key construction, cgroup memory) + the full LLM failover chain live.
+- Remaining for T-036: Vercel import (operator, guided this session: name the project `syllabai`, env `NEXT_PUBLIC_API_BASE_URL=https://syllabai-core.onrender.com` bare origin, then CORS via project name or Render env), teacher account (runbook one-time path), full browser E2E against the deployed URLs with recorded evidence.
+- Fix commits on core main this session: `9d18303` (previous session) → `91441c0` (previous session) → **`b35aa62`**.
