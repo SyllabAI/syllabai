@@ -704,3 +704,70 @@ MISCONCEPTION_OF ≠ WRONG_ANSWER_PATTERN), §41 empty-state vocabulary, §8A.14
 (`graph/specification_points.yaml`), §19 coverage-provenance semantics; teacher-lens surface
 explicitly scoped Cycle-2+ (F-035/TFA-03) — the doc itself agrees (§31, rule 18); TODO T-C09/
 C10/C11 descriptions synced; PROGRESS session-27 addendum. Committed + pushed.
+
+---
+
+## Session 28 — T-C09 EXECUTED: Phase-1 knowledge-graph skeleton extracted, PDF-verified, validated (syllabai-resources)
+
+Continuation after a session interruption (worklog recoverable from the repo state): the
+extraction script had been written but never run. This session ran it, fixed what the hard
+gates caught, shipped the validator, and committed.
+
+**First gated run failed exactly as gates should:** 2 PDF cross-check mismatches (1.60C,
+2.50) — root cause: the PDF text layer's section-start sub-topic TOC listing
+("The following sub-topics are covered in this section[:.]?" + title lines) glues onto the
+previous section's last statement as "continuation text", because the section title is
+extracted as two silently-skipped lines ('2' + 'Inorganic chemistry'). The S3 variant of the
+prefix ends with ':' (not '.'), so it slipped the skip regex too; 3.22C was silently polluted
+into a false fuzzy pass. Fix: listing-state machine in `pdf_boundary_map()` (prefix line
+enters the state; listing titles are skipped, not glued; state clears at the next real
+subsection header / code line / section title / 'Students should:'). Second defect: the
+45-table classifier checked `paper_overview` ("Paper code" in flat text) BEFORE
+`codes_appendix` ("Subject codes") — Appendix 1's "Paper codes" row substring-matched and
+emitted a bogus third paper record with null marks/duration. Fix: check codes_appendix first
++ a `papers: 2` gate + null-marks gate.
+
+**Final gated run: ALL GREEN.** 182 spec points (S1:60/S2:50/S3:22/S4:50) · 52 C-points ·
+4 topics · 28 subtopics · 12 practicals · 25 command words · 45 tables (31 spec) · 210
+PART_OF edges · 2 papers. Ground truth amended vs the plan §5 baseline: 182/52/28 (not
+167/40/29) — the md holds all 182 statements but 4.49C/4.50C are OCR-orphans outside the
+HTML tables; documented in `graph/reports/PHASE1_COMPLETENESS.md` §2. Statement-level PDF
+cross-check: 119 exact / 52 normalized / 11 fuzzy (residual OCR damage) / **0 mismatch**;
+statement order identical; md↔PDF code sets equal. Damage policy honored: text verbatim
+(whitespace-normalised only), 54/182 statements carry damage flags, never silently fixed;
+4SD0 whitelisted only inside the Double-Award applicability rule prose.
+
+**Deliverables (all in syllabai-resources, private repo, zero core changes):**
+- `scripts/c09_spec_graph_extract.py` — deterministic zero-LLM extractor, hard gates abort
+  on any count/mismatch regression; regenerates the whole `graph/` tree.
+- `graph/` = 6 YAML graph-as-code files per KNOWLEDGE_GRAPH_CONTEXT §8A.14:
+  `specification_points.yaml` (182 records: verbatim wording, subsection, orderings,
+  C-point applicability, leading verb → draft SKILL tags, full provenance incl. md line
+  anchor + table/row index + row shape + PDF page + match level, damage flags),
+  `topics.yaml` (4 + 28 with md/PDF title reconciliation and header source),
+  `relationships.yaml` (210 PART_OF edges, live V2 enum names only),
+  `command_words.yaml` (25: 23 main + 2 categorised), `practicals.yaml` (12),
+  `assessment_objectives.yaml` (3 AOs + 2 papers).
+- `graph/reports/PHASE1_COMPLETENESS.md` (12 sections: gates table, baseline amendment
+  evidence, cross-check levels, structural damage inventory, notation-damage census,
+  45-table census, subsection inventory, practicals, command words, C-point rule,
+  skill-tag census incl. 9 unknown-leading-verb entries, operator actions)
+  + `graph/reports/SPOT_CHECK_SHEET.md` (seeded 20-statement sample, reproducible,
+  PASS/FAIL checkboxes).
+- `scripts/graph_check.py` — the T-C09 validator: 8 check groups (meta/count consistency;
+  specification_points schema+semantics; topics incl. membership equivalence with the
+  points' own declarations; relationships incl. exact PART_OF coverage and edge-order
+  agreement; command words; practicals incl. practical-flag coverage; AOs+papers;
+  namespace prose scan). ALL PASS on the real graph; **negative-tested against 8
+  corruption classes** (provenance md_line loss, foreign node code, invented edge
+  relation, membership drift, foreign prose, duplicate global_order, cross-check
+  regression, record removal) — every one caught.
+- `scripts/README.md` updated with both tools.
+
+**Tracker updates:** TODO T-C09 → [x] COMPLETE with full evidence; T-C10 note → unblocked
+after the operator spot-check/PR gate; PROGRESS session-28 header + headline; this entry.
+
+**Operator gates (the HUMAN_VALIDATED promotion, per the plan):** (1) spot-check the 20
+seeded statements against the PDF; (2) git PR review of `graph/*.yaml`. DB wiring rides
+T-C06 (CurriculumDraftDto → SPEC_POINT, built in T-010). Next in the KG track: T-C10
+(112-note → spec-point mapping). T-036 critical path unchanged.
