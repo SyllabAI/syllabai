@@ -598,3 +598,36 @@ Stage summary:
 - **T-C05 complete: the manual 4CH1 corpus has a binding import contract before mass conversion begins** — the operator now standardizes front matter, headings, marks notation, chemistry notation, and asset conventions from file #1 (the MUST list), with everything else designed to evolve after the corpus exists.
 - Cycle 1 untouched; IAL and IGCSE coexist as sibling CurriculumVersions with named contamination guards (T-C07 being the one real code prerequisite).
 - T-036 status unchanged: teacher account + human browser E2E remain (CORS re-confirmed green this session).
+
+## Session 26 — T-C05 review pass: first syllabai-resources batch inspected + repaired
+
+The operator uploaded the first corpus batch (spec PDF + its ocr.z.ai markdown, 112 Save My Exams
+revision notes with 244 images, both Student Book scans) to the new `syllabai-resources` repo.
+Inspected it end-to-end against CMC v1.0 and applied two repairs.
+
+**Time-critical rescue:** the spec markdown's 5 embedded images sat on ocr.z.ai signed URLs
+expiring 2026-09-17 — downloaded to local `assets/` and references localized before expiry
+(`scripts/c05_recover_spec_images.py`, pattern kept in the repo for future conversions).
+Additive CMC front matter (`status: raw_ocr`) prepended; no content touched.
+
+**Clipper bug repair:** every SME note referenced images via the unsubstituted Web-Clipper
+template variable `%7BpageTitle%7D/…` while all images were dumped in one literal
+`{pageTitle}/` folder — all 245 refs broken. Shipped idempotent
+`scripts/c05_repair_clipper_refs.py` (re-run after every clip batch): folder → `assets/`,
+correct relative paths, percent-encoded filenames decoded (two files were double-encoded),
+one webp→png extension rescue, CMC `figure-missing` markers for the 3 genuinely missing images.
+244/247 refs now resolve. Verified by byte-level diff audit that no prose/tables/whitespace
+semantics changed (one earlier overzealous pass was caught and reverted via git checkout).
+
+**Quality verdict:** the spec OCR preserved everything that must be authoritative — all four
+content sections with complete spec-point tables (1.1–1.60C / 2.x / 3.1–3.22C / 4.1–4.49C),
+the 12 practicals, Appendix 5 command-word taxonomy, the Periodic Table; damage is confined to
+the predicted chemistry-notation class (CJK leak like `简单 distillation`, lost sub/superscripts
+like `CO32-`, full-width punctuation, LaTeX fragments) → pipeline lint + human review own the
+fixes, no hand-editing. SME notes: clean clips with canonical source URLs (112 distinct),
+authorship and nav preserved; same notation damage; boilerplate to be stripped at ingest.
+Student Book: both PDFs are the same title; convert the 383-page 1-up (page-level provenance),
+not the 192-page 2-up.
+
+Committed and pushed: `syllabai-resources` `8b9b5c3` → `c2b0e69` (repairs +
+`CORPUS_REVIEW_2026-09-10.md` + maintenance scripts). No code repos touched; Cycle 1 untouched.
