@@ -31,7 +31,7 @@ This is the **main repository**: the master project pack (specification, decisio
 
 ## Execution scope
 
-**Cycle 1 = the course project**: Edexcel IAL Chemistry, ~50 retake-path students, 8 weeks, Tutor + Assessor agents only (Paper B's own Cycle-1 definition). 34 backlog rows, 12 of them the critical-path spine. Everything else is Cycle 2+. See Master Spec §39a.
+**Cycle 1 = the course project**: Edexcel International GCSE Chemistry (4CH1) — subject scope moved from IAL Chemistry by ADR-019 (2026-09-11) — ~50 retake-path students, 8 weeks, Tutor + Assessor agents only (Paper B's own Cycle-1 definition). 34 backlog rows, 12 of them the critical-path spine. Everything else is Cycle 2+. See Master Spec §39a.
 
 ## Source hierarchy (do not silently resolve conflicts)
 

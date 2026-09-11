@@ -2,7 +2,7 @@
 
 **Status:** Canonical product/engineering decision
 **Date:** 2026-09-07
-**Applies to:** All boards, qualifications, and subjects; current Cycle-1 execution remains Edexcel IAL Chemistry unless the scope is explicitly changed.
+**Applies to:** All boards, qualifications, and subjects; Cycle-1 execution is Edexcel International GCSE Chemistry (4CH1) per ADR-019 (2026-09-11), which explicitly changed the scope from Edexcel IAL Chemistry (ADR-010).
 
 ## 1. Decision
 
@@ -408,7 +408,7 @@ The individual student graph is the same graph/learner-state model as the studen
 
 This document defines the **long-term subject-first product architecture**. It does not authorize scope expansion of the current pilot.
 
-Current Cycle-1 execution remains Edexcel IAL Chemistry according to ADR-010. The teacher/classroom architecture and IGCSE examples describe the target platform, not permission to ingest all supported courses immediately.
+Current Cycle-1 execution is Edexcel International GCSE Chemistry (4CH1) according to ADR-010 as amended by ADR-019 (2026-09-11). The teacher/classroom architecture and the other qualification examples describe the target platform, not permission to ingest all supported courses immediately.
 
 Feature additions discovered from the subject-first architecture or teacher/classroom discussions must be entered into the definitive project tracker or the controlled addenda under `backlog/` and must not live only in chat history.
 

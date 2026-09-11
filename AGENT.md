@@ -196,7 +196,7 @@ Resources should map to specification points. Future QuestionVersion/QuestionPar
 
 Learner state is a separate time-aware overlay on the subject graph: mastery, misconceptions, confidence, procedural fluency, exposure/evidence, and review/decay. Never mutate official curriculum nodes with student-specific state.
 
-The subject-first architecture is broader than the current pilot. **Cycle 1 remains Edexcel IAL Chemistry** under ADR-010. The IGCSE Chemistry examples in `SUBJECT_ARCHITECTURE.md` do not authorize IGCSE bulk ingestion or other scope expansion.
+The subject-first architecture is broader than the current pilot. **Cycle 1 is Edexcel International GCSE Chemistry (4CH1)** under ADR-010 as amended by ADR-019 (2026-09-11 scope pivot from Edexcel IAL Chemistry). Other qualifications remain out of the pilot: this does not authorize bulk ingestion of further courses or other scope expansion.
 
 When an agent discovers a new subject-scoped capability, it must be added to the definitive tracker (or recorded in the current feature-tracker addendum pending the next controlled workbook sync) rather than existing only in prose.
 

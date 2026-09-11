@@ -242,3 +242,18 @@ Mock attempts use the existing immutable-evidence / review-state / derived-maste
 The complete implementation blueprint is canonical in `MOCK_EXAM_GENERATOR_ARCHITECTURE.md`, with agent rules in `MOCK_EXAM_GENERATOR_AGENT_ADDENDUM.md` and the dedicated decision record in `DECISION_018_MOCK_EXAM_GENERATOR.md`.
 
 **Scope guard:** ADR-018 defines long-term product architecture and does not expand Cycle 1. Cycle 1 remains Edexcel IAL Chemistry with Tutor + Assessor focus under ADR-010.
+
+## ADR-019: Cycle-1 pilot qualification pivot — Edexcel IAL Chemistry → Edexcel IGCSE Chemistry (4CH1)
+
+**Status:** Accepted (operator decision)
+**Date:** 2026-09-11
+
+The Cycle-1 course-project pilot runs on **Edexcel International GCSE Chemistry (4CH1)** instead of Edexcel IAL Chemistry. This amends the subject scope of ADR-010 and supersedes every earlier "Cycle 1 remains Edexcel IAL Chemistry" statement (the ADR-017/ADR-018 scope guards, the §39a v1.2.1 text, and similar lines in historical logs). Those records are preserved verbatim per the source hierarchy; this ADR is the superseding authority.
+
+Rationale: the operator's teaching context is IGCSE, and the entire content program already executes on 4CH1 — the 2017 4CH1 specification with its 182-point registry (S1:60 / S2:50 / S3:22 / S4:50, 28 subtopics), the CMC v1.0 content corpus and provenance machinery (T-C05), the 112-note spec-point mapping with ratification gates (T-C09/T-C10), and the past-paper QP/MS ingestion (41 sessions complete, Papers 1–2). The only IAL artifact is the core DB's T-010 curriculum seed (Pearson 2018 IAL spec: 6 units / 20 topics / 15 subtopics), which remains valid, namespaced platform content awaiting T-C06 wiring.
+
+Unchanged by this decision: the pilot population (~50 retake-path students, 8 weeks), the agents in scope (Tutor + Assessor only), the pre-registered predictions P1–P8, the 34-row Cycle-1 backlog cut with its 12-spine critical path, and the qualification coexistence rules — KG node codes stay namespaced per qualification (`4CH1-*`, `WCH*`), and the T-C07 curriculum-scoping gap in retrieval must close before corpus embeddings are enabled. IAL support remains a Cycle-2+ platform capability, not a Cycle-1 subject.
+
+Follow-ups already registered stay valid: 4CH1 curriculum ingestion into core rides T-C06's CurriculumDraftDto path; T-C11 zero-coverage corpus-gap work (annotated 4CH1-4.15 gap) continues unchanged.
+
+**Scope guard:** ADR-019 IS the explicit scope change that SUBJECT_ARCHITECTURE §0/§15 and Master Spec §39a anticipated. It changes only the Cycle-1 subject qualification; it does not authorize bulk ingestion of any further qualification, subject, or course.

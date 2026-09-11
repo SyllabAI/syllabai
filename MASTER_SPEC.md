@@ -1,7 +1,7 @@
 # SyllabAI Master Technical Specification
 
 **Document status:** Canonical project specification  
-**Specification version:** 1.2.1 (documentation-sync revision, 2026-09-08 — closes the residual list in `FINAL_SANITY_CONTRADICTION_CHECK_2026-09-07.md`: registers ADR-018 blueprint-driven Mock Exam Generator in the §0 addenda hierarchy, §6.5 assessment-layer principle, §39a Cycle-2+ scope guard and §43 documentation index; the master workbook absorbed F-171–F-176 the same day (TSV/XLSX parity 181=181); v1.2.0 architecture content unchanged)  
+**Specification version:** 1.3.0 (Cycle-1 scope revision, 2026-09-11 — ADR-019: the Cycle-1 pilot subject moves from Edexcel IAL Chemistry to Edexcel International GCSE Chemistry (4CH1); §39a Subject bullet rewritten, all other architecture content unchanged from v1.2.1)  
 **Research date:** 2026-09-02  
 **Project:** SyllabAI  
 **Academic context:** Advanced Object Oriented Programming (Java backend)  
@@ -1474,7 +1474,7 @@ Calibration, longitudinal analyses, external replications, model comparisons, qu
 
 The build waves in section 39 describe the full-system roadmap. The **authoritative execution scope for the course project** is the Cycle-1 pilot slice defined by Paper B:
 
-- **Subject:** Edexcel IAL Chemistry (a Units 1–3 subset sized for the 8-week window).
+- **Subject:** Edexcel International GCSE Chemistry (4CH1) — scope moved from Edexcel IAL Chemistry by operator decision (ADR-019, 2026-09-11, which amends the subject scope of ADR-010). The 4CH1 content corpus, spec-point registry (182 points) and mapping program (T-C05/T-C09/T-C10) already execute on this qualification; IAL remains a supported platform qualification (namespaced, coexistence per T-C07) but is Cycle-2+.
 - **Population:** ~50 retake-path students, 8 weeks.
 - **Agents in scope:** **Tutor + Assessor only** (Paper B Cycle 1). No coach/counselor agents.
 - **Study:** pre-registered predictions P1–P8 evaluated against learning-log telemetry.

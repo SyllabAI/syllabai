@@ -268,9 +268,9 @@ Existing feature identities were preserved and extended rather than duplicated:
 
 ## Execution scope
 
-Cycle 1 (authoritative, Master Spec §39a): Edexcel IAL Chemistry, ~50 students, 8 weeks, Tutor + Assessor agents only, predictions P1–P8. Cycle-1 rows in the backlog define the cut; everything else is Cycle 2+.
+Cycle 1 (authoritative, Master Spec §39a as amended by ADR-019): Edexcel International GCSE Chemistry (4CH1) — subject scope moved from Edexcel IAL Chemistry by operator decision, 2026-09-11 — ~50 students, 8 weeks, Tutor + Assessor agents only, predictions P1–P8. Cycle-1 rows in the backlog define the cut; everything else is Cycle 2+.
 
-The subject-first, teacher/classroom, learning-evidence, recommendation and mock-exam architectures are broader than Cycle 1 and **do not authorize IGCSE bulk ingestion or implementation of long-term features inside the pilot unless the tracker explicitly marks them `Cycle 1`.**
+The subject-first, teacher/classroom, learning-evidence, recommendation and mock-exam architectures are broader than Cycle 1 and **do not authorize bulk ingestion of any further qualification (e.g. IAL) or implementation of long-term features inside the pilot unless the tracker explicitly marks them `Cycle 1`.**
 
 ## Important engineering insight
 
