@@ -890,7 +890,7 @@ Standing state: 19 confirmed / 1 rejected-and-remapped; all mappings still `vali
 
 **State:** the advisor's condition is discharged — the §11 batch is machine-verified to promote exactly the 61 AI-reviewed CONFIRM mappings and nothing else. Remaining: the operator executes the §11 command (or explicitly delegates). Provenance chain preserved: AI CONFIRM → operator ratification → HUMAN_VALIDATED (`validated_by: operator`); the other 150 mappings stay `SUGGESTED` as a deliberate risk-tier, not an inconsistency. T-C11 starts after ratification.
 
-## Session 34 — 2026-09-11: T-C10 round-4 rework — 2 of the 61 confirms REJECTED and removed; ratification audit re-targeted at the 59-spec §12 batch (resources 49a0478 → 3c33555)
+## Session 34 — 2026-09-11: T-C10 round-4 rework — 2 of the 61 confirms REJECTED and removed; ratification audit re-targeted at the 59-spec §12 batch (resources bc52c93 → 9efd5b5, rebased over the operator's concurrent PMT-notes push; audit provenance refresh c6454c9 — final HEAD)
 
 **Trigger:** the operator forwarded the external advisor's FOURTH-round review: two rejections (4CH1-4.15 @ Nitrogen Oxides & Sulfur Dioxide; 4CH1-1.17 @ Calculate Relative Mass), the proposed command-kind substance rule, and the instruction to hold the 61-spec batch. "Proceed" authorized full execution of the concurrence plan.
 
