@@ -966,3 +966,19 @@ Standing state: 19 confirmed / 1 rejected-and-remapped; all mappings still `vali
 - Not done (by design): no PMT fetch, no recon fetches, no baseline mutation — Gate A is the operator's alone to open (complete the SUGGESTED → HUMAN_VALIDATED pass over the 1,361 dirs, or waive in writing). Session numbering taken as 40 — if the operator's concurrent sessions claim it, renumber per the session-38/39 precedent.
 
 **State:** T-C12 is fully specified and operator-ratified on paper; zero execution ambiguity remains for the backfill session — recon + ledger prep may start immediately, the first PDF fetch waits on Gate A, P1 waits on Gate B. The operator's ratification pass over the 1,361 `AI-IDENTIFIED` baseline dirs is now the critical-path item for the whole backfill.
+---
+
+## Session 40 — 2026-09-11 (T-C11 stream — co-numbered with the operator's same-day
+session-40 T-C12 ratification record 074e629; both entries stand, different task
+streams)
+
+**T-C11 pilot review round (operator six-task review instruction).**
+
+- Verified baseline before work: resources e218259 / syllabai afb1d99 (clean), graph_check 11/11, negative 14/14, byte-identical regeneration, 4.15 zero coverage, 0 HUMAN_VALIDATED edges — the tasking's claimed state matched the repos exactly.
+- Task 1: 10-field reviews of both REVIEW_REQUIRED edges (evidence byte-verified in the source notes). PR-03→CON-MOLE REJECT ("moles" = table-row labels only, never prose; transitively subsumed). GAS-VOL-CALC→AVOGADRO-LAW HOLD (worked example never names the law; real skill = molar-ratio reasoning; alternative identity unauthored). Both concordant with pass-2; neither silently resolved; neither promoted.
+- Task 2: 12 held candidates audited — 11 CONFIRM_HOLD + 1 CONFIRM_REJECT, 0 promoted, 0 reopened; clustered into 4 stable failure classes documented in C11_ARCHITECTURE §19 (FC-1..FC-4; RR edges instantiate the same classes).
+- Task 3: all 66 edges re-audited against the 7 semantics rules — all upheld; 2 medium-confidence judgments flagged review-gated (FP-1 EXPLAINED_BY; CONSERVATION-MASS remediation mapping).
+- Task 4: negative control machine-verified (frozen 14/14 + 3 new variant lures 3/3 rejected: spec-wording anchor, topical-similarity note, uncovered-remediation path).
+- Task 5: promotion mechanism built & tested & INERT — c11_promote.py (exact identity, fail-closed, idempotent, anti-forgery) + c11_promotions.yaml (0 entries) + generator G13 + checker c11.10/c11.13 two-way audit + c11_promote_test.py 25/25 in a sandbox. Nothing promoted: the RR verdicts were REJECT/HOLD (not ACCEPT), and no operator-ratified identities exist.
+- Task 6: C11_S16_GATE_REPORT — §16 NOT ready, NOT self-authorized (operator blockers: RR settlement, sheet verdicts, first promotion + audit, expansion plan).
+- Final state: 29/66/12 byte-identical to e218259, 0 HUMAN_VALIDATED, graph_check 11/11, negative 14/14, task4 3/3, promote 25/25; resources e218259 → 4eba8ea.
