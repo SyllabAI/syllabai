@@ -47,7 +47,9 @@ The current repository set is:
 | `syllabai-core` | Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith (all domain modules) |
 | `syllabai-web` | Next.js 16 / React 19 / TypeScript frontend (Vercel) |
 | `syllabai-parser` | polyglot offline content pipeline (opendataloader-pdf in-process; MinerU/Surya offline) |
-| `Past-Papers` | public official-content corpus repo for IAL/IGCSE Edexcel QP/MS PDFs; no application code |
+| `Past-Papers` | public official-content corpus repo for IAL/IGCSE Edexcel QP/MS PDFs + GLM-OCR markdown corpora (`paper 1` / `paper 2` = 4CH1 papers 1C/2C × 41 sessions, QP+MS pairs, MANIFEST.json provenance); raw staging feeding `syllabai-pastpapers`; no application code |
+| `syllabai-resources` | public content-ops corpus repo: 112 SME IGCSE Chemistry revision notes with spec-point mappings (T-C09 graph-as-code + T-C10, 209/209 HUMAN_VALIDATED), 4CH1 specification md/PDF, PMT Edexcel IGCSE Chemistry resources, Student-Book OCR runbook + pilot, KG build scripts |
+| `syllabai-pastpapers` | public canonical past-papers corpus, charter-governed (README = charter): normalized Edexcel IGCSE/IAL/GCE QP/MS under `past-papers/pearson-edexcel/` with per-paper `manifest.yaml` (identity, SHA-256, provenance) + `_quarantine/`; **data layer for the Past Papers feature — students/teachers access official QPs and mark schemes**; ingestion reports + acquisition plans at root |
 
 Domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live **inside `syllabai-core`** as strongly-separated packages and graduate to repositories only when a genuine runtime/lifecycle boundary appears.
 
