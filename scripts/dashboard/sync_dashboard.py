@@ -59,6 +59,8 @@ def http(method, url, data=None, headers=None, timeout=60, retries=2):
         try:
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 raw = r.read().decode()
+                if raw.strip() and not raw.lstrip().startswith(("{", "[")):
+                    die(f"{method} {url} -> non-JSON response (blocked?): {raw[:150]}")
                 return r.status, (json.loads(raw) if raw.strip() else {})
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503) and attempt < retries:
@@ -128,10 +130,12 @@ def sheet_clear(tab, token):
 
 
 def sheet_put(tab, rows, token):
-    rng = urllib.parse.quote(f"{tab}!A1", safe="")
-    url = (f"https://sheets.googleapis.com/v4/spreadsheets/{SHEET_ID}/values/"
-           f"{rng}?valueInputOption=USER_ENTERED")
-    st, data = http("POST", url, data={"values": rows}, headers={"Authorization": f"Bearer {token}"})
+    # single-range write form (values/{range}?valueInputOption=...) gets served an HTML
+    # block page from datacenter IPs - use values:batchUpdate instead (verified working)
+    url = f"https://sheets.googleapis.com/v4/spreadsheets/{SHEET_ID}/values:batchUpdate"
+    payload = {"valueInputOption": "USER_ENTERED",
+               "data": [{"range": f"{tab}!A1", "values": rows}]}
+    st, data = http("POST", url, data=payload, headers={"Authorization": f"Bearer {token}"})
     if st not in (200, 201):
         die(f"sheet_put {tab} -> {st}: {json.dumps(data)[:200]}")
 
@@ -213,7 +217,10 @@ def main():
     gtoken = google_token(cid, sec, rtok)
     print("[OK] Google token refreshed")
 
-    repos = gh(f"/users/{GH_ORG}/repos", {"per_page": 100, "sort": "pushed"})
+    # /user/repos returns public + private for the token's own account;
+    # /users/{user}/repos returns public only
+    repos = gh("/user/repos", {"per_page": 100, "sort": "pushed",
+                               "visibility": "all", "affiliation": "owner"})
     print(f"[OK] {len(repos)} repos fetched")
 
     # ---- commits: merge new into existing log ----
