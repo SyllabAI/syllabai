@@ -1256,3 +1256,14 @@ Resources: eeb6021 → b688140; tracker 0cfe9b3 → (this commit).
 **Next:** the batch-4 authoring session (extraction_pass c11-s16-batch-4 over 4CH1-3.1–3.22C + the 3.8/3.15/3.16 practicals; 15 notes read in full + the 3 pinned MS; decision record → generator registry [pilot, batch1, batch2, batch3, batch4] → pass-2 adversarial review → C11_BATCH4_REVIEW_SHEET + the operator-owned verdict template) under the boundary ruling's standing constraint.
 
 Resources: b688140 → 3663665 (batch-3 application) → bde08f2 (batch-4 start), pushed; tracker 22a4941 → (this commit).
+
+## Session 53 — T-C11 §16 batch 4 (S3 Physical Chemistry) authored to its operator gate (2026-09-13)
+
+- Operator directive: "Execute Batch 4 using the established Batch-1/2/3 machinery." — authoring cleanly to the operator gate; no promotion, no invented verdicts, no new review loops.
+- Extraction: 15/15 HUMAN_VALIDATED-mapped S3 notes read in full + 3/3 pinned S3 Paper-2 MS mined + 22 spec wordings; every planned quote probed pre-authoring (c11_batch4_quote_probe.py), 128/128 anchors pre-verified fail-closed BEFORE the registry grew (c11_batch4_preverify.py).
+- Decision record scripts/c11_batch4_decisions.yaml (c11-s16-batch-4): 22 nodes (17 CONCEPT + 5 MS-documented WAP misconceptions) / 35 authored edges (24 RP + 1 EXPLAINED_BY + 5 WAP + 5 REMEDIATED_BY; all SUGGESTED, zero RR) / 20 derived PART_OF / 14 held (B4-H-01..14) / 22 command kinds; the session-52 boundary ruling applied EXACTLY (5 sanctioned edges, one per ruled S1 owner; zero re-minting; the sixth considered edge held).
+- Merged store: 113 nodes / 275 edges (117 PART_OF + 158 semantic) / 82 command kinds / 118 HUMAN_VALIDATED UNCHANGED / 2 RR frozen / 4.15 uncovered; coverage 82/182 SPs.
+- Pass-2 (c11_batch4_review_pass2.yaml): zero demotions, flags FP-B4-1..5 + FN-B4-1..3. Review gate: C11_BATCH4_REVIEW_SHEET.md + C11_BATCH4_REVIEW.json + the operator-owned verdicts template (35 E + 17 N + 5 M rows + 6 identity decisions + held acknowledgment).
+- State anchors re-anchored with dated session-53 comments only (graph_check, batch-2/3 verdict checks, diff-review R1 35/5/118, boundary check B/D, promote/diff-review test staging); governance reports amended (S16 gate report + architecture §16, dated session-53 notes, historical text preserved).
+- Full gate suite green at the authored-to-gate state; generator + review-build + forecast re-runs sha256-byte-identical; forecast batch-4 record appended (52.8/60.5/22.0 vs 22/35/14; promotion 0.0 pending the gate).
+- Resources commit b2c880a pushed to origin/main. STOPPED at the operator gate. NEXT: the operator's batch-4 verdict session (fill + rename scripts/c11_batch4_verdicts_template.yaml → c11_batch4_verdicts.yaml); then batch 5 = S2 Inorganic (cross-slice ruling S1↔S2 + S3↔S2).
