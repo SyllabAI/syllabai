@@ -449,7 +449,7 @@ def main():
             s_time,
             f'=HYPERLINK("https://drive.google.com/drive/folders/{drive_map[name]}","open")'
             if name in drive_map else "-",
-            files, mb, delta,
+            files, mb, safe(delta, 40),
         ])
         if health.startswith("🔴"):
             why = f"last sync: {s_status} at {s_time} UTC" if s_time != "-" else "never synced"
