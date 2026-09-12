@@ -1136,3 +1136,27 @@ streams)
 **Next:** operator records batch-1 verdicts (`c11_batch1_verdicts.yaml`) → dedicated application session (§18 approve → promote → gated re-run; REJECT/merge/split via §7 re-authoring) → batch 2 (S1 remainder 1.13–1.24); the consolidated cross-slice boundary ruling before phase 2.
 
 Resources: 9ce37bc → see the session-47 commit; operator copies under /home/z/my-project/download/t-c11-batch-1/.
+
+## Session 48 — T-C11 §16 batch-1 operator gate SETTLED and APPLIED (2026-09-12)
+
+**Commission:** the operator's ruling on the batch-1 gate, verbatim: "CONFIRM all" (after the session's assessment round rejected an unsanctioned extra AI review layer; Option A — the operator decides from the review sheet, the session encodes + applies).
+
+**Executed (the exact session-44/45 sanctioned shape):**
+- ENCODE: `scripts/c11_verdict_encode_batch1.py` (fail-closed: template untouched / row shapes exact / store reconciled 28 SUGGESTED + 1 RR / 24 nodes / 12 held / pilot frozen at 28 HV / §16 AUTHORIZED) → the OPERATOR-OWNED `scripts/c11_batch1_verdicts.yaml` (the template filled + RENAMED per the gate pathway): 28 edge CONFIRM / 24 node CONFIRM (B1-N-08/B1-N-11 keep ENRICHMENT scoping) / 4 identity decisions KEEP_AS_IS / RR settlement HOLD_REVIEW_REQUIRED / held appendix acknowledged; the ruling + its recorded mapping in meta.operator_ruling; post-write verification.
+- §7 RE-AUTHORING: `scripts/c11_verdict_apply_batch1.py` (byte-exact anchors, authored-fields-identical post-guard) — the RR settlement operator_decision block (HOLD_REVIEW_REQUIRED: the subsumption quarantine CONFIRMED; stays REVIEW_REQUIRED, not promotable) + the two enrichment-scoping CONFIRM blocks (B1-N-08, B1-N-11 — the pilot N-27/N-08 patterns) + a session-48 header note in `c11_batch1_decisions.yaml`; generator re-run byte-identical with the blocks present (operator_decision never reaches graph/*.yaml).
+- §18 APPLICATION: bundle `graph/reports/C11_DIFF_REVIEW_B1_2026-09-12.md` (28 pending / 5 not-actionable; the session-45 bundle preserved byte-intact at its own path) → `c11_diff_review.py approve --all --by operator --date 2026-09-12 --review-ref the B1 bundle` → ONE `c11_promote.py` invocation (28 exact identities, evidence pre-verified) → 28 promotion entries appended → gated G13 re-run: **56 HUMAN_VALIDATED (28 pilot + 28 batch-1) — ALL GATES GREEN**.
+- NEW STANDING GATE: `scripts/c11_batch1_verdict_check.py` 33/33 ALL PASS — schema / verdict shape / decision-record reconciliation / **three-way set equality** (verdict CONFIRM == live batch-1 HV == store batch entries) / pilot-slice permanence / 4.15 uncovered / no PART_OF or node promoted.
+
+**Tooling fixed (dated comments):** c11_diff_review.py export `--out` relative-path resolution (crashed at the --review-ref render line — the flag had only been exercised via the default path); c11_batch1_review_build.py template re-emission guard (a recorded verdict round must never be shadowed by a fresh empty template) + state-dependent final print.
+
+**State-moved expectations only (protective intent unchanged):** c11_review_verdict_check B5/D1 re-anchored to the PILOT SLICE of the grown store (B4 comment: the batch RR is operator-settled); c11_diff_review_test R1 = 0/5/56; graph_check C11_COUNTS comment + summary phrase (56 HV); c11_negative_test mut_07 dated note (the only SUGGESTED semantic edges left are the 3 pilot operator HOLDs). Forecast: session 48, operator_verdicts {confirm 28}, promotion_rate 0.9655, status SETTLED — deterministic.
+
+**Governance reports amended (dated session-48 notes, historical text preserved):** C11_S16_GATE_REPORT.md (header addendum GATE SETTLED; state-table 56 HV + 2 RR; item-4 promoted count 56; item-5 the settled batch RR; closing note) + C11_ARCHITECTURE.md §16.
+
+**Invariants held:** frozen pilot dispositions byte-intact (E-08/E-26/E-29 SUGGESTED; pilot RR REVIEW_REQUIRED; HELD-01..13 untouched; PART_OF derived, outside §18); batch-1 RR settled-un-promoted; 12 batch held untouched; batch-1 nodes SUGGESTED (no node §18 pathway); 4CH1-4.15 uncovered; no DB writes; AI attribution forbidden (all 56 promotions operator).
+
+**Gates at the final state:** graph_check ALL PASS (53/118/56-HV/4.15-uncovered) / pilot verdict check ALL PASS / batch-1 verdict check 33/33 / negative 14/14 / promote 27/27 / task4 3/3 / diff-review ALL PASS (R1 0/5/56) / authorization 22/22; generator + review-build + forecast re-runs byte-identical; git diff --check clean.
+
+**Next:** batch 2 (S1 remainder 1.13–1.24) commissionable — same per-batch shape; the consolidated cross-slice boundary ruling comes before phase 2 (S3).
+
+Resources: 50351e1 → 5dce457; operator copies under /home/z/my-project/download/t-c11-batch1-verdicts/.
