@@ -122,7 +122,8 @@ def main():
         }],
     }
     req = urllib.request.Request(WEBHOOK, data=json.dumps(payload).encode(),
-                                 headers={"Content-Type": "application/json"})
+                                 headers={"Content-Type": "application/json",
+                                          "User-Agent": "SyllabAI-Notifier/1.0 (+https://github.com/SyllabAI)"})
     try:
         urllib.request.urlopen(req, timeout=20)
         print(f"[OK] pulse posted — {len(repos)} repos, {total_commits} commits in 24h")
