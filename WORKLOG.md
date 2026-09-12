@@ -1160,3 +1160,26 @@ Resources: 9ce37bc → see the session-47 commit; operator copies under /home/z/
 **Next:** batch 2 (S1 remainder 1.13–1.24) commissionable — same per-batch shape; the consolidated cross-slice boundary ruling comes before phase 2 (S3).
 
 Resources: 50351e1 → 5dce457; operator copies under /home/z/my-project/download/t-c11-batch1-verdicts/.
+
+
+## Session 49 — T-C11 §16 phase-1 batch 2 executed to its operator gate (2026-09-12)
+
+**Commission:** the operator's "run batch 2" (phase-1, second 12 S1-remainder SPs: 4CH1-1.13–1.24 + practical PR-02).
+
+**Executed (the full per-batch pipeline, ending at the operator gate):**
+- Extraction: 7 T-C10 HUMAN_VALIDATED-mapped notes read in full (b. Paper chromatography [the 1.13 practical note] + c. Atoms Definitions & Structure + c. Relative atomic mass + d. Periodic Table Basics + d. Electronic Configurations + d. Metals & non-metals + d. Electronic Configuration & Reactivity); 6 PMT MS pinned (ATOM1/2/3, PT, ECM1, ECM3 — the ECM pins close the batch-1 FN-B1-1 remainder) via `scripts/c11_ms_pin_batch2.py`; REJECT-column attributions layout-verified with `pdftotext -layout`.
+- Decision record `scripts/c11_batch2_decisions.yaml` (extraction_pass c11-s16-batch-2): 14 nodes (11 CONCEPT incl. the semi-metals enrichment leaf + 2 WRONG_ANSWER_PATTERN misconceptions: isotopes-differ-in-protons, RAM-vs-mass-number), 23 authored edges (ALL SUGGESTED, ZERO RR; the store's first COMMONLY_CONFUSED_WITH edge; 5 sanctioned cross-boundary edges into earlier-record nodes — no duplicate Ar mint: the pilot's CON-AR owns the term), 10 held candidates; all 77 quotes pre-verified under the T-C10 norm before writing (`scripts/c11_batch2_preverify.py`), then machine-verified (G03/c11.4).
+- Generator registry extended to [pilot, batch1, batch2] (same list in promote/diff-review/graph_check; test sandboxes stage the whole registry). Merged store: 67 nodes / 156 edges (72 PART_OF + 84 semantic) / 36 command kinds; 56 operator promotions intact; 4.15 uncovered; deterministic.
+- Pass-2 adversarial review (`scripts/c11_batch2_review_pass2.yaml`): zero demotions (abstention landed at authoring: 10 held, no RR); flags enumerated (boundary identity FP-B2-1, relation-class choices FP-B2-2, first-CCW deployment FP-B2-3, boundary discipline FP-B2-4, FN-B2-1/2/3).
+- Review gate: `graph/reports/C11_BATCH2_REVIEW_SHEET.md` + `C11_BATCH2_REVIEW.json` + the OPERATOR-OWNED template `scripts/c11_batch2_verdicts_template.yaml` (23 edge rows + 14 node rows + 4 identity decisions + held acknowledgment).
+- Forecast instrument: batch-2 record appended (predicted 28.8/33/13 vs actual 14/23/10 — nodes −51.4% = the boundary discipline: no duplicate Ar mint + 1.13 practical-only); status state-accurate; deterministic.
+- Governance reports amended with dated session-49 notes (gate report header/state-table; architecture §16).
+- State-moved expectations only: graph_check C11_COUNTS (67/156/72/84/36, CCW 1) + batch-2 SPS/stage; batch-1 verdict check D6 re-anchored to SLICE PRESERVATION; diff-review R1 = 23/5/56; negative mut_07 dated note.
+
+**Invariants held:** nothing promoted (0 batch-2 identities in the store), frozen pilot + batch-1 records byte-identical, E-08/E-26/E-29 + both settled RR edges + HELD-01..13 + B1-H-01..12 + PART_OF + 4.15 all intact, no DB writes, per-batch operator gate respected.
+
+**Gates at the final state:** graph_check / pilot verdict check / batch-1 verdict check 33/33 / negative 14/14 / promote 27/27 / task4 3/3 / diff-review (R1 23/5/56) / authorization 22/22; generator + review-build + forecast re-runs byte-identical.
+
+**Next:** operator records batch-2 verdicts (`c11_batch2_verdicts.yaml`) → dedicated application session (§18 approve → promote → gated re-run; REJECT/merge/split via §7 re-authoring) → batch 3 (S1 remainder 1.37–1.60C); the consolidated cross-slice boundary ruling before phase 2.
+
+Resources: 5dce457 → f3274ae (rebased over the concurrent CI commit 0246728); operator copies under /home/z/my-project/download/t-c11-batch-2/.
