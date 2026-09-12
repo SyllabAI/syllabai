@@ -1109,3 +1109,30 @@ streams)
 - Committed + pushed: resources 08f5ec9 → 9ce37bc (6 files, +380/−15: 2 new operator-record/gate files + 3 amended reports + 1 forecast generator status update); tracker (this commit). Operator copies under /home/z/my-project/download/t-c11-s16-authorization/.
 
 **Result:** §16 AUTHORIZED (explicit operator action, recorded and machine-validated). The expansion is unlocked per the item-14 batching shape with per-batch operator gates. NOTHING executed yet: no batch started, no generation, no promotion, no DB writes. Next: the operator commissions phase-1 batch 1 (S1 remainder 1.1–1.24) — each batch = own extraction_pass + decision record + gated generation + pass-2 adversarial review + review sheet + operator gate; the consolidated cross-slice boundary-concept ruling comes before phase 2.
+
+
+---
+
+## Session 47 — T-C11 §16 phase-1 batch 1 executed to its operator gate (2026-09-12)
+
+**Commission:** the operator's "run batch 1" (phase-1, first 12 S1-remainder SPs: 4CH1-1.1–1.12 + practical PR-01).
+
+**Executed (the full per-batch pipeline, ending at the operator gate):**
+- Extraction: 10 T-C10 HUMAN_VALIDATED-mapped notes read in full; 2 PMT mark schemes pinned (SOM_MS_P1 e41e67f27cd5, ECM2_MS_P1 3c31a1a0e154) — per-batch mark-scheme mining per the §16 scope.
+- Decision record `scripts/c11_batch1_decisions.yaml` (extraction_pass c11-s16-batch-1): 24 nodes (22 CONCEPT + 2 mark-scheme-documented WRONG_ANSWER_PATTERN misconceptions: gas-particles-touching, crystallisation-to-dryness), 29 authored edges (28 SUGGESTED + CRYSTALLISATION→SOLUTION self-quarantined REVIEW_REQUIRED, subsumption class), 12 held candidates; every quote pre-verified under the T-C10 norm before writing.
+- Generator → decision-record REGISTRY (fail-closed: mandatory members, per-record scope/disjointness/determinism; merged surfaces/universe/meta). Merged store: 53 nodes / 118 edges (57 PART_OF + 61 semantic) / 24 command kinds; 28 operator promotions intact; 4.15 uncovered; deterministic.
+- §18 machinery registry-aware (c11_promote.py, c11_diff_review.py, graph_check c11.13): the operator's batch-1 approval surface = 28 actionable / 5 not-actionable / promo 28.
+- Pass-2 adversarial review (`scripts/c11_batch1_review_pass2.yaml`): zero demotions (abstention landed at authoring), flags enumerated (merge candidates, relation-class choice, symmetric-operand options, density class, remediation-target pattern; FP-B1-1..4, FN-B1-1..3).
+- Review gate: `graph/reports/C11_BATCH1_REVIEW_SHEET.md` + `C11_BATCH1_REVIEW.json` + the OPERATOR-OWNED template `scripts/c11_batch1_verdicts_template.yaml` (28 edge rows + RR settlement + 24 node rows + 4 identity decisions + held acknowledgment).
+- Forecast instrument: batch-1 record appended (predicted 28.8/33/12 vs actual 24/29/12; nodes −16.7%, edges −12.1%, held 0.0%); status state-accurate.
+- Governance reports amended with dated session-47 notes (gate report header/closing; architecture §16).
+
+**Defects fixed (dated comments):** c11_diff_review.py die(*list) call-site crash; meta_hunk_manual duplicate-keys preview (post-promotion state); hardcoded preview line offsets. **Found + deferred:** C11_PILOT_REVIEW_SHEET.md/.json are session-41-stale vs the pilot record's session-44/45 HOLD blocks (FP-5; renderer reproduces the faithful state on demand — verified; committed bytes preserved).
+
+**Invariants held:** nothing promoted (0 batch identities in the store), frozen pilot records byte-identical, E-08/E-26/E-29 + pilot RR + HELD-01..13 + PART_OF + 4.15 all intact, no DB writes, per-batch operator gate respected.
+
+**Gates at the final state:** graph_check / verdict check / negative 14/14 / promote 27/27 / task4 3/3 / diff-review (R1 28/5/28) / authorization 22/22; generator + forecast + review-build re-runs byte-identical; §18 dry-run verified on a batch-1 identity (correct preview, nothing written).
+
+**Next:** operator records batch-1 verdicts (`c11_batch1_verdicts.yaml`) → dedicated application session (§18 approve → promote → gated re-run; REJECT/merge/split via §7 re-authoring) → batch 2 (S1 remainder 1.13–1.24); the consolidated cross-slice boundary ruling before phase 2.
+
+Resources: 9ce37bc → see the session-47 commit; operator copies under /home/z/my-project/download/t-c11-batch-1/.
