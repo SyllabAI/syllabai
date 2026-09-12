@@ -1183,3 +1183,28 @@ Resources: 50351e1 → 5dce457; operator copies under /home/z/my-project/downloa
 **Next:** operator records batch-2 verdicts (`c11_batch2_verdicts.yaml`) → dedicated application session (§18 approve → promote → gated re-run; REJECT/merge/split via §7 re-authoring) → batch 3 (S1 remainder 1.37–1.60C); the consolidated cross-slice boundary ruling before phase 2.
 
 Resources: 5dce457 → f3274ae (rebased over the concurrent CI commit 0246728); operator copies under /home/z/my-project/download/t-c11-batch-2/.
+
+
+## Session 50 — T-C11 §16 batch-2 operator gate SETTLED and APPLIED (2026-09-12)
+
+**Commission:** the operator's ruling on the session-49 batch-2 gate, verbatim: "CONFIRM all".
+
+**Environment recovery (session start):** this sandbox was found rolled back to the session-44 state (resources 5715396 / tracker 61a3b2d, worklog ending at session 44, no batch-1/batch-2 artifacts). Both repos fast-forwarded to the remote (b884cfb / a491f3b — recovering sessions 45-49, incl. session 49's batch-2 authoring to its operator gate); NOTHING was re-authored from memory — all state came from the pushed commits — and the full 9-gate suite was re-baselined green before any work.
+
+**Executed (the exact session-44/45/48 sanctioned shape):**
+- ENCODE: `scripts/c11_verdict_encode_batch2.py` (fail-closed: no double-fill; template untouched / row shapes exact / store reconciled 23 SUGGESTED + ZERO RR / 14 nodes / 10 held / live store frozen at 56 HV / §16 AUTHORIZED) → the OPERATOR-OWNED `scripts/c11_batch2_verdicts.yaml` (template filled + RENAMED per the gate pathway): 23 edge CONFIRM / 14 node CONFIRM (B2-N-08 CON-METALLOID keeps ENRICHMENT scoping) / 4 identity decisions KEEP_AS_IS (B2-ID-01: the CON-ISOTOPES/CON-AR boundary split stands — the Ar TERM stays with the pilot's CON-AR, NO re-scope; B2-ID-02/03/04: particle triple, periodic-table block, 1.20/1.21 classification stay single nodes) / held appendix 10 acknowledged / NO RR settlement row (zero RR authored); the ruling + its recorded mapping in meta.operator_ruling; post-write verification.
+- §7 RE-AUTHORING: `scripts/c11_verdict_apply_batch2.py` (byte-exact anchors, authored-fields-identical post-guard) — the B2-N-08 enrichment-scoping operator_decision CONFIRM block + a session-50 header note in `c11_batch2_decisions.yaml`; generator re-run byte-identical (concepts.yaml + spec_command_kinds.yaml untouched — operator_decision never reaches graph/*.yaml).
+- §18 APPLICATION: bundle `graph/reports/C11_DIFF_REVIEW_B2_2026-09-12.md` (23 pending / 5 not-actionable; the pilot + B1 bundles preserved byte-intact) → `c11_diff_review.py approve --all --by operator --date 2026-09-12 --review-ref the B2 bundle` → ONE `c11_promote.py` invocation (exact identities, evidence pre-verified) → 23 promotion entries appended → gated G13 re-run: **79 HUMAN_VALIDATED (28 pilot + 28 batch-1 + 23 batch-2 — ALL operator)**.
+- NEW STANDING GATE: `scripts/c11_batch2_verdict_check.py` ALL PASS (32 checks: schema incl. NO rr_settlement + the verbatim ruling; verdict shape + record reconciliation + the B2-N-08 od block; three-way set equality verdict CONFIRM == live batch-2 HV == store batch-2 entries, operator attribution + B2 bundle ref; pilot + batch-1 slices intact, both RR edges REVIEW_REQUIRED, store 79, 4.15 uncovered, no PART_OF or node promoted).
+
+**State-moved expectations only (protective intent unchanged):** c11_batch1_verdict_check D4 re-anchored 56 → 79 (sanctioned batch-2 growth; the batch-1 slice preserved exactly); c11_diff_review_test R1 = 0/5/79 (actionable surface empty until the next batch's gate); graph_check state comment + summary phrase (79 HV); c11_negative_test mut_07 dated note (the only SUGGESTED semantic edges are again the 3 pilot operator HOLDs); forecast batch-2 record SETTLED (operator_verdicts confirm 23 / promotion_rate 1.0 / s16_projection status) — deterministic.
+
+**Governance reports amended (dated session-50 notes, historical text preserved):** C11_S16_GATE_REPORT.md (header addendum GATE SETTLED; state-table rows 79 HV; item-4 promoted count 79; item-5 zero-RR note; closing note) + C11_ARCHITECTURE.md §16.
+
+**Invariants held:** frozen pilot + batch-1 dispositions byte-intact (E-08/E-26/E-29 SUGGESTED; pilot RR REVIEW_REQUIRED under operator HOLD; batch-1 RR keeps its HOLD_REVIEW_REQUIRED settlement; HELD-01..13 + B1-H-01..12 + B2-H-01..10 untouched); batch-2 nodes SUGGESTED (no node §18 pathway); PART_OF derived, outside §18; 4CH1-4.15 uncovered; no DB writes; AI attribution forbidden (79/79 operator — every promoted identity traces to an operator verdict row).
+
+**Gates at the final state:** graph_check ALL PASS (67/156/72+84/79-HV/4.15-uncovered) / pilot verdict check ALL PASS / batch-1 verdict check ALL PASS (D4 re-anchored) / batch-2 verdict check ALL PASS (new) / negative 14/14 / promote 27/27 / task4 3/3 / diff-review ALL PASS (R1 0/5/79) / authorization 22/22; generator + review-build (re-issue guard held) + forecast re-runs byte-identical; git diff --check clean.
+
+**Next:** batch 3 (S1 remainder 4CH1-1.37–1.60C) is the next commissionable batch; the consolidated cross-slice boundary ruling comes before phase 2 (S3); FN-B2-1 (Paper-2 MS pins) deferred to batch 3 per the review sheet.
+
+Resources: b884cfb → eeb6021 (rebased over the concurrent CI commit 8118d93; gates re-run green at the rebased state); operator copies under /home/z/my-project/download/t-c11-batch2-verdicts/.
