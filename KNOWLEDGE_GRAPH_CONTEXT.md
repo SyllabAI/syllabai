@@ -1316,6 +1316,24 @@ The graph may subsequently be projected into PostgreSQL and the existing SyllabA
 
 A Neo4j-style database is not required for the initial architecture.
 
+> **Session-56 amendment (2026-09-13) — the projection is real.** The settled T-C11 store now
+> projects into the existing Postgres KG via `ConceptGraphSeedService` (syllabai-core, V15):
+> the pinned 4CH1 substrate (specification_points / topics / relationships — the official
+> curriculum anchor) + the settled graph layer (113 concept/misconception nodes, 117 anchor
+> PART_OF edges, 153 HUMAN_VALIDATED semantic edges) materialize into `knowledge_nodes` /
+> `knowledge_edges` with the store's codes verbatim — which is also what activates the
+> session-55 graph-aware learner NBA stages against real curriculum rows. Status mapping
+> preserves the store's epistemic state (§8A.4): structure VALIDATED (RULE_DERIVED spec
+> extract, operator git-PR gate), concept/misconception nodes + anchors SUGGESTED (the
+> store's own status), the 153 validated semantic edges VALIDATED with full T-C11
+> provenance (origin AI, validated_by operator). The 3 pilot HOLD + 2 REVIEW_REQUIRED edges
+> never materialize (loader fail-closed on their count). Deterministic + idempotent
+> (resolve-by-code, foreign provenance conflicts loudly); teacher-facing via
+> `POST /api/v1/teacher/concept-graph/activate` + `GET …/edges` and the existing tree read
+> model; still no Neo4j, no second store, no LLM. The runtime KG remains the single graph
+> substrate; this store stays the version-controlled source of truth, and a snapshot upgrade
+> is always a conscious re-pin (SHA-256) + re-activation.
+
 ---
 
 ## 8A.15 Assessment Integration
