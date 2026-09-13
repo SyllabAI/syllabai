@@ -119,7 +119,7 @@ jobs:
             --stats-one-line --stats 30s -v 2>&1 | tee /tmp/rclone.log \
           || {
             if grep -q "storage quota" /tmp/rclone.log; then
-              echo "::error::Google blocks service-account uploads to personal My Drive. Fix: (A) Workspace Shared Drive -> add SA as Content Manager, set repo variable GDRIVE_TEAM_DRIVE to its ID; or (B) OAuth -> set secret GDRIVE_RCLONE_OAUTH. See GOOGLE_DRIVE_SETUP_GUIDE.md."
+              echo "::error::Google blocks service-account uploads to personal My Drive. Fix: (A) Workspace Shared Drive -> add SA as Content Manager, set repo variable GDRIVE_TEAM_DRIVE to its ID; or (B) OAuth -> set secret GDRIVE_RCLONE_OAUTH. Both auth modes are documented in the comment block at the top of this workflow file."
             fi
             if [ -z "$EXTRA" ]; then
               echo "::notice::Retrying with --drive-shared-with-me"

@@ -22,7 +22,7 @@ This is the **main repository**: the master project pack (specification, decisio
 
 ## Start here
 
-1. `MASTER_SPEC.md` — engineering source of truth (v1.1, merged & verified 2026-09-03)
+1. `MASTER_SPEC.md` — engineering source of truth (v1.3.0 — 2026-09-11 Cycle-1 scope revision per ADR-019; originally merged & verified 2026-09-03 as v1.1)
 2. `AGENT.md` — operating manual for coding/research agents
 3. `backlog/syllabai-master-project.xlsx` — **definitive feature tracker** (TSV export alongside; `Cycle` column = Paper B Cycle-1 pilot cut; green = Cycle 1, amber = critical-path spine)
 4. `DECISIONS.md` — architecture decision records (ADR-001…020)

@@ -4,6 +4,7 @@
 **Date:** 2026-09-10 (Session 27)
 **Input assessed:** the operator-forwarded external proposal ("specification = canonical curriculum skeleton, revision notes = instructional enrichment layer, four build phases").
 **Relationship to existing docs:** this plan *executes* the contracts already fixed in `CONTENT_CORPUS_ARCHITECTURE.md` (CMC v1.0; §7 four-tier mapping provenance; §8 taxonomy tiers; §13/§14 coexistence guards). DB wiring rides the parked **T-C06** converter. Nothing here replaces that architecture — it sequences it.
+**Visibility correction (2026-09-13):** this document calls `syllabai-resources` "private" in three places below; that was the assumed posture when it was written. The repo is in fact **public** on the SyllabAI account (verified 2026-09-13), so every copyright-safety rule premised on privacy must be re-validated by the operator (ADR-013 posture: pilot own-use; re-check before any redistribution).
 
 ---
 
@@ -16,7 +17,7 @@ Non-negotiables carried over unchanged:
 1. The specification **defines** the points; every other source (SME notes, Student Book, questions) only **maps to** them — many-to-many, never reorganizing the syllabus.
 2. Every node and edge carries **provenance** (one of the four §7 tiers) and a validation state; nothing AI-extracted is ever authoritative.
 3. No cross-curriculum edges, ever (`4CH1-*` codes only; the 4CH0 fixture and `IAL-CHEM-2018` are hard-separated by the converter and by validator checks).
-4. All corpus-derived artifacts that quote copyrighted text live in the **private** `syllabai-resources` repo; this repo carries structure, schemas, and counts only.
+4. All corpus-derived artifacts that quote copyrighted text live in the `syllabai-resources` repo (assumed **private** when written — see the 2026-09-13 visibility correction above); this repo carries structure, schemas, and counts only.
 5. Cycle 1 serving is untouched until T-C06 + T-C04 unlock; until then the graph is built and validated as **graph-as-code** in the resources repo.
 
 ---
@@ -44,7 +45,7 @@ The proposal is directionally sound and independently converges on architecture 
 
 ## 2. What already exists — build on it, not beside it
 
-### Corpus (syllabai-resources, private)
+### Corpus (syllabai-resources — see the 2026-09-13 visibility correction: the repo is public)
 
 | Asset | State | Graph role |
 |---|---|---|
@@ -175,7 +176,7 @@ Blocked on past-paper material (none converted yet) and the T-C04 verdict — **
 
 ## 10. Storage, review workflow, compiler
 
-- **Source of truth:** `graph/` directory in the *private* `syllabai-resources` repo — versioned YAML with CMC front matter, one file per node family + edges, every unit carrying provenance + validation state. Git history = the audit trail; PR review = the human validation gate (the operator's existing workflow).
+- **Source of truth:** `graph/` directory in the `syllabai-resources` repo (assumed *private* when written — see the 2026-09-13 visibility correction) — versioned YAML with CMC front matter, one file per node family + edges, every unit carrying provenance + validation state. Git history = the audit trail; PR review = the human validation gate (the operator's existing workflow).
 - **Validator now, compiler later:** `scripts/graph_check.py` runs in the resources repo **immediately** (schema conformance, code namespace = `4CH1-*` only, no cross-curriculum references, provenance completeness, phase gates) — no core changes needed. The **T-C06 converter** later compiles the same files through the canonical contracts into Postgres.
 - **Serving** stays exactly the existing core surfaces; no Neo4j, no new graph store — Postgres + the existing KG machinery. (Explicit anti-goal: infrastructure novelty for its own sake.)
 

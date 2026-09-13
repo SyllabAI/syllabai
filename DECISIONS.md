@@ -257,3 +257,14 @@ Unchanged by this decision: the pilot population (~50 retake-path students, 8 we
 Follow-ups already registered stay valid: 4CH1 curriculum ingestion into core rides T-C06's CurriculumDraftDto path; T-C11 zero-coverage corpus-gap work (annotated 4CH1-4.15 gap) continues unchanged.
 
 **Scope guard:** ADR-019 IS the explicit scope change that SUBJECT_ARCHITECTURE §0/§15 and Master Spec §39a anticipated. It changes only the Cycle-1 subject qualification; it does not authorize bulk ingestion of any further qualification, subject, or course.
+
+## ADR-020: SyllabAI-native Educational Retrieval Engine
+
+**Status:** Accepted architecture direction; implementation promotion gated by benchmark evidence
+**Date:** 2026-09-12
+
+SyllabAI builds a provider-neutral **Educational Retrieval Engine** inside the existing modular architecture instead of adopting a generic RAG framework. Research into `NirDiamant/RAG_Techniques`, `HKUDS/LightRAG`, `HKUDS/RAG-Anything` and `infiniflow/ragflow` identified the borrowable techniques (hybrid recall, reranking, hierarchical/contextual retrieval, graph-aware expansion, evidence selection, stronger citation/evaluation practice), but adopting a generic platform would create a competing source of truth beside the authoritative curriculum graph, SpecificationPoints, validated resource mappings, learner state and immutable learning evidence, and would weaken provenance. Trade-off accepted: SyllabAI implements and maintains more retrieval logic itself, and a benchmark/evaluation corpus is required before aggressive optimization.
+
+The complete decision record is canonical in `ADR-020-EDUCATIONAL_RETRIEVAL_ENGINE.md`, with the research dossier in `RAG_RETRIEVAL_RESEARCH.md`. (Ledger entry registered 2026-09-13 to restore the standalone-file ↔ ledger mirror pattern; the standalone file remains the authority.)
+
+**Scope guard:** this ADR does not authorize bulk ingestion of new subjects or expansion of Cycle 1 — the pilot corpus remains Pearson Edexcel International GCSE Chemistry 4CH1 — and retrieval work must not become an excuse to indefinitely delay the pilot.

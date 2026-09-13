@@ -501,7 +501,7 @@ Detection is machine (hashes, fingerprints); **classification is human** (AI may
 
 ## 12. Corpus repository organization
 
-**A fourth repo: `syllabai-corpus` (private).** Rationale: content volume and access control (publisher/SME copyright) differ from code repos; review cadence is per-batch; ingestion treats it as a data source. Structure (path = human convenience; **front matter is the truth** — the converter never derives identity from paths, so files can be moved):
+**A fourth repo: `syllabai-corpus` (private).** *(Amended 2026-09-13: the corpus repo was in fact created as **`syllabai-resources`** (public) — this section's paths describe that repo's layout; `syllabai-corpus` never existed. The assumed-private posture also needs re-validation — see the visibility correction in `KNOWLEDGE_GRAPH_BUILD_PLAN.md`.)* Rationale: content volume and access control (publisher/SME copyright) differ from code repos; review cadence is per-batch; ingestion treats it as a data source. Structure (path = human convenience; **front matter is the truth** — the converter never derives identity from paths, so files can be moved):
 
 ```text
 syllabai-corpus/

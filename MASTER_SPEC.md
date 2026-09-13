@@ -113,7 +113,7 @@ Never introduce a paid-only infrastructure dependency when an equivalent free/op
 SyllabAI is a multi-repository project. Repositories are separated only where a component has an independent responsibility, lifecycle, runtime, language, test strategy, or deployment model.
 
 ```text
-SyllabAI GitHub account (github.com/SyllabAI) — 5 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`))
+SyllabAI GitHub account (github.com/SyllabAI) — 7 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`; amended 2026-09-13: the content-ops repositories `syllabai-pastpapers` + `syllabai-resources` complete the 7-repo set — the README repo map is the authoritative list)
 │
 ├── syllabai  (this repo — the "main repo")
 │   └── master project pack: spec, ADRs, backlog, research dossiers, papers
@@ -131,6 +131,14 @@ SyllabAI GitHub account (github.com/SyllabAI) — 5 repositories (ADR-012 amende
 │   └── polyglot offline content pipeline: Java in-process
 │       (opendataloader-pdf via Maven) + Python/Rust offline engines
 │       (MinerU / Surya / anydoc / pdf-inspector)
+│
+├── syllabai-pastpapers  (public)
+│   └── canonical exam-material corpus: manifests, SHA-256 provenance,
+│       ledgers + Python ingestion tooling
+│
+├── syllabai-resources  (public)
+│   └── RAG revision-note corpus + T-C09/T-C11 mapping/graph QA +
+│       Python governance scripts
 │
 └── Past-Papers  (public, 689 MB)
     └── official content corpus: Edexcel IAL/IGCSE past papers +
@@ -187,7 +195,7 @@ The former `syllabai-knowledge` / `-assessment` / `-learner-model` / `-ai` / `-r
                                anydoc / pdf-inspector
 ```
 
-The three labels above the data layer (`Assessment module`, `Learner/Diagnosis modules`, `Tutor/AI modules`) are **bounded-context modules inside `syllabai-core`**, not separate repositories — ADR-012 consolidated the former `syllabai-assessment` / `syllabai-learner-model` / `syllabai-ai` spec-v1.0 repositories as modules of the monolith. The current repository set is `syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser`, plus the public `Past-Papers` corpus repository (section 3). Never describe internal modules as deployable repositories.
+The three labels above the data layer (`Assessment module`, `Learner/Diagnosis modules`, `Tutor/AI modules`) are **bounded-context modules inside `syllabai-core`**, not separate repositories — ADR-012 consolidated the former `syllabai-assessment` / `syllabai-learner-model` / `syllabai-ai` spec-v1.0 repositories as modules of the monolith. The current repository set is `syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser`, the content-ops repositories `syllabai-pastpapers` and `syllabai-resources`, plus the public `Past-Papers` corpus repository (section 3). Never describe internal modules as deployable repositories.
 
 ---
 
@@ -1568,7 +1576,7 @@ The project should maintain:
 - `WORKLOG.md` - chronological execution history.
 - `PROGRESS.md` - current-state dashboard narrative.
 - `TODO.md` - actionable work queue.
-- `DECISIONS.md` - architectural decision records (ADR-001…ADR-018).
+- `DECISIONS.md` - architectural decision records (ADR-001…ADR-020; ADR-020 also lives as the standalone `ADR-020-EDUCATIONAL_RETRIEVAL_ENGINE.md`).
 - `REPOSITORY_RESEARCH.md` - researched external repository dossier.
 - `README.md` - project entry point and navigation.
 - `PROJECT_CONTEXT.md` - concise cross-document orientation for humans/agents.
