@@ -440,3 +440,121 @@ Before finishing, ask:
 - Adding paid infrastructure without an explicit decision.
 - Updating code without updating project state and documentation.
 - Letting retrieval research indefinitely postpone pilot delivery.
+
+---
+
+# Multi-agent operating system
+
+SyllabAI is developed by multiple agents in parallel. The repository itself is the shared coordination surface; agent transcripts are not canonical project state.
+
+## Canonical coordination state
+
+Before substantial work, read:
+
+- `.syllabai/project-state.yaml` — current project state and invariants.
+- `.syllabai/agent-registry.yaml` — ownership boundaries and shared-resource policies.
+- `.syllabai/tasks/` — dependency-aware task packets.
+- `.syllabai/locks.yaml` — active shared-resource leases.
+- `.syllabai/contracts/` — cross-repository contracts and fixtures.
+- `.syllabai/evidence/README.md` — durable evidence and claim discipline.
+
+These files supplement, but do not replace, the Master Spec, architecture addenda, research sources, backlog, WORKLOG, PROGRESS or TODO.
+
+## Ownership
+
+Every major surface has one primary owner. Ownership means responsibility for integration and invariants, not exclusive permission to fix defects.
+
+- Core owns backend/domain/database schema and Flyway migrations.
+- Parser owns offline extraction and parser-output contracts.
+- Web owns frontend surfaces.
+- Resources owns validated resource/corpus preparation.
+- Corpus owns canonical past-paper data and provenance ledgers.
+- KG owns T-C11 authoritative KG promotion.
+- Control/integration owns project coordination, contracts and evidence policy.
+
+Agents may cross boundaries only through an explicit task dependency or coordinated change.
+
+## Shared-resource serialization
+
+The following are serialized/controlled resources:
+
+- Flyway version allocation.
+- Database-schema changes.
+- Destructive campaign tooling.
+- Shared parser↔core and core↔web contracts.
+- Authoritative KG promotion.
+
+**Never independently reserve a migration number. Never modify, rename, delete or renumber an applied Flyway migration.** A schema correction always uses a new migration.
+
+Checking `main` before choosing a migration number is not sufficient serialization. Use the coordination lease/task mechanism and record the allocation.
+
+## Task packets and parallelism
+
+Work is represented as small, dependency-aware task packets. Parallelize independent tasks aggressively. Do not create manual approval gates between successful independent batches.
+
+Stop or escalate on genuine failures: identity/provenance mismatch, data loss, unexpected deletion, migration collision, contract incompatibility, validation/serving invariant failure, security issue, or another hard acceptance failure.
+
+Quarantine isolated ambiguities and continue unrelated work where the architecture permits it.
+
+## Stale-base protocol
+
+Every agent records its base commit. When `main` advances:
+
+1. If changed files/contracts do not overlap, continue.
+2. If they overlap, reconcile with current `main` before completion.
+3. Rerun affected tests/invariants after reconciliation.
+4. Never silently overwrite newer work.
+
+Small commits and short-lived branches are preferred over large long-lived divergence.
+
+## Truth tiers
+
+```text
+T0 official external source
+T1 validated SyllabAI truth
+T2 derived system state
+T3 agent candidate/suggestion
+T4 ephemeral execution state
+```
+
+Lower tiers may not silently overwrite higher tiers. Parser/VLM/LLM output, inferred KG edges and agent proposals remain T3 until the appropriate validation/promotion gate accepts them.
+
+## Claim discipline
+
+Reports must distinguish:
+
+- `VERIFIED` — reproducible and backed by durable evidence.
+- `INFERRED` — supported but not directly demonstrated.
+- `REPORTED` — another agent claims it without adequate surviving evidence.
+- `UNVERIFIED` — currently unsupported.
+
+Never promote `REPORTED` to `VERIFIED` merely because a report is detailed or plausible.
+
+## Durable milestone rule
+
+Ephemeral infrastructure may be used for execution, but it is never the sole canonical store of project state or verification evidence. Material milestone claims require durable evidence as specified in `.syllabai/evidence/README.md`.
+
+A campaign/database milestone should include, where applicable: repository commit(s), schema/migration state, row-count manifest, retained dump/hash, corpus/source commit, test/invariant output and an external durable export.
+
+## Cross-repository contracts
+
+Producer/consumer changes are coordinated through `.syllabai/contracts/`. Educational-content contract failures remain fail-loud unless an explicit compatibility decision permits otherwise. Do not silently discard unknown fields that could contain educational data.
+
+## Agent completion report
+
+Before declaring a task complete, report:
+
+```text
+STATUS
+TASK
+BASE
+CHANGES
+TESTS
+INVARIANTS
+EVIDENCE
+CLAIMS (VERIFIED / INFERRED / REPORTED / UNVERIFIED)
+BLOCKERS
+NEXT SAFE ACTIONS
+```
+
+The next agent must be able to continue from the repository state and evidence without relying on the previous agent's private transcript.
