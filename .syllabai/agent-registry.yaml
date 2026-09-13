@@ -1,0 +1,49 @@
+# Agent ownership registry. One primary owner per surface; ownership does not prohibit coordinated fixes.
+version: 1
+agents:
+  control:
+    owns: [project-state, task-graph, locks, evidence-policy]
+  core:
+    repo: syllabai-core
+    owns: [backend, domain-modules, database-schema, flyway-migrations]
+    requires_coordination_for: [shared-contracts, migrations, cross-repo-breaking-changes]
+  parser:
+    repo: syllabai-parser
+    owns: [offline-ingestion, extraction, parser-output-contracts]
+    requires_coordination_for: [parser-core-contract]
+  web:
+    repo: syllabai-web
+    owns: [frontend, teacher-ui, student-ui]
+    requires_coordination_for: [core-web-contract]
+  resources:
+    repo: syllabai-resources
+    owns: [validated-resource-corpus, retrieval-corpus-preparation]
+    requires_coordination_for: [authoritative-kg-promotion]
+  corpus:
+    repo: syllabai-pastpapers
+    owns: [canonical-past-paper-data, manifests, provenance-ledgers]
+  source-corpus:
+    repo: Past-Papers
+    owns: [official-source-corpus]
+  kg:
+    owns: [t-c11-knowledge-graph-promotion]
+    requires_coordination_for: [authoritative-kg-promotion]
+
+shared_resources:
+  database-schema:
+    allocation: serialized
+  flyway-version:
+    allocation: serialized
+  parser-core-contract:
+    allocation: coordinated
+  core-web-contract:
+    allocation: coordinated
+  authoritative-kg-promotion:
+    allocation: operator-gated
+
+rules:
+  - Never independently reserve a shared resource.
+  - Never modify an applied Flyway migration.
+  - Never treat T3 suggestions as T0/T1 truth.
+  - A stale base requires reconciliation before merge when touched files overlap.
+  - Agents may continue independent work when dependencies are green; do not create manual batch-by-batch approval gates.
