@@ -1,35 +1,44 @@
 # Canonical multi-agent coordination state.
-# This file is operational state, not educational truth. Update it when a milestone changes.
+# This file is operational state, not educational truth. Git HEAD is the source of current code state;
+# this ledger records the last verified project milestone and coordination policy rather than a live HEAD hash.
 version: 1
 project:
   name: SyllabAI
   state: GREEN
   state_basis: R3-4 canonical replay + retained evidence
   last_verified_at: 2026-09-13
+  last_verified_main_commit: 760a3f908c99281e6be71b15b71c02bb8fc1bcb8
   canonical_branch: main
+  current_head_source: git-main
 
 repositories:
   syllabai:
     branch: main
-    last_known_commit: 760a3f908c99281e6be71b15b71c02bb8fc1bcb8
+    current_head: derive-from-git
   syllabai-core:
     role: backend
     owner_surface: core
+    current_head: derive-from-git
   syllabai-parser:
     role: ingestion
     owner_surface: parser
+    current_head: derive-from-git
   syllabai-web:
     role: frontend
     owner_surface: web
+    current_head: derive-from-git
   syllabai-resources:
     role: validated-resource-corpus
     owner_surface: resources
+    current_head: derive-from-git
   syllabai-pastpapers:
     role: canonical-past-paper-data
     owner_surface: corpus
+    current_head: derive-from-git
   Past-Papers:
     role: official-source-corpus
     owner_surface: source-corpus
+    current_head: derive-from-git
 
 truth_tiers:
   T0: official_external_source
