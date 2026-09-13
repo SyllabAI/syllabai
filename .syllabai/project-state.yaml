@@ -1,0 +1,58 @@
+# Canonical multi-agent coordination state.
+# This file is operational state, not educational truth. Update it when a milestone changes.
+version: 1
+project:
+  name: SyllabAI
+  state: GREEN
+  state_basis: R3-4 canonical replay + retained evidence
+  last_verified_at: 2026-09-13
+  canonical_branch: main
+
+repositories:
+  syllabai:
+    branch: main
+    last_known_commit: 760a3f908c99281e6be71b15b71c02bb8fc1bcb8
+  syllabai-core:
+    role: backend
+    owner_surface: core
+  syllabai-parser:
+    role: ingestion
+    owner_surface: parser
+  syllabai-web:
+    role: frontend
+    owner_surface: web
+  syllabai-resources:
+    role: validated-resource-corpus
+    owner_surface: resources
+  syllabai-pastpapers:
+    role: canonical-past-paper-data
+    owner_surface: corpus
+  Past-Papers:
+    role: official-source-corpus
+    owner_surface: source-corpus
+
+truth_tiers:
+  T0: official_external_source
+  T1: validated_syllabai_truth
+  T2: derived_system_state
+  T3: agent_candidate_or_suggestion
+  T4: ephemeral_execution_state
+
+invariants:
+  applied_flyway_migrations_immutable: true
+  imported_assessment_requires_validation: true
+  unvalidated_content_must_not_serve: true
+  authoritative_kg_requires_promotion_gate: true
+  campaign_db_identity_required: true
+  durable_milestone_evidence_required: true
+  claims_must_be_labeled: true
+
+active_work: []
+blocked_work: []
+resource_locks: []
+
+claim_status:
+  VERIFIED: "Backed by reproducible checks and durable evidence."
+  INFERRED: "Strongly supported but not directly demonstrated."
+  REPORTED: "Claimed by another agent without surviving evidence."
+  UNVERIFIED: "No adequate evidence currently exists."
