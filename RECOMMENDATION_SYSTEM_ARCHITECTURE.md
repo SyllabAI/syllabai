@@ -172,6 +172,31 @@ Candidates may come from:
 
 Candidate generation is a constraint-and-evidence stage, not a free-form LLM stage.
 
+> **2026-09-13 (session 55) — validated graph relationships as a candidate source (implemented).**
+> The settled T-C11 concept graph (113 nodes / 275 edges / 153 HUMAN_VALIDATED semantic
+> relationships at the Batch-4 close) now feeds candidate generation as a structured
+> dependency layer (`ConceptDependencyGraph`, nba-rules/v1.1). Two sources join the list
+> above:
+>
+> 10. **Validated prerequisite chains** — when a dependent topic is established-weak from
+>     measured learner evidence and a HUMAN_VALIDATED `REQUIRES_PREREQUISITE` edge names its
+>     prerequisite, the prerequisite becomes a remediation candidate (NBA tier T2b). The graph
+>     only nominates: a prerequisite measured strong is skipped in favour of the evidence, and
+>     an unmeasured prerequisite is reported honestly as unmeasured.
+> 11. **Validated misconception remediation** — when BDT evidence is active on a
+>     misconception and a HUMAN_VALIDATED `REMEDIATED_BY` edge names its corrective concept,
+>     that concept becomes the corrective-action candidate (NBA tier T4b,
+>     `REMEDIATE_MISCONCEPTION`).
+>
+> Hard boundaries preserved: the graph joins the KG by node code inside the requested
+> subject subtree (subject isolation); it is never learner state and never invents mastery;
+> only HUMAN_VALIDATED edges can enter the layer (the three frozen pilot HOLDs and the two
+> REVIEW_REQUIRED edges are excluded at load, by construction); PART_OF structure stays the
+> runtime KG's authority; the graph is a pinned, versioned classpath snapshot
+> (SHA-256-fail-closed), not a second graph database. Source: `syllabai-core`
+> `com.syllabai.recommendation` (`ConceptDependencyGraph`, `ConceptDependencyGraphLoader`,
+> `NextBestActionService` v1.1) with deterministic unit coverage of the graph cases A–D.
+
 ## 7. Cold start
 
 The old document proposed a diagnostic quiz, subject goals, default syllabus order and peer popularity. Keep the idea, but apply it conservatively.
