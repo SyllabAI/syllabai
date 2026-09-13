@@ -1,0 +1,77 @@
+name: Agent task
+
+description: Create a dependency-aware, scoped SyllabAI agent task.
+title: "[TASK] "
+labels: [agent-task]
+body:
+  - type: input
+    id: task-id
+    attributes:
+      label: Task ID
+      placeholder: T-XXX
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner / agent surface
+      placeholder: core, parser, web, kg, control
+    validations:
+      required: true
+  - type: input
+    id: base
+    attributes:
+      label: Base commit
+      placeholder: full SHA
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: State the smallest coherent outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: allowed
+    attributes:
+      label: Allowed scope
+      description: Files, modules, contracts, or repositories this agent may change.
+    validations:
+      required: true
+  - type: textarea
+    id: forbidden
+    attributes:
+      label: Forbidden scope
+      description: Shared or authoritative surfaces this task must not change independently.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / shared resources
+      placeholder: T-XXX; flyway-version; parser-core-contract
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Required evidence
+      description: Tests, manifests, retained artifacts, or release references required before GREEN.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety acknowledgement
+      options:
+        - label: I will not modify applied Flyway migrations.
+          required: true
+        - label: I will not promote authoritative KG truth outside its gate.
+          required: true
+        - label: I will preserve immutable assessment evidence and validation state.
+          required: true
