@@ -1,0 +1,25 @@
+# Copy this template to .syllabai/tasks/T-XXX.yaml for active work.
+version: 1
+task:
+  id: T-XXX
+  title: ""
+  owner: ""
+  status: READY # READY | EXECUTING | BLOCKED | VERIFYING | DONE
+  priority: P1
+  base:
+    repo: ""
+    commit: ""
+  scope:
+    allowed: []
+    forbidden: []
+  dependencies: []
+  shared_resources: []
+  acceptance: []
+  tests: []
+  evidence_required: []
+  claims:
+    VERIFIED: []
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: []
+  next_safe_actions: []
