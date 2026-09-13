@@ -1,0 +1,21 @@
+# Shared-resource leases. This file is a coordination ledger, not an educational data store.
+# A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
+version: 1
+locks: []
+
+resource_classes:
+  flyway-version:
+    policy: serialized
+    rationale: Two agents must never independently allocate the same migration version.
+  database-schema:
+    policy: serialized
+  parser-core-contract:
+    policy: coordinated
+  core-web-contract:
+    policy: coordinated
+  authoritative-kg-promotion:
+    policy: operator-gated
+
+lease_schema:
+  required: [resource, owner, task, base_commit, acquired_at, expires_at]
+  rule: "Do not edit another active lease. Reconcile stale/expired leases explicitly."
