@@ -68,6 +68,7 @@ syllabai           main repo: spec, ADRs, backlog, research dossiers, papers
 syllabai-web       Next.js 16 / React 19 / TypeScript frontend
 syllabai-core      Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith
 syllabai-parser    polyglot offline content pipeline
+syllabai-pastpapers canonical exam corpus: manifests, provenance, ledgers (4,280 files)
 Past-Papers        official QP/MS corpus source repository
 syllabai-resources validated revision/content corpus and corpus QA
 ```

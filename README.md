@@ -11,7 +11,10 @@ This is the **main repository**: the master project pack (specification, decisio
 | `syllabai` (this) | Master project pack: spec, ADRs, backlog, research, papers | Markdown + spreadsheet |
 | `syllabai-core` | Backend modular monolith — all domain modules | Java 25 · Spring Boot 4.1 · Spring AI 2.0 |
 | `syllabai-web` | Web frontend | Next.js 16 · React 19 · TypeScript · Vercel |
-| `syllabai-parser` | Offline content pipeline (polyglot) | Java (opendataloader-pdf in-process) · Python/Rust offline (MinerU/Surya) |
+| `syllabai-parser` | Offline content pipeline (polyglot) | Java (opendataloader-pdf in-process) · GLM-OCR Python tooling (MinerU/Surya deferred) |
+| `syllabai-pastpapers` | Canonical exam-material corpus — manifests, SHA-256 provenance, ledgers | Markdown/YAML corpus + Python ingestion tooling |
+| `syllabai-resources` | RAG revision-note corpus + T-C09/T-C11 mapping/graph QA | Markdown corpus + Python governance scripts |
+| `Past-Papers` | Raw operator-collected source PDFs (pre-normalization) | PDFs |
 
 **Polyglot policy (ADR-011):** Java is preferred and owns the domain core (course requirement); other languages are welcome where they are clearly better — TypeScript for the frontend, Python/Rust for OCR/ML parsing tooling.
 
@@ -22,7 +25,7 @@ This is the **main repository**: the master project pack (specification, decisio
 1. `MASTER_SPEC.md` — engineering source of truth (v1.1, merged & verified 2026-09-03)
 2. `AGENT.md` — operating manual for coding/research agents
 3. `backlog/syllabai-master-project.xlsx` — **definitive feature tracker** (TSV export alongside; `Cycle` column = Paper B Cycle-1 pilot cut; green = Cycle 1, amber = critical-path spine)
-4. `DECISIONS.md` — architecture decision records (ADR-001…013)
+4. `DECISIONS.md` — architecture decision records (ADR-001…020)
 5. `REPOSITORY_RESEARCH.md` — external repo dossier (section 0 = verified integration verdicts & license corrections)
 6. `ARCHITECTURE_REFERENCE_REGISTER.md` — curated architecture/UX/orchestration reference list (OpenHuman added 2026-09-05)
 7. `PLATFORM_RESEARCH.md` — verified platform/free-tier research
