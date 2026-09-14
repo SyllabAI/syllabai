@@ -119,6 +119,7 @@ Do not reduce SyllabAI to generic `PDF → chunks → embeddings → vector DB �
 |---|---|
 | Teacher product architecture | `TEACHER_ARCHITECTURE.md` |
 | Teacher validation | teacher-workbench repo contracts, release/evidence packs, relevant core validation contracts |
+| V20 production reconciliation | `V20_PRODUCTION_RECONCILIATION_2026-09-15.md` — cross-repository reconciliation of core fixes, teacher verification battery, workbench deployment repair, and remaining evidence gaps |
 | Production/project coordination | `.syllabai/project-state.yaml`, `.syllabai/agent-registry.yaml`, `.syllabai/locks.yaml`, `.syllabai/tasks/`, `.syllabai/contracts/`, `.syllabai/evidence/` |
 | Deployment state | release records, deployment evidence, `PROGRESS.md`, current project state |
 | Operational verification | `.syllabai/evidence/` and release-specific evidence artifacts |
