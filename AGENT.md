@@ -43,6 +43,8 @@ Before substantial changes:
 9. `RAG_RETRIEVAL_RESEARCH.md` for retrieval, Tutor grounding, embeddings, reranking, graph retrieval, HyPE, evidence selection or multimodal-RAG work.
 10. `RAG_RETRIEVAL_CORPUS_GUIDANCE.md` in `syllabai-resources` for corpus-side retrieval preparation.
 11. Relevant research-paper sections whenever scientific constructs, hypotheses, operational definitions, metrics or learner-model semantics change.
+12. `PROJECT_KNOWLEDGE_MAP.md` for locating durable cross-project knowledge and its canonical owner.
+13. `KNOWLEDGE_DURABILITY_POLICY.md` when work discovers architecture, research, operational, provenance, AI/RAG or other potentially durable project knowledge.
 
 The Master Spec is the engineering source of truth. Research papers remain authoritative for scientific claims. Named architecture addenda govern their specific layers. Do not silently resolve conflicts; record them and make/update the appropriate decision.
 
@@ -222,3 +224,30 @@ semantic relevance
 ```
 
 Benchmark generic rerankers before adding model-specific complexity.
+
+---
+
+# Knowledge durability / conversation persistence
+
+`PROJECT_KNOWLEDGE_MAP.md` is the durable navigation index for cross-project knowledge. `KNOWLEDGE_DURABILITY_POLICY.md` defines the persistence rules.
+
+## Core principle
+
+**Chat is a working interface, not the project's canonical memory.** Important SyllabAI knowledge must not exist only in conversation.
+
+When an agent, research session, or conversation discovers information that could affect future architecture, implementation, research interpretation, product behavior, data meaning, security, deployment, provenance or project scope:
+
+1. Apply the durability test in `KNOWLEDGE_DURABILITY_POLICY.md`.
+2. Find the existing canonical owner using `PROJECT_KNOWLEDGE_MAP.md`.
+3. Update the existing owner whenever possible; do not create duplicate summaries.
+4. Create a focused artifact only when no correct owner exists.
+5. Preserve provenance and distinguish `PROPOSED`, `ACCEPTED`, `IMPLEMENTED`, `VERIFIED`, `INFERRED`, `REPORTED`, `UNVERIFIED` and `REJECTED` states as applicable.
+6. Update the Knowledge Map when a new cross-project canonical artifact is introduced or its discoverability materially changes.
+7. Update the feature tracker when feature scope/state changes.
+8. Commit the durable knowledge with the work; do not leave it solely in a chat or PR conversation.
+
+This is a normal definition-of-done step, not a human approval gate. Routine code changes that discover no durable knowledge do not require documentation changes.
+
+## Handoff invariant
+
+A future agent should be able to understand accepted architecture and binding implementation rules from repository artifacts without access to a previous chat. Conversation context may accelerate work, but it must never be the sole storage location for durable project knowledge.
