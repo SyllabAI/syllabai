@@ -21,6 +21,15 @@
 - REPORTED:
 - UNVERIFIED:
 
+### Knowledge impact
+- [ ] No durable project knowledge discovered.
+- [ ] Existing canonical artifact updated.
+- [ ] New durable artifact created.
+- [ ] Architecture/decision record updated.
+- [ ] Operational evidence/state updated.
+- [ ] `PROJECT_KNOWLEDGE_MAP.md` updated because a new cross-project canonical artifact was added or discoverability materially changed.
+- [ ] No competing source of truth was introduced.
+
 ### State safety
 - [ ] No applied Flyway migration was modified, renamed, deleted, or renumbered.
 - [ ] No immutable assessment evidence was mutated.
