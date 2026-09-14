@@ -5,13 +5,18 @@
 
 ## Current implementation
 
-The first bounded implementation artifacts now exist in `SyllabAI/syllabai-parser` under `tools/content-package-v0.1/`:
+The first executable reconstruction proof now exists in `SyllabAI/syllabai-parser` under `tools/content-package-v0.1/`:
 
 - SQLite schema for the v0.1 derived package;
 - package manifest contract example;
-- proof-harness guidance and explicit verification gates.
+- dependency-free bounded compiler/reconstruction harness;
+- semantic reconstruction checks for Revision Note, SpecificationPoint mapping, QP/MS, question/part/mark-point identity;
+- SHA-256 provenance checks;
+- fail-closed lifecycle and relationship checks;
+- negative regression tests;
+- CI execution of the bounded proof.
 
-This implements the **representation boundary**, not a production-wide content compiler or corpus migration.
+The parser proof is implemented as a bounded harness, not a production-wide content compiler or corpus migration.
 
 ## Repository ownership
 
@@ -23,7 +28,9 @@ This implements the **representation boundary**, not a production-wide content c
 
 ## Verification status
 
-The proof is **UNVERIFIED** until a clean environment demonstrates schema creation, provenance/identity preservation, lifecycle/serving-state preservation, fail-closed behavior, QP/MS relationship preservation, and semantic reconstruction from the same inputs.
+The implementation remains **UNVERIFIED** until the GitHub CI proof run completes successfully and the evidence demonstrates clean-environment schema creation, provenance/identity preservation, lifecycle/serving-state preservation, fail-closed behavior, QP/MS relationship preservation, and semantic reconstruction from the same inputs.
+
+The current fixture is deliberately synthetic and is **not canonical educational content**. It proves the package mechanics only.
 
 No claim of byte-for-byte package determinism is made yet.
 
@@ -34,8 +41,17 @@ No claim of byte-for-byte package determinism is made yet.
 - storing learner state as canonical truth;
 - bypassing validation or serving gates;
 - adopting MarkdownDB;
-- broad corpus migration before the bounded proof passes.
+- broad corpus migration before the bounded proof passes;
+- treating the proof fixture as validated curriculum or assessment content.
+
+## Current parser proof
+
+Open PR: `SyllabAI/syllabai-parser#5` — bounded Content Package v0.1 reconstruction harness.
+
+Head commit at status update: `d70fb9017a2a754a2a63378a1cd460f276297b36`.
+
+Status: **IMPLEMENTED / UNVERIFIED** pending CI evidence.
 
 ## Next gate
 
-Run the proof against a deliberately small known-good corpus: a small Revision Note sample plus one validated QP/MS pair. Record the exact source identities, SHA-256 values, compiler/schema versions, validation state, and reconstruction result. Only evidence from that run may move this from `UNVERIFIED` toward `VERIFIED`.
+Use the CI result as the first machine-generated proof evidence. If green, preserve the run identifier, source identities, SHA-256 values, compiler/schema versions, validation state, and reconstruction result in a durable evidence artifact before considering the bounded implementation `VERIFIED`. The bounded proof passing does **not** by itself accept the broader Content Compiler architecture or authorize a corpus migration.
