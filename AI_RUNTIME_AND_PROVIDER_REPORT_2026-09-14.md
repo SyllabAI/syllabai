@@ -25,12 +25,13 @@ The current architecture should be:
     │
     ├── Tutor
     ├── Smart Mark candidate generation
-    └── Interaction Evidence extraction
+    ├── Interaction Evidence extraction
+    └── Contextual Learning Assistant
 ```
 
-Tutor, Smart Mark and interaction analysis may share a model initially, but they are separate workloads with separate prompts, schemas, validators, telemetry and fallback policies.
+Tutor, Smart Mark, interaction analysis and contextual assistance may share a model initially, but they are separate workloads with separate prompts, schemas, validators, telemetry and fallback policies.
 
-The model itself is **not** the agent. Agentic capability will come from an application-controlled loop with bounded educational tools, permissions, state and termination rules.
+The model itself is **not the agent**. Agentic capability will come from an application-controlled loop with bounded educational tools, permissions, state and termination rules.
 
 ## 1. Current production/runtime position
 
@@ -52,6 +53,7 @@ These runtime facts are implementation evidence; provider quotas and model catal
 | Workload | Needs generation LLM? | Needs embeddings? | Initial model strategy |
 |---|---:|---:|---|
 | Tutor answer | Yes | Indirectly, for retrieval | Groq `openai/gpt-oss-120b` primary |
+| Contextual Learning Assistant | Yes | Indirectly, for retrieval | Same Tutor/provider abstraction, context-specific policy |
 | Smart Mark candidate generation | Yes | No hard requirement | Same provider abstraction; separate marking prompt/schema |
 | Interaction Evidence extraction | Yes | Optional | Same provider initially; structured-output workload |
 | Learner model / BKT / BDT / decay | No | No | Deterministic/application logic |
@@ -178,6 +180,7 @@ The stable boundary should be:
 TutorService
 SmartMarkService
 InteractionEvidenceService
+ContextualLearningAssistantService
 AgentRuntime
        │
        ▼
@@ -199,7 +202,7 @@ Provider-specific model IDs, URLs, temperature/options and rate-limit behavior b
 
 ## 9. Interaction Memory changes the AI workload map
 
-The new Learner Interaction Memory feature adds a fourth generation workload: **Interaction Evidence extraction**.
+The new Learner Interaction Memory feature adds a generation workload: **Interaction Evidence extraction**.
 
 It should not be implemented as an always-on expensive call after every token. Prefer analysis at message/turn boundaries and batch/async processing where latency is not user-visible.
 
@@ -214,7 +217,45 @@ A cost-aware policy is:
 
 This reduces both cost and noise.
 
-## 10. Current final AI recommendation
+## 10. Contextual Learning Assistant architecture
+
+Revision Notes and Exam Questions should expose a floating **Contextual Learning Assistant**. It is a mode of the existing Tutor runtime, not a separate chatbot stack.
+
+The server constructs a typed `ResourceContext` from the current authorized resource. The client may identify a resource ID, but it must not define the resource's educational truth.
+
+For Revision Notes, context includes resource identity, subject, qualification, exam board, specification/version, linked SpecificationPoints/KG nodes, current section, validated content and relevant learner evidence/state.
+
+For Exam Questions, context includes question/subparts, marks, command words, linked SpecificationPoints/KG nodes, validated mark scheme/examiner guidance and relevant learner evidence/state.
+
+The assistant has three context levels:
+
+1. **Page-locked** — current resource is primary.
+2. **SyllabAI-aware routing** — locate the correct SyllabAI resource when the learner asks about another topic/subject.
+3. **General educational conversation** — only when policy permits, with clear distinction from authoritative SyllabAI content.
+
+This supports quick actions such as Definitions, Summary, Pitfalls and Exam Help on Revision Notes, and Understand and Approach on Exam Questions.
+
+For Exam Questions, default tutoring should progress from understanding to hints/approach, guided work, student attempt, Smart Mark and improvement rather than immediately exposing a complete answer.
+
+The assistant is also a learner-evidence surface: meaningful interactions can feed the existing Interaction Evidence pipeline. Chat remains evidence, not learner truth.
+
+A likely implementation boundary is:
+
+```text
+ResourceContext
+ContextPolicy
+ToolPolicy
+ResponseMode
+EvidenceCapture
+       ↓
+Tutor / LlmProvider
+```
+
+See `CONTEXTUAL_LEARNING_ASSISTANT_ARCHITECTURE.md` and `MASTER_SPEC_ADDENDUM_1.5_CONTEXTUAL_LEARNING_ASSISTANT.md` for the complete product and safety contract.
+
+Current external product evidence supports this direction: Save My Exams documents Revision Note Chat and Exam Question Chat as AI tools grounded in examiner-written, specification-aligned content and assessment context. Source: https://www.savemyexams.com/learning-hub/sme-articles/is-save-my-exams-ai/
+
+## 11. Current final AI recommendation
 
 ```text
 Generation primary:
@@ -241,11 +282,14 @@ Smart Mark:
 Interaction Evidence:
   same generation provider initially, separate structured extractor
 
+Contextual Learning Assistant:
+  same generation provider initially, separate context/tool/response policies
+
 Agent runtime:
   application-controlled tools, permissions and termination
 ```
 
-## 11. Operational rule
+## 12. Operational rule
 
 Provider/model availability is not an architecture invariant. The invariant is the provider abstraction and the safety/grounding contract around it.
 
