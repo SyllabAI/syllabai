@@ -2,7 +2,7 @@
 
 **Status:** Canonical navigation/index document  
 **Purpose:** Locate durable project knowledge without relying on conversation memory.  
-**Last reviewed:** 2026-09-14
+**Last reviewed:** 2026-09-15
 
 ## 1. Purpose
 
@@ -45,6 +45,7 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Current execution state | `PROGRESS.md`, `TODO.md` | Living state/work queue |
 | Repository research | `REPOSITORY_RESEARCH.md` | External implementation/license research |
 | Platform/provider research | `PLATFORM_RESEARCH.md`, current AI runtime/provider report | Provider and platform evidence |
+| Content representation/package | `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md`, `CONTENT_PACKAGE_V0_1.md`, ADR-021 | Markdown artifacts, PostgreSQL boundary and portable SQLite package direction |
 
 ## 4. Curriculum, subject and knowledge graph
 
