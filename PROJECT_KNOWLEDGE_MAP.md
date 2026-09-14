@@ -86,11 +86,12 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Area | Canonical artifact(s) | Status/role |
 |---|---|---|
 | RAG/retrieval research | `RAG_RETRIEVAL_RESEARCH.md` | Accepted research/architecture guidance; promotion requires benchmark evidence |
+| Gemini File Search / Gemini Notebook architecture research | `GEMINI_FILE_SEARCH_AND_NOTEBOOK_ARCHITECTURE_RESEARCH.md` | Accepted research investigation; benchmark required; no production default yet |
 | Educational Retrieval Engine | `ADR-020-EDUCATIONAL_RETRIEVAL_ENGINE.md` | Accepted architecture direction |
 | Retrieval agent rules | `AGENT.md` RAG section and relevant core implementation contracts | Binding |
 | Contextual Learning Assistant | `CONTEXTUAL_LEARNING_ASSISTANT_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.5_CONTEXTUAL_LEARNING_ASSISTANT.md`, `AGENT_CONTEXTUAL_LEARNING_ASSISTANT_ADDENDUM.md`, decision log | Product architecture |
 | AI runtime/provider choices | `AI_RUNTIME_AND_PROVIDER_REPORT_*.md` and `PLATFORM_RESEARCH.md` | Time-sensitive operational/research evidence |
-| External RAG references | `RAG_RETRIEVAL_RESEARCH.md`, `REPOSITORY_RESEARCH.md` | Reference only unless explicitly adopted |
+| External RAG references | `RAG_RETRIEVAL_RESEARCH.md`, `REPOSITORY_RESEARCH.md`, `GEMINI_FILE_SEARCH_AND_NOTEBOOK_ARCHITECTURE_RESEARCH.md` | Reference only unless explicitly adopted |
 
 ### RAG invariant
 
