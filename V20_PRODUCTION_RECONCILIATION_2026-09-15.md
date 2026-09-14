@@ -69,6 +69,8 @@ The next Content Package proof should use real, already validated production/can
 
 The architecture remains **PROPOSED** until that real-corpus proof is captured and reviewed.
 
+**Update (later on 2026-09-15):** the bounded real-corpus proof has since been executed — one real operator-validated Revision Note + one real production-VALIDATED QP/MS pair with a complete marking contract, five fail-closed negative gates, and a clean-room semantic reconstruction, CI-executed GREEN 17/17 (`parser-ci` run 34903192847, parser main `a0a599b`). Exact evidence in `CONTENT_PACKAGE_V0_1_IMPLEMENTATION_STATUS.md`. The architecture itself remains PROPOSED.
+
 ## 5. Next verification gate
 
 Before promoting the reported V20 production result to VERIFIED, capture durable evidence for the final deployed state:
