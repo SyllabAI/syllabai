@@ -37,40 +37,45 @@ Before substantial changes:
 3. Relevant repository/module documentation.
 4. `PROJECT_CONTEXT.md` for cross-cutting or unclear work.
 5. `SUBJECT_ARCHITECTURE.md` for subject/curriculum/content-linking/assessment-tagging/knowledge-graph/student subject workspace work.
-6. `TEACHER_ARCHITECTURE.md` for teacher/class/LMS/Test Builder/assignments/teacher analytics/teacher AI/class-KG work.
-7. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` and `LEARNING_EVIDENCE_AGENT_ADDENDUM.md` for question/attempt/assessment evidence/Smart Mark/review/recommendation/telemetry work.
-8. `RAG_RETRIEVAL_RESEARCH.md` for retrieval, Tutor grounding, embeddings, reranking, graph retrieval, HyPE, evidence selection or multimodal-RAG work.
-9. `RAG_RETRIEVAL_CORPUS_GUIDANCE.md` in `syllabai-resources` for corpus-side retrieval preparation.
-10. Relevant research-paper sections whenever scientific constructs, hypotheses, operational definitions, metrics or learner-model semantics change.
+6. `DATA_MODEL_ERD.md` for database/schema/entity-relationship work. **Treat its Current ERD as implementation evidence and its Target EERD as architecture; never silently present target-only entities as implemented.**
+7. `TEACHER_ARCHITECTURE.md` for teacher/class/LMS/Test Builder/assignments/teacher analytics/teacher AI/class-KG work.
+8. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` and `LEARNING_EVIDENCE_AGENT_ADDENDUM.md` for question/attempt/assessment evidence/Smart Mark/review/recommendation/telemetry work.
+9. `RAG_RETRIEVAL_RESEARCH.md` for retrieval, Tutor grounding, embeddings, reranking, graph retrieval, HyPE, evidence selection or multimodal-RAG work.
+10. `RAG_RETRIEVAL_CORPUS_GUIDANCE.md` in `syllabai-resources` for corpus-side retrieval preparation.
+11. Relevant research-paper sections whenever scientific constructs, hypotheses, operational definitions, metrics or learner-model semantics change.
 
 The Master Spec is the engineering source of truth. Research papers remain authoritative for scientific claims. Named architecture addenda govern their specific layers. Do not silently resolve conflicts; record them and make/update the appropriate decision.
+
+---
 
 ## Source hierarchy
 
 1. Research papers — scientific claims, hypotheses, operational definitions and evaluation design.
 2. `MASTER_SPEC.md` — engineering architecture and technology decisions.
 3. Canonical architecture addenda — named architecture layers.
-4. Definitive project spreadsheet — feature inventory and execution state.
-5. `RAG_RETRIEVAL_RESEARCH.md` — canonical RAG/retrieval research and integration guidance.
-6. `REPOSITORY_RESEARCH.md` — external implementation references and license decisions.
-7. `DECISIONS.md` and ADR files — explicit architecture decisions.
-8. `SUBJECT_ARCHITECTURE.md` — subject/specification-point architecture.
-9. `TEACHER_ARCHITECTURE.md` — teacher/classroom architecture.
-10. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` and addendum — assessment evidence architecture.
-11. `WORKLOG.md`, `PROGRESS.md`, `TODO.md` — living execution state/history.
+4. `DATA_MODEL_ERD.md` — current physical/logical data model versus canonical target EERD, for schema/entity decisions.
+5. Definitive project spreadsheet — feature inventory and execution state.
+6. `RAG_RETRIEVAL_RESEARCH.md` — canonical RAG/retrieval research and integration guidance.
+7. `REPOSITORY_RESEARCH.md` — external implementation references and license decisions.
+8. `DECISIONS.md` and ADR files — explicit architecture decisions.
+9. `SUBJECT_ARCHITECTURE.md` — subject/specification-point architecture.
+10. `TEACHER_ARCHITECTURE.md` — teacher/classroom architecture.
+11. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` and addendum — assessment evidence architecture.
+12. `WORKLOG.md`, `PROGRESS.md`, `TODO.md` — living execution state/history.
 
 ---
 
 ## Project repositories
 
 ```text
-syllabai           main repo: spec, ADRs, backlog, research dossiers, papers
-syllabai-web       Next.js 16 / React 19 / TypeScript frontend
-syllabai-core      Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith
-syllabai-parser    polyglot offline content pipeline
-syllabai-pastpapers canonical exam corpus: manifests, provenance, ledgers (4,280 files)
-Past-Papers        official QP/MS corpus source repository
-syllabai-resources validated revision/content corpus and corpus QA
+syllabai                 main repo: spec, ADRs, backlog, research dossiers, papers
+syllabai-web             Next.js 16 / React 19 / TypeScript frontend
+syllabai-core            Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith
+syllabai-parser          polyglot offline content pipeline
+syllabai-pastpapers      canonical exam corpus: manifests, provenance, ledgers
+Past-Papers              official QP/MS corpus source repository
+syllabai-resources       validated revision/content corpus and corpus QA
+syllabai-teacher-workbench teacher validation workbench / staged decision importer
 ```
 
 All domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live inside `syllabai-core` unless a real runtime/lifecycle boundary justifies separation.
@@ -217,344 +222,3 @@ semantic relevance
 ```
 
 Benchmark generic rerankers before adding model-specific complexity.
-
-## Two graph layers
-
-There are conceptually two different graph purposes:
-
-**Authoritative Educational KG:** validated SpecificationPoints, concepts, prerequisites, misconceptions and educational relations. Governed by provenance/validation/promotion rules.
-
-**Retrieval graph/view:** derived retrieval relationships such as `similar_to`, `co-occurs_with`, `supports`, `adjacent_to` and `retrieves`. These can be automatically generated, but they are **not educational truth**.
-
-LightRAG/GraphRAG-style retrieval may traverse the authoritative SyllabAI graph, but it must not automatically create authoritative prerequisite or misconception edges.
-
-This is especially important after T-C11: semantic similarity/co-occurrence is not evidence of pedagogical dependency. Held/rejected edges stay held/rejected unless explicitly promoted through the existing gate.
-
-## HyPE rule
-
-Hypothetical learner questions are retrieval aliases only. They must never become curriculum truth, assessment truth, or evidence. Generate them from validated resource/SpecificationPoint context, validate/deduplicate where practical, and retain model/version metadata.
-
-## Citation rule
-
-Prefer this provenance chain:
-
-```text
-Tutor claim
- → evidence segment
- → validated resource/version
- → SpecificationPoint
- → curriculum/specification source
-```
-
-Do not reduce a strong provenance chain to a generic vector-chunk citation.
-
-## Learner-aware retrieval rule
-
-Learner state is a retrieval/ranking signal, not a replacement for curriculum truth. Different learners may correctly receive different evidence for the same natural-language question because their prerequisite mastery or misconception state differs.
-
-Do not create a second learner model inside RAG.
-
-## Multimodal ingestion rule
-
-RAG-Anything/MinerU/VLM/OCR-style extraction may be used as candidate document processing. Extracted text, equations, tables, diagrams and relationships remain candidate representations until the existing provenance/validation gates accept them.
-
-## Infrastructure rule
-
-PostgreSQL remains the system of record and pgvector remains the default vector layer. Do not add Neo4j, a separate vector database, RAGFlow or LightRAG solely to obtain a RAG feature that can be implemented behind existing contracts.
-
----
-
-# External RAG repository guidance
-
-### `NirDiamant/RAG_Techniques`
-
-Use as a technique toolbox and benchmark source. Highest-value areas: hybrid/fusion retrieval, reranking, contextual enrichment, hierarchical retrieval, HyPE, relevant-segment extraction, query transformation and explainable retrieval. Do not blindly copy notebook architecture.
-
-### `HKUDS/LightRAG`
-
-Use for graph-aware retrieval, local/global retrieval ideas, candidate fusion, reranking and citation patterns. Do not use its retrieval graph as SyllabAI's authoritative educational KG.
-
-### `HKUDS/RAG-Anything`
-
-Use primarily as a multimodal ingestion/reference pattern for PDFs, tables, equations, figures, scans and heterogeneous educational documents. Parser/VLM output is not truth.
-
-### `infiniflow/ragflow`
-
-Use as an engineering reference for deep document understanding, multiple recall, fused reranking, metadata filtering, citation UX and retrieval operations. Do not make it the SyllabAI runtime or source of truth.
-
----
-
-# Corpus-specific rules
-
-The current 4CH1 validated corpus includes the T-C09/T-C10/T-C11 substrate. Important current facts:
-
-- 182 SpecificationPoints.
-- 112 revision notes.
-- 209 final HUMAN_VALIDATED note → SpecificationPoint mappings.
-- `4CH1-4.15` intentionally uncovered after semantic review.
-- `4CH1-1.17` mapping rejected.
-- T-C11 held/rejected candidates must not become retrieval expansion paths without explicit promotion.
-
-Retrieval experiments must not manufacture coverage for an uncovered point through semantic similarity, generated HyPE aliases or inferred graph edges.
-
-For corpus-side guidance see `syllabai-resources/RAG_RETRIEVAL_CORPUS_GUIDANCE.md`.
-
----
-
-# Retrieval benchmark rule
-
-Do not adopt RAG techniques based only on external README claims.
-
-Use the real 4CH1 corpus and roughly 100–200 representative Tutor queries covering factual, conceptual, calculation, prerequisite, misconception, "why did I get this wrong?", exam, revision, vague-language and multi-SpecificationPoint requests.
-
-Benchmark at minimum:
-
-```text
-semantic baseline
-BM25
-hybrid
-hybrid + reranking
-hierarchical + hybrid + reranking
-context enrichment
-HyPE
-KG expansion
-KG + HyPE + reranking + evidence selection
-```
-
-Measure:
-
-- Recall@5/10/20;
-- MRR;
-- nDCG;
-- SpecificationPoint resolution accuracy;
-- evidence precision;
-- false-positive rate;
-- evidence sufficiency;
-- citation correctness;
-- unsupported-claim rate;
-- p50/p95 latency;
-- retrieval/indexing cost;
-- LLM calls per query;
-- storage overhead.
-
-A technique becomes a default only after meaningful improvement without unacceptable latency, cost, complexity or educational-precision regression.
-
----
-
-# Engineering rules
-
-1. Preserve domain boundaries. UI does not own business rules; controllers do not own domain logic.
-2. Prefer provider-neutral contracts: `KnowledgeGraphRepository`, `VectorStore`, `DocumentParser`, `ObjectStorage`, `LlmProvider`, `EmbeddingProvider`, `LearnerModel`, retrieval/reranking/evidence contracts.
-3. Preserve provenance for every generated educational claim and AI-derived relation.
-4. Record model/provider/prompt/version metadata wherever AI output matters.
-5. Do not silently change scientific semantics. Consult the relevant research paper and decision record.
-6. Do not introduce paid-only infrastructure under the free-tier constraint without an explicit decision.
-7. Do not introduce microservices without a real runtime/lifecycle boundary.
-8. Do not couple domain logic to OpenAI, Pinecone, Neo4j, MinerU, LightRAG, RAGFlow or another external implementation.
-9. Do not copy external code/data across the license wall.
-10. Treat external repositories as references behind SyllabAI contracts.
-11. Retrieval work must not indefinitely block the pilot.
-
----
-
-# Worklog / progress / TODO protocol
-
-`WORKLOG.md` is chronological and append-only. Repeat important findings, mistakes and breakthroughs.
-
-`PROGRESS.md` describes current state: repository status, subsystem state, architecture, latest findings, risks and next highest-value work.
-
-`TODO.md` contains actionable tasks with IDs where useful, repository, priority, dependencies, status and acceptance criteria. Do not leave stale completed work.
-
-The definitive spreadsheet remains the execution index. New capabilities must be represented there rather than only in prose.
-
----
-
-# Coding workflow
-
-```text
-Understand task
-  ↓
-Locate feature in spreadsheet
-  ↓
-Read Master Spec / relevant architecture addenda
-  ↓
-Read RAG_RETRIEVAL_RESEARCH.md for retrieval/Tutor/content-intelligence work
-  ↓
-Read relevant research-paper section when scientific meaning changes
-  ↓
-Inspect existing code/tests
-  ↓
-Implement smallest coherent change behind existing contracts
-  ↓
-Run tests/static checks
-  ↓
-Verify behavior
-  ↓
-Update relevant docs/decisions
-  ↓
-Update WORKLOG
-  ↓
-Update PROGRESS
-  ↓
-Update TODO/spreadsheet state
-```
-
-Before finishing, ask:
-
-- Did I preserve architecture and source-of-truth boundaries?
-- Did I add/adjust tests?
-- Did I preserve provenance?
-- Did I introduce a new assumption requiring a research-paper check?
-- If subject-scoped, did I preserve Board/Qualification/Subject/CurriculumVersion isolation?
-- If curriculum-scoped, did I preserve official SpecificationPoint numbering and provenance?
-- If question/evidence-scoped, did I preserve immutable evidence and canonical QuestionPart identity?
-- If retrieval-scoped, did I avoid making embeddings or automatically inferred graph relations authoritative?
-- If retrieval-scoped, did I record the benchmark configuration and failure cases?
-- Did I update project-management state and documentation?
-
----
-
-# Common mistakes to avoid
-
-- Turning SyllabAI into a generic RAG chatbot.
-- Letting vector similarity define educational truth.
-- Letting GraphRAG/LightRAG-generated edges become authoritative prerequisites or misconceptions.
-- Replacing the SyllabAI KG with a generic RAG graph.
-- Adding Neo4j or another database solely for GraphRAG.
-- Flattening SpecificationPoints into arbitrary chunks.
-- Treating HyPE-generated questions as evidence or curriculum truth.
-- Treating VLM/OCR/parser output as authoritative without validation.
-- Creating a second learner model inside retrieval.
-- Copying code from non-permissive reference repositories.
-- Pulling Cycle-2+ features into Cycle 1.
-- Coupling domain logic to external providers/frameworks.
-- Putting important state on ephemeral Render storage.
-- Exposing JPA entities directly through APIs.
-- Treating frontend checks as authorization.
-- Updating learner mastery directly from UI actions.
-- Using one topic for multi-topic questions.
-- Treating BKT as the complete learner model.
-- Labeling students at risk without inspectable evidence.
-- Presenting research hypotheses as validated facts.
-- Introducing microservices without a genuine boundary.
-- Adding paid infrastructure without an explicit decision.
-- Updating code without updating project state and documentation.
-- Letting retrieval research indefinitely postpone pilot delivery.
-
----
-
-# Multi-agent operating system
-
-SyllabAI is developed by multiple agents in parallel. The repository itself is the shared coordination surface; agent transcripts are not canonical project state.
-
-## Canonical coordination state
-
-Before substantial work, read:
-
-- `.syllabai/project-state.yaml` — current project state and invariants.
-- `.syllabai/agent-registry.yaml` — ownership boundaries and shared-resource policies.
-- `.syllabai/tasks/` — dependency-aware task packets.
-- `.syllabai/locks.yaml` — active shared-resource leases.
-- `.syllabai/contracts/` — cross-repository contracts and fixtures.
-- `.syllabai/evidence/README.md` — durable evidence and claim discipline.
-
-These files supplement, but do not replace, the Master Spec, architecture addenda, research sources, backlog, WORKLOG, PROGRESS or TODO.
-
-## Ownership
-
-Every major surface has one primary owner. Ownership means responsibility for integration and invariants, not exclusive permission to fix defects.
-
-- Core owns backend/domain/database schema and Flyway migrations.
-- Parser owns offline extraction and parser-output contracts.
-- Web owns frontend surfaces.
-- Resources owns validated resource/corpus preparation.
-- Corpus owns canonical past-paper data and provenance ledgers.
-- KG owns T-C11 authoritative KG promotion.
-- Control/integration owns project coordination, contracts and evidence policy.
-
-Agents may cross boundaries only through an explicit task dependency or coordinated change.
-
-## Shared-resource serialization
-
-The following are serialized/controlled resources:
-
-- Flyway version allocation.
-- Database-schema changes.
-- Destructive campaign tooling.
-- Shared parser↔core and core↔web contracts.
-- Authoritative KG promotion.
-
-**Never independently reserve a migration number. Never modify, rename, delete or renumber an applied Flyway migration.** A schema correction always uses a new migration.
-
-Checking `main` before choosing a migration number is not sufficient serialization. Use the coordination lease/task mechanism and record the allocation.
-
-## Task packets and parallelism
-
-Work is represented as small, dependency-aware task packets. Parallelize independent tasks aggressively. Do not create manual approval gates between successful independent batches.
-
-Stop or escalate on genuine failures: identity/provenance mismatch, data loss, unexpected deletion, migration collision, contract incompatibility, validation/serving invariant failure, security issue, or another hard acceptance failure.
-
-Quarantine isolated ambiguities and continue unrelated work where the architecture permits it.
-
-## Stale-base protocol
-
-Every agent records its base commit. When `main` advances:
-
-1. If changed files/contracts do not overlap, continue.
-2. If they overlap, reconcile with current `main` before completion.
-3. Rerun affected tests/invariants after reconciliation.
-4. Never silently overwrite newer work.
-
-Small commits and short-lived branches are preferred over large long-lived divergence.
-
-## Truth tiers
-
-```text
-T0 official external source
-T1 validated SyllabAI truth
-T2 derived system state
-T3 agent candidate/suggestion
-T4 ephemeral execution state
-```
-
-Lower tiers may not silently overwrite higher tiers. Parser/VLM/LLM output, inferred KG edges and agent proposals remain T3 until the appropriate validation/promotion gate accepts them.
-
-## Claim discipline
-
-Reports must distinguish:
-
-- `VERIFIED` — reproducible and backed by durable evidence.
-- `INFERRED` — supported but not directly demonstrated.
-- `REPORTED` — another agent claims it without adequate surviving evidence.
-- `UNVERIFIED` — currently unsupported.
-
-Never promote `REPORTED` to `VERIFIED` merely because a report is detailed or plausible.
-
-## Durable milestone rule
-
-Ephemeral infrastructure may be used for execution, but it is never the sole canonical store of project state or verification evidence. Material milestone claims require durable evidence as specified in `.syllabai/evidence/README.md`.
-
-A campaign/database milestone should include, where applicable: repository commit(s), schema/migration state, row-count manifest, retained dump/hash, corpus/source commit, test/invariant output and an external durable export.
-
-## Cross-repository contracts
-
-Producer/consumer changes are coordinated through `.syllabai/contracts/`. Educational-content contract failures remain fail-loud unless an explicit compatibility decision permits otherwise. Do not silently discard unknown fields that could contain educational data.
-
-## Agent completion report
-
-Before declaring a task complete, report:
-
-```text
-STATUS
-TASK
-BASE
-CHANGES
-TESTS
-INVARIANTS
-EVIDENCE
-CLAIMS (VERIFIED / INFERRED / REPORTED / UNVERIFIED)
-BLOCKERS
-NEXT SAFE ACTIONS
-```
-
-The next agent must be able to continue from the repository state and evidence without relying on the previous agent's private transcript.
