@@ -53,7 +53,7 @@ These runtime facts are implementation evidence; provider quotas and model catal
 |---|---:|---:|---|
 | Tutor answer | Yes | Indirectly, for retrieval | Groq `openai/gpt-oss-120b` primary |
 | Smart Mark candidate generation | Yes | No hard requirement | Same provider abstraction; separate marking prompt/schema |
-| Interaction Evidence extraction | Yes | Optional | Lower-cost structured-output call; can share Tutor model initially |
+| Interaction Evidence extraction | Yes | Optional | Same provider initially; structured-output workload |
 | Learner model / BKT / BDT / decay | No | No | Deterministic/application logic |
 | Recommendation scoring | No hard requirement | Optional retrieval support | Existing rule/evidence-based engine |
 | Knowledge graph authority | No | No | Canonical database state |
@@ -96,15 +96,15 @@ text → vector representation
 
 SyllabAI uses embeddings for semantic retrieval, not for educational truth. Vector similarity must remain subordinate to curriculum anchors, validated resources, KG structure and learner evidence.
 
-Google currently documents `gemini-embedding-001` as a stable text-embedding model supporting flexible dimensions from 128 to 3072, with 768/1536/3072 recommended. citeturn6search0turn6search1
+Google documents `gemini-embedding-001` as a stable text-embedding model supporting flexible dimensions from 128 to 3072, with 768/1536/3072 recommended. Source: https://ai.google.dev/gemini-api/docs/models/gemini-embedding-001
 
-Google also now documents `gemini-embedding-2`, a newer multimodal embedding model supporting text, image, audio, video and PDF inputs. It is a future upgrade candidate, not an automatic Cycle-1 migration. citeturn6search4turn6search7
+Google also documents `gemini-embedding-2`, a newer multimodal embedding model supporting text, image, audio, video and PDF inputs. It is a future upgrade candidate, not an automatic Cycle-1 migration. Source: https://ai.google.dev/gemini-api/docs/models/gemini-embedding-2
 
 ## 5. Free provider strategy
 
 ### Groq — primary generation provider
 
-Groq remains the strongest default for the current no-card pilot because it offers OpenAI-compatible inference and useful free-tier limits. Current Groq documentation lists `openai/gpt-oss-120b` at 30 RPM, 1,000 requests/day, 8K TPM and 200K TPD on the current published table. Limits are model/account dependent and can change. citeturn5search5
+Groq remains the strongest default for the current no-card pilot because it offers OpenAI-compatible inference and useful free-tier limits. Current Groq documentation lists `openai/gpt-oss-120b` at 30 RPM, 1,000 requests/day, 8K TPM and 200K TPD on the current published table. Limits are model/account dependent and can change. Source: https://console.groq.com/docs/rate-limits
 
 The production system should therefore treat provider limits as runtime state, not as constants in architecture prose.
 
@@ -114,7 +114,7 @@ Google's Gemini API remains useful as a second generation provider and as the cu
 
 ### OpenRouter — tertiary free generation pool
 
-OpenRouter is useful because it provides an OpenAI-compatible interface and a rotating collection of free models. Current documentation says accounts without purchased credits receive 50 free-model API requests/day; purchasing at least $10 of credits raises the free-model allowance to 1,000/day. OpenRouter explicitly warns that free models have low limits and are usually unsuitable as a sole production dependency. citeturn5search3
+OpenRouter is useful because it provides an OpenAI-compatible interface and a rotating collection of free models. Current documentation says accounts without purchased credits receive 50 free-model API requests/day; purchasing at least $10 of credits raises the free-model allowance to 1,000/day. OpenRouter explicitly warns that free models have low limits and are usually unsuitable as a sole production dependency. Source: https://openrouter.ai/docs/faq
 
 For SyllabAI's no-card constraint, only the 50/day tier should be assumed. Never architect around the paid $10 allowance.
 
@@ -124,9 +124,9 @@ Ollama, llama.cpp, vLLM and LM Studio remain valid zero-API-cost options for dev
 
 ## 6. Gemini-web2api assessment
 
-`Sophomoresty/gemini-web2api` is technically interesting: it converts Gemini Web into an OpenAI-compatible API, supports streaming/tool-calling patterns and advertises anonymous/free access. The project is MIT licensed. citeturn5search0turn5search2
+`Sophomoresty/gemini-web2api` is technically interesting: it converts Gemini Web into an OpenAI-compatible API, supports streaming/tool-calling patterns and advertises anonymous/free access. The project is MIT licensed. Source: https://github.com/Sophomoresty/gemini-web2api
 
-However, it reverse-engineers Gemini Web rather than using a stable official developer API. Its own README warns about throttling and sustained-use blocking, proxy/network issues and the fact that free-account access does not provide real paid Pro routing. It also simulates multi-turn context by including prior messages in requests. citeturn5search0
+However, it reverse-engineers Gemini Web rather than using a stable official developer API. Its own README warns about throttling and sustained-use blocking, proxy/network issues and the fact that free-account access does not provide real paid Pro routing. It also simulates multi-turn context by including prior messages in requests. Source: https://github.com/Sophomoresty/gemini-web2api#limitations
 
 **Decision:** do not make Gemini-web2api a production-critical SyllabAI dependency. It can be an experimental/local fallback behind the existing OpenAI-compatible provider abstraction.
 
