@@ -1,17 +1,16 @@
 name: Google Sheet Dashboard
 
 # Refreshes the SyllabAI project & sync dashboard Google Sheet:
-#   - every 6 hours (all repos)
-#   - on every push to this master repo
+#   - once daily at 02:43 UTC (08:43 Asia/Dhaka, before the 09:07 Discord pulse)
 #   - manually via Actions -> Run workflow
+# (Push trigger removed + cron reduced from every 6h to save private-repo
+#  Actions minutes. Re-add if you need fresher data.)
 # Writes: Overview (repo/sync/Drive state), Commits (append-only log),
 #         Sync Runs (recent run health). See scripts/dashboard/sync_dashboard.py.
 
 on:
   schedule:
-    - cron: "23 */6 * * *"
-  push:
-    branches: [main]
+    - cron: "43 2 * * *"
   workflow_dispatch:
 
 permissions:
