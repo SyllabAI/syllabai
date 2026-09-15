@@ -1,0 +1,10 @@
+replacing 0 earlier checks: ['S-B-SLICED']
+phases=['sb'] smoke=False out=/home/z/my-project/evidence/cla_eval_phased.json
+corpus: {'topics_total': 28, 'subtopics_validated': 194, 'concepts_suggested': 117, 'questions_servable': 34}; evaluating 8 topics, 2 questions
+
+== S-B grounded precision / citations / modes ==
+PASS [S-B] 4CH1-S1-e EXPLAIN+SUMMARIZE grounded, cited, mode-shaped — ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=1082->635
+PASS [S-B] grounded precision 100% (all served answers evidence-backed) — 1/1 topics
+PASS [S-B] zero false refusals on in-scope probes — false_refusals=0
+
+phase(s) ['sb'] complete — 32 checks accumulated so far
