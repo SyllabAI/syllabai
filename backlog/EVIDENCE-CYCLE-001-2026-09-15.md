@@ -40,6 +40,52 @@ multi-part regression test pins it (part-a mark → no evidence; completing mark
 Already-fired events are immutable by design; the three mis-observed events
 remain as historical data. Post-fix attempts observe correctly.
 
+## Post-fix verification (2026-09-15, same day — statuses updated)
+
+- **`fe01b87` — IMPLEMENTED / LOCALLY VERIFIED (strengthened) / CI
+  VERIFICATION BLOCKED — ACTIONS QUOTA.** Local unit suite on main `95093d7`
+  (contains `fe01b87` untouched): **510 green** (1 pre-existing skip), up from
+  495 — the post-fix round added the same invariant proof for the SECOND
+  marking path and for the shared guard (core `2d613d5`): the κ-released
+  Smart Mark multi-part regression (part-a authoritative mark with part b
+  PENDING → NO evidence; completing mark → publishGraded exactly once, full
+  settled total) and `EvidencePublisherTest` (the once-only CAS pinned
+  directly: repeated `publishGraded` after firing is a no-op emitting
+  nothing; settled-total + conservative-correctness payload; `publishMcq`
+  fails closed on duplicate submit). ITs unchanged and awaiting CI (no local
+  Docker).
+- **Contamination reconciled deterministically**
+  (`evidence/cycle-001/reconciliation.json`, generator
+  `scripts/ops/s2_reconcile_evidence.py` in web): replaying the defective
+  sequence [F,F,F] reproduces the production value `0.11533544411262374`
+  EXACTLY — the replay model is validated to the last digit. Corrected
+  replay [T,T,F] (what the settled attempts earned): **mastery 0.3135593,
+  attempts=3, correct=2; class mean 0.1137 → 0.1385** (still LOW — S2-f
+  legitimately remains a weak topic). Decision: **deterministic
+  RECOMPUTATION, not reset** — the settled attempt rows are the ground
+  truth, `skill_states` is a rebuildable projection, the evidence events
+  stay immutable (audit + κ pairing). The guarded repair SQL + rollback are
+  prepared in the reconciliation artifact; execution BLOCKED on an operator
+  path to the production DB (no Neon DSN / Render token available to the
+  agent; Actions secrets are write-only). The old 0.12/0.1137 values are
+  REPORTED → INVALIDATED BY ROOT-CAUSE ANALYSIS → CORRECTED; VERIFIED only
+  after the recomputation lands and the post-fix round confirms.
+- **The deferred `correct: null` gap — now FIXED** (core `04d621a`):
+  classified by contract inspection as a semantic API defect, not intentional
+  representation — the `AttemptHistoryView` DTO documents `correct` as null
+  "UNTIL an authoritative mark exists" (a temporary state) but the
+  implementation never populated it for structured attempts. Smallest fix:
+  once every part is authoritatively marked the item carries the settled
+  row's own classification (the same conservative full-marks rule the
+  evidence event used); pending stays null. Unit regression added (settled
+  full marks → true; partial → false with the summed total); the flow IT
+  strengthened (correct=true after the human full-mark). Full suite **511
+  green** locally. Web `HistoryView` comment updated (no logic change).
+- **Frontend re-verified anonymously post-cycle:** §8–§10 markers still
+  present in the live Vercel bundle ("Target class weaknesses",
+  ACTIVE_MISCONCEPTION_PRESENT, weakness-options client fn); backend
+  `/actuator/health` UP.
+
 ## Honest states (§20)
 
 - **VERIFIED**: the full chain above (production runs, artifacts downloadable);
@@ -48,7 +94,9 @@ remain as historical data. Post-fix attempts observe correctly.
   pilot-monitor 18/18 green including web-bundle for the first time since
   session-69).
 - **PARTIAL**: core `fe01b87` (the evidence-timing fix) — unit-tested locally
-  (495 green) but **CI BLOCKED**: the org's GitHub Actions began failing every
+  (511 green after the same-day post-fix round: the both-path invariant tests
+  `2d613d5` and the settled-classification fix `04d621a`) but **CI BLOCKED**:
+  the org's GitHub Actions began failing every
   workflow instantly (even a one-step echo) at ~13:02 UTC while the platform
   status is operational — consistent with Actions minutes/spending-limit
   exhaustion. The concurrent CLA lane's pushes are equally blocked. Render
@@ -60,10 +108,11 @@ remain as historical data. Post-fix attempts observe correctly.
   correctly-credited mastery rise) is designed and ready
   (`s2-evidence-cycle.yml` phases `after`/`mark`/`final`) but needs the
   Actions path back.
-- **FOUND, deferred**: `AttemptHistoryView.correct` stays null for structured
-  attempts after marking settles (display-level gap, ~3-line fix in
-  `AttemptHistoryService`); deferred to avoid stacking unverified changes
-  while CI is blocked.
+- **FOUND, FIXED same day**: `AttemptHistoryView.correct` stayed null for
+  structured attempts after marking settled — classified by DTO-contract
+  inspection as a semantic API defect (the contract documents null "UNTIL an
+  authoritative mark exists"); fixed in core `04d621a` with unit + IT
+  regressions (511 local green).
 - **Left for its lane**: 10 new PENDING answers from the concurrent CLA eval
   bundle (created 12:43–12:47) — untouched per the concurrent-lane protocol.
 - **Deliberately NOT done**: κ/evaluate. All 255 round-1 answers plus the

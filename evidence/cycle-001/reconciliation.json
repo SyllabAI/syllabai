@@ -1,0 +1,117 @@
+{
+ "affected": {
+  "learnerId": "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+  "misObservedEvents": [
+   {
+    "evidenceCorrect": false,
+    "firedAtPartial": "4/6",
+    "question": "96ae4235",
+    "settled": "6/6",
+    "settledCorrect": true
+   },
+   {
+    "evidenceCorrect": false,
+    "firedAtPartial": "1/6",
+    "question": "ac5045d7",
+    "settled": "6/6",
+    "settledCorrect": true
+   },
+   {
+    "evidenceCorrect": false,
+    "firedAtPartial": "0/18",
+    "question": "ddf30066",
+    "settled": "0/18",
+    "settledCorrect": false
+   }
+  ],
+  "topicCode": "4CH1-S2-f",
+  "topicNodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+ },
+ "bktParameters": {
+  "guess": 0.25,
+  "l0": 0.1,
+  "learnRate": 0.1,
+  "slip": 0.1
+ },
+ "contaminated": {
+  "mastery": 0.11533544411262374,
+  "productionMeasured": 0.11533544411262374,
+  "replayMatchesProductionExactly": true,
+  "sequence": [
+   false,
+   false,
+   false
+  ],
+  "smartLessonReason": "LOW_MASTERY (measured 0.12 below weak ceiling 0.45)"
+ },
+ "corrected": {
+  "attempts": 3,
+  "classMean": 0.13847798474015932,
+  "classMeanWas": 0.1137,
+  "correctCount": 2,
+  "mastery": 0.3135593220338984,
+  "sequence": [
+   true,
+   true,
+   false
+  ],
+  "smartLessonReason": "LOW_MASTERY (measured 0.31 below weak ceiling 0.45) \u2014 same code, honest value"
+ },
+ "decision": {
+  "choice": "DETERMINISTIC RECOMPUTATION (not reset)",
+  "guard": "the WHERE clause matches ONLY the known-contaminated row shape; zero rows updated = investigate, do not widen",
+  "rationale": [
+   "the settled attempt rows are the ground truth (6/6, 6/6, 0/18) and are correct",
+   "skill_states is a derived projection of the evidence stream and is rebuildable",
+   "resetting would discard real evidence and return the learner to UNKNOWN",
+   "the evidence events stay immutable (audit trail + kappa pairing data)",
+   "one row repair corrects the whole downstream chain (class analytics and",
+   "Smart Lesson read skill_states live)"
+  ],
+  "repairSql": "UPDATE skill_states SET mastery = :corrected, correct_count = 2, version = version + 1, updated_at = now() WHERE learner_id = ':learner' AND node_id = ':topic' AND mastery = :contaminated AND correct_count = 0 AND attempts = 3;",
+  "rollback": "UPDATE skill_states SET mastery = :contaminated, correct_count = 0, version = version + 1, updated_at = now() WHERE learner_id = ':learner' AND node_id = ':topic';"
+ },
+ "defect": "multi-part evidence fired at first-part partial totals (pre-fe01b87)",
+ "replaySteps": {
+  "contaminated": [
+   {
+    "correct": false,
+    "posterior": 0.11313868613138686,
+    "prior": 0.1,
+    "step": 1
+   },
+   {
+    "correct": false,
+    "posterior": 0.11505260318316698,
+    "prior": 0.11313868613138686,
+    "step": 2
+   },
+   {
+    "correct": false,
+    "posterior": 0.11533544411262374,
+    "prior": 0.11505260318316698,
+    "step": 3
+   }
+  ],
+  "corrected": [
+   {
+    "correct": true,
+    "posterior": 0.3571428571428572,
+    "prior": 0.1,
+    "step": 1
+   },
+   {
+    "correct": true,
+    "posterior": 0.7000000000000001,
+    "prior": 0.3571428571428572,
+    "step": 2
+   },
+   {
+    "correct": false,
+    "posterior": 0.3135593220338984,
+    "prior": 0.7000000000000001,
+    "step": 3
+   }
+  ]
+ }
+}

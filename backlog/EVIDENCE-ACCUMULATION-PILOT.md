@@ -38,14 +38,24 @@ recommendations actually get better?** Operationally:
    topics the ones the teacher also judges weak (reasons + drill-down
    evidence reviewed case by case)?
 
-## Entry criteria (all currently BLOCKED on operator actions)
+## Entry criteria (update 2026-09-15 post-fix round — baseline measured at `EVIDENCE-ACCUMULATION-BASELINE-2026-09-15.md`)
 
 - [ ] **GitHub Actions restored** (minutes/spending limit — every workflow in
   the org fails instantly since ~13:02 UTC 2026-09-15, while the platform is
-  operational; even a one-step echo fails). Blocks: CI for core `fe01b87`,
-  the s2-evidence-cycle verification phases, the pilot monitor cron.
-- [ ] **CI green on `fe01b87`** (evidence-timing fix; local unit suite 495
-  green, ITs unverified without CI) + Render deploy confirmed current.
+  operational; even a one-step echo fails). Blocks: CI for core `fe01b87` +
+  `2d613d5` + `04d621a`, the s2-evidence-cycle verification phases, the pilot
+  monitor cron.
+- [ ] **CI green on the fix chain** (local unit suite now **511 green** —
+  `fe01b87` plus the same-day strengthening: both-path multi-part invariant
+  tests `2d613d5`, settled-classification fix `04d621a`; ITs unverified
+  without CI) + Render deploy confirmed current.
+- [ ] **Contaminated derived state recomputed** — the monitor learner's
+  `skill_states` row on 4CH1-S2-f (mastery 0.1153/correct=0 → **0.3136/
+  correct=2**, class mean 0.1137 → 0.1385). The deterministic replay is
+  validated to the last digit against production, the guarded repair SQL +
+  rollback are prepared (`evidence/cycle-001/reconciliation.json`); execution
+  needs an operator path to the production DB. Decision made: RECOMPUTATION,
+  not reset.
 - [ ] **Post-fix verification round** (ready to dispatch: `s2-evidence-cycle`
   phases `after` → `mark` (r3 manifest from the fresh dump) → `final`):
   re-attempt the targeted questions → mark → the mastery trajectory must show
