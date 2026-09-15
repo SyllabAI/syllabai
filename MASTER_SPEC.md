@@ -113,7 +113,7 @@ Never introduce a paid-only infrastructure dependency when an equivalent free/op
 SyllabAI is a multi-repository project. Repositories are separated only where a component has an independent responsibility, lifecycle, runtime, language, test strategy, or deployment model.
 
 ```text
-SyllabAI GitHub account (github.com/SyllabAI) — 7 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`; amended 2026-09-13: the content-ops repositories `syllabai-pastpapers` + `syllabai-resources` complete the 7-repo set — the README repo map is the authoritative list)
+SyllabAI GitHub account (github.com/SyllabAI) — 8 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`; amended 2026-09-13: the content-ops repositories `syllabai-pastpapers` + `syllabai-resources` complete the then-7-repo set; amended 2026-09-15: `syllabai-teacher-workbench` (teacher validation workbench: staged decision importer, evidence packs, release/verification tooling) joins as the 8th repository — the README repo map is the authoritative list)
 │
 ├── syllabai  (this repo — the "main repo")
 │   └── master project pack: spec, ADRs, backlog, research dossiers, papers
@@ -139,6 +139,10 @@ SyllabAI GitHub account (github.com/SyllabAI) — 7 repositories (ADR-012 amende
 ├── syllabai-resources  (public)
 │   └── RAG revision-note corpus + T-C09/T-C11 mapping/graph QA +
 │       Python governance scripts
+│
+├── syllabai-teacher-workbench  (public)
+│   └── teacher validation workbench: staged decision importer,
+│       evidence packs, release/verification tooling
 │
 └── Past-Papers  (public, 689 MB)
     └── official content corpus: Edexcel IAL/IGCSE past papers +

@@ -11,9 +11,9 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 
 ## Canonical project documents
 
-- `MASTER_SPEC.md`: engineering truth (v1.3.0; 2026-09-11 ADR-019 Cycle-1 subject pivot to IGCSE Chemistry 4CH1 — earlier: 2026-09-07 architecture synchronization, 2026-09-08 ADR-018 documentation sync).
+- `MASTER_SPEC.md`: engineering truth (v1.3.0 + Addenda 1.4 (Learner Interaction Memory) & 1.5 (Contextual Learning Assistant), 2026-09-15; 2026-09-11 ADR-019 Cycle-1 subject pivot to IGCSE Chemistry 4CH1 — earlier: 2026-09-07 architecture synchronization, 2026-09-08 ADR-018 documentation sync).
 - `AGENT.md`: agent behavior and mandatory implementation workflow.
-- `DECISIONS.md`: architecture decision records (ADR-001…020 in the consolidated ledger).
+- `DECISIONS.md`: architecture decision records (ADR-001…022 in the consolidated ledger; ADR-021 mirrored from the standalone `ADR_021_CONTENT_COMPILER_AND_PORTABLE_CONTENT_PACKAGE.md` on 2026-09-15).
 - `DECISION_018_MOCK_EXAM_GENERATOR.md`: ADR-018 for the blueprint-driven Mock Exam Generator.
 - `ARCHITECTURE_DISCUSSION_SYNC_2026-09-07.md`: consolidated durable index of the subject-first, teacher/classroom, learning-evidence, recommendation and mock-exam architecture discussions.
 - `SUBJECT_ARCHITECTURE.md`: canonical subject-first product boundary and specification-point graph model (2026-09-07).
@@ -25,6 +25,7 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `ADR_017_LEARNING_FIRST_RECOMMENDATION_SYSTEM.md`: ADR-017 decision record.
 - `MOCK_EXAM_GENERATOR_ARCHITECTURE.md`: canonical blueprint-driven mock-exam architecture.
 - `MOCK_EXAM_GENERATOR_AGENT_ADDENDUM.md`: mandatory implementation rules for F-051 and related mock features.
+- `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` + `CONTENT_PACKAGE_V0_1.md` + `ADR_021_CONTENT_COMPILER_AND_PORTABLE_CONTENT_PACKAGE.md`: proposed Content Compiler / portable SQLite Content Package architecture — Markdown as durable human-readable artifact → validation/normalization → PostgreSQL canonical domain projection, with a derived SQLite portable package (ADR-021, 2026-09-15).
 - `WORKLOG.md`: history.
 - `PROGRESS.md`: current state.
 - `TODO.md`: current work queue (Cycle 1 first).
@@ -50,6 +51,7 @@ The current repository set is:
 | `Past-Papers` | public official-content corpus repo for IAL/IGCSE Edexcel QP/MS PDFs + GLM-OCR markdown corpora (`paper 1` / `paper 2` = 4CH1 papers 1C/2C × 41 sessions, QP+MS pairs, MANIFEST.json provenance); raw staging feeding `syllabai-pastpapers`; no application code |
 | `syllabai-resources` | public content-ops corpus repo: 112 SME IGCSE Chemistry revision notes with spec-point mappings (T-C09 graph-as-code + T-C10, 209/209 HUMAN_VALIDATED), 4CH1 specification md/PDF, PMT Edexcel IGCSE Chemistry resources, Student-Book OCR runbook + pilot, KG build scripts |
 | `syllabai-pastpapers` | public canonical past-papers corpus, charter-governed (README = charter): normalized Edexcel IGCSE/IAL/GCE QP/MS under `past-papers/pearson-edexcel/` with per-paper `manifest.yaml` (identity, SHA-256, provenance) + `_quarantine/`; **data layer for the Past Papers feature — students/teachers access official QPs and mark schemes**; ingestion reports + acquisition plans at root |
+| `syllabai-teacher-workbench` | public teacher validation workbench: staged decision importer, evidence packs, release/verification tooling; Vercel readonly mirror mode |
 
 Domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live **inside `syllabai-core`** as strongly-separated packages and graduate to repositories only when a genuine runtime/lifecycle boundary appears.
 

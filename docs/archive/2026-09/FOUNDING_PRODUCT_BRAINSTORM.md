@@ -1,3 +1,5 @@
+> **ARCHIVED 2026-09-15.** Founding product brainstorm (an "Edexcel and Cambridge AI LMS" feature manifesto written before the Master Spec existed), recovered from the repository root under the junk filename "document (2) (1).md" and moved here by the documentation audit reconciliation. Content is superseded by `MASTER_SPEC.md` and still describes the pre-ADR-019 IAL scope; retained for historical value.
+
 ## 1. Project Overview: "Edexcel & Cambridge AI LMS"
 
 **Vision:** To create the single smartest revision ecosystem for IGCSE and International A-Level (IAL/GCE) students, moving beyond static content libraries to an interactive, AI-driven learning experience.

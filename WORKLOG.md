@@ -1,3 +1,5 @@
+> **WORKLOG GAP — annotated 2026-09-15.** This log holds durable entries only for sessions 2-20 and 35; sessions 21-34 and 36-71 were logged in ephemeral workspaces that did not survive environment resets. A reconstruction index built from durable repository artifacts lives in `WORKLOG_GAP.md`; treat it as the bridge until the missing entries are restored. Provenance: documentation audit reconciliation, 2026-09-15.
+
 ## Session 35 — 2026-09-11: T-C10 round-5 exhaustive review of the remaining 150 — 150 CONFIRM / 0 REJECT / 0 HOLD, store untouched (resources c6454c9 → c90f5ae, rebased over the operator's PMT QP push)
 
 - Operator commissioned a formal Round-5 review of exactly the remaining 150 mappings (209 store − 59 round-4 ratification targets − both rejected pairs), explicitly NOT treating their own independent pre-review conclusion (also 150 clean) as HUMAN_VALIDATED, and requiring adversarial standards (mention-vs-teach, calculation nouns vs procedures, practical names vs methods, multi-part points, causal verbs, heading-only support, short evidence) with REJECT/HOLD records instead of silent deletions, and no promotion.

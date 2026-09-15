@@ -1,3 +1,5 @@
+> **ARCHIVED 2026-09-15.** Index stub for `docs/DATA_MODEL_ERD.md`; AGENT.md and `PROJECT_KNOWLEDGE_MAP.md` now point directly at `docs/DATA_MODEL_ERD.md`.
+
 # SyllabAI ERD / EERD package
 
 See `DATA_MODEL_ERD.md` for the detailed interpretation, current-vs-target boundary, and schema gaps.

@@ -1,3 +1,5 @@
+> **HISTORICAL SNAPSHOT — annotated 2026-09-15.** This is a point-in-time record of 2026-09-07, preserved verbatim. Any statement here that "Cycle 1 = Edexcel IAL Chemistry" — and every scope statement derived from it — was superseded by **ADR-019 (2026-09-11)**: the Cycle-1 pilot subject is now **Edexcel International GCSE Chemistry (4CH1)**. Read as history, not as current scope; current scope lives in `MASTER_SPEC.md` section 39a and ADR-019.
+
 # Workbook Synchronization Record — 2026-09-07
 
 ## Status

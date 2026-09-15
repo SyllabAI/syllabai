@@ -1,3 +1,5 @@
+> **ARCHIVED 2026-09-15.** Session-9 point-in-time report (2026-09-04, GLM-OCR pipeline implemented and verified); its content is summarized in WORKLOG.md (sessions 9-11) and PROGRESS.md. Retained as history.
+
 # SyllabAI Session 9 Report — Recovery, GLM-OCR Pipeline, Determinism, Conformance
 
 **Date:** 2026-09-05

@@ -269,6 +269,17 @@ The complete decision record is canonical in `ADR-020-EDUCATIONAL_RETRIEVAL_ENGI
 
 **Scope guard:** this ADR does not authorize bulk ingestion of new subjects or expansion of Cycle 1 — the pilot corpus remains Pearson Edexcel International GCSE Chemistry 4CH1 — and retrieval work must not become an excuse to indefinitely delay the pilot.
 
+## ADR-021: Content Compiler and Portable Content Package
+
+**Status:** Proposed  
+**Date:** 2026-09-15
+
+Markdown is a first-class durable content/interchange representation for Revision Notes and parser/OCR-derived QP/MS artifacts; PostgreSQL remains the canonical operational/domain representation; a SyllabAI-specific SQLite Content Package is designed as a derived portable/reproducible corpus, QA, research and distribution format. SQLite packages are not authoritative learner state, curriculum truth, KG truth, or production multi-user storage. Generic MarkdownDB is not adopted as a core dependency. No package or Markdown artifact bypasses existing validation, authorization or learner-serving gates.
+
+The complete decision record is canonical in `ADR_021_CONTENT_COMPILER_AND_PORTABLE_CONTENT_PACKAGE.md`, with the architecture in `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` and the initial package contract in `CONTENT_PACKAGE_V0_1.md`. (Ledger entry registered 2026-09-15 by the documentation audit reconciliation to close the 020→022 numbering gap; the standalone file remains the authority. Promotion from PROPOSED requires implementation evidence and bounded reproducibility tests.)
+
+**Scope guard:** this ADR does not change Cycle-1 product scope and does not authorize bulk ingestion, learner-serving changes, or a production database migration.
+
 ## ADR-022: Contextual Learning Assistant — contract-first, platform-owned context
 
 **Status:** Accepted as contract direction; runtime PROPOSED and separately gated

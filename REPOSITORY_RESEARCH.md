@@ -1,3 +1,5 @@
+> **VERIFICATION-HORIZON NOTICE — added 2026-09-15.** This dossier was verified in the first days of the project (2026-09-02/04). Free-tier limits, plans, quotas and licensing terms are time-sensitive and are now past their re-verification horizon (TODO item P-003 requires re-verify at build time). Re-check every time-sensitive claim against the provider before relying on it.
+
 # Definitive Research Dossier: Learning, Knowledge, Document Intelligence, RAG & Agent Repositories
 
 **Research date:** 2026-09-02  

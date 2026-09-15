@@ -91,7 +91,7 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Educational Retrieval Engine | `ADR-020-EDUCATIONAL_RETRIEVAL_ENGINE.md` | Accepted architecture direction |
 | Retrieval agent rules | `AGENT.md` RAG section and relevant core implementation contracts | Binding |
 | Contextual Learning Assistant | `CONTEXTUAL_LEARNING_ASSISTANT_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.5_CONTEXTUAL_LEARNING_ASSISTANT.md`, `AGENT_CONTEXTUAL_LEARNING_ASSISTANT_ADDENDUM.md`, `syllabai-core/docs/CONTEXTUAL_LEARNING_ASSISTANT_IMPLEMENTATION.md`, `syllabai-core/docs/CLA_STEP1_RUNTIME_ACCEPTANCE.md`, ADR-022 | Steps 1–2 IMPLEMENTED/VERIFIED (KG_TOPIC + PAST_PAPER_QUESTION contexts, EXPLAIN/SUMMARIZE/HINT/CHECK, read-only tools, §7 deterministic leakage gate + CI-mandatory negative suite, LIM evidence) at core `544bad1` (V24 lineage); §10.4 evaluation bundle + further context kinds remain contract-governed, not implemented |
-| AI runtime/provider choices | `AI_RUNTIME_AND_PROVIDER_REPORT_*.md` and `PLATFORM_RESEARCH.md` | Time-sensitive operational/research evidence |
+| AI runtime/provider choices | `PLATFORM_RESEARCH.md` + ADR-009 (free-tier LLM chain) + `ADR-020-EDUCATIONAL_RETRIEVAL_ENGINE.md` (retrieval runtime direction) | Time-sensitive operational/research evidence |
 | External RAG references | `RAG_RETRIEVAL_RESEARCH.md`, `REPOSITORY_RESEARCH.md`, `GEMINI_FILE_SEARCH_AND_NOTEBOOK_ARCHITECTURE_RESEARCH.md` | Reference only unless explicitly adopted |
 
 ### RAG invariant

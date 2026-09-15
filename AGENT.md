@@ -37,7 +37,7 @@ Before substantial changes:
 3. Relevant repository/module documentation.
 4. `PROJECT_CONTEXT.md` for cross-cutting or unclear work.
 5. `SUBJECT_ARCHITECTURE.md` for subject/curriculum/content-linking/assessment-tagging/knowledge-graph/student subject workspace work.
-6. `DATA_MODEL_ERD.md` for database/schema/entity-relationship work. **Treat its Current ERD as implementation evidence and its Target EERD as architecture; never silently present target-only entities as implemented.**
+6. `docs/DATA_MODEL_ERD.md` for database/schema/entity-relationship work. **Treat its Current ERD as implementation evidence and its Target EERD as architecture; never silently present target-only entities as implemented.**
 7. `TEACHER_ARCHITECTURE.md` for teacher/class/LMS/Test Builder/assignments/teacher analytics/teacher AI/class-KG work.
 8. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` and `LEARNING_EVIDENCE_AGENT_ADDENDUM.md` for question/attempt/assessment evidence/Smart Mark/review/recommendation/telemetry work.
 9. `LEARNER_INTERACTION_MEMORY_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.4_LEARNER_INTERACTION_MEMORY.md` and `AGENT_LEARNER_INTERACTION_MEMORY_ADDENDUM.md` for tutor chat, engagement memory, Smart Lesson tutor legs, or any conversational-surface signal work.
@@ -57,7 +57,7 @@ The Master Spec is the engineering source of truth. Research papers remain autho
 1. Research papers — scientific claims, hypotheses, operational definitions and evaluation design.
 2. `MASTER_SPEC.md` — engineering architecture and technology decisions.
 3. Canonical architecture addenda — named architecture layers.
-4. `DATA_MODEL_ERD.md` — current physical/logical data model versus canonical target EERD, for schema/entity decisions.
+4. `docs/DATA_MODEL_ERD.md` — current physical/logical data model versus canonical target EERD, for schema/entity decisions.
 5. Definitive project spreadsheet — feature inventory and execution state.
 6. `RAG_RETRIEVAL_RESEARCH.md` — canonical RAG/retrieval research and integration guidance.
 7. `REPOSITORY_RESEARCH.md` — external implementation references and license decisions.

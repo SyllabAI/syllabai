@@ -14,6 +14,7 @@ This is the **main repository**: the master project pack (specification, decisio
 | `syllabai-parser` | Offline content pipeline (polyglot) | Java (opendataloader-pdf in-process) · GLM-OCR Python tooling (MinerU/Surya deferred) |
 | `syllabai-pastpapers` | Canonical exam-material corpus — manifests, SHA-256 provenance, ledgers | Markdown/YAML corpus + Python ingestion tooling |
 | `syllabai-resources` | RAG revision-note corpus + T-C09/T-C11 mapping/graph QA | Markdown corpus + Python governance scripts |
+| `syllabai-teacher-workbench` | Teacher validation workbench: staged decision importer, evidence packs, release/verification tooling | Next.js 16 · React 19 · Vercel (readonly mirror mode) |
 | `Past-Papers` | Raw operator-collected source PDFs (pre-normalization) | PDFs |
 
 **Polyglot policy (ADR-011):** Java is preferred and owns the domain core (course requirement); other languages are welcome where they are clearly better — TypeScript for the frontend, Python/Rust for OCR/ML parsing tooling.
@@ -22,10 +23,10 @@ This is the **main repository**: the master project pack (specification, decisio
 
 ## Start here
 
-1. `MASTER_SPEC.md` — engineering source of truth (v1.3.0 — 2026-09-11 Cycle-1 scope revision per ADR-019; originally merged & verified 2026-09-03 as v1.1)
+1. `MASTER_SPEC.md` — engineering source of truth (v1.3.0 — 2026-09-11 Cycle-1 scope revision per ADR-019; originally merged & verified 2026-09-03 as v1.1; Addenda 1.4 (Learner Interaction Memory) & 1.5 (Contextual Learning Assistant), 2026-09-15, govern the newest layers)
 2. `AGENT.md` — operating manual for coding/research agents
 3. `backlog/syllabai-master-project.xlsx` — **definitive feature tracker** (TSV export alongside; `Cycle` column = Paper B Cycle-1 pilot cut; green = Cycle 1, amber = critical-path spine)
-4. `DECISIONS.md` — architecture decision records (ADR-001…020)
+4. `DECISIONS.md` — architecture decision records (ADR-001…022; ADR-021 mirrored from its standalone file)
 5. `REPOSITORY_RESEARCH.md` — external repo dossier (section 0 = verified integration verdicts & license corrections)
 6. `ARCHITECTURE_REFERENCE_REGISTER.md` — curated architecture/UX/orchestration reference list (OpenHuman added 2026-09-05)
 7. `PLATFORM_RESEARCH.md` — verified platform/free-tier research
