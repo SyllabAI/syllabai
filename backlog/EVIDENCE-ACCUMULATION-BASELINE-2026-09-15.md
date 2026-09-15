@@ -14,8 +14,10 @@ cycle 001 carry the pre-`fe01b87` partial-total evidence defect. Status chain:
 REPORTED (cycle 001)                mastery 0.1153, class mean 0.1137
   → INVALIDATED BY ROOT-CAUSE ANALYSIS  (evidence fired at first-part partial totals)
   → CORRECTED (deterministic replay)    mastery 0.3136, class mean 0.1385
-  → VERIFIED                            PENDING — production recomputation +
-                                         post-fix verification round (below)
+  → VERIFIED (Session 75, 2026-09-15)   recomputation EXECUTED 18:00:34 UTC on
+                                        production (one guarded row repair, zero
+                                        unintended changes) + post-fix data-level
+                                        verification; live r3 round waits for Actions
 ```
 
 The replay model is validated to the last digit: replaying the defective
@@ -33,7 +35,7 @@ what the settled attempts earned (6/6, 6/6, 0/18 → full-marks rule).
 | Evidence events | 55 | 52 after r1 + 3 after r2; 3 fired at partial totals (the defect); 2 of those carry wrong correctness (Q1 4/6→F vs settled 6/6→T; Q2 1/6→F vs 6/6→T); Q3 0/18 was correct as fired |
 | Learners with evidence | 29 | across 8 curriculum topics after r1 |
 | Cohort mastery (r1 topics) | ~0.113 | all-incorrect observations from the placeholder backlog; prior L0=0.1 |
-| Monitor learner, 4CH1-S2-f | 0.1153 REPORTED → **0.3136 CORRECTED** | attempts=3, correct=2 (was 0); BKT params L0=0.1/slip=0.1/guess=0.25/T=0.1 |
+| Monitor learner, 4CH1-S2-f | 0.1153 REPORTED → 0.3136 CORRECTED → **VERIFIED** | attempts=3, correct=2 (was 0); BKT params L0=0.1/slip=0.1/guess=0.25/T=0.1; row repaired 2026-09-15 18:00:34 UTC, version 2→3 |
 | Misconception signals | 0 | structured evidence carries no misconception ids (MCQ-only path); none manufactured |
 | Smart Lesson decisions | 1 documented change | monitor learner on 4CH1-S2-f: INSUFFICIENT_COVERAGE → LOW_MASTERY — the CODE changed for the right reason (coverage established); the measured VALUE in the reason was contaminated (0.12; corrected 0.31) |
 | Recommendation changes | 1 | same event; smart-lesson/v2 deterministic ladder, evidence trace carried attempts + raw/decay-adjusted mastery |
@@ -47,7 +49,7 @@ what the settled attempts earned (6/6, 6/6, 0/18 → full-marks rule).
 | Weak topics | 8 → 10 | 8 after r1 (all LOW_MEAN_MASTERY with explicit reasons); 10 after r2's additional evidence |
 | Coverage gaps (pre-marking) | 8→10 listed separately | weakness is NEVER inferred from absence of measurement — gaps and weak topics are distinct lanes |
 | Evidence volume (4CH1-S2-f) | 14 evidence-backed attempts | at final probe |
-| Class mean (4CH1-S2-f) | 0.1137 REPORTED → **0.1385 CORRECTED** | correction replaces the monitor's contaminated row only; still LOW — the topic legitimately remains weak |
+| Class mean (4CH1-S2-f) | 0.1137 REPORTED → 0.1385 CORRECTED → **VERIFIED** | correction replaced the monitor's contaminated row only (exact live value 0.1384718718825788); still LOW — the topic legitimately remains weak |
 | Targeted interventions | 1 | 4CH1-S2-f selected: most class evidence (7 measured) AND targetable (3 servable VALIDATED questions) |
 | Post-intervention change | see learner rows | monitor: 0 (unknown) → 0.1153 REPORTED / 0.3136 CORRECTED; lesson INSUFFICIENT_COVERAGE → LOW_MASTERY |
 
@@ -79,7 +81,9 @@ what the settled attempts earned (6/6, 6/6, 0/18 → full-marks rule).
 
 - PENDING never became learner evidence (255 r1 answers waited for marks).
 - Partial marking became settled evidence **only via the defect** — fixed, both
-  paths regression-pinned; post-fix production verification PENDING.
+  paths regression-pinned; post-fix production verification DONE at the data
+  level (Session 75: whole-projection audit clean, corrected state verified;
+  artifacts under `evidence/cycle-001/`).
 - Smart Mark did not bypass the κ/human gates (never released; 105 provisional
   marks carried zero evidence).
 - A single Tutor utterance changed no mastery (tutor signals feed priority, not
@@ -95,15 +99,19 @@ what the settled attempts earned (6/6, 6/6, 0/18 → full-marks rule).
 
 ## What must happen before t1 measurement
 
-1. **Production recomputation of the contaminated row** (the smallest safe
-   repair, prepared in `evidence/cycle-001/reconciliation.json`): guarded SQL,
-   rollback included, decision = RECOMPUTATION not reset. BLOCKED on an
-   execution path (Neon DSN or equivalent operator credentials) — not
-   silently deferred: the contamination is documented here and in the cycle
-   record.
+1. **Production recomputation of the contaminated row** — **DONE (Session 75,
+   2026-09-15 18:00:34 UTC).** Executed exactly as prepared
+   (`evidence/cycle-001/reconciliation.json`) via the operator-provided Neon
+   API path: read-only investigation (whole-projection audit: exactly ONE
+   mismatch — the known row), one guarded transaction (rowcount 1, exactly one
+   of 47 rows changed), post-fix verification (audit clean; Smart Lesson
+   LOW_MASTERY with the honest 0.31 value; class mean 0.1384718718825788).
+   Artifacts: `evidence/cycle-001/reconciliation-investigation.json` +
+   `reconciliation-execution.json` + `postfix-verification.json`.
 2. **GitHub Actions restored** → CI verifies `fe01b87` + `2d613d5` +
    `04d621a` (511 local unit green; ITs need CI — no local Docker).
 3. **Post-fix verification round** (`s2-evidence-cycle` phases after → mark
    r3 → final): re-attempt → mark → mastery trajectory must show
-   correctly-credited full-mark attempts live.
+   correctly-credited full-mark attempts live. (The data-level half is DONE —
+   Session 75; this gate is the LIVE app-level round, needs Actions.)
 4. Teacher marking rhythm begins (the queue is the loop's clock).

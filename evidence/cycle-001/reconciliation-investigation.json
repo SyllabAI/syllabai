@@ -1,0 +1,326 @@
+{
+ "generatedAt": "2026-09-15T17:56:58.842241+00:00",
+ "mode": "READ-ONLY",
+ "phase": "A-investigate",
+ "server": {
+  "user": "neondb_owner",
+  "db": "neondb",
+  "pg": "18.6 (2078fcb)",
+  "version_head": "PostgreSQL 18.6 (2078fcb) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu "
+ },
+ "flyway": [
+  {
+   "version": "26",
+   "desc": "intervention runs",
+   "ok": true
+  },
+  {
+   "version": "25",
+   "desc": "tutor signal policy v2",
+   "ok": true
+  },
+  {
+   "version": "24",
+   "desc": "cla contextual assistant",
+   "ok": true
+  }
+ ],
+ "counts": {
+  "attempts": 83,
+  "skill_states": 47,
+  "answers": 282,
+  "question_parts": 5401,
+  "questions": 854,
+  "question_topics": 57,
+  "knowledge_nodes": 447
+ },
+ "attempts_by_state": [
+  {
+   "marking_state": "AUTO_GRADED",
+   "evidence": true,
+   "n": 26
+  },
+  {
+   "marking_state": "OVERRIDDEN",
+   "evidence": true,
+   "n": 55
+  },
+  {
+   "marking_state": "PENDING",
+   "evidence": false,
+   "n": 2
+  }
+ ],
+ "affectedRow": {
+  "id": "16dc58cc-1aaf-4eb5-b901-40263462b3bd",
+  "learnerId": "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+  "nodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+  "mastery": 0.11533544411262374,
+  "attempts": 3,
+  "correctCount": 0,
+  "lastPracticedAt": "2026-09-15T12:47:37.873285+00:00",
+  "createdAt": "2026-09-15T12:47:21.124840+00:00",
+  "updatedAt": "2026-09-15T12:47:37.975244+00:00",
+  "version": 2,
+  "proceduralFluencyGap": null
+ },
+ "affectedChainAttempts": [
+  {
+   "attemptId": "a05c756c-fade-49cd-8285-422515cca3f8",
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a",
+   "externalRef": "q01-b7849fb8",
+   "markingState": "OVERRIDDEN",
+   "evidenceEmitted": true,
+   "settledCorrect": true,
+   "marksAwarded": 6,
+   "questionMarks": 6,
+   "partCount": 3,
+   "createdAt": "2026-09-15T12:41:42.591041+00:00",
+   "settledLook": true
+  },
+  {
+   "attemptId": "1c2d57e1-64ba-4b5e-8265-3ee6f17522e8",
+   "questionId": "ac5045d7-4af7-4843-811b-357039a73666",
+   "externalRef": "q03-b7849fb8",
+   "markingState": "OVERRIDDEN",
+   "evidenceEmitted": true,
+   "settledCorrect": true,
+   "marksAwarded": 6,
+   "questionMarks": 6,
+   "partCount": 4,
+   "createdAt": "2026-09-15T12:41:44.877137+00:00",
+   "settledLook": true
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "questionId": "ddf30066-4905-4376-ae76-0630c263061a",
+   "externalRef": "q04-0ebc841c",
+   "markingState": "OVERRIDDEN",
+   "evidenceEmitted": true,
+   "settledCorrect": false,
+   "marksAwarded": 0,
+   "questionMarks": 18,
+   "partCount": 10,
+   "createdAt": "2026-09-15T12:41:47.070492+00:00",
+   "settledLook": true
+  }
+ ],
+ "affectedChainParts": [
+  {
+   "attemptId": "1c2d57e1-64ba-4b5e-8265-3ee6f17522e8",
+   "part": "a",
+   "state": "HUMAN_MARKED",
+   "marks": 1,
+   "partMax": 0
+  },
+  {
+   "attemptId": "1c2d57e1-64ba-4b5e-8265-3ee6f17522e8",
+   "part": "b",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "1c2d57e1-64ba-4b5e-8265-3ee6f17522e8",
+   "part": "b-i",
+   "state": "OVERRIDDEN",
+   "marks": 3,
+   "partMax": 0
+  },
+  {
+   "attemptId": "1c2d57e1-64ba-4b5e-8265-3ee6f17522e8",
+   "part": "b-ii",
+   "state": "OVERRIDDEN",
+   "marks": 2,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "a",
+   "state": "HUMAN_MARKED",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "b",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "c",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "c-i",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "c-ii",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "d",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "e",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "f",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "f-ii",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "part": "f-iii",
+   "state": "OVERRIDDEN",
+   "marks": 0,
+   "partMax": 0
+  },
+  {
+   "attemptId": "a05c756c-fade-49cd-8285-422515cca3f8",
+   "part": "a",
+   "state": "HUMAN_MARKED",
+   "marks": 4,
+   "partMax": 4
+  },
+  {
+   "attemptId": "a05c756c-fade-49cd-8285-422515cca3f8",
+   "part": "b",
+   "state": "OVERRIDDEN",
+   "marks": 1,
+   "partMax": 1
+  },
+  {
+   "attemptId": "a05c756c-fade-49cd-8285-422515cca3f8",
+   "part": "c",
+   "state": "OVERRIDDEN",
+   "marks": 1,
+   "partMax": 1
+  }
+ ],
+ "audit": {
+  "skillStateRows": 47,
+  "mismatchCount": 1,
+  "mismatches": [
+   {
+    "learnerId": "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+    "nodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "storedAttempts": 3,
+    "storedCorrect": 0,
+    "storedMastery": 0.11533544411262374,
+    "derivedEvents": 3,
+    "derivedSettledCorrect": 2
+   }
+  ]
+ },
+ "settledWithoutEvidence": [],
+ "provisionalSmartMarked": 0,
+ "pendingStructured": 2,
+ "classTopic": {
+  "nodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+  "code": "4CH1-S2-f",
+  "learnersMeasured": 8,
+  "meanMasteryStored": 0.11369388714241949,
+  "sumAttempts": 14,
+  "rows": [
+   {
+    "learnerId": "03e36d02-758c-46a8-a65d-9cbc79464fc1",
+    "mastery": 0.11313868613138686,
+    "attempts": 1,
+    "correct": 0
+   },
+   {
+    "learnerId": "3227507c-a738-4069-be5e-548d759db56d",
+    "mastery": 0.11313868613138686,
+    "attempts": 1,
+    "correct": 0
+   },
+   {
+    "learnerId": "4d6b0ed4-13e3-4eb4-9e9e-9d7086c2635b",
+    "mastery": 0.11313868613138686,
+    "attempts": 1,
+    "correct": 0
+   },
+   {
+    "learnerId": "986118d3-4784-4357-ba2c-20b4bf13a01a",
+    "mastery": 0.11538353623841088,
+    "attempts": 5,
+    "correct": 0
+   },
+   {
+    "learnerId": "9d0878c6-9d80-4b0e-8eee-d8ddc280dcf7",
+    "mastery": 0.11313868613138686,
+    "attempts": 1,
+    "correct": 0
+   },
+   {
+    "learnerId": "a9683eb9-f83c-448c-bdec-49f054daf476",
+    "mastery": 0.11313868613138686,
+    "attempts": 1,
+    "correct": 0
+   },
+   {
+    "learnerId": "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+    "mastery": 0.11533544411262374,
+    "attempts": 3,
+    "correct": 0
+   },
+   {
+    "learnerId": "c7b58d2c-1ccd-4183-bad4-440041107b0d",
+    "mastery": 0.11313868613138686,
+    "attempts": 1,
+    "correct": 0
+   }
+  ]
+ },
+ "replay": {
+  "contaminatedSeq": [
+   false,
+   false,
+   false
+  ],
+  "contaminatedFinal": 0.11533544411262374,
+  "contaminatedMatchesStored": true,
+  "correctedSeq": [
+   true,
+   true,
+   false
+  ],
+  "correctedFinal": 0.3135593220338984,
+  "correctedMatchesPrepared": true
+ },
+ "nodeResolution": [
+  {
+   "id": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+   "code": "4CH1-S2-f"
+  }
+ ]
+}

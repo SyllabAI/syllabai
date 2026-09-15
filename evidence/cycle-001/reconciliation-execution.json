@@ -1,0 +1,62 @@
+{
+ "taskId": "session-75-phaseB",
+ "executedAtUtc": "2026-09-15T18:00:31.312087+00:00",
+ "repair": "UPDATE skill_states SET mastery = 0.3135593220338984, correct_count = 2, version = version + 1, updated_at = now() WHERE learner_id = 'b6caacb0-5cd2-47b4-a339-1bc72bf9a79d' AND node_id = '70a48c9a-ce5a-4662-92a6-c825a2d50c54' AND mastery = 0.11533544411262374 AND correct_count = 0 AND attempts = 3",
+ "rollback": "UPDATE skill_states SET mastery = 0.11533544411262374, correct_count = 0, version = version + 1, updated_at = now() WHERE learner_id = 'b6caacb0-5cd2-47b4-a339-1bc72bf9a79d' AND node_id = '70a48c9a-ce5a-4662-92a6-c825a2d50c54'",
+ "source": "evidence/cycle-001/reconciliation.json (session-73 prepared path)",
+ "preState": {
+  "skillStateRows": 47,
+  "affectedRow": {
+   "mastery": 0.11533544411262374,
+   "attempts": 3,
+   "correctCount": 0,
+   "version": 2,
+   "lastPracticedAt": "2026-09-15T12:47:37.873285+00:00",
+   "updatedAt": "2026-09-15T12:47:37.975244+00:00"
+  },
+  "classTopic": {
+   "measured": 8,
+   "meanStored": 0.11369388714241949
+  },
+  "auditMismatches": 1,
+  "reviewSchedulesForNode": [],
+  "misconceptionStatesForLearner": 1
+ },
+ "inTxnAfter": {
+  "mastery": 0.3135593220338984,
+  "attempts": 3,
+  "correctCount": 2,
+  "version": 3,
+  "updatedAt": "2026-09-15T18:00:34.677722+00:00"
+ },
+ "postState": {
+  "skillStateRows": 47,
+  "affectedRow": {
+   "mastery": 0.3135593220338984,
+   "attempts": 3,
+   "correctCount": 2,
+   "version": 3,
+   "lastPracticedAt": "2026-09-15T12:47:37.873285+00:00",
+   "updatedAt": "2026-09-15T18:00:34.677722+00:00"
+  },
+  "classTopic": {
+   "measured": 8,
+   "meanStored": 0.1384718718825788
+  },
+  "auditMismatches": 0,
+  "changedRowKeys": [
+   [
+    "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+    "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   ]
+  ]
+ },
+ "verification": {
+  "rowsChangedTotal": 1,
+  "onlyAffectedRowChanged": true,
+  "affectedMasteryCorrected": true,
+  "affectedCorrectCount": true,
+  "rowCountUnchanged": true,
+  "auditNowClean": true
+ }
+}

@@ -146,3 +146,66 @@ remain as historical data. Post-fix attempts observe correctly.
   (255 decisions, sha 269f13b5…) and `scripts/ops/s2_marks_manifest_r2.json`
   (17 decisions, sha ad99c75b…).
 - Monitor: pilot-monitor run 34965596626 — 18/18 green, web-bundle green.
+
+## Reconciliation EXECUTED (2026-09-15 18:00:34 UTC — Session 75 amendment)
+
+The operator provided a Neon API key (org-scoped) for this session; the
+prepared recomputation was then executed EXACTLY as documented above — no
+second repair mechanism was introduced.
+
+- **Access path (non-destructive):** Neon API v2 → the SyllabAI org's single
+  production project → branch `production` → database `neondb`, PG 18.6,
+  Flyway V26 — matching the deployed schema (exact resource ids deliberately
+  not recorded in tracked files; they live in the operator's Neon console
+  and the local session artifacts). The role password was retrieved via the
+  API's read-only `reveal_password` endpoint (`neondb_owner` — NO password
+  reset, NO rotation, NO app-visible change; the Render service's
+  connections were never disturbed). No credentials are stored in any
+  tracked file.
+- **Read-only investigation first** (`evidence/cycle-001/reconciliation-investigation.json`):
+  the affected row matched the prepared guard shape BIT-EXACTLY
+  (mastery `0.11533544411262374`, attempts=3, correct_count=0, version=2;
+  the nightly decay job had NOT touched it — last practice was within the
+  2-day idle grace). The 3-attempt chain matched the reconciliation record
+  exactly (settled 6/6, 6/6, 0/18; question ids `96ae4235…`, `ac5045d7…`,
+  `ddf30066…`; per-part marks show evidence fired at part-`a` partials).
+  A WHOLE-PROJECTION audit — stored (attempts, correct_count) vs
+  derived-from-settled-attempts over primary+secondary topics, order-independent
+  — found **exactly ONE mismatch among all 47 `skill_states` rows: the known
+  row**. Zero settled attempts without evidence; zero duplicate rows. This
+  independently confirms the session-73 scope analysis (r1's 0-mark
+  placeholders could not change correctness; the contamination is exactly
+  the two r2 mis-fires + one derived row).
+- **The guarded repair, one transaction** (`evidence/cycle-001/reconciliation-execution.json`):
+  `BEGIN` → `SELECT … FOR UPDATE` (shape re-verified under lock) → the
+  prepared `UPDATE` (with an additive `RETURNING` for the rowcount guard;
+  WHERE/SET semantics identical to the prepared SQL) → rowcount **1** →
+  in-transaction after-read → `COMMIT`, at 2026-09-15 18:00:34 UTC.
+  Result: mastery `0.11533544411262374` → **`0.3135593220338984`**
+  (bit-exact corrected value), correct_count 0 → 2, version 2 → 3
+  (optimistic-lock discipline preserved); `last_practiced_at` untouched.
+  **Zero unintended changes, proven at row granularity: exactly ONE of the
+  47 rows changed, row count unchanged, post-repair whole-projection audit
+  0 mismatches.** The prepared rollback SQL and the full before-snapshot
+  are preserved in the execution audit artifact.
+- **Post-fix verification** (`evidence/cycle-001/postfix-verification.json`):
+  corrected learner state confirmed (0.3135593220338984, 2/3 correct,
+  version 3); Smart Lesson decision replicated with the production code
+  semantics (raw 0.3136, decay-adjusted ≈0.311, weak ceiling 0.45 →
+  **LOW_MASTERY — same code, honest value**); class analytics propagation
+  (8 measured, mean of stored mastery `0.11369388714241949` →
+  **`0.1384718718825788`**, LOW band — S2-f legitimately remains weak;
+  weakness options and the targeted Test Builder read the same live
+  aggregation); the 2 remaining PENDING attempts are the concurrent CLA
+  lane's (`web-structured-v1`), untouched.
+- **Correction to the earlier estimate (honest nuance):** session 73's
+  corrected class mean 0.13847798474015932 was computed from the ROUNDED
+  t0 mean (0.1137). The exact live recomputation is **0.1384718718825788**.
+  The difference (≈5.4e-06) is rounding in the estimate, not a data change;
+  both values are recorded for transparency.
+- **Status chain closed:** the 0.1153/0.1137 cycle figures are now
+  REPORTED → INVALIDATED BY ROOT-CAUSE ANALYSIS → CORRECTED →
+  **VERIFIED (production recomputation executed + post-fix data-level
+  verification)**. The live r3 round (re-attempt → mark → mastery trajectory
+  through the deployed app) still waits for the Actions quota — it is the
+  remaining app-level confirmation, riding the §9 recovery plan.

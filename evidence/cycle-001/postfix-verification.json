@@ -1,0 +1,80 @@
+{
+ "generatedAtUtc": "2026-09-15T18:03:36.685164+00:00",
+ "phase": "C-postfix-verify",
+ "mode": "READ-ONLY",
+ "correctedLearnerState": {
+  "mastery": 0.3135593220338984,
+  "attempts": 3,
+  "correctCount": 2,
+  "version": 3,
+  "lastPracticedAt": "2026-09-15T12:47:37.873285+00:00",
+  "updatedAt": "2026-09-15T18:00:34.677722+00:00"
+ },
+ "smartLessonDecision": {
+  "rawMastery": 0.3135593220338984,
+  "effectiveMastery": 0.3112742046557062,
+  "daysSinceLastPractice": 0.21943069329861112,
+  "tauDays": 30,
+  "weakCeiling": 0.45,
+  "decision": "LOW_MASTERY",
+  "evidenceTrace": {
+   "attempts": 3,
+   "masteryRaw": 0.3135593220338984,
+   "masteryDecayAdjusted": 0.3112742046557062
+  }
+ },
+ "settledEvidenceBase": [
+  {
+   "attemptId": "a05c756c-fade-49cd-8285-422515cca3f8",
+   "settledCorrect": true,
+   "marks": "6/6",
+   "state": "OVERRIDDEN",
+   "evidenceEmitted": true,
+   "createdAt": "2026-09-15T12:41:42.591041+00:00"
+  },
+  {
+   "attemptId": "1c2d57e1-64ba-4b5e-8265-3ee6f17522e8",
+   "settledCorrect": true,
+   "marks": "6/6",
+   "state": "OVERRIDDEN",
+   "evidenceEmitted": true,
+   "createdAt": "2026-09-15T12:41:44.877137+00:00"
+  },
+  {
+   "attemptId": "2bbf9206-a757-404b-bbed-2c3fb706731b",
+   "settledCorrect": false,
+   "marks": "0/18",
+   "state": "OVERRIDDEN",
+   "evidenceEmitted": true,
+   "createdAt": "2026-09-15T12:41:47.070492+00:00"
+  }
+ ],
+ "classAnalyticsPropagation": {
+  "learnersMeasured": 8,
+  "meanMasteryStored": 0.1384718718825788,
+  "sumAttempts": 14,
+  "band": "LOW",
+  "weakTopic": true,
+  "note": "weakness options + targeted Test Builder read the same live class-analytics aggregation; propagation is by construction"
+ },
+ "pendingAttempts": [
+  {
+   "attemptId": "d57bdd56-0331-441f-988b-3a3da0cb7a1d",
+   "learnerId": "81b1099f-9f24-4149-87b1-398da21a1b01",
+   "provenance": "web-structured-v1",
+   "createdAt": "2026-09-15T12:46:37.776886+00:00"
+  },
+  {
+   "attemptId": "6361becb-0fb2-41e3-9acb-91e88a1c0428",
+   "learnerId": "81b1099f-9f24-4149-87b1-398da21a1b01",
+   "provenance": "web-structured-v1",
+   "createdAt": "2026-09-15T12:46:59.841878+00:00"
+  }
+ ],
+ "integrityInvariants": {
+  "duplicateSkillStateRows": 0,
+  "settledAttemptsWithoutEvidence": 0,
+  "auditMismatches": 0
+ },
+ "verdict": "POST-FIX VERIFIED (data level + exact read-model replication)"
+}
