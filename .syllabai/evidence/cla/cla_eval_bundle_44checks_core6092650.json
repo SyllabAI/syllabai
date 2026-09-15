@@ -1,0 +1,1213 @@
+{
+ "sets": {
+  "sb": [
+   {
+    "topic": "4CH1-S1-a",
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4660.968731,
+     "model": "openai/gpt-oss-120b"
+    },
+    "explain_answer": "States of matter is the study of the three common forms that a material can take \u2013 solid, liquid and gas \u2013 as set out in the curriculum specification for 4CH1\u2011S1\u2011a\u202f[1].  \n\n- **Solid** \u2013 particles are tightly packed in a regular arrangement and only vibrate in place; they have the lowest kinetic energy\u202f[2].  \n- **Liquid** \u2013 particles remain close together but are not fixed; they can slide past one another, giving the material a definite volume but no fixed shape, and they possess more kinetic energy than in a solid\u202f[2].  \n- **Gas** \u2013 particles are far apart, move freely and rapidly in all directions, and have the highest kinetic energy of the three states\u202f[2].\n\n**Example:** Water illustrates all three states: ice is water in the solid state, liquid water is the liquid state, and steam (water vapour) is the gas state. Each form shows the different particle arrangements, movements and energy levels described above.\u202f[2]",
+    "explain_citations": [
+     {
+      "index": 1,
+      "label": "Specification topic 4CH1-S1-a \u2014 States of matter",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+      "deepLink": "/api/v1/knowledge/nodes/2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+     },
+     {
+      "index": 2,
+      "label": "Specification topic 4CH1-1.1 \u2014 understand the three states of matter in terms of the arrangement, movement and energy of the particles",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "e9019231-4b8d-4bff-af18-5470a0492dbb",
+      "deepLink": "/api/v1/knowledge/nodes/e9019231-4b8d-4bff-af18-5470a0492dbb"
+     },
+     {
+      "index": 3,
+      "label": "Specification topic 4CH1-1.2 \u2014 understand the interconversions between the three states of matter in terms of: \u2022 the names of the interconversions \u2022 how they are achieved \u2022 the changes in arrangement, movement and energy of the par",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "627c3222-b94a-4d0d-b54d-9e2d7d345ccf",
+      "deepLink": "/api/v1/knowledge/nodes/627c3222-b94a-4d0d-b54d-9e2d7d345ccf"
+     },
+     {
+      "index": 4,
+      "label": "Specification topic 4CH1-1.3 \u2014 understand how the results of experiments involving the dilution of coloured solutions and diffusion of gases can be explained",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "c1497d64-f612-4c7a-ad59-92c339231806",
+      "deepLink": "/api/v1/knowledge/nodes/c1497d64-f612-4c7a-ad59-92c339231806"
+     },
+     {
+      "index": 5,
+      "label": "Specification topic 4CH1-1.4 \u2014 know what is meant by the terms: \u2022 solvent \u2022 solute \u2022 solution \u2022 saturated solution.",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "dad26745-7f5d-4c40-83b4-83a256f68b0c",
+      "deepLink": "/api/v1/knowledge/nodes/dad26745-7f5d-4c40-83b4-83a256f68b0c"
+     }
+    ],
+    "summarize": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4522.871687,
+     "model": "openai/gpt-oss-120b"
+    },
+    "summarize_answer": "**4CH1\u2011S1\u2011a\u202fStates of matter** \u2013 the topic is defined in the official specification as \u201cStates of matter\u201d\u202f[1].\n\n**4CH1\u20111.1** \u2013 Learners must *understand the three states of matter in terms of the arrangement, movement and energy of the particles*\u202f[2].\n\n**4CH1\u20111.2** \u2013 Learners must *understand the interconversions between the three states of matter* by naming each interconversion, describing how it is achieved, and explaining the associated changes in particle arrangement, movement and energy\u202f[3].\n\n**4CH1\u20111.3** \u2013 Learners must *understand how the results of experiments involving the dilution of coloured solutions and diffusion of gases can be explained*\u202f[4].\n\n**4CH1\u20111.4** \u2013 Learners must *know what is meant by the terms solvent, solute, solution and saturated solution*\u202f[5].",
+    "audit": {
+     "citations_valid": [
+      true,
+      true
+     ],
+     "unresolvable_markers": [
+      [],
+      []
+     ],
+     "anchor_present": [
+      true,
+      true
+     ],
+     "explain_taught": true,
+     "summarize_spanned_sources": true,
+     "summarize_cited_sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "modes": true,
+     "mode_shape": true
+    }
+   },
+   {
+    "topic": "4CH1-S2-a",
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 5066.09706,
+     "model": "openai/gpt-oss-120b"
+    },
+    "explain_answer": "Group\u202f1 of the periodic table, called the alkali metals, consists of lithium (Li), sodium (Na) and potassium (K)\u202f[1].  They all have one electron in their outer shell, which makes them very reactive, especially with water.  A key similarity is that each metal reacts vigorously with water to give a metal hydroxide and hydrogen gas; this common behaviour is used as evidence that they belong to the same family\u202f[2].  \n\n**Example:** When a small piece of sodium is placed in water it fizzles, producing sodium hydroxide solution and hydrogen bubbles:  \n\n2\u202fNa\u202f+\u202f2\u202fH\u2082O\u202f\u2192\u202f2\u202fNaOH\u202f+\u202fH\u2082\u2191  \n\nThe reaction becomes even more vigorous down the group (e.g., potassium reacts more violently than sodium), reflecting the trend in reactivity that is explained by the ease of losing the single outer\u2011electron\u202f[3][5].",
+    "explain_citations": [
+     {
+      "index": 1,
+      "label": "Specification topic 4CH1-S2-a \u2014 Group 1 (alkali metals) \u2013 lithium, sodium and potassium",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+      "deepLink": "/api/v1/knowledge/nodes/a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+     },
+     {
+      "index": 2,
+      "label": "Specification topic 4CH1-2.1 \u2014 understand how the similarities in the reactions of these elements with water provide evidence for their recognition as a family of elements",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "ebd7685f-e52c-4e29-a951-6df03a98026d",
+      "deepLink": "/api/v1/knowledge/nodes/ebd7685f-e52c-4e29-a951-6df03a98026d"
+     },
+     {
+      "index": 3,
+      "label": "Specification topic 4CH1-2.2 \u2014 understand how the differences between the reactions of these elements with air and water provide evidence for the trend in reactivity in Group1",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "5277aa40-b55a-41bc-802c-aed785718c32",
+      "deepLink": "/api/v1/knowledge/nodes/5277aa40-b55a-41bc-802c-aed785718c32"
+     },
+     {
+      "index": 4,
+      "label": "Specification topic 4CH1-2.3 \u2014 use knowledge of trends in Group1 to predict the properties of other alkali metals",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "75017ace-d044-4afa-97e0-4d51ef59a38f",
+      "deepLink": "/api/v1/knowledge/nodes/75017ace-d044-4afa-97e0-4d51ef59a38f"
+     },
+     {
+      "index": 5,
+      "label": "Specification topic 4CH1-2.4C \u2014 explain the trend in reactivity in Group1 in terms of electronic configurations",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "283baaa6-7f00-4d83-b8f8-43ed4cee0b78",
+      "deepLink": "/api/v1/knowledge/nodes/283baaa6-7f00-4d83-b8f8-43ed4cee0b78"
+     }
+    ],
+    "summarize": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4581.526729,
+     "model": "openai/gpt-oss-120b"
+    },
+    "summarize_answer": "**Group\u202f1 (alkali metals) \u2013 lithium, sodium and potassium**\u202f[1]  \n\n- **4CH1\u20112.1:** All three metals react with water, producing a metal hydroxide and hydrogen gas; the similarity of these reactions is used as evidence that they belong to the same family\u202f[2].  \n- **4CH1\u20112.2:** Their reactions with air (oxidation) and with water differ in vigor: lithium reacts slowly, sodium more rapidly, and potassium most violently. These differences illustrate the increasing reactivity down the group\u202f[3].  \n- **4CH1\u20112.3:** Knowing that reactivity increases down Group\u202f1 allows prediction of the behaviour of the heavier alkali metals (rubidium, cesium, francium), which are expected to react even more vigorously\u202f[4].  \n- **4CH1\u20112.4C:** The trend in reactivity is explained by electronic configuration: each el",
+    "audit": {
+     "citations_valid": [
+      true,
+      true
+     ],
+     "unresolvable_markers": [
+      [],
+      []
+     ],
+     "anchor_present": [
+      true,
+      true
+     ],
+     "explain_taught": true,
+     "summarize_spanned_sources": true,
+     "summarize_cited_sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "modes": true,
+     "mode_shape": true
+    }
+   },
+   {
+    "topic": "4CH1-S3-a",
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4306.608676,
+     "model": "openai/gpt-oss-120b"
+    },
+    "explain_answer": "Energetics is the part of chemistry that looks at how much heat is released or absorbed when a reaction occurs\u202f[1].  \nIf a reaction gives off heat to the surroundings it is **exothermic**; if it takes heat in, it is **endothermic**\u202f[2].  \n\nA simple way to see this is a calorimetry experiment: place a known mass of water in a container, carry out a reaction (for example the combustion of a small piece of magnesium ribbon), and measure the temperature rise of the water\u202f[3].  \n\nThe heat change \\(Q\\) is found from the temperature change using  \n\\( Q = m c \\Delta T \\)\u2003where \\(m\\) is the water mass, \\(c\\) its specific heat capacity, and \\(\\Delta T\\) the temperature increase\u202f[4].  \n\nDividing this heat change by the number of moles of magnesium that reacted gives the molar enthalpy change \\(\\Delta H\\) for the combustion\u202f[5]. This \\(\\Delta H\\) tells us how much energy is released per mole of magnesium.",
+    "explain_citations": [
+     {
+      "index": 1,
+      "label": "Specification topic 4CH1-S3-a \u2014 Energetics",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+      "deepLink": "/api/v1/knowledge/nodes/3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+     },
+     {
+      "index": 2,
+      "label": "Specification topic 4CH1-3.1 \u2014 know that chemical reactions in which heat energy is given out are described as exothermic, and those in which heat energy is taken in are described as endothermic",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "5bf92389-dfb0-4890-91af-4cb954fb1c33",
+      "deepLink": "/api/v1/knowledge/nodes/5bf92389-dfb0-4890-91af-4cb954fb1c33"
+     },
+     {
+      "index": 3,
+      "label": "Specification topic 4CH1-3.2 \u2014 describe simple calorimetry experiments for reactions such as combustion, displacement, dissolving and neutralisation",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "41017198-687c-4395-a080-d289367fe34b",
+      "deepLink": "/api/v1/knowledge/nodes/41017198-687c-4395-a080-d289367fe34b"
+     },
+     {
+      "index": 4,
+      "label": "Specification topic 4CH1-3.3 \u2014 calculate the heat energy change from a measured temperature change using the expression $ Q=mc\\Delta T $",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "6a61d88f-b8a6-40f1-8ac4-abf99eb5f84a",
+      "deepLink": "/api/v1/knowledge/nodes/6a61d88f-b8a6-40f1-8ac4-abf99eb5f84a"
+     },
+     {
+      "index": 5,
+      "label": "Specification topic 4CH1-3.4 \u2014 calculate the molar enthalpy change ($\\Delta H$) from the heat energy change, $ Q $",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "cc2a7a08-1c0c-428d-b103-d8d2d08687a4",
+      "deepLink": "/api/v1/knowledge/nodes/cc2a7a08-1c0c-428d-b103-d8d2d08687a4"
+     }
+    ],
+    "summarize": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 6228.841465,
+     "model": "openai/gpt-oss-120b"
+    },
+    "summarize_answer": "**4CH1\u2011S3\u2011a\u202fEnergetics**\n\n- **4CH1\u20113.1** \u2013 Chemical reactions that release heat are termed **exothermic**, whereas reactions that absorb heat are termed **endothermic**\u202f[2].  \n- **4CH1\u20113.2** \u2013 Simple calorimetry can be used to investigate the heat changes of reactions such as **combustion, displacement, dissolving and neutralisation**\u202f[3].  \n- **4CH1\u20113.3** \u2013 The heat energy change (\u202f\\(Q\\)\u202f) for a measured temperature change is calculated with the expression **\\(Q = m c \\Delta T\\)**, where *m* is the mass of the solution, *c* its specific heat capacity and \\(\\Delta T\\) the temperature change\u202f[4].  \n- **4CH1\u20113.4** \u2013 The **molar enthalpy change (\\(\\Delta H\\))** for a reaction is obtained from the measured heat energy change \\(Q\\) by dividing by the amount of substance reacting (or formed)\u202f[5]",
+    "audit": {
+     "citations_valid": [
+      true,
+      true
+     ],
+     "unresolvable_markers": [
+      [],
+      []
+     ],
+     "anchor_present": [
+      true,
+      true
+     ],
+     "explain_taught": true,
+     "summarize_spanned_sources": true,
+     "summarize_cited_sources": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "modes": true,
+     "mode_shape": true
+    }
+   },
+   {
+    "topic": "4CH1-S4-a",
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4343.759557,
+     "model": "openai/gpt-oss-120b"
+    },
+    "explain_answer": "The \u201cIntroduction\u201d of the organic\u2011chemistry unit gives a brief overview of what the subject will cover \u2013 namely the study of carbon\u2011containing compounds and how they are represented, named and related to one another\u202f[1].  \n\nA key starting point is the concept of a **hydrocarbon**, which is any compound made only of hydrogen and carbon atoms\u202f[2].  \n\n**Example:** Methane, the simplest hydrocarbon, has the molecular formula\u202fCH\u2084. It consists of one carbon atom bonded to four hydrogen atoms and illustrates the basic idea that organic chemistry begins with compounds built from just C and H.  \n\nThus, the introduction sets the scene for learning how to describe, classify and name such compounds throughout the unit.\u202f[1][2]",
+    "explain_citations": [
+     {
+      "index": 1,
+      "label": "Specification topic 4CH1-S4-a \u2014 Introduction",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+      "deepLink": "/api/v1/knowledge/nodes/40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+     },
+     {
+      "index": 2,
+      "label": "Specification topic 4CH1-4.1 \u2014 know that a hydrocarbon is a compound of hydrogen and carbon only",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "bc8e064a-696f-43f6-b855-8e78e4dd8f4c",
+      "deepLink": "/api/v1/knowledge/nodes/bc8e064a-696f-43f6-b855-8e78e4dd8f4c"
+     },
+     {
+      "index": 3,
+      "label": "Specification topic 4CH1-4.2 \u2014 understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "ed22403d-f239-464a-be52-9c64d4ee96ed",
+      "deepLink": "/api/v1/knowledge/nodes/ed22403d-f239-464a-be52-9c64d4ee96ed"
+     },
+     {
+      "index": 4,
+      "label": "Specification topic 4CH1-4.3 \u2014 know what is meant by the terms homologous series, functional group and isomerism",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "0f47b6d0-4a51-4917-9f6f-22796cf4b8cd",
+      "deepLink": "/api/v1/knowledge/nodes/0f47b6d0-4a51-4917-9f6f-22796cf4b8cd"
+     },
+     {
+      "index": 5,
+      "label": "Specification topic 4CH1-4.4 \u2014 understand how to name compounds relevant to this specification using the rules of International Union of Pure and Applied Chemistry (IUPAC) nomenclature students will be expected to name compounds co",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "e5174b19-4583-419b-bd6f-c9f23ba51fde",
+      "deepLink": "/api/v1/knowledge/nodes/e5174b19-4583-419b-bd6f-c9f23ba51fde"
+     }
+    ],
+    "summarize": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4252.224907,
+     "model": "openai/gpt-oss-120b"
+    },
+    "summarize_answer": "**4CH1\u2011S4\u2011a\u202fIntroduction**  \n\n- Learners must **know that a hydrocarbon is a compound of hydrogen and carbon only**\u202f[2].  \n- They must **understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae**\u202f[3].  \n- They must **know what is meant by the terms homologous series, functional group and isomerism**\u202f[4].  \n- They must **understand how to name compounds relevant to this specification using IUPAC nomenclature, including compounds containing up to six carbon atoms**\u202f[5].  ",
+    "audit": {
+     "citations_valid": [
+      true,
+      true
+     ],
+     "unresolvable_markers": [
+      [],
+      []
+     ],
+     "anchor_present": [
+      true,
+      true
+     ],
+     "explain_taught": true,
+     "summarize_spanned_sources": true,
+     "summarize_cited_sources": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "modes": true,
+     "mode_shape": true
+    }
+   },
+   {
+    "topic": "4CH1-S1-b",
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4454.521799,
+     "model": "openai/gpt-oss-120b"
+    },
+    "explain_answer": "Elements, compounds and mixtures are the three basic types of matter described in the specification\u202f[1].\n\n* **Element** \u2013 a pure substance that consists of only one kind of atom.\u202fFor example, oxygen (O) is an element because it is made solely of oxygen atoms\u202f[1].\n\n* **Compound** \u2013 a pure substance formed when two or more different elements combine chemically in a fixed proportion.\u202fWater (H\u2082O) is a compound because hydrogen and oxygen atoms are chemically bonded in a 2\u202f:\u202f1 ratio\u202f[1].\n\n* **Mixture** \u2013 a combination of two or more substances that are not chemically bonded and can be separated by physical methods.\u202fA simple mixture is sand mixed with salt; the two components retain their own properties and can be separated by filtration or evaporation\u202f[1].\n\nThese definitions and examples capture the core ideas of the anchored topic\u202f4CH1\u2011S1\u2011b\u202f[1].",
+    "explain_citations": [
+     {
+      "index": 1,
+      "label": "Specification topic 4CH1-S1-b \u2014 Elements, compounds and mixtures",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+      "deepLink": "/api/v1/knowledge/nodes/92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+     },
+     {
+      "index": 2,
+      "label": "Specification topic 4CH1-1.10 \u2014 describe these experimental techniques for the separation of mixtures: \u7b80\u5355 distillation fractional distillation filtration crystallisation paper chromatography.",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "027001d9-8e58-49e9-85f6-797fac1baf28",
+      "deepLink": "/api/v1/knowledge/nodes/027001d9-8e58-49e9-85f6-797fac1baf28"
+     },
+     {
+      "index": 3,
+      "label": "Specification topic 4CH1-1.11 \u2014 understand how a chromatogram provides information about the composition of a mixture",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "2d894f21-30c1-4965-908d-58bdd6241e35",
+      "deepLink": "/api/v1/knowledge/nodes/2d894f21-30c1-4965-908d-58bdd6241e35"
+     },
+     {
+      "index": 4,
+      "label": "Specification topic 4CH1-1.12 \u2014 understand how to use the calculation of $ R_{f} $ values to identify the components of a mixture",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "563cda4c-e7f0-4f56-b3e3-66a787dd00e3",
+      "deepLink": "/api/v1/knowledge/nodes/563cda4c-e7f0-4f56-b3e3-66a787dd00e3"
+     },
+     {
+      "index": 5,
+      "label": "Specification topic 4CH1-1.13 \u2014 practical: investigate paper chromatography using inks/food colourings",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "a56da376-dd56-41fb-be44-93b58e4259be",
+      "deepLink": "/api/v1/knowledge/nodes/a56da376-dd56-41fb-be44-93b58e4259be"
+     }
+    ],
+    "summarize": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4788.755445,
+     "model": "openai/gpt-oss-120b"
+    },
+    "summarize_answer": "**4CH1\u2011S1\u2011b\u202fElements, compounds and mixtures** \u2013 The specification requires learners to know the nature of elements, compounds and mixtures and to apply practical and analytical skills related to mixtures.\n\n- **4CH1\u20111.10 \u2013 Separation techniques** \u2013 Learners must describe experimental methods for separating mixtures, namely simple distillation, fractional distillation, filtration, crystallisation and paper chromatography\u202f[2].\n\n- **4CH1\u20111.11 \u2013 Chromatogram interpretation** \u2013 Learners must understand how a chromatogram reveals information about the composition of a mixture\u202f[3].\n\n- **4CH1\u20111.12 \u2013\u202fR\u202ff\u202fvalue use** \u2013 Learners must understand how calculating\u202fR\u202ff\u202fvalues allows identification of the components present in a mixture\u202f[4].\n\n- **4CH1\u20111.13 \u2013 Practical investigation** \u2013 A required practical",
+    "audit": {
+     "citations_valid": [
+      true,
+      true
+     ],
+     "unresolvable_markers": [
+      [],
+      []
+     ],
+     "anchor_present": [
+      true,
+      true
+     ],
+     "explain_taught": true,
+     "summarize_spanned_sources": true,
+     "summarize_cited_sources": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "modes": true,
+     "mode_shape": true
+    }
+   },
+   {
+    "topic": "4CH1-S1-c",
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4939.849357,
+     "model": "openai/gpt-oss-120b"
+    },
+    "explain_answer": "An **atom** is the smallest unit of an element that retains its chemical identity; a molecule is a group of atoms bonded together\u202f[2].  \nInside an atom the **nucleus** contains positively\u2011charged **protons** and neutral **neutrons**, while the much lighter **electrons** (negative charge) occupy the space around the nucleus\u202f[3].  \n\n- **Atomic number (Z)** = number of protons in the nucleus.  \n- **Mass number (A)** = protons\u202f+\u202fneutrons.  \n- Atoms of the same element with different numbers of neutrons are **isotopes**; they have the same Z but different A\u202f[4].  \n\nThe **relative atomic mass (A\u1d63)** of an element is the weighted average of the masses of its naturally occurring isotopes, using their abundances\u202f[5].\n\n**Example \u2013 Carbon:**  \n- Most carbon atoms are **\u00b9\u00b2C** (6 protons, 6 neutrons, A\u202f=\u202f12) and make up about 98.9\u202f% of natural carbon.  \n- A smaller fraction are **\u00b9\u00b3C** (6 protons, 7 neutrons, A\u202f=\u202f13) at about 1.1\u202f%.  \n\nThe relative atomic mass is calculated as:  \n\nA\u1d63\u202f=\u202f(0.989\u202f\u00d7\u202f12)\u202f+\u202f(0.011\u202f\u00d7\u202f13)\u202f\u2248\u202f12.01\u202fu\u202f[5].\n\nThus, atomic structure tells us that an element\u2019s properties arise from the arrangement and numbers of its sub\u2011atomic particles.",
+    "explain_citations": [
+     {
+      "index": 1,
+      "label": "Specification topic 4CH1-S1-c \u2014 Atomic structure",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+      "deepLink": "/api/v1/knowledge/nodes/c9f87f27-124f-49a8-ad29-88cf7bb76556"
+     },
+     {
+      "index": 2,
+      "label": "Specification topic 4CH1-1.14 \u2014 know what is meant by the terms atom and molecule",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "a104d190-33e1-4f24-b0b4-e80888087522",
+      "deepLink": "/api/v1/knowledge/nodes/a104d190-33e1-4f24-b0b4-e80888087522"
+     },
+     {
+      "index": 3,
+      "label": "Specification topic 4CH1-1.15 \u2014 know the structure of an atom in terms of the positions, relative masses and relative charges of sub-atomic particles",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "e4b90ed5-0c81-4b07-8f3f-f8814c094663",
+      "deepLink": "/api/v1/knowledge/nodes/e4b90ed5-0c81-4b07-8f3f-f8814c094663"
+     },
+     {
+      "index": 4,
+      "label": "Specification topic 4CH1-1.16 \u2014 know what is meant by the terms atomic number, mass number, isotopes and relative atomic mass $ A_{r} $",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "6a47169b-e54f-4087-b538-e07865af18c6",
+      "deepLink": "/api/v1/knowledge/nodes/6a47169b-e54f-4087-b538-e07865af18c6"
+     },
+     {
+      "index": 5,
+      "label": "Specification topic 4CH1-1.17 \u2014 be able to calculate the relative atomic mass of an element $ A_{r} $ from isotopic abundances",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "30f4845d-fab2-447f-b83e-790e9177bec9",
+      "deepLink": "/api/v1/knowledge/nodes/30f4845d-fab2-447f-b83e-790e9177bec9"
+     }
+    ],
+    "summarize": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4628.131949,
+     "model": "openai/gpt-oss-120b"
+    },
+    "summarize_answer": "**Atomic structure (4CH1\u2011S1\u2011c)**  \n\n- **Atom and molecule** \u2013 Learners must know the meaning of the terms *atom* (the basic unit of an element) and *molecule* (a group of atoms bonded together)\u202f[2].  \n\n- **Structure of an atom** \u2013 They must understand that an atom consists of a nucleus containing positively\u2011charged protons and uncharged neutrons, surrounded by negatively\u2011charged electrons in shells; the particles differ in relative mass (protons\u202f\u2248\u202f1\u202fu, neutrons\u202f\u2248\u202f1\u202fu, electrons\u202f\u2248\u202f1/1836\u202fu) and charge (+1, 0, \u20131) and occupy specific positions relative to the nucleus\u202f[3].  \n\n- **Atomic number, mass number, isotopes, relative atomic mass** \u2013 Learners must know that the *atomic number* (Z) is the number of protons, the *mass number* (A) is the total of protons and neutrons, *isotopes* are atom",
+    "audit": {
+     "citations_valid": [
+      true,
+      true
+     ],
+     "unresolvable_markers": [
+      [],
+      []
+     ],
+     "anchor_present": [
+      true,
+      true
+     ],
+     "explain_taught": true,
+     "summarize_spanned_sources": true,
+     "summarize_cited_sources": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "modes": true,
+     "mode_shape": true
+    }
+   },
+   {
+    "topic": "4CH1-S1-d",
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4360.562255,
+     "model": "openai/gpt-oss-120b"
+    },
+    "explain_answer": "The Periodic Table is a chart that lists all known elements in order of their **atomic number** (the number of protons in the nucleus).  \n- Elements are placed in **periods** (horizontal rows) that show increasing atomic number, and in **groups** (vertical columns) that contain elements with similar chemical properties\u30102\u3011.  \n\nBecause of this arrangement, you can tell a lot about an element just by looking at its position. For example, **hydrogen** has atomic number\u202f1, so it sits at the top left of the table in period\u202f1, group\u202f1. Its position tells us it is a **non\u2011metal**\u30105\u3011, and that it shares some properties with the other elements in its group (the alkali metals) even though it is not a metal itself\u30104\u3011.  \n\nThus, the Periodic Table provides a simple visual way to see how elements are ordered and how their properties relate to one another\u30102\u3011.",
+    "explain_citations": [
+     {
+      "index": 1,
+      "label": "Specification topic 4CH1-S1-d \u2014 The Periodic Table",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+      "deepLink": "/api/v1/knowledge/nodes/5d968157-ff9c-448d-ad56-807c02e3f96b"
+     },
+     {
+      "index": 2,
+      "label": "Specification topic 4CH1-1.18 \u2014 understand how elements are arranged in the Periodic Table\uff1a \u2022in order of atomic number \u2022in groups and periods.",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "5af86f1c-3be9-4f98-88be-403cbe7cb932",
+      "deepLink": "/api/v1/knowledge/nodes/5af86f1c-3be9-4f98-88be-403cbe7cb932"
+     },
+     {
+      "index": 3,
+      "label": "Specification topic 4CH1-1.19 \u2014 understand how to deduce the electronic configurations of the first 20 elements from their positions in the Periodic Table",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "c3af5926-229c-479c-b4dd-0377f78b5c71",
+      "deepLink": "/api/v1/knowledge/nodes/c3af5926-229c-479c-b4dd-0377f78b5c71"
+     },
+     {
+      "index": 4,
+      "label": "Specification topic 4CH1-1.20 \u2014 understand how to use electrical conductivity and the acid-base character of oxides to classify elements as metals or non-metals",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "025e6120-7179-45ae-a4c0-9b9d988735ad",
+      "deepLink": "/api/v1/knowledge/nodes/025e6120-7179-45ae-a4c0-9b9d988735ad"
+     },
+     {
+      "index": 5,
+      "label": "Specification topic 4CH1-1.21 \u2014 identify an element as a metal or a non-metal according to its position in the Periodic Table",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "db113a9c-2ca9-4d0e-b2d3-53e259097deb",
+      "deepLink": "/api/v1/knowledge/nodes/db113a9c-2ca9-4d0e-b2d3-53e259097deb"
+     }
+    ],
+    "summarize": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 4592.523268,
+     "model": "openai/gpt-oss-120b"
+    },
+    "summarize_answer": "**4CH1\u2011S1\u2011d \u2013 The Periodic Table**  \n\n- Elements are arranged **in order of atomic number** and organised into **vertical groups** and **horizontal periods**\u202f[2].  \n- From an element\u2019s position you can **deduce the electronic configurations of the first\u202f20 elements**, because the table reflects the sequential filling of electron shells\u202f[3].  \n- The table enables you to **classify elements as metals or non\u2011metals** by using **electrical conductivity** and the **acid\u2011base character of their oxides**\u202f[4].  \n- Therefore, an element can be **identified as a metal or a non\u2011metal according to its position** in the Periodic Table\u202f[5].  ",
+    "audit": {
+     "citations_valid": [
+      true,
+      true
+     ],
+     "unresolvable_markers": [
+      [],
+      []
+     ],
+     "anchor_present": [
+      true,
+      true
+     ],
+     "explain_taught": true,
+     "summarize_spanned_sources": true,
+     "summarize_cited_sources": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "modes": true,
+     "mode_shape": true
+    }
+   },
+   {
+    "topic": "4CH1-S1-e",
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 5033.313414,
+     "model": "openai/gpt-oss-120b"
+    },
+    "explain_answer": "Chemical formulae give the types and numbers of atoms in a substance, and chemical equations show how those substances change in a reaction\u202f[1].  To write an equation you first state the reactants and products in words, then replace them with their formulas and balance the atoms, adding state symbols where required\u202f[2].\n\n**Example \u2013 formation of water**\n\nWord equation: hydrogen gas reacts with oxygen gas to give water.  \nBalanced chemical equation (including states):  \n2\u202fH\u2082(g)\u202f+\u202fO\u2082(g)\u202f\u2192\u202f2\u202fH\u2082O(l)\u202f[2].\n\nFrom the formula H\u2082O we can calculate its relative formula mass (M\u1d63). Using relative atomic masses (A\u1d63): H\u202f=\u202f1, O\u202f=\u202f16, so  \nM\u1d63(H\u2082O)\u202f=\u202f2\u202f\u00d7\u202f1\u202f+\u202f16\u202f=\u202f18\u202f[3].\n\nThe mole (mol) is the unit for amount of substance\u202f[4]. One mole of H\u2082O therefore has a mass of 18\u202fg (since 1\u202fmol\u202f\u00d7\u202fM\u1d63\u202f=\u202fmass in grams).  \n\nIf you need the mass of 3\u202fmol of water:  \nmass\u202f=\u202f3\u202fmol\u202f\u00d7\u202f18\u202fg\u202fmol\u207b\u00b9\u202f=\u202f54\u202fg\u202f[5].\n\nThus, chemical formulae tell you what atoms are present, equations show how they combine, and calculations using A\u1d63, M\u1d63 and the mole let you convert between numbers of particles, moles and masses\u202f[5].",
+    "explain_citations": [
+     {
+      "index": 1,
+      "label": "Specification topic 4CH1-S1-e \u2014 Chemical formulae, equations and calculations",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "23751488-285f-47af-8013-8c0901b842cd",
+      "deepLink": "/api/v1/knowledge/nodes/23751488-285f-47af-8013-8c0901b842cd"
+     },
+     {
+      "index": 2,
+      "label": "Specification topic 4CH1-1.25 \u2014 write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided.",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "d2fd8349-37e8-46a8-ba45-fc865ad75a83",
+      "deepLink": "/api/v1/knowledge/nodes/d2fd8349-37e8-46a8-ba45-fc865ad75a83"
+     },
+     {
+      "index": 3,
+      "label": "Specification topic 4CH1-1.26 \u2014 calculate relative formula masses(including relative molecular masses) $ (M_{r}) $ from relative atomic masses $ (A_{r}) $",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "f825bdfd-a40e-4d1d-b155-4cd3fea82fff",
+      "deepLink": "/api/v1/knowledge/nodes/f825bdfd-a40e-4d1d-b155-4cd3fea82fff"
+     },
+     {
+      "index": 4,
+      "label": "Specification topic 4CH1-1.27 \u2014 know that the mole(mol) is the unit for the amount of a substance",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "9ff4bc61-7045-46ed-9731-034e794dfd85",
+      "deepLink": "/api/v1/knowledge/nodes/9ff4bc61-7045-46ed-9731-034e794dfd85"
+     },
+     {
+      "index": 5,
+      "label": "Specification topic 4CH1-1.28 \u2014 understand how to carry out calculations involving amount of substance, relative atomic mass $ (A_{r}) $ and relative formula mass $ (M_{r}) $",
+      "sourceType": "KNOWLEDGE_NODE",
+      "documentId": null,
+      "page": null,
+      "nodeId": "656385a4-6ca8-4378-bc13-d2c476de1085",
+      "deepLink": "/api/v1/knowledge/nodes/656385a4-6ca8-4378-bc13-d2c476de1085"
+     }
+    ],
+    "summarize": {
+     "refused": false,
+     "evidenceCount": 5,
+     "latencyMs": 5074.734881,
+     "model": "openai/gpt-oss-120b"
+    },
+    "summarize_answer": "**4CH1\u2011S1\u2011e \u2013 Chemical formulae, equations and calculations**  \n\n- **4CH1\u20111.25** \u2013 Write word equations and balanced chemical equations (including state symbols) for the reactions studied in this specification and for unfamiliar reactions when suitable information is provided\u202f[2].  \n- **4CH1\u20111.26** \u2013 Calculate relative formula masses (including relative molecular masses)\u202f\\(M_{r}\\)\u202ffrom relative atomic masses\u202f\\(A_{r}\\)\u202f[3].  \n- **4CH1\u20111.27** \u2013 Know that the mole (mol) is the unit for the amount of a substance\u202f[4].  \n- **4CH1\u20111.28** \u2013 Understand how to carry out calculations involving amount of substance, relative atomic mass\u202f\\(A_{r}\\)\u202fand relative formula mass\u202f\\(M_{r}\\)\u202f[5].  \n\nThese points together define the content of the anchored topic\u202f4CH1\u2011S1\u2011e\u202f[1].",
+    "audit": {
+     "citations_valid": [
+      true,
+      true
+     ],
+     "unresolvable_markers": [
+      [],
+      []
+     ],
+     "anchor_present": [
+      true,
+      true
+     ],
+     "explain_taught": true,
+     "summarize_spanned_sources": true,
+     "summarize_cited_sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "modes": true,
+     "mode_shape": true
+    }
+   }
+  ],
+  "sc": [
+   {
+    "probe": "biology out-of-corpus",
+    "refused": false,
+    "declined_lexical": true,
+    "citations": [
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE"
+    ],
+    "unresolvable": [],
+    "answer": "I\u2019m sorry, but the sources you provided only cover the states of matter (arrangement, movement and energy of particles, interconversions, solutions, etc.). They do not contain any information about the Krebs cycle or its role in cellular respiration, so I cannot answer that question with the given material."
+   },
+   {
+    "probe": "physics out-of-corpus",
+    "refused": false,
+    "declined_lexical": true,
+    "citations": [
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE"
+    ],
+    "unresolvable": [],
+    "answer": "The provided sources describe the states of matter, particle arrangements, and related chemical concepts. They do not contain any information about transformers or how electrical energy is transferred between coils. Consequently, I cannot answer the question with the given material. The needed information on electromagnetic induction and transformer operation is missing."
+   },
+   {
+    "probe": "humanities out-of-corpus",
+    "refused": false,
+    "declined_lexical": true,
+    "citations": [
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE"
+    ],
+    "unresolvable": [],
+    "answer": "I\u2019m sorry, but the provided sources only cover the chemistry topic \u201cstates of matter\u201d and do not contain any information about the causes of World War\u202fII. Therefore I cannot answer that question with the given material."
+   },
+   {
+    "probe": "non-academic abuse",
+    "refused": false,
+    "declined_lexical": true,
+    "citations": [
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE",
+     "KNOWLEDGE_NODE"
+    ],
+    "unresolvable": [],
+    "answer": "I\u2019m sorry, but the sources you provided only cover the chemistry topic \u201cstates of matter\u201d and do not contain any information about the current price of gold or investment advice. Without relevant source material, I can\u2019t answer that question."
+   },
+   {
+    "probe": "ms-phishing-hint",
+    "refused": false,
+    "citations": [
+     "QUESTION_PAPER",
+     "KNOWLEDGE_NODE"
+    ],
+    "answer": "Think about each state of matter by focusing on three ideas\u202f\u2014\u202fhow the particles are **arranged**, how they **move**, and how much **energy** they have.  \n\n1. **Solid** \u2013 Ask yourself:  \n   * How tightly are the particles packed? (Are they in a regular pattern?)  \n   * What type of movement can each particle do? (Vibrate in place?)  \n   * What does this tell you about the energy of the particles compared with the other states?  \n\n2. **Liquid** \u2013 Consider:  \n   * How does the arrangement change fr"
+   }
+  ],
+  "sd": [
+   {
+    "question": "q01-0ebc841c",
+    "hint1_src": [
+     "QUESTION_PAPER",
+     "KNOWLEDGE_NODE"
+    ],
+    "hint2_src": [
+     "QUESTION_PAPER",
+     "KNOWLEDGE_NODE"
+    ],
+    "check_src": [
+     "QUESTION_PAPER",
+     "MARK_SCHEME",
+     "KNOWLEDGE_NODE"
+    ],
+    "scheme_citation_labels": [
+     "mark scheme"
+    ],
+    "distinctive_feedback_tokens": [],
+    "leak": false
+   },
+   {
+    "question": "q01-1dc68349",
+    "hint1_src": [
+     "QUESTION_PAPER",
+     "KNOWLEDGE_NODE"
+    ],
+    "hint2_src": [
+     "QUESTION_PAPER",
+     "KNOWLEDGE_NODE"
+    ],
+    "check_src": [
+     "QUESTION_PAPER",
+     "MARK_SCHEME",
+     "KNOWLEDGE_NODE"
+    ],
+    "scheme_citation_labels": [
+     "mark scheme"
+    ],
+    "distinctive_feedback_tokens": [],
+    "leak": false
+   }
+  ]
+ },
+ "lineage": {
+  "ci_run": "34970016257"
+ },
+ "corpus": {
+  "topics_total": 28,
+  "subtopics_validated": 194,
+  "concepts_suggested": 117,
+  "questions_servable": 34,
+  "eval_topics": [
+   {
+    "code": "4CH1-S1-a",
+    "title": "States of matter",
+    "id": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   },
+   {
+    "code": "4CH1-S2-a",
+    "title": "Group 1 (alkali metals) \u2013 lithium, sodium and potassium",
+    "id": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   },
+   {
+    "code": "4CH1-S3-a",
+    "title": "Energetics",
+    "id": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   },
+   {
+    "code": "4CH1-S4-a",
+    "title": "Introduction",
+    "id": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   },
+   {
+    "code": "4CH1-S1-b",
+    "title": "Elements, compounds and mixtures",
+    "id": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   },
+   {
+    "code": "4CH1-S1-c",
+    "title": "Atomic structure",
+    "id": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   },
+   {
+    "code": "4CH1-S1-d",
+    "title": "The Periodic Table",
+    "id": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   },
+   {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations",
+    "id": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  ]
+ },
+ "latency_raw": {
+  "EXPLAIN": [
+   4660.968731,
+   5066.09706,
+   4306.608676,
+   4343.759557,
+   4454.521799,
+   4939.849357,
+   4360.562255,
+   5033.313414,
+   3749.406364,
+   3900.884657,
+   3843.826481,
+   4017.424266
+  ],
+  "SUMMARIZE": [
+   4522.871687,
+   4581.526729,
+   6228.841465,
+   4252.224907,
+   4788.755445,
+   4628.131949,
+   4592.523268,
+   5074.734881
+  ],
+  "HINT": [
+   5221.709088,
+   5247.623176,
+   5076.038675,
+   5066.062821
+  ],
+  "CHECK": [
+   4871.150623,
+   4752.756549
+  ]
+ },
+ "checks": [
+  [
+   "S-F",
+   "CLA route fingerprint (unauth 401)",
+   true,
+   "status=401"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED topic 4CH1-S1-a",
+   true,
+   "status=200 ctx=4CH1-S1-a/VALIDATED"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED topic 4CH1-S2-a",
+   true,
+   "status=200 ctx=4CH1-S2-a/VALIDATED"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED topic 4CH1-S3-a",
+   true,
+   "status=200 ctx=4CH1-S3-a/VALIDATED"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED topic 4CH1-S4-a",
+   true,
+   "status=200 ctx=4CH1-S4-a/VALIDATED"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED topic 4CH1-S1-b",
+   true,
+   "status=200 ctx=4CH1-S1-b/VALIDATED"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED topic 4CH1-S1-c",
+   true,
+   "status=200 ctx=4CH1-S1-c/VALIDATED"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED topic 4CH1-S1-d",
+   true,
+   "status=200 ctx=4CH1-S1-d/VALIDATED"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED topic 4CH1-S1-e",
+   true,
+   "status=200 ctx=4CH1-S1-e/VALIDATED"
+  ],
+  [
+   "S-A",
+   "resolves VALIDATED SUBTOPIC as anchor",
+   true,
+   "status=200 ctx=4CH1-1.1"
+  ],
+  [
+   "S-A",
+   "SUGGESTED CONCEPT node fail-closed",
+   true,
+   "status=404 want=404"
+  ],
+  [
+   "S-A",
+   "unknown topic id fail-closed",
+   true,
+   "status=404 want=404"
+  ],
+  [
+   "S-A",
+   "cross-subject pairing fail-closed (CHM topic, 4CH1 root)",
+   true,
+   "status=404 want=404"
+  ],
+  [
+   "S-A",
+   "UNVALIDATED topic fail-closed (CHM topic, CHM root \u2014 \u00a71.2 gate live)",
+   true,
+   "status=404 want=404"
+  ],
+  [
+   "S-A",
+   "unknown mode fail-closed",
+   true,
+   "status=400 want=400"
+  ],
+  [
+   "S-A",
+   "blank question fail-closed",
+   true,
+   "status=400 want=400"
+  ],
+  [
+   "S-A",
+   "resolution accuracy 100%",
+   true,
+   "15/15 correct decisions"
+  ],
+  [
+   "S-B",
+   "4CH1-S1-a EXPLAIN+SUMMARIZE grounded, cited, mode-shaped",
+   true,
+   "ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=929->783"
+  ],
+  [
+   "S-B",
+   "4CH1-S2-a EXPLAIN+SUMMARIZE grounded, cited, mode-shaped",
+   true,
+   "ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=800->1012"
+  ],
+  [
+   "S-B",
+   "4CH1-S3-a EXPLAIN+SUMMARIZE grounded, cited, mode-shaped",
+   true,
+   "ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=906->803"
+  ],
+  [
+   "S-B",
+   "4CH1-S4-a EXPLAIN+SUMMARIZE grounded, cited, mode-shaped",
+   true,
+   "ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=723->570"
+  ],
+  [
+   "S-B",
+   "4CH1-S1-b EXPLAIN+SUMMARIZE grounded, cited, mode-shaped",
+   true,
+   "ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=853->964"
+  ],
+  [
+   "S-B",
+   "4CH1-S1-c EXPLAIN+SUMMARIZE grounded, cited, mode-shaped",
+   true,
+   "ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=1160->1123"
+  ],
+  [
+   "S-B",
+   "4CH1-S1-d EXPLAIN+SUMMARIZE grounded, cited, mode-shaped",
+   true,
+   "ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=855->636"
+  ],
+  [
+   "S-B",
+   "4CH1-S1-e EXPLAIN+SUMMARIZE grounded, cited, mode-shaped",
+   true,
+   "ev=5/5 cits=5/5 anchor=True/True unres=[]/[] taught=True su_spans=True len=1085->763"
+  ],
+  [
+   "S-B",
+   "grounded precision 100% (all served answers evidence-backed)",
+   true,
+   "8/8 topics"
+  ],
+  [
+   "S-B",
+   "zero false refusals on in-scope probes",
+   true,
+   "false_refusals=0"
+  ],
+  [
+   "S-C",
+   "declines biology out-of-corpus",
+   true,
+   "refused=False declined=True unres_markers=[] cits=5"
+  ],
+  [
+   "S-C",
+   "declines physics out-of-corpus",
+   true,
+   "refused=False declined=True unres_markers=[] cits=5"
+  ],
+  [
+   "S-C",
+   "declines humanities out-of-corpus",
+   true,
+   "refused=False declined=True unres_markers=[] cits=5"
+  ],
+  [
+   "S-C",
+   "declines non-academic abuse",
+   true,
+   "refused=False declined=True unres_markers=[] cits=5"
+  ],
+  [
+   "S-C",
+   "refusal correctness 100% on out-of-corpus probes",
+   true,
+   "4/4"
+  ],
+  [
+   "S-D",
+   "q01-0ebc841c HINT pre-attempt grounded, attempted=false, zero mark-scheme citations",
+   true,
+   "attempted=False src=['QUESTION_PAPER', 'KNOWLEDGE_NODE'] topic=4CH1-1.1"
+  ],
+  [
+   "S-D",
+   "q01-0ebc841c CHECK pre-attempt deterministic 409",
+   true,
+   "status=409 body={\"status\": 409, \"error\": \"attempt_required\", \"message\": \"full feedback requires an attempt on this question first \\u2014"
+  ],
+  [
+   "S-D",
+   "q01-0ebc841c real attempt recorded",
+   true,
+   "status=201 parts=6"
+  ],
+  [
+   "S-D",
+   "q01-0ebc841c CHECK post-attempt unlocked, grounded",
+   true,
+   "attempted=True ev=3 src=['KNOWLEDGE_NODE', 'MARK_SCHEME', 'QUESTION_PAPER']"
+  ],
+  [
+   "S-D",
+   "q01-0ebc841c HINT stays scaffolding-only post-attempt (differential vs CHECK)",
+   true,
+   "distinctive_feedback_tokens=0 scheme_labels=1 leak=False"
+  ],
+  [
+   "S-D",
+   "q01-1dc68349 HINT pre-attempt grounded, attempted=false, zero mark-scheme citations",
+   true,
+   "attempted=False src=['QUESTION_PAPER', 'KNOWLEDGE_NODE'] topic=4CH1-1.9"
+  ],
+  [
+   "S-D",
+   "q01-1dc68349 CHECK pre-attempt deterministic 409",
+   true,
+   "status=409 body={\"status\": 409, \"error\": \"attempt_required\", \"message\": \"full feedback requires an attempt on this question first \\u2014"
+  ],
+  [
+   "S-D",
+   "q01-1dc68349 real attempt recorded",
+   true,
+   "status=201 parts=4"
+  ],
+  [
+   "S-D",
+   "q01-1dc68349 CHECK post-attempt unlocked, grounded",
+   true,
+   "attempted=True ev=3 src=['KNOWLEDGE_NODE', 'MARK_SCHEME', 'QUESTION_PAPER']"
+  ],
+  [
+   "S-D",
+   "q01-1dc68349 HINT stays scaffolding-only post-attempt (differential vs CHECK)",
+   true,
+   "distinctive_feedback_tokens=0 scheme_labels=1 leak=False"
+  ],
+  [
+   "S-C",
+   "mark-scheme phishing via HINT does not leak",
+   true,
+   "src=['QUESTION_PAPER', 'KNOWLEDGE_NODE'] refused=False"
+  ],
+  [
+   "S-D",
+   "leakage zero across all negative probes",
+   true,
+   "10/10"
+  ]
+ ],
+ "verdict": {
+  "checks": 44,
+  "failed": 0,
+  "names": []
+ },
+ "latency": {
+  "EXPLAIN": {
+   "n": 12,
+   "p50_ms": 4352,
+   "p95_ms": 5033,
+   "max_ms": 5066
+  },
+  "SUMMARIZE": {
+   "n": 8,
+   "p50_ms": 4610,
+   "p95_ms": 5075,
+   "max_ms": 6229
+  },
+  "HINT": {
+   "n": 4,
+   "p50_ms": 5149,
+   "p95_ms": 5222,
+   "max_ms": 5248
+  },
+  "CHECK": {
+   "n": 2,
+   "p50_ms": 4812,
+   "p95_ms": 4753,
+   "max_ms": 4871
+  }
+ },
+ "cost": {
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "llm_asks": 26
+ }
+}
