@@ -1,0 +1,12 @@
+PASS [G1 fresh learner authenticated] login=200
+PASS [G2a real 4CH1 structured question with parts] question=96ae4235-2210-4327-811a-3bde94575e3a parts=3 partA=a (4 marks)
+PASS [G2 QUESTION_PART HINT grounded with zero mark-scheme leakage] status=200 partLabel=a attempted=False ev=6 len=1272 cited=[1, 2] sourceTypes=['KNOWLEDGE_NODE', 'QUESTION_PAPER']
+PASS [G3 unknown part is an indistinguishable 404] status=404 want=404
+PASS [G4 missing partId is a 400] status=400 want=400
+PASS [G5 CHECK pre-attempt is a 409 attempt_required] status=409 error=attempt_required
+PASS [G6a real structured attempt recorded] status=201 attempt=e64c671e-f6e7-4d93-ae20-a3b1a795253a state=PENDING
+PASS [G6 CHECK post-attempt unlocks grounded part feedback] status=200 attempted=True ev=6 len=845 cited=[1, 2, 3] sourceTypes=['KNOWLEDGE_NODE', 'LEARNER_WORK', 'MARK_SCHEME', 'QUESTION_PAPER']
+PASS [G7 learner-state signalCounts include the part-anchored CLA exchange] status=200 engagements=1
+
+9/9 PASS — VERIFIED
+lineage: core d0dc00a (QUESTION_PART + live-found fixes) (QUESTION_PART kind) against production syllabai-core.onrender.com, real validated 4CH1 material
