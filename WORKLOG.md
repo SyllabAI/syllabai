@@ -1582,3 +1582,27 @@ Stage Summary:
 **Commits this session (all as Nawaf Al Hussain Khondokar <nkhondokar2420136@bscse.uiu.ac.bd>):** core `45b5ec3` (rebased clean over the concurrent lane's `50222b7`); web `c3fb24d` (class surface) → `3e33431` (probe) → `6e2f25c`/`314e9e2` (probe fixes) → `845de5b` (monitor). CI: core-ci green (428+39), web-ci green ×5. Live evidence: workflow runs 34936590304 (core-ci), s2-class-probe run 34937577939 (ALL OK), pilot-monitor run (15/16, web-bundle red by design).
 
 **NEXT:** continue the sprint autonomously — §6/§7 (review-throughput lane + deterministic queue intelligence; the marking queue's 243 pending answers are the direct feed of class mastery), then §8–§10. Operator item outstanding: Vercel access for nawaf-al-hussain (or vcp_ token re-delivery).
+
+## Session 70 — Productization Sprint 2 §6/§7 EXECUTED: marking throughput lane + review-queue intelligence live in production (backend verified live at c9b4cd6; s2-marking-probe ALL OK; monitor marking-lane green; the 249-answer pending backlog now has a deterministic work lane) (2026-09-15)
+
+**Sprint-2 continuation (directive: Teacher Intelligence + Content Growth, autonomous).** Session-69 closed §1 + §2–§5. This session delivered the §6/§7 lane the class-mastery unlock depends on (the pending marking backlog is what keeps the heatmap empty).
+
+**Built (core `c9b4cd6`, CI green — 463 unit + 52 IT, zero failures):**
+- `TeacherMarkingQueueService` + `/api/v1/teacher/marking/{queue-v2,throughput}` + `POST /smart-mark-batch` — the deterministic paper-grouped queue (one mark scheme in working memory; oldest-waiting paper first; attempt-age → part → id within paper; full tie-break to UUID), the mark→next chain on every item, throughput metrics that count what happened (state mix, 24h/7d human-mark windows, pending-by-paper leaders ≤5, oldest pending age — honest zeros, never estimates), and the bounded Smart Mark batch (≤50, dedup, per-item transactions, SKIPPED_ALREADY_MARKED idempotency, honest FAILED reasons; κ gate and the evidence contract untouched — the batch only sequences existing pipeline calls).
+- Review-queue v3 (§7): `ContentReviewService.enrichedReviewQueueV3` + `GET /api/v1/teacher/content/review-queue-v3` — the v2 enrichment PLUS scheme-linkage ratio, curriculum mapping ratio, novel coverage against the practicable set (validated papers' primary + mapped topics; 38 topics today), and per-paper rankReasons stating ONLY signals that hold (absent confidence never stated, never zero-filled). Deterministic ordering: reconciled-OK → scheme ratio → mapping ratio → novel topics → confidence → findings → newest → id. Ordering is a triage aid; nothing is promoted, no gate weakened. Record is FLAT by design (Jackson serializes record components).
+- All reads batched — one query per signal for the whole queue (the §11 pattern), grouping in memory.
+
+**Built (web `b3445fa`, web-ci green, tsc clean, production build verified):**
+- Marking tab: paper-group headers (title · code · session · count · oldest-waiting), per-group bounded Smart Mark batch with honest outcome summary, "Record & next" following the server-provided chain, throughput panel with the honesty note that the pending backlog gates class-mastery population.
+- Content gate: v3 badges (scheme linked / mapped / novel topics), "Why this rank" reasons per row, practicable-topic baseline in the header.
+- Ops: `s2-marking-probe` workflow (read-only production probe + ONE zero-mutation batch call) and the pilot-monitor `marking-lane` check.
+
+**Production verification (live, PILOT_TEACHER_* pattern):**
+- s2-marking-probe run 34952828990: **ALL OK** — queue-v2 249 pending / 15 paper groups (chain OK, groups contiguous, oldest-first, deterministic across reads), throughput states all reported (oldest pending 20h), review-queue-v3 77 suggested papers / 34 fully schemed / practicable=38, batch endpoint honestly FAILED an unknown id with nothing marked.
+- pilot-monitor run 34953036568: **marking-lane OK, class-analytics OK (enrolled=64)**; the only RED is the known web-bundle stale drift (the session-69 Vercel git-author operator blocker — the frontend bundle still serves the 96d7a34-era code until the operator connects nawaf-al-hussain to the Vercel team or re-provides the vcp_ token; all API surfaces are live regardless).
+
+**Tests:** `TeacherMarkingQueueServiceTest` (13), `ContentReviewServiceV3Test` (5), `MarkingQueueFlowIT` (3/3 in CI — RBAC 401/403/200 over real HTTP, ordering + chain + partial batch + throughput + v3 signals + determinism on real Postgres).
+
+**Commits this session (all as Nawaf Al Hussain Khondokar <nkhondokar2420136@bscse.uiu.ac.bd>):** core `c9b4cd6` (rebased clean over the concurrent CLA lane's `6983d7c`); web `b3445fa`. CI: core-ci green (run 34948631597), web-ci green (run 34948578973).
+
+**NEXT:** continue the sprint autonomously — §8 (Smart Lesson increments only where production evidence shows weakness), §9 (new structured Tutor signals), §10 (Test Builder; the class-weakest-area 30-mark test when evidence suffices), then §11–§17. Operator item outstanding: Vercel access for nawaf-al-hussain (or vcp_ token re-delivery) to deploy the frontend bundle.
