@@ -1588,6 +1588,12 @@ The project should maintain:
 - `MOCK_EXAM_GENERATOR_ARCHITECTURE.md` - canonical blueprint-driven mock-exam architecture (ADR-018).
 - `MOCK_EXAM_GENERATOR_AGENT_ADDENDUM.md` - mandatory implementation rules for F-051 and the mock feature family.
 - `DECISION_018_MOCK_EXAM_GENERATOR.md` - dedicated ADR-018 decision record.
+- `LEARNER_INTERACTION_MEMORY_ARCHITECTURE.md` - canonical learner-interaction-memory architecture (implemented V21/V23 runtime).
+- `MASTER_SPEC_ADDENDUM_1.4_LEARNER_INTERACTION_MEMORY.md` - spec addendum for the learner-interaction-memory layer.
+- `AGENT_LEARNER_INTERACTION_MEMORY_ADDENDUM.md` - mandatory implementation rules for all conversational-surface work.
+- `CONTEXTUAL_LEARNING_ASSISTANT_ARCHITECTURE.md` - canonical Contextual Learning Assistant contract (ADR-022; PROPOSED, no runtime).
+- `MASTER_SPEC_ADDENDUM_1.5_CONTEXTUAL_LEARNING_ASSISTANT.md` - spec addendum for the CLA contract primitives and leakage policy.
+- `AGENT_CONTEXTUAL_LEARNING_ASSISTANT_ADDENDUM.md` - mandatory rules for any future CLA implementation work.
 - `WORKBOOK_SYNC_2026-09-07.md` - record of the canonical workbook consolidation and cleanup.
 - `backlog/*-feature-addendum.tsv` - detailed feature-tracker addenda feeding the definitive master workbook (folded: subject/teacher/learning-evidence/recommendation in session 17, mock-exam in session 18; the addenda remain detailed supplements, not competing inventories).
 

@@ -268,3 +268,18 @@ SyllabAI builds a provider-neutral **Educational Retrieval Engine** inside the e
 The complete decision record is canonical in `ADR-020-EDUCATIONAL_RETRIEVAL_ENGINE.md`, with the research dossier in `RAG_RETRIEVAL_RESEARCH.md`. (Ledger entry registered 2026-09-13 to restore the standalone-file ↔ ledger mirror pattern; the standalone file remains the authority.)
 
 **Scope guard:** this ADR does not authorize bulk ingestion of new subjects or expansion of Cycle 1 — the pilot corpus remains Pearson Edexcel International GCSE Chemistry 4CH1 — and retrieval work must not become an excuse to indefinitely delay the pilot.
+
+## ADR-022: Contextual Learning Assistant — contract-first, platform-owned context
+
+**Status:** Accepted as contract direction; runtime PROPOSED and separately gated
+**Date:** 2026-09-15
+
+The next conversational surface after the Grounded Tutor is the **Contextual Learning Assistant (CLA)**: a grounded assistant that operates in the resolved context of the resource the learner is viewing (spec point, KG topic, note section, question part, Smart Lesson topic). The operator registered the contract task on the core tracker (syllabai-core#17, with the Learner Interaction Memory binding rules in syllabai-core#16); this ADR accepts the contract direction and fixes its non-negotiables.
+
+Decision: the CLA **composes** the verified subsystems — Educational Retrieval Engine (ADR-020) for context-anchored evidence acquisition, the Grounded Tutor (KA-RAG) for grounded generation with deterministic refusal and claim/citation validation, Learner Interaction Memory (Master Spec Addendum 1.4; core contract `syllabai-core/docs/LEARNER_INTERACTION_MEMORY_IMPLEMENTATION.md`) for evidence capture, and the governed learner-state/NBA layers for consumption — and it introduces no new generative stack. Context resolution, response modes, tool registry, budgets and leakage control are **platform-owned application code**; provider-side memory, session, tools or context are rejected (provider infrastructure must not become canonical SyllabAI state).
+
+The defining safety property is the **exam-question answer-leakage policy**: answer-protection for content with pending attempts or in timed/mock/assignment contexts is deterministic application logic (HINT scaffolds, never reveals; full feedback unlocks only post-attempt, proven from attempt evidence), enforced in code and CI-tested with a mandatory negative leakage suite — never delegated to the model or to prompts.
+
+Canonical artifacts: `CONTEXTUAL_LEARNING_ASSISTANT_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.5_CONTEXTUAL_LEARNING_ASSISTANT.md`, `AGENT_CONTEXTUAL_LEARNING_ASSISTANT_ADDENDUM.md`, and the core implementation contract `syllabai-core/docs/CONTEXTUAL_LEARNING_ASSISTANT_IMPLEMENTATION.md`.
+
+**Scope guard:** this ADR authorizes contract and evaluation design only — no runtime implementation, no Cycle-1 scope expansion (pilot remains 4CH1, Tutor + Assessor agents under ADR-019), and it must not delay the pilot. Runtime work proceeds only as separately planned, separately verified tranches under the core contract's sequencing and the ADR-020 evaluation discipline.

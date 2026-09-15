@@ -40,11 +40,13 @@ Before substantial changes:
 6. `DATA_MODEL_ERD.md` for database/schema/entity-relationship work. **Treat its Current ERD as implementation evidence and its Target EERD as architecture; never silently present target-only entities as implemented.**
 7. `TEACHER_ARCHITECTURE.md` for teacher/class/LMS/Test Builder/assignments/teacher analytics/teacher AI/class-KG work.
 8. `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` and `LEARNING_EVIDENCE_AGENT_ADDENDUM.md` for question/attempt/assessment evidence/Smart Mark/review/recommendation/telemetry work.
-9. `RAG_RETRIEVAL_RESEARCH.md` for retrieval, Tutor grounding, embeddings, reranking, graph retrieval, HyPE, evidence selection or multimodal-RAG work.
-10. `RAG_RETRIEVAL_CORPUS_GUIDANCE.md` in `syllabai-resources` for corpus-side retrieval preparation.
-11. Relevant research-paper sections whenever scientific constructs, hypotheses, operational definitions, metrics or learner-model semantics change.
-12. `PROJECT_KNOWLEDGE_MAP.md` for locating durable cross-project knowledge and its canonical owner.
-13. `KNOWLEDGE_DURABILITY_POLICY.md` when work discovers architecture, research, operational, provenance, AI/RAG or other potentially durable project knowledge.
+9. `LEARNER_INTERACTION_MEMORY_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.4_LEARNER_INTERACTION_MEMORY.md` and `AGENT_LEARNER_INTERACTION_MEMORY_ADDENDUM.md` for tutor chat, engagement memory, Smart Lesson tutor legs, or any conversational-surface signal work.
+10. `CONTEXTUAL_LEARNING_ASSISTANT_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.5_CONTEXTUAL_LEARNING_ASSISTANT.md`, `AGENT_CONTEXTUAL_LEARNING_ASSISTANT_ADDENDUM.md` and `syllabai-core/docs/CONTEXTUAL_LEARNING_ASSISTANT_IMPLEMENTATION.md` for any context-aware assistant (CLA) work.
+11. `RAG_RETRIEVAL_RESEARCH.md` for retrieval, Tutor grounding, embeddings, reranking, graph retrieval, HyPE, evidence selection or multimodal-RAG work.
+12. `RAG_RETRIEVAL_CORPUS_GUIDANCE.md` in `syllabai-resources` for corpus-side retrieval preparation.
+13. Relevant research-paper sections whenever scientific constructs, hypotheses, operational definitions, metrics or learner-model semantics change.
+14. `PROJECT_KNOWLEDGE_MAP.md` for locating durable cross-project knowledge and its canonical owner.
+15. `KNOWLEDGE_DURABILITY_POLICY.md` when work discovers architecture, research, operational, provenance, AI/RAG or other potentially durable project knowledge.
 
 The Master Spec is the engineering source of truth. Research papers remain authoritative for scientific claims. Named architecture addenda govern their specific layers. Do not silently resolve conflicts; record them and make/update the appropriate decision.
 
