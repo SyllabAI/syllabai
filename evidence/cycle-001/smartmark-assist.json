@@ -1,0 +1,188 @@
+{
+ "finishedAt": "2026-09-15T12:24:18Z",
+ "groups": [
+  {
+   "code": "4CH0/1C",
+   "failed": 4,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 3,
+   "paperId": "fdccde9f-e87b-4412-b28a-1e64c3f92eeb",
+   "requested": 7,
+   "skipped": 0
+  },
+  {
+   "code": "4CH0/2C",
+   "failed": 0,
+   "failureReasons": [],
+   "httpStatus": 200,
+   "marked": 33,
+   "paperId": "2852f64f-29ff-427d-aa0e-55a612a66cd3",
+   "requested": 33,
+   "skipped": 0
+  },
+  {
+   "code": "4CH0/2C",
+   "failed": 28,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 0,
+   "paperId": "7f3ecd08-5682-419e-9d68-e2acfcaf202e",
+   "requested": 28,
+   "skipped": 0
+  },
+  {
+   "code": null,
+   "failed": 24,
+   "failureReasons": [
+    "mark scheme 1f957b16-5d5a-400d-83af-860107bab0fb not found",
+    "mark scheme 2031aeeb-a015-42cb-93ae-a6bd4585ca06 not found"
+   ],
+   "httpStatus": 200,
+   "marked": 0,
+   "paperId": "da53c201-4cc2-4828-9dd5-4f47ae542085",
+   "requested": 24,
+   "skipped": 0
+  },
+  {
+   "code": null,
+   "failed": 20,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 0,
+   "paperId": "cb3a9474-cd78-424b-bede-688966c6b564",
+   "requested": 20,
+   "skipped": 0
+  },
+  {
+   "code": "4CH0/2C",
+   "failed": 4,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 3,
+   "paperId": "2f6675a3-925b-40ea-9407-e6d2a3c9ed46",
+   "requested": 7,
+   "skipped": 0
+  },
+  {
+   "code": "4CH1/2CR",
+   "failed": 7,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 12,
+   "paperId": "6a50e784-ae71-4756-b932-40b8f0371094",
+   "requested": 19,
+   "skipped": 0
+  },
+  {
+   "code": "4CH1/2C",
+   "failed": 5,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 9,
+   "paperId": "f10c6814-c4ce-425d-afb6-3501eb5f06e1",
+   "requested": 14,
+   "skipped": 0
+  },
+  {
+   "code": "4CH1/2CR",
+   "failed": 8,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 7,
+   "paperId": "3638b166-faea-4ad0-8aa7-06be702d10ae",
+   "requested": 15,
+   "skipped": 0
+  },
+  {
+   "code": "4CH1/2C",
+   "failed": 7,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 12,
+   "paperId": "e850e6fe-4d43-41b1-97b1-ef6845ef5caf",
+   "requested": 19,
+   "skipped": 0
+  },
+  {
+   "code": null,
+   "failed": 14,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 1,
+   "paperId": "cfccc663-8aef-4a20-90b4-1205b3e740b5",
+   "requested": 15,
+   "skipped": 0
+  },
+  {
+   "code": "4CH1/2C",
+   "failed": 10,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 6,
+   "paperId": "b1068e09-d65d-42b5-b225-b53637e1dc5c",
+   "requested": 16,
+   "skipped": 0
+  },
+  {
+   "code": null,
+   "failed": 14,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 3,
+   "paperId": "6b5dc788-7de9-4148-a24e-afedaae165fb",
+   "requested": 17,
+   "skipped": 0
+  },
+  {
+   "code": "4CH1/2C",
+   "failed": 0,
+   "failureReasons": [],
+   "httpStatus": 200,
+   "marked": 11,
+   "paperId": "23ef5e6e-7cd2-4180-94d5-f180af2cca22",
+   "requested": 11,
+   "skipped": 0
+  },
+  {
+   "code": "4CH1/1C",
+   "failed": 5,
+   "failureReasons": [
+    "NO_SCHEME_POINTS"
+   ],
+   "httpStatus": 200,
+   "marked": 5,
+   "paperId": "c30856ff-9a6f-478a-970b-2c9e2c8f4c51",
+   "requested": 10,
+   "skipped": 0
+  }
+ ],
+ "startedAt": "2026-09-15T12:16:58Z",
+ "totals": {
+  "failed": 150,
+  "marked": 105,
+  "skipped": 0
+ }
+}

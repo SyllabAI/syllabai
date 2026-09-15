@@ -1,0 +1,219 @@
+{
+ "capturedAt": "2026-09-15T12:40:59Z",
+ "closedLoop": {
+  "actionChanged": true,
+  "afterReason": "INSUFFICIENT_COVERAGE",
+  "beforeReason": "INSUFFICIENT_COVERAGE"
+ },
+ "newAttempts": [
+  {
+   "markingState": "PENDING",
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a",
+   "status": 201,
+   "type": "STRUCTURED"
+  },
+  {
+   "markingState": "PENDING",
+   "questionId": "ac5045d7-4af7-4843-811b-357039a73666",
+   "status": 201,
+   "type": "STRUCTURED"
+  },
+  {
+   "markingState": "PENDING",
+   "questionId": "ddf30066-4905-4376-ae76-0630c263061a",
+   "status": 201,
+   "type": "STRUCTURED"
+  }
+ ],
+ "root4ch1": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+ "servableOnTopic": [
+  {
+   "id": "96ae4235-2210-4327-811a-3bde94575e3a",
+   "marks": 6,
+   "paperId": "2852f64f-29ff-427d-aa0e-55a612a66cd3",
+   "type": "STRUCTURED"
+  },
+  {
+   "id": "ac5045d7-4af7-4843-811b-357039a73666",
+   "marks": 6,
+   "paperId": "2852f64f-29ff-427d-aa0e-55a612a66cd3",
+   "type": "STRUCTURED"
+  },
+  {
+   "id": "ddf30066-4905-4376-ae76-0630c263061a",
+   "marks": 18,
+   "paperId": "7f3ecd08-5682-419e-9d68-e2acfcaf202e",
+   "type": "STRUCTURED"
+  }
+ ],
+ "smartLessonAfter": {
+  "action": {
+   "actionType": "PRACTISE_QUESTIONS",
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a",
+   "reasonCode": "INSUFFICIENT_COVERAGE",
+   "reasonDetail": "No attempt evidence on 4CH1-S2-f yet \u2014 start with the first validated question to find your level (diagnostic practice) (all 3 validated question(s) attempted \u2014 revisiting the first)",
+   "servableQuestionCount": 3,
+   "targetCode": "4CH1-S2-f",
+   "targetNodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+   "targetTitle": "Acids, alkalis and titrations"
+  },
+  "evidence": [
+   {
+    "key": "topic",
+    "value": "4CH1-S2-f \u2014 Acids, alkalis and titrations"
+   },
+   {
+    "key": "attempts",
+    "value": "0 (no attempt evidence on this topic)"
+   }
+  ],
+  "policy": "smart-lesson/v2",
+  "status": 200
+ },
+ "smartLessonBefore": {
+  "action": {
+   "actionType": "PRACTISE_QUESTIONS",
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a",
+   "reasonCode": "INSUFFICIENT_COVERAGE",
+   "reasonDetail": "No attempt evidence on 4CH1-S2-f yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+   "servableQuestionCount": 3,
+   "targetCode": "4CH1-S2-f",
+   "targetNodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+   "targetTitle": "Acids, alkalis and titrations"
+  },
+  "evidenceCount": 2,
+  "policy": "smart-lesson/v2",
+  "status": 200
+ },
+ "targetTopic": {
+  "code": "4CH1-S2-f",
+  "learnersMeasured": 7,
+  "meanMastery": 0.1135,
+  "reasons": [
+   "LOW_MEAN_MASTERY"
+  ],
+  "topicNodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+ },
+ "targetTopicAfterAttempts": {
+  "code": "4CH1-S2-f",
+  "learnersMeasured": 7,
+  "meanMastery": 0.1135,
+  "reasons": [
+   "LOW_MEAN_MASTERY"
+  ]
+ },
+ "targetedTest": {
+  "answerKeyEntries": 8,
+  "questionCount": 3,
+  "questions": [
+   {
+    "id": "96ae4235-2210-4327-811a-3bde94575e3a",
+    "marks": 6,
+    "stem": "These pieces of apparatus are used in chemistry experiments. P Q R S",
+    "topicCode": "4CH1-S2-f",
+    "type": "STRUCTURED"
+   },
+   {
+    "id": "ac5045d7-4af7-4843-811b-357039a73666",
+    "marks": 6,
+    "stem": "A student is provided with a solution of dilute sulfuric acid and a solution of sodium hydroxide. The student does a titration using $ 2 5. ",
+    "topicCode": "4CH1-S2-f",
+    "type": "STRUCTURED"
+   },
+   {
+    "id": "ddf30066-4905-4376-ae76-0630c263061a",
+    "marks": 18,
+    "stem": "A student investigated the neutralisation of acids by measuring the temperature changes when alkalis were added to acids of known concentrat",
+    "topicCode": "4CH1-S2-f",
+    "type": "STRUCTURED"
+   }
+  ],
+  "totalMarks": 30
+ },
+ "weaknessOptions": {
+  "enrolled": 79,
+  "weakTopics": [
+   {
+    "code": "4CH1-S2-b",
+    "learnersMeasured": 1,
+    "meanMastery": 0.1131,
+    "reasons": [
+     "LOW_MEAN_MASTERY"
+    ],
+    "servableQuestions": 2,
+    "topicNodeId": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   },
+   {
+    "code": "4CH1-S2-g",
+    "learnersMeasured": 2,
+    "meanMastery": 0.1131,
+    "reasons": [
+     "LOW_MEAN_MASTERY"
+    ],
+    "servableQuestions": 5,
+    "topicNodeId": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   },
+   {
+    "code": "4CH1-S2-h",
+    "learnersMeasured": 2,
+    "meanMastery": 0.1131,
+    "reasons": [
+     "LOW_MEAN_MASTERY"
+    ],
+    "servableQuestions": 5,
+    "topicNodeId": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   },
+   {
+    "code": "4CH1-S2-f",
+    "learnersMeasured": 7,
+    "meanMastery": 0.1135,
+    "reasons": [
+     "LOW_MEAN_MASTERY"
+    ],
+    "servableQuestions": 3,
+    "topicNodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   },
+   {
+    "code": "4CH1-1.1",
+    "learnersMeasured": 2,
+    "meanMastery": 0.1141,
+    "reasons": [
+     "LOW_MEAN_MASTERY"
+    ],
+    "servableQuestions": 1,
+    "topicNodeId": "e9019231-4b8d-4bff-af18-5470a0492dbb"
+   },
+   {
+    "code": "4CH1-1.2",
+    "learnersMeasured": 1,
+    "meanMastery": 0.1151,
+    "reasons": [
+     "LOW_MEAN_MASTERY"
+    ],
+    "servableQuestions": 1,
+    "topicNodeId": "627c3222-b94a-4d0d-b54d-9e2d7d345ccf"
+   },
+   {
+    "code": "4CH1-1.9",
+    "learnersMeasured": 1,
+    "meanMastery": 0.1151,
+    "reasons": [
+     "LOW_MEAN_MASTERY"
+    ],
+    "servableQuestions": 1,
+    "topicNodeId": "aa5ebfef-2221-4022-a62e-d2547576a2ef"
+   },
+   {
+    "code": "4CH1-S1-d",
+    "learnersMeasured": 1,
+    "meanMastery": 0.1151,
+    "reasons": [
+     "LOW_MEAN_MASTERY"
+    ],
+    "servableQuestions": 1,
+    "topicNodeId": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  ],
+  "withEvidence": 29
+ }
+}

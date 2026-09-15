@@ -1,0 +1,87 @@
+{
+ "capturedAt": "2026-09-15T12:52:17Z",
+ "smartLesson": {
+  "action": {
+   "actionType": "PRACTISE_QUESTIONS",
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a",
+   "reasonCode": "LOW_MASTERY",
+   "reasonDetail": "Measured mastery 0.12 over 3 attempts is below the weak ceiling (0.45) \u2014 keep practising 4CH1-S2-f (all 3 validated question(s) attempted \u2014 revisiting the first)",
+   "servableQuestionCount": 3,
+   "targetCode": "4CH1-S2-f",
+   "targetNodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+   "targetTitle": "Acids, alkalis and titrations"
+  },
+  "asOf": "2026-09-15T12:52:27.812500225Z",
+  "evidence": [
+   {
+    "key": "topic",
+    "value": "4CH1-S2-f \u2014 Acids, alkalis and titrations"
+   },
+   {
+    "key": "attempts",
+    "value": "3"
+   },
+   {
+    "key": "mastery (raw)",
+    "value": "0.12"
+   },
+   {
+    "key": "mastery (decay-adjusted)",
+    "value": "0.12"
+   }
+  ],
+  "learnerId": "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+  "misconceptions": [],
+  "policy": "smart-lesson/v2",
+  "prerequisites": [],
+  "rootId": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+  "topicCode": "4CH1-S2-f",
+  "topicNodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+  "topicStatus": {
+   "attempts": 3,
+   "coverage": "ESTABLISHED",
+   "effectiveMastery": 0.1153225434961417,
+   "fluencyGap": null,
+   "mastery": 0.11533544411262374,
+   "reviewDue": false,
+   "servableQuestions": 3,
+   "strongestMisconceptionProbability": null,
+   "tutorAsks": 0
+  },
+  "topicTitle": "Acids, alkalis and titrations"
+ },
+ "targetTopicFinal": {
+  "code": "4CH1-S2-f",
+  "evidenceBackedAttempts": 14,
+  "learnersMeasured": 8,
+  "meanMastery": 0.1137,
+  "reasons": [
+   "LOW_MEAN_MASTERY"
+  ]
+ },
+ "targetedAttempts": [
+  {
+   "correct": null,
+   "createdAt": null,
+   "marksAwarded": 0,
+   "marksTotal": 18,
+   "questionId": "ddf30066-4905-4376-ae76-0630c263061a"
+  },
+  {
+   "correct": null,
+   "createdAt": null,
+   "marksAwarded": 6,
+   "marksTotal": 6,
+   "questionId": "ac5045d7-4af7-4843-811b-357039a73666"
+  },
+  {
+   "correct": null,
+   "createdAt": null,
+   "marksAwarded": 6,
+   "marksTotal": 6,
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a"
+  }
+ ],
+ "topicId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+ "weakTopicCount": 10
+}
