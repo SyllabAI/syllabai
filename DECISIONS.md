@@ -294,3 +294,16 @@ The defining safety property is the **exam-question answer-leakage policy**: ans
 Canonical artifacts: `CONTEXTUAL_LEARNING_ASSISTANT_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.5_CONTEXTUAL_LEARNING_ASSISTANT.md`, `AGENT_CONTEXTUAL_LEARNING_ASSISTANT_ADDENDUM.md`, and the core implementation contract `syllabai-core/docs/CONTEXTUAL_LEARNING_ASSISTANT_IMPLEMENTATION.md`.
 
 **Scope guard:** this ADR authorizes contract and evaluation design only — no runtime implementation, no Cycle-1 scope expansion (pilot remains 4CH1, Tutor + Assessor agents under ADR-019), and it must not delay the pilot. Runtime work proceeds only as separately planned, separately verified tranches under the core contract's sequencing and the ADR-020 evaluation discipline.
+
+## ADR-023: LLM provider pool hardening — extend FailoverLlmChain, structured failures, local daily budget, fail-closed modes
+
+**Status:** Accepted (slices B/C/D/E + benchmark harness; evidence on main)
+**Date:** 2026-09-17
+
+The LLM Provider Pool work extends the EXISTING provider architecture instead of rewriting it: `LlmProvider` + `FailoverLlmChain` remain the only routing abstraction (ADR-009 chain order unchanged). Failures are classified ONCE at the provider/adapter boundary into `LlmFailureClass` from SDK exception types and HTTP status codes — never message string-matching; dead-key / retired-model configuration failures suppress that provider until the end of the UTC day while transient classes keep threshold/cooldown semantics. `daily-budget-per-provider` is enforced as a configured LOCAL routing guard (requestsToday >= budget ⇒ ineligible until UTC-day rollover; chain fails over; pinned experiments fail closed — pins never silently drift). `syllabai.llm.mode` = production|test|live makes test boots FAIL CLOSED (real adapters are never constructed in test mode; keys are ignored with a warning) and gates live-provider tests behind `LIVE_LLM_TESTS=explicit`. One reusable deterministic `FakeLlmProvider` test fixture replaces duplicated hand-written fakes and records invocation metadata (never prompt text). Admin chain-health snapshots gain additive routing fields (enabled/configured/healthy/coolingDown/requestsToday/dailyBudget/remainingLocalBudget/lastFailureClass/effectiveModel).
+
+FreeLLMAPI (self-hosted OpenAI-compatible free-tier aggregator) is researched against primary sources in `PLATFORM_RESEARCH.md` and stays **PROPOSED / EXPERIMENTAL** — no production integration; if ever promoted it enters as an optional, experiment-pinnable member through the existing `SpringAiChatModelAdapter`, never as the canonical layer. Quota circumvention (multi-account pools, credential rotation) is rejected outright.
+
+The complete decision record is canonical in `ADR-023-LLM_PROVIDER_POOL_HARDENING.md` (standalone file remains the authority). Implementation evidence: syllabai-core `b8ce0f4`/`f669330`/`bdc2540`/`8e1d27b`; regression 582 tests green (0 failures, 1 live-gated skip).
+
+**Scope guard:** provider-routing mechanics only — no retrieval, KG, learner-state, evidence, InterventionRun or CLA pedagogy semantics change; benchmark execution remains operator-gated behind live credentials.
