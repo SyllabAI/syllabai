@@ -50,3 +50,29 @@ CREATE INDEX idx_document_chunks_content_tsv ON document_chunks USING GIN (conte
 ## 6. What remains to reach Run 2
 
 A0 baseline + B/C arms in the Java lane (Maven + Docker present), per `RETRIEVAL_BENCHMARK_HARNESS_SPEC.md` §7; then the §8 thresholds produce the first promotion verdict (expected candidate: hybrid lexical + semantic).
+
+
+## 7. Execution addendum — 2026-09-17 (late)
+
+- **T-C14 IMPLEMENTED** in syllabai-core `99be333` (LOCAL VERIFIED at the unit level; Docker-ITs
+  on the CI route): the §3 contract landed as the `com.syllabai.retrieval` package (port + query/
+  candidate records + `LearnerSignals`/`EvidenceRequirements` + `Bm25Retriever` +
+  `PgVectorRetrievalProvider`/`AuthoritativeKgRetrievalProvider` adapters +
+  `GeminiFileSearchRetriever` stub behind `available()=false`, not a bean) and
+  `ChunkLexicalRepository` owns the native SQL. 27 new unit tests; full suite 631/631 (1 Docker
+  skip); `ChunkLexicalSearchIT` carries the §3 test list (ranking sanity, empty query, curriculum
+  negative control) on the CI lane.
+- **Migration renumbered:** the §3 draft V27 is **V28** (`V28__content_lexical_search.sql`) — V27
+  was taken by the revision-notes lane. Consequence: the §4 T-C06 draft number V28 is also
+  consumed; T-C06's enum migration lands as **V29+**.
+- **Recorded deviation from the sketch §2:** `StructuredRetrievalQuery` carries the resolved
+  `CurriculumScope` (the T-C07 canonical scope carrier, which also holds the KG intent surface the
+  authoritative-KG adapter needs) instead of the sketch's bare `curriculumVersionId: UUID`;
+  `curriculumVersionId()` remains a derived accessor. The fail-closed invariant is unchanged
+  (a null-scope query is unconstructible).
+- **Serving untouched:** BM25 is wired into the benchmark surface only; adding it to the served
+  fusion is the T-C13 verdict's decision.
+- **Ruling-3 worksheet generated** (`evidence/bench-001/governance/`): 51/120 sampled (classes
+  4/5/6 at 100%, others ceil(20%)), seed `20c2bbbde6f59f8a` derived from the gold manifest
+  sha256 — generator `bench/gold_spotcheck.py`, determinism byte-identical across regenerate
+  cycles.

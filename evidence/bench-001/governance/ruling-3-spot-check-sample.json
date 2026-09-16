@@ -1,0 +1,141 @@
+{
+ "purpose": "T-C13 spec \u00a710 ruling 3 \u2014 owner spot-check of auto-derived gold-v1 labels",
+ "method": {
+  "sampling": "classes 4/5/6 (prerequisite, misconception, why_wrong) 100%; every other class ceil(0.2 * n), minimum 1",
+  "selection": "ids sorted ascending, ranked by sha256(seed + ':' + id) ascending, first k",
+  "seed": "20c2bbbde6f59f8a",
+  "seed_derivation": "sha256(bench/gold/manifest.json)[:16]",
+  "reproduce": "python3 bench/gold_spotcheck.py"
+ },
+ "basis": {
+  "gold_version": "gold-v1",
+  "manifest_sha256": "20c2bbbde6f59f8ae867782a19eea7a7e8a68a191f1e38da0c042d4160d172d1",
+  "snapshot": "evidence/bench-001/snapshot (snap-001)"
+ },
+ "total_sampled": 51,
+ "per_class": {
+  "factual": {
+   "sampled": 3,
+   "total": 15,
+   "query_ids": [
+    "g1-003",
+    "g1-014",
+    "g1-015"
+   ]
+  },
+  "conceptual": {
+   "sampled": 3,
+   "total": 15,
+   "query_ids": [
+    "g1-019",
+    "g1-027",
+    "g1-029"
+   ]
+  },
+  "calculation": {
+   "sampled": 2,
+   "total": 10,
+   "query_ids": [
+    "g1-036",
+    "g1-039"
+   ]
+  },
+  "prerequisite": {
+   "sampled": 12,
+   "total": 12,
+   "query_ids": [
+    "g1-041",
+    "g1-042",
+    "g1-043",
+    "g1-044",
+    "g1-045",
+    "g1-046",
+    "g1-047",
+    "g1-048",
+    "g1-049",
+    "g1-050",
+    "g1-051",
+    "g1-052"
+   ]
+  },
+  "misconception": {
+   "sampled": 10,
+   "total": 10,
+   "query_ids": [
+    "g1-053",
+    "g1-054",
+    "g1-055",
+    "g1-056",
+    "g1-057",
+    "g1-058",
+    "g1-059",
+    "g1-060",
+    "g1-061",
+    "g1-062"
+   ]
+  },
+  "why_wrong": {
+   "sampled": 10,
+   "total": 10,
+   "query_ids": [
+    "g1-063",
+    "g1-064",
+    "g1-065",
+    "g1-066",
+    "g1-067",
+    "g1-068",
+    "g1-069",
+    "g1-070",
+    "g1-071",
+    "g1-072"
+   ]
+  },
+  "exam_question": {
+   "sampled": 2,
+   "total": 10,
+   "query_ids": [
+    "g1-074",
+    "g1-075"
+   ]
+  },
+  "mark_scheme": {
+   "sampled": 2,
+   "total": 8,
+   "query_ids": [
+    "g1-086",
+    "g1-089"
+   ]
+  },
+  "revision_note": {
+   "sampled": 2,
+   "total": 10,
+   "query_ids": [
+    "g1-091",
+    "g1-093"
+   ]
+  },
+  "vague_learner": {
+   "sampled": 2,
+   "total": 8,
+   "query_ids": [
+    "g1-101",
+    "g1-104"
+   ]
+  },
+  "multi_spec_point": {
+   "sampled": 2,
+   "total": 7,
+   "query_ids": [
+    "g1-109",
+    "g1-113"
+   ]
+  },
+  "diagram_dependent": {
+   "sampled": 1,
+   "total": 5,
+   "query_ids": [
+    "g1-116"
+   ]
+  }
+ }
+}
