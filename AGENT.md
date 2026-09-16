@@ -253,3 +253,50 @@ This is a normal definition-of-done step, not a human approval gate. Routine cod
 ## Handoff invariant
 
 A future agent should be able to understand accepted architecture and binding implementation rules from repository artifacts without access to a previous chat. Conversation context may accelerate work, but it must never be the sole storage location for durable project knowledge.
+---
+
+# Think in Code / context discipline
+
+**The agent is a programmer, not a data processor.** Every raw byte a tool returns enters the conversation and is carried through every later turn, accelerating context exhaustion and degrading reasoning quality. Program the analysis; surface only the derived result.
+
+## Core principle
+
+```text
+Raw data (files, PDFs, JSON/YAML, logs, API responses, manifests)
+        ↓
+script / one-liner executed in the workspace
+        ↓
+only the derived answer enters the conversation
+```
+
+If a script can process the bytes, the bytes do not belong in the context window.
+
+## Binding rules
+
+1. **Extract, don't dump.** To inspect structured data (JSON/YAML/XML, API responses, manifests, DB rows), run a filter (`jq`, `python -c`, `grep -o`, a column-limited `SELECT`) and print only the fields the task needs. Never cat or print a whole large file or endpoint body into the conversation.
+2. **Count, don't enumerate.** "How many / which files / what changed" questions are answered by a script that returns the number or the short list, not by reading every candidate file.
+3. **One script replaces N tool calls.** Batch related inspection into a single script run and print a compact report. Ten reads across files to derive one cross-file fact is an anti-pattern.
+4. **Persist bulky evidence as files; cite the path.** When raw output may be needed again (test logs, long diffs, crawl/fetch results), write it to a file (scratch/artifact location or worklog directory) and reference the path. The conversation carries the summary, not the payload.
+5. **Filter process output.** Pipe builds, tests and logs through summary modes and filters (`mvn -q`, `git log --oneline`, `tail`, `grep`, exit codes). Open full logs only when diagnosing a specific failure, then grep to the failing section.
+6. **Fetch selectively.** Web/API fetches request only what the task needs (ranges, field selection, post-processing before the result is shown).
+
+## When reading raw content is correct
+
+- The file is about to be **edited** — editing requires the exact current bytes.
+- The output is short, fixed and state-checking (`git status`, a small config, a one-line probe).
+- The task is genuinely to read and judge a whole artifact (a review), and its size is proportionate to the task.
+
+Everything else defaults to the script.
+
+## Forbidden anti-patterns
+
+- Reading many files into the conversation to compute something countable or greppable.
+- Printing full JSON/YAML blobs or extracted PDF text "to take a look".
+- Re-fetching the same large response across turns instead of caching it to a file once.
+- Pasting full command output into commit messages, PR descriptions or reports where a one-line result suffices.
+
+## Relation to existing rules
+
+- This section governs **context efficiency**, not project knowledge. Durability decisions still follow `KNOWLEDGE_DURABILITY_POLICY.md` and `PROJECT_KNOWLEDGE_MAP.md`; efficiency never justifies skipping a durability update.
+- Provenance is not an excuse to flood context: manifest/hash verification (e.g. `syllabai-pastpapers`) is performed by scripts that print verdicts; raw manifests stay in-repo.
+- Tokens are a budget like Actions minutes and free-tier quotas. Spend them deliberately.
