@@ -119,3 +119,30 @@ PILOT READY decision is made on the record — not before.
 - Do not pre-author the marks manifest (I5) or adjust the protocol after
   seeing data (P.6 amendment procedure instead).
 - Do not probe private Actions before 2026-09-27T06:00Z (zero-noise rule).
+
+---
+
+## Addendum (2026-09-17, CI-recovery lane) — the tree is PREPARED for the window
+
+- **core main = `ef69d8d`** carries the fix for the six first-execution IT fixture
+  defects (test-only) + `workflow_dispatch` on `ci.yml` (build job unchanged) +
+  the E2 §14 persistence/query-cost artifact. Pushed with `[skip ci]` — zero
+  minutes consumed; no run exists for `ef69d8d` yet.
+- **The ONE authoritative run when minutes are available** (replaces the
+  sentinel's old-SHA rerun for core, whose latest non-green run predates the
+  fix):
+  ```bash
+  gh api -X POST repos/SyllabAI/syllabai-core/actions/workflows/ci.yml/dispatches -f ref=main
+  ```
+- **Honest expectation for that run:** unit 582 green (already proven locally on
+  JDK 25 and in CI on `78c8afc`); the six fixture REDs are gone. TWO residual
+  lane-owned REDs may still fail the run: `RevisionNoteFlowIT`
+  (`revision_note_asset.bytes` bytea/bigint binding — revision-notes lane) and
+  `EvidenceStateConcurrencyIT.sameAnswerConcurrentMarks…` (their DB-backed
+  harness demonstrating the 630b269 double-emission gap: evidence=2, expected 1,
+  6/6 rounds — a REAL product defect their lane is addressing). A RED on those
+  two is NOT a fixture regression; do not re-classify the six fixed defects.
+- Empirical quota note: real (non-zero-step) CI builds executed 2026-09-16
+  18:27–18:49Z (`35135082818`, `35136279108`, `35136630860` — all failure /
+  failure / failure), so the "2026-09-27 window" premise is soft; the
+  operator's standing directive (minutes exhausted) governs dispatch timing.
