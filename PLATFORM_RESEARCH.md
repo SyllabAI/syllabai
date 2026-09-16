@@ -77,11 +77,11 @@ Pilot budget check: 50 students × ~20 tutor queries/day ≈ 1,000 requests/day 
 
 The chain ORDER (ADR-009: Groq → Gemini → OpenRouter) is stable and accepted; the model IDENTIFIERS have drifted with provider catalog churn. States are recorded separately — do not claim deployed runtime state from YAML alone.
 
-| Provider | DOCUMENTED (this dossier, 2026-09-02) | CONFIGURED (syllabai-core `application.yml` @ 8e1d27b) | DEPLOYED (Render runtime) | VERIFIED LIVE |
+| Provider | DOCUMENTED (this dossier, 2026-09-02) | CONFIGURED (syllabai-core `application.yml` @ 8e1d27b; re-verified byte-identical at 7eb621a, 2026-09-17 close-out — empty diff on the LLM section) | DEPLOYED (Render runtime) | VERIFIED LIVE |
 |---|---|---|---|---|
-| Groq | `llama-3.3-70b-versatile` (retired for this key's account — catalog probe 2026-09-14) | `${SYLLABAI_GROQ_MODEL:openai/gpt-oss-120b}` (env-bridged) | Unknown from repository evidence — Render may set `SYLLABAI_GROQ_MODEL` | Not re-verified in the authoring environment (no credentials) |
-| Gemini | `2.5 Flash` (no longer available to accounts created after its retirement window — YAML finding 2026-09-14) | `gemini-3.6-flash` (hard-coded) | Presumed = CONFIGURED (no env bridge defined); unverified | Not re-verified |
-| OpenRouter | "free models" (`llama-3.3-70b-instruct:free` retired; free inventory rotated) | `nvidia/nemotron-3-super-120b-a12b:free` (probe-verified 200 / 2.4 s against the production key 2026-09-14) | Presumed = CONFIGURED; unverified | 2026-09-14 probe recorded in the YAML comment — predates this register |
+| Groq | `llama-3.3-70b-versatile` (retired for this key's account — catalog probe 2026-09-14) | `${SYLLABAI_GROQ_MODEL:openai/gpt-oss-120b}` (env-bridged) | Unknown from repository evidence — Render may set `SYLLABAI_GROQ_MODEL`; **UNVERIFIED (close-out 2026-09-17: no Render access)** | Not re-verified (no credentials; close-out 2026-09-17 also credential-blocked) |
+| Gemini | `2.5 Flash` (no longer available to accounts created after its retirement window — YAML finding 2026-09-14) | `gemini-3.6-flash` (hard-coded) | Presumed = CONFIGURED (no env bridge defined); **UNVERIFIED (close-out 2026-09-17: no Render access)** | Not re-verified (credential-blocked, close-out 2026-09-17) |
+| OpenRouter | "free models" (`llama-3.3-70b-instruct:free` retired; free inventory rotated) | `nvidia/nemotron-3-super-120b-a12b:free` (probe-verified 200 / 2.4 s against the production key 2026-09-14) | Presumed = CONFIGURED; **UNVERIFIED (close-out 2026-09-17: no Render access)** | 2026-09-14 probe recorded in the YAML comment — predates this register; not re-established (credential-blocked, close-out 2026-09-17) |
 
 Re-verification rule (ADR-009): free-tier catalogs drift weekly — verify at build time and record the probe (provider, model, timestamp, result) here.
 
