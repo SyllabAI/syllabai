@@ -86,16 +86,779 @@
     },
     "parity_ok": true,
     "hint_status": 200,
-    "summ_status": 503,
-    "modes_ok": false,
+    "summ_status": 200,
+    "modes_ok": true,
     "hint_ok": true,
-    "summ_ok": false
+    "summ_ok": true
+   },
+   "4CH1-S1-b": {
+    "explain_ok": true,
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "lessonAction": {
+      "actionType": "PRACTISE_QUESTIONS",
+      "reasonCode": "INSUFFICIENT_COVERAGE",
+      "targetNodeId": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+      "targetCode": "4CH1-S1-b",
+      "targetTitle": "Elements, compounds and mixtures",
+      "reasonDetail": "No attempt evidence on 4CH1-S1-b yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+      "servableQuestionCount": 3
+     },
+     "citations": [
+      {
+       "index": 1,
+       "label": "Specification topic 4CH1-S1-b \u2014 Elements, compounds and mixtures",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+       "deepLink": "/api/v1/knowledge/nodes/92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+      },
+      {
+       "index": 2,
+       "label": "Specification topic 4CH1-1.10 \u2014 describe these experimental techniques for the separation of mixtures: \u7b80\u5355 distillation fractional distillation filtration crystallisation paper chromatography.",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "027001d9-8e58-49e9-85f6-797fac1baf28",
+       "deepLink": "/api/v1/knowledge/nodes/027001d9-8e58-49e9-85f6-797fac1baf28"
+      },
+      {
+       "index": 3,
+       "label": "Specification topic 4CH1-1.11 \u2014 understand how a chromatogram provides information about the composition of a mixture",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "2d894f21-30c1-4965-908d-58bdd6241e35",
+       "deepLink": "/api/v1/knowledge/nodes/2d894f21-30c1-4965-908d-58bdd6241e35"
+      },
+      {
+       "index": 4,
+       "label": "Specification topic 4CH1-1.12 \u2014 understand how to use the calculation of $ R_{f} $ values to identify the components of a mixture",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "563cda4c-e7f0-4f56-b3e3-66a787dd00e3",
+       "deepLink": "/api/v1/knowledge/nodes/563cda4c-e7f0-4f56-b3e3-66a787dd00e3"
+      },
+      {
+       "index": 5,
+       "label": "Specification topic 4CH1-1.13 \u2014 practical: investigate paper chromatography using inks/food colourings",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "a56da376-dd56-41fb-be44-93b58e4259be",
+       "deepLink": "/api/v1/knowledge/nodes/a56da376-dd56-41fb-be44-93b58e4259be"
+      }
+     ],
+     "answer": "Elements, compounds and mixtures are the three basic ways matter can be organised\u202f[1].\n\n* **Element** \u2013 a pure substance made of only one type of atom.\u202fFor example, iron (Fe) is an element; every particle in a piece of iron is an iron atom.  \n* **Compound** \u2013 two or more different elements chemically bonded together in fixed proportions.\u202fWater (H\u2082O) is a compound made from hydrogen and oxygen atoms that are joined by chemical bonds.  \n* **Mixture** \u2013 two or more substances that are simply combined, not chemically bonded, so each retains its own identity and can be separated again\u202f[1].  \n\nA sim"
+    },
+    "surface": {
+     "actionType": "PRACTISE_QUESTIONS",
+     "reasonCode": "TUTOR_ENGAGED"
+    },
+    "parity_ok": true,
+    "hint_status": 200,
+    "hint_ok": true,
+    "summ_status": 200,
+    "summ_ok": true,
+    "modes_ok": true
+   },
+   "4CH1-S1-c": {
+    "explain_ok": true,
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "lessonAction": {
+      "actionType": "PRACTISE_QUESTIONS",
+      "reasonCode": "INSUFFICIENT_COVERAGE",
+      "targetNodeId": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+      "targetCode": "4CH1-S1-c",
+      "targetTitle": "Atomic structure",
+      "reasonDetail": "No attempt evidence on 4CH1-S1-c yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+      "servableQuestionCount": 2
+     },
+     "citations": [
+      {
+       "index": 1,
+       "label": "Specification topic 4CH1-S1-c \u2014 Atomic structure",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+       "deepLink": "/api/v1/knowledge/nodes/c9f87f27-124f-49a8-ad29-88cf7bb76556"
+      },
+      {
+       "index": 2,
+       "label": "Specification topic 4CH1-1.14 \u2014 know what is meant by the terms atom and molecule",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "a104d190-33e1-4f24-b0b4-e80888087522",
+       "deepLink": "/api/v1/knowledge/nodes/a104d190-33e1-4f24-b0b4-e80888087522"
+      },
+      {
+       "index": 3,
+       "label": "Specification topic 4CH1-1.15 \u2014 know the structure of an atom in terms of the positions, relative masses and relative charges of sub-atomic particles",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "e4b90ed5-0c81-4b07-8f3f-f8814c094663",
+       "deepLink": "/api/v1/knowledge/nodes/e4b90ed5-0c81-4b07-8f3f-f8814c094663"
+      },
+      {
+       "index": 4,
+       "label": "Specification topic 4CH1-1.16 \u2014 know what is meant by the terms atomic number, mass number, isotopes and relative atomic mass $ A_{r} $",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "6a47169b-e54f-4087-b538-e07865af18c6",
+       "deepLink": "/api/v1/knowledge/nodes/6a47169b-e54f-4087-b538-e07865af18c6"
+      },
+      {
+       "index": 5,
+       "label": "Specification topic 4CH1-1.17 \u2014 be able to calculate the relative atomic mass of an element $ A_{r} $ from isotopic abundances",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "30f4845d-fab2-447f-b83e-790e9177bec9",
+       "deepLink": "/api/v1/knowledge/nodes/30f4845d-fab2-447f-b83e-790e9177bec9"
+      }
+     ],
+     "answer": "Atomic structure is about what an atom looks like and how we describe it.  \n\nAn **atom** is the tiny unit of an element, while a **molecule** is two or more atoms joined together\u202f[2]. Inside an atom are three kinds of sub\u2011atomic particles:  \n\n* **Protons** \u2013 positively charged, located in the centre (the nucleus) and have a relative mass of\u202f1.  \n* **Neutrons** \u2013 no charge, also in the nucleus, mass\u202f\u2248\u202f1.  \n* **Electrons** \u2013 negatively charged, orbit the nucleus and have a very small mass\u202f[3].\n\nThe **atomic number (Z)** tells how many protons an atom has; the **mass number (A)** is the total of "
+    },
+    "surface": {
+     "actionType": "PRACTISE_QUESTIONS",
+     "reasonCode": "TUTOR_ENGAGED"
+    },
+    "parity_ok": true,
+    "hint_status": 200,
+    "hint_ok": true,
+    "summ_status": 200,
+    "summ_ok": true,
+    "modes_ok": true
+   },
+   "4CH1-S1-d": {
+    "explain_ok": true,
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "lessonAction": {
+      "actionType": "PRACTISE_QUESTIONS",
+      "reasonCode": "INSUFFICIENT_COVERAGE",
+      "targetNodeId": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+      "targetCode": "4CH1-S1-d",
+      "targetTitle": "The Periodic Table",
+      "reasonDetail": "No attempt evidence on 4CH1-S1-d yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+      "servableQuestionCount": 1
+     },
+     "citations": [
+      {
+       "index": 1,
+       "label": "Specification topic 4CH1-S1-d \u2014 The Periodic Table",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+       "deepLink": "/api/v1/knowledge/nodes/5d968157-ff9c-448d-ad56-807c02e3f96b"
+      },
+      {
+       "index": 2,
+       "label": "Specification topic 4CH1-1.18 \u2014 understand how elements are arranged in the Periodic Table\uff1a \u2022in order of atomic number \u2022in groups and periods.",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "5af86f1c-3be9-4f98-88be-403cbe7cb932",
+       "deepLink": "/api/v1/knowledge/nodes/5af86f1c-3be9-4f98-88be-403cbe7cb932"
+      },
+      {
+       "index": 3,
+       "label": "Specification topic 4CH1-1.19 \u2014 understand how to deduce the electronic configurations of the first 20 elements from their positions in the Periodic Table",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "c3af5926-229c-479c-b4dd-0377f78b5c71",
+       "deepLink": "/api/v1/knowledge/nodes/c3af5926-229c-479c-b4dd-0377f78b5c71"
+      },
+      {
+       "index": 4,
+       "label": "Specification topic 4CH1-1.20 \u2014 understand how to use electrical conductivity and the acid-base character of oxides to classify elements as metals or non-metals",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "025e6120-7179-45ae-a4c0-9b9d988735ad",
+       "deepLink": "/api/v1/knowledge/nodes/025e6120-7179-45ae-a4c0-9b9d988735ad"
+      },
+      {
+       "index": 5,
+       "label": "Specification topic 4CH1-1.21 \u2014 identify an element as a metal or a non-metal according to its position in the Periodic Table",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "db113a9c-2ca9-4d0e-b2d3-53e259097deb",
+       "deepLink": "/api/v1/knowledge/nodes/db113a9c-2ca9-4d0e-b2d3-53e259097deb"
+      }
+     ],
+     "answer": "The Periodic Table is a chart that lists every known element in order of increasing atomic number \u2013 the number of protons in the nucleus\u202f[2].  \nElements are arranged in vertical columns called **groups** and horizontal rows called **periods**\u202f[2]; elements in the same group share similar properties.  \n\n**Example:** Carbon sits in period\u202f2 and group\u202f14. Because it is the sixth element in its period, we can work out its electrons: the first two fill the 1s orbital, the next two fill 2s, and the remaining two go into 2p, giving the configuration\u202f1s\u00b2\u202f2s\u00b2\u202f2p\u00b2\u202f[3].  \n\nThe table also helps us tell wh"
+    },
+    "surface": {
+     "actionType": "PRACTISE_QUESTIONS",
+     "reasonCode": "TUTOR_ENGAGED"
+    },
+    "parity_ok": true,
+    "hint_status": 200,
+    "hint_ok": true,
+    "summ_status": 200,
+    "summ_ok": true,
+    "modes_ok": true
+   },
+   "4CH1-S1-e": {
+    "explain_ok": true,
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "lessonAction": {
+      "actionType": "PRACTISE_QUESTIONS",
+      "reasonCode": "INSUFFICIENT_COVERAGE",
+      "targetNodeId": "23751488-285f-47af-8013-8c0901b842cd",
+      "targetCode": "4CH1-S1-e",
+      "targetTitle": "Chemical formulae, equations and calculations",
+      "reasonDetail": "No attempt evidence on 4CH1-S1-e yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+      "servableQuestionCount": 5
+     },
+     "citations": [
+      {
+       "index": 1,
+       "label": "Specification topic 4CH1-S1-e \u2014 Chemical formulae, equations and calculations",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "23751488-285f-47af-8013-8c0901b842cd",
+       "deepLink": "/api/v1/knowledge/nodes/23751488-285f-47af-8013-8c0901b842cd"
+      },
+      {
+       "index": 2,
+       "label": "Specification topic 4CH1-1.25 \u2014 write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided.",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "d2fd8349-37e8-46a8-ba45-fc865ad75a83",
+       "deepLink": "/api/v1/knowledge/nodes/d2fd8349-37e8-46a8-ba45-fc865ad75a83"
+      },
+      {
+       "index": 3,
+       "label": "Specification topic 4CH1-1.26 \u2014 calculate relative formula masses(including relative molecular masses) $ (M_{r}) $ from relative atomic masses $ (A_{r}) $",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "f825bdfd-a40e-4d1d-b155-4cd3fea82fff",
+       "deepLink": "/api/v1/knowledge/nodes/f825bdfd-a40e-4d1d-b155-4cd3fea82fff"
+      },
+      {
+       "index": 4,
+       "label": "Specification topic 4CH1-1.27 \u2014 know that the mole(mol) is the unit for the amount of a substance",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "9ff4bc61-7045-46ed-9731-034e794dfd85",
+       "deepLink": "/api/v1/knowledge/nodes/9ff4bc61-7045-46ed-9731-034e794dfd85"
+      },
+      {
+       "index": 5,
+       "label": "Specification topic 4CH1-1.28 \u2014 understand how to carry out calculations involving amount of substance, relative atomic mass $ (A_{r}) $ and relative formula mass $ (M_{r}) $",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "656385a4-6ca8-4378-bc13-d2c476de1085",
+       "deepLink": "/api/v1/knowledge/nodes/656385a4-6ca8-4378-bc13-d2c476de1085"
+      }
+     ],
+     "answer": "**Chemical formulae, equations and calculations** means using symbols to show what substances are made of, how they react, and how to work out quantities involved\u202f[1].\n\n1. **Write the reaction**  \n   - First write a *word equation* (e.g. \u201chydrogen gas reacts with oxygen gas to give water\u201d).  \n   - Then turn it into a *balanced chemical equation* with formulas and state symbols, making sure the number of atoms of each element is the same on both sides\u202f[2].  \n\n   *Example*:  \n   \\[\n   \\text{hydrogen (g)} + \\text{oxygen (g)} \\rightarrow \\text{water (l)}\n   \\]  \n   becomes  \n   \\[\n   2\\; \\text{H}_"
+    },
+    "surface": {
+     "actionType": "PRACTISE_QUESTIONS",
+     "reasonCode": "TUTOR_ENGAGED"
+    },
+    "parity_ok": true,
+    "hint_status": 200,
+    "hint_ok": true,
+    "summ_status": 200,
+    "summ_ok": true,
+    "modes_ok": true
+   },
+   "4CH1-S2-a": {
+    "explain_ok": true,
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "lessonAction": {
+      "actionType": "PRACTISE_QUESTIONS",
+      "reasonCode": "INSUFFICIENT_COVERAGE",
+      "targetNodeId": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+      "targetCode": "4CH1-S2-a",
+      "targetTitle": "Group 1 (alkali metals) \u2013 lithium, sodium and potassium",
+      "reasonDetail": "No attempt evidence on 4CH1-S2-a yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+      "servableQuestionCount": 0
+     },
+     "citations": [
+      {
+       "index": 1,
+       "label": "Specification topic 4CH1-S2-a \u2014 Group 1 (alkali metals) \u2013 lithium, sodium and potassium",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+       "deepLink": "/api/v1/knowledge/nodes/a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+      },
+      {
+       "index": 2,
+       "label": "Specification topic 4CH1-2.1 \u2014 understand how the similarities in the reactions of these elements with water provide evidence for their recognition as a family of elements",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "ebd7685f-e52c-4e29-a951-6df03a98026d",
+       "deepLink": "/api/v1/knowledge/nodes/ebd7685f-e52c-4e29-a951-6df03a98026d"
+      },
+      {
+       "index": 3,
+       "label": "Specification topic 4CH1-2.2 \u2014 understand how the differences between the reactions of these elements with air and water provide evidence for the trend in reactivity in Group1",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "5277aa40-b55a-41bc-802c-aed785718c32",
+       "deepLink": "/api/v1/knowledge/nodes/5277aa40-b55a-41bc-802c-aed785718c32"
+      },
+      {
+       "index": 4,
+       "label": "Specification topic 4CH1-2.3 \u2014 use knowledge of trends in Group1 to predict the properties of other alkali metals",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "75017ace-d044-4afa-97e0-4d51ef59a38f",
+       "deepLink": "/api/v1/knowledge/nodes/75017ace-d044-4afa-97e0-4d51ef59a38f"
+      },
+      {
+       "index": 5,
+       "label": "Specification topic 4CH1-2.4C \u2014 explain the trend in reactivity in Group1 in terms of electronic configurations",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "283baaa6-7f00-4d83-b8f8-43ed4cee0b78",
+       "deepLink": "/api/v1/knowledge/nodes/283baaa6-7f00-4d83-b8f8-43ed4cee0b78"
+      }
+     ],
+     "answer": "Group\u202f1 of the periodic table \u2013 the alkali metals \u2013 consists of lithium (Li), sodium (Na) and potassium (K)\u202f[1].  \nAll three react with water to give a metal hydroxide and hydrogen gas, showing a clear similarity that marks them as a family\u202f[2]. For example, when a small piece of lithium is placed in water it reacts slowly, producing a little fizz; sodium reacts more vigorously, and potassium reacts so rapidly that it can even ignite the hydrogen released\u202f[2].  \n\nWhen exposed to air, the metals form oxides, but the speed and amount of oxide formed differ, giving evidence of a reactivity trend "
+    },
+    "surface": {
+     "actionType": "PRACTISE_QUESTIONS",
+     "reasonCode": "TUTOR_ENGAGED"
+    },
+    "parity_ok": true,
+    "hint_status": 200,
+    "hint_ok": true,
+    "summ_status": 200,
+    "summ_ok": true,
+    "modes_ok": true
+   },
+   "4CH1-S3-a": {
+    "explain_ok": true,
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "lessonAction": {
+      "actionType": "PRACTISE_QUESTIONS",
+      "reasonCode": "INSUFFICIENT_COVERAGE",
+      "targetNodeId": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+      "targetCode": "4CH1-S3-a",
+      "targetTitle": "Energetics",
+      "reasonDetail": "No attempt evidence on 4CH1-S3-a yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+      "servableQuestionCount": 1
+     },
+     "citations": [
+      {
+       "index": 1,
+       "label": "Specification topic 4CH1-S3-a \u2014 Energetics",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+       "deepLink": "/api/v1/knowledge/nodes/3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+      },
+      {
+       "index": 2,
+       "label": "Specification topic 4CH1-3.1 \u2014 know that chemical reactions in which heat energy is given out are described as exothermic, and those in which heat energy is taken in are described as endothermic",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "5bf92389-dfb0-4890-91af-4cb954fb1c33",
+       "deepLink": "/api/v1/knowledge/nodes/5bf92389-dfb0-4890-91af-4cb954fb1c33"
+      },
+      {
+       "index": 3,
+       "label": "Specification topic 4CH1-3.2 \u2014 describe simple calorimetry experiments for reactions such as combustion, displacement, dissolving and neutralisation",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "41017198-687c-4395-a080-d289367fe34b",
+       "deepLink": "/api/v1/knowledge/nodes/41017198-687c-4395-a080-d289367fe34b"
+      },
+      {
+       "index": 4,
+       "label": "Specification topic 4CH1-3.3 \u2014 calculate the heat energy change from a measured temperature change using the expression $ Q=mc\\Delta T $",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "6a61d88f-b8a6-40f1-8ac4-abf99eb5f84a",
+       "deepLink": "/api/v1/knowledge/nodes/6a61d88f-b8a6-40f1-8ac4-abf99eb5f84a"
+      },
+      {
+       "index": 5,
+       "label": "Specification topic 4CH1-3.4 \u2014 calculate the molar enthalpy change ($\\Delta H$) from the heat energy change, $ Q $",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "cc2a7a08-1c0c-428d-b103-d8d2d08687a4",
+       "deepLink": "/api/v1/knowledge/nodes/cc2a7a08-1c0c-428d-b103-d8d2d08687a4"
+      }
+     ],
+     "answer": "Energetics is the part of chemistry that looks at how much heat is released or absorbed when a reaction happens\u202f[1].  \nIf a reaction gives off heat to the surroundings it is called **exothermic**; if it takes heat in, it is **endothermic**\u202f[2].  \n\nA simple way to see this is a calorimetry experiment, where a reaction takes place in water and the temperature change is measured\u202f[3].  \n\nThe heat change \\(Q\\) is found from the temperature rise (or fall) using  \n\n\\[\nQ = m c \\Delta T\n\\]\n\nwhere \\(m\\) is the mass of water, \\(c\\) its specific heat capacity, and \\(\\Delta T\\) the temperature change\u202f[4]. "
+    },
+    "surface": {
+     "actionType": "PRACTISE_QUESTIONS",
+     "reasonCode": "TUTOR_ENGAGED"
+    },
+    "parity_ok": true,
+    "hint_status": 200,
+    "hint_ok": true,
+    "summ_status": 200,
+    "summ_ok": true,
+    "modes_ok": true
+   },
+   "4CH1-S4-a": {
+    "explain_ok": true,
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "lessonAction": {
+      "actionType": "PRACTISE_QUESTIONS",
+      "reasonCode": "TUTOR_ENGAGED",
+      "targetNodeId": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+      "targetCode": "4CH1-S4-a",
+      "targetTitle": "Introduction",
+      "reasonDetail": "You asked the Tutor 2 time(s) about 4CH1-S4-a but have no attempt evidence yet \u2014 convert the curiosity into practice",
+      "servableQuestionCount": 1
+     },
+     "citations": [
+      {
+       "index": 1,
+       "label": "Specification topic 4CH1-S4-a \u2014 Introduction",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+       "deepLink": "/api/v1/knowledge/nodes/40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+      },
+      {
+       "index": 2,
+       "label": "Specification topic 4CH1-4.1 \u2014 know that a hydrocarbon is a compound of hydrogen and carbon only",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "bc8e064a-696f-43f6-b855-8e78e4dd8f4c",
+       "deepLink": "/api/v1/knowledge/nodes/bc8e064a-696f-43f6-b855-8e78e4dd8f4c"
+      },
+      {
+       "index": 3,
+       "label": "Specification topic 4CH1-4.2 \u2014 understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "ed22403d-f239-464a-be52-9c64d4ee96ed",
+       "deepLink": "/api/v1/knowledge/nodes/ed22403d-f239-464a-be52-9c64d4ee96ed"
+      },
+      {
+       "index": 4,
+       "label": "Specification topic 4CH1-4.3 \u2014 know what is meant by the terms homologous series, functional group and isomerism",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "0f47b6d0-4a51-4917-9f6f-22796cf4b8cd",
+       "deepLink": "/api/v1/knowledge/nodes/0f47b6d0-4a51-4917-9f6f-22796cf4b8cd"
+      },
+      {
+       "index": 5,
+       "label": "Specification topic 4CH1-4.4 \u2014 understand how to name compounds relevant to this specification using the rules of International Union of Pure and Applied Chemistry (IUPAC) nomenclature students will be expected to name compounds co",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "e5174b19-4583-419b-bd6f-c9f23ba51fde",
+       "deepLink": "/api/v1/knowledge/nodes/e5174b19-4583-419b-bd6f-c9f23ba51fde"
+      }
+     ],
+     "answer": "The \u201cIntroduction\u201d to organic chemistry tells you what the subject is about and why it matters.\u202fIt starts by defining the simplest organic substances \u2013 **hydrocarbons**, which are molecules made only of carbon and hydrogen atoms\u202f[2].  \n\nTo work with these molecules you need to be able to write them in different ways: the **empirical formula** (simplest whole\u2011number ratio), the **molecular formula** (actual number of atoms), the **general formula** for a whole series, and the **structural or displayed formula** that shows how the atoms are linked\u202f[3].  \n\nOrganic compounds are grouped into **hom"
+    },
+    "surface": {
+     "actionType": "PRACTISE_QUESTIONS",
+     "reasonCode": "INSUFFICIENT_COVERAGE"
+    },
+    "parity_ok": true,
+    "hint_status": 200,
+    "hint_ok": true,
+    "summ_status": 200,
+    "summ_ok": true,
+    "modes_ok": true
    }
   },
-  "sh_tail": {}
+  "sh_tail": {
+   "grounded precision 100% over the lesson corpus": [
+    true,
+    "topics=8/8"
+   ],
+   "unknown topic fail-closed 404": [
+    true,
+    "status=404 want=404"
+   ],
+   "missing topicNodeId fail-closed 400": [
+    true,
+    "status=400 want=400"
+   ],
+   "unknown mode fail-closed 400": [
+    true,
+    "status=400 want=400"
+   ],
+   "blank question fail-closed 400": [
+    true,
+    "status=400 want=400"
+   ],
+   "foreign-subject topic fail-closed 404 (real foreign topic)": [
+    true,
+    "status=404 want=404"
+   ],
+   "out-of-domain probe declines honestly (no fabricated markers)": [
+    true,
+    "status=200 refused=False unres=[]"
+   ],
+   "learner evidence: signalCounts include the SMART_LESSON ask": [
+    true,
+    "engagements=8"
+   ],
+   "learner evidence: zero canonical skill rows from chat": [
+    true,
+    "skills=0"
+   ]
+  }
  },
  "lineage": {
   "slice": "SMART_LESSON",
   "expect_core": "50dfa59"
+ },
+ "checks": [
+  [
+   "S-H",
+   "4CH1-S1-a lesson EXPLAIN grounded, anchored, ladder-valid",
+   true,
+   "ev=5 cits=5 action=PRACTISE_QUESTIONS/INSUFFICIENT_COVERAGE"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-a substrate parity with the Smart Lesson surface",
+   true,
+   "surface=PRACTISE_QUESTIONS/TUTOR_ENGAGED cla=PRACTISE_QUESTIONS"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-a HINT + SUMMARIZE modes correct on the lesson",
+   true,
+   "HINT=200 SUMMARIZE=200"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-b lesson EXPLAIN grounded, anchored, ladder-valid",
+   true,
+   "ev=5 cits=5 action=PRACTISE_QUESTIONS/INSUFFICIENT_COVERAGE"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-b substrate parity with the Smart Lesson surface",
+   true,
+   "surface=PRACTISE_QUESTIONS/TUTOR_ENGAGED cla=PRACTISE_QUESTIONS"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-b HINT + SUMMARIZE modes correct on the lesson",
+   true,
+   "HINT=200 SUMMARIZE=200"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-c lesson EXPLAIN grounded, anchored, ladder-valid",
+   true,
+   "ev=5 cits=5 action=PRACTISE_QUESTIONS/INSUFFICIENT_COVERAGE"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-c substrate parity with the Smart Lesson surface",
+   true,
+   "surface=PRACTISE_QUESTIONS/TUTOR_ENGAGED cla=PRACTISE_QUESTIONS"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-c HINT + SUMMARIZE modes correct on the lesson",
+   true,
+   "HINT=200 SUMMARIZE=200"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-d lesson EXPLAIN grounded, anchored, ladder-valid",
+   true,
+   "ev=5 cits=5 action=PRACTISE_QUESTIONS/INSUFFICIENT_COVERAGE"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-d substrate parity with the Smart Lesson surface",
+   true,
+   "surface=PRACTISE_QUESTIONS/TUTOR_ENGAGED cla=PRACTISE_QUESTIONS"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-d HINT + SUMMARIZE modes correct on the lesson",
+   true,
+   "HINT=200 SUMMARIZE=200"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-e lesson EXPLAIN grounded, anchored, ladder-valid",
+   true,
+   "ev=5 cits=5 action=PRACTISE_QUESTIONS/INSUFFICIENT_COVERAGE"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-e substrate parity with the Smart Lesson surface",
+   true,
+   "surface=PRACTISE_QUESTIONS/TUTOR_ENGAGED cla=PRACTISE_QUESTIONS"
+  ],
+  [
+   "S-H",
+   "4CH1-S1-e HINT + SUMMARIZE modes correct on the lesson",
+   true,
+   "HINT=200 SUMMARIZE=200"
+  ],
+  [
+   "S-H",
+   "4CH1-S2-a lesson EXPLAIN grounded, anchored, ladder-valid",
+   true,
+   "ev=5 cits=5 action=PRACTISE_QUESTIONS/INSUFFICIENT_COVERAGE"
+  ],
+  [
+   "S-H",
+   "4CH1-S2-a substrate parity with the Smart Lesson surface",
+   true,
+   "surface=PRACTISE_QUESTIONS/TUTOR_ENGAGED cla=PRACTISE_QUESTIONS"
+  ],
+  [
+   "S-H",
+   "4CH1-S2-a HINT + SUMMARIZE modes correct on the lesson",
+   true,
+   "HINT=200 SUMMARIZE=200"
+  ],
+  [
+   "S-H",
+   "4CH1-S3-a lesson EXPLAIN grounded, anchored, ladder-valid",
+   true,
+   "ev=5 cits=5 action=PRACTISE_QUESTIONS/INSUFFICIENT_COVERAGE"
+  ],
+  [
+   "S-H",
+   "4CH1-S3-a substrate parity with the Smart Lesson surface",
+   true,
+   "surface=PRACTISE_QUESTIONS/TUTOR_ENGAGED cla=PRACTISE_QUESTIONS"
+  ],
+  [
+   "S-H",
+   "4CH1-S3-a HINT + SUMMARIZE modes correct on the lesson",
+   true,
+   "HINT=200 SUMMARIZE=200"
+  ],
+  [
+   "S-H",
+   "4CH1-S4-a lesson EXPLAIN grounded, anchored, ladder-valid",
+   true,
+   "ev=5 cits=5 action=PRACTISE_QUESTIONS/TUTOR_ENGAGED"
+  ],
+  [
+   "S-H",
+   "4CH1-S4-a substrate parity with the Smart Lesson surface",
+   true,
+   "surface=PRACTISE_QUESTIONS/INSUFFICIENT_COVERAGE cla=PRACTISE_QUESTIONS"
+  ],
+  [
+   "S-H",
+   "4CH1-S4-a HINT + SUMMARIZE modes correct on the lesson",
+   true,
+   "HINT=200 SUMMARIZE=200"
+  ],
+  [
+   "S-H",
+   "grounded precision 100% over the lesson corpus",
+   true,
+   "topics=8/8"
+  ],
+  [
+   "S-H",
+   "unknown topic fail-closed 404",
+   true,
+   "status=404 want=404"
+  ],
+  [
+   "S-H",
+   "missing topicNodeId fail-closed 400",
+   true,
+   "status=400 want=400"
+  ],
+  [
+   "S-H",
+   "unknown mode fail-closed 400",
+   true,
+   "status=400 want=400"
+  ],
+  [
+   "S-H",
+   "blank question fail-closed 400",
+   true,
+   "status=400 want=400"
+  ],
+  [
+   "S-H",
+   "foreign-subject topic fail-closed 404 (real foreign topic)",
+   true,
+   "status=404 want=404"
+  ],
+  [
+   "S-H",
+   "out-of-domain probe declines honestly (no fabricated markers)",
+   true,
+   "status=200 refused=False unres=[]"
+  ],
+  [
+   "S-H",
+   "learner evidence: signalCounts include the SMART_LESSON ask",
+   true,
+   "engagements=8"
+  ],
+  [
+   "S-H",
+   "learner evidence: zero canonical skill rows from chat",
+   true,
+   "skills=0"
+  ]
+ ],
+ "provider_limited": false,
+ "verdict": {
+  "set": "S-H",
+  "total": 33,
+  "passed": 33,
+  "complete_corpus_and_tail": true,
+  "green": true
  }
 }
