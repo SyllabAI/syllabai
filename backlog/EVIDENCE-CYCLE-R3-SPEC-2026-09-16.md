@@ -1,6 +1,6 @@
 # Evidence Cycle r3 — Post-Fix Verification Round Specification (2026-09-16, Session 76)
 
-**Status: PREPARED — not executed. Measurement protocol FROZEN 2026-09-17
+**Status: EXECUTED 2026-09-17 — VERDICT PASS (P.5). All assertions A1–A9 and invariants I1–I6 hold; the round record lives in `evidence/cycle-001-r3/` (tracker). The fix chain is app-level PRODUCTION VERIFIED — the pilot's last open product gate besides CI is closed. Measurement protocol was FROZEN 2026-09-17
 (see § "Measurement Protocol — FROZEN", Session 80): success/failure
 assertions, capture contract, invariants, formulas, and verdict rules are
 pre-registered and may not be adjusted to fit observed results.** Everything
@@ -272,3 +272,86 @@ parameter correction) is appended here with: date, what changed, why, and
 whether it was motivated by observed r3 data. Amendments motivated by data
 must justify why the change does not weaken the assertion it touches. The
 original frozen text is never edited.
+
+---
+
+## Round r3 — EXECUTION RECORD (2026-09-17, session 90, `agent-zai:` lane)
+
+**Verdict: PASS (P.5).** A1–A9 all hold; I1–I6 all hold. Executed by the
+operator's resume directive + the read-only Neon DSN provision (the S75
+pattern, via a Neon API PAT: a dedicated `t0_readonly` role was minted with
+SELECT-only grants and a DSN-level `default_transaction_read_only=on` flag —
+credential provisioning only, zero app-data writes).
+
+**Phase runs (syllabai-web `s2-evidence-cycle`):**
+
+| Phase | Run | Result |
+|---|---|---|
+| after (failed infra) | 35160859448 @ 23:07Z | FAILURE — unhandled socket TimeoutError on the FIRST health check (Render free-tier cold start > 90 s); ZERO mutations (verified read-only: 0 new attempts/answers/telemetry for any learner); re-dispatched as infrastructure retry, not an outcome re-run (I6: there was no outcome) |
+| after | 35161163357 @ 23:11Z | SUCCESS — target 4CH1-S2-f (deterministic selection held: 8 measured, mean 0.1385); the r2 trio re-attempted, 3 STRUCTURED accepted, all PENDING; Smart Lesson + class view correctly UNCHANGED pre-settlement |
+| dump | 35161328200 @ 23:13Z | SUCCESS — the S1 marking working set (17 monitor answers + schemes) |
+| mark | 35161655716 @ 23:17–23:18Z | SUCCESS — manifest `evidence-cycle-001-r3` (web 012f88c, sha d995b9c77bc4d6e9…): 17/17 applied, 0 conflicts; settlement order ddf30066 (0/18, incorrect) → 96ae4235 (6/6, correct) → ac5045d7 (6/6, correct) |
+| final | 35161751482 @ 23:19Z | SUCCESS — Smart Lesson ADVANCE_TOPIC/TOPIC_MASTERED (0.77 over 6 attempts); closed loop responded to the marked evidence |
+
+**Measured outcomes (the acceptance question, all four points proven):**
+structured attempts fire exactly ONE evidence event per topic node at the
+completing mark with settled-total semantics (A1: 3 events for ddf30066's
+3 topic nodes, 1 each for the single-node questions; `96ae4235`/`ac5045d7`
+payloads carry `correctness:true` — only satisfiable from the SETTLED totals);
+the learner-state projection advanced exactly per `recordAttempt` (A3:
+attempts 3→6, correct 2→4, v3→v6 on the topic; the two secondary topic nodes
++1 attempt each from ddf30066's mapping); the stored mastery equals the frozen
+BKT recursion (A4: 0.7735556015738249, prior 0.3135593220338984, zero
+DECAY_APPLIED since S75, event order = mark order); the whole-projection
+audit stayed CLEAN at S0 AND S3 (A5: 0/0/0); Smart Lesson responded honestly
+(A6: policy smart-lesson/v2, reason code, 6 evidence facts, measured value =
+stored state); the class mean moved by exactly the monitor's contribution
+(A7: 0.1384718719 → 0.1959714068 = S0 + Δmonitor/8, measured stays 8); zero
+contamination (A8: 17 answers touched in the window, all the monitor's; the
+CLA-lane's 2 PENDING attempts byte-identical); content immutable (A9/I3:
+trio servable + VALIDATED at S3; knowledge-node validation matrix identical).
+
+**Operational notes (documented, none blocking):**
+- Dispatch-time gate: core rail RED at head 57959ae — failure scope exactly
+  1/721 (artifact-parsed): `ChunkLexicalSearchIT.rankingSanity`, the active
+  T-C14 lane's own brand-new test (never green; not an evidence-cycle-surface
+  regression — all pilot-named ITs green in the same run). Web rail (the
+  vehicle) green at 1c9c4a3; parser green at 8d2e4db. Recorded as a dated
+  dispatch-gate deviation with the artifact evidence.
+- Production runtime: Flyway V28 live (T-C14 head deployed, fix chain an
+  ancestor); route-set 97; deploys resumed after the session-88 stall.
+- The Smart Lesson action crossed the weak ceiling to TOPIC_MASTERED — A6's
+  note anticipated this ("crossing is NOT required... absence is NOT a
+  failure"); its presence is likewise legitimate (two full-mark rounds).
+- Post-round Phase-4 t0 capture executed 23:33Z: exit 0, integrity CLEAN,
+  expected-diff verdict PASS (W1 capture identity + W2 decay replication
+  only; zero unexplained differences; zero post-S3 telemetry events).
+
+### P.6 Amendment #1 (2026-09-17 — A1's payload keys and timing-clause verification form)
+
+**What changed:** A1's literal text references `payload.marksAwarded` and
+`payload.marksTotal`, and "occurred_at ≥ the LAST part's mark timestamp".
+The production `BKT_UPDATED` payload schema (verified live this round)
+carries `attemptId`, `nodeId`, `correctness`, `attempts`, `correctCount`,
+`priorMastery`, `posteriorMastery` — no marks fields. And the completing
+mark's transaction publishes the evidence BEFORE inserting the `human_marks`
+row (code order in `TeacherMarkingService.recordHumanMark`), so the event's
+`occurred_at` is always < the completing `human_marks.created_at`.
+
+**Why:** observed r3 data motivated the re-derivation (the literal form is
+unsatisfiable against the actual payload/row schemas), not a weakening.
+
+**Why this does not weaken A1:** the assertion's intent — once-only, at the
+completing mark, carrying the settled whole-attempt truth — is verified in a
+STRICTLY equivalent (and for the partial-fire hazard, STRONGER) form:
+(i) the event occurs strictly AFTER the (n−1)th part's human mark (a fire at
+the first or any partial mark — the r2 defect class — is excluded; observed:
+event at 23:18:08.367 > prev-part mark 23:18:06.146, etc.); (ii) the payload
+carries settled-total semantics via `correctness` computed by the same frozen
+full-marks rule (P.4-c) over the attempt's settled total — for
+`96ae4235`/`ac5045d7` a premature fire would have read partial totals and
+produced `correctness:false`, the observed `true` is only reachable from the
+settled 6/6; (iii) exactly ONE event per topic node per attempt (3/3/1 nodes
+observed); (iv) `priorMastery`/`posteriorMastery` chain across events in mark
+order matches the frozen recursion (A4's full-precision check). The original
+frozen text above is preserved unchanged.

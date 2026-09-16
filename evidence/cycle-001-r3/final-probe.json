@@ -1,0 +1,229 @@
+{
+ "capturedAt": "2026-09-16T23:19:08Z",
+ "drillDown": {
+  "affectedLearners": [
+   {
+    "displayName": "P1 Reconcile Probe",
+    "mastery": 0.1154,
+    "reason": "LOW_MASTERY"
+   }
+  ],
+  "evidenceCount": 20,
+  "representativeEvidence": [
+   {
+    "correct": false,
+    "learner": "Pilot Monitor (automated)",
+    "marks": 0,
+    "of": 18,
+    "questionRef": "q04-0ebc841c",
+    "state": "HUMAN_MARKED"
+   },
+   {
+    "correct": true,
+    "learner": "Pilot Monitor (automated)",
+    "marks": 6,
+    "of": 6,
+    "questionRef": "q03-b7849fb8",
+    "state": "HUMAN_MARKED"
+   },
+   {
+    "correct": true,
+    "learner": "Pilot Monitor (automated)",
+    "marks": 6,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "HUMAN_MARKED"
+   },
+   {
+    "correct": false,
+    "learner": "Nawaf Al Hussain",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   },
+   {
+    "correct": false,
+    "learner": "CLA Part Live",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   },
+   {
+    "correct": false,
+    "learner": "Inspect Part",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   },
+   {
+    "correct": false,
+    "learner": "CLA Part Live",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   },
+   {
+    "correct": false,
+    "learner": "CLA Part Live",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   },
+   {
+    "correct": false,
+    "learner": "Probe 500",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   },
+   {
+    "correct": false,
+    "learner": "CLA Part Live",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   },
+   {
+    "correct": false,
+    "learner": "CLA Part Live",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   },
+   {
+    "correct": false,
+    "learner": "CLA Part Live",
+    "marks": null,
+    "of": 6,
+    "questionRef": "q01-b7849fb8",
+    "state": "PENDING"
+   }
+  ],
+  "topic": {
+   "code": "4CH1-S2-f",
+   "learnersMeasured": 8,
+   "meanMastery": 0.196
+  }
+ },
+ "smartLesson": {
+  "action": {
+   "actionType": "ADVANCE_TOPIC",
+   "questionId": "9ce4a458-73e1-4e77-aad3-f80806f9a20e",
+   "reasonCode": "TOPIC_MASTERED",
+   "reasonDetail": "4CH1-S2-f is mastered (decay-adjusted mastery 0.77) \u2014 move on to 4CH1-S1-a (States of matter): not yet started",
+   "servableQuestionCount": 2,
+   "targetCode": "4CH1-S1-a",
+   "targetNodeId": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+   "targetTitle": "States of matter"
+  },
+  "asOf": "2026-09-16T23:19:12.321622703Z",
+  "evidence": [
+   {
+    "key": "topic",
+    "value": "4CH1-S2-f \u2014 Acids, alkalis and titrations"
+   },
+   {
+    "key": "attempts",
+    "value": "6"
+   },
+   {
+    "key": "mastery (raw)",
+    "value": "0.77"
+   },
+   {
+    "key": "mastery (decay-adjusted)",
+    "value": "0.77"
+   },
+   {
+    "key": "mastered 4CH1-S2-f",
+    "value": "0.77 over 6 attempts"
+   },
+   {
+    "key": "next in curriculum order",
+    "value": "4CH1-S1-a \u2014 not yet started, direct prerequisites not weak"
+   }
+  ],
+  "learnerId": "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+  "misconceptions": [],
+  "policy": "smart-lesson/v2",
+  "prerequisites": [],
+  "rootId": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+  "topicCode": "4CH1-S2-f",
+  "topicNodeId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+  "topicStatus": {
+   "attempts": 6,
+   "coverage": "ESTABLISHED",
+   "effectiveMastery": 0.7735508390000655,
+   "fluencyGap": null,
+   "mastery": 0.7735556015738249,
+   "reviewDue": false,
+   "servableQuestions": 3,
+   "strongestMisconceptionProbability": null,
+   "tutorAsks": 0
+  },
+  "topicTitle": "Acids, alkalis and titrations"
+ },
+ "targetTopicFinal": {
+  "code": "4CH1-S2-f",
+  "evidenceBackedAttempts": 17,
+  "learnersMeasured": 8,
+  "meanMastery": 0.196,
+  "reasons": [
+   "LOW_MEAN_MASTERY"
+  ]
+ },
+ "targetedAttempts": [
+  {
+   "correct": false,
+   "createdAt": null,
+   "marksAwarded": 0,
+   "marksTotal": 18,
+   "questionId": "ddf30066-4905-4376-ae76-0630c263061a"
+  },
+  {
+   "correct": true,
+   "createdAt": null,
+   "marksAwarded": 6,
+   "marksTotal": 6,
+   "questionId": "ac5045d7-4af7-4843-811b-357039a73666"
+  },
+  {
+   "correct": true,
+   "createdAt": null,
+   "marksAwarded": 6,
+   "marksTotal": 6,
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a"
+  },
+  {
+   "correct": false,
+   "createdAt": null,
+   "marksAwarded": 0,
+   "marksTotal": 18,
+   "questionId": "ddf30066-4905-4376-ae76-0630c263061a"
+  },
+  {
+   "correct": true,
+   "createdAt": null,
+   "marksAwarded": 6,
+   "marksTotal": 6,
+   "questionId": "ac5045d7-4af7-4843-811b-357039a73666"
+  },
+  {
+   "correct": true,
+   "createdAt": null,
+   "marksAwarded": 6,
+   "marksTotal": 6,
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a"
+  }
+ ],
+ "topicId": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+ "weakTopicCount": 10
+}

@@ -266,8 +266,10 @@ web main, parser `8142574`, resources `020cc92`, ops `04d7d68`.
   review of probe placeholders); r3's frozen protocol re-verifies it with
   pre-registered assertions. Deterministic question selection (weakest
   targetable topic rule — the workflow's existing order, not a new one).
-- **Verdict: GREEN** (pending r3's live confirmation, which is the
-  protocol's purpose).
+- **Verdict: GREEN — r3 CONFIRMED LIVE 2026-09-17** (round PASS per the frozen
+  P.5 rules: `evidence/cycle-001-r3/`; the deterministic selection held
+  (4CH1-S2-f, the r2 trio re-attempted), 17/17 marks applied zero conflicts,
+  A1–A9/I1–I6 all hold).
 
 ## T12 — Updated learner state (the closed loop)
 
@@ -324,6 +326,9 @@ zero product changes required by this audit.** The multi-part corruption
 class that motivated the audit is closed at four layers (atomic submission
 refusal, completing-mark evidence guard, counter-based projection audit,
 formula-anchored r3 assertions). The pilot's remaining gates are the
-external ones: CI restoration (sentinel window 2026-09-27), the live r3
-round, and the clean t0 capture — all now backed by frozen, pre-registered
-protocols rather than post-hoc analysis.
+external ones: CI restoration (sentinel window 2026-09-27). The live r3
+round PASSED 2026-09-17 (A1–A9/I1–I6 all hold, verdict record
+`evidence/cycle-001-r3/verdict.json`) and the Phase-4 t0 capture is CLEAN
+with expected-diff PASS (`evidence/cycle-001-r3/t0-phase4-*.json`) — the
+fix chain is app-level PRODUCTION VERIFIED, closing the audit's last open
+product gate.

@@ -1,0 +1,102 @@
+{
+ "classRowsS0": [
+  {
+   "learnerId": "03e36d02-758c-46a8-a65d-9cbc79464fc1",
+   "mastery": "0.11313868613138686",
+   "version": 0
+  },
+  {
+   "learnerId": "3227507c-a738-4069-be5e-548d759db56d",
+   "mastery": "0.11313868613138686",
+   "version": 0
+  },
+  {
+   "learnerId": "4d6b0ed4-13e3-4eb4-9e9e-9d7086c2635b",
+   "mastery": "0.11313868613138686",
+   "version": 0
+  },
+  {
+   "learnerId": "986118d3-4784-4357-ba2c-20b4bf13a01a",
+   "mastery": "0.11538353623841088",
+   "version": 4
+  },
+  {
+   "learnerId": "9d0878c6-9d80-4b0e-8eee-d8ddc280dcf7",
+   "mastery": "0.11313868613138686",
+   "version": 0
+  },
+  {
+   "learnerId": "a9683eb9-f83c-448c-bdec-49f054daf476",
+   "mastery": "0.11313868613138686",
+   "version": 0
+  },
+  {
+   "learnerId": "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+   "mastery": "0.3135593220338984",
+   "version": 3
+  },
+  {
+   "learnerId": "c7b58d2c-1ccd-4183-bad4-440041107b0d",
+   "mastery": "0.11313868613138686",
+   "version": 0
+  }
+ ],
+ "monitorAttemptsOnTrio": [
+  {
+   "pending": 0,
+   "questionId": "96ae4235-2210-4327-811a-3bde94575e3a",
+   "total": 1
+  },
+  {
+   "pending": 0,
+   "questionId": "ac5045d7-4af7-4843-811b-357039a73666",
+   "total": 1
+  },
+  {
+   "pending": 0,
+   "questionId": "ddf30066-4905-4376-ae76-0630c263061a",
+   "total": 1
+  }
+ ],
+ "monitorPendingAnswers": {
+  "count": 0,
+  "ids": []
+ },
+ "monitorSkillState": {
+  "attempts": 3,
+  "correctCount": 2,
+  "email": "pilot.monitor@syllabai-test.dev",
+  "lastPracticedAt": "2026-09-15T12:47:37.873285+00:00",
+  "learnerId": "b6caacb0-5cd2-47b4-a339-1bc72bf9a79d",
+  "mastery": "0.3135593220338984",
+  "updatedAt": "2026-09-15T18:00:34.677722+00:00",
+  "version": 3
+ },
+ "preconditionVerdict": "OK",
+ "r2TrioServability": [
+  {
+   "active": true,
+   "currentVersion": 1,
+   "id": "96ae4235-2210-4327-811a-3bde94575e3a",
+   "paperState": "VALIDATED",
+   "type": "STRUCTURED",
+   "versionStatus": "VALIDATED"
+  },
+  {
+   "active": true,
+   "currentVersion": 1,
+   "id": "ac5045d7-4af7-4843-811b-357039a73666",
+   "paperState": "VALIDATED",
+   "type": "STRUCTURED",
+   "versionStatus": "VALIDATED"
+  },
+  {
+   "active": true,
+   "currentVersion": 1,
+   "id": "ddf30066-4905-4376-ae76-0630c263061a",
+   "paperState": "VALIDATED",
+   "type": "STRUCTURED",
+   "versionStatus": "VALIDATED"
+  }
+ ]
+}

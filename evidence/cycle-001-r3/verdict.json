@@ -1,0 +1,170 @@
+{
+ "assertions": {
+  "A1": {
+   "detail": "[{\"attempt\": \"a85efe8a\", \"q\": \"ddf30066\", \"events\": 3, \"topicNodes\": 3, \"oncePerNode\": true, \"settledCorrectness\": true, \"afterPrevPartMark\": true, \"prevPartMark\": \"23:18:06.146\", \"firstEventAt\": \"23:18:08.367\"}, {\"attempt\": \"e69a29a6\", \"q\": \"96ae4235\", \"events\": 1, \"topicNodes\": 1, \"oncePerNode\": true, \"settledCorrectness\": true, \"afterPrevPartMark\": true, \"prevPartMark\": \"23:18:14.633\", \"firstEventAt\": \"23:18:16.463\"}, {\"attempt\": \"65bdd533\", \"q\": \"ac5045d7\", \"events\": 1, \"topicNodes\": 1, \"oncePerNode\": true, \"settledCorrectness\": true, \"afterPrevPartMark\": true, \"prevPartMark\": \"23:18:22.627\", \"firstEventAt\": \"23:18:24.446\"}]",
+   "verdict": "HOLDS"
+  },
+  "A2": {
+   "detail": "settled correctness = full-marks rule: [('65bdd533-341a-4261-b475-2410004984da', 6, 6, True), ('a85efe8a-b4e5-4b5e-b9e9-5b03ce27ce48', 0, 18, False), ('e69a29a6-1df4-4f6d-ae6a-f77bd5279834', 6, 6, True)]",
+   "verdict": "HOLDS"
+  },
+  "A3": {
+   "detail": "main 3\u21926 attempts, 2\u21924 correct, v3\u2192v6; secondary nodes 2 each +1 attempt +0 correct",
+   "verdict": "HOLDS"
+  },
+  "A4": {
+   "detail": "stored 0.7735556016 vs frozen-BKT 0.7735556015738249 (order a85efe8a\u2192e69a29a6\u219265bdd533); zero DECAY_APPLIED since 09-15",
+   "verdict": "HOLDS"
+  },
+  "A5": {
+   "detail": "S3 T0.7 integrity {'duplicateSkillStateRows': 0, 'projectionMismatches': 0, 'settledWithoutEvidence': 0, 'verdict': 'CLEAN'} (S0 CLEAN)",
+   "verdict": "HOLDS"
+  },
+  "A6": {
+   "detail": "policy=smart-lesson/v2 action=ADVANCE_TOPIC/TOPIC_MASTERED evidenceFacts=6; detail='4CH1-S2-f is mastered (decay-adjusted mastery 0.77) \u2014 move on to 4CH1-S1-a (States of matt'",
+   "verdict": "HOLDS"
+  },
+  "A7": {
+   "detail": "class mean 0.1384718719\u21920.1959714068 (expected 0.1959714069); measured stays 8",
+   "verdict": "HOLDS"
+  },
+  "A8": {
+   "detail": "answers touched in window: 17 (all monitor: 17); non-monitor touches: 0; CLA-lane 2 PENDING attempts untouched: True (d57bdd56, 6361becb)",
+   "verdict": "HOLDS"
+  },
+  "A9+I3": {
+   "detail": "trio servable+VALIDATED at S3; knowledge-node type\u00d7validation matrix identical S0\u2192S3",
+   "verdict": "HOLDS"
+  },
+  "I1": {
+   "detail": "changed rows in the 47-row matrix: 3, all monitor-owned: True",
+   "verdict": "HOLDS"
+  },
+  "I2": {
+   "detail": "2 CLA-lane PENDING attempts remain PENDING with evidence not emitted (byte-level: state+evidence flags unchanged)",
+   "verdict": "HOLDS"
+  },
+  "I4": {
+   "detail": "population identical S0\u2192S3: {'disabled_students': 0, 'enabled_students': 149}",
+   "verdict": "HOLDS"
+  },
+  "I5": {
+   "detail": "manifest authored after S1 (commit 012f88c, sha-pinned d995b9c77bc4d6e9\u2026), applied 17/17 zero conflicts",
+   "verdict": "HOLDS"
+  },
+  "I6": {
+   "detail": "no phase re-run after results existed; the one after-phase retry was pre-mutation (health-check timeout, zero-mutation verified read-only, run 35160859448 \u2192 35161163357)",
+   "verdict": "HOLDS"
+  }
+ },
+ "bktTraceTrueOrder": [
+  {
+   "attempt": "a85efe8a",
+   "correct": false,
+   "masteryAfter": 0.15166795965865015,
+   "q": "ddf30066"
+  },
+  {
+   "attempt": "e69a29a6",
+   "correct": true,
+   "masteryAfter": 0.45242864296444674,
+   "q": "96ae4235"
+  },
+  {
+   "attempt": "65bdd533",
+   "correct": true,
+   "masteryAfter": 0.7735556015738249,
+   "q": "ac5045d7"
+  }
+ ],
+ "nonBktEvents": [
+  {
+   "at": "2026-09-16T23:17:51.228963+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:17:53.333282+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:17:55.003134+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:17:57.310737+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:17:59.349870+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:01.019377+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:02.704005+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:04.519497+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:06.146395+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:08.367831+00:00",
+   "type": "ATTEMPT_SUBMITTED"
+  },
+  {
+   "at": "2026-09-16T23:18:10.875377+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:12.806832+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:14.634200+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:16.463110+00:00",
+   "type": "ATTEMPT_SUBMITTED"
+  },
+  {
+   "at": "2026-09-16T23:18:17.354308+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:19.256760+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:20.995867+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:22.628200+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  },
+  {
+   "at": "2026-09-16T23:18:24.446735+00:00",
+   "type": "ATTEMPT_SUBMITTED"
+  },
+  {
+   "at": "2026-09-16T23:18:25.331079+00:00",
+   "type": "HUMAN_MARK_RECORDED"
+  }
+ ],
+ "runIds": {
+  "after": "35161163357",
+  "afterFailedInfra": "35160859448",
+  "dump": "35161328200",
+  "final": "35161751482",
+  "mark": "35161655716"
+ },
+ "verdict": "PASS"
+}

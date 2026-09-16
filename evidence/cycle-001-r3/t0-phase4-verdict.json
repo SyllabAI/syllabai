@@ -1,0 +1,27 @@
+{
+ "unexplained": [],
+ "verdict": "PASS",
+ "whitelist": [
+  {
+   "detail": {
+    "s3": {
+     "capturedAt": "2026-09-16T23:20:50.650941+00:00",
+     "flyway": "28"
+    },
+    "t0": {
+     "capturedAt": "2026-09-16T23:33:34.332974+00:00",
+     "flyway": "28"
+    }
+   },
+   "w": "W1 capture identity"
+  },
+  {
+   "detail": "raw inputs identical S3\u2192t0; only the decayAdjustedMastery/band replication moves with capture time (by design)",
+   "w": "W2 decay replication values"
+  },
+  {
+   "detail": {},
+   "w": "post-S3 telemetry"
+  }
+ ]
+}
