@@ -1881,3 +1881,28 @@ Stage Summary:
 - **Discipline:** no feature started; no gate weakened; docs-only central push (no CI trigger); no workflow touched.
 
 **Commits:** core `d191ea9` (unit house-rule fix), core `48db7f7` (IT harness alignment, +43 test lines); tracker this commit. **Verdict: everything previously open is fixed and CI-verified; the two T-C07-era harness defects this check surfaced are fixed and the whole suite (616 units + 76 Docker ITs) is GREEN at main `48db7f7`; deployment of the new main honestly UNVERIFIED.**
+
+## Session 88 — 2026-09-16: r3 evidence-cycle pipeline RESUMED to the operator-input gate (rails verified, vehicle proven, round NOT started)
+
+**Operator directive:** "Resume the r3 evidence-cycle pipeline" — the post-fix verification round per `backlog/EVIDENCE-CYCLE-R3-SPEC-2026-09-16.md` (measurement protocol FROZEN 2026-09-17) riding the `CI-RECOVERY-RUNBOOK-2026-09-27.md` phases.
+
+**What ran (this session, all read-only or vehicle-verification):**
+
+- **Phase 0/1 — CI rails.** Quota confirmed back (runs execute normally org-wide). Found core-ci RED at head `d191ea9` and witnessed the failure LIVE: run 35156171315 failed on `ContentPipelineIT.fullPipeline` (`duplicate=true` — the T-C07 negative controls ingest the same checksum-idempotent fixture and JUnit's default method order ran one first) and `KaRagFlowIT.hybridAsk` (no MARK_SCHEME citation — the seeded mark scheme has no `exam_papers` link, so the T-C07 mandatory scope predicate makes it invisible, fail-closed BY DESIGN). Root-caused both read-only in source — checksum dedup in `ContentIngestionService`, the `ChunkVectorRepository` EXISTS join path, the `CurriculumScopeResolver` single-owner rule — WITHOUT touching the owning lane's files. The T-C07/session-86 lane (active in parallel) pushed the repair `48db7f7` minutes later; independently verified sound: the same fix this session had derived (`@TestMethodOrder`/`@Order` pinning + linking the MS paper into the single owning curriculum), zero product change.
+- **Phase 1 verdict at the audited heads:** core GREEN at `48db7f7` (run 35157219616 — 615 unit + 76 IT, 0 failures; `EvidenceStateConcurrencyIT` 4/4, `MultipartMarkingFlowIT` 2/2, `RevisionNoteFlowIT` 2/2), web GREEN at `1c9c4a3`, parser GREEN at `5c93317`. Phase 2 spot check artifact-parsed (named invariants green).
+- **Vehicle verified post-blackout:** dispatched the READ-ONLY `precheck` phase — run `35157814182` GREEN, the first `s2-evidence-cycle` dispatch since the Actions blackout. Artifact (saved locally + on the run): 4CH1-S2-f remains the deterministic target (8 measured, mean 0.1385, 3 servable incl. the r2 trio `96ae4235`/`ac5045d7`/`ddf30066` — the spec's precondition and invariant I3 hold at S0-check time); 149 enrolled / 75 with-evidence; 10 weak topics + 11 coverage gaps.
+- **t0 instrument readiness:** psycopg 3.3.5 installed; `t0_capture.py`/`t0_capture.sql` present; the S0/S3/Phase-4 command is ready (`DATABASE_URL='<read-only Neon DSN>' python3 t0_capture.py --out <artifact>`).
+
+**What did NOT run (the round itself — deliberately):**
+
+- The mutating phases (`after`/`mark`/`final`) were NOT dispatched. The frozen capture contract (P.1) requires the t0 sections (T0.3/T0.4/T0.6/T0.9) BEFORE the `after` phase starts the round, and those need the read-only Neon DSN — the Session-75 access path; no credential persists locally by design. Starting the round without S0 would violate the frozen protocol and risk wasting the single-shot round (I6: a re-run is r3b, the first result stands).
+- **The single blocking input: the read-only Neon DSN, operator-provided.** With it, the round executes immediately: S0 capture → `after` → marks manifest authored from the S1 dump (honest teacher judgment against the scheme, the r2 pattern — the operator's resume directive read as the delegation per the r1/r2 precedent) → `mark` → `final` → S3 capture → assertions A1–A9 / invariants I1–I6 → verdict per P.5 → records → Phase-4 full t0 capture.
+
+**Operational notes surfaced (read-only findings, not this lane's to fix):**
+
+1. **Render deploys appear stalled since ~20:35Z:** the deployed OpenAPI route-set is exactly the pre-`56f1475` set (96 paths) — the marking fix chain IS deployed (marking + revision-notes routes live), but the mark-scheme-reveal route (and later work) is not. Product deltas since the deployed build are additive and orthogonal to the evidence cycle (reveal = new GET endpoint; T-C07/T-C14 = retrieval paths) — not an r3 blocker; the pilot will want head deployed (incl. V28) — check the Render service Events tab.
+2. **Moving head:** after this session's Phase-1 verification, core advanced to `99be333` (T-C14 lexical arm, V28 migration) whose CI run `35157930089` is RED on that lane's own new `ChunkLexicalSearchIT` (`rankingSanity` empty result + `failClosedContracts` expecting a raw `IllegalArgumentException` that arrives JPA-wrapped) — the same T-C07-era contract-alignment class; the lane is active. Dispatch-time gate re-verification per the runbook's own rule is mandatory regardless.
+
+**Boundaries held:** zero product/test code changes by this lane (the IT repair was the owning lane's, verified read-only); no workflow modified; no mutating phase dispatched; frozen protocols untouched.
+
+**Artifacts:** precheck `s2-cycle-precheck` (run 35157814182, on-run + local `work/r3-artifacts/precheck-2026-09-16T2228Z.json`); scripts `r3_phase1_ci_state.py`, `r3_fail_detail.py`, `r3_pr_and_ops_state.py`, `r3_cycle_dispatch.py`, `r3_artifact_download.py` (session sandbox).
