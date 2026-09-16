@@ -1,0 +1,40 @@
+# SMART_LESSON production deployment verification — Vercel REDEPLOYED — 2026-09-17
+# Reconciliation session (head verification + deployment closure + CI reality check)
+# Production frontend: https://syllabai-web.vercel.app (Vercel, dashboard-triggered deploys)
+# Production backend:  https://syllabai-core.onrender.com (observed from the deployed app's own network traffic)
+
+## A. Deployment freshness (chunk-level, content-hashed names)
+- Deployed panel chunk TODAY: cf73528213c5da17.js — EXACTLY the chunk name recorded
+  2026-09-16 for the local main-lineage build at 4c3326a
+  (evidence: cla_smartlesson_browser_verification_4c3326a.log section D).
+- Previously deployed panel chunk: 3f2aa9baa470e1ea.js (pre-SMART_LESSON; contained
+  QUESTION_PART but not SMART_LESSON/lessonAction).
+- Deployed chunk contains ALL markers: SMART_LESSON, lessonAction, "Smart lesson",
+  QUESTION_PART, "Question part", "Anchored lesson topic".
+- VERDICT: Vercel has actually redeployed — the deployed build is byte-lineage-identical
+  to the 4c3326a main-lineage build that passed the FULL §4.1 checklist on 2026-09-16.
+  Probe script: scripts/vercel_deployment_probe.py (9 chunks reachable from /).
+
+## B. In-browser verification on the DEPLOYED build (fresh learner via UI)
+- Fresh registration through the deployed UI (sl-redeploy-probe-…@syllabai.test, STUDENT);
+  deployed frontend observed POSTing to https://syllabai-core.onrender.com (production backend).
+- App shell now includes the "Smart lesson" tab (only exists in the 4c3326a+ build).
+- Assistant panel (SAME single panel, no second assistant surface):
+  context-kind selector lists exactly [Topic (specification), Smart lesson,
+  Past-paper question, Question part] — "Smart lesson" PRESENT.
+- SMART_LESSON selected → topic picker under the kind; anchored topic
+  "4CH1-S1-a — States of matter"; label becomes
+  "Anchored lesson topic (your own next action rides along)".
+- Mode selector: "Explain — Teach the topic from validated sources".
+- EXPLAIN ask "Explain what states of matter means" → grounded answer rendered with
+  inline citation links [1][2] and numbered sources carrying REAL validated spec
+  anchors: "Specification topic 4CH1-1.2 — interconversions between the three states
+  of matter…" and "Specification topic 4CH1-1.4 — solvent • solute • solution…".
+- Screenshots: deployed_smartlesson_selector_20260917.png,
+  deployed_smartlesson_answer_20260917.png (this directory).
+
+## C. Verdict
+- SMART_LESSON production deployment verification: VERIFIED (was UNVERIFIED —
+  DEPLOYMENT BLOCKED pending operator redeploy). Deployment lag closed.
+- The 2026-09-16 full §4.1 checklist (14/14 on the identical main-lineage build ×
+  production backend) + this deployed-surface confirmation together close the item.
