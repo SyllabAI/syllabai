@@ -307,3 +307,12 @@ FreeLLMAPI (self-hosted OpenAI-compatible free-tier aggregator) is researched ag
 The complete decision record is canonical in `ADR-023-LLM_PROVIDER_POOL_HARDENING.md` (standalone file remains the authority). Implementation evidence: syllabai-core `b8ce0f4`/`f669330`/`bdc2540`/`8e1d27b`; regression 582 tests green (0 failures, 1 live-gated skip).
 
 **Scope guard:** provider-routing mechanics only — no retrieval, KG, learner-state, evidence, InterventionRun or CLA pedagogy semantics change; benchmark execution remains operator-gated behind live credentials.
+
+## ADR-024: InterventionRun (E2) promoted to ACCEPTED production architecture
+
+**Status:** Accepted
+**Date:** 2026-09-17
+
+The bounded InterventionRun orchestration boundary (contract `docs/research/INTERVENTION_RUN_PROTOTYPE.md`, core issue #19) is promoted PROPOSED → ACCEPTED under the contract's own §14 decision gate, with every precondition executed and verified rather than reported: acceptance criteria 1–10 demonstrated claim-by-claim (unit suite green; live verification 10/10 PASS on production at core `02643ed`, evidence committed in the central repo); persistence/query cost understood (`syllabai-core/docs/INTERVENTION_RUN_PERSISTENCE_QUERY_COST.md` — run-PK-scoped index-covered queries, ≈0.75 MB/month worst-case growth, normalization trigger not fired, so the §14 fallback clause does not apply); `InterventionRunFlowIT` 2/2 GREEN in real Docker core-ci (run `35139255878` at `7eb621a`, the fixture-fix `ef69d8d` lineage); and the deployed runtime verified via the Render API — the LIVE deploy is exactly `7eb621a`, with intervention product code byte-identical since `02643ed`, making the production 10/10 apply verbatim to the deployed build. The operator's conditional promotion directive was given and executed the same day.
+
+**Scope guard:** the run records bounded execution and NEVER mutates learner state (the governed evidence path remains the sole authority — DB-level bit-identical proof stands); no generic workflow engine, no autonomous LLM-defined steps, no curriculum/KG mutation, terminal history append-only. Any future scope growth re-opens the contract, not this record.
