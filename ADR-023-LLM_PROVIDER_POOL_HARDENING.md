@@ -1,6 +1,6 @@
 # ADR-023: LLM provider pool hardening — extend FailoverLlmChain, classify failures, enforce the local daily budget, fail-closed test/live mode
 
-**Status:** Accepted for slices B/C/D/E/G-harness (implementation evidence on main); FreeLLMAPI portion PROPOSED/EXPERIMENTAL
+**Status:** Accepted for slices B/C/D/E/G-harness (implementation evidence on main); FreeLLMAPI portion PROPOSED/EXPERIMENTAL. **2026-09-17 close-out (session 82d):** main-branch CI GREEN at 7eb621a — run 35139255878, surefire 582/0/0/1 (the 1 skip = live-gated benchmark, gate verified fail-closed) + failsafe 74 Testcontainers ITs 0/0/0; live benchmark execution and deployed-runtime state remain UNVERIFIED (credential-gated); FreeLLMAPI still PROPOSED/EXPERIMENTAL, not implemented.
 **Date:** 2026-09-17
 **Scope:** `syllabai-core` `infrastructure/llm` + test sourceset; research in `PLATFORM_RESEARCH.md`; no retrieval, KG, SpecificationPoint, learner-state, evidence, InterventionRun or CLA semantics touched.
 
