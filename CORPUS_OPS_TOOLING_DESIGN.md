@@ -1,6 +1,6 @@
 # corpus_ops — Corpus Acquisition & Organization Tooling (Stage A/A′)
 
-**Status:** Proposed — tracker row registered, awaiting owner ratification of the design
+**Status:** **Ratified 2026-09-17** (owner-delegated self-review, §12) — implementation commissioned same day; see rollout gate in §10 before any production use
 **Date:** 2026-09-17
 **Tracker row:** T-C16 (registered in the master workbook TODO.md, content-ops track)
 **Governing spec sections:** Master Spec §9 (content-processing architecture), §27 (parser abstraction), ADR-021 (Markdown as durable interchange)
@@ -96,13 +96,22 @@ Behavior:
 5. **Reference rewrite** — MD links are rewritten to local relative `assets/…` paths
    (the `Past-Papers` convention) at intake time; original URLs are preserved in the
    manifest per image for provenance.
-6. **MANIFEST build** — deterministic, insertion-ordered JSON (§7).
+6. **Asset filename collisions (fail-closed):** two distinct URLs that resolve to the
+   same crop filename are a hard FAIL unless the downloaded bytes are sha256-identical
+   (then they are one asset, deduped, `referenced_by` listing every referent). Different
+   bytes under one name is exactly the silent-overwrite class this package exists to
+   prevent.
+7. **Duplicate documents:** two raw MD files with identical sha256 are recorded in
+   `dropped_duplicates[]` (legacy key, verified present in `paper 1/MANIFEST.json`) and
+   only the first is organized — never silently ignored.
+8. **MANIFEST build** — deterministic, insertion-ordered JSON (§7).
 
 ## 5. Command 2 — `scrub` (post-operator-deletion reference removal)
 
 ```
 python3 tools/corpus_ops/corpus_ops.py scrub <corpus-root> \
-    --deletions deletions.csv      # session,asset_filename,operator_note
+    (--deletions deletions.csv     # session,asset_filename,operator_note
+     | --from-staging)             # collect from <session>/assets/_deleted/
     [--dry-run]
 ```
 
@@ -118,7 +127,11 @@ Behavior — **fail-closed at every step**:
 2. Every removed file's references are removed from QP/MS by **exact relative-path
    match, with original-URL fallback** (files saved before the rewrite convention
    stabilized). Removal is subtractive, grammar-aware: the enclosing image island is
-   deleted whole (T-C17 §3 invariant 4).
+   deleted whole (T-C17 §3 invariant 4). Verified against the live corpus, the island
+   is the **single-line** center-div form —
+   `<div style='text-align: center;'><img src='assets/crop_1_<ts>.png' alt='OCR图片'/></div>` —
+   so island removal is whole-line removal; a scrub that ever needs to edit *within*
+   that line has mis-matched and must fail instead.
 3. Orphan detection runs **after** scrubbing: any remaining image reference with
    neither a file nor a deletion record → hard FAIL with the full ledger (this closes
    the "ref exists, file never downloaded, never deleted" gap that silent passes leave).
@@ -154,12 +167,18 @@ sessions, operator_cleanup, structural_repair, operator_cleanup_2`.
 v1.1 adds, without renaming or reshaping legacy keys:
 
 - `schema_version: 1.1`
-- `sessions{}` — now a keyed object (session id → files with `sha256`, `size`,
-  `source_urls{}`, asset lists with `mime`, `width_px/height_px`, `sha256`);
-  the legacy list form remains readable via the version marker;
+- `sessions{}` — **correction made at ratification:** the legacy manifest's `sessions`
+  was verified to be *already a keyed object* (session id → `{documents{MS,QP →
+  {original_name, path, sha256}}, image_count, images{url → {saved_as, bytes, format,
+  sha256, referenced_by[]}}}`). v1.1 therefore only **adds optional fields**: per image
+  `mime` (sniffed, not extension-derived) and `width_px`/`height_px` (parsed from PNG
+  IHDR / JPEG SOF bytes, stdlib), per document `size`; `images`' keys already ARE the
+  source URLs, so no separate `source_urls` layer is added. Legacy entries are read and
+  rewritten unchanged except for added fields.
 - `ops_log[]` — the general form of the legacy `operator_cleanup*` blocks (batch id,
-  kind: `image-cleanup | structural-repair | rename | reference-scrub`, date, counts,
-  per-session detail);
+  kind: `intake | image-cleanup | structural-repair | rename | reference-scrub`, date,
+  counts, per-session detail; removed-image original URLs preserved inside the entry,
+  exactly as the 2026-09-11 `operator_cleanup` entry did);
 - `clean{}` — per session: `qp_sha256`, `ms_sha256`, `report_ref` (T-C17 outputs);
   raw files stay the provenance root, clean artifacts are recorded as derivatives.
 
@@ -198,6 +217,10 @@ Inherited from the project's fail-closed culture (T-C02, health gate, c12 promot
    records as an integration oracle (the 2026-09-11 cleanup is the expected-output
    fixture).
 4. Add `clean_diff.py` once T-C17's cleaning agent produces its first real pairs.
+   *(Ratification amendment: clean_diff.py is implemented alongside the package — its
+   unit tests run on synthetic draft pairs per §9 — but its first **real-world**
+   validation still awaits Stage B's first raw/clean pair; until then it is
+   CI-tested, not corpus-proven.)*
 5. Only then run the first live CLEANED batch → `GlmOcrPairCli` → T-C02 ingestion.
 
 ## 11. Honesty notes
@@ -210,3 +233,38 @@ Inherited from the project's fail-closed culture (T-C02, health gate, c12 promot
 - Downloaded bytes are not validated against the *printed paper* — image rescue
   preserves what the OCR service produced; content truth remains downstream
   (extraction drafts → SME validation).
+- `clean_diff.py`'s G3 checks are the machine-checkable subset of T-C17 §9 (counts,
+  mark identity, warning classes, `paperTotalConflict`); the "explainable line-by-line"
+  requirement remains human-audited per T-C17 §13 until the operations ledger gets an
+  automated mapping.
+
+## 12. Ratification record (self-review, 2026-09-17)
+
+Reviewer: main agent (owner-delegated). Every factual claim in this design was checked
+against primary sources before ratification:
+
+- **Legacy manifest shape** — `Past-Papers/paper 1/MANIFEST.json` re-read: top-level
+  keys exactly as §7 lists them; `sessions` verified to be a keyed dict with entry shape
+  `{documents, image_count, images}` (§7 corrected accordingly — the draft's "legacy
+  list form" hedge was wrong); `operator_cleanup` entry shape
+  `{date_utc, description, removed_image_count, removed_images{session: [urls]}}`
+  confirmed as the `ops_log[]` template; `structure` string confirms the per-session
+  layout; session names confirm the `<year>-<Mon>[-R]` convention (`2013-Jun-R`,
+  `2020-Jan-R` … all live).
+- **Corpus reality** — live QP.md image references are the single-line center-div
+  island form above; MS.md in the sampled session carries zero image refs (normal);
+  asset filenames are the OCR crop names (`crop_1_<ts>.png`).
+- **Cross-references** — T-C17 §3 invariant 4 / §9 G3 verified present at the cited
+  sections of `CLEAN_VERIFY_PROTOCOL_QP_MS_MARKDOWN.md` v1.1; T-C17 §9 already names
+  `tools/corpus_ops/clean_diff.py` as the G3 implementation, so package layout is
+  consistent in both directions. `AGENT.md` rule 2 quote verified verbatim.
+- **Position vs `ocr_batch`** — `tools/ocr_batch/README.md` confirms the PDF-only
+  input scope and the same-second/expiry discipline this package retro-fits.
+- **Amendments applied at ratification:** §4 steps 6–7 (collision + duplicate rules),
+  §5 signature (`--from-staging` promoted from prose to the CLI contract) and island
+  shape pinned to the verified form, §7 legacy-shape correction + field additions
+  narrowed to what is genuinely absent (`mime`, dimensions, document `size`), §10
+  step-4 timing note, §11 clean_diff scope note.
+
+**Verdict: RATIFIED with the amendments above.** Rollout gate (§10 step 2: dogfood on
+the next conversion batch before it touches `Past-Papers`) remains owner-held.

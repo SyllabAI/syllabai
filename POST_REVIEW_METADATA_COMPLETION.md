@@ -1,11 +1,11 @@
 # Post-Review Metadata Completion — Difficulty, Question Type, Spec-Point Mapping
 
-**Status:** Proposed — tracker row registered, awaiting owner ratification of the design
+**Status:** **Ratified 2026-09-17** (owner-delegated self-review, §11) — one material design correction applied: the type gap is closed on the *existing* `Question.Type` substrate (§3 v1.1), not via a new version-level column
 **Date:** 2026-09-17
 **Tracker row:** T-C18 (registered in the master workbook TODO.md, content-ops track; sub-rows T-C18a–e per §10)
 **Governing spec sections:** Master Spec §6.2/ADR-014 (curriculum hierarchy, `SpecificationPoint` as canonical anchor), §7 (KG, SUGGESTED→VALIDATED lifecycle), §10 (question bank, F-168), ADR-017 (recommendations over one evidence substrate), ADR-020 (retrieval: benchmark before promotion)
 **Related rows:** T-C02 (ingestion bridge — hardcodes the placeholder), T-C12 (question↔spec-point tagger — supplies candidate mappings), T-C13 (bench — defines what "VALIDATED" corpus exists today), F-050 (Test Builder — the consumer this proposal serves)
-**Code touchpoints:** `syllabai-core` → `QuestionVersion` (difficulty/commandWord), `PastPaperIngestionService` (line 132 placeholder), `GlmOcrDraftMapper`, Flyway migrations (V26 current per T-C13 preconditions); `syllabai-resources` → T-C12 tagger + `c12_promote` operator gate; `syllabai-teacher-workbench` → staged intent UI (review surface)
+**Code touchpoints:** `syllabai-core` → `Question` (existing `Type` enum — see §3 correction) and `QuestionVersion` (difficulty/commandWord), `PastPaperIngestionService` (hardcoded `3` verified; also hardcodes `Question.Type.STRUCTURED`), `GlmOcrDraftMapper`, Flyway migrations (**V27 current — verified in-tree; next migration is V28**); `syllabai-resources` → T-C12 tagger (`scripts/c12_spec_tagger.py`) + `c12_promote` operator gate (`scripts/c12_promote.py`, verified); `syllabai-teacher-workbench` → staged intent UI (review surface)
 
 ---
 
@@ -15,7 +15,7 @@
 |---|---|
 | `QuestionVersion.difficulty` exists as `int, nullable = false` | ✅ but `PastPaperIngestionService` hardcodes `3` at ingestion with the honest comment *"difficulty unknown until review"* — every parsed question presents a fiction of medium difficulty |
 | `QuestionVersion.commandWord` extracted | ✅ populated from the draft's command-word signal (`CommandWordLexicon`) |
-| MCQ detection | ✅ extractor-side (`GlmOcrQuestionExtractor` MCQ hindsight validation), but **no `questionType` column exists** — the signal dies at the draft boundary |
+| MCQ detection | ✅ extractor-side (`GlmOcrQuestionExtractor` MCQ hindsight validation), and the pair-CLI draft bundle carries the signal forward (`mcq` + `options` fields — verified in a real bundle). **Correction made at ratification:** a type column *does* exist — `Question.Type { MCQ_SINGLE, SHORT_ANSWER, STRUCTURED }` — but `PastPaperIngestionService` **hardcodes `STRUCTURED`** for every ingested question, so the MCQ signal still dies at the ingestion boundary; worse, the draft-level signal was never persisted anywhere |
 | Spec-point relation on questions | ❌ none in the assessment module; questions land on an *ingestion-anchor topic* only. Mapping exists **corpus-side**: the T-C12 hybrid tagger + `c12_promote` operator gate in `syllabai-resources` produce reviewable mapping artifacts, but nothing in core DB consumes them |
 | KG spec points | ✅ 182/182 4CH1 spec-point nodes VALIDATED (per T-C13 preconditions) — the mapping *target* side is ready |
 | Question corpus | 127 VALIDATED question versions over 94 papers; 172 documents; 2,333 chunks, **zero embeddings** (gated by T-C07); production retrieval = arm A0 KG-only |
@@ -41,26 +41,52 @@ all three with one governance model.
    by Test Builder, Smart Mark, recommendations and analytics — no parallel shadow
    tables (the ADR-017 lesson).
 
-## 3. Question type (close the cheapest gap first)
+## 3. Question type (close the cheapest gap first) — v1.1, corrected at ratification
 
-**Change:** add `question_type` to `QuestionVersion` — enum `MCQ | STRUCTURED |
-UNKNOWN` (extensible), default `UNKNOWN`, plus `question_type_source`
-(`PARSER | SME`) and `question_type_state` reusing the corpus validation-state
-vocabulary.
+**Correction:** the draft proposed a new `question_type` column on `QuestionVersion`.
+Ratification review found that a type substrate **already exists**: `Question.Type {
+MCQ_SINGLE, SHORT_ANSWER, STRUCTURED }` (DB column on `questions`, V3/V8 lineage), and
+it is **load-bearing** — `ServableQuestionService`, `AssessmentService` and
+`ServableQuestionSpec` all gate serving paths on `type == STRUCTURED`, and the enum's
+own comment marks MCQ end-to-end support as a known *future* project. Adding a parallel
+version-level column would violate this proposal's own Principle 4, and blindly writing
+`MCQ_SINGLE` into the existing column at ingestion would silently drop those questions
+out of every STRUCTURED-gated serving path.
+
+**Corrected change — persist the signal, keep serving semantics untouched:** add three
+additive columns on `Question`:
+
+- `detected_type` enum `MCQ_SINGLE | SHORT_ANSWER | STRUCTURED | UNKNOWN`, default
+  `UNKNOWN` — the honest parser observation, persisted so it stops dying at the
+  boundary;
+- `type_source` enum `UNKNOWN | PARSER | SME`;
+- `type_state` reusing the corpus validation-state vocabulary (`SUGGESTED | VALIDATED`).
+
+The existing `Question.type` column stays the **serving-authoritative** type and its
+behavior is unchanged (past papers keep flowing as STRUCTURED until the MCQ end-to-end
+project lands). Promoting `detected_type` into serving `type` for MCQ_SINGLE is
+explicitly **out of scope** here and must ride the MCQ end-to-end work, not sneak in
+through metadata.
 
 **Fill path:**
 
 1. **At ingestion (SUGGESTED):** the GLM-OCR draft already carries MCQ signals
-   (option lists + the extractor's hindsight-validation result). Map them:
-   MCQ-detected → `MCQ / PARSER / SUGGESTED`; otherwise → `STRUCTURED / PARSER /
-   SUGGESTED` **only when** the draft shows explicit part structure; else `UNKNOWN`.
-   The `GlmOcrDraftMapper` change is small and deterministic.
+   (`mcq` + `options` in the pair-CLI bundle, verified). Map them deterministically in
+   `GlmOcrDraftMapper`: MCQ-detected → `MCQ_SINGLE / PARSER / SUGGESTED`; otherwise →
+   `STRUCTURED / PARSER / SUGGESTED` **only when** the draft shows explicit part
+   structure; else `UNKNOWN / PARSER / SUGGESTED`.
 2. **At validation:** the existing review pass (workbench staged importer) confirms or
-   corrects type alongside the content review it already performs — one extra field on
-   an existing human step, not a new human step.
+   corrects the detected type alongside the content review it already performs — one
+   extra field on an existing human step, not a new human step.
+3. **Legacy backfill (non-destructive):** existing PAST_PAPER rows get `detected_type =
+   'UNKNOWN'`, `type_source = 'UNKNOWN'`, `type_state = 'SUGGESTED'` — history stops
+   pretending it classified anything, while `Question.type` stays STRUCTURED so
+   serving and Smart Mark flows are untouched. TEACHER_AUTHORED / SEED_DEMO rows keep
+   their type with `type_source = 'SME'`, `type_state = 'VALIDATED'` (the author chose
+   it deliberately).
 
-**Why this is safe:** type is structurally observable in the document; error cost is
-low; and Test Builder behavior on `UNKNOWN` is defined (§6).
+**Why this is safe:** the signal is persisted without touching a serving-gated column;
+error cost is low; and Test Builder behavior on `UNKNOWN` is defined (§6).
 
 ## 4. Difficulty (replace the fiction, keep the column)
 
@@ -68,6 +94,13 @@ low; and Test Builder behavior on `UNKNOWN` is defined (§6).
 (`UNKNOWN | SME | EVIDENCE | HEURISTIC`) and `difficulty_rated_at`, `difficulty_rated_by`.
 Migration backfills: existing rows keep `3` but get `difficulty_source = 'UNKNOWN'` —
 history stops lying without breaking reads.
+
+**Two-axis rule (clarified at ratification):** `difficulty_source` records *where the
+value came from* and never changes after write; the validation *state* is what flips.
+When an SME ratifies an `EVIDENCE` or `HEURISTIC` proposal, `difficulty_state` moves to
+`VALIDATED` while the source preserves its origin — this is what §6's
+"EVIDENCE-validated" means (state VALIDATED ∧ source EVIDENCE). The same two-axis model
+governs §3's type columns.
 
 **Fill paths, in governance order:**
 
@@ -119,7 +152,10 @@ evidence pack), consistent with how the corpus tooling already governs promotion
   matching the paper's qualification (4CH1 → IGCSE family; WCH1x → `IAL-CHEM-2018`).
   Cross-family mappings are rejected loudly, not clamped;
 - exactly-zero PRIMARY mappings on a question is legal (coverage gaps are information —
-  the teaching-coverage lens already distinguishes absent from weak);
+  the teaching-coverage lens already distinguishes absent from weak); **more than one
+  PRIMARY on a question is also legal** (multi-spec-point questions are a real class —
+  the retrieval bench has a dedicated `class_multi_spec_point` gold file) but the
+  importer surfaces it in the review batch so the operator sees it; it never blocks;
 - re-import of an identical batch is idempotent by provenance fingerprint; a conflicting
   re-import fails loudly (the CurriculumIngestionService precedent).
 
@@ -195,3 +231,35 @@ narrows candidates; it can never relax a hard rule.
 - **T-C18d** — T-C12 mapping importer with fail-closed curriculum scoping (core +
   resources).
 - **T-C18e** — Test Builder filter enablement under §6 contract (core + web).
+
+## 11. Ratification record (self-review, 2026-09-17)
+
+Reviewer: main agent (owner-delegated). Claims re-verified against primary sources:
+
+- **Hardcoded difficulty** — `PastPaperIngestionService` re-read: `3` with the exact
+  comment *"difficulty unknown until review"*, in **both** the `Question` and
+  `QuestionVersion` constructions; `QuestionVersion.difficulty` is a primitive `int`
+  (→ NOT NULL) as §4 assumes; `command_word` present.
+- **Type substrate (the material correction)** — `Question.java` line 26:
+  `enum Type { MCQ_SINGLE, SHORT_ANSWER, STRUCTURED }` with the comment
+  *"MCQ end-to-end; STRUCTURED = multi-part (V8)"*; ingestion hardcodes
+  `Question.Type.STRUCTURED`; STRUCTURED-gated serving paths verified at
+  `ServableQuestionService` (×2), `AssessmentService` (×2), `ServableQuestionSpec`.
+  §1 table and §3 rewritten accordingly; the proposed version-level `question_type`
+  column is **dropped** in favor of additive `detected_type`/`type_source`/`type_state`
+  on `Question` (no parallel substrate, no serving-path blast radius).
+- **Draft signal** — a real pair-CLI bundle (`tools/content-package-v0.1/
+  real_corpus/source/bundle/qp-draft.json`) confirmed `mcq` + `options` fields on
+  questions, so the §3 mapper mapping is deterministic.
+- **Migrations** — `syllabai-core` `db/migration/` lists **V27__revision_notes.sql**;
+  the draft's "V26 current" was stale; next migration is V28. Workbook row corrected
+  in the same pass.
+- **T-C12** — `c12_spec_tagger.py`, `c12_promote.py`, verdicts/promotions YAMLs all
+  present in `syllabai-resources/scripts/`; `CommandWordLexicon` verified in
+  syllabai-parser (`structure/`), feeding the §4.3 heuristic path.
+- **Multi-PRIMARY** — §5 amended: multiple PRIMARY rows are legal (multi-spec-point
+  questions are a bench gold class) but surfaced for operator review.
+
+**Verdict: RATIFIED with the corrections above.** Sub-rows T-C18a–e stand; T-C18a's
+scope now reads "V28: nullable difficulty + source/state columns + detected-type
+columns on Question + `question_spec_points` table".
