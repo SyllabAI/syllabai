@@ -1,0 +1,1309 @@
+{
+  "arm" : "A0 KG-only  -  production GraphKnowledgeRetriever (unmodified) over frozen snapshot: title-token specificity matching over VALIDATED structure nodes, maxTopics=5, single-token floor 0.50; single-list RRF k=60; NoReranker",
+  "arm_status" : "RUNNABLE  -  current production serving default; the baseline to beat",
+  "arms_unavailable" : {
+    "A" : "requires T-C07 + embedding backfill (0/2,333 embedded)",
+    "B" : "requires T-C14 Bm25Retriever + tsvector migration",
+    "C/D" : "require A + B",
+    "E/F/G" : "require T-C15"
+  },
+  "chunk_axis" : {
+    "all_chunks" : {
+      "corpus_n" : 2333,
+      "overall" : {
+        "evidence_precision@10" : 0.0,
+        "false_positive_rate@10" : 0.0,
+        "mrr" : 0.0,
+        "ndcg@10" : 0.0,
+        "recall@10" : 0.0,
+        "recall@20" : 0.0,
+        "recall@5" : 0.0
+      },
+      "per_class" : {
+        "calculation" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "conceptual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "exam_question" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "factual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "mark_scheme" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "misconception" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "multi_spec_point" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "prerequisite" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "vague_learner" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "why_wrong" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        }
+      },
+      "queries_scored" : 98,
+      "scope" : "ALL-chunks (2333)"
+    },
+    "validated_only" : {
+      "corpus_n" : 296,
+      "overall" : {
+        "evidence_precision@10" : 0.0,
+        "false_positive_rate@10" : 0.0,
+        "mrr" : 0.0,
+        "ndcg@10" : 0.0,
+        "recall@10" : 0.0,
+        "recall@20" : 0.0,
+        "recall@5" : 0.0
+      },
+      "per_class" : {
+        "calculation" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "conceptual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "exam_question" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "factual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "mark_scheme" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "misconception" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "multi_spec_point" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "prerequisite" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "vague_learner" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "why_wrong" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        }
+      },
+      "queries_scored" : 98,
+      "scope" : "VALIDATED-paper chunks only (arm emits nothing in any scope)"
+    },
+    "validation_boundary_violations" : 0
+  },
+  "code_version" : "9690c00",
+  "date" : "2026-09-17",
+  "determinism_check" : "PASS  -  aggregates recomputed twice in-process, byte-identical serialization",
+  "evaluation_contract" : {
+    "boundary_check" : "A0 surfaces no chunks in either scope -> zero VALIDATION_BOUNDARY_VIOLATION by construction.",
+    "chunk_axis" : "A0 emits NO chunk evidence (production truth: vector side empty at 0/2,333 embedded; the KG arm emits entity items). Per ratified spec section 6, an empty result from a runnable arm is scored as a REAL ZERO (not excluded) on every chunk-labeled query  -  this zero is the honest picture of today's serving default and the motivation for arms A/B/C.",
+    "spec_resolution_axis" : "A0's native, scored axis: coverage of gold_spec_points by the RRF-fused ranked topics (production matching semantics, unmodified)."
+  },
+  "gold_set" : "gold-v1 (120 queries; frozen)",
+  "per_query_resolution" : {
+    "g1-001" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.5" ],
+      "matched_topics" : [ "4CH1-2.5", "4CH1-4.10", "4CH1-2.46" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-002" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.40C" ],
+      "matched_topics" : [ "4CH1-2.43C", "4CH1-2.39", "4CH1-2.40C", "4CH1-2.41C", "4CH1-2.42" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-003" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.6" ],
+      "matched_topics" : [ "4CH1-2.6", "4CH1-2.3", "4CH1-4.23", "4CH1-4.29C", "4CH1-4.38C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-004" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.44" ],
+      "matched_topics" : [ "4CH1-4.44", "4CH1-1.44", "4CH1-4.46", "4CH1-4.45", "4CH1-2.46" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-005" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.12" ],
+      "matched_topics" : [ "4CH1-2.12", "4CH1-4.1", "4CH1-2.13", "4CH1-2.44", "4CH1-4.15" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-006" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.14" ],
+      "matched_topics" : [ "4CH1-4.14", "4CH1-2.5", "4CH1-3.22C", "4CH1-4.32C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-007" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.48" ],
+      "matched_topics" : [ "4CH1-1.49", "4CH1-4.10", "4CH1-1.27", "4CH1-1.48", "4CH1-1.42" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-008" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.19" ],
+      "matched_topics" : [ "4CH1-4.19", "4CH1-4.24", "4CH1-1.32", "4CH1-1.36", "4CH1-2.34" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-009" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.57C" ],
+      "matched_topics" : [ "4CH1-1.57C", "4CH1-1.14", "4CH1-1.32", "4CH1-1.4", "4CH1-1.16" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-010" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.41C" ],
+      "matched_topics" : [ "4CH1-4.40C", "4CH1-4.5", "4CH1-4.2", "4CH1-4.41C", "4CH1-4.49C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-011" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.5" ],
+      "matched_topics" : [ "4CH1-4.40C", "4CH1-4.5", "4CH1-4.12", "4CH1-4.2", "4CH1-4.41C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-012" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.37C" ],
+      "matched_topics" : [ "4CH1-4.37C", "4CH1-1.60C", "4CH1-2.31", "4CH1-1.4", "4CH1-2.30" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-013" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.29C" ],
+      "matched_topics" : [ "4CH1-4.29C", "4CH1-4.23", "4CH1-4.38C", "4CH1-4.34C", "4CH1-4.3" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-014" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.30" ],
+      "matched_topics" : [ "4CH1-1.30", "4CH1-2.9" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-015" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.2" ],
+      "matched_topics" : [ "4CH1-1.1", "4CH1-1.2", "4CH1-1.44", "4CH1-2.5", "4CH1-2.2" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-016" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.28" ],
+      "matched_topics" : [ "4CH1-1.28", "4CH1-1.34C", "4CH1-2.45", "4CH1-2.33C", "4CH1-1.35C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-017" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.9" ],
+      "matched_topics" : [ "4CH1-2.9", "4CH1-2.14", "4CH1-2.22C", "4CH1-2.10" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-018" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.34C" ],
+      "matched_topics" : [ "4CH1-4.34C", "4CH1-4.23", "4CH1-4.29C", "4CH1-4.38C", "4CH1-2.32" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-019" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-3.11" ],
+      "matched_topics" : [ "4CH1-3.10", "4CH1-3.9", "4CH1-3.11", "4CH1-3.16", "4CH1-3.15" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-020" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.4C" ],
+      "matched_topics" : [ "4CH1-2.4C", "4CH1-2.8C", "4CH1-2.3", "4CH1-2.2", "4CH1-2.7" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-021" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.27" ],
+      "matched_topics" : [ "4CH1-1.27", "4CH1-4.11", "4CH1-1.5C", "4CH1-3.12", "4CH1-1.28" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-022" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.50C" ],
+      "matched_topics" : [ "4CH1-4.50C", "4CH1-3.17", "4CH1-4.48C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-023" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.39" ],
+      "matched_topics" : [ "4CH1-1.39", "4CH1-1.37", "4CH1-4.40C", "4CH1-1.44", "4CH1-4.41C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-024" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.47" ],
+      "matched_topics" : [ "4CH1-1.48", "4CH1-1.47", "4CH1-1.49" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-025" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.3" ],
+      "matched_topics" : [ "4CH1-4.3", "4CH1-1.14", "4CH1-1.32", "4CH1-1.4", "4CH1-1.16" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-026" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.31" ],
+      "matched_topics" : [ "4CH1-4.37C", "4CH1-2.31", "4CH1-2.32", "4CH1-4.36C", "4CH1-1.60C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-027" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.29" ],
+      "matched_topics" : [ "4CH1-1.29", "4CH1-1.33", "4CH1-1.26" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-028" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.5C" ],
+      "matched_topics" : [ "4CH1-1.5C", "4CH1-1.14", "4CH1-1.32", "4CH1-1.4", "4CH1-1.16" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-029" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.43" ],
+      "matched_topics" : [ "4CH1-1.51", "4CH1-1.55C", "4CH1-1.43", "4CH1-1.56C", "4CH1-4.1" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-030" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.3" ],
+      "matched_topics" : [ "4CH1-2.3", "4CH1-2.6", "4CH1-2.4C", "4CH1-2.5", "4CH1-2.2" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-031" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.33C", "4CH1-4.36C", "4CH1-4.37C", "4CH1-2.31", "4CH1-2.47" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-032" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-3.4", "4CH1-4.11", "4CH1-3.3", "4CH1-3.1" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-033" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.36", "4CH1-1.28", "4CH1-1.40" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-034" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.33C", "4CH1-4.36C", "4CH1-4.37C", "4CH1-2.21", "4CH1-1.58C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-035" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.29", "4CH1-3.18", "4CH1-2.34", "4CH1-1.38" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-036" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-3.17", "4CH1-3.19C", "4CH1-4.16", "4CH1-2.13", "4CH1-2.37" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-037" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.48", "4CH1-2.39", "4CH1-2.41C", "4CH1-2.34", "4CH1-2.16" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-038" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.32C", "4CH1-2.24C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-039" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.7C", "4CH1-2.34", "4CH1-3.16", "4CH1-3.8" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-040" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.19", "4CH1-4.24", "4CH1-1.32", "4CH1-1.26", "4CH1-4.28" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-041" : {
+      "coverage" : 0.3333333333333333,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.10", "4CH1-1.4", "4CH1-1.5C" ],
+      "matched_topics" : [ "4CH1-1.6C", "4CH1-1.4", "4CH1-1.56C", "4CH1-1.3", "4CH1-2.29" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-042" : {
+      "coverage" : 0.5,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.41", "4CH1-1.58C" ],
+      "matched_topics" : [ "4CH1-1.41", "4CH1-1.53C", "4CH1-1.56C", "4CH1-1.59C", "4CH1-1.42" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-043" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-3.1", "4CH1-3.6C" ],
+      "matched_topics" : [ "4CH1-3.6C", "4CH1-3.5C", "4CH1-1.45", "4CH1-3.1", "4CH1-3.21C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-044" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-3.10" ],
+      "matched_topics" : [ "4CH1-3.21C", "4CH1-3.12", "4CH1-2.1", "4CH1-2.7", "4CH1-4.6" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-045" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.11", "4CH1-1.9" ],
+      "matched_topics" : [ "4CH1-1.49", "4CH1-1.9", "4CH1-1.42", "4CH1-1.11", "4CH1-1.48" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-046" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.32", "4CH1-1.33" ],
+      "matched_topics" : [ "4CH1-1.32", "4CH1-1.33", "4CH1-4.2", "4CH1-1.26", "4CH1-4.5" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-047" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.34C", "4CH1-3.10" ],
+      "matched_topics" : [ "4CH1-3.10", "4CH1-3.9", "4CH1-4.36C", "4CH1-1.34C", "4CH1-3.11" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-048" : {
+      "coverage" : 0.6666666666666666,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.44", "4CH1-1.45", "4CH1-3.7C" ],
+      "matched_topics" : [ "4CH1-1.45", "4CH1-1.12", "4CH1-1.55C", "4CH1-1.1", "4CH1-1.44" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-049" : {
+      "coverage" : 0.5,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.57C", "4CH1-1.58C" ],
+      "matched_topics" : [ "4CH1-1.19", "4CH1-1.57C", "4CH1-2.1", "4CH1-2.15", "4CH1-1.59C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-050" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.10" ],
+      "matched_topics" : [ "4CH1-1.13", "4CH1-1.10" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-051" : {
+      "coverage" : 0.6666666666666666,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.44", "4CH1-1.45", "4CH1-1.46" ],
+      "matched_topics" : [ "4CH1-1.45", "4CH1-1.46", "4CH1-1.55C", "4CH1-1.8", "4CH1-1.40" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-052" : {
+      "coverage" : 0.6666666666666666,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-3.1", "4CH1-3.21C", "4CH1-3.22C" ],
+      "matched_topics" : [ "4CH1-3.21C", "4CH1-3.5C", "4CH1-3.6C", "4CH1-3.1", "4CH1-3.19C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-053" : {
+      "coverage" : 0.5,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-3.21C", "4CH1-3.22C" ],
+      "matched_topics" : [ "4CH1-3.22C", "4CH1-3.10", "4CH1-3.11" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-054" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.47", "4CH1-1.48" ],
+      "matched_topics" : [ "4CH1-1.45", "4CH1-1.48", "4CH1-1.44", "4CH1-1.49", "4CH1-1.47" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-055" : {
+      "coverage" : 0.5,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-3.12", "4CH1-3.13" ],
+      "matched_topics" : [ "4CH1-1.1", "4CH1-3.13", "4CH1-3.10", "4CH1-3.9", "4CH1-3.11" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-056" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.1", "4CH1-1.3" ],
+      "matched_topics" : [ "4CH1-3.11" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-057" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.41" ],
+      "matched_topics" : [ "4CH1-1.41", "4CH1-1.14", "4CH1-1.53C", "4CH1-1.44", "4CH1-4.21" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-058" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.34C" ],
+      "matched_topics" : [ "4CH1-1.34C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-059" : {
+      "coverage" : 0.5,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.16", "4CH1-1.17" ],
+      "matched_topics" : [ "4CH1-1.16", "4CH1-1.18", "4CH1-1.19", "4CH1-2.1" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-060" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-3.4" ],
+      "matched_topics" : [ "4CH1-3.4", "4CH1-3.7C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-061" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.26", "4CH1-1.28" ],
+      "matched_topics" : [ "4CH1-1.16", "4CH1-1.18", "4CH1-1.17", "4CH1-1.26", "4CH1-1.28" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-062" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-3.7C" ],
+      "matched_topics" : [ ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-063" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.20", "4CH1-2.2", "4CH1-4.14", "4CH1-4.31C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-064" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.21", "4CH1-4.36C", "4CH1-2.37", "4CH1-2.15", "4CH1-2.48" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-065" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.34C", "4CH1-4.36C", "4CH1-4.41C", "4CH1-4.35C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-066" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.36C", "4CH1-2.15", "4CH1-2.16", "4CH1-2.1", "4CH1-2.7" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-067" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-068" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.18" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-069" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.37" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-070" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.7", "4CH1-1.8", "4CH1-4.1", "4CH1-4.8", "4CH1-4.6" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-071" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.4" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-072" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.7C", "4CH1-2.49", "4CH1-3.8", "4CH1-1.31", "4CH1-3.9" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-073" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.37C", "4CH1-4.39C", "4CH1-4.31C", "4CH1-4.32C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-074" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.8", "4CH1-4.7", "4CH1-4.9", "4CH1-1.40" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-075" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.33C", "4CH1-2.31", "4CH1-2.47", "4CH1-1.58C", "4CH1-4.36C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-076" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-077" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.8", "4CH1-4.7", "4CH1-4.9", "4CH1-1.10" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-078" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.4", "4CH1-1.5C", "4CH1-1.57C", "4CH1-2.29", "4CH1-3.11" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-079" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.7", "4CH1-4.8", "4CH1-1.8", "4CH1-4.1", "4CH1-4.9" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-080" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.32C", "4CH1-2.24C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-081" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.13", "4CH1-1.10", "4CH1-4.42C", "4CH1-1.40" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-082" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.50", "4CH1-1.36", "4CH1-2.37", "4CH1-1.31" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-083" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.11", "4CH1-4.16", "4CH1-2.44", "4CH1-4.15" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-084" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.24C", "4CH1-1.40" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-085" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-2.49", "4CH1-3.8" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-086" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.8", "4CH1-2.26C", "4CH1-1.9", "4CH1-1.40" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-087" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.20", "4CH1-2.2", "4CH1-4.14", "4CH1-4.31C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-088" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.16", "4CH1-2.13", "4CH1-4.14" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-089" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.40" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-090" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.19", "4CH1-1.22", "4CH1-2.4C", "4CH1-2.8C", "4CH1-1.21" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-091" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.34" ],
+      "matched_topics" : [ "4CH1-4.19", "4CH1-4.24", "4CH1-2.34", "4CH1-1.5C", "4CH1-2.31" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-092" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.19" ],
+      "matched_topics" : [ "4CH1-1.19", "4CH1-2.4C", "4CH1-2.8C", "4CH1-1.22", "4CH1-4.46" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-093" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.48C" ],
+      "matched_topics" : [ "4CH1-4.48C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-094" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.21" ],
+      "matched_topics" : [ "4CH1-2.21", "4CH1-1.60C", "4CH1-3.15", "4CH1-1.13", "4CH1-1.7C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-095" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.43C" ],
+      "matched_topics" : [ "4CH1-4.43C", "4CH1-2.43C", "4CH1-2.42", "4CH1-2.39", "4CH1-2.40C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-096" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.32" ],
+      "matched_topics" : [ "4CH1-1.32", "4CH1-1.14", "4CH1-4.19", "4CH1-4.24", "4CH1-1.4" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-097" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.27C" ],
+      "matched_topics" : [ "4CH1-2.27C", "4CH1-2.26C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-098" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.59C" ],
+      "matched_topics" : [ "4CH1-1.59C", "4CH1-3.17", "4CH1-1.25", "4CH1-4.49C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-099" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.23" ],
+      "matched_topics" : [ "4CH1-1.23", "4CH1-1.18", "4CH1-1.22", "4CH1-1.8", "4CH1-1.19" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-100" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.33C" ],
+      "matched_topics" : [ "4CH1-2.33C", "4CH1-2.32", "4CH1-2.45", "4CH1-2.31", "4CH1-2.40C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-101" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.31" ],
+      "matched_topics" : [ "4CH1-4.40C", "4CH1-1.31", "4CH1-4.2", "4CH1-4.5", "4CH1-4.21" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-102" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.8C" ],
+      "matched_topics" : [ "4CH1-2.8C", "4CH1-2.4C", "4CH1-2.6", "4CH1-2.7", "4CH1-2.2" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-103" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.18" ],
+      "matched_topics" : [ "4CH1-1.8", "4CH1-1.18", "4CH1-1.19", "4CH1-1.23", "4CH1-1.20" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-104" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.46" ],
+      "matched_topics" : [ "4CH1-4.46", "4CH1-1.19" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-105" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.6C" ],
+      "matched_topics" : [ "4CH1-1.6C", "4CH1-1.42", "4CH1-1.9" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-106" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-4.4" ],
+      "matched_topics" : [ "4CH1-1.55C", "4CH1-1.8", "4CH1-4.4", "4CH1-1.56C", "4CH1-1.42" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-107" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.14" ],
+      "matched_topics" : [ "4CH1-2.14", "4CH1-1.36" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-108" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.16" ],
+      "matched_topics" : [ "4CH1-2.15", "4CH1-2.16", "4CH1-1.18", "4CH1-1.20", "4CH1-1.31" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-109" : {
+      "coverage" : 0.5,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.34C", "4CH1-2.28" ],
+      "matched_topics" : [ "4CH1-1.28", "4CH1-1.34C", "4CH1-2.45", "4CH1-2.33C", "4CH1-1.35C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-110" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-2.28", "4CH1-3.4" ],
+      "matched_topics" : [ "4CH1-3.4", "4CH1-3.3", "4CH1-3.7C", "4CH1-2.28", "4CH1-4.11" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-111" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.3", "4CH1-3.4" ],
+      "matched_topics" : [ "4CH1-3.4", "4CH1-3.3", "4CH1-1.3", "4CH1-3.7C", "4CH1-4.11" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-112" : {
+      "coverage" : 1.0,
+      "exact_hit" : true,
+      "gold_spec_points" : [ "4CH1-1.3", "4CH1-4.45" ],
+      "matched_topics" : [ "4CH1-4.45", "4CH1-1.3", "4CH1-4.46", "4CH1-2.10", "4CH1-4.49C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-113" : {
+      "coverage" : 0.5,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.47", "4CH1-4.37C" ],
+      "matched_topics" : [ "4CH1-4.37C", "4CH1-1.60C", "4CH1-1.27", "4CH1-1.32", "4CH1-1.48" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-114" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-1.47", "4CH1-4.13" ],
+      "matched_topics" : [ "4CH1-1.32", "4CH1-1.41", "4CH1-1.45", "4CH1-1.48", "4CH1-1.53C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-115" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ "4CH1-2.34", "4CH1-4.13" ],
+      "matched_topics" : [ "4CH1-4.19", "4CH1-4.24", "4CH1-1.14", "4CH1-1.6C", "4CH1-1.5C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-116" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-3.14C", "4CH1-3.5C", "4CH1-1.40", "4CH1-4.21", "4CH1-4.35C" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-117" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-1.7C", "4CH1-2.49", "4CH1-3.14C", "4CH1-3.5C", "4CH1-3.8" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-118" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-3.14C", "4CH1-3.5C", "4CH1-1.40" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-119" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-3.14C", "4CH1-3.3", "4CH1-3.5C", "4CH1-3.10", "4CH1-3.9" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    },
+    "g1-120" : {
+      "coverage" : 0.0,
+      "exact_hit" : false,
+      "gold_spec_points" : [ ],
+      "matched_topics" : [ "4CH1-4.27", "4CH1-3.14C", "4CH1-3.5C", "4CH1-2.21", "4CH1-4.6" ],
+      "misconception_codes" : [ ],
+      "prerequisite_codes" : [ ]
+    }
+  },
+  "queries_excluded_no_chunk_labels" : {
+    "count" : 22,
+    "ids" : [ "g1-022", "g1-030", "g1-116", "g1-117", "g1-118", "g1-119", "g1-120", "g1-076", "g1-081", "g1-001", "g1-003", "g1-004", "g1-091", "g1-092", "g1-093", "g1-094", "g1-095", "g1-096", "g1-097", "g1-098", "g1-099", "g1-100" ],
+    "reason" : "no chunk labels (substrate-absent classes / sparse auto-labels)  -  excluded from the chunk axis only, NOT from spec resolution; same rule as run-001"
+  },
+  "queries_scored_chunks" : 98,
+  "queries_scored_resolution" : 120,
+  "queries_total" : 120,
+  "run_id" : "run-002-a0",
+  "signals" : {
+    "matched_topics_total" : 492,
+    "misconception_signals_total" : 0,
+    "prerequisite_signals_total" : 0,
+    "queries_with_misconceptions" : 0,
+    "queries_with_prerequisites" : 0,
+    "queries_with_zero_topics" : 3
+  },
+  "snapshot" : "snap-001 (snap-001)",
+  "spec_resolution" : {
+    "overall" : {
+      "coverage_mean" : 0.5569,
+      "exact_hit_rate" : 0.5083,
+      "gold_points_mean" : 0.8667,
+      "matched_ratio" : 0.6,
+      "precision_mean_over_matched" : 0.2944
+    },
+    "per_class" : {
+      "calculation" : {
+        "coverage_mean" : 0.0,
+        "exact_hit_rate" : 0.0,
+        "gold_points_mean" : 0.0,
+        "matched_ratio" : 0.0,
+        "precision_mean_over_matched" : 0.0
+      },
+      "conceptual" : {
+        "coverage_mean" : 1.0,
+        "exact_hit_rate" : 1.0,
+        "gold_points_mean" : 1.0,
+        "matched_ratio" : 1.0,
+        "precision_mean_over_matched" : 0.23
+      },
+      "diagram_dependent" : {
+        "coverage_mean" : 0.0,
+        "exact_hit_rate" : 0.0,
+        "gold_points_mean" : 0.0,
+        "matched_ratio" : 0.0,
+        "precision_mean_over_matched" : 0.0
+      },
+      "exam_question" : {
+        "coverage_mean" : 0.0,
+        "exact_hit_rate" : 0.0,
+        "gold_points_mean" : 0.0,
+        "matched_ratio" : 0.0,
+        "precision_mean_over_matched" : 0.0
+      },
+      "factual" : {
+        "coverage_mean" : 1.0,
+        "exact_hit_rate" : 1.0,
+        "gold_points_mean" : 1.0,
+        "matched_ratio" : 1.0,
+        "precision_mean_over_matched" : 0.2322
+      },
+      "mark_scheme" : {
+        "coverage_mean" : 0.0,
+        "exact_hit_rate" : 0.0,
+        "gold_points_mean" : 0.0,
+        "matched_ratio" : 0.0,
+        "precision_mean_over_matched" : 0.0
+      },
+      "misconception" : {
+        "coverage_mean" : 0.65,
+        "exact_hit_rate" : 0.5,
+        "gold_points_mean" : 1.6,
+        "matched_ratio" : 0.8,
+        "precision_mean_over_matched" : 0.4104
+      },
+      "multi_spec_point" : {
+        "coverage_mean" : 0.5714,
+        "exact_hit_rate" : 0.4286,
+        "gold_points_mean" : 2.0,
+        "matched_ratio" : 0.7143,
+        "precision_mean_over_matched" : 0.32
+      },
+      "prerequisite" : {
+        "coverage_mean" : 0.6944,
+        "exact_hit_rate" : 0.4167,
+        "gold_points_mean" : 2.1667,
+        "matched_ratio" : 0.9167,
+        "precision_mean_over_matched" : 0.3545
+      },
+      "revision_note" : {
+        "coverage_mean" : 1.0,
+        "exact_hit_rate" : 1.0,
+        "gold_points_mean" : 1.0,
+        "matched_ratio" : 1.0,
+        "precision_mean_over_matched" : 0.315
+      },
+      "vague_learner" : {
+        "coverage_mean" : 1.0,
+        "exact_hit_rate" : 1.0,
+        "gold_points_mean" : 1.0,
+        "matched_ratio" : 1.0,
+        "precision_mean_over_matched" : 0.2917
+      },
+      "why_wrong" : {
+        "coverage_mean" : 0.0,
+        "exact_hit_rate" : 0.0,
+        "gold_points_mean" : 0.0,
+        "matched_ratio" : 0.0,
+        "precision_mean_over_matched" : 0.0
+      }
+    }
+  }
+}
