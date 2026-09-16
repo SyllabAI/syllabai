@@ -1,0 +1,101 @@
+{
+ "sets": {
+  "discover": {
+   "learner": "cla-sh-6434183b@syllabai.test",
+   "root": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+   "topics": {
+    "4CH1-S1-a": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "4CH1-S1-b": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "4CH1-S1-c": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "4CH1-S1-d": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "4CH1-S1-e": "23751488-285f-47af-8013-8c0901b842cd",
+    "4CH1-S2-a": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "4CH1-S3-a": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "4CH1-S4-a": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   },
+   "foreign": "20000000-0000-0000-0000-000000000011",
+   "second_subject": true
+  },
+  "sh_topics": {
+   "4CH1-S1-a": {
+    "explain_ok": true,
+    "explain": {
+     "refused": false,
+     "evidenceCount": 5,
+     "lessonAction": {
+      "actionType": "PRACTISE_QUESTIONS",
+      "reasonCode": "INSUFFICIENT_COVERAGE",
+      "targetNodeId": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+      "targetCode": "4CH1-S1-a",
+      "targetTitle": "States of matter",
+      "reasonDetail": "No attempt evidence on 4CH1-S1-a yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+      "servableQuestionCount": 2
+     },
+     "citations": [
+      {
+       "index": 1,
+       "label": "Specification topic 4CH1-S1-a \u2014 States of matter",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+       "deepLink": "/api/v1/knowledge/nodes/2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+      },
+      {
+       "index": 2,
+       "label": "Specification topic 4CH1-1.1 \u2014 understand the three states of matter in terms of the arrangement, movement and energy of the particles",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "e9019231-4b8d-4bff-af18-5470a0492dbb",
+       "deepLink": "/api/v1/knowledge/nodes/e9019231-4b8d-4bff-af18-5470a0492dbb"
+      },
+      {
+       "index": 3,
+       "label": "Specification topic 4CH1-1.2 \u2014 understand the interconversions between the three states of matter in terms of: \u2022 the names of the interconversions \u2022 how they are achieved \u2022 the changes in arrangement, movement and energy of the par",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "627c3222-b94a-4d0d-b54d-9e2d7d345ccf",
+       "deepLink": "/api/v1/knowledge/nodes/627c3222-b94a-4d0d-b54d-9e2d7d345ccf"
+      },
+      {
+       "index": 4,
+       "label": "Specification topic 4CH1-1.3 \u2014 understand how the results of experiments involving the dilution of coloured solutions and diffusion of gases can be explained",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "c1497d64-f612-4c7a-ad59-92c339231806",
+       "deepLink": "/api/v1/knowledge/nodes/c1497d64-f612-4c7a-ad59-92c339231806"
+      },
+      {
+       "index": 5,
+       "label": "Specification topic 4CH1-1.4 \u2014 know what is meant by the terms: \u2022 solvent \u2022 solute \u2022 solution \u2022 saturated solution.",
+       "sourceType": "KNOWLEDGE_NODE",
+       "documentId": null,
+       "page": null,
+       "nodeId": "dad26745-7f5d-4c40-83b4-83a256f68b0c",
+       "deepLink": "/api/v1/knowledge/nodes/dad26745-7f5d-4c40-83b4-83a256f68b0c"
+      }
+     ],
+     "answer": "**States of matter** are the different ways that particles (atoms or molecules) can be arranged, move and hold energy. There are three main states:\n\n* **Solid** \u2013 particles are tightly packed in a regular pattern, they vibrate in place and have low energy.  \n* **Liquid** \u2013 particles are close together but not in a fixed pattern; they can slide past each other, move more freely and have a bit more energy.  \n* **Gas** \u2013 particles are far apart, move rapidly in all directions and have the highest energy.  \n\nThese ideas are set out in the specification for the topic\u202f[1] and are described in terms "
+    },
+    "surface": {
+     "actionType": "PRACTISE_QUESTIONS",
+     "reasonCode": "TUTOR_ENGAGED"
+    },
+    "parity_ok": true,
+    "hint_status": 200,
+    "summ_status": 503,
+    "modes_ok": false,
+    "hint_ok": true,
+    "summ_ok": false
+   }
+  },
+  "sh_tail": {}
+ },
+ "lineage": {
+  "slice": "SMART_LESSON",
+  "expect_core": "50dfa59"
+ }
+}

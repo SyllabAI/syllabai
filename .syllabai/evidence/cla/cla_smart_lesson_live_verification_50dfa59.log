@@ -1,0 +1,17 @@
+PASS G1 readiness
+PASS G2a SMART_LESSON fingerprint (new build live) — status=400 body={"status": 400, "error": "bad_request", "message": "SMART_LESSON context requires rootId and topicNodeId", "timestamp": "2026-09-16T02:06:48.918545673Z"}
+PASS G2b CLA route auth gate (unauth 401) — status=401
+PASS G3 fresh learner register+login — learner=cla-sl-9af3f179@syllabai.test
+PASS G4a 4CH1 root + validated topic resolved — 4CH1-S1-a States of matter (28 topics)
+PASS G4b SMART_LESSON EXPLAIN grounded — status=200 evidence=5 citations=5 model=openai/gpt-oss-120b
+PASS G4c context kind + validation resolved server-side — kind=SMART_LESSON version=4CH1-2017 subject=4CH1
+PASS G4d deterministic lesson action on the context — action=PRACTISE_QUESTIONS reason=INSUFFICIENT_COVERAGE target=4CH1-S1-a
+PASS G4e citations resolve (no unresolvable [n] markers) — markers=[]
+PASS G5 smart-lesson surface substrate consistent — status=200 surface_action=PRACTISE_QUESTIONS surface_reason=TUTOR_ENGAGED cla_action=PRACTISE_QUESTIONS
+PASS G6 HINT + SUMMARIZE modes grounded on the lesson context — HINT=200 SUMMARIZE=200
+PASS G7a unknown topic 404 — status=404
+PASS G7b foreign-subject topic 404 — status=404
+PASS G8a learner-state signalCounts reflect SMART_LESSON asks — status=200 topic=States of matter signalCounts={'EXPLANATION_REQUEST': 1, 'TOPIC_ENGAGEMENT': 2}
+PASS G8b no mastery rows created by chat — skills=0 (fresh learner, SMART_LESSON asks only)
+
+SMART_LESSON LIVE VERIFICATION: 15/15 PASS

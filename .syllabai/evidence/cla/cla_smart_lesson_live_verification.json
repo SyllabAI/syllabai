@@ -1,0 +1,135 @@
+{
+ "gates": {
+  "G1": {
+   "ok": true,
+   "detail": ""
+  },
+  "G2a": {
+   "ok": true,
+   "detail": "status=400 body={\"status\": 400, \"error\": \"bad_request\", \"message\": \"SMART_LESSON context requires rootId and topicNodeId\", \"timestamp\": \"2026-09-16T02:06:48.918545673Z\"}"
+  },
+  "G2b": {
+   "ok": true,
+   "detail": "status=401"
+  },
+  "G3": {
+   "ok": true,
+   "detail": "learner=cla-sl-9af3f179@syllabai.test"
+  },
+  "G4a": {
+   "ok": true,
+   "detail": "4CH1-S1-a States of matter (28 topics)"
+  },
+  "G4b": {
+   "ok": true,
+   "detail": "status=200 evidence=5 citations=5 model=openai/gpt-oss-120b"
+  },
+  "G4c": {
+   "ok": true,
+   "detail": "kind=SMART_LESSON version=4CH1-2017 subject=4CH1"
+  },
+  "G4d": {
+   "ok": true,
+   "detail": "action=PRACTISE_QUESTIONS reason=INSUFFICIENT_COVERAGE target=4CH1-S1-a"
+  },
+  "G4e": {
+   "ok": true,
+   "detail": "markers=[]"
+  },
+  "G5": {
+   "ok": true,
+   "detail": "status=200 surface_action=PRACTISE_QUESTIONS surface_reason=TUTOR_ENGAGED cla_action=PRACTISE_QUESTIONS"
+  },
+  "G6": {
+   "ok": true,
+   "detail": "HINT=200 SUMMARIZE=200"
+  },
+  "G7a": {
+   "ok": true,
+   "detail": "status=404"
+  },
+  "G7b": {
+   "ok": true,
+   "detail": "status=404"
+  },
+  "G8a": {
+   "ok": true,
+   "detail": "status=200 topic=States of matter signalCounts={'EXPLANATION_REQUEST': 1, 'TOPIC_ENGAGEMENT': 2}"
+  },
+  "G8b": {
+   "ok": true,
+   "detail": "skills=0 (fresh learner, SMART_LESSON asks only)"
+  }
+ },
+ "meta": {
+  "topic": "4CH1-S1-a",
+  "topic_id": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+  "cla_action": {
+   "actionType": "PRACTISE_QUESTIONS",
+   "reasonCode": "INSUFFICIENT_COVERAGE",
+   "targetNodeId": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+   "targetCode": "4CH1-S1-a",
+   "targetTitle": "States of matter",
+   "reasonDetail": "No attempt evidence on 4CH1-S1-a yet \u2014 start with the first validated question to find your level (diagnostic practice)",
+   "servableQuestionCount": 2
+  },
+  "surface_action": {
+   "actionType": "PRACTISE_QUESTIONS",
+   "reasonCode": "TUTOR_ENGAGED",
+   "targetNodeId": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+   "targetCode": "4CH1-S1-a",
+   "targetTitle": "States of matter",
+   "questionId": "9ce4a458-73e1-4e77-aad3-f80806f9a20e",
+   "servableQuestionCount": 2,
+   "reasonDetail": "You asked the Tutor 1 time(s) about 4CH1-S1-a but have no attempt evidence yet \u2014 convert the curiosity into practice"
+  },
+  "citations": [
+   {
+    "index": 1,
+    "label": "Specification topic 4CH1-S1-a \u2014 States of matter",
+    "sourceType": "KNOWLEDGE_NODE",
+    "documentId": null,
+    "page": null,
+    "nodeId": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "deepLink": "/api/v1/knowledge/nodes/2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   },
+   {
+    "index": 2,
+    "label": "Specification topic 4CH1-1.1 \u2014 understand the three states of matter in terms of the arrangement, movement and energy of the particles",
+    "sourceType": "KNOWLEDGE_NODE",
+    "documentId": null,
+    "page": null,
+    "nodeId": "e9019231-4b8d-4bff-af18-5470a0492dbb",
+    "deepLink": "/api/v1/knowledge/nodes/e9019231-4b8d-4bff-af18-5470a0492dbb"
+   },
+   {
+    "index": 3,
+    "label": "Specification topic 4CH1-1.2 \u2014 understand the interconversions between the three states of matter in terms of: \u2022 the names of the interconversions \u2022 how they are achieved \u2022 the changes in arrangement, movement and energy of the par",
+    "sourceType": "KNOWLEDGE_NODE",
+    "documentId": null,
+    "page": null,
+    "nodeId": "627c3222-b94a-4d0d-b54d-9e2d7d345ccf",
+    "deepLink": "/api/v1/knowledge/nodes/627c3222-b94a-4d0d-b54d-9e2d7d345ccf"
+   },
+   {
+    "index": 4,
+    "label": "Specification topic 4CH1-1.3 \u2014 understand how the results of experiments involving the dilution of coloured solutions and diffusion of gases can be explained",
+    "sourceType": "KNOWLEDGE_NODE",
+    "documentId": null,
+    "page": null,
+    "nodeId": "c1497d64-f612-4c7a-ad59-92c339231806",
+    "deepLink": "/api/v1/knowledge/nodes/c1497d64-f612-4c7a-ad59-92c339231806"
+   },
+   {
+    "index": 5,
+    "label": "Specification topic 4CH1-1.4 \u2014 know what is meant by the terms: \u2022 solvent \u2022 solute \u2022 solution \u2022 saturated solution.",
+    "sourceType": "KNOWLEDGE_NODE",
+    "documentId": null,
+    "page": null,
+    "nodeId": "dad26745-7f5d-4c40-83b4-83a256f68b0c",
+    "deepLink": "/api/v1/knowledge/nodes/dad26745-7f5d-4c40-83b4-83a256f68b0c"
+   }
+  ],
+  "answer_excerpt": "States of matter are the different forms that a substance can take \u2013 solid, liquid and gas \u2013 and they are distinguished by how the particles are arranged, how they move and how much energy they have\u202f[2].  \n\n* **Solid** \u2013 particles are tightly packed in a regular pattern and can only vibrate in place; they have low kinetic energy.  \n* **Liquid** \u2013 particles are close together but not in a fixed pat"
+ }
+}
