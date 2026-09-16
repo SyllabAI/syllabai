@@ -214,11 +214,59 @@ PRODUCTION VERIFIED   = YES   (read-only checks green, S75 state stands)
 CI VERIFIED           = NO    (BLOCKED — quota exhausted; sentinel-automated)
 PILOT READY           = NO    (4/5 gates; CI + live r3 remain)
 
-Pilot Monitor migration = EXECUTED (ops 7d6622a + web 022d9ba);
-                          wiring VERIFIED by real dispatch (fail-closed
-                          preflight); end-to-end 19/19 green PENDING the
-                          operator's secret entry — NOT CLAIMED until run.
+Pilot Monitor migration = COMPLETE (ops 7d6622a→04d7d68 + web 022d9ba);
+                          credentials re-provisioned after loss
+                          (pilot.monitor2@syllabai-test.dev); end-to-end
+                          VERIFIED by real dispatch 35080761751:
+                          preflight passed, 15/15 checks green,
+                          Discord report posted (see §9).
 Steady state             = ~590 min/mo private-billed (was ~1,190 published)
 Money spent              = zero
 Gates weakened           = none
 ```
+
+## 9. Amendment (2026-09-16, later same day): operator reported the passwords LOST — credentials re-provisioned, secrets set, cutover COMPLETED end-to-end
+
+The operator's follow-up ("I dont have the passwords" / "Yes, pasted") closed
+the one pending step, with a recovery in between:
+
+- **Credential loss confirmed unrecoverable by design.** The session-58
+  password was sealed into write-only GitHub secrets and delivered only in
+  the session-59 report, which was wiped by the sandbox reset (verified: only
+  t-c03/t-c11/t036 artifacts persist in `download/`); no forgot-password
+  endpoint exists (AuthController: register/login/me/password-change-needs-
+  current); no credentials were ever committed (session-60 leak-scan stands).
+- **Recovery = the sanctioned provisioning path, session-58 precedent:** a
+  fresh TEST monitor learner via the PUBLIC register API —
+  `pilot.monitor2@syllabai-test.dev` (STUDENT, verified via /auth/me; TEST
+  classification = the `@syllabai-test.dev` email-domain convention, applied
+  analytically; the users table has no classification column and the evidence
+  export excludes test accounts at analysis time). The probe is designed for
+  a FRESH learner (its smart-lesson check expects the cold-start
+  INSUFFICIENT_COVERAGE action), so no account state needed migration; the
+  dormant old account is a harmless TEST STUDENT row. One production write:
+  a single users+user_roles row — the same write session-58 made.
+  **Pre-handover local verification with the real probe script (byte-identical
+  ops copy): 15/15 checks green, exit 0.**
+- **Operator pasted the new pair** (verified present by name via the API:
+  `PILOT_MONITOR_EMAIL` + `PILOT_MONITOR_PASSWORD` now in syllabai-ops).
+- **End-to-end dispatch VERIFIED (run `35080761751`, 2026-09-16T09:40Z,
+  public = free, 22 s):** preflight → "monitor-account secrets present" →
+  full probe → `SUMMARY: 15/15 checks green (0 failing, 2 advisory)` →
+  "discord report posted" → conclusion success. The 2 advisories: teacher
+  creds not set + kappa N/A until T-C04 — both known, both non-blocking.
+  (The earlier "19/19" phrasing was the with-teacher-creds estimate; the
+  observed 6-hourly probe summary line is 15/15 with teacher advisory-skip.)
+- **Cutover status: COMPLETE.** Pilot monitoring is RESTORED during the
+  blackout (the private monitor had been quota-dead since 2026-09-15T13:02Z);
+  the next 6-hourly schedule (17 */6 * * *) now reports to Discord
+  automatically. Steady state stands at ~590 private min/mo. Teacher secrets
+  remain optional/unset: recovery requires the operator's Neon path (bcrypt
+  reset) or their local copy of the session-59 report (`recovery-2026-09-13-*`);
+  the register API cannot recreate the TEACHER role (always STUDENTs,
+  Master Spec §6.1); the monitor degrades gracefully without them.
+- Docs updated truthfully: ops `04d7d68` (README cutover runbook + workflow
+  comment name the new account + re-provisioning provenance; NO password in
+  any repo file). Core `DEPLOYMENT.md` §4 pre-existing drift (still says
+  "web repo secrets" + the old email — stale since the migration itself)
+  noted, not fixed here (scope discipline; standalone doc follow-up).
