@@ -118,3 +118,105 @@ becomes the machine-readable t0 that t1 is measured against, and the
 baseline document's t0 values are superseded by the captured ones where they
 differ (they should not differ materially — the state has been repaired and
 audited clean; but t0 will say so itself, freshly measured).
+
+---
+
+## Expected-diff policy — the t0 gate (added 2026-09-17, Session 80)
+
+t0 runs after CI restoration and the r3 round. Its verdict is an objective
+gate on starting the pilot: the artifact is compared against the
+**pre-registered expected state** — the r3 protocol's S3 captures plus the
+declared operational baseline — and every difference must classify into
+exactly one of four rows. Anything that cannot be classified is treated as
+FAIL (fail-closed, the house rule).
+
+| t0 result | Interpretation | Pilot impact |
+|---|---|---|
+| No unexpected differences | **PASS** | Pilot may start (CI-gate permitting) |
+| Known/declared transient differences only | **REVIEW** | Operator decides with evidence; documented transients do not block |
+| Unexpected learner-state/content mutation | **FAIL** | Pilot blocked until cause understood + re-captured clean |
+| Missing provenance/evidence | **FAIL** | Capture is untrustworthy; re-run the capture after fixing |
+
+### The comparison basis (what t0 is diffed AGAINST)
+
+1. The r3 round record (S0 baseline + S3 post-state, per the frozen r3
+   protocol) — the last sanctioned evidence event before t0.
+2. The declared operational baseline (below): accounts created, deploys
+   shipped, and scheduled jobs that legitimately write between S3 and t0.
+
+The comparison is field-scoped: identity fields are never diffs; state
+fields are compared at full stored precision; derived/replicated fields
+(the decay-adjusted values, bands) are compared only against a t0-moment
+recomputation, never against a stale constant.
+
+### Declared transients (the REVIEW whitelist — enumerated exhaustively)
+
+- **W1 — capture identity:** `capturedAt`, server identity, connection
+  metadata; the `lineages` block (may legitimately advance if a deploy
+  shipped between S3 and t0 — but then the deploy MUST be declared).
+- **W2 — decay replication values:** `smartLessonInputs.*.
+  decayAdjustedMastery` and `band` are computed AT CAPTURE TIME by design
+  (P(t)=P₀·e^(−t/τ)); they differ between any two captures. The comparison
+  basis for mastery is the STORED value (T0.9 raw), which changes ONLY via
+  `recordAttempt` (evidence) or `applyDecay` (nightly job) — each of which
+  leaves telemetry (BKT_UPDATED / DECAY_APPLIED).
+- **W3 — nightly decay writes:** `skill_states.mastery`/`updated_at` for
+  rows idle > 48 h, each with a `DECAY_APPLIED` telemetry row whose
+  payload reconciles the before/after values. `attempts`, `correct_count`,
+  `last_practiced_at` must be untouched by decay (code-verified:
+  `SkillState.applyDecay` writes mastery only).
+- **W4 — declared operational rows:** the t0-moment monitor account
+  (`pilot.monitor2@syllabai-test.dev` — a users + user_roles row pair),
+  the dormant original monitor account, the teacher account; telemetry rows
+  emitted by the Pilot Monitor's own read-only probes (the probe loop is
+  GET-only — it creates ZERO attempts; any attempts row for the monitor
+  outside r3 is NOT in this whitelist).
+- **W5 — review schedules:** rows created by the nightly job's review
+  threshold crossing (accompanied by the matching DECAY_APPLIED event).
+
+### Hard-fail classes (any one ⇒ FAIL)
+
+- **F1 — integrity invariants:** T0.7 non-zero (projection mismatch /
+  settled-without-evidence / duplicate rows), or `integrity.verdict` ≠
+  `CLEAN`, or runner exit ≠ 0.
+- **F2 — undeclared learner-state mutation:** any `skill_states` /
+  `misconception_states` / `attempts` / `answers` change not attributable
+  to the r3 record (A-assertions) or a whitelisted transient (W2–W5).
+- **F3 — undeclared content mutation:** any change to `questions`,
+  `question_versions`, `exam_papers`, `knowledge_nodes`, or
+  validation/review states not part of a declared operator content action
+  recorded before the capture.
+- **F4 — population drift:** new users beyond W4's declared accounts
+  (t0 is pre-pilot: self-registration has not opened).
+- **F5 — provenance gaps:** the artifact lacks `lineages`, lacks the
+  integrity block, shows a dirty-tree flag on a repo that should be clean,
+  or records a Flyway head inconsistent with the deployed state.
+- **F6 — schema drift:** any t0 section returning an error / empty result
+  that the local execution validation showed must be non-empty (e.g. the
+  population sections), indicating the instrument no longer matches the
+  schema it claims to measure.
+
+### Verdict procedure
+
+1. Run the capture; confirm runner exit 0 and `integrity.verdict = CLEAN`
+   (else F1 → FAIL immediately).
+2. Diff the artifact against the r3 S3 record + operational baseline,
+   field-scoped as above.
+3. Classify every difference: whitelisted → REVIEW-list; attributable to a
+   declared cause → REVIEW-list; else → FAIL.
+4. Record the verdict IN the t0 artifact's sibling record (not by editing
+   the artifact): verdict, classification list, operator decision if
+   REVIEW. A REVIEW verdict with all differences whitelisted and no
+   operator concern is recorded as PASS-WITH-NOTES.
+5. On FAIL: no re-capture until the cause is understood and written down;
+   then a fresh capture (t0 is cheap — it is the understanding that must
+   precede it).
+
+### t0 → t1 continuity note
+
+The same policy governs t1 (post-pilot), with one pre-registered
+difference: at t1, F4 (population drift) becomes the pilot's own
+enrollment — legitimate, declared by the pilot protocol itself, with each
+enrolled learner attributable to a real registration event. Everything
+else (especially F1–F3, F5–F6) is unchanged, so t0–t1 differences remain
+attributable to pilot evidence, not to measurement drift.
