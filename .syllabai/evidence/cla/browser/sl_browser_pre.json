@@ -1,0 +1,35 @@
+{
+ "phase": "pre",
+ "state": {
+  "status": 200,
+  "skill_row_count": 0,
+  "engagement_count": 0,
+  "signal_counts_total": {}
+ },
+ "fingerprint": {
+  "cla_ask_unauth": 401,
+  "smart_lesson_unauth": 401
+ },
+ "kg_topic_explain": {
+  "status": 200,
+  "kind": "KG_TOPIC",
+  "evidence": 1,
+  "citations": 5
+ },
+ "unknown_topic": {
+  "status": 404,
+  "expect": 404
+ },
+ "foreign_topic": {
+  "status": 404,
+  "expect": 404
+ },
+ "state_after": {
+  "status": 200,
+  "skill_row_count": 0,
+  "engagement_count": 1,
+  "signal_counts_total": {
+   "EXPLANATION_REQUEST": 1
+  }
+ }
+}

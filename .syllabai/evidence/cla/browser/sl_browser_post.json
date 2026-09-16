@@ -1,0 +1,28 @@
+{
+ "phase": "post",
+ "state": {
+  "status": 200,
+  "skill_row_count": 0,
+  "engagement_count": 1,
+  "signal_counts_total": {
+   "EXPLANATION_REQUEST": 1
+  }
+ },
+ "smart_lesson_explain": {
+  "status": 200,
+  "kind": "SMART_LESSON",
+  "validation": null,
+  "actionType": "PRACTISE_QUESTIONS",
+  "targetCode": "4CH1-S1-a",
+  "evidence": 5,
+  "citations": 5
+ },
+ "state_after": {
+  "status": 200,
+  "skill_row_count": 0,
+  "engagement_count": 1,
+  "signal_counts_total": {
+   "EXPLANATION_REQUEST": 2
+  }
+ }
+}

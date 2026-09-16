@@ -1,0 +1,84 @@
+# SMART_LESSON in-browser verification + deployment inspection — 2026-09-16
+# Session: SMART_LESSON closure → safe auto-progression (post-33/33)
+# Frontend under test: syllabai-web main 4c3326a ("Smart lesson" kind in the SAME Assistant panel)
+# Production backend: https://syllabai-core.onrender.com (unchanged lineage: 50dfa59/9c0cad0)
+# Production frontend: https://syllabai-web.vercel.app (Vercel, dashboard-configured; no repo-side deploy hook)
+
+## A. GitHub Actions probe (mission §5)
+- actions-health canary dispatched via API at 2026-09-16T07:51:43Z → run 35070697220:
+  completed FAILURE with ZERO steps = the documented zero-step BlobNotFound
+  infrastructure signature (org Actions quota). INFRASTRUCTURE FAILURE, not a product failure.
+- Last core-ci on main lineage: run 35045617136 @ 50dfa59 — same zero-step signature.
+- Determination: Actions remains UNVERIFIED — CI INFRASTRUCTURE BLOCKED
+  (sentinel-automated restore window 2026-09-27 per session-76 audit).
+  Unit (535/535 local), live (15/15), S-H (33/33) evidence preserved unchanged.
+
+## B. Production Vercel deployment inspection (mission §4)
+- Fresh headless-browser session on https://syllabai-web.vercel.app (no cache).
+- Assistant panel opens; context-kind selector lists exactly:
+  [Topic (specification), Past-paper question, Question part] — NO "Smart lesson".
+- Panel chunk 3f2aa9baa470e1ea.js contains QUESTION_PART but NOT SMART_LESSON /
+  lessonAction strings → deployed build predates 4c3326a (chunk names are
+  content-hashed; not a CDN cache artifact).
+- Classification: deployment lag. Vercel deploys are dashboard-triggered
+  (central WORKLOG: "Vercel redeploy required — dashboard-configured, no
+  repo-side deploy hook"). OPERATOR-GATED, not a product defect.
+- Status: SMART_LESSON production in-browser verification = UNVERIFIED —
+  DEPLOYMENT BLOCKED (operator Vercel redeploy required).
+
+## C. In-browser verification — DEPLOYED build (regression scope, §4.1)
+Learner: fresh registration via UI (sl-browser-1789545547@syllabai.test, STUDENT).
+| Check | Result |
+|---|---|
+| Assistant panel opens | PASS |
+| Existing kinds listed; no parallel assistant surface | PASS (same single panel) |
+| KG_TOPIC EXPLAIN via UI (4CH1-S1-a) | PASS — grounded answer, inline [1]–[5], source list w/ spec anchors 4CH1-1.1..1.4, meta row `KG_TOPIC · VALIDATED · evidence 5 · openai/gpt-oss-120b / groq · 4.9s · read-only tools used (3)` |
+| QUESTION_PART EXPLAIN via UI (q01-b7849fb8 part a) | PASS — part label `(a) · 4 marks`, meta row `QUESTION_PART (a) · VALIDATED · evidence 6 · attempted: false`; honest grounded refusal (declines to name apparatus absent from text evidence instead of fabricating) |
+| Citation/source presentation | PASS — numbered sources + inline markers (same as before, no regression) |
+| Unknown topic fail-closed (API, same learner) | PASS — 404 (SMART_LESSON, zero topicNodeId) |
+| Foreign-subject topic fail-closed (API, real second-subject topic id 20000000-0000-0000-0000-000000000011) | PASS — 404 |
+| No mutation from rendering/asking | PASS — skillStates rows 0 before AND after; only sanctioned tutorEngagements signal (EXPLANATION_REQUEST +1) |
+| Backend SMART_LESSON re-fingerprint (this session) | PASS — EXPLAIN 200, kind=SMART_LESSON, actionType=PRACTISE_QUESTIONS, targetCode=4CH1-S1-a, evidenceCount=5, citations=5; pre-auth 401 on cla/ask + smart-lesson |
+Evidence: browser/sl_browser_explain.png, browser/sl_browser_part.png,
+browser/sl_browser_lesson.png (Smart Lesson surface renders deterministic
+ladder honestly: insufficient coverage → diagnostic practice), browser/sl_browser_pre.json, browser/sl_browser_post.json.
+
+## D. In-browser verification — MAIN-LINEAGE build (SMART_LESSON panel scope, §4.1)
+Method: production build of syllabai-web main 4c3326a served locally
+(`next build` + `next start`, NEXT_PUBLIC_API_BASE_URL baked =
+https://syllabai-core.onrender.com; localhost:3000 is in the backend default
+CORS allow-list) — the EXACT code Vercel will serve after redeploy, exercised
+against the REAL production backend + real LLM. Local build chunk verified to
+contain SMART_LESSON (cf73528213c5da17.js) — proves the deployed production
+chunk simply lags main.
+Learner: fresh registration via UI (sl-local-…@syllabai.test, STUDENT).
+| §4.1 item | Result |
+|---|---|
+| Assistant panel opens | PASS |
+| Context-kind selector contains SMART_LESSON | PASS — "Smart lesson" listed in the SAME selector (no second assistant UI) |
+| SMART_LESSON selectable for a valid topic | PASS — topic picker under the kind; anchored topic 4CH1-S1-a — States of matter; label becomes "Anchored lesson topic (your own next action rides along)" |
+| Root/topic resolution correct | PASS — context meta row `anchored 4CH1-S1-a · States of matter · SMART_LESSON · VALIDATED`; citation [1] deep link = the exact anchored topic node id 2fa5ee0e-1bd1-44a7-b993-83b08241d882 |
+| Lesson action/framing displayed correctly | PASS — meta row "next action: practise questions" (deterministic ladder action rides along) on every mode response |
+| EXPLAIN works with grounded evidence | PASS — 5 evidence / 5 citations (spec topics 4CH1-S1-a + 1.1–1.4), water example (ice/liquid/steam), model openai/gpt-oss-120b / groq, 6.8s |
+| HINT works without mark-scheme leakage | PASS — scaffolding-only response (rooms analogy + guiding questions, ends with a question; never states the final description); sources = specification topics ONLY, zero MARK_SCHEME; placeholder morphs to "Ask for a hint (scaffolding, never the answer)" |
+| SUMMARIZE works with appropriate scope | PASS — compressed spec-structure overview (one line per spec point, each cited), not a full explanation; 7.1s |
+| Citation/source presentation remains correct | PASS — numbered list, inline markers, deep links to canonical knowledge-node endpoints ([1] = anchored topic node) |
+| Unknown topic fails closed | PASS — 404 (API probe, same learner; UI picker only lists real topics) |
+| Foreign-subject topic fails closed | PASS — 404 (real foreign topic id via API probe) |
+| No learner-state/mastery mutation from rendering or asking | PASS — skillStates rows 0 before/after all four UI asks + probes; only sanctioned signals TOPIC_ENGAGEMENT 1, EXPLANATION_REQUEST 3 |
+| KG_TOPIC / QUESTION_PART not regressed | PASS — verified on BOTH builds (section C = production; same panel architecture on main) |
+| UI remains within existing Assistant panel architecture | PASS — same panel, same mode selector, same gate/citation behavior; SMART_LESSON adds a selector option + lesson label + meta-row action only |
+Evidence: browser/sl_local_explain.png, browser/sl_local_hint.png,
+browser/sl_local_summarize.png.
+
+## E. Verdicts (honest labels)
+- SMART_LESSON web panel (main 4c3326a): VERIFIED in-browser — local production
+  build × production backend (real LLM, real learner, real fail-closed).
+- Production Vercel deployment of 4c3326a: UNVERIFIED — DEPLOYMENT BLOCKED
+  (operator-gated dashboard redeploy; no repo-side deploy hook). Deployment lag
+  is recorded with chunk-level proof; NOT a product defect.
+- GitHub Actions: UNVERIFIED — CI INFRASTRUCTURE BLOCKED (fresh zero-step probe
+  run 35070697220 this session; sentinel window 2026-09-27).
+- Existing surfaces (KG_TOPIC, QUESTION_PART, Smart Lesson surface): no
+  regression observed on production.
+- Defects found this session: NONE (zero product defects; no harness defects).
