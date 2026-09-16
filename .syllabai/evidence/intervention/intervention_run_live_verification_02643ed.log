@@ -1,0 +1,14 @@
+waiting for the backend (cold starts take ~2 min)…
+backend UP
+PASS G1 intervention-run route auth gate (pre-auth 401) — get=401 create=401
+PASS G2 fresh learner register+login — status=200 learner=run-live-32c087a0@syllabai.test
+PASS G3 deterministic NBA PRACTISE_QUESTIONS (cold start) — status=200 top=PRACTISE_QUESTIONS reason=UNCOVERED_TOPIC
+PASS G4 run created from the recommendation snapshot — status=201 origin=NBA diagRef=nba:nba-rules/v1.3:297a8706-b957-40cb-8bb6-0bfed66980b7:2fa5
+PASS G5 lifecycle activate→step→evidence-by-reference — activate=200 step=200 (seq=0) evidence=200
+PASS G6 completion + full reconstruction — complete=200 get=200 status=COMPLETED steps=1 evidence=1
+PASS G7 mutation boundary (zero skill rows; engagement rows untouched by run ops) — skills pre/post=0/0 engagements unchanged=True
+PASS G8 terminal immutability (second complete 409; late evidence 409) — complete=409 evidence=409
+PASS G9 resume gate (wrong identity 409 intervention_version_mismatch; correct resumes) — wrong=409 (intervention_version_mismatch) right=200 status=ACTIVE
+PASS G10 ownership fail-closed (stranger 404 on get and complete) — get=404 complete=404
+
+INTERVENTION RUN LIVE VERIFICATION: 10/10 PASS

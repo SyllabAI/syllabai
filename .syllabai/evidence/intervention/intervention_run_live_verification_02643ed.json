@@ -1,0 +1,82 @@
+{
+ "base": "https://syllabai-core.onrender.com",
+ "lineage": "02643ed",
+ "gates": {
+  "G1": {
+   "ok": true,
+   "detail": "get=401 create=401"
+  },
+  "G2": {
+   "ok": true,
+   "detail": "status=200 learner=run-live-32c087a0@syllabai.test"
+  },
+  "G3": {
+   "ok": true,
+   "detail": "status=200 top=PRACTISE_QUESTIONS reason=UNCOVERED_TOPIC"
+  },
+  "G4": {
+   "ok": true,
+   "detail": "status=201 origin=NBA diagRef=nba:nba-rules/v1.3:297a8706-b957-40cb-8bb6-0bfed66980b7:2fa5"
+  },
+  "G5": {
+   "ok": true,
+   "detail": "activate=200 step=200 (seq=0) evidence=200"
+  },
+  "G6": {
+   "ok": true,
+   "detail": "complete=200 get=200 status=COMPLETED steps=1 evidence=1"
+  },
+  "G7": {
+   "ok": true,
+   "detail": "skills pre/post=0/0 engagements unchanged=True"
+  },
+  "G8": {
+   "ok": true,
+   "detail": "complete=409 evidence=409"
+  },
+  "G9": {
+   "ok": true,
+   "detail": "wrong=409 (intervention_version_mismatch) right=200 status=ACTIVE"
+  },
+  "G10": {
+   "ok": true,
+   "detail": "get=404 complete=404"
+  }
+ },
+ "run": {
+  "runId": "88cf2bbb-7643-40b9-bb86-58feb46c80d1",
+  "learnerId": "52943f1f-1f62-4bf4-9f6d-f6f57af7acd7",
+  "subjectId": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+  "curriculumVersionId": "356840e6-81e2-49df-8182-93ab6504d591",
+  "status": "CREATED",
+  "origin": "NBA",
+  "targetSpecificationPoints": [
+   "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+  ],
+  "questionPartIds": [],
+  "evidenceRefs": [],
+  "diagnosisSnapshotRef": "nba:nba-rules/v1.3:297a8706-b957-40cb-8bb6-0bfed66980b7:2fa5ee0e-1bd1-44a7-b993-83b08241d882:rank1:UNCOVERED_TOPIC",
+  "learnerStateSnapshotRef": "skill-state:2fa5ee0e-1bd1-44a7-b993-83b08241d882:unmeasured",
+  "diagnosisVersion": "nba-rules/v1.3",
+  "actionType": "PRACTISE_QUESTIONS",
+  "interventionVersion": "practice-intervention/v1",
+  "interventionHash": "83951aefcf74e8ed7196cfd94fb6b6cc47d4625ab8fdd1eca6964a63d0d6180b",
+  "allowedToolIds": [
+   "get_specification_context",
+   "get_learner_state",
+   "start_practice"
+  ],
+  "terminalOutcome": null,
+  "currentStep": null,
+  "createdAt": "2026-09-16T09:21:25.026754060Z",
+  "startedAt": null,
+  "completedAt": null,
+  "cancelledAt": null,
+  "steps": [],
+  "evidence": []
+ },
+ "meta": {
+  "learner": "run-live-32c087a0@syllabai.test",
+  "run_id": "88cf2bbb-7643-40b9-bb86-58feb46c80d1"
+ }
+}
