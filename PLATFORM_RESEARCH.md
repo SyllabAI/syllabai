@@ -73,6 +73,18 @@ Pilot budget check: 50 students × ~20 tutor queries/day ≈ 1,000 requests/day 
 
 **Decision (ADR-009):** default chain Groq → Gemini 2.5 Flash → OpenRouter behind `LlmProvider`/`EmbeddingProvider`, with health/rate tracking and per-experiment pinning.
 
+### LLM provider chain — model drift register (added 2026-09-17)
+
+The chain ORDER (ADR-009: Groq → Gemini → OpenRouter) is stable and accepted; the model IDENTIFIERS have drifted with provider catalog churn. States are recorded separately — do not claim deployed runtime state from YAML alone.
+
+| Provider | DOCUMENTED (this dossier, 2026-09-02) | CONFIGURED (syllabai-core `application.yml` @ 8e1d27b) | DEPLOYED (Render runtime) | VERIFIED LIVE |
+|---|---|---|---|---|
+| Groq | `llama-3.3-70b-versatile` (retired for this key's account — catalog probe 2026-09-14) | `${SYLLABAI_GROQ_MODEL:openai/gpt-oss-120b}` (env-bridged) | Unknown from repository evidence — Render may set `SYLLABAI_GROQ_MODEL` | Not re-verified in the authoring environment (no credentials) |
+| Gemini | `2.5 Flash` (no longer available to accounts created after its retirement window — YAML finding 2026-09-14) | `gemini-3.6-flash` (hard-coded) | Presumed = CONFIGURED (no env bridge defined); unverified | Not re-verified |
+| OpenRouter | "free models" (`llama-3.3-70b-instruct:free` retired; free inventory rotated) | `nvidia/nemotron-3-super-120b-a12b:free` (probe-verified 200 / 2.4 s against the production key 2026-09-14) | Presumed = CONFIGURED; unverified | 2026-09-14 probe recorded in the YAML comment — predates this register |
+
+Re-verification rule (ADR-009): free-tier catalogs drift weekly — verify at build time and record the probe (provider, model, timestamp, result) here.
+
 ### License correction — SurrealDB (struck)
 
 SurrealDB is **not** Apache-2.0, contrary to the v1.0 repository dossier. Its core is licensed under the **Business Source License 1.1** (not open source; commercial/production use restricted; GitHub license field returns NOASSERTION). Sources: https://surrealdb.com and the BSL 1.1 text in the repository.
@@ -147,3 +159,31 @@ Groq llama-3.3-70b (primary) / Gemini 2.5 Flash / OpenRouter / Ollama — behind
 - Neon Free has bounded compute/storage.
 - AI inference may incur external cost.
 - Data/source/model licensing must be checked separately from infrastructure pricing.
+
+## FreeLLMAPI — primary-source research (added 2026-09-17)
+
+**Status: PROPOSED / EXPERIMENTAL — researched, NOT implemented, NOT accepted for production learner traffic (ADR-023).** Subject: `tashfeenahmed/freellmapi`. Primary sources: repository README, LICENSE, `docs/en/architecture/00-high-level-index.md` (incl. its maintained per-provider ToS review), retrieved 2026-09-17.
+
+**Architecture.** Self-hosted, single-user, local-first OpenAI-compatible proxy/aggregator (TypeScript, Node 20+, Express on :3001; Docker Compose or desktop app). Routes ONE /v1 endpoint over ~34 free providers (its signed catalog tracks 474 model families / 635 free endpoints) using YOUR OWN free-tier keys: provider keys AES-256-GCM-encrypted in local SQLite, decrypted in-memory per request. Flow: Express proxy → Router (highest-priority model with a healthy key under all its rate limits) → provider SDK. NOT a hosted request service — prompts/completions never transit freellmapi.co; the only outbound dependency is a twice-daily SIGNED model-catalog sync (Ed25519-pinned; the free build trails ~30 days; the paid "Premium" tier only accelerates that feed — the router stays MIT/free either way).
+
+**Licensing.** MIT for the router + dashboard; Premium is a paid catalog-feed service, not a license change.
+
+**Terms-of-Service considerations.** The project maintains a per-provider ToS review (May 2026): Groq / Cerebras / Mistral / OpenRouter "likely OK" for a private single-user proxy; Google Gemini "caution" (2026 clause narrowing to professional/business purposes); NVIDIA NIM and GitHub Models "caution" (evaluation/prototyping scope); Cohere flagged "avoid". The project's own rules of thumb: one account per provider, no reselling, no endpoint sharing, no free tier as a paid production backend. Its own disclaimer states the software is "for personal experimentation and learning, not production."
+
+**Privacy.** Keys and analytics stay local; no prompt/key telemetry reaches the catalog server (per project docs); response cache and prompt compression are opt-in. Self-hosting is the only mode — the privacy posture is adequate when self-hosted, and only self-hosted.
+
+**Operational model.** One more always-on service (Render Docker service or equivalent) with persistent SQLite storage; health probes, cooldowns on 429/5xx, RPM/RPD/TPM/TPD ledger, six routing strategies, 30-minute sticky sessions. Project-stated limitations: no frontier models, variable latency, no SLA, effective intelligence dips late in the day.
+
+**API compatibility.** OpenAI-compatible `/v1/chat/completions` including tools and structured outputs — Spring AI's `OpenAiChatModel` can point at it via `base-url` (the same adapter path as Groq/OpenRouter). No SyllabAI code exists for it (correctly, per ADR-023).
+
+**Failure behavior.** Internal per-model failover with cooldowns and learned per-key ceilings — a router INSIDE what would be a single SyllabAI chain member; opaque to `FailoverLlmChain` observability (the chain sees one member, not the internal model switches).
+
+**Quota behavior.** Per-key RPM/RPD/TPM/TPD counters that learn providers' reported ceilings; routing stays under the caps of the keys you feed it. No quota is created — it only aggregates the same free tiers SyllabAI can use directly.
+
+**Security.** Local login-gated dashboard; keys encrypted at rest; the endpoint must not be reachable by third parties (single-user assumption — sharing it violates the ToS rules of thumb above).
+
+**SyllabAI suitability.** Marginal for production: SyllabAI already uses the same underlying free tiers DIRECTLY through its own chain (classification, budgets, cooldowns, experiment pinning — all observable and platform-owned). Inserting FreeLLMAPI adds a second routing layer with duplicated semantics and reduced per-provider observability, plus a second always-on service to operate, in exchange for capacity from providers SyllabAI has not yet registered. Its own "not production" disclaimer does not meet the pilot's reliability bar for learner-serving traffic.
+
+**Known unknowns.** (1) Multi-key behavior (bulk import exists — account-pooling temptation; ADR-023 rejects it); (2) behavior under sustained SyllabAI-shaped load (never benchmarked here); (3) catalog-sync behavior when offline or blocked; (4) structured-output fidelity across heterogeneous internal models against SmartMark's strict-JSON contract.
+
+**Verdict.** PROPOSED / EXPERIMENTAL — keep out of production. If ever promoted: existing `SpringAiChatModelAdapter` + OpenAI-compatible base-url, optional chain member, experiment-pinnable, benchmarked via the Slice-G harness, fresh ToS review at promotion time.
