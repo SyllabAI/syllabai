@@ -1,6 +1,10 @@
 # SyllabAI — InterventionRun Prototype
 
-**Status:** PROPOSED
+**Status:** ACCEPTED (2026-09-17 — §14 decision gate closed: acceptance criteria 1–10 demonstrated
+(`syllabai-core/docs/INTERVENTION_RUN_ACCEPTANCE.md`, live 10/10 on production at `02643ed`),
+persistence/query cost understood (`syllabai-core/docs/INTERVENTION_RUN_PERSISTENCE_QUERY_COST.md`),
+`InterventionRunFlowIT` 2/2 GREEN in real Docker core-ci run `35139255878` at `7eb621a`, Render live
+deploy verified on the same commit; operator's conditional promotion directive given and executed)
 **Date:** 2026-09-15
 **Research origin:** `docs/research/OPENHUMAN_GRAPH_ARCHAEOLOGY.md` — E2
 **Scope:** backend orchestration contract only; no graph UI changes
