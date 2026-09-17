@@ -5,7 +5,7 @@
 **Tracker row:** T-C18 (registered in the master workbook TODO.md, content-ops track; sub-rows T-C18a–e per §10)
 **Governing spec sections:** Master Spec §6.2/ADR-014 (curriculum hierarchy, `SpecificationPoint` as canonical anchor), §7 (KG, SUGGESTED→VALIDATED lifecycle), §10 (question bank, F-168), ADR-017 (recommendations over one evidence substrate), ADR-020 (retrieval: benchmark before promotion)
 **Related rows:** T-C02 (ingestion bridge — hardcodes the placeholder), T-C12 (question↔spec-point tagger — supplies candidate mappings), T-C13 (bench — defines what "VALIDATED" corpus exists today), F-050 (Test Builder — the consumer this proposal serves)
-**Code touchpoints:** `syllabai-core` → `Question` (existing `Type` enum — see §3 correction) and `QuestionVersion` (difficulty/commandWord), `PastPaperIngestionService` (hardcoded `3` verified; also hardcodes `Question.Type.STRUCTURED`), `GlmOcrDraftMapper`, Flyway migrations (**V27 current — verified in-tree; next migration is V28**); `syllabai-resources` → T-C12 tagger (`scripts/c12_spec_tagger.py`) + `c12_promote` operator gate (`scripts/c12_promote.py`, verified); `syllabai-teacher-workbench` → staged intent UI (review surface)
+**Code touchpoints:** `syllabai-core` → `Question` (existing `Type` enum — see §3 correction) and `QuestionVersion` (difficulty/commandWord), `PastPaperIngestionService` (hardcoded `3` verified; also hardcodes `Question.Type.STRUCTURED`), `GlmOcrDraftMapper`, Flyway migrations (**V28 current — consumed 2026-09-17 by the T-C14 lexical arm `V28__content_lexical_search.sql`; the T-C18 landing migration is V29**); `syllabai-resources` → T-C12 tagger (`scripts/c12_spec_tagger.py`) + `c12_promote` operator gate (`scripts/c12_promote.py`, verified); `syllabai-teacher-workbench` → staged intent UI (review surface)
 
 ---
 
@@ -253,7 +253,9 @@ Reviewer: main agent (owner-delegated). Claims re-verified against primary sourc
   questions, so the §3 mapper mapping is deterministic.
 - **Migrations** — `syllabai-core` `db/migration/` lists **V27__revision_notes.sql**;
   the draft's "V26 current" was stale; next migration is V28. Workbook row corrected
-  in the same pass.
+  in the same pass. **2026-09-17 errata (session 94): V28 has since been consumed by the T-C14
+  lexical arm (`V28__content_lexical_search.sql`); the T-C18 landing migration is
+  **V29** — core `db/migration/` head re-verified in-tree = V28.**
 - **T-C12** — `c12_spec_tagger.py`, `c12_promote.py`, verdicts/promotions YAMLs all
   present in `syllabai-resources/scripts/`; `CommandWordLexicon` verified in
   syllabai-parser (`structure/`), feeding the §4.3 heuristic path.
@@ -261,5 +263,5 @@ Reviewer: main agent (owner-delegated). Claims re-verified against primary sourc
   questions are a bench gold class) but surfaced for operator review.
 
 **Verdict: RATIFIED with the corrections above.** Sub-rows T-C18a–e stand; T-C18a's
-scope now reads "V28: nullable difficulty + source/state columns + detected-type
+scope now reads "V29 (renumbered from the ratified V28 by the 2026-09-17 errata — V28 consumed by the T-C14 lexical arm): nullable difficulty + source/state columns + detected-type
 columns on Question + `question_spec_points` table".
