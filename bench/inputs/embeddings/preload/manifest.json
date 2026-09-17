@@ -3,8 +3,8 @@
   "model" : "gemini-embedding-001",
   "dimension" : 768,
   "task_types" : {
-    "queries" : "RETRIEVAL_QUERY",
-    "chunks" : "RETRIEVAL_DOCUMENT"
+    "chunks" : "RETRIEVAL_DOCUMENT",
+    "queries" : "RETRIEVAL_QUERY"
   },
   "snapshot_version" : "snap-001",
   "snapshot_files_sha256" : {
@@ -32,13 +32,13 @@
   },
   "counts" : {
     "corpus_chunks" : 2333,
-    "chunks_embedded_this_run" : 1005,
-    "chunks_stored_total" : 2013,
-    "pending_after" : 320,
-    "queries_embedded" : 0
+    "chunks_embedded_this_run" : 320,
+    "chunks_stored_total" : 2333,
+    "pending_after" : 0,
+    "queries_embedded" : 120
   },
-  "core_commit" : "ea3438139c8a0e3c7a150b802ec7aa73372488ff",
+  "core_commit" : "fb2bffa5872cbe083f5cc5726a3ac55df83da26a",
   "run_date" : "2026-09-17",
-  "generated_at" : "2026-09-17T14:48:36.748622425Z",
-  "notes" : [ "compute-once-freeze-forever: benchmark replays apply this artifact offline; no API calls at replay time", "text-embedding-004 (codebase default) is RETIRED (404 v1+v1beta, probed with valid key 2026-09-17); gemini-embedding-001 passed explicitly at outputDimensionality=768 — vector(768) schema-compatible", "production default repair + model_versions registration registered separately (benchmark-only slice here)", "embedding is index preparation, not serving: T-C07 scope + T-C05 VALIDATED boundaries apply at query time", "resumed-from-preload: 1008 chunk vectors were preloaded from the previous partial artifact (checksum-verified, same model); chunks_embedded_this_run counts only this run's API calls", "INCOMPLETE: embedding budget/rate exhausted mid-run — this artifact is a PRELOAD checkpoint (pending_after > 0); re-dispatch with BENCH_PRELOAD_ARTIFACT pointed here", "multi-key run: keys=3 per_key_chunks_embedded=[999, 3, 3] per_key_queries=[0, 0, 0] fingerprints=[sha256:3687872106, sha256:91fdfb06ac, sha256:797b77a879]", "keys are expected to come from DISTINCT Google projects — same-project keys share one quota pool" ]
+  "generated_at" : "2026-09-17T15:51:52.825390111Z",
+  "notes" : [ "compute-once-freeze-forever: benchmark replays apply this artifact offline; no API calls at replay time", "text-embedding-004 (codebase default) is RETIRED (404 v1+v1beta, probed with valid key 2026-09-17); gemini-embedding-001 passed explicitly at outputDimensionality=768 — vector(768) schema-compatible", "production default repair + model_versions registration registered separately (benchmark-only slice here)", "embedding is index preparation, not serving: T-C07 scope + T-C05 VALIDATED boundaries apply at query time", "resumed-from-preload: 2013 chunk vectors were preloaded from the previous partial artifact (checksum-verified, same model); chunks_embedded_this_run counts only this run's API calls", "multi-key run: keys=4 per_key_chunks_embedded=[320, 0, 0, 0] per_key_queries=[120, 0, 0, 0] fingerprints=[sha256:01ac5264a3, sha256:3687872106, sha256:91fdfb06ac, sha256:797b77a879]", "keys are expected to come from DISTINCT Google projects — same-project keys share one quota pool" ]
 }
