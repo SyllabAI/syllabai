@@ -1,0 +1,44 @@
+{
+  "run_id" : "embed-backfill-snap-001",
+  "model" : "gemini-embedding-001",
+  "dimension" : 768,
+  "task_types" : {
+    "queries" : "RETRIEVAL_QUERY",
+    "chunks" : "RETRIEVAL_DOCUMENT"
+  },
+  "snapshot_version" : "snap-001",
+  "snapshot_files_sha256" : {
+    "chunks.jsonl.gz" : "d33fd0613622817da7225eae05b29837700c912b3e154d61ce1907823af70919",
+    "concept_attachments.json" : "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "graph_code.json" : "8d366370987eb1b6c73ad3d356058d0097bcb500411a2780c9a736d20a9deb42",
+    "graph_edges.json" : "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
+    "misconceptions.json" : "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
+    "question_anchors.json" : "2935c02d5ba56be8b744ff70f9f598cdf023f6c0ef40adee0244ad110bc664e0",
+    "spec_points.json" : "e6c513b4d7d60c2d54fd13bc1f4a4ce5e5c765c35bf057b32929e3e3dde28225"
+  },
+  "gold_files_sha256" : {
+    "class_calculation.json" : "ee1b00a506ab1434adf45c4289176452b4820772899baa3fc0860cee3897673f",
+    "class_conceptual.json" : "e976109232221b404f75d70de29f8a9ae4467008d647581fe70b95bc5d06c5a9",
+    "class_diagram_dependent.json" : "73417b1a3e2af61cb5536a773906bfe743a223a0a732e5bd52d45f5d06abb395",
+    "class_exam_question.json" : "571c33ae36f184d770e1657ad8862c1553b61cc2218ee6c0f941920c19633c16",
+    "class_factual.json" : "929946de9301322057728a885f86018337695a3f2294268e9377cab80d1145e7",
+    "class_mark_scheme.json" : "ac82fc34222fa7cfb61aa6d1363499b0ffba24f6c7229fc1c2b6e8e3740966d2",
+    "class_misconception.json" : "6cfcfed308f4cf71aa64846f5efc0d230a6f2e90d7f88f650be7d057b6e34bbc",
+    "class_multi_spec_point.json" : "36b21b96eb34d491865d70d52eb70ded356621f78d5123ff00ca7d82549cf5c9",
+    "class_prerequisite.json" : "8cc0d9e8ae726f1d8c2d26c4ab555ad5f0c766dce7dae62ea30cf67be47726ab",
+    "class_revision_note.json" : "fec2dfccb100f9a937a8e700cb558246ae720352c194f90d633f44065314993e",
+    "class_vague_learner.json" : "5c643d3d3c2477246cf37ebd23fb430467401a908888d1ef5dc8f3413857323b",
+    "class_why_wrong.json" : "944742c3b9ef58367f037f97147f0d452c66304f7f4b2c7949a28d815e0715de"
+  },
+  "counts" : {
+    "corpus_chunks" : 2333,
+    "chunks_embedded_this_run" : 7,
+    "chunks_stored_total" : 7,
+    "pending_after" : 2326,
+    "queries_embedded" : 0
+  },
+  "core_commit" : "621b38c45811f1a0337cbafa6a315fa85e97a1ab",
+  "run_date" : "2026-09-17",
+  "generated_at" : "2026-09-17T10:55:44.224089899Z",
+  "notes" : [ "compute-once-freeze-forever: benchmark replays apply this artifact offline; no API calls at replay time", "text-embedding-004 (codebase default) is RETIRED (404 v1+v1beta, probed with valid key 2026-09-17); gemini-embedding-001 passed explicitly at outputDimensionality=768 — vector(768) schema-compatible", "production default repair + model_versions registration registered separately (benchmark-only slice here)", "embedding is index preparation, not serving: T-C07 scope + T-C05 VALIDATED boundaries apply at query time", "INCOMPLETE: embedding budget/rate exhausted mid-run — this artifact is a PRELOAD checkpoint (pending_after > 0); re-dispatch with BENCH_PRELOAD_ARTIFACT pointed here" ]
+}

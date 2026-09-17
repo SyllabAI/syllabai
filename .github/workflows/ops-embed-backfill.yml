@@ -73,6 +73,7 @@ jobs:
           BENCH_JDBC_PASSWORD: bench
           BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot
           BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold
+          BENCH_PRELOAD_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload
           BENCH_RUN_OUT: ${{ github.workspace }}/embed-out
           BENCH_CORE_COMMIT: 621b38c45811f1a0337cbafa6a315fa85e97a1ab
           BENCH_RUN_DATE: "2026-09-17"
