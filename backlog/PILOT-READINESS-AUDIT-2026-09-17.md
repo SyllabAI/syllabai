@@ -332,3 +332,221 @@ round PASSED 2026-09-17 (A1–A9/I1–I6 all hold, verdict record
 with expected-diff PASS (`evidence/cycle-001-r3/t0-phase4-*.json`) — the
 fix chain is app-level PRODUCTION VERIFIED, closing the audit's last open
 product gate.
+
+---
+
+## Phase-5 — five-gate pilot-readiness review (T-032, executed 2026-09-17, session 92)
+
+Mandate: the operator's Phase-5 directive — a fresh reconciliation gate
+against CURRENT GitHub state and machine evidence, not a restatement of
+prior records. GitHub is canonical; every claim below points at the
+artifact that establishes it. No r3 artifact was mutated; no experiment
+re-run; production touched read-only.
+
+**Canonical heads at review time (fetched 2026-09-17 ~08:50Z):**
+core `8eed5e6f3fd3ce749147ef6568c9cf3a2b897d68`, web
+`012f88cb692682c971e4dffa979274f4371f52c1`, parser
+`8d2e4dbc5d593cb7345435cad8247afd8489fdb5`, tracker
+`a7bc9616685e2e392c24266fe5665bb1daf1fdc8` (post-session-91 errata).
+
+### Gate 1 — CI: PASS
+
+All three rails verified at their CURRENT heads; in every case the
+successful run's `head_sha` equals the current `origin/main` and ZERO
+newer runs exist (the run tested the head, not a predecessor):
+
+| rail | head | run | conclusion | artifact/step truth |
+|---|---|---|---|---|
+| core | `8eed5e6` | `35162299609` (rn 217, push, 2026-09-16T23:26:30Z) | success | test-reports artifact parsed: **surefire 646 tests / 0 fail / 0 err / 1 skip** (91 classes) + **failsafe 81 tests / 0 fail / 0 err / 0 skip** (23 IT classes); the 1 skip = `DatabaseIsolationGuardTest` env-guard (documented no-test-DB skip) |
+| web | `012f88c` | `35161624427` (rn 91, push, 23:17:15Z) | success | build job, 11 steps all success incl. Lint + Production build (type-checked, standalone copy exercised) |
+| parser | `8d2e4db` | `35159090681` (rn 54, push, 22:44:03Z) | success | 3 jobs all success — build (`mvn -B verify`), conformance harness (16/16 sealed suite), content-package-proof (real-corpus reconstruction) — 26 steps, 0 failed |
+
+Pilot-named ITs green in the core artifact: EvidenceStateConcurrencyIT
+4/4, MultipartMarkingFlowIT 2/2, RevisionNoteFlowIT 2/2, SmartLessonFlowIT
+5/5, NextBestActionFlowIT 1/1, ClassAnalyticsFlowIT 2/2,
+WeaknessTargetingFlowIT 2/2, MarkingQueueFlowIT 3/3, InterventionRunFlowIT
+2/2, ConceptGraphSeedFlowIT 2/2, LexicalBoundaryIT 2/2,
+ChunkLexicalSearchIT 3/3. (Counts grew from the session-85 baseline
+581+74 because the concurrent T-C07/T-C14/T-C19 lanes added tests; the
+runbook's spot-check set is fully covered.)
+
+**Moving-target re-verification (concurrent lanes pushed during the
+record push, 2026-09-17 ~09:2xZ):** core advanced `8eed5e6` → `b0be54da`
+(PR #20 — embedding backfill runner + hermetic replay IT; **ZERO src/main
+delta**, test-side only, runtime-identical) and parser advanced
+`8d2e4db` → `7b8bcbab` (corpus-ops tooling only, T-C16 owner-gated lane);
+web unchanged. Both new heads re-verified GREEN at exactly those SHAs —
+core run `35204682298` (rn 220; artifact truth re-parsed: surefire
+646/0/0/1 + failsafe 84/0/0/0 across 24 IT classes, incl.
+EmbedBackfillReplayIT 3/3; all pilot-named ITs green; the same 1
+env-guard skip) and parser run `35205554680`. Because the core delta is
+test-only, the Gate-3 deployed-lineage analysis (route-set + V28 +
+runtime surface) is unaffected by the advance. Conclusion unchanged.
+
+### Gate 2 — r3: PASS
+
+The frozen round record verified, not restated:
+
+- **Zero mutation:** `evidence/cycle-001-r3/` (README + 11 artifacts)
+  exists in exactly ONE commit (`037bb2d`, 2026-09-16); the only later
+  tracker commit (`a7bc961`, session-91 errata) touched PROGRESS.md and
+  bench run-003-b files only — verified by `git log --name-only`.
+- **Verdict** (`verdict.json`, sha256 `974bfda972fe41db…`): **PASS** —
+  A1–A9 and I1–I6 all HOLDS.
+- **Final stored values confirmed:** attempts 3 → 6, correct 2 → 4,
+  version v3 → v6; mastery `0.3135593220338984 → 0.7735556015738249`
+  (A4: stored = frozen BKT recursion over the true mark order, zero
+  DECAY_APPLIED); class mean `0.1384718719 → 0.1959714068` = exactly the
+  monitor's contribution (A7, measured stays 8).
+- **Zero CLA contamination** (A8/I2): 17 answers touched, all the
+  monitor's; the CLA lane's 2 PENDING attempts (d57bdd56, 6361becb)
+  byte-identical.
+- **Exactly-one-completing-mark semantics** (A1, amended per the frozen
+  P.6 Amendment #1): once-per-node, after the (n−1)th part mark,
+  settled-total correctness; completing marks 23:18:10.875 / 23:18:17.354
+  / 23:18:25.330.
+- **Manifest integrity re-derived this session:** the committed file at
+  web `012f88c` (= the mark run `35161655716`'s exact checkout,
+  head_sha `012f88cb69`) canonicalizes (sorted keys, minus the embedded
+  `manifestSha256` field) to sha256
+  `d995b9c77bc4d6e9eb061be4de0dae2ff9ad35f8b9ca428d9d7ca6041f3eb633` —
+  reproduced locally, verified in-run by `s2_cycle_mark.py`'s sha check,
+  embedded in-file, and recorded in the verdict + mark artifacts. (The
+  raw-file hash differs by design — canonicalization, not content.)
+- **Phase runs cross-checked on GitHub:** after-infra-fail `35160859448`
+  (failure @ `1c9c4a3`, pre-mutation cold-start), after `35161163357`,
+  dump `35161328200`, mark `35161655716` (@ `012f88c`), final
+  `35161751482` (@ `012f88c`) — all success as recorded.
+- **I6 single-shot holds at review time:** the newest
+  `s2-evidence-cycle` run is still the round's `final`
+  (`35161751482`) — zero dispatches after the round.
+- The frozen spec carries status EXECUTED/PASS + P.6 Amendment #1 with
+  its non-weakening justification; protocol semantics untouched.
+
+### Gate 3 — production lineage: PASS-WITH-NOTES
+
+Fresh probes this session (2026-09-17 ~09:0xZ):
+
+- **Health:** `/actuator/health` → 200 `{"status":"UP"}`.
+- **Route-set fingerprint:** live OpenAPI = **97 paths, EXACTLY equal**
+  to the source-derived controller route set at core `8eed5e6`
+  (zero divergence in either direction; includes the `56f1475`
+  mark-scheme-reveal route). `/actuator` root = 401 (locked);
+  `/actuator/info` = 200 `{}` — **no build identity is exposed**.
+- **Flyway:** live `flyway_schema_history` (read-only SQL) = 28 entries,
+  max successful **V28** (`content lexical search`, installed
+  2026-09-16T22:31:29Z). V28 exists only in the `99be333`+ lineage →
+  the deployed build carries the T-C14-head lineage; the evidence fix
+  chain is an ancestor of every candidate build and was behaviorally
+  production-verified by the r3 round itself.
+- **Live stored state:** the monitor's `skill_states` row read TODAY =
+  6 attempts / 4 correct / mastery `0.7735556015738249` / v6 — exactly
+  the r3 final values (no drift, no unexplained post-round mutation).
+- **`CURRENT_GITHUB_HEAD > DEPLOYED_PRODUCTION_HEAD` is NOT observably
+  true** at any external surface (routes, schema, stored state all
+  equal).
+
+NOTES (recorded, not concealed):
+1. **Exact-SHA pinning is operator-gated** (Render API credential-gated
+   by design; `/actuator/info` empty) — the operator Render Events check
+   for the `8eed5e6` deploy stands as the confirmation path. The
+   deployed runtime is pinned by API+schema evidence to the
+   [`99be333`..`8eed5e6`] three-commit window, whose ONLY src/main delta
+   is `ChunkLexicalRepository`/`Bm25Retriever` retrieval internals —
+   benchmark-lane code with zero `List<RetrievalProvider>` consumer
+   sites (session-91 errata's verified statement), i.e. not wired into
+   any serving path, so no pilot-relevant behavioral difference exists
+   within the window.
+
+### Gate 4 — t0 / scientific baseline: PASS
+
+- **Phase-4 t0** (`t0-phase4-capture.json` sha256 `8e53f72ddd8d12aa…`):
+  integrity CLEAN (0 duplicate rows / 0 projection mismatches / 0
+  settled-without-evidence); verdict (`t0-phase4-verdict.json` sha256
+  `4998a2d189687be5…`): **PASS** — `unexplained: []`, whitelist **W1
+  (capture identity)** + **W2 (decay replication)** only, post-S3
+  telemetry `{}` (none). S0 and S3 captures CLEAN at both boundaries.
+- **Measurement-side read-only:** the instrument is read-only by
+  construction (session-level `default_transaction_read_only=on` +
+  60 s statement timeout; zero mutating statements in `t0_capture.sql`).
+- **Read-only path re-verified LIVE this session:** connected as
+  `t0_readonly`; `UPDATE … WHERE 1=0` → BLOCKED ("cannot execute UPDATE
+  in a read-only transaction"); grants on `skill_states` = SELECT only;
+  DSN-level `default_transaction_read_only=on`.
+- **Credential hygiene:** `t0_readonly` appears in tracked content ONLY
+  as role-name/provenance metadata (capture `db_user` fields + docs);
+  zero DSN/password/`napi_` material in any of the four repos (git grep
+  clean); the DSN exists only as an untracked 0600 file in a
+  remote-less sandbox repo — never pushed, never committed.
+
+### Gate 5 — operational/security readiness: PASS-WITH-NOTES
+
+- **Pilot Monitor (public ops repo):** run `35183824707` (scheduled,
+  2026-09-17T04:56:45Z, head `5e37777`) — success; job log:
+  "**SUMMARY: 15/15 checks green (0 failing, 2 advisory)**"; secrets
+  preflight (fail-closed) green; monitor-account secrets present.
+- **Secrets configured and working:** PILOT_MONITOR_*/PILOT_TEACHER_* in
+  the web repo are proven working by the r3 phase runs themselves
+  (after/dump/mark/final all authenticated through them).
+- **Fail-closed authentication (fresh probes):** 401 on six real routes
+  (POST attempts, marking queue-v2, intervention-runs, learner state,
+  human-mark, admin chain-health); monitor's teacher-guard 401.
+- **LLM chain healthy:** today's monitor probe shows `tutor: 200` with
+  the full answer/citations/evidenceCount/model/provider/topics shape —
+  the session-67 LLM-key wipe is resolved.
+- **No unresolved pilot-blocking operator dependency:** the historic
+  blockers (Actions quota, DSN input, LLM keys) are all closed with
+  machine evidence.
+
+NOTES (recorded, not concealed):
+1. **SECURITY/OPS follow-up — the production DB password exposed during
+   Session 75 has NOT been rotated.** Neon operations history (complete
+   2026-09-13 → now) contains zero password-reset operations after the
+   2026-09-15 reveal; the only post-S75 credential operation is the
+   `t0_readonly` role creation (2026-09-16 23:00–23:01Z). The S75
+   standing recommendation ("rotate at the next convenient maintenance
+   window — Render env update + Neon reset together") remains
+   UNEXECUTED. Not pilot-blocking (the exposed value survived only in
+   operator-side session artifacts destroyed by sandbox resets; the
+   app's env holds the session-67-rotated value; the pilot's own DB
+   path is the SELECT-only `t0_readonly` role), but it is scheduled
+   follow-up work, not a closed item.
+2. Ops-repo `PILOT_TEACHER_*` unset → teacher checks advisory-skip there
+   (recovery path documented in the ops README; the web repo's copies
+   are proven working).
+3. κ gate has zero paired samples (by design until T-C04 mixed-award
+   marking accumulates) — Smart Mark stays advisory; human marks
+   authoritative.
+4. Stale `DEPLOYMENT.md` §4 monitor-account references (audit finding 5)
+   remain a standalone docs follow-up.
+
+### Decision
+
+**PILOT READY — PASS-WITH-NOTES.** The runbook's Phase-5 precondition
+trio is fully satisfied (three CI rails green at head + r3 PASS + t0
+PASS), and the five gates return 3× PASS + 2× PASS-WITH-NOTES with zero
+FAILED and zero BLOCKED. The audit's CI=NO → **YES** collapse is
+executed on this record. Residual UNVERIFIED items (exact-SHA deployment
+pinning; DB password rotation) are recorded above as follow-ups, not
+concealed.
+
+**Explicit non-goals preserved:** T-C14 Arm B stays benchmark-gated
+(recorded run-003-b: recall@10 ≈ 0.074, MRR ≈ 0.1224, precision@10 ≈
+0.0122, 106/120 gold queries zero-candidate under the recorded all-terms
+form; SpecificationPoint resolution unscoreable — zero HUMAN_VALIDATED
+chunk→spec mappings exist); T-C16 stays owner-gated for corpus mutation
+(dogfood the next OCR batch first); Gemini/File Search is not
+production-selected; retrieval production-readiness is NOT claimed by
+this decision. "Pilot ready" means the closed-loop evidence pilot
+(population ~50 retake-path students, 8 weeks, per the pilot plan) may
+proceed to its next controlled step on the deployed surface.
+
+**Next engineering workstreams (post-readiness, per the operator's
+directive):** (1) T-C13/T-C14 retrieval benchmark improvement — the
+Arm-B quality gap + the missing HUMAN_VALIDATED chunk→SpecificationPoint
+mapping data; (2) T-C16 corpus-ops dogfood on the next OCR batch before
+any Past-Papers mutation; (3) deployment/security residuals — operator
+Render Events exact-SHA confirmation, the neondb_owner password
+rotation (Render env + Neon reset together), optional ops-repo
+PILOT_TEACHER_* population, and the stale DEPLOYMENT.md §4 references.
+
