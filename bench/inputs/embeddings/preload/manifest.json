@@ -3,8 +3,8 @@
   "model" : "gemini-embedding-001",
   "dimension" : 768,
   "task_types" : {
-    "queries" : "RETRIEVAL_QUERY",
-    "chunks" : "RETRIEVAL_DOCUMENT"
+    "chunks" : "RETRIEVAL_DOCUMENT",
+    "queries" : "RETRIEVAL_QUERY"
   },
   "snapshot_version" : "snap-001",
   "snapshot_files_sha256" : {
@@ -32,13 +32,13 @@
   },
   "counts" : {
     "corpus_chunks" : 2333,
-    "chunks_embedded_this_run" : 7,
-    "chunks_stored_total" : 7,
-    "pending_after" : 2326,
+    "chunks_embedded_this_run" : 1001,
+    "chunks_stored_total" : 1008,
+    "pending_after" : 1325,
     "queries_embedded" : 0
   },
-  "core_commit" : "621b38c45811f1a0337cbafa6a315fa85e97a1ab",
+  "core_commit" : "ea3438139c8a0e3c7a150b802ec7aa73372488ff",
   "run_date" : "2026-09-17",
-  "generated_at" : "2026-09-17T10:55:44.224089899Z",
-  "notes" : [ "compute-once-freeze-forever: benchmark replays apply this artifact offline; no API calls at replay time", "text-embedding-004 (codebase default) is RETIRED (404 v1+v1beta, probed with valid key 2026-09-17); gemini-embedding-001 passed explicitly at outputDimensionality=768 — vector(768) schema-compatible", "production default repair + model_versions registration registered separately (benchmark-only slice here)", "embedding is index preparation, not serving: T-C07 scope + T-C05 VALIDATED boundaries apply at query time", "INCOMPLETE: embedding budget/rate exhausted mid-run — this artifact is a PRELOAD checkpoint (pending_after > 0); re-dispatch with BENCH_PRELOAD_ARTIFACT pointed here" ]
+  "generated_at" : "2026-09-17T14:10:02.871312223Z",
+  "notes" : [ "compute-once-freeze-forever: benchmark replays apply this artifact offline; no API calls at replay time", "text-embedding-004 (codebase default) is RETIRED (404 v1+v1beta, probed with valid key 2026-09-17); gemini-embedding-001 passed explicitly at outputDimensionality=768 — vector(768) schema-compatible", "production default repair + model_versions registration registered separately (benchmark-only slice here)", "embedding is index preparation, not serving: T-C07 scope + T-C05 VALIDATED boundaries apply at query time", "resumed-from-preload: 7 chunk vectors were preloaded from the previous partial artifact (checksum-verified, same model); chunks_embedded_this_run counts only this run's API calls", "INCOMPLETE: embedding budget/rate exhausted mid-run — this artifact is a PRELOAD checkpoint (pending_after > 0); re-dispatch with BENCH_PRELOAD_ARTIFACT pointed here", "multi-key run: keys=2 per_key_chunks_embedded=[1000, 1] per_key_queries=[0, 0] fingerprints=[sha256:797b77a879, sha256:91fdfb06ac]", "keys are expected to come from DISTINCT Google projects — same-project keys share one quota pool" ]
 }
