@@ -1,0 +1,347 @@
+[
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:7",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "7649654514db73f8a21e0fe0c5ed1c410762ba6dbaa63e618e7afac4bf402450:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "9a2262007b4e38c3c9370ba1ce513b11fb60717138db2fc14703c9d9adf5dae6:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "66a8d87f23fcf1dc02335473711338da81099c7c78061c58ec4894c2e5c35183:3",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-031",
+  "notes": "auto-derived v1; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CSUMMER2021",
+   "rule": "R1+R3",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "A student does a titration to find the concentration of a solution of phosphoric acid. He uses these pieces of apparatus X, Y and Z in his titration. Y Diagrams are not to scale. Z",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "682b67c88046c069c57b11ea4d6a03d3c4c8aaa7bb90a9fcbb91beeac9254da7:7",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "78d67bd9c00a214071d645902eff11b3055f3b95643ab64a40e7623df40fd6c6:7",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-032",
+  "notes": "auto-derived v1; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "ING-JUNE2014",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "A student does some experiments to find the heat energy released when natural gas burns. She uses this apparatus.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:10",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "76975a69298b6202ca8b952310f585e1b315ff2b495d5e8f1625682ba379dce3:5",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "311da39817c816c9485707722879583d28fd7862f3267e4786759cb516b4b0ba:20",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "eaf8b78560e286ca493bb049a3383dae77c22471199ca46156b6d38aa9331b64:15",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-033",
+  "notes": "auto-derived v1; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH11CSUMMER2021",
+   "rule": "R1+R3",
+   "source": "qversion[4CH1/1C]"
+  },
+  "query": "(a) The diagram shows the apparatus a teacher uses to determine the formula of an oxide of lead. This is the teacher's method. Step1 find the mass of the reduction tube Step 2 add …",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "868a150c1aaee47589fd20603212263b9eb9d634dd6881ed5e6e7d0aeca3387f:3",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "cda9b6c006faaed7260edfa71c5063fb653fd52c5c3c0a4b43aa245ae0663890:5",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "fdfa109ccff957a9ad67c4cbb52750d69c03448aeef4693793c5967fee72933f:1",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-034",
+  "notes": "auto-derived v1; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CRJANUARY2022",
+   "rule": "R1+R3",
+   "source": "qversion[4CH1/2CR]"
+  },
+  "query": "A student does a titration to find the concentration of a solution of dilute sulfuric acid. The student uses these solutions and this apparatus. dilute sulfuric acid potassium hydr…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:8",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "7649654514db73f8a21e0fe0c5ed1c410762ba6dbaa63e618e7afac4bf402450:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "9a2262007b4e38c3c9370ba1ce513b11fb60717138db2fc14703c9d9adf5dae6:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "66a8d87f23fcf1dc02335473711338da81099c7c78061c58ec4894c2e5c35183:3",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-035",
+  "notes": "auto-derived v1; selector=numeric-stem fill (quota amendment, command_word unpopulated)",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CSPECIMEN2017",
+   "rule": "R1+R3",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "Ammonia is manufactured on a large scale and is used to make fertilisers such as ammonium nitrate $ \\mathrm{(N H_{4} N O_{3})}. $",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "f06f8084643a11c0d6edce65e56105a1c7ecfcb4a674adb607867aa71c5fbc89:9",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:7",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "790877f765a4c36ea0dc3fc5aeab33bfae53c3a01d0aaf1ea116224f1e3357af:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "e50985bda81bad8193c6c630b8033ede3edd2697c7e97a4806290553ee5ba8ba:4",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-036",
+  "notes": "auto-derived v1; selector=numeric-stem fill (quota amendment, command_word unpopulated)",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S3-c",
+   "rule": "R1+R3",
+   "source": "qversion[4CH0/2C]"
+  },
+  "query": "When nitrogen dioxide gas $ \\mathrm{(N O_{2})} $ is placed in a sealed flask, it reacts to form dinitrogen tetraoxide gas $ \\mathrm{(N_{2}O_{4})}. $ The equation for the reaction i…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "960bce5cd160919487dd76582040f9957efc99d9e0211c97fb6cf02a41161d62:4",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "cda9b6c006faaed7260edfa71c5063fb653fd52c5c3c0a4b43aa245ae0663890:5",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "fdfa109ccff957a9ad67c4cbb52750d69c03448aeef4693793c5967fee72933f:1",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-037",
+  "notes": "auto-derived v1; selector=numeric-stem fill (quota amendment, command_word unpopulated)",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CRJANUARY2020",
+   "rule": "R1+R3",
+   "source": "qversion[4CH1/2CR]"
+  },
+  "query": "Solutions of silver nitrate and potassium chloride react together to make the insoluble salt, silver chloride. Step 1 add $ 2 5 \\mathrm{c m}^{3} $ of silver nitrate solution to a c…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "78d67bd9c00a214071d645902eff11b3055f3b95643ab64a40e7623df40fd6c6:4",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "682b67c88046c069c57b11ea4d6a03d3c4c8aaa7bb90a9fcbb91beeac9254da7:4",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-038",
+  "notes": "auto-derived v1; selector=numeric-stem fill (quota amendment, command_word unpopulated)",
+  "provenance": {
+   "anchor_code_non_spec": "ING-JUNE2014",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "(a) Ethanol can be manufactured by two different processes. Process 1 sucrose $ \\xrightarrow[]{stage1} $ glucose $ \\xrightarrow[]{stage2} $ ethanol Process 2 ethene $ \\longrightarr…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:4",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "7649654514db73f8a21e0fe0c5ed1c410762ba6dbaa63e618e7afac4bf402450:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "9a2262007b4e38c3c9370ba1ce513b11fb60717138db2fc14703c9d9adf5dae6:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "66a8d87f23fcf1dc02335473711338da81099c7c78061c58ec4894c2e5c35183:3",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-039",
+  "notes": "auto-derived v1; selector=numeric-stem fill (quota amendment, command_word unpopulated)",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CSUMMER2021",
+   "rule": "R1+R3",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "A student investigates the solubility of potassium nitrate in water. She measures the masses of potassium nitrate that dissolve in $ 2 5 \\mathrm{c m}^{3} $ of water at different te…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "76975a69298b6202ca8b952310f585e1b315ff2b495d5e8f1625682ba379dce3:5",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "311da39817c816c9485707722879583d28fd7862f3267e4786759cb516b4b0ba:20",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "eaf8b78560e286ca493bb049a3383dae77c22471199ca46156b6d38aa9331b64:15",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-040",
+  "notes": "auto-derived v1; selector=numeric-stem fill (quota amendment, command_word unpopulated)",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH11CSUMMER2021",
+   "rule": "R1+R3",
+   "source": "qversion[4CH1/1C]"
+  },
+  "query": "This question is about alkanes and alkenes. ( a ) ( i ) Complete the boxes by giving the missing information about the alkane with the molecular formula $ \\mathrm{C_{2} H_{6}} $ (i…",
+  "substrate": "chunks"
+ }
+]
