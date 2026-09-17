@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: SyllabAI/syllabai-core
-          ref: ea3438139c8a0e3c7a150b802ec7aa73372488ff
+          ref: fb2bffa5872cbe083f5cc5726a3ac55df83da26a
           path: core
 
       - name: Set up JDK 25
@@ -75,7 +75,7 @@ jobs:
           BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold
           BENCH_PRELOAD_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload
           BENCH_RUN_OUT: ${{ github.workspace }}/embed-out
-          BENCH_CORE_COMMIT: ea3438139c8a0e3c7a150b802ec7aa73372488ff
+          BENCH_CORE_COMMIT: fb2bffa5872cbe083f5cc5726a3ac55df83da26a
           BENCH_RUN_DATE: "2026-09-17"
           SYLLABAI_EMBEDDING_GEMINI_API_KEY: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEY }}
           SYLLABAI_EMBEDDING_GEMINI_API_KEYS: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEYS }}
