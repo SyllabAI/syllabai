@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruling-3 Gold-Label Spot-Check — Interactive Worksheet</title>
+<style>
+:root{
+  --bg:#f4f6f8; --card:#ffffff; --ink:#1c2430; --mut:#5b6774; --line:#dde3ea;
+  --acc:#2563eb; --pass:#15803d; --passbg:#e8f7ee; --fail:#dc2626; --failbg:#fdeaea;
+  --amb:#b45309; --ambbg:#fdf3e2; --gray:#8a94a0;
+}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.86em;background:#eef1f5;padding:1px 5px;border-radius:4px}
+pre{white-space:pre-wrap;word-break:break-word}
+.topbar{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);padding:10px 18px}
+.tb-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;max-width:1060px;margin:0 auto}
+.topbar h1{font-size:16px;margin:0 12px 0 0;font-weight:650}
+.topbar .sub{color:var(--mut);font-size:12.5px;margin-top:2px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;max-width:1060px;margin:8px auto 0}
+.chip{border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12.5px;cursor:pointer;background:#fff;color:var(--mut)}
+.chip b{color:var(--ink)}
+.chip.pass{background:var(--passbg);border-color:#bfe6cd;color:var(--pass)}
+.chip.fail{background:var(--failbg);border-color:#f3c1c1;color:var(--fail)}
+.chip.part{background:var(--ambbg);border-color:#ecd3ae;color:var(--amb)}
+.spacer{flex:1}
+.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;color:var(--ink)}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.primary:hover{opacity:.92;color:#fff}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.progresswrap{max-width:1060px;margin:10px auto 0;display:flex;align-items:center;gap:10px}
+.pbar{flex:1;height:8px;background:#e6eaef;border-radius:999px;overflow:hidden}
+.pfill{height:100%;width:0;background:var(--acc);transition:width .2s}
+.ptext{font-size:12.5px;color:var(--mut);white-space:nowrap}
+main{max-width:1060px;margin:14px auto 60px;padding:0 18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.panel h2{font-size:14px;margin:0 0 8px}
+.panel .rule{color:var(--fail);font-weight:600}
+details.howto{margin-bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px}
+details.howto summary{cursor:pointer;font-weight:600;font-size:14px}
+details.howto ol{margin:8px 0 4px 20px;padding:0}
+details.howto li{margin-bottom:6px}
+table.roll{width:100%;border-collapse:collapse;font-size:13.5px}
+table.roll th,table.roll td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line)}
+table.roll td:nth-child(2),table.roll td:nth-child(3),table.roll td:nth-child(4),table.roll th:nth-child(2),table.roll th:nth-child(3),table.roll th:nth-child(4){text-align:right}
+.vbadge{padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600}
+.vbadge.pass{background:var(--passbg);color:var(--pass)}
+.vbadge.fail{background:var(--failbg);color:var(--fail)}
+.vbadge.part{background:var(--ambbg);color:var(--amb)}
+.vbadge.todo{background:#eef1f5;color:var(--gray)}
+.roll-gate{margin-top:10px;font-size:13.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.card.j-correct{border-left:4px solid var(--pass)}
+.card.j-incorrect{border-left:4px solid var(--fail)}
+.classhead{margin:22px 0 10px;font-size:14.5px;font-weight:700}
+.classhead .cnt{color:var(--mut);font-weight:400;font-size:12.5px}
+.cardhead{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.qid{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:700;font-size:13.5px}
+.badge{font-size:11.5px;border-radius:999px;padding:2px 9px;background:#eef1f5;color:var(--mut)}
+.badge.cls{background:#e8edfb;color:var(--acc)}
+.query{margin:4px 0 10px;font-size:15px}
+.pillrow{display:flex;flex-wrap:wrap;gap:5px;align-items:baseline;margin:4px 0}
+.pilllabel{font-size:11.5px;color:var(--mut);width:112px;flex:none}
+.pill{font-size:12px;background:#eef1f5;border-radius:6px;padding:2px 7px;font-family:ui-monospace,Menlo,Consolas,monospace}
+.prov{font-size:12.5px;color:var(--mut);margin:8px 0}
+.evhead{font-size:12.5px;font-weight:600;color:var(--mut);margin:10px 0 6px}
+.ev{border:1px solid var(--line);border-radius:9px;padding:7px 10px;margin-bottom:7px;background:#fbfcfe}
+.ev summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tier{font-size:11px;font-weight:700;border-radius:5px;padding:1px 7px}
+.tier.t2{background:var(--passbg);color:var(--pass)}
+.tier.t1{background:#e8edfb;color:var(--acc)}
+.tier.t0{background:#eef1f5;color:var(--gray)}
+.evmeta{font-size:12px;color:var(--mut)}
+.evbody{margin:8px 0 2px;border-left:3px solid var(--line);padding-left:10px;color:#333}
+.ovr{display:inline-block;margin-top:6px;font-size:12px;color:var(--mut)}
+.ovr select{margin-left:6px;font-size:12px}
+.noev{font-size:12.5px;color:var(--gray);font-style:italic}
+.verdict{display:flex;gap:8px;margin-top:12px}
+.vbtn{flex:0 0 auto;border-radius:8px;border:1.5px solid var(--line);background:#fff;padding:7px 18px;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--mut)}
+.vbtn.vc:hover{border-color:var(--pass);color:var(--pass)}
+.vbtn.vi:hover{border-color:var(--fail);color:var(--fail)}
+.vbtn.sel-c{background:var(--pass);border-color:var(--pass);color:#fff}
+.vbtn.sel-i{background:var(--fail);border-color:var(--fail);color:#fff}
+.followup{margin-top:10px;display:flex;flex-direction:column;gap:7px}
+.followup input,.followup textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:13.5px/1.4 inherit}
+.followup textarea{min-height:52px;resize:vertical}
+.followup label{font-size:12px;color:var(--mut);font-weight:600}
+.onlyinc{display:none}
+.card.j-incorrect .onlyinc{display:block}
+.footerbar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--line);padding:8px 18px;z-index:20}
+.fb-row{max-width:1060px;margin:0 auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.gate-msg{font-size:12.5px;color:var(--mut)}
+.gate-msg .gate-bad{color:var(--fail);font-weight:600}
+.gate-msg .gate-ok{color:var(--pass);font-weight:600}
+.reviewerbox{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mut)}
+.reviewerbox input{border:1px solid var(--line);border-radius:7px;padding:4px 8px;font-size:12.5px;width:280px}
+.hidden{display:none!important}
+@media print{.topbar,.footerbar,.chips,.verdict,.btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="tb-row">
+    <div>
+      <h1>Ruling-3 Gold-Label Spot-Check</h1>
+      <div class="sub">gold-v1 · sample <span id="m-total"></span>/120 · seed <code id="m-seed"></code> · snapshot snap-001 · frozen manifest <code id="m-manifest"></code></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="reviewerbox">Reviewer: <input id="reviewer" spellcheck="false"></div>
+    <button class="btn" id="btn-reset">Reset</button>
+  </div>
+  <div class="progresswrap">
+    <div class="pbar"><div class="pfill" id="pfill"></div></div>
+    <div class="ptext" id="ptext"></div>
+  </div>
+  <div class="chips" id="chips"></div>
+</div>
+
+<main>
+  <details class="howto">
+    <summary>How to judge one query (binding criteria — T-C13 spec §10, ruling 3)</summary>
+    <ol>
+      <li><b>Spec points</b> — would a competent teacher accept every listed gold SpecificationPoint as a correct anchor for this query? Missing obvious anchors count as INCORRECT (note the missing codes in the corrections field).</li>
+      <li><b>Evidence tiers</b> — tier 2 = <i>directly answers</i> the query; tier 1 = <i>legitimate supporting</i> evidence; tier 0 = not relevant. Each evidence block carries its paper code, kind, page and full chunk text; if the auto tier is wrong, set the owner-tier override on that block.</li>
+      <li>Mark <b>CORRECT</b> only if (1) and (2) both hold; otherwise INCORRECT with corrected labels.</li>
+    </ol>
+    <p style="font-size:13px;color:var(--mut);margin:6px 0 2px">Decision rule: any class below <span class="rule">90% owner agreement</span> is manually re-authored before the next recorded run. Progress autosaves in this browser; exports produce commit-ready artifacts.</p>
+  </details>
+
+  <div class="panel">
+    <h2>Live class rollup</h2>
+    <table class="roll">
+      <thead><tr><th>Class</th><th>Judged</th><th>CORRECT</th><th>Agreement</th><th>≥90%?</th></tr></thead>
+      <tbody id="rollbody"></tbody>
+    </table>
+    <div class="roll-gate" id="rollgate"></div>
+  </div>
+
+  <div class="panel" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+    <label style="font-size:13px;display:flex;gap:6px;align-items:center;cursor:pointer">
+      <input type="checkbox" id="flt-unjudged"> Show unjudged only
+    </label>
+    <div class="spacer"></div>
+    <button class="btn" id="btn-csv">Export marking CSV</button>
+    <button class="btn" id="btn-json">Export verdict JSON</button>
+    <button class="btn" id="btn-copy">Copy JSON</button>
+  </div>
+
+  <div id="records"></div>
+</main>
+
+<div class="footerbar">
+  <div class="fb-row">
+    <span class="ptext" id="ftext"></span>
+    <div class="spacer"></div>
+    <span class="gate-msg" id="gatemsg"></span>
+  </div>
+</div>
+
+<script id="payload" type="application/json">__DATA_JSON__</script>
+
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("payload").textContent);
+const KEY = "r3-spotcheck-v1:" + DATA.meta.seed;
+const CLS = {}; DATA.classes.forEach(c => CLS[c.name] = c);
+let S = { verdicts:{}, notes:{}, corrections:{}, tiers:{}, reviewer: DATA.meta.default_reviewer };
+
+function load(){ try{ const raw = localStorage.getItem(KEY); if(raw){ const p = JSON.parse(raw); S = Object.assign(S, p); } }catch(e){} }
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m])); }
+function el(id){ return document.getElementById(id); }
+
+function classStats(name){
+  const recs = DATA.records.filter(r => r.class === name);
+  let judged=0, correct=0;
+  recs.forEach(r => { const v = S.verdicts[r.id]; if(v){ judged++; if(v==="CORRECT") correct++; } });
+  const agreement = judged ? correct/judged : null;
+  let status;
+  if (judged < recs.length) status = judged ? "part" : "todo";
+  else status = (agreement >= 0.9) ? "pass" : "fail";
+  return { total: recs.length, judged, correct, agreement, status };
+}
+
+function tierBadge(t){ return '<span class="tier t'+t+'">tier '+t+"</span>"; }
+
+function recordCard(r){
+  const c = CLS[r.class];
+  const clsNoBadge = '<span class="badge cls">Class '+c.no+" · "+esc(c.label)+"</span>";
+  let pills = "";
+  if (r.gold_spec_points.length) pills += '<div class="pillrow"><span class="pilllabel">Spec points</span><span>'+r.gold_spec_points.map(p=>'<span class="pill">'+esc(p)+"</span>").join(" ")+"</span></div>";
+  if (r.gold_concepts.length) pills += '<div class="pillrow"><span class="pilllabel">Concepts</span><span>'+r.gold_concepts.map(p=>'<span class="pill">'+esc(p)+"</span>").join(" ")+"</span></div>";
+  if (r.gold_misconceptions.length) pills += '<div class="pillrow"><span class="pilllabel">Misconceptions</span><span>'+r.gold_misconceptions.map(p=>'<span class="pill">'+esc(p)+"</span>").join(" ")+"</span></div>";
+  let evHtml = "";
+  if (r.evidence.length){
+    evHtml = '<div class="evhead">Gold evidence ('+r.evidence.length+")</div>" + r.evidence.map(ev => {
+      const ch = DATA.chunks[ev.chunk_ref];
+      const ovKey = r.id + "|" + ev.chunk_ref;
+      const ov = S.tiers[ovKey];
+      const opts = [0,1,2].map(t => '<option value="'+t+'"'+((ov==null?ev.tier===t:ov===t)?" selected":"")+">tier "+t+"</option>").join("");
+      return '<div class="ev">'+
+        '<details><summary>'+tierBadge(ev.tier)+
+        '<span class="evmeta"><code>'+esc(ev.short_ref)+"</code> · "+esc(ev.paper_code||"—")+" "+esc(ev.kind)+" p."+esc(ev.pages)+" · state "+esc(ev.paper_state)+
+        (ev.content_truncated?" · <i>excerpt truncated</i>":"")+"</span>"+
+        '<span class="evmeta"><code>'+esc(ev.rule)+"</code></span></summary>"+
+        '<div class="evbody"><pre>'+esc(ch.content)+"</pre></div></details>"+
+        '<span class="ovr">owner tier re-rate: <select data-ov="'+esc(ovKey)+'"><option value="">keep auto</option>'+opts+"</select></span>"+
+        "</div>";
+    }).join("");
+  } else {
+    evHtml = '<div class="noev">No gold evidence chunks for this record (spec-point-only anchor).</div>';
+  }
+  return '<section class="card" id="card-'+esc(r.id)+'" data-id="'+esc(r.id)+'" data-class="'+esc(r.class)+'">'+
+    '<div class="cardhead"><span class="qid">'+esc(r.id)+"</span>"+clsNoBadge+'<span class="badge">substrate: '+esc(r.substrate||"—")+"</span></div>"+
+    '<p class="query">'+esc(r.query)+"</p>"+ pills +
+    '<p class="prov">Provenance: '+esc(r.provenance_str)+(r.notes?" · generator notes: "+esc(r.notes):"")+"</p>"+
+    evHtml +
+    '<div class="verdict">'+
+      '<button class="vbtn vc" data-v="CORRECT" data-id="'+esc(r.id)+'">CORRECT</button>'+
+      '<button class="vbtn vi" data-v="INCORRECT" data-id="'+esc(r.id)+'">INCORRECT</button>'+
+    "</div>"+
+    '<div class="followup">'+
+      '<div class="onlyinc"><label>Corrected labels (missing/incorrect anchors, fixes)</label>'+
+      '<input data-corr="'+esc(r.id)+'" placeholder="e.g. missing 4CH1-1.30; drop 4CH1-2.6" value="'+esc(S.corrections[r.id]||"")+'"></div>'+
+      '<label>Owner notes</label>'+
+      '<textarea data-note="'+esc(r.id)+'" placeholder="optional">'+esc(S.notes[r.id]||"")+"</textarea>"+
+    "</div>"+
+  "</section>";
+}
+
+function renderRecords(){
+  const host = el("records"); let html = ""; let lastCls = null;
+  DATA.records.forEach(r => {
+    if (r.class !== lastCls){
+      lastCls = r.class; const c = CLS[r.class]; const st = classStats(r.class);
+      html += '<div class="classhead" id="cls-'+esc(r.class)+'">Class '+c.no+" — "+esc(c.label)+
+        ' <span class="cnt">('+c.sampled+"/"+c.total+" sampled · "+st.judged+" judged · code "+esc(r.class)+")</span></div>";
+    }
+    html += recordCard(r);
+  });
+  host.innerHTML = html;
+  host.addEventListener("click", onCardClick);
+  host.addEventListener("input", onCardInput);
+  host.addEventListener("change", onCardChange);
+}
+
+function onCardClick(e){
+  const b = e.target.closest("button.vbtn"); if(!b) return;
+  const id = b.dataset.id, v = b.dataset.v;
+  S.verdicts[id] = (S.verdicts[id] === v) ? undefined : v;
+  if (!S.verdicts[id]) delete S.verdicts[id];
+  save(); refreshCard(id); refreshAll();
+}
+function onCardInput(e){
+  const t = e.target;
+  if (t.dataset.note != null){ S.notes[t.dataset.note] = t.value; save(); }
+  if (t.dataset.corr != null){ S.corrections[t.dataset.corr] = t.value; save(); }
+  if (t.id === "reviewer"){ S.reviewer = t.value; save(); }
+}
+function onCardChange(e){
+  const t = e.target;
+  if (t.dataset.ov != null){
+    if (t.value === "") delete S.tiers[t.dataset.ov]; else S.tiers[t.dataset.ov] = parseInt(t.value,10);
+    save();
+  }
+}
+
+function refreshCard(id){
+  const card = document.querySelector('.card[data-id="'+id+'"]');
+  if (!card) return;
+  const v = S.verdicts[id];
+  card.classList.toggle("j-correct", v==="CORRECT");
+  card.classList.toggle("j-incorrect", v==="INCORRECT");
+  card.querySelectorAll("button.vbtn").forEach(b=>{
+    b.classList.toggle("sel-c", b.dataset.v==="CORRECT" && v==="CORRECT");
+    b.classList.toggle("sel-i", b.dataset.v==="INCORRECT" && v==="INCORRECT");
+  });
+}
+
+function refreshAll(){
+  let judged = 0;
+  DATA.records.forEach(r => { if (S.verdicts[r.id]) judged++; });
+  const pct = Math.round(100*judged/DATA.records.length);
+  el("pfill").style.width = pct+"%";
+  el("ptext").textContent = judged+" / "+DATA.records.length+" judged ("+pct+"%)";
+  el("ftext").textContent = judged+" / "+DATA.records.length+" judged";
+
+  el("chips").innerHTML = DATA.classes.map(c=>{
+    const st = classStats(c.name);
+    const label = st.agreement==null ? "–" : Math.round(100*st.agreement)+"%";
+    return '<span class="chip '+st.status+'" data-cls="'+esc(c.name)+'"><b>'+c.no+"</b> "+esc(c.name)+" "+st.judged+"/"+st.total+" · "+label+"</span>";
+  }).join("");
+
+  el("rollbody").innerHTML = DATA.classes.map(c=>{
+    const st = classStats(c.name);
+    const badge = st.status==="pass" ? '<span class="vbadge pass">PASS</span>'
+      : st.status==="fail" ? '<span class="vbadge fail">RE-AUTHOR</span>'
+      : st.status==="part" ? '<span class="vbadge part">'+Math.round(100*st.agreement)+"% so far</span>"
+      : '<span class="vbadge todo">unjudged</span>';
+    return "<tr><td>"+c.no+" — "+esc(c.label)+"</td><td>"+st.judged+"/"+st.total+"</td><td>"+st.correct+"</td><td>"+
+      (st.agreement==null?"–":(100*st.agreement).toFixed(1)+"%")+"</td><td>"+badge+"</td></tr>";
+  }).join("");
+
+  const failing = DATA.classes.filter(c => classStats(c.name).status==="fail").map(c=>c.label);
+  const allJudged = judged === DATA.records.length;
+  let gate;
+  if (!allJudged){
+    gate = '<span class="gate-bad">Incomplete:</span> '+(DATA.records.length-judged)+" verdict(s) remaining — rollup is provisional until all sampled queries are judged.";
+  } else if (failing.length){
+    gate = '<span class="gate-bad">Ruling 3 trigger:</span> below 90% — '+esc(failing.join(", "))+" must be manually re-authored before the next recorded run.";
+  } else {
+    gate = '<span class="gate-ok">All sampled classes ≥90% owner agreement.</span> No re-author required (record the outcome in TODO T-C13 + PROGRESS).';
+  }
+  el("rollgate").innerHTML = gate;
+  el("gatemsg").innerHTML = gate;
+
+  el("chips").querySelectorAll(".chip").forEach(ch=>{
+    ch.onclick = () => { const t = el("cls-"+ch.dataset.cls); if(t) t.scrollIntoView({behavior:"smooth"}); };
+  });
+}
+
+function applyFilter(){
+  const only = el("flt-unjudged").checked;
+  document.querySelectorAll(".card").forEach(card=>{
+    card.classList.toggle("hidden", only && !!S.verdicts[card.dataset.id]);
+  });
+  document.querySelectorAll(".classhead").forEach(h=>{
+    const cname = h.id.slice(4);
+    const any = [...document.querySelectorAll('.card[data-class="'+cname+'"]')].some(c=>!c.classList.contains("hidden"));
+    h.classList.toggle("hidden", !any);
+  });
+}
+
+function tierOverridesFor(id){
+  const out = [];
+  DATA.records.find(r=>r.id===id).evidence.forEach(ev=>{
+    const k = id+"|"+ev.chunk_ref;
+    if (S.tiers[k] != null && S.tiers[k] !== ev.tier)
+      out.push({ chunk_ref: ev.chunk_ref, short_ref: ev.short_ref, auto_tier: ev.tier, owner_tier: S.tiers[k] });
+  });
+  return out;
+}
+
+function completeness(){
+  const per_class = {};
+  DATA.classes.forEach(c=>{ const st = classStats(c.name);
+    per_class[c.name] = { sampled: st.total, judged: st.judged, correct: st.correct,
+      agreement: st.agreement==null?null:Math.round(st.agreement*10000)/10000,
+      pass_90: st.status==="pass", status: st.status }; });
+  const judged = Object.keys(S.verdicts).length;
+  const failing = DATA.classes.filter(c=>classStats(c.name).status==="fail").map(c=>c.name);
+  return { judged, total: DATA.records.length, complete: judged===DATA.records.length,
+    reauthor_classes: failing, per_class };
+}
+
+function baseExport(){
+  return { basis: DATA.meta, reviewer: (el("reviewer").value||"").trim(), completeness: completeness() };
+}
+
+function exportJSON(){
+  const base = baseExport();
+  const doc = Object.assign({ artifact: "ruling-3-owner-verdicts",
+    exported_at: new Date().toISOString(),
+    decision_rule: "any class below 90% owner agreement (CORRECT/sampled) is manually re-authored before the next recorded run (T-C13 spec §10, ruling 3, RATIFIED v1.0)" }, base);
+  doc.verdicts = DATA.records.map(r=>({
+    query_id: r.id, class_no: CLS[r.class].no, class: r.class,
+    verdict: S.verdicts[r.id] || "UNJUDGED",
+    corrected_labels: S.corrections[r.id] || "",
+    owner_notes: S.notes[r.id] || "",
+    tier_overrides: tierOverridesFor(r.id)
+  }));
+  return doc;
+}
+
+function csvQuote(v){ const s = String(v==null?"":v); return /[",\r\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s; }
+
+function exportCSV(){
+  const rows = [["class_no","class","query_id","query","gold_spec_points","gold_concepts","gold_misconceptions","evidence_tiers","evidence_refs","provenance","substrate","notes","VERDICT (CORRECT/INCORRECT)","corrected_labels","owner_notes"]];
+  DATA.records.forEach(r=>{
+    const ov = tierOverridesFor(r.id);
+    const notes = [S.notes[r.id]||"", ...ov.map(o=>"tier_override "+o.short_ref+": t"+o.auto_tier+"->t"+o.owner_tier)].join("; ");
+    rows.push([CLS[r.class].no, r.class, r.id, r.query,
+      r.gold_spec_points.join(" | "), r.gold_concepts.join(" | "), r.gold_misconceptions.join(" | "),
+      r.evidence_tiers, r.evidence_refs, r.provenance_str, r.substrate, r.notes,
+      S.verdicts[r.id]||"", S.corrections[r.id]||"", notes]);
+  });
+  return rows.map(r=>r.map(csvQuote).join(",")).join("\r\n")+"\r\n";
+}
+
+function download(name, text, type){
+  const b = new Blob([text], {type: type||"text/plain"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(b); a.download = name; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 3000);
+}
+
+function guardIncomplete(){
+  const c = completeness();
+  if (c.complete) return true;
+  return window.confirm("Only "+c.judged+"/"+c.total+" judged — the export will be marked incomplete and the rollup is provisional. Export anyway?");
+}
+
+function init(){
+  load();
+  el("m-total").textContent = DATA.records.length;
+  el("m-seed").textContent = DATA.meta.seed;
+  el("m-manifest").textContent = DATA.meta.manifest_sha256.slice(0,16)+"…";
+  el("reviewer").value = S.reviewer || DATA.meta.default_reviewer;
+  renderRecords();
+  DATA.records.forEach(r => refreshCard(r.id));
+  refreshAll();
+  el("flt-unjudged").onchange = applyFilter;
+  el("btn-json").onclick = ()=>{ if(guardIncomplete()) download("ruling-3-owner-verdicts-"+DATA.meta.seed+".json", JSON.stringify(exportJSON(), null, 1)+"\n", "application/json"); };
+  el("btn-copy").onclick = ()=>{
+    if(!guardIncomplete()) return;
+    navigator.clipboard.writeText(JSON.stringify(exportJSON(), null, 1)+"\n")
+      .then(()=>{ el("btn-copy").textContent = "Copied"; setTimeout(()=>el("btn-copy").textContent="Copy JSON", 1500); });
+  };
+  el("btn-csv").onclick = ()=>{ if(guardIncomplete()) download("ruling-3-spot-check-worksheet-marked-"+DATA.meta.seed+".csv", exportCSV(), "text/csv"); };
+  el("btn-reset").onclick = ()=>{
+    if (window.confirm("Discard all verdicts, notes and tier overrides saved in this browser?")){
+      S = { verdicts:{}, notes:{}, corrections:{}, tiers:{}, reviewer: DATA.meta.default_reviewer };
+      save(); location.reload();
+    }
+  };
+}
+init();
+</script>
+</body>
+</html>
