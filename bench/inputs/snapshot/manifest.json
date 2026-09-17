@@ -1,0 +1,33 @@
+{
+  "bytes": {
+    "chunks.jsonl.gz": 3060441,
+    "concept_attachments.json": 2,
+    "graph_code.json": 31687,
+    "graph_edges.json": 15686,
+    "misconceptions.json": 2264,
+    "question_anchors.json": 38436,
+    "spec_points.json": 36676
+  },
+  "chunk_identity": "(documents.checksum, chunk_index, content sha256) \u2014 environment-portable",
+  "counts": {
+    "chunks": 2333,
+    "concept_attachments": 0,
+    "edges": 152,
+    "misconceptions": 19,
+    "question_anchors": 119,
+    "spec_points": 182
+  },
+  "files_sha256": {
+    "chunks.jsonl.gz": "d33fd0613622817da7225eae05b29837700c912b3e154d61ce1907823af70919",
+    "concept_attachments.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "graph_code.json": "8d366370987eb1b6c73ad3d356058d0097bcb500411a2780c9a736d20a9deb42",
+    "graph_edges.json": "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
+    "misconceptions.json": "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
+    "question_anchors.json": "2935c02d5ba56be8b744ff70f9f598cdf023f6c0ef40adee0244ad110bc664e0",
+    "spec_points.json": "e6c513b4d7d60c2d54fd13bc1f4a4ce5e5c765c35bf057b32929e3e3dde28225"
+  },
+  "generated": "2026-09-17",
+  "graph_as_code_source": "SyllabAI/syllabai-resources@b2bff3f",
+  "snapshot_version": "snap-001",
+  "source": "production Neon (read-only), db billowing-cherry-15418366 branch production"
+}

@@ -1,0 +1,90 @@
+name: ops-embed-backfill
+
+# Benchmark-only embedding backfill for the frozen snap-001 corpus (session 92).
+# Runs ONLY on manual dispatch — never on push/PR. Uses the production-shaped
+# EmbedBackfill runner from syllabai-core (pinned sha) against a disposable
+# pgvector service container; produces the compute-once-freeze-forever artifact
+# (float4-exact JSONL + manifest + SHA256SUMS). The API key lives in repo
+# secrets and is never logged. Resume-safe: re-dispatch continues pending chunks.
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Embedding model (dimension-compatible with vector(768))"
+        default: "gemini-embedding-001"
+      min_interval_ms:
+        description: "Min interval between embedding calls (ms)"
+        default: "600"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: bench
+          POSTGRES_PASSWORD: bench
+          POSTGRES_DB: postgres
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U bench"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - name: Checkout records repo (frozen inputs)
+        uses: actions/checkout@v4
+        with:
+          path: records
+
+      - name: Checkout core (runner code, pinned sha)
+        uses: actions/checkout@v4
+        with:
+          repository: SyllabAI/syllabai-core
+          ref: 48c197ad9319b2161465a94fa8235c625367e30c
+          path: core
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Cache Maven repo
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: embed-backfill-m2-${{ hashFiles('core/pom.xml') }}
+          restore-keys: embed-backfill-m2-
+
+      - name: Build classpath
+        working-directory: core
+        run: mvn -B -ntp -q test-compile dependency:build-classpath -Dmdep.outputFile=../cp.txt
+
+      - name: Run embedding backfill (production provider path)
+        working-directory: core
+        env:
+          BENCH_JDBC_URL: jdbc:postgresql://localhost:5433/postgres
+          BENCH_JDBC_USER: bench
+          BENCH_JDBC_PASSWORD: bench
+          BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot
+          BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold
+          BENCH_RUN_OUT: ${{ github.workspace }}/embed-out
+          BENCH_CORE_COMMIT: 48c197ad9319b2161465a94fa8235c625367e30c
+          BENCH_RUN_DATE: "2026-09-17"
+          SYLLABAI_EMBEDDING_GEMINI_API_KEY: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEY }}
+          EMBED_MODEL: ${{ inputs.model }}
+          EMBED_MIN_INTERVAL_MS: ${{ inputs.min_interval_ms }}
+        run: java -Xmx2g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.EmbedBackfill
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: embed-backfill-snap-001
+          path: embed-out/
+          retention-days: 90

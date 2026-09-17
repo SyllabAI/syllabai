@@ -1,0 +1,572 @@
+[
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-SATURATED-SOLUTION",
+   "4CH1-CON-SOLUBILITY"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "d72903ee825831ea03c0d0ba4f1887ddfddc06dd7ee1e7281fb69c883be6adc9:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "914d583101f8909911651f8f07571ed489f1cec67d62c328dc0eb37aa9becc65:4",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "29f395966957443e2e22a54e2c11c0cc340c9c9a976f128016aa80f0ac24cb68:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.10",
+   "4CH1-1.4",
+   "4CH1-1.5C"
+  ],
+  "id": "g1-041",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-SOLUBILITY->4CH1-CON-SATURATED-SOLUTION"
+  },
+  "query": "Do I need to master Saturated solution before I can understand Solubility?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-ELECTROLYSIS",
+   "4CH1-CON-IONIC-BOND"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "bd1bc88542ba6c3928296ff742647404592389d52988f037e57143f4c85e7639:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "05952b3ad6fdc5190a511a20c1ed0405348946bb63d8aa8726e7464e69b4082a:22",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "9bb3e3d6ffb61c52225e28d2a92044e68602f5084c750de2fdbd73000270423a:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "be35905e00ebd13d4c7b6572568454b886c7fd80bd5b34ded7bde7bd4aa127c8:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.41",
+   "4CH1-1.58C"
+  ],
+  "id": "g1-042",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-ELECTROLYSIS->4CH1-CON-IONIC-BOND"
+  },
+  "query": "Do I need to master Ionic bonding before I can understand Electrolysis?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-BOND-BREAKING-MAKING",
+   "4CH1-CON-EXO-ENDO"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "c4e2178d9321e32899731a034c90ae089d8c8a7e7b4d3b09a63fc8e9a81f04ce:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "c928be1d9da9b25d83cb32a6eb0d46323813be409dd2c13ab4f2013c0f589aeb:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "295c56c31b8497bd3d93ab59e8a8a8d5ed3b15a084150f16f72e5d9889230312:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36f8d68e0f2d3fa2a269ef73a6095bb55c8f7b38f962781541fab38cdf6cd8a5:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "2f11ca6ab8ac98be7d1e9ac3d1ad786cffcfadfb7c9bf89139730f5b61a45f76:11",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-3.1",
+   "4CH1-3.6C"
+  ],
+  "id": "g1-043",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-BOND-BREAKING-MAKING->4CH1-CON-EXO-ENDO"
+  },
+  "query": "Do I need to master Exothermic and endothermic reactions before I can understand Bond-breaking endothermic, bond-making exothermic?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-RATE-FACTORS"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "c8b8f0758bb915f86f537bd0f5df3342af9ac60868624e30509210b1b4ca9a26:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "05952b3ad6fdc5190a511a20c1ed0405348946bb63d8aa8726e7464e69b4082a:20",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "f67d0dfb4a1d7a843657eb2b3d3d99370cec36de0660f7e5e18e553e00e060e8:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "2f11ca6ab8ac98be7d1e9ac3d1ad786cffcfadfb7c9bf89139730f5b61a45f76:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-3.10"
+  ],
+  "id": "g1-044",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "endpoint_non_concept": [
+    "4CH1-PR-10"
+   ],
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-PR-10->4CH1-CON-RATE-FACTORS"
+  },
+  "query": "Do I need to master Factors affecting the rate of reaction before I can understand 4CH1-PR-10?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-CHROMATOGRAM-INTERPRETATION",
+   "4CH1-CON-PURE-SUBSTANCE"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "0f3d75d3b6c6247a72c152679f82bdc9c70380a9b907ff386ee2b358c6c7fb1e:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "e8017889e5c1748f14f38aeb07a26a6eaa779ee5a9508308a69002b8ecf9ed91:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "90f25c14016c043bd9bc1d9dba4aff6c328221e4d13a5d8b4033f4c68def95f8:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "512af760e518e78109995e96666717d92517d3cce8cd23585f0222403453e82b:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "295c56c31b8497bd3d93ab59e8a8a8d5ed3b15a084150f16f72e5d9889230312:4",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.11",
+   "4CH1-1.9"
+  ],
+  "id": "g1-045",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-CHROMATOGRAM-INTERPRETATION->4CH1-CON-PURE-SUBSTANCE"
+  },
+  "query": "Do I need to master Pure substance and fixed melting/boiling points before I can understand Interpreting chromatograms?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-EMPIRICAL-FORMULA",
+   "4CH1-CON-MOLECULAR-FORMULA"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "0ec62ea71773ab8e28bad1c9ac79e9e6fee4752e60fd96c4b2110c5c79110de3:10",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "96bdc4705e39ebcd8fd28e95f007173614daf1ff3c9c1253eff608db0519a1e2:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "2c192320c254b2d049fe05015c675461270e18f03365fedbc34787a3ba21b65b:4",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "5f9b96f76afefec1996683c86ee821b5adb65de655063375b26599ca4050185d:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "fa60642a0e047791393eb4f8ab26edc5f3638099e22daea77ca4c790307b3064:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.32",
+   "4CH1-1.33"
+  ],
+  "id": "g1-046",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-MOLECULAR-FORMULA->4CH1-CON-EMPIRICAL-FORMULA"
+  },
+  "query": "Do I need to master Empirical formula before I can understand Molecular formula?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-CONCENTRATION",
+   "4CH1-CON-RATE-FACTORS"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "c8b8f0758bb915f86f537bd0f5df3342af9ac60868624e30509210b1b4ca9a26:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "05952b3ad6fdc5190a511a20c1ed0405348946bb63d8aa8726e7464e69b4082a:20",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "2f11ca6ab8ac98be7d1e9ac3d1ad786cffcfadfb7c9bf89139730f5b61a45f76:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "f67d0dfb4a1d7a843657eb2b3d3d99370cec36de0660f7e5e18e553e00e060e8:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.34C",
+   "4CH1-3.10"
+  ],
+  "id": "g1-047",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-RATE-FACTORS->4CH1-CON-CONCENTRATION"
+  },
+  "query": "Do I need to master Concentration of a solution before I can understand Factors affecting the rate of reaction?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-BOND-ENERGY-CALC",
+   "4CH1-CON-COVALENT-BOND"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "de0d5a687a3b9ee4ea6ba1035c81b41ec0ea9c908ccb3fc8103c9e2e8f5f2cc5:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "98c01335384bb9d14aaf42f25236b0fe3b9df2da0627a88d2b1f2a5060d314e0:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "034516a42657ca0ffa1671f65d939ad69055a6d97b477f958cd9c5d6d29be8b8:7",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "56c67b2c2a9f310a2f61e9dadbc6ec7db14818c2035ba34036e1f2442ef8f71d:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "da0b8fe107f8d3dd12a6f7c2c37c814e1065546a5ffd648a80e75e3f698747b6:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.44",
+   "4CH1-1.45",
+   "4CH1-3.7C"
+  ],
+  "id": "g1-048",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-BOND-ENERGY-CALC->4CH1-CON-COVALENT-BOND"
+  },
+  "query": "Do I need to master Covalent bond before I can understand Bond energy calculations?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-ANODE-CATHODE",
+   "4CH1-CON-ELECTROLYSIS"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "05952b3ad6fdc5190a511a20c1ed0405348946bb63d8aa8726e7464e69b4082a:22",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "fa60642a0e047791393eb4f8ab26edc5f3638099e22daea77ca4c790307b3064:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "9bb3e3d6ffb61c52225e28d2a92044e68602f5084c750de2fdbd73000270423a:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "be35905e00ebd13d4c7b6572568454b886c7fd80bd5b34ded7bde7bd4aa127c8:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "bd1bc88542ba6c3928296ff742647404592389d52988f037e57143f4c85e7639:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.57C",
+   "4CH1-1.58C"
+  ],
+  "id": "g1-049",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-ELECTROLYSIS->4CH1-CON-ANODE-CATHODE"
+  },
+  "query": "Do I need to master Anions and cations and their migration to cathode and anode before I can understand Electrolysis?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-CHROMATOGRAPHY"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "136b500f077e97400fa8509adecf11e0161389a87bff0d9e17a1c2061fa0a639:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "ae36e95e784562e7007033bf5b75afee612189d7cc429799dcb32feed9830536:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "ce65d4fd54ccede16ffc20dc621a2c88f0cd8225fac673043a0410a3b2d65a0f:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "465b6999213788a9d63023387f2347bd6c9c41221dce95633ecde76a2c778af9:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "61abeb4e83d0a173b9002a0e71452a072b3002ded9153b4b5bd5bd53277c83be:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.10"
+  ],
+  "id": "g1-050",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "endpoint_non_concept": [
+    "4CH1-PR-02"
+   ],
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-PR-02->4CH1-CON-CHROMATOGRAPHY"
+  },
+  "query": "Do I need to master Paper chromatography before I can understand 4CH1-PR-02?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-COVALENT-BOND",
+   "4CH1-CON-DOT-CROSS-COVALENT"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "de0d5a687a3b9ee4ea6ba1035c81b41ec0ea9c908ccb3fc8103c9e2e8f5f2cc5:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "034516a42657ca0ffa1671f65d939ad69055a6d97b477f958cd9c5d6d29be8b8:7",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "5f9b96f76afefec1996683c86ee821b5adb65de655063375b26599ca4050185d:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "fc38cf9a0bd05b5596b4996e4215cb75137a5725a3057fe2cfb43279110f4927:7",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.44",
+   "4CH1-1.45",
+   "4CH1-1.46"
+  ],
+  "id": "g1-051",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-DOT-CROSS-COVALENT->4CH1-CON-COVALENT-BOND"
+  },
+  "query": "Do I need to master Covalent bond before I can understand Dot-and-cross diagrams for covalent substances?",
+  "substrate": "kg"
+ },
+ {
+  "class": "prerequisite",
+  "gold_concepts": [
+   "4CH1-CON-EQ-POSITION",
+   "4CH1-CON-EXO-ENDO"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "c4e2178d9321e32899731a034c90ae089d8c8a7e7b4d3b09a63fc8e9a81f04ce:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "c928be1d9da9b25d83cb32a6eb0d46323813be409dd2c13ab4f2013c0f589aeb:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "5a98b7f5dbc50985174ece5de0ab784ec25ee1afe1130b8b27249e5970848490:15",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "e5285c8628e38432f2ad04809cf2a236eb17754bf241eeb7d5360f534d44fd45:11",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:14",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-3.1",
+   "4CH1-3.21C",
+   "4CH1-3.22C"
+  ],
+  "id": "g1-052",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REQUIRES_PREREQUISITE:4CH1-CON-EQ-POSITION->4CH1-CON-EXO-ENDO"
+  },
+  "query": "Do I need to master Exothermic and endothermic reactions before I can understand Position of equilibrium?",
+  "substrate": "kg"
+ }
+]
