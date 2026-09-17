@@ -1,0 +1,225 @@
+[
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "018dc797a48327677eb3cc823ebb85665a8d82edf3a5997042f3fad28256c837:7",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "b5524ad345abad0fe9765a0a508fb9ba4be38fea11e55e8d9d67774f925f6063:7",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-073",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-SUMMER2019",
+   "rule": "R1",
+   "source": "qversion[None]"
+  },
+  "query": "When a bottle of wine is left open for several days, some of the ethanol in the wine turns to ethanoic acid, $ \\mathrm{C H_{3} C O O H} $",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:3",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-074",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CSUMMER2021",
+   "rule": "R1",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "The diagram shows the industrial equipment used to separate crude oil into fractions.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:2",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-075",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S2-f",
+   "rule": "R1",
+   "source": "qversion[4CH0/2C]"
+  },
+  "query": "A student is provided with a solution of dilute sulfuric acid and a solution of sodium hydroxide. The student does a titration using $ 2 5. 0 \\mathrm{c m}^{3} $ of the sodium hydroxide solut…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-076",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CRJANUARY2020",
+   "rule": "R1",
+   "source": "qversion[4CH1/2CR]"
+  },
+  "query": "This question is about the metal, lead.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:8",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-077",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CJANUARY2021",
+   "rule": "R1",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "This question is about octane $ \\left( \\mathrm{C}_{8} \\mathrm{H}_{1 8} \\right) $ which is produced in the gasoline fraction during fractional distillation of crude oil.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:2",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-078",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CNOVEMBER2021",
+   "rule": "R1",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "(a) The box lists words that may be used to explain the term saturated solution. solute solvent temperature Explain, using all the words in the box, the term saturated solution.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "431606b12abc8c3039e4b4396a24431f328dfff53e1704975f7d71b60e4b3099:6",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "821c1d9f59677ffd1a6c48c1c5305bde636d863603696027e6bd268290b74088:6",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-079",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-SUMMER2016",
+   "rule": "R1",
+   "source": "qversion[None]"
+  },
+  "query": "Crude oil is a complex mixture of organic compounds called hydrocarbons. It is separated into fractions using a fractionating tower.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "78d67bd9c00a214071d645902eff11b3055f3b95643ab64a40e7623df40fd6c6:4",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "682b67c88046c069c57b11ea4d6a03d3c4c8aaa7bb90a9fcbb91beeac9254da7:4",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-080",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-JUNE2014",
+   "rule": "R1",
+   "source": "qversion[None]"
+  },
+  "query": "(a) Ethanol can be manufactured by two different processes. Process 1 sucrose $ \\xrightarrow[]{stage1} $ glucose $ \\xrightarrow[]{stage2} $ ethanol Process 2 ethene $ \\longrightarrow $ ethan…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-081",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CRJANUARY2020",
+   "rule": "R1",
+   "source": "qversion[4CH1/2CR]"
+  },
+  "query": "Chromatography is used to analyse mixtures. She places four known dyes, A, B, C and D, and the green food colouring on chromatography paper. The diagram shows the student's apparatus at the …",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:7",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g1-082",
+  "notes": "auto-derived v1",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CSPECIMEN2017",
+   "rule": "R1",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "The mineral nesquehonite is a form of hydrated magnesium carbonate. The formula, $ \\mathrm{M g C O_{3}. x H_{2} O} $ , shows that nesquehonite contains water of crystallisation. When a sampl…",
+  "substrate": "chunks"
+ }
+]

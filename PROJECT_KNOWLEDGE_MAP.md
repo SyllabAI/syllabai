@@ -87,6 +87,8 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Area | Canonical artifact(s) | Status/role |
 |---|---|---|
 | RAG/retrieval research | `RAG_RETRIEVAL_RESEARCH.md` | Accepted research/architecture guidance; promotion requires benchmark evidence |
+| Retrieval benchmark harness | `RETRIEVAL_BENCHMARK_HARNESS_SPEC.md` + `bench/` + `evidence/bench-001/` | T-C13 gate spec (PROPOSED v0.1); frozen gold-v1 set, snapshot snap-001, run records |
+| Retrieval frontier prepared contracts | `RETRIEVAL_FRONTIER_PREPARED_PACKAGE_2026-09-17.md` | PREPARED (UNVERIFIED) contracts: T-C07 scoping, embedding runbook, T-C14 lexical (V27), T-C06 converter (V28); audit findings AF-1..AF-3 |
 | Gemini File Search / Gemini Notebook architecture research | `GEMINI_FILE_SEARCH_AND_NOTEBOOK_ARCHITECTURE_RESEARCH.md` | Accepted research investigation; benchmark required; no production default yet |
 | Educational Retrieval Engine | `ADR-020-EDUCATIONAL_RETRIEVAL_ENGINE.md` | Accepted architecture direction |
 | Retrieval agent rules | `AGENT.md` RAG section and relevant core implementation contracts | Binding |

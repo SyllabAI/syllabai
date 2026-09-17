@@ -1,0 +1,257 @@
+{
+ "all_chunks": {
+  "corpus_n": 2333,
+  "overall": {
+   "evidence_precision@10": 0.0827,
+   "false_positive_rate@10": 0.9173,
+   "mrr": 0.2464,
+   "ndcg@10": 0.4299,
+   "recall@10": 0.2954,
+   "recall@20": 0.3638,
+   "recall@5": 0.2679
+  },
+  "per_class": {
+   "calculation": {
+    "evidence_precision@10": 0.11,
+    "false_positive_rate@10": 0.89,
+    "mrr": 0.9,
+    "ndcg@10": 0.9,
+    "recall@10": 0.375,
+    "recall@20": 0.375,
+    "recall@5": 0.375
+   },
+   "conceptual": {
+    "evidence_precision@10": 0.0692,
+    "false_positive_rate@10": 0.9308,
+    "mrr": 0.0,
+    "ndcg@10": 0.2716,
+    "recall@10": 0.3231,
+    "recall@20": 0.3385,
+    "recall@5": 0.2846
+   },
+   "exam_question": {
+    "evidence_precision@10": 0.1375,
+    "false_positive_rate@10": 0.8625,
+    "mrr": 1.0,
+    "ndcg@10": 1.0,
+    "recall@10": 1.0,
+    "recall@20": 1.0,
+    "recall@5": 1.0
+   },
+   "factual": {
+    "evidence_precision@10": 0.1333,
+    "false_positive_rate@10": 0.8667,
+    "mrr": 0.0,
+    "ndcg@10": 0.3374,
+    "recall@10": 0.3167,
+    "recall@20": 0.4833,
+    "recall@5": 0.2167
+   },
+   "mark_scheme": {
+    "evidence_precision@10": 0.0125,
+    "false_positive_rate@10": 0.9875,
+    "mrr": 0.0,
+    "ndcg@10": 0.0222,
+    "recall@10": 0.025,
+    "recall@20": 0.05,
+    "recall@5": 0.0
+   },
+   "misconception": {
+    "evidence_precision@10": 0.1,
+    "false_positive_rate@10": 0.9,
+    "mrr": 0.0,
+    "ndcg@10": 0.4276,
+    "recall@10": 0.32,
+    "recall@20": 0.47,
+    "recall@5": 0.3
+   },
+   "multi_spec_point": {
+    "evidence_precision@10": 0.0429,
+    "false_positive_rate@10": 0.9571,
+    "mrr": 0.0,
+    "ndcg@10": 0.124,
+    "recall@10": 0.0857,
+    "recall@20": 0.2571,
+    "recall@5": 0.0571
+   },
+   "prerequisite": {
+    "evidence_precision@10": 0.075,
+    "false_positive_rate@10": 0.925,
+    "mrr": 0.0,
+    "ndcg@10": 0.3309,
+    "recall@10": 0.15,
+    "recall@20": 0.2333,
+    "recall@5": 0.1167
+   },
+   "vague_learner": {
+    "evidence_precision@10": 0.025,
+    "false_positive_rate@10": 0.975,
+    "mrr": 0.0,
+    "ndcg@10": 0.125,
+    "recall@10": 0.125,
+    "recall@20": 0.15,
+    "recall@5": 0.125
+   },
+   "why_wrong": {
+    "evidence_precision@10": 0.09,
+    "false_positive_rate@10": 0.91,
+    "mrr": 0.7144,
+    "ndcg@10": 0.7262,
+    "recall@10": 0.24,
+    "recall@20": 0.28,
+    "recall@5": 0.24
+   }
+  },
+  "queries_scored": 98,
+  "scope": "ALL-chunks"
+ },
+ "arm": "B-proxy (harness-internal Okapi BM25 k1=1.2 b=0.75)",
+ "arm_status": "PROXY \u2014 NOT a production arm; never citable for promotion decisions",
+ "arms_unavailable": {
+  "A": "requires T-C07 + embedding backfill (0/2,333 chunks embedded)",
+  "A0": "requires syllabai-core Java lane (Java 25 + Maven unavailable in authoring env) \u2014 PREPARED, not RUNNABLE here",
+  "B": "requires T-C14 Bm25Retriever + tsvector migration",
+  "C/D": "require A + B",
+  "E/F/G": "require T-C15"
+ },
+ "date": "2026-09-17",
+ "gold_set": "gold-v1 (120 queries; frozen)",
+ "queries_excluded_no_labels": {
+  "count": 22,
+  "ids": [
+   "g1-022",
+   "g1-030",
+   "g1-116",
+   "g1-117",
+   "g1-118",
+   "g1-119",
+   "g1-120",
+   "g1-076",
+   "g1-081",
+   "g1-001",
+   "g1-003",
+   "g1-004",
+   "g1-091",
+   "g1-092",
+   "g1-093",
+   "g1-094",
+   "g1-095",
+   "g1-096",
+   "g1-097",
+   "g1-098",
+   "g1-099",
+   "g1-100"
+  ],
+  "reason": "substrate-absent classes (notes_mirror/figures) or auto-label sparse; excluded from retrieval metrics, NOT scored as zero"
+ },
+ "queries_total": 120,
+ "queries_with_chunk_labels": 98,
+ "run_id": "run-001-bproxy",
+ "validated_only": {
+  "corpus_n": 296,
+  "overall": {
+   "evidence_precision@10": 0.0439,
+   "false_positive_rate@10": 0.9561,
+   "mrr": 0.233,
+   "ndcg@10": 0.3237,
+   "recall@10": 0.1449,
+   "recall@20": 0.1658,
+   "recall@5": 0.1388
+  },
+  "per_class": {
+   "calculation": {
+    "evidence_precision@10": 0.07,
+    "false_positive_rate@10": 0.93,
+    "mrr": 0.7,
+    "ndcg@10": 0.7,
+    "recall@10": 0.175,
+    "recall@20": 0.175,
+    "recall@5": 0.175
+   },
+   "conceptual": {
+    "evidence_precision@10": 0.0231,
+    "false_positive_rate@10": 0.9769,
+    "mrr": 0.0,
+    "ndcg@10": 0.1451,
+    "recall@10": 0.0731,
+    "recall@20": 0.1692,
+    "recall@5": 0.0731
+   },
+   "exam_question": {
+    "evidence_precision@10": 0.0875,
+    "false_positive_rate@10": 0.9125,
+    "mrr": 0.875,
+    "ndcg@10": 0.875,
+    "recall@10": 0.75,
+    "recall@20": 0.75,
+    "recall@5": 0.75
+   },
+   "factual": {
+    "evidence_precision@10": 0.0583,
+    "false_positive_rate@10": 0.9417,
+    "mrr": 0.0,
+    "ndcg@10": 0.2182,
+    "recall@10": 0.1167,
+    "recall@20": 0.15,
+    "recall@5": 0.0833
+   },
+   "mark_scheme": {
+    "evidence_precision@10": 0.0,
+    "false_positive_rate@10": 1.0,
+    "mrr": 0.0,
+    "ndcg@10": 0.0,
+    "recall@10": 0.0,
+    "recall@20": 0.025,
+    "recall@5": 0.0
+   },
+   "misconception": {
+    "evidence_precision@10": 0.03,
+    "false_positive_rate@10": 0.97,
+    "mrr": 0.0,
+    "ndcg@10": 0.1377,
+    "recall@10": 0.06,
+    "recall@20": 0.08,
+    "recall@5": 0.04
+   },
+   "multi_spec_point": {
+    "evidence_precision@10": 0.0429,
+    "false_positive_rate@10": 0.9571,
+    "mrr": 0.0,
+    "ndcg@10": 0.1945,
+    "recall@10": 0.0857,
+    "recall@20": 0.0857,
+    "recall@5": 0.0857
+   },
+   "prerequisite": {
+    "evidence_precision@10": 0.025,
+    "false_positive_rate@10": 0.975,
+    "mrr": 0.0,
+    "ndcg@10": 0.1125,
+    "recall@10": 0.05,
+    "recall@20": 0.05,
+    "recall@5": 0.05
+   },
+   "vague_learner": {
+    "evidence_precision@10": 0.0,
+    "false_positive_rate@10": 1.0,
+    "mrr": 0.0,
+    "ndcg@10": 0.0,
+    "recall@10": 0.0,
+    "recall@20": 0.0,
+    "recall@5": 0.0
+   },
+   "why_wrong": {
+    "evidence_precision@10": 0.1,
+    "false_positive_rate@10": 0.9,
+    "mrr": 0.8833,
+    "ndcg@10": 0.9131,
+    "recall@10": 0.23,
+    "recall@20": 0.23,
+    "recall@5": 0.23
+   }
+  },
+  "queries_scored": 98,
+  "scope": "VALIDATED-paper-chunks-only"
+ },
+ "validation_boundary_note": "scope difference quantifies how much gold evidence lives on SUGGESTED papers; production retrieval must serve VALIDATED-only per the T-C05 gate"
+}
