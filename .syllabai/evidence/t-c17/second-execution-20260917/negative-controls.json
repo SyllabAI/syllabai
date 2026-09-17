@@ -1,0 +1,50 @@
+[
+  {
+    "id": "NC-1",
+    "control": "real part-mark mutation (1→2 in Q7)",
+    "result": "DETECTED",
+    "detail": "shared entries=37 mark mismatches=1 first: {'number': '9', 'part': 'd-i', 'raw_marks': 1, 'clean_marks': 2}"
+  },
+  {
+    "id": "NC-2",
+    "control": "phantom question + minted total",
+    "result": "DETECTED",
+    "detail": "questions raw=11 clean=12 | shared question totals=11 mismatches=0 minted-in-clean=['12']"
+  },
+  {
+    "id": "NC-4",
+    "control": "orphan $$ fence",
+    "result": "DETECTED",
+    "detail": "orphanMathFences=1"
+  },
+  {
+    "id": "NC-5",
+    "control": "QWC asterisk reformat *(c)→* (c)",
+    "result": "DETECTED",
+    "detail": "roles *(c)=['paragraph'] vs * (c)=['list_item', 'paragraph']"
+  },
+  {
+    "id": "NC-7",
+    "control": "tampered raw document",
+    "result": "DETECTED",
+    "detail": "HARD STOP: raw checksum mismatch"
+  },
+  {
+    "id": "NC-8",
+    "control": "new warning class injected",
+    "result": "DETECTED",
+    "detail": "ading': 1, 'question numbering gap': 8, '1': 9, '2': 6, '3': 9, '4': 4, '5': 7, '6': 9, '7': 5, '8': 12, '9': 15, '10': 4, '11': 2} NEW=['unclassified heading']"
+  },
+  {
+    "id": "NC-3",
+    "control": "image-island reformat",
+    "result": "NOT-APPLICABLE-HERE",
+    "detail": "fresh parse carries no image islands (no layout/crop stage); the island-reformat control was DETECTED on the real 2012-Jan raw with islands in session-92 evidence (.syllabai/evidence/t-c17)"
+  },
+  {
+    "id": "NC-6",
+    "control": "entity pre-decode",
+    "result": "NOT-APPLICABLE-HERE",
+    "detail": "fresh parse contains no HTML entities (entityDecodedLines 0=0, unchanged); entity-ownership control DETECTED in session-92 evidence"
+  }
+]

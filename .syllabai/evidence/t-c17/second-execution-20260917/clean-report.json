@@ -1,0 +1,146 @@
+{
+  "schema": "clean-report-1.0",
+  "session": "2012-Jan",
+  "generated_at_utc": "2026-09-17T17:49:00Z",
+  "protocol": "CLEAN_VERIFY_PROTOCOL_QP_MS_MARKDOWN.md v1.1",
+  "tooling": "syllabai-parser 7b8bcba tools/corpus_ops + tools/glmocr (python twin; Java unavailable in sandbox)",
+  "raw_provenance": {
+    "note": "raw = FRESH full-document OCR parse of the official PDFs (operator-directed \"parse the pdf version add it\"); NOT the 2026-09-11 ocr.z.ai website batch recorded in the canonical manifest",
+    "source_pdfs": {
+      "QP": {
+        "name": "January 2012 QP - Paper 1C Edexcel Chemistry IGCSE.pdf"
+      },
+      "MS": {
+        "name": "January 2012 MS - Paper 1C Edexcel Chemistry IGCSE.pdf"
+      }
+    },
+    "engine": {
+      "kind": "internal-gateway-vision (NOT ocr.z.ai layout_parsing)",
+      "endpoint": "POST {baseUrl}/chat/completions/vision",
+      "models_reported": [
+        "glm-5v-turbo"
+      ],
+      "layout_stage": "none — no crop figures produced; figures skipped by model",
+      "prompt_sha256_per_document": {
+        "QP": null,
+        "MS": "456bd2d04b1c3797c02c6790a53ce763a1b5d9a75a7d1e62ac341f958d0df168"
+      },
+      "prompt_sha256_current": "456bd2d04b1c3797c02c6790a53ce763a1b5d9a75a7d1e62ac341f958d0df168",
+      "dpi": 200
+    },
+    "batch_manifest": "ocr-batch-2012jan/manifest.json (sandbox evidence)",
+    "supersedes": {
+      "prior_raw": {
+        "qp_sha256": "136b500f077e97400fa8509adecf11e0161389a87bff0d9e17a1c2061fa0a639",
+        "ms_sha256": "f2afa60dc10c541d44c3a1f98b13bae7820f370935d024117005722f06f3369b"
+      },
+      "prior_execution": "session-92 T-C17 first execution (protocol machinery VERIFIED, session NOT CLEANED: G2 FAIL 120 vs 98, escalations E-001..E-004)",
+      "supersession_reason": "operator-directed fresh parse recovers the printed total lines the prior OCR lost (Q5=11, Q11=11) and drops the prior in-table OCR artifacts (E-004)"
+    }
+  },
+  "raw": {
+    "qp_sha256": "bdb8127872e118abb19ecd4dfe4a1d76772b6fde5082b4715d22c4de9070df98",
+    "ms_sha256": "1a22f26071e9d67e46a925e5fac9e23d2b7f5cb1bc4be18faabc3ae8507a0cc2"
+  },
+  "clean": {
+    "qp_sha256": "66e878691c25e1c410e5e5735570474c0142e2e27bf7b5a8ced0dc54d9827038",
+    "ms_sha256": "59e4abd48482fa996089dda764275646a4b49851e835c0c8c4cea2b5aa92fa33"
+  },
+  "captured_totals": {
+    "qp_paper_total": 120,
+    "qp_paper_total_witnesses": [
+      {
+        "line": 41,
+        "text": "The total mark for this paper is 120."
+      },
+      {
+        "line": 842,
+        "text": "TOTAL FOR PAPER = 120 MARKS"
+      }
+    ],
+    "ms_paper_total": null,
+    "ms_paper_total_note": "absent from the PRINTED mark scheme (same as prior raw); not an escalation — nothing reconstructed",
+    "per_question_totals": {
+      "1": 10,
+      "2": 8,
+      "3": 13,
+      "4": 8,
+      "5": 11,
+      "6": 14,
+      "7": 9,
+      "8": 10,
+      "9": 18,
+      "10": 8,
+      "11": 11
+    },
+    "per_question_totals_absent": []
+  },
+  "identity_as_printed": {
+    "board": "Edexcel",
+    "qualification": "International GCSE Chemistry / Science (Double Award)",
+    "paper_reference": "4CH0/1C (also 4SC0/1C)",
+    "session": "Friday 13 January 2012 - Morning (QP); January 2012 (MS)"
+  },
+  "operations": [
+    {
+      "op": "remove-block",
+      "class": "cover-instructions-periodic-boilerplate",
+      "target": "QP",
+      "lines": "1-93",
+      "detail": "cover fields, Instructions/Information/Advice, Turn over/P40126A/copyright/barcode furniture, periodic table + key, BLANK PAGE, PMT, \"Answer ALL questions.\" (B.0 witnesses captured first)"
+    },
+    {
+      "op": "remove-line",
+      "class": "page-furniture-pmt",
+      "target": "QP",
+      "lines": "281, 678, 813",
+      "detail": "3 stray PMT marks"
+    },
+    {
+      "op": "remove-block",
+      "class": "blank-page",
+      "target": "QP",
+      "lines": "844, 846",
+      "detail": "2 trailing BLANK PAGEs"
+    },
+    {
+      "op": "remove-block",
+      "class": "cover-corporate-preamble",
+      "target": "MS",
+      "lines": "1-35",
+      "detail": "Mark Scheme cover + Edexcel/Pearson corporate preamble; identity line \"INTERNATIONAL GCSE CHEMISTRY 4CH0 4SC0 /1C – JANUARY 2012\" KEPT"
+    },
+    {
+      "op": "remove-block",
+      "class": "publications-footer",
+      "target": "MS",
+      "lines": "1236-1256",
+      "detail": "Edexcel Publications order info + corporate footer"
+    }
+  ],
+  "repairs": [],
+  "escalations": [],
+  "observations": [
+    {
+      "id": "N-001",
+      "kind": "printed-total-discrepancy",
+      "detail": "the PRINTED mark scheme says \"Total 11 marks\" for Question 3 while the printed QP says \"(Total for Question 3 = 13 marks)\" and the MS mark cells for Q3 sum to 13 — a property of the printed documents, faithfully transcribed on both sides; recorded for operator awareness, nothing changed",
+      "state": "informational"
+    }
+  ],
+  "figures_note": "fresh parse carries NO image islands (vision engine has no layout/crop stage — recorded honestly in the batch manifest); the prior raw's 11 assets remain in the canonical session folder untouched",
+  "gate_results": {
+    "G4": "pass",
+    "G1": "pass",
+    "G2": "pass",
+    "G3": "PASS",
+    "G5": "pass",
+    "determinism": "verified",
+    "negative_controls": "6/6 DETECTED (2 N/A recorded)"
+  },
+  "gate_notes": [
+    "G4: checksums=True manifest=True ledger=True line-math=True escalations=True",
+    "G1: five-file bundle present; executed via conformance-verified python twin (Java 25/mvn unavailable in sandbox — recorded deviation)",
+    "determinism: clean re-run byte-identical=True (epoch-pinned report); clean_diff re-run byte-identical=True"
+  ]
+}

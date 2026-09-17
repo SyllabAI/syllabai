@@ -1,0 +1,260 @@
+{
+  "pairs": [
+    {
+      "checks": {
+        "assets": {
+          "hasAssetsDir": false,
+          "hasManifest": false,
+          "knownUnavailable": 0,
+          "missing": [],
+          "note": "no manifest.json \u2014 md\u2194asset map unverified (gap #9 tooling exists: tools/ocr_batch)",
+          "status": "ok"
+        },
+        "paperMapping": {
+          "status": "ok",
+          "unmatchedMs": [],
+          "unmatchedQp": []
+        },
+        "paperTotal": {
+          "mismatches": [],
+          "ms": null,
+          "qp": 120,
+          "status": "review",
+          "sumOfQuestionTotals": 120
+        },
+        "qpMsTotals": {
+          "mismatches": [],
+          "missingOnOneSide": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "status": "review"
+        },
+        "questionMarkSums": {
+          "findings": [
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 4,
+              "partsWithMarks": 1,
+              "printedTotal": 10,
+              "question": 1,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 7,
+              "partsWithMarks": 0,
+              "printedTotal": 8,
+              "question": 2,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 8,
+              "partsWithMarks": 0,
+              "printedTotal": 13,
+              "question": 3,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 9,
+              "partsWithMarks": 0,
+              "printedTotal": 8,
+              "question": 4,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 10,
+              "partsWithMarks": 0,
+              "printedTotal": 11,
+              "question": 5,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 10,
+              "partsWithMarks": 5,
+              "printedTotal": 14,
+              "question": 6,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 6,
+              "partsWithMarks": 0,
+              "printedTotal": 9,
+              "question": 7,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 7,
+              "partsWithMarks": 0,
+              "printedTotal": 10,
+              "question": 8,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 13,
+              "partsWithMarks": 6,
+              "printedTotal": 18,
+              "question": 9,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 5,
+              "partsWithMarks": 0,
+              "printedTotal": 8,
+              "question": 10,
+              "status": "review"
+            },
+            {
+              "note": "some part marks unknown",
+              "partsTotal": 6,
+              "partsWithMarks": 3,
+              "printedTotal": 11,
+              "question": 11,
+              "status": "review"
+            }
+          ],
+          "status": "review"
+        }
+      },
+      "counts": {
+        "msEntries": 25,
+        "questions": 11
+      },
+      "identity": {
+        "msDocumentId": "4573c2df-6fac-5948-a2b3-fb8b4d280fb9",
+        "qpDocumentId": "4a90d94e-921c-5089-83e6-fe771f7f7438"
+      },
+      "ms": "/home/z/my-project/tc17-work/corpus-sandbox/paper 1/2012-Jan/clean/MS.md",
+      "paper": {
+        "logNumber": null,
+        "paperReference": null,
+        "publicationCode": null,
+        "session": null
+      },
+      "qp": "/home/z/my-project/tc17-work/corpus-sandbox/paper 1/2012-Jan/clean/QP.md",
+      "status": "review",
+      "warnings": {
+        "ms": [
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "1: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "2: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "2: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "2: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "2: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "2: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "2: bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "3: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "4: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "4: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "4: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "4: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "5: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "5: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "5: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "5: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "5: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "5: bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+          "5: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "6: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "7: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "7: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "7: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "7: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "7: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "8: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "9: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "10: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "10: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "10: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "10: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+          "11: bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+          "11: bare integer cell \"1\" skipped (rubric/rowspan ambiguity)"
+        ],
+        "qp": [
+          "question numbering gap: expected Q3, got Q1 (content merges into Q2)",
+          "question numbering gap: expected Q3, got Q2 (content merges into Q2)",
+          "question numbering gap: expected Q3, got Q1 (content merges into Q2)",
+          "question numbering gap: expected Q3, got Q2 (content merges into Q2)",
+          "question numbering gap: expected Q6, got Q1 (content merges into Q5)",
+          "question numbering gap: expected Q6, got Q2 (content merges into Q5)",
+          "question numbering gap: expected Q9, got Q1 (content merges into Q8)",
+          "question numbering gap: expected Q9, got Q2 (content merges into Q8)"
+        ]
+      }
+    }
+  ],
+  "schemaVersion": "1.0",
+  "skipped": [],
+  "summary": {
+    "fail": 0,
+    "pairs": 1,
+    "pass": 0,
+    "review": 1
+  },
+  "tool": "glmocr-health"
+}

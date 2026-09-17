@@ -37,3 +37,16 @@ corpus clone was never modified (verified by B.0 anchors at every re-run).
 - `verify-real-paper1.log` / `verify-real-paper2.log` — read-only `corpus_ops verify`
   over the FULL live corpora (paper 1: 41 sessions / paper 2: 41 sessions,
   164 documents checksum-verified): 0 FAIL, 0 WARN each
+
+---
+
+## Second execution — 2026-09-17 (operator-directed fresh parse; session CLEANED)
+
+Operator directive ("You can parse the pdf version add it. Make it complete yourself")
+triggered a fresh full-document OCR of the official 2012-Jan PDFs and a second, complete
+T-C17 execution. Session 2012-Jan is now **CLEANED** (G1–G5 pass, determinism verified,
+negative controls 6/6 DETECTED + 2 N/A cross-referenced above); the canonical corpus was
+superseded verify-green at SyllabAI/Past-Papers `9746af8` (prior raw archived, checksums
+verified). Full detail, exact SHAs, engine provenance (honest deviation: gateway vision,
+not ocr.z.ai), discrepancies, and the re-runnable scripts:
+`second-execution-20260917/README-second-execution.md`.
