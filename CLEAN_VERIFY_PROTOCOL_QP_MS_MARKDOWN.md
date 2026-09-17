@@ -1,6 +1,6 @@
 # Clean-and-Verify Protocol for QP/MS Markdown (Stage B)
 
-**Status:** Proposal v1.1 — grammar contract RATIFIED against `GlmOcrMarkdownParser` v1.2.0 (syllabai-parser `5c93317` tree, 2026-09-17); protocol execution itself not yet run
+**Status:** Proposal v1.1 — grammar contract RATIFIED against `GlmOcrMarkdownParser` v1.2.0 (syllabai-parser `5c93317` tree, 2026-09-17); **FIRST EXECUTION 2026-09-17 on real corpus session `Past-Papers/paper 1/2012-Jan`** (sandbox copy; canonical corpus untouched) — gates G1/G3/G4/G5 PASS, G2 FAIL on a PRE-EXISTING content condition (printed paper total 120 vs markdown question-sum 98: the OCR markdown itself is incomplete), so the session is correctly **NOT CLEANED** and blocked from ingestion — the fail-closed property working; negative controls 8/8 DETECTED; determinism verified; evidence `.syllabai/evidence/t-c17/`. Two gate/tooling gaps found by the execution's negative controls were FIXED by strengthening (never weakening): `corpus_ops verify` pair-completeness now checks the filesystem, and clean_diff gained **G3.2b** (question-level printed-total identity) — syllabai-parser `c9ad722` + `7b8bcba`
 **Date:** 2026-09-17
 **Tracker row:** T-C17 (registered in the master workbook TODO.md, content-ops track)
 **Governing spec sections:** Master Spec §8 (canonical document format), §9 (content-processing architecture), §10 (question bank), ADR-021 (Markdown as durable interchange; PostgreSQL canonical)
@@ -326,7 +326,23 @@ T-C16) so the gate is machine-checkable in CI, not an agent's self-assessment.
   (16/16) but was not independently re-read line-by-line in this pass.
 - The G3 "explainability" requirement is currently human-audited; automating it fully
   (mapping every removed line to a removal class) is desirable and unproven.
+- **First-execution finding (2026-09-17):** G2 as implemented reads only the pair-CLI
+  drafts; it has NO sidecar input, so the protocol's "QP↔MS total agreement using the
+  B.0-captured witnesses" is not yet tool-integrated. The executed run kept the printed
+  `TOTAL FOR PAPER` line in the clean file (it is a load-bearing `TOTAL_LINE` boundary
+  anyway) so the FAIL-class paperTotal check still fires against the real witness —
+  removing it would have downgraded a real FAIL to REVIEW (witness suppression). The
+  sidecar-witness integration remains unimplemented tooling work, owner-held.
+- **First-execution finding (2026-09-17):** gate G3 as ratified checked part-level mark
+  identity only; the real-corpus negative control showed a mutated
+  `(Total for Question N = M marks)` line slipping past it for part-bearing questions.
+  clean_diff now enforces **G3.2b** (question-level printed-total identity for shared
+  question numbers; minting totals in clean also rejected; dropping a Total line stays
+  an allowed explainable removal) — a strengthening, not a protocol change.
 - Cleaning changes document checksums by construction; the corpus repositories must
   agree on which artifact (`raw` vs `clean/QP.md`) the *next* manifest generation
   records — proposed answer: manifests keep raw as the provenance root and add an
-  additive `clean` block per session (T-C16 §7).
+  additive `clean` block per session (T-C16 §7). **Verified live 2026-09-17**: with the
+  additive `clean{}` block present, `corpus_ops verify` clean-readiness validates the
+  sandbox clean subtree end-to-end (raw anchors vs manifest, clean checksums vs report)
+  and a tampered clean file FAILs (`clean-checksum`).

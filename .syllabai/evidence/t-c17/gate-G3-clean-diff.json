@@ -1,0 +1,42 @@
+{
+ "gate": "G3",
+ "result": "PASS",
+ "counts": {
+  "questions_raw": 11,
+  "questions_clean": 11,
+  "mark_points_raw": 0,
+  "mark_points_clean": 0
+ },
+ "checks": [
+  {
+   "id": "G3.1",
+   "status": "pass",
+   "detail": "questions raw=11 clean=11"
+  },
+  {
+   "id": "G3.2",
+   "status": "pass",
+   "detail": "shared entries=85 mark mismatches=0"
+  },
+  {
+   "id": "G3.2b",
+   "status": "pass",
+   "detail": "shared question totals=11 mismatches=0"
+  },
+  {
+   "id": "G3.3",
+   "status": "pass",
+   "detail": "mark points raw=0 clean=0"
+  },
+  {
+   "id": "G3.4",
+   "status": "pass",
+   "detail": "raw classes={'1': 9, '2': 5, '3': 11, '4': 5, '5': 7, '6': 9, '7': 6, '8': 12, '9': 16, '10': 6, '11': 2} clean classes={'1': 9, '2': 5, '3': 11, '4': 5, '5': 7, '6': 9, '7': 6, '8': 12, '9': 16, '10': 6, '11': 2}"
+  },
+  {
+   "id": "G3.5",
+   "status": "pass",
+   "detail": "raw=None clean=None"
+  }
+ ]
+}

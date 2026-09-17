@@ -1,0 +1,10 @@
+DETECTED  NC-A mark mutation: gate result=FAIL; G3.2b FAIL — shared question totals=11 mismatches=1 first: {'number': '1', 'raw_total': 10, 'clean_total': 9}
+DETECTED  NC-B phantom question: G3.1 FAIL — questions raw=11 clean=12
+DETECTED  NC-C island reformat: canonical figures 11 -> 10 (figure silently lost; count change is the detection signal)
+DETECTED  NC-D orphan fence: clean-parse provenance emits ['orphanMathFences'] (values: {'orphanMathFences': 1})
+DETECTED  NC-E QWC reclassify: '*(c)' = paragraph, asterisk preserved; '* (c)' -> role list_item (marker consumed) — the exact §3.3 reclassification
+DETECTED  NC-F entity pre-decode: entityDecodedLines 2 -> 0 (drift not explainable by removals)
+DETECTED  NC-G B.0 hard stop: Stage-B exit=1: HARD STOP: raw checksums do not match the paper manifest (B.0)
+DETECTED  NC-H new warning class: G3.4 FAIL —  '6': 9, '7': 6, '8': 12, '9': 16, '10': 6, '11': 2} NEW=['figure-unresolvable']
+
+NEGATIVE CONTROLS: 8/8 correctly detected

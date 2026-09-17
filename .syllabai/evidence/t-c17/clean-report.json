@@ -1,0 +1,253 @@
+{
+ "schema": "clean-report-1.0",
+ "session": "2012-Jan",
+ "generated_at_utc": "2026-09-17T09:20:39Z",
+ "protocol": "CLEAN_VERIFY_PROTOCOL_QP_MS_MARKDOWN.md v1.1",
+ "tooling": "syllabai-parser 8d2e4db tools/corpus_ops + tools/glmocr (GlmOcrPairCli, health.py)",
+ "raw": {
+  "qp_sha256": "136b500f077e97400fa8509adecf11e0161389a87bff0d9e17a1c2061fa0a639",
+  "ms_sha256": "f2afa60dc10c541d44c3a1f98b13bae7820f370935d024117005722f06f3369b"
+ },
+ "captured_totals": {
+  "qp_paper_total": 120,
+  "qp_paper_total_witnesses": [
+   {
+    "line": 28,
+    "text": "The total mark for this paper is 120."
+   },
+   {
+    "line": 288,
+    "text": "TOTAL FOR PAPER = 120 MARKS"
+   }
+  ],
+  "ms_paper_total": null,
+  "per_question_totals": {
+   "1": 10,
+   "2": 8,
+   "3": 13,
+   "4": 8,
+   "6": 14,
+   "7": 9,
+   "8": 10,
+   "9": 18,
+   "10": 8
+  },
+  "per_question_totals_absent": [
+   "5",
+   "11"
+  ]
+ },
+ "identity_as_printed": {
+  "board": "Edexcel",
+  "qualification": "International GCSE Chemistry / Science (Double Award)",
+  "paper_reference": "4CH0/1C (also 4SC0/1C)",
+  "session": "Friday 13 January 2012 - Morning (QP); January 2012 (MS)"
+ },
+ "operations": [
+  {
+   "op": "remove-block",
+   "target": "cover-page",
+   "file": "QP.md",
+   "lines": "1-11",
+   "count": 11
+  },
+  {
+   "op": "remove-block",
+   "target": "instructions-page",
+   "file": "QP.md",
+   "lines": "12-45",
+   "count": 34
+  },
+  {
+   "op": "remove-block",
+   "target": "reference-furniture",
+   "file": "QP.md",
+   "lines": "46-50",
+   "count": 5
+  },
+  {
+   "op": "remove-block",
+   "target": "blank-page",
+   "file": "QP.md",
+   "lines": "289-290 (clamped; file has 290 lines)",
+   "count": 2
+  },
+  {
+   "op": "remove-block",
+   "target": "cover-page+marking-preamble",
+   "file": "MS.md",
+   "lines": "1-28",
+   "count": 28
+  },
+  {
+   "op": "remove-block",
+   "target": "page-furniture",
+   "file": "MS.md",
+   "lines": "134-145 (clamped; file has 145 lines)",
+   "count": 12
+  }
+ ],
+ "escalations": [
+  {
+   "id": "E-001",
+   "kind": "missing-printed-total",
+   "detail": "QP '(Total for Question 5/11 = ...)' lines absent from the markdown (OCR dropout); question 5 part (e) '(2)' survives but question totals do not",
+   "state": "awaiting_operator"
+  },
+  {
+   "id": "E-002",
+   "kind": "content-completeness",
+   "detail": "printed paper total 120 vs sum of captured question totals 98; markdown contains printed questions 1-11 only; whether further questions existed in the printed paper is not decidable from the document alone",
+   "state": "awaiting_operator"
+  },
+  {
+   "id": "E-003",
+   "kind": "missing-printed-total",
+   "detail": "MS carries no printed paper-total line; B.0 witness is null",
+   "state": "awaiting_operator"
+  },
+  {
+   "id": "E-004",
+   "kind": "in-table-ocr-artifact",
+   "detail": "marking-table Notes/marks cells contain OCR artifacts (e.g. 'H2O和O2' for 'H2O and O2', fused marks cells '11'/'21'/'111', flattened division bar in Q9b); tables are edited whole-or-not-at-all, so these are operator items",
+   "state": "awaiting_operator"
+  }
+ ],
+ "gate_results": {
+  "G1": "pass",
+  "G2": "FAIL",
+  "G3": "pass",
+  "G4": "pass",
+  "G5": "pass"
+ },
+ "removed_lines": {
+  "QP.md": 52,
+  "MS.md": 40
+ },
+ "clean": {
+  "qp_sha256": "4ae32c0ab0cf8ea999c2cb7773d7c72fbf66cb263de54a63ebd8cc2e68c56728",
+  "ms_sha256": "f9251c699d6e7a5a5a609dad77b221d07722f4f51cfef1dc6e13f1d971774a7c",
+  "report_ref": "clean/clean-report.json"
+ },
+ "gate_evidence": {
+  "G1": {
+   "exit": 0,
+   "bundle_complete": true,
+   "cli_line": "bundle written to: /home/z/my-project/t-c17/session-run/clean-bundle"
+  },
+  "G2": {
+   "exit": 1,
+   "summary": "      questionMarkSums:  REVIEW\n      qpMsTotals:        REVIEW\n        missingOnOneSide: [1, 2, 3, 4, 6, 7, 8, 9, 10]\n      paperTotal:        FAIL\n        mismatches: [{\"qp\": 120, \"sumOfQuestionTotals\": 98}]\n      assets:            REVIEW\n        note: no manifest.json — md↔asset map unverified (gap #9 tooling exists: tools/ocr_batch)\npairs: 1  pass: 0  review: 0  fail: 1"
+  },
+  "G3": {
+   "gate": "G3",
+   "result": "PASS",
+   "counts": {
+    "questions_raw": 11,
+    "questions_clean": 11,
+    "mark_points_raw": 0,
+    "mark_points_clean": 0
+   },
+   "checks": [
+    {
+     "id": "G3.1",
+     "status": "pass",
+     "detail": "questions raw=11 clean=11"
+    },
+    {
+     "id": "G3.2",
+     "status": "pass",
+     "detail": "shared entries=85 mark mismatches=0"
+    },
+    {
+     "id": "G3.2b",
+     "status": "pass",
+     "detail": "shared question totals=11 mismatches=0"
+    },
+    {
+     "id": "G3.3",
+     "status": "pass",
+     "detail": "mark points raw=0 clean=0"
+    },
+    {
+     "id": "G3.4",
+     "status": "pass",
+     "detail": "raw classes={'1': 9, '2': 5, '3': 11, '4': 5, '5': 7, '6': 9, '7': 6, '8': 12, '9': 16, '10': 6, '11': 2} clean classes={'1': 9, '2': 5, '3': 11, '4': 5, '5': 7, '6': 9, '7': 6, '8': 12, '9': 16, '10': 6, '11': 2}"
+    },
+    {
+     "id": "G3.5",
+     "status": "pass",
+     "detail": "raw=None clean=None"
+    }
+   ]
+  },
+  "G4": {
+   "operations_have_line_targets": true,
+   "escalations_typed": true,
+   "raw_anchors_match_manifest": true
+  },
+  "G5": {
+   "failure_counters_absent_in_clean": true,
+   "signedUrlFigureRefs_unchanged": true,
+   "entityDecodedLines_unchanged": true,
+   "sourceLineCount_delta_matches_ledger": true,
+   "image_islands_raw_vs_clean": [
+    11,
+    11
+   ],
+   "raw_provenance": {
+    "qp": {
+     "unterminatedTableBlocks": "ABSENT",
+     "orphanMathFences": "ABSENT",
+     "unclosedCenterDivs": "ABSENT",
+     "greedyMathLines": "ABSENT",
+     "signedUrlFigureRefs": 0,
+     "entityDecodedLines": 0,
+     "sourceLineCount": 291,
+     "figures": 11,
+     "tables": 7
+    },
+    "ms": {
+     "unterminatedTableBlocks": "ABSENT",
+     "orphanMathFences": "ABSENT",
+     "unclosedCenterDivs": "ABSENT",
+     "greedyMathLines": "ABSENT",
+     "signedUrlFigureRefs": 0,
+     "entityDecodedLines": 2,
+     "sourceLineCount": 146,
+     "figures": 0,
+     "tables": 24
+    }
+   },
+   "clean_provenance": {
+    "qp": {
+     "unterminatedTableBlocks": "ABSENT",
+     "orphanMathFences": "ABSENT",
+     "unclosedCenterDivs": "ABSENT",
+     "greedyMathLines": "ABSENT",
+     "signedUrlFigureRefs": 0,
+     "entityDecodedLines": 0,
+     "sourceLineCount": 239,
+     "figures": 11,
+     "tables": 5
+    },
+    "ms": {
+     "unterminatedTableBlocks": "ABSENT",
+     "orphanMathFences": "ABSENT",
+     "unclosedCenterDivs": "ABSENT",
+     "greedyMathLines": "ABSENT",
+     "signedUrlFigureRefs": 0,
+     "entityDecodedLines": 2,
+     "sourceLineCount": 106,
+     "figures": 0,
+     "tables": 24
+    }
+   }
+  },
+  "determinism": {
+   "pair_cli_rerun_exit": 0,
+   "bundle_equal_modulo_extractedAt": true,
+   "clean_diff_byte_identical": true
+  }
+ }
+}
