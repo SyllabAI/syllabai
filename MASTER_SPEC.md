@@ -756,6 +756,16 @@ Persist:
 
 This supports the Smart Mark calibration dataset described in Paper B.
 
+### 15.1 Product contract — Smart Mark inside Exam Questions (operator clarification, 2026-09-18 / ADR-025)
+
+Smart Mark's product placement is fixed: it is the **in-page marking widget on Exam Questions pages** and the **single marking authority** in the product. It has **no chatbox** — it is a bounded marking flow, not a conversational surface. The tutor/CLA explain; Smart Mark marks.
+
+- **Marking unit stays per-part.** One `Answer` per `QuestionPart`; the marker scores each part against that part's in-scope validated scheme points (`MarkingContext` unchanged). The whole-question single-context marking proposal is rejected (ADR-025): per-point κ calibration (F-161), the bounds/mark-sum/coverage validators, and skipped/unattempted-part detection all depend on the per-part unit. The UI may render the full parsed question and the full mark scheme as *presentation context*; that rendering never widens the marking scope. Input presentation is a web-layer choice (a combined box for multi-part questions is permitted) — but answers persist per-part.
+- **Surfaces.** Atomized questions categorized at question level (topics/subtopics) power three features: the **Exam Questions** repo (browsable, categorized), **Test Builder** (teacher paper authoring with filters — F-050, substrate owned by T-C18), and **Target Test** (student-selected topics/subtopics → escalating difficulty → end-of-test strong/weak topic diagnosis; difficulty values consume T-C18 outputs, SME/EVIDENCE-validated only).
+- **Flow.** Each question renders the parsed web view with a **View Mark Scheme** action; MCQ options are clickable, structured parts take input. Two marking paths: **self-mark** (view the scheme, mark yourself — a human mark) or **Smart Mark** (the AI marks each part against the scheme). After a Smart Mark: exactly two bounded actions — **Explain my feedback** and **Improve my answer** — single-purpose governed generation over the learner's answer and the question's own validated scheme points (post-attempt leakage rules apply; never a free chat). Submitting a new answer re-runs Smart Mark; results are append-only.
+- **Boundary.** The CLA's post-attempt `CHECK` feedback on question contexts remains *explanatory* — the tutor never awards marks, and Smart Mark never converses.
+
+
 ---
 
 # 16. Timed vs untimed assessment
