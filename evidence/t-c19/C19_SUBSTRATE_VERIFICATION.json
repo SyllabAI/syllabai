@@ -1,0 +1,80 @@
+{
+ "tool": "scripts/c19_substrate_verify.py@1.0.0",
+ "generated": "2026-09-18",
+ "input_pins": null,
+ "counts": {
+  "nodes": 113,
+  "edges": 275,
+  "part_of": 117,
+  "r2_registry": 182,
+  "rat_wording_index": 0,
+  "concepts_meta_spec_points": 82,
+  "rows_materialized": 117,
+  "sampled": 39,
+  "multi_attached_sps": 23,
+  "m_fail_rows": 0
+ },
+ "seed": "32c2aa9bbe9c4b0e",
+ "sampled_ids": [
+  "01ff2c7a7dc2594c",
+  "04aa5b7d1e3ddd62",
+  "0b548e899a089a27",
+  "0d4343056f261b75",
+  "11775672ac485d4e",
+  "2343414c146f49d6",
+  "252f5fa8b460b3a2",
+  "346fd8a7f7ffeef1",
+  "3f8e517e7aff502b",
+  "403feffd0d5b3fdf",
+  "457f73c1391a16ae",
+  "45cf6f1e8ad614bd",
+  "46da34b8122712d9",
+  "4aeb1144e29ebeb8",
+  "534b9a8a1060d81f",
+  "5b644fe7b4826c6d",
+  "5c4741e90d69c0a3",
+  "5f0e6b93dde3ccbc",
+  "63f68e18a40514a6",
+  "6b63cb7ee8206660",
+  "6c975732a8dd5cc7",
+  "7097cd27a505f0bc",
+  "727f2309d8881917",
+  "74037fd585d27912",
+  "7cfa81540f8e5f2b",
+  "7f81df7683fc74ca",
+  "7f8e2c4af06fbdf1",
+  "8bf7660c71661003",
+  "8d45c1b98aaa2cf9",
+  "9530417e9c749569",
+  "98bd3c9bb76696db",
+  "a6c53372c8b3526f",
+  "af846a5f28c7ecd1",
+  "b0a85e9b423c16e4",
+  "b56662765f0f0b39",
+  "ca083179fe32cb89",
+  "d04783dbcfc34795",
+  "d053ae1c139e1437",
+  "d25cf56d69ac43ab"
+ ],
+ "strata_rollup": {
+  "CORE|S1": {
+   "stratum_rows": 88,
+   "sampled": 25
+  },
+  "CORE|S3": {
+   "stratum_rows": 20,
+   "sampled": 5
+  },
+  "ENRICHMENT|S1": {
+   "stratum_rows": 6,
+   "sampled": 6
+  },
+  "SUPPORTING|S1": {
+   "stratum_rows": 3,
+   "sampled": 3
+  }
+ },
+ "m_fail_rows": [],
+ "structural_problems": [],
+ "determinism": "re-run over unchanged inputs must reproduce C19_SUBSTRATE_ROWS.yaml byte-identically"
+}
