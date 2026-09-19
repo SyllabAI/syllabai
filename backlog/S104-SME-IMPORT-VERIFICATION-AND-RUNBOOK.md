@@ -2,7 +2,7 @@
 
 **Package:** `s104-sme-import` (reconstructed 2026-09-19 after the session-105 sandbox loss)
 **Decision basis:** ADR-026 (tracker `DECISIONS.md`), build lane T-C22, scope guard igcse-chemistry-19 only
-**State as of 2026-09-19:** everything is deployed and verified except **the upload itself — one operator action** (ADMIN credential required; no ADMIN secret exists in any repo).
+**State as of 2026-09-19 (evening): ALL COMPLETE — the upload was executed this date via §3(b) + §4 Path B and verified end-to-end (see §9).** This document now serves as the audit record; §3–§5 are retained for re-runs/rollback.
 
 ---
 
@@ -15,7 +15,7 @@
 | Web `20c8f85` (practice tranche) deployed | DONE | Served bundle contains `QuestionMarkdown` (react-markdown + remark-gfm + remark-math + rehype-katex + rehype-raw), "Help with this question", "Submit for marking", "Failed to record the self-mark" |
 | Corpus packages built + verified | DONE | Release `sme-corpus-2026-09-18` on SyllabAI/syllabai-web; digests re-verified this session (§1) |
 | Multipart size limits | VERIFIED ADEQUATE | Deployed build sets `spring.servlet.multipart.max-file-size=64MB / max-request-size=64MB` — both packages (27.9 / 14.0 MB) fit (an earlier "1 MB default" concern was checked and refuted against the deployed config) |
-| **Package upload** | **OPERATOR ACTION** | Dispatched run `35348458620` verdict `OPERATOR_BOUNDARY` (pilot-teacher is TEACHER-only; probe 403, nothing touched). This runbook §4/§5 is the remaining step |
+| **Package upload** | **DONE — 2026-09-19** | Executed via §3(b) grant + §4 Path B (§9 has the full record): question bank committed 05:58:51Z (server-side ~8 min transaction; client read-timeout at 560 s — §8 poll pattern — then status flip to 593/228/365/1725/585); notes ingest returned `{topics:4, subtopics:28, notes:112, assets:194, replaced:true}` verbatim; post statuses + 20 read-only DB checks + learner smoke all green; ADMIN grant revoked, ops account disabled |
 
 Frozen r3/t0 baseline: **untouched by everything above** (additive migrations + evidence-safe deactivation only; attempts, BKT evidence, and the 26-answer κ marking queue are data the ingest never deletes — see §7).
 
@@ -160,3 +160,30 @@ If you prefer the already-staged automation: grant ADMIN to the account behind t
 - If curl times out client-side, **poll the status endpoint before retrying** — the ingest is transactional (committed or not, never half-applied), and a retry is safe-by-replace regardless.
 - Memory: the ingest holds the package in memory (~28 MB compressed + parsed structures) on a 512 MB JVM. If the service restarts mid-upload (OOM visible in Render logs), a retry on a warm instance usually clears it; the transaction guarantees no partial state.
 - The κ-grade marking (F-161) continues to run on teacher judgment only — SME `solutionMd` feeds the reveal/self-mark flows, not the κ sample.
+
+---
+
+## 9. EXECUTION RECORD — 2026-09-19 (the upload itself)
+
+**Authorization path (exactly §3(b), as designed):** the operator provided the Neon API key this date. Non-destructive discovery (API `reveal_password` — returns the *current* stored password, nothing reset) gave the production-branch DSN; a dedicated ops account `s105.upload.ops@syllabai-test.dev` was registered through the **public register API** (app-side BCrypt, STUDENT role), promoted with the exact §3(b) `INSERT INTO user_roles … 'ADMIN'` SQL via the Neon production branch (`br-muddy-bar-a5huwldd`), logged in again (roles embed in the JWT), and used for the two ingests. Afterwards the §3(b) revoke was executed (`DELETE … role='ADMIN'`, 1 row) and the account disabled (`enabled=false`); it retains only STUDENT and wrote zero attempts/answers/self-marks. Credentials live only in sandbox 0600 files, never in git.
+
+**Question package ingest:** client read-timeout at 560 s (free-tier 0.1 CPU — §8 anticipated this); per §8 the status endpoint was polled, and the bank flipped at **05:58:51Z** (server-side transaction ≈ 8 min). The response body was lost to the timeout, so the expected IngestSummary (§4) was instead verified **field-by-field against the committed state** via read-only DB queries — all 11 fields exact:
+
+```
+questions 593 (MCQ_SINGLE 228 / STRUCTURED 365, all active)
+deactivated 854 (the entire prior bank, rows preserved inactive; total questions 854→1447)
+parts 1176 · options 912 · markPoints 1404 (1176 part-attached + 228 MCQ scheme-attached)
+topicMappings 1161 (primary_topic_node_id set on 593 + 568 secondary question_topics rows)
+specPointMappings 1725 (question_spec_points, all on active) · assets 585 (question_asset)
+external refs sme-eq-* (e.g. sme-eq-1-5-…-q2) · provenance PAST_PAPER × 593
+```
+
+**Notes package ingest:** completed inside the client window; response captured verbatim — `{"topics":4, "subtopics":28, "notes":112, "assets":194, "replaced":true}`. All 112 `revision_note` rows carry `corpus_version = sme-revision-notes-igcse-chemistry-19-2026-09-18`; `revision_note_viewed` stayed **5 → 5** (the SME re-scrape preserves `rn_*` ids, so learner view history survived the replace intact).
+
+**Post-upload statuses (verbatim):** question-bank `{activeQuestions:593, activeMcq:228, activeStructured:365, specPointMappings:1725, assets:585}`; revision-notes `{ingested:true, notes:112, assets:194, ingestedAt:2026-09-19T06:01:36Z, corpusVersion:sme-revision-notes-igcse-chemistry-19-2026-09-18}`.
+
+**Freeze verification (r3/t0):** full table-count sweep pre-vs-post — the only deltas are the ingest footprint (questions/-versions/-parts/-options/mark_points/mark_schemes/question_topics/question_spec_points/question_asset/revision_note/revision_note_asset) and the sanctioned ops-account rows (since reverted to STUDENT+disabled). `attempts 109`, `answers {OVERRIDDEN 217, HUMAN_MARKED 72, PENDING 77}`, `human_marks 289`, `learner_self_marks 0`, evidence/BKT tables — all byte-identical. The 26-answer κ queue is untouched.
+
+**Learner-side smoke (read-only, pilot.learner01):** topic *Chemical formulae, equations and calculations* now serves 164 SME questions; question detail carries the V30 `specPointCodes` (e.g. `4CH1-1.26`) + markdown stems (`MgCO<sub>3</sub>·2H<sub>2</sub>O`); `/api/v1/learners/me/revision-notes` serves the SME corpusVersion with rn_* ids. The §6 browser pass remains available as an operator sanity check.
+
+**Operational notes for the record:** (i) the question ingest genuinely takes ~8 minutes server-side on the 0.1-CPU free tier — expect a client timeout and poll (§8); (ii) Neon `reveal_password` is read-only and nothing was reset, but the operator may rotate the Neon role password or the API key if the channel that shared it is considered sensitive; (iii) `admin@syllabai.dev` exists and is enabled but its password remains lost — the same Neon path can rotate its hash (BCrypt) if the operator wants the original account back; otherwise re-enabling `s105.upload.ops@syllabai-test.dev` (Neon, `enabled=true` + §3(b) grant) reproduces a working admin path at any time.
