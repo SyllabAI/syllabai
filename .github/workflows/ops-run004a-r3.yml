@@ -1,0 +1,93 @@
+name: ops-run004-a-r3
+
+# Run 004 — arm A semantic replay (T-C13), R3 generation (snap-001 + gold-v1
+# from the R3 golden-set catalog, 2026-09-20). Benchmark-only; never on push/PR.
+# Replays the frozen R3 embedding artifact (embed-backfill-snap-001:
+# 2333/2333 chunks + 120 gold queries, gemini-embedding-001@768, SHA256SUMS-pinned,
+# CI run 35509284803) through the PRODUCTION vector serving path
+# (ChunkVectorRepository.search pgvector cosine, T-C07 scope; ContentVectorRetriever
+# floor 0.15) on a disposable pgvector service container. ZERO API calls at run
+# time — compute-once-freeze-forever. Fail-closed: the artifact is checksum-verified
+# against the exact frozen snapshot/gold inputs before anything runs; scoring is
+# recomputed twice and the aggregates must be byte-identical or the run aborts.
+# Output: results.json + RUN_REPORT.md + SHA256SUMS (uploaded artifact).
+# R3 delta vs run-004-a (2026-09-17): -r3 input paths, gold-r3 (EXP/FET/ENU, 44
+# chunk-axis labeled), BENCH_RUN003B_RESULTS points at the R3 run-003-b results
+# committed to evidence/bench-001/runs/run-003-b-r3/ (readJson tolerance keeps the
+# run green if absent). Core pin c05efb98 = fb2bffa5 + additive bench commit
+# (RetrievalFabric + Run005C only; main retrieval code identical to the
+# Task-29-verified fb2bffa5).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run004a:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: bench
+          POSTGRES_PASSWORD: bench
+          POSTGRES_DB: postgres
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U bench"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - name: Checkout records repo (frozen inputs + artifact)
+        uses: actions/checkout@v4
+        with:
+          path: records
+
+      - name: Checkout core (harness, pinned sha)
+        uses: actions/checkout@v4
+        with:
+          repository: SyllabAI/syllabai-core
+          ref: c05efb98355ada8a3328c2781148072b556c8c24
+          path: core
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Cache Maven repo
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: run004a-r3-m2-${{ hashFiles('core/pom.xml') }}
+          restore-keys: run004a-r3-m2-
+
+      - name: Build classpath
+        working-directory: core
+        run: mvn -B -ntp -q test-compile dependency:build-classpath -Dmdep.outputFile=../cp.txt
+
+      - name: Run arm A semantic replay (zero API calls)
+        working-directory: core
+        env:
+          BENCH_JDBC_URL: jdbc:postgresql://localhost:5433/postgres
+          BENCH_JDBC_USER: bench
+          BENCH_JDBC_PASSWORD: bench
+          BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot-r3
+          BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold-r3
+          BENCH_EMBED_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload-r3
+          BENCH_RUN_OUT: ${{ github.workspace }}/run004a-out
+          BENCH_RUN003B_RESULTS: ${{ github.workspace }}/records/evidence/bench-001/runs/run-003-b-r3/results.json
+          BENCH_CORE_COMMIT: c05efb98355ada8a3328c2781148072b556c8c24
+          BENCH_RUN_DATE: "2026-09-20"
+        run: java -Xmx3g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.Run004A
+
+      - name: Upload run record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-004-a-r3
+          path: run004a-out/
+          retention-days: 90
