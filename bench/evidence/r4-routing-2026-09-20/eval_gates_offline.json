@@ -1,0 +1,682 @@
+{
+ "fetch": {
+  "live": [
+   {
+    "id": "FET-001",
+    "query": "give me the answer to q4 from summer 2021",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "Summer 2021",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-002",
+    "query": "question 6 summer 2011 mark scheme",
+    "expected_paper": "4CH0/1C",
+    "expected_session": "June 2011",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-003",
+    "query": "what did question 2 ask in 4CH1/2CR 2022",
+    "expected_paper": "4CH1/2CR",
+    "expected_session": "January 2022",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-004",
+    "query": "4CH1/2CR q1 2020 answer",
+    "expected_paper": "4CH1/2CR",
+    "expected_session": "January 2020",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-005",
+    "query": "mark scheme for q2 november 2021 paper 4CH1/2C",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "November 2021",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-006",
+    "query": "give me the answer to q3 from summer 2021",
+    "expected_paper": "4CH1/1C",
+    "expected_session": "Summer 2021",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-007",
+    "query": "question 5 jan 2018 mark scheme",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2018",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-008",
+    "query": "what did question 4 ask in 4CH1/2C 2017",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "Specimen 2017",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-009",
+    "query": "4CH1/2C q7 2021 answer",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "January 2021",
+    "candidates": 3,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-010",
+    "query": "mark scheme for q9 summer 2021 paper 4CH1/1C",
+    "expected_paper": "4CH1/1C",
+    "expected_session": "Summer 2021",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-011",
+    "query": "give me the answer to q7 from january 2017",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2017",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-012",
+    "query": "question 6 jan 2016 mark scheme",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2016",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-013",
+    "query": "what did question 7 ask in 4CH1/1C 2021",
+    "expected_paper": "4CH1/1C",
+    "expected_session": "Summer 2021",
+    "candidates": 3,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-014",
+    "query": "4CH0/2C q2 2016 answer",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2016",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-015",
+    "query": "mark scheme for q4 jan 2018 paper 4CH0/2C",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2018",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-016",
+    "query": "give me the answer to q9 from june 2011",
+    "expected_paper": "4CH0/1C",
+    "expected_session": "June 2011",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-017",
+    "query": "question 6 january 2020 mark scheme",
+    "expected_paper": "4CH1/2CR",
+    "expected_session": "January 2020",
+    "candidates": 4,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-018",
+    "query": "what did question 4 ask in 4CH0/2C 2014",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2014",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-019",
+    "query": "4CH0/2C q5 2017 answer",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2017",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-020",
+    "query": "mark scheme for q1 january 2022 paper 4CH1/2CR",
+    "expected_paper": "4CH1/2CR",
+    "expected_session": "January 2022",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-021",
+    "query": "give me the answer to q7 from summer 2021",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "Summer 2021",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-022",
+    "query": "question 5 summer 2021 mark scheme",
+    "expected_paper": "4CH1/1C",
+    "expected_session": "Summer 2021",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-023",
+    "query": "what did question 3 ask in 4CH0/2C 2014",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2014",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-024",
+    "query": "4CH0/2C q3 2016 answer",
+    "expected_paper": "4CH0/2C",
+    "expected_session": "January 2016",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-025",
+    "query": "mark scheme for q6 jan 2021 paper 4CH1/2C",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "January 2021",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-026",
+    "query": "give me the answer to q6 from june 2021",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "Summer 2021",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-027",
+    "query": "question 2 jan 2021 mark scheme",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "January 2021",
+    "candidates": 4,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-028",
+    "query": "what did question 4 ask in 4CH1/2CR 2022",
+    "expected_paper": "4CH1/2CR",
+    "expected_session": "January 2022",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-029",
+    "query": "4CH0/1C q4 2011 answer",
+    "expected_paper": "4CH0/1C",
+    "expected_session": "June 2011",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-030",
+    "query": "mark scheme for q4 jan 2020 paper 4CH1/2CR",
+    "expected_paper": "4CH1/2CR",
+    "expected_session": "January 2020",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-031",
+    "query": "give me the answer to q10 from june 2016",
+    "expected_paper": "4CH0/1CR",
+    "expected_session": "June 2016",
+    "candidates": 4,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-032",
+    "query": "question 11 summer 2015 mark scheme",
+    "expected_paper": "4CH0/1C",
+    "expected_session": "June 2015",
+    "candidates": 2,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-033",
+    "query": "what did question 7 ask in 4CH1/1CR 2019",
+    "expected_paper": "4CH1/1CR",
+    "expected_session": "June 2019",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-034",
+    "query": "4CH0/1CR q4 2014 answer",
+    "expected_paper": "4CH0/1CR",
+    "expected_session": "June 2014",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   },
+   {
+    "id": "FET-035",
+    "query": "mark scheme for q8 summer 2019 paper 4CH1/2C",
+    "expected_paper": "4CH1/2C",
+    "expected_session": "June 2019",
+    "candidates": 1,
+    "class": "substrate-live",
+    "match": "exact"
+   }
+  ],
+  "retired": [
+   {
+    "id": "FET-036",
+    "query": "question 2 summer 2015 answer",
+    "expected_paper": null,
+    "expected_session": "Summer 2015",
+    "candidates": 2,
+    "resolved_folder_match": true,
+    "class": "substrate-retired"
+   },
+   {
+    "id": "FET-037",
+    "query": "question 3 summer 2019 answer",
+    "expected_paper": null,
+    "expected_session": "Summer 2019",
+    "candidates": 4,
+    "resolved_folder_match": true,
+    "class": "substrate-retired"
+   },
+   {
+    "id": "FET-038",
+    "query": "question 11 summer 2013 answer",
+    "expected_paper": null,
+    "expected_session": "Summer 2013",
+    "candidates": 4,
+    "resolved_folder_match": true,
+    "class": "substrate-retired"
+   },
+   {
+    "id": "FET-039",
+    "query": "question 10 summer 2013 answer",
+    "expected_paper": null,
+    "expected_session": "Summer 2013",
+    "candidates": 4,
+    "resolved_folder_match": true,
+    "class": "substrate-retired"
+   },
+   {
+    "id": "FET-040",
+    "query": "question 6 june 2014 answer",
+    "expected_paper": null,
+    "expected_session": "June 2014",
+    "candidates": 4,
+    "resolved_folder_match": true,
+    "class": "substrate-retired"
+   }
+  ],
+  "fail": []
+ },
+ "enumerate": {
+  "topic": [
+   {
+    "id": "ENU-001",
+    "expected": 12,
+    "endpoint": 12,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-002",
+    "expected": 21,
+    "endpoint": 21,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-003",
+    "expected": 10,
+    "endpoint": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-004",
+    "expected": 29,
+    "endpoint": 29,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-005",
+    "expected": 22,
+    "endpoint": 22,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-006",
+    "expected": 24,
+    "endpoint": 24,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-007",
+    "expected": 26,
+    "endpoint": 26,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-008",
+    "expected": 10,
+    "endpoint": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-009",
+    "expected": 15,
+    "endpoint": 15,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-010",
+    "expected": 15,
+    "endpoint": 15,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-011",
+    "expected": 5,
+    "endpoint": 5,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-012",
+    "expected": 5,
+    "endpoint": 5,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-013",
+    "expected": 109,
+    "endpoint": 109,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-014",
+    "expected": 23,
+    "endpoint": 23,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-015",
+    "expected": 16,
+    "endpoint": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-016",
+    "expected": 15,
+    "endpoint": 15,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-017",
+    "expected": 21,
+    "endpoint": 21,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-018",
+    "expected": 10,
+    "endpoint": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-019",
+    "expected": 7,
+    "endpoint": 7,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-020",
+    "expected": 19,
+    "endpoint": 19,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-021",
+    "expected": 23,
+    "endpoint": 23,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-022",
+    "expected": 15,
+    "endpoint": 15,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-023",
+    "expected": 37,
+    "endpoint": 37,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-024",
+    "expected": 16,
+    "endpoint": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-025",
+    "expected": 13,
+    "endpoint": 13,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-026",
+    "expected": 21,
+    "endpoint": 21,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-027",
+    "expected": 20,
+    "endpoint": 20,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-028",
+    "expected": 9,
+    "endpoint": 9,
+    "recall": 1.0,
+    "precision": 1.0
+   }
+  ],
+  "spec": [
+   {
+    "id": "ENU-029",
+    "expected": 21,
+    "endpoint": 21,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-030",
+    "expected": 10,
+    "endpoint": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-031",
+    "expected": 25,
+    "endpoint": 25,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-032",
+    "expected": 17,
+    "endpoint": 17,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-033",
+    "expected": 21,
+    "endpoint": 21,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-034",
+    "expected": 21,
+    "endpoint": 21,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-035",
+    "expected": 8,
+    "endpoint": 8,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-036",
+    "expected": 7,
+    "endpoint": 7,
+    "recall": 1.0,
+    "precision": 1.0
+   }
+  ],
+  "paper": [
+   {
+    "id": "ENU-037",
+    "expected": 5,
+    "endpoint": 5,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-038",
+    "expected": 7,
+    "endpoint": 7,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-039",
+    "expected": 9,
+    "endpoint": 9,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   {
+    "id": "ENU-040",
+    "expected": 7,
+    "endpoint": 7,
+    "recall": 1.0,
+    "precision": 1.0
+   }
+  ]
+ },
+ "verdict": {
+  "fetch_live_exact": 35,
+  "fetch_live_ambiguous": 0,
+  "fetch_live_total": 35,
+  "fetch_retired_identity": 5,
+  "fetch_retired_total": 5,
+  "fetch_fail": [],
+  "enumerate": {
+   "topic": {
+    "recall": 1.0,
+    "precision": 1.0,
+    "n": 28
+   },
+   "spec": {
+    "recall": 1.0,
+    "precision": 1.0,
+    "n": 8
+   },
+   "paper": {
+    "recall": 1.0,
+    "precision": 1.0,
+    "n": 4
+   }
+  }
+ }
+}
