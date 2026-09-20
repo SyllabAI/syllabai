@@ -1,0 +1,15 @@
+{
+ "note": "Topical spot probes for the embed-bridge-v2 eval — hand-written chemistry content queries (NOT from gold-v1; the gold's FETCH/ENUMERATE baskets are metadata-point/list intents). Judged by keyword containment in top-10 rev2 chunks; these are sanity probes over real content-similarity serving, not gate metrics.",
+ "probes": [
+  {"id": "PRB-01", "query": "explain what happens during the electrolysis of aluminium oxide", "keywords": ["electrolys", "aluminium", "alumina", "oxide", "cathode", "anode"]},
+  {"id": "PRB-02", "query": "why does the rate of reaction increase when the temperature is higher", "keywords": ["rate", "temperature", "collision", "energy", "frequency"]},
+  {"id": "PRB-03", "query": "how do you test for chloride ions in a solution", "keywords": ["chloride", "silver nitrate", "precipitate", "white", "test"]},
+  {"id": "PRB-04", "query": "describe the covalent bonding in a methane molecule", "keywords": ["covalent", "methane", "bond", "shared", "electrons", "outer"]},
+  {"id": "PRB-05", "query": "what is the order of the reactivity series of metals", "keywords": ["reactivity", "series", "metal", "potassium", "sodium", "order"]},
+  {"id": "PRB-06", "query": "how do you calculate the concentration of a solution in a titration", "keywords": ["titration", "concentration", "volume", "mole", "solution", "acid"]},
+  {"id": "PRB-07", "query": "what is produced at the negative electrode during electrolysis of a molten ionic compound", "keywords": ["electrolys", "cathode", "negative", "electrode", "molten", "ion"]},
+  {"id": "PRB-08", "query": "explain the difference between a mixture and a compound", "keywords": ["mixture", "compound", "element", "chemical", "separated", "bonded"]},
+  {"id": "PRB-09", "query": "what is an exothermic reaction and what happens to the energy", "keywords": ["exothermic", "energy", "temperature", "released", "surroundings", "heat"]},
+  {"id": "PRB-10", "query": "describe a flame test for identifying metal ions", "keywords": ["flame", "test", "metal", "ion", "colour", "lithium", "sodium"]}
+ ]
+}

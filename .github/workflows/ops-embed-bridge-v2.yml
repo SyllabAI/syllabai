@@ -1,0 +1,52 @@
+name: ops-embed-bridge-v2
+
+# embed-bridge-v2 (Task 32, 2026-09-20): compute the corpus-v2 (rev2) offline
+# eval substrate — embeddings for the 300 header-stamped bridge preview chunks
+# (11 chemistry papers, engine pdflane-atoms/1.2.0, parser PR #6 f0b6f81) plus
+# 10 topical probes, through the production embedding semantics
+# (gemini-embedding-001, RETRIEVAL_DOCUMENT/RETRIEVAL_QUERY, dims 768).
+# Computed in CI because the Gemini API is geo-blocked from the operator
+# sandbox ("user location is not supported") — same reason the R3 query
+# vectors were computed in CI (run 35509284803). compute-once-freeze-forever:
+# the artifact is fetched, SHA-frozen and committed to evidence/bench-001/
+# embed-bridge-v2/ by the operator; replay-time eval is offline. The frozen
+# 120 gold query vectors (embed-backfill-snap-001) are REUSED — no query
+# re-embedding. Benchmark-only; manual dispatch only; never on push/PR.
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Embedding model (dimension-compatible with vector(768))"
+        default: "gemini-embedding-001"
+      min_interval_ms:
+        description: "Min interval between embedding calls (ms)"
+        default: "500"
+
+jobs:
+  embed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout records repo (frozen inputs)
+        uses: actions/checkout@v4
+        with:
+          path: records
+
+      - name: Embed bridge chunks + probes (production semantics)
+        working-directory: records/bench/inputs/bridge-v2
+        env:
+          SYLLABAI_EMBEDDING_GEMINI_API_KEY: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEY }}
+          SYLLABAI_EMBEDDING_GEMINI_API_KEYS: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEYS }}
+          EMBED_MODEL: ${{ inputs.model }}
+          EMBED_MIN_INTERVAL_MS: ${{ inputs.min_interval_ms }}
+          BRIDGE_OUT: ${{ github.workspace }}/embed-out-bridge-v2
+        run: python3 embed_bridge.py
+
+      - name: Upload embed artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: embed-bridge-v2
+          path: embed-out-bridge-v2/
+          retention-days: 90
