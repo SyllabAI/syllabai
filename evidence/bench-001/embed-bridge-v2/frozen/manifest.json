@@ -1,0 +1,26 @@
+{
+ "artifact": "embed-bridge-v2",
+ "created_at_utc": "2026-09-20T17:24:08Z",
+ "model": "gemini-embedding-001",
+ "dimension": 768,
+ "semantics": {
+  "chunks": "RETRIEVAL_DOCUMENT, one embedContent per text, outputDimensionality=768",
+  "probes": "RETRIEVAL_QUERY, one embedContent per text, outputDimensionality=768",
+  "note": "production GeminiEmbeddingProvider semantics (Spring AI GoogleGenAi RETRIEVAL_DOCUMENT/RETRIEVAL_QUERY, dims 768); transport differs (single-call vs batched) \u2014 values verified transport-independent by the rev1 G2 float4-identity gate; rev2 re-verified post-ingest by DB-vs-artifact vector diff"
+ },
+ "inputs": {
+  "records.jsonl": {
+   "records": 300,
+   "sha256": "a8fbc517a8e6dca57e33bee49e1aa38b49c3a0a47d805a3f577411294e4d21fb"
+  },
+  "probes.json": {
+   "probes": 10,
+   "sha256": "c67c124891359e7c3380f4a3d448edc11df905c056ec9b1a022822532e67fa59"
+  }
+ },
+ "counts": {
+  "chunks": 300,
+  "probes": 10
+ },
+ "upstream": "engine pdflane-atoms/1.2.0 bridge release (parser PR #6, f0b6f81); header projection port verified against ChunkingServiceTest grammar"
+}

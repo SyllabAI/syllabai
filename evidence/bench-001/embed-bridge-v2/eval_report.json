@@ -1,0 +1,852 @@
+{
+ "g1_covered_paired": true,
+ "g2_probes": true,
+ "g3_structure": true,
+ "paired": [
+  {
+   "id": "FET-002",
+   "query": "question 6 summer 2011 mark scheme",
+   "bridge": [
+    "JUN 2011 4CH0/1C"
+   ],
+   "qnum": "6",
+   "gold2_size": 3,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.0,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|MARK_SCHEME|6",
+     "cos": 0.7295
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-01_4CH0-1C|MARK_SCHEME|7",
+     "cos": 0.7232
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|3",
+     "cos": 0.7193
+    }
+   ]
+  },
+  {
+   "id": "FET-005",
+   "query": "mark scheme for q2 november 2021 paper 4CH1/2C",
+   "bridge": [
+    "NOV 2021 4CH1/2C"
+   ],
+   "qnum": "2",
+   "gold2_size": 3,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.0,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|MARK_SCHEME|6",
+     "cos": 0.7638
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2025-11_4CH1-2C|MARK_SCHEME|1",
+     "cos": 0.7637
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|MARK_SCHEME|2",
+     "cos": 0.763
+    }
+   ]
+  },
+  {
+   "id": "FET-009",
+   "query": "4CH1/2C q7 2021 answer",
+   "bridge": [
+    "NOV 2021 4CH1/2C"
+   ],
+   "qnum": "7",
+   "gold2_size": 3,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.0,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-2C|MARK_SCHEME|8",
+     "cos": 0.7509
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|MARK_SCHEME|9",
+     "cos": 0.7444
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|MARK_SCHEME|8",
+     "cos": 0.7426
+    }
+   ]
+  },
+  {
+   "id": "FET-016",
+   "query": "give me the answer to q9 from june 2011",
+   "bridge": [
+    "JUN 2011 4CH0/1C"
+   ],
+   "qnum": "9",
+   "gold2_size": 4,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.0,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|11",
+     "cos": 0.7129
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-06_4CH0-1C|MARK_SCHEME|13",
+     "cos": 0.6944
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|10",
+     "cos": 0.6942
+    }
+   ]
+  },
+  {
+   "id": "FET-018",
+   "query": "what did question 4 ask in 4CH0/2C 2014",
+   "bridge": [
+    "JAN 2014 4CH0/2C"
+   ],
+   "qnum": "4",
+   "gold2_size": 3,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.0,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|QUESTION_PAPER|6",
+     "cos": 0.6998
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|6",
+     "cos": 0.6929
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2025-11_4CH1-2C|QUESTION_PAPER|4",
+     "cos": 0.6915
+    }
+   ]
+  },
+  {
+   "id": "FET-023",
+   "query": "what did question 3 ask in 4CH0/2C 2014",
+   "bridge": [
+    "JAN 2014 4CH0/2C"
+   ],
+   "qnum": "3",
+   "gold2_size": 2,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.0,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|3",
+     "cos": 0.7124
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|4",
+     "cos": 0.6911
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|QUESTION_PAPER|4",
+     "cos": 0.6875
+    }
+   ]
+  },
+  {
+   "id": "FET-029",
+   "query": "4CH0/1C q4 2011 answer",
+   "bridge": [
+    "JUN 2011 4CH0/1C"
+   ],
+   "qnum": "4",
+   "gold2_size": 2,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.0,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|3",
+     "cos": 0.7424
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|0",
+     "cos": 0.721
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-06_4CH0-1C|MARK_SCHEME|5",
+     "cos": 0.7129
+    }
+   ]
+  },
+  {
+   "id": "FET-033",
+   "query": "what did question 7 ask in 4CH1/1CR 2019",
+   "bridge": [
+    "JUN 2019 4CH1/1CR"
+   ],
+   "qnum": "7",
+   "gold2_size": 3,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.0,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|12",
+     "cos": 0.7275
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|7",
+     "cos": 0.7253
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-1CR|MARK_SCHEME|6",
+     "cos": 0.7139
+    }
+   ]
+  },
+  {
+   "id": "ENU-037",
+   "query": "every question in the January 2014 2014 paper 4CH0/2C",
+   "bridge": [
+    "JAN 2014 4CH0/2C"
+   ],
+   "qnum": null,
+   "gold2_size": 20,
+   "rev2_hit@10": 1.0,
+   "rev1_hit@10": 0.09090909090909091,
+   "top3_rev2": [
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|0",
+     "cos": 0.7135
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|4",
+     "cos": 0.7115
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|QUESTION_PAPER|0",
+     "cos": 0.71
+    }
+   ]
+  }
+ ],
+ "probe_rows": [
+  {
+   "id": "PRB-01",
+   "query": "explain what happens during the electrolysis of aluminium oxide",
+   "keyword_hits_in_top10": 7,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|10",
+     "cos": 0.69,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q9 | pp.22–24"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|11",
+     "cos": 0.6824,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q9 | p.16"
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|QUESTION_PAPER|7",
+     "cos": 0.6475,
+     "header": "International GCSE Chemistry 4CH1 | Nov 2021 | 4CH1/2C | Paper 2C | Q5 | pp.14–16"
+    }
+   ]
+  },
+  {
+   "id": "PRB-02",
+   "query": "why does the rate of reaction increase when the temperature is higher",
+   "keyword_hits_in_top10": 10,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|QUESTION_PAPER|5",
+     "cos": 0.6517,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1CR | Paper 1CR | Q5 | p.12"
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|8",
+     "cos": 0.6452,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1CR | Paper 1CR | Q5 | p.13"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|10",
+     "cos": 0.6194,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2012 | 4CH0/1C | Paper 1C | Q8 | pp.18–19"
+    }
+   ]
+  },
+  {
+   "id": "PRB-03",
+   "query": "how do you test for chloride ions in a solution",
+   "keyword_hits_in_top10": 9,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2012-01_4CH0-1C|MARK_SCHEME|2",
+     "cos": 0.7307,
+     "header": "International GCSE Chemistry 4CH1 | Jan 2012 | 4CH0/1C | Paper 1C | Q3 | p.5"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|QUESTION_PAPER|2",
+     "cos": 0.7143,
+     "header": "International GCSE Chemistry 4CH1 | Jan 2014 | 4CH0/2C | Paper 2C | Q2 | p.6"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-01_4CH0-1C|QUESTION_PAPER|2",
+     "cos": 0.7043,
+     "header": "International GCSE Chemistry 4CH1 | Jan 2012 | 4CH0/1C | Paper 1C | Q3 | pp.8–9"
+    }
+   ]
+  },
+  {
+   "id": "PRB-04",
+   "query": "describe the covalent bonding in a methane molecule",
+   "keyword_hits_in_top10": 10,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|1",
+     "cos": 0.6549,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/1CR | Paper 1CR | Q2 | p.6"
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-2C|QUESTION_PAPER|7",
+     "cos": 0.6404,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/2C | Paper 2C | Q7 | pp.16–17"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-01_4CH0-1C|MARK_SCHEME|7",
+     "cos": 0.6369,
+     "header": "International GCSE Chemistry 4CH1 | Jan 2012 | 4CH0/1C | Paper 1C | Q6 | pp.12–13"
+    }
+   ]
+  },
+  {
+   "id": "PRB-05",
+   "query": "what is the order of the reactivity series of metals",
+   "keyword_hits_in_top10": 9,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-1C|QUESTION_PAPER|1",
+     "cos": 0.6742,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/1C | Paper 1C | Q2 | pp.4–5"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|1",
+     "cos": 0.6644,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2012 | 4CH0/1C | Paper 1C | Q2 | pp.6–7"
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-1C|MARK_SCHEME|1",
+     "cos": 0.661,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/1C | Paper 1C | Q2 | p.5"
+    }
+   ]
+  },
+  {
+   "id": "PRB-06",
+   "query": "how do you calculate the concentration of a solution in a titration",
+   "keyword_hits_in_top10": 10,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|13",
+     "cos": 0.6592,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q10 | pp.28–29"
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|QUESTION_PAPER|9",
+     "cos": 0.6386,
+     "header": "International GCSE Chemistry 4CH1 | Nov 2021 | 4CH1/2C | Paper 2C | Q6 | pp.18–19"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-01_4CH0-1C|QUESTION_PAPER|16",
+     "cos": 0.6371,
+     "header": "International GCSE Chemistry 4CH1 | Jan 2012 | 4CH0/1C | Paper 1C | Q11 | pp.25–26"
+    }
+   ]
+  },
+  {
+   "id": "PRB-07",
+   "query": "what is produced at the negative electrode during electrolysis of a molten ionic compound",
+   "keyword_hits_in_top10": 10,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-2C|MARK_SCHEME|7",
+     "cos": 0.6829,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/2C | Paper 2C | Q6 | pp.9–10"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|4",
+     "cos": 0.6818,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q5 | p.7"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|11",
+     "cos": 0.677,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q9 | p.16"
+    }
+   ]
+  },
+  {
+   "id": "PRB-08",
+   "query": "explain the difference between a mixture and a compound",
+   "keyword_hits_in_top10": 9,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|2",
+     "cos": 0.668,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/1CR | Paper 1CR | Q3 | pp.8–9"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|1",
+     "cos": 0.6653,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q2 | pp.4–5"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|1",
+     "cos": 0.6561,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q2 | p.5"
+    }
+   ]
+  },
+  {
+   "id": "PRB-09",
+   "query": "what is an exothermic reaction and what happens to the energy",
+   "keyword_hits_in_top10": 10,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|2",
+     "cos": 0.6151,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2012 | 4CH0/1C | Paper 1C | Q2 | p.7"
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-2CR|QUESTION_PAPER|9",
+     "cos": 0.614,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/2CR | Paper 2CR | Q7 | pp.19–21"
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|5",
+     "cos": 0.6069,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/1CR | Paper 1CR | Q6 | pp.14–16"
+    }
+   ]
+  },
+  {
+   "id": "PRB-10",
+   "query": "describe a flame test for identifying metal ions",
+   "keyword_hits_in_top10": 10,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|13",
+     "cos": 0.7153,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2012 | 4CH0/1C | Paper 1C | Q11 | pp.22–23"
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2012-06_4CH0-1C|MARK_SCHEME|16",
+     "cos": 0.705,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2012 | 4CH0/1C | Paper 1C | Q11 | pp.24–25"
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-1C|QUESTION_PAPER|5",
+     "cos": 0.6809,
+     "header": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/1C | Paper 1C | Q6 | pp.12–13"
+    }
+   ]
+  }
+ ],
+ "coverage_gap": [
+  {
+   "id": "FET-001",
+   "class": "fetch_paper_code",
+   "query": "give me the answer to q4 from summer 2021",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2021,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-003",
+   "class": "fetch_paper_code",
+   "query": "what did question 2 ask in 4CH1/2CR 2022",
+   "paperCodes": [
+    "4CH1/2CR"
+   ],
+   "year": 2022,
+   "series": null
+  },
+  {
+   "id": "FET-004",
+   "class": "fetch_paper_code",
+   "query": "4CH1/2CR q1 2020 answer",
+   "paperCodes": [
+    "4CH1/2CR"
+   ],
+   "year": 2020,
+   "series": null
+  },
+  {
+   "id": "FET-006",
+   "class": "fetch_paper_code",
+   "query": "give me the answer to q3 from summer 2021",
+   "paperCodes": [
+    "4CH1/1C"
+   ],
+   "year": 2021,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-007",
+   "class": "fetch_paper_code",
+   "query": "question 5 jan 2018 mark scheme",
+   "paperCodes": [
+    "4CH0/2C"
+   ],
+   "year": 2018,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-008",
+   "class": "fetch_paper_code",
+   "query": "what did question 4 ask in 4CH1/2C 2017",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2017,
+   "series": null
+  },
+  {
+   "id": "FET-010",
+   "class": "fetch_paper_code",
+   "query": "mark scheme for q9 summer 2021 paper 4CH1/1C",
+   "paperCodes": [
+    "4CH1/1C"
+   ],
+   "year": 2021,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-011",
+   "class": "fetch_paper_code",
+   "query": "give me the answer to q7 from january 2017",
+   "paperCodes": [
+    "4CH0/2C"
+   ],
+   "year": 2017,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-012",
+   "class": "fetch_paper_code",
+   "query": "question 6 jan 2016 mark scheme",
+   "paperCodes": [
+    "4CH0/2C"
+   ],
+   "year": 2016,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-013",
+   "class": "fetch_paper_code",
+   "query": "what did question 7 ask in 4CH1/1C 2021",
+   "paperCodes": [
+    "4CH1/1C"
+   ],
+   "year": 2021,
+   "series": null
+  },
+  {
+   "id": "FET-014",
+   "class": "fetch_paper_code",
+   "query": "4CH0/2C q2 2016 answer",
+   "paperCodes": [
+    "4CH0/2C"
+   ],
+   "year": 2016,
+   "series": null
+  },
+  {
+   "id": "FET-015",
+   "class": "fetch_paper_code",
+   "query": "mark scheme for q4 jan 2018 paper 4CH0/2C",
+   "paperCodes": [
+    "4CH0/2C"
+   ],
+   "year": 2018,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-017",
+   "class": "fetch_paper_code",
+   "query": "question 6 january 2020 mark scheme",
+   "paperCodes": [
+    "4CH1/2CR"
+   ],
+   "year": 2020,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-019",
+   "class": "fetch_paper_code",
+   "query": "4CH0/2C q5 2017 answer",
+   "paperCodes": [
+    "4CH0/2C"
+   ],
+   "year": 2017,
+   "series": null
+  },
+  {
+   "id": "FET-020",
+   "class": "fetch_paper_code",
+   "query": "mark scheme for q1 january 2022 paper 4CH1/2CR",
+   "paperCodes": [
+    "4CH1/2CR"
+   ],
+   "year": 2022,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-021",
+   "class": "fetch_paper_code",
+   "query": "give me the answer to q7 from summer 2021",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2021,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-022",
+   "class": "fetch_paper_code",
+   "query": "question 5 summer 2021 mark scheme",
+   "paperCodes": [
+    "4CH1/1C"
+   ],
+   "year": 2021,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-024",
+   "class": "fetch_paper_code",
+   "query": "4CH0/2C q3 2016 answer",
+   "paperCodes": [
+    "4CH0/2C"
+   ],
+   "year": 2016,
+   "series": null
+  },
+  {
+   "id": "FET-025",
+   "class": "fetch_paper_code",
+   "query": "mark scheme for q6 jan 2021 paper 4CH1/2C",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2021,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-026",
+   "class": "fetch_paper_code",
+   "query": "give me the answer to q6 from june 2021",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2021,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-027",
+   "class": "fetch_paper_code",
+   "query": "question 2 jan 2021 mark scheme",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2021,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-028",
+   "class": "fetch_paper_code",
+   "query": "what did question 4 ask in 4CH1/2CR 2022",
+   "paperCodes": [
+    "4CH1/2CR"
+   ],
+   "year": 2022,
+   "series": null
+  },
+  {
+   "id": "FET-030",
+   "class": "fetch_paper_code",
+   "query": "mark scheme for q4 jan 2020 paper 4CH1/2CR",
+   "paperCodes": [
+    "4CH1/2CR"
+   ],
+   "year": 2020,
+   "series": "JAN"
+  },
+  {
+   "id": "FET-031",
+   "class": "fetch_paper_code",
+   "query": "give me the answer to q10 from june 2016",
+   "paperCodes": [
+    "4CH0/1CR"
+   ],
+   "year": 2016,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-032",
+   "class": "fetch_paper_code",
+   "query": "question 11 summer 2015 mark scheme",
+   "paperCodes": [
+    "4CH0/1C"
+   ],
+   "year": 2015,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-034",
+   "class": "fetch_paper_code",
+   "query": "4CH0/1CR q4 2014 answer",
+   "paperCodes": [
+    "4CH0/1CR"
+   ],
+   "year": 2014,
+   "series": null
+  },
+  {
+   "id": "FET-035",
+   "class": "fetch_paper_code",
+   "query": "mark scheme for q8 summer 2019 paper 4CH1/2C",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2019,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-036",
+   "class": "fetch_null_code",
+   "query": "question 2 summer 2015 answer",
+   "paperCodes": [
+    null
+   ],
+   "year": 2015,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-037",
+   "class": "fetch_null_code",
+   "query": "question 3 summer 2019 answer",
+   "paperCodes": [
+    null
+   ],
+   "year": 2019,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-038",
+   "class": "fetch_null_code",
+   "query": "question 11 summer 2013 answer",
+   "paperCodes": [
+    null
+   ],
+   "year": 2013,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-039",
+   "class": "fetch_null_code",
+   "query": "question 10 summer 2013 answer",
+   "paperCodes": [
+    null
+   ],
+   "year": 2013,
+   "series": "JUN"
+  },
+  {
+   "id": "FET-040",
+   "class": "fetch_null_code",
+   "query": "question 6 june 2014 answer",
+   "paperCodes": [
+    null
+   ],
+   "year": 2014,
+   "series": "JUN"
+  },
+  {
+   "id": "ENU-038",
+   "class": "enumerate_paper",
+   "query": "every question in the January 2016 2016 paper 4CH0/2C",
+   "paperCodes": [
+    "4CH0/2C"
+   ],
+   "year": 2016,
+   "series": "JAN"
+  },
+  {
+   "id": "ENU-039",
+   "class": "enumerate_paper",
+   "query": "every question in the Specimen 2017 2017 paper 4CH1/2C",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2017,
+   "series": null
+  },
+  {
+   "id": "ENU-040",
+   "class": "enumerate_paper",
+   "query": "every question in the January 2021 2021 paper 4CH1/2C",
+   "paperCodes": [
+    "4CH1/2C"
+   ],
+   "year": 2021,
+   "series": "JAN"
+  }
+ ],
+ "rev1_offline_hits": {
+  "FET-001": 0.0,
+  "FET-002": 0.0,
+  "FET-003": 0.0,
+  "FET-004": 0.0,
+  "FET-005": 0.0,
+  "FET-006": 0.0,
+  "FET-007": 0.0,
+  "FET-008": 0.0,
+  "FET-009": 0.0,
+  "FET-010": 0.0,
+  "FET-011": 0.0,
+  "FET-012": 0.0,
+  "FET-013": 0.0,
+  "FET-014": 0.0,
+  "FET-015": 0.0,
+  "FET-016": 0.0,
+  "FET-017": 0.0,
+  "FET-018": 0.0,
+  "FET-019": 0.0,
+  "FET-020": 0.0,
+  "FET-021": 0.0,
+  "FET-022": 0.0,
+  "FET-023": 0.0,
+  "FET-024": 0.0,
+  "FET-025": 0.0,
+  "FET-026": 0.0,
+  "FET-027": 0.0,
+  "FET-028": 0.0,
+  "FET-029": 0.0,
+  "FET-030": 0.0,
+  "FET-031": 0.0,
+  "FET-032": 0.0,
+  "FET-033": 0.0,
+  "FET-034": 0.0,
+  "FET-035": 0.0,
+  "FET-036": 0.0,
+  "FET-037": 0.0,
+  "FET-038": 0.0,
+  "FET-039": 0.0,
+  "FET-040": 0.0,
+  "ENU-037": 0.09090909090909091,
+  "ENU-038": 0.09090909090909091,
+  "ENU-039": 0.05,
+  "ENU-040": 0.05
+ }
+}

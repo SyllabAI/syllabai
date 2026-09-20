@@ -1,0 +1,245 @@
+{
+ "artifact_vs_db_cosine": {
+  "min": 0.8619430661201477,
+  "mean": 0.9083359837532043,
+  "max": 0.9466933608055115,
+  "top10_rank_agreement": 0.7906666666666669
+ },
+ "paired_dbvectors": [
+  {
+   "id": "FET-002",
+   "query": "question 6 summer 2011 mark scheme",
+   "qnum": "6",
+   "gold2_size": 3,
+   "rev2_hit@10_dbvectors": 0.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2012-01_4CH0-1C|MARK_SCHEME|7",
+     "cos": 0.7055
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|0",
+     "cos": 0.6994
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|MARK_SCHEME|6",
+     "cos": 0.6983
+    }
+   ]
+  },
+  {
+   "id": "FET-005",
+   "query": "mark scheme for q2 november 2021 paper 4CH1/2C",
+   "qnum": "2",
+   "gold2_size": 3,
+   "rev2_hit@10_dbvectors": 1.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2025-11_4CH1-2C|MARK_SCHEME|1",
+     "cos": 0.7455
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|0",
+     "cos": 0.7298
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|4",
+     "cos": 0.7234
+    }
+   ]
+  },
+  {
+   "id": "FET-009",
+   "query": "4CH1/2C q7 2021 answer",
+   "qnum": "7",
+   "gold2_size": 3,
+   "rev2_hit@10_dbvectors": 1.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-2C|MARK_SCHEME|8",
+     "cos": 0.6834
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2021-11_4CH1-2C|MARK_SCHEME|8",
+     "cos": 0.6768
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-2CR|MARK_SCHEME|9",
+     "cos": 0.6765
+    }
+   ]
+  },
+  {
+   "id": "FET-016",
+   "query": "give me the answer to q9 from june 2011",
+   "qnum": "9",
+   "gold2_size": 4,
+   "rev2_hit@10_dbvectors": 1.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|0",
+     "cos": 0.7034
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|11",
+     "cos": 0.6465
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|12",
+     "cos": 0.6309
+    }
+   ]
+  },
+  {
+   "id": "FET-018",
+   "query": "what did question 4 ask in 4CH0/2C 2014",
+   "qnum": "4",
+   "gold2_size": 3,
+   "rev2_hit@10_dbvectors": 0.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|6",
+     "cos": 0.6355
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2025-11_4CH1-2C|MARK_SCHEME|6",
+     "cos": 0.6351
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|6",
+     "cos": 0.6323
+    }
+   ]
+  },
+  {
+   "id": "FET-023",
+   "query": "what did question 3 ask in 4CH0/2C 2014",
+   "qnum": "3",
+   "gold2_size": 2,
+   "rev2_hit@10_dbvectors": 0.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|3",
+     "cos": 0.6688
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-2CR|QUESTION_PAPER|3",
+     "cos": 0.6562
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|4",
+     "cos": 0.6487
+    }
+   ]
+  },
+  {
+   "id": "FET-029",
+   "query": "4CH0/1C q4 2011 answer",
+   "qnum": "4",
+   "gold2_size": 2,
+   "rev2_hit@10_dbvectors": 1.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|15",
+     "cos": 0.6791
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|3",
+     "cos": 0.6591
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|0",
+     "cos": 0.6542
+    }
+   ]
+  },
+  {
+   "id": "FET-033",
+   "query": "what did question 7 ask in 4CH1/1CR 2019",
+   "qnum": "7",
+   "gold2_size": 3,
+   "rev2_hit@10_dbvectors": 1.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|0",
+     "cos": 0.6549
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2024-06_4CH1-2CR|MARK_SCHEME|9",
+     "cos": 0.6536
+    },
+    {
+     "ref": "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|12",
+     "cos": 0.648
+    }
+   ]
+  },
+  {
+   "id": "ENU-037",
+   "query": "every question in the January 2014 2014 paper 4CH0/2C",
+   "qnum": null,
+   "gold2_size": 20,
+   "rev2_hit@10_dbvectors": 1.0,
+   "top3": [
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|0",
+     "cos": 0.6743
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|4",
+     "cos": 0.6666
+    },
+    {
+     "ref": "bridge|4ch0_past-papers_2014-01_4CH0-2C|MARK_SCHEME|1",
+     "cos": 0.6583
+    }
+   ]
+  }
+ ],
+ "probes_dbvectors": [
+  {
+   "id": "PRB-01",
+   "hits": 8
+  },
+  {
+   "id": "PRB-02",
+   "hits": 10
+  },
+  {
+   "id": "PRB-03",
+   "hits": 9
+  },
+  {
+   "id": "PRB-04",
+   "hits": 10
+  },
+  {
+   "id": "PRB-05",
+   "hits": 9
+  },
+  {
+   "id": "PRB-06",
+   "hits": 10
+  },
+  {
+   "id": "PRB-07",
+   "hits": 10
+  },
+  {
+   "id": "PRB-08",
+   "hits": 8
+  },
+  {
+   "id": "PRB-09",
+   "hits": 10
+  },
+  {
+   "id": "PRB-10",
+   "hits": 10
+  }
+ ],
+ "verdict": {
+  "covered_hit@10": "6/9",
+  "probes": "10/10"
+ }
+}
