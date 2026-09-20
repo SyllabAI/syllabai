@@ -1,32 +1,35 @@
 {
-  "run_id": "embed-backfill-snap-001 (R3 preload checkpoint)",
-  "model": "gemini-embedding-001",
-  "dimension": 768,
-  "task_types": {
-    "chunks": "RETRIEVAL_DOCUMENT",
-    "queries": "RETRIEVAL_QUERY"
+  "run_id" : "embed-backfill-snap-001",
+  "model" : "gemini-embedding-001",
+  "dimension" : 768,
+  "task_types" : {
+    "queries" : "RETRIEVAL_QUERY",
+    "chunks" : "RETRIEVAL_DOCUMENT"
   },
-  "snapshot_version": "snap-001",
-  "snapshot_files_sha256": {
-    "chunks.jsonl.gz": "67da3765edccc6e96a023a784a405434737901c1ea3406d5c2264fd851bbc9a8",
-    "graph_edges.json": "f29c7e1bb736e6be256a4f7571796712bf66a96eea3faacd680ac5d8d6a5e2bd",
-    "manifest.json": "320a00a6aedb73d47eee18fa59b1b2de2fdb361df32653d66c4ede0878a4b5dd",
-    "misconceptions.json": "cbf373afd75237dc3ae87d56d87bdb44a435384cdd1b2792a8aa3de5513dbe44",
-    "question_anchors.json": "a78443ad71e34650d600051c8bdacbecee81d01fcc39fd67fe46a4fa15374449",
-    "spec_points.json": "e69c140be394135da3eaf9839d0351f53e076179d246f8b4ea55b8352019cd14"
+  "snapshot_version" : "snap-001",
+  "snapshot_files_sha256" : {
+    "chunks.jsonl.gz" : "67da3765edccc6e96a023a784a405434737901c1ea3406d5c2264fd851bbc9a8",
+    "graph_edges.json" : "f29c7e1bb736e6be256a4f7571796712bf66a96eea3faacd680ac5d8d6a5e2bd",
+    "manifest.json" : "320a00a6aedb73d47eee18fa59b1b2de2fdb361df32653d66c4ede0878a4b5dd",
+    "misconceptions.json" : "cbf373afd75237dc3ae87d56d87bdb44a435384cdd1b2792a8aa3de5513dbe44",
+    "question_anchors.json" : "a78443ad71e34650d600051c8bdacbecee81d01fcc39fd67fe46a4fa15374449",
+    "spec_points.json" : "e69c140be394135da3eaf9839d0351f53e076179d246f8b4ea55b8352019cd14"
   },
-  "counts": {
-    "corpus_chunks": 2333,
-    "chunks_embedded_this_run": 0,
-    "chunks_stored_total": 2333,
-    "pending_after": 0,
-    "queries_embedded": 0
+  "gold_files_sha256" : {
+    "class_enumerate.json" : "2718c69e3737dfb5fa7db4fa1f62e7fa136ee10dbbb34280c5fb41ff9656a821",
+    "class_explain.json" : "433d3ab40ff069e2f91cc3b998d42a410bf2c7c317e8aad1679cf8aef1f1c425",
+    "class_fetch.json" : "e8aa8ae0139c925a69290fcab910be1ed2d818a8792ec04022c7cdd766ffc3a8",
+    "manifest.json" : "923026253edb5cf7f09013a97061e58fd4a4c49143845b6f12722ee4d87253ef"
   },
-  "core_commit": "fb2bffa5872cbe083f5cc5726a3ac55df83da26a",
-  "run_date": "2026-09-20",
-  "generated_at": "2026-09-20T00:00:00Z",
-  "notes": [
-    "R3 preload checkpoint: chunk vector rows are the ORIGINAL repo preload rows (bench/inputs/embeddings/preload, sessions 92/94/96) VERBATIM — chunk_ids are the loader-deterministic ids, ref set verified == R3 snap-001 (2333/2333), vectors verified == production document_chunks float4-exactly (scripts/build_embed_artifact.py G2)",
-    "only the manifest is regenerated so snapshot_files_sha256 echoes the R3 snapshot dir (Run004A.verifyArtifact provenance equality) — chunk pass will preload 2333 and make ZERO chunk API calls; the 120 R3 gold queries embed fresh in the query pass"
-  ]
+  "counts" : {
+    "corpus_chunks" : 2333,
+    "chunks_embedded_this_run" : 0,
+    "chunks_stored_total" : 2333,
+    "pending_after" : 0,
+    "queries_embedded" : 120
+  },
+  "core_commit" : "fb2bffa5872cbe083f5cc5726a3ac55df83da26a",
+  "run_date" : "2026-09-20",
+  "generated_at" : "2026-09-20T11:59:05.171868408Z",
+  "notes" : [ "compute-once-freeze-forever: benchmark replays apply this artifact offline; no API calls at replay time", "text-embedding-004 (codebase default) is RETIRED (404 v1+v1beta, probed with valid key 2026-09-17); gemini-embedding-001 passed explicitly at outputDimensionality=768 — vector(768) schema-compatible", "production default repair + model_versions registration registered separately (benchmark-only slice here)", "embedding is index preparation, not serving: T-C07 scope + T-C05 VALIDATED boundaries apply at query time", "resumed-from-preload: 2333 chunk vectors were preloaded from the previous partial artifact (checksum-verified, same model); chunks_embedded_this_run counts only this run's API calls", "multi-key run: keys=4 per_key_chunks_embedded=[0, 0, 0, 0] per_key_queries=[120, 0, 0, 0] fingerprints=[sha256:01ac5264a3, sha256:91fdfb06ac, sha256:797b77a879, sha256:3687872106]", "keys are expected to come from DISTINCT Google projects — same-project keys share one quota pool" ]
 }
