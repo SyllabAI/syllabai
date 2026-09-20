@@ -1,0 +1,99 @@
+{
+ "gold_set_version": "gold-v1",
+ "created_at_utc": "2026-09-20T11:13:35+00:00",
+ "built_by": "scripts/compile_gold_v1.py (read-only against prod; deterministic probes)",
+ "compiled_from": {
+  "catalog": "scripts/golden_set_v1_catalog.json (Task 27, seed gsv1, 120 queries)",
+  "catalog_sha256": "e7712371fa456541a6e5e2e46efbfa3aa62aafa5dc44693626cc77dbb1f34f47",
+  "snapshot": "snap-001",
+  "snapshot_manifest_sha256": "320a00a6aedb73d47eee18fa59b1b2de2fdb361df32653d66c4ede0878a4b5dd"
+ },
+ "counts": {
+  "total": 120,
+  "by_basket": {
+   "EXPLAIN": {
+    "explain_spec": 26,
+    "explain_note": 10,
+    "explain_refusal": 4
+   },
+   "FETCH": {
+    "fetch_paper_code": 35,
+    "fetch_null_code": 5
+   },
+   "ENUMERATE": {
+    "enumerate_topic": 28,
+    "enumerate_spec": 8,
+    "enumerate_paper": 4
+   }
+  },
+  "by_class": {
+   "explain_spec": 26,
+   "explain_note": 10,
+   "explain_refusal": 4,
+   "fetch_paper_code": 35,
+   "fetch_null_code": 5,
+   "enumerate_topic": 28,
+   "enumerate_spec": 8,
+   "enumerate_paper": 4
+  }
+ },
+ "quota_table": {
+  "EXPLAIN": {
+   "explain_spec": 26,
+   "explain_note": 10,
+   "explain_refusal": 4
+  },
+  "FETCH": {
+   "fetch_paper_code": 35,
+   "fetch_null_code": 5
+  },
+  "ENUMERATE": {
+   "enumerate_topic": 28,
+   "enumerate_spec": 8,
+   "enumerate_paper": 4
+  }
+ },
+ "scoring_notes": [
+  "tier semantics per BenchMetrics: tier>=1 = recall gold; tier==2 = MRR target; nDCG gain 2^tier-1",
+  "FETCH tier policy: MS-seeking queries (answer/mark scheme/solution) -> MS chunks tier 2, QP chunks tier 1; QP-seeking ('what did question N ask') swapped (33 ms-primary / 7 qp-primary)",
+  "enumerate_paper: all QP-doc chunks tier 2, MS-doc chunks tier 1 (paper-level evidence)",
+  "substrate-absent classes (explain_spec, explain_note, enumerate_topic, enumerate_spec) carry empty gold_evidence BY DESIGN: their substrate is spec/notes/bank rows, which are NOT part of the snap-001 chunk corpus (2,333 paper chunks) — these are excluded from the chunk axis only (run-001/002 rule), never from spec resolution",
+  "explain_refusal probes carry empty gold_spec_points: BenchMetrics.scoreResolution returns coverage 0.0 for empty gold — a correct refusal and a total miss both read 0 on this axis; refusal correctness is gated separately (catalog meta.gates_plan_9). Recorded blind spot, not silently hidden.",
+  "evidence probes are deterministic text matches (qp_stem_probe >=30 chars, qp_furniture_probe 'total for question N', ms_marktext_probe >=25 chars); chunk content itself is frozen in snap-001 so probes are re-runnable offline"
+ ],
+ "evidence_label_coverage": {
+  "fetch_queries_with_zero_chunk_labels": 0,
+  "fetch_zero_label_ids": [],
+  "label_stats": {
+   "fetch_qp_hits": 87,
+   "fetch_ms_hits": 31,
+   "fetch_qp_stem": 82,
+   "fetch_qp_furniture": 5,
+   "enu_paper_qp_chunks": 44,
+   "enu_paper_ms_chunks": 40
+  }
+ },
+ "gold_spec_code_validation": {
+  "all_codes_in_snapshot": true,
+  "non_validated_codes": [],
+  "note": "A gold spec point whose snapshot node is not VALIDATED can never be matched by the production matcher (it matches VALIDATED structure nodes only) — listed here honestly instead of dropped."
+ },
+ "hygiene_markers": [
+  "session_label_raw / series_norm / label_variant_used document the Summer-vs-June mix (plan 8.1)",
+  "exam_papers has NO year column — year derived from session_label digits at eval time (strengthens 8.1)",
+  "FET null-code cases identify papers by unit+session+year (plan 8.2)",
+  "ALL 846 paper-linked questions are active=FALSE while 15/94 papers are VALIDATED — R4 Fetch/Enumerate SQL must define its active-policy; FETCH + ENUMERATE-C anchors are bank rows regardless of active, VALIDATED papers first",
+  "1,725 question_spec_points rows all sit on ACTIVE questions that have NO exam_paper_id (0/1725) — the spec-anchored and paper-anchored bank subsets are DISJOINT today (R3 bank-backfill design input)",
+  "Many multipart STRUCTURED questions carry an EMPTY questions.stem (text lives in question_parts) — EXP-A filters stems >40 chars; R3 question-card rendering must assemble stem from parts"
+ ],
+ "gates_plan_9": {
+  "EXPLAIN": "recall@10 of expected spec refs among retrieved chunks + citation validity + refusal correctness",
+  "FETCH": "100% exact (series, year, paper, qnum) on the deterministic path (R4)",
+  "ENUMERATE": "recall >= 0.95 and precision >= 0.90 vs SQL+card path"
+ },
+ "files_sha256": {
+  "class_explain.json": "433d3ab40ff069e2f91cc3b998d42a410bf2c7c317e8aad1679cf8aef1f1c425",
+  "class_fetch.json": "e8aa8ae0139c925a69290fcab910be1ed2d818a8792ec04022c7cdd766ffc3a8",
+  "class_enumerate.json": "2718c69e3737dfb5fa7db4fa1f62e7fa136ee10dbbb34280c5fb41ff9656a821"
+ }
+}

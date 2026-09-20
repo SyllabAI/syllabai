@@ -1,0 +1,74 @@
+{
+ "snapshot_version": "snap-001",
+ "created_at_utc": "2026-09-20T11:09:41+00:00",
+ "built_by": "scripts/build_snap001.py (read-only against prod)",
+ "source": {
+  "database": "neondb",
+  "flyway_tip": 33,
+  "corpus": "all 2,333 document_chunks over 172 paper-linked documents (91 QUESTION_PAPER + 81 MARK_SCHEME), embed_rev=1 glmocr corpus; structure = production findStructureNodes() surface; graph = knowledge_edges verbatim",
+  "extraction_notes": [
+   "chunk_ref = documents.checksum + ':' + document_chunks.chunk_index (0-based); unique",
+   "paper_state = exam_papers.validation_state verbatim; probed consistent per document (172/172)",
+   "kind = documents.kind verbatim (QUESTION_PAPER/MARK_SCHEME — BenchGraph vocabulary)",
+   "spec_points = ALL UNIT/TOPIC/SUBTOPIC nodes with true validation_status (production KnowledgeNodeRepository.findStructureNodes is an explicit type list, ANY status; the production matcher filters VALIDATED itself)",
+   "graph_edges extracted VERBATIM: REQUIRES_PREREQUISITE rows are source=dependent -> target=prerequisite in production data (verified against titles) — exactly the BenchGraph convention; no direction flip applied",
+   "misconceptions.json holds production titles; the BenchSnapshot loader forces VALIDATED status in-harness (harness modeling decision; signals only, never scored)",
+   "question_anchors = all paper-linked PAST_PAPER bank rows (846; all active=FALSE — recorded hygiene finding); loader only counts them"
+  ]
+ },
+ "counts": {
+  "chunks": 2333,
+  "documents": 172,
+  "spec_points": 328,
+  "misconceptions": 19,
+  "graph_edges": 517,
+  "question_anchors": 846,
+  "validated_chunks": 296,
+  "validated_spec_points": 226,
+  "empty_content_chunks": 0
+ },
+ "breakdowns": {
+  "spec_points_by_type_status": {
+   "SUBTOPIC": {
+    "VALIDATED": 194,
+    "UNVALIDATED": 6
+   },
+   "UNIT": {
+    "VALIDATED": 4,
+    "UNVALIDATED": 1
+   },
+   "TOPIC": {
+    "VALIDATED": 28,
+    "UNVALIDATED": 95
+   }
+  },
+  "graph_edges_by_relation": {
+   "COMMONLY_CONFUSED_WITH": 2,
+   "EXPLAINED_BY": 9,
+   "MISCONCEPTION_OF": 6,
+   "PART_OF": 353,
+   "RELATED_TO": 1,
+   "REMEDIATED_BY": 14,
+   "REQUIRES_PREREQUISITE": 119,
+   "WRONG_ANSWER_PATTERN": 13
+  },
+  "chunks_by_paper_state": {
+   "VALIDATED": 296,
+   "SUGGESTED": 2037,
+   "REJECTED": 0
+  }
+ },
+ "cross_validation": {
+  "chunks_total_matches_run001_bproxy_all": true,
+  "validated_chunks_matches_run001_bproxy_validated": true,
+  "note_anchored_spec_points_production": 182,
+  "stale_prose_divergence": "run-002 template prose says '182 snapshot spec points'; 182 is the DISTINCT NOTE-ANCHORED spec-code count in prod (all 182 resolve to node codes). The frozen structure surface is the full findStructureNodes() set (328 nodes) — recorded here as snapshot truth."
+ },
+ "files_sha256": {
+  "chunks.jsonl.gz": "67da3765edccc6e96a023a784a405434737901c1ea3406d5c2264fd851bbc9a8",
+  "spec_points.json": "e69c140be394135da3eaf9839d0351f53e076179d246f8b4ea55b8352019cd14",
+  "misconceptions.json": "cbf373afd75237dc3ae87d56d87bdb44a435384cdd1b2792a8aa3de5513dbe44",
+  "graph_edges.json": "f29c7e1bb736e6be256a4f7571796712bf66a96eea3faacd680ac5d8d6a5e2bd",
+  "question_anchors.json": "a78443ad71e34650d600051c8bdacbecee81d01fcc39fd67fe46a4fa15374449"
+ }
+}
