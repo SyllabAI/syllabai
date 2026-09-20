@@ -1,0 +1,434 @@
+{
+ "stages": [
+  {
+   "stage": "1 digest preflight",
+   "ok": true,
+   "detail": "q=4bb53004f8b6f013\u2026 n=837ea8f2576a8010\u2026"
+  },
+  {
+   "stage": "2 register ops account",
+   "ok": true,
+   "detail": "201 user_id=71a2a851-d274-424c-aec8-5c2aec591886 roles=['STUDENT']"
+  },
+  {
+   "stage": "3 ADMIN grant (\u00a73(b) SQL)",
+   "ok": true,
+   "detail": "cols=['user_id', 'role'] inserted=1 roles_now=['ADMIN', 'STUDENT']"
+  },
+  {
+   "stage": "4 admin probe (question-bank status)",
+   "ok": true,
+   "detail": "200: {'activeQuestions': 854, 'activeMcq': 8, 'activeStructured': 846, 'specPointMappings': 0, 'assets': 0}"
+  },
+  {
+   "stage": "5 pre-upload statuses",
+   "ok": true,
+   "detail": "question-bank={'activeQuestions': 854, 'activeMcq': 8, 'activeStructured': 846, 'specPointMappings': 0, 'assets': 0} | revision-notes={'ingested': True, 'notes': 112, 'assets': 194, 'ingestedAt': '2026-09-18T18:03:03.837933Z', 'corpusVersion': 'igcse-chem19-notes-20260918180251'}"
+  },
+  {
+   "stage": "7 notes ingest summary",
+   "ok": true,
+   "detail": "all fields match: {\"topics\": 4, \"subtopics\": 28, \"notes\": 112, \"assets\": 194, \"replaced\": true}"
+  },
+  {
+   "stage": "8a post-upload question-bank status",
+   "ok": true,
+   "detail": "{'activeQuestions': 593, 'activeMcq': 228, 'activeStructured': 365, 'specPointMappings': 1725, 'assets': 585}"
+  },
+  {
+   "stage": "8b post-upload revision-notes status",
+   "ok": true,
+   "detail": "{'ingested': True, 'notes': 112, 'assets': 194, 'ingestedAt': '2026-09-19T06:01:36.837867Z', 'corpusVersion': 'sme-revision-notes-igcse-chemistry-19-2026-09-18'}"
+  }
+ ],
+ "pre_upload": {
+  "question_bank": {
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  "revision_notes": {
+   "http": 200,
+   "body": {
+    "ingested": true,
+    "notes": 112,
+    "assets": 194,
+    "ingestedAt": "2026-09-18T18:03:03.837933Z",
+    "corpusVersion": "igcse-chem19-notes-20260918180251"
+   }
+  }
+ },
+ "poll_observations": [
+  {
+   "t": "05:51:25",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:51:58",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:52:29",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:53:01",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:53:32",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:54:04",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:54:36",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:55:07",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:55:39",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:56:11",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:56:42",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:57:14",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:57:48",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:58:19",
+   "http": 200,
+   "body": {
+    "activeQuestions": 854,
+    "activeMcq": 8,
+    "activeStructured": 846,
+    "specPointMappings": 0,
+    "assets": 0
+   }
+  },
+  {
+   "t": "05:58:51",
+   "http": 200,
+   "body": {
+    "activeQuestions": 593,
+    "activeMcq": 228,
+    "activeStructured": 365,
+    "specPointMappings": 1725,
+    "assets": 585
+   }
+  }
+ ],
+ "poll_final": {
+  "t": "05:58:51",
+  "http": 200,
+  "body": {
+   "activeQuestions": 593,
+   "activeMcq": 228,
+   "activeStructured": 365,
+   "specPointMappings": 1725,
+   "assets": 585
+  }
+ },
+ "db_verify_questions": {
+  "checks": [
+   {
+    "name": "active MCQ_SINGLE = 228",
+    "ok": true,
+    "detail": "{'MCQ_SINGLE': 228, 'STRUCTURED': 365}"
+   },
+   {
+    "name": "active STRUCTURED = 365",
+    "ok": true,
+    "detail": "{'MCQ_SINGLE': 228, 'STRUCTURED': 365}"
+   },
+   {
+    "name": "active total = 593",
+    "ok": true,
+    "detail": "{'MCQ_SINGLE': 228, 'STRUCTURED': 365}"
+   },
+   {
+    "name": "deactivated old bank = 854",
+    "ok": true,
+    "detail": "854"
+   },
+   {
+    "name": "questions total = 1447 (854+593)",
+    "ok": true,
+    "detail": "1447"
+   },
+   {
+    "name": "parts on active = 1176",
+    "ok": true,
+    "detail": "1176"
+   },
+   {
+    "name": "options on active = 912",
+    "ok": true,
+    "detail": "912"
+   },
+   {
+    "name": "markPoints on active = 1404 (via mark_schemes)",
+    "ok": true,
+    "detail": "1404"
+   },
+   {
+    "name": "markPoints split = 1176 part-attached + 228 MCQ scheme-attached",
+    "ok": true,
+    "detail": "parts=1176 nopart=228"
+   },
+   {
+    "name": "primary topic set on all 593",
+    "ok": true,
+    "detail": "593"
+   },
+   {
+    "name": "topicMappings = 593 primary + 568 secondary = 1161",
+    "ok": true,
+    "detail": "primary=593 secondary=568"
+   },
+   {
+    "name": "specPointMappings total = 1725",
+    "ok": true,
+    "detail": "1725"
+   },
+   {
+    "name": "specPointMappings on active = 1725",
+    "ok": true,
+    "detail": "1725"
+   },
+   {
+    "name": "assets = 585",
+    "ok": true,
+    "detail": "585"
+   },
+   {
+    "name": "SME questions freshly created (>0)",
+    "ok": true,
+    "detail": "593"
+   },
+   {
+    "name": "freeze baseline intact (no unexpected table deltas)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "answers states unchanged {OVERRIDDEN:217, HUMAN_MARKED:72, PENDING:77}",
+    "ok": true,
+    "detail": "{'OVERRIDDEN': 217, 'HUMAN_MARKED': 72, 'PENDING': 77}"
+   },
+   {
+    "name": "learner_self_marks still 0",
+    "ok": true,
+    "detail": "0"
+   }
+  ],
+  "all_ok": true
+ },
+ "notes_ingest": {
+  "http": 200,
+  "body": {
+   "topics": 4,
+   "subtopics": 28,
+   "notes": 112,
+   "assets": 194,
+   "replaced": true
+  }
+ },
+ "post_upload": {
+  "question_bank": {
+   "http": 200,
+   "body": {
+    "activeQuestions": 593,
+    "activeMcq": 228,
+    "activeStructured": 365,
+    "specPointMappings": 1725,
+    "assets": 585
+   }
+  },
+  "revision_notes": {
+   "http": 200,
+   "body": {
+    "ingested": true,
+    "notes": 112,
+    "assets": 194,
+    "ingestedAt": "2026-09-19T06:01:36.837867Z",
+    "corpusVersion": "sme-revision-notes-igcse-chemistry-19-2026-09-18"
+   }
+  }
+ },
+ "upload_completed": true,
+ "db_verify_notes": {
+  "checks": [
+   {
+    "name": "revision_note count = 112 (replaced)",
+    "ok": true,
+    "detail": "112"
+   },
+   {
+    "name": "all 112 notes carry the SME corpus_version",
+    "ok": true,
+    "detail": "112"
+   },
+   {
+    "name": "revision_note_asset count = 194",
+    "ok": true,
+    "detail": "194"
+   },
+   {
+    "name": "all 194 note assets are fresh",
+    "ok": true,
+    "detail": "194"
+   },
+   {
+    "name": "final freeze sweep clean",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "answers states unchanged {OVERRIDDEN:217, HUMAN_MARKED:72, PENDING:77}",
+    "ok": true,
+    "detail": "{'OVERRIDDEN': 217, 'HUMAN_MARKED': 72, 'PENDING': 77}"
+   },
+   {
+    "name": "attempts still 109",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "human_marks still 289",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "learner_self_marks still 0",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "all_ok": true
+ },
+ "cleanup": {
+  "revoked": 1,
+  "disabled": 1,
+  "roles_left": [
+   "STUDENT"
+  ],
+  "enabled": false,
+  "ops_attempts": 0,
+  "ops_answers": 0,
+  "ops_self_marks": 0,
+  "all_ok": true
+ }
+}

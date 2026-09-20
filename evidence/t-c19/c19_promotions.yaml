@@ -1,0 +1,831 @@
+# T-C19 attachment promotion record — operator ratifications of concept→SP
+# PART_OF attachment identities (the expansion round named by c11_promote.py).
+# Written ONLY by scripts/c19_promote.py; see the lane spec §7.
+# Hand-editing is forbidden.
+meta:
+  task: T-C19
+  stage: attachment-promotion
+  contract: CONCEPT_SPEC_POINT_MAPPING_VALIDATION_LANE.md §7 (RATIFIED v1.1)
+  decision_record: graph/reports/C19_SUBSTRATE_ROWS.yaml + filled review sheet
+  tool: scripts/c19_promote.py
+  generated_date: '2026-09-18'
+promotions:
+- attachment:
+    concept: 4CH1-CON-ACTIVATION-ENERGY
+    spec_point: 4CH1-3.14C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ANODE-CATHODE
+    spec_point: 4CH1-1.57C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-AQUEOUS-DISCHARGE
+    spec_point: 4CH1-1.58C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-AR
+    spec_point: 4CH1-1.26
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-AR
+    spec_point: 4CH1-1.28
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ATOM
+    spec_point: 4CH1-1.14
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ATOMIC-NUMBER
+    spec_point: 4CH1-1.16
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-AVOGADRO-CONST
+    spec_point: 4CH1-1.27
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-AVOGADRO-LAW
+    spec_point: 4CH1-1.35C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-BOND-BREAKING-MAKING
+    spec_point: 4CH1-3.6C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-BOND-ENERGY-CALC
+    spec_point: 4CH1-3.7C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CALORIMETRY
+    spec_point: 4CH1-3.2
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CATALYST
+    spec_point: 4CH1-3.12
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CATALYST
+    spec_point: 4CH1-3.13
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CHROMATOGRAM-INTERPRETATION
+    spec_point: 4CH1-1.11
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CHROMATOGRAPHY
+    spec_point: 4CH1-1.10
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-COLLISION-THEORY
+    spec_point: 4CH1-3.11
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-COMPOUND
+    spec_point: 4CH1-1.8
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CONC-CALC
+    spec_point: 4CH1-1.34C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CONCENTRATION
+    spec_point: 4CH1-1.34C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CONSERVATION-MASS
+    spec_point: 4CH1-1.25
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CONSERVATION-MASS
+    spec_point: 4CH1-1.26
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-COVALENT-BOND
+    spec_point: 4CH1-1.44
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-COVALENT-BOND
+    spec_point: 4CH1-1.45
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-COVALENT-CONDUCTION
+    spec_point: 4CH1-1.51
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-COVALENT-CONDUCTION
+    spec_point: 4CH1-1.55C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-CRYSTALLISATION
+    spec_point: 4CH1-1.10
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-DIAMOND-GRAPHITE
+    spec_point: 4CH1-1.50
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-DIFFUSION
+    spec_point: 4CH1-1.3
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-DILUTION
+    spec_point: 4CH1-1.3
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-DOT-CROSS-COVALENT
+    spec_point: 4CH1-1.46
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-DOT-CROSS-IONIC
+    spec_point: 4CH1-1.40
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-DYNAMIC-EQUILIBRIUM
+    spec_point: 4CH1-3.19C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-DYNAMIC-EQUILIBRIUM
+    spec_point: 4CH1-3.20C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ELECTRODE-HALF-EQUATIONS
+    spec_point: 4CH1-1.59C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ELECTROLYSIS
+    spec_point: 4CH1-1.58C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ELECTRONIC-CONFIGURATION
+    spec_point: 4CH1-1.19
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ELECTRONIC-CONFIGURATION
+    spec_point: 4CH1-1.22
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ELEMENT
+    spec_point: 4CH1-1.8
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EMP-MOL-CALC
+    spec_point: 4CH1-1.33
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EMPIRICAL-FORMULA
+    spec_point: 4CH1-1.32
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EMPIRICAL-FORMULA
+    spec_point: 4CH1-1.33
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ENERGY-LEVEL-DIAGRAM
+    spec_point: 4CH1-3.5C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EQ-POSITION
+    spec_point: 4CH1-3.21C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EQ-POSITION
+    spec_point: 4CH1-3.22C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EQ-STATE-SYM
+    spec_point: 4CH1-1.25
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EQ-SYMBOL
+    spec_point: 4CH1-1.25
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EQ-WORD
+    spec_point: 4CH1-1.25
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EVAPORATION-BOILING
+    spec_point: 4CH1-1.2
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EXO-ENDO
+    spec_point: 4CH1-3.1
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EXP-FORMULA-DEDUCTION
+    spec_point: 4CH1-1.31
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-EXP-FORMULA-DEDUCTION
+    spec_point: 4CH1-1.36
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-FILTRATION
+    spec_point: 4CH1-1.10
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-FRACTIONAL-DISTILLATION
+    spec_point: 4CH1-1.10
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-GAS-VOL-CALC
+    spec_point: 4CH1-1.35C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-GIANT-COVALENT
+    spec_point: 4CH1-1.49
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-GROUP-SIMILARITY
+    spec_point: 4CH1-1.23
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-HEAT-CALC
+    spec_point: 4CH1-3.3
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-HEATING-CONSTANT-MASS
+    spec_point: 4CH1-1.7C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ION
+    spec_point: 4CH1-1.37
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ION-CHARGE-RULES
+    spec_point: 4CH1-1.38
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-IONIC-BOND
+    spec_point: 4CH1-1.41
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-IONIC-CONDUCTION
+    spec_point: 4CH1-1.43
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-IONIC-CONDUCTION
+    spec_point: 4CH1-1.56C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-IONIC-FORMULA
+    spec_point: 4CH1-1.39
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-IONIC-LATTICE
+    spec_point: 4CH1-1.42
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ISOTOPES
+    spec_point: 4CH1-1.16
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-ISOTOPES
+    spec_point: 4CH1-1.17
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MASS-NUMBER
+    spec_point: 4CH1-1.16
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-METAL-NONMETAL
+    spec_point: 4CH1-1.20
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-METAL-NONMETAL
+    spec_point: 4CH1-1.21
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-METAL-PROPERTIES
+    spec_point: 4CH1-1.54C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-METALLIC-BOND
+    spec_point: 4CH1-1.52C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-METALLIC-BOND
+    spec_point: 4CH1-1.53C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-METALLOID
+    spec_point: 4CH1-1.21
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MIXTURE
+    spec_point: 4CH1-1.8
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLAR-ENTHALPY
+    spec_point: 4CH1-3.4
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLAR-GAS-VOL
+    spec_point: 4CH1-1.35C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLAR-MASS
+    spec_point: 4CH1-1.28
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLAR-RATIO
+    spec_point: 4CH1-1.29
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLE
+    spec_point: 4CH1-1.27
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLE-MASS-CONV
+    spec_point: 4CH1-1.28
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLECULAR-FORMULA
+    spec_point: 4CH1-1.32
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLECULAR-FORMULA
+    spec_point: 4CH1-1.33
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MOLECULE
+    spec_point: 4CH1-1.14
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MR
+    spec_point: 4CH1-1.26
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-MR
+    spec_point: 4CH1-1.28
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-NOBLE-GAS-INERTNESS
+    spec_point: 4CH1-1.24
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-PERCENT-YIELD
+    spec_point: 4CH1-1.30
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-PERIODIC-TABLE
+    spec_point: 4CH1-1.18
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-PURE-SUBSTANCE
+    spec_point: 4CH1-1.9
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-RATE-EXPERIMENTS
+    spec_point: 4CH1-3.9
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-RATE-FACTORS
+    spec_point: 4CH1-3.10
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-REACTING-MASS
+    spec_point: 4CH1-1.29
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-REACTION-PROFILE
+    spec_point: 4CH1-3.14C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-REDOX-ELECTRONS
+    spec_point: 4CH1-1.59C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-REVERSIBLE
+    spec_point: 4CH1-3.17
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-REVERSIBLE-EXAMPLES
+    spec_point: 4CH1-3.18
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-RF-VALUE
+    spec_point: 4CH1-1.12
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SATURATED-SOLUTION
+    spec_point: 4CH1-1.10
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SATURATED-SOLUTION
+    spec_point: 4CH1-1.4
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SIMPLE-DISTILLATION
+    spec_point: 4CH1-1.10
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SIMPLE-MOLECULAR
+    spec_point: 4CH1-1.47
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SIMPLE-MOLECULAR
+    spec_point: 4CH1-1.48
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SOLUBILITY
+    spec_point: 4CH1-1.5C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SOLUBILITY-CURVE
+    spec_point: 4CH1-1.6C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SOLUTION
+    spec_point: 4CH1-1.4
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-STATE-CHANGES
+    spec_point: 4CH1-1.2
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-STATE-PARTICLE-MODEL
+    spec_point: 4CH1-1.1
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-STATE-PARTICLE-MODEL
+    spec_point: 4CH1-1.3
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-STATES-THREE
+    spec_point: 4CH1-1.1
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-SUBATOMIC-PARTICLES
+    spec_point: 4CH1-1.15
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-THEOR-YIELD
+    spec_point: 4CH1-1.30
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-VOL-CONVERSION
+    spec_point: 4CH1-1.34C
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-WATER-CRYST
+    spec_point: 4CH1-1.31
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-YIELD
+    spec_point: 4CH1-1.30
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)
+- attachment:
+    concept: 4CH1-CON-YIELD-FACTORS
+    spec_point: 4CH1-1.30
+  validated_by: operator-directive-session-106
+  validated_date: '2026-09-18'
+  review_reference: graph/reports/C19_CONCEPT_SP_SUBSTRATE_REVIEW_SHEET.md (Part A class rollup; sampled
+    rows individually marked; seed + method on the sheet)

@@ -1,0 +1,1112 @@
+[
+ {
+  "id": "FET-001",
+  "class": "fetch_paper_code",
+  "query": "give me the answer to q4 from summer 2021",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:4",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "106be2315c64a2036005345e4c268014efa8847919022a5b9eca39b43e4b7044:5",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-002",
+  "class": "fetch_paper_code",
+  "query": "question 6 summer 2011 mark scheme",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:4",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:5",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "c904de1e03d8bb25e25fc3864e30c208f8066cafea3bb2f2c4faa0661d308fba:6",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-003",
+  "class": "fetch_paper_code",
+  "query": "what did question 2 ask in 4CH1/2CR 2022",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "868a150c1aaee47589fd20603212263b9eb9d634dd6881ed5e6e7d0aeca3387f:2",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "868a150c1aaee47589fd20603212263b9eb9d634dd6881ed5e6e7d0aeca3387f:3",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-004",
+  "class": "fetch_paper_code",
+  "query": "4CH1/2CR q1 2020 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "960bce5cd160919487dd76582040f9957efc99d9e0211c97fb6cf02a41161d62:3",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:3",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-005",
+  "class": "fetch_paper_code",
+  "query": "mark scheme for q2 november 2021 paper 4CH1/2C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:2",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:3",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:4",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "9a2262007b4e38c3c9370ba1ce513b11fb60717138db2fc14703c9d9adf5dae6:3",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-006",
+  "class": "fetch_paper_code",
+  "query": "give me the answer to q3 from summer 2021",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:3",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:4",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:4",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:7",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-007",
+  "class": "fetch_paper_code",
+  "query": "question 5 jan 2018 mark scheme",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:3",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:4",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:5",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:6",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "4c17afab642ea7ba9bdc2844d974419fd3bbfc21a5a5547ee82e3c032a2fc8f1:5",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "4c17afab642ea7ba9bdc2844d974419fd3bbfc21a5a5547ee82e3c032a2fc8f1:6",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-008",
+  "class": "fetch_paper_code",
+  "query": "what did question 4 ask in 4CH1/2C 2017",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:5",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-009",
+  "class": "fetch_paper_code",
+  "query": "4CH1/2C q7 2021 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:8",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:9",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:8",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:9",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-010",
+  "class": "fetch_paper_code",
+  "query": "mark scheme for q9 summer 2021 paper 4CH1/1C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:9",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:10",
+    "tier": 1,
+    "rule": "qp_furniture_probe"
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:8",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:12",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-011",
+  "class": "fetch_paper_code",
+  "query": "give me the answer to q7 from january 2017",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "f06f8084643a11c0d6edce65e56105a1c7ecfcb4a674adb607867aa71c5fbc89:8",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "f20fe163e6c65d28e4f92c242833ff63b2a412bdfa049a767fd4af3b5e5f9640:8",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-012",
+  "class": "fetch_paper_code",
+  "query": "question 6 jan 2016 mark scheme",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:6",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:7",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:8",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:9",
+    "tier": 1,
+    "rule": "qp_furniture_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-013",
+  "class": "fetch_paper_code",
+  "query": "what did question 7 ask in 4CH1/1C 2021",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:7",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:8",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-014",
+  "class": "fetch_paper_code",
+  "query": "4CH0/2C q2 2016 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:1",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:2",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-015",
+  "class": "fetch_paper_code",
+  "query": "mark scheme for q4 jan 2018 paper 4CH0/2C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:2",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:3",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "4c17afab642ea7ba9bdc2844d974419fd3bbfc21a5a5547ee82e3c032a2fc8f1:4",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-016",
+  "class": "fetch_paper_code",
+  "query": "give me the answer to q9 from june 2011",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:9",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:10",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "c904de1e03d8bb25e25fc3864e30c208f8066cafea3bb2f2c4faa0661d308fba:11",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "c904de1e03d8bb25e25fc3864e30c208f8066cafea3bb2f2c4faa0661d308fba:12",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-017",
+  "class": "fetch_paper_code",
+  "query": "question 6 january 2020 mark scheme",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "960bce5cd160919487dd76582040f9957efc99d9e0211c97fb6cf02a41161d62:7",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "960bce5cd160919487dd76582040f9957efc99d9e0211c97fb6cf02a41161d62:8",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:9",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:10",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-018",
+  "class": "fetch_paper_code",
+  "query": "what did question 4 ask in 4CH0/2C 2014",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:6",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:7",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:8",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:9",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-019",
+  "class": "fetch_paper_code",
+  "query": "4CH0/2C q5 2017 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "f06f8084643a11c0d6edce65e56105a1c7ecfcb4a674adb607867aa71c5fbc89:5",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "f06f8084643a11c0d6edce65e56105a1c7ecfcb4a674adb607867aa71c5fbc89:6",
+    "tier": 1,
+    "rule": "qp_furniture_probe"
+   },
+   {
+    "chunk_ref": "f20fe163e6c65d28e4f92c242833ff63b2a412bdfa049a767fd4af3b5e5f9640:5",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-020",
+  "class": "fetch_paper_code",
+  "query": "mark scheme for q1 january 2022 paper 4CH1/2CR",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "868a150c1aaee47589fd20603212263b9eb9d634dd6881ed5e6e7d0aeca3387f:2",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-021",
+  "class": "fetch_paper_code",
+  "query": "give me the answer to q7 from summer 2021",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:7",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:8",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "106be2315c64a2036005345e4c268014efa8847919022a5b9eca39b43e4b7044:10",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-022",
+  "class": "fetch_paper_code",
+  "query": "question 5 summer 2021 mark scheme",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:5",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:6",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:6",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-023",
+  "class": "fetch_paper_code",
+  "query": "what did question 3 ask in 4CH0/2C 2014",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:5",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:6",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-024",
+  "class": "fetch_paper_code",
+  "query": "4CH0/2C q3 2016 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:2",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:3",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-025",
+  "class": "fetch_paper_code",
+  "query": "mark scheme for q6 jan 2021 paper 4CH1/2C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:6",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:7",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:8",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:7",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-026",
+  "class": "fetch_paper_code",
+  "query": "give me the answer to q6 from june 2021",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:6",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:7",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "106be2315c64a2036005345e4c268014efa8847919022a5b9eca39b43e4b7044:8",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "106be2315c64a2036005345e4c268014efa8847919022a5b9eca39b43e4b7044:9",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-027",
+  "class": "fetch_paper_code",
+  "query": "question 2 jan 2021 mark scheme",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:2",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:3",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-028",
+  "class": "fetch_paper_code",
+  "query": "what did question 4 ask in 4CH1/2CR 2022",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "868a150c1aaee47589fd20603212263b9eb9d634dd6881ed5e6e7d0aeca3387f:4",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "868a150c1aaee47589fd20603212263b9eb9d634dd6881ed5e6e7d0aeca3387f:5",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "c396f41c067ee5536a0ca7f6c40848aeebd23852d4eecbb024abdd71c39ce058:5",
+    "tier": 1,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-029",
+  "class": "fetch_paper_code",
+  "query": "4CH0/1C q4 2011 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:2",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:3",
+    "tier": 1,
+    "rule": "qp_furniture_probe"
+   },
+   {
+    "chunk_ref": "c904de1e03d8bb25e25fc3864e30c208f8066cafea3bb2f2c4faa0661d308fba:3",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-030",
+  "class": "fetch_paper_code",
+  "query": "mark scheme for q4 jan 2020 paper 4CH1/2CR",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "960bce5cd160919487dd76582040f9957efc99d9e0211c97fb6cf02a41161d62:5",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "960bce5cd160919487dd76582040f9957efc99d9e0211c97fb6cf02a41161d62:6",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-031",
+  "class": "fetch_paper_code",
+  "query": "give me the answer to q10 from june 2016",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "f6ca23616eaff8c8612c7544f526df3fe3420fdd65f04b1a66209d23655fcc74:10",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "f6ca23616eaff8c8612c7544f526df3fe3420fdd65f04b1a66209d23655fcc74:11",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "f6ca23616eaff8c8612c7544f526df3fe3420fdd65f04b1a66209d23655fcc74:12",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-032",
+  "class": "fetch_paper_code",
+  "query": "question 11 summer 2015 mark scheme",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "5f9b96f76afefec1996683c86ee821b5adb65de655063375b26599ca4050185d:14",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "5f9b96f76afefec1996683c86ee821b5adb65de655063375b26599ca4050185d:15",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "5f9b96f76afefec1996683c86ee821b5adb65de655063375b26599ca4050185d:16",
+    "tier": 1,
+    "rule": "qp_furniture_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-033",
+  "class": "fetch_paper_code",
+  "query": "what did question 7 ask in 4CH1/1CR 2019",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "042dcbb07a50de1b0040240e690c557297dbdd1bd082f0085f44725f9faf64b4:8",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "042dcbb07a50de1b0040240e690c557297dbdd1bd082f0085f44725f9faf64b4:9",
+    "tier": 2,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "de0d5a687a3b9ee4ea6ba1035c81b41ec0ea9c908ccb3fc8103c9e2e8f5f2cc5:13",
+    "tier": 1,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "de0d5a687a3b9ee4ea6ba1035c81b41ec0ea9c908ccb3fc8103c9e2e8f5f2cc5:15",
+    "tier": 1,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-034",
+  "class": "fetch_paper_code",
+  "query": "4CH0/1CR q4 2014 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "93db3ed10166d26df54bb09a9be78a3c0d18cbb45418ff96ff0a41f5ca5a3a1f:4",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "93db3ed10166d26df54bb09a9be78a3c0d18cbb45418ff96ff0a41f5ca5a3a1f:5",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-035",
+  "class": "fetch_paper_code",
+  "query": "mark scheme for q8 summer 2019 paper 4CH1/2C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "57ec77e6e7f9a27c3e12a83691b880d34938e476c17b10ba75c0b9295a268bf9:9",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "e10577bf8fd8830af036eaa2440d955b8db3328a0093ee4ebbfddbb56826c258:9",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   },
+   {
+    "chunk_ref": "e10577bf8fd8830af036eaa2440d955b8db3328a0093ee4ebbfddbb56826c258:14",
+    "tier": 2,
+    "rule": "ms_marktext_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_paper_code",
+   "source": "exam_papers with paper_code"
+  }
+ },
+ {
+  "id": "FET-036",
+  "class": "fetch_null_code",
+  "query": "question 2 summer 2015 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "face72f4a8764f5f66c2bfd57e38e7887ec4a46c9b67672d54827404a5bc39fe:1",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "face72f4a8764f5f66c2bfd57e38e7887ec4a46c9b67672d54827404a5bc39fe:2",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "face72f4a8764f5f66c2bfd57e38e7887ec4a46c9b67672d54827404a5bc39fe:3",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_null_code",
+   "source": "exam_papers with NULL paper_code"
+  }
+ },
+ {
+  "id": "FET-037",
+  "class": "fetch_null_code",
+  "query": "question 3 summer 2019 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "f9f7ec2386181fd717d60e709d750636c933f7d3e039dead009f46d6abee9a7c:4",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "f9f7ec2386181fd717d60e709d750636c933f7d3e039dead009f46d6abee9a7c:5",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_null_code",
+   "source": "exam_papers with NULL paper_code"
+  }
+ },
+ {
+  "id": "FET-038",
+  "class": "fetch_null_code",
+  "query": "question 11 summer 2013 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:15",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:16",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:17",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_null_code",
+   "source": "exam_papers with NULL paper_code"
+  }
+ },
+ {
+  "id": "FET-039",
+  "class": "fetch_null_code",
+  "query": "question 10 summer 2013 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:13",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:14",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "e5556d9d8c2900469569dab76eea68657880d86b33ae51328ba39f80be593de4:15",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_null_code",
+   "source": "exam_papers with NULL paper_code"
+  }
+ },
+ {
+  "id": "FET-040",
+  "class": "fetch_null_code",
+  "query": "question 6 june 2014 answer",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "e02c65ad9f2536fc0a1b0a3e68fb0743b8fc4d282c748129691bfa2ef8b0e8f0:7",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   },
+   {
+    "chunk_ref": "e02c65ad9f2536fc0a1b0a3e68fb0743b8fc4d282c748129691bfa2ef8b0e8f0:8",
+    "tier": 1,
+    "rule": "qp_stem_probe"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:fetch_null_code",
+   "source": "exam_papers with NULL paper_code"
+  }
+ }
+]

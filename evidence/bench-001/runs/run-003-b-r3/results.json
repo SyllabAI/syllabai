@@ -1,0 +1,314 @@
+{
+  "appendix_query_form_diagnostics" : {
+    "loader_truth" : "the snapshot does not carry exam sessions; paper_code is NOT unique per paper (9 codes across 94 papers) while paper_state is exactly consistent per document, so the loader emits one exam_papers row per document with its own state — the closest the snapshot allows to the production paper-per-session model",
+    "note" : "harness-internal query-form diagnostics, recorded for honesty; the RECORDED arm above is the production code as it stands (websearch bare-word form)",
+    "reading" : "the all-terms requirement is the dominant zero-result driver for natural-language questions on the compliant VALIDATED corpus; the finding is recorded as a diagnostic for the T-C13 owner process, not silently fixed against the frozen set",
+    "recorded_form_non_empty" : "14/120 (bare websearch words are AND-ed — the production Bm25Retriever as implemented; 106/120 queries get zero candidates)",
+    "term_union_diagnostic" : "OR term-union form measured in-session on the same fixed loader: 120/120 non-empty, recall@10 0.1097, mrr 0.1189, ndcg@10 0.186, fp@10 0.9663 — NOT adopted for the recorded run: switching the query form after having seen frozen-set numbers would violate the spec's anti-tuning rule (§3.2/§6/§9); adopting it requires a dev-subset decision or a gold-v2 re-freeze per the spec's own route"
+  },
+  "arm" : "B lexical — PRODUCTION T-C14 provider (ChunkLexicalRepository SQL: websearch_to_tsquery('english') over V28 content_tsv GIN, ts_rank_cd, T-C07 scope EXISTS predicate, T-C05 VALIDATED-paper serving, identity tie-break document_id/chunk_index) — Bm25Retriever port, NoReranker",
+  "arm_status" : "RUNNABLE — T-C14 landed (retriever + migration); benchmark arm only, NOT a production serving default",
+  "arms_registry" : {
+    "A" : "UNAVAILABLE — requires embedding backfill (0/2,333 embedded)",
+    "A0" : "RUNNABLE — recorded in run-002-a0 (production baseline; chunk axis = real zeros, resolution axis on record)",
+    "B" : "RUNNABLE — this run (production lexical arm, first recorded run)",
+    "B-proxy" : "RECORDED (run-001) — harness-internal probe; remains the early-signal instrument, never citable for promotion; historical evidence preserved",
+    "C/D" : "UNAVAILABLE — require A + B (A still unavailable)",
+    "E/F/G" : "UNAVAILABLE — require T-C15",
+    "H1" : "UNAVAILABLE — hierarchical filtering over C",
+    "H2" : "UNAVAILABLE — T-C06 chunking contract",
+    "H3" : "UNAVAILABLE — HyPE over A",
+    "I" : "UNAVAILABLE — KG expansion + best-of"
+  },
+  "chunk_axis" : {
+    "all_chunks_context" : { },
+    "validated_only_served" : {
+      "corpus_n" : 296,
+      "overall" : {
+        "evidence_precision@10" : 0.0068,
+        "false_positive_rate@10" : 0.0023,
+        "mrr" : 0.0682,
+        "ndcg@10" : 0.0682,
+        "recall@10" : 0.0032,
+        "recall@20" : 0.0032,
+        "recall@5" : 0.0032
+      },
+      "per_class" : {
+        "enumerate_paper" : {
+          "evidence_precision@10" : 0.075,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.75,
+          "ndcg@10" : 0.75,
+          "recall@10" : 0.0352,
+          "recall@20" : 0.0352,
+          "recall@5" : 0.0352
+        },
+        "fetch_null_code" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "fetch_paper_code" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0029,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        }
+      },
+      "queries_scored" : 44,
+      "scope" : "VALIDATED-paper chunks only (the arm's compliant serving scope)"
+    },
+    "validation_boundary_violations" : 0,
+    "violation_refs" : [ ]
+  },
+  "code_version" : "c05efb98355ada8a3328c2781148072b556c8c24",
+  "date" : "2026-09-20",
+  "determinism_check" : "PASS — scoring recomputed twice in-process (second full retrieval pass), aggregates byte-identical; serialization byte-stable",
+  "evaluation_contract" : {
+    "boundary_check" : "every returned hit audited against the loader's paper-state map; any non-VALIDATED hit is a VALIDATION_BOUNDARY_VIOLATION (hard fail)",
+    "chunk_axis" : "Recall@5/10/20, MRR (first tier-2 hit in top-20), nDCG@10 (2/1/0 tiers), evidence precision@10 and FP@10 over the fixed top-10 denominator — formulas identical to run-001/run-002 (BenchMetrics, pinned).",
+    "serving_scope" : "the arm serves curriculum-scoped VALIDATED-paper chunks only (production predicate); its ranked lists are therefore scored against the same gold labels on the VALIDATED-only reachable corpus (296 chunks) — the ALL-chunks (2,333) view is carried by run-001's B-proxy pair (AF-2) and is reproduced below for the §10-ruling-1 dual-denominator context",
+    "spec_resolution_axis" : "NOT SCOREABLE for arm B: the snapshot carries ZERO HUMAN_VALIDATED chunk→spec mapping rows (concept_attachments = 0, the T-C06/F-168 mapping substrate is pending), so a resolution number would be fabrication; recorded as a named data gap, not a zero, not an exclusion"
+  },
+  "executor" : "production code over real Postgres migrated V1..V28 (Flyway), corpus loaded from the frozen snapshot; no scorer reimplemented. Arm = retrieval.Bm25Retriever through the RetrievalProvider fabric contract over ChunkLexicalRepository.searchServingEligible (T-C05 VALIDATED-only guard)",
+  "gold_set" : "gold-v1 (120 queries; frozen)",
+  "per_query_chunks" : {
+    "ENU-037" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:0" ],
+      "scores" : [ 6.21118E-4 ]
+    },
+    "ENU-038" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:0" ],
+      "scores" : [ 6.6225167E-4 ]
+    },
+    "ENU-039" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "ENU-040" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:0" ],
+      "scores" : [ 7.246377E-4 ]
+    },
+    "FET-001" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-002" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "c904de1e03d8bb25e25fc3864e30c208f8066cafea3bb2f2c4faa0661d308fba:2" ],
+      "scores" : [ 9.3457947E-4 ]
+    },
+    "FET-003" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-004" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-005" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-006" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-007" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-008" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-009" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-010" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-011" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-012" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-013" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-014" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-015" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-016" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-017" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-018" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-019" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-020" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-021" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-022" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-023" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-024" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-025" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-026" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-027" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-028" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-029" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-030" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-031" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-032" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-033" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-034" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-035" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-036" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-037" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-038" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-039" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "FET-040" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    }
+  },
+  "queries_excluded_no_chunk_labels" : {
+    "count" : 76,
+    "ids" : [ "ENU-001", "ENU-002", "ENU-003", "ENU-004", "ENU-005", "ENU-006", "ENU-007", "ENU-008", "ENU-009", "ENU-010", "ENU-011", "ENU-012", "ENU-013", "ENU-014", "ENU-015", "ENU-016", "ENU-017", "ENU-018", "ENU-019", "ENU-020", "ENU-021", "ENU-022", "ENU-023", "ENU-024", "ENU-025", "ENU-026", "ENU-027", "ENU-028", "ENU-029", "ENU-030", "ENU-031", "ENU-032", "ENU-033", "ENU-034", "ENU-035", "ENU-036", "EXP-001", "EXP-002", "EXP-003", "EXP-004", "EXP-005", "EXP-006", "EXP-007", "EXP-008", "EXP-009", "EXP-010", "EXP-011", "EXP-012", "EXP-013", "EXP-014", "EXP-015", "EXP-016", "EXP-017", "EXP-018", "EXP-019", "EXP-020", "EXP-021", "EXP-022", "EXP-023", "EXP-024", "EXP-025", "EXP-026", "EXP-027", "EXP-028", "EXP-029", "EXP-030", "EXP-031", "EXP-032", "EXP-033", "EXP-034", "EXP-035", "EXP-036", "EXP-037", "EXP-038", "EXP-039", "EXP-040" ],
+    "reason" : "no chunk labels (substrate-absent classes / sparse auto-labels) — excluded from the chunk axis only; same rule as run-001/run-002"
+  },
+  "queries_scored_chunks" : 44,
+  "queries_total" : 120,
+  "queries_with_zero_results" : 109,
+  "run_id" : "run-003-b",
+  "snapshot" : "snap-001 (snap-001)"
+}

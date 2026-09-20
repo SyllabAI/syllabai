@@ -317,7 +317,37 @@ The bounded InterventionRun orchestration boundary (contract `docs/research/INTE
 
 **Scope guard:** the run records bounded execution and NEVER mutates learner state (the governed evidence path remains the sole authority — DB-level bit-identical proof stands); no generic workflow engine, no autonomous LLM-defined steps, no curriculum/KG mutation, terminal history append-only. Any future scope growth re-opens the contract, not this record.
 
-## ADR-025: Teacher-marking-surface scoping — classroom-authorization visibility; independent learners teacher-invisible
+## ADR-025: Smart Mark product contract — bounded per-part marker inside Exam Questions, no chatbox
+
+**Status:** Accepted (operator decision)
+**Date:** 2026-09-18
+
+Smart Mark's product placement is fixed by operator clarification (session 101): it is the in-page marking widget on Exam Questions pages and the **single marking authority** — the tutor/CLA explain, Smart Mark marks, and Smart Mark has no chatbox. The marking unit **remains per-part** (one `Answer` per `QuestionPart`, scheme points scoped to that part); the whole-question single-context marking proposal is **rejected** to preserve per-point κ calibration (F-161), the bounds/mark-sum/coverage validator scoping, and skipped-part detection — full-question/full-scheme rendering is presentation context only, and answers persist per-part regardless of input presentation. Bounded post-mark actions ("Explain my feedback" / "Improve my answer") are single-purpose governed generation over the learner's answer and the question's own validated scheme points under the post-attempt leakage rules; resubmission re-marks with append-only result history; self-mark stays a first-class alternative. Question-level topic/spec categorization powers the Exam Questions repo, Test Builder (F-050) and Target Test; the filter/difficulty/type substrate is owned by T-C18. Canonical record: `ADR-025-SMART_MARK_PRODUCT_CONTRACT.md` (standalone file remains the authority); Master Spec §15.1; build lane T-C21.
+
+**Scope guard:** product placement/UX contract only — no pipeline, validator, κ-gate, evidence-contract or CLA-leakage semantics change; build execution separately tracked (T-C21).
+
+## ADR-026: SME question-bank import surface (igcse-chemistry-19) — corpus replace, evidence-safe deactivation, κ-excluded self-marking
+
+**Status:** ACCEPTED (production, deployed 2026-09-18)
+**Date:** 2026-09-18 (s104 branch built + tested; session 105 reconstructed the lost artifacts, renumbered V29→V30, extended the surface, merged, deployed)
+**Build lane:** T-C22
+
+The operator's directive (2026-09-17/18): validate the SME→4CH1 mapping, then replace the live question bank with the SME exam-question corpus and the live revision notes with the SME re-scrape (igcse-chemistry-19 only — ADR-014 Cycle-1 scope guard). The import rides a versioned ZIP package (`sme-question-package/1.0` + `assets/`), built by deterministic zero-LLM scripts (`scripts/s104_*.py`, syllabai-resources@sme-import-session-104), validated fail-closed at the endpoint (wrong version / duplicate refs / unresolvable KG codes / MCQ without exactly-one-correct / part-marks mismatch / dangling asset refs reject the whole package, single transaction, live bank untouched).
+
+Key decisions:
+
+1. **Replace semantics, evidence-safe:** one transaction deactivates every active question (rows survive — attempts, the pending κ marking queue, BKT evidence and FK chains untouched) and inserts the SME set as VALIDATED v1 (PAST_PAPER provenance, difficulty_source=SME, easy/medium/hard → 2/3/4). Old bank recovery = re-ingest any prior package; nothing is ever deleted.
+2. **Question→spec-point mappings are first-class** (T-C18's ratified design): `question_spec_points` (role PRIMARY/SECONDARY, provenance + validation_state, AI_VALIDATED under the operator's 2026-09-17 delegation, upgradable to HUMAN_VALIDATED by review without re-import). Codes resolve against the official 182-point 4CH1 registry — 1,404/1,404 corpus parts coded, all in-registry (verified A-gate).
+3. **Learner self-marking is first-class but κ-excluded** (complements ADR-025's "self-mark stays first-class"): the SME reveal-and-self-mark flow settles the caller's own structured attempt and fires the once-only evidence exactly like the teacher human-mark path (attempt-row lock, per-part bounds, conservative full-marks-equals-correct), but records in `learner_self_marks` — never `HumanMark` — so the F-161 κ agreement sample stays teacher-only by construction. Single-shot: settled attempts reject self-marks (409); the teacher override path remains authoritative.
+4. **Serving posture:** SME questions are born VALIDATED (operator delegation; the mapping cross-check 161/162 vs the human c10/c12 notes mappings is recorded in the corpus VALIDATION.md); the V20 paper gate and servability rules apply unchanged. `solutionMd` is SME's worked solution feeding the reveal/self-mark flows — NOT the official Pearson scheme; κ-grade marking still runs on teacher judgment (F-161 unchanged).
+5. **Migration numbering:** the surface lands as V30 — T-C06's V29__content_corpus_kinds landed on main after the branch was cut; two V29s cannot coexist under Flyway (the renumber is recorded in the migration header).
+
+Propagation obligations: the corpus packages are sha256-pinned (web release `sme-corpus-2026-09-18` + operator runbook download/s104-sme-import/); re-ingestion is idempotent-by-replace (re-runs deactivate+insert, same corpus version = same content). The revision-notes corpus (v2 package, union spec-map: c10 HUMAN_VALIDATED ∪ SME resolution) shares the full-replace semantics of the existing V27 surface — T-C06's IAL canonical-documents track is a separate path (documents/chunks, born-SUGGESTED) and is unaffected.
+
+**Scope guard:** igcse-chemistry-19 only; flashcards, IAL and the other 37 courses remain Cycle 2+ (ADR-014). The upload itself requires ADMIN (operator credential boundary — run 35348458620 verdict OPERATOR_BOUNDARY; no ADMIN secret exists in any repo).
+
+> [Session-112 reconciliation note] Originally recorded as ADR-025 on this lane's branch; renumbered ADR-027 at the merge because the canonical ADR-025 was independently taken by the operator's Smart Mark product-contract decision (`1304eaa`). No semantic change; references in the classroom lane's copy of the original ADR-025 file resolve to this ADR-027.
+## ADR-027: Teacher-marking-surface scoping — classroom-authorization visibility; independent learners teacher-invisible
 
 **Status:** Accepted
 **Date:** 2026-09-20
@@ -326,6 +356,6 @@ The teacher marking surface (T-029 queue, throughput metrics, Run-Smart-Mark bat
 
 Teacher marking is NEVER a blocking step for an independent learner: their flow is self-mark (View Answer mark-scheme reveal) or Smart Mark, with evidence semantics unchanged and fail-closed (κ-gated, F-161); an answer remaining SMART_MARKED indefinitely is a correct terminal state, not a stuck one. Paired κ calibration decisions originate exclusively where a human marker holds authorization (classroom scope; today the pilot-staff runbook) — independent answers are never sampled for calibration and never need to be. Visibility is computed live from current enrollment + teacher class assignments (no snapshots): enrollment grants prospective visibility, un-enrollment revokes it, and append-only HumanMark history is never erased (honesty rule). Marking states, evidence contract, gate math, and T-029 acceptance criteria are all unchanged — this is a scoping decision, not a semantics change.
 
-The complete decision record is canonical in `ADR-025-TEACHER_MARKING_QUEUE_SCOPING.md` (standalone file remains the authority).
+The complete decision record is canonical in `ADR-027-TEACHER_MARKING_QUEUE_SCOPING.md` (standalone file remains the authority).
 
 **Scope guard:** decides WHO sees learner answers on teacher surfaces and WHEN teacher marking is required (classroom scope only, never for independent learners); does not design the Class entity, change marking states/gate math/evidence semantics, or expand Cycle-1. Conflicts re-open this ADR, not the implementation.

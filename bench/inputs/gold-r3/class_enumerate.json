@@ -1,0 +1,978 @@
+[
+ {
+  "id": "ENU-001",
+  "class": "enumerate_topic",
+  "query": "list all questions about elements, compounds and mixtures",
+  "gold_spec_points": [
+   "4CH1-S1-b"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-002",
+  "class": "enumerate_topic",
+  "query": "list all questions about metallic bonding",
+  "gold_spec_points": [
+   "4CH1-S1-h"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-003",
+  "class": "enumerate_topic",
+  "query": "list all questions about reversible reactions and equilibria",
+  "gold_spec_points": [
+   "4CH1-S3-c"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-004",
+  "class": "enumerate_topic",
+  "query": "list all questions about introduction",
+  "gold_spec_points": [
+   "4CH1-S4-a"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-005",
+  "class": "enumerate_topic",
+  "query": "list all questions about alkanes",
+  "gold_spec_points": [
+   "4CH1-S4-c"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-006",
+  "class": "enumerate_topic",
+  "query": "list all questions about crude oil",
+  "gold_spec_points": [
+   "4CH1-S4-b"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-007",
+  "class": "enumerate_topic",
+  "query": "list all questions about acids, bases and salt preparations",
+  "gold_spec_points": [
+   "4CH1-S2-g"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-008",
+  "class": "enumerate_topic",
+  "query": "list all questions about states of matter",
+  "gold_spec_points": [
+   "4CH1-S1-a"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-009",
+  "class": "enumerate_topic",
+  "query": "list all questions about the periodic table",
+  "gold_spec_points": [
+   "4CH1-S1-d"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-010",
+  "class": "enumerate_topic",
+  "query": "list all questions about carboxylic acids",
+  "gold_spec_points": [
+   "4CH1-S4-f"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-011",
+  "class": "enumerate_topic",
+  "query": "list all questions about group 7 (halogens) – chlorine, bromine and iodine",
+  "gold_spec_points": [
+   "4CH1-S2-b"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-012",
+  "class": "enumerate_topic",
+  "query": "list all questions about atomic structure",
+  "gold_spec_points": [
+   "4CH1-S1-c"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-013",
+  "class": "enumerate_topic",
+  "query": "list all questions about chemical formulae, equations and calculations",
+  "gold_spec_points": [
+   "4CH1-S1-e"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-014",
+  "class": "enumerate_topic",
+  "query": "list all questions about covalent bonding",
+  "gold_spec_points": [
+   "4CH1-S1-g"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-015",
+  "class": "enumerate_topic",
+  "query": "list all questions about rates of reaction",
+  "gold_spec_points": [
+   "4CH1-S3-b"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-016",
+  "class": "enumerate_topic",
+  "query": "list all questions about alcohols",
+  "gold_spec_points": [
+   "4CH1-S4-e"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-017",
+  "class": "enumerate_topic",
+  "query": "list all questions about synthetic polymers",
+  "gold_spec_points": [
+   "4CH1-S4-h"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-018",
+  "class": "enumerate_topic",
+  "query": "list all questions about gases in the atmosphere",
+  "gold_spec_points": [
+   "4CH1-S2-c"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-019",
+  "class": "enumerate_topic",
+  "query": "list all questions about acids, alkalis and titrations",
+  "gold_spec_points": [
+   "4CH1-S2-f"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-020",
+  "class": "enumerate_topic",
+  "query": "list all questions about ionic bonding",
+  "gold_spec_points": [
+   "4CH1-S1-f"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-021",
+  "class": "enumerate_topic",
+  "query": "list all questions about alkenes",
+  "gold_spec_points": [
+   "4CH1-S4-d"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-022",
+  "class": "enumerate_topic",
+  "query": "list all questions about extraction and uses of metals",
+  "gold_spec_points": [
+   "4CH1-S2-e"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-023",
+  "class": "enumerate_topic",
+  "query": "list all questions about chemical tests",
+  "gold_spec_points": [
+   "4CH1-S2-h"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-024",
+  "class": "enumerate_topic",
+  "query": "list all questions about energetics",
+  "gold_spec_points": [
+   "4CH1-S3-a"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-025",
+  "class": "enumerate_topic",
+  "query": "list all questions about electrolysis",
+  "gold_spec_points": [
+   "4CH1-S1-i"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-026",
+  "class": "enumerate_topic",
+  "query": "list all questions about esters",
+  "gold_spec_points": [
+   "4CH1-S4-g"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-027",
+  "class": "enumerate_topic",
+  "query": "list all questions about reactivity series",
+  "gold_spec_points": [
+   "4CH1-S2-d"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-028",
+  "class": "enumerate_topic",
+  "query": "list all questions about group 1 (alkali metals) – lithium, sodium and potassium",
+  "gold_spec_points": [
+   "4CH1-S2-a"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_topic",
+   "source": "question_topics full-range (year windows need gap 8.1 fixed: no year column)"
+  }
+ },
+ {
+  "id": "ENU-029",
+  "class": "enumerate_spec",
+  "query": "all questions for specification point 4CH1-4.36C",
+  "gold_spec_points": [
+   "4CH1-4.36C"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_spec",
+   "source": "question_spec_points group"
+  }
+ },
+ {
+  "id": "ENU-030",
+  "class": "enumerate_spec",
+  "query": "all questions for specification point 4CH1-2.36",
+  "gold_spec_points": [
+   "4CH1-2.36"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_spec",
+   "source": "question_spec_points group"
+  }
+ },
+ {
+  "id": "ENU-031",
+  "class": "enumerate_spec",
+  "query": "all questions for specification point 4CH1-4.27",
+  "gold_spec_points": [
+   "4CH1-4.27"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_spec",
+   "source": "question_spec_points group"
+  }
+ },
+ {
+  "id": "ENU-032",
+  "class": "enumerate_spec",
+  "query": "all questions for specification point 4CH1-1.15",
+  "gold_spec_points": [
+   "4CH1-1.15"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_spec",
+   "source": "question_spec_points group"
+  }
+ },
+ {
+  "id": "ENU-033",
+  "class": "enumerate_spec",
+  "query": "all questions for specification point 4CH1-2.48",
+  "gold_spec_points": [
+   "4CH1-2.48"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_spec",
+   "source": "question_spec_points group"
+  }
+ },
+ {
+  "id": "ENU-034",
+  "class": "enumerate_spec",
+  "query": "all questions for specification point 4CH1-1.46",
+  "gold_spec_points": [
+   "4CH1-1.46"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_spec",
+   "source": "question_spec_points group"
+  }
+ },
+ {
+  "id": "ENU-035",
+  "class": "enumerate_spec",
+  "query": "all questions for specification point 4CH1-2.25C",
+  "gold_spec_points": [
+   "4CH1-2.25C"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_spec",
+   "source": "question_spec_points group"
+  }
+ },
+ {
+  "id": "ENU-036",
+  "class": "enumerate_spec",
+  "query": "all questions for specification point 4CH1-4.46",
+  "gold_spec_points": [
+   "4CH1-4.46"
+  ],
+  "gold_evidence": [],
+  "substrate": "bank_rows",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_spec",
+   "source": "question_spec_points group"
+  }
+ },
+ {
+  "id": "ENU-037",
+  "class": "enumerate_paper",
+  "query": "every question in the January 2014 2014 paper 4CH0/2C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:0",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:1",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:2",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:3",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:4",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:5",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:6",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:7",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:8",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:9",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:10",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:0",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:1",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:2",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:3",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:4",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:5",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:6",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:7",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:8",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:9",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "20d8089be2451db7b6088e09cb83fea740d0168b46fb41121536f4559da62789:10",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_paper",
+   "source": "whole-paper question list (bank rows, active-policy agnostic)"
+  }
+ },
+ {
+  "id": "ENU-038",
+  "class": "enumerate_paper",
+  "query": "every question in the January 2016 2016 paper 4CH0/2C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:0",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:1",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:2",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:3",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:4",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:5",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:6",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:7",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:8",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:9",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:10",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:0",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:1",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:2",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:3",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:4",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:5",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:6",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:7",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:8",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:9",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:10",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_paper",
+   "source": "whole-paper question list (bank rows, active-policy agnostic)"
+  }
+ },
+ {
+  "id": "ENU-039",
+  "class": "enumerate_paper",
+  "query": "every question in the Specimen 2017 2017 paper 4CH1/2C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:0",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:1",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:2",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:3",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:4",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:5",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:6",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:7",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:8",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:9",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:10",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:11",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:0",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:1",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:3",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:4",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:5",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:6",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:7",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_paper",
+   "source": "whole-paper question list (bank rows, active-policy agnostic)"
+  }
+ },
+ {
+  "id": "ENU-040",
+  "class": "enumerate_paper",
+  "query": "every question in the January 2021 2021 paper 4CH1/2C",
+  "gold_spec_points": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:0",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:1",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:2",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:3",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:4",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:5",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:6",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:7",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:8",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329:9",
+    "tier": 2,
+    "rule": "whole_paper_qp"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:0",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:1",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:2",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:3",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:4",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:5",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:6",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:7",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:8",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   },
+   {
+    "chunk_ref": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5:9",
+    "tier": 1,
+    "rule": "whole_paper_ms"
+   }
+  ],
+  "substrate": "paper_chunks",
+  "provenance": {
+   "rule": "gsv1-compile:enumerate_paper",
+   "source": "whole-paper question list (bank rows, active-policy agnostic)"
+  }
+ }
+]

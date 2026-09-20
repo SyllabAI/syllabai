@@ -1,0 +1,96 @@
+name: ops-run005-c-r3
+
+# Run 005 — arm C hybrid replay (T-C13), R3 generation (snap-001 + gold-v1 from
+# the R3 golden-set catalog, 2026-09-20). Benchmark-only; never on push/PR.
+# Drives the PRODUCTION retrieval fabric orchestrator (RetrievalFabric: explicit
+# arms [pgvector, bm25], central BoundaryPolicy, shipped ReciprocalRankFusion
+# k=60) over the frozen R3 embedding artifact (embed-backfill-snap-001:
+# 2333/2333 chunks + 120 gold queries, gemini-embedding-001@768, CI run
+# 35509284803) on a disposable pgvector service container. ZERO API calls at run
+# time — compute-once-freeze-forever. Dual view: served (production truth, ALL
+# denominator — the §8 gate target, ruling 1) + compliant (central VALIDATED gate
+# pre-fusion, zero-violation by construction, hard-fails on any leak). Fail-closed
+# artifact verification against the exact frozen snapshot/gold inputs; double-pass
+# determinism.
+# Output: results.json + RUN_REPORT.md + SHA256SUMS (uploaded artifact).
+# R3 delta vs run-005-c (2026-09-17): -r3 input paths; BENCH_RUN003B_RESULTS /
+# BENCH_RUN004A_RESULTS point at the R3 run dirs committed before this dispatch;
+# BENCH_RUN002A0_RESULTS deliberately unset — arm A0's premise (0/2333 embedded)
+# is stale for the R3 generation and its role as the before-picture is carried by
+# the live rev1 baseline (Task 27, baseline_armA_rev1.json); overallOf marks the
+# absent context honestly as UNAVAILABLE.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run005c:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: bench
+          POSTGRES_PASSWORD: bench
+          POSTGRES_DB: postgres
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U bench"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - name: Checkout records repo (frozen inputs + artifact + prior runs)
+        uses: actions/checkout@v4
+        with:
+          path: records
+
+      - name: Checkout core (harness, pinned sha)
+        uses: actions/checkout@v4
+        with:
+          repository: SyllabAI/syllabai-core
+          ref: c05efb98355ada8a3328c2781148072b556c8c24
+          path: core
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Cache Maven repo
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: run005c-r3-m2-${{ hashFiles('core/pom.xml') }}
+          restore-keys: run005c-r3-m2-
+
+      - name: Build classpath
+        working-directory: core
+        run: mvn -B -ntp -q test-compile dependency:build-classpath -Dmdep.outputFile=../cp.txt
+
+      - name: Run arm C hybrid replay (zero API calls)
+        working-directory: core
+        env:
+          BENCH_JDBC_URL: jdbc:postgresql://localhost:5433/postgres
+          BENCH_JDBC_USER: bench
+          BENCH_JDBC_PASSWORD: bench
+          BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot-r3
+          BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold-r3
+          BENCH_EMBED_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload-r3
+          BENCH_RUN_OUT: ${{ github.workspace }}/run005c-out
+          BENCH_RUN003B_RESULTS: ${{ github.workspace }}/records/evidence/bench-001/runs/run-003-b-r3/results.json
+          BENCH_RUN004A_RESULTS: ${{ github.workspace }}/records/evidence/bench-001/runs/run-004-a-r3/results.json
+          BENCH_CORE_COMMIT: c05efb98355ada8a3328c2781148072b556c8c24
+          BENCH_RUN_DATE: "2026-09-20"
+        run: java -Xmx3g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.Run005C
+
+      - name: Upload run record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-005-c-r3
+          path: run005c-out/
+          retention-days: 90
