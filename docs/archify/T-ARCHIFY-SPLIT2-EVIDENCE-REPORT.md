@@ -158,7 +158,4 @@ COMMITS
 - (this round) tc17-rec: docs(archify) — two HTMLs, two IR sources, evidence
   report, tools sidecars, ARCHIFY_INTEGRATION.md §8 + file table, first
   archify session entries in PROGRESS.md/WORKLOG.md.
-- Note: "syllaabi" typo guard — the assessment sidecar filename in this
-  repo is syllabai-assessment-marking.visual-check.json (correct spelling
-  on disk).
 ```
