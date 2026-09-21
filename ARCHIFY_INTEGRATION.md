@@ -97,6 +97,13 @@ Key rules baked into this workflow:
 | `docs/archify/tools/manual-browser-evidence.json` | Containment measurements from the manual run |
 | `docs/archify/tools/visual_evidence_split.py` | Manual browser-evidence script for the split diagrams |
 | `docs/archify/tools/split-manual-browser-evidence.json` | Containment + DOM spot checks for both split diagrams |
+| `docs/archify/syllabai-assessment-marking.archify.json` | Archify IR — assessment & marking split (showcase) |
+| `docs/archify/syllabai-assessment-marking.html` | Delivered assessment & marking HTML (showcase quality) |
+| `docs/archify/syllabai-ingestion-pipeline.archify.json` | Archify IR — ingestion & content-pipeline split (showcase) |
+| `docs/archify/syllabai-ingestion-pipeline.html` | Delivered ingestion HTML (showcase quality) |
+| `docs/archify/T-ARCHIFY-SPLIT2-EVIDENCE-REPORT.md` | Evidence report for the round-2 subsystem diagrams |
+| `docs/archify/tools/visual_evidence_round2.py` | Manual browser-evidence script for the round-2 diagrams |
+| `docs/archify/tools/round2-manual-browser-evidence.json` | Containment + DOM spot checks for both round-2 diagrams |
 
 ## 5. Browser evidence status (honest record)
 
@@ -161,3 +168,61 @@ verified at the pin): learning loop — spec `64d13a3d…` (11,625 B) → artifa
 (`tools/split-manual-browser-evidence.json`, `tools/visual_evidence_split.py`):
 zero horizontal overflow at 1440/1600/1920/2048; screenshots perceptually
 reviewed — all nodes, regions, status chips, guided views and cards render.
+
+## 8. Round-2 subsystem diagrams (2026-09-22, showcase)
+
+The split continued with the two remaining core subsystems. Same pin
+(`syllabai-core @ 14b5e3d…`), same status vocabulary, same evidence workflow.
+Together with §7 the four subsystem diagrams now cover every implemented
+region of the overview (tutor/CLA live inside the retrieval diagram; the
+Local Intelligence Layer stays a PROPOSED note on the overview only):
+
+3. **Assessment & marking** (`syllabai-assessment-marking.html`) — 12 nodes:
+   teacher web surface (cross-repo text-cited) → marking API
+   (`/api/v1/teacher/marking`, queue-v2, smart-mark-batch) → marking queue
+   service (paper-grouped, idempotent SKIP, **pilot-scope mode per ADR-027**) →
+   Smart Mark engine (VALIDATED-only G-2, honest `SCHEME_NOT_VALIDATED` refusal,
+   prompt v2) → LLM failover chain (groq → gemini → openrouter). The κ
+   agreement gate sits center as a security node fed by BOTH the human marks
+   (`perPointDecisions {mp: 0|1}`) and the validation-passed smart breakdowns;
+   its pass (`κ ≥ 0.60`, threshold recorded per row) releases Smart Mark. The
+   first authoritative human mark fires learning evidence exactly once
+   (DECISION_016 — overrides revise, never re-fire). Scheme validation paths
+   (teacher content review validate/reject/flag; SME packages that arrive
+   VALIDATED) feed the question bank. Cards carry the fail-closed invariants
+   (V34), release & evidence rules, and the ADR-027 scope honesty.
+4. **Ingestion & content pipeline** (`syllabai-ingestion-pipeline.html`) —
+   12 nodes: past-papers corpus (source data) → parser (pdflane, engine 1.1.1,
+   cross-repo text-cited) → the T-C02 GlmOcr bridge (one pair, one transaction,
+   bridge records keep everything) feeding paper ingestion (T-011, everything
+   lands SUGGESTED + UNVALIDATED anchor topic) and content ingestion (T-013,
+   validate → checksum dedup → JSONB → deterministic chunks, never embeds).
+   The curriculum bridge (T-010) writes canonical truth: a red security group
+   wraps the Educational KG + Curriculum truth nodes ("runtime surfaces never
+   write"). Teacher content review is the only promotion path
+   (validate / reject / flag); SME packages arrive VALIDATED because a human
+   authored them. The pgvector semantic lane stays dashed PREPARED · UNVERIFIED
+   with `/embed` re-runnable and the content lane honestly tagged
+   "ingestion paused" (pending Embedding v2; V33 identity mirror in path).
+
+Delivery receipts (showcase, 9/9 checks, 0 errors, 0 warnings, evidence
+verified at the pin): assessment & marking — spec `83a212ba…` (15,033 B) →
+artifact `fe5ca322…` (828,187 B, 25 source references); ingestion — spec
+`2d0a4a15…` (15,270 B) → artifact `4f2b0341…` (829,354 B, 27 source
+references).
+
+Browser evidence this round is MIXED and recorded as such: the packaged
+`visual-check` COMPLETED for the ingestion artifact (browser worked) and its
+only diagnostics are `viewer/viewport-overflow` with `overflowY: true` —
+`overflowX` is false at every viewport/theme; the vertical flow is the
+conclusion cards, the same first-screen shape as the overview and §7
+diagrams (cards are necessary content; horizontal containment is exact).
+Status `fail` is recorded, not suppressed. For the assessment artifact the
+same command stayed environmentally unstable (Runtime.evaluate 15000 ms
+timeout twice, then `Page.captureScreenshot` failure) — sidecar
+`syllabai-assessment-marking.visual-check.json` records the last attempt.
+Manual Playwright evidence (`tools/round2-manual-browser-evidence.json`,
+`tools/visual_evidence_round2.py`): horizontal containment exact at
+1440/1600/1920/2048 on both diagrams; every needle label found; all four
+guided-view chips render per diagram; screenshots perceptually reviewed
+(light via Playwright, dark via the ingestion visual-check capture).

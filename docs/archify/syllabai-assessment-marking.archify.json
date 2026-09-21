@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SyllabAI — Assessment & Marking (source-backed)",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1130,
+      600
+    ],
+    "repository": {
+      "url": "https://github.com/SyllabAI/syllabai-core",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+    },
+    "views": [
+      {
+        "id": "marking-flow",
+        "label": "Human marking flow",
+        "focus": [
+          "teacher_web",
+          "marking_api",
+          "marking_queue",
+          "human_mark",
+          "evidence"
+        ],
+        "note": "One authoritative human mark: queue → record → evidence fires exactly once."
+      },
+      {
+        "id": "smart-mark-gate",
+        "label": "Smart Mark & κ gate",
+        "focus": [
+          "marking_queue",
+          "smartmark",
+          "llm_chain",
+          "kappa_gate",
+          "release"
+        ],
+        "note": "Batch Smart Mark: VALIDATED-only, prompt v2, κ agreement decides release."
+      },
+      {
+        "id": "scheme-validation",
+        "label": "Scheme validation",
+        "focus": [
+          "scheme_review",
+          "sme_ingest",
+          "assessment",
+          "smartmark"
+        ],
+        "note": "Two promotion paths into the bank; only VALIDATED schemes back marking."
+      },
+      {
+        "id": "release-rules",
+        "label": "Release rules",
+        "focus": [
+          "kappa_gate",
+          "release",
+          "human_mark",
+          "evidence"
+        ],
+        "note": "Human marks always visible; AI marks only after the gate; evidence fail-closed."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "teacher_web",
+      "type": "frontend",
+      "label": "syllabai-web — Teacher",
+      "sublabel": "marking queue v2 · test builder",
+      "tag": "IMPLEMENTED · cross-repo",
+      "pos": [
+        20,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ]
+    },
+    {
+      "id": "marking_api",
+      "type": "backend",
+      "label": "Teacher marking API",
+      "sublabel": "/api/v1/teacher/marking",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        250,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
+          "line": 44,
+          "label": "marking routes"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
+          "line": 104,
+          "label": "queue-v2"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
+          "line": 133,
+          "label": "smart-mark-batch"
+        }
+      ]
+    },
+    {
+      "id": "marking_queue",
+      "type": "backend",
+      "label": "Marking queue service",
+      "sublabel": "paper-grouped · idempotent SKIP",
+      "tag": "IMPLEMENTED · pilot-scope (ADR-027)",
+      "pos": [
+        480,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
+          "line": 49,
+          "label": "queue service"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
+          "line": 84,
+          "label": "markingQueue"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
+          "line": 240,
+          "label": "smartMarkBatch"
+        }
+      ]
+    },
+    {
+      "id": "smartmark",
+      "type": "backend",
+      "label": "Smart Mark engine",
+      "sublabel": "per-part pipeline · prompt v2",
+      "tag": "IMPLEMENTED · VALIDATED-only (G-2)",
+      "pos": [
+        710,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
+          "line": 41,
+          "label": "Smart Mark engine"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
+          "line": 106,
+          "label": "VALIDATED-only selection"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
+          "line": 185,
+          "label": "honest refusal row"
+        }
+      ]
+    },
+    {
+      "id": "llm_chain",
+      "type": "external",
+      "label": "LLM failover chain",
+      "sublabel": "groq → gemini → openrouter",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        940,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/infrastructure/llm/LlmChainProperties.java",
+          "line": 64,
+          "label": "provider order"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/LlmMarkingCandidateGenerator.java",
+          "line": 58,
+          "label": "chain.generate"
+        }
+      ]
+    },
+    {
+      "id": "human_mark",
+      "type": "backend",
+      "label": "Authoritative human marks",
+      "sublabel": "bounded award · perPointDecisions",
+      "tag": "IMPLEMENTED · append-only",
+      "pos": [
+        20,
+        280
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingService.java",
+          "line": 85,
+          "label": "recordHumanMark"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/HumanMark.java",
+          "line": 45,
+          "label": "perPointDecisions jsonb"
+        }
+      ]
+    },
+    {
+      "id": "kappa_gate",
+      "type": "security",
+      "label": "κ agreement gate (F-161)",
+      "sublabel": "cohenKappa · threshold per row",
+      "tag": "IMPLEMENTED · fail-closed",
+      "pos": [
+        480,
+        280
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/smartmark/KappaAgreementService.java",
+          "line": 22,
+          "label": "cohenKappa"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkAgreementEvaluation.java",
+          "line": 23,
+          "label": "threshold 0.60"
+        }
+      ]
+    },
+    {
+      "id": "release",
+      "type": "backend",
+      "label": "Smart Mark release",
+      "sublabel": "AI marks only after the gate",
+      "tag": "IMPLEMENTED · κ-gated",
+      "pos": [
+        250,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
+          "line": 136,
+          "label": "authoritative after gate"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/StudentSmartMarkService.java",
+          "line": 95,
+          "label": "reveal policy"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "type": "messagebus",
+      "label": "Learning evidence",
+      "sublabel": "AssessmentEvidenceRecordedEvent",
+      "tag": "IMPLEMENTED · fires once",
+      "pos": [
+        20,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java",
+          "line": 46,
+          "label": "publishGraded once"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingService.java",
+          "line": 110,
+          "label": "override never re-fires"
+        }
+      ]
+    },
+    {
+      "id": "scheme_review",
+      "type": "backend",
+      "label": "Teacher content review",
+      "sublabel": "validate · reject · flag schemes",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        480,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/ContentReviewService.java",
+          "line": 243,
+          "label": "scheme.validate"
+        },
+        {
+          "path": "src/main/java/com/syllabai/assessment/MarkScheme.java",
+          "line": 125,
+          "label": "flagged never backs"
+        }
+      ]
+    },
+    {
+      "id": "assessment",
+      "type": "backend",
+      "label": "Question bank & schemes",
+      "sublabel": "marking lifecycle · scheme states",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        710,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/assessment/Answer.java",
+          "line": 34,
+          "label": "MarkingState lifecycle"
+        },
+        {
+          "path": "src/main/java/com/syllabai/assessment/MarkScheme.java",
+          "line": 32,
+          "label": "ValidationState"
+        }
+      ]
+    },
+    {
+      "id": "sme_ingest",
+      "type": "backend",
+      "label": "SME package ingest",
+      "sublabel": "questions + spec points + schemes",
+      "tag": "IMPLEMENTED · arrives VALIDATED",
+      "pos": [
+        940,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
+          "line": 111,
+          "label": "package ingest"
+        },
+        {
+          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
+          "line": 165,
+          "label": "schemes VALIDATED"
+        }
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "syllabai-core @ 14b5e3d — marking fabric",
+      "wraps": [
+        "marking_api",
+        "marking_queue",
+        "smartmark",
+        "human_mark",
+        "kappa_gate",
+        "release",
+        "evidence",
+        "scheme_review",
+        "assessment",
+        "sme_ingest"
+      ],
+      "pad": 20
+    }
+  ],
+  "connections": [
+    {
+      "id": "tw-to-api",
+      "from": "teacher_web",
+      "to": "marking_api",
+      "label": "HTTPS",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "api-to-queue",
+      "from": "marking_api",
+      "to": "marking_queue",
+      "label": "queue-v2",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -29
+    },
+    {
+      "id": "queue-to-smartmark",
+      "from": "marking_queue",
+      "to": "smartmark",
+      "label": "batch",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -29
+    },
+    {
+      "id": "smartmark-to-llm",
+      "from": "smartmark",
+      "to": "llm_chain",
+      "label": "prompt v2",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -29
+    },
+    {
+      "id": "api-to-human",
+      "from": "marking_api",
+      "to": "human_mark",
+      "label": "human-mark",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        220,
+        208
+      ]
+    },
+    {
+      "id": "human-to-evidence",
+      "from": "human_mark",
+      "to": "evidence",
+      "label": "fires once · DECISION_016",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        105,
+        412
+      ]
+    },
+    {
+      "id": "human-to-kappa",
+      "from": "human_mark",
+      "to": "kappa_gate",
+      "label": "perPointDecisions { mp: 0|1 }",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [
+        335,
+        255
+      ]
+    },
+    {
+      "id": "smartmark-to-kappa",
+      "from": "smartmark",
+      "to": "kappa_gate",
+      "label": "breakdown",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        680,
+        215
+      ]
+    },
+    {
+      "id": "kappa-to-release",
+      "from": "kappa_gate",
+      "to": "release",
+      "label": "κ ≥ 0.60",
+      "variant": "security",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": -29,
+      "labelAt": [
+        450,
+        405
+      ]
+    },
+    {
+      "id": "bank-to-smartmark",
+      "from": "assessment",
+      "to": "smartmark",
+      "label": "VALIDATED only (G-2)",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelAt": [
+        795,
+        300
+      ]
+    },
+    {
+      "id": "review-to-bank",
+      "from": "scheme_review",
+      "to": "assessment",
+      "label": "validate / reject / flag",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -29,
+      "labelAt": [
+        680,
+        431
+      ]
+    },
+    {
+      "id": "sme-to-bank",
+      "from": "sme_ingest",
+      "to": "assessment",
+      "label": "arrives VALIDATED",
+      "fromSide": "left",
+      "toSide": "right",
+      "labelDy": -29,
+      "labelAt": [
+        870,
+        431
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "How to read status",
+      "items": [
+        "IMPLEMENTED nodes carry line-anchored sources verified at syllabai-core 14b5e3d",
+        "syllabai-web — Teacher is cross-repo text-cited (no pin-verified path from this diagram's repository pin)",
+        "Statuses use the project vocabulary; nothing here is upgraded beyond its evidence"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Fail-closed honesty (V34)",
+      "items": [
+        "Only a VALIDATED scheme backs marking (G-2) — anything else returns an honest SCHEME_NOT_VALIDATED row at zero LLM cost",
+        "A FLAGGED scheme never backs marking, from SUGGESTED or VALIDATED",
+        "SMART_MARKED stays provisional until the κ gate passes; the threshold is recorded per evaluation row",
+        "No κ value exists yet — the first real calibration is the operator's marking round"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Release & evidence rules",
+      "items": [
+        "Human marks are authoritative and always visible; AI marks reach learners only after κ ≥ 0.60 (default, per-row)",
+        "The first authoritative mark fires learning evidence exactly once (DECISION_016) — overrides revise marks, never re-fire evidence",
+        "Independent learners are never blocked by teacher marking (ADR-027 D2): self-mark or κ-gated Smart Mark, SMART_MARKED is a correct terminal state",
+        "Answer lifecycle: PENDING → SMART_MARKED (provisional) → HUMAN_MARKED (authoritative); SELF_MARKED / OVERRIDDEN on the same lifecycle"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Scope honesty (ADR-027)",
+      "items": [
+        "The queue currently reads globally in documented pilot-scope mode (the ADR-015 shortcut)",
+        "The classroom lane must ship enrollment-scoped reads in the same milestone — a global read behind a live authorization model is a defect, not a cleanup item",
+        "κ calibration samples originate only where a human marker holds authorization (D3); no new teacher accounts until then"
+      ]
+    }
+  ]
+}

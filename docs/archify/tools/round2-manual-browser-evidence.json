@@ -1,0 +1,133 @@
+{
+  "assessment-marking": {
+    "containment": [
+      {
+        "viewport": "1440x900",
+        "ok": false,
+        "sw": 1440,
+        "iw": 1440,
+        "sh": 1368,
+        "ih": 900
+      },
+      {
+        "viewport": "1600x1000",
+        "ok": false,
+        "sw": 1600,
+        "iw": 1600,
+        "sh": 1450,
+        "ih": 1000
+      },
+      {
+        "viewport": "1920x1080",
+        "ok": false,
+        "sw": 1920,
+        "iw": 1920,
+        "sh": 1450,
+        "ih": 1080
+      },
+      {
+        "viewport": "2048x1320",
+        "ok": true,
+        "sw": 2048,
+        "iw": 2048,
+        "sh": 1320,
+        "ih": 1320
+      }
+    ],
+    "dom_checks": {
+      "svg_text_count": 60,
+      "needles_found": {
+        "Assessment & Marking (source-backed)": true,
+        "Teacher marking API": true,
+        "Marking queue service": true,
+        "Smart Mark engine": true,
+        "LLM failover chain": true,
+        "Authoritative human marks": true,
+        "agreement gate": true,
+        "Smart Mark release": true,
+        "Learning evidence": true,
+        "Teacher content review": true,
+        "Question bank": true,
+        "SME package ingest": true,
+        "pilot-scope": true,
+        "VALIDATED-only": true
+      },
+      "view_buttons": [
+        "Human marking flow",
+        "Smart Mark & \u03ba gate",
+        "Scheme validation",
+        "Release rules"
+      ]
+    },
+    "shots": [
+      "/home/z/my-project/download/archify-shots2/assessment-marking-1440x900.png",
+      "/home/z/my-project/download/archify-shots2/assessment-marking-1920x1080.png"
+    ]
+  },
+  "ingestion-pipeline": {
+    "containment": [
+      {
+        "viewport": "1440x900",
+        "ok": false,
+        "sw": 1440,
+        "iw": 1440,
+        "sh": 1368,
+        "ih": 900
+      },
+      {
+        "viewport": "1600x1000",
+        "ok": false,
+        "sw": 1600,
+        "iw": 1600,
+        "sh": 1450,
+        "ih": 1000
+      },
+      {
+        "viewport": "1920x1080",
+        "ok": false,
+        "sw": 1920,
+        "iw": 1920,
+        "sh": 1450,
+        "ih": 1080
+      },
+      {
+        "viewport": "2048x1320",
+        "ok": false,
+        "sw": 2048,
+        "iw": 2048,
+        "sh": 1489,
+        "ih": 1320
+      }
+    ],
+    "dom_checks": {
+      "svg_text_count": 59,
+      "needles_found": {
+        "Ingestion & Content Pipeline (source-backed)": true,
+        "Past-papers corpus": true,
+        "syllabai-parser": true,
+        "GlmOcr bridge": true,
+        "Curriculum bridge": true,
+        "Paper ingestion": true,
+        "Question bank": true,
+        "Educational KG": true,
+        "Curriculum truth": true,
+        "SME package ingest": true,
+        "Teacher content review": true,
+        "Content corpus": true,
+        "pgvector semantic lane": true,
+        "ingestion paused": true,
+        "PREPARED": true
+      },
+      "view_buttons": [
+        "Main ingest flow",
+        "Canonical truth",
+        "Validation & promotion",
+        "Paused lane"
+      ]
+    },
+    "shots": [
+      "/home/z/my-project/download/archify-shots2/ingestion-pipeline-1440x900.png",
+      "/home/z/my-project/download/archify-shots2/ingestion-pipeline-1920x1080.png"
+    ]
+  }
+}
