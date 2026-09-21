@@ -130,7 +130,7 @@ def swap_key(key):
 
 
 def deploy_and_wait(timeout_s=900):
-    dep = render("POST", f"services/{SERVICE}/deploys", {"clearCache": "DO_NOT_CLEAR"})
+    dep = render("POST", f"services/{SERVICE}/deploys", {"clearCache": "do_not_clear"})
     dep_id = dep.get("id") or dep.get("deploy", {}).get("id")
     print(f"  deploy {dep_id} requested", flush=True)
     t0 = time.time()
