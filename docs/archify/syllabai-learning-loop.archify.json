@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SyllabAI — Learning Loop (source-backed)",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "viewBox": [1130, 580],
+    "repository": {
+      "url": "https://github.com/SyllabAI/syllabai-core",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+    },
+    "views": [
+      {
+        "id": "main-loop",
+        "label": "Main loop",
+        "focus": [
+          "learner_web",
+          "interaction_api",
+          "assessment_smartmark",
+          "kappa_gate",
+          "evidence",
+          "learner_model",
+          "patterns",
+          "remediation",
+          "recommendation",
+          "next_action"
+        ],
+        "note": "Interaction → Smart Mark → κ gate → evidence → model → patterns → remediation → next action."
+      },
+      {
+        "id": "gated-release",
+        "label": "Gated release",
+        "focus": [
+          "assessment_smartmark",
+          "kappa_gate",
+          "evidence",
+          "learner_model"
+        ],
+        "note": "Human marks always publish; AI marks only after κ ≥ 0.60."
+      },
+      {
+        "id": "truth-anchors",
+        "label": "Truth anchors",
+        "focus": [
+          "curriculum",
+          "learner_model",
+          "recommendation"
+        ],
+        "note": "Curriculum is canonical; learner state overlays; NBA reads the overlay plus canonical concept graph."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "learner_web",
+      "type": "frontend",
+      "label": "Learner interaction (web)",
+      "sublabel": "Practice · Tutor chat · Next actions",
+      "tag": "IMPLEMENTED · cross-repo",
+      "pos": [20, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "interaction_api",
+      "type": "backend",
+      "label": "Interaction capture",
+      "sublabel": "/attempts · /tutor · engagement",
+      "tag": "IMPLEMENTED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/assessment/AttemptController.java", "line": 24, "label": "attempts API" },
+        { "path": "src/main/java/com/syllabai/tutor/TutorController.java", "line": 21, "label": "tutor API" },
+        { "path": "src/main/java/com/syllabai/learner/TutorEngagementRecorder.java", "line": 32, "label": "engagement recorder" }
+      ],
+      "pos": [250, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "assessment_smartmark",
+      "type": "backend",
+      "label": "Assessment & Smart Mark",
+      "sublabel": "attempts · parts · per-part pipeline",
+      "tag": "IMPLEMENTED · κ-gated release",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/assessment/Answer.java", "line": 32, "label": "answer + marking state" },
+        { "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java", "line": 84, "label": "markAnswer" },
+        { "path": "src/main/java/com/syllabai/smartmark/SmartMarkPipeline.java", "line": 57, "label": "pipeline run" }
+      ],
+      "pos": [480, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "kappa_gate",
+      "type": "security",
+      "label": "κ agreement gate (F-161)",
+      "sublabel": "κ ≥ 0.60 · fail-closed",
+      "tag": "IMPLEMENTED · gate closed",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/smartmark/KappaAgreementService.java", "line": 22, "label": "cohenKappa" },
+        { "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java", "line": 207, "label": "kappaGatePassed" }
+      ],
+      "pos": [710, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "evidence",
+      "type": "messagebus",
+      "label": "Learning evidence",
+      "sublabel": "first authoritative mark · once",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java", "line": 46, "label": "publishGraded" },
+        { "path": "src/main/java/com/syllabai/shared/events/AssessmentEvidenceRecordedEvent.java", "line": 36, "label": "evidence event" }
+      ],
+      "pos": [940, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "learner_model",
+      "type": "backend",
+      "label": "Governed learner model",
+      "sublabel": "BKT mastery · BDT · fluency",
+      "tag": "IMPLEMENTED · overlay only",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/learner/LearnerModelService.java", "line": 72, "label": "onAssessmentEvidence" },
+        { "path": "src/main/java/com/syllabai/learner/bkt/BktEngine.java", "line": 36, "label": "BKT update" }
+      ],
+      "pos": [940, 270],
+      "size": [170, 70]
+    },
+    {
+      "id": "patterns",
+      "type": "backend",
+      "label": "Learner patterns",
+      "sublabel": "struggle rules v0.2 · 7-day expiry",
+      "tag": "IMPLEMENTED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/diagnostic/StruggleInferenceService.java", "line": 54, "label": "evidence listener" },
+        { "path": "src/main/java/com/syllabai/diagnostic/StruggleInferenceService.java", "line": 38, "label": "rules-v0.2" }
+      ],
+      "pos": [710, 270],
+      "size": [170, 70]
+    },
+    {
+      "id": "remediation",
+      "type": "backend",
+      "label": "Remediation policy",
+      "sublabel": "plans in tutor/CLA context",
+      "tag": "IMPLEMENTED · run ledger not wired",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/TutorPolicyService.java", "line": 55, "label": "select plan" },
+        { "path": "src/main/java/com/syllabai/tutor/TutorPolicyService.java", "line": 97, "label": "InterventionType" },
+        { "path": "src/main/java/com/syllabai/intervention/InterventionRunService.java", "line": 38, "label": "run ledger" }
+      ],
+      "pos": [480, 270],
+      "size": [170, 70]
+    },
+    {
+      "id": "recommendation",
+      "type": "backend",
+      "label": "Deterministic NBA",
+      "sublabel": "nba-rules/v1.3 · no LLM",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/recommendation/NextBestActionService.java", "line": 76, "label": "NBA service" },
+        { "path": "src/main/java/com/syllabai/recommendation/NextBestActionService.java", "line": 78, "label": "policy id" }
+      ],
+      "pos": [480, 460],
+      "size": [170, 70]
+    },
+    {
+      "id": "next_action",
+      "type": "backend",
+      "label": "Next learning action API",
+      "sublabel": "GET /learners/me/recommendations",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/recommendation/LearnerRecommendationController.java", "line": 29, "label": "recommendations" }
+      ],
+      "pos": [250, 460],
+      "size": [170, 70]
+    },
+    {
+      "id": "curriculum",
+      "type": "database",
+      "label": "Curriculum & specification",
+      "sublabel": "canonical truth · versioned",
+      "tag": "IMPLEMENTED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java", "line": 46, "label": "scope resolver" },
+        { "path": "src/main/java/com/syllabai/curriculum/CurriculumController.java", "line": 21, "label": "curriculum API" }
+      ],
+      "pos": [710, 460],
+      "size": [170, 70]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "syllabai-core · Spring Boot — pinned at 14b5e3d",
+      "wraps": [
+        "interaction_api",
+        "assessment_smartmark",
+        "kappa_gate",
+        "evidence",
+        "learner_model",
+        "patterns",
+        "remediation",
+        "recommendation",
+        "next_action",
+        "curriculum"
+      ],
+      "pad": 20
+    }
+  ],
+  "connections": [
+    {
+      "from": "learner_web",
+      "to": "interaction_api",
+      "label": "HTTPS",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "from": "interaction_api",
+      "to": "assessment_smartmark",
+      "label": "attempts",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "from": "assessment_smartmark",
+      "to": "kappa_gate",
+      "label": "AI marks",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "from": "kappa_gate",
+      "to": "evidence",
+      "label": "gated",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "from": "assessment_smartmark",
+      "to": "evidence",
+      "label": "human marks · always authoritative",
+      "fromSide": "top",
+      "toSide": "top",
+      "via": [[565, 14], [1025, 14]],
+      "labelAt": [795, 14]
+    },
+    {
+      "from": "evidence",
+      "to": "learner_model",
+      "label": "evidence event",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 75
+    },
+    {
+      "from": "learner_model",
+      "to": "patterns",
+      "label": "post-update",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "patterns",
+      "to": "remediation",
+      "label": "inferences",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "learner_model",
+      "to": "recommendation",
+      "label": "mastery · review · decay",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "from": "curriculum",
+      "to": "recommendation",
+      "label": "concepts",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "recommendation",
+      "to": "next_action",
+      "label": "actions",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "next_action",
+      "to": "learner_web",
+      "label": "NextBestActionsCard",
+      "variant": "emphasis",
+      "fromSide": "left",
+      "toSide": "bottom"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "How to read status",
+      "items": [
+        "IMPLEMENTED = code exists in the pinned repository/commit; VERIFIED adds acceptance evidence from project records",
+        "sources[] = file:line verified at syllabai-core @ 14b5e3d via Archify evidence verification",
+        "gate closed / not wired / overlay only are explicit statuses — never read them as live capability"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Truth boundaries",
+      "items": [
+        "Curriculum & specification are canonical; the learner model only overlays them (skill states keyed to canonical nodes)",
+        "Raw tutor chat never updates mastery — only assessment evidence does, via the @Order(10) listener; patterns infer afterwards (@Order(100)) from the post-update model",
+        "Smart Mark never modifies curriculum truth; remediation plans are advisory context inside tutor/CLA answers",
+        "InterventionRunService (append-only run ledger) is implemented but has no producer wired today"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "κ gate (F-161 / F-047)",
+      "items": [
+        "AI (Smart Mark) marks reach learners only when per-paper κ ≥ 0.60 against human marks",
+        "Human marks are always authoritative — the top edge bypasses the gate by design (DECISION_016)",
+        "Fail-closed: no passing calibration on file, so the gate is closed today (G-4 calibration pending operator marking round)"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Cross-repo nodes",
+      "items": [
+        "Learner interaction surfaces live in syllabai-web @ bfc9850: PracticeView.tsx, TutorChatView.tsx, NextBestActionsCard.tsx",
+        "One repository per Archify diagram — this diagram pins syllabai-core, so web surfaces are text-cited here, not file:line verified"
+      ]
+    }
+  ]
+}

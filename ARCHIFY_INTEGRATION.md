@@ -87,9 +87,16 @@ Key rules baked into this workflow:
 |---|---|
 | `docs/archify/syllabai-architecture-overview.archify.json` | Archify IR (source of the diagram; author-editable) |
 | `docs/archify/syllabai-architecture-overview.html` | Delivered self-contained interactive HTML (do not edit; regenerate) |
+| `docs/archify/syllabai-learning-loop.archify.json` | Archify IR — learning-loop split (showcase) |
+| `docs/archify/syllabai-learning-loop.html` | Delivered learning-loop HTML (showcase quality) |
+| `docs/archify/syllabai-retrieval-architecture.archify.json` | Archify IR — retrieval/grounded-AI split (showcase) |
+| `docs/archify/syllabai-retrieval-architecture.html` | Delivered retrieval HTML (showcase quality) |
 | `docs/archify/T-ARCHIFY-EVIDENCE-REPORT.md` | Installation/validation/visual/evidence report for the first delivery |
+| `docs/archify/T-ARCHIFY-SPLIT-EVIDENCE-REPORT.md` | Evidence report for the two split subsystem diagrams |
 | `docs/archify/tools/visual_inspect.py` | Manual browser-evidence script (Playwright containment + screenshots) |
 | `docs/archify/tools/manual-browser-evidence.json` | Containment measurements from the manual run |
+| `docs/archify/tools/visual_evidence_split.py` | Manual browser-evidence script for the split diagrams |
+| `docs/archify/tools/split-manual-browser-evidence.json` | Containment + DOM spot checks for both split diagrams |
 
 ## 5. Browser evidence status (honest record)
 
@@ -115,3 +122,42 @@ The first overview intentionally carries 27 nodes (task bound: 15–30). At
 authored and delivered at `standard` quality (the profile intended for dense
 maps). Splitting into multiple diagrams remains the path to `showcase` if later
 desired (e.g. separate learning-loop and retrieval diagrams).
+
+## 7. Split subsystem diagrams (2026-09-21, showcase)
+
+The overview was split into two subsystem diagrams, authored and delivered at
+`showcase` quality — the path §6 anticipated. Both pin the same commit
+(`syllabai-core @ 14b5e3d…`) and reuse the status vocabulary and evidence
+verification workflow:
+
+1. **Learning loop** (`syllabai-learning-loop.html`) — 11 nodes: curriculum &
+   specification (canonical) → learner interaction (web + capture API) →
+   assessment & Smart Mark → κ agreement gate (security node, fail-closed) →
+   learning evidence (first authoritative mark, once) → governed learner model
+   (BKT/BDT overlay) → learner patterns (`rules-v0.2`, reads the post-update
+   model via `@Order(100)`) → remediation policy (plans inside tutor/CLA
+   context; run ledger implemented but not wired) → deterministic NBA
+   (`nba-rules/v1.3`) → next-action API → back to the web surfaces. The human
+   marks edge bypasses the κ gate by design (DECISION_016) and is drawn
+   explicitly.
+2. **Retrieval & grounded AI** (`syllabai-retrieval-architecture.html`) — 12
+   nodes: deterministic query understanding → curriculum scope resolution
+   (fail-closed T-C07) → serving hybrid arms (authoritative KG + pgvector
+   vector leg that degrades honestly to KG-only) → rank fusion (RRF k=60,
+   serving) → reranking (interface shipped, v0 no-op) → evidence selection/cap
+   → sufficiency gate (security node, deterministic refusal) → grounded
+   generation (KaRAG + CLA) → citation validation. A separate dashed region
+   holds what is built but NOT serving: the BM25 lexical arm and the
+   RetrievalFabric multi-arm orchestrator (zero consumers by design,
+   T-C13 benchmark-gated).
+
+Delivery receipts (showcase, 9/9 checks, 0 errors, 0 warnings, evidence
+verified at the pin): learning loop — spec `64d13a3d…` (11,625 B) → artifact
+`962bf8a5…` (825,188 B, 22 source references); retrieval — spec `60945d3e…`
+(12,120 B) → artifact `30a8d291…` (826,227 B, 23 source references).
+
+`visual-check` failed with the same environmental DevTools timeout (sidecars
+`*.visual-check.json` recorded per artifact). Manual Playwright evidence
+(`tools/split-manual-browser-evidence.json`, `tools/visual_evidence_split.py`):
+zero horizontal overflow at 1440/1600/1920/2048; screenshots perceptually
+reviewed — all nodes, regions, status chips, guided views and cards render.

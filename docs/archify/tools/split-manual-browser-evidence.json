@@ -1,0 +1,126 @@
+{
+  "learning-loop": {
+    "containment": [
+      {
+        "viewport": "1440x900",
+        "ok": false,
+        "sw": 1440,
+        "iw": 1440,
+        "sh": 1249,
+        "ih": 900
+      },
+      {
+        "viewport": "1600x1000",
+        "ok": false,
+        "sw": 1600,
+        "iw": 1600,
+        "sh": 1331,
+        "ih": 1000
+      },
+      {
+        "viewport": "1920x1080",
+        "ok": false,
+        "sw": 1920,
+        "iw": 1920,
+        "sh": 1331,
+        "ih": 1080
+      },
+      {
+        "viewport": "2048x1320",
+        "ok": true,
+        "sw": 2048,
+        "iw": 2048,
+        "sh": 1320,
+        "ih": 1320
+      }
+    ],
+    "dom_checks": {
+      "svg_text_count": 56,
+      "needles_found": {
+        "Learning Loop (source-backed)": true,
+        "assess": true,
+        "agreement gate": true,
+        "learner model": true,
+        "Struggle": false,
+        "Remediation": true,
+        "NBA": true,
+        "Next learning action": true,
+        "Curriculum & specification": true,
+        "human marks": true,
+        "IMPLEMENTED": true
+      },
+      "view_buttons": [
+        "Main loop",
+        "Gated release",
+        "Truth anchors"
+      ]
+    },
+    "shots": [
+      "/home/z/my-project/download/archify-shots/learning-loop-1440x900.png",
+      "/home/z/my-project/download/archify-shots/learning-loop-1920x1080.png"
+    ]
+  },
+  "retrieval": {
+    "containment": [
+      {
+        "viewport": "1440x900",
+        "ok": false,
+        "sw": 1440,
+        "iw": 1440,
+        "sh": 1399,
+        "ih": 900
+      },
+      {
+        "viewport": "1600x1000",
+        "ok": false,
+        "sw": 1600,
+        "iw": 1600,
+        "sh": 1481,
+        "ih": 1000
+      },
+      {
+        "viewport": "1920x1080",
+        "ok": false,
+        "sw": 1920,
+        "iw": 1920,
+        "sh": 1481,
+        "ih": 1080
+      },
+      {
+        "viewport": "2048x1320",
+        "ok": false,
+        "sw": 2048,
+        "iw": 2048,
+        "sh": 1537,
+        "ih": 1320
+      }
+    ],
+    "dom_checks": {
+      "svg_text_count": 60,
+      "needles_found": {
+        "Retrieval & Grounded AI (source-backed)": true,
+        "Curriculum resolution": true,
+        "Authoritative KG": true,
+        "Semantic vector leg": true,
+        "Rank fusion": true,
+        "Reranking": true,
+        "Evidence selection": true,
+        "Evidence sufficiency": true,
+        "Grounded AI": true,
+        "Citation validation": true,
+        "BM25": true,
+        "Multi-arm fabric": true
+      },
+      "view_buttons": [
+        "Serving path",
+        "Grounding & provenance",
+        "Prepared arms",
+        "Prepared arms"
+      ]
+    },
+    "shots": [
+      "/home/z/my-project/download/archify-shots/retrieval-1440x900.png",
+      "/home/z/my-project/download/archify-shots/retrieval-1920x1080.png"
+    ]
+  }
+}

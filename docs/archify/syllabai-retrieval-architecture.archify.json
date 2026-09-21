@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SyllabAI — Retrieval & Grounded AI (source-backed)",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "viewBox": [1130, 580],
+    "repository": {
+      "url": "https://github.com/SyllabAI/syllabai-core",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+    },
+    "views": [
+      {
+        "id": "serving-path",
+        "label": "Serving path",
+        "focus": [
+          "query_intent",
+          "scope_resolution",
+          "kg_retrieval",
+          "semantic",
+          "fusion",
+          "rerank",
+          "selection",
+          "sufficiency",
+          "grounded_ai",
+          "citations"
+        ],
+        "note": "Deterministic intent → scoped hybrid retrieval → rank fusion → cap → grounding gate → grounded generation → citations."
+      },
+      {
+        "id": "grounding-gate",
+        "label": "Grounding & provenance",
+        "focus": [
+          "selection",
+          "sufficiency",
+          "grounded_ai",
+          "citations"
+        ],
+        "note": "Empty evidence ⇒ deterministic refusal, no LLM call; every citation resolves from surviving evidence."
+      },
+      {
+        "id": "prepared-arms",
+        "label": "Prepared arms",
+        "focus": [
+          "lexical",
+          "fabric"
+        ],
+        "note": "Built, benchmark-gated, and intentionally not wired to serving."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "query_intent",
+      "type": "backend",
+      "label": "Query understanding",
+      "sublabel": "deterministic intent · no LLM",
+      "tag": "IMPLEMENTED · deterministic",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 89, "label": "ask()" },
+        { "path": "src/main/java/com/syllabai/retrieval/StructuredRetrievalQuery.java", "line": 38, "label": "normalized query" }
+      ],
+      "pos": [20, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "scope_resolution",
+      "type": "backend",
+      "label": "Curriculum resolution",
+      "sublabel": "active scope · fail-closed (T-C07)",
+      "tag": "IMPLEMENTED · fail-closed",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java", "line": 46, "label": "resolveActive" }
+      ],
+      "pos": [250, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "kg_retrieval",
+      "type": "backend",
+      "label": "Authoritative KG",
+      "sublabel": "canonical nodes · token match",
+      "tag": "IMPLEMENTED · SERVING",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/GraphKnowledgeRetriever.java", "line": 77, "label": "KG retrieve" },
+        { "path": "src/main/java/com/syllabai/knowledge/KnowledgeGraphService.java", "line": 25, "label": "KG service" },
+        { "path": "src/main/java/com/syllabai/retrieval/AuthoritativeKgRetrievalProvider.java", "line": 16, "label": "fabric arm" }
+      ],
+      "pos": [480, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "semantic",
+      "type": "backend",
+      "label": "Semantic vector leg",
+      "sublabel": "pgvector · cosine floor 0.15",
+      "tag": "IMPLEMENTED · degrades to KG-only",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/ContentVectorRetriever.java", "line": 45, "label": "vector retrieve" },
+        { "path": "src/main/java/com/syllabai/content/ContentRetrievalService.java", "line": 35, "label": "scoped search" }
+      ],
+      "pos": [710, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "fusion",
+      "type": "backend",
+      "label": "Rank fusion",
+      "sublabel": "RRF k=60 · rank-only",
+      "tag": "IMPLEMENTED · SERVING",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/ReciprocalRankFusion.java", "line": 22, "label": "fuse()" }
+      ],
+      "pos": [940, 80],
+      "size": [170, 70]
+    },
+    {
+      "id": "rerank",
+      "type": "backend",
+      "label": "Reranking",
+      "sublabel": "interface shipped · v0 no-op",
+      "tag": "IMPLEMENTED · no-op v0",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/EvidenceReranker.java", "line": 11, "label": "reranker port" },
+        { "path": "src/main/java/com/syllabai/tutor/NoReranker.java", "line": 17, "label": "NoReranker" }
+      ],
+      "pos": [940, 270],
+      "size": [170, 70]
+    },
+    {
+      "id": "selection",
+      "type": "backend",
+      "label": "Evidence selection",
+      "sublabel": "cap 6 · learner + knowledge brief",
+      "tag": "IMPLEMENTED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 118, "label": "rerank + cap" },
+        { "path": "src/main/java/com/syllabai/tutor/LearnerContextAssembler.java", "line": 37, "label": "assemble context" }
+      ],
+      "pos": [710, 270],
+      "size": [170, 70]
+    },
+    {
+      "id": "sufficiency",
+      "type": "security",
+      "label": "Evidence sufficiency",
+      "sublabel": "empty ⇒ deterministic refusal",
+      "tag": "IMPLEMENTED · fail-closed",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 126, "label": "grounding gate" },
+        { "path": "src/main/java/com/syllabai/retrieval/EvidenceRequirements.java", "line": 25, "label": "requirements" }
+      ],
+      "pos": [480, 270],
+      "size": [170, 70]
+    },
+    {
+      "id": "grounded_ai",
+      "type": "backend",
+      "label": "Grounded AI",
+      "sublabel": "KaRAG tutor + CLA · context-only",
+      "tag": "IMPLEMENTED · KaRAG UNVERIFIED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/GroundedTutorGenerator.java", "line": 37, "label": "generate" },
+        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 33, "label": "KaRAG service" },
+        { "path": "src/main/java/com/syllabai/cla/ClaService.java", "line": 86, "label": "CLA service" }
+      ],
+      "pos": [250, 270],
+      "size": [170, 70]
+    },
+    {
+      "id": "citations",
+      "type": "backend",
+      "label": "Citation validation",
+      "sublabel": "citations from surviving evidence",
+      "tag": "IMPLEMENTED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/tutor/SimpleCitationResolver.java", "line": 22, "label": "resolve citations" },
+        { "path": "src/main/java/com/syllabai/tutor/CitationResolver.java", "line": 29, "label": "citation record" }
+      ],
+      "pos": [20, 270],
+      "size": [170, 70]
+    },
+    {
+      "id": "lexical",
+      "type": "backend",
+      "label": "Lexical BM25 arm",
+      "sublabel": "V28 lexical column · provider",
+      "tag": "IMPLEMENTED · NOT SERVED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/retrieval/Bm25Retriever.java", "line": 45, "label": "lexical provider" }
+      ],
+      "pos": [480, 460],
+      "size": [170, 70]
+    },
+    {
+      "id": "fabric",
+      "type": "backend",
+      "label": "Multi-arm fabric",
+      "sublabel": "fusion + dedup + boundary policy",
+      "tag": "IMPLEMENTED · UNWIRED",
+      "sources": [
+        { "path": "src/main/java/com/syllabai/retrieval/RetrievalFabric.java", "line": 102, "label": "retrieve()" },
+        { "path": "src/main/java/com/syllabai/retrieval/BoundaryPolicy.java", "line": 29, "label": "boundary port" }
+      ],
+      "pos": [710, 460],
+      "size": [170, 70]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Serving hybrid — KaRAG tutor + CLA (pinned at 14b5e3d)",
+      "wraps": [
+        "query_intent",
+        "scope_resolution",
+        "kg_retrieval",
+        "semantic",
+        "fusion",
+        "rerank",
+        "selection",
+        "sufficiency",
+        "grounded_ai",
+        "citations"
+      ],
+      "pad": 20
+    },
+    {
+      "kind": "region",
+      "label": "Prepared · T-C13 benchmark-gated — no serving behavior",
+      "wraps": [
+        "lexical",
+        "fabric"
+      ],
+      "pad": 14
+    }
+  ],
+  "connections": [
+    {
+      "from": "query_intent",
+      "to": "scope_resolution",
+      "label": "query",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "from": "scope_resolution",
+      "to": "kg_retrieval",
+      "label": "scoped",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "from": "scope_resolution",
+      "to": "semantic",
+      "label": "scope-bound",
+      "fromSide": "top",
+      "toSide": "top",
+      "via": [[335, 14], [795, 14]],
+      "labelAt": [565, 14]
+    },
+    {
+      "from": "kg_retrieval",
+      "to": "fusion",
+      "label": "KG evidence",
+      "fromSide": "bottom",
+      "toSide": "bottom"
+    },
+    {
+      "from": "semantic",
+      "to": "fusion",
+      "label": "chunks",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "from": "fusion",
+      "to": "rerank",
+      "label": "fused",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 75
+    },
+    {
+      "from": "rerank",
+      "to": "selection",
+      "label": "cap",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "selection",
+      "to": "sufficiency",
+      "label": "context",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "sufficiency",
+      "to": "grounded_ai",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "grounded_ai",
+      "to": "citations",
+      "label": "answer",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "lexical",
+      "to": "fabric",
+      "label": "arm",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "left"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "How to read status",
+      "items": [
+        "IMPLEMENTED = code exists in the pinned repository/commit; SERVING adds that the path runs on the live tutor/CLA request path",
+        "sources[] = file:line verified at syllabai-core @ 14b5e3d via Archify evidence verification",
+        "NOT SERVED / UNWIRED / no-op v0 / degrades are explicit statuses — never read them as live capability"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "What is NOT serving today",
+      "items": [
+        "Lexical BM25 arm — implemented against the V28 column, but enters the served fusion only if the T-C13 benchmark promotes it",
+        "RetrievalFabric multi-arm orchestrator — deliberately not a Spring bean, zero consumers by design (explicit composition, run-003-b E-1)",
+        "Gemini File Search arm — stub with available() = false",
+        "Vector leg degrades honestly to empty (KG-only evidence) when no embedding provider is keyed; ingestion paused pending Embedding v2"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Truth boundaries",
+      "items": [
+        "The authoritative KG is canonical curriculum truth — retrieval-derived graph signals (Local Intelligence Layer) are PROPOSED and appear nowhere in serving",
+        "Serving retrieval is NOT PDF→chunks→embeddings→vector DB→LLM: it is curriculum-scope-gated hybrid retrieval (KG + vector) fused rank-only, capped, and refused deterministically when nothing survives",
+        "LLMs generate from the assembled context only — they never mark answers and never own curriculum truth",
+        "Every citation resolves from surviving evidence items; there is no free-floating claim path. The sufficiency→generator edge is intentionally unlabeled: admission-on-pass is the gate's contract, refusal is documented here"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Sources",
+      "items": [
+        "All 12 nodes are syllabai-core packages, pinned at 14b5e3d780956b39267bce2a8b831865ca4f89bb",
+        "KaRAG pipeline contract (intent → KG context → hybrid retrieval → fusion → rerank → grounded generation → citations) is documented in KaRagService.java:18-19",
+        "CLA follows the same contract (ClaService.java:59-61) with the §7 answer-leakage gate (ClaLeakagePolicy)"
+      ]
+    }
+  ]
+}
