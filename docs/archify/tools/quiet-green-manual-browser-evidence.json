@@ -1,0 +1,328 @@
+{
+  "generated": "2026-09-22",
+  "tool": "visual_evidence_quiet_green.py",
+  "artifacts": {
+    "syllabai-architecture-overview.html": {
+      "containment": {
+        "light": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        },
+        "dark": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        }
+      },
+      "themes": {
+        "light": {
+          "bg": "rgb(245, 245, 242)",
+          "backend_stroke": "#2e6b4f",
+          "panel_border": "#e0e0da",
+          "security_stroke": "#b0432d",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        },
+        "dark": {
+          "bg": "rgb(23, 24, 27)",
+          "backend_stroke": "#55b285",
+          "panel_border": "#2e3036",
+          "security_stroke": "#df7c63",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        }
+      },
+      "needles": {
+        "syllabai-web \u2014 Learner": true,
+        "syllabai-web \u2014 Teacher": true,
+        "Teacher Workbench": true,
+        "Local Intelligence Layer": true,
+        "syllabai-core REST API": true,
+        "Retrieval fabric": true,
+        "Content corpus & chunks": true
+      },
+      "screenshots": [
+        "syllabai-architecture-overview.light.1440.png",
+        "syllabai-architecture-overview.dark.1440.png"
+      ],
+      "PASS": true
+    },
+    "syllabai-learning-loop.html": {
+      "containment": {
+        "light": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        },
+        "dark": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        }
+      },
+      "themes": {
+        "light": {
+          "bg": "rgb(245, 245, 242)",
+          "backend_stroke": "#2e6b4f",
+          "panel_border": "#e0e0da",
+          "security_stroke": "#b0432d",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        },
+        "dark": {
+          "bg": "rgb(23, 24, 27)",
+          "backend_stroke": "#55b285",
+          "panel_border": "#2e3036",
+          "security_stroke": "#df7c63",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        }
+      },
+      "needles": {
+        "Learner interaction (web)": true,
+        "Interaction capture": true,
+        "Assessment & Smart Mark": true,
+        "\u03ba agreement gate (F-161)": true,
+        "Learning evidence": true,
+        "Governed learner model": true,
+        "Learner patterns": true
+      },
+      "screenshots": [
+        "syllabai-learning-loop.light.1440.png",
+        "syllabai-learning-loop.dark.1440.png",
+        "syllabai-learning-loop.light.full.png",
+        "syllabai-learning-loop.dark.full.png"
+      ],
+      "PASS": true
+    },
+    "syllabai-retrieval-architecture.html": {
+      "containment": {
+        "light": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        },
+        "dark": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        }
+      },
+      "themes": {
+        "light": {
+          "bg": "rgb(245, 245, 242)",
+          "backend_stroke": "#2e6b4f",
+          "panel_border": "#e0e0da",
+          "security_stroke": "#b0432d",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        },
+        "dark": {
+          "bg": "rgb(23, 24, 27)",
+          "backend_stroke": "#55b285",
+          "panel_border": "#2e3036",
+          "security_stroke": "#df7c63",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        }
+      },
+      "needles": {
+        "Query understanding": true,
+        "Curriculum resolution": true,
+        "Authoritative KG": true,
+        "Semantic vector leg": true,
+        "Rank fusion": true,
+        "Reranking": true,
+        "Evidence selection": true
+      },
+      "screenshots": [
+        "syllabai-retrieval-architecture.light.1440.png",
+        "syllabai-retrieval-architecture.dark.1440.png"
+      ],
+      "PASS": true
+    },
+    "syllabai-assessment-marking.html": {
+      "containment": {
+        "light": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        },
+        "dark": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        }
+      },
+      "themes": {
+        "light": {
+          "bg": "rgb(245, 245, 242)",
+          "backend_stroke": "#2e6b4f",
+          "panel_border": "#e0e0da",
+          "security_stroke": "#b0432d",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        },
+        "dark": {
+          "bg": "rgb(23, 24, 27)",
+          "backend_stroke": "#55b285",
+          "panel_border": "#2e3036",
+          "security_stroke": "#df7c63",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        }
+      },
+      "needles": {
+        "syllabai-web \u2014 Teacher": true,
+        "Teacher marking API": true,
+        "Marking queue service": true,
+        "Smart Mark engine": true,
+        "LLM failover chain": true,
+        "Authoritative human marks": true,
+        "\u03ba agreement gate (F-161)": true
+      },
+      "screenshots": [
+        "syllabai-assessment-marking.light.1440.png",
+        "syllabai-assessment-marking.dark.1440.png"
+      ],
+      "PASS": true
+    },
+    "syllabai-ingestion-pipeline.html": {
+      "containment": {
+        "light": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        },
+        "dark": {
+          "1440x1000": true,
+          "1600x1000": true,
+          "1920x1080": true,
+          "2048x1200": true
+        }
+      },
+      "themes": {
+        "light": {
+          "bg": "rgb(245, 245, 242)",
+          "backend_stroke": "#2e6b4f",
+          "panel_border": "#e0e0da",
+          "security_stroke": "#b0432d",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        },
+        "dark": {
+          "bg": "rgb(23, 24, 27)",
+          "backend_stroke": "#55b285",
+          "panel_border": "#2e3036",
+          "security_stroke": "#df7c63",
+          "body_font": "\"Instrument Sans\", \"Helvetica Neue\", Arial, \"Noto Sans SC\", sans-serif",
+          "h1_font": "\"Bricolage Grotesque\", \"Avenir Next\", \"Trebuchet MS\", sans-serif",
+          "svg_font": "\"Spline Sans Mono\", \"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+          "instrument_loaded": true,
+          "bricolage_loaded": true,
+          "bg_ok": true,
+          "fern_ok": true,
+          "sans_declared": true,
+          "display_declared": true,
+          "mono_svg_declared": true
+        }
+      },
+      "needles": {
+        "Past-papers corpus": true,
+        "syllabai-parser \u2014 pdflane": true,
+        "GlmOcr bridge (T-C02)": true,
+        "Curriculum bridge (T-010)": true,
+        "Paper ingestion (T-011)": true,
+        "Question bank": true,
+        "Educational KG": true
+      },
+      "screenshots": [
+        "syllabai-ingestion-pipeline.light.1440.png",
+        "syllabai-ingestion-pipeline.dark.1440.png"
+      ],
+      "PASS": true
+    }
+  }
+}

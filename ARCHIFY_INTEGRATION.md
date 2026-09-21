@@ -125,6 +125,11 @@ Key rules baked into this workflow:
 | `docs/archify/T-ARCHIFY-SPLIT2-EVIDENCE-REPORT.md` | Evidence report for the round-2 subsystem diagrams |
 | `docs/archify/tools/visual_evidence_round2.py` | Manual browser-evidence script for the round-2 diagrams |
 | `docs/archify/tools/round2-manual-browser-evidence.json` | Containment + DOM spot checks for both round-2 diagrams |
+| `docs/archify/tools/apply_quiet_green.py` | Design-system post-processor (Quiet Green restyle; part of the regeneration pipeline, see §9) |
+| `docs/archify/tools/visual_evidence_quiet_green.py` | Manual browser-evidence script for the Quiet Green restyle |
+| `docs/archify/tools/quiet-green-manual-browser-evidence.json` | Evidence results for the restyle (5/5 PASS) |
+| `docs/archify/tools/quiet-green-evidence/*.png` | 12 committed screenshots (all five artifacts × light/dark + full-page) |
+| `docs/archify/T-ARCHIFY-QUIET-GREEN-EVIDENCE-REPORT.md` | Evidence report for the design-system restyle |
 
 ## 5. Browser evidence status (honest record)
 
@@ -247,3 +252,42 @@ Manual Playwright evidence (`tools/round2-manual-browser-evidence.json`,
 1440/1600/1920/2048 on both diagrams; every needle label found; all four
 guided-view chips render per diagram; screenshots perceptually reviewed
 (light via Playwright, dark via the ingestion visual-check capture).
+
+## 9. Quiet Green design-system restyle (2026-09-22)
+
+The operator supplied the Open Notebook **"Quiet Green"** design system
+(`open-notebook-design-system.md`, extracted from `lfnovo/open-notebook` v1.14)
+and directed it be applied to the five delivered diagrams, both themes. The IR
+schema carries no palette vocabulary, so the restyle is a **committed,
+deterministic, idempotent post-processor** — `tools/apply_quiet_green.py` —
+not a hand edit. The regeneration pipeline for every diagram is now
+`archify deliver → tools/apply_quiet_green.py → committed artifact`; re-running
+the tool after a fresh deliver re-applies byte-stably (markers
+`quiet-green-theme:BEGIN/END` wrap the injected font link + style layer).
+
+What it does (full mapping table in
+`T-ARCHIFY-QUIET-GREEN-EVIDENCE-REPORT.md`):
+
+1. **Token remap, both `[data-theme]` values, raw tokens only** (the Quiet
+   Green dark-mode architecture): surfaces → the neutral ladder; ink → the
+   4-step ramp; lanes/grid/mask/toolbar → hairlines and raised surfaces.
+2. **Kind → owned hue, following the laws**: `backend` → fern (the system
+   acting), `frontend` → sage (web), `database` → plum (canonical stores),
+   `cloud` → teal (AI voice), `messagebus` → gold (recorded events),
+   `external` → slate (paper/external), `security` → **danger** (fail-closed
+   gates — red destroys, and only destroys).
+3. **Geometry** squared 4–6px; **depth** = hairlines + one popover shadow
+   (floating layers only); **typography** = Instrument Sans body / Bricolage
+   Grotesque display titles / Spline Sans Mono data — the SVG interior stays
+   mono (labels, file:line citations are data); teal focus ring on chrome.
+
+Verification (manual Playwright, `tools/visual_evidence_quiet_green.py`,
+5/5 PASS): cascade proofs via computed styles (QG tokens win; fonts declared
+and actually loaded in the evidence run); horizontal containment exact at
+1440/1600/1920/2048 both themes; 7/7 IR-derived needle labels per artifact;
+interaction sanity (theme toggle, guided views); 12 committed screenshots
+perceptually reviewed. Honest limits recorded in the report: the packaged
+`visual-check` was not re-run (environmentally unstable; existing sidecars
+describe the pre-restyle deliver output), and fonts load from Google Fonts
+with in-file fallback stacks offline (embedded JetBrains Mono remains the
+deepest mono fallback).
