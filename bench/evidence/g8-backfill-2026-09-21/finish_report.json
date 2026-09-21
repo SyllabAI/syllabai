@@ -1,0 +1,34 @@
+{
+ "artifact": "finish-pending-v2",
+ "created_at_utc": "2026-09-21T15:05:58Z",
+ "docs": 59,
+ "chunks_pending": 744,
+ "key_order": [
+  3,
+  0,
+  1,
+  2
+ ],
+ "fingerprints": {
+  "0": "sha256:01ac5264a3",
+  "1": "sha256:91fdfb06ac",
+  "2": "sha256:797b77a879",
+  "3": "sha256:3687872106"
+ },
+ "rounds": [
+  {
+   "round": 1,
+   "key_index": 3,
+   "key_fingerprint": "sha256:3687872106",
+   "env_changed": true,
+   "deploy_id": "dep-daokflv40ujc73flr0ig",
+   "deploy_seconds": 197,
+   "docs_posted": 59,
+   "embedded": 744,
+   "skipped": 0,
+   "failures": []
+  }
+ ],
+ "open_docs_after": [],
+ "complete": true
+}
