@@ -71,8 +71,12 @@ def http_json(method, url, body=None, headers=None, timeout=120):
         h["Content-Type"] = "application/json"
     h.update(headers or {})
     req = urllib.request.Request(url, data=data, headers=h, method=method)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode(errors="replace")[:300]
+        raise RuntimeError(f"{method} {url} -> HTTP {e.code}: {detail}") from None
 
 
 def render(method, path, body=None, timeout=120):
@@ -98,18 +102,26 @@ def mint_jwt(identity, secret):
 
 def swap_key(key):
     items = render("GET", f"services/{SERVICE}/env-vars")
-    # items: [{envVar:{key,value}}, ...] — normalize to [{key,value}]
-    env = [it.get("envVar", it) for it in items]
-    changed = False
+    # items: [{envVar:{key,value,...}}, ...] — normalize to CLEAN {key,value}
+    # pairs: the PUT contract rejects the GET payload's extra fields (cursor etc.)
+    raw = [it.get("envVar", it) for it in items]
+    current_fp = None
     jwt_secret = None
-    for e in env:
-        if e["key"] == "SYLLABAI_JWT_SECRET":
-            jwt_secret = e["value"]
-        if e["key"] == "SYLLABAI_EMBEDDING_GEMINI_API_KEY":
-            if e.get("value") != key:
-                e["value"] = key
+    changed = False
+    env = []
+    for e in raw:
+        k, v = e["key"], e.get("value") or ""
+        if k == "SYLLABAI_JWT_SECRET":
+            jwt_secret = v
+        if k == "SYLLABAI_EMBEDDING_GEMINI_API_KEY":
+            current_fp = fp(v) if v else None
+            if v != key:
+                v = key
                 changed = True
+        env.append({"key": k, "value": v})
     assert jwt_secret, "SYLLABAI_JWT_SECRET not found in Render env"
+    print(f"  current embedding key: {current_fp} -> {fp(key)} "
+          f"({'PUT' if changed else 'already set'})", flush=True)
     if changed:
         render("PUT", f"services/{SERVICE}/env-vars", {"envVars": env})
     return changed, jwt_secret
