@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SyllabAI — Ingestion & Content Pipeline (source-backed)",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1130,
+      600
+    ],
+    "repository": {
+      "url": "https://github.com/SyllabAI/syllabai-core",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+    },
+    "views": [
+      {
+        "id": "main-flow",
+        "label": "Main ingest flow",
+        "focus": [
+          "corpus",
+          "parser",
+          "bridge",
+          "paper_ingest",
+          "question_bank"
+        ],
+        "note": "Source PDFs → parser outputs → the controlled bridge → all-SUGGESTED bank."
+      },
+      {
+        "id": "canonical-truth",
+        "label": "Canonical truth",
+        "focus": [
+          "curriculum_ingest",
+          "kg",
+          "curriculum_truth"
+        ],
+        "note": "The curriculum bridge is the curated writer of canonical educational truth."
+      },
+      {
+        "id": "promotion",
+        "label": "Validation & promotion",
+        "focus": [
+          "question_bank",
+          "promotion",
+          "sme_ingest"
+        ],
+        "note": "Everything lands SUGGESTED; only teacher/SME review promotes or flags."
+      },
+      {
+        "id": "paused-lane",
+        "label": "Paused lane",
+        "focus": [
+          "content_store",
+          "embedding_lane"
+        ],
+        "note": "Chunks land without embeddings; the semantic lane stays prepared, not serving."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "corpus",
+      "type": "external",
+      "label": "Past-papers corpus",
+      "sublabel": "source QP/MS PDFs",
+      "tag": "SOURCE DATA",
+      "pos": [
+        20,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ]
+    },
+    {
+      "id": "parser",
+      "type": "backend",
+      "label": "syllabai-parser — pdflane",
+      "sublabel": "canonical QP/MS JSON · v1.1.1",
+      "tag": "IMPLEMENTED · cross-repo",
+      "pos": [
+        250,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ]
+    },
+    {
+      "id": "bridge",
+      "type": "backend",
+      "label": "GlmOcr bridge (T-C02)",
+      "sublabel": "one pair · one tx",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        480,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/ingestion/GlmOcrIngestionService.java",
+          "line": 27,
+          "label": "T-C02 bridge contract"
+        },
+        {
+          "path": "src/main/java/com/syllabai/content/ContentIngestionService.java",
+          "line": 25,
+          "label": "T-013 chunking"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/ingestion/GlmOcrBridgeRecord.java",
+          "line": 36,
+          "label": "bridge record (V13)"
+        }
+      ]
+    },
+    {
+      "id": "curriculum_ingest",
+      "type": "backend",
+      "label": "Curriculum bridge (T-010)",
+      "sublabel": "whole-draft tx · no derived prereqs",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        910,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/ingestion/CurriculumIngestionService.java",
+          "line": 21,
+          "label": "T-010 bridge"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/ingestion/CurriculumIngestionService.java",
+          "line": 28,
+          "label": "no derived prerequisites"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/ingestion/CurriculumIngestionService.java",
+          "line": 30,
+          "label": "idempotent re-ingest"
+        }
+      ]
+    },
+    {
+      "id": "paper_ingest",
+      "type": "backend",
+      "label": "Paper ingestion (T-011)",
+      "sublabel": "ExamPaper → … → MarkPoint",
+      "tag": "IMPLEMENTED · all SUGGESTED",
+      "pos": [
+        20,
+        280
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/ingestion/PastPaperIngestionService.java",
+          "line": 40,
+          "label": "SUGGESTED + anchor topic"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/ingestion/PastPaperIngestionService.java",
+          "line": 46,
+          "label": "ingestion service"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/ingestion/PastPaperIngestionService.java",
+          "line": 78,
+          "label": "ingest()"
+        }
+      ]
+    },
+    {
+      "id": "question_bank",
+      "type": "database",
+      "label": "Question bank",
+      "sublabel": "papers · questions · schemes · parts",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        250,
+        280
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/assessment/ExamPaper.java",
+          "line": 24,
+          "label": "ExamPaper + states"
+        },
+        {
+          "path": "src/main/java/com/syllabai/assessment/MarkScheme.java",
+          "line": 32,
+          "label": "scheme states"
+        }
+      ]
+    },
+    {
+      "id": "kg",
+      "type": "database",
+      "label": "Educational KG",
+      "sublabel": "nodes · edges · per-row validation",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        700,
+        280
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/ConceptGraphSeedService.java",
+          "line": 24,
+          "label": "V15 pinned seed"
+        },
+        {
+          "path": "src/main/java/com/syllabai/knowledge/KnowledgeNode.java",
+          "line": 25,
+          "label": "ValidationStatus"
+        },
+        {
+          "path": "src/main/java/com/syllabai/knowledge/KnowledgeEdge.java",
+          "line": 55,
+          "label": "edges UNVALIDATED default"
+        }
+      ]
+    },
+    {
+      "id": "curriculum_truth",
+      "type": "database",
+      "label": "Curriculum truth",
+      "sublabel": "subjects · versions · serving scope",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        910,
+        280
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/curriculum/CurriculumVersion.java",
+          "line": 20,
+          "label": "DRAFT/ACTIVE versions"
+        },
+        {
+          "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java",
+          "line": 41,
+          "label": "4CH1-2017 serving scope"
+        }
+      ]
+    },
+    {
+      "id": "sme_ingest",
+      "type": "backend",
+      "label": "SME package ingest",
+      "sublabel": "questions + spec points + schemes",
+      "tag": "IMPLEMENTED · arrives VALIDATED",
+      "pos": [
+        20,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
+          "line": 111,
+          "label": "package ingest"
+        },
+        {
+          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
+          "line": 165,
+          "label": "schemes VALIDATED"
+        },
+        {
+          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
+          "line": 206,
+          "label": "QuestionSpecPoint"
+        }
+      ]
+    },
+    {
+      "id": "promotion",
+      "type": "security",
+      "label": "Teacher content review",
+      "sublabel": "validate · reject · flag",
+      "tag": "IMPLEMENTED · the only promotion",
+      "pos": [
+        250,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/ContentReviewService.java",
+          "line": 53,
+          "label": "review service"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/ContentReviewService.java",
+          "line": 138,
+          "label": "paper.validate"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/ContentReviewService.java",
+          "line": 243,
+          "label": "scheme.validate"
+        }
+      ]
+    },
+    {
+      "id": "content_store",
+      "type": "database",
+      "label": "Content corpus & chunks",
+      "sublabel": "JSONB docs · deterministic chunks",
+      "tag": "IMPLEMENTED · ingestion paused",
+      "pos": [
+        480,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/content/Document.java",
+          "line": 26,
+          "label": "documents"
+        },
+        {
+          "path": "src/main/java/com/syllabai/content/ContentIngestionService.java",
+          "line": 65,
+          "label": "V33 identity mirror"
+        }
+      ]
+    },
+    {
+      "id": "embedding_lane",
+      "type": "backend",
+      "label": "pgvector semantic lane",
+      "sublabel": "768-dim · re-runnable /embed",
+      "tag": "PREPARED · UNVERIFIED",
+      "pos": [
+        710,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/content/EmbeddingConfig.java",
+          "line": 19,
+          "label": "one provider by design"
+        },
+        {
+          "path": "src/main/java/com/syllabai/content/EmbeddingConfig.java",
+          "line": 47,
+          "label": "pgvector 768 (V11)"
+        },
+        {
+          "path": "src/main/java/com/syllabai/content/ContentDocumentController.java",
+          "line": 87,
+          "label": "/embed endpoint"
+        }
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "syllabai-core @ 14b5e3d — ingestion fabric",
+      "wraps": [
+        "bridge",
+        "curriculum_ingest",
+        "paper_ingest",
+        "question_bank",
+        "kg",
+        "curriculum_truth",
+        "sme_ingest",
+        "promotion",
+        "content_store",
+        "embedding_lane"
+      ],
+      "pad": 20
+    },
+    {
+      "kind": "security-group",
+      "label": "Canonical truth — runtime surfaces never write",
+      "wraps": [
+        "curriculum_truth",
+        "kg"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "corpus-to-parser",
+      "from": "corpus",
+      "to": "parser",
+      "label": "QP/MS PDFs",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "parser-to-bridge",
+      "from": "parser",
+      "to": "bridge",
+      "label": "VERIFIED outputs",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -29
+    },
+    {
+      "id": "parser-to-curriculum",
+      "from": "parser",
+      "to": "curriculum_ingest",
+      "label": "curriculum draft",
+      "fromSide": "top",
+      "toSide": "top",
+      "via": [
+        [
+          335,
+          30
+        ],
+        [
+          995,
+          30
+        ]
+      ]
+    },
+    {
+      "id": "bridge-to-papers",
+      "from": "bridge",
+      "to": "paper_ingest",
+      "label": "QP/MS drafts",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        300,
+        208
+      ]
+    },
+    {
+      "id": "bridge-to-content",
+      "from": "bridge",
+      "to": "content_store",
+      "label": "canonical JSON → chunks",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        565,
+        300
+      ]
+    },
+    {
+      "id": "papers-to-bank",
+      "from": "paper_ingest",
+      "to": "question_bank",
+      "label": "all SUGGESTED",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [
+        220,
+        276
+      ]
+    },
+    {
+      "id": "sme-to-bank",
+      "from": "sme_ingest",
+      "to": "question_bank",
+      "label": "arrives VALIDATED",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelAt": [
+        220,
+        375
+      ]
+    },
+    {
+      "id": "review-to-bank",
+      "from": "promotion",
+      "to": "question_bank",
+      "label": "validate / reject / flag",
+      "variant": "security",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelAt": [
+        410,
+        375
+      ]
+    },
+    {
+      "id": "curriculum-to-kg",
+      "from": "curriculum_ingest",
+      "to": "kg",
+      "label": "nodes + PART_OF",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        850,
+        208
+      ]
+    },
+    {
+      "id": "curriculum-to-truth",
+      "from": "curriculum_ingest",
+      "to": "curriculum_truth",
+      "label": "single tx · idempotent",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        1060,
+        215
+      ]
+    },
+    {
+      "id": "content-to-embedding",
+      "from": "content_store",
+      "to": "embedding_lane",
+      "label": "/embed · paused pending v2",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -29
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "How to read status",
+      "items": [
+        "Core nodes carry line-anchored sources verified at syllabai-core 14b5e3d",
+        "syllabai-parser (pdflane, engine 1.1.1 @ eef89fb) and the normalized-papers repo of record (syllabai-pastpapers @ 6354773) are cross-repo text-cited",
+        "The corpus node is source data, not code"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Bridge discipline",
+      "items": [
+        "T-C02: one pair, one transaction, one entry point; reconciliation and review findings are preserved verbatim in GlmOcrBridgeRecord (V13) — nothing discarded",
+        "T-011: papers land as ExamPaper → Question → Version → Part → MarkScheme → MarkPoint, all SUGGESTED, with an ingestion-anchor topic (UNVALIDATED) remapped during review",
+        "T-013: validate → checksum dedup → JSONB → deterministic chunks — never embeds at ingest",
+        "T-010: whole-draft single transaction; identical provenance fingerprint re-ingests as a no-op; prerequisite edges are never derived"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Validation honesty",
+      "items": [
+        "Everything ingestion creates lands SUGGESTED or UNVALIDATED with full provenance",
+        "Only teacher/SME review promotes: validate · reject · flag — a flagged scheme never backs marking",
+        "SME packages are the exception that proves the rule: their schemes arrive VALIDATED because a human authored them"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Paused & prepared",
+      "items": [
+        "Content ingestion is paused pending Embedding v2 (ops state; the V33 identity mirror is already in the ingest path)",
+        "The semantic lane is PREPARED · UNVERIFIED: exactly one Gemini 768-dim provider by design, /embed is re-runnable, and content lands even with zero API keys",
+        "Serving-side consumption of these stores is diagrammed separately — see syllabai-retrieval-architecture.html"
+      ]
+    }
+  ]
+}

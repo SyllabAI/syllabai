@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "visual-check",
+  "evidenceKind": "automated-browser",
+  "status": "fail",
+  "visualReview": "pending",
+  "artifact": {
+    "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.html",
+    "sha256": "fe5ca322d9712030f83af77178e1aa4e7384f365554f4acec5edf2f2a9a57310",
+    "bytes": 828187
+  },
+  "state": {
+    "detail": "read",
+    "motion": "still"
+  },
+  "chrome": {
+    "status": "available",
+    "executable": "/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/visual-check-runtime",
+      "severity": "error",
+      "message": "visual-check could not complete its Chrome inspection.",
+      "subject": {
+        "artifact": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.html"
+      },
+      "evidence": {
+        "reason": "Page.captureScreenshot: Unable to capture screenshot"
+      },
+      "supportedFixes": [
+        "resolve the reported Chrome inspection error, then rerun visual-check"
+      ]
+    }
+  ],
+  "containment": {
+    "status": "fail",
+    "viewports": []
+  },
+  "readability": {
+    "status": "fail",
+    "minimumProjectedNodeTextPx": 6,
+    "viewports": []
+  },
+  "viewerChrome": {
+    "status": "fail",
+    "viewports": []
+  },
+  "captures": {
+    "status": "fail",
+    "screenshots": [],
+    "contactSheet": null
+  },
+  "sidecars": {
+    "receipt": "syllabai-assessment-marking.visual-check.json",
+    "contactSheet": "syllabai-assessment-marking.visual-check.html"
+  },
+  "error": "Page.captureScreenshot: Unable to capture screenshot"
+}

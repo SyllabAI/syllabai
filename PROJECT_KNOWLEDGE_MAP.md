@@ -46,6 +46,7 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Repository research | `REPOSITORY_RESEARCH.md` | External implementation/license research |
 | Platform/provider research | `PLATFORM_RESEARCH.md`, current AI runtime/provider report | Provider and platform evidence |
 | Content representation/package | `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md`, `CONTENT_PACKAGE_V0_1.md`, ADR-021 | Markdown artifacts, PostgreSQL boundary and portable SQLite package direction |
+| Source-backed architecture diagrams | `ARCHIFY_INTEGRATION.md`, `docs/archify/` | Archify tooling workflow (dev/documentation only, never a runtime dependency); derived diagrams, not canonical architecture truth |
 
 ## 4. Curriculum, subject and knowledge graph
 
