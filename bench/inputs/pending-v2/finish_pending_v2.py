@@ -123,7 +123,9 @@ def swap_key(key):
     print(f"  current embedding key: {current_fp} -> {fp(key)} "
           f"({'PUT' if changed else 'already set'})", flush=True)
     if changed:
-        render("PUT", f"services/{SERVICE}/env-vars", {"envVars": env})
+        # Render env-vars PUT contract: BARE ARRAY body ({"envVars": ...} is
+        # rejected as invalid JSON — verified 400 vs 200 by probe 2026-09-21)
+        render("PUT", f"services/{SERVICE}/env-vars", env)
     return changed, jwt_secret
 
 
