@@ -1,0 +1,1172 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SyllabAI — Source-Backed Architecture Overview",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "viewBox": [
+      2350,
+      1580
+    ],
+    "repository": {
+      "url": "https://github.com/SyllabAI/syllabai-core",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+    },
+    "views": [
+      {
+        "id": "learning-loop",
+        "label": "Learning loop",
+        "focus": [
+          "learner_web",
+          "api_core",
+          "assessment",
+          "smartmark",
+          "kappa_gate",
+          "evidence",
+          "learner_model",
+          "recommendation"
+        ],
+        "note": "Attempt → Smart Mark → κ gate → evidence → learner model → next action."
+      },
+      {
+        "id": "grounded-ai",
+        "label": "Grounded AI",
+        "focus": [
+          "retrieval",
+          "content",
+          "knowledge",
+          "curriculum",
+          "tutor",
+          "cla",
+          "llm_chain"
+        ],
+        "note": "Retrieval fabric feeds tutor and CLA; LLMs generate, never mark or own truth."
+      },
+      {
+        "id": "truth-boundaries",
+        "label": "Truth boundaries",
+        "focus": [
+          "curriculum",
+          "knowledge",
+          "assessment",
+          "learner_model",
+          "postgres"
+        ],
+        "note": "Curriculum + authoritative KG are canonical; learner state only overlays."
+      },
+      {
+        "id": "proposed",
+        "label": "Proposed / unverified",
+        "focus": [
+          "lil",
+          "embedding_lane",
+          "kappa_gate"
+        ],
+        "note": "Local Intelligence Layer proposed; pgvector lane unverified; κ gate closed."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "learner_web",
+      "type": "frontend",
+      "label": "syllabai-web — Learner",
+      "sublabel": "Next.js · Exam Questions · Assistant",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "pos": [
+        90,
+        64
+      ],
+      "size": [
+        220,
+        66
+      ]
+    },
+    {
+      "id": "teacher_web",
+      "type": "frontend",
+      "label": "syllabai-web — Teacher",
+      "sublabel": "marking queue · test builder",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        420,
+        64
+      ],
+      "size": [
+        220,
+        66
+      ]
+    },
+    {
+      "id": "workbench",
+      "type": "frontend",
+      "label": "Teacher Workbench",
+      "sublabel": "SME validation (staging)",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        750,
+        64
+      ],
+      "size": [
+        220,
+        66
+      ]
+    },
+    {
+      "id": "lil",
+      "type": "frontend",
+      "label": "Local Intelligence Layer",
+      "sublabel": "browser-local controller",
+      "tag": "PROPOSED",
+      "pos": [
+        2070,
+        64
+      ],
+      "size": [
+        220,
+        66
+      ]
+    },
+    {
+      "id": "api_core",
+      "type": "backend",
+      "label": "syllabai-core REST API",
+      "sublabel": "Spring Boot · /api/v1 · identity",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "pos": [
+        90,
+        240
+      ],
+      "size": [
+        920,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/SyllabAiApplication.java",
+          "line": 18,
+          "label": "boot entrypoint"
+        }
+      ]
+    },
+    {
+      "id": "retrieval",
+      "type": "backend",
+      "label": "Retrieval fabric",
+      "sublabel": "lexical Bm25 · authoritative-KG",
+      "tag": "IMPLEMENTED · benchmark-gated",
+      "pos": [
+        410,
+        480
+      ],
+      "size": [
+        220,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/retrieval/Bm25Retriever.java",
+          "line": 45,
+          "label": "lexical provider"
+        },
+        {
+          "path": "src/main/java/com/syllabai/retrieval/AuthoritativeKgRetrievalProvider.java",
+          "line": 16,
+          "label": "KG provider"
+        }
+      ]
+    },
+    {
+      "id": "content",
+      "type": "database",
+      "label": "Content corpus & chunks",
+      "sublabel": "documents · ingestion",
+      "tag": "IMPLEMENTED · ingestion paused",
+      "pos": [
+        760,
+        480
+      ],
+      "size": [
+        210,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/content/ContentRetrievalService.java",
+          "line": 15,
+          "label": "chunk reads"
+        }
+      ]
+    },
+    {
+      "id": "revisionnotes",
+      "type": "backend",
+      "label": "Revision notes",
+      "sublabel": "validated learner content",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        1410,
+        480
+      ],
+      "size": [
+        220,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/revisionnotes/RevisionNoteService.java",
+          "line": 21,
+          "label": "notes service"
+        }
+      ]
+    },
+    {
+      "id": "assessment",
+      "type": "backend",
+      "label": "Assessment & question bank",
+      "sublabel": "attempts · parts · schemes",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "pos": [
+        1740,
+        480
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/assessment/Answer.java",
+          "line": 32,
+          "label": "answer + marking state"
+        }
+      ]
+    },
+    {
+      "id": "curriculum",
+      "type": "backend",
+      "label": "Curriculum & SpecPoints",
+      "sublabel": "subjects · scope resolution",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        100,
+        680
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java",
+          "line": 46,
+          "label": "scope resolver"
+        }
+      ]
+    },
+    {
+      "id": "knowledge",
+      "type": "backend",
+      "label": "Authoritative Educational KG",
+      "sublabel": "canonical nodes · edges",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        470,
+        680
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/knowledge/KnowledgeGraphService.java",
+          "line": 25,
+          "label": "KG service"
+        }
+      ]
+    },
+    {
+      "id": "embedding_lane",
+      "type": "backend",
+      "label": "pgvector semantic lane",
+      "sublabel": "provider present · not serving",
+      "tag": "PREPARED · UNVERIFIED",
+      "pos": [
+        770,
+        680
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/retrieval/PgVectorRetrievalProvider.java",
+          "line": 16,
+          "label": "pgvector provider"
+        }
+      ]
+    },
+    {
+      "id": "teacher_marking",
+      "type": "backend",
+      "label": "Teacher marking queue",
+      "sublabel": "authoritative human marks",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        1740,
+        680
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingService.java",
+          "line": 85,
+          "label": "recordHumanMark"
+        },
+        {
+          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingService.java",
+          "line": 160,
+          "label": "evaluateAgreement"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "type": "messagebus",
+      "label": "Learning evidence",
+      "sublabel": "question-attempt events",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "pos": [
+        440,
+        880
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java",
+          "line": 19,
+          "label": "evidence publisher"
+        }
+      ]
+    },
+    {
+      "id": "recommendation",
+      "type": "backend",
+      "label": "Recommendations (NBA)",
+      "sublabel": "deterministic next-best-action",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "pos": [
+        100,
+        880
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/recommendation/NextBestActionService.java",
+          "line": 76,
+          "label": "NBA service"
+        }
+      ]
+    },
+    {
+      "id": "intervention",
+      "type": "backend",
+      "label": "Intervention runs",
+      "sublabel": "evidence by reference · append-only",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "pos": [
+        760,
+        880
+      ],
+      "size": [
+        220,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/intervention/InterventionRunService.java",
+          "line": 23,
+          "label": "run service"
+        }
+      ]
+    },
+    {
+      "id": "smartmark",
+      "type": "backend",
+      "label": "Smart Mark engine",
+      "sublabel": "per-part pipeline · validators",
+      "tag": "IMPLEMENTED · κ-gated",
+      "pos": [
+        1740,
+        880
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
+          "line": 84,
+          "label": "markAnswer"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkPipeline.java",
+          "line": 57,
+          "label": "pipeline run"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/LlmMarkingCandidateGenerator.java",
+          "line": 69,
+          "label": "marking prompt"
+        }
+      ]
+    },
+    {
+      "id": "llm_chain",
+      "type": "external",
+      "label": "LLM failover chain",
+      "sublabel": "Groq → Gemini → OpenRouter",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        2080,
+        880
+      ],
+      "size": [
+        210,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/infrastructure/llm/FailoverLlmChain.java",
+          "line": 32,
+          "label": "failover chain"
+        },
+        {
+          "path": "src/main/java/com/syllabai/infrastructure/llm/LlmChainProperties.java",
+          "line": 16,
+          "label": "provider order"
+        }
+      ]
+    },
+    {
+      "id": "learner_model",
+      "type": "backend",
+      "label": "Governed learner model",
+      "sublabel": "BKT mastery · BDT misconceptions",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        100,
+        1080
+      ],
+      "size": [
+        210,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/learner/LearnerModelService.java",
+          "line": 36,
+          "label": "model service"
+        },
+        {
+          "path": "src/main/java/com/syllabai/learner/bkt/BktEngine.java",
+          "label": "BKT engine"
+        }
+      ]
+    },
+    {
+      "id": "diagnostic",
+      "type": "backend",
+      "label": "Struggle inference",
+      "sublabel": "diagnosis signals",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        440,
+        1080
+      ],
+      "size": [
+        190,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/diagnostic/StruggleInferenceService.java",
+          "line": 37,
+          "label": "struggle service"
+        }
+      ]
+    },
+    {
+      "id": "tutor",
+      "type": "backend",
+      "label": "KaRAG grounded tutor",
+      "sublabel": "fusion · rerank · citations",
+      "tag": "IMPLEMENTED · UNVERIFIED",
+      "pos": [
+        760,
+        1080
+      ],
+      "size": [
+        210,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/tutor/KaRagService.java",
+          "line": 33,
+          "label": "KaRAG service"
+        },
+        {
+          "path": "src/main/java/com/syllabai/tutor/ReciprocalRankFusion.java",
+          "line": 22,
+          "label": "RRF fusion"
+        }
+      ]
+    },
+    {
+      "id": "cla",
+      "type": "backend",
+      "label": "Contextual Learning Assistant",
+      "sublabel": "EXPLAIN · HINT · CHECK · read-only",
+      "tag": "IMPLEMENTED · VERIFIED",
+      "pos": [
+        1080,
+        1080
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/cla/ClaService.java",
+          "line": 86,
+          "label": "CLA service"
+        }
+      ]
+    },
+    {
+      "id": "kappa_gate",
+      "type": "security",
+      "label": "κ agreement gate (F-161)",
+      "sublabel": "κ ≥ 0.60 · fail-closed",
+      "tag": "IMPLEMENTED · gate closed",
+      "pos": [
+        1740,
+        1080
+      ],
+      "size": [
+        200,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/main/java/com/syllabai/smartmark/KappaAgreementService.java",
+          "line": 22,
+          "label": "cohenKappa"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
+          "line": 207,
+          "label": "kappaGatePassed"
+        }
+      ]
+    },
+    {
+      "id": "postgres",
+      "type": "database",
+      "label": "PostgreSQL (production)",
+      "sublabel": "Flyway-managed schema",
+      "tag": "IMPLEMENTED · PRODUCTION",
+      "pos": [
+        90,
+        1330
+      ],
+      "size": [
+        210,
+        62
+      ],
+      "sources": [
+        {
+          "path": "src/main/resources/db/migration/V8__multipart_assessment.sql",
+          "line": 1,
+          "label": "flyway migration"
+        }
+      ]
+    },
+    {
+      "id": "corpus",
+      "type": "external",
+      "label": "Official Past-Papers corpus",
+      "sublabel": "SyllabAI/Past-Papers source PDFs",
+      "tag": "SOURCE DATA",
+      "pos": [
+        440,
+        1330
+      ],
+      "size": [
+        230,
+        62
+      ]
+    },
+    {
+      "id": "parser",
+      "type": "backend",
+      "label": "syllabai-parser",
+      "sublabel": "offline QP/MS parsing · OCR",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        760,
+        1330
+      ],
+      "size": [
+        190,
+        62
+      ]
+    },
+    {
+      "id": "pastpapers",
+      "type": "database",
+      "label": "syllabai-pastpapers",
+      "sublabel": "normalized papers · provenance",
+      "tag": "IMPLEMENTED",
+      "pos": [
+        1090,
+        1330
+      ],
+      "size": [
+        210,
+        62
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Learner & teacher surfaces",
+      "wraps": [
+        "learner_web",
+        "teacher_web",
+        "workbench"
+      ],
+      "pad": 18
+    },
+    {
+      "kind": "region",
+      "label": "Proposed — not implemented",
+      "wraps": [
+        "lil"
+      ],
+      "pad": 14
+    },
+    {
+      "kind": "region",
+      "label": "syllabai-core · Spring Boot modular monolith",
+      "wraps": [
+        "curriculum",
+        "knowledge",
+        "content",
+        "revisionnotes",
+        "retrieval",
+        "embedding_lane",
+        "assessment",
+        "teacher_marking",
+        "smartmark",
+        "kappa_gate",
+        "evidence",
+        "recommendation",
+        "intervention",
+        "learner_model",
+        "diagnostic",
+        "tutor",
+        "cla"
+      ],
+      "pad": 20
+    },
+    {
+      "kind": "region",
+      "label": "Educational truth (canonical)",
+      "wraps": [
+        "curriculum",
+        "knowledge"
+      ],
+      "pad": 14
+    },
+    {
+      "kind": "region",
+      "label": "Retrieval (benchmark-gated)",
+      "wraps": [
+        "retrieval",
+        "embedding_lane",
+        "content"
+      ],
+      "pad": 14
+    },
+    {
+      "kind": "region",
+      "label": "Assessment & Smart Mark",
+      "wraps": [
+        "assessment",
+        "teacher_marking",
+        "smartmark",
+        "kappa_gate"
+      ],
+      "pad": 14
+    },
+    {
+      "kind": "region",
+      "label": "Learning evidence & learner model",
+      "wraps": [
+        "evidence",
+        "recommendation",
+        "intervention",
+        "learner_model",
+        "diagnostic"
+      ],
+      "pad": 14
+    },
+    {
+      "kind": "region",
+      "label": "Grounded AI — explains, never marks",
+      "wraps": [
+        "tutor",
+        "cla"
+      ],
+      "pad": 14
+    },
+    {
+      "kind": "region",
+      "label": "Ingestion toolchain (offline)",
+      "wraps": [
+        "corpus",
+        "parser",
+        "pastpapers"
+      ],
+      "pad": 14
+    }
+  ],
+  "connections": [
+    {
+      "from": "learner_web",
+      "to": "api_core",
+      "label": "HTTPS · /api/v1",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        270,
+        185
+      ]
+    },
+    {
+      "from": "teacher_web",
+      "to": "api_core",
+      "label": "HTTPS · /api/v1",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        600,
+        185
+      ]
+    },
+    {
+      "from": "api_core",
+      "to": "retrieval",
+      "label": "grounded search",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        400,
+        420
+      ]
+    },
+    {
+      "from": "api_core",
+      "to": "content",
+      "label": "chunk reads",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        620,
+        350
+      ]
+    },
+    {
+      "from": "api_core",
+      "to": "revisionnotes",
+      "label": "serves notes",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          550,
+          390
+        ],
+        [
+          1520,
+          390
+        ]
+      ],
+      "labelAt": [
+        1035,
+        366
+      ]
+    },
+    {
+      "from": "api_core",
+      "to": "postgres",
+      "label": "JPA · Flyway",
+      "fromSide": "left",
+      "toSide": "top",
+      "via": [
+        [
+          60,
+          276
+        ],
+        [
+          60,
+          1290
+        ],
+        [
+          195,
+          1290
+        ]
+      ],
+      "labelAt": [
+        150,
+        783
+      ]
+    },
+    {
+      "from": "curriculum",
+      "to": "knowledge",
+      "label": "KG roots",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [
+        385,
+        700
+      ]
+    },
+    {
+      "from": "retrieval",
+      "to": "curriculum",
+      "label": "spec resolution",
+      "fromSide": "left",
+      "toSide": "top",
+      "via": [
+        [
+          360,
+          512
+        ],
+        [
+          360,
+          640
+        ],
+        [
+          200,
+          640
+        ]
+      ],
+      "labelAt": [
+        280,
+        610
+      ]
+    },
+    {
+      "from": "retrieval",
+      "to": "content",
+      "label": "chunks",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [
+        695,
+        500
+      ]
+    },
+    {
+      "from": "embedding_lane",
+      "to": "retrieval",
+      "label": "semantic candidates",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "via": [
+        [
+          870,
+          612
+        ],
+        [
+          520,
+          612
+        ]
+      ],
+      "labelAt": [
+        715,
+        594
+      ]
+    },
+    {
+      "from": "teacher_marking",
+      "to": "assessment",
+      "label": "authoritative marks",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelAt": [
+        1915,
+        612
+      ]
+    },
+    {
+      "from": "assessment",
+      "to": "smartmark",
+      "label": "validated scheme scope",
+      "fromSide": "right",
+      "toSide": "right",
+      "via": [
+        [
+          2010,
+          512
+        ],
+        [
+          2010,
+          912
+        ]
+      ],
+      "labelAt": [
+        2170,
+        494
+      ]
+    },
+    {
+      "from": "smartmark",
+      "to": "kappa_gate",
+      "label": "smart decisions",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        1955,
+        1012
+      ]
+    },
+    {
+      "from": "smartmark",
+      "to": "evidence",
+      "label": "graded evidence · κ-gated",
+      "fromSide": "left",
+      "toSide": "right",
+      "via": [
+        [
+          1700,
+          912
+        ],
+        [
+          1700,
+          980
+        ],
+        [
+          700,
+          980
+        ],
+        [
+          700,
+          912
+        ]
+      ],
+      "labelAt": [
+        1200,
+        998
+      ]
+    },
+    {
+      "from": "evidence",
+      "to": "learner_model",
+      "label": "BKT/BDT updates",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        372,
+        1028
+      ],
+      "via": [
+        [
+          540,
+          1010
+        ],
+        [
+          205,
+          1010
+        ]
+      ]
+    },
+    {
+      "from": "diagnostic",
+      "to": "learner_model",
+      "label": "struggle signals",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "labelAt": [
+        370,
+        1232
+      ],
+      "via": [
+        [
+          535,
+          1250
+        ],
+        [
+          205,
+          1250
+        ]
+      ]
+    },
+    {
+      "from": "recommendation",
+      "to": "intervention",
+      "label": "NBA creates run",
+      "fromSide": "top",
+      "toSide": "top",
+      "labelAt": [
+        535,
+        802
+      ],
+      "via": [
+        [
+          200,
+          820
+        ],
+        [
+          870,
+          820
+        ]
+      ]
+    },
+    {
+      "from": "corpus",
+      "to": "parser",
+      "label": "source PDFs",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [
+        715,
+        1341
+      ]
+    },
+    {
+      "from": "parser",
+      "to": "pastpapers",
+      "label": "normalized QP/MS",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [
+        1020,
+        1343
+      ]
+    },
+    {
+      "from": "learner_web",
+      "to": "lil",
+      "label": "optional controller",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "top",
+      "via": [
+        [
+          200,
+          44
+        ],
+        [
+          2180,
+          44
+        ]
+      ],
+      "labelAt": [
+        700,
+        26
+      ]
+    },
+    {
+      "from": "lil",
+      "to": "api_core",
+      "label": "semantic tool calls",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          2180,
+          160
+        ],
+        [
+          550,
+          160
+        ]
+      ],
+      "labelAt": [
+        1365,
+        182
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "How to read status",
+      "items": [
+        "IMPLEMENTED = code exists in the pinned repository/commit; VERIFIED adds acceptance evidence from project records",
+        "sources[] = file:line verified at the pinned syllabai-core commit; cross-repo nodes cite repo@SHA here only",
+        "PROPOSED / PREPARED · UNVERIFIED / gate closed are explicit: never read them as live capability"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Educational truth invariants",
+      "items": [
+        "Curriculum + authoritative KG are canonical; embeddings, providers and LLMs never are",
+        "Learner state overlays curriculum truth — it never mutates canonical semantics",
+        "Smart Mark and assessment never mutate canonical truth; impact flows only through evidence → learner model",
+        "The first authoritative human mark on an attempt fires the evidence contract; overrides revise, never re-fire",
+        "The REST API fronts every subsystem shown; undrawn request paths (API→assessment, pastpapers import) are omitted for readability, not absence",
+        "Retrieval resolves candidates from curriculum, the authoritative KG and content chunks (lexical + semantic + metadata + KG); the κ-gate pairing lives in teacher marking"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Gates and honest status",
+      "items": [
+        "κ ≥ 0.60 agreement gate (F-161) is fail-closed: no passing evaluation on file, smart marks stay provisional",
+        "Retrieval serving is benchmark-gated (T-C05); the pgvector semantic lane is PREPARED · UNVERIFIED",
+        "Content ingestion paused pending Embedding v2 — pastpapers corpus imports through validation gates only",
+        "KaRAG tutor, the CLA and Smart Mark all call the shared failover LLM chain; it generates, it never marks or owns truth",
+        "Teacher Workbench validates SME packages upstream of every import gate; teacher per-point decisions pair with Smart Mark decisions in evaluateAgreement",
+        "The REST API fronts every subsystem including the CLA; the CLA reads learner work and canonical anchors through read-only context resolution"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Cross-repository evidence (text-cited)",
+      "items": [
+        "syllabai-web @ bfc9850 (main) — learner/teacher surfaces",
+        "syllabai-teacher-workbench @ 39ad5d8 (main) — SME validation tooling",
+        "syllabai-parser @ eef89fb (tc17-work) — offline parsing",
+        "syllabai-pastpapers @ 6354773 (main) — normalized corpus + provenance",
+        "SyllabAI/syllabai @ 6df88d3 (tc17-rec) — specs, ADRs, knowledge map"
+      ]
+    }
+  ]
+}
