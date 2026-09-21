@@ -1,0 +1,485 @@
+{
+  "generated_at": "2026-09-21T10:53:34Z",
+  "base": "https://syllabai-core.onrender.com",
+  "health": "{\"groups\":[\"liveness\",\"readiness\"],\"status\":\"UP\"}",
+  "search": [
+    {
+      "id": "N1",
+      "query": "how does temperature affect the rate of reaction",
+      "latency_s": 4.43,
+      "n_hits": 5,
+      "kinds": [
+        "EXTERNAL_NOTES",
+        "QUESTION_PAPER"
+      ],
+      "lane_hit": true,
+      "hits": [
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.7031,
+          "documentId": "37bde1ab-8aae-5a04-8677-18ecaee5423f",
+          "chunkIndex": 3,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-3.11 | Rates of Reaction | Ex"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6792,
+          "documentId": "f785269b-605f-5877-a93a-afa6720d9ca9",
+          "chunkIndex": 2,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-3.9\u20134CH1-3.10 | Rates of Reac"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6589,
+          "documentId": "37bde1ab-8aae-5a04-8677-18ecaee5423f",
+          "chunkIndex": 4,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-3.11 | Rates of Reaction | Ex"
+        },
+        {
+          "kind": "QUESTION_PAPER",
+          "score": 0.6572,
+          "documentId": "f29edeea-3156-5273-a970-9bea7f431541",
+          "chunkIndex": 5,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1CR | Paper 1CR | "
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6475,
+          "documentId": "37bde1ab-8aae-5a04-8677-18ecaee5423f",
+          "chunkIndex": 2,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-3.11 | Rates of Reaction | Ex"
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "query": "electrolysis of molten lead bromide",
+      "latency_s": 4.78,
+      "n_hits": 5,
+      "kinds": [
+        "EXTERNAL_NOTES",
+        "QUESTION_PAPER",
+        "SYLLABUS"
+      ],
+      "lane_hit": true,
+      "hits": [
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.8022,
+          "documentId": "064f0e78-4e31-5d2e-bdb2-5b8d948142c2",
+          "chunkIndex": 1,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.58C | Electrolysis | Electr"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.7966,
+          "documentId": "064f0e78-4e31-5d2e-bdb2-5b8d948142c2",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.58C | Electrolysis | Electr"
+        },
+        {
+          "kind": "QUESTION_PAPER",
+          "score": 0.7645,
+          "documentId": "de0ebeac-bbb0-5a95-9c31-7b5258604133",
+          "chunkIndex": 5,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/2C | Paper 2C | Q6"
+        },
+        {
+          "kind": "SYLLABUS",
+          "score": 0.7579,
+          "documentId": "e615de0e-dee4-5871-af24-0925ed236018",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Spec | Spec 4CH1-1.58C | 1. Principles of Chemi"
+        },
+        {
+          "kind": "QUESTION_PAPER",
+          "score": 0.7338,
+          "documentId": "40d34459-e45c-595d-a645-e8f722bcabeb",
+          "chunkIndex": 4,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q5"
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "query": "describe a test for chloride ions",
+      "latency_s": 4.09,
+      "n_hits": 5,
+      "kinds": [
+        "EXTERNAL_NOTES",
+        "MARK_SCHEME",
+        "QUESTION_PAPER",
+        "SYLLABUS"
+      ],
+      "lane_hit": false,
+      "hits": [
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.7407,
+          "documentId": "a6bf93e7-63f8-56d9-a14d-bff2970960c8",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-2.48 | Chemical Tests | Tests"
+        },
+        {
+          "kind": "SYLLABUS",
+          "score": 0.7311,
+          "documentId": "178e78c2-0cc8-5a7a-9853-27abfdb27f15",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Spec | Spec 4CH1-2.48 | 2. Inorganic Chemistry "
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.7251,
+          "documentId": "a6bf93e7-63f8-56d9-a14d-bff2970960c8",
+          "chunkIndex": 1,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-2.48 | Chemical Tests | Tests"
+        },
+        {
+          "kind": "MARK_SCHEME",
+          "score": 0.711,
+          "documentId": "1f3bd170-739b-5bc8-a3f5-9f109458aa83",
+          "chunkIndex": 2,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jan 2012 | 4CH0/1C | Paper 1C | Q3"
+        },
+        {
+          "kind": "QUESTION_PAPER",
+          "score": 0.7101,
+          "documentId": "7d7c11c9-3d4b-596e-898a-80deca84b62f",
+          "chunkIndex": 2,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jan 2014 | 4CH0/2C | Paper 2C | Q2"
+        }
+      ]
+    },
+    {
+      "id": "S1",
+      "query": "calculate empirical formulae",
+      "latency_s": 4.13,
+      "n_hits": 5,
+      "kinds": [
+        "EXTERNAL_NOTES",
+        "SYLLABUS"
+      ],
+      "lane_hit": true,
+      "hits": [
+        {
+          "kind": "SYLLABUS",
+          "score": 0.7239,
+          "documentId": "02c550b3-07b7-5025-901f-94b23eca98f6",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Spec | Spec 4CH1-1.33 | 1. Principles of Chemis"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6975,
+          "documentId": "2253e577-6b8e-5f4c-b1cb-acee70d304f3",
+          "chunkIndex": 1,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.32\u20134CH1-1.33 | Chemical For"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6872,
+          "documentId": "2253e577-6b8e-5f4c-b1cb-acee70d304f3",
+          "chunkIndex": 3,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.32\u20134CH1-1.33 | Chemical For"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6857,
+          "documentId": "2253e577-6b8e-5f4c-b1cb-acee70d304f3",
+          "chunkIndex": 2,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.32\u20134CH1-1.33 | Chemical For"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6856,
+          "documentId": "2253e577-6b8e-5f4c-b1cb-acee70d304f3",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.32\u20134CH1-1.33 | Chemical For"
+        }
+      ]
+    },
+    {
+      "id": "P1",
+      "query": "the student measured the volume of gas produced",
+      "latency_s": 4.09,
+      "n_hits": 5,
+      "kinds": [
+        "EXTERNAL_QUESTIONS"
+      ],
+      "lane_hit": true,
+      "hits": [
+        {
+          "kind": "EXTERNAL_QUESTIONS",
+          "score": 0.6981,
+          "documentId": "f07b5f5c-39f3-5c0a-a89f-ca1af2d23ecd",
+          "chunkIndex": 1,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Jun 2013 | 4CH0/1C | Q-Card | Q2 | p.1\nQ-Card |"
+        },
+        {
+          "kind": "EXTERNAL_QUESTIONS",
+          "score": 0.6819,
+          "documentId": "57ce04e2-7bef-5313-a813-0e12a5c5a852",
+          "chunkIndex": 6,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Jan 2013 | 4CH0/2C | Q-Card | Q7 | p.1\nQ-Card |"
+        },
+        {
+          "kind": "EXTERNAL_QUESTIONS",
+          "score": 0.6812,
+          "documentId": "fe36605f-3ea4-5122-b38c-cf4129d62b6c",
+          "chunkIndex": 6,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Jun 2017 | 4CH0/1C | Q-Card | Q7 | p.1\nQ-Card |"
+        },
+        {
+          "kind": "EXTERNAL_QUESTIONS",
+          "score": 0.6789,
+          "documentId": "2300607c-89aa-5cc1-b9bf-f6a1b3972205",
+          "chunkIndex": 8,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Nov 2021 | 4CH1/1C | Q-Card | Q9 | p.1\nQ-Card |"
+        },
+        {
+          "kind": "EXTERNAL_QUESTIONS",
+          "score": 0.6789,
+          "documentId": "417b3358-f7af-5ed1-b147-6c48f45f9a9e",
+          "chunkIndex": 2,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Jan 2021 | 4CH1/2C | Q-Card | Q3 | p.1\nQ-Card |"
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "query": "flame test colours of lithium sodium potassium",
+      "latency_s": 4.65,
+      "n_hits": 5,
+      "kinds": [
+        "EXTERNAL_NOTES",
+        "QUESTION_PAPER",
+        "SYLLABUS"
+      ],
+      "lane_hit": true,
+      "hits": [
+        {
+          "kind": "SYLLABUS",
+          "score": 0.77,
+          "documentId": "feac302e-ef16-50db-8151-20f0e0a1ed44",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Spec | Spec 4CH1-2.46 | 2. Inorganic Chemistry "
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.7692,
+          "documentId": "f2627c09-83b2-55fd-80f1-a33fc8637078",
+          "chunkIndex": 1,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-2.46 | Chemical Tests | Flame"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.7428,
+          "documentId": "f2627c09-83b2-55fd-80f1-a33fc8637078",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-2.46 | Chemical Tests | Flame"
+        },
+        {
+          "kind": "QUESTION_PAPER",
+          "score": 0.6881,
+          "documentId": "1e6a27f5-5c2f-502f-b36f-d03e3a6414ce",
+          "chunkIndex": 5,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/1C | Paper 1C | Q6"
+        },
+        {
+          "kind": "QUESTION_PAPER",
+          "score": 0.6827,
+          "documentId": "efd57f65-11ac-58b4-a622-f1c9f4960761",
+          "chunkIndex": 13,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jun 2012 | 4CH0/1C | Paper 1C | Q1"
+        }
+      ]
+    },
+    {
+      "id": "M1",
+      "query": "allow ecf for correct working",
+      "latency_s": 4.11,
+      "n_hits": 5,
+      "kinds": [
+        "MARK_SCHEME"
+      ],
+      "lane_hit": true,
+      "hits": [
+        {
+          "kind": "MARK_SCHEME",
+          "score": 0.5353,
+          "documentId": "9d12f668-9923-5754-9dd3-716ee1160170",
+          "chunkIndex": 8,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Nov 2021 | 4CH1/2C | Paper 2C | Q7"
+        },
+        {
+          "kind": "MARK_SCHEME",
+          "score": 0.5264,
+          "documentId": "123e0bf0-f380-5550-8cfc-17521258a656",
+          "chunkIndex": 9,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jun 2024 | 4CH1/2CR | Paper 2CR | "
+        },
+        {
+          "kind": "MARK_SCHEME",
+          "score": 0.5233,
+          "documentId": "3be30cc2-2f3d-599c-ac15-90a4926534a5",
+          "chunkIndex": 12,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/1C | Paper 1C | Q9"
+        },
+        {
+          "kind": "MARK_SCHEME",
+          "score": 0.5233,
+          "documentId": "aa079c51-874e-5fe8-a44c-2a8feb9b07b5",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1CR | Paper 1CR | "
+        },
+        {
+          "kind": "MARK_SCHEME",
+          "score": 0.5219,
+          "documentId": "1074003c-64c8-5c8a-accd-e86485a24fbc",
+          "chunkIndex": 7,
+          "model": "gemini-embedding-001",
+          "text": "International GCSE Chemistry 4CH1 | Nov 2025 | 4CH1/2C | Paper 2C | Q4"
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "query": "ionic bonding between sodium and chlorine",
+      "latency_s": 4.64,
+      "n_hits": 5,
+      "kinds": [
+        "EXTERNAL_NOTES",
+        "SYLLABUS"
+      ],
+      "lane_hit": true,
+      "hits": [
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.7338,
+          "documentId": "413ebf93-e38e-55db-8f49-f9e63ce5334b",
+          "chunkIndex": 1,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.40 | Ionic Bonding | Ionic "
+        },
+        {
+          "kind": "SYLLABUS",
+          "score": 0.6782,
+          "documentId": "9d34e964-b06b-5c76-9e68-57a54cfdcbe7",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Spec | Spec 4CH1-1.41 | 1. Principles of Chemis"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.672,
+          "documentId": "841a295d-8d63-52df-bb0d-8f7dc3957bc9",
+          "chunkIndex": 2,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-2.5\u20134CH1-2.7 | Group 7 (Halog"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6706,
+          "documentId": "df4a1ca9-2b8c-5c76-ba5a-68444db93706",
+          "chunkIndex": 0,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.41\u20134CH1-1.43 | Ionic Bondin"
+        },
+        {
+          "kind": "EXTERNAL_NOTES",
+          "score": 0.6643,
+          "documentId": "ae71ee44-fc13-5b40-8d13-b909b13232a0",
+          "chunkIndex": 1,
+          "model": "gemini-embedding-001",
+          "text": "IGCSE Chemistry 4CH1 | Notes | Spec 4CH1-1.44\u20134CH1-1.45 | Covalent Bon"
+        }
+      ]
+    }
+  ],
+  "fetch": [
+    {
+      "id": "FET-002",
+      "query": "question 6 summer 2011 mark scheme",
+      "latency_s": 4.98,
+      "parse_defect": false,
+      "ambiguous": true,
+      "papers": 2,
+      "questions_resolved": 2,
+      "mark_points": 7,
+      "ok": true
+    },
+    {
+      "id": "FET-003",
+      "query": "what did question 2 ask in 4CH1/2CR 2022",
+      "latency_s": 4.4,
+      "parse_defect": false,
+      "ambiguous": true,
+      "papers": 2,
+      "questions_resolved": 2,
+      "mark_points": 9,
+      "ok": true
+    }
+  ],
+  "enumerate": [
+    {
+      "id": "ENU-002",
+      "query": "list all questions about metallic bonding",
+      "latency_s": 3.78,
+      "questions": 1,
+      "axes": null,
+      "ok": true
+    },
+    {
+      "id": "ENU-STRUCT-1.32",
+      "nodeCode": "4CH1-1.32",
+      "latency_s": 3.79,
+      "questions": 1,
+      "ok": true
+    }
+  ],
+  "determinism": {
+    "query": "how does temperature affect the rate of reaction",
+    "pass": true,
+    "latency1_s": 4.07,
+    "latency2_s": 4.1
+  },
+  "rev_leakage": {
+    "unique_hits": 40,
+    "leaks": [],
+    "unresolved": []
+  }
+}
