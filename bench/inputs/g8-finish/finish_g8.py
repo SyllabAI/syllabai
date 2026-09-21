@@ -24,6 +24,7 @@ RAW KEY VALUES NEVER REACH THE REPORT — fingerprints only. G8 default KEY_ORDE
 is 3,0,1,2 (1 and 2 are the keys exhausted today; 3 and 0 are untouched).
 
 Stdlib only.
+"""
 import base64
 import hashlib
 import hmac
