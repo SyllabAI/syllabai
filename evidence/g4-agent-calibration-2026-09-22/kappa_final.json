@@ -1,0 +1,234 @@
+{
+  "generated_at": "2026-09-22",
+  "provenance": "AGENT_MARKING \u2014 agent-generated engineering calibration; NOT human/teacher evidence",
+  "frozen_decisions_sha256": "255265d7608d0c5e6d5a3e6f1468ea6cb0b5fe996836815e09c63a9e1eeafef6",
+  "threshold": 0.6,
+  "convention_A_as_frozen": {
+    "description": "bundled multi-mark point = 1 only when fully earned (marker convention declared at freeze, before any smart output)",
+    "kappa": 0.311927,
+    "observed": 0.76,
+    "expected": 0.6512,
+    "n": 25,
+    "smart_yes": 23,
+    "human_yes": 17,
+    "passed": false
+  },
+  "convention_B_production_mirror": {
+    "description": "human side mirrors production smart-side semantics: any credit = 1 (TeacherMarkingService awarded-boolean pairing); re-read from the same frozen rationales",
+    "kappa": 1.0,
+    "observed": 1.0,
+    "expected": 0.8528,
+    "n": 25,
+    "smart_yes": 23,
+    "human_yes": 23,
+    "passed": true
+  },
+  "rows": [
+    {
+      "part": "sme-eq-1-3-atomic-structure-q0|a",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q0|b",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q0|c",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q0|d",
+      "paired": true,
+      "smart_awarded": false,
+      "human_frozen": 0,
+      "human_production_mirror": 0,
+      "convention_b_basis": "rationale records no credit (atomic number given instead of mass number) -> 0"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q0|e",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q10|a",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q10|b",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 0,
+      "human_production_mirror": 1,
+      "convention_b_basis": "rationale records 3/4 sub-items correct (U; 25; W) -> any credit = 1"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q10|c",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 0,
+      "human_production_mirror": 1,
+      "convention_b_basis": "rationale records the weighted-sum method mark (2017.6) -> any credit = 1"
+    },
+    {
+      "part": "sme-eq-2-5-extraction-and-uses-of-metals-q4|a",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-2-5-extraction-and-uses-of-metals-q4|b",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-2-5-extraction-and-uses-of-metals-q4|c",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-2-5-extraction-and-uses-of-metals-q4|d",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 0,
+      "human_production_mirror": 1,
+      "convention_b_basis": "rationale records the Mr = 102 sub-point -> any credit = 1"
+    },
+    {
+      "part": "sme-eq-1-6-ionic-bonding-q5|a",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 0,
+      "human_production_mirror": 1,
+      "convention_b_basis": "rationale records sodium-loses / oxygen-gains sub-points (ratio missed) -> any credit = 1"
+    },
+    {
+      "part": "sme-eq-1-6-ionic-bonding-q5|b",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-6-ionic-bonding-q5|c",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-6-ionic-bonding-q5|d",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 0,
+      "human_production_mirror": 1,
+      "convention_b_basis": "rationale records the flame-test method sub-point (colour wrong) -> any credit = 1"
+    },
+    {
+      "part": "sme-eq-1-6-ionic-bonding-q5|e",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q4|a",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q4|b",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-3-atomic-structure-q4|c",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-2-5-extraction-and-uses-of-metals-q14|a",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-2-5-extraction-and-uses-of-metals-q14|b",
+      "paired": true,
+      "smart_awarded": false,
+      "human_frozen": 0,
+      "human_production_mirror": 0,
+      "convention_b_basis": "rationale records no credit (unit conversion missed, answer off by x1000) -> 0"
+    },
+    {
+      "part": "sme-eq-2-5-extraction-and-uses-of-metals-q14|c",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 0,
+      "human_production_mirror": 1,
+      "convention_b_basis": "rationale records three of four+ required reasons -> any credit = 1"
+    },
+    {
+      "part": "sme-eq-2-5-extraction-and-uses-of-metals-q14|d",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-6-ionic-bonding-q7|a",
+      "paired": true,
+      "smart_awarded": true,
+      "human_frozen": 1,
+      "human_production_mirror": 1,
+      "convention_b_basis": "frozen decision already any-credit-consistent -> unchanged"
+    },
+    {
+      "part": "sme-eq-1-6-ionic-bonding-q7|b",
+      "paired": false,
+      "reason": "smart not validation-passed (UNPARSEABLE_OUTPUT)"
+    }
+  ],
+  "first_run_note": "Cohen's kappa per mark-point decision (KappaAgreementService.cohenKappa semantics)"
+}
