@@ -1,0 +1,47 @@
+name: ops-g1-finish
+
+# g1-finish (G1 MS-classifier landing lane, 2026-09-22): embed the G1-upgraded
+# MS corpus — 83 replaced old-spec MS docs (parser 9f38dda row grammar; canonical
+# content changed) + the first 3 MS-only COVID papers (parser dffeb1d --ms-only;
+# Nov 2020 4CH1-1CR/2C/2CR), 86 documents / 1,344 rev2 chunks pending.
+#
+# Vectors are produced BY THE PRODUCTION APP (POST /{id}/embed, Spring AI
+# batched transport) because CI single-call REST vectors are a different vector
+# space (evidence/bench-001/embed-bridge-v2/CORRECTION.md — cross-space top-10
+# rank agreement 0.79). This workflow rotates the Render embedding key to a
+# REMAINING key (default order 1,2,0,3 — all keys recovered at Pacific-midnight;
+# index 3 is the current serving key and goes last), redeploys, then drives the
+# app's own embed endpoint per document (idempotent, resumable, fail-fast on 3
+# consecutive same-class HTTP failures). Raw key values never reach logs or
+# artifacts — fingerprints only. Manual dispatch only; never on push/PR.
+
+on:
+  workflow_dispatch:
+    inputs:
+      key_order:
+        description: "0-based indices into SYLLABAI_EMBEDDING_GEMINI_API_KEYS to rotate through"
+        default: "1,2,0,3"
+
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    steps:
+      - name: Checkout records repo (frozen inputs)
+        uses: actions/checkout@v4
+
+      - name: Rotate Render key + drive app-side embed of pending G1 chunks
+        env:
+          SYLLABAI_EMBEDDING_GEMINI_API_KEYS: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEYS }}
+          RENDER_API_TOKEN: ${{ secrets.RENDER_API_TOKEN }}
+          KEY_ORDER: ${{ inputs.key_order }}
+          FINISH_OUT: ${{ github.workspace }}/finish-out-g1
+        run: python3 bench/inputs/g1-finish/finish_g1.py
+
+      - name: Upload finish report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: finish-g1
+          path: finish-out-g1/
+          retention-days: 90
