@@ -137,9 +137,44 @@ def swap_key(key):
     return changed, jwt_secret
 
 
+def create_deploy(timeout_s=120):
+    """POST a deploy; Render now answers 202 with an EMPTY body (observed
+    2026-09-22 — no id in the response), so discover the id by listing deploys
+    and taking the freshest created within the last two minutes."""
+    import datetime
+    deadline = time.time() + timeout_s
+    while time.time() < deadline:
+        dep = None
+        try:
+            dep = render("POST", f"services/{SERVICE}/deploys",
+                         {"clearCache": "do_not_clear"})
+        except Exception as e:
+            print(f"  deploy POST: {str(e)[:120]}", flush=True)
+        dep_id = (dep or {}).get("id") if isinstance(dep, dict) else None
+        if not dep_id and isinstance(dep, dict):
+            dep_id = dep.get("deploy", {}).get("id")
+        if dep_id:
+            return dep_id
+        # discover: newest deploy created just now
+        items = render("GET", f"services/{SERVICE}/deploys?limit=5")
+        cutoff = time.time() - 120
+        for it in (items if isinstance(items, list) else []):
+            d = it.get("deploy", it)
+            created = d.get("createdAt") or d.get("created_at")
+            try:
+                t = datetime.datetime.fromisoformat(created.replace("Z", "+00:00")).timestamp()
+            except Exception:
+                continue
+            if t >= cutoff:
+                print(f"  deploy discovered from list: {d.get('id')}", flush=True)
+                return d.get("id")
+        print("  no fresh deploy found — retrying POST", flush=True)
+        time.sleep(10)
+    raise RuntimeError("could not create/discover a deploy")
+
+
 def deploy_and_wait(timeout_s=900):
-    dep = render("POST", f"services/{SERVICE}/deploys", {"clearCache": "do_not_clear"})
-    dep_id = dep.get("id") or dep.get("deploy", {}).get("id")
+    dep_id = create_deploy()
     print(f"  deploy {dep_id} requested", flush=True)
     t0 = time.time()
     while time.time() - t0 < timeout_s:
