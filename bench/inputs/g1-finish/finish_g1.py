@@ -68,13 +68,23 @@ def http_json(method, url, body=None, headers=None, timeout=120):
     if body is not None:
         h["Content-Type"] = "application/json"
     h.update(headers or {})
-    req = urllib.request.Request(url, data=data, headers=h, method=method)
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return json.loads(r.read().decode())
-    except urllib.error.HTTPError as e:
-        detail = e.read().decode(errors="replace")[:300]
-        raise RuntimeError(f"{method} {url} -> HTTP {e.code}: {detail}") from None
+    last = None
+    for attempt in range(4):
+        req = urllib.request.Request(url, data=data, headers=h, method=method)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                raw = r.read().decode()
+            if not raw.strip():
+                # observed once 2026-09-22: Render API returned 200 with an
+                # EMPTY body — retry with backoff before giving up
+                last = RuntimeError(f"{method} {url} -> empty body (attempt {attempt + 1})")
+                time.sleep(5 * (attempt + 1))
+                continue
+            return json.loads(raw)
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode(errors="replace")[:300]
+            raise RuntimeError(f"{method} {url} -> HTTP {e.code}: {detail}") from None
+    raise last or RuntimeError(f"{method} {url} -> exhausted retries")
 
 
 def render(method, path, body=None, timeout=120):
