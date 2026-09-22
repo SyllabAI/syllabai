@@ -1,0 +1,237 @@
+{
+ "artifact": "g1-finish",
+ "created_at_utc": "2026-09-22T07:59:42Z",
+ "docs": 86,
+ "chunks_pending": 1344,
+ "key_order": [
+  1,
+  2,
+  0,
+  3
+ ],
+ "fingerprints": {
+  "0": "sha256:01ac5264a3",
+  "1": "sha256:91fdfb06ac",
+  "2": "sha256:797b77a879",
+  "3": "sha256:3687872106"
+ },
+ "rounds": [
+  {
+   "round": 1,
+   "key_index": 1,
+   "key_fingerprint": "sha256:91fdfb06ac",
+   "env_changed": false,
+   "deploy_id": "dep-dap3acratf1s73bempi0",
+   "deploy_seconds": 272,
+   "docs_posted": 86,
+   "embedded": 796,
+   "skipped": 0,
+   "failures": [
+    {
+     "doc": "1fe41975-467b-49d6-a2b2-2575c19fdae5",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/1fe41975-467b-49d6-a2b2-2575c19fdae5/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:12.885Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "70c90de1-b471-4d36-8fe0-a8e94ee805ca",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/70c90de1-b471-4d36-8fe0-a8e94ee805ca/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:13.896Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "8b525ada-29e8-4b30-b110-de1627f15bc9",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/8b525ada-29e8-4b30-b110-de1627f15bc9/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:14.635Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "b464e974-25e6-4cef-a1ef-7dc14bf14d9b",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/b464e974-25e6-4cef-a1ef-7dc14bf14d9b/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:15.351Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "13ee238b-b910-4e71-acd4-ca092a31aea6",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/13ee238b-b910-4e71-acd4-ca092a31aea6/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:16.066Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "8198fd3a-9e42-4e27-91c2-e1e034cd0824",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/8198fd3a-9e42-4e27-91c2-e1e034cd0824/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:16.776Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "72ae2a68-ccb2-483f-aa06-8bd958c32151",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/72ae2a68-ccb2-483f-aa06-8bd958c32151/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:17.792Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "7ce71412-a23a-4b62-8c91-bf3381ad5391",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/7ce71412-a23a-4b62-8c91-bf3381ad5391/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:18.523Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "cb9ac56d-2d32-463c-b714-f5e2185a8a3e",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/cb9ac56d-2d32-463c-b714-f5e2185a8a3e/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:19.248Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "4336e813-121a-4404-9e75-379086033935",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/4336e813-121a-4404-9e75-379086033935/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:20.316Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "026063f9-6fe2-4440-a33f-c1efa4f2d543",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/026063f9-6fe2-4440-a33f-c1efa4f2d543/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:21.038Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "b57b071f-0e4a-49f4-a196-ff62180962bc",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/b57b071f-0e4a-49f4-a196-ff62180962bc/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:21.758Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "181889f9-a963-4d62-8b19-0bf47f3c5bf7",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/181889f9-a963-4d62-8b19-0bf47f3c5bf7/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:22.456Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "a9f61ce9-958d-4f2f-9bd4-4718771b974d",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/a9f61ce9-958d-4f2f-9bd4-4718771b974d/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:23.266Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "52c18f79-b555-4788-b101-7eedb0e734eb",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/52c18f79-b555-4788-b101-7eedb0e734eb/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:23.970Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "5505e8a7-b947-4955-8dea-48057c752ddc",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/5505e8a7-b947-4955-8dea-48057c752ddc/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:24.675Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "1c3df2f0-048b-4bf4-9630-89524eb70cda",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/1c3df2f0-048b-4bf4-9630-89524eb70cda/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:25.394Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "14a843fa-6091-4027-9b65-510de5775257",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/14a843fa-6091-4027-9b65-510de5775257/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:26.112Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "2f44a063-1753-4c7f-a01a-aaf051802910",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/2f44a063-1753-4c7f-a01a-aaf051802910/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:26.824Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "daacf542-040f-4097-ae74-040a3c1c0a2c",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/daacf542-040f-4097-ae74-040a3c1c0a2c/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:27.527Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "e00d383c-279a-4797-8d1c-39037e4cfefc",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/e00d383c-279a-4797-8d1c-39037e4cfefc/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:28.239Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "9d90f542-f5d2-475e-9ea2-987e40a69e4d",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/9d90f542-f5d2-475e-9ea2-987e40a69e4d/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:28.949Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "5addd464-8726-4509-9986-5acfce934ce2",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/5addd464-8726-4509-9986-5acfce934ce2/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:29.995Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "46b427ae-8b10-45c8-86e7-7241a85560e5",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/46b427ae-8b10-45c8-86e7-7241a85560e5/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:30.710Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "9f3b467a-47c6-45a0-a15c-3729e75be25a",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/9f3b467a-47c6-45a0-a15c-3729e75be25a/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:31.409Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "b184aaeb-2c33-40ed-aa78-e30907c2d223",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/b184aaeb-2c33-40ed-aa78-e30907c2d223/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:32.121Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "2ca92749-8fd5-4089-a5ba-4f047537daab",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/2ca92749-8fd5-4089-a5ba-4f047537daab/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:32.835Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "593537b0-5091-4971-b555-d5d54902da01",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/593537b0-5091-4971-b555-d5d54902da01/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:33.541Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "b4af4821-7b2b-4dc2-86da-2333843ee165",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/b4af4821-7b2b-4dc2-86da-2333843ee165/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:34.248Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "767e8ae9-a61f-4f19-9073-b2ff1a356ee3",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/767e8ae9-a61f-4f19-9073-b2ff1a356ee3/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:34.978Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "6ca49d76-4404-448d-b8d3-f2bbadcce5f8",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/6ca49d76-4404-448d-b8d3-f2bbadcce5f8/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:35.712Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "ffe22bd2-a968-45f7-a0b9-1db193989cce",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/ffe22bd2-a968-45f7-a0b9-1db193989cce/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:36.412Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "7e04186d-dbe6-4057-b394-ac7c6d95ddc2",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/7e04186d-dbe6-4057-b394-ac7c6d95ddc2/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:37.112Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "301c1a66-f198-4e8d-bfb1-58cb33dda9e6",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/301c1a66-f198-4e8d-bfb1-58cb33dda9e6/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:37.816Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "5d3bfa8d-d922-4a50-be89-c775309eb720",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/5d3bfa8d-d922-4a50-be89-c775309eb720/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:38.510Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "d91bc762-f5fc-4fee-bdf0-bf4565f63516",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/d91bc762-f5fc-4fee-bdf0-bf4565f63516/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:39.558Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "080a73fa-4d27-445c-89d8-5b920752fb77",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/080a73fa-4d27-445c-89d8-5b920752fb77/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:40.290Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    },
+    {
+     "doc": "af362348-36d7-4cac-943b-770119d6a9df",
+     "reason": "transport",
+     "body": "POST https://syllabai-core.onrender.com/api/v1/teacher/content/documents/af362348-36d7-4cac-943b-770119d6a9df/embed -> HTTP 401: {\"timestamp\":\"2026-09-22T08:15:40.998Z\",\"status\":401,\"error\":\"Unauthorized\",\"path\":\"/api/v1"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "key_index": 2,
+   "key_fingerprint": "sha256:797b77a879",
+   "env_changed": true,
+   "deploy_id": "dep-dap3ibm0tbcc7389866g",
+   "deploy_seconds": 197,
+   "docs_posted": 38,
+   "embedded": 548,
+   "skipped": 0,
+   "failures": []
+  }
+ ],
+ "open_docs_after": [],
+ "complete": true
+}

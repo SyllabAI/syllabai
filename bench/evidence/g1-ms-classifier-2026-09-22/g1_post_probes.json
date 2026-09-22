@@ -1,0 +1,163 @@
+{
+ "generated_at": "2026-09-22T08:33:53Z",
+ "base": "https://syllabai-core.onrender.com",
+ "health": {
+  "groups": [
+   "liveness",
+   "readiness"
+  ],
+  "status": "UP"
+ },
+ "search": [
+  {
+   "id": "N1",
+   "query": "how does temperature affect the rate of reaction",
+   "latency_s": 4.83,
+   "n_hits": 10,
+   "kinds": [
+    "QUESTION_PAPER",
+    "EXTERNAL_NOTES",
+    "MARK_SCHEME"
+   ]
+  },
+  {
+   "id": "N2",
+   "query": "electrolysis of molten lead bromide",
+   "latency_s": 4.62,
+   "n_hits": 10,
+   "kinds": [
+    "EXTERNAL_NOTES",
+    "QUESTION_PAPER",
+    "SYLLABUS"
+   ]
+  },
+  {
+   "id": "C1",
+   "query": "describe a test for chloride ions",
+   "latency_s": 4.04,
+   "n_hits": 10,
+   "kinds": [
+    "EXTERNAL_NOTES",
+    "SYLLABUS",
+    "QUESTION_PAPER",
+    "MARK_SCHEME"
+   ]
+  },
+  {
+   "id": "S1",
+   "query": "calculate empirical formulae",
+   "latency_s": 3.96,
+   "n_hits": 10,
+   "kinds": [
+    "SYLLABUS",
+    "EXTERNAL_NOTES",
+    "QUESTION_PAPER"
+   ]
+  },
+  {
+   "id": "P1",
+   "query": "the student measured the volume of gas produced",
+   "latency_s": 4.29,
+   "n_hits": 10,
+   "kinds": [
+    "EXTERNAL_QUESTIONS",
+    "QUESTION_PAPER"
+   ]
+  },
+  {
+   "id": "P2",
+   "query": "flame test colours of lithium sodium potassium",
+   "latency_s": 3.9,
+   "n_hits": 10,
+   "kinds": [
+    "SYLLABUS",
+    "EXTERNAL_NOTES",
+    "QUESTION_PAPER"
+   ]
+  },
+  {
+   "id": "M1",
+   "query": "allow ecf for correct working",
+   "latency_s": 3.95,
+   "n_hits": 10,
+   "kinds": [
+    "QUESTION_PAPER",
+    "MARK_SCHEME"
+   ]
+  },
+  {
+   "id": "B1",
+   "query": "ionic bonding between sodium and chlorine",
+   "latency_s": 3.92,
+   "n_hits": 10,
+   "kinds": [
+    "EXTERNAL_NOTES",
+    "SYLLABUS",
+    "QUESTION_PAPER",
+    "MARK_SCHEME"
+   ]
+  },
+  {
+   "id": "MSO-1",
+   "query": "November 2020 mark scheme amounts of substance",
+   "latency_s": 3.91,
+   "n_hits": 10,
+   "kinds": [
+    "MARK_SCHEME"
+   ]
+  }
+ ],
+ "rev_leakage": {
+  "unique_hits": 90,
+  "leaks": [],
+  "unresolved": []
+ },
+ "g1_msonly_docs": {
+  "nov2020_ms_docs_with_chunks": 4
+ },
+ "determinism": {
+  "query": "how does temperature affect the rate of reaction",
+  "pass": true
+ },
+ "fetch": [
+  {
+   "id": "FET-002",
+   "latency_s": 4.73,
+   "raw_keys": [
+    "parsed",
+    "ambiguous",
+    "parseDefect",
+    "papers"
+   ],
+   "papers": 2
+  },
+  {
+   "id": "FET-003",
+   "latency_s": 4.38,
+   "raw_keys": [
+    "parsed",
+    "ambiguous",
+    "parseDefect",
+    "papers"
+   ],
+   "papers": 2
+  }
+ ],
+ "enumerate": [
+  {
+   "id": "ENU-002",
+   "latency_s": 3.82,
+   "raw_keys": [
+    "result"
+   ],
+   "questions": 0
+  },
+  {
+   "id": "ENU-STRUCT-1.32",
+   "latency_s": 3.7,
+   "raw_keys": [
+    "result"
+   ]
+  }
+ ]
+}
