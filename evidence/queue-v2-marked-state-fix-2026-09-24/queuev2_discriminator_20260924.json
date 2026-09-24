@@ -1,0 +1,44 @@
+{
+  "overridden_pipeline_census": {
+    "1.0.0": 182,
+    "1.2.0": 26
+  },
+  "g4_items_rendered": [
+    {
+      "q": "sme-eq-1-3-atomic-structure-q0",
+      "part": "a",
+      "pipeline": "1.2.0",
+      "model": "openai/gpt-oss-120b",
+      "marks": 1,
+      "conf": 0.99,
+      "validationPassed": true,
+      "breakdown_points": 1,
+      "human_marks": 1
+    },
+    {
+      "q": "sme-eq-1-3-atomic-structure-q0",
+      "part": "b",
+      "pipeline": "1.2.0",
+      "model": "openai/gpt-oss-120b",
+      "marks": 1,
+      "conf": 0.99,
+      "validationPassed": true,
+      "breakdown_points": 1,
+      "human_marks": 1
+    },
+    {
+      "q": "sme-eq-1-3-atomic-structure-q0",
+      "part": "c",
+      "pipeline": "1.2.0",
+      "model": "openai/gpt-oss-120b",
+      "marks": 1,
+      "conf": 0.99,
+      "validationPassed": true,
+      "breakdown_points": 1,
+      "human_marks": 1
+    }
+  ],
+  "human_marked_run_census": {
+    "1.0.0": 49
+  }
+}
