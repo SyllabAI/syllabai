@@ -1,0 +1,1137 @@
+{
+ "schemaVersion": "1.0",
+ "paper": {
+  "board": "Edexcel",
+  "qualification": "4CH1",
+  "subject": "Chemistry",
+  "unit": "4CH1",
+  "sessionLabel": "January 2021",
+  "paperCode": "4CH1/1CR",
+  "questionPaperDocumentId": null,
+  "markSchemeDocumentId": null
+ },
+ "questions": [
+  {
+   "externalRef": "4ch1-1cr-202101#q1",
+   "questionNumber": "1",
+   "prompt": "Answer ALL questions.\n1 The box lists some substances.\nair bromine carbon copper glucose\nnitrogen oxygen sulfur water\nChoose substances from the box to answer these questions.\nEach substance may be used once, more than once or not at all.",
+   "commandWord": null,
+   "marks": 6,
+   "questionType": "STRUCTURED",
+   "pageNumber": 3,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "Name a metallic element.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "Name a compound.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "Name a mixture.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "d",
+     "prompt": "Name an element that is a gas at room temperature.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "e",
+     "prompt": "Name an element that forms a basic oxide.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "f",
+     "prompt": "Name two elements that are in the same group of the Periodic Table.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q2",
+   "questionNumber": "2",
+   "prompt": "A student does a chromatography experiment using ink 1, ink 2, and\nthree known dyes A, B and C. The student uses water as the solvent.\nThe diagram shows the student\u2019s chromatogram.\nsolvent front\npencil line\nink\ndye\ndye\ndye\nink\n2\nA\nB\nC\n1",
+   "commandWord": null,
+   "marks": 7,
+   "questionType": "STRUCTURED",
+   "pageNumber": 4,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "Deduce what conclusions can be made about the composition of ink 1.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "Give one conclusion that can be made about ink 2.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "Suggest how the student could change the experiment to find the\ncomposition of ink 2.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "Calculate the Rf value of dye C, giving your answer to 2 significant figures.\nRf value = ...............................................",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q3",
+   "questionNumber": "3",
+   "prompt": "Crude oil is a mixture of organic compounds.\nMost of these compounds are members of the same homologous series.",
+   "commandWord": null,
+   "marks": 13,
+   "questionType": "STRUCTURED",
+   "pageNumber": 6,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "State the name of this homologous series.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "An industrial process is used to separate crude oil into fractions.",
+     "commandWord": null,
+     "marks": 4,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "The process depends on a difference in a property of the fractions.\nWhat is this property?\nA boiling point\nB density\nC melting point\nD solubility",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "The boxes give some uses of fractions and some names of fractions.\nDraw one straight line from each use to its correct fraction.\nUse\nFraction\nbitumen\nfuel for aeroplanes\ndiesel\nfuel for ships\nfuel oil\ngasoline\nsurfacing roads\nkerosene",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "Fuels obtained from the fractions may contain impurities.\nExplain how the combustion of a common impurity in fuels may cause an\nenvironmental problem.",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "d",
+     "prompt": "Some of the fractions contain long-chain molecules which are not very useful.",
+     "commandWord": null,
+     "marks": 5,
+     "confidence": 1.0
+    },
+    {
+     "label": "d-i",
+     "prompt": "Give the name of the process used to convert long-chain molecules into more\nuseful shorter-chain molecules.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "d-ii",
+     "prompt": "Give the catalyst and temperature used in the industrial process to convert\nlong-chain molecules into shorter-chain molecules.\ncatalyst\u2009...............................................................................................................................................................................................................................................................\ntemperature..................................................................................................................................................................................................................................................",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "d-iii",
+     "prompt": "When C13H28 is used in this process, three different molecules are formed.\nComplete the equation for this reaction.\nC13H28 \u2192 C8H18 + ............................... + ...............................",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q4",
+   "questionNumber": "4",
+   "prompt": "When iron is left in damp air, rust forms on its surface.",
+   "commandWord": null,
+   "marks": 9,
+   "questionType": "STRUCTURED",
+   "pageNumber": 8,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a-i",
+     "prompt": "State the chemical name for rust.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-ii",
+     "prompt": "Explain how a barrier method prevents rusting.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "A student uses this apparatus to find the approximate percentage by volume\nof oxygen in air.\nrubber bung\ndamp iron wool\n100\n90\ngraduated glass tube\n80\n70\n60\n50\n40\n30\n20\nwater\n10\n0\nThis is the student\u2019s method.\n\uf09f\nplace a graduated glass tube in a beaker of water\n\uf09f\nplace some damp iron wool and a rubber bung in the top of the tube\nrecord the reading of the water level in the tube\n\uf09f\nleave the apparatus for a few days\n\uf09f\n\uf09f\nrecord the reading of the water level again\nThe diagram shows the readings at the start and at the end of the experiment.\n30\n40\n20\n30\n10\n20\nstart\nend",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "Use the readings to complete the table, giving all values to the nearest 0.5\u2009cm3.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "The student uses these results to calculate the percentage by volume of\noxygen in air.\nSuggest why her calculated value is lower than the expected value.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "The student repeats the experiment using the same apparatus.\nThese are her results for the second experiment.\nvolume of air in tube at start = 80.0\u2009cm3\nreading at start = 20.0\nreading at end = 35.5\nUse the results to calculate the percentage by volume of oxygen in air.\npercentage = ............................................... %",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q5",
+   "questionNumber": "5",
+   "prompt": "A student uses this apparatus to investigate the effect of heat on different solid\nmetal carbonates.\nmetal carbonate\nboiling tube\ndelivery tube\ntest tube\nheat\nlimewater\nThis is the student\u2019s method.\nuse a spatula to put some metal carbonate in the boiling tube\n\uf09f\n\uf09f\nfit the delivery tube into position\n\uf09f\npour some limewater into the test tube\nstart a timer and immediately begin to heat the metal carbonate\n\uf09f\n\uf09f\nrecord the time when a change first occurs in the limewater\nThe student repeats the method using different metal carbonates.\nWhen a metal carbonate is heated a reaction sometimes occurs.\nThe equation for the reaction is\nmetal carbonate \u2192 metal oxide + carbon dioxide",
+   "commandWord": null,
+   "marks": 12,
+   "questionType": "STRUCTURED",
+   "pageNumber": 13,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "State the name given to this type of reaction.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "State two variables that the student should control in this investigation.\n1.................................................................................................................................................................................................................................................................................",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "Suggest why bubbles appear in the limewater immediately after heating has\nstarted but before there is any change to the metal carbonate.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "d",
+     "prompt": "Explain the purpose of limewater in this investigation.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "e",
+     "prompt": "The table shows some of the results for the student\u2019s investigation.\ncopper(II) carbonate\n50 seconds",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "e-i",
+     "prompt": "State the colour change that occurs for copper(II) carbonate.\nfrom ..................................................................... to .....................................................................",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "e-ii",
+     "prompt": "Give a chemical equation for this reaction of copper(II) carbonate.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "f-i",
+     "prompt": "There is a relationship between the position of a metal in the reactivity series\nand how easily the metal carbonate reacts when heated.\nUse the student\u2019s results and your own knowledge to deduce this relationship.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "f-ii",
+     "prompt": "State how you should extend the investigation to see if your deduction is correct.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q6",
+   "questionNumber": "6",
+   "prompt": "Zinc reacts with dilute hydrochloric acid to form hydrogen.",
+   "commandWord": null,
+   "marks": 12,
+   "questionType": "STRUCTURED",
+   "pageNumber": 16,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a-i",
+     "prompt": "Give a chemical equation for this reaction.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-ii",
+     "prompt": "Give a test for hydrogen gas.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "A student investigates the reaction between pieces of zinc and dilute hydrochloric acid.\nIn each experiment, he uses the same mass of zinc but a different volume of the acid.\nHe collects the hydrogen and measures its volume in each experiment.\nThe graph shows the student\u2019s results.\n120\n100\n80\nVolume of\nhydrogen\nin cm3\n60\n40\n20\n0\n0\n20\n40\n60\n80\n100\nVolume of dilute hydrochloric acid in cm3",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "Use the graph to find the minimum volume of acid needed to react with all of\nthe zinc.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "The student repeats the investigation, using hydrochloric acid of double the\noriginal concentration.\nDetermine the volume of hydrogen that would be collected using 15\u2009cm3 of\nthis acid.\nShow your working on the graph.\nvolume = ............................................... cm3",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "Explain how increasing the concentration of the hydrochloric acid affects the rate\nof reaction.",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "d",
+     "prompt": "The rate of reaction could also be affected by changing the temperature of the\nhydrochloric acid, or by using a catalyst.\nExplain one other way in which the rate of reaction between zinc and\nhydrochloric acid can be affected.",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q7",
+   "questionNumber": "7",
+   "prompt": "The formation of ions and covalent bonds involves electrons.\nThe table gives the electronic configurations of atoms of hydrogen, lithium and chlorine.",
+   "commandWord": null,
+   "marks": 8,
+   "questionType": "STRUCTURED",
+   "pageNumber": 20,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "Describe the different roles of electrons in the formation of\n\uf09f\nions in lithium chloride\n\uf09f\ncovalent bonds in hydrogen chloride",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "Explain why lithium chloride has a higher melting point than hydrogen chloride.\nRefer to structure and bonding in your answer.",
+     "commandWord": null,
+     "marks": 5,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q8",
+   "questionNumber": "8",
+   "prompt": "",
+   "commandWord": null,
+   "marks": 15,
+   "questionType": "STRUCTURED",
+   "pageNumber": 22,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a-i",
+     "prompt": "Organic compounds can exist as isomers.\nExplain what is meant by the term isomers.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-ii",
+     "prompt": "Organic compound Q reacts with bromine, without the presence of\nultraviolet radiation, to form the compound C4H8Br2\nDraw the displayed formulae of two isomers of Q.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "An acrylic polymer can be formed from molecules with this structure.\nH\nCH3\nC C\nCOOCH3\nH",
+     "commandWord": null,
+     "marks": 5,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "A student describes the molecule as an unsaturated hydrocarbon.\nExplain whether this is a correct description.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "Name the type of polymerisation that occurs in the formation of the polymer.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-iii",
+     "prompt": "Complete the equation for the polymerisation reaction.\nH\nCH3\nn\nC C\nCOOCH3\nH",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "Octane is a compound in petrol.\nThe equation for the complete combustion of octane is\nC8H18 + 12.5 O2 \u2192 8 CO2 + 9 H2O",
+     "commandWord": null,
+     "marks": 6,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-i",
+     "prompt": "The fuel tank of a car contains 50.0\u2009dm3 of octane.\nCalculate the mass, in kg, of carbon dioxide formed if all the octane in the fuel\ntank undergoes complete combustion.\n[mass of 1\u2009dm3 of octane = 700\u2009g]\nmass = ................................................kg",
+     "commandWord": null,
+     "marks": 5,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-ii",
+     "prompt": "State an environmental problem caused by carbon dioxide.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q9",
+   "questionNumber": "9",
+   "prompt": "Lithium, sodium and potassium are the first three elements in Group 1 of the Periodic Table.",
+   "commandWord": null,
+   "marks": 13,
+   "questionType": "STRUCTURED",
+   "pageNumber": 25,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "Suggest why these three elements are all stored in paraffin oil.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "Caesium, Cs, is below potassium in Group 1.",
+     "commandWord": null,
+     "marks": 4,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "Give a similarity and a difference between the reactions of potassium with water\nand caesium with water.\nsimilarity............................................................................................................................................................................................................................................................\ndifference.........................................................................................................................................................................................................................................................",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "Give the chemical equation for the reaction between caesium and water.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "A student investigates the temperature change in the reaction between dilute acids\nand solutions of Group 1 hydroxides.\nHe uses this apparatus.\nglass beaker\npolystyrene cup\nThis is the student\u2019s method.\nmeasure the temperature of 50\u2009cm3 of hydrochloric acid\n\uf09f\n\uf09f\npour the acid into a polystyrene cup\n\uf09f\nadd 50\u2009cm3 of sodium hydroxide solution to the acid\n\uf09f\nmeasure the maximum temperature of the mixture",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-i",
+     "prompt": "Suggest what could be added to the apparatus to improve the experiment.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-ii",
+     "prompt": "Explain a change to the method that would improve the accuracy of the experiment.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "d",
+     "prompt": "These are the student\u2019s results.\ntemperature of hydrochloric acid = 19.9\u2009\u00b0C\nmaximum temperature of mixture = 26.5\u2009\u00b0C",
+     "commandWord": null,
+     "marks": 5,
+     "confidence": 1.0
+    },
+    {
+     "label": "d-i",
+     "prompt": "Calculate the energy change, Q, in joules for this reaction.\n[mass of 1.0\u2009cm3 of mixture = 1.0\u2009g]\n[for the mixture, c = 4.2 J/g/\u00b0C]\nQ = .............................................. J",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "d-ii",
+     "prompt": "In the student\u2019s reaction between hydrochloric acid and sodium hydroxide,\n0.050\u2009mol of water forms.\nCalculate the molar enthalpy change, \u0394H, in kJ/mol for this reaction.\n\u0394H = .............................................. kJ/mol",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch1-1cr-202101#q10",
+   "questionNumber": "10",
+   "prompt": "This question is about salts.",
+   "commandWord": null,
+   "marks": 15,
+   "questionType": "STRUCTURED",
+   "pageNumber": 28,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "Soluble salts can be prepared by the reaction between a metal oxide and an acid.\nThe equation for this type of reaction is\nmetal oxide + acid \u2192 salt + water",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-i",
+     "prompt": "State the name given to this type of reaction.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-ii",
+     "prompt": "State, in terms of protons, what happens in this reaction.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "A student is given 50\u2009cm3 of dilute sulfuric acid and a bottle of solid copper(II) carbonate.\nDescribe the method that the student should use to prepare a saturated\nsolution of copper(II) sulfate.\nIn your answer, refer to the pieces of apparatus that the student should use.",
+     "commandWord": null,
+     "marks": 5,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "The student produces dry crystals of hydrated copper(II) sulfate from the\nsaturated solution.\nHe calculates that 6.40\u2009g of dry crystals should be formed.\nThe mass of dry crystals he actually obtains is 1.80\u2009g less than he calculated.\nCalculate the student\u2019s percentage yield.\nGive your answer to one decimal place.\npercentage yield = .............................................. %",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-i",
+     "prompt": "Gypsum is hydrated calcium sulfate.\nA sample of gypsum contains 79% of calcium sulfate by mass.\nCalculate the value of x in CaSO4.xH2O\n[Mr of CaSO4 = 136 Mr of H2O = 18]\nx = ..............................................",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-ii",
+     "prompt": "Describe a test for calcium ions in the sample of gypsum.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    }
+   ]
+  }
+ ],
+ "markScheme": {
+  "version": "1",
+  "sourceDocumentId": null,
+  "points": [
+   {
+    "questionRef": "1-a",
+    "order": 1,
+    "text": "copper",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-b",
+    "order": 2,
+    "text": "glucose/water",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-c",
+    "order": 3,
+    "text": "air",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-d",
+    "order": 4,
+    "text": "nitrogen/oxygen",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-e",
+    "order": 5,
+    "text": "copper",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-f",
+    "order": 6,
+    "text": "oxygen and sulfur",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-a",
+    "order": 1,
+    "text": "Any two from the following:",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-b-i",
+    "order": 2,
+    "text": "(Ink 2) is insoluble (in solvent/water)",
+    "marks": 1,
+    "acceptance": [
+     "Allow: does not"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-b-ii",
+    "order": 3,
+    "text": "(repeat) using different solvent",
+    "marks": 1,
+    "acceptance": [
+     "Allow: named"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-c",
+    "order": 4,
+    "text": "correct measurement of distance moved by",
+    "marks": 3,
+    "acceptance": [
+     "Allow: 5.4-5.6"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-a",
+    "order": 1,
+    "text": "alkanes",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-b-i",
+    "order": 2,
+    "text": "A boiling point is the correct answer because fractional",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-b",
+    "order": 3,
+    "text": "(ii)",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-c",
+    "order": 4,
+    "text": "explanation including the following points:",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-d-i",
+    "order": 5,
+    "text": "cracking",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-d-ii",
+    "order": 6,
+    "text": "(catalyst) silica/alumina",
+    "marks": 2,
+    "acceptance": [
+     "Allow: silicon",
+     "Allow: formulae"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-d-iii",
+    "order": 7,
+    "text": "C3H6 +",
+    "marks": 2,
+    "acceptance": [
+     "Allow: structural"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-a-i",
+    "order": 1,
+    "text": "(hydrated) iron(III) oxide",
+    "marks": 1,
+    "acceptance": [
+     "Reject: incorrect"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-a-ii",
+    "order": 2,
+    "text": "(barrier method involves) coating iron in paint/oil/grease/plastic named metal below",
+    "marks": 2,
+    "acceptance": [
+     "Allow: coating in"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-b",
+    "order": 3,
+    "text": "(i) reading at end 33.5 (1)",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-b-ii",
+    "order": 4,
+    "text": "not all oxygen had reacted / not enough iron",
+    "marks": 1,
+    "acceptance": [
+     "Allow: not left for long"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-c",
+    "order": 5,
+    "text": "calculation of volume oxygen used",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-a",
+    "order": 1,
+    "text": "(thermal) decomposition (1)",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-b",
+    "order": 2,
+    "text": "any two of the following:",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-c",
+    "order": 3,
+    "text": "bubbles are air (from tube) / caused by air",
+    "marks": 1,
+    "acceptance": [
+     "Allow: gas in tube"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-d",
+    "order": 4,
+    "text": "(when limewater turns milky/cloudy it)",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-e-i",
+    "order": 5,
+    "text": "(from) green",
+    "marks": 2,
+    "acceptance": [
+     "Ignore: qualifiers eg"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-e-ii",
+    "order": 6,
+    "text": "CuCO3 \uf022 CuO + CO2",
+    "marks": 1,
+    "acceptance": [
+     "Allow: products in"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-f-i",
+    "order": 7,
+    "text": "the lower the metal is (in the reactivity series)",
+    "marks": 2,
+    "acceptance": [
+     "Allow: the less"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-f-ii",
+    "order": 8,
+    "text": "repeat (the investigation) using different / other / more",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-a-i",
+    "order": 1,
+    "text": "Zn + 2HCl \uf022 ZnCl2 + H2",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-a-ii",
+    "order": 2,
+    "text": "lighted splint (produces squeaky) pop",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-b-i",
+    "order": 3,
+    "text": "52 (cm3)",
+    "marks": 1,
+    "acceptance": [
+     "Allow: 51.5-52.5"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-b-ii",
+    "order": 4,
+    "text": "vertical line from 15 cm3 acid to graph line",
+    "marks": 2,
+    "acceptance": [
+     "Allow: extra point drawn"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-c",
+    "order": 5,
+    "text": "explanation linking",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-d",
+    "order": 6,
+    "text": "explanation including",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "7-a",
+    "order": 1,
+    "text": "description including (formation of ions in lithium chloride involves)",
+    "marks": 3,
+    "acceptance": [
+     "Allow: correct dot-and-"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "7-b",
+    "order": 2,
+    "text": "explanation including five of the following points:",
+    "marks": 5,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-a-i",
+    "order": 1,
+    "text": "explanation linking",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-a-ii",
+    "order": 2,
+    "text": "displayed formula of but-1-ene",
+    "marks": 2,
+    "acceptance": [
+     "Allow: displayed",
+     "Ignore: bond angles"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-b-i",
+    "order": 3,
+    "text": "molecule is unsaturated as contains (carbon to carbon) double bond",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-b-ii",
+    "order": 4,
+    "text": "addition",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-b-ii",
+    "order": 5,
+    "text": "correct repeat unit structure",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-c",
+    "order": 6,
+    "text": "calculation of mass of octane",
+    "marks": 5,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-c-ii",
+    "order": 7,
+    "text": "global warming/climate change                           effect; (Total for Question 8 = 15); M1 (no printed marks cell): (molecules/compounds) having same | molecular formulae; M2 (no printed marks cell): but different structural/displayed formulae | ALLOW different | structures | ALLOW different | arrangement of atoms; M2 (no printed marks cell): displayed formula of but-2-ene | formula of | methylpropene; P2 (no printed marks cell): explanation linking; M2 (no printed marks cell): molecule not a hydrocarbon as contains | ACCEPT does not | oxygen                                              contain hydrogen and | carbon only; P4 (no printed marks cell): (i); M2 (no printed marks cell): calculation of Mr of C8H18 and CO2; M3 (no printed marks cell): link between mass/mol C8H18 and mass/mol | CO2; M4 (no printed marks cell): calculation of mass CO2 in g; M5 (no printed marks cell): calculation of mass CO2 in kg | Example calculation:; M1 (no printed marks cell): 50 x 700 = 35000 (g); M2 (no printed marks cell): Mr of C8H18 = 114 and Mr CO2 = 44; M3 (no printed marks cell): 114g C8H18 produces (8 x 44 =) 352 (g) CO2; M4 (no printed marks cell): 35000 g C8H18 produces 35000 \u00d7 352 | 114 | = 108070.2 (g) CO2                      ALLOW 2 sig fig or | more in M4 and M5; M5 (no printed marks cell): = 108 (kg) | Alternative method using mol:; M1 (no printed marks cell): 50 x 700 = 35000 (g); M2 (no printed marks cell): Mr of C8H18 = 114 and Mr CO2 = 44; M3 (no printed marks cell): n (C8H18) = 35000 = 307.0175 mol | 114 | so n (CO2) = 8 x 307.0175 = 2456.14 mol         ALLOW 2 sig fig or | more in M3 M4 and M5; M4 (no printed marks cell): mass CO2 = 2456.14 x 44 = 108070.2 (g); M5 (no printed marks cell): = 108 (kg) | MARK CSQ in both | methods | correct answer without | working scores 5",
+    "marks": 1,
+    "acceptance": [
+     "Ignore: greenhouse"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "9-a",
+    "order": 1,
+    "text": "to keep out of contact/prevent reaction with",
+    "marks": 1,
+    "acceptance": [
+     "Allow: they react with"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "9-b-i",
+    "order": 2,
+    "text": "similarity: both fizz/move on surface/ produce flame",
+    "marks": 2,
+    "acceptance": [
+     "Allow: both melt/form a",
+     "Allow: caesium explodes"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "9-b-ii",
+    "order": 3,
+    "text": "2Cs + 2H2O \uf022 2CsOH + H2",
+    "marks": 2,
+    "acceptance": [
+     "Allow: fractions and"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "9-c-i",
+    "order": 4,
+    "text": "a lid/cover",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "9-c-ii",
+    "order": 5,
+    "text": "explanation linking either",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "9-d-i",
+    "order": 6,
+    "text": "correct temperature change/\uf072T",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "9-d-ii",
+    "order": 7,
+    "text": "answer to M3 from (i) \u00f7 0.05",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "10-a-i",
+    "order": 1,
+    "text": "neutralisation",
+    "marks": 1,
+    "acceptance": [
+     "Allow: acid - base"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "10-a-ii",
+    "order": 2,
+    "text": "acid donates proton(s)/base accepts proton(s)",
+    "marks": 1,
+    "acceptance": [
+     "Allow: metal oxide for"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "10-b-i",
+    "order": 3,
+    "text": "description including",
+    "marks": 5,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "10-b-ii",
+    "order": 4,
+    "text": "M1 calculation of actual mass of crystals obtained",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "10-c-i",
+    "order": 5,
+    "text": "find percentage of water",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "10-c-ii",
+    "order": 6,
+    "text": "description including",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   }
+  ]
+ },
+ "extractionMethod": "pdflane-atoms-draft-v1",
+ "reviewRequired": true
+}

@@ -1,0 +1,755 @@
+{
+ "schemaVersion": "1.0",
+ "paper": {
+  "board": "Edexcel",
+  "qualification": "4CH0",
+  "subject": "Chemistry",
+  "unit": "4CH0",
+  "sessionLabel": "January 2017",
+  "paperCode": "4CH0/2C",
+  "questionPaperDocumentId": null,
+  "markSchemeDocumentId": null
+ },
+ "questions": [
+  {
+   "externalRef": "4ch0-2c-201701#q1",
+   "questionNumber": "1",
+   "prompt": "The box contains the names of some substances.\nDO NOT WRITE IN THIS AREA\nair\nchlorine\nhydrogen\niron\nnitrogen\noxygen\npotassium\nsodium\nChoose a substance from the box that best matches each description.\nEach substance may be used once, more than once or not at all.",
+   "commandWord": null,
+   "marks": 5,
+   "questionType": "STRUCTURED",
+   "pageNumber": 3,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "Which substance is a mixture?",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "Which substance is a gas that makes a squeaky pop when ignited?\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "Which substance is an element that is a green gas at room temperature?",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "d",
+     "prompt": "Which substance is used to sterilise water?",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "e",
+     "prompt": "Which substance is a metal that can be made by heating its oxide with carbon?",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch0-2c-201701#q2",
+   "questionNumber": "2",
+   "prompt": "Oxides can be made by burning elements in air.\nThe table gives some information about the oxides of four elements.\nDO NOT WRITE IN THIS AREA",
+   "commandWord": null,
+   "marks": 6,
+   "questionType": "STRUCTURED",
+   "pageNumber": 4,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "Calcium and magnesium are metals. Carbon and sulfur are non-metals.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-i",
+     "prompt": "Using only information from the table, state two ways in which the oxides of\nthe metals are similar to each other.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-ii",
+     "prompt": "Using only information from the table, state two ways in which the oxides of\nthe non-metals are similar to each other.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "A teacher tells his students that when phosphorus burns in air a white solid oxide forms.\nThis oxide is very soluble in water and forms an acidic solution.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "One student states that phosphorus is a metal.\nUse information from the table to suggest why the student made this statement.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "Another student states that phosphorus is a non-metal.\nUse information from the table to suggest why the student made this statement.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "An experiment using this apparatus shows that phosphorus is a non-metal.\nlamp\nphosphorus\nExplain how this experiment shows that phosphorus is a non-metal.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch0-2c-201701#q3",
+   "questionNumber": "3",
+   "prompt": "This question is about the reactivity of metals.",
+   "commandWord": null,
+   "marks": 8,
+   "questionType": "STRUCTURED",
+   "pageNumber": 6,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "This apparatus can be used to compare the reactivities of different metals.\nDO NOT WRITE IN THIS AREA\nmixture of metal\nand metal oxide\nheat\nA metal is heated with the oxide of a different metal.\nThe table shows the results of two experiments.\nDO NOT WRITE IN THIS AREA\nExplain how these results show the order of reactivity of calcium, tin and titanium.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "The diagram shows a method of making iron.\nmagnesium fuse\nDO NOT WRITE IN THIS AREA\nmixture of aluminium powder\nand iron(III) oxide powder",
+     "commandWord": null,
+     "marks": 5,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "The word equation for the reaction that occurs is\naluminium + iron(III) oxide \u2192 aluminium oxide + iron\nWrite a chemical equation for this reaction.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "Explain which substance is oxidised in this reaction.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-iii",
+     "prompt": "Explain why aluminium and iron(III) oxide are used in powdered form rather\nthan large pieces.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch0-2c-201701#q4",
+   "questionNumber": "4",
+   "prompt": "Chemical tests can be used to detect ions in solids and in aqueous solutions.",
+   "commandWord": null,
+   "marks": 5,
+   "questionType": "STRUCTURED",
+   "pageNumber": 8,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "A solid produces a gas when heated with sodium hydroxide solution. Damp red\nDO NOT WRITE IN THIS AREA\nlitmus paper is turned blue by the gas.\nWhich of these ions is present in the solid?\nA Cu2+\nB Fe2+\nC Fe3+\nD NH4\n+",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "When dilute nitric acid is added to an aqueous solution, followed by silver nitrate\nsolution, a yellow precipitate forms.\nWhich of these halide ions is present in the aqueous solution?\nA Br\u2013\nDO NOT WRITE IN THIS AREA\nB Cl\u2013\nC F\u2013\nD I\u2013",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "When dilute hydrochloric acid is added to a solid, a gas forms.\nWhich of these ions is present in the solid?\nA carbonate\nB hydroxide\nC nitrate\nD sulfate\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "d",
+     "prompt": "Sodium hydroxide solution is added separately to three solutions.\nOne solution contains Cu2+ ions, another contains Fe2+ ions and the third solution\nDO NOT WRITE IN THIS AREA\ncontains Fe3+ ions.\nWhich row shows the correct colours of the precipitates that form?\nA\nB\nC\nD",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "e",
+     "prompt": "When barium chloride solution is added to an aqueous solution of a compound, a white\nprecipitate forms. When dilute hydrochloric acid is added to the mixture, the precipitate\ndisappears and a colourless solution forms.\nDO NOT WRITE IN THIS AREA\nWhich of these ions is present in the aqueous solution?\nA carbonate\nB chloride\nC nitrate\nD sulfate",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch0-2c-201701#q5",
+   "questionNumber": "5",
+   "prompt": "Lithium and carbon both form fluorides.",
+   "commandWord": null,
+   "marks": 8,
+   "questionType": "STRUCTURED",
+   "pageNumber": 10,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "Lithium reacts with fluorine to produce the ionic compound lithium fluoride.\nDO NOT WRITE IN THIS AREA\nThe diagrams show the arrangement of electrons in a lithium atom and in a fluorine atom.\nF\nLi\nlithium atom\nfluorine atom\nDraw similar diagrams to show the arrangement of the electrons in the ions formed\nwhen lithium reacts with fluorine.\nShow all the electrons in each ion.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "Carbon tetrafluoride is a simple molecular compound.\nThe displayed formula for a molecule of carbon tetrafluoride is\nF\nC\nF\nF\nF\nDO NOT WRITE IN THIS AREA\nDraw a dot and cross diagram to show the arrangement of the electrons in this molecule.\nShow only the outer electrons.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "The table shows some properties of lithium fluoride and carbon tetrafluoride.\nDO NOT WRITE IN THIS AREA\nExplain these properties of each compound.\nlithium fluoride .........................................................................................................................................................................................................................................\nDO NOT WRITE IN THIS AREA\ncarbon tetrafluoride .............................................................................................................................................................................................................................",
+     "commandWord": null,
+     "marks": 4,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch0-2c-201701#q6",
+   "questionNumber": "6",
+   "prompt": "Ethanol can be produced when yeast is added to a glucose solution.\nThis apparatus is used to investigate the reaction.\nDO NOT WRITE IN THIS AREA\nglucose solution\nyeast\nlimewater",
+   "commandWord": null,
+   "marks": 13,
+   "questionType": "STRUCTURED",
+   "pageNumber": 12,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "The equation for the reaction is\nC6H12O6(aq) \u2192 2C2H5OH(aq) + 2CO2(g)\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-i",
+     "prompt": "State the purpose of the yeast.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-ii",
+     "prompt": "State how the appearance of the limewater changes during the reaction.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-iii",
+     "prompt": "State the temperature at which this reaction is carried out in industry.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "Ethanol can be used as a fuel.\nThis is the equation for the complete combustion of ethanol.\nDO NOT WRITE IN THIS AREA\nC2H5OH + 3O2 \u2192 2CO2 + 3H2O\nThese are the displayed formulae for ethanol, oxygen, carbon dioxide and water.\nThe table gives some average (mean) bond energies.\nDO NOT WRITE IN THIS AREA\nUse this information to calculate the enthalpy change (\u0394H) when one mole of ethanol\nis completely burned.\nDO NOT WRITE IN THIS AREA\nenthalpy change (\u0394H) = ............................................ kJ/mol",
+     "commandWord": null,
+     "marks": 4,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "Ethanol and methanol can both be used as fuels.\nA student uses this apparatus to find out how much energy is produced when\nDO NOT WRITE IN THIS AREA\none mole of ethanol and one mole of methanol are burned.\ncopper can\nwater\nburner\nethanol or methanol\nDO NOT WRITE IN THIS AREA\nThe table shows some of the student\u2019s results.",
+     "commandWord": null,
+     "marks": 6,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-i",
+     "prompt": "Calculate the energy given out by 1 mol of methanol.\nDO NOT WRITE IN THIS AREA\nenergy given out = ............................................ kJ",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-ii",
+     "prompt": "The student uses the same burner and copper can in each experiment.\nState two other factors that the student should keep the same in each experiment.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "c-iii",
+     "prompt": "A data book states that the energy given out when 1 mol of ethanol is burned is 1371 kJ.\nSuggest two reasons why the student\u2019s value is much less than this.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch0-2c-201701#q7",
+   "questionNumber": "7",
+   "prompt": "Magnesium chloride can be made by reacting excess magnesium carbonate with\ndilute hydrochloric acid.\nDO NOT WRITE IN THIS AREA\nThe equation for the reaction is\nMgCO3 + 2HCl \u2192 MgCl2 + H2O + CO2",
+   "commandWord": null,
+   "marks": 7,
+   "questionType": "STRUCTURED",
+   "pageNumber": 16,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a-i",
+     "prompt": "In one experiment, a sample of 0.050 mol of MgCO3 is added to 0.080 mol of HCl.\nShow, by calculation, that the MgCO3 is in excess.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "a-ii",
+     "prompt": "Calculate the maximum volume, in cm3, of carbon dioxide, measured at room\ntemperature and pressure, that would be obtained when 0.080 mol of HCl\nreact completely with MgCO3.\n[One mole of any gas occupies 24 000 cm3 at room temperature and pressure.]\nmaximum volume of carbon dioxide = ............................................ cm3\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "In another experiment 0.050 mol of MgCO3 reacts with excess HCl.\nA yield of 5.5 g of MgCl2.6H2O is obtained.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "Calculate the percentage yield of MgCl2.6H2O\npercentage yield = ............................................ %",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "Suggest why the percentage yield is less than 100%.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "externalRef": "4ch0-2c-201701#q8",
+   "questionNumber": "8",
+   "prompt": "When nitrogen dioxide gas (NO2) is placed in a sealed flask, it reacts to form\ndinitrogen tetraoxide gas (N2O4).\nDO NOT WRITE IN THIS AREA\nThe equation for the reaction is\n\uf083\n2NO2(g)\nN2O4(g)\nbrown gas\ncolourless gas\nA sample of pure NO2 is placed in a sealed flask at 25\u00b0C. The flask is left until a\ndynamic equilibrium is reached.",
+   "commandWord": null,
+   "marks": 8,
+   "questionType": "STRUCTURED",
+   "pageNumber": 18,
+   "confidence": 1.0,
+   "parts": [
+    {
+     "label": "a",
+     "prompt": "For a reaction that is in dynamic equilibrium, the forward and backward reactions\noccur at the same time.\nState two other features of a reaction that is in dynamic equilibrium.\nDO NOT WRITE IN THIS AREA",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    },
+    {
+     "label": "b",
+     "prompt": "At equilibrium there is more NO2 than N2O4\nThe graph shows how the number of moles of NO2 in the sealed flask changes with time.\nnumber\nof moles\nNO2\nDO NOT WRITE IN THIS AREA\n00\ntime",
+     "commandWord": null,
+     "marks": 4,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-i",
+     "prompt": "Draw a cross (X) on the graph at the point where the reaction reaches equilibrium.",
+     "commandWord": null,
+     "marks": 1,
+     "confidence": 1.0
+    },
+    {
+     "label": "b-ii",
+     "prompt": "Draw a curve on the graph to show how the number of moles of N2O4 in the\nsealed flask changes over the same time period.",
+     "commandWord": null,
+     "marks": 3,
+     "confidence": 1.0
+    },
+    {
+     "label": "c",
+     "prompt": "The sealed flask containing the equilibrium mixture is placed in water at a\ntemperature of 50\u00b0C. The mixture goes darker in colour.\nDO NOT WRITE IN THIS AREA\nExplain what this observation shows about the equilibrium reaction.",
+     "commandWord": null,
+     "marks": 2,
+     "confidence": 1.0
+    }
+   ]
+  }
+ ],
+ "markScheme": {
+  "version": "1",
+  "sourceDocumentId": null,
+  "points": [
+   {
+    "questionRef": "1-a",
+    "order": 1,
+    "text": "air",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-b",
+    "order": 2,
+    "text": "hydrogen",
+    "marks": 1,
+    "acceptance": [
+     "Allow: H2",
+     "Ignore: H"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-c",
+    "order": 3,
+    "text": "chlorine",
+    "marks": 1,
+    "acceptance": [
+     "Allow: Cl2",
+     "Ignore: Cl"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-d",
+    "order": 4,
+    "text": "chlorine",
+    "marks": 1,
+    "acceptance": [
+     "Allow: Cl2",
+     "Ignore: Cl"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "1-e",
+    "order": 5,
+    "text": "iron",
+    "marks": 1,
+    "acceptance": [
+     "Allow: Fe"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-a-i",
+    "order": 1,
+    "text": "(both are) solids",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-a-ii",
+    "order": 2,
+    "text": "(both are) gases",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-b-i",
+    "order": 3,
+    "text": "the oxide is solid",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-b-ii",
+    "order": 4,
+    "text": "the oxide forms an acidic solution (in water)",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "2-c",
+    "order": 5,
+    "text": "the lamp does not light up",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-a",
+    "order": 1,
+    "text": "calcium is the most reactive; titanium",
+    "marks": 3,
+    "acceptance": [
+     "Allow: Ca > Ti >"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-b-i",
+    "order": 2,
+    "text": "2Al + Fe2O3 \u2192 Al2O3 + 2Fe",
+    "marks": 1,
+    "acceptance": [
+     "Allow: multiples"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-b-ii",
+    "order": 3,
+    "text": "aluminium",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "3-b-iii",
+    "order": 4,
+    "text": "(powders have) larger surface area",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-a",
+    "order": 1,
+    "text": "D (NH4+)",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-b",
+    "order": 2,
+    "text": "D (I\u2212)",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-c",
+    "order": 3,
+    "text": "A (carbonate)",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-d",
+    "order": 4,
+    "text": "C (blue, green, brown)",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "4-e",
+    "order": 5,
+    "text": "A (carbonate)",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-a",
+    "order": 1,
+    "text": "1 mark for each correct",
+    "marks": 2,
+    "acceptance": [
+     "Allow: any combination",
+     "Ignore: charges on ion"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-b",
+    "order": 2,
+    "text": "all four bonding pairs",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "5-c",
+    "order": 3,
+    "text": "(high melting point of LiF)",
+    "marks": 4,
+    "acceptance": [
+     "Reject: any reference to",
+     "Reject: reference to atoms"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-a-i",
+    "order": 1,
+    "text": "(to provide the) zymase/enzyme (that acts",
+    "marks": 1,
+    "acceptance": [
+     "Allow: (to act as a) catalyst",
+     "Reject: to provide",
+     "Ignore: to lower the",
+     "Ignore: to start the reaction"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-a-ii",
+    "order": 2,
+    "text": "(turns) milky / cloudy / turbid (then clear)",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-a-iii",
+    "order": 3,
+    "text": "30 \u00baC",
+    "marks": 1,
+    "acceptance": [
+     "Allow: any temperature,"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-b",
+    "order": 4,
+    "text": "Route 1:",
+    "marks": 4,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-c-i",
+    "order": 5,
+    "text": "32",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-c-ii",
+    "order": 6,
+    "text": "& M2 Any two from:",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "6-c-iii",
+    "order": 7,
+    "text": "Any two from:",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "7-a-i",
+    "order": 1,
+    "text": "0.080 mol of HCl react with 0.040 mol",
+    "marks": 2,
+    "acceptance": [
+     "Allow: any method"
+    ],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "7-a-ii",
+    "order": 2,
+    "text": "n(CO2) = \u00bd x 0.08(0) OR 0.04(0)",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "7-b-i",
+    "order": 3,
+    "text": "Mr(MgCl2.6H2O) = 203",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "7-b-ii",
+    "order": 4,
+    "text": "Any one of:",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-a",
+    "order": 1,
+    "text": "rate of forward reaction = rate of",
+    "marks": 2,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-b-i",
+    "order": 2,
+    "text": "cross drawn on either curve just where it",
+    "marks": 1,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-b-ii",
+    "order": 3,
+    "text": "curve starts at 0,0 and has the general",
+    "marks": 3,
+    "acceptance": [],
+    "confidence": 1.0
+   },
+   {
+    "questionRef": "8-c",
+    "order": 4,
+    "text": "equilibrium has shifted to the left /",
+    "marks": 2,
+    "acceptance": [
+     "Ignore: references"
+    ],
+    "confidence": 1.0
+   }
+  ]
+ },
+ "extractionMethod": "pdflane-atoms-draft-v1",
+ "reviewRequired": true
+}
