@@ -3,7 +3,7 @@ task:
   id: T-C29
   title: "Phase 2 step 3 residue — MasteryMap learner chips + PapersView detail scoping consume the T-C28 contract"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: EXECUTING
+  status: DONE
   priority: P1
   base:
     repo: syllabai-web
@@ -48,4 +48,49 @@ task:
       'const ode, setMode]' in shell tool output because the display layer
       swallows the '[m' substring (ANSI artifact) — the bytes are
       'const [mode, setMode]'; do NOT 'fix' it"
-  evidence: []
+  outcome:
+    commit: c49fefa
+    merge: 9c9ab6b
+    ci: "web-ci build SUCCESS + Vercel preview SUCCESS on c49fefa (PR #9)"
+    scope: "types.ts additive mirrors (LearnerNodeWithStateView.applicability?,
+      ExamPaperQuestionMeta.specPoints?); MasteryMap NodeDetailCard scope
+      section; PapersView PaperRow summary + per-question chips; scopeChips
+      stays the one owner; 3 files +104/-1; zero core/demo/resources edits"
+  evidence:
+    - "PR SyllabAI/syllabai-web#9 -> web-ci build SUCCESS + Vercel preview
+      SUCCESS on c49fefa; merged as 9c9ab6b; local main synced; branch deleted;
+      Vercel production picks it up on the main push"
+    - "coordination claim-first commit e69f57c (web base 390feaa); no
+      concurrent coordination pushes to reconcile"
+  claims:
+    VERIFIED:
+      - "both new surfaces render ONLY from the payload (scopeChips is the
+        single presentation owner; zero client-side derivation)"
+      - "honest absence enforced: no applicability on a node -> no section;
+        no refs on a paper -> nothing; refs without applicability -> the
+        T-C25 backfill footnote (all three paths compile-checked; runtime
+        rendering verified post-backfill by the joint sweep)"
+      - "local gates: eslint clean, next build green (Turbopack + TypeScript)"
+      - "v75 kg-explorer engine/layout and MasteryMap tree/graph/explorer
+        modes untouched; ExamQuestionsView/ConceptGraphView untouched"
+    INFERRED:
+      - "production learner KG / papers payloads come from the core deploy of
+        7063e61; until the operator-gated seed activation backfills the 182
+        4CH1 applicability maps, the surfaces render their honest-absent
+        paths in production"
+    REPORTED:
+      - "Vercel production deployment triggered by the main push"
+    UNVERIFIED:
+      - "production rendering against live core payloads (post-deploy sweep —
+        auth-gated learner endpoints need a session token; same
+        next_safe_action as T-C25/T-C28)"
+  next_safe_actions:
+    - "operator-gated seed activation on core (the 'applicability present on
+      182 spec-point node(s)' backfill log line) — activates every Phase 2
+      surface at once"
+    - "joint post-deploy read-only prod sweep (auth-gated): learner KG
+      applicability probe + papers-detail specPoints probe on a 4CH1 surface"
+  closeout:
+    commit: c49fefa
+    merge: 9c9ab6bce4c642c22c97f9e5d2aaa3faae20c66c
+    ci: "https://github.com/SyllabAI/syllabai-web/pull/9"

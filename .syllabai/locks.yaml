@@ -1,14 +1,9 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
 version: 1
-locks:
-  - resource: core-web-contract
-    owner: "superz (main agent, zai session web-98866c45)"
-    task: T-C29
-    base_commit: 390feaa9e272ddfabde39e46d283e0f9120eea3c
-    acquired_at: "2026-09-26T01:05:00+08:00"
-    expires_at: "2026-09-27T01:05:00+08:00"
-    note: "consumer lease for the T-C28 learner payloads; released at closeout"
+locks: []
+# (T-C29's core-web-contract consumer lease was fulfilled — web PR #9 merged
+#  as 9c9ab6b with web-ci + Vercel success — and released per the reclaim rule.)
 # (T-C28's core-web-contract producer lease was fulfilled — learner payloads
 #  serve applicability/specPoints, core PR #25 merged as 7063e61 with core-ci
 #  success — and released per the reclaim rule. The web residue is a follow-up
