@@ -1,7 +1,14 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
 version: 1
-locks: []
+locks:
+  - resource: flyway-version
+    owner: superz
+    task: T-C24
+    detail: "claim V39 (knowledge_nodes.applicability jsonb) — highest applied on remote main @ d523f57 is V38"
+    base_commit: d523f57d7b0343a9b75fb7149ad16307cc9d2981
+    acquired_at: 2026-09-25T14:55:00Z
+    expires_at: 2026-09-26T15:55:00Z
 
 resource_classes:
   flyway-version:

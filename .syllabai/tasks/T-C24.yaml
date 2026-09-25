@@ -1,0 +1,56 @@
+version: 1
+task:
+  id: T-C24
+  title: "Phase 2 step 1 — official-spec applicability reaches the core serving layer"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: EXECUTING
+  priority: P1
+  base:
+    repo: syllabai-core
+    commit: d523f57d7b0343a9b75fb7149ad16307cc9d2981
+  scope:
+    allowed:
+      - "new migration V39 (knowledge_nodes.applicability jsonb, additive/nullable)"
+      - "KnowledgeNode entity: applicability JSONB field (house StruggleInference pattern)"
+      - "ConceptGraphSnapshotLoader: parse applicability verbatim from the pinned 4CH1 YAML (SHA unchanged)"
+      - "ConceptGraphSeedService: persist applicability on spec-point nodes; idempotent backfill on reuse (logged)"
+      - "SmeQuestionSpecPointRepository + ServableQuestionService + StudentQuestionView: additive specPoints (code, role, applicability) on the learner question view; specPointCodes kept"
+      - "NodeView: additive applicability field (knowledge/teacher tree consumers updated mechanically)"
+      - "unit tests: loader parse, seed create/backfill/idempotency, servable view shape"
+    forbidden:
+      - "editing any applied migration (V1..V38)"
+      - "touching syllabai-web / syllabai-resources / past-papers lanes"
+      - "changing the pinned snapshot SHA or the seed status/provenance contract"
+      - "extending SeedSummary record (contract ripple) — backfill count is log-only"
+  dependencies: []
+  shared_resources:
+    - flyway-version   # V39 claimed via locks.yaml lease
+    - database-schema
+  acceptance:
+    - "mvn verify green in CI on the PR (JDK 25)"
+    - "182/182 spec-point applicability parsed from the pinned YAML, deep-equal to the resources canonical"
+    - "seed: create + one-time backfill paths covered by tests; re-run stays a structural no-op"
+    - "learner question view carries specPoints (code, role, applicability); specPointCodes unchanged for existing consumers"
+  tests:
+    - "ConceptGraphSnapshotLoaderTest (applicability parse)"
+    - "ConceptGraphSeedServiceTest (create / backfill / idempotency)"
+    - "ServableQuestionServiceTest (view shape)"
+  evidence_required:
+    - "CI run URL (core-ci on PR)"
+    - "local mvn test output for the touched test classes (JDK 25 + Maven 3.9.9)"
+  claims:
+    VERIFIED:
+      - "core pinned concept-graph/specification_points.yaml is byte-identical to syllabai-resources graph/specification_points.yaml @ bb51b88 (SHA b1fea699...), 182/182 applicability present, uniform keyset papers/double_award_shared/rule, 0 nulls"
+      - "core @ d523f57 has ZERO applicability adoption in src/**.java|.sql; spec points are persisted as NodeType.SUBTOPIC (V2/V16 CHECK has no SPEC_POINT)"
+      - "local baseline: mvn test (JDK 25, Maven 3.9.9) green — ConceptGraphSnapshotLoaderTest + ConceptGraphSeedServiceTest 15/15"
+    INFERRED:
+      - "the seed is the only writer of 4CH1 spec-point nodes, so a seed-side idempotent backfill covers the already-seeded serving DB"
+    REPORTED:
+      - "serving state: 4CH1-2017 is the sole ACTIVE curriculum (coordination session 128, operator decision)"
+    UNVERIFIED:
+      - "JPQL projection of the jsonb field inside CodeProjection (validated by CI)"
+  next_safe_actions:
+    - "implement per scope.allowed on branch t-c24-spec-applicability"
+    - "PR -> core-ci -> merge on green"
+    - "coordination: flip status VERIFYING with CI evidence, then DONE"
+    - "PROJECT_KNOWLEDGE_MAP.md: record applicability as a canonical serving field"
