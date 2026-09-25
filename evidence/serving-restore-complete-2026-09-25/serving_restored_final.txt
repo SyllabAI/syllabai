@@ -1,0 +1,38 @@
+login OK (teacher token acquired)
+search [electrolysis of molten lead bromide] -> 200 hits=5 latency=1565ms
+    doc=9ca8600d kind=MARK_SCHEME model=gemini-embedding-001 score=0.7302007770546085
+      "Question number | Answer | Notes | Marks 6(c)(i) | brown vapour/gas/fumes(of bromine) | AL"
+    doc=37664a21 kind=QUESTION_PAPER model=gemini-embedding-001 score=0.7288709072822747
+      "One of the products of this electrolysis is lead. (i) State why solid lead(II) bromide doe"
+    doc=144da9ac kind=MARK_SCHEME model=gemini-embedding-001 score=0.7036603650350056
+      "Question number | Answer | Notes | Marks 5(a)(i) | 7 |  | 1 (ii) | iodine/astatine | No pe"
+search [explain catalytic cracking of alkanes] -> 200 hits=5 latency=1664ms
+    doc=cb680191 kind=QUESTION_PAPER model=gemini-embedding-001 score=0.7217024857252361
+      "(c) One of the hydrocarbons in crude oil is an alkane with this structural formula. \mathr"
+    doc=cd4c28e3 kind=QUESTION_PAPER model=gemini-embedding-001 score=0.7100927583820982
+      "3 The diagram shows the industrial equipment used to separate crude oil into fractions. (a"
+    doc=9ca8600d kind=MARK_SCHEME model=gemini-embedding-001 score=0.6787740264447317
+      "Question number | Answer | Notes | Marks 2(d) | M1alumina/silica | ACCEPTaluminiumoxide/si"
+search [ionic bonding between sodium and chlorine] -> 200 hits=5 latency=2017ms
+    doc=b7849fb8 kind=QUESTION_PAPER model=gemini-embedding-001 score=0.6340399203996293
+      "Complete the ionic half-equation for this reaction. (b) Chlorine reacts with sodium hydrox"
+    doc=cd4c28e3 kind=QUESTION_PAPER model=gemini-embedding-001 score=0.6151944840907928
+      "(Total for Question 5 = 14 marks) 6 The diagram shows how hydrogen gas and chlorine gas ca"
+    doc=fdf86d33 kind=MARK_SCHEME model=gemini-embedding-001 score=0.6060041943229231
+      "Question number | Answer | Notes | Marks 3 | (a) |  | does not easily lose/gain electrons "
+search [rates of reaction temperature] -> 200 hits=5 latency=2077ms
+    doc=0ebc841c kind=QUESTION_PAPER model=gemini-embedding-001 score=0.6274454491898781
+      "temperature after adding alkali ... $ ^{\circ} \mathrm{C} $ temperature before adding alka"
+    doc=f0190f63 kind=MARK_SCHEME model=gemini-embedding-001 score=0.6222052584672229
+      "(ii) | M1 curve drawn starting at the origin and below the original curve M2 curve levels "
+    doc=8536e68c kind=QUESTION_PAPER model=gemini-embedding-001 score=0.6107568925759279
+      "(iii) Draw a dot-and-cross diagram to show the bonding in a molecule of ammonia. Show oute"
+search [separation techniques fractional distillatio] -> 200 hits=5 latency=1688ms
+    doc=cd4c28e3 kind=QUESTION_PAPER model=gemini-embedding-001 score=0.6238254909778405
+      "3 The diagram shows the industrial equipment used to separate crude oil into fractions. (a"
+    doc=7f5e53ea kind=MARK_SCHEME model=gemini-embedding-001 score=0.5826081138313852
+      "Question number | Answer | Notes | Marks 6(a) | A description including the following poin"
+    doc=b0de0083 kind=MARK_SCHEME model=gemini-embedding-001 score=0.5733824109955997
+      "Question number | Answer | Notes | Marks 3(a)(i) | fractionating column/ fractionating tow"
+
+VERDICT: SERVING RESTORED (hits>0)
