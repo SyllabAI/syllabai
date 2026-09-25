@@ -1,0 +1,51 @@
+version: 1
+task:
+  id: T-C29
+  title: "Phase 2 step 3 residue — MasteryMap learner chips + PapersView detail scoping consume the T-C28 contract"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: EXECUTING
+  priority: P1
+  base:
+    repo: syllabai-web
+    commit: 390feaa9e272ddfabde39e46d283e0f9120eea3c
+  scope:
+    allowed:
+      - "src/lib/types.ts: additive mirrors of the T-C28 core contract —
+        LearnerNodeWithStateView.applicability? (SpecPointApplicability | null,
+        verbatim passthrough of NodeWithStateView.applicability) and
+        ExamPaperQuestionMeta.specPoints? (SpecPointRef[], shared projection
+        shape)"
+      - "MasteryMap.tsx NodeDetailCard: 'Official assessment scope' section for
+        nodes whose payload carries applicability (demo honest pattern — chips
+        via scopeChips + printed rule note; absent -> no section); MasteryBar /
+        graph / explorer modes untouched (other agent's fresh v75 lane)"
+      - "PapersView.tsx PaperRow: paper-level 'Official assessment scope'
+        summary (union of chips across the detail payload's question refs +
+        honest mapped-question count) and per-question code+chip rows;
+        refCount > 0 with zero applicability-bearing refs -> the T-C25 honest
+        footnote; no refs at all -> render nothing"
+      - "src/lib/applicability.ts stays the ONE owner — consumers import
+        scopeChips; no new presentation logic in the views"
+    forbidden:
+      - "touching syllabai-core / syllabai-demo / syllabai-resources (the
+        contract is CONSUMED as merged in T-C28, core 7063e61)"
+      - "inventing or deriving applicability client-side — render only what
+        the payload carries, honest absence everywhere"
+      - "editing the v75 kg-explorer engine/layout or MasteryMap's
+        tree/graph/explorer modes (adapter + view-file additions only)"
+      - "changing ExamQuestionsView / ConceptGraphView (T-C25 landed them) or
+        the papers list columns / filter semantics"
+  dependencies:
+    - T-C28 # learner payloads serve applicability + specPoints (core 7063e61)
+    - T-C25 # applicability.ts + honest-controls pattern established
+  shared_resources:
+    - core-web-contract   # consumer lease (coordinated policy)
+  notes:
+    - "until the operator-gated seed activation backfills the 182 4CH1
+      applicability maps, both fields arrive empty/null — every new surface
+      honestly omits (the T-C25 footnote path)"
+    - "forensic note for the next agent: MasteryMap.tsx displays as
+      'const ode, setMode]' in shell tool output because the display layer
+      swallows the '[m' substring (ANSI artifact) — the bytes are
+      'const [mode, setMode]'; do NOT 'fix' it"
+  evidence: []
