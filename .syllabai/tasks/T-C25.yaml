@@ -1,0 +1,83 @@
+version: 1
+task:
+  id: T-C25
+  title: "Phase 2 step 2 — the web lane consumes the applicability serving field"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: EXECUTING
+  priority: P1
+  base:
+    repo: syllabai-web
+    commit: 8722dbdf8a15be1336e144fd206a9502e467ebcc
+  scope:
+    allowed:
+      - "src/lib/types.ts: additive mirrors of the merged T-C24 core contract —
+        SpecPointApplicability (papers/unit_scope/tier/coursework/double_award_shared/rule,
+        verbatim passthrough), SpecPointRef (code, role, applicability),
+        StudentQuestionView.specPoints?, NodeView.applicability?"
+      - "new src/lib/applicability.ts: the demo's presentation rules ported verbatim
+        (paperLabel/unitLabel/scopeChips) + scope-option collection and match
+        semantics over ExamQuestionUnit parts (pure functions, one owner)"
+      - "ExamQuestionsView TopicPane: paper/unit/tier scope row over the loaded
+        topic's questions — demo honest-controls pattern (>=2 distinct values ->
+        interactive select, ==1 -> locked fact row 'Every question · <label>',
+        0 -> control omitted; zero scope data -> footnote); composes with the
+        existing difficulty/type/saved filters"
+      - "kg-explorer/adapters.ts conceptGraphHost: 'Assessment scope' node-panel
+        section for SPEC nodes from NodeView.applicability (absent -> no section)"
+      - "ConceptGraphView list mode: applicability chips beside the 'official spec
+        point' badge (demo kgApplicabilityChips parity on the teacher surface)"
+    forbidden:
+      - "touching syllabai-core / syllabai-resources / syllabai-demo (contract is
+        CONSUMED as merged in T-C24, core 3c1600c — no core edits in this task)"
+      - "inventing or deriving applicability client-side — render only what the
+        core payload carries, honest absence everywhere"
+      - "editing the v75 kg-explorer engine/layout (other agent's fresh lane,
+        commits c41b43d/8722dbd) — adapter + view-file additions only"
+      - "changing existing filter semantics (difficulty/type/saved) or removing
+        any accessible default mode"
+  dependencies:
+    - T-C24 # core serving field, merged 3c1600c
+  shared_resources:
+    - core-web-contract   # consumer side; no core edits, additive web mirrors only
+  acceptance:
+    - "bun run lint green locally (CI parity)"
+    - "bun run build green locally (type-checked — validates the contract mirrors)"
+    - "scope controls render only dimensions the payload actually carries
+      (4CH1: Paper select 1C/2C; no unit/tier controls — linear IGCSE)"
+    - "questions without applicability stay visible when no scope filter is
+      active and drop out only under an active scope filter (demo matches()
+      semantics, question-level union across parts)"
+    - "CI web-ci green on the pushed head"
+  tests:
+    - "bun run lint"
+    - "bun run build (tsc type check)"
+    - "no unit-test runner exists in this repo (v20 battery is prod-side) —
+      pure helpers kept in one module for a future runner"
+  evidence_required:
+    - "local lint + build outputs"
+    - "CI run URL for the web-ci workflow"
+  claims:
+    VERIFIED:
+      - "core contract merged (3c1600c): StudentQuestionView.specPoints [{code,
+        role, applicability}] attached in projectAll (topic lists served with
+        it); NodeView.applicability on tree payloads"
+      - "syllabai-web @ 8722dbd has zero applicability matches in src/ — nothing
+        to reconcile, the lane is free"
+      - "ExamQuestionsView TopicPane derives units via buildQuestionUnits
+        (exam-families.ts); parts preserve specPoints verbatim"
+      - "learner KG payload (NodeWithStateView) does NOT carry applicability —
+        MasteryMap chips would need a core contract change; the honest web-side
+        chip landing is NodeView consumers (ConceptGraphView, conceptGraphHost)"
+    INFERRED:
+      - "the serving DB backfill runs at the next operator-gated seed activation;
+        until then specPoints arrive with applicability null and every new
+        control must honestly omit (footnote path)"
+    REPORTED: []
+    UNVERIFIED:
+      - "production rendering against live core payloads (post-deploy verify)"
+  next_safe_actions:
+    - "post-deploy: re-run the T-KG-18-style read-only prod sweep extended with
+      a specPoints probe on a 4CH1 topic list"
+    - "Phase 2 step 3 residue: MasteryMap learner-panel chips + PapersView
+      scoping both need learner-side applicability in the core payload
+      (NodeWithStateView / ExamPaperBrowseView) — register a core task first"
