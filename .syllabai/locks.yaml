@@ -1,18 +1,11 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
 version: 1
-locks:
-  # T-C25: web-side consumption of the T-C24 applicability serving contract.
-  # Coordinated (not serialized): additive web mirrors only, zero core edits —
-  # the core side of the contract is already merged (3c1600c) and immutable here.
-  - resource: core-web-contract
-    owner: "superz (main agent, zai session web-98866c45)"
-    task: T-C25
-    base_commit: 8722dbdf8a15be1336e144fd206a9502e467ebcc
-    acquired_at: "2026-09-25T16:00:00Z"
-    expires_at: "2026-09-26T16:00:00Z"
+locks: []
 # (T-C24's flyway-version lease for V39 was fulfilled — migration merged as
 #  syllabai-core 3c1600c — and released per the reclaim rule.)
+# (T-C25's core-web-contract consumer lease was fulfilled — web main pushed as
+#  390feaa with web-ci success — and released per the reclaim rule.)
 
 resource_classes:
   flyway-version:
