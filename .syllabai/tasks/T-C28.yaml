@@ -3,7 +3,7 @@ task:
   id: T-C28
   title: "Phase 2 step 3 residue unblock — learner payloads carry the applicability contract"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: EXECUTING
+  status: DONE
   priority: P1
   base:
     repo: syllabai-core
@@ -44,4 +44,51 @@ task:
     - "no data backfill dependency beyond the existing T-C24 operator-gated
       seed activation; until then both fields arrive empty/null and the web
       residue must render honest absence"
-  evidence: []
+  outcome:
+    commit: bdc378d
+    merge: 7063e61
+    ci: "core-ci build SUCCESS on bdc378d (PR #25)"
+    tests: "local full unit suite 798/798 green (1 pre-existing environmental skip);
+      LearnerKnowledgeGraphServiceTest 8/8 (new specPointApplicabilityPassesThrough);
+      ExamPaperControllerTest 2/2 (rich refs PRIMARY-first via the shared projection;
+      honest-empty paper)"
+    scope: "NodeWithStateView.applicability (verbatim passthrough, last record component);
+      PaperQuestionView.specPoints (shared ServableQuestionService.specPointRefs,
+      private -> public); LearnerKnowledgeGraphService.walk passthrough;
+      ExamPaperController injects the service; no migrations; no seed change;
+      no statement/applicability content touched (golden gate)"
+  evidence:
+    - "PR SyllabAI/syllabai-core#25 -> core-ci build SUCCESS on bdc378d; merged as
+      7063e61; local main synced; branch deleted"
+    - "coordination claim-first commit 8dc9064 (base 7803102); zero file overlap with
+      the concurrent T-C23 closeout (33e8acd) — verified before this closeout"
+  claims:
+    VERIFIED:
+      - "learner KG payload now carries applicability on spec-point nodes
+        (NodeWithStateView walks the same NodeView tree T-C24 equipped)"
+      - "papers detail payload carries specPoints refs from the SAME projection
+        as StudentQuestionView — one SQL contract, one ordering rule"
+      - "honest absence: no mapping -> null applicability / empty specPoints
+        (asserted in both new test classes)"
+      - "CI core-ci SUCCESS on bdc378d (Testcontainers ITs + JPQL jsonb
+        projection validated where local offline run could not)"
+    INFERRED:
+      - "until the operator-gated seed activation backfills the 182 4CH1
+        applicability maps, both fields arrive empty/null in serving —
+        web residue must render honest absence (same as T-C25)"
+    REPORTED:
+      - "deploy lands with the next core deployment (Render)"
+    UNVERIFIED:
+      - "production payloads against live core (post-deploy probe — same
+        next_safe_action as T-C25)"
+  next_safe_actions:
+    - "Phase 2 step 3 residue (web lane, T-C29): MasteryMap learner-panel chips
+      (NodeWithStateView.applicability) + PapersView detail scoping
+      (PaperQuestionView.specPoints) via src/lib/applicability.ts — claim the
+      core-web-contract consumer lease"
+    - "post-deploy read-only prod sweep: specPoints probe on a 4CH1 topic list +
+      applicability probe on a learner KG payload (auth-gated)"
+  closeout:
+    commit: bdc378de73dd167fcbffacd181697bb6ef3cc213
+    merge: 7063e616936636eec18345ab837173e5536cc116
+    ci: "https://github.com/SyllabAI/syllabai-core/pull/25"
