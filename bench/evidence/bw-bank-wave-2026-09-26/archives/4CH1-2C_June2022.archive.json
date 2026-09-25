@@ -1,0 +1,1383 @@
+{
+ "archived_at": "2026-09-25T16:56:44Z",
+ "paper_code": "4CH1/2C",
+ "session_label": "June 2022",
+ "ep_id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+ "counts": {
+  "exam_papers": 1,
+  "questions": 7,
+  "question_versions": 7,
+  "question_parts": 50,
+  "mark_schemes": 7,
+  "mark_points": 39,
+  "question_topics": 0,
+  "question_spec_points": 0,
+  "question_options": 0,
+  "glm_ocr_bridge_records": 0,
+  "content_review_audit_refs": 0,
+  "teacher_validation_event_refs": 0
+ },
+ "rows": {
+  "exam_papers": [
+   {
+    "id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+    "subject_id": "0f3cc8ba-d8b6-464c-b915-77b29abd64af",
+    "title": "4CH1 Chemistry 4CH1/2C June 2022",
+    "board": "Edexcel",
+    "qualification": "4CH1",
+    "unit": "2C",
+    "session_label": "June 2022",
+    "paper_code": "4CH1/2C",
+    "question_paper_document_id": "466ab0f2-6864-55ae-a738-a06adee9d5a6",
+    "mark_scheme_document_id": "87c6168f-8ef6-5000-8545-4cc1ba04e608",
+    "validation_state": "SUGGESTED",
+    "provenance": "PAST_PAPER",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+    "created_at": "2026-09-24 16:32:29.360376+00:00",
+    "series": "JUN",
+    "year": 2022
+   }
+  ],
+  "questions": [
+   {
+    "id": "1e89f518-2c86-47c4-bc2c-70071c2e7a5f",
+    "external_ref": "4ch1/past-papers/2022-06/4ch1-2C#q1",
+    "question_type": "STRUCTURED",
+    "stem": "Answer ALL questions.\nSome questions must be answered with a cross in a box . If you change your mind about an\nand then mark your new answer with a cross .\nanswer, put a line through the box\n1 This question is about gases in the atmosphere.\nThe box gives the names of some gases.\nargon carbon dioxide hydrogen\nnitrogen oxygen water vapour",
+    "marks": 6,
+    "difficulty": 3,
+    "expected_time_seconds": 540,
+    "command_word": null,
+    "primary_topic_node_id": "ce521c2d-9a73-462e-b791-47832a4daff7",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 16:32:29.360633+00:00",
+    "exam_paper_id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+    "difficulty_source": null
+   },
+   {
+    "id": "ade48096-687f-406b-b5f2-2208cb36ef4a",
+    "external_ref": "4ch1/past-papers/2022-06/4ch1-2C#q2",
+    "question_type": "STRUCTURED",
+    "stem": "",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "primary_topic_node_id": "ce521c2d-9a73-462e-b791-47832a4daff7",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 16:32:29.361275+00:00",
+    "exam_paper_id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+    "difficulty_source": null
+   },
+   {
+    "id": "7170031c-43ed-48ae-9969-53b5a28b1452",
+    "external_ref": "4ch1/past-papers/2022-06/4ch1-2C#q3",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about Group 7, the halogens.",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "primary_topic_node_id": "ce521c2d-9a73-462e-b791-47832a4daff7",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 16:32:29.361567+00:00",
+    "exam_paper_id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+    "difficulty_source": null
+   },
+   {
+    "id": "13fad809-831a-4452-9a1f-bbd79ea2fab3",
+    "external_ref": "4ch1/past-papers/2022-06/4ch1-2C#q4",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about magnesium and magnesium compounds.",
+    "marks": 11,
+    "difficulty": 3,
+    "expected_time_seconds": 990,
+    "command_word": null,
+    "primary_topic_node_id": "ce521c2d-9a73-462e-b791-47832a4daff7",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 16:32:29.361842+00:00",
+    "exam_paper_id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+    "difficulty_source": null
+   },
+   {
+    "id": "51221954-08a2-4051-b1a4-d7eb1c62e9a2",
+    "external_ref": "4ch1/past-papers/2022-06/4ch1-2C#q5",
+    "question_type": "STRUCTURED",
+    "stem": "",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "primary_topic_node_id": "ce521c2d-9a73-462e-b791-47832a4daff7",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 16:32:29.362091+00:00",
+    "exam_paper_id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+    "difficulty_source": null
+   },
+   {
+    "id": "95045f8a-6456-420c-a215-9f348977b3d4",
+    "external_ref": "4ch1/past-papers/2022-06/4ch1-2C#q6",
+    "question_type": "STRUCTURED",
+    "stem": "Titanium is an important metal in industry.\nTitanium dioxide (TiO2) can be converted into titanium metal in two stages.\ntitanium dioxide is converted into titanium(IV) chloride (TiCl4)\nStage 1\nStage 2\ntitanium(IV) chloride is converted into titanium",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "primary_topic_node_id": "ce521c2d-9a73-462e-b791-47832a4daff7",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 16:32:29.362300+00:00",
+    "exam_paper_id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+    "difficulty_source": null
+   },
+   {
+    "id": "6c802692-7639-473e-bc8f-e8fa38df7b95",
+    "external_ref": "4ch1/past-papers/2022-06/4ch1-2C#q7",
+    "question_type": "STRUCTURED",
+    "stem": "A student uses this apparatus to find the heat energy supplied by a liquid fuel.\nthermometer\ncopper container\nwater\nliquid fuel\nThe student burns some fuel to heat the water in the copper container and measures\nthe change in temperature.",
+    "marks": 11,
+    "difficulty": 3,
+    "expected_time_seconds": 990,
+    "command_word": null,
+    "primary_topic_node_id": "ce521c2d-9a73-462e-b791-47832a4daff7",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 16:32:29.362502+00:00",
+    "exam_paper_id": "a16d1044-4295-4783-ba18-a0db0732ecd0",
+    "difficulty_source": null
+   }
+  ],
+  "question_versions": [
+   {
+    "id": "9312021c-99e9-4075-8312-2a8f393da45f",
+    "question_id": "1e89f518-2c86-47c4-bc2c-70071c2e7a5f",
+    "version": 1,
+    "stem": "Answer ALL questions.\nSome questions must be answered with a cross in a box . If you change your mind about an\nand then mark your new answer with a cross .\nanswer, put a line through the box\n1 This question is about gases in the atmosphere.\nThe box gives the names of some gases.\nargon carbon dioxide hydrogen\nnitrogen oxygen water vapour",
+    "marks": 6,
+    "difficulty": 3,
+    "expected_time_seconds": 540,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "466ab0f2-6864-55ae-a738-a06adee9d5a6",
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.361039+00:00"
+   },
+   {
+    "id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "question_id": "ade48096-687f-406b-b5f2-2208cb36ef4a",
+    "version": 1,
+    "stem": "",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "466ab0f2-6864-55ae-a738-a06adee9d5a6",
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.361430+00:00"
+   },
+   {
+    "id": "67f912c1-7512-479e-9ec8-5f947b5dde22",
+    "question_id": "7170031c-43ed-48ae-9969-53b5a28b1452",
+    "version": 1,
+    "stem": "This question is about Group 7, the halogens.",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "466ab0f2-6864-55ae-a738-a06adee9d5a6",
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.361695+00:00"
+   },
+   {
+    "id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "question_id": "13fad809-831a-4452-9a1f-bbd79ea2fab3",
+    "version": 1,
+    "stem": "This question is about magnesium and magnesium compounds.",
+    "marks": 11,
+    "difficulty": 3,
+    "expected_time_seconds": 990,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "466ab0f2-6864-55ae-a738-a06adee9d5a6",
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.361968+00:00"
+   },
+   {
+    "id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "question_id": "51221954-08a2-4051-b1a4-d7eb1c62e9a2",
+    "version": 1,
+    "stem": "",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "466ab0f2-6864-55ae-a738-a06adee9d5a6",
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.362189+00:00"
+   },
+   {
+    "id": "a4e533df-d9a5-41fd-8240-24c3b7c1bd09",
+    "question_id": "95045f8a-6456-420c-a215-9f348977b3d4",
+    "version": 1,
+    "stem": "Titanium is an important metal in industry.\nTitanium dioxide (TiO2) can be converted into titanium metal in two stages.\ntitanium dioxide is converted into titanium(IV) chloride (TiCl4)\nStage 1\nStage 2\ntitanium(IV) chloride is converted into titanium",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "466ab0f2-6864-55ae-a738-a06adee9d5a6",
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.362394+00:00"
+   },
+   {
+    "id": "e45c233a-3a11-4a8a-bbdd-ac8ae4d24e5d",
+    "question_id": "6c802692-7639-473e-bc8f-e8fa38df7b95",
+    "version": 1,
+    "stem": "A student uses this apparatus to find the heat energy supplied by a liquid fuel.\nthermometer\ncopper container\nwater\nliquid fuel\nThe student burns some fuel to heat the water in the copper container and measures\nthe change in temperature.",
+    "marks": 11,
+    "difficulty": 3,
+    "expected_time_seconds": 990,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "466ab0f2-6864-55ae-a738-a06adee9d5a6",
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.362595+00:00"
+   }
+  ],
+  "question_parts": [
+   {
+    "id": "e3ecb268-6e97-40dc-87ea-40a882aed1e0",
+    "question_version_id": "9312021c-99e9-4075-8312-2a8f393da45f",
+    "label": "a",
+    "prompt": "Choose gases from the box to answer these questions.",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 0,
+    "created_at": "2026-09-24 16:32:29.364258+00:00"
+   },
+   {
+    "id": "920054ac-c41b-47c7-8883-29e0d7eb3d19",
+    "question_version_id": "9312021c-99e9-4075-8312-2a8f393da45f",
+    "label": "a-i",
+    "prompt": "Identify the least reactive gas in the atmosphere.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 1,
+    "created_at": "2026-09-24 16:32:29.364285+00:00"
+   },
+   {
+    "id": "85f4dd29-c7c2-4cb1-845c-69f85c1e397b",
+    "question_version_id": "9312021c-99e9-4075-8312-2a8f393da45f",
+    "label": "a-ii",
+    "prompt": "Identify the most abundant gas in the atmosphere.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 2,
+    "created_at": "2026-09-24 16:32:29.364296+00:00"
+   },
+   {
+    "id": "5a98353d-69bf-4efb-8849-f0407cb90b1f",
+    "question_version_id": "9312021c-99e9-4075-8312-2a8f393da45f",
+    "label": "a-iii",
+    "prompt": "Identify the gas that is not normally found in the atmosphere.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 3,
+    "created_at": "2026-09-24 16:32:29.364300+00:00"
+   },
+   {
+    "id": "8e48ed50-b3f0-420e-a61b-0c012f2a94e9",
+    "question_version_id": "9312021c-99e9-4075-8312-2a8f393da45f",
+    "label": "b",
+    "prompt": "State an environmental problem caused by increasing amounts of carbon dioxide\nin the atmosphere.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 4,
+    "created_at": "2026-09-24 16:32:29.364305+00:00"
+   },
+   {
+    "id": "7448cb85-ba3b-432a-b9d6-a05146cb0e35",
+    "question_version_id": "9312021c-99e9-4075-8312-2a8f393da45f",
+    "label": "c",
+    "prompt": "Describe a test for carbon dioxide.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 5,
+    "created_at": "2026-09-24 16:32:29.364310+00:00"
+   },
+   {
+    "id": "1442bd02-ca39-44f4-8f7b-bf810e6ece96",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "label": "a",
+    "prompt": "The diagram shows two pieces of apparatus, X and Y.\ncm3\n50\n40\n25\n30\ncm3\n20\n10\nX\nY",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 0,
+    "created_at": "2026-09-24 16:32:29.364338+00:00"
+   },
+   {
+    "id": "b63cddc4-25c6-4323-b90c-5401917283f5",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "label": "a-i",
+    "prompt": "Give the name of each piece of apparatus.\nX ................................................................................................................................................................................................................................................................................\nY.................................................................................................................................................................................................................................................................................",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 1,
+    "created_at": "2026-09-24 16:32:29.364349+00:00"
+   },
+   {
+    "id": "cb6411c6-d71f-48b3-8445-879b6b6d361d",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "label": "a-ii",
+    "prompt": "In a titration, a student adds 25.0\u2009cm3 of barium hydroxide solution to a\nconical flask.\nGive a reason why it is better to use Y rather than X.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 2,
+    "created_at": "2026-09-24 16:32:29.364354+00:00"
+   },
+   {
+    "id": "1d5a91aa-76b9-49d8-9c1a-76ac1a4b4ce4",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "label": "b",
+    "prompt": "The student uses methyl orange indicator in the titration.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 3,
+    "created_at": "2026-09-24 16:32:29.364366+00:00"
+   },
+   {
+    "id": "723d38f3-f60f-4df8-bdf6-4f40a73cc3a8",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "label": "b-i",
+    "prompt": "State the colour of methyl orange in barium hydroxide solution.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 4,
+    "created_at": "2026-09-24 16:32:29.364376+00:00"
+   },
+   {
+    "id": "726ac431-4e8f-4f51-87c4-76bee69ee6e5",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "label": "b-ii",
+    "prompt": "Give a reason why universal indicator is not suitable for use in a titration.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 5,
+    "created_at": "2026-09-24 16:32:29.364382+00:00"
+   },
+   {
+    "id": "25a85f66-66db-424f-8106-65814b887b6f",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "label": "c",
+    "prompt": "The student adds some dilute nitric acid to a burette and does the titration.\nThe equation for the reaction is\nBa(OH)2 + 2HNO3 \u2192 Ba(NO3)2 + 2H2O\nThe student finds that 21.50\u2009cm3 of nitric acid of concentration 0.600\u2009mol/dm3\nneutralises 25.0\u2009cm3 of barium hydroxide solution.\nCalculate the concentration, in mol/dm3, of the barium hydroxide solution.\nconcentration = ..............................................................\u2009mol/dm3",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 6,
+    "created_at": "2026-09-24 16:32:29.364386+00:00"
+   },
+   {
+    "id": "23c3a405-5606-4ccd-851a-9bd67630ea5c",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "label": "d",
+    "prompt": "State why sulfuric acid would not be a suitable acid to use in this titration.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 7,
+    "created_at": "2026-09-24 16:32:29.364390+00:00"
+   },
+   {
+    "id": "bdaa38f2-6e35-473f-a7f8-28a59d5b3919",
+    "question_version_id": "67f912c1-7512-479e-9ec8-5f947b5dde22",
+    "label": "a",
+    "prompt": "Which halogen has the palest colour?\nA astatine\nB bromine\nC fluorine\nD iodine",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 0,
+    "created_at": "2026-09-24 16:32:29.364403+00:00"
+   },
+   {
+    "id": "8dbf1fd8-47b6-45cd-92e5-d9442facd0cd",
+    "question_version_id": "67f912c1-7512-479e-9ec8-5f947b5dde22",
+    "label": "b",
+    "prompt": "Which halogen is a solid at room temperature?\nA astatine\nB bromine\nC chlorine\nD fluorine",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 1,
+    "created_at": "2026-09-24 16:32:29.364408+00:00"
+   },
+   {
+    "id": "5f1bc644-a874-4032-baf0-983d6f1129b1",
+    "question_version_id": "67f912c1-7512-479e-9ec8-5f947b5dde22",
+    "label": "c",
+    "prompt": "The table shows the electronic configurations of a fluorine atom and a\nchlorine atom.\nExplain the relative reactivities of fluorine and chlorine using the information in\nthe table.",
+    "command_word": null,
+    "marks": 4,
+    "ordering": 2,
+    "created_at": "2026-09-24 16:32:29.364412+00:00"
+   },
+   {
+    "id": "2bdb1341-0800-42f0-8155-3760ad93a447",
+    "question_version_id": "67f912c1-7512-479e-9ec8-5f947b5dde22",
+    "label": "d",
+    "prompt": "Lithium reacts with chlorine to form lithium chloride.",
+    "command_word": null,
+    "marks": 6,
+    "ordering": 3,
+    "created_at": "2026-09-24 16:32:29.364417+00:00"
+   },
+   {
+    "id": "e46e3100-f53d-44bf-8115-f4fbe4214da6",
+    "question_version_id": "67f912c1-7512-479e-9ec8-5f947b5dde22",
+    "label": "d-i",
+    "prompt": "Write a chemical equation for the reaction of lithium with chlorine.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 4,
+    "created_at": "2026-09-24 16:32:29.364429+00:00"
+   },
+   {
+    "id": "c1f6967e-6c21-4830-9283-e98052ec35bb",
+    "question_version_id": "67f912c1-7512-479e-9ec8-5f947b5dde22",
+    "label": "d-ii",
+    "prompt": "Describe tests to show that the product of the reaction is lithium chloride.",
+    "command_word": null,
+    "marks": 5,
+    "ordering": 5,
+    "created_at": "2026-09-24 16:32:29.364433+00:00"
+   },
+   {
+    "id": "cee224e7-99a5-4eda-aec2-f826c6e505ee",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "label": "a",
+    "prompt": "Magnesium burns in oxygen to form magnesium oxide.\nState two observations that would be seen during the reaction.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 0,
+    "created_at": "2026-09-24 16:32:29.364445+00:00"
+   },
+   {
+    "id": "c70fa4c5-c2b2-48df-b977-e7237a3929f5",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "label": "b",
+    "prompt": "The diagram shows the electron configurations of a magnesium atom and an\noxygen atom.\nmagnesium atom\noxygen atom\nDescribe the changes in the electronic configurations when magnesium reacts\nwith oxygen to form the ionic compound magnesium oxide, MgO",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 1,
+    "created_at": "2026-09-24 16:32:29.364452+00:00"
+   },
+   {
+    "id": "7dbae1a3-1be3-4115-b084-47e93c1cedbd",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "label": "c",
+    "prompt": "Magnesium can be produced by the electrolysis of molten magnesium chloride.",
+    "command_word": null,
+    "marks": 5,
+    "ordering": 2,
+    "created_at": "2026-09-24 16:32:29.364457+00:00"
+   },
+   {
+    "id": "4cd06b18-9dc8-49ac-88c5-0ca1720acf85",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "label": "c-i",
+    "prompt": "State why magnesium cannot be produced by heating magnesium oxide\nwith carbon.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 3,
+    "created_at": "2026-09-24 16:32:29.364460+00:00"
+   },
+   {
+    "id": "af0c0072-5696-48ca-83c0-27b9d250e385",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "label": "c-ii",
+    "prompt": "Explain the different ways that magnesium and magnesium chloride\nconduct electricity.\nmagnesium\nmagnesium chloride",
+    "command_word": null,
+    "marks": 4,
+    "ordering": 4,
+    "created_at": "2026-09-24 16:32:29.364466+00:00"
+   },
+   {
+    "id": "49cb4d76-7421-4860-b62b-289d30c80a67",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "label": "d",
+    "prompt": "During the electrolysis of molten magnesium chloride, magnesium is formed at\nthe negative electrode.\nThe ionic half\u2011equation for the reaction is\nMg2+ + 2e\u2013 \u2192 Mg",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 5,
+    "created_at": "2026-09-24 16:32:29.364473+00:00"
+   },
+   {
+    "id": "66cc023f-a745-433f-be82-91fac1e7b628",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "label": "d-i",
+    "prompt": "State why this is a reduction reaction.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 6,
+    "created_at": "2026-09-24 16:32:29.364478+00:00"
+   },
+   {
+    "id": "15f1c9a2-f3ae-494e-bf00-ce1296ed1e43",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "label": "d-ii",
+    "prompt": "Write an ionic half\u2011equation for the formation of chlorine at the\npositive electrode.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 7,
+    "created_at": "2026-09-24 16:32:29.364482+00:00"
+   },
+   {
+    "id": "0f4751a7-e43c-4cfe-826e-bdcf4f93fb9e",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "a",
+    "prompt": "An organic compound has this percentage composition by mass.\nC = 40\u2009% H = 6.7\u2009% O = 53.3\u2009%",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 0,
+    "created_at": "2026-09-24 16:32:29.364493+00:00"
+   },
+   {
+    "id": "c02edefd-8c5e-4167-b912-4a4c090e6f4a",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "a-i",
+    "prompt": "Show that the empirical formula of the compound is CH2O",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 1,
+    "created_at": "2026-09-24 16:32:29.364497+00:00"
+   },
+   {
+    "id": "32d067d3-8b48-4f01-927d-4dc33519e8a5",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "a-ii",
+    "prompt": "Draw the structural formula of a compound with the molecular formula C2H4O2",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 2,
+    "created_at": "2026-09-24 16:32:29.364501+00:00"
+   },
+   {
+    "id": "7be3e3cc-1301-45ec-93e8-2d6c56c7fb87",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "b",
+    "prompt": "Methanoic acid (HCOOH) reacts with sodium carbonate solution to give\nthree products.",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 3,
+    "created_at": "2026-09-24 16:32:29.364505+00:00"
+   },
+   {
+    "id": "d4240e0b-5faf-429a-8671-fe074229f186",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "b-i",
+    "prompt": "Complete the equation for this reaction.\n2HCOOH + Na2CO3 \u2192 ............................................... + ............................................... + ...............................................",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 4,
+    "created_at": "2026-09-24 16:32:29.364510+00:00"
+   },
+   {
+    "id": "6ae52493-71c0-43c8-922b-bade0fd9967b",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "b-ii",
+    "prompt": "State what you would observe in this reaction.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 5,
+    "created_at": "2026-09-24 16:32:29.364513+00:00"
+   },
+   {
+    "id": "e701f470-c513-44ca-9a92-f7238ee92e20",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "c",
+    "prompt": "Methanoic acid also reacts with propanol to form an ester.\nThe equation for the reaction is\nHCOOH + C3H7OH \uf083 HCOOC3H7 + H2O",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 6,
+    "created_at": "2026-09-24 16:32:29.364517+00:00"
+   },
+   {
+    "id": "fe84ab06-467c-4df1-b032-4404d5263078",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "c-i",
+    "prompt": "Give the name of the ester that forms.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 7,
+    "created_at": "2026-09-24 16:32:29.364522+00:00"
+   },
+   {
+    "id": "4f5abbd4-f4e0-4502-ba3c-62ca15b9ccf9",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "c-ii",
+    "prompt": "State what is meant by the \uf083 symbol.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 8,
+    "created_at": "2026-09-24 16:32:29.364526+00:00"
+   },
+   {
+    "id": "6eed3cd8-3cbe-494a-9ae3-35286eba9ed6",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "c-iii",
+    "prompt": "When this reaction occurs in a sealed container, the reaction can reach\ndynamic equilibrium.\nGive one characteristic of a reaction at dynamic equilibrium.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 9,
+    "created_at": "2026-09-24 16:32:29.364530+00:00"
+   },
+   {
+    "id": "b4e0bebe-330a-48b5-b73b-cd4c65cee584",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "d",
+    "prompt": "A polyester forms when butanedioic acid reacts with ethanediol.\nThe diagram shows the repeat unit of the polyester that forms.\nO\nO\nC\nCH2CH2\nC\nO\nCH2CH2\nO",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 10,
+    "created_at": "2026-09-24 16:32:29.364533+00:00"
+   },
+   {
+    "id": "a812dbc1-cfb0-4dd7-a8f9-d30d99e958da",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "d-i",
+    "prompt": "Give the name of this type of polymerisation.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 11,
+    "created_at": "2026-09-24 16:32:29.364537+00:00"
+   },
+   {
+    "id": "a65d614c-d0b5-4455-9aef-210bbc646e03",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "label": "d-ii",
+    "prompt": "Draw the structural formulae of the two monomers used to make\nthis polyester.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 12,
+    "created_at": "2026-09-24 16:32:29.364541+00:00"
+   },
+   {
+    "id": "775b14b5-3940-4949-a96e-e59d915cd544",
+    "question_version_id": "a4e533df-d9a5-41fd-8240-24c3b7c1bd09",
+    "label": "a",
+    "prompt": "This is the equation for the reaction in stage 1.\nTiO2 + 2Cl2 + C \u2192 TiCl4 + CO2\nCalculate the volume, in dm3, of chlorine gas at rtp needed to react completely\nwith 20 tonnes of titanium dioxide.\nGive your answer in standard form.\n[1 tonne = 106\u2009g\nMr of TiO2 = 80]\n[molar volume of chlorine gas at rtp = 24\u2009dm3]\nvolume of chlorine gas = ..............................................................\u2009dm3",
+    "command_word": null,
+    "marks": 4,
+    "ordering": 0,
+    "created_at": "2026-09-24 16:32:29.364554+00:00"
+   },
+   {
+    "id": "1f0c1575-6812-4d9e-b149-68cfdc949a9a",
+    "question_version_id": "a4e533df-d9a5-41fd-8240-24c3b7c1bd09",
+    "label": "b",
+    "prompt": "In stage 2, titanium(IV) chloride vapour is passed through molten magnesium in a\ncontainer filled with argon.\nThis is the equation for the reaction in stage 2.\nTiCl4 + 2Mg \u2192 Ti + 2MgCl2\nExplain why the container is filled with argon rather than air.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 1,
+    "created_at": "2026-09-24 16:32:29.364565+00:00"
+   },
+   {
+    "id": "93c120a0-822b-4861-bb15-667551e8561e",
+    "question_version_id": "a4e533df-d9a5-41fd-8240-24c3b7c1bd09",
+    "label": "c",
+    "prompt": "Aeroplanes are made of an alloy containing aluminium and titanium.\nExplain why the alloy is stronger than pure titanium metal.\nYou may include diagrams in your answer.",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 2,
+    "created_at": "2026-09-24 16:32:29.364573+00:00"
+   },
+   {
+    "id": "1b414dd4-e228-4b60-850a-9458f543950f",
+    "question_version_id": "e45c233a-3a11-4a8a-bbdd-ac8ae4d24e5d",
+    "label": "a",
+    "prompt": "The student notices that the bottom of the container turns black.\nGive the name of the black substance that forms on the bottom of the container.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 0,
+    "created_at": "2026-09-24 16:32:29.364584+00:00"
+   },
+   {
+    "id": "ed80b370-f842-4eee-82d5-384e4c9f1418",
+    "question_version_id": "e45c233a-3a11-4a8a-bbdd-ac8ae4d24e5d",
+    "label": "b",
+    "prompt": "In one experiment, the student burns 0.92\u2009g of ethanol.\nThe student calculates that the heat energy absorbed by the water is 18.2\u2009kJ.\nShow that the results of this experiment give an approximate value for the\nenthalpy of combustion of ethanol of \u0394H = \u2013900\u2009kJ/mol.\n[Mr of ethanol = 46]",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 1,
+    "created_at": "2026-09-24 16:32:29.364589+00:00"
+   },
+   {
+    "id": "84b96353-f2ca-472c-b78a-82699b7a0f26",
+    "question_version_id": "e45c233a-3a11-4a8a-bbdd-ac8ae4d24e5d",
+    "label": "c",
+    "prompt": "The data book value of \u0394H for the combustion of ethanol is \u20131367\u2009kJ/mol.\nGive two reasons why the student\u2019s value is much lower than the data book value.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 2,
+    "created_at": "2026-09-24 16:32:29.364593+00:00"
+   },
+   {
+    "id": "c88776ff-c324-414b-8d32-984f822d3c36",
+    "question_version_id": "e45c233a-3a11-4a8a-bbdd-ac8ae4d24e5d",
+    "label": "d",
+    "prompt": "The equation shows the combustion of methane.\n\u0394H = \u2013890\u2009kJ/mol\nCH4 + 2O2 \u2192 CO2 + 2H2O\nThis is the equation showing the displayed formulae.\nH\nH\nO\nO\nO\nH\n\u2192 O\nC\nO +\n+\nC\nH\nH\nO\nO\nO\nH\nH\nH\nThe table shows the bond energies for O\nO, C\nO and O\nH",
+    "command_word": null,
+    "marks": 6,
+    "ordering": 3,
+    "created_at": "2026-09-24 16:32:29.364597+00:00"
+   },
+   {
+    "id": "599bcb05-c8c8-4788-9b1c-79eb28b70be8",
+    "question_version_id": "e45c233a-3a11-4a8a-bbdd-ac8ae4d24e5d",
+    "label": "d-i",
+    "prompt": "Calculate the bond energy of the C\nH bond, using information from the\nequation and the table.\nH bond energy = ..............................................................\u2009kJ/mol\nC",
+    "command_word": null,
+    "marks": 4,
+    "ordering": 4,
+    "created_at": "2026-09-24 16:32:29.364601+00:00"
+   },
+   {
+    "id": "30a895a4-c0ac-4668-ab9b-c61fbf735c2d",
+    "question_version_id": "e45c233a-3a11-4a8a-bbdd-ac8ae4d24e5d",
+    "label": "d-ii",
+    "prompt": "Complete the energy level diagram to show the products and \u0394H.\nEnergy\nCH4 + 2O2",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 5,
+    "created_at": "2026-09-24 16:32:29.364605+00:00"
+   }
+  ],
+  "mark_schemes": [
+   {
+    "id": "92f76008-9a48-445c-9a20-9a8e9b69ea99",
+    "question_version_id": "9312021c-99e9-4075-8312-2a8f393da45f",
+    "version_label": "1",
+    "source_document_id": "87c6168f-8ef6-5000-8545-4cc1ba04e608",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.362812+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "a572c75a-9fa4-48e0-9abd-8f849abc4caf",
+    "question_version_id": "b2b3a2cc-512d-4971-817c-3a4496bc910d",
+    "version_label": "1",
+    "source_document_id": "87c6168f-8ef6-5000-8545-4cc1ba04e608",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.363079+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "8d7156ce-6db4-4d01-8fc3-b6d1d035662e",
+    "question_version_id": "67f912c1-7512-479e-9ec8-5f947b5dde22",
+    "version_label": "1",
+    "source_document_id": "87c6168f-8ef6-5000-8545-4cc1ba04e608",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.363234+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "6b8534bb-3232-41b7-9003-dc34c1352d55",
+    "question_version_id": "ac0a0649-23ae-4750-a56c-34ea7fb74ae2",
+    "version_label": "1",
+    "source_document_id": "87c6168f-8ef6-5000-8545-4cc1ba04e608",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.363386+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_version_id": "71dc66ad-8121-454b-83f7-08168f4bf9c4",
+    "version_label": "1",
+    "source_document_id": "87c6168f-8ef6-5000-8545-4cc1ba04e608",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.363532+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "017ecb29-4be5-46ca-a40b-bdcf2b87a144",
+    "question_version_id": "a4e533df-d9a5-41fd-8240-24c3b7c1bd09",
+    "version_label": "1",
+    "source_document_id": "87c6168f-8ef6-5000-8545-4cc1ba04e608",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.363652+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "87cd958a-1281-4bc8-88f9-c594fe9c06d4",
+    "question_version_id": "e45c233a-3a11-4a8a-bbdd-ac8ae4d24e5d",
+    "version_label": "1",
+    "source_document_id": "87c6168f-8ef6-5000-8545-4cc1ba04e608",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 16:32:29.363763+00:00",
+    "general_guidance": null
+   }
+  ],
+  "mark_points": [
+   {
+    "id": "fbbd5935-462b-435b-98ab-d4c629060242",
+    "mark_scheme_id": "92f76008-9a48-445c-9a20-9a8e9b69ea99",
+    "question_part_id": "920054ac-c41b-47c7-8883-29e0d7eb3d19",
+    "ref": "1-a-i",
+    "ordering": 0,
+    "text": "argon",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: Ar"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.364634+00:00"
+   },
+   {
+    "id": "73b6caa2-4603-43fe-b5cb-7f593a509805",
+    "mark_scheme_id": "92f76008-9a48-445c-9a20-9a8e9b69ea99",
+    "question_part_id": "85f4dd29-c7c2-4cb1-845c-69f85c1e397b",
+    "ref": "1-a-ii",
+    "ordering": 1,
+    "text": "nitrogen",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: N2/N"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.364776+00:00"
+   },
+   {
+    "id": "0c7d2abf-c29a-4d37-9514-1ab3c1687605",
+    "mark_scheme_id": "92f76008-9a48-445c-9a20-9a8e9b69ea99",
+    "question_part_id": "5a98353d-69bf-4efb-8849-f0407cb90b1f",
+    "ref": "1-a-iii",
+    "ordering": 2,
+    "text": "hydrogen",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: H2/H"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.364852+00:00"
+   },
+   {
+    "id": "87234e40-b2d4-4de3-8e31-6729f679dce8",
+    "mark_scheme_id": "92f76008-9a48-445c-9a20-9a8e9b69ea99",
+    "question_part_id": "8e48ed50-b3f0-420e-a61b-0c012f2a94e9",
+    "ref": "1-b",
+    "ordering": 3,
+    "text": "climate change/global warming /oceans becoming",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: greenhouse",
+     "Allow: effects of",
+     "Reject: references to",
+     "Ignore: acid rain"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.364892+00:00"
+   },
+   {
+    "id": "9c0119e5-24ae-4444-902f-6d7331f0a1bd",
+    "mark_scheme_id": "92f76008-9a48-445c-9a20-9a8e9b69ea99",
+    "question_part_id": "7448cb85-ba3b-432a-b9d6-a05146cb0e35",
+    "ref": "1-c",
+    "ordering": 4,
+    "text": "bubble/pass/add the gas/carbon dioxide into",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Reject: addition of"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.364919+00:00"
+   },
+   {
+    "id": "06ebc9de-9537-435b-8f7e-5a2a7126eee2",
+    "mark_scheme_id": "a572c75a-9fa4-48e0-9abd-8f849abc4caf",
+    "question_part_id": "b63cddc4-25c6-4323-b90c-5401917283f5",
+    "ref": "2-a-i",
+    "ordering": 0,
+    "text": "(X) measuring cylinder",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.364958+00:00"
+   },
+   {
+    "id": "9b3ee618-5474-407b-b668-a0e3ce31395e",
+    "mark_scheme_id": "a572c75a-9fa4-48e0-9abd-8f849abc4caf",
+    "question_part_id": "cb6411c6-d71f-48b3-8445-879b6b6d361d",
+    "ref": "2-a-ii",
+    "ordering": 1,
+    "text": "(volume measurement with Y is) more precise ORA",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: (volume",
+     "Allow: (Y gives) a"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.364981+00:00"
+   },
+   {
+    "id": "aaca9681-f3a5-4c8c-806f-0ca9e37b8d43",
+    "mark_scheme_id": "a572c75a-9fa4-48e0-9abd-8f849abc4caf",
+    "question_part_id": "723d38f3-f60f-4df8-bdf6-4f40a73cc3a8",
+    "ref": "2-b-i",
+    "ordering": 2,
+    "text": "yellow",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365008+00:00"
+   },
+   {
+    "id": "03679d67-eebf-419d-b44a-6970409aee2d",
+    "mark_scheme_id": "a572c75a-9fa4-48e0-9abd-8f849abc4caf",
+    "question_part_id": "726ac431-4e8f-4f51-87c4-76bee69ee6e5",
+    "ref": "2-b-ii",
+    "ordering": 3,
+    "text": "there is no clear end point/ colour change is gradual (at",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: it has a"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365035+00:00"
+   },
+   {
+    "id": "2452fce4-e9e1-481d-ae10-45d4e831eded",
+    "mark_scheme_id": "a572c75a-9fa4-48e0-9abd-8f849abc4caf",
+    "question_part_id": "25a85f66-66db-424f-8106-65814b887b6f",
+    "ref": "2-c",
+    "ordering": 4,
+    "text": "correct answer with",
+    "marks": 3,
+    "acceptance_criteria": [
+     "Allow: 2 sig figs"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365066+00:00"
+   },
+   {
+    "id": "e1576aae-f964-45ca-a9f4-e90ed53319bf",
+    "mark_scheme_id": "a572c75a-9fa4-48e0-9abd-8f849abc4caf",
+    "question_part_id": "23c3a405-5606-4ccd-851a-9bd67630ea5c",
+    "ref": "2-d",
+    "ordering": 5,
+    "text": "barium sulfate is insoluble /does not dissolve /forms a",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365094+00:00"
+   },
+   {
+    "id": "bcf850b5-f696-4365-af70-8ae26e6a4f9c",
+    "mark_scheme_id": "8d7156ce-6db4-4d01-8fc3-b6d1d035662e",
+    "question_part_id": "bdaa38f2-6e35-473f-a7f8-28a59d5b3919",
+    "ref": "3-a",
+    "ordering": 0,
+    "text": "C fluorine",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365143+00:00"
+   },
+   {
+    "id": "7e896e2b-f69e-4f5a-99a6-6df05634e131",
+    "mark_scheme_id": "8d7156ce-6db4-4d01-8fc3-b6d1d035662e",
+    "question_part_id": "8dbf1fd8-47b6-45cd-92e5-d9442facd0cd",
+    "ref": "3-b",
+    "ordering": 1,
+    "text": "A astatine",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365164+00:00"
+   },
+   {
+    "id": "141f6b46-96bd-4da1-bb02-ef5c5eb18662",
+    "mark_scheme_id": "8d7156ce-6db4-4d01-8fc3-b6d1d035662e",
+    "question_part_id": "5f1bc644-a874-4032-baf0-983d6f1129b1",
+    "ref": "3-c",
+    "ordering": 2,
+    "text": "An explanation that links the following four points",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365186+00:00"
+   },
+   {
+    "id": "a03ff35c-5285-4d99-a00a-351e6c94e8a3",
+    "mark_scheme_id": "8d7156ce-6db4-4d01-8fc3-b6d1d035662e",
+    "question_part_id": "e46e3100-f53d-44bf-8115-f4fbe4214da6",
+    "ref": "3-d-i",
+    "ordering": 3,
+    "text": "2Li + Cl2 \uf0ae 2LiCl",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: multiples or",
+     "Allow: 2Li+Cl-",
+     "Reject: any charges on Li",
+     "Ignore: state symbols"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365203+00:00"
+   },
+   {
+    "id": "ebe2052a-5d50-4a52-82ef-24e6227301bb",
+    "mark_scheme_id": "8d7156ce-6db4-4d01-8fc3-b6d1d035662e",
+    "question_part_id": "c1f6967e-6c21-4830-9283-e98052ec35bb",
+    "ref": "3-d-ii",
+    "ordering": 4,
+    "text": "A description that refers to the following five points",
+    "marks": 5,
+    "acceptance_criteria": [
+     "Allow: description of"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365231+00:00"
+   },
+   {
+    "id": "b73d8cd3-2da0-433a-8acb-16001eb1e651",
+    "mark_scheme_id": "6b8534bb-3232-41b7-9003-dc34c1352d55",
+    "question_part_id": "cee224e7-99a5-4eda-aec2-f826c6e505ee",
+    "ref": "4-a",
+    "ordering": 0,
+    "text": "bright/white light OR bright/white flame",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: grey powder",
+     "Reject: white precipitate"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365262+00:00"
+   },
+   {
+    "id": "93289d44-3229-4e44-bc57-87ea6abb4223",
+    "mark_scheme_id": "6b8534bb-3232-41b7-9003-dc34c1352d55",
+    "question_part_id": "c70fa4c5-c2b2-48df-b977-e7237a3929f5",
+    "ref": "4-b",
+    "ordering": 1,
+    "text": "A description that refers to the following two points",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365285+00:00"
+   },
+   {
+    "id": "d91443b0-3d68-47bf-b545-3d1393086f7b",
+    "mark_scheme_id": "6b8534bb-3232-41b7-9003-dc34c1352d55",
+    "question_part_id": "4cd06b18-9dc8-49ac-88c5-0ca1720acf85",
+    "ref": "4-c-i",
+    "ordering": 2,
+    "text": "magnesium is more reactive/higher in the reactivity",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365306+00:00"
+   },
+   {
+    "id": "24aacc4f-31cc-4876-ac51-22c289e7ff44",
+    "mark_scheme_id": "6b8534bb-3232-41b7-9003-dc34c1352d55",
+    "question_part_id": "af0c0072-5696-48ca-83c0-27b9d250e385",
+    "ref": "4-c-ii",
+    "ordering": 3,
+    "text": "An explanation that links the following four points",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365323+00:00"
+   },
+   {
+    "id": "af899478-bf97-4eed-ad33-7c44ae335228",
+    "mark_scheme_id": "6b8534bb-3232-41b7-9003-dc34c1352d55",
+    "question_part_id": "66cc023f-a745-433f-be82-91fac1e7b628",
+    "ref": "4-d-i",
+    "ordering": 4,
+    "text": "magnesium ions/ Mg2+ gains electrons",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: electrons are",
+     "Reject: magnesium /Mg",
+     "Reject: reference to loss"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365343+00:00"
+   },
+   {
+    "id": "0ce71684-dc3e-49ca-b0b2-1c128006475f",
+    "mark_scheme_id": "6b8534bb-3232-41b7-9003-dc34c1352d55",
+    "question_part_id": "15f1c9a2-f3ae-494e-bf00-ce1296ed1e43",
+    "ref": "4-d-ii",
+    "ordering": 5,
+    "text": "2Cl\uf02d \uf0ae Cl2",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: 2Cl\uf02d \uf02d 2e(\uf02d)\uf0ae Cl2",
+     "Allow: multiples or",
+     "Ignore: state symbols"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365364+00:00"
+   },
+   {
+    "id": "ae905e16-7bbd-4387-be82-7a5743cccb91",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "c02edefd-8c5e-4167-b912-4a4c090e6f4a",
+    "ref": "5-a-i",
+    "ordering": 0,
+    "text": "40.0",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365401+00:00"
+   },
+   {
+    "id": "1bbd7941-1ecb-4c14-827f-eb2497e12cd6",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "32d067d3-8b48-4f01-927d-4dc33519e8a5",
+    "ref": "5-a-ii",
+    "ordering": 1,
+    "text": "CH3COOH",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: HCOOCH3"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365429+00:00"
+   },
+   {
+    "id": "bec09eda-611c-44e3-a7e7-d809b25be288",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "d4240e0b-5faf-429a-8671-fe074229f186",
+    "ref": "5-b-i",
+    "ordering": 2,
+    "text": "2HCOOH + Na2CO3 \uf0ae 2HCOONa + CO2 + H2O",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365452+00:00"
+   },
+   {
+    "id": "305c6792-de5c-454a-8e1f-342c08535abf",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "6ae52493-71c0-43c8-922b-bade0fd9967b",
+    "ref": "5-b-ii",
+    "ordering": 3,
+    "text": "bubbles/ fizzing/ effervescence",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: sodium carbonate",
+     "Ignore: gas given off"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365474+00:00"
+   },
+   {
+    "id": "fa5c6266-a16a-4151-bdff-367f17c9bbbc",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "fe84ab06-467c-4df1-b032-4404d5263078",
+    "ref": "5-c-i",
+    "ordering": 4,
+    "text": "propyl methanoate",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: propyl formate"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365496+00:00"
+   },
+   {
+    "id": "1172ef4d-6ce9-4232-9626-74bfe3d52c82",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "4f5abbd4-f4e0-4502-ba3c-62ca15b9ccf9",
+    "ref": "5-c-ii",
+    "ordering": 5,
+    "text": "reversible reaction",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: reaction which",
+     "Ignore: equilibrium"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365516+00:00"
+   },
+   {
+    "id": "d681af40-dcef-4d4f-8322-d17f48efdbc6",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "6eed3cd8-3cbe-494a-9ae3-35286eba9ed6",
+    "ref": "5-c-iii",
+    "ordering": 6,
+    "text": "forward and backward reactions occur at the same",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Reject: concentrations of"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365539+00:00"
+   },
+   {
+    "id": "cc3691d2-d322-451a-945d-c510f83e975e",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "a812dbc1-cfb0-4dd7-a8f9-d30d99e958da",
+    "ref": "5-d-i",
+    "ordering": 7,
+    "text": "condensation (polymerisation)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365562+00:00"
+   },
+   {
+    "id": "850594e3-88d2-4ba4-a6fd-ec262dcde672",
+    "mark_scheme_id": "d528a878-f2ae-4cbb-90da-2a1a68644a8f",
+    "question_part_id": "a65d614c-d0b5-4455-9aef-210bbc646e03",
+    "ref": "5-d-ii",
+    "ordering": 8,
+    "text": "M1 M2 ALLOW",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: HOCH2CH2OH for",
+     "Reject: OH\u2014C once only"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365584+00:00"
+   },
+   {
+    "id": "32e6278a-b6ce-4e6d-ba31-8ef2da8dd5a3",
+    "mark_scheme_id": "017ecb29-4be5-46ca-a40b-bdcf2b87a144",
+    "question_part_id": "775b14b5-3940-4949-a96e-e59d915cd544",
+    "ref": "6-a",
+    "ordering": 0,
+    "text": "correct answer with or",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365632+00:00"
+   },
+   {
+    "id": "74c4cc1d-2bc8-4a79-8fc1-e19e5f99c0e4",
+    "mark_scheme_id": "017ecb29-4be5-46ca-a40b-bdcf2b87a144",
+    "question_part_id": "1f0c1575-6812-4d9e-b149-68cfdc949a9a",
+    "ref": "6-b",
+    "ordering": 1,
+    "text": "An explanation that links the following two points",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365657+00:00"
+   },
+   {
+    "id": "51177f24-b3ca-415e-abb2-2557b9d55ee2",
+    "mark_scheme_id": "017ecb29-4be5-46ca-a40b-bdcf2b87a144",
+    "question_part_id": "93c120a0-822b-4861-bb15-667551e8561e",
+    "ref": "6-c",
+    "ordering": 2,
+    "text": "An explanation that links the following three",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365679+00:00"
+   },
+   {
+    "id": "eb6375c2-0c13-4781-b5fc-04085a48c985",
+    "mark_scheme_id": "87cd958a-1281-4bc8-88f9-c594fe9c06d4",
+    "question_part_id": "1b414dd4-e228-4b60-850a-9458f543950f",
+    "ref": "7-a",
+    "ordering": 0,
+    "text": "carbon",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: soot",
+     "Allow: copper(II) oxide",
+     "Reject: copper(I) oxide"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365706+00:00"
+   },
+   {
+    "id": "c93614e1-6175-49b1-b3cd-55aaa316f754",
+    "mark_scheme_id": "87cd958a-1281-4bc8-88f9-c594fe9c06d4",
+    "question_part_id": "ed80b370-f842-4eee-82d5-384e4c9f1418",
+    "ref": "7-b",
+    "ordering": 1,
+    "text": "(amount of ethanol) = 0.92 \uf0b8 46 OR 0.02(0) (mol)",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: alternative"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365748+00:00"
+   },
+   {
+    "id": "d77cec00-5463-463f-a148-704506921db5",
+    "mark_scheme_id": "87cd958a-1281-4bc8-88f9-c594fe9c06d4",
+    "question_part_id": "84b96353-f2ca-472c-b78a-82699b7a0f26",
+    "ref": "7-c",
+    "ordering": 2,
+    "text": "Any 2 from",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365769+00:00"
+   },
+   {
+    "id": "7606521f-b951-450c-86d8-fe837f70599b",
+    "mark_scheme_id": "87cd958a-1281-4bc8-88f9-c594fe9c06d4",
+    "question_part_id": "599bcb05-c8c8-4788-9b1c-79eb28b70be8",
+    "ref": "7-d-i",
+    "ordering": 3,
+    "text": "correct answer with or",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365809+00:00"
+   },
+   {
+    "id": "26845e25-f9c4-43eb-8b03-cea26f77a377",
+    "mark_scheme_id": "87cd958a-1281-4bc8-88f9-c594fe9c06d4",
+    "question_part_id": "30a895a4-c0ac-4668-ab9b-c61fbf735c2d",
+    "ref": "7-d-ii",
+    "ordering": 4,
+    "text": "\uf0ad",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Reject: arrow pointing",
+     "Ignore: any attempts at"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 16:32:29.365837+00:00"
+   }
+  ],
+  "question_topics": [],
+  "question_spec_points": [],
+  "question_options": [],
+  "glm_ocr_bridge_records": [],
+  "content_review_audit_refs": [],
+  "teacher_validation_event_refs": []
+ }
+}

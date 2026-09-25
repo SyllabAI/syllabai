@@ -1,0 +1,3115 @@
+{
+ "archived_at": "2026-09-25T17:01:49Z",
+ "paper_code": "4CH1/2C",
+ "session_label": "Summer 2022",
+ "ep_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+ "counts": {
+  "exam_papers": 1,
+  "questions": 7,
+  "question_versions": 7,
+  "question_parts": 44,
+  "mark_schemes": 6,
+  "mark_points": 29,
+  "question_topics": 0,
+  "question_spec_points": 0,
+  "question_options": 0,
+  "glm_ocr_bridge_records": 1,
+  "content_review_audit_refs": 0,
+  "teacher_validation_event_refs": 0
+ },
+ "rows": {
+  "exam_papers": [
+   {
+    "id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "subject_id": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+    "title": "4CH1/2C Summer 2022",
+    "board": "Edexcel",
+    "qualification": "unknown",
+    "unit": null,
+    "session_label": "Summer 2022",
+    "paper_code": "4CH1/2C",
+    "question_paper_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "mark_scheme_document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+    "validation_state": "SUGGESTED",
+    "provenance": "PAST_PAPER",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_by": null,
+    "created_at": "2026-09-14 12:06:05.801631+00:00",
+    "series": "JUN",
+    "year": 2022
+   }
+  ],
+  "questions": [
+   {
+    "id": "b6e41b8b-ea01-491f-9fc2-f9f752fefb4d",
+    "external_ref": "q01-3fe332a3",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about gases in the atmosphere. The box gives the names of some gases.",
+    "marks": 6,
+    "difficulty": 3,
+    "expected_time_seconds": 540,
+    "command_word": null,
+    "primary_topic_node_id": "b334695a-f64a-4162-90fc-a4492bd2c157",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:06:05.801853+00:00",
+    "exam_paper_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "difficulty_source": null
+   },
+   {
+    "id": "114c749d-274b-40f3-bfd5-b3f6ac3d801a",
+    "external_ref": "q02-3fe332a3",
+    "question_type": "STRUCTURED",
+    "stem": "(a) The diagram shows two pieces of apparatus, X and Y. Y (i) Give the name of each piece of apparatus. (ii) In a titration, a student adds $ 2 5. 0 \\mathrm{c m}^{3} $ of barium hydroxide solution to a conical flask. Give a reason why it is better to use Y rather than X.",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "primary_topic_node_id": "b334695a-f64a-4162-90fc-a4492bd2c157",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:06:05.802614+00:00",
+    "exam_paper_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "difficulty_source": null
+   },
+   {
+    "id": "465b1936-7dbb-42f2-98be-cbed821b899a",
+    "external_ref": "q03-3fe332a3",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about Group 7,the halogens.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "primary_topic_node_id": "b334695a-f64a-4162-90fc-a4492bd2c157",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:06:05.803024+00:00",
+    "exam_paper_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "difficulty_source": null
+   },
+   {
+    "id": "15d4b9bd-d9b0-4c60-be73-57381c0e07a2",
+    "external_ref": "q04-3fe332a3",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about magnesium and magnesium compounds.",
+    "marks": 11,
+    "difficulty": 3,
+    "expected_time_seconds": 990,
+    "command_word": null,
+    "primary_topic_node_id": "b334695a-f64a-4162-90fc-a4492bd2c157",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:06:05.803257+00:00",
+    "exam_paper_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "difficulty_source": null
+   },
+   {
+    "id": "4159a17d-6856-4e54-b6bd-076a61b380b4",
+    "external_ref": "q05-3fe332a3",
+    "question_type": "STRUCTURED",
+    "stem": "(a) An organic compound has this percentage composition by mass. $C = 40 \\% H = 6.7 \\% O = 53.3 \\%$ (i) Show that the empirical formula of the compound is $ \\mathrm{C H_{2} O} $ (ii) Draw the structural formula of a compound with the molecular formula $ \\mathrm{C_{2} H_{4}O_{2}} $",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "primary_topic_node_id": "b334695a-f64a-4162-90fc-a4492bd2c157",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:06:05.803664+00:00",
+    "exam_paper_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "difficulty_source": null
+   },
+   {
+    "id": "7a93aa43-e22f-4e4e-90cf-ee8c09169f7e",
+    "external_ref": "q06-3fe332a3",
+    "question_type": "STRUCTURED",
+    "stem": "Titanium is an important metal in industry. Titanium dioxide $ \\left( \\mathrm{T i O}_{2} \\right) $ can be converted into titanium metal in two stages. Stage 1 titanium dioxide is converted into titanium(IV) chloride $ \\left( \\mathrm{T i C l}_{4} \\right) $ Stage 2 titanium(IV) chloride is converted into titanium",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "primary_topic_node_id": "b334695a-f64a-4162-90fc-a4492bd2c157",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:06:05.803979+00:00",
+    "exam_paper_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "difficulty_source": null
+   },
+   {
+    "id": "593b6de5-c1c9-42c1-9f8a-112beb9262b2",
+    "external_ref": "q07-3fe332a3",
+    "question_type": "STRUCTURED",
+    "stem": "A student uses this apparatus to find the heat energy supplied by a liquid fuel. The student burns some fuel to heat the water in the copper container and measures the change in temperature.",
+    "marks": 11,
+    "difficulty": 3,
+    "expected_time_seconds": 990,
+    "command_word": null,
+    "primary_topic_node_id": "b334695a-f64a-4162-90fc-a4492bd2c157",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:06:05.804196+00:00",
+    "exam_paper_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "difficulty_source": null
+   }
+  ],
+  "question_versions": [
+   {
+    "id": "aa72a7a0-343e-48a0-b5b0-7e985de534c4",
+    "question_id": "b6e41b8b-ea01-491f-9fc2-f9f752fefb4d",
+    "version": 1,
+    "stem": "This question is about gases in the atmosphere. The box gives the names of some gases.",
+    "marks": 6,
+    "difficulty": 3,
+    "expected_time_seconds": 540,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.802296+00:00"
+   },
+   {
+    "id": "91726ce0-2718-4ee2-99cf-02b1b58a5365",
+    "question_id": "114c749d-274b-40f3-bfd5-b3f6ac3d801a",
+    "version": 1,
+    "stem": "(a) The diagram shows two pieces of apparatus, X and Y. Y (i) Give the name of each piece of apparatus. (ii) In a titration, a student adds $ 2 5. 0 \\mathrm{c m}^{3} $ of barium hydroxide solution to a conical flask. Give a reason why it is better to use Y rather than X.",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.802828+00:00"
+   },
+   {
+    "id": "bb1a22d4-e013-412e-bd7a-421e118c40b1",
+    "question_id": "465b1936-7dbb-42f2-98be-cbed821b899a",
+    "version": 1,
+    "stem": "This question is about Group 7,the halogens.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "extraction_confidence": 0.45,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.803151+00:00"
+   },
+   {
+    "id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "question_id": "15d4b9bd-d9b0-4c60-be73-57381c0e07a2",
+    "version": 1,
+    "stem": "This question is about magnesium and magnesium compounds.",
+    "marks": 11,
+    "difficulty": 3,
+    "expected_time_seconds": 990,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.803502+00:00"
+   },
+   {
+    "id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "question_id": "4159a17d-6856-4e54-b6bd-076a61b380b4",
+    "version": 1,
+    "stem": "(a) An organic compound has this percentage composition by mass. $C = 40 \\% H = 6.7 \\% O = 53.3 \\%$ (i) Show that the empirical formula of the compound is $ \\mathrm{C H_{2} O} $ (ii) Draw the structural formula of a compound with the molecular formula $ \\mathrm{C_{2} H_{4}O_{2}} $",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.803809+00:00"
+   },
+   {
+    "id": "e9399abc-439d-4840-baca-ad1bc01597df",
+    "question_id": "7a93aa43-e22f-4e4e-90cf-ee8c09169f7e",
+    "version": 1,
+    "stem": "Titanium is an important metal in industry. Titanium dioxide $ \\left( \\mathrm{T i O}_{2} \\right) $ can be converted into titanium metal in two stages. Stage 1 titanium dioxide is converted into titanium(IV) chloride $ \\left( \\mathrm{T i C l}_{4} \\right) $ Stage 2 titanium(IV) chloride is converted into titanium",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.804093+00:00"
+   },
+   {
+    "id": "31637b69-2103-4adc-b63b-0c509df211a7",
+    "question_id": "593b6de5-c1c9-42c1-9f8a-112beb9262b2",
+    "version": 1,
+    "stem": "A student uses this apparatus to find the heat energy supplied by a liquid fuel. The student burns some fuel to heat the water in the copper container and measures the change in temperature.",
+    "marks": 11,
+    "difficulty": 3,
+    "expected_time_seconds": 990,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.804300+00:00"
+   }
+  ],
+  "question_parts": [
+   {
+    "id": "1064a905-3c2b-4f6e-8a62-921026eacd26",
+    "question_version_id": "aa72a7a0-343e-48a0-b5b0-7e985de534c4",
+    "label": "a",
+    "prompt": "Choose gases from the box to answer these questions.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:06:05.810708+00:00"
+   },
+   {
+    "id": "7acdcde6-f34f-4e57-b3ff-be0dbd5dd7e1",
+    "question_version_id": "aa72a7a0-343e-48a0-b5b0-7e985de534c4",
+    "label": "a-i",
+    "prompt": "Identify the least reactive gas in the atmosphere.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:06:05.810799+00:00"
+   },
+   {
+    "id": "499a44a1-3faa-4631-8296-46787525f622",
+    "question_version_id": "aa72a7a0-343e-48a0-b5b0-7e985de534c4",
+    "label": "a-ii",
+    "prompt": "Identify the most abundant gas in the atmosphere.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:06:05.810814+00:00"
+   },
+   {
+    "id": "d506da2c-b07c-49ed-82bf-78c2cbe97325",
+    "question_version_id": "aa72a7a0-343e-48a0-b5b0-7e985de534c4",
+    "label": "a-iii",
+    "prompt": "Identify the gas that is not normally found in the atmosphere.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:06:05.810820+00:00"
+   },
+   {
+    "id": "2ef4a9fb-a3ba-4411-b50d-bb1fe06cbffe",
+    "question_version_id": "aa72a7a0-343e-48a0-b5b0-7e985de534c4",
+    "label": "b",
+    "prompt": "State an environmental problem caused by increasing amounts of carbon dioxide in the atmosphere.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:06:05.810827+00:00"
+   },
+   {
+    "id": "cd140a36-fa66-4b95-8c82-000e78a024f5",
+    "question_version_id": "aa72a7a0-343e-48a0-b5b0-7e985de534c4",
+    "label": "c",
+    "prompt": "Describe a test for carbon dioxide.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:06:05.810833+00:00"
+   },
+   {
+    "id": "232c2320-e99a-47d4-ba5e-c6d236bb58d2",
+    "question_version_id": "91726ce0-2718-4ee2-99cf-02b1b58a5365",
+    "label": "b",
+    "prompt": "The student uses methyl orange indicator in the titration.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:06:05.810842+00:00"
+   },
+   {
+    "id": "5b17231d-aff9-4807-83b3-7534ed78ed8c",
+    "question_version_id": "91726ce0-2718-4ee2-99cf-02b1b58a5365",
+    "label": "b-i",
+    "prompt": "State the colour of methyl orange in barium hydroxide solution.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:06:05.810850+00:00"
+   },
+   {
+    "id": "95fb7ac6-ea44-4adb-bb1b-17ccd7bcf732",
+    "question_version_id": "91726ce0-2718-4ee2-99cf-02b1b58a5365",
+    "label": "b-ii",
+    "prompt": "Give a reason why universal indicator is not suitable for use in a titration.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:06:05.810854+00:00"
+   },
+   {
+    "id": "2970bedf-424c-4eed-ae24-c51be32de18f",
+    "question_version_id": "91726ce0-2718-4ee2-99cf-02b1b58a5365",
+    "label": "c",
+    "prompt": "The student adds some dilute nitric acid to a burette and does the titration. The equation for the reaction is $\\mathrm {B a} (\\mathrm {O H}) _ {2} + 2 \\mathrm {H N O} _ {3} \\rightarrow \\mathrm {B a} (\\mathrm {N O} _ {3}) _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O}$ The student finds that $ 2 1. 5 0 \\mathrm{c m}^{3} $ of nitric acid of concentration $ 0. 6 0 0 \\mathrm{m o l} / \\mathrm{d m}^{3} $ neutralises $ 2 5. 0 \\mathrm{c m}^{3} $ of barium hydroxide solution. Calculate the concentration, in mol/dm $ ^{3} $ , of the barium hydroxide solution. $\\mathrm {c o n c e n t r a t i o n} =$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:06:05.810874+00:00"
+   },
+   {
+    "id": "bd465a29-cbab-416c-80fd-d87286612c09",
+    "question_version_id": "91726ce0-2718-4ee2-99cf-02b1b58a5365",
+    "label": "d",
+    "prompt": "State why sulfuric acid would not be a suitable acid to use in this titration.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:06:05.810881+00:00"
+   },
+   {
+    "id": "426a47ad-9e1c-4717-bc33-58b07a2ea83e",
+    "question_version_id": "bb1a22d4-e013-412e-bd7a-421e118c40b1",
+    "label": "a",
+    "prompt": "Which halogen has the palest colour? A astatine B bromine fluorine D iodine",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:06:05.810888+00:00"
+   },
+   {
+    "id": "9c86f16f-7dc9-4eda-b86c-2eebe59db89c",
+    "question_version_id": "bb1a22d4-e013-412e-bd7a-421e118c40b1",
+    "label": "b",
+    "prompt": "Which halogen is a solid at room temperature? A astatine chlorine B bromine D fluorine",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:06:05.810894+00:00"
+   },
+   {
+    "id": "521c18f7-66d8-415f-9b94-9e048f6e59d1",
+    "question_version_id": "bb1a22d4-e013-412e-bd7a-421e118c40b1",
+    "label": "c",
+    "prompt": "The table shows the electronic configurations of a fluorine atom and a chlorine atom. Explain the relative reactivities of fluorine and chlorine using the information in the table.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:06:05.810899+00:00"
+   },
+   {
+    "id": "d306800b-dd47-4cc7-aff1-88754366fe78",
+    "question_version_id": "bb1a22d4-e013-412e-bd7a-421e118c40b1",
+    "label": "d",
+    "prompt": "Lithium reacts with chlorine to form lithium chloride.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:06:05.810905+00:00"
+   },
+   {
+    "id": "c3fa490a-490b-4d87-8a9c-800e171be551",
+    "question_version_id": "bb1a22d4-e013-412e-bd7a-421e118c40b1",
+    "label": "d-i",
+    "prompt": "Write a chemical equation for the reaction of lithium with chlorine.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:06:05.810911+00:00"
+   },
+   {
+    "id": "7920b70c-2aaa-4f64-8924-63476ba2d04d",
+    "question_version_id": "bb1a22d4-e013-412e-bd7a-421e118c40b1",
+    "label": "d-ii",
+    "prompt": "Describe tests to show that the product of the reaction is lithium chloride.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:06:05.810917+00:00"
+   },
+   {
+    "id": "7c7a1218-0bf5-48c3-bbde-b23b04aa80da",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "label": "a",
+    "prompt": "Magnesium burns in oxygen to form magnesium oxide. State two observations that would be seen during the reaction.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:06:05.810929+00:00"
+   },
+   {
+    "id": "c35d6c14-cbc7-44f2-b7da-a84b4267daa0",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "label": "b",
+    "prompt": "The diagram shows the electron configurations of a magnesium atom and an oxygen atom. magnesium atom oxygen atom Describe the changes in the electronic configurations when magnesium reacts with oxygen to form the ionic compound magnesium oxide, MgO",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:06:05.810934+00:00"
+   },
+   {
+    "id": "fb8546b6-389c-4b65-a678-8877b5618780",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "label": "c",
+    "prompt": "Magnesium can be produced by the electrolysis of molten magnesium chloride.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:06:05.810939+00:00"
+   },
+   {
+    "id": "38044e1f-4740-4f08-9503-7bef10ad62b5",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "label": "c-i",
+    "prompt": "State why magnesium cannot be produced by heating magnesium oxide with carbon.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:06:05.810945+00:00"
+   },
+   {
+    "id": "c284e33d-8538-4105-b3b5-0aab2cef81b7",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "label": "c-ii",
+    "prompt": "Explain the different ways that magnesium and magnesium chloride conduct electricity. magnesium magnesium chloride",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:06:05.810951+00:00"
+   },
+   {
+    "id": "c1e3cfdb-c213-4ec7-b44d-7ce2f153749b",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "label": "d",
+    "prompt": "During the electrolysis of molten magnesium chloride, magnesium is formed at the negative electrode. The ionic half-equation for the reaction is $M g ^ {2 +} + 2 e ^ {-} \\rightarrow M g$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:06:05.810957+00:00"
+   },
+   {
+    "id": "dd2e8fa5-3503-4110-b009-b35abd1126b9",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "label": "d-i",
+    "prompt": "State why this is a reduction reaction.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:06:05.810961+00:00"
+   },
+   {
+    "id": "32112588-9e5c-4d55-99f3-25d6ba34f9d2",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "label": "d-ii",
+    "prompt": "Write an ionic half-equation for the formation of chlorine at the positive electrode.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 12:06:05.810967+00:00"
+   },
+   {
+    "id": "b5319e81-40f0-4daa-9acc-443befd01951",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "b",
+    "prompt": "Methanoic acid (HCOOH) reacts with sodium carbonate solution to give three products.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:06:05.810976+00:00"
+   },
+   {
+    "id": "95b6a6f3-14cc-414b-8db1-ee7bfc4df323",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "b-i",
+    "prompt": "Complete the equation for this reaction. $2 \\mathrm {H C O O H} + \\mathrm {N a} _ {2} \\mathrm {C O} _ {3} \\rightarrow$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:06:05.810984+00:00"
+   },
+   {
+    "id": "2466dfbe-2c81-4dda-a110-b58a228fa25d",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "b-ii",
+    "prompt": "State what you would observe in this reaction.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:06:05.810990+00:00"
+   },
+   {
+    "id": "16d29bc7-620d-4f44-bf5a-92e04f52d1bc",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "c",
+    "prompt": "Methanoic acid also reacts with propanol to form an ester. $\\mathrm {H C O O H} + \\mathrm {C} _ {3} \\mathrm {H} _ {7} \\mathrm {O H} \\rightleftharpoons \\mathrm {H C O O C} _ {3} \\mathrm {H} _ {7} + \\mathrm {H} _ {2} \\mathrm {O}$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:06:05.810995+00:00"
+   },
+   {
+    "id": "fe96da2e-dc21-49d4-ad0c-5a8fa6c59d1b",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "c-i",
+    "prompt": "Give the name of the ester that forms. The equation for the reaction is",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:06:05.811001+00:00"
+   },
+   {
+    "id": "2bad82f0-e140-4420-8ab5-f95d6c3b69ea",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "c-ii",
+    "prompt": "State what is meant by the $ \\rightleftharpoons $ symbol.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:06:05.811006+00:00"
+   },
+   {
+    "id": "e97edad9-10b3-4146-9ce4-2a2cfa960738",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "c-iii",
+    "prompt": "When this reaction occurs in a sealed container, the reaction can reach dynamic equilibrium. Give one characteristic of a reaction at dynamic equilibrium.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:06:05.811012+00:00"
+   },
+   {
+    "id": "8c183bf1-5055-4e24-91a7-97e5dfe241a4",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "d",
+    "prompt": "A polyester forms when butanedioic acid reacts with ethanediol. The diagram shows the repeat unit of the polyester that forms.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 12:06:05.811018+00:00"
+   },
+   {
+    "id": "6cc167a4-581f-4e24-9f83-e726d8966733",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "d-i",
+    "prompt": "Give the name of this type of polymerisation.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 8,
+    "created_at": "2026-09-14 12:06:05.811022+00:00"
+   },
+   {
+    "id": "b0cdbc4e-0877-44c1-995a-2860c09db46f",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "label": "d-ii",
+    "prompt": "Draw the structural formulae of the two monomers used to make this polyester.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 9,
+    "created_at": "2026-09-14 12:06:05.811028+00:00"
+   },
+   {
+    "id": "c7e87097-58a4-458e-94bd-eea1355ea6f6",
+    "question_version_id": "e9399abc-439d-4840-baca-ad1bc01597df",
+    "label": "a",
+    "prompt": "This is the equation for the reaction in stage 1. $\\mathrm {T i O} _ {2} + 2 \\mathrm {C l} _ {2} + \\mathrm {C} \\rightarrow \\mathrm {T i C l} _ {4} + \\mathrm {C O} _ {2}$ Calculate the volume, in $ \\mathrm{d m}^{3} $ of chlorine gas at rtp needed to react completely with 20 tonnes of titanium dioxide. Give your answer in standard form. $[ 1 \\mathrm {t o n n e} = 1 0 ^ {6} \\mathrm {g} M _ {\\mathrm {r}} \\mathrm {o f} \\mathrm {T i O} _ {2} = 8 0 ]$ [molar volume of chlorine gas at rtp=24 dm $ ^{3} $]",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:06:05.811039+00:00"
+   },
+   {
+    "id": "92d62679-9d5d-4629-bf04-2ed45a04d824",
+    "question_version_id": "e9399abc-439d-4840-baca-ad1bc01597df",
+    "label": "b",
+    "prompt": "In stage 2, titanium(IV) chloride vapour is passed through molten magnesium in a container filled with argon. This is the equation for the reaction in stage 2. $\\mathrm {T i C l} _ {4} + 2 \\mathrm {M g} \\rightarrow \\mathrm {T i} + 2 \\mathrm {M g C l} _ {2}$ Explain why the container is filled with argon rather than air.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:06:05.811082+00:00"
+   },
+   {
+    "id": "05da3e21-2836-4f9b-a0f6-3bcdff8b49f1",
+    "question_version_id": "e9399abc-439d-4840-baca-ad1bc01597df",
+    "label": "c",
+    "prompt": "Aeroplanes are made of an alloy containing aluminium and titanium. Explain why the alloy is stronger than pure titanium metal. You may include diagrams in your answer.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:06:05.811091+00:00"
+   },
+   {
+    "id": "58bcd182-6870-4891-8623-de291c6886f9",
+    "question_version_id": "31637b69-2103-4adc-b63b-0c509df211a7",
+    "label": "a",
+    "prompt": "The student notices that the bottom of the container turns black. Give the name of the black substance that forms on the bottom of the container.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:06:05.811102+00:00"
+   },
+   {
+    "id": "258e1d8e-35d3-4ec5-b55e-bf88727f7549",
+    "question_version_id": "31637b69-2103-4adc-b63b-0c509df211a7",
+    "label": "b",
+    "prompt": "In one experiment, the student burns 0.92 g of ethanol. The student calculates that the heat energy absorbed by the water is 18.2 kJ. Show that the results of this experiment give an approximate value for the enthalpy of combustion of ethanol of $ \\Delta H=-9 0 0 \\mathrm{k J / m o l}. $ [M $ _{r} $ of ethanol=46]",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:06:05.811108+00:00"
+   },
+   {
+    "id": "9103a1de-0b4f-4144-9a60-460f1e00f900",
+    "question_version_id": "31637b69-2103-4adc-b63b-0c509df211a7",
+    "label": "c",
+    "prompt": "The data book value of $ \\Delta H $ for the combustion of ethanol is $ -1 3 6 7 \\mathrm{k J / m o l} $ Give two reasons why the student's value is much lower than the data book value.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:06:05.811114+00:00"
+   },
+   {
+    "id": "a9c6a946-1633-43b2-b4de-b10db6c8bc3d",
+    "question_version_id": "31637b69-2103-4adc-b63b-0c509df211a7",
+    "label": "d",
+    "prompt": "The equation shows the combustion of methane. $\\mathrm {C H} _ {4} + 2 \\mathrm {O} _ {2} \\rightarrow \\mathrm {C O} _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O} \\quad \\Delta H = - 8 9 0 \\mathrm {k J / m o l}$ This is the equation showing the displayed formulae. The table shows the bond energies for O=O, C=O and O\u2014H",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:06:05.811142+00:00"
+   },
+   {
+    "id": "86271d56-9c4f-44b0-b96a-df9ffbf7b937",
+    "question_version_id": "31637b69-2103-4adc-b63b-0c509df211a7",
+    "label": "d-i",
+    "prompt": "Calculate the bond energy of the C\u2014H bond, using information from the equation and the table. $\\mathrm {C} - \\mathrm {H} \\mathrm {b o n d} \\mathrm {e n e r g y} =$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:06:05.811153+00:00"
+   },
+   {
+    "id": "13ba8994-a365-4a55-a730-e1a6a09d8666",
+    "question_version_id": "31637b69-2103-4adc-b63b-0c509df211a7",
+    "label": "d-ii",
+    "prompt": "Complete the energy level diagram to show the products and $ \\Delta H. $",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:06:05.811158+00:00"
+   }
+  ],
+  "mark_schemes": [
+   {
+    "id": "adc32bce-32bb-4cb6-9077-bbefe8a5b612",
+    "question_version_id": "aa72a7a0-343e-48a0-b5b0-7e985de534c4",
+    "version_label": "1",
+    "source_document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.804592+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "8d2dca60-daec-416e-aa6b-5275976e8ad0",
+    "question_version_id": "bb1a22d4-e013-412e-bd7a-421e118c40b1",
+    "version_label": "1",
+    "source_document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.804830+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "6a96a7d8-004b-4367-9a83-4b714fa56b93",
+    "question_version_id": "dcc45677-d722-4c2b-8983-9ddfdf86e814",
+    "version_label": "1",
+    "source_document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.804958+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "ea2312da-60f8-4393-8326-8bcbde44d3f8",
+    "question_version_id": "622bd651-7745-4acc-9c9e-643286ef3291",
+    "version_label": "1",
+    "source_document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.805098+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "4abd83d2-9769-44bd-b55d-5c93cdd3174c",
+    "question_version_id": "e9399abc-439d-4840-baca-ad1bc01597df",
+    "version_label": "1",
+    "source_document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.805211+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "1ebafe30-215a-493c-8358-4b67060fb42c",
+    "question_version_id": "31637b69-2103-4adc-b63b-0c509df211a7",
+    "version_label": "1",
+    "source_document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:06:05.805298+00:00",
+    "general_guidance": null
+   }
+  ],
+  "mark_points": [
+   {
+    "id": "4a2e4a51-80e6-491b-b818-b94bd88c67b9",
+    "mark_scheme_id": "adc32bce-32bb-4cb6-9077-bbefe8a5b612",
+    "question_part_id": "7acdcde6-f34f-4e57-b3ff-be0dbd5dd7e1",
+    "ref": "1-a-i",
+    "ordering": 0,
+    "text": "argon",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811174+00:00"
+   },
+   {
+    "id": "7077c318-cf9c-4373-a7ac-6af4e65acb6a",
+    "mark_scheme_id": "adc32bce-32bb-4cb6-9077-bbefe8a5b612",
+    "question_part_id": "499a44a1-3faa-4631-8296-46787525f622",
+    "ref": "1-a-ii",
+    "ordering": 1,
+    "text": "nitrogen",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811412+00:00"
+   },
+   {
+    "id": "5bfaf8bc-3121-4aea-a2c3-740e9d53e06d",
+    "mark_scheme_id": "adc32bce-32bb-4cb6-9077-bbefe8a5b612",
+    "question_part_id": "d506da2c-b07c-49ed-82bf-78c2cbe97325",
+    "ref": "1-a-iii",
+    "ordering": 2,
+    "text": "hydrogen",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811456+00:00"
+   },
+   {
+    "id": "bf63d609-d5c3-47d8-ad0b-a84f7bb5ae94",
+    "mark_scheme_id": "adc32bce-32bb-4cb6-9077-bbefe8a5b612",
+    "question_part_id": "2ef4a9fb-a3ba-4411-b50d-bb1fe06cbffe",
+    "ref": "1-b",
+    "ordering": 3,
+    "text": "climate change/global warming/oceans becoming more acidic",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811490+00:00"
+   },
+   {
+    "id": "ca827e5a-0efc-4f00-af13-4e874895a272",
+    "mark_scheme_id": "adc32bce-32bb-4cb6-9077-bbefe8a5b612",
+    "question_part_id": "cd140a36-fa66-4b95-8c82-000e78a024f5",
+    "ref": "1-c",
+    "ordering": 4,
+    "text": "M1 bubble/pass/add the gas/carbon dioxide into limewaterM2(limewater) turns cloudy/milky",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811520+00:00"
+   },
+   {
+    "id": "7449b01f-8940-40fa-ad28-7d71384e7fd5",
+    "mark_scheme_id": "adc32bce-32bb-4cb6-9077-bbefe8a5b612",
+    "question_part_id": "cd140a36-fa66-4b95-8c82-000e78a024f5",
+    "ref": "1-c",
+    "ordering": 5,
+    "text": "M1moles ofHNO3=21.5\u00d70.6",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811551+00:00"
+   },
+   {
+    "id": "0dcb1321-a847-4eae-b192-c127d8c1c136",
+    "mark_scheme_id": "adc32bce-32bb-4cb6-9077-bbefe8a5b612",
+    "question_part_id": "cd140a36-fa66-4b95-8c82-000e78a024f5",
+    "ref": "1-c",
+    "ordering": 6,
+    "text": "1000",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811582+00:00"
+   },
+   {
+    "id": "f93d511c-27d8-4110-af8b-d3c620bd4a3e",
+    "mark_scheme_id": "8d2dca60-daec-416e-aa6b-5275976e8ad0",
+    "question_part_id": "426a47ad-9e1c-4717-bc33-58b07a2ea83e",
+    "ref": "3-a",
+    "ordering": 0,
+    "text": "C fluorineA is incorrect as astatine is blackB is incorrect as bromine is brownD is incorrect as iodine is dark grey",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811619+00:00"
+   },
+   {
+    "id": "8b632f6f-53ff-4a57-b124-277d4bdd1958",
+    "mark_scheme_id": "8d2dca60-daec-416e-aa6b-5275976e8ad0",
+    "question_part_id": "9c86f16f-7dc9-4eda-b86c-2eebe59db89c",
+    "ref": "3-b",
+    "ordering": 1,
+    "text": "A astatineB is incorrect as bromine is a liquidC is incorrect as chlorine is a gasD is incorrect as fluorine is a gas",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811649+00:00"
+   },
+   {
+    "id": "bf5af50b-ef53-40a9-9d1b-1bd48394ad54",
+    "mark_scheme_id": "8d2dca60-daec-416e-aa6b-5275976e8ad0",
+    "question_part_id": "521c18f7-66d8-415f-9b94-9e048f6e59d1",
+    "ref": "3-c",
+    "ordering": 2,
+    "text": "An explanation that links the following four pointsM1 fluorine is more reactive than chlorine ORA M2 the outer shell is closer to the nucleus in fluorine/fluorine has fewer shells/fluorine has a smaller atomic radius ORA M3 there is a stronger attraction to the nucleus for an electron in fluorine ORA M4 so fluorine accepts an electron more readily ORA",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811680+00:00"
+   },
+   {
+    "id": "ff8035c2-01fa-4952-88d6-cc6c4e043ff3",
+    "mark_scheme_id": "8d2dca60-daec-416e-aa6b-5275976e8ad0",
+    "question_part_id": "c3fa490a-490b-4d87-8a9c-800e171be551",
+    "ref": "3-d-i",
+    "ordering": 3,
+    "text": "2Li+Cl2\u21922LiCl",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811711+00:00"
+   },
+   {
+    "id": "5e66e87a-ecea-4b92-a57a-2f6fc576bd04",
+    "mark_scheme_id": "8d2dca60-daec-416e-aa6b-5275976e8ad0",
+    "question_part_id": "7920b70c-2aaa-4f64-8924-63476ba2d04d",
+    "ref": "3-d-ii",
+    "ordering": 4,
+    "text": "A description that refers to the following five points\nTest for lithium ions\nM1 flame test\nM2 red (flame)\nTest for chloride ions\nM3 add nitric acid\nM4 add silver nitrate (solution)\nM5 white precipitate",
+    "marks": 5,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811739+00:00"
+   },
+   {
+    "id": "de803239-67a6-4048-9d07-ff6d0a923cf5",
+    "mark_scheme_id": "6a96a7d8-004b-4367-9a83-4b714fa56b93",
+    "question_part_id": "7c7a1218-0bf5-48c3-bbde-b23b04aa80da",
+    "ref": "4-a",
+    "ordering": 0,
+    "text": "M1 bright/white light OR bright/white flame",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811782+00:00"
+   },
+   {
+    "id": "8335bd94-b6f1-4b11-8bb6-ace785d6e84a",
+    "mark_scheme_id": "6a96a7d8-004b-4367-9a83-4b714fa56b93",
+    "question_part_id": "c35d6c14-cbc7-44f2-b7da-a84b4267daa0",
+    "ref": "4-b",
+    "ordering": 1,
+    "text": "A description that refers to the following two points",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.5,
+    "created_at": "2026-09-14 12:06:05.811823+00:00"
+   },
+   {
+    "id": "6abce86c-fa03-47fa-a408-a299984e9d7f",
+    "mark_scheme_id": "6a96a7d8-004b-4367-9a83-4b714fa56b93",
+    "question_part_id": "38044e1f-4740-4f08-9503-7bef10ad62b5",
+    "ref": "4-c-i",
+    "ordering": 2,
+    "text": "magnesium is more reactive/higher in the reactivity series (than carbon)/magnesium is a better reducing agent (than carbon) ORA",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.811856+00:00"
+   },
+   {
+    "id": "da5f1175-f8c1-4379-ab9a-5c3aeda47bb2",
+    "mark_scheme_id": "6a96a7d8-004b-4367-9a83-4b714fa56b93",
+    "question_part_id": "c284e33d-8538-4105-b3b5-0aab2cef81b7",
+    "ref": "4-c-ii",
+    "ordering": 3,
+    "text": "M1 (magnesium) has delocalised electrons",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.5,
+    "created_at": "2026-09-14 12:06:05.811888+00:00"
+   },
+   {
+    "id": "43e64511-5bd7-43c5-9118-5c618a5a2563",
+    "mark_scheme_id": "6a96a7d8-004b-4367-9a83-4b714fa56b93",
+    "question_part_id": "dd2e8fa5-3503-4110-b009-b35abd1126b9",
+    "ref": "4-d-i",
+    "ordering": 4,
+    "text": "magnesium ions/Mg2+ gains electrons",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812191+00:00"
+   },
+   {
+    "id": "32516d76-f758-4243-a0ec-31f9ddf90421",
+    "mark_scheme_id": "6a96a7d8-004b-4367-9a83-4b714fa56b93",
+    "question_part_id": "32112588-9e5c-4d55-99f3-25d6ba34f9d2",
+    "ref": "4-d-ii",
+    "ordering": 5,
+    "text": "",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812299+00:00"
+   },
+   {
+    "id": "98d7fcd1-d1a0-422b-adb8-e8227f6652a6",
+    "mark_scheme_id": "ea2312da-60f8-4393-8326-8bcbde44d3f8",
+    "question_part_id": null,
+    "ref": "5-a-i",
+    "ordering": 0,
+    "text": "M1",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812347+00:00"
+   },
+   {
+    "id": "fb5cf614-e08b-4c7c-8036-e7c9d2d4b4f9",
+    "mark_scheme_id": "ea2312da-60f8-4393-8326-8bcbde44d3f8",
+    "question_part_id": null,
+    "ref": "5-a-ii",
+    "ordering": 1,
+    "text": "AND1",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812409+00:00"
+   },
+   {
+    "id": "4728affb-0be9-43ba-a051-e8ae0801261c",
+    "mark_scheme_id": "ea2312da-60f8-4393-8326-8bcbde44d3f8",
+    "question_part_id": null,
+    "ref": "5-a-iii",
+    "ordering": 2,
+    "text": "forward and backward reactions occur at the same rate OWTTE\nOR\nconcentrations of reactants and products remain constant/stay the same/do not change",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812462+00:00"
+   },
+   {
+    "id": "763b5b9d-d873-4212-bd3d-6070ae84fce3",
+    "mark_scheme_id": "4abd83d2-9769-44bd-b55d-5c93cdd3174c",
+    "question_part_id": "c7e87097-58a4-458e-94bd-eea1355ea6f6",
+    "ref": "6-a",
+    "ordering": 0,
+    "text": "M1(moles ofTiO2=) $ \\frac{20\\times10^{6}}{80} $ OR $ 2.5\\times10^{5} $ (mol)",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812498+00:00"
+   },
+   {
+    "id": "caab3d98-fff9-4ba1-a6aa-4ea0bceee3b2",
+    "mark_scheme_id": "1ebafe30-215a-493c-8358-4b67060fb42c",
+    "question_part_id": "58bcd182-6870-4891-8623-de291c6886f9",
+    "ref": "7-a",
+    "ordering": 0,
+    "text": "carbon",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812530+00:00"
+   },
+   {
+    "id": "1e2b023e-93e5-4ebe-8af1-327bb021a73f",
+    "mark_scheme_id": "1ebafe30-215a-493c-8358-4b67060fb42c",
+    "question_part_id": "258e1d8e-35d3-4ec5-b55e-bf88727f7549",
+    "ref": "7-b",
+    "ordering": 1,
+    "text": "M1(amount of ethanol)=0.92\u00f746OR0.02",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812562+00:00"
+   },
+   {
+    "id": "420bcb65-e341-41a0-be2a-cace2d4c12ed",
+    "mark_scheme_id": "1ebafe30-215a-493c-8358-4b67060fb42c",
+    "question_part_id": "258e1d8e-35d3-4ec5-b55e-bf88727f7549",
+    "ref": "7-b",
+    "ordering": 2,
+    "text": "(mol)\nM2(-)18.2\u00f70.02",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812591+00:00"
+   },
+   {
+    "id": "66acabd9-14b9-4410-88ac-bd35c7eb2e72",
+    "mark_scheme_id": "1ebafe30-215a-493c-8358-4b67060fb42c",
+    "question_part_id": "258e1d8e-35d3-4ec5-b55e-bf88727f7549",
+    "ref": "7-b",
+    "ordering": 3,
+    "text": "=(-)910(kJ/mol)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812623+00:00"
+   },
+   {
+    "id": "dad63d91-fb5c-41ee-a0da-bbb3b3cc74e7",
+    "mark_scheme_id": "1ebafe30-215a-493c-8358-4b67060fb42c",
+    "question_part_id": "9103a1de-0b4f-4144-9a60-460f1e00f900",
+    "ref": "7-c",
+    "ordering": 4,
+    "text": "Any 2 from\nM1heat(energy)/thermal energy was lost(to the surroundings/apparatus)\nM2incomplete combustion(of ethanol)\nM3the ethanol was impure/ethanol evaporates",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812651+00:00"
+   },
+   {
+    "id": "dcbd8a31-17de-4b73-ae75-69c483be7fc4",
+    "mark_scheme_id": "1ebafe30-215a-493c-8358-4b67060fb42c",
+    "question_part_id": "86271d56-9c4f-44b0-b96a-df9ffbf7b937",
+    "ref": "7-d-i",
+    "ordering": 5,
+    "text": "M1\u2211bonds broken=4xC-H+2x498\nM2\u2211bonds formed=2x805+4x463OR3462\nM34xC-H+996-3462=-890\nM4C-H=1576\u00f74=394(kJ/mol)",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812681+00:00"
+   },
+   {
+    "id": "7699efcd-65d4-47c1-8090-6245e1a81e83",
+    "mark_scheme_id": "1ebafe30-215a-493c-8358-4b67060fb42c",
+    "question_part_id": "13ba8994-a365-4a55-a730-e1a6a09d8666",
+    "ref": "7-d-ii",
+    "ordering": 6,
+    "text": "Energy\nCH4+2O2\n\u0394H\nCO2+2H2O\nM1 horizontal line to show products in correct position and correctly labelled\nM2 vertical line in correct position and labelled \u0394H/\u2212890(kJ/mol)",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:06:05.812708+00:00"
+   }
+  ],
+  "question_topics": [],
+  "question_spec_points": [],
+  "question_options": [],
+  "glm_ocr_bridge_records": [
+   {
+    "id": "3850a849-54a0-44b6-95d4-6fe267c3d0a6",
+    "paper_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+    "bridge": "glm-ocr-v1",
+    "qp_document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+    "ms_document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+    "qp_document_row_id": "8719c476-18b2-4b4e-b8b9-3079b96c8263",
+    "ms_document_row_id": "4a2a1ff4-2a16-415e-8865-0f0a028f3f22",
+    "qp_checksum": "56c67b2c2a9f310a2f61e9dadbc6ec7db14818c2035ba34036e1f2442ef8f71d",
+    "ms_checksum": "111f670feae5dd7a0020408425cede2552b6f80b11944af06f5d2fdbd8f7eef3",
+    "extraction_methods": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "reconciliation_status": "OK",
+    "review_findings": [
+     {
+      "detail": "Q1: QP total 6 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 6,
+      "severity": "qp-only",
+      "questionNumber": "1"
+     },
+     {
+      "detail": "Q2: QP total 9 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 9,
+      "severity": "qp-only",
+      "questionNumber": "2"
+     },
+     {
+      "detail": "Q4: QP total 11 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 11,
+      "severity": "qp-only",
+      "questionNumber": "4"
+     },
+     {
+      "detail": "Q5: QP total 12 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 12,
+      "severity": "qp-only",
+      "questionNumber": "5"
+     },
+     {
+      "detail": "Q6: QP total 9 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 9,
+      "severity": "qp-only",
+      "questionNumber": "6"
+     },
+     {
+      "detail": "Q7: QP total 11 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 11,
+      "severity": "qp-only",
+      "questionNumber": "7"
+     },
+     {
+      "detail": "orphan row before first entry: 2(a)(i)(ii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M2(Y) pipette",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: (volume measurement with Y is) more precise ORA",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: (b)(i)(ii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: there is no clear end point/colour change is gradual(at the end point)/no sharp colour change OWTTE",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "1(c): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "4(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "4(c)(i): bare integer cell \"4\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "5(a)(ii): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "5(a)(ii): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "5(a)(ii): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "5(a)(ii): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "6(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "6(a): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     }
+    ],
+    "qp_draft": {
+     "paper": {
+      "board": "Edexcel",
+      "session": null,
+      "subject": null,
+      "duration": null,
+      "examDate": null,
+      "logNumber": null,
+      "qualification": null,
+      "paperReference": "4CH1/2C",
+      "publicationCode": null,
+      "canonicalDocumentId": "3fe332a3-7419-5cc5-8925-1503d7d382de"
+     },
+     "warnings": [],
+     "questions": [
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about gases in the atmosphere. The box gives the names of some gases.",
+       "marks": 6,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Choose gases from the box to answer these questions.",
+         "label": "a",
+         "marks": null,
+         "partId": "q01-3fe332a3-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Identify the least reactive gas in the atmosphere.",
+         "label": "a-i",
+         "marks": null,
+         "partId": "q01-3fe332a3-pa-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Identify the most abundant gas in the atmosphere.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q01-3fe332a3-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Identify the gas that is not normally found in the atmosphere.",
+         "label": "a-iii",
+         "marks": null,
+         "partId": "q01-3fe332a3-pa-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State an environmental problem caused by increasing amounts of carbon dioxide in the atmosphere.",
+         "label": "b",
+         "marks": null,
+         "partId": "q01-3fe332a3-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Describe a test for carbon dioxide.",
+         "label": "c",
+         "marks": null,
+         "partId": "q01-3fe332a3-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 1,
+       "figures": [],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q01-3fe332a3",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000025"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "(a) The diagram shows two pieces of apparatus, X and Y. Y (i) Give the name of each piece of apparatus. (ii) In a titration, a student adds $ 2 5. 0 \\mathrm{c m}^{3} $ of barium hydroxide solution to a conical flask. Give a reason why it is better to use Y rather than X.",
+       "marks": 9,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The student uses methyl orange indicator in the titration.",
+         "label": "b",
+         "marks": null,
+         "partId": "q02-3fe332a3-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State the colour of methyl orange in barium hydroxide solution.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q02-3fe332a3-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give a reason why universal indicator is not suitable for use in a titration.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q02-3fe332a3-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The student adds some dilute nitric acid to a burette and does the titration. The equation for the reaction is $\\mathrm {B a} (\\mathrm {O H}) _ {2} + 2 \\mathrm {H N O} _ {3} \\rightarrow \\mathrm {B a} (\\mathrm {N O} _ {3}) _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O}$ The student finds that $ 2 1. 5 0 \\mathrm{c m}^{3} $ of nitric acid of concentration $ 0. 6 0 0 \\mathrm{m o l} / \\mathrm{d m}^{3} $ neutralises $ 2 5. 0 \\mathrm{c m}^{3} $ of barium hydroxide solution. Calculate the concentration, in mol/dm $ ^{3} $ , of the barium hydroxide solution. $\\mathrm {c o n c e n t r a t i o n} =$",
+         "label": "c",
+         "marks": null,
+         "partId": "q02-3fe332a3-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State why sulfuric acid would not be a suitable acid to use in this titration.",
+         "label": "d",
+         "marks": null,
+         "partId": "q02-3fe332a3-pd",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 2,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789069745238.png",
+         "width": 192,
+         "format": "png",
+         "height": 575,
+         "sha256": "35ac7efc2eab331a847e3d86a259c5e08b338a46949277bbc388bdc202cb602c",
+         "assetId": "img:35ac7efc2eab331a847e3d86a259c5e08b338a46949277bbc388bdc202cb602c",
+         "mimeType": "image/jpeg",
+         "elementId": "e000034",
+         "sourceName": "assets/crop_1_1789069745238.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789069745245.png",
+         "width": 98,
+         "format": "png",
+         "height": 542,
+         "sha256": "72a69ee51c166857c57721b1a8e9f881904f2382f625ca5041f928f68461cd1c",
+         "assetId": "img:72a69ee51c166857c57721b1a8e9f881904f2382f625ca5041f928f68461cd1c",
+         "mimeType": "image/jpeg",
+         "elementId": "e000035",
+         "sourceName": "assets/crop_2_1789069745245.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q02-3fe332a3",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about Group 7,the halogens.",
+       "marks": 0,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Which halogen has the palest colour? A astatine B bromine fluorine D iodine",
+         "label": "a",
+         "marks": null,
+         "partId": "q03-3fe332a3-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Which halogen is a solid at room temperature? A astatine chlorine B bromine D fluorine",
+         "label": "b",
+         "marks": null,
+         "partId": "q03-3fe332a3-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The table shows the electronic configurations of a fluorine atom and a chlorine atom. Explain the relative reactivities of fluorine and chlorine using the information in the table.",
+         "label": "c",
+         "marks": null,
+         "partId": "q03-3fe332a3-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Lithium reacts with chlorine to form lithium chloride.",
+         "label": "d",
+         "marks": null,
+         "partId": "q03-3fe332a3-pd",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Write a chemical equation for the reaction of lithium with chlorine.",
+         "label": "d-i",
+         "marks": null,
+         "partId": "q03-3fe332a3-pd-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Describe tests to show that the product of the reaction is lithium chloride.",
+         "label": "d-ii",
+         "marks": null,
+         "partId": "q03-3fe332a3-pd-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 3,
+       "figures": [],
+       "options": [],
+       "section": null,
+       "confidence": 0.45,
+       "marksKnown": false,
+       "questionId": "q03-3fe332a3",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000063"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about magnesium and magnesium compounds.",
+       "marks": 11,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Magnesium burns in oxygen to form magnesium oxide. State two observations that would be seen during the reaction.",
+         "label": "a",
+         "marks": null,
+         "partId": "q04-3fe332a3-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The diagram shows the electron configurations of a magnesium atom and an oxygen atom. magnesium atom oxygen atom Describe the changes in the electronic configurations when magnesium reacts with oxygen to form the ionic compound magnesium oxide, MgO",
+         "label": "b",
+         "marks": null,
+         "partId": "q04-3fe332a3-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789069745276.png",
+           "width": 404,
+           "format": "png",
+           "height": 371,
+           "sha256": "c4a6660f9f13dadeabd6fa961c959bf3aded5d4c4f651a648a9c32c17f89d14a",
+           "assetId": "img:c4a6660f9f13dadeabd6fa961c959bf3aded5d4c4f651a648a9c32c17f89d14a",
+           "mimeType": "image/jpeg",
+           "elementId": "e000072",
+           "sourceName": "assets/crop_1_1789069745276.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789069745280.png",
+           "width": 248,
+           "format": "png",
+           "height": 259,
+           "sha256": "35fddd782402aad58be95b94602a9800b92a1db328eae0d01b1c5166d83c5eb3",
+           "assetId": "img:35fddd782402aad58be95b94602a9800b92a1db328eae0d01b1c5166d83c5eb3",
+           "mimeType": "image/jpeg",
+           "elementId": "e000074",
+           "sourceName": "assets/crop_2_1789069745280.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Magnesium can be produced by the electrolysis of molten magnesium chloride.",
+         "label": "c",
+         "marks": null,
+         "partId": "q04-3fe332a3-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State why magnesium cannot be produced by heating magnesium oxide with carbon.",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q04-3fe332a3-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain the different ways that magnesium and magnesium chloride conduct electricity. magnesium magnesium chloride",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q04-3fe332a3-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "During the electrolysis of molten magnesium chloride, magnesium is formed at the negative electrode. The ionic half-equation for the reaction is $M g ^ {2 +} + 2 e ^ {-} \\rightarrow M g$",
+         "label": "d",
+         "marks": null,
+         "partId": "q04-3fe332a3-pd",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State why this is a reduction reaction.",
+         "label": "d-i",
+         "marks": null,
+         "partId": "q04-3fe332a3-pd-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Write an ionic half-equation for the formation of chlorine at the positive electrode.",
+         "label": "d-ii",
+         "marks": null,
+         "partId": "q04-3fe332a3-pd-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 4,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789069745276.png",
+         "width": 404,
+         "format": "png",
+         "height": 371,
+         "sha256": "c4a6660f9f13dadeabd6fa961c959bf3aded5d4c4f651a648a9c32c17f89d14a",
+         "assetId": "img:c4a6660f9f13dadeabd6fa961c959bf3aded5d4c4f651a648a9c32c17f89d14a",
+         "mimeType": "image/jpeg",
+         "elementId": "e000072",
+         "sourceName": "assets/crop_1_1789069745276.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789069745280.png",
+         "width": 248,
+         "format": "png",
+         "height": 259,
+         "sha256": "35fddd782402aad58be95b94602a9800b92a1db328eae0d01b1c5166d83c5eb3",
+         "assetId": "img:35fddd782402aad58be95b94602a9800b92a1db328eae0d01b1c5166d83c5eb3",
+         "mimeType": "image/jpeg",
+         "elementId": "e000074",
+         "sourceName": "assets/crop_2_1789069745280.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q04-3fe332a3",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "(a) An organic compound has this percentage composition by mass. $C = 40 \\% H = 6.7 \\% O = 53.3 \\%$ (i) Show that the empirical formula of the compound is $ \\mathrm{C H_{2} O} $ (ii) Draw the structural formula of a compound with the molecular formula $ \\mathrm{C_{2} H_{4}O_{2}} $",
+       "marks": 12,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Methanoic acid (HCOOH) reacts with sodium carbonate solution to give three products.",
+         "label": "b",
+         "marks": null,
+         "partId": "q05-3fe332a3-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Complete the equation for this reaction. $2 \\mathrm {H C O O H} + \\mathrm {N a} _ {2} \\mathrm {C O} _ {3} \\rightarrow$",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q05-3fe332a3-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State what you would observe in this reaction.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q05-3fe332a3-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Methanoic acid also reacts with propanol to form an ester. $\\mathrm {H C O O H} + \\mathrm {C} _ {3} \\mathrm {H} _ {7} \\mathrm {O H} \\rightleftharpoons \\mathrm {H C O O C} _ {3} \\mathrm {H} _ {7} + \\mathrm {H} _ {2} \\mathrm {O}$",
+         "label": "c",
+         "marks": null,
+         "partId": "q05-3fe332a3-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the name of the ester that forms. The equation for the reaction is",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q05-3fe332a3-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State what is meant by the $ \\rightleftharpoons $ symbol.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q05-3fe332a3-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "When this reaction occurs in a sealed container, the reaction can reach dynamic equilibrium. Give one characteristic of a reaction at dynamic equilibrium.",
+         "label": "c-iii",
+         "marks": null,
+         "partId": "q05-3fe332a3-pc-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A polyester forms when butanedioic acid reacts with ethanediol. The diagram shows the repeat unit of the polyester that forms.",
+         "label": "d",
+         "marks": null,
+         "partId": "q05-3fe332a3-pd",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789069745352.png",
+           "width": 655,
+           "format": "png",
+           "height": 139,
+           "sha256": "24e046454d39386a8d9e345180817f261c7ef505e233e8b6f486d9ed6a7188e7",
+           "assetId": "img:24e046454d39386a8d9e345180817f261c7ef505e233e8b6f486d9ed6a7188e7",
+           "mimeType": "image/jpeg",
+           "elementId": "e000105",
+           "sourceName": "assets/crop_1_1789069745352.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the name of this type of polymerisation.",
+         "label": "d-i",
+         "marks": null,
+         "partId": "q05-3fe332a3-pd-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Draw the structural formulae of the two monomers used to make this polyester.",
+         "label": "d-ii",
+         "marks": null,
+         "partId": "q05-3fe332a3-pd-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 5,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789069745352.png",
+         "width": 655,
+         "format": "png",
+         "height": 139,
+         "sha256": "24e046454d39386a8d9e345180817f261c7ef505e233e8b6f486d9ed6a7188e7",
+         "assetId": "img:24e046454d39386a8d9e345180817f261c7ef505e233e8b6f486d9ed6a7188e7",
+         "mimeType": "image/jpeg",
+         "elementId": "e000105",
+         "sourceName": "assets/crop_1_1789069745352.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q05-3fe332a3",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "Titanium is an important metal in industry. Titanium dioxide $ \\left( \\mathrm{T i O}_{2} \\right) $ can be converted into titanium metal in two stages. Stage 1 titanium dioxide is converted into titanium(IV) chloride $ \\left( \\mathrm{T i C l}_{4} \\right) $ Stage 2 titanium(IV) chloride is converted into titanium",
+       "marks": 9,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "This is the equation for the reaction in stage 1. $\\mathrm {T i O} _ {2} + 2 \\mathrm {C l} _ {2} + \\mathrm {C} \\rightarrow \\mathrm {T i C l} _ {4} + \\mathrm {C O} _ {2}$ Calculate the volume, in $ \\mathrm{d m}^{3} $ of chlorine gas at rtp needed to react completely with 20 tonnes of titanium dioxide. Give your answer in standard form. $[ 1 \\mathrm {t o n n e} = 1 0 ^ {6} \\mathrm {g} M _ {\\mathrm {r}} \\mathrm {o f} \\mathrm {T i O} _ {2} = 8 0 ]$ [molar volume of chlorine gas at rtp=24 dm $ ^{3} $]",
+         "label": "a",
+         "marks": null,
+         "partId": "q06-3fe332a3-pa",
+         "figures": [
+          {
+           "url": "assets/crop_2_1789069745390.png",
+           "width": 126,
+           "format": "png",
+           "height": 37,
+           "sha256": "761e41f5b31b70deb672d14d29ef987b40b8bbf6cfadcf7d343e7d95ecfee835",
+           "assetId": "img:761e41f5b31b70deb672d14d29ef987b40b8bbf6cfadcf7d343e7d95ecfee835",
+           "mimeType": "image/jpeg",
+           "elementId": "e000120",
+           "sourceName": "assets/crop_2_1789069745390.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "In stage 2, titanium(IV) chloride vapour is passed through molten magnesium in a container filled with argon. This is the equation for the reaction in stage 2. $\\mathrm {T i C l} _ {4} + 2 \\mathrm {M g} \\rightarrow \\mathrm {T i} + 2 \\mathrm {M g C l} _ {2}$ Explain why the container is filled with argon rather than air.",
+         "label": "b",
+         "marks": null,
+         "partId": "q06-3fe332a3-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Aeroplanes are made of an alloy containing aluminium and titanium. Explain why the alloy is stronger than pure titanium metal. You may include diagrams in your answer.",
+         "label": "c",
+         "marks": null,
+         "partId": "q06-3fe332a3-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 6,
+       "figures": [
+        {
+         "url": "assets/crop_2_1789069745390.png",
+         "width": 126,
+         "format": "png",
+         "height": 37,
+         "sha256": "761e41f5b31b70deb672d14d29ef987b40b8bbf6cfadcf7d343e7d95ecfee835",
+         "assetId": "img:761e41f5b31b70deb672d14d29ef987b40b8bbf6cfadcf7d343e7d95ecfee835",
+         "mimeType": "image/jpeg",
+         "elementId": "e000120",
+         "sourceName": "assets/crop_2_1789069745390.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q06-3fe332a3",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "A student uses this apparatus to find the heat energy supplied by a liquid fuel. The student burns some fuel to heat the water in the copper container and measures the change in temperature.",
+       "marks": 11,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The student notices that the bottom of the container turns black. Give the name of the black substance that forms on the bottom of the container.",
+         "label": "a",
+         "marks": null,
+         "partId": "q07-3fe332a3-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "In one experiment, the student burns 0.92 g of ethanol. The student calculates that the heat energy absorbed by the water is 18.2 kJ. Show that the results of this experiment give an approximate value for the enthalpy of combustion of ethanol of $ \\Delta H=-9 0 0 \\mathrm{k J / m o l}. $ [M $ _{r} $ of ethanol=46]",
+         "label": "b",
+         "marks": null,
+         "partId": "q07-3fe332a3-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The data book value of $ \\Delta H $ for the combustion of ethanol is $ -1 3 6 7 \\mathrm{k J / m o l} $ Give two reasons why the student's value is much lower than the data book value.",
+         "label": "c",
+         "marks": null,
+         "partId": "q07-3fe332a3-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The equation shows the combustion of methane. $\\mathrm {C H} _ {4} + 2 \\mathrm {O} _ {2} \\rightarrow \\mathrm {C O} _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O} \\quad \\Delta H = - 8 9 0 \\mathrm {k J / m o l}$ This is the equation showing the displayed formulae. The table shows the bond energies for O=O, C=O and O\u2014H",
+         "label": "d",
+         "marks": null,
+         "partId": "q07-3fe332a3-pd",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789069745445.png",
+           "width": 994,
+           "format": "png",
+           "height": 219,
+           "sha256": "e29951037d80b00fe78721a44687ff0cd2b305e3b1544c138c0d4475371b7094",
+           "assetId": "img:e29951037d80b00fe78721a44687ff0cd2b305e3b1544c138c0d4475371b7094",
+           "mimeType": "image/jpeg",
+           "elementId": "e000143",
+           "sourceName": "assets/crop_1_1789069745445.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Calculate the bond energy of the C\u2014H bond, using information from the equation and the table. $\\mathrm {C} - \\mathrm {H} \\mathrm {b o n d} \\mathrm {e n e r g y} =$",
+         "label": "d-i",
+         "marks": null,
+         "partId": "q07-3fe332a3-pd-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Complete the energy level diagram to show the products and $ \\Delta H. $",
+         "label": "d-ii",
+         "marks": null,
+         "partId": "q07-3fe332a3-pd-ii",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789069745456.png",
+           "width": 475,
+           "format": "png",
+           "height": 664,
+           "sha256": "110954729cf87ac4301187d386db11672d87013b8548d24fc2640c2051810187",
+           "assetId": "img:110954729cf87ac4301187d386db11672d87013b8548d24fc2640c2051810187",
+           "mimeType": "image/jpeg",
+           "elementId": "e000149",
+           "sourceName": "assets/crop_1_1789069745456.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 7,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789069745433.png",
+         "width": 915,
+         "format": "png",
+         "height": 550,
+         "sha256": "984062f459f5bd478eebac7733eaa9b61fcd037d8ddc2b033a06105b2fcb1ff2",
+         "assetId": "img:984062f459f5bd478eebac7733eaa9b61fcd037d8ddc2b033a06105b2fcb1ff2",
+         "mimeType": "image/jpeg",
+         "elementId": "e000131",
+         "sourceName": "assets/crop_1_1789069745433.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789069745445.png",
+         "width": 994,
+         "format": "png",
+         "height": 219,
+         "sha256": "e29951037d80b00fe78721a44687ff0cd2b305e3b1544c138c0d4475371b7094",
+         "assetId": "img:e29951037d80b00fe78721a44687ff0cd2b305e3b1544c138c0d4475371b7094",
+         "mimeType": "image/jpeg",
+         "elementId": "e000143",
+         "sourceName": "assets/crop_1_1789069745445.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789069745456.png",
+         "width": 475,
+         "format": "png",
+         "height": 664,
+         "sha256": "110954729cf87ac4301187d386db11672d87013b8548d24fc2640c2051810187",
+         "assetId": "img:110954729cf87ac4301187d386db11672d87013b8548d24fc2640c2051810187",
+         "mimeType": "image/jpeg",
+         "elementId": "e000149",
+         "sourceName": "assets/crop_1_1789069745456.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q07-3fe332a3",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000145"
+       ]
+      }
+     ],
+     "paperTotal": 70,
+     "schemaVersion": "1.0",
+     "sectionTotals": {},
+     "questionTotals": {
+      "1": 6,
+      "2": 9,
+      "4": 11,
+      "5": 12,
+      "6": 9,
+      "7": 11
+     },
+     "reviewRequired": true,
+     "extractionMethod": "glm-ocr-qp-v1",
+     "frontMatterFigures": []
+    },
+    "ms_draft": {
+     "paper": {
+      "board": "Edexcel",
+      "session": "Summer 2022",
+      "subject": null,
+      "duration": null,
+      "examDate": null,
+      "logNumber": "P70947A",
+      "qualification": null,
+      "paperReference": null,
+      "publicationCode": "4CH1_2C_2206_MS",
+      "canonicalDocumentId": "b1a609ef-577e-514d-aba6-3870903a07a0"
+     },
+     "entries": [
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(a)(i)",
+       "marks": 1,
+       "number": 1,
+       "entryId": "ms-b1a609ef-q1ai",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW Ar"
+        }
+       ],
+       "answerText": "argon",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "two-level label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(a)(ii)",
+       "marks": 1,
+       "number": 1,
+       "entryId": "ms-b1a609ef-q1aii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW N2/N"
+        }
+       ],
+       "answerText": "nitrogen",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(a)(iii)",
+       "marks": 1,
+       "number": 1,
+       "entryId": "ms-b1a609ef-q1aiii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW H2/H"
+        }
+       ],
+       "answerText": "hydrogen",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(b)",
+       "marks": 1,
+       "number": 1,
+       "entryId": "ms-b1a609ef-q1b",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW greenhouse effectALLOW effects of global warming e.g. melting of polar ice caps/flooding/wild firesIGNORE acid rainREJECT references to ozone layer"
+        }
+       ],
+       "answerText": "climate change/global warming/oceans becoming more acidic",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(c)",
+       "marks": 2,
+       "number": 1,
+       "entryId": "ms-b1a609ef-q1c",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW white precipitateM2 dep on mention of limewaterREJECT addition of extra reagents for both marks"
+        },
+        {
+         "kind": "note",
+         "text": "Total 6"
+        }
+       ],
+       "answerText": "M1 bubble/pass/add the gas/carbon dioxide into limewaterM2(limewater) turns cloudy/milky",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(c)",
+       "marks": 3,
+       "number": 1,
+       "entryId": "ms-b1a609ef-q1c",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "correct answer with or without working scores3"
+        },
+        {
+         "kind": "note",
+         "text": "M2moles ofBa(OH)2=0.0129\u00f72OR0.00645"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWecf onM2"
+        },
+        {
+         "kind": "note",
+         "text": "M3conc.ofBa(OH)2=0.00645\u00d71000=0.258(mol/dm3)25"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT alternative methods"
+        },
+        {
+         "kind": "note",
+         "text": "0.516 scores2"
+        },
+        {
+         "kind": "note",
+         "text": "1.032 scores2"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW2 sig figs correctly rounded throughout"
+        },
+        {
+         "kind": "note",
+         "text": "Penalise rounding to1 sig fig once only"
+        },
+        {
+         "kind": "note",
+         "text": "barium sulfate is insoluble/does not dissolve/forms a precipitate"
+        },
+        {
+         "kind": "note",
+         "text": "Total9"
+        }
+       ],
+       "answerText": "M1moles ofHNO3=21.5\u00d70.6(00)1000",
+       "confidence": 0.75,
+       "markPoints": [
+        {
+         "ecf": false,
+         "text": "M1moles ofHNO3=21.5\u00d70.6",
+         "marks": 0,
+         "reject": false,
+         "ordinal": 1,
+         "rawText": "M1moles ofHNO3=21.5\u00d70.6",
+         "anyTwoFrom": false,
+         "dependentOn": [],
+         "alternatives": []
+        },
+        {
+         "ecf": false,
+         "text": "1000",
+         "marks": null,
+         "reject": false,
+         "ordinal": 2,
+         "rawText": "1000",
+         "anyTwoFrom": false,
+         "dependentOn": [],
+         "alternatives": []
+        }
+       ],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(a)",
+       "marks": 1,
+       "number": 3,
+       "entryId": "ms-b1a609ef-q3a",
+       "guidance": [],
+       "answerText": "C fluorineA is incorrect as astatine is blackB is incorrect as bromine is brownD is incorrect as iodine is dark grey",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(b)",
+       "marks": 1,
+       "number": 3,
+       "entryId": "ms-b1a609ef-q3b",
+       "guidance": [],
+       "answerText": "A astatineB is incorrect as bromine is a liquidC is incorrect as chlorine is a gasD is incorrect as fluorine is a gas",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(c)",
+       "marks": 4,
+       "number": 3,
+       "entryId": "ms-b1a609ef-q3c",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW reactivity decreases down the group ORAALLOW a fluorine atom is smaller than a chlorine atom ORAALLOW there is less shielding in fluorine ORA"
+        }
+       ],
+       "answerText": "An explanation that links the following four pointsM1 fluorine is more reactive than chlorine ORA M2 the outer shell is closer to the nucleus in fluorine/fluorine has fewer shells/fluorine has a smaller atomic radius ORA M3 there is a stronger attraction to the nucleus for an electron in fluorine ORA M4 so fluorine accepts an electron more readily ORA",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(d)(i)",
+       "marks": 1,
+       "number": 3,
+       "entryId": "ms-b1a609ef-q3di",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW multiples or fractionsIGNORE state symbols even if incorrectACCEPT2Li+Cl-REJECT any charges on Li or Cl2"
+        }
+       ],
+       "answerText": "2Li+Cl2\u21922LiCl",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(d)(ii)",
+       "marks": 5,
+       "number": 3,
+       "entryId": "ms-b1a609ef-q3dii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "ACCEPT description of flame test"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW crimson/scarlet"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT brick red/orange red"
+        },
+        {
+         "kind": "note",
+         "text": "M2 dep on M1"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT incorrect acid e.g. HCl or H2SO4 for M3 only"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW acidified silver nitrate for M3 and M4"
+        },
+        {
+         "kind": "note",
+         "text": "M5 dep on addition of silver nitrate"
+        },
+        {
+         "kind": "note",
+         "text": "Total 12"
+        }
+       ],
+       "answerText": "A description that refers to the following five points\nTest for lithium ions\nM1 flame test\nM2 red (flame)\nTest for chloride ions\nM3 add nitric acid\nM4 add silver nitrate (solution)\nM5 white precipitate",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(a)",
+       "marks": 2,
+       "number": 4,
+       "entryId": "ms-b1a609ef-q4a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2 white powder/solid/ash"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW white smoke"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW grey powder/solid/ash"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT white precipitate"
+        }
+       ],
+       "answerText": "M1 bright/white light OR bright/white flame",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(b)",
+       "marks": null,
+       "number": 4,
+       "entryId": "ms-b1a609ef-q4b",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M1 magnesium/Mg loses two electrons/becomes 2.8"
+        },
+        {
+         "kind": "note",
+         "text": "M2 oxygen/O gains two electrons/becomes 2.8"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT magnesium gives two electrons to oxygen for M1 and M2"
+        },
+        {
+         "kind": "note",
+         "text": "Both marks can be scored from diagrams showing correct electronic configurations of the ions."
+        }
+       ],
+       "answerText": "A description that refers to the following two points",
+       "confidence": 0.5,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": null
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(c)(i)",
+       "marks": 1,
+       "number": 4,
+       "entryId": "ms-b1a609ef-q4ci",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW carbon cannot displace magnesium"
+        },
+        {
+         "kind": "note",
+         "text": "An explanation that links the following four points"
+        }
+       ],
+       "answerText": "magnesium is more reactive/higher in the reactivity series (than carbon)/magnesium is a better reducing agent (than carbon) ORA",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(c)(ii)",
+       "marks": null,
+       "number": 4,
+       "entryId": "ms-b1a609ef-q4cii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "REJECT reference to ions or atoms moving for M2"
+        },
+        {
+         "kind": "note",
+         "text": "ions are free to move when (magnesium chloride) is molten/in solution OR (magnesium chloride) cannot conduct when solid"
+        },
+        {
+         "kind": "note",
+         "text": "M2 electrons can move"
+        },
+        {
+         "kind": "note",
+         "text": "M3 (magnesium chloride) can only conduct when molten/in solution OR (magnesium chloride) cannot conduct when solid"
+        },
+        {
+         "kind": "note",
+         "text": "M4 ions are free to move"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT reference to electrons moving for M4"
+        }
+       ],
+       "answerText": "M1 (magnesium) has delocalised electrons",
+       "confidence": 0.5,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": null
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(d)(i)",
+       "marks": 1,
+       "number": 4,
+       "entryId": "ms-b1a609ef-q4di",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW electrons are gained"
+        },
+        {
+         "kind": "note",
+         "text": "2Cl-\u2192Cl2+2e(-)"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT magnesium/Mg gains electrons"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT reference to loss or gain of oxygen"
+        }
+       ],
+       "answerText": "magnesium ions/Mg2+ gains electrons",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(d)(ii)",
+       "marks": 1,
+       "number": 4,
+       "entryId": "ms-b1a609ef-q4dii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW 2Cl-\u21922e(-)\u2192Cl2"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW multiples or fractions"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE state symbols even if incorrect"
+        },
+        {
+         "kind": "note",
+         "text": "Total 11"
+        }
+       ],
+       "answerText": "",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(a)(i)",
+       "marks": 2,
+       "number": 5,
+       "entryId": "ms-b1a609ef-q5ai",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "40.0/12"
+        },
+        {
+         "kind": "note",
+         "text": "6.7/1"
+        },
+        {
+         "kind": "note",
+         "text": "53.3/16"
+        },
+        {
+         "kind": "note",
+         "text": "0 marks for division by atomic numbers or upside-down calculation"
+        },
+        {
+         "kind": "note",
+         "text": "M2"
+        },
+        {
+         "kind": "note",
+         "text": "3.33"
+        },
+        {
+         "kind": "note",
+         "text": "6.7"
+        },
+        {
+         "kind": "note",
+         "text": "3.33"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW any number of sig figs except 1"
+        }
+       ],
+       "answerText": "M1",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "two-level label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(a)(ii)",
+       "marks": 1,
+       "number": 5,
+       "entryId": "ms-b1a609ef-q5aii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "ACCEPT alternative methods"
+        },
+        {
+         "kind": "note",
+         "text": "CH3COOHORH-C-C"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT HCOOCH3ORH-C-C"
+        },
+        {
+         "kind": "note",
+         "text": "(b)(i)"
+        },
+        {
+         "kind": "note",
+         "text": "(i)"
+        },
+        {
+         "kind": "note",
+         "text": "2HCOOH+Na2CO3\u21922HCOONa+CO2+H2O"
+        },
+        {
+         "kind": "note",
+         "text": "M1 CO2+H2O"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE numbers in front of CO2 and/or H2O if only M1 scored"
+        },
+        {
+         "kind": "note",
+         "text": "M2 HCOONa and equation correctly balanced"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT NaCOOHALLOW NaHCOO"
+        },
+        {
+         "kind": "note",
+         "text": "(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "bubbles/ fizzing/ effervescence"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE gas given offALLOW sodium carbonate disappears/dissolves"
+        },
+        {
+         "kind": "note",
+         "text": "propyl methanoate"
+        },
+        {
+         "kind": "note",
+         "text": "spelling must be correctALLOW propyl formate"
+        },
+        {
+         "kind": "note",
+         "text": "(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "reversible reaction"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW reaction which goes both waysIGNORE equilibrium"
+        }
+       ],
+       "answerText": "AND1",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "rowspan continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(a)(iii)",
+       "marks": 1,
+       "number": 5,
+       "entryId": "ms-b1a609ef-q5aiii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW"
+        },
+        {
+         "kind": "note",
+         "text": "amounts/moles/ratios of reactants and products remain constant"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT concentrations of reactants and products are equal/the same"
+        },
+        {
+         "kind": "note",
+         "text": "(d)(i)(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "condensation (polymerisation)"
+        },
+        {
+         "kind": "note",
+         "text": "1"
+        },
+        {
+         "kind": "note",
+         "text": "2"
+        },
+        {
+         "kind": "note",
+         "text": "M1"
+        },
+        {
+         "kind": "note",
+         "text": "HO-C-CH2CH2-C-OH"
+        },
+        {
+         "kind": "note",
+         "text": "M2"
+        },
+        {
+         "kind": "note",
+         "text": "HO-CH2CH2-OH"
+        },
+        {
+         "kind": "note",
+         "text": "Total 12"
+        }
+       ],
+       "answerText": "forward and backward reactions occur at the same rate OWTTE\nOR\nconcentrations of reactants and products remain constant/stay the same/do not change",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "6(a)",
+       "marks": 4,
+       "number": 6,
+       "entryId": "ms-b1a609ef-q6a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "correct answer with or without working scores 4"
+        },
+        {
+         "kind": "note",
+         "text": "M2(moles ofCl2=) $ 2.5\\times10^{5}\\times2 $ OR $ 5.0\\times10^{5} $ (mol)"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT250000(mol)"
+        },
+        {
+         "kind": "note",
+         "text": "M3(vol ofCl2=) $ 5.0\\times10^{5}\\times24 $ OR $ 12000000 $ (dm3)"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT500000(mol)"
+        },
+        {
+         "kind": "note",
+         "text": "M4 $ 1.2\\times10^{7} $ (dm3)"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWecf onM2andM36x10^{6} scores33x10^{6} scores36000000 scores23000000 scores22.083x10^{4} scores3"
+        },
+        {
+         "kind": "note",
+         "text": "(b)An explanation that links the following two pointsM1argon is unreactive/inertM2(so argon) will not react with/oxidise the magnesiumOR oxygen(in air) will react with/oxidise the magnesium"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWargon will not react with/oxidise titaniumOR oxygen(in air) will react with/oxidise the titanium"
+        },
+        {
+         "kind": "note",
+         "text": "(c)An explanation that links the following three pointsM1in pure titanium all atoms are the same sizeOR layers/atoms can slide over each other(making it soft/malleable)M2the alloy has atoms of different sizesM3(which disrupts the structure so that) atoms/layers do not/harder to slide over each other(making it stronger)OWTTE"
+        },
+        {
+         "kind": "note",
+         "text": "all marks can be awarded from labelled diagramsALLOWcations/ions/particles in place of atoms throughoutREJECTmention of molecules once only"
+        },
+        {
+         "kind": "note",
+         "text": "Total9"
+        }
+       ],
+       "answerText": "M1(moles ofTiO2=) $ \\frac{20\\times10^{6}}{80} $ OR $ 2.5\\times10^{5} $ (mol)",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(a)",
+       "marks": 1,
+       "number": 7,
+       "entryId": "ms-b1a609ef-q7a",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW soot"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW copper(II) oxide/copper oxide/CuO"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT copper(I) oxide"
+        }
+       ],
+       "answerText": "carbon",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(b)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-b1a609ef-q7b",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW alternative methods"
+        }
+       ],
+       "answerText": "M1(amount of ethanol)=0.92\u00f746OR0.02(0)(mol)\nM2(-)18.2\u00f70.02(0)=(-)910(kJ/mol)",
+       "confidence": 0.75,
+       "markPoints": [
+        {
+         "ecf": false,
+         "text": "M1(amount of ethanol)=0.92\u00f746OR0.02",
+         "marks": 0,
+         "reject": false,
+         "ordinal": 1,
+         "rawText": "M1(amount of ethanol)=0.92\u00f746OR0.02",
+         "anyTwoFrom": false,
+         "dependentOn": [],
+         "alternatives": []
+        },
+        {
+         "ecf": false,
+         "text": "(mol)\nM2(-)18.2\u00f70.02",
+         "marks": 0,
+         "reject": false,
+         "ordinal": 2,
+         "rawText": "(mol)\nM2(-)18.2\u00f70.02",
+         "anyTwoFrom": false,
+         "dependentOn": [],
+         "alternatives": []
+        },
+        {
+         "ecf": false,
+         "text": "=(-)910(kJ/mol)",
+         "marks": null,
+         "reject": false,
+         "ordinal": 3,
+         "rawText": "=(-)910(kJ/mol)",
+         "anyTwoFrom": false,
+         "dependentOn": [],
+         "alternatives": []
+        }
+       ],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(c)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-b1a609ef-q7c",
+       "guidance": [],
+       "answerText": "Any 2 from\nM1heat(energy)/thermal energy was lost(to the surroundings/apparatus)\nM2incomplete combustion(of ethanol)\nM3the ethanol was impure/ethanol evaporates",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(d)(i)",
+       "marks": 4,
+       "number": 7,
+       "entryId": "ms-b1a609ef-q7di",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "correct answer with or without working scores4"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW2x498OR996seen"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWecf throughout"
+        },
+        {
+         "kind": "note",
+         "text": "839 without working scores3"
+        },
+        {
+         "kind": "note",
+         "text": "616.5/617 without working scores3"
+        }
+       ],
+       "answerText": "M1\u2211bonds broken=4xC-H+2x498\nM2\u2211bonds formed=2x805+4x463OR3462\nM34xC-H+996-3462=-890\nM4C-H=1576\u00f74=394(kJ/mol)",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(d)(ii)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-b1a609ef-q7dii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "ACCEPT double headed arrow or arrow pointing from reactants level to products level"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT arrow pointing from products level to reactants level"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE any attempts at including activation energy"
+        },
+        {
+         "kind": "note",
+         "text": "If endothermic reaction shown M2 can be awarded for correct arrow/line labelled \u0394H/+890(kJ/mol)"
+        },
+        {
+         "kind": "note",
+         "text": "Total 11"
+        }
+       ],
+       "answerText": "Energy\nCH4+2O2\n\u0394H\nCO2+2H2O\nM1 horizontal line to show products in correct position and correctly labelled\nM2 vertical line in correct position and labelled \u0394H/\u2212890(kJ/mol)",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      }
+     ],
+     "icTable": null,
+     "warnings": [
+      "orphan row before first entry: 2(a)(i)(ii)",
+      "orphan row before first entry: M2(Y) pipette",
+      "orphan row before first entry: (volume measurement with Y is) more precise ORA",
+      "orphan row before first entry: (b)(i)(ii)",
+      "orphan row before first entry: there is no clear end point/colour change is gradual(at the end point)/no sharp colour change OWTTE",
+      "1(c): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "4(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "4(c)(i): bare integer cell \"4\" skipped (rubric/rowspan ambiguity)",
+      "5(a)(ii): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "5(a)(ii): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "5(a)(ii): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "5(a)(ii): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "6(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "6(a): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)"
+     ],
+     "paperTotal": null,
+     "schemaVersion": "1.0",
+     "questionTotals": {},
+     "reviewRequired": true,
+     "extractionMethod": "glm-ocr-ms-v1"
+    },
+    "reconciliation": {
+     "findings": [
+      {
+       "msMarks": null,
+       "qpMarks": 6,
+       "severity": "qp-only",
+       "questionNumber": "1"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 9,
+       "severity": "qp-only",
+       "questionNumber": "2"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 11,
+       "severity": "qp-only",
+       "questionNumber": "4"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 12,
+       "severity": "qp-only",
+       "questionNumber": "5"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 9,
+       "severity": "qp-only",
+       "questionNumber": "6"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 11,
+       "severity": "qp-only",
+       "questionNumber": "7"
+      }
+     ],
+     "msPaperTotal": null,
+     "qpPaperTotal": 70,
+     "mismatchCount": 0,
+     "paperTotalConflict": false
+    },
+    "created_by": null,
+    "created_at": "2026-09-14 12:06:05.808487+00:00"
+   }
+  ],
+  "content_review_audit_refs": [],
+  "teacher_validation_event_refs": []
+ }
+}

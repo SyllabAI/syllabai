@@ -1,0 +1,382 @@
+{
+ "replace": {
+  "4ch1-2c-202206": {
+   "deleted": true,
+   "archive": "4CH1-2C_June2022.archive.json",
+   "archive_sha": "3ef32d42df094c448a19ffbc367d2c4de962f25e30f94578228590f6a012d9da",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 7,
+    "question_versions": 7,
+    "question_parts": 50,
+    "mark_schemes": 7,
+    "mark_points": 39,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 0,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "47b57ed2-769a-49ab-8b08-459a11b74d6f",
+    "questions": 7,
+    "parts": 50,
+    "markPoints": 39,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-2c-201906": {
+   "deleted": true,
+   "archive": "4CH1-2C_June2019.archive.json",
+   "archive_sha": "fb1a6287e2c1b335671d77c9944976792b9b2799a5d6613e426d64d18f7ed8bc",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 8,
+    "question_versions": 8,
+    "question_parts": 45,
+    "mark_schemes": 8,
+    "mark_points": 39,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 0,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "37f7f180-6643-4635-9921-88ee8bc6aad1",
+    "questions": 8,
+    "parts": 45,
+    "markPoints": 39,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-1c-202001": {
+   "deleted": true,
+   "archive": "4CH1-1C_January2020.archive.json",
+   "archive_sha": "43cc6d3e703f8c20899bf8d5c3ad02bad7f646ec00a2b3c92bff5de66b07b648",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 10,
+    "question_versions": 10,
+    "question_parts": 72,
+    "mark_schemes": 10,
+    "mark_points": 51,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 1,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "be73332c-bf0f-463f-bbe6-72a1d4bf9b80",
+    "questions": 10,
+    "parts": 75,
+    "markPoints": 60,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-2c-202001": {
+   "deleted": true,
+   "archive": "4CH1-2C_January2020.archive.json",
+   "archive_sha": "c911d0e0d55c273f902ef7985a8a71e70d13ca76b7db8e4a5a62a0202b32b9c8",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 7,
+    "question_versions": 7,
+    "question_parts": 47,
+    "mark_schemes": 5,
+    "mark_points": 19,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 1,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "c4c50062-745f-4376-9340-65e6cd9d864d",
+    "questions": 7,
+    "parts": 49,
+    "markPoints": 39,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-1c-202101": {
+   "deleted": true,
+   "archive": "4CH1-1C_January2021.archive.json",
+   "archive_sha": "b8f280803ea94f7f79676e7bd7d564a9d5c93f17448c8fd5d04285d412bcbe7e",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 11,
+    "question_versions": 11,
+    "question_parts": 60,
+    "mark_schemes": 10,
+    "mark_points": 37,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 1,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "d7f79cdc-3777-4f5c-a932-c682a1f5daa3",
+    "questions": 11,
+    "parts": 62,
+    "markPoints": 53,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-1c-202201": {
+   "deleted": true,
+   "archive": "4CH1-1C_January2022.archive.json",
+   "archive_sha": "03e3d3b6ffa3c4962ae7da810424db09678400e337b5b91c2f330925025a7894",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 11,
+    "question_versions": 11,
+    "question_parts": 79,
+    "mark_schemes": 11,
+    "mark_points": 65,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 0,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "566c24ca-1049-4c64-9419-b52ae3ed2213",
+    "questions": 11,
+    "parts": 79,
+    "markPoints": 65,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-2c-202201": {
+   "deleted": true,
+   "archive": "4CH1-2C_January2022.archive.json",
+   "archive_sha": "468f0568a23f3140db21deaeff5dc1942645c998209947dc948a546399a2f307",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 7,
+    "question_versions": 7,
+    "question_parts": 53,
+    "mark_schemes": 5,
+    "mark_points": 18,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 1,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "34c56cfa-d7dd-4388-904b-18a905bc3822",
+    "questions": 7,
+    "parts": 53,
+    "markPoints": 41,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-1c-202301": {
+   "deleted": true,
+   "archive": "4CH1-1C_January2023.archive.json",
+   "archive_sha": "b6922150272cbede5f0a34fcf949db1bc5f2dc8b77dd2f947ef43f2b433b7d08",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 12,
+    "question_versions": 12,
+    "question_parts": 71,
+    "mark_schemes": 9,
+    "mark_points": 44,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 1,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "8afaaa22-b2ef-45dd-aa11-d6abe3ec3092",
+    "questions": 12,
+    "parts": 72,
+    "markPoints": 60,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-2c-202301": {
+   "deleted": true,
+   "archive": "4CH1-2C_January2023.archive.json",
+   "archive_sha": "aec86f2afc083e9fcf202b3f890d5739d49d11099a2e95fe5671011ff0a4eed5",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 7,
+    "question_versions": 7,
+    "question_parts": 44,
+    "mark_schemes": 6,
+    "mark_points": 28,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 1,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "30cb3c9d-a77e-4441-80fe-bd0e0161cdfd",
+    "questions": 7,
+    "parts": 45,
+    "markPoints": 37,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-1c-202306": {
+   "deleted": true,
+   "archive": "4CH1-1C_June2023.archive.json",
+   "archive_sha": "2910a2274e28f9cbe56780f35e4a3921a8bf30a548d158037bc428f18e86fa30",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 10,
+    "question_versions": 10,
+    "question_parts": 68,
+    "mark_schemes": 10,
+    "mark_points": 55,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 0,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "e2033fc8-4154-45df-a02f-3f93916245f6",
+    "questions": 10,
+    "parts": 68,
+    "markPoints": 55,
+    "validationState": "SUGGESTED"
+   }
+  },
+  "4ch1-2c-202306": {
+   "deleted": true,
+   "archive": "4CH1-2C_June2023.archive.json",
+   "archive_sha": "a8af1d77fe31adede59c4a1c8754da96e6d6f951fe8aaa4a5578c90bafbd16ea",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 7,
+    "question_versions": 7,
+    "question_parts": 47,
+    "mark_schemes": 7,
+    "mark_points": 41,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 0,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   },
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "482f2333-c3bb-4d22-9eda-f463d3fa34b9",
+    "questions": 7,
+    "parts": 47,
+    "markPoints": 41,
+    "validationState": "SUGGESTED"
+   }
+  }
+ },
+ "new": {
+  "4ch1-2c-202011": {
+   "done": true,
+   "post_status": 201,
+   "ingested": {
+    "paperId": "e6c96a2e-1d1d-4310-aa4f-a46a98b99470",
+    "questions": 7,
+    "parts": 44,
+    "markPoints": 35,
+    "validationState": "SUGGESTED"
+   }
+  }
+ },
+ "merge": {
+  "4CH1-2C|Summer2022": {
+   "done": true,
+   "deleted_ep_id": "9c3b63a0-cda1-4f16-bd4e-f1801fb4fc0b",
+   "archive": "4CH1-2C_Summer2022.archive.json",
+   "archive_sha": "391d02d08e834a3ec016ca24b560252372f324866b967e6183590014b3b0c250",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 7,
+    "question_versions": 7,
+    "question_parts": 44,
+    "mark_schemes": 6,
+    "mark_points": 29,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 1,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   }
+  },
+  "4CH1-2CR|Summer2022": {
+   "done": true,
+   "deleted_ep_id": "ba8eb78c-625b-45dc-986b-1ae3409541f4",
+   "archive": "4CH1-2CR_Summer2022.archive.json",
+   "archive_sha": "ce35edc84cb62992c7b99c5c6085893def9312e24b39e34ee57c8f108a7b31b5",
+   "old_counts": {
+    "exam_papers": 1,
+    "questions": 7,
+    "question_versions": 7,
+    "question_parts": 47,
+    "mark_schemes": 6,
+    "mark_points": 25,
+    "question_topics": 0,
+    "question_spec_points": 0,
+    "question_options": 0,
+    "glm_ocr_bridge_records": 1,
+    "content_review_audit_refs": 0,
+    "teacher_validation_event_refs": 0
+   }
+  }
+ },
+ "repoint": {
+  "done": true,
+  "qv_repointed": 7,
+  "ms_repointed": 7
+ },
+ "poststate": {
+  "exam_papers": 104,
+  "questions": 1533,
+  "question_versions": 1533,
+  "mark_schemes": 1418,
+  "mark_points": 5271,
+  "bridge_records": 64,
+  "ep_uuid_form_qp": 0,
+  "ep_uuid_form_ms": 0
+ }
+}

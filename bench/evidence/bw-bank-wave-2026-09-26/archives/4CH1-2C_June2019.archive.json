@@ -1,0 +1,1375 @@
+{
+ "archived_at": "2026-09-25T16:57:10Z",
+ "paper_code": "4CH1/2C",
+ "session_label": "June 2019",
+ "ep_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+ "counts": {
+  "exam_papers": 1,
+  "questions": 8,
+  "question_versions": 8,
+  "question_parts": 45,
+  "mark_schemes": 8,
+  "mark_points": 39,
+  "question_topics": 0,
+  "question_spec_points": 0,
+  "question_options": 0,
+  "glm_ocr_bridge_records": 0,
+  "content_review_audit_refs": 0,
+  "teacher_validation_event_refs": 0
+ },
+ "rows": {
+  "exam_papers": [
+   {
+    "id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "subject_id": "0f3cc8ba-d8b6-464c-b915-77b29abd64af",
+    "title": "4CH1 Chemistry 4CH1/2C June 2019",
+    "board": "Edexcel",
+    "qualification": "4CH1",
+    "unit": "4CH1",
+    "session_label": "June 2019",
+    "paper_code": "4CH1/2C",
+    "question_paper_document_id": "f11e2595-cf07-5e1b-a97e-1f690077f2bf",
+    "mark_scheme_document_id": "24a393b2-84ad-56eb-9aef-0eed5d7f7e84",
+    "validation_state": "SUGGESTED",
+    "provenance": "PAST_PAPER",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+    "created_at": "2026-09-24 21:03:18.151707+00:00",
+    "series": "JUN",
+    "year": 2019
+   }
+  ],
+  "questions": [
+   {
+    "id": "f91840fe-6453-4540-82be-751f6a1709e8",
+    "external_ref": "4ch1-2c-201906#q1",
+    "question_type": "STRUCTURED",
+    "stem": "The diagram shows the particles in an atom of an element.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "marks": 6,
+    "difficulty": 3,
+    "expected_time_seconds": 540,
+    "command_word": null,
+    "primary_topic_node_id": "173948f9-a699-45af-91dd-096480499409",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 21:03:18.152017+00:00",
+    "exam_paper_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "difficulty_source": null
+   },
+   {
+    "id": "e80ed80e-9163-4c82-9f6f-92f265ae73d9",
+    "external_ref": "4ch1-2c-201906#q2",
+    "question_type": "STRUCTURED",
+    "stem": "The table gives some information about the halogens, chlorine, bromine and iodine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "primary_topic_node_id": "173948f9-a699-45af-91dd-096480499409",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 21:03:18.152508+00:00",
+    "exam_paper_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "difficulty_source": null
+   },
+   {
+    "id": "4eec8cd0-eed2-4310-a86f-9f677c5d2068",
+    "external_ref": "4ch1-2c-201906#q3",
+    "question_type": "STRUCTURED",
+    "stem": "Methanol, ethanol, propanol and butanol are alcohols. They are all liquids that\nevaporate easily when warmed.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nA student uses this apparatus to compare the time taken for the four liquids to evaporate.\nalcohol\nhot water\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nShe uses this method.\n\u2022\npour some methanol into an evaporating basin\n\u2022\nplace the evaporating basin on top of a beaker containing hot water\n\u2022\nmeasure the time taken for the methanol to evaporate completely\n\u2022\nrepeat the experiment with each of the other alcohols, using the same apparatus",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "primary_topic_node_id": "173948f9-a699-45af-91dd-096480499409",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 21:03:18.152803+00:00",
+    "exam_paper_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "difficulty_source": null
+   },
+   {
+    "id": "bbcb10f3-b337-4c12-8e2a-665249cee6c6",
+    "external_ref": "4ch1-2c-201906#q4",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about metals.",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "primary_topic_node_id": "173948f9-a699-45af-91dd-096480499409",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 21:03:18.153132+00:00",
+    "exam_paper_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "difficulty_source": null
+   },
+   {
+    "id": "ea304c89-8637-4c87-aff5-6bb44c9084b8",
+    "external_ref": "4ch1-2c-201906#q5",
+    "question_type": "STRUCTURED",
+    "stem": "During the Second World War, engineers developed a rocket-powered aircraft.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\ncombustion chamber\nhydrogen peroxide tank\nhydrazine tank\nThe aircraft carried these two liquids\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\n\u2022\nhydrazine, N2H4\n\u2022\nhydrogen peroxide, H2O2\nWhen these two liquids mix in the combustion chamber, they evaporate and then\nreact rapidly to form nitrogen gas, N2, and steam, H2O\nThe reaction is exothermic.\nThe equation for the reaction is\nN2H4 + 2H2O2 \u2192 N2 + 4H2O\nThe displayed formulae for the reactants and products are\nH\nH\nO\nH\nH\nH\nH\nO\nH\nH\nH\nH\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nO\nO\nN\nN\nO\nH\nH\nH\nH\nO\nN=N\nH\nH\nO\nO",
+    "marks": 10,
+    "difficulty": 3,
+    "expected_time_seconds": 900,
+    "command_word": null,
+    "primary_topic_node_id": "173948f9-a699-45af-91dd-096480499409",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 21:03:18.153515+00:00",
+    "exam_paper_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "difficulty_source": null
+   },
+   {
+    "id": "f31b99bb-4175-427a-b24f-bcb9d69e3ad7",
+    "external_ref": "4ch1-2c-201906#q6",
+    "question_type": "STRUCTURED",
+    "stem": "Some cars in Brazil use ethanol, C2H5OH, as a fuel instead of petrol.\nThe ethanol is made by the fermentation of glucose which is obtained from sugar cane.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe sugar is extracted from the sugar cane and then dissolved in water to make\na sugar solution.",
+    "marks": 14,
+    "difficulty": 3,
+    "expected_time_seconds": 1260,
+    "command_word": null,
+    "primary_topic_node_id": "173948f9-a699-45af-91dd-096480499409",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 21:03:18.153837+00:00",
+    "exam_paper_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "difficulty_source": null
+   },
+   {
+    "id": "83e1ebb2-9c2c-48ea-b16b-80128dbc5119",
+    "external_ref": "4ch1-2c-201906#q7",
+    "question_type": "STRUCTURED",
+    "stem": "Dinitrogen tetraoxide, N2O4, is a colourless gas.\nNitrogen dioxide, NO2, is a brown gas.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe two gases can exist together in dynamic equilibrium according to the equation\nN2O4(g) \uf083 2NO2(g)",
+    "marks": 8,
+    "difficulty": 3,
+    "expected_time_seconds": 720,
+    "command_word": null,
+    "primary_topic_node_id": "173948f9-a699-45af-91dd-096480499409",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 21:03:18.154127+00:00",
+    "exam_paper_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "difficulty_source": null
+   },
+   {
+    "id": "77398668-fc66-4a02-89f8-aa28b2e0cd98",
+    "external_ref": "4ch1-2c-201906#q8",
+    "question_type": "STRUCTURED",
+    "stem": "The concentration of NaClO(aq) in a solution of bleach is found by reacting it with\nhydrochloric acid.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe equation for the reaction is\nNaClO(aq) + 2HCl(aq) \u2192 NaCl(aq) + H2O(l) + Cl2(g)\nAn excess of dilute hydrochloric acid is added to 4.00\u2009cm3 of bleach solution.\n60.0\u2009cm3 of chlorine gas is produced.",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "primary_topic_node_id": "173948f9-a699-45af-91dd-096480499409",
+    "provenance": "PAST_PAPER",
+    "active": true,
+    "version": 1,
+    "created_at": "2026-09-24 21:03:18.154584+00:00",
+    "exam_paper_id": "46f421da-15bf-4226-baa4-24ab84fb9406",
+    "difficulty_source": null
+   }
+  ],
+  "question_versions": [
+   {
+    "id": "9f9b7d30-2cf4-47e6-950e-dbc44a210adc",
+    "question_id": "f91840fe-6453-4540-82be-751f6a1709e8",
+    "version": 1,
+    "stem": "The diagram shows the particles in an atom of an element.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "marks": 6,
+    "difficulty": 3,
+    "expected_time_seconds": 540,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": null,
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.152324+00:00"
+   },
+   {
+    "id": "7c39d442-e537-46fe-bcaf-ba5d2e7c4097",
+    "question_id": "e80ed80e-9163-4c82-9f6f-92f265ae73d9",
+    "version": 1,
+    "stem": "The table gives some information about the halogens, chlorine, bromine and iodine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": null,
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.152654+00:00"
+   },
+   {
+    "id": "b8b7aba7-2704-4dcb-b432-1fd7af0c7bfc",
+    "question_id": "4eec8cd0-eed2-4310-a86f-9f677c5d2068",
+    "version": 1,
+    "stem": "Methanol, ethanol, propanol and butanol are alcohols. They are all liquids that\nevaporate easily when warmed.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nA student uses this apparatus to compare the time taken for the four liquids to evaporate.\nalcohol\nhot water\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nShe uses this method.\n\u2022\npour some methanol into an evaporating basin\n\u2022\nplace the evaporating basin on top of a beaker containing hot water\n\u2022\nmeasure the time taken for the methanol to evaporate completely\n\u2022\nrepeat the experiment with each of the other alcohols, using the same apparatus",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": null,
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.152948+00:00"
+   },
+   {
+    "id": "3d875935-e5ea-4367-a45b-32ac71fe6e8d",
+    "question_id": "bbcb10f3-b337-4c12-8e2a-665249cee6c6",
+    "version": 1,
+    "stem": "This question is about metals.",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": null,
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.153329+00:00"
+   },
+   {
+    "id": "d1489c6f-7285-42b2-8df8-04913353e5ce",
+    "question_id": "ea304c89-8637-4c87-aff5-6bb44c9084b8",
+    "version": 1,
+    "stem": "During the Second World War, engineers developed a rocket-powered aircraft.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\ncombustion chamber\nhydrogen peroxide tank\nhydrazine tank\nThe aircraft carried these two liquids\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\n\u2022\nhydrazine, N2H4\n\u2022\nhydrogen peroxide, H2O2\nWhen these two liquids mix in the combustion chamber, they evaporate and then\nreact rapidly to form nitrogen gas, N2, and steam, H2O\nThe reaction is exothermic.\nThe equation for the reaction is\nN2H4 + 2H2O2 \u2192 N2 + 4H2O\nThe displayed formulae for the reactants and products are\nH\nH\nO\nH\nH\nH\nH\nO\nH\nH\nH\nH\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nO\nO\nN\nN\nO\nH\nH\nH\nH\nO\nN=N\nH\nH\nO\nO",
+    "marks": 10,
+    "difficulty": 3,
+    "expected_time_seconds": 900,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": null,
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.153677+00:00"
+   },
+   {
+    "id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "question_id": "f31b99bb-4175-427a-b24f-bcb9d69e3ad7",
+    "version": 1,
+    "stem": "Some cars in Brazil use ethanol, C2H5OH, as a fuel instead of petrol.\nThe ethanol is made by the fermentation of glucose which is obtained from sugar cane.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe sugar is extracted from the sugar cane and then dissolved in water to make\na sugar solution.",
+    "marks": 14,
+    "difficulty": 3,
+    "expected_time_seconds": 1260,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": null,
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.153975+00:00"
+   },
+   {
+    "id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "question_id": "83e1ebb2-9c2c-48ea-b16b-80128dbc5119",
+    "version": 1,
+    "stem": "Dinitrogen tetraoxide, N2O4, is a colourless gas.\nNitrogen dioxide, NO2, is a brown gas.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe two gases can exist together in dynamic equilibrium according to the equation\nN2O4(g) \uf083 2NO2(g)",
+    "marks": 8,
+    "difficulty": 3,
+    "expected_time_seconds": 720,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": null,
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.154414+00:00"
+   },
+   {
+    "id": "10e5eef5-01ac-4ad6-8210-8f9df54d3e84",
+    "question_id": "77398668-fc66-4a02-89f8-aa28b2e0cd98",
+    "version": 1,
+    "stem": "The concentration of NaClO(aq) in a solution of bleach is found by reacting it with\nhydrochloric acid.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe equation for the reaction is\nNaClO(aq) + 2HCl(aq) \u2192 NaCl(aq) + H2O(l) + Cl2(g)\nAn excess of dilute hydrochloric acid is added to 4.00\u2009cm3 of bleach solution.\n60.0\u2009cm3 of chlorine gas is produced.",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": null,
+    "extraction_confidence": 1.0,
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.154759+00:00"
+   }
+  ],
+  "question_parts": [
+   {
+    "id": "b17f0068-eebe-40e4-8919-cc2e6ff9cf43",
+    "question_version_id": "9f9b7d30-2cf4-47e6-950e-dbc44a210adc",
+    "label": "a",
+    "prompt": "The box gives the names of some particles.\nelectron ion molecule neutron proton\nUse words from the box to label the diagram.",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 0,
+    "created_at": "2026-09-24 21:03:18.156789+00:00"
+   },
+   {
+    "id": "d8197a83-b8b4-4daa-8dc8-fe127e7b4166",
+    "question_version_id": "9f9b7d30-2cf4-47e6-950e-dbc44a210adc",
+    "label": "b",
+    "prompt": "Give the mass number of this atom.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 1,
+    "created_at": "2026-09-24 21:03:18.156848+00:00"
+   },
+   {
+    "id": "5ed78563-e2f2-4af5-b599-3a4e7bfcfb69",
+    "question_version_id": "9f9b7d30-2cf4-47e6-950e-dbc44a210adc",
+    "label": "c",
+    "prompt": "Complete the sentence about isotopes.\nIsotopes are atoms that have the same number of ..............................................................\nbut have a different number of .............................................................. .\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 2,
+    "created_at": "2026-09-24 21:03:18.156864+00:00"
+   },
+   {
+    "id": "1f7af4b2-b199-4c0d-ba8b-1389009b87f6",
+    "question_version_id": "7c39d442-e537-46fe-bcaf-ba5d2e7c4097",
+    "label": "a",
+    "prompt": "Complete the table.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 0,
+    "created_at": "2026-09-24 21:03:18.156896+00:00"
+   },
+   {
+    "id": "93a0b0f7-498e-4819-84f8-f3f4adde40f6",
+    "question_version_id": "7c39d442-e537-46fe-bcaf-ba5d2e7c4097",
+    "label": "b",
+    "prompt": "Chlorine has two isotopes of mass numbers 35 and 37\nThe relative percentage of each isotope in a sample of chlorine is\nchlorine-35 77.78% chlorine-37 22.22%\nCalculate the relative atomic mass of this sample of chlorine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nGive your answer to one decimal place.\nrelative atomic mass = ..........................................................",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 1,
+    "created_at": "2026-09-24 21:03:18.156910+00:00"
+   },
+   {
+    "id": "ee5d6821-075c-408a-bd64-c652016dae76",
+    "question_version_id": "7c39d442-e537-46fe-bcaf-ba5d2e7c4097",
+    "label": "c",
+    "prompt": "A student is given an aqueous solution of chlorine and an aqueous solution of\npotassium bromide.\nExplain how he can use these two solutions to compare the reactivity of chlorine\nwith the reactivity of bromine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 4,
+    "ordering": 2,
+    "created_at": "2026-09-24 21:03:18.156921+00:00"
+   },
+   {
+    "id": "61bd5c3a-b462-4579-854f-0ce4651826cf",
+    "question_version_id": "b8b7aba7-2704-4dcb-b432-1fd7af0c7bfc",
+    "label": "a",
+    "prompt": "State two variables the student should control to make sure her results are valid.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 0,
+    "created_at": "2026-09-24 21:03:18.156943+00:00"
+   },
+   {
+    "id": "f29c0847-5026-4977-a769-f4f546655b25",
+    "question_version_id": "b8b7aba7-2704-4dcb-b432-1fd7af0c7bfc",
+    "label": "b",
+    "prompt": "State why it is not safe to heat the evaporating basin directly with a Bunsen flame.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 1,
+    "created_at": "2026-09-24 21:03:18.156965+00:00"
+   },
+   {
+    "id": "efefea1b-1bab-4a03-9b8e-25b293fba717",
+    "question_version_id": "b8b7aba7-2704-4dcb-b432-1fd7af0c7bfc",
+    "label": "c",
+    "prompt": "The table shows the results of experiments done by four students, A, B, C and D.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 6,
+    "ordering": 2,
+    "created_at": "2026-09-24 21:03:18.156978+00:00"
+   },
+   {
+    "id": "df4f5b91-031a-49e0-b877-a73bd6c0910d",
+    "question_version_id": "b8b7aba7-2704-4dcb-b432-1fd7af0c7bfc",
+    "label": "c-i",
+    "prompt": "Calculate the mean (average) time for butanol to evaporate.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nmean time = ..............................................................s",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 3,
+    "created_at": "2026-09-24 21:03:18.156989+00:00"
+   },
+   {
+    "id": "2e6651f8-5be6-4344-a29d-f82b7d5d4db9",
+    "question_version_id": "b8b7aba7-2704-4dcb-b432-1fd7af0c7bfc",
+    "label": "c-ii",
+    "prompt": "Explain how the results show which alcohol evaporates most easily.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 4,
+    "created_at": "2026-09-24 21:03:18.157003+00:00"
+   },
+   {
+    "id": "d59698d6-843a-4f04-9cfb-e5ea279a2132",
+    "question_version_id": "b8b7aba7-2704-4dcb-b432-1fd7af0c7bfc",
+    "label": "c-iii",
+    "prompt": "State the relationship between the number of carbon atoms in the molecule\nand how easily the alcohol evaporates.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 5,
+    "created_at": "2026-09-24 21:03:18.157014+00:00"
+   },
+   {
+    "id": "3fbf2f95-2b77-4374-91ed-d11fe79c81a5",
+    "question_version_id": "3d875935-e5ea-4367-a45b-32ac71fe6e8d",
+    "label": "a",
+    "prompt": "Which statement describes metallic bonding?\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nA electrostatic attraction between oppositely charged ions\nB electrostatic attraction between the nuclei of two atoms and a pair of\nelectrons shared between them\nC electrostatic attraction between positively charged particles and delocalised electrons\nD electrostatic attraction between atoms",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 0,
+    "created_at": "2026-09-24 21:03:18.157037+00:00"
+   },
+   {
+    "id": "71164be3-7dfa-4b0e-9ada-327e871136ce",
+    "question_version_id": "3d875935-e5ea-4367-a45b-32ac71fe6e8d",
+    "label": "b",
+    "prompt": "Aluminium is malleable and can be easily shaped to make saucepans used for\ncooking food.\nState two other properties of aluminium that make it suitable for saucepans used\nfor cooking food.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 1,
+    "created_at": "2026-09-24 21:03:18.157057+00:00"
+   },
+   {
+    "id": "a7587b65-99e1-407a-80eb-c3885368efd6",
+    "question_version_id": "3d875935-e5ea-4367-a45b-32ac71fe6e8d",
+    "label": "c",
+    "prompt": "Magnalium is an alloy of aluminium and magnesium.\nThe diagram shows how the atoms are arranged in this alloy.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nmagnesium atom\naluminium atom",
+    "command_word": null,
+    "marks": 4,
+    "ordering": 2,
+    "created_at": "2026-09-24 21:03:18.157069+00:00"
+   },
+   {
+    "id": "54638c8a-1479-44d8-9324-c40370a934ad",
+    "question_version_id": "3d875935-e5ea-4367-a45b-32ac71fe6e8d",
+    "label": "c-i",
+    "prompt": "State what is meant by the term alloy.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 3,
+    "created_at": "2026-09-24 21:03:18.157089+00:00"
+   },
+   {
+    "id": "2d49c200-2ebc-4e69-a0e6-e0c871708ea9",
+    "question_version_id": "3d875935-e5ea-4367-a45b-32ac71fe6e8d",
+    "label": "c-ii",
+    "prompt": "Explain why magnalium is harder than aluminium.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 4,
+    "created_at": "2026-09-24 21:03:18.157099+00:00"
+   },
+   {
+    "id": "70c2f2a1-764d-43fc-9a75-56c346c60214",
+    "question_version_id": "d1489c6f-7285-42b2-8df8-04913353e5ce",
+    "label": "a",
+    "prompt": "The tables give the bond energies for the bonds broken in the reactants and the\nbonds made in the products.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 5,
+    "ordering": 0,
+    "created_at": "2026-09-24 21:03:18.157123+00:00"
+   },
+   {
+    "id": "9752ecaf-3048-481a-a0f8-2ea6369340b0",
+    "question_version_id": "d1489c6f-7285-42b2-8df8-04913353e5ce",
+    "label": "a-i",
+    "prompt": "Use the data in the tables to calculate the total amount of energy required to\nbreak all of the bonds in the reactants.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nenergy required = .............................................................. kJ",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 1,
+    "created_at": "2026-09-24 21:03:18.157136+00:00"
+   },
+   {
+    "id": "9ef0b9ce-358d-40da-9c75-4857260aa60f",
+    "question_version_id": "d1489c6f-7285-42b2-8df8-04913353e5ce",
+    "label": "a-ii",
+    "prompt": "Use the data in the tables to calculate the total amount of energy released\nwhen all of the bonds in the products are made.\nenergy released = .............................................................. kJ",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 2,
+    "created_at": "2026-09-24 21:03:18.157147+00:00"
+   },
+   {
+    "id": "8800d6da-7752-4841-b803-e7b17d4d8db3",
+    "question_version_id": "d1489c6f-7285-42b2-8df8-04913353e5ce",
+    "label": "a-iii",
+    "prompt": "Calculate the enthalpy change, \u2206H, in kJ/mol, for the reaction.\nInclude a sign in your answer.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 3,
+    "created_at": "2026-09-24 21:03:18.157156+00:00"
+   },
+   {
+    "id": "6635c2e1-ae23-4bee-97bb-92dce14611b8",
+    "question_version_id": "d1489c6f-7285-42b2-8df8-04913353e5ce",
+    "label": "b",
+    "prompt": "Explain, in terms of bonds broken and bonds made, why this reaction is exothermic.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 4,
+    "created_at": "2026-09-24 21:03:18.157247+00:00"
+   },
+   {
+    "id": "01c7cd1b-589b-42ca-a228-f10ea91d4ed0",
+    "question_version_id": "d1489c6f-7285-42b2-8df8-04913353e5ce",
+    "label": "c",
+    "prompt": "Draw an energy level diagram for the reaction between N2H4 and H2O2\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nenergy",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 5,
+    "created_at": "2026-09-24 21:03:18.157272+00:00"
+   },
+   {
+    "id": "aa8dae71-c9e1-42df-831d-85020aaf429e",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "a-i",
+    "prompt": "Name the substance that is added to the sugar solution that causes glucose to ferment.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 0,
+    "created_at": "2026-09-24 21:03:18.157306+00:00"
+   },
+   {
+    "id": "8b702a12-7264-462d-8d11-dd661953baf5",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "a-ii",
+    "prompt": "Which temperature is the most suitable for fermentation?\nA 0\u00b0C\nB 10\u00b0C\nC 30\u00b0C\nD 80\u00b0C\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 1,
+    "created_at": "2026-09-24 21:03:18.157322+00:00"
+   },
+   {
+    "id": "67576a90-47fe-4e66-b946-991f011f4b3b",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "a-iii",
+    "prompt": "Explain why fermentation is done in the absence of air.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 2,
+    "created_at": "2026-09-24 21:03:18.157334+00:00"
+   },
+   {
+    "id": "a550c2a9-5b66-4cf9-b71b-fd283c936c3a",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "b-i",
+    "prompt": "State what is meant by the term fuel.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 3,
+    "created_at": "2026-09-24 21:03:18.157345+00:00"
+   },
+   {
+    "id": "00aa8376-35cd-46c9-a3e1-13ce8f3ad0dd",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "b-ii",
+    "prompt": "Write a chemical equation for the complete combustion of ethanol in air.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 4,
+    "created_at": "2026-09-24 21:03:18.157355+00:00"
+   },
+   {
+    "id": "aa0e7d4f-fca4-4a77-af31-4cd40ecfad60",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "c",
+    "prompt": "Ethanol is also manufactured by reacting steam with ethene, C2H4\nThe equation for this reaction is\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nC2H4(g) + H2O(g) \u2192 C2H5OH(g)\nState the conditions of temperature and pressure used in this process.\ntemperature . ...............................................................................................................................................................................................................................................\npressure . ..........................................................................................................................................................................................................................................................",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 5,
+    "created_at": "2026-09-24 21:03:18.157366+00:00"
+   },
+   {
+    "id": "02eaf7b7-0e38-431d-ba85-5b3901330e07",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "d",
+    "prompt": "When ethanol is heated with acidified potassium dichromate(VI), it is oxidised to\nethanoic acid.",
+    "command_word": null,
+    "marks": 5,
+    "ordering": 6,
+    "created_at": "2026-09-24 21:03:18.157375+00:00"
+   },
+   {
+    "id": "9c4b4717-b5e1-4d8b-8111-312600242a89",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "d-i",
+    "prompt": "State the colour change that occurs in the potassium dichromate(VI) during\nthis reaction.\nfrom ................................................................................................................ to ................................................................................................................\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 7,
+    "created_at": "2026-09-24 21:03:18.157384+00:00"
+   },
+   {
+    "id": "9e916fb3-060b-4e31-84af-8464255df003",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "d-ii",
+    "prompt": "The structural formula of ethanoic acid is CH3COOH\nDraw the displayed formula of ethanoic acid.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 8,
+    "created_at": "2026-09-24 21:03:18.157394+00:00"
+   },
+   {
+    "id": "be31ffea-80e4-47ee-a51f-f450d7258639",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "label": "d-iii",
+    "prompt": "Complete the equation for the reaction of ethanoic acid with sodium.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\n.......................CH3COOH(aq) + .......................Na(s) \u2192 ..............................................................(aq) + ....................................(g)",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 9,
+    "created_at": "2026-09-24 21:03:18.157404+00:00"
+   },
+   {
+    "id": "7d9e9e6b-d4ee-4e56-9af0-c773a3ae773c",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "label": "a",
+    "prompt": "Explain what is meant by the term dynamic equilibrium.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 0,
+    "created_at": "2026-09-24 21:03:18.157433+00:00"
+   },
+   {
+    "id": "a811a687-a822-48f6-aabb-05ae07c7b489",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "label": "b",
+    "prompt": "Some N2O4 and some NO2 are put into a sealed gas syringe and allowed to form\nan equilibrium mixture.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nequilibrium mixture\npiston\ngas syringe\nThis equilibrium mixture is brown.",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 1,
+    "created_at": "2026-09-24 21:03:18.157446+00:00"
+   },
+   {
+    "id": "66559c4b-55ed-4a13-83e7-2d040a0084f1",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "label": "b-i",
+    "prompt": "The pressure of the gas in the syringe is increased by pushing in the piston.\nThe mixture is then allowed to reach a new equilibrium at the same\ntemperature as before.\nExplain why the new equilibrium mixture contains less NO2 than the original\nequilibrium mixture.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 2,
+    "created_at": "2026-09-24 21:03:18.157456+00:00"
+   },
+   {
+    "id": "4aedde78-ae8d-44ac-aea7-71fb3f2b4b47",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "label": "b-ii",
+    "prompt": "A student suggests that the new equilibrium mixture would be lighter in\ncolour than the original equilibrium mixture, as there is now less NO2 present.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nSuggest why the new equilibrium mixture is actually darker than the original.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 3,
+    "created_at": "2026-09-24 21:03:18.157466+00:00"
+   },
+   {
+    "id": "94460ae9-fe56-4158-9561-7ac570b1f3a0",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "label": "c",
+    "prompt": "Carbon monoxide, CO, and oxides of nitrogen are produced in a car engine when\npetrol is burned.\nThese oxides can be partly removed by using a catalytic converter fitted to the\ncar\u2019s exhaust system.",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 4,
+    "created_at": "2026-09-24 21:03:18.157477+00:00"
+   },
+   {
+    "id": "21002659-d93b-4e1c-8d7a-ff3df2bec20a",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "label": "c-i",
+    "prompt": "State how oxides of nitrogen are produced in the car engine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 5,
+    "created_at": "2026-09-24 21:03:18.157486+00:00"
+   },
+   {
+    "id": "b3b39793-2e89-460c-a865-8f3bf38d2a80",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "label": "c-ii",
+    "prompt": "Give a disadvantage of allowing oxides of nitrogen to escape into the atmosphere.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 6,
+    "created_at": "2026-09-24 21:03:18.157524+00:00"
+   },
+   {
+    "id": "988e9025-a36a-47d0-b205-71ea285890c6",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "label": "c-iii",
+    "prompt": "Write a chemical equation for the reaction between nitrogen monoxide, NO,\nand carbon monoxide to form carbon dioxide and nitrogen.",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 7,
+    "created_at": "2026-09-24 21:03:18.157542+00:00"
+   },
+   {
+    "id": "75d31243-7ef9-4c8e-ae3c-106ef6945358",
+    "question_version_id": "10e5eef5-01ac-4ad6-8210-8f9df54d3e84",
+    "label": "a",
+    "prompt": "Explain a safety precaution that should be taken when doing this experiment.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 0,
+    "created_at": "2026-09-24 21:03:18.157567+00:00"
+   },
+   {
+    "id": "7023a020-f600-4cf7-861d-7efefff93d7a",
+    "question_version_id": "10e5eef5-01ac-4ad6-8210-8f9df54d3e84",
+    "label": "b-i",
+    "prompt": "Calculate the amount, in moles, of chlorine gas produced.\nAssume one mole of chlorine gas occupies 24\u2009000\u2009cm3.\namount of chlorine = .............................................................. mol",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 1,
+    "created_at": "2026-09-24 21:03:18.157588+00:00"
+   },
+   {
+    "id": "6f6c5991-df25-4742-bda7-7ebe31305f4a",
+    "question_version_id": "10e5eef5-01ac-4ad6-8210-8f9df54d3e84",
+    "label": "b-ii",
+    "prompt": "Determine the amount, in moles, of NaClO in 4.00\u2009cm3 of bleach.\namount of NaClO = .............................................................. mol\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 2,
+    "created_at": "2026-09-24 21:03:18.157601+00:00"
+   },
+   {
+    "id": "30253106-50e3-4f73-b078-27b98bb95557",
+    "question_version_id": "10e5eef5-01ac-4ad6-8210-8f9df54d3e84",
+    "label": "b-iii",
+    "prompt": "Calculate the concentration, in mol/dm3, of the bleach solution.\nconcentration = .............................................................. mol/dm3",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 3,
+    "created_at": "2026-09-24 21:03:18.157612+00:00"
+   }
+  ],
+  "mark_schemes": [
+   {
+    "id": "8c7c47fa-d8a8-46ae-9d4f-347957a2a06b",
+    "question_version_id": "9f9b7d30-2cf4-47e6-950e-dbc44a210adc",
+    "version_label": "1",
+    "source_document_id": null,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.154987+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "f0e5c702-90fe-45b8-870a-cbe7bfbca4c3",
+    "question_version_id": "7c39d442-e537-46fe-bcaf-ba5d2e7c4097",
+    "version_label": "1",
+    "source_document_id": null,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.155224+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "87228063-1ae9-46d1-a425-10eea5285c92",
+    "question_version_id": "b8b7aba7-2704-4dcb-b432-1fd7af0c7bfc",
+    "version_label": "1",
+    "source_document_id": null,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.155444+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "cd4e2cce-efd1-4af6-98e1-f0bfc63a4026",
+    "question_version_id": "3d875935-e5ea-4367-a45b-32ac71fe6e8d",
+    "version_label": "1",
+    "source_document_id": null,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.155621+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "bd656946-4145-4825-ba51-6498f929b35c",
+    "question_version_id": "d1489c6f-7285-42b2-8df8-04913353e5ce",
+    "version_label": "1",
+    "source_document_id": null,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.155791+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_version_id": "56ff241d-fa93-4be0-9039-4c2224c1c19b",
+    "version_label": "1",
+    "source_document_id": null,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.155946+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "0969a175-103e-44d9-a2a3-9397cdefe9fa",
+    "question_version_id": "47d64721-af3d-4c69-86f5-24ba2d074298",
+    "version_label": "1",
+    "source_document_id": null,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.156104+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "a49097d6-d96d-49c8-b6d3-b8d4aed95985",
+    "question_version_id": "10e5eef5-01ac-4ad6-8210-8f9df54d3e84",
+    "version_label": "1",
+    "source_document_id": null,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1",
+    "created_at": "2026-09-24 21:03:18.156295+00:00",
+    "general_guidance": null
+   }
+  ],
+  "mark_points": [
+   {
+    "id": "f15f0ad9-f323-465b-862e-5898f2d931cf",
+    "mark_scheme_id": "8c7c47fa-d8a8-46ae-9d4f-347957a2a06b",
+    "question_part_id": "b17f0068-eebe-40e4-8919-cc2e6ff9cf43",
+    "ref": "1-a",
+    "ordering": 0,
+    "text": "1 mark for each correct",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.157637+00:00"
+   },
+   {
+    "id": "2ffb8248-56b9-4a0f-8aee-8b221eec7d97",
+    "mark_scheme_id": "8c7c47fa-d8a8-46ae-9d4f-347957a2a06b",
+    "question_part_id": "d8197a83-b8b4-4daa-8dc8-fe127e7b4166",
+    "ref": "1-b",
+    "ordering": 1,
+    "text": "13",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.157824+00:00"
+   },
+   {
+    "id": "31cc653b-77eb-4940-8674-5b21380f53c8",
+    "mark_scheme_id": "8c7c47fa-d8a8-46ae-9d4f-347957a2a06b",
+    "question_part_id": "5ed78563-e2f2-4af5-b599-3a4e7bfcfb69",
+    "ref": "1-c",
+    "ordering": 2,
+    "text": "protons",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Ignore: electrons"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.157905+00:00"
+   },
+   {
+    "id": "05f81920-e29d-4b6b-99b4-25702a4879c5",
+    "mark_scheme_id": "f0e5c702-90fe-45b8-870a-cbe7bfbca4c3",
+    "question_part_id": "1f7af4b2-b199-4c0d-ba8b-1389009b87f6",
+    "ref": "2-a",
+    "ordering": 0,
+    "text": "grey and black eg grey-black",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: black",
+     "Allow: any combination of"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.157982+00:00"
+   },
+   {
+    "id": "b3073828-fb13-4aaf-8ed2-dce21ea7a559",
+    "mark_scheme_id": "f0e5c702-90fe-45b8-870a-cbe7bfbca4c3",
+    "question_part_id": "93a0b0f7-498e-4819-84f8-f3f4adde40f6",
+    "ref": "2-b",
+    "ordering": 1,
+    "text": "(35 \u00d7 77.78) + (37 \u00d7 22.22)",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158052+00:00"
+   },
+   {
+    "id": "2d825e24-7e84-456c-930a-4866aad46820",
+    "mark_scheme_id": "f0e5c702-90fe-45b8-870a-cbe7bfbca4c3",
+    "question_part_id": "ee5d6821-075c-408a-bd64-c652016dae76",
+    "ref": "2-c",
+    "ordering": 2,
+    "text": "add chlorine (solution) to potassium bromide",
+    "marks": 4,
+    "acceptance_criteria": [
+     "Allow: mix the two"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158104+00:00"
+   },
+   {
+    "id": "7609ae83-acbb-482a-bd5b-21eacf034e26",
+    "mark_scheme_id": "87228063-1ae9-46d1-a425-10eea5285c92",
+    "question_part_id": "61bd5c3a-b462-4579-854f-0ce4651826cf",
+    "ref": "3-a",
+    "ordering": 0,
+    "text": "the volume of liquid/alcohol",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: amount of liquid/alcohol",
+     "Ignore: mass",
+     "Ignore: volume of water"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158196+00:00"
+   },
+   {
+    "id": "fc31a50a-5bd2-4cc5-a35c-7b898ff04f7a",
+    "mark_scheme_id": "87228063-1ae9-46d1-a425-10eea5285c92",
+    "question_part_id": "f29c0847-5026-4977-a769-f4f546655b25",
+    "ref": "3-b",
+    "ordering": 1,
+    "text": "alcohols/the liquids are flammable/catch fire",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: alcohols/the liquids can be",
+     "Allow: any named alcohol from the"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158262+00:00"
+   },
+   {
+    "id": "d349f05f-ec58-44e5-92a6-e7ca120e8bfb",
+    "mark_scheme_id": "87228063-1ae9-46d1-a425-10eea5285c92",
+    "question_part_id": "df4f5b91-031a-49e0-b877-a73bd6c0910d",
+    "ref": "3-c-i",
+    "ordering": 2,
+    "text": "(64 + 63 + 60) \u00f73",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158320+00:00"
+   },
+   {
+    "id": "0db62a35-7cf0-4727-9db0-c02aee068989",
+    "mark_scheme_id": "87228063-1ae9-46d1-a425-10eea5285c92",
+    "question_part_id": "2e6651f8-5be6-4344-a29d-f82b7d5d4db9",
+    "ref": "3-c-ii",
+    "ordering": 3,
+    "text": "methanol/CH3OH (evaporates most easily)",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158377+00:00"
+   },
+   {
+    "id": "ee12d2bc-47ea-4d73-a882-eef597624594",
+    "mark_scheme_id": "87228063-1ae9-46d1-a425-10eea5285c92",
+    "question_part_id": "d59698d6-843a-4f04-9cfb-e5ea279a2132",
+    "ref": "3-c-iii",
+    "ordering": 4,
+    "text": "as the number of carbon atoms increases",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158439+00:00"
+   },
+   {
+    "id": "1bdcf0e8-2858-4b63-9cba-ef3fc2df913e",
+    "mark_scheme_id": "cd4e2cce-efd1-4af6-98e1-f0bfc63a4026",
+    "question_part_id": "3fbf2f95-2b77-4374-91ed-d11fe79c81a5",
+    "ref": "4-a",
+    "ordering": 0,
+    "text": "C (electrostatic attraction between positively charged",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158510+00:00"
+   },
+   {
+    "id": "45c595b2-e390-4b1d-afe0-2b1e7af3a75b",
+    "mark_scheme_id": "cd4e2cce-efd1-4af6-98e1-f0bfc63a4026",
+    "question_part_id": "71164be3-7dfa-4b0e-9ada-327e871136ce",
+    "ref": "4-b",
+    "ordering": 1,
+    "text": "good conductor of heat/thermal energy",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158563+00:00"
+   },
+   {
+    "id": "28ba9c3e-eb3f-4665-aebf-8aa2441af105",
+    "mark_scheme_id": "cd4e2cce-efd1-4af6-98e1-f0bfc63a4026",
+    "question_part_id": "54638c8a-1479-44d8-9324-c40370a934ad",
+    "ref": "4-c-i",
+    "ordering": 2,
+    "text": "a mixture of (two or more) elements, one of which is",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: a mixture of (two or",
+     "Allow: combination for mixture",
+     "Reject: compound or references to"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158634+00:00"
+   },
+   {
+    "id": "b3a59306-cffd-4bb0-b1da-266292f8b6e0",
+    "mark_scheme_id": "cd4e2cce-efd1-4af6-98e1-f0bfc63a4026",
+    "question_part_id": "2d49c200-2ebc-4e69-a0e6-e0c871708ea9",
+    "ref": "4-c-ii",
+    "ordering": 3,
+    "text": "the regular arrangement of atoms is",
+    "marks": 3,
+    "acceptance_criteria": [
+     "Allow: lattice/layers/rows of",
+     "Allow: lattice/layers/rows of"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158694+00:00"
+   },
+   {
+    "id": "e5c8b26d-a132-4044-af96-8f7ee6120744",
+    "mark_scheme_id": "bd656946-4145-4825-ba51-6498f929b35c",
+    "question_part_id": "9752ecaf-3048-481a-a0f8-2ea6369340b0",
+    "ref": "5-a-i",
+    "ordering": 0,
+    "text": "(bonds broken)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158759+00:00"
+   },
+   {
+    "id": "36052ece-3146-4b96-8fbd-238074b74487",
+    "mark_scheme_id": "bd656946-4145-4825-ba51-6498f929b35c",
+    "question_part_id": "9ef0b9ce-358d-40da-9c75-4857260aa60f",
+    "ref": "5-a-ii",
+    "ordering": 1,
+    "text": "(bonds made)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158817+00:00"
+   },
+   {
+    "id": "5f8d859b-2b28-414c-95e6-9570e3cde199",
+    "mark_scheme_id": "bd656946-4145-4825-ba51-6498f929b35c",
+    "question_part_id": "8800d6da-7752-4841-b803-e7b17d4d8db3",
+    "ref": "5-a-iii",
+    "ordering": 2,
+    "text": "subtraction of \u03a3(bonds made) made and",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158869+00:00"
+   },
+   {
+    "id": "494a2dd2-7e00-43c2-b142-59fccf995c4f",
+    "mark_scheme_id": "bd656946-4145-4825-ba51-6498f929b35c",
+    "question_part_id": "6635c2e1-ae23-4bee-97bb-92dce14611b8",
+    "ref": "5-b",
+    "ordering": 3,
+    "text": "more energy is given out when the bonds are made",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158919+00:00"
+   },
+   {
+    "id": "8b030e22-bb0a-4bea-911a-489a14106186",
+    "mark_scheme_id": "bd656946-4145-4825-ba51-6498f929b35c",
+    "question_part_id": "01c7cd1b-589b-42ca-a228-f10ea91d4ed0",
+    "ref": "5-c",
+    "ordering": 4,
+    "text": "drawn; shown; energy shown; M2 (no printed marks cell): correct evaluation of the calculation shown in M1 | IGNORE sign; M3 (no printed marks cell): If \u03a3(bonds made) > \u03a3(bonds broken) final answer must | be negative | If \u03a3(bonds made) < \u03a3(bonds broken) final answer must   Expected final answer is | be positive (and + sign given)                         \u2012788 (kJ/mol) | -788 with no working | scores 3 | (+) 788 scores 2; P3 (no printed marks cell): An explanation that links together the following two points:; M2 (no printed marks cell): than is taken in when the bonds are broken | ACCEPT correct reverse | argument | Answer                Additional guidance       Marks; M1 (no printed marks cell): right hand line below left hand line; M2 (no printed marks cell): correct names/formulae of both reactants | If only use words | reactants (on left) and; M3 (no printed marks cell): correct names/formulae of both products | products (on right) award | 1 mark from M2 and M3",
+    "marks": 3,
+    "acceptance_criteria": [
+     "Ignore: horizontal axis",
+     "Ignore: enthalpy change",
+     "Ignore: activation"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.158974+00:00"
+   },
+   {
+    "id": "74214a70-f0f6-4c95-85c0-d54cc4d40ca2",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "aa8dae71-c9e1-42df-831d-85020aaf429e",
+    "ref": "6-a-i",
+    "ordering": 0,
+    "text": "yeast",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Ignore: zymase"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159041+00:00"
+   },
+   {
+    "id": "9bd76334-4e1e-4a48-9baa-5d0a02d1fcea",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "8b702a12-7264-462d-8d11-dd661953baf5",
+    "ref": "6-a-ii",
+    "ordering": 1,
+    "text": "C (30 \u00b0C) is correct as it is the most",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159099+00:00"
+   },
+   {
+    "id": "238a6261-b51c-4330-aeaf-63aeaf8ac232",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "67576a90-47fe-4e66-b946-991f011f4b3b",
+    "ref": "6-a-iii",
+    "ordering": 2,
+    "text": "oxygen in the air would react with",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: ethanol would be oxidised"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159151+00:00"
+   },
+   {
+    "id": "aa3fb152-a22d-4e7d-8246-80c33e38c318",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "a550c2a9-5b66-4cf9-b71b-fd283c936c3a",
+    "ref": "6-b-i",
+    "ordering": 3,
+    "text": "a substance that releases thermal",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Ignore: energy on its own"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159233+00:00"
+   },
+   {
+    "id": "2e5134a9-6f26-4d8f-bc2e-d657c3a72056",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "00aa8376-35cd-46c9-a3e1-13ce8f3ad0dd",
+    "ref": "6-b-ii",
+    "ordering": 4,
+    "text": "C2H5OH + 3 O2 \uf022 2 CO2 + 3 H2O",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: multiples"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159313+00:00"
+   },
+   {
+    "id": "1e8f046e-2e86-4023-8651-6d5a8c9fc0d6",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "aa0e7d4f-fca4-4a77-af31-4cd40ecfad60",
+    "ref": "6-c",
+    "ordering": 5,
+    "text": "(temperature) 300 \u00b0C",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: any value or range of values",
+     "Allow: equivalent temperatures in other"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159367+00:00"
+   },
+   {
+    "id": "f1e9502e-1e8c-4e39-80d9-fe7228324bbc",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "9c4b4717-b5e1-4d8b-8111-312600242a89",
+    "ref": "6-d-i",
+    "ordering": 6,
+    "text": "(from) orange (to) green",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159605+00:00"
+   },
+   {
+    "id": "88fe3188-86e3-44e9-ac14-7a4e74a229ff",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "9e916fb3-060b-4e31-84af-8464255df003",
+    "ref": "6-d-ii",
+    "ordering": 7,
+    "text": "scores 1 mark",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Ignore: bond angles"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159681+00:00"
+   },
+   {
+    "id": "c08199c4-4908-40f3-8db3-997eccb42823",
+    "mark_scheme_id": "da5668c7-fcda-4388-8616-cdbe7aec196f",
+    "question_part_id": "be31ffea-80e4-47ee-a51f-f450d7258639",
+    "ref": "6-d-iii",
+    "ordering": 8,
+    "text": "CH3COONa + \u00bd H2",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: NaCH3COO"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159734+00:00"
+   },
+   {
+    "id": "7aaf66a2-9140-42b7-9564-8f8597185b48",
+    "mark_scheme_id": "0969a175-103e-44d9-a2a3-9397cdefe9fa",
+    "question_part_id": "7d9e9e6b-d4ee-4e56-9af0-c773a3ae773c",
+    "ref": "7-a",
+    "ordering": 0,
+    "text": "reaction is taking place in both directions (at",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: both forward and",
+     "Ignore: it is a reversible reaction"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159855+00:00"
+   },
+   {
+    "id": "4a24048b-5f87-487e-9665-bb0832464e30",
+    "mark_scheme_id": "0969a175-103e-44d9-a2a3-9397cdefe9fa",
+    "question_part_id": "66559c4b-55ed-4a13-83e7-2d040a0084f1",
+    "ref": "7-b-i",
+    "ordering": 1,
+    "text": "(the position of) equilibrium has",
+    "marks": 2,
+    "acceptance_criteria": [
+     "Allow: (position of) equilibrium",
+     "Allow: (position of) equilibrium",
+     "Allow: increasing pressure shifts",
+     "Ignore: references to Le"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159932+00:00"
+   },
+   {
+    "id": "97559225-6153-4372-a708-74b2ac90d216",
+    "mark_scheme_id": "0969a175-103e-44d9-a2a3-9397cdefe9fa",
+    "question_part_id": "4aedde78-ae8d-44ac-aea7-71fb3f2b4b47",
+    "ref": "7-b-ii",
+    "ordering": 2,
+    "text": "the concentration of NO2 has increased",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: molecules/particles of NO2",
+     "Allow: molecules/particles of NO2",
+     "Reject: more NO2 produced"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.159993+00:00"
+   },
+   {
+    "id": "1890570f-5738-4b15-8925-f8d2ba3f9e85",
+    "mark_scheme_id": "0969a175-103e-44d9-a2a3-9397cdefe9fa",
+    "question_part_id": "21002659-d93b-4e1c-8d7a-ff3df2bec20a",
+    "ref": "7-c-i",
+    "ordering": 3,
+    "text": "nitrogen/N2 reacts with oxygen/O2 (both from the",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Ignore: nitrogen burns/combusts",
+     "Ignore: nitrogen is oxidised"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.160044+00:00"
+   },
+   {
+    "id": "e191df5e-a2b3-4f40-9705-6340ea72e65a",
+    "mark_scheme_id": "0969a175-103e-44d9-a2a3-9397cdefe9fa",
+    "question_part_id": "b3b39793-2e89-460c-a865-8f3bf38d2a80",
+    "ref": "7-c-ii",
+    "ordering": 4,
+    "text": "(they form) acid rain",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: references to respiratory",
+     "Allow: a specified harmful effect of",
+     "Allow: references to smog",
+     "Allow: references to greenhouse"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.160095+00:00"
+   },
+   {
+    "id": "ae1c9318-a2bb-468a-8078-bd81a57ba1a4",
+    "mark_scheme_id": "0969a175-103e-44d9-a2a3-9397cdefe9fa",
+    "question_part_id": "988e9025-a36a-47d0-b205-71ea285890c6",
+    "ref": "7-c-iii",
+    "ordering": 5,
+    "text": "2 NO + 2 CO \uf022 N2 + 2 CO2",
+    "marks": 1,
+    "acceptance_criteria": [
+     "Allow: multiples and fractions"
+    ],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.160154+00:00"
+   },
+   {
+    "id": "f0d15eb2-37e7-4bd8-b3b7-6409106df528",
+    "mark_scheme_id": "a49097d6-d96d-49c8-b6d3-b8d4aed95985",
+    "question_part_id": "75d31243-7ef9-4c8e-ae3c-106ef6945358",
+    "ref": "8-a",
+    "ordering": 0,
+    "text": "use a fume cupboard",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.196095+00:00"
+   },
+   {
+    "id": "896f88b3-8a3e-4369-8c60-99dc1e39bd5a",
+    "mark_scheme_id": "a49097d6-d96d-49c8-b6d3-b8d4aed95985",
+    "question_part_id": "7023a020-f600-4cf7-861d-7efefff93d7a",
+    "ref": "8-b-i",
+    "ordering": 1,
+    "text": "60 \u00f7 24 000",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.196388+00:00"
+   },
+   {
+    "id": "dad17d96-135a-4d5f-8c22-15557041f34f",
+    "mark_scheme_id": "a49097d6-d96d-49c8-b6d3-b8d4aed95985",
+    "question_part_id": "6f6c5991-df25-4742-bda7-7ebe31305f4a",
+    "ref": "8-b-ii",
+    "ordering": 2,
+    "text": "0.0025 OR answer to M2 from (i)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.196497+00:00"
+   },
+   {
+    "id": "6d6b0ba8-a6b6-4ec3-9f98-eba1351d11a7",
+    "mark_scheme_id": "a49097d6-d96d-49c8-b6d3-b8d4aed95985",
+    "question_part_id": "30253106-50e3-4f73-b078-27b98bb95557",
+    "ref": "8-b-iii",
+    "ordering": 3,
+    "text": "(0.0025 \u00f7 4.00) \u00d7 1000",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 1.0,
+    "created_at": "2026-09-24 21:03:18.196569+00:00"
+   }
+  ],
+  "question_topics": [],
+  "question_spec_points": [],
+  "question_options": [],
+  "glm_ocr_bridge_records": [],
+  "content_review_audit_refs": [],
+  "teacher_validation_event_refs": []
+ }
+}

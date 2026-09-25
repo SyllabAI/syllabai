@@ -1,0 +1,3112 @@
+{
+ "archived_at": "2026-09-25T16:59:29Z",
+ "paper_code": "4CH1/2C",
+ "session_label": "January 2022",
+ "ep_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+ "counts": {
+  "exam_papers": 1,
+  "questions": 7,
+  "question_versions": 7,
+  "question_parts": 53,
+  "mark_schemes": 5,
+  "mark_points": 18,
+  "question_topics": 0,
+  "question_spec_points": 0,
+  "question_options": 0,
+  "glm_ocr_bridge_records": 1,
+  "content_review_audit_refs": 0,
+  "teacher_validation_event_refs": 0
+ },
+ "rows": {
+  "exam_papers": [
+   {
+    "id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "subject_id": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+    "title": "4CH1/2C January 2022",
+    "board": "Edexcel",
+    "qualification": "unknown",
+    "unit": null,
+    "session_label": "January 2022",
+    "paper_code": "4CH1/2C",
+    "question_paper_document_id": "960a5626-9d8a-5a55-9f63-7f02f49269dd",
+    "mark_scheme_document_id": "0b7662a2-3520-5714-8508-4de54ed948b1",
+    "validation_state": "SUGGESTED",
+    "provenance": "PAST_PAPER",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_by": null,
+    "created_at": "2026-09-14 12:05:56.748701+00:00",
+    "series": "JAN",
+    "year": 2022
+   }
+  ],
+  "questions": [
+   {
+    "id": "e7d58bb5-cc33-4a4c-9d41-6e3278a8eec4",
+    "external_ref": "q01-1121bc8d",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about the unsaturated hydrocarbon, ethene. The displayed formula of ethene is",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "primary_topic_node_id": "1c62d442-7e46-46f0-a6a3-38f8f6e85762",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:05:56.748987+00:00",
+    "exam_paper_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "difficulty_source": null
+   },
+   {
+    "id": "4c3fa8ea-002f-4717-8440-e57b1ba62d74",
+    "external_ref": "q02-1121bc8d",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about gases in the air. The pie chart represents the percentages of gases in dry, unpolluted air. Gases with percentages of less than 1% in air are called trace gases.",
+    "marks": 8,
+    "difficulty": 3,
+    "expected_time_seconds": 720,
+    "command_word": null,
+    "primary_topic_node_id": "1c62d442-7e46-46f0-a6a3-38f8f6e85762",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:05:56.749717+00:00",
+    "exam_paper_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "difficulty_source": null
+   },
+   {
+    "id": "1c41f7ba-7e47-47e7-8b16-60578bb17c8c",
+    "external_ref": "q03-1121bc8d",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about solubility.",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "primary_topic_node_id": "1c62d442-7e46-46f0-a6a3-38f8f6e85762",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:05:56.750143+00:00",
+    "exam_paper_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "difficulty_source": null
+   },
+   {
+    "id": "6cfb90cf-76bf-4c0a-8ae1-0140f9f8b665",
+    "external_ref": "q04-1121bc8d",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about the reactions of Group 1 metals with water.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "primary_topic_node_id": "1c62d442-7e46-46f0-a6a3-38f8f6e85762",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:05:56.750495+00:00",
+    "exam_paper_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "difficulty_source": null
+   },
+   {
+    "id": "fc9d6834-0c71-4dad-bd8b-81d9e2d9805d",
+    "external_ref": "q05-1121bc8d",
+    "question_type": "STRUCTURED",
+    "stem": "Hydrogen peroxide solution decomposes to give water and oxygen gas. The equation for this reaction is $2 \\mathrm {H} _ {2} \\mathrm {O} _ {2} (\\mathrm {a q}) \\rightarrow 2 \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {I}) + \\mathrm {O} _ {2} (\\mathrm {g})$",
+    "marks": 8,
+    "difficulty": 3,
+    "expected_time_seconds": 720,
+    "command_word": null,
+    "primary_topic_node_id": "1c62d442-7e46-46f0-a6a3-38f8f6e85762",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:05:56.753537+00:00",
+    "exam_paper_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "difficulty_source": null
+   },
+   {
+    "id": "15bf7778-30da-4b47-a2ef-37ec020acb81",
+    "external_ref": "q06-1121bc8d",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about the electrolysis of copper(II) sulfate solution.",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "primary_topic_node_id": "1c62d442-7e46-46f0-a6a3-38f8f6e85762",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:05:56.754840+00:00",
+    "exam_paper_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "difficulty_source": null
+   },
+   {
+    "id": "967a253a-bf61-49f8-88f5-5227a02fa03f",
+    "external_ref": "q07-1121bc8d",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about esters. Ester A reacts with water to form ethanoic acid and ethanol. The displayed formulae of the reactants and products are shown in this equation The molar enthalpy change $ (\\Delta H) $ for the reaction is 0 kJ/mol.",
+    "marks": 15,
+    "difficulty": 3,
+    "expected_time_seconds": 1350,
+    "command_word": null,
+    "primary_topic_node_id": "1c62d442-7e46-46f0-a6a3-38f8f6e85762",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:05:56.755475+00:00",
+    "exam_paper_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "difficulty_source": null
+   }
+  ],
+  "question_versions": [
+   {
+    "id": "0821c2a3-9894-4b98-91c9-2d2495396e8a",
+    "question_id": "e7d58bb5-cc33-4a4c-9d41-6e3278a8eec4",
+    "version": 1,
+    "stem": "This question is about the unsaturated hydrocarbon, ethene. The displayed formula of ethene is",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.749374+00:00"
+   },
+   {
+    "id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "question_id": "4c3fa8ea-002f-4717-8440-e57b1ba62d74",
+    "version": 1,
+    "stem": "This question is about gases in the air. The pie chart represents the percentages of gases in dry, unpolluted air. Gases with percentages of less than 1% in air are called trace gases.",
+    "marks": 8,
+    "difficulty": 3,
+    "expected_time_seconds": 720,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.749916+00:00"
+   },
+   {
+    "id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "question_id": "1c41f7ba-7e47-47e7-8b16-60578bb17c8c",
+    "version": 1,
+    "stem": "This question is about solubility.",
+    "marks": 9,
+    "difficulty": 3,
+    "expected_time_seconds": 810,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.750319+00:00"
+   },
+   {
+    "id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "question_id": "6cfb90cf-76bf-4c0a-8ae1-0140f9f8b665",
+    "version": 1,
+    "stem": "This question is about the reactions of Group 1 metals with water.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+    "extraction_confidence": 0.45,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.752418+00:00"
+   },
+   {
+    "id": "85459ef6-5c0f-44f6-b088-efa9a1c932c8",
+    "question_id": "fc9d6834-0c71-4dad-bd8b-81d9e2d9805d",
+    "version": 1,
+    "stem": "Hydrogen peroxide solution decomposes to give water and oxygen gas. The equation for this reaction is $2 \\mathrm {H} _ {2} \\mathrm {O} _ {2} (\\mathrm {a q}) \\rightarrow 2 \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {I}) + \\mathrm {O} _ {2} (\\mathrm {g})$",
+    "marks": 8,
+    "difficulty": 3,
+    "expected_time_seconds": 720,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.754415+00:00"
+   },
+   {
+    "id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "question_id": "15bf7778-30da-4b47-a2ef-37ec020acb81",
+    "version": 1,
+    "stem": "This question is about the electrolysis of copper(II) sulfate solution.",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.755153+00:00"
+   },
+   {
+    "id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "question_id": "967a253a-bf61-49f8-88f5-5227a02fa03f",
+    "version": 1,
+    "stem": "This question is about esters. Ester A reacts with water to form ethanoic acid and ethanol. The displayed formulae of the reactants and products are shown in this equation The molar enthalpy change $ (\\Delta H) $ for the reaction is 0 kJ/mol.",
+    "marks": 15,
+    "difficulty": 3,
+    "expected_time_seconds": 1350,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.755751+00:00"
+   }
+  ],
+  "question_parts": [
+   {
+    "id": "451851b4-87ba-468e-9993-c5dad026ba8e",
+    "question_version_id": "0821c2a3-9894-4b98-91c9-2d2495396e8a",
+    "label": "a",
+    "prompt": "State the meaning of the term hydrocarbon.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:05:56.765464+00:00"
+   },
+   {
+    "id": "2475a038-457c-4278-bfc9-3eb26103a9f3",
+    "question_version_id": "0821c2a3-9894-4b98-91c9-2d2495396e8a",
+    "label": "a-ii",
+    "prompt": "Give the reason why ethene is described as unsaturated.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:05:56.765574+00:00"
+   },
+   {
+    "id": "9538bc34-de31-4522-b7ae-9ea0e06b5cff",
+    "question_version_id": "0821c2a3-9894-4b98-91c9-2d2495396e8a",
+    "label": "b",
+    "prompt": "Ethene is bubbled through bromine water until there is no further colour change. Which of these is the appearance of the solution formed? A colourless B orange C purple D red",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:05:56.765610+00:00"
+   },
+   {
+    "id": "3f448c96-8020-4a23-b783-4cc08be30ceb",
+    "question_version_id": "0821c2a3-9894-4b98-91c9-2d2495396e8a",
+    "label": "c",
+    "prompt": "Ethanol is produced industrially by the reaction between ethene and steam. The equation for the reaction is",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:05:56.765634+00:00"
+   },
+   {
+    "id": "efd754e7-481a-47dc-bddc-6e71bb66cd7e",
+    "question_version_id": "0821c2a3-9894-4b98-91c9-2d2495396e8a",
+    "label": "c-i",
+    "prompt": "State the temperature and pressure used in this reaction. $\\mathrm {C H} _ {2} \\mathrm {C H} _ {2} (\\mathrm {g}) + \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {g}) \\rightarrow \\mathrm {C H} _ {3} \\mathrm {C H} _ {2} \\mathrm {O H} (\\mathrm {I})$ temperature pressure",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:05:56.765658+00:00"
+   },
+   {
+    "id": "6252f46d-fefe-4734-aea7-694a7a901372",
+    "question_version_id": "0821c2a3-9894-4b98-91c9-2d2495396e8a",
+    "label": "c-ii",
+    "prompt": "Give the molecular formula of ethanol.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:05:56.765683+00:00"
+   },
+   {
+    "id": "f914112e-54be-4acd-a999-6d6a78f0f9b6",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "a",
+    "prompt": "Which of these is gas Z? A hydrogen B methane C neon D nitrogen",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:05:56.765712+00:00"
+   },
+   {
+    "id": "0edef5ab-1390-40d5-ac76-8f691928d5d2",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "a-ii",
+    "prompt": "Which of these is the approximate percentage of oxygen in dry, unpolluted air? A 0.04% B 0.9% C 21% D 35%",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:05:56.765742+00:00"
+   },
+   {
+    "id": "5cb2d470-8f77-422d-a01f-f70fc02f377b",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "b",
+    "prompt": "One of the trace gases is carbon dioxide.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:05:56.765789+00:00"
+   },
+   {
+    "id": "c9c7591f-ab13-427a-a0e0-2f184d7dd6c8",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "b-i",
+    "prompt": "Identify two reactions that produce carbon dioxide by placing a tick ( $ \\surd $ ) in two boxes.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:05:56.765837+00:00"
+   },
+   {
+    "id": "9988d060-7c64-4ee9-ad76-5b71060a6a3d",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "b-ii",
+    "prompt": "Name an environmental problem that is caused by the percentage of carbon dioxide increasing in the atmosphere.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:05:56.765875+00:00"
+   },
+   {
+    "id": "e6dde050-c284-4c4d-8397-58ea5b4430c0",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "b-iii",
+    "prompt": "Name the trace gas with the highest percentage in dry, unpolluted air.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:05:56.765902+00:00"
+   },
+   {
+    "id": "d38b0f56-25b8-47ca-a8ff-51cb8b39a35a",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "c",
+    "prompt": "Rainwater is acidic because carbon dioxide dissolves in water to form carbonic acid. Acid rain is more acidic than rainwater because acidic pollutant gases also dissolve in water.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:05:56.765926+00:00"
+   },
+   {
+    "id": "6ab25ee3-e0de-4da4-8d65-6fe63f8dfd4a",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "c-i",
+    "prompt": "Give the name of the acid that forms when nitrogen dioxide dissolves in water.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 12:05:56.765951+00:00"
+   },
+   {
+    "id": "485e8f72-7d77-45ba-968e-cabca514f4e9",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "label": "c-ii",
+    "prompt": "Name another pollutant gas that also forms acid rain.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 8,
+    "created_at": "2026-09-14 12:05:56.765973+00:00"
+   },
+   {
+    "id": "54ddb098-c081-406d-bb57-f564f37c170e",
+    "question_version_id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "label": "a",
+    "prompt": "The graph shows the solubilities of copper(II) chloride and sodium chloride at different temperatures. $^{\\circ} C$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:05:56.766005+00:00"
+   },
+   {
+    "id": "d7a71970-f3e5-40b7-be96-6d66ff44cf75",
+    "question_version_id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "label": "a-i",
+    "prompt": "Determine the temperature at which copper(II) chloride and sodium chloride have the same solubility. Show on the graph how you obtained your answer. $\\mathrm {t e m p e r a t u r e} =$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:05:56.766032+00:00"
+   },
+   {
+    "id": "d1737bae-3283-4f78-8b12-6972d388c901",
+    "question_version_id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "label": "a-ii",
+    "prompt": "A saturated solution of copper(II) chloride in 100g of water is cooled from $ 4 0^{\\circ} \\mathrm{C} $ to $ 1 0^{\\circ} \\mathrm{C}. $ Determine the mass, in grams, of copper(II) chloride that crystallises.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:05:56.766058+00:00"
+   },
+   {
+    "id": "bceef4b3-b03f-4b0d-a1b4-2d128ad976aa",
+    "question_version_id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "label": "b",
+    "prompt": "A student uses this method to determine the solubility of potassium chloride in water at room temperature. record the mass of an empty evaporating basin pour some saturated potassium chloride solution into the evaporating basin record the mass of the evaporating basin and saturated potassium chloride solution heat the evaporating basin to remove all the water record the mass of the evaporating basin and the dry potassium chloride The table shows the student's results.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:05:56.766082+00:00"
+   },
+   {
+    "id": "0efd106d-fb82-4ccb-9e6a-af91da0ae24e",
+    "question_version_id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "label": "b-i",
+    "prompt": "Calculate the mass of dry potassium chloride obtained.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:05:56.766107+00:00"
+   },
+   {
+    "id": "e8107553-6fad-4c6d-a8e1-345db53d6110",
+    "question_version_id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "label": "b-ii",
+    "prompt": "Calculate the mass of water removed.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:05:56.766131+00:00"
+   },
+   {
+    "id": "1f61e1c5-ff1d-4a0c-89b7-b884aeb6019d",
+    "question_version_id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "label": "b-iii",
+    "prompt": "Calculate the solubility of potassium chloride in grams per 100 grams of water. $s o l u b i l i t y =$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:05:56.766154+00:00"
+   },
+   {
+    "id": "142b7edc-7bd0-48a6-ba5c-d90c1b5828bb",
+    "question_version_id": "9c9e915d-3007-4263-88cf-5bad05b1cb90",
+    "label": "b-iv",
+    "prompt": "Suggest why the student's method is not suitable for determining the solubility of hydrated copper(II) sulfate.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 12:05:56.766180+00:00"
+   },
+   {
+    "id": "e11f41fb-f314-4185-bdb8-e96e48ff9b2c",
+    "question_version_id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "label": "a",
+    "prompt": "A teacher adds a piece of sodium to some water containing universal indicator. The equation for this reaction is $2 \\mathrm {N a} (\\mathrm {s}) + 2 \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {I}) \\rightarrow 2 \\mathrm {N a O H} (\\mathrm {a q}) + \\mathrm {H} _ {2} (\\mathrm {g})$ The sodium floats on the surface of the water and the universal indicator changes colour because an alkaline solution is formed.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:05:56.766206+00:00"
+   },
+   {
+    "id": "5e542e70-2cd7-4a5a-beaa-00ecc4f234f1",
+    "question_version_id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "label": "a-i",
+    "prompt": "Give two other observations.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:05:56.766233+00:00"
+   },
+   {
+    "id": "db8c3b68-a851-449e-9bd4-f9144af4fcb3",
+    "question_version_id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "label": "a-ii",
+    "prompt": "Give the final colour of the universal indicator.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:05:56.766258+00:00"
+   },
+   {
+    "id": "7944defc-9c8d-4bd8-9091-f8c00c01aec1",
+    "question_version_id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "label": "b",
+    "prompt": "The diagram represents an atom of lithium and an atom of sodium. lithium sodium",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:05:56.766286+00:00"
+   },
+   {
+    "id": "090185a5-6eeb-43eb-b9b3-e2dfabadb868",
+    "question_version_id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "label": "b-i",
+    "prompt": "Give a reason why lithium and sodium have similar reactions with water.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:05:56.766310+00:00"
+   },
+   {
+    "id": "6996f7b3-973c-48b6-88f3-516378a0ac3d",
+    "question_version_id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "label": "b-ii",
+    "prompt": "Explain why lithium is less reactive than sodium.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:05:56.766608+00:00"
+   },
+   {
+    "id": "6cfb222a-26e6-4f5f-8444-9cb6b0f89359",
+    "question_version_id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "label": "c",
+    "prompt": "The teacher adds 0.150g of lithium to an excess of water and collects the hydrogen gas produced. The equation for the reaction is $2 \\mathrm {L i} (\\mathrm {s}) + 2 \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {I}) \\rightarrow 2 \\mathrm {L i O H} (\\mathrm {a q}) + \\mathrm {H} _ {2} (\\mathrm {g})$ The teacher collects $ 2 5 4 \\mathrm{c m}^{3} $ of hydrogen gas at room temperature and pressure (rtp). Show by calculation that 1 mol of hydrogen gas has a volume of approximately $ 2 4 0 0 0 \\mathrm{c m}^{3} $ at rtp.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:05:56.766698+00:00"
+   },
+   {
+    "id": "1c4d4cb0-1e5c-4cad-b978-e89e681f131c",
+    "question_version_id": "85459ef6-5c0f-44f6-b088-efa9a1c932c8",
+    "label": "a",
+    "prompt": "Three different solids are catalysts for the decomposition of hydrogen peroxide solution. A student is given hydrogen peroxide solution and a sample of each of the solid catalysts. The student has a timer, a measuring cylinder, a balance and the apparatus shown in the diagram. Describe a method the student could use to find which of the three solids is the most effective catalyst for the decomposition of hydrogen peroxide solution.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:05:56.766745+00:00"
+   },
+   {
+    "id": "f779cd60-9a25-4615-aea0-86dc7db15157",
+    "question_version_id": "85459ef6-5c0f-44f6-b088-efa9a1c932c8",
+    "label": "b",
+    "prompt": "The diagram shows the reaction profile for the decomposition of hydrogen peroxide without a catalyst.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:05:56.766791+00:00"
+   },
+   {
+    "id": "a38b5378-c28e-430b-a71b-5a75e5c98276",
+    "question_version_id": "85459ef6-5c0f-44f6-b088-efa9a1c932c8",
+    "label": "b-i",
+    "prompt": "Label the diagram to show the activation energy $ ( E_{\\mathrm{a}}) $ and the enthalpy change $ (\\Delta H) $ for this reaction.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:05:56.766821+00:00"
+   },
+   {
+    "id": "238503d2-47c3-401b-8494-6530a00a0d4f",
+    "question_version_id": "85459ef6-5c0f-44f6-b088-efa9a1c932c8",
+    "label": "b-ii",
+    "prompt": "On the diagram, draw a curve to show the reaction profile for the same reaction when a catalyst is used.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:05:56.766846+00:00"
+   },
+   {
+    "id": "85a5a2af-f376-4ebd-a194-02c6b7d0efff",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "a",
+    "prompt": "The diagram shows the apparatus used for the electrolysis. A student records the total increase in mass of the negative electrode every minute for 8 minutes. The table shows the results.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:05:56.766873+00:00"
+   },
+   {
+    "id": "935bd67d-15d0-4ae7-987d-9207dcc4e5ea",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "a-i",
+    "prompt": "Plot the student's results.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:05:56.766902+00:00"
+   },
+   {
+    "id": "b89997b8-ee57-4d8d-975a-1a1ab3cc8c1b",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "a-ii",
+    "prompt": "Draw a curve of best fit.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:05:56.766925+00:00"
+   },
+   {
+    "id": "bba5c271-5aa5-4cf5-a6ce-b3a536223b56",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "a-iii",
+    "prompt": "Explain the shape of the graph.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:05:56.766947+00:00"
+   },
+   {
+    "id": "7d0c27ee-9282-478f-92a4-589e9131a800",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "b",
+    "prompt": "The product at the positive electrode is oxygen gas.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:05:56.766970+00:00"
+   },
+   {
+    "id": "a4d92aeb-09bc-45e0-a2aa-11c7a087cded",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "b-i",
+    "prompt": "The student repeats the electrolysis using different apparatus. Describe how the student should collect a sample of pure oxygen at the positive electrode.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:05:56.767103+00:00"
+   },
+   {
+    "id": "206574b3-43b4-4446-9cfe-620f8a5b2617",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "b-ii",
+    "prompt": "Give an ionic half-equation for the formation of oxygen.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:05:56.767155+00:00"
+   },
+   {
+    "id": "ad1f0e45-0506-49b3-aa63-35401d63eafb",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "c",
+    "prompt": "The wire used to connect the power supply to the electrodes is made of copper metal. The diagram shows the arrangement of the ions in a metal. metal ion",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 12:05:56.767181+00:00"
+   },
+   {
+    "id": "dca6f4c4-240f-4db8-be27-904044348769",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "c-i",
+    "prompt": "Metals that are malleable can also be stretched to form long, thin wires. Suggest why metals can be stretched to form wires.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 8,
+    "created_at": "2026-09-14 12:05:56.767211+00:00"
+   },
+   {
+    "id": "fe0d0bab-b0e0-4242-9afd-55443ec1d016",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "label": "c-ii",
+    "prompt": "Explain why metals conduct electricity.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 9,
+    "created_at": "2026-09-14 12:05:56.767231+00:00"
+   },
+   {
+    "id": "dab3c584-f00c-4a37-9f70-73abb4500bfb",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "a",
+    "prompt": "Draw a ring around the functional group in ester A.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:05:56.767261+00:00"
+   },
+   {
+    "id": "9617071e-1e1d-4fda-836a-7f6d36785359",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "a-ii",
+    "prompt": "Give the name of ester A.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:05:56.767285+00:00"
+   },
+   {
+    "id": "fee0e35c-9899-498c-9a86-1cb6544e771e",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "a-iii",
+    "prompt": "Describe a chemical test, other than using an indicator, to show that the reaction mixture contains ethanoic acid.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:05:56.767311+00:00"
+   },
+   {
+    "id": "647c6cb5-e9b3-4465-a5b6-3ba6bcd50153",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "b",
+    "prompt": "Explain why the molar enthalpy change $ (\\Delta H) $ for the reaction between ester A and water is 0 kJ/mol. In your answer, refer to the bonds broken and the bonds formed.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:05:56.767332+00:00"
+   },
+   {
+    "id": "4a016bca-c62e-456f-ad5c-cfcd72687e5f",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "c",
+    "prompt": "A mixture of ester A and water is left in a sealed container until the reaction mixture reaches dynamic equilibrium.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:05:56.767366+00:00"
+   },
+   {
+    "id": "9d083f65-6c86-4d28-a60d-c40d7e804980",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "c-i",
+    "prompt": "Describe what is meant by dynamic equilibrium.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:05:56.767397+00:00"
+   },
+   {
+    "id": "3f395d20-00e1-47df-822c-34ef4096d9e9",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "c-ii",
+    "prompt": "Explain why adding a catalyst does not change the position of equilibrium.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:05:56.767421+00:00"
+   },
+   {
+    "id": "4ad85c04-5cd9-43e1-85e7-3e2b0ba5dd84",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "d",
+    "prompt": "The ethanoic acid produced in the reaction is completely neutralised by $ 2 2. 7 5 \\mathrm{c m}^{3} $ of $ 0. 1 5 0 \\mathrm{m o l} / \\mathrm{d m}^{3} $ barium hydroxide solution. The equation for the neutralisation reaction is $2 \\mathrm {C H} _ {3} \\mathrm {C O O H} + \\mathrm {B a} (\\mathrm {O H}) _ {2} \\rightarrow \\mathrm {B a} (\\mathrm {C H} _ {3} \\mathrm {C O O}) _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O}$ Calculate the amount, in moles, of ethanoic acid neutralised Give your answer to 3 significant figures.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 12:05:56.767441+00:00"
+   },
+   {
+    "id": "8d5ea647-82bc-4259-9597-950a98d45c22",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "label": "e",
+    "prompt": "The structures of two organic compounds are shown. These compounds react together to form a polymer. Give the repeat unit of the polymer formed.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 8,
+    "created_at": "2026-09-14 12:05:56.767466+00:00"
+   }
+  ],
+  "mark_schemes": [
+   {
+    "id": "eeb050c6-494f-4127-8566-80a3be4e45bf",
+    "question_version_id": "4cc1b10a-4acc-41db-92e2-a750693d49d5",
+    "version_label": "1",
+    "source_document_id": "20135ce7-80e7-521a-a01c-e5ff06afc6a5",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.756193+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "5fd4f152-1820-4de1-ba65-567e55f51e65",
+    "question_version_id": "e77185e9-90cd-4263-a427-7e50879d87d7",
+    "version_label": "1",
+    "source_document_id": "20135ce7-80e7-521a-a01c-e5ff06afc6a5",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.756670+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "5580fe66-2b9c-41f6-9bc7-336c98b27ceb",
+    "question_version_id": "85459ef6-5c0f-44f6-b088-efa9a1c932c8",
+    "version_label": "1",
+    "source_document_id": "20135ce7-80e7-521a-a01c-e5ff06afc6a5",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.757084+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "10237ca9-dadb-43da-9150-2c003f67ceca",
+    "question_version_id": "f92f1921-1cf2-4abb-aa58-fa4972aea2d1",
+    "version_label": "1",
+    "source_document_id": "20135ce7-80e7-521a-a01c-e5ff06afc6a5",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.757410+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "4ef17a5d-9797-441b-b678-13c96abecaa5",
+    "question_version_id": "ba526c79-135c-4e3c-9e5c-f2e66c71772d",
+    "version_label": "1",
+    "source_document_id": "20135ce7-80e7-521a-a01c-e5ff06afc6a5",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:05:56.757721+00:00",
+    "general_guidance": null
+   }
+  ],
+  "mark_points": [
+   {
+    "id": "69d00dd7-dadb-421b-bdd9-478bda43b1ce",
+    "mark_scheme_id": "eeb050c6-494f-4127-8566-80a3be4e45bf",
+    "question_part_id": null,
+    "ref": "2-a-i",
+    "ordering": 0,
+    "text": "D nitrogen\nD is the only correct answer as nitrogen is the most abundant gas in unpolluted air.A is not correct as there are only trace amounts of hydrogen in unpolluted air.B is not correct as there are only trace amounts of methane in unpolluted air.C is not correct as there are only trace amounts of neon in unpolluted air.\nC 21%C is the only correct answer as the percentage of oxygen in the air is 21%A is not the correct answer as the percentage of oxygen in the air is not 0.04%B is not the correct answer as the percentage of oxygen in the air is not 0.9%D is not the correct answer as the percentage of oxygen in the air is not 35%",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.767498+00:00"
+   },
+   {
+    "id": "4fcf1381-7167-4a47-8ce7-2363d7eafc60",
+    "mark_scheme_id": "eeb050c6-494f-4127-8566-80a3be4e45bf",
+    "question_part_id": "c9c7591f-ab13-427a-a0e0-2f184d7dd6c8",
+    "ref": "2-b-i",
+    "ordering": 1,
+    "text": "cracking an alkane\nreaction between magnesium and hydrochloric acid\nrusting of iron\nthermal decomposition of copper(II) carbonate\nAny one from:M1 global warmingM2 climate changeargon",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.767827+00:00"
+   },
+   {
+    "id": "4ff3d244-81b4-4890-97aa-e8d7e9f84f0f",
+    "mark_scheme_id": "eeb050c6-494f-4127-8566-80a3be4e45bf",
+    "question_part_id": "6ab25ee3-e0de-4da4-8d65-6fe63f8dfd4a",
+    "ref": "2-c-i",
+    "ordering": 2,
+    "text": "nitric acid\nTotal for question = 8",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.767952+00:00"
+   },
+   {
+    "id": "237aa5ba-bc4a-4156-bd43-c50001553045",
+    "mark_scheme_id": "5fd4f152-1820-4de1-ba65-567e55f51e65",
+    "question_part_id": "5e542e70-2cd7-4a5a-beaa-00ecc4f234f1",
+    "ref": "4-a-i",
+    "ordering": 0,
+    "text": "Any two from:",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768033+00:00"
+   },
+   {
+    "id": "0279c941-0ee8-40f3-964d-fa8e295d3a81",
+    "mark_scheme_id": "5fd4f152-1820-4de1-ba65-567e55f51e65",
+    "question_part_id": "090185a5-6eeb-43eb-b9b3-e2dfabadb868",
+    "ref": "4-b-i",
+    "ordering": 1,
+    "text": "same number of electrons/one electron in the outer shell.\nTotal for question = 11",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768096+00:00"
+   },
+   {
+    "id": "623b7ea0-02fe-4d65-97bc-2f83794783ab",
+    "mark_scheme_id": "5580fe66-2b9c-41f6-9bc7-336c98b27ceb",
+    "question_part_id": "1c4d4cb0-1e5c-4cad-b978-e89e681f131c",
+    "ref": "5-a",
+    "ordering": 0,
+    "text": "A description that refers to any five of the following points",
+    "marks": 5,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768180+00:00"
+   },
+   {
+    "id": "725857e3-1ecc-4ed3-99e6-d7eff0aa344b",
+    "mark_scheme_id": "5580fe66-2b9c-41f6-9bc7-336c98b27ceb",
+    "question_part_id": "a38b5378-c28e-430b-a71b-5a75e5c98276",
+    "ref": "5-b-i",
+    "ordering": 1,
+    "text": "M1 a vertical line from the level of the hydrogen peroxide to the top of the curve labelled activation energy or $E_{\\mathrm{a}}$",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768254+00:00"
+   },
+   {
+    "id": "ec841032-2970-4bb8-ac05-05fe87e92bc1",
+    "mark_scheme_id": "5580fe66-2b9c-41f6-9bc7-336c98b27ceb",
+    "question_part_id": "238503d2-47c3-401b-8494-6530a00a0d4f",
+    "ref": "5-b-ii",
+    "ordering": 2,
+    "text": "",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768349+00:00"
+   },
+   {
+    "id": "7f2f3e90-a903-45f7-8b1b-8cb03cbda5d1",
+    "mark_scheme_id": "10237ca9-dadb-43da-9150-2c003f67ceca",
+    "question_part_id": "935bd67d-15d0-4ae7-987d-9207dcc4e5ea",
+    "ref": "6-a-i",
+    "ordering": 0,
+    "text": "all points plotted \u00b1 half a square\ncurved line of best fit\nAn explanation that links the following two points\nM1 curve shows increasing mass (of negative electrode) because (more) copper deposits/forms\nM2 line becomes horizontal because there are no more copper(II) ions left in the solution/all the copper has been deposited/formed OWTTE",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768443+00:00"
+   },
+   {
+    "id": "c0d43a90-9bf6-4109-819b-0e4683e85947",
+    "mark_scheme_id": "10237ca9-dadb-43da-9150-2c003f67ceca",
+    "question_part_id": "a4d92aeb-09bc-45e0-a2aa-11c7a087cded",
+    "ref": "6-b-i",
+    "ordering": 1,
+    "text": "A description that refers to two of the following points\nM1 fill a test tube/measuring cylinder with copper sulfate solution\nM2 place the tube over the positive electrode\nM3 collect gas/oxygen by displacement of solution/water",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768507+00:00"
+   },
+   {
+    "id": "16e469c3-5b97-4ab7-8c31-769e00a1dc94",
+    "mark_scheme_id": "10237ca9-dadb-43da-9150-2c003f67ceca",
+    "question_part_id": "206574b3-43b4-4446-9cfe-620f8a5b2617",
+    "ref": "6-b-ii",
+    "ordering": 2,
+    "text": "2H2O\u2192O2+4H++4e(-)\nM1 all formulae correct\nM2 correct balancing of correct formulae",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768564+00:00"
+   },
+   {
+    "id": "b121674f-b1d7-4ccd-94d3-9be1b783a66c",
+    "mark_scheme_id": "10237ca9-dadb-43da-9150-2c003f67ceca",
+    "question_part_id": "dca6f4c4-240f-4db8-be27-904044348769",
+    "ref": "6-c-i",
+    "ordering": 3,
+    "text": "M1 layers (of atoms or ions)\nM1 delocalised electrons",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768621+00:00"
+   },
+   {
+    "id": "d4b216d5-5246-4fda-9085-f3ce4d23b679",
+    "mark_scheme_id": "10237ca9-dadb-43da-9150-2c003f67ceca",
+    "question_part_id": "fe0d0bab-b0e0-4242-9afd-55443ec1d016",
+    "ref": "6-c-ii",
+    "ordering": 4,
+    "text": "M2 are free to move (throughout the structure)\nTotal for question = 12",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.5,
+    "created_at": "2026-09-14 12:05:56.768679+00:00"
+   },
+   {
+    "id": "8e2e4b1c-5e5d-4e02-bb97-623397b5e0c9",
+    "mark_scheme_id": "4ef17a5d-9797-441b-b678-13c96abecaa5",
+    "question_part_id": null,
+    "ref": "7-a-i",
+    "ordering": 0,
+    "text": "Chemical structure of ethyl ethanoate\nALLOW ethyl acetate\nACCEPT test gas with lighted splint which pops\nM2 dep on reference to adding a metal\nORM1 add a carbonateM2 effervescence/bubbles/fizzing",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768741+00:00"
+   },
+   {
+    "id": "c919fc2e-9757-492e-9f3e-eeb89fe7b952",
+    "mark_scheme_id": "4ef17a5d-9797-441b-b678-13c96abecaa5",
+    "question_part_id": "647c6cb5-e9b3-4465-a5b6-3ba6bcd50153",
+    "ref": "7-b",
+    "ordering": 1,
+    "text": "M1 C-O and one/two O-H bonds are broken and formedM2 so the same amount of energy is needed to break the bonds in the reactants as is given off when the bonds in the products are formed\nALLOW energy of bonds formed equals energy of bonds broken",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768812+00:00"
+   },
+   {
+    "id": "0d7777c8-2d3f-43a7-89c1-e1c1d6d388dd",
+    "mark_scheme_id": "4ef17a5d-9797-441b-b678-13c96abecaa5",
+    "question_part_id": "9d083f65-6c86-4d28-a60d-c40d7e804980",
+    "ref": "7-c-i",
+    "ordering": 2,
+    "text": "M1 the rate of the forward reaction equals the rate of the backward reactionM2 the concentrations of reactants and products remain constant\nREJECT concentration of the reactants and products are the same",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768878+00:00"
+   },
+   {
+    "id": "7aaedb50-8742-44db-8ae0-03913f24fd0a",
+    "mark_scheme_id": "4ef17a5d-9797-441b-b678-13c96abecaa5",
+    "question_part_id": "4ad85c04-5cd9-43e1-85e7-3e2b0ba5dd84",
+    "ref": "7-d",
+    "ordering": 3,
+    "text": "example calculation\nM1 moles barium hydroxide=(0.150\u00d722.75)\u00f71000\nOR0.0034125\nM2 moles ethanoic acid=0.006825\nM3 moles ethanoic acid to 3 significant figures=0.00683",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.768957+00:00"
+   },
+   {
+    "id": "506c99e4-536b-43f5-99ae-6841bb1c81d5",
+    "mark_scheme_id": "4ef17a5d-9797-441b-b678-13c96abecaa5",
+    "question_part_id": "8d5ea647-82bc-4259-9597-950a98d45c22",
+    "ref": "7-e",
+    "ordering": 4,
+    "text": "correct answer scores2 marks\nChemical structure\nM1 three carbons from the dicarboxylic acid and two from the diol and the ester linkage\nM2 -OH lost from the dicarboxylic acid and -H lost from the diol\nTotal for question=15",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:05:56.769016+00:00"
+   }
+  ],
+  "question_topics": [],
+  "question_spec_points": [],
+  "question_options": [],
+  "glm_ocr_bridge_records": [
+   {
+    "id": "45fe1b39-0340-4469-9174-667de3b8cbd5",
+    "paper_id": "683a73cd-6129-4376-af25-5fdb2f091a5c",
+    "bridge": "glm-ocr-v1",
+    "qp_document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+    "ms_document_id": "20135ce7-80e7-521a-a01c-e5ff06afc6a5",
+    "qp_document_row_id": "0da66656-d797-4ae8-b078-0070d6826d1e",
+    "ms_document_row_id": "ebc7b858-20f4-40a9-87c2-9035895e2e98",
+    "qp_checksum": "4c856f38b30a33fec4e17e275fcaa263e4b0a0dae8b85b57ffd92632adba9acd",
+    "ms_checksum": "7649654514db73f8a21e0fe0c5ed1c410762ba6dbaa63e618e7afac4bf402450",
+    "extraction_methods": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "reconciliation_status": "OK",
+    "review_findings": [
+     {
+      "detail": "Q1: QP total 7 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 7,
+      "severity": "qp-only",
+      "questionNumber": "1"
+     },
+     {
+      "detail": "Q2: QP total 8 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 8,
+      "severity": "qp-only",
+      "questionNumber": "2"
+     },
+     {
+      "detail": "Q3: QP total 9 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 9,
+      "severity": "qp-only",
+      "questionNumber": "3"
+     },
+     {
+      "detail": "Q5: QP total 8 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 8,
+      "severity": "qp-only",
+      "questionNumber": "5"
+     },
+     {
+      "detail": "Q6: QP total 12 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 12,
+      "severity": "qp-only",
+      "questionNumber": "6"
+     },
+     {
+      "detail": "Q7: QP total 15 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 15,
+      "severity": "qp-only",
+      "questionNumber": "7"
+     },
+     {
+      "detail": "unclassified heading: Increase in mass in grams",
+      "source": "QP_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: 1(a)(i)(ii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M2 only",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: ethene has a double bond",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: (b)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: (c)(i)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: (ii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: Total for question=7",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "2(a)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "2(b)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "2(b)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "2(c)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: 3(a)(i)(ii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M131-13M218(g)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: 5.1(g)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: (b)(i)(ii)(iii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M15.1\u00f715OR0.34(g)ORanswer to(i)\u00f7answer to(ii)M234(g)ORanswer toM1\u00d7100",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: Any one fromM1(hydrated) copper(II)sulfate would become anhydrous copper sulfateM2(hydrated) copper(II)sulfate would lose water",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: Total for question=9",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "4(a)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "4(b)(i): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "4(b)(i): bare integer cell \"4\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "6(a)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "6(a)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "6(b)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "6(c)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "7(a)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "7(a)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "7(c)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     }
+    ],
+    "qp_draft": {
+     "paper": {
+      "board": "Edexcel",
+      "session": null,
+      "subject": null,
+      "duration": null,
+      "examDate": null,
+      "logNumber": null,
+      "qualification": null,
+      "paperReference": "4CH1/2C",
+      "publicationCode": null,
+      "canonicalDocumentId": "1121bc8d-f209-5f2d-82ab-06856eb0ad07"
+     },
+     "warnings": [
+      "unclassified heading: Increase in mass in grams"
+     ],
+     "questions": [
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about the unsaturated hydrocarbon, ethene. The displayed formula of ethene is",
+       "marks": 7,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "State the meaning of the term hydrocarbon.",
+         "label": "a",
+         "marks": null,
+         "partId": "q01-1121bc8d-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the reason why ethene is described as unsaturated.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q01-1121bc8d-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Ethene is bubbled through bromine water until there is no further colour change. Which of these is the appearance of the solution formed? A colourless B orange C purple D red",
+         "label": "b",
+         "marks": null,
+         "partId": "q01-1121bc8d-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Ethanol is produced industrially by the reaction between ethene and steam. The equation for the reaction is",
+         "label": "c",
+         "marks": null,
+         "partId": "q01-1121bc8d-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State the temperature and pressure used in this reaction. $\\mathrm {C H} _ {2} \\mathrm {C H} _ {2} (\\mathrm {g}) + \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {g}) \\rightarrow \\mathrm {C H} _ {3} \\mathrm {C H} _ {2} \\mathrm {O H} (\\mathrm {I})$ temperature pressure",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q01-1121bc8d-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the molecular formula of ethanol.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q01-1121bc8d-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 1,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064258301.png",
+         "width": 204,
+         "format": "png",
+         "height": 177,
+         "sha256": "c81a475bc54219ef424d733b53fb51c08303517e3f89e36262594f7898c64444",
+         "assetId": "img:c81a475bc54219ef424d733b53fb51c08303517e3f89e36262594f7898c64444",
+         "mimeType": "image/jpeg",
+         "elementId": "e000025",
+         "sourceName": "assets/crop_1_1789064258301.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q01-1121bc8d",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about gases in the air. The pie chart represents the percentages of gases in dry, unpolluted air. Gases with percentages of less than 1% in air are called trace gases.",
+       "marks": 8,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Which of these is gas Z? A hydrogen B methane C neon D nitrogen",
+         "label": "a",
+         "marks": null,
+         "partId": "q02-1121bc8d-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Which of these is the approximate percentage of oxygen in dry, unpolluted air? A 0.04% B 0.9% C 21% D 35%",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q02-1121bc8d-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "One of the trace gases is carbon dioxide.",
+         "label": "b",
+         "marks": null,
+         "partId": "q02-1121bc8d-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Identify two reactions that produce carbon dioxide by placing a tick ( $ \\surd $ ) in two boxes.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q02-1121bc8d-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Name an environmental problem that is caused by the percentage of carbon dioxide increasing in the atmosphere.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q02-1121bc8d-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Name the trace gas with the highest percentage in dry, unpolluted air.",
+         "label": "b-iii",
+         "marks": null,
+         "partId": "q02-1121bc8d-pb-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Rainwater is acidic because carbon dioxide dissolves in water to form carbonic acid. Acid rain is more acidic than rainwater because acidic pollutant gases also dissolve in water.",
+         "label": "c",
+         "marks": null,
+         "partId": "q02-1121bc8d-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the name of the acid that forms when nitrogen dioxide dissolves in water.",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q02-1121bc8d-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Name another pollutant gas that also forms acid rain.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q02-1121bc8d-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 2,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064258320.png",
+         "width": 746,
+         "format": "png",
+         "height": 466,
+         "sha256": "1b969f8b9e5f489f62f7a16b7a440d1ddf3ecba6b5029961d1abfb8dc407f3cb",
+         "assetId": "img:1b969f8b9e5f489f62f7a16b7a440d1ddf3ecba6b5029961d1abfb8dc407f3cb",
+         "mimeType": "image/jpeg",
+         "elementId": "e000044",
+         "sourceName": "assets/crop_1_1789064258320.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q02-1121bc8d",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000057"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about solubility.",
+       "marks": 9,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The graph shows the solubilities of copper(II) chloride and sodium chloride at different temperatures. $^{\\circ} C$",
+         "label": "a",
+         "marks": null,
+         "partId": "q03-1121bc8d-pa",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258405.png",
+           "width": 1566,
+           "format": "png",
+           "height": 1088,
+           "sha256": "5e782f0ba76770290c31c225afcff7c342af29fe7cfb4f0d2b4781cb257d3bad",
+           "assetId": "img:5e782f0ba76770290c31c225afcff7c342af29fe7cfb4f0d2b4781cb257d3bad",
+           "mimeType": "image/jpeg",
+           "elementId": "e000068",
+           "sourceName": "assets/crop_1_1789064258405.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Determine the temperature at which copper(II) chloride and sodium chloride have the same solubility. Show on the graph how you obtained your answer. $\\mathrm {t e m p e r a t u r e} =$",
+         "label": "a-i",
+         "marks": null,
+         "partId": "q03-1121bc8d-pa-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A saturated solution of copper(II) chloride in 100g of water is cooled from $ 4 0^{\\circ} \\mathrm{C} $ to $ 1 0^{\\circ} \\mathrm{C}. $ Determine the mass, in grams, of copper(II) chloride that crystallises.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q03-1121bc8d-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": [
+          "mass of copper(II) chloride"
+         ]
+        },
+        {
+         "qwc": false,
+         "text": "A student uses this method to determine the solubility of potassium chloride in water at room temperature. record the mass of an empty evaporating basin pour some saturated potassium chloride solution into the evaporating basin record the mass of the evaporating basin and saturated potassium chloride solution heat the evaporating basin to remove all the water record the mass of the evaporating basin and the dry potassium chloride The table shows the student's results.",
+         "label": "b",
+         "marks": null,
+         "partId": "q03-1121bc8d-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Calculate the mass of dry potassium chloride obtained.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q03-1121bc8d-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Calculate the mass of water removed.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q03-1121bc8d-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Calculate the solubility of potassium chloride in grams per 100 grams of water. $s o l u b i l i t y =$",
+         "label": "b-iii",
+         "marks": null,
+         "partId": "q03-1121bc8d-pb-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Suggest why the student's method is not suitable for determining the solubility of hydrated copper(II) sulfate.",
+         "label": "b-iv",
+         "marks": null,
+         "partId": "q03-1121bc8d-pb-iv",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 3,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064258405.png",
+         "width": 1566,
+         "format": "png",
+         "height": 1088,
+         "sha256": "5e782f0ba76770290c31c225afcff7c342af29fe7cfb4f0d2b4781cb257d3bad",
+         "assetId": "img:5e782f0ba76770290c31c225afcff7c342af29fe7cfb4f0d2b4781cb257d3bad",
+         "mimeType": "image/jpeg",
+         "elementId": "e000068",
+         "sourceName": "assets/crop_1_1789064258405.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q03-1121bc8d",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000083"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about the reactions of Group 1 metals with water.",
+       "marks": 0,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "A teacher adds a piece of sodium to some water containing universal indicator. The equation for this reaction is $2 \\mathrm {N a} (\\mathrm {s}) + 2 \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {I}) \\rightarrow 2 \\mathrm {N a O H} (\\mathrm {a q}) + \\mathrm {H} _ {2} (\\mathrm {g})$ The sodium floats on the surface of the water and the universal indicator changes colour because an alkaline solution is formed.",
+         "label": "a",
+         "marks": null,
+         "partId": "q04-1121bc8d-pa",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258431.png",
+           "width": 928,
+           "format": "png",
+           "height": 245,
+           "sha256": "ed464718b248b748b23a72c1e35e0f98dffa8b6da074bdec9d8b6f65d6df3042",
+           "assetId": "img:ed464718b248b748b23a72c1e35e0f98dffa8b6da074bdec9d8b6f65d6df3042",
+           "mimeType": "image/jpeg",
+           "elementId": "e000092",
+           "sourceName": "assets/crop_1_1789064258431.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give two other observations.",
+         "label": "a-i",
+         "marks": null,
+         "partId": "q04-1121bc8d-pa-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the final colour of the universal indicator.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q04-1121bc8d-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The diagram represents an atom of lithium and an atom of sodium. lithium sodium",
+         "label": "b",
+         "marks": null,
+         "partId": "q04-1121bc8d-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258450.png",
+           "width": 311,
+           "format": "png",
+           "height": 310,
+           "sha256": "cfc951ce381e5ce9c75609b53cb4b8d4553388d776a602c6a23630528ab031fd",
+           "assetId": "img:cfc951ce381e5ce9c75609b53cb4b8d4553388d776a602c6a23630528ab031fd",
+           "mimeType": "image/jpeg",
+           "elementId": "e000099",
+           "sourceName": "assets/crop_1_1789064258450.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789064258455.png",
+           "width": 389,
+           "format": "png",
+           "height": 363,
+           "sha256": "1528cb9b515973136f74ad2b6809a99c937a83f6e2b0a0011d178dac0a222786",
+           "assetId": "img:1528cb9b515973136f74ad2b6809a99c937a83f6e2b0a0011d178dac0a222786",
+           "mimeType": "image/jpeg",
+           "elementId": "e000101",
+           "sourceName": "assets/crop_2_1789064258455.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give a reason why lithium and sodium have similar reactions with water.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q04-1121bc8d-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain why lithium is less reactive than sodium.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q04-1121bc8d-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The teacher adds 0.150g of lithium to an excess of water and collects the hydrogen gas produced. The equation for the reaction is $2 \\mathrm {L i} (\\mathrm {s}) + 2 \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {I}) \\rightarrow 2 \\mathrm {L i O H} (\\mathrm {a q}) + \\mathrm {H} _ {2} (\\mathrm {g})$ The teacher collects $ 2 5 4 \\mathrm{c m}^{3} $ of hydrogen gas at room temperature and pressure (rtp). Show by calculation that 1 mol of hydrogen gas has a volume of approximately $ 2 4 0 0 0 \\mathrm{c m}^{3} $ at rtp.",
+         "label": "c",
+         "marks": null,
+         "partId": "q04-1121bc8d-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 4,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064258431.png",
+         "width": 928,
+         "format": "png",
+         "height": 245,
+         "sha256": "ed464718b248b748b23a72c1e35e0f98dffa8b6da074bdec9d8b6f65d6df3042",
+         "assetId": "img:ed464718b248b748b23a72c1e35e0f98dffa8b6da074bdec9d8b6f65d6df3042",
+         "mimeType": "image/jpeg",
+         "elementId": "e000092",
+         "sourceName": "assets/crop_1_1789064258431.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064258450.png",
+         "width": 311,
+         "format": "png",
+         "height": 310,
+         "sha256": "cfc951ce381e5ce9c75609b53cb4b8d4553388d776a602c6a23630528ab031fd",
+         "assetId": "img:cfc951ce381e5ce9c75609b53cb4b8d4553388d776a602c6a23630528ab031fd",
+         "mimeType": "image/jpeg",
+         "elementId": "e000099",
+         "sourceName": "assets/crop_1_1789064258450.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789064258455.png",
+         "width": 389,
+         "format": "png",
+         "height": 363,
+         "sha256": "1528cb9b515973136f74ad2b6809a99c937a83f6e2b0a0011d178dac0a222786",
+         "assetId": "img:1528cb9b515973136f74ad2b6809a99c937a83f6e2b0a0011d178dac0a222786",
+         "mimeType": "image/jpeg",
+         "elementId": "e000101",
+         "sourceName": "assets/crop_2_1789064258455.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.45,
+       "marksKnown": false,
+       "questionId": "q04-1121bc8d",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "Hydrogen peroxide solution decomposes to give water and oxygen gas. The equation for this reaction is $2 \\mathrm {H} _ {2} \\mathrm {O} _ {2} (\\mathrm {a q}) \\rightarrow 2 \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {I}) + \\mathrm {O} _ {2} (\\mathrm {g})$",
+       "marks": 8,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Three different solids are catalysts for the decomposition of hydrogen peroxide solution. A student is given hydrogen peroxide solution and a sample of each of the solid catalysts. The student has a timer, a measuring cylinder, a balance and the apparatus shown in the diagram. Describe a method the student could use to find which of the three solids is the most effective catalyst for the decomposition of hydrogen peroxide solution.",
+         "label": "a",
+         "marks": null,
+         "partId": "q05-1121bc8d-pa",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258475.png",
+           "width": 1042,
+           "format": "png",
+           "height": 594,
+           "sha256": "8a3f401b2b1f2ac03211b35845bbd69227e143aa0fdc94e822bec421f32e2dee",
+           "assetId": "img:8a3f401b2b1f2ac03211b35845bbd69227e143aa0fdc94e822bec421f32e2dee",
+           "mimeType": "image/jpeg",
+           "elementId": "e000117",
+           "sourceName": "assets/crop_1_1789064258475.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The diagram shows the reaction profile for the decomposition of hydrogen peroxide without a catalyst.",
+         "label": "b",
+         "marks": null,
+         "partId": "q05-1121bc8d-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258489.png",
+           "width": 1032,
+           "format": "png",
+           "height": 629,
+           "sha256": "5d32a0ec8d7587abaf6bb1184d922edf96bbbcd9eed3c86a987ec86256c2f134",
+           "assetId": "img:5d32a0ec8d7587abaf6bb1184d922edf96bbbcd9eed3c86a987ec86256c2f134",
+           "mimeType": "image/jpeg",
+           "elementId": "e000120",
+           "sourceName": "assets/crop_1_1789064258489.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Label the diagram to show the activation energy $ ( E_{\\mathrm{a}}) $ and the enthalpy change $ (\\Delta H) $ for this reaction.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q05-1121bc8d-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "On the diagram, draw a curve to show the reaction profile for the same reaction when a catalyst is used.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q05-1121bc8d-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 5,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064258475.png",
+         "width": 1042,
+         "format": "png",
+         "height": 594,
+         "sha256": "8a3f401b2b1f2ac03211b35845bbd69227e143aa0fdc94e822bec421f32e2dee",
+         "assetId": "img:8a3f401b2b1f2ac03211b35845bbd69227e143aa0fdc94e822bec421f32e2dee",
+         "mimeType": "image/jpeg",
+         "elementId": "e000117",
+         "sourceName": "assets/crop_1_1789064258475.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064258489.png",
+         "width": 1032,
+         "format": "png",
+         "height": 629,
+         "sha256": "5d32a0ec8d7587abaf6bb1184d922edf96bbbcd9eed3c86a987ec86256c2f134",
+         "assetId": "img:5d32a0ec8d7587abaf6bb1184d922edf96bbbcd9eed3c86a987ec86256c2f134",
+         "mimeType": "image/jpeg",
+         "elementId": "e000120",
+         "sourceName": "assets/crop_1_1789064258489.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q05-1121bc8d",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about the electrolysis of copper(II) sulfate solution.",
+       "marks": 12,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The diagram shows the apparatus used for the electrolysis. A student records the total increase in mass of the negative electrode every minute for 8 minutes. The table shows the results.",
+         "label": "a",
+         "marks": null,
+         "partId": "q06-1121bc8d-pa",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258504.png",
+           "width": 1227,
+           "format": "png",
+           "height": 572,
+           "sha256": "ed882005f63380662101111efe864d4fe8bb0c2d1996a733c7d72e1d4e7aedc1",
+           "assetId": "img:ed882005f63380662101111efe864d4fe8bb0c2d1996a733c7d72e1d4e7aedc1",
+           "mimeType": "image/jpeg",
+           "elementId": "e000127",
+           "sourceName": "assets/crop_1_1789064258504.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Plot the student's results.",
+         "label": "a-i",
+         "marks": null,
+         "partId": "q06-1121bc8d-pa-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Draw a curve of best fit.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q06-1121bc8d-pa-ii",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258549.png",
+           "width": 879,
+           "format": "png",
+           "height": 1089,
+           "sha256": "55f5487d2083f00ccc1ba236b90d109f56756780624ebd82831a4c93602217f5",
+           "assetId": "img:55f5487d2083f00ccc1ba236b90d109f56756780624ebd82831a4c93602217f5",
+           "mimeType": "image/jpeg",
+           "elementId": "e000134",
+           "sourceName": "assets/crop_1_1789064258549.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain the shape of the graph.",
+         "label": "a-iii",
+         "marks": null,
+         "partId": "q06-1121bc8d-pa-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The product at the positive electrode is oxygen gas.",
+         "label": "b",
+         "marks": null,
+         "partId": "q06-1121bc8d-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The student repeats the electrolysis using different apparatus. Describe how the student should collect a sample of pure oxygen at the positive electrode.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q06-1121bc8d-pb-i",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258563.png",
+           "width": 1298,
+           "format": "png",
+           "height": 605,
+           "sha256": "7b7ab6feb60e893ce3fff9c11af66beb6010edbb652b337d9dab6f97323719a9",
+           "assetId": "img:7b7ab6feb60e893ce3fff9c11af66beb6010edbb652b337d9dab6f97323719a9",
+           "mimeType": "image/jpeg",
+           "elementId": "e000138",
+           "sourceName": "assets/crop_1_1789064258563.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give an ionic half-equation for the formation of oxygen.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q06-1121bc8d-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The wire used to connect the power supply to the electrodes is made of copper metal. The diagram shows the arrangement of the ions in a metal. metal ion",
+         "label": "c",
+         "marks": null,
+         "partId": "q06-1121bc8d-pc",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258572.png",
+           "width": 746,
+           "format": "png",
+           "height": 433,
+           "sha256": "f73c6bd861c9887f07e3600886084d21c2d15d590c8d3d6a59003c6feb433c28",
+           "assetId": "img:f73c6bd861c9887f07e3600886084d21c2d15d590c8d3d6a59003c6feb433c28",
+           "mimeType": "image/jpeg",
+           "elementId": "e000143",
+           "sourceName": "assets/crop_1_1789064258572.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789064258577.png",
+           "width": 119,
+           "format": "png",
+           "height": 121,
+           "sha256": "dae53390826d7cd038682e55093e577d2eb4436c477591b85ae6369190925ed9",
+           "assetId": "img:dae53390826d7cd038682e55093e577d2eb4436c477591b85ae6369190925ed9",
+           "mimeType": "image/jpeg",
+           "elementId": "e000144",
+           "sourceName": "assets/crop_2_1789064258577.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Metals that are malleable can also be stretched to form long, thin wires. Suggest why metals can be stretched to form wires.",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q06-1121bc8d-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain why metals conduct electricity.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q06-1121bc8d-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 6,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064258504.png",
+         "width": 1227,
+         "format": "png",
+         "height": 572,
+         "sha256": "ed882005f63380662101111efe864d4fe8bb0c2d1996a733c7d72e1d4e7aedc1",
+         "assetId": "img:ed882005f63380662101111efe864d4fe8bb0c2d1996a733c7d72e1d4e7aedc1",
+         "mimeType": "image/jpeg",
+         "elementId": "e000127",
+         "sourceName": "assets/crop_1_1789064258504.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064258549.png",
+         "width": 879,
+         "format": "png",
+         "height": 1089,
+         "sha256": "55f5487d2083f00ccc1ba236b90d109f56756780624ebd82831a4c93602217f5",
+         "assetId": "img:55f5487d2083f00ccc1ba236b90d109f56756780624ebd82831a4c93602217f5",
+         "mimeType": "image/jpeg",
+         "elementId": "e000134",
+         "sourceName": "assets/crop_1_1789064258549.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064258563.png",
+         "width": 1298,
+         "format": "png",
+         "height": 605,
+         "sha256": "7b7ab6feb60e893ce3fff9c11af66beb6010edbb652b337d9dab6f97323719a9",
+         "assetId": "img:7b7ab6feb60e893ce3fff9c11af66beb6010edbb652b337d9dab6f97323719a9",
+         "mimeType": "image/jpeg",
+         "elementId": "e000138",
+         "sourceName": "assets/crop_1_1789064258563.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064258572.png",
+         "width": 746,
+         "format": "png",
+         "height": 433,
+         "sha256": "f73c6bd861c9887f07e3600886084d21c2d15d590c8d3d6a59003c6feb433c28",
+         "assetId": "img:f73c6bd861c9887f07e3600886084d21c2d15d590c8d3d6a59003c6feb433c28",
+         "mimeType": "image/jpeg",
+         "elementId": "e000143",
+         "sourceName": "assets/crop_1_1789064258572.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789064258577.png",
+         "width": 119,
+         "format": "png",
+         "height": 121,
+         "sha256": "dae53390826d7cd038682e55093e577d2eb4436c477591b85ae6369190925ed9",
+         "assetId": "img:dae53390826d7cd038682e55093e577d2eb4436c477591b85ae6369190925ed9",
+         "mimeType": "image/jpeg",
+         "elementId": "e000144",
+         "sourceName": "assets/crop_2_1789064258577.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q06-1121bc8d",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000130"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about esters. Ester A reacts with water to form ethanoic acid and ethanol. The displayed formulae of the reactants and products are shown in this equation The molar enthalpy change $ (\\Delta H) $ for the reaction is 0 kJ/mol.",
+       "marks": 15,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Draw a ring around the functional group in ester A.",
+         "label": "a",
+         "marks": null,
+         "partId": "q07-1121bc8d-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the name of ester A.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q07-1121bc8d-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Describe a chemical test, other than using an indicator, to show that the reaction mixture contains ethanoic acid.",
+         "label": "a-iii",
+         "marks": null,
+         "partId": "q07-1121bc8d-pa-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain why the molar enthalpy change $ (\\Delta H) $ for the reaction between ester A and water is 0 kJ/mol. In your answer, refer to the bonds broken and the bonds formed.",
+         "label": "b",
+         "marks": null,
+         "partId": "q07-1121bc8d-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A mixture of ester A and water is left in a sealed container until the reaction mixture reaches dynamic equilibrium.",
+         "label": "c",
+         "marks": null,
+         "partId": "q07-1121bc8d-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Describe what is meant by dynamic equilibrium.",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q07-1121bc8d-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain why adding a catalyst does not change the position of equilibrium.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q07-1121bc8d-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The ethanoic acid produced in the reaction is completely neutralised by $ 2 2. 7 5 \\mathrm{c m}^{3} $ of $ 0. 1 5 0 \\mathrm{m o l} / \\mathrm{d m}^{3} $ barium hydroxide solution. The equation for the neutralisation reaction is $2 \\mathrm {C H} _ {3} \\mathrm {C O O H} + \\mathrm {B a} (\\mathrm {O H}) _ {2} \\rightarrow \\mathrm {B a} (\\mathrm {C H} _ {3} \\mathrm {C O O}) _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O}$ Calculate the amount, in moles, of ethanoic acid neutralised Give your answer to 3 significant figures.",
+         "label": "d",
+         "marks": null,
+         "partId": "q07-1121bc8d-pd",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The structures of two organic compounds are shown. These compounds react together to form a polymer. Give the repeat unit of the polymer formed.",
+         "label": "e",
+         "marks": null,
+         "partId": "q07-1121bc8d-pe",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064258628.png",
+           "width": 411,
+           "format": "png",
+           "height": 202,
+           "sha256": "9cabc2bf37b48e9548eb61c0dfca5bdddf396da991d8d4245b3fd8094e9ed53b",
+           "assetId": "img:9cabc2bf37b48e9548eb61c0dfca5bdddf396da991d8d4245b3fd8094e9ed53b",
+           "mimeType": "image/jpeg",
+           "elementId": "e000167",
+           "sourceName": "assets/crop_1_1789064258628.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789064258634.png",
+           "width": 373,
+           "format": "png",
+           "height": 214,
+           "sha256": "9f6366c480c4f73be6b7ca84650898caac3c62d0c8a94f48183a04566c21ef68",
+           "assetId": "img:9f6366c480c4f73be6b7ca84650898caac3c62d0c8a94f48183a04566c21ef68",
+           "mimeType": "image/jpeg",
+           "elementId": "e000168",
+           "sourceName": "assets/crop_2_1789064258634.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 7,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064258586.png",
+         "width": 1357,
+         "format": "png",
+         "height": 259,
+         "sha256": "1f38b9ee61dbadd6aa18ea86878b9fec54bfa9e075397d50cc1447f899783c76",
+         "assetId": "img:1f38b9ee61dbadd6aa18ea86878b9fec54bfa9e075397d50cc1447f899783c76",
+         "mimeType": "image/jpeg",
+         "elementId": "e000152",
+         "sourceName": "assets/crop_1_1789064258586.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064258628.png",
+         "width": 411,
+         "format": "png",
+         "height": 202,
+         "sha256": "9cabc2bf37b48e9548eb61c0dfca5bdddf396da991d8d4245b3fd8094e9ed53b",
+         "assetId": "img:9cabc2bf37b48e9548eb61c0dfca5bdddf396da991d8d4245b3fd8094e9ed53b",
+         "mimeType": "image/jpeg",
+         "elementId": "e000167",
+         "sourceName": "assets/crop_1_1789064258628.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789064258634.png",
+         "width": 373,
+         "format": "png",
+         "height": 214,
+         "sha256": "9f6366c480c4f73be6b7ca84650898caac3c62d0c8a94f48183a04566c21ef68",
+         "assetId": "img:9f6366c480c4f73be6b7ca84650898caac3c62d0c8a94f48183a04566c21ef68",
+         "mimeType": "image/jpeg",
+         "elementId": "e000168",
+         "sourceName": "assets/crop_2_1789064258634.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q07-1121bc8d",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      }
+     ],
+     "paperTotal": 70,
+     "schemaVersion": "1.0",
+     "sectionTotals": {},
+     "questionTotals": {
+      "1": 7,
+      "2": 8,
+      "3": 9,
+      "5": 8,
+      "6": 12,
+      "7": 15
+     },
+     "reviewRequired": true,
+     "extractionMethod": "glm-ocr-qp-v1",
+     "frontMatterFigures": []
+    },
+    "ms_draft": {
+     "paper": {
+      "board": "Edexcel",
+      "session": "January 2022",
+      "subject": null,
+      "duration": null,
+      "examDate": null,
+      "logNumber": "P70702A",
+      "qualification": null,
+      "paperReference": null,
+      "publicationCode": "4CH1_2C_2201_MS",
+      "canonicalDocumentId": "20135ce7-80e7-521a-a01c-e5ff06afc6a5"
+     },
+     "entries": [
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(a)(i)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-20135ce7-q2ai",
+       "guidance": [],
+       "answerText": "D nitrogen\nD is the only correct answer as nitrogen is the most abundant gas in unpolluted air.A is not correct as there are only trace amounts of hydrogen in unpolluted air.B is not correct as there are only trace amounts of methane in unpolluted air.C is not correct as there are only trace amounts of neon in unpolluted air.\nC 21%C is the only correct answer as the percentage of oxygen in the air is 21%A is not the correct answer as the percentage of oxygen in the air is not 0.04%B is not the correct answer as the percentage of oxygen in the air is not 0.9%D is not the correct answer as the percentage of oxygen in the air is not 35%",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(b)(i)",
+       "marks": 2,
+       "number": 2,
+       "entryId": "ms-20135ce7-q2bi",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW greenhouse effectALLOW an effect of global warming/climate change e.g. wildfires/melting of polar ice caps/flooding"
+        },
+        {
+         "kind": "note",
+         "text": "complete combustion of an alkane"
+        },
+        {
+         "kind": "note",
+         "text": "\u2713"
+        },
+        {
+         "kind": "note",
+         "text": "\u2713"
+        }
+       ],
+       "answerText": "cracking an alkane\nreaction between magnesium and hydrochloric acid\nrusting of iron\nthermal decomposition of copper(II) carbonate\nAny one from:M1 global warmingM2 climate changeargon",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(c)(i)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-20135ce7-q2ci",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW HNO3/ nitrous acid/HNO2"
+        },
+        {
+         "kind": "note",
+         "text": "sulfur dioxide"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW SO2ALLOW other oxides of nitrogen"
+        }
+       ],
+       "answerText": "nitric acid\nTotal for question = 8",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(a)(i)",
+       "marks": 2,
+       "number": 4,
+       "entryId": "ms-20135ce7-q4ai",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M1 sodium moves (on the surface)"
+        },
+        {
+         "kind": "note",
+         "text": "M2 sodium turns into a sphere/ball"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW sodium melts"
+        },
+        {
+         "kind": "note",
+         "text": "M3 effervescence"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW fizzing / bubbles"
+        },
+        {
+         "kind": "note",
+         "text": "M4 sodium gets smaller"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW sodium disappears / dissolves"
+        },
+        {
+         "kind": "note",
+         "text": "M5 white trail seen"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE references to a flame"
+        },
+        {
+         "kind": "note",
+         "text": "(ii) blue / purple"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE qualifiers"
+        }
+       ],
+       "answerText": "Any two from:",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(b)(i)",
+       "marks": 1,
+       "number": 4,
+       "entryId": "ms-20135ce7-q4bi",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW same number of valence electrons/one valence electron"
+        },
+        {
+         "kind": "note",
+         "text": "M1 lithium (atom) has a smaller atomic radius"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW lithium is smaller (atom)/lithium (atom) has fewer shells /energy levels"
+        },
+        {
+         "kind": "note",
+         "text": "M2 the outer shell electron is more strongly attracted to the nucleus OWTTE"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW outer electron in lithium (atom) is closer to the nucleus"
+        },
+        {
+         "kind": "note",
+         "text": "M3 so is less easily lost"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW reverse argument for sodium"
+        },
+        {
+         "kind": "note",
+         "text": "(c)M1 amount lithium = 0.150\u00f77 OR 0.0214 molM2 amount hydrogen = 0.0107 molM3 254\u00f70.0107M4 23,738"
+        },
+        {
+         "kind": "note",
+         "text": "penalise 1 sig fig in M1ALLOW M1\u00f72ALLOW 2 or more sig figs in answers to M1 and M2ALLOW 2 or more sig figs if all working showncorrect answers in the range 23,707 to 24,910 cm3 to 3 or more significant figures, without working scores4 marks."
+        }
+       ],
+       "answerText": "same number of electrons/one electron in the outer shell.\nTotal for question = 11",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(a)",
+       "marks": 5,
+       "number": 5,
+       "entryId": "ms-20135ce7-q5a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M1 add hydrogen peroxide to the conical flask and add catalyst"
+        },
+        {
+         "kind": "note",
+         "text": "M2 start the timer"
+        },
+        {
+         "kind": "note",
+         "text": "M3 record volume of gas produced in a given time/record the time for certain volume of gas to be produced"
+        },
+        {
+         "kind": "note",
+         "text": "M4 repeat with same mass of a different catalyst"
+        },
+        {
+         "kind": "note",
+         "text": "M5 and with same volume of hydrogen peroxide"
+        },
+        {
+         "kind": "note",
+         "text": "M6 plot the results on a graph and calculate gradient (for each catalyst)"
+        },
+        {
+         "kind": "note",
+         "text": "M7 the most effective catalyst gives the fastest rate of reaction OWTTE"
+        }
+       ],
+       "answerText": "A description that refers to any five of the following points",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)(i)",
+       "marks": 2,
+       "number": 5,
+       "entryId": "ms-20135ce7-q5bi",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "the line does not need an arrow head"
+        },
+        {
+         "kind": "note",
+         "text": "M2 a vertical line from the level of the hydrogen peroxide to the level of the water and oxygen labelled enthalpy change or $\\Delta H$"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW double headed arrow"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT arrow pointing down"
+        },
+        {
+         "kind": "note",
+         "text": "curve starting from hydrogen peroxide level, below the peak of the original curve, and ending at water and oxygen level"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW double headed arrow"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT arrow pointing up"
+        }
+       ],
+       "answerText": "M1 a vertical line from the level of the hydrogen peroxide to the top of the curve labelled activation energy or $E_{\\mathrm{a}}$",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)(ii)",
+       "marks": 1,
+       "number": 5,
+       "entryId": "ms-20135ce7-q5bii",
+       "guidance": [],
+       "answerText": "",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "6(a)(i)",
+       "marks": 1,
+       "number": 6,
+       "entryId": "ms-20135ce7-q6ai",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW line becomes horizontal as there is no copper sulfate solution left"
+        }
+       ],
+       "answerText": "all points plotted \u00b1 half a square\ncurved line of best fit\nAn explanation that links the following two points\nM1 curve shows increasing mass (of negative electrode) because (more) copper deposits/forms\nM2 line becomes horizontal because there are no more copper(II) ions left in the solution/all the copper has been deposited/formed OWTTE",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "6(b)(i)",
+       "marks": 2,
+       "number": 6,
+       "entryId": "ms-20135ce7-q6bi",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW fill a test tube/measuring cylinder with water"
+        }
+       ],
+       "answerText": "A description that refers to two of the following points\nM1 fill a test tube/measuring cylinder with copper sulfate solution\nM2 place the tube over the positive electrode\nM3 collect gas/oxygen by displacement of solution/water",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "6(b)(ii)",
+       "marks": 2,
+       "number": 6,
+       "entryId": "ms-20135ce7-q6bii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2 dep on M1"
+        }
+       ],
+       "answerText": "2H2O\u2192O2+4H++4e(-)\nM1 all formulae correct\nM2 correct balancing of correct formulae",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "6(c)(i)",
+       "marks": 2,
+       "number": 6,
+       "entryId": "ms-20135ce7-q6ci",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW sheets/rows"
+        },
+        {
+         "kind": "note",
+         "text": "M2 can slide over one another"
+        },
+        {
+         "kind": "note",
+         "text": "M2 dep on M1"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW atoms/ions slide over each other for M2"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE sea of electrons/free electrons"
+        }
+       ],
+       "answerText": "M1 layers (of atoms or ions)\nM1 delocalised electrons",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "6(c)(ii)",
+       "marks": null,
+       "number": 6,
+       "entryId": "ms-20135ce7-q6cii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2 dep on mention of electrons in M1"
+        },
+        {
+         "kind": "note",
+         "text": "0 marks if reference to ions moving"
+        }
+       ],
+       "answerText": "M2 are free to move (throughout the structure)\nTotal for question = 12",
+       "confidence": 0.5,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": null
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(a)(i)",
+       "marks": 1,
+       "number": 7,
+       "entryId": "ms-20135ce7-q7ai",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "REJECT any other atoms in the ring."
+        },
+        {
+         "kind": "note",
+         "text": "(ii) ethyl ethanoate"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW ethylethanoate"
+        },
+        {
+         "kind": "note",
+         "text": "(iii) M1 add a metal such as magnesium, aluminium, zinc or ironM2 effervescence/bubbles/fizzing"
+        },
+        {
+         "kind": "note",
+         "text": "must be a named metal REJECT Group 1 metals"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT any named carbonateACCEPT test gas with limewater which goes cloudy/milkyM2 dep on M1"
+        }
+       ],
+       "answerText": "Chemical structure of ethyl ethanoate\nALLOW ethyl acetate\nACCEPT test gas with lighted splint which pops\nM2 dep on reference to adding a metal\nORM1 add a carbonateM2 effervescence/bubbles/fizzing",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(b)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-20135ce7-q7b",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW the same bonds are broken and formed"
+        }
+       ],
+       "answerText": "M1 C-O and one/two O-H bonds are broken and formedM2 so the same amount of energy is needed to break the bonds in the reactants as is given off when the bonds in the products are formed\nALLOW energy of bonds formed equals energy of bonds broken",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(c)(i)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-20135ce7-q7ci",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "(ii)M1 a catalyst increases the rate of forward and backward reactionsM2 equally"
+        },
+        {
+         "kind": "note",
+         "text": "M2 dep on M1"
+        }
+       ],
+       "answerText": "M1 the rate of the forward reaction equals the rate of the backward reactionM2 the concentrations of reactants and products remain constant\nREJECT concentration of the reactants and products are the same",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(d)",
+       "marks": 3,
+       "number": 7,
+       "entryId": "ms-20135ce7-q7d",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M1 needs to be given to at least 3 sig figs"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW M1\u00d72"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW answer to M2 to 3 significant figures."
+        },
+        {
+         "kind": "note",
+         "text": "correct answer of0.00683 moles with or without working scores3 marks"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT answer in standard form"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT 0.00682 if M1 given to 3 sig figs"
+        },
+        {
+         "kind": "note",
+         "text": "6.83 with or without working scores2 marks"
+        }
+       ],
+       "answerText": "example calculation\nM1 moles barium hydroxide=(0.150\u00d722.75)\u00f71000\nOR0.0034125\nM2 moles ethanoic acid=0.006825\nM3 moles ethanoic acid to 3 significant figures=0.00683",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(e)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-20135ce7-q7e",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW structure without extension bonds"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE brackets and n and +H2O"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW -OH lost from diol and -H lost from dicarboxylic acid"
+        }
+       ],
+       "answerText": "correct answer scores2 marks\nChemical structure\nM1 three carbons from the dicarboxylic acid and two from the diol and the ester linkage\nM2 -OH lost from the dicarboxylic acid and -H lost from the diol\nTotal for question=15",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      }
+     ],
+     "icTable": null,
+     "warnings": [
+      "orphan row before first entry: 1(a)(i)(ii)",
+      "orphan row before first entry: M2 only",
+      "orphan row before first entry: ethene has a double bond",
+      "orphan row before first entry: (b)",
+      "orphan row before first entry: (c)(i)",
+      "orphan row before first entry: (ii)",
+      "orphan row before first entry: Total for question=7",
+      "2(a)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "2(b)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "2(b)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "2(c)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "orphan row before first entry: 3(a)(i)(ii)",
+      "orphan row before first entry: M131-13M218(g)",
+      "orphan row before first entry: 5.1(g)",
+      "orphan row before first entry: (b)(i)(ii)(iii)",
+      "orphan row before first entry: M15.1\u00f715OR0.34(g)ORanswer to(i)\u00f7answer to(ii)M234(g)ORanswer toM1\u00d7100",
+      "orphan row before first entry: Any one fromM1(hydrated) copper(II)sulfate would become anhydrous copper sulfateM2(hydrated) copper(II)sulfate would lose water",
+      "orphan row before first entry: Total for question=9",
+      "4(a)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "4(b)(i): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "4(b)(i): bare integer cell \"4\" skipped (rubric/rowspan ambiguity)",
+      "6(a)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "6(a)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "6(b)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "6(c)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "7(a)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "7(a)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "7(c)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)"
+     ],
+     "paperTotal": null,
+     "schemaVersion": "1.0",
+     "questionTotals": {},
+     "reviewRequired": true,
+     "extractionMethod": "glm-ocr-ms-v1"
+    },
+    "reconciliation": {
+     "findings": [
+      {
+       "msMarks": null,
+       "qpMarks": 7,
+       "severity": "qp-only",
+       "questionNumber": "1"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 8,
+       "severity": "qp-only",
+       "questionNumber": "2"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 9,
+       "severity": "qp-only",
+       "questionNumber": "3"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 8,
+       "severity": "qp-only",
+       "questionNumber": "5"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 12,
+       "severity": "qp-only",
+       "questionNumber": "6"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 15,
+       "severity": "qp-only",
+       "questionNumber": "7"
+      }
+     ],
+     "msPaperTotal": null,
+     "qpPaperTotal": 70,
+     "mismatchCount": 0,
+     "paperTotalConflict": false
+    },
+    "created_by": null,
+    "created_at": "2026-09-14 12:05:56.762693+00:00"
+   }
+  ],
+  "content_review_audit_refs": [],
+  "teacher_validation_event_refs": []
+ }
+}
