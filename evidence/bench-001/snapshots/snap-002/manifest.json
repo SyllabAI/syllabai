@@ -1,0 +1,107 @@
+{
+  "bytes": {
+    "chunks.jsonl.gz": 3059830,
+    "concept_attachments.json": 10947,
+    "graph_code.json": 31716,
+    "graph_edges.json": 15686,
+    "misconceptions.json": 2264,
+    "question_anchors.json": 154953,
+    "spec_points.json": 39379
+  },
+  "chunk_identity": "(documents.checksum, chunk_index, content sha256) \u2014 environment-portable",
+  "counts": {
+    "chunks": 2517,
+    "concept_attachments": 117,
+    "edges": 152,
+    "misconceptions": 19,
+    "question_anchors": 720,
+    "spec_points": 194
+  },
+  "deltas_vs_snap-001": {
+    "SNAP2-F1_corpus_reingestion": {
+      "chunk_refs_surviving": 0,
+      "consequence": "gold-v1 remains SHA-paired with snap-001 for the recorded runs; snap-002 requires a future gold-v2 regeneration (gold_generate.py, BENCH_SNAPSHOT override) before any new recorded run \u2014 per spec \u00a73/\u00a74 set+snapshot pair discipline",
+      "finding": "serving corpus fully re-ingested since snap-001; chunk identity triple (checksum, ordinal, content sha256) churned completely",
+      "t0_unique_contents": 2182,
+      "unique_contents_surviving": 0
+    },
+    "SNAP2-F2_attachment_list_order": {
+      "finding": "ratified concepts.yaml reordered spec_points lists for some emitted rows; sets identical, order follows the pinned store",
+      "rows": [
+        {
+          "code": "4CH1-CON-SATURATED-SOLUTION",
+          "snap001": {
+            "spec_points": [
+              "4CH1-1.4",
+              "4CH1-1.10"
+            ]
+          },
+          "snap002": {
+            "spec_points": [
+              "4CH1-1.10",
+              "4CH1-1.4"
+            ]
+          }
+        }
+      ]
+    },
+    "corpus_scope": {
+      "note": "4CH0 series were in scope at t0 too; no silent series filtering applied",
+      "predicate": "documents.kind IN ('QUESTION_PAPER','MARK_SCHEME') \u2014 unchanged from t0",
+      "snap002_4ch1_scoped_chunks": 1507,
+      "snap002_paper_codes": {
+        "4CH0/1C": 656,
+        "4CH0/2C": 354,
+        "4CH1/1C": 537,
+        "4CH1/1CR": 349,
+        "4CH1/2C": 366,
+        "4CH1/2CR": 255
+      },
+      "t0_4ch1_scoped_chunks": 1093,
+      "t0_paper_codes": {
+        "4CH0/1C": 547,
+        "4CH0/1CR": 149,
+        "4CH0/2C": 342,
+        "4CH0/2CR": 79,
+        "4CH1/1C": 368,
+        "4CH1/1CR": 268,
+        "4CH1/2C": 256,
+        "4CH1/2CR": 201,
+        "null": 123
+      }
+    }
+  },
+  "files_sha256": {
+    "chunks.jsonl.gz": "f421e9f96216518cb454e5b5f2f16b3da8cc2f602ebc360504a52914d1727b1a",
+    "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
+    "graph_code.json": "422341a3a32b2f46a65c1c8412bf4ba1083638306e8dcb025f2ac52ee3a0c20f",
+    "graph_edges.json": "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
+    "misconceptions.json": "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
+    "question_anchors.json": "11a53c11e6e35cec6f7bc436a0765a63a321a671f5c9e54be92a41e8571fc78f",
+    "spec_points.json": "b95361eff3ac5a70040e0bc79af7b5f5666704db350505830ca409ead607d6fb"
+  },
+  "generated": "2026-09-25",
+  "graph_as_code_source": "SyllabAI/syllabai-resources@1245df009712216b309f163aacdd1c6d8ef39f1b",
+  "pairing": {
+    "c19_prediction": "the C19 downstream record ('concept_attachments.json fills with the 117 promoted rows; gold-v1 unchanged') is fulfilled exactly; additionally the serving DB already carries the same 117 pairs as SUGGESTED (status lag only, pair set 1:1)",
+    "gold_v1": "unchanged and SHA-paired with snap-001 (validator selftest 6/6 green post-freeze); snap-001 remains the only snapshot eligible for re-runs of the recorded arms",
+    "snap-002": "requires a gold-v2 regeneration (gold_generate.py, BENCH_SNAPSHOT override) before any recorded run \u2014 the SNAP2-F1 corpus re-ingestion broke chunk identity, so gold-v1 anchors do NOT resolve here (by design, recorded)"
+  },
+  "predicates": {
+    "chunks.jsonl.gz": "documents.kind IN ('QUESTION_PAPER','MARK_SCHEME'), ORDER BY d.checksum, c.chunk_index (t0 predicate unchanged)",
+    "concept_attachments.json": "the T-C19 HUMAN_VALIDATED concept->SP rows from the ratified store, cross-checked 1:1 against scripts/c19_promotions.yaml and against the serving DB PART_OF pair set",
+    "graph_code.json": "serving-DB node set (98 CONCEPT + 19 MISCONCEPTION) enriched from the pinned ratified concepts.yaml (aliases/spec_points/title); counts recomputed",
+    "graph_edges.json": "knowledge_edges validation_status='VALIDATED' AND relation_type IN (CCW, EB, MOF, RB, RP, WAP), ORDER BY relation, source, target (RELATED_TO excluded \u2014 t0-consistent)",
+    "misconceptions.json": "knowledge_nodes node_type='MISCONCEPTION' (all statuses), ORDER BY code",
+    "question_anchors.json": "question_versions validation_state='VALIDATED' joined questions.primary_topic_node_id -> knowledge_nodes.code, exam_papers.paper_code, ORDER BY anchor_code, stem",
+    "spec_points.json": "knowledge_nodes node_type='SUBTOPIC' AND validation_status='VALIDATED' AND code LIKE '4CH1-%', ORDER BY code"
+  },
+  "serialization_notes": {
+    "anchor_order": "deterministic ORDER BY anchor_code, stem (t0 used DB natural order \u2014 unrecoverable; supersets verified)",
+    "exporter": "snap002_export.py (carried in this directory as export provenance); verification: graph_edges.json and misconceptions.json byte-identical to snap-001",
+    "gzip": "mtime=0 (deterministic, t0-consistent)",
+    "spec_points_projection": "pinned store's rich {code, role, evidence} attachment objects projected to their code string (the t0 row contract)"
+  },
+  "snapshot_version": "snap-002",
+  "source": "production Neon (read-only), db billowing-cherry-15418366 branch production \u2014 frozen via Neon branch bench-snap-002-ro (br-noisy-sunset-a5jilghp, endpoint ep-twilight-snow-a5ut29lz) created from production at export time; branch + role dropped after the freeze (no production writes, no production roles)"
+}
