@@ -1,0 +1,775 @@
+{
+ "generatedAt": "2026-09-25T16:45:54Z",
+ "base": "https://syllabai-core.onrender.com",
+ "mode": "read-only census (teacher token)",
+ "curriculumVersion": {
+  "id": "356840e6-81e2-49df-8182-93ab6504d591",
+  "code": "4CH1-2017"
+ },
+ "specPointUniverse": 182,
+ "universeTypes": {
+  "SUBTOPIC": 182
+ },
+ "questionAxis": {
+  "servingQuestions": 593,
+  "specPointsWithAtLeast1Question": 170,
+  "coveragePct": 93.4,
+  "specPointsUncovered": [
+   "4CH1-1.52C",
+   "4CH1-2.24C",
+   "4CH1-2.27C",
+   "4CH1-2.35",
+   "4CH1-2.43C",
+   "4CH1-3.19C",
+   "4CH1-4.29C",
+   "4CH1-4.37C",
+   "4CH1-4.38C",
+   "4CH1-4.42C",
+   "4CH1-4.43C",
+   "4CH1-4.48C"
+  ],
+  "questionsWithoutSpecCodes": 2,
+  "foreignCodes": {}
+ },
+ "noteAxis": {
+  "documentsByKind": {
+   "MARK_SCHEME": 169,
+   "QUESTION_PAPER": 177,
+   "EXTERNAL_QUESTIONS": 81,
+   "EXTERNAL_NOTES": 112,
+   "SYLLABUS": 162
+  },
+  "noteChunks": 112
+ },
+ "msAxis": "proxy: every serving bank question carries its marks-closed scheme by construction (ingest asserts closure); per-spec MS coverage therefore inherits the question axis \u2014 per-question reveal is attempt-gated and out of scope for a read-only census",
+ "unitRollup": {
+  "4CH1-1.1": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.10": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.11": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.12": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.13": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.14": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.15": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.16": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.17": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.18": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.19": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.2": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.20": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.21": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.22": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.23": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.24": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.25": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.26": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.27": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.28": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.29": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.3": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.30": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.31": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.32": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.33": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.34C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.35C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.36": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.37": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.38": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.39": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.4": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.40": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.41": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.42": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.43": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.44": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.45": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.46": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.47": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.48": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.49": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.50": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.51": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.52C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-1.53C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.54C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.55C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.56C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.57C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.58C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.59C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.5C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.60C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.6C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.7C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.8": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-1.9": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.1": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.10": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.11": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.12": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.13": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.14": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.15": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.16": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.17": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.18": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.19": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.2": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.20": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.21": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.22C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.23C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.24C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-2.25C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.26C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.27C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-2.28": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.29": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.3": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.30": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.31": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.32": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.33C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.34": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.35": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-2.36": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.37": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.38": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.39": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.40C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.41C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.42": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.43C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-2.44": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.45": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.46": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.47": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.48": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.49": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.4C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.5": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.50": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.6": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.7": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.8C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-2.9": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.1": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.10": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.11": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.12": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.13": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.14C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.15": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.16": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.17": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.18": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.19C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-3.2": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.20C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.21C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.22C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.3": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.4": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.5C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.6C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.7C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.8": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-3.9": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.1": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.10": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.11": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.12": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.13": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.14": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.15": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.16": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.17": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.18": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.19": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.2": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.20": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.21": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.22": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.23": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.24": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.25": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.26": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.27": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.28": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.29C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-4.3": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.30C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.31C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.32C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.33C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.34C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.35C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.36C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.37C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-4.38C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-4.39C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.4": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.40C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.41C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.42C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-4.43C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-4.44": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.45": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.46": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.47": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.48C": {
+   "covered": 0,
+   "total": 1
+  },
+  "4CH1-4.49C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.5": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.50C": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.6": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.7": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.8": {
+   "covered": 1,
+   "total": 1
+  },
+  "4CH1-4.9": {
+   "covered": 1,
+   "total": 1
+  }
+ }
+}

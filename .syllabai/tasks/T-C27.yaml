@@ -1,0 +1,20 @@
+version: 1
+task:
+  id: T-C27
+  title: "Question cards corpus + chunk→spec-code linkage (bank layer v2)"
+  owner: "unassigned (READY)"
+  status: READY
+  priority: P2
+  scope:
+    allowed:
+      - "deterministic card emission from bank questions (header + tags +
+        summaryHint, token-subset of print) — eval-gated ingest per plan §9"
+      - "controlled-taxonomy join paperDir#qN -> spec_codes (V33 GIN column)"
+  forbidden:
+    - "agent-asserted content validation"
+    - "textbook tier (P4 by design, licensing open)"
+    - "parser grammar changes (RC-C lane)"
+  dependencies:
+    - T-C26
+  evidence:
+    - "evidence/plan-cash-out-2026-09-25/ (substrate census + spec)"
