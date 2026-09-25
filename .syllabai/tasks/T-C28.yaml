@@ -1,0 +1,47 @@
+version: 1
+task:
+  id: T-C28
+  title: "Phase 2 step 3 residue unblock — learner payloads carry the applicability contract"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: EXECUTING
+  priority: P1
+  base:
+    repo: syllabai-core
+    commit: 78031028233fa2fa69def150092b8ebd124a400c
+  scope:
+    allowed:
+      - "LearnerKnowledgeGraphView.NodeWithStateView: additive applicability
+        (Map<String,Object>) — verbatim passthrough of NodeView.applicability,
+        which the walked tree (KnowledgeGraphService.treeWithMisconceptions)
+        has carried since T-C24; no new persistence, no new traversal"
+      - "ExamPaperController.PaperQuestionView: additive specPoints
+        [{code, role, applicability}] reusing the T-C24 spec-point projection
+        (SmeQuestionSpecPointRepository join + SpecPointRef shape) so the
+        papers detail payload supports the same honest scoping the question
+        topic pane has — same package, shared projection, no duplicated SQL"
+      - "honesty semantics identical to T-C24: nodes/questions without a
+        mapping arrive with null applicability / empty specPoints; nothing
+        invented at the serving layer"
+      - "unit tests for both passthroughs (learner KG view + paper detail
+        projection), including the honest-absent case"
+    forbidden:
+      - "any migration (applicability already persists via V39 + seed; no
+        flyway lease needed for this task)"
+      - "touching statement text or applicability content (golden gate —
+        serving layers pass through verbatim)"
+      - "editing syllabai-web / syllabai-demo / syllabai-resources (the web
+        residue UI — MasteryMap chips + PapersView scoping — is a follow-up
+        web-lane task that CONSUMES this contract)"
+      - "changing existing field order/semantics of either view beyond the
+        additive component (constructor-site ripple kept minimal)"
+  dependencies:
+    - T-C24 # applicability persisted + served on NodeView/StudentQuestionView (3c1600c)
+    - T-C25 # web consumer that identified this gap (next_safe_actions)
+  shared_resources:
+    - core-web-contract   # producer-side contract extension (coordinated policy)
+  notes:
+    - "T-C27 (bank layer v2) is a different lane — no overlap with this task"
+    - "no data backfill dependency beyond the existing T-C24 operator-gated
+      seed activation; until then both fields arrive empty/null and the web
+      residue must render honest absence"
+  evidence: []
