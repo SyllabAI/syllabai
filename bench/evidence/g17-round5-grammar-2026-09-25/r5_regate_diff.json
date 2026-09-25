@@ -1,0 +1,611 @@
+{
+ "4ch0-1c-201106": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 11,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "8": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q8"
+  ],
+  "prev_marksVerified": true
+ },
+ "4ch0-1c-201206": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 13,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {},
+  "queue_questions": [
+   "q1",
+   "q11"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-1c-201306": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 11,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "6": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ],
+   "11": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q6",
+   "q11"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-1c-201401": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 14,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "12": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q8",
+   "q11",
+   "q12"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-1c-201406": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 15,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "9": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q9",
+   "q15"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-1c-201501": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 12,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "7": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q7",
+   "q8"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-1c-201506": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 11,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "7": [
+    "MS-POINTS-DONT-CLOSE",
+    "MS-PART-NO-POINTS"
+   ],
+   "9": [
+    "MS-POINTS-DONT-CLOSE",
+    "MS-PART-NO-POINTS"
+   ],
+   "11": [
+    "MS-POINTS-DONT-CLOSE",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "queue_questions": [
+   "q7",
+   "q9",
+   "q11"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-1c-201701": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 11,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "1": [
+    "MS-PART-NO-POINTS"
+   ],
+   "5": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "10": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q1",
+   "q5"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-1c-201706": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 11,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "1": [
+    "MS-QUESTION-MISSING"
+   ],
+   "2": [
+    "MS-PART-NO-POINTS"
+   ],
+   "4": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "10": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q1",
+   "q2",
+   "q4",
+   "q10"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-1c-201806": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 15,
+   "tm": 120,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "8": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "9": [
+    "MS-QUESTION-MISSING"
+   ]
+  },
+  "queue_questions": [
+   "q9"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-2c-201301": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 7,
+   "tm": 60,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "2": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q2"
+  ],
+  "prev_marksVerified": true
+ },
+ "4ch0-2c-201306": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 7,
+   "tm": 60,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "2": [
+    "MS-QUESTION-MISSING"
+   ],
+   "4": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q2",
+   "q6",
+   "q7"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-2c-201401": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 5,
+   "tm": 60,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "3": [
+    "PRINTED-TOTAL-DISCREPANCY-QP-VS-MS"
+   ],
+   "5": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q5"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-2c-201501": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 9,
+   "tm": 60,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "3": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ],
+   "4": [
+    "MS-POINTS-DONT-CLOSE",
+    "MS-PART-NO-POINTS"
+   ],
+   "7": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ],
+   "8": [
+    "MS-POINTS-DONT-CLOSE"
+   ],
+   "9": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q4",
+   "q8",
+   "q9"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch0-2c-201601": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 7,
+   "tm": 60,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "3": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "7": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q3"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-1c-201906": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 8,
+   "tm": 55,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "10": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ],
+   "14": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "queue_questions": [
+   "q10",
+   "q14"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-1c-202106": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 10,
+   "tm": 110,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "5": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q5"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-1c-202111": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 11,
+   "tm": 110,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {},
+  "queue_questions": [
+   "q1"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-1c-202406": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 10,
+   "tm": 110,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {},
+  "queue_questions": [
+   "q3",
+   "q4",
+   "q8"
+  ],
+  "prev_marksVerified": true
+ },
+ "4ch1-1c-202506": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 10,
+   "tm": 110,
+   "src": "doclane_regate_report.json (Task 40, verified earlier this session)"
+  },
+  "flagged_questions": {
+   "6": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "queue_questions": [
+   "6"
+  ],
+  "prev_marksVerified": true
+ },
+ "4ch1-1cr-201906": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 10,
+   "tm": 110,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "4": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "5": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "queue_questions": [
+   "q4",
+   "q5"
+  ],
+  "prev_marksVerified": true
+ },
+ "4ch1-1cr-202006": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 10,
+   "tm": 110,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "3": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "queue_questions": [
+   "q1",
+   "q3"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-1cr-202201": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 11,
+   "tm": 110,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "1": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ],
+   "8": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "queue_questions": [
+   "q1",
+   "q8"
+  ],
+  "prev_marksVerified": true
+ },
+ "4ch1-1cr-202506": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 11,
+   "tm": 110,
+   "src": "doclane_regate_report.json (Task 40)"
+  },
+  "flagged_questions": {
+   "10": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "10"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-2c-202001": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 7,
+   "tm": 70,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {},
+  "queue_questions": [
+   "q2"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-2c-202106": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 7,
+   "tm": 70,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "7": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q7"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-2c-202201": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 7,
+   "tm": 70,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "3": [
+    "PART-MARKS-MISMATCH",
+    "MS-POINT-UNKNOWN-PART"
+   ]
+  },
+  "queue_questions": [
+   "q3"
+  ],
+  "prev_marksVerified": true
+ },
+ "4ch1-2cr-201906": {
+  "variant": "std",
+  "marksVerified": false,
+  "committed": {
+   "qc": 7,
+   "tm": 70,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {
+   "2": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ],
+   "5": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "queue_questions": [
+   "q5"
+  ],
+  "prev_marksVerified": false
+ },
+ "4ch1-2cr-202101": {
+  "variant": "std",
+  "marksVerified": true,
+  "committed": {
+   "qc": 8,
+   "tm": 70,
+   "src": "g15_gate_report.json"
+  },
+  "flagged_questions": {},
+  "queue_questions": [
+   "q7"
+  ],
+  "prev_marksVerified": true
+ }
+}

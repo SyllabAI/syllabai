@@ -1,0 +1,319 @@
+{
+ "basis": "parser main b0907a0 (g1.5-r5 + regression guard) vs round-4 repro f4ec81f",
+ "papers_reparsed": 29,
+ "improved": [
+  {
+   "slug": "4ch0-1c-201206",
+   "flags_before": 4,
+   "flags_after": 0,
+   "marksVerified": "False->True",
+   "questions_cleared": [
+    "1",
+    "11",
+    "12"
+   ]
+  },
+  {
+   "slug": "4ch0-1c-201401",
+   "flags_before": 5,
+   "flags_after": 2,
+   "marksVerified": "False->False",
+   "questions_cleared": [
+    "8",
+    "11"
+   ]
+  },
+  {
+   "slug": "4ch0-1c-201406",
+   "flags_before": 2,
+   "flags_after": 1,
+   "marksVerified": "False->True",
+   "questions_cleared": [
+    "15"
+   ]
+  },
+  {
+   "slug": "4ch0-1c-201501",
+   "flags_before": 3,
+   "flags_after": 1,
+   "marksVerified": "False->True",
+   "questions_cleared": [
+    "8"
+   ]
+  },
+  {
+   "slug": "4ch0-2c-201306",
+   "flags_before": 7,
+   "flags_after": 3,
+   "marksVerified": "False->False",
+   "questions_cleared": [
+    "6",
+    "7"
+   ]
+  },
+  {
+   "slug": "4ch1-1c-202111",
+   "flags_before": 4,
+   "flags_after": 0,
+   "marksVerified": "False->True",
+   "questions_cleared": [
+    "1",
+    "2"
+   ]
+  },
+  {
+   "slug": "4ch1-1c-202406",
+   "flags_before": 5,
+   "flags_after": 0,
+   "marksVerified": "True->True",
+   "questions_cleared": [
+    "3",
+    "4",
+    "8"
+   ]
+  },
+  {
+   "slug": "4ch1-1cr-202006",
+   "flags_before": 6,
+   "flags_after": 3,
+   "marksVerified": "False->False",
+   "questions_cleared": [
+    "1"
+   ]
+  },
+  {
+   "slug": "4ch1-2c-202001",
+   "flags_before": 2,
+   "flags_after": 0,
+   "marksVerified": "False->True",
+   "questions_cleared": [
+    "2"
+   ]
+  },
+  {
+   "slug": "4ch1-2cr-202101",
+   "flags_before": 2,
+   "flags_after": 0,
+   "marksVerified": "True->True",
+   "questions_cleared": [
+    "7"
+   ]
+  }
+ ],
+ "regressions": [],
+ "still_flagged": {
+  "4ch0-1c-201106": {
+   "8": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-1c-201306": {
+   "6": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ],
+   "11": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-1c-201401": {
+   "12": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-1c-201406": {
+   "9": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-1c-201501": {
+   "7": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-1c-201506": {
+   "7": [
+    "MS-POINTS-DONT-CLOSE",
+    "MS-PART-NO-POINTS"
+   ],
+   "9": [
+    "MS-POINTS-DONT-CLOSE",
+    "MS-PART-NO-POINTS"
+   ],
+   "11": [
+    "MS-POINTS-DONT-CLOSE",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "4ch0-1c-201701": {
+   "1": [
+    "MS-PART-NO-POINTS"
+   ],
+   "5": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "10": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-1c-201706": {
+   "1": [
+    "MS-QUESTION-MISSING"
+   ],
+   "2": [
+    "MS-PART-NO-POINTS"
+   ],
+   "4": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "10": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-1c-201806": {
+   "8": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "9": [
+    "MS-QUESTION-MISSING"
+   ]
+  },
+  "4ch0-2c-201301": {
+   "2": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-2c-201306": {
+   "2": [
+    "MS-QUESTION-MISSING"
+   ],
+   "4": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-2c-201401": {
+   "3": [
+    "PRINTED-TOTAL-DISCREPANCY-QP-VS-MS"
+   ],
+   "5": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-2c-201501": {
+   "3": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ],
+   "4": [
+    "MS-POINTS-DONT-CLOSE",
+    "MS-PART-NO-POINTS"
+   ],
+   "7": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ],
+   "8": [
+    "MS-POINTS-DONT-CLOSE"
+   ],
+   "9": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch0-2c-201601": {
+   "3": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "7": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch1-1c-201906": {
+   "10": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ],
+   "14": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "4ch1-1c-202106": {
+   "5": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch1-1c-202506": {
+   "6": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "4ch1-1cr-201906": {
+   "4": [
+    "PART-MARKS-MISMATCH"
+   ],
+   "5": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "4ch1-1cr-202006": {
+   "3": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "4ch1-1cr-202201": {
+   "1": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ],
+   "8": [
+    "PART-MARKS-MISMATCH",
+    "MS-PART-NO-POINTS"
+   ]
+  },
+  "4ch1-1cr-202506": {
+   "10": [
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch1-2c-202106": {
+   "7": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  },
+  "4ch1-2c-202201": {
+   "3": [
+    "PART-MARKS-MISMATCH",
+    "MS-POINT-UNKNOWN-PART"
+   ]
+  },
+  "4ch1-2cr-201906": {
+   "2": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ],
+   "5": [
+    "MS-POINTS-DONT-CLOSE",
+    "PART-MARKS-MISMATCH"
+   ]
+  }
+ },
+ "queue_questions_cleared_total": 17,
+ "newly_marksVerified": [
+  "4ch0-1c-201206",
+  "4ch0-1c-201406",
+  "4ch0-1c-201501",
+  "4ch1-1c-202111",
+  "4ch1-2c-202001"
+ ]
+}
