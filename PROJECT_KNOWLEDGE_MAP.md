@@ -2,7 +2,7 @@
 
 **Status:** Canonical navigation/index document  
 **Purpose:** Locate durable project knowledge without relying on conversation memory.  
-**Last reviewed:** 2026-09-15
+**Last reviewed:** 2026-09-25
 
 ## 1. Purpose
 
@@ -54,6 +54,7 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 |---|---|
 | Subject-first product architecture | `SUBJECT_ARCHITECTURE.md` |
 | SpecificationPoint model | `SUBJECT_ARCHITECTURE.md`, `MASTER_SPEC.md`, ADR-014 |
+| Spec-point applicability (official paper/unit/tier scope on KG nodes) | source data: `syllabai-resources` `graph/specification_points.yaml` (byte-pinned classpath copy in core); persistence/serving: core `V39__knowledge_node_applicability.sql` + `ConceptGraphSnapshotLoader`/`ConceptGraphSeedService` + `StudentQuestionView.specPoints`/`NodeView`; task packet `T-C24` |
 | Teacher/classroom lens over shared graph | `TEACHER_ARCHITECTURE.md`, ADR-015 |
 | Knowledge graph build/context | `KNOWLEDGE_GRAPH_BUILD_PLAN.md`, `KNOWLEDGE_GRAPH_CONTEXT.md`, relevant KG evidence/releases |
 | Current corpus/resource mappings | `syllabai-resources` canonical corpus and its QA/graph artifacts |
