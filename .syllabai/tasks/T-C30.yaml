@@ -3,7 +3,7 @@ task:
   id: T-C30
   title: "Operator-directed KG-tree applicability backfill — dispatchable teacher-activation workflow (activates every Phase 2 surface)"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: EXECUTING
+  status: DONE
   priority: P1
   base:
     repo: syllabai-web
@@ -52,10 +52,57 @@ task:
     - "workflow run URL + log excerpt (login role, activation SeedSummary lines,
       student-side verification count)"
     - "sweep re-run evidence: learner_kg_stats.non_null_applicability > 0"
+  outcome:
+    commit: ec29148
+    merge: 6a3971a
+    ci: "web-ci build SUCCESS + Vercel preview SUCCESS on ec29148 (PR #11)"
+    scope: ".github/workflows/concept-graph-activate.yml (NEW) +
+      scripts/ops/tc30_concept_graph_activate.py (NEW); zero application-code
+      edits; PILOT_TEACHER_* / PILOT_MONITOR_* reused, no new secret names"
+    activation: "workflow run 36253537636 SUCCESS — activation 200, SeedSummary
+      nodesCreated 0 / nodesReused 340 / edgesCreated 0 / edgesReused 496 /
+      alreadyActive true; pre 0 -> post 182 non-null applicability nodes"
+    idempotency: "workflow run 36253728888 SUCCESS — second dispatch wrote 0
+      values (pre 182 -> post 182, created 0/0, no drift)"
+  evidence:
+    - ".syllabai/evidence/t-c30/activation-evidence.json (both runs + sweep
+      re-run + the first backfilled ref verbatim)"
+    - "PR SyllabAI/syllabai-web#11 -> web-ci build SUCCESS; merged as 6a3971a;
+      local main synced; branch deleted"
+    - "coordination claim-first commit 7ab7183 (web base 3df9c61)"
   claims:
-    VERIFIED: []
-    INFERRED: []
-    REPORTED: []
+    VERIFIED:
+      - "the backfill fired exactly once and honestly: 182/182 spec-point nodes
+        under the 4CH1 root now carry the official paper/unit/tier scope
+        (learner KG probe pre 0 -> post 182; independent T-C28 sweep re-run
+        GREEN 6/6 with non_null_applicability 182)"
+      - "ref-level applicability activates with it (shared projection): paper
+        detail refs now carry the official map verbatim (e.g. 4CH1-4.23:
+        papers 1C+2C, double_award_shared true, rule with PDF page cites) —
+        zero invention, byte-verbatim from the SHA-pinned snapshot"
+      - "idempotency acceptance MET with evidence: second dispatch wrote 0
+        additional values"
+      - "zero drift: nodesCreated 0 / edgesCreated 0 on both runs — the prod
+        tree matches the pinned 340-node/496-edge seed exactly"
+      - "fail-closed safety confirmed live: requireSeedNode provenance guard
+        had nothing to reject (reused 340/340)"
+    INFERRED:
+      - "the T-C29 learner surfaces (MasteryMap scope section + PapersView
+        chips) now render populated scope data in production — the prod
+        bundle was verified serving the T-C29 code earlier today; the UI
+        itself is client-rendered and was not screenshot-verified here"
+    REPORTED:
+      - "Vercel production deployment triggered by the main push"
     UNVERIFIED: []
-  next_safe_actions: []
-  closeout: {}
+  next_safe_actions:
+    - "optional UI spot-check of PapersView chips + MasteryMap scope section in
+      a signed-in browser session (the payloads and bundle are both verified)"
+    - "the workflow stays as a permanent dispatchable idempotency re-verification
+      tool — dispatch it after any future core seed/snapshot change"
+    - "T-C27 bench-at-serving-flip remains owed on its own lane"
+  closeout:
+    commit: ec29148
+    merge: 6a3971a
+    ci: "https://github.com/SyllabAI/syllabai-web/pull/11"
+    lease: "authoritative-kg-promotion released — the activation ran under the
+      recorded operator directive, twice, idempotently"
