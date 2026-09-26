@@ -1,16 +1,12 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
 version: 1
-locks:
-  - resource: authoritative-kg-promotion
-    owner: "superz (main agent, zai session web-98866c45)"
-    task: T-C30
-    base_commit: 3df9c61b17153a5077b17b8e4ba655c3ae989291
-    acquired_at: 2026-09-26T15:48:54Z
-    expires_at: 2026-09-27T15:48:54Z
-    note: >-
-      Operator-gated activation of the already-merged T-C24 seed-side backfill;
-      operator directive recorded in the task file. Released at T-C30 closeout.
+locks: []
+# (T-C30's authoritative-kg-promotion lease was fulfilled — the operator-directed
+#  activation ran under the recorded directive, twice, idempotently (runs
+#  36253537636 + 36253728888 SUCCESS, 0 -> 182 applicability nodes); web PR #11
+#  merged as 6a3971a; released per the reclaim rule. Leftover active entry
+#  reconciled 2026-09-26T21:05Z — the closeout record had marked it released.)
 # (T-C29's core-web-contract consumer lease was fulfilled — web PR #9 merged
 #  as 9c9ab6b with web-ci + Vercel success — and released per the reclaim rule.)
 # (T-C28's core-web-contract producer lease was fulfilled — learner payloads

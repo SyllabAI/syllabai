@@ -67,6 +67,9 @@ task:
   evidence:
     - ".syllabai/evidence/t-c30/activation-evidence.json (both runs + sweep
       re-run + the first backfilled ref verbatim)"
+    - ".syllabai/evidence/t-c30/ui-spot-check.json + evidence/t-c30/ui/*.png
+      (signed-in browser spot-check: PapersView chips + MasteryMap scope
+      section rendering the activated applicability data)"
     - "PR SyllabAI/syllabai-web#11 -> web-ci build SUCCESS; merged as 6a3971a;
       local main synced; branch deleted"
     - "coordination claim-first commit 7ab7183 (web base 3df9c61)"
@@ -86,17 +89,23 @@ task:
         tree matches the pinned 340-node/496-edge seed exactly"
       - "fail-closed safety confirmed live: requireSeedNode provenance guard
         had nothing to reject (reused 340/340)"
-    INFERRED:
-      - "the T-C29 learner surfaces (MasteryMap scope section + PapersView
-        chips) now render populated scope data in production — the prod
-        bundle was verified serving the T-C29 code earlier today; the UI
-        itself is client-rendered and was not screenshot-verified here"
+      - "UI spot-check (2026-09-26T21:03Z, headless Chromium signed in as the
+        sanctioned TEST learner): PapersView scope chips render on 4/4 probed
+        papers (Paper 1C | Paper 2C | Also in Double Award; counts 6/8, 10/11,
+        7/11, 7/7) and the MasteryMap NodeDetailCard scope section renders on
+        both applicability shapes — 4CH1-1.1 shared (3 chips) and 4CH1-1.5C
+        C-suffixed (Paper 2C only) — with the verbatim rule text; per-question
+        chip rows correctly absent while questions await teacher validation;
+        0 console/page errors. Evidence: evidence/t-c30/ui-spot-check.json +
+        evidence/t-c30/ui/*.png — upgrades the former INFERRED UI claim"
+    INFERRED: []
     REPORTED:
       - "Vercel production deployment triggered by the main push"
     UNVERIFIED: []
   next_safe_actions:
-    - "optional UI spot-check of PapersView chips + MasteryMap scope section in
-      a signed-in browser session (the payloads and bundle are both verified)"
+    - "DONE 2026-09-26: UI spot-check of PapersView chips + MasteryMap scope
+      section executed in a signed-in browser session — both surfaces render
+      the populated official scope (evidence/t-c30/ui-spot-check.json)"
     - "the workflow stays as a permanent dispatchable idempotency re-verification
       tool — dispatch it after any future core seed/snapshot change"
     - "T-C27 bench-at-serving-flip remains owed on its own lane"
