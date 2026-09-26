@@ -52,3 +52,27 @@ task:
          (sandbox probes show Google geo-block 400 — client-side artifact, not a key fault).
          See ADDENDUM.md + gemini_key_probe.json + key_swap_record.json + embed_state.jsonl"
     pack: "bench/evidence/tc27-cards-speclinkage-2026-09-26/ (EVIDENCE.md + SHA256SUMS)"
+    continuation_2026-09-26T21:45Z:
+      agent: "superz (main agent, zai session web-98866c45) — coordinated continuation
+        per the registry rule (ownership does not prohibit coordinated fixes); operator
+        directed the bench-at-serving-flip item be picked up with a coordination check first"
+      coordination_check:
+        - "no conflict: owner session web-23eb7684 has no active lease (locks []),
+           active_work [] — the lane is free for a coordinated continuation; no
+           re-execution of landed items attempted"
+        - "the flip has NOT happened as of this probe: no validation-wave record in
+           coordination since snap-003; live serving posture probe recorded the teacher
+           search endpoint auth-gated (401 unauth / 403 learner-role — the sanctioned
+           TEST learner cannot observe card serving; honest limit, evidence
+           /download/tc27_flip_probe.json workspace copy)"
+      readiness_reverified:
+        - "snap-003 SHA256SUMS 7/7 OK + gold-v2 SHA256SUMS all OK (local re-verification)"
+        - "gold_check PASS reproduced: 120 records, quotas ok, all anchors resolve"
+        - "harness unit-green via core-ci (runs 36251591706 + 36272382294 on main)"
+      staged:
+        - "bench/AT_FLIP_RUNBOOK.md — the complete at-flip runbook (trigger A: operator
+           card-validation wave then run; trigger B: explicit operator commission of a
+           pre-flip ALL-denominator run; r4 generation steps mirroring r3 exactly: vector
+           freeze -> stage inputs -> workflows -> dispatch B->A->C -> record -> close T-C27)"
+      unchanged: "status stays EXECUTING; the recorded run remains operator-held and
+        un-executed — nothing was commissioned or self-started"
