@@ -1,0 +1,186 @@
+{
+ "date": "2026-09-26",
+ "repairs": {
+  "B_series_year": {
+   "non_specimen_null_remaining": [],
+   "backfilled_12": [
+    {
+     "paper_code": "4CH1/2C",
+     "session_label": "June 2022",
+     "series": "JUN",
+     "year": 2022
+    },
+    {
+     "paper_code": "4CH1/2C",
+     "session_label": "June 2019",
+     "series": "JUN",
+     "year": 2019
+    },
+    {
+     "paper_code": "4CH1/1C",
+     "session_label": "January 2020",
+     "series": "JAN",
+     "year": 2020
+    },
+    {
+     "paper_code": "4CH1/2C",
+     "session_label": "January 2020",
+     "series": "JAN",
+     "year": 2020
+    },
+    {
+     "paper_code": "4CH1/1C",
+     "session_label": "January 2021",
+     "series": "JAN",
+     "year": 2021
+    },
+    {
+     "paper_code": "4CH1/1C",
+     "session_label": "January 2022",
+     "series": "JAN",
+     "year": 2022
+    },
+    {
+     "paper_code": "4CH1/2C",
+     "session_label": "January 2022",
+     "series": "JAN",
+     "year": 2022
+    },
+    {
+     "paper_code": "4CH1/1C",
+     "session_label": "January 2023",
+     "series": "JAN",
+     "year": 2023
+    },
+    {
+     "paper_code": "4CH1/2C",
+     "session_label": "January 2023",
+     "series": "JAN",
+     "year": 2023
+    },
+    {
+     "paper_code": "4CH1/1C",
+     "session_label": "June 2023",
+     "series": "JUN",
+     "year": 2023
+    },
+    {
+     "paper_code": "4CH1/2C",
+     "session_label": "June 2023",
+     "series": "JUN",
+     "year": 2023
+    },
+    {
+     "paper_code": "4CH1/2C",
+     "session_label": "November 2020",
+     "series": "NOV",
+     "year": 2020
+    }
+   ]
+  },
+  "A_HOLD_jun2024_cr": {
+   "ep_rows": [
+    {
+     "paper_code": "4CH1/1CR",
+     "session_label": "June 2024",
+     "validation_state": "SUGGESTED",
+     "extraction_method": "pdflane-atoms-draft-v1",
+     "series": "JUN",
+     "year": 2024,
+     "question_paper_document_id": "afa9a7e7-fd1a-5b56-a538-8113879d94ea",
+     "mark_scheme_document_id": "4c3c9759-4cce-5c5d-83d0-2a0eb82a3d0d",
+     "created_at": "2026-09-26 21:14:59.040291+00:00"
+    },
+    {
+     "paper_code": "4CH1/2CR",
+     "session_label": "June 2024",
+     "validation_state": "SUGGESTED",
+     "extraction_method": "pdflane-atoms-draft-v1",
+     "series": "JUN",
+     "year": 2024,
+     "question_paper_document_id": "82d5aeca-6d73-5d8d-96b0-d4e30edd418f",
+     "mark_scheme_document_id": "123e0bf0-f380-5550-8cfc-17521258a656",
+     "created_at": "2026-09-26 21:15:17.362122+00:00"
+    }
+   ],
+   "bank": [
+    {
+     "paper_code": "4CH1/1CR",
+     "questions": 12,
+     "marks": 110,
+     "active": 12
+    },
+    {
+     "paper_code": "4CH1/2CR",
+     "questions": 7,
+     "marks": 70,
+     "active": 7
+    }
+   ],
+   "old_mislinked_rows_gone": true,
+   "doc_embed": [
+    {
+     "document_id": "123e0bf0-f380-5550-8cfc-17521258a656",
+     "chunks": 9,
+     "embedded": 9
+    },
+    {
+     "document_id": "4c3c9759-4cce-5c5d-83d0-2a0eb82a3d0d",
+     "chunks": 17,
+     "embedded": 17
+    },
+    {
+     "document_id": "82d5aeca-6d73-5d8d-96b0-d4e30edd418f",
+     "chunks": 11,
+     "embedded": 11
+    },
+    {
+     "document_id": "afa9a7e7-fd1a-5b56-a538-8113879d94ea",
+     "chunks": 14,
+     "embedded": 14
+    }
+   ],
+   "chunk_mirrors": [
+    {
+     "paper_code": "4CH1/1CR",
+     "series": "JUN",
+     "year": 2024,
+     "embed_rev": 2
+    },
+    {
+     "paper_code": "4CH1/2CR",
+     "series": "JUN",
+     "year": 2024,
+     "embed_rev": 2
+    }
+   ],
+   "old_4ch0_refs_on_4ch1_rows": 11
+  }
+ },
+ "census": {
+  "exam_papers": [
+   {
+    "validation_state": "SUGGESTED",
+    "n": 80
+   },
+   {
+    "validation_state": "REJECTED",
+    "n": 13
+   },
+   {
+    "validation_state": "VALIDATED",
+    "n": 11
+   }
+  ],
+  "ep_total": 104,
+  "bank": {
+   "questions": 1533,
+   "parts": 7222,
+   "mark_points": 5300,
+   "schemes": 1420,
+   "documents": 999,
+   "chunks": 4343
+  },
+  "null_series_pdflane": 0
+ }
+}
