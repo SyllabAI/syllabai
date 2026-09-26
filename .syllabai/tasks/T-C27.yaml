@@ -2,8 +2,8 @@ version: 1
 task:
   id: T-C27
   title: "Question cards corpus + chunk→spec-code linkage (bank layer v2)"
-  owner: "unassigned (READY)"
-  status: READY
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: EXECUTING
   priority: P2
   scope:
     allowed:
@@ -18,3 +18,26 @@ task:
     - T-C26
   evidence:
     - "evidence/plan-cash-out-2026-09-25/ (substrate census + spec)"
+  execution:
+    started: "2026-09-26 (operator item-① directive; chat 54c94863)"
+    base:
+      repo: syllabai
+      commit: 59af112
+    landed:
+      - "spec-linkage: qsp 1,725 -> 2,359 (+634 AI_VALIDATED, sme-eq precedent; 295/298
+         cardable paperDir#qN questions mapped against the 182-code taxonomy, confidence
+         min 0.80/median 0.90, 144/182 codes used, 3 honest skips) + chunk.spec_codes
+         512 -> 923 (+411 QP/MS via the deterministic join); GIN containment verified"
+      - "cards: 298 deterministic per-bank-question canonical drafts (qcard-bridge-family,
+         token-subset of print, series JAN/JUN/NOV, specCodes in retrieval block 295/298)
+         ingested 201 x298 via the teacher-authed API (1 dedup hit); documents 701 -> 999,
+         chunks 4,045 -> 4,343; all SUGGESTED, retrieval identity stamped, GIN spec-filter
+         verified; T-C20 structurally excludes them from serving — no retrieval change shipped"
+    blocked:
+      - "embed of the 298 card chunks: SYLLABAI_EMBEDDING_GEMINI_API_KEY returns HTTP 403
+         'Your project has been denied access' (PERMISSION_DENIED, provider-level; verified
+         directly + via /documents/search and /documents/{id}/embed 500s on live 1a644d5) —
+         operator must restore/replace the key; this also blocks the embed window 09-27"
+      - "recorded T-C13 bench (snap-003 re-freeze + gold-v2) — operator-held per the
+         snap-002 FREEZE_RECORD; owed at the serving flip"
+    pack: "bench/evidence/tc27-cards-speclinkage-2026-09-26/ (EVIDENCE.md + SHA256SUMS)"
