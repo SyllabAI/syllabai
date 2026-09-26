@@ -1,0 +1,61 @@
+version: 1
+task:
+  id: T-C30
+  title: "Operator-directed KG-tree applicability backfill — dispatchable teacher-activation workflow (activates every Phase 2 surface)"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: EXECUTING
+  priority: P1
+  base:
+    repo: syllabai-web
+    commit: 3df9c61b17153a5077b17b8e4ba655c3ae989291
+  scope:
+    allowed:
+      - ".github/workflows/concept-graph-activate.yml: NEW workflow_dispatch workflow —
+        teacher login via PILOT_TEACHER_* secrets, POST
+        /api/v1/teacher/concept-graph/activate (300 s cold-start tolerance per the
+        pilot_probe.py recovery note), honest SeedSummary print (created/reused counts;
+        the applicability backfill count is LOG-ONLY on core by T-C24 contract — never
+        re-add it to SeedSummary); optional student-side verification via
+        PILOT_MONITOR_* secrets (learner KG non-null applicability count); JSON artifact
+        upload per the s2 house pattern"
+      - "scripts/ops/tc30_concept_graph_activate.py: the workflow's script — same house
+        pattern as s2_class_probe.py (assert secrets set, never echo credentials,
+        timeout-bounded, one cold-start retry on dropped connections)"
+    forbidden:
+      - "no application code changes (src/) — the backfill write path is already merged
+        core-side (T-C24, 3c1600c, deployed): seed-side idempotent reuse write, verbatim
+        from the SHA-pinned snapshot, zero invention"
+      - "no core / demo / resources / past-papers edits"
+      - "no new secret names — reuse PILOT_TEACHER_* / PILOT_MONITOR_* exactly as the
+        existing s2 workflows do"
+      - "never print or persist credential values; SeedSummary counts only"
+  dependencies:
+    - T-C24 # backfill write path (core 3c1600c; prod build verified >= 7063e61 by sweep)
+    - T-C28 # learner payloads carry applicability + specPoints (verified live in prod)
+    - T-C29 # learner surfaces consume it (merged 9c9ab6b; prod bundle verified)
+  shared_resources:
+    - authoritative-kg-promotion # operator-gated: DIRECTIVE RECORDED — the operator
+      # chose option (a) in session web-98866c45 on 2026-09-26 ("operator KG-tree
+      # applicability backfill"). The activation is a prod WRITE: idempotent, single
+      # transaction, fail-closed on any provenance mismatch (requireSeedNode guard).
+  acceptance:
+    - "PR to syllabai-web green on web-ci (lint + build)"
+    - "workflow_dispatch run completes with activation HTTP 200 and honest counts printed"
+    - "post-activation read-only verification: learner KG applicability non-null count > 0
+      (expect 182 spec-point nodes under the 4CH1 root) via the T-C28 sweep probe"
+    - "idempotency preserved: a second activation run must write 0 additional values"
+  tests:
+    - "script dry-run without secrets fails fast with a clear message (assert path)"
+    - "post-activation: T-C28 sweep re-run (P4 specPoints ref-level applicability +
+      P5 learner KG non-null count)"
+  evidence_required:
+    - "workflow run URL + log excerpt (login role, activation SeedSummary lines,
+      student-side verification count)"
+    - "sweep re-run evidence: learner_kg_stats.non_null_applicability > 0"
+  claims:
+    VERIFIED: []
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: []
+  next_safe_actions: []
+  closeout: {}
