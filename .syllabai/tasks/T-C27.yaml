@@ -34,10 +34,14 @@ task:
          chunks 4,045 -> 4,343; all SUGGESTED, retrieval identity stamped, GIN spec-filter
          verified; T-C20 structurally excludes them from serving — no retrieval change shipped"
     blocked:
-      - "embed of the 298 card chunks: SYLLABAI_EMBEDDING_GEMINI_API_KEY returns HTTP 403
-         'Your project has been denied access' (PERMISSION_DENIED, provider-level; verified
-         directly + via /documents/search and /documents/{id}/embed 500s on live 1a644d5) —
-         operator must restore/replace the key; this also blocks the embed window 09-27"
       - "recorded T-C13 bench (snap-003 re-freeze + gold-v2) — operator-held per the
-         snap-002 FREEZE_RECORD; owed at the serving flip"
+         snap-002 FREEZE_RECORD; owed at the serving flip (when cards enter the serving set)"
+    resolved:
+      - "2026-09-26T13:30Z — embed blocker CLEARED: the operator supplied new keys; the
+         live key was the denied ...02sA (the 403 outage root cause); swapped to a working
+         key (env PUT flat-array shape + explicit deploy) — /documents/search RESTORED
+         (5/5 queries, 5 hits, 1.5-1.7s) and all 298 card chunks embedded
+         (gemini-embedding-001, 768-dim, ~30 RPM sustained, zero 429s). Spare key on file
+         (sandbox probes show Google geo-block 400 — client-side artifact, not a key fault).
+         See ADDENDUM.md + gemini_key_probe.json + key_swap_record.json + embed_state.jsonl"
     pack: "bench/evidence/tc27-cards-speclinkage-2026-09-26/ (EVIDENCE.md + SHA256SUMS)"

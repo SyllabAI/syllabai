@@ -1,0 +1,52 @@
+{
+ "model": "gemini-embedding-001",
+ "dimension": 768,
+ "at": "2026-09-26T12:54:40Z",
+ "results": {
+  "AQ.Ab8RN6I...iQNA": {
+   "call1": {
+    "ok": false,
+    "ms": 130,
+    "status": 400,
+    "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"User location is not supported for the API use.\",\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+   },
+   "call2": {
+    "ok": false,
+    "ms": 125,
+    "status": 400,
+    "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"User location is not supported for the API use.\",\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+   },
+   "verdict": "LIMITED/BLOCKED"
+  },
+  "AQ.Ab8RN6I...oasw": {
+   "call1": {
+    "ok": false,
+    "ms": 143,
+    "status": 400,
+    "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"User location is not supported for the API use.\",\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+   },
+   "call2": {
+    "ok": false,
+    "ms": 146,
+    "status": 400,
+    "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"User location is not supported for the API use.\",\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+   },
+   "verdict": "LIMITED/BLOCKED"
+  },
+  "AQ.Ab8RN6K...02sA": {
+   "call1": {
+    "ok": false,
+    "ms": 134,
+    "status": 403,
+    "body": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Your project has been denied access. Please contact support.\",\n    \"status\": \"PERMISSION_DENIED\"\n  }\n}\n"
+   },
+   "call2": {
+    "ok": false,
+    "ms": 134,
+    "status": 403,
+    "body": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Your project has been denied access. Please contact support.\",\n    \"status\": \"PERMISSION_DENIED\"\n  }\n}\n"
+   },
+   "verdict": "LIMITED/BLOCKED"
+  }
+ }
+}
