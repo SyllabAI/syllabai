@@ -1,0 +1,347 @@
+[
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-031",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-e",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "When zinc oxide reacts with dilute nitric acid, zinc nitrate is produced. The equation for the reaction is: ZnO + 2HNO<sub>3</sub> → Zn(NO<sub>3</sub>)<sub>2</sub> + H<sub>2</sub>O…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-032",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S3-a",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "Another student carries out the experiment to find the heat energy released in the reaction of sodium oxide with water: Na<sub>2</sub>O (s) + H<sub>2</sub>O (l) $\\rightarrow$ 2NaOH…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "3a280ff330b75f3ca8853c572ff39361d0bd7add2475647916f44b27bdd36943:1",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "bc6e12f1d5e6a27a4960a5bdaa58c51ed8b575234c41219d0d0ece8152c6f0c8:1",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-033",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-c",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "Thallium, Tl, is an element in Group 3 and Period 6 of the Periodic Table. The atomic number of thallium is 81 How many electrons are there in the outer shell of an atom of thalliu…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-034",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-e",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "A student wanted to make 15.0 g of zinc chloride. The equation for the reaction is: ZnCO<sub>3</sub> + 2HCl → ZnCl<sub>2</sub> + CO<sub>2</sub> + H<sub>2</sub>O What mass of zinc c…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-035",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-e",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "The industrial production of sulfuric acid involves several steps. One of these steps is the reaction of sulfur dioxide, SO<sub>2</sub>, with oxygen to form sulfur trioxide, SO<sub…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-036",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-e",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "What is the mass of 0.25 moles of hydrated copper(II) sulfate, CuSO<sub>4</sub>.5H<sub>2</sub>O? Relative formula mass (*M*<sub>*r*</sub>): H<sub>2</sub>O = 18 CuSO<sub>4</sub> = 1…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "eaf09d7f7aca30db3048250e526c0464f80e2cbdc0b61b1b0633f5e5806f4a0a:11",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:7",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "07baeebd0ffcc6eb5b792e2433d8bb6aa67e9b456bca4eab6b48211d5164ae78:3",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "cfa563798cb6ae1023c28eb981b2da218fb91ee437bbbcfaa2b006e018c32a72:10",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "c12b4a056d1f37e86a509f4c465011fb2d7c1d570438f1e195d8ecf5497174ab:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-037",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CSUMMER2021",
+   "rule": "R1+R3",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "A student does a titration to find the concentration of a solution of phosphoric acid. He uses these pieces of apparatus X, Y and Z in his titration. Y Diagrams are not to scale. Z",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-038",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-b",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "A student obtained the following chromatogram for substance A. ![1-2-q3-image](assets/029-1-2-q3-image.png) Determine the *R*<sub>*f*</sub> value of substance A.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "aa1b11cff9c757c6805cf0fe2c0b0b8975c161e73b9efdbda6cc339bc8ed178b:9",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-039",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "ING-JUNE2014",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "A student does some experiments to find the heat energy released when natural gas burns. She uses this apparatus.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "calculation",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "268af62afb9286bf5563f0bd11e59004c2eae78bdeb56a6a6ef3067cbdd58feb:11",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:0",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R3-paper-cohort",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-040",
+  "notes": "auto-derived v2; selector=cue-word",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-e",
+   "rule": "R1+R3",
+   "source": "qversion[None]"
+  },
+  "query": "Halon 1301 is a compound used in some fire extinguishers. Halon 1301 has the percentage composition by mass of 8.05% C, 53.69% Br and 38.26% F. Calculate the empirical formula of H…",
+  "substrate": "chunks"
+ }
+]

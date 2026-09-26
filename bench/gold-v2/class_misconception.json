@@ -1,0 +1,423 @@
+[
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-EQ-POSITION"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "2f65cb125d280694244b2c8d29a30b06c0972bb0fb6993efe72b5363c18cb45e:10",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "149db957b978ed0484dd1c29b4ba834b134f9fb3813a3d5582bc37def08199a6:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "a07762fac3f6a0c55d230e0e7505a7a188b1b72e7fd47af30aa983391cc7bdc2:16",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:11",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "985862905236514b57896abc643f40fa4b75dc9f5cdf33f880fe8dcfeec0dc75:16",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-EQ-PRESSURE-FEWER"
+  ],
+  "gold_spec_points": [
+   "4CH1-3.21C",
+   "4CH1-3.22C"
+  ],
+  "id": "g2-053",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:WRONG_ANSWER_PATTERN:4CH1-MIS-EQ-PRESSURE-FEWER->4CH1-CON-EQ-POSITION"
+  },
+  "query": "Why is 'predicting that a pressure change shifts equilibrium to the side with…' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-SIMPLE-MOLECULAR"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "9f3aaf4474afc28c23c6ceaf544a2e9006ab26be94ecba9382823ebca6cabf29:0",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "dbc179805f43912bb4f697ea473f9b46266893a875285eface4b4d8caaaa009a:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "f20fe163e6c65d28e4f92c242833ff63b2a412bdfa049a767fd4af3b5e5f9640:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "371e31a747194f0099ff466ce9dcd1bce628ceae31dcf5561ef6a62428284735:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-COVALENT-BONDS-BROKEN"
+  ],
+  "gold_spec_points": [
+   "4CH1-1.47",
+   "4CH1-1.48"
+  ],
+  "id": "g2-054",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REMEDIATED_BY:4CH1-MIS-COVALENT-BONDS-BROKEN->4CH1-CON-SIMPLE-MOLECULAR"
+  },
+  "query": "Why is 'saying covalent bonds are broken when simple molecular substances mel…' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-CATALYST"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "4085e363ba33f3f0ab148875f0cc72dc6de56c3af608b836c828507b160bcf94:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-CATALYST-PARTICLE-ENERGY"
+  ],
+  "gold_spec_points": [
+   "4CH1-3.12",
+   "4CH1-3.13"
+  ],
+  "id": "g2-055",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:WRONG_ANSWER_PATTERN:4CH1-MIS-CATALYST-PARTICLE-ENERGY->4CH1-CON-CATALYST"
+  },
+  "query": "Why is 'explaining a catalyst's effect as particles gaining energy or moving …' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-STATE-PARTICLE-MODEL"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b0704e76048cb454a3e702a1612fae5f026e460a146ccad67d436157a563a3ba:0",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-GAS-PARTICLES-TOUCH"
+  ],
+  "gold_spec_points": [
+   "4CH1-1.1",
+   "4CH1-1.3"
+  ],
+  "id": "g2-056",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REMEDIATED_BY:4CH1-MIS-GAS-PARTICLES-TOUCH->4CH1-CON-STATE-PARTICLE-MODEL"
+  },
+  "query": "Why is 'drawing gas particles touching each other or joined by bonds' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-IONIC-BOND"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "199f1ff326c8ef8022feaec4b622aeff5f31c752f2499a6061796eb74012a423:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "f20fe163e6c65d28e4f92c242833ff63b2a412bdfa049a767fd4af3b5e5f9640:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "536a8dd1c56d6b45c9d82af86e924257a1b0a93517a50ec7a7f057366c2a4005:16",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "81f416f2c32d849ec99796c546aa21b76bbab50b2131c29f623f1298fdaed7a0:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "e200f7eb08b55d55bedd5ddc9a02a776e29651eaf7594380285eda7ae93a7314:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-IONIC-BOND-ATOMS"
+  ],
+  "gold_spec_points": [
+   "4CH1-1.41"
+  ],
+  "id": "g2-057",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REMEDIATED_BY:4CH1-MIS-IONIC-BOND-ATOMS->4CH1-CON-IONIC-BOND"
+  },
+  "query": "Why is 'describing ionic bonding as attraction between atoms or molecules' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-VOL-CONVERSION"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b81fd2bc25bac1fb611e44b68b38d6f771ae1aca261f4c84962ddcd8f437a026:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "b1fa10107dad8964471cf4bd0b119f520bc56c65daf15d1eabc67c34b65d5da0:12",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "868a150c1aaee47589fd20603212263b9eb9d634dd6881ed5e6e7d0aeca3387f:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "88d87542229f8b140dd1e71c544d4cefda349dd17ce45f8ab76e337ee4749e1d:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "701efdc345f8b78da0fc54294643ae845d8b0e5d71e8e39faec13a87c6429937:10",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-CONC-UNIT"
+  ],
+  "gold_spec_points": [
+   "4CH1-1.34C"
+  ],
+  "id": "g2-058",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REMEDIATED_BY:4CH1-MIS-CONC-UNIT->4CH1-CON-VOL-CONVERSION"
+  },
+  "query": "Why is 'failing to convert cm3 to dm3 in concentration calculations' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-ISOTOPES"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "9cc282f92e1f986a5d2e9082047a9269747856485170e1b8a3d022fff2b81917:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "f1d98b594b804b5d4b38650684c43d5edaa5e67453567a3226e05aa9ab39381c:0",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "c6edac244e596ee7f015305ff4ef80f0381d5c1df25816a70fd2ce7c8a002d7c:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "bc6e12f1d5e6a27a4960a5bdaa58c51ed8b575234c41219d0d0ece8152c6f0c8:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "54a0a9f6198c4f1c9dd6aa39e6754a551ad4c06da51ac2067a68b10a06eac61a:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-ISOTOPES-DIFFER-PROTONS"
+  ],
+  "gold_spec_points": [
+   "4CH1-1.16",
+   "4CH1-1.17"
+  ],
+  "id": "g2-059",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REMEDIATED_BY:4CH1-MIS-ISOTOPES-DIFFER-PROTONS->4CH1-CON-ISOTOPES"
+  },
+  "query": "Why is 'believing isotopes of an element differ in their number of protons' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-MOLAR-ENTHALPY"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "bc6e12f1d5e6a27a4960a5bdaa58c51ed8b575234c41219d0d0ece8152c6f0c8:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "db3e6fdfb62c0357798a5bda8d755facdada1bd0a43d1439565b737ca26fb817:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "dab46d233def98fa0496d7b22298a660b3a98cc951665d33d9dc22c8d35252f6:12",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "aacf1223dedbcf7e8ad9265e1d404e1493e4228248ac235ee038c3bfd77c9993:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "5ab4f0df3c04af4723294e5ee792bcb7f4ff99b51f5a5f28a2c7b0bed8554594:7",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-ENTHALPY-UNIT-J"
+  ],
+  "gold_spec_points": [
+   "4CH1-3.4"
+  ],
+  "id": "g2-060",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REMEDIATED_BY:4CH1-MIS-ENTHALPY-UNIT-J->4CH1-CON-MOLAR-ENTHALPY"
+  },
+  "query": "Why is 'quoting the molar enthalpy change as the unconverted joule value inst…' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-AR"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "97890bc9e6069200c75b35037185c196dedd70d654491c32e43670a17e0e7a46:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "37247459b838d799b1059dd3b1aba296043104a56323c656e71eb1fca589396f:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "3a280ff330b75f3ca8853c572ff39361d0bd7add2475647916f44b27bdd36943:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "fa8769bea3b6ef523b0e2c6a3f339fab8502ddf317ba7d9444cb8da034bc1c5b:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-RAM-MASS-NUMBER"
+  ],
+  "gold_spec_points": [
+   "4CH1-1.26",
+   "4CH1-1.28"
+  ],
+  "id": "g2-061",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REMEDIATED_BY:4CH1-MIS-RAM-MASS-NUMBER->4CH1-CON-AR"
+  },
+  "query": "Why is 'calling the periodic table relative atomic mass the mass number' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ },
+ {
+  "class": "misconception",
+  "gold_concepts": [
+   "4CH1-CON-BOND-ENERGY-CALC"
+  ],
+  "gold_evidence": [
+   {
+    "chunk_ref": "7f4279654c9823e9e36eaee777e014746da9b1f6479601af159028d185719e82:21",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "985862905236514b57896abc643f40fa4b75dc9f5cdf33f880fe8dcfeec0dc75:12",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [
+   "4CH1-MIS-BOND-ENERGY-COUNT"
+  ],
+  "gold_spec_points": [
+   "4CH1-3.7C"
+  ],
+  "id": "g2-062",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "edge:REMEDIATED_BY:4CH1-MIS-BOND-ENERGY-COUNT->4CH1-CON-BOND-ENERGY-CALC"
+  },
+  "query": "Why is 'counting the wrong number or type of bonds in bond-energy calculations' a wrong idea, and what is the correct picture?",
+  "substrate": "kg+chunks"
+ }
+]

@@ -1,0 +1,123 @@
+{
+ "bytes": {
+  "chunks.jsonl.gz": 4106837,
+  "concept_attachments.json": 10947,
+  "graph_code.json": 31525,
+  "graph_edges.json": 15686,
+  "misconceptions.json": 2264,
+  "question_anchors.json": 154953,
+  "spec_points.json": 39379
+ },
+ "chunk_identity": "(documents.checksum, chunk_index, content sha256) \u2014 environment-portable (t0 convention unchanged)",
+ "counts": {
+  "chunks": 3831,
+  "chunks_by_kind": {
+   "EXTERNAL_QUESTIONS": 1056,
+   "MARK_SCHEME": 1494,
+   "QUESTION_PAPER": 1281
+  },
+  "concept_attachments": 117,
+  "documents_with_chunks": 575,
+  "edges": 152,
+  "excluded_chunks_by_kind": {
+   "EXTERNAL_NOTES": 350,
+   "SYLLABUS": 162
+  },
+  "misconceptions": 19,
+  "question_anchors": 720,
+  "spec_points": 194
+ },
+ "deltas_vs_snap-002": {
+  "SNAP3-F1_predicate_extension": {
+   "chunk_rows_by_kind": {
+    "snap002": {
+     "MARK_SCHEME": 1364,
+     "QUESTION_PAPER": 1153
+    },
+    "snap003": {
+     "EXTERNAL_QUESTIONS": 1056,
+     "MARK_SCHEME": 1494,
+     "QUESTION_PAPER": 1281
+    }
+   },
+   "documents_with_chunks": {
+    "snap002": 173,
+    "snap003": 575
+   },
+   "excluded_kinds": {
+    "EXTERNAL_NOTES": "350 chunks (T-C06/C13 lane governance)",
+    "SYLLABUS": "162 chunks (reference substrate, out of arm scope)"
+   },
+   "finding": "predicate extended with documents.kind='EXTERNAL_QUESTIONS' (T-C27 question cards: 298 ingested 2026-09-26 + 81 pre-existing 2026-09-20; all SUGGESTED, serving-inert at freeze time \u2014 the extension is what makes this pair usable for the serving-flip recorded run named by the T-C27 debt)",
+   "note": "paper_state (documents.validation_state) is uniformly SUGGESTED in snap-002 AND snap-003 \u2014 doc-level state; paper-level VALIDATED lives on exam_papers (11) and question_versions axes, unchanged discipline",
+   "predicate_snap003": "documents.kind IN ('QUESTION_PAPER','MARK_SCHEME','EXTERNAL_QUESTIONS')",
+   "predicate_t0_and_snap002": "documents.kind IN ('QUESTION_PAPER','MARK_SCHEME')"
+  },
+  "SNAP3-F2_corpus_evolution": {
+   "chunk_refs_surviving_qpms_to_qpms": 2359,
+   "consequence": "gold-v1 AND gold-v2 stay SHA-paired to their own snapshots; snap-002 keeps gold-v1-freeze semantics (its anchors never resolved post-SNAP2-F1); snap-003 pairs with gold-v2 (built in the same freeze)",
+   "finding": "QP/MS corpus re-ingested again between snap-002 (2026-09-25) and snap-003 (rw-9b v2 supersession of the 13 clear pairs, bank-wave repoint, T-C23 guarded repair); card axis is purely additive",
+   "qpms_chunks": {
+    "snap002": 2517,
+    "snap003": 2775
+   },
+   "t0_unique_contents_snap002": 2517,
+   "total_chunks": {
+    "snap002": 2517,
+    "snap003": 3831
+   },
+   "unique_contents_surviving_qpms_to_qpms": 2180
+  },
+  "SNAP3-F3_chunk_spec_codes_field": {
+   "finding": "chunk rows carry the V33 spec_codes GIN column (T-C27 deterministic join), projected jsonb -> sorted unique code strings",
+   "rows_with_codes_by_kind": {
+    "EXTERNAL_QUESTIONS": {
+     "rows": 1056,
+     "with_codes": 295
+    },
+    "MARK_SCHEME": {
+     "rows": 1494,
+     "with_codes": 237
+    },
+    "QUESTION_PAPER": {
+     "rows": 1281,
+     "with_codes": 174
+    }
+   }
+  }
+ },
+ "files_sha256": {
+  "chunks.jsonl.gz": "671a4d8cbc6596c10a50b04a6f952f216b182f475f7879180d86f154875a3a92",
+  "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
+  "graph_code.json": "2f0ed04bb60d7a664f124a4af61e4c6b27b1a85cc752d18036459b97a5debca3",
+  "graph_edges.json": "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
+  "misconceptions.json": "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
+  "question_anchors.json": "11a53c11e6e35cec6f7bc436a0765a63a321a671f5c9e54be92a41e8571fc78f",
+  "spec_points.json": "b95361eff3ac5a70040e0bc79af7b5f5666704db350505830ca409ead607d6fb"
+ },
+ "generated": "2026-09-26",
+ "graph_as_code_source": "SyllabAI/syllabai-resources@1245df009712216b309f163aacdd1c6d8ef39f1b (pin unchanged since snap-002)",
+ "pairing": {
+  "gold-v1": "unchanged, byte-untouched, SHA-paired with snap-001 (recorded-run history semantics preserved; gold-v1 anchors do not resolve into snap-002 or snap-003 \u2014 by design, recorded at SNAP2-F1)",
+  "r3_lineage": "the separate R3 lineage (bench/inputs/snapshot-r3 + gold-r3, catalog-compiled EXP/FET/ENU classes, run-003-b-r3/run-004-a-r3) is untouched by this freeze; its own versioning is independent",
+  "snap-003": "pairs with gold-v2 (bench/gold-v2), generated in this freeze from this snapshot per the snap-002 FREEZE_RECORD's named consequence ('any recorded run on snap-002 requires a gold-v2 regeneration first'); the gold-v2 manifest carries this snapshot's files_sha256",
+  "t_c27_debt": "the T-C27 blocked item 'recorded T-C13 bench (snap-003 re-freeze + gold-v2) \u2014 owed at the serving flip' is substrate-complete with this freeze: the card axis is IN the snapshot (SNAP3-F1), so the serving-flip recorded run can consume snap-003 + gold-v2 without a further freeze; the recorded run itself remains owed at the flip"
+ },
+ "predicates": {
+  "chunks.jsonl.gz": "documents.kind IN ('QUESTION_PAPER','MARK_SCHEME','EXTERNAL_QUESTIONS') \u2014 SNAP3-F1 extends the t0/snap-002 QP+MS predicate with the T-C27 question-card kind (named delta, see deltas_vs_snap-002); ORDER BY d.checksum, c.chunk_index unchanged",
+  "concept_attachments.json": "the T-C19 HUMAN_VALIDATED concept->SP rows from the ratified store @1245df0, cross-checked 1:1 against scripts/c19_promotions.yaml and against the serving DB SUGGESTED PART_OF pair set (all CONCEPT->SUBTOPIC)",
+  "graph_code.json": "serving-DB node set (98 CONCEPT + 19 MISCONCEPTION) enriched from the pinned ratified concepts.yaml @1245df0 (aliases/spec_points/title); counts recomputed",
+  "graph_edges.json": "knowledge_edges validation_status='VALIDATED' AND relation_type IN (CCW, EB, MOF, RB, RP, WAP), ORDER BY relation, source, target (RELATED_TO excluded \u2014 t0-consistent)",
+  "question_anchors.json": "question_versions validation_state='VALIDATED' joined via questions.primary_topic_node_id, ORDER BY anchor_code, stem (t0 predicate unchanged)",
+  "spec_points.json": "knowledge_nodes node_type='SUBTOPIC' AND validation_status='VALIDATED' AND code LIKE '4CH1-%', ORDER BY code (t0 predicate unchanged)"
+ },
+ "serialization_notes": {
+  "anchor_order": "deterministic ORDER BY anchor_code, stem (unchanged from snap-002)",
+  "chunk_spec_codes": "V33 spec_codes jsonb projected to a sorted unique list of code strings on every chunk row (SNAP3-F3); loader-safe \u2014 BenchSnapshot reads known fields via path accessors",
+  "exporter": "snap003_export.py (carried in this directory as export provenance); adapted from the frozen snap002_export.py; verification: spec_points, graph_edges, misconceptions, question_anchors, concept_attachments all BYTE-IDENTICAL to snap-002; graph_code rows set-equal (source.date differs by construction)",
+  "gzip": "mtime=0 (deterministic, t0-consistent); re-gzip of the staged file is byte-identical (verified at freeze time)",
+  "spec_points_projection": "unchanged t0 row contract (plain code strings on graph_code attachments)"
+ },
+ "snapshot_version": "snap-003",
+ "source": "production Neon, sanctioned session-env read path (the ops lanes' state-probe connection), opened READ-ONLY: psycopg2 set_session(readonly=True), SELECT-only statements, transaction rolled back and connection closed at export end. Method delta vs snap-002 (SNAP3-M1, recorded): snap-002 froze via an isolated Neon branch + dedicated role using the management credential, which is not present in this session; the read-only production connection is the same read path the ops-lane state probes have used throughout. Zero writes to any production table; zero roles created."
+}

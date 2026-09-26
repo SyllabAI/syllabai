@@ -1,0 +1,196 @@
+[
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-073",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-c",
+   "rule": "R1",
+   "source": "qversion[None]"
+  },
+  "query": "Which box contains only atoms?",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "4e0bd25cb81f959be8794017f6b7a28df788ff6c818ef9cc44edb28130cc3ab1:6",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-074",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "ING-SUMMER2019",
+   "rule": "R1",
+   "source": "qversion[None]"
+  },
+  "query": "When a bottle of wine is left open for several days, some of the ethanol in the wine turns to ethanoic acid, $ \\mathrm{C H_{3} C O O H} $",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "eaf09d7f7aca30db3048250e526c0464f80e2cbdc0b61b1b0633f5e5806f4a0a:3",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:3",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-075",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CSUMMER2021",
+   "rule": "R1",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "The diagram shows the industrial equipment used to separate crude oil into fractions.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-076",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S1-e",
+   "rule": "R1",
+   "source": "qversion[None]"
+  },
+  "query": "Halon 1301 is a compound used in some fire extinguishers. Halon 1301 has the percentage composition by mass of 8.05% C, 53.69% Br and 38.26% F. Calculate the empirical formula of Halon 1301.…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "c652bb227055e869eaf88db3b5bec9abc4357586a56d47b8c84dcd69a113afcd:3",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   },
+   {
+    "chunk_ref": "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:2",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-077",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S2-f",
+   "rule": "R1",
+   "source": "qversion[4CH0/2C]"
+  },
+  "query": "A student is provided with a solution of dilute sulfuric acid and a solution of sodium hydroxide. The student does a titration using $ 2 5. 0 \\mathrm{c m}^{3} $ of the sodium hydroxide solut…",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-078",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CRJANUARY2020",
+   "rule": "R1",
+   "source": "qversion[4CH1/2CR]"
+  },
+  "query": "This question is about the metal, lead.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-079",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S4-f",
+   "rule": "R1",
+   "source": "qversion[None]"
+  },
+  "query": "#### Separate: Chemistry Only Butanoic acid behaves like other acids. Which is the correct statement about the reactions of butanoic acid?",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-080",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CJANUARY2021",
+   "rule": "R1",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "This question is about octane $ \\left( \\mathrm{C}_{8} \\mathrm{H}_{1 8} \\right) $ which is produced in the gasoline fraction during fractional distillation of crude oil.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:2",
+    "rule": "R1-stem-verbatim",
+    "tier": 2
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-081",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "ING-4CH12CNOVEMBER2021",
+   "rule": "R1",
+   "source": "qversion[4CH1/2C]"
+  },
+  "query": "(a) The box lists words that may be used to explain the term saturated solution. solute solvent temperature Explain, using all the words in the box, the term saturated solution.",
+  "substrate": "chunks"
+ },
+ {
+  "class": "exam_question",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [],
+  "id": "g2-082",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "anchor_code_non_spec": "4CH1-S2-b",
+   "rule": "R1",
+   "source": "qversion[None]"
+  },
+  "query": "Astatine is found below iodine in Group 7 of the Periodic Table. What is its formula and state at room temperature?",
+  "substrate": "chunks"
+ }
+]

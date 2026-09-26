@@ -1,0 +1,488 @@
+[
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-2.5"
+  ],
+  "id": "g2-001",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-2.5"
+  },
+  "query": "What are the key facts I should know about know the colours,physical states and trends in physical pro…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "86369f2cbfe7922f534b9c7a87e48a9121b804e63e37333d35a83d7b7c538f41:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "fe7ab0651205882098a01263fa8f6fb67774a2809d3267f454b70b5bc1ef496e:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "99ef1fc89c8a3f2a9fe45ccce83a587957edb5f39565423ee789c15085fff202:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-2.40C"
+  ],
+  "id": "g2-002",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-2.40C"
+  },
+  "query": "What are the key facts I should know about describe an experiment to prepare a pure,dry sample of a so…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-2.6"
+  ],
+  "id": "g2-003",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-2.6"
+  },
+  "query": "What are the key facts I should know about use knowledge of trends in Group 7 to predict the propertie…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-4.44"
+  ],
+  "id": "g2-004",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-4.44"
+  },
+  "query": "What are the key facts I should know about know that an addition polymer is formed by joining up many …?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "ffa46da2cff84c1c4ae92af32069a14f5f75c858878d7435d44f56c1b672156d:4",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-2.12"
+  ],
+  "id": "g2-005",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-2.12"
+  },
+  "query": "What are the key facts I should know about describe the formation of carbon dioxide from the thermal d…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-4.14"
+  ],
+  "id": "g2-006",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-4.14"
+  },
+  "query": "What are the key facts I should know about know that, in car engines, the temperature reached is high …?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "06c4f1f72748869ed805d867b271638317e3a31599f1daa9373279b83b40d9a5:10",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "eaf09d7f7aca30db3048250e526c0464f80e2cbdc0b61b1b0633f5e5806f4a0a:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "b45e7d8549f7f3fd7029d8b9d9ff5ab1c8483c435823503981e40db825294a3e:8",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "297a4aa6badfa7eba21dde5fd6cfab84d848f92949c614a4e8ed3de475f0933e:11",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "814bcb8761067882f5c6d887789cb7dd3574b6c6e5199966de10900aa336c06a:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.48"
+  ],
+  "id": "g2-007",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-1.48"
+  },
+  "query": "What are the key facts I should know about explain why the melting and boiling points of substances wi…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "783224a36be5df82d8be1344084cd38bf42abc0de1b71cb26cbd58d462950569:1",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "2d6d5a5e9e747ed7ecdf3b458fea4fb5e9fd130792ad3efb4bc33b87685f7019:11",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "3797f4918e2288921963bcce55be4136e7464640a99fd9ff0d87c19a7c4e3c2b:7",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "8cb5186ee55dfeee00fa885d47e8c219a8a5a225e828ed43ea76084a82e5f54f:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "708de70d0823854858069268087cfedbe6f4aba9ba915ddde4799800933dcfff:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-4.19"
+  ],
+  "id": "g2-008",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-4.19"
+  },
+  "query": "What are the key facts I should know about know the general formula for alkanes?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "c8962567547f6f72b0d1edff2e0f56084b0e6ec44f5390497f58e22239c2e0da:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "ed4d77321103f1106a54cb43d25c2095df94c4357271b4c3cffe7541a1377d8f:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "f1b6e819adc5bfbdfb64c095c7b53d18b4b95dcdc1c5b6a63218c52e1d300eac:22",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "0588a3f20148d1e39f4ecfca209ad4c5cf51496dd55cf946027cabcc6d954615:2",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "defac24dda59289cdf74de96242a74c7402d8a9334fab81a451140677bddba0e:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.57C"
+  ],
+  "id": "g2-009",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-1.57C"
+  },
+  "query": "What are the key facts I should know about know that anion and cation are terms used to refer to negat…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "f7620ffaab9d07e79e88b45c5184153ef9049399c51b76fe210c6c036d019a60:0",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "6a9a10e439ec605a25bf38146db8871eb65bb1d55b9099d53077fc59930a12a0:11",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "868a150c1aaee47589fd20603212263b9eb9d634dd6881ed5e6e7d0aeca3387f:4",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "54f77a4de78c9f67c2419ddf56d191ccc76247c187b71eb0696dd657b59a9054:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "525d39a5a83c5094fb85f430eb5ea90d38287db7f09e4dbad6dcd8cd87b70833:4",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-4.41C"
+  ],
+  "id": "g2-010",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-4.41C"
+  },
+  "query": "What are the key facts I should know about understand how to write the structural and displayed formul…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:7",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-4.5"
+  ],
+  "id": "g2-011",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-4.5"
+  },
+  "query": "What are the key facts I should know about understand how to write the possible structural and display…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "cbeeacd0e7adda0d0568b8b766ba63c54b45b789793a14ec7a626e090cafb376:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "49e32df30edacbb78ec2d520c6d6c7a482c3488dccb23b54b276f4e7277e5b84:6",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "525d39a5a83c5094fb85f430eb5ea90d38287db7f09e4dbad6dcd8cd87b70833:4",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:7",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "defac24dda59289cdf74de96242a74c7402d8a9334fab81a451140677bddba0e:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-4.37C"
+  ],
+  "id": "g2-012",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-4.37C"
+  },
+  "query": "What are the key facts I should know about know that vinegar is an aqueous solution containing ethanoi…?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "15ce6089c8113a9f29518ee98bc4237d14210cbf2cfea6cef7582857417dcaca:3",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "01949da0e27e17eca053ce0b79243587b70a1dc1c0b433cc9e7a0f1c9e867e1f:4",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "22dffd209d18e2876fc75e60f36ef189dbd40ea348acf4eb345343dd3cc2efed:5",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "59413267142268502119549685e09b72555ac341e5edeb2a2c568a911445f75c:0",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "c24318af29ca262766fb4e626233b655ebc8ef8e8db08db4e205cdae1159bf6f:0",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-4.29C"
+  ],
+  "id": "g2-013",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-4.29C"
+  },
+  "query": "What are the key facts I should know about know that alcohols contain the functional group-OH?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "f21e970f2cb67b8333e2271689e8278aa3c2a131dab449f534b2bb11cf548ff9:13",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "3797f4918e2288921963bcce55be4136e7464640a99fd9ff0d87c19a7c4e3c2b:15",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "99ef1fc89c8a3f2a9fe45ccce83a587957edb5f39565423ee789c15085fff202:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "f0094e30d88274dc3e9aaa86dff212323a427adf22fbc15acfc17874a5477a77:7",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "c71dfc1b6c8080931e8d94b3402d147329ea7689390a9399042738fff60f6cad:9",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.30"
+  ],
+  "id": "g2-014",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-1.30"
+  },
+  "query": "What are the key facts I should know about calculate percentage yield?",
+  "substrate": "chunks+kg"
+ },
+ {
+  "class": "factual",
+  "gold_concepts": [],
+  "gold_evidence": [
+   {
+    "chunk_ref": "88d87542229f8b140dd1e71c544d4cefda349dd17ce45f8ab76e337ee4749e1d:0",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   },
+   {
+    "chunk_ref": "e2e42c96bc0abc80aba539f052e01d198acc8a09ec7a83615267ebfad462c72e:0",
+    "rule": "R2-term-cooccurrence",
+    "tier": 1
+   }
+  ],
+  "gold_misconceptions": [],
+  "gold_spec_points": [
+   "4CH1-1.2"
+  ],
+  "id": "g2-015",
+  "notes": "auto-derived v2",
+  "provenance": {
+   "rule": "R2",
+   "source": "spec_point:4CH1-1.2"
+  },
+  "query": "What are the key facts I should know about understand the interconversions between the three states of…?",
+  "substrate": "chunks+kg"
+ }
+]

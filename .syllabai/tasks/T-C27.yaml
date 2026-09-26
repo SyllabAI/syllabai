@@ -36,6 +36,13 @@ task:
     blocked:
       - "recorded T-C13 bench (snap-003 re-freeze + gold-v2) — operator-held per the
          snap-002 FREEZE_RECORD; owed at the serving flip (when cards enter the serving set)"
+    resolved_addendum_2026-09-26:
+      - "bench substrate COMPLETE (operator directive 'Proceed with retrieval bench'):
+         snap-003 re-freeze (evidence/bench-001/snapshots/snap-003/ — card axis IN via
+         SNAP3-F1; 3,831 chunks / 575 docs; 5/7 artifacts byte-identical to snap-002) +
+         gold-v2 (bench/gold-v2/ — 120 queries, label logic byte-identical to v1) +
+         bench/gold_check.py practical-code gate extension; load-check PASS; the
+         serving-flip recorded run itself remains owed at the flip"
     resolved:
       - "2026-09-26T13:30Z — embed blocker CLEARED: the operator supplied new keys; the
          live key was the denied ...02sA (the 403 outage root cause); swapped to a working
