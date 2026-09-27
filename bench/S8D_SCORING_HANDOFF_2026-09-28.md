@@ -129,3 +129,30 @@ chunk_refs, and the §4 accessor.
   there as of 2026-09-28 (verified first-hand).
 
 *Handoff authored by the bench/evidence lane, 2026-09-28. Implementation scheduling belongs to the core lane.*
+
+---
+
+## 9. Implementation status (appended 2026-09-28, same day)
+
+**Sections 1, 2 and 4 + the §5 scorer mechanics are IMPLEMENTED AND LANDED on core main:**
+commit `c91372c435ed56d34c2f3d0702073393cf103913` (ff `fe5983f..c91372c`; branch CI
+`36341510062` SUCCESS on `bench/s8d-hv-foundation` — dispatched run, full build + suite, Java 25;
+local suite 21/21 incl. subject-id/metrics regressions before dispatch).
+
+- `BenchSnapshot` gained the optional `chunk_spec_hv.json` load with every fail-closed guard this
+  document specified: present-but-unpinned aborts; non-HUMAN_VALIDATED `provenance.validation_status`
+  aborts (the §5 counting rule in code); malformed spec codes, duplicate mapping ids and chunk_refs
+  unknown to the snapshot abort; MISS rows (empty refs) are recorded in the census, never force-matched.
+- Accessors: `chunkSpecHvPresent()`, `hvSpecCodesByChunkRef()` (ref → Set<code>, many-to-many),
+  `chunkSpecHvCensus()` (rows / rowsWithRefs / distinctRefs / distinctCodes / missCodes).
+- New `ChunkSpecHvResolution` (pure, deterministic, BenchMetrics-discipline): per-query
+  full-coverage + per-point micro-average, BOTH reported (`spec_points_full_coverage_rate`,
+  `spec_points_micro_average`), empty served lists = honest zeros, `unbridgedGoldPoints()` surfaces
+  the structurally unbridged codes (1.52C / 4.15) as explicit misses.
+- Tests carry the REAL bridge vectors (efc19a2773331632 → 4CH1-1.1; c19e1b3cca1d9eee MULTI over
+  3 refs; the 1d97fd710f098a74 / 4CH1-1.52C MISS row) — `BenchSnapshotChunkSpecHvTest` (7) +
+  `ChunkSpecHvResolutionTest` (7).
+- **Still sequenced to the r6 staging per §6:** the run-class wiring (the conditional §8(d) section
+  in Run003B/Run004A/Run005C + report text) and the snap-005 export + drift gate land as one unit at
+  the card-flip freeze, exactly as r4/r5 staged their generations. On every frozen snapshot the
+  recorded-generation behavior is unchanged by construction (absent artifact path is byte-identical).
