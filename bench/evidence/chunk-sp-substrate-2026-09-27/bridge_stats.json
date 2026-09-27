@@ -1,0 +1,68 @@
+{
+ "date": "2026-09-27",
+ "store": {
+  "path": "graph/igcse-chemistry/spec_chunk_mappings.yaml",
+  "sha256_16": "e8b58a7109104bb7",
+  "resources_main": "1245df009712216b309f163aacdd1c6d8ef39f1b",
+  "rows": 211,
+  "hv_rows": 210,
+  "worklist_rows": 1
+ },
+ "db": {
+  "external_notes_docs": 112,
+  "notes_chunks": 350
+ },
+ "bridge": {
+  "resolved": 210,
+  "anchor_kinds": {
+   "CLEAN": 205,
+   "MISS": 1,
+   "MULTI": 4
+  },
+  "unresolved_slug": [],
+  "unresolved_doc": [],
+  "convention_mismatch": [],
+  "misses": [
+   {
+    "mapping_id": "1d97fd710f098a74",
+    "note_slug": "1-8-1-metallic-bonding",
+    "rn_id": "rn_Hp2nK8XpN2SmjdQc",
+    "quote_head": "!Structure & bonding in a metal, IGCSE & GCSE Chemistry revision notes Metallic "
+   }
+  ],
+  "multis": [
+   {
+    "mapping_id": "c19e1b3cca1d9eee",
+    "hits": [
+     1,
+     2,
+     4
+    ]
+   },
+   {
+    "mapping_id": "de462807f25c8acb",
+    "hits": [
+     1,
+     2,
+     4
+    ]
+   },
+   {
+    "mapping_id": "78a139dafc53db10",
+    "hits": [
+     3,
+     4
+    ]
+   },
+   {
+    "mapping_id": "8bc65a715956c8ab",
+    "hits": [
+     2,
+     4
+    ]
+   }
+  ],
+  "spans": [],
+  "distinct_spec_codes_bridged": 180
+ }
+}

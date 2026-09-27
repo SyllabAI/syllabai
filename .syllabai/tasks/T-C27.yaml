@@ -256,3 +256,18 @@ task:
           landed; the r6 card-flip run stays available"
         interpretation: "evidence/bench-001/runs/R5-GENERATION-NOTES.md (incl. the runner
           template-text caveat and the r3/r4 comparability rules)"
+
+
+      r6_gate_recheck_2026-09-27:
+        outcome: "GATE UNCHANGED — the card validation wave has NOT landed (live probe
+          09-27 ~13:1xZ by session web-23eb7684, read-only: EXTERNAL_QUESTIONS 378
+          SUGGESTED + 1 VALIDATED; chunks 317 VALIDATED = snap-004 SNAP4-F1 exactly;
+          exam_papers 78/13/13). r6 stays available and operator-held. The §8(d)
+          substrate side is READY: the resources C13 HUMAN_VALIDATED chunk→SP store
+          (210 rows, session-102 apply) is bridged onto production notes chunks —
+          209/210 rows (205 CLEAN / 4 MULTI / 1 MISS) projecting onto
+          'checksum:chunk_index' snapshot-scheme refs, 58/58 gold spec points
+          covered (bench/evidence/chunk-sp-substrate-2026-09-27/); the snap-005
+          freeze at the r6 card-flip can carry the projection artifact and the
+          spec axis flips NOT SCOREABLE → scoreable-with-coverage."
+        evidence: "bench/evidence/chunk-sp-substrate-2026-09-27/EVIDENCE.md"
