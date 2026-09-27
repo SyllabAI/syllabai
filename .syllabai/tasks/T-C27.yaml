@@ -124,3 +124,51 @@ task:
       remaining: "the at-flip re-run (trigger A) stays operator-held: it becomes meaningful
         when the operator/teacher validation wave promotes papers/cards — at that point the
         298 T-C27 cards enter the serving set and the denominators separate"
+    trigger_a_directive_2026-09-27:
+      agent: "superz (main agent, zai session web-98866c45) — coordinated continuation on
+        the owner's lane per the registry rule; claim-first record, nothing executed"
+      operator_directive: "\"trigger-A re-run\" (trace 1a0e2220d22a90b1, chat
+        bfc203d2-f2bf-4dea-b928-d2a4c5cbd47f, 2026-09-27) — received as the operator call
+        AT_FLIP_RUNBOOK.md trigger A names for"
+      coordination_check:
+        - "locks []; no trigger-A/r5 commits on records main (HEAD 5a18253) and no r5
+           Actions dispatches (newest bench runs remain the r4 generation, 09-27
+           01:47-02:13Z) — no agent has started this lane"
+        - "the separately-issued 'runner label hygiene' directive was already cashed by
+           another agent (core PR #28, a92bd6d, manifest-dynamic bench labels) — no
+           duplicate work opened; tutor lane (s138-s140) disjoint"
+      readiness_verified:
+        - "flip NOT verifiable from this session: the sanctioned production read
+           (SYLLABAI_DATABASE_URL/USERNAME/PASSWORD — the snap-003 exporter's path) is
+           absent from the session env (environment reset since T-C28); the teacher HTTP
+           surface cannot enumerate document validation states (DocumentSummaryView
+           carries no validation_state) — flip confirmation stays with the operator
+           (a teacher-scoped /content/documents/search probe returning
+           kind=EXTERNAL_QUESTIONS hits is the ready serving-evidence check)"
+        - "mechanics census (why a plain r4 re-dispatch is NOT a trigger-A run):
+           snap-003 chunk rows carry no subject_id (3831/3831 rows verified) and uniform
+           SUGGESTED paper_state; the bench loader links per-doc exam_paper rows for
+           QP/MS kinds only and inserts no chunk subject_id — under both
+           searchServingEligible branches the card axis is structurally unservable in
+           the container, and both runners' paper-state maps read the frozen snapshot —
+           a re-dispatch would deterministically reproduce the r4 zeros"
+        - "production premise verified: ingestion is fail-closed on chunk subject_id
+           ('nothing without subject_id'), so post-flip cards serve in production via
+           the doc-state branch of the T-C20 gate — the runbook's trigger-A premise
+           holds; only the bench container cannot mirror it yet"
+      staged:
+        - "core bench enabler (this continuation): BenchSnapshot parses the optional
+           chunk subject_id field and the loader inserts it — backward-compatible
+           (snap-003 rows lack the field, so r4 behavior and recorded-run
+           reproducibility are byte-identical); with it, the at-flip generation (a
+           post-flip snap-004 freeze whose exporter projects subject_id + gold re-pair
+           + r5 workflows mirroring r3 exactly) can serve and measure the card axis"
+      blocked:
+        - "the validation wave itself — operator-only (T-C27 forbidden list: no agent
+           may perform the validation)"
+        - "the snap-004 freeze + vector preload need the sanctioned production read
+           (env-gated) — a session holding SYLLABAI_DATABASE_* executes the
+           freeze -> stage -> dispatch chain per the runbook; the recorded run is NOT
+           executed from this session"
+      unchanged: "status stays DONE (the trigger-B outcome stands); the trigger-A re-run
+        remains operator-held pending the flip + a production-read session"
