@@ -3,7 +3,7 @@ task:
   id: T-C27
   title: "Question cards corpus + chunk→spec-code linkage (bank layer v2)"
   owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
-  status: EXECUTING
+  status: DONE
   priority: P2
   scope:
     allowed:
@@ -108,3 +108,19 @@ task:
       execution: "r4 generation per AT_FLIP_RUNBOOK.md steps 1-6 verbatim: vector freeze ->
         stage inputs -> generate r4 workflows -> dispatch B -> A -> C -> record ->
         close T-C27"
+    recorded_run_2026-09-27:
+      outcome: "DONE — the last §5 item (the recorded T-C13 bench) is cashed: the
+        operator-commissioned pre-flip trigger-B run was executed per AT_FLIP_RUNBOOK.md
+        steps 1-6 verbatim (directive trace 1a0e07674d2b1e19); run IDs as outcome evidence:
+        embed-backfill 36286617830 (frozen r4 artifact, 3831/3831 chunks preloaded + 120
+        queries fresh), arm B 36286954444, arm A 36287130564, arm C 36287897846 (first
+        dispatch 36287567921 superseded with the ordering slip disclosed); all runs SUCCESS,
+        determinism PASS, 0 validation-boundary violations — the gate held"
+      honest_result: "all served metrics 0.0: the T-C05/T-C20 VALIDATED-only gate on core
+        main serves nothing from a uniformly-SUGGESTED snapshot (FREEZE_RECORD finding 4);
+        vector space verified healthy (cos 0.54-0.69) — the zeros are the starved-snapshot
+        truth, not a defect; §8 verdict NOT PROMOTED recorded verbatim; interpretation in
+        evidence/bench-001/runs/R4-GENERATION-NOTES.md"
+      remaining: "the at-flip re-run (trigger A) stays operator-held: it becomes meaningful
+        when the operator/teacher validation wave promotes papers/cards — at that point the
+        298 T-C27 cards enter the serving set and the denominators separate"
