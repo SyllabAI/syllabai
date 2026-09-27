@@ -1,0 +1,1279 @@
+{
+  "arm" : "C hybrid — PRODUCTION retrieval fabric (com.syllabai.retrieval.RetrievalFabric: explicit arms [pgvector, bm25], central BoundaryPolicy, shipped ReciprocalRankFusion k=60, rank-only, NoReranker) over arm A's production vector path and arm B's production lexical path; chunk+query vectors replayed from the frozen artifact embed-backfill-snap-001, zero API calls at run time",
+  "arm_status" : "RUNNABLE — this run (the fabric orchestrator landed with the run; arm promotion must stay explicit, never injection-implied); benchmark arm only, NOT a production serving default — nothing in production constructs a RetrievalFabric yet",
+  "arms_registry" : {
+    "A" : "RUNNABLE — recorded in run-004-a (production semantic arm)",
+    "A0" : "RUNNABLE — recorded in run-002-a0 (production baseline)",
+    "B" : "RUNNABLE — recorded in run-003-b (production lexical arm)",
+    "B-proxy" : "RECORDED (run-001) — harness-internal probe; never citable",
+    "C" : "RUNNABLE — this run (hybrid over the production fabric)",
+    "D" : "UNAVAILABLE — C + reranker behind the EvidenceReranker port",
+    "E/F/G" : "UNAVAILABLE — require T-C15",
+    "H1/H2/H3/I" : "UNAVAILABLE — prerequisites unchanged"
+  },
+  "chunk_axis" : {
+    "compliant_view" : {
+      "corpus_n" : 0,
+      "overall" : {
+        "evidence_precision@10" : 0.0,
+        "false_positive_rate@10" : 0.0,
+        "mrr" : 0.0,
+        "ndcg@10" : 0.0,
+        "recall@10" : 0.0,
+        "recall@20" : 0.0,
+        "recall@5" : 0.0
+      },
+      "per_class" : {
+        "calculation" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "conceptual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "exam_question" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "factual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "mark_scheme" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "misconception" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "multi_spec_point" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "prerequisite" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "vague_learner" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "why_wrong" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        }
+      },
+      "queries_scored" : 89,
+      "scope" : "fabric(central VALIDATED gate, pre-fusion) — the T-C05-closed configuration"
+    },
+    "served_view" : {
+      "corpus_n" : 3831,
+      "overall" : {
+        "evidence_precision@10" : 0.0,
+        "false_positive_rate@10" : 0.0,
+        "mrr" : 0.0,
+        "ndcg@10" : 0.0,
+        "recall@10" : 0.0,
+        "recall@20" : 0.0,
+        "recall@5" : 0.0
+      },
+      "per_class" : {
+        "calculation" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "conceptual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "exam_question" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "factual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "mark_scheme" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "misconception" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "multi_spec_point" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "prerequisite" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "vague_learner" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "why_wrong" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        }
+      },
+      "queries_scored" : 89,
+      "scope" : "fabric(allowAll) over the T-C07-scoped embedded corpus (production truth, ALL denominator)"
+    },
+    "validation_boundary_violations" : {
+      "compliant" : 0,
+      "served" : 0
+    },
+    "violation_refs_served" : [ ]
+  },
+  "code_version" : "45f6774d7e3f6e575afa4a03d70fbb4724f93df6",
+  "context" : {
+    "A0_run_002" : "UNAVAILABLE (results.json: evidence/bench-001/runs/run-002-a0/results.json)",
+    "A_run_004_compliant" : {
+      "evidence_precision@10" : 0.0,
+      "false_positive_rate@10" : 0.0,
+      "mrr" : 0.0,
+      "ndcg@10" : 0.0,
+      "recall@10" : 0.0,
+      "recall@20" : 0.0,
+      "recall@5" : 0.0
+    },
+    "A_run_004_served" : {
+      "evidence_precision@10" : 0.0,
+      "false_positive_rate@10" : 0.0,
+      "mrr" : 0.0,
+      "ndcg@10" : 0.0,
+      "recall@10" : 0.0,
+      "recall@20" : 0.0,
+      "recall@5" : 0.0
+    },
+    "B_run_003" : {
+      "evidence_precision@10" : 0.0,
+      "false_positive_rate@10" : 0.0,
+      "mrr" : 0.0,
+      "ndcg@10" : 0.0,
+      "recall@10" : 0.0,
+      "recall@20" : 0.0,
+      "recall@5" : 0.0
+    },
+    "note" : "arm C = fabric over the recorded arms A+B; same frozen gold, same formulas; A0 chunk axis is the zero baseline"
+  },
+  "context_prior_arms" : {
+    "A0_run_002" : "UNAVAILABLE (results.json: evidence/bench-001/runs/run-002-a0/results.json)",
+    "A_run_004_compliant" : {
+      "evidence_precision@10" : 0.0,
+      "false_positive_rate@10" : 0.0,
+      "mrr" : 0.0,
+      "ndcg@10" : 0.0,
+      "recall@10" : 0.0,
+      "recall@20" : 0.0,
+      "recall@5" : 0.0
+    },
+    "A_run_004_served" : {
+      "evidence_precision@10" : 0.0,
+      "false_positive_rate@10" : 0.0,
+      "mrr" : 0.0,
+      "ndcg@10" : 0.0,
+      "recall@10" : 0.0,
+      "recall@20" : 0.0,
+      "recall@5" : 0.0
+    },
+    "B_run_003" : {
+      "evidence_precision@10" : 0.0,
+      "false_positive_rate@10" : 0.0,
+      "mrr" : 0.0,
+      "ndcg@10" : 0.0,
+      "recall@10" : 0.0,
+      "recall@20" : 0.0,
+      "recall@5" : 0.0
+    },
+    "note" : "arm C = fabric over the recorded arms A+B; same frozen gold, same formulas; A0 chunk axis is the zero baseline"
+  },
+  "date" : "2026-09-27",
+  "determinism_check" : "PASS — scoring recomputed twice in-process (second full retrieval pass), both views' aggregates byte-identical; serialization byte-stable",
+  "embedding_artifact" : {
+    "backfill_core_commit" : "45f6774d7e3f6e575afa4a03d70fbb4724f93df6",
+    "backfill_run_date" : "2026-09-27",
+    "counts" : {
+      "chunks_embedded_this_run" : 0,
+      "chunks_stored_total" : 3831,
+      "corpus_chunks" : 3831,
+      "pending_after" : 0,
+      "queries_embedded" : 120
+    },
+    "dimension" : 768,
+    "model" : "gemini-embedding-001",
+    "run_id" : "embed-backfill-snap-001",
+    "sha256_echo" : {
+      "embeddings_chunks.jsonl" : "83b3d60637d7376da132b78b41eac95b3488e7e68f4bba0f52367d57f260990d",
+      "embeddings_queries.jsonl" : "bca558414b827256b7d22bcdfcf18c5d0bf6aa9711e4a6f8fb97489b5b3d29f4",
+      "manifest.json" : "111e5afcb96e0f9ac394b4dc7167050bc8572d3f60002aca940e13de145618a6"
+    }
+  },
+  "evaluation_contract" : {
+    "chunk_axis" : "Recall@5/10/20, MRR (first tier-2 hit in top-20), nDCG@10 (2/1/0 tiers), evidence precision@10 and FP@10 over the fixed top-10 denominator — formulas identical to run-001/002/003/004 (BenchMetrics, pinned).",
+    "compliant_view" : "the same fabric with the central VALIDATED-only policy applied pre-fusion — zero violations by construction (audited per query; any leak hard-fails the run); comparable in SCOPE with arm B and with arm A's post-hoc compliant view",
+    "latency_axis" : "per-query retrieval nanoseconds (p50/p95), measured outside scoring; the frozen replay excludes the production query-embedding call, so a deployed hybrid adds one embedding round-trip to these numbers (recorded as the §8(e) caveat)",
+    "served_view" : "the fabric under allowAll over the components as they stand — production truth, ALL denominator (ruling 1's gate target); boundary violations expected from the vector leg and recorded, never patched",
+    "spec_resolution_axis" : "NOT SCOREABLE for arm C: zero HUMAN_VALIDATED chunk→spec mapping rows in the snapshot (concept_attachments = 0, the T-C06/F-168 mapping substrate is pending) — a resolution number would be fabrication; recorded as a named data gap"
+  },
+  "executor" : "production code over real Postgres migrated V1..V28 (Flyway), corpus loaded from the frozen snapshot; chunk vectors applied from the checksummed compute-once-freeze-forever artifact and query vectors served through the production EmbeddingProvider port; no retrieval SQL changed, no fusion code written (the shipped ReciprocalRankFusion runs unchanged)",
+  "fabric" : {
+    "compliant_boundary" : "central VALIDATED-only policy applied PRE-fusion (the T-C05 closure shape; each arm ranks within its servable candidates)",
+    "fusion" : "ReciprocalRankFusion k=60 (the shipped serving fuser)",
+    "per_arm_limit" : 20,
+    "providers" : [ "pgvector", "bm25" ],
+    "served_boundary" : "BoundaryPolicy.allowAll() — production-truth components as they stand (vector surface predates T-C05: the T-C20 registered gap)"
+  },
+  "gold_set" : "gold-v1 (120 queries; frozen)",
+  "latency" : {
+    "compliant" : {
+      "n" : 120,
+      "p50_ms" : 223.368612,
+      "p95_ms" : 228.124173
+    },
+    "note" : "retrieval-only (frozen query vectors); a deployed hybrid adds the production query-embedding round-trip",
+    "served" : {
+      "n" : 120,
+      "p50_ms" : 222.999833,
+      "p95_ms" : 228.476661
+    }
+  },
+  "per_query_chunks" : {
+    "g2-002" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.543413
+    },
+    "g2-005" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.193536
+    },
+    "g2-007" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.809485
+    },
+    "g2-008" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.418471
+    },
+    "g2-009" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.110166
+    },
+    "g2-010" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 220.218242
+    },
+    "g2-011" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.88272
+    },
+    "g2-012" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.715986
+    },
+    "g2-013" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.335348
+    },
+    "g2-014" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 236.511341
+    },
+    "g2-015" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.614309
+    },
+    "g2-016" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 220.824417
+    },
+    "g2-017" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 233.16555
+    },
+    "g2-018" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.448609
+    },
+    "g2-019" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.832886
+    },
+    "g2-020" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.809732
+    },
+    "g2-021" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.990909
+    },
+    "g2-022" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.496292
+    },
+    "g2-023" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.192356
+    },
+    "g2-024" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.359576
+    },
+    "g2-025" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.583192
+    },
+    "g2-026" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.826019
+    },
+    "g2-028" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.59745
+    },
+    "g2-029" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.894847
+    },
+    "g2-031" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 234.174889
+    },
+    "g2-032" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.985699
+    },
+    "g2-033" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.051616
+    },
+    "g2-034" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.502804
+    },
+    "g2-035" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.53435
+    },
+    "g2-036" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.57378
+    },
+    "g2-037" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.593096
+    },
+    "g2-038" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.661511
+    },
+    "g2-039" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.581652
+    },
+    "g2-040" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.568203
+    },
+    "g2-041" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.876439
+    },
+    "g2-042" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.763334
+    },
+    "g2-043" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 220.870558
+    },
+    "g2-044" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.915612
+    },
+    "g2-045" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.099985
+    },
+    "g2-046" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 219.856643
+    },
+    "g2-047" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.343682
+    },
+    "g2-048" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.448944
+    },
+    "g2-049" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.664311
+    },
+    "g2-050" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.552545
+    },
+    "g2-051" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.125777
+    },
+    "g2-052" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.097265
+    },
+    "g2-053" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.098964
+    },
+    "g2-054" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.830573
+    },
+    "g2-055" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.603201
+    },
+    "g2-056" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.835341
+    },
+    "g2-057" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.783462
+    },
+    "g2-058" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.160819
+    },
+    "g2-059" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.267184
+    },
+    "g2-060" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 227.554528
+    },
+    "g2-061" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.505032
+    },
+    "g2-062" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.867716
+    },
+    "g2-063" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.946945
+    },
+    "g2-064" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.790667
+    },
+    "g2-065" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.597298
+    },
+    "g2-066" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.964884
+    },
+    "g2-067" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.321358
+    },
+    "g2-068" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.857997
+    },
+    "g2-069" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.051644
+    },
+    "g2-070" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.008983
+    },
+    "g2-071" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.549727
+    },
+    "g2-072" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.069453
+    },
+    "g2-074" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 241.039239
+    },
+    "g2-075" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.396445
+    },
+    "g2-077" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.428903
+    },
+    "g2-081" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.724876
+    },
+    "g2-083" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 228.97432
+    },
+    "g2-084" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.668352
+    },
+    "g2-085" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.062982
+    },
+    "g2-086" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.204748
+    },
+    "g2-087" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.386722
+    },
+    "g2-088" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.056259
+    },
+    "g2-089" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.737335
+    },
+    "g2-090" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.719689
+    },
+    "g2-102" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 227.904138
+    },
+    "g2-104" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.984178
+    },
+    "g2-105" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.349543
+    },
+    "g2-107" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.473131
+    },
+    "g2-109" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.999833
+    },
+    "g2-110" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.435366
+    },
+    "g2-111" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.528122
+    },
+    "g2-112" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.206569
+    },
+    "g2-113" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.358967
+    },
+    "g2-114" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.249206
+    },
+    "g2-115" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.261951
+    }
+  },
+  "per_query_compliant" : {
+    "g2-002" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.771306
+    },
+    "g2-005" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.186942
+    },
+    "g2-007" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.973116
+    },
+    "g2-008" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 231.915437
+    },
+    "g2-009" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.021504
+    },
+    "g2-010" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.75898
+    },
+    "g2-011" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.638998
+    },
+    "g2-012" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.557702
+    },
+    "g2-013" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.042924
+    },
+    "g2-014" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 235.679179
+    },
+    "g2-015" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.547565
+    },
+    "g2-016" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.799459
+    },
+    "g2-017" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.676917
+    },
+    "g2-018" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.459783
+    },
+    "g2-019" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.125683
+    },
+    "g2-020" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.421411
+    },
+    "g2-021" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.970685
+    },
+    "g2-022" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.08358
+    },
+    "g2-023" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.560131
+    },
+    "g2-024" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 227.237235
+    },
+    "g2-025" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.179144
+    },
+    "g2-026" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 220.437293
+    },
+    "g2-028" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.24802
+    },
+    "g2-029" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 219.44893
+    },
+    "g2-031" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 230.034066
+    },
+    "g2-032" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.114069
+    },
+    "g2-033" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.70556
+    },
+    "g2-034" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.262547
+    },
+    "g2-035" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.234088
+    },
+    "g2-036" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.738097
+    },
+    "g2-037" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.802498
+    },
+    "g2-038" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.028135
+    },
+    "g2-039" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 236.108609
+    },
+    "g2-040" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.123459
+    },
+    "g2-041" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.271385
+    },
+    "g2-042" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.049186
+    },
+    "g2-043" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.121707
+    },
+    "g2-044" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.00711
+    },
+    "g2-045" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.305422
+    },
+    "g2-046" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.063072
+    },
+    "g2-047" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.290304
+    },
+    "g2-048" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.719722
+    },
+    "g2-049" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.701545
+    },
+    "g2-050" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.477234
+    },
+    "g2-051" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 220.324262
+    },
+    "g2-052" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.399995
+    },
+    "g2-053" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.214663
+    },
+    "g2-054" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.760472
+    },
+    "g2-055" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.006172
+    },
+    "g2-056" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.967288
+    },
+    "g2-057" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 227.409232
+    },
+    "g2-058" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.804955
+    },
+    "g2-059" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 226.246632
+    },
+    "g2-060" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.851948
+    },
+    "g2-061" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.430053
+    },
+    "g2-062" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.034095
+    },
+    "g2-063" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.624975
+    },
+    "g2-064" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.04641
+    },
+    "g2-065" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.957657
+    },
+    "g2-066" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.544289
+    },
+    "g2-067" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.164655
+    },
+    "g2-068" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 220.760214
+    },
+    "g2-069" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.243266
+    },
+    "g2-070" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.200878
+    },
+    "g2-071" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.283033
+    },
+    "g2-072" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.427674
+    },
+    "g2-074" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.937233
+    },
+    "g2-075" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.489469
+    },
+    "g2-077" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.272901
+    },
+    "g2-081" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.625144
+    },
+    "g2-083" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 227.245673
+    },
+    "g2-084" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.766624
+    },
+    "g2-085" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.744092
+    },
+    "g2-086" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.385733
+    },
+    "g2-087" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.603051
+    },
+    "g2-088" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.288029
+    },
+    "g2-089" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.546865
+    },
+    "g2-090" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.047476
+    },
+    "g2-102" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.9667
+    },
+    "g2-104" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.616363
+    },
+    "g2-105" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.636162
+    },
+    "g2-107" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 224.341388
+    },
+    "g2-109" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 222.423899
+    },
+    "g2-110" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.820505
+    },
+    "g2-111" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 240.853443
+    },
+    "g2-112" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 223.090306
+    },
+    "g2-113" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.601307
+    },
+    "g2-114" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 225.516753
+    },
+    "g2-115" : {
+      "fused_scores" : [ ],
+      "ranked_refs" : [ ],
+      "retrieval_ms" : 221.555558
+    }
+  },
+  "queries_compliant_starved" : 0,
+  "queries_excluded_no_chunk_labels" : {
+    "count" : 31,
+    "ids" : [ "g2-027", "g2-030", "g2-116", "g2-117", "g2-118", "g2-119", "g2-120", "g2-073", "g2-076", "g2-078", "g2-079", "g2-080", "g2-082", "g2-001", "g2-003", "g2-004", "g2-006", "g2-091", "g2-092", "g2-093", "g2-094", "g2-095", "g2-096", "g2-097", "g2-098", "g2-099", "g2-100", "g2-101", "g2-103", "g2-106", "g2-108" ],
+    "reason" : "no chunk labels (substrate-absent classes / sparse auto-labels) — excluded from the chunk axis only; same rule as run-001..004"
+  },
+  "queries_scored_chunks" : 89,
+  "queries_total" : 120,
+  "queries_with_zero_results" : 120,
+  "run_id" : "run-005-c",
+  "s8_gate" : {
+    "a_recall@10" : {
+      "floor" : 0.3249,
+      "pass" : false,
+      "value" : 0.0
+    },
+    "b_mrr" : {
+      "floor" : 0.2964,
+      "pass" : false,
+      "value" : 0.0
+    },
+    "c_ndcg@10" : {
+      "floor" : 0.4799,
+      "pass" : false,
+      "value" : 0.0
+    },
+    "d_spec_resolution" : "NOT SCOREABLE — zero HUMAN_VALIDATED chunk→SP rows (named data gap; nothing to regress, nothing to claim)",
+    "e_p95_latency" : "NOT EVALUABLE FROM RECORDS — A0 p95 was not recorded; this run records retrieval-only p50/p95 (frozen replay excludes the production query-embedding call, which a deployed hybrid adds)",
+    "evaluated_on" : "served view (ALL denominator)",
+    "f_boundary" : {
+      "note" : "zero violations",
+      "pass" : true,
+      "served_violations" : 0
+    },
+    "g_per_class" : "PASS trivially — A0's chunk axis is all zeros, no class can regress against the zero baseline; per-class detail reported for the record",
+    "verdict" : "NOT PROMOTED",
+    "version" : "spec §8 v1.0 (ratified 2026-09-17) + §10 ruling 1: gate arithmetic evaluated on the ALL denominator (the served view); floors = B-proxy ALL +10% relative / +0.05 absolute (0.2954→0.3249, 0.2464→0.2964, 0.4299→0.4799)"
+  },
+  "snapshot" : "snap-001 (snap-003)"
+}
