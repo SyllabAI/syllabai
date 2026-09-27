@@ -237,3 +237,22 @@ task:
       boundary: "no agent-asserted content validation anywhere — the wave was performed
         by the operator/teacher before the directive; this lane only freezes the
         state it found (read-only, zero production writes)"
+      recorded_run_2026-09-27_atflip:
+        outcome: "DONE — the trigger-A at-flip re-run is recorded on all three arms per
+          AT_FLIP_RUNBOOK.md steps (directive trace 1a0e23212e7b3cf5): snap-004 freeze +
+          gold-v3 re-pair + preload-r5 staged @ f04451930; embed-backfill-r5 run
+          36311624648 SUCCESS (0 chunk API calls, 120 queries fresh) @ 5770133f2; arm B
+          36311973564 @ d003a45e0; arm A 36312145176 @ 7723d90d8; arm C 36312444139 @
+          61ec5120; runbook ordering held, no re-dispatches"
+        honest_result: "the r4->r5 differential IS the flip: the served view is non-empty
+          for the first time post-T-C20 (317 VALIDATED chunks = the wave's exact flip
+          count); B 0.0247/0.0449, A 0.0762/0.0543/0.1376, C compliant 0.0762/0.0674/
+          0.1473 (fusion lifts ranking at identical recall); 0 validation-boundary
+          violations x3 arms x120 queries (the gate held under real post-flip load);
+          determinism PASS x3; §8 NOT PROMOTED verbatim (a/b/c quality floors fail —
+          the paper-axis wave alone does not clear them; d NOT SCOREABLE; f PASS)"
+        scope_note: "cashed on the PAPER axis (13 papers + 1 card doc); the 298 T-C27
+          cards remain SUGGESTED — the card validation wave (operator/teacher) has NOT
+          landed; the r6 card-flip run stays available"
+        interpretation: "evidence/bench-001/runs/R5-GENERATION-NOTES.md (incl. the runner
+          template-text caveat and the r3/r4 comparability rules)"
