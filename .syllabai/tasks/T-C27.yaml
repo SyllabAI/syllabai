@@ -163,6 +163,17 @@ task:
            reproducibility are byte-identical); with it, the at-flip generation (a
            post-flip snap-004 freeze whose exporter projects subject_id + gold re-pair
            + r5 workflows mirroring r3 exactly) can serve and measure the card axis"
+        - "ENABLER LANDED 2026-09-27: syllabai-core e728b7d (core-ci run 36310569728
+           SUCCESS, head e728b7de) — Run003B.loadSnapshot now carries documents.
+           validation_state from the same per-document paper_state and stamps every
+           chunk with the bench scope's subject, so BOTH searchServingEligible
+           branches work in the container exactly as production does (branch 1
+           paper-anchored QP/MS unchanged; branch 2 doc-VALIDATED cards live);
+           backward-compatible by construction (snap-001..003 uniformly SUGGESTED,
+           V29 default 'SUGGESTED' = value-identical insert, recorded r3/r4 runs
+           sha-pinned and untouched); BenchSnapshotSubjectIdTest pins the optional
+           projection fold (present / absent / JSON null); the snapshot rows'
+           subject_id is census/verification evidence, never a container gate input"
       blocked:
         - "the validation wave itself — operator-only (T-C27 forbidden list: no agent
            may perform the validation)"
