@@ -1,0 +1,602 @@
+{
+  "appendix_query_form_diagnostics" : {
+    "loader_truth" : "the snapshot does not carry exam sessions; paper_code is NOT unique per paper (9 codes across 94 papers) while paper_state is exactly consistent per document, so the loader emits one exam_papers row per document with its own state — the closest the snapshot allows to the production paper-per-session model",
+    "note" : "harness-internal query-form diagnostics, recorded for honesty; the RECORDED arm above is the production code as it stands (websearch bare-word form)",
+    "reading" : "the all-terms requirement is the dominant zero-result driver for natural-language questions on the compliant VALIDATED corpus; the finding is recorded as a diagnostic for the T-C13 owner process, not silently fixed against the frozen set",
+    "recorded_form_non_empty" : "14/120 (bare websearch words are AND-ed — the production Bm25Retriever as implemented; 106/120 queries get zero candidates)",
+    "term_union_diagnostic" : "OR term-union form measured in-session on the same fixed loader: 120/120 non-empty, recall@10 0.1097, mrr 0.1189, ndcg@10 0.186, fp@10 0.9663 — NOT adopted for the recorded run: switching the query form after having seen frozen-set numbers would violate the spec's anti-tuning rule (§3.2/§6/§9); adopting it requires a dev-subset decision or a gold-v2 re-freeze per the spec's own route"
+  },
+  "arm" : "B lexical — PRODUCTION T-C14 provider (ChunkLexicalRepository SQL: websearch_to_tsquery('english') over V28 content_tsv GIN, ts_rank_cd, T-C07 scope EXISTS predicate, T-C05 VALIDATED-paper serving, identity tie-break document_id/chunk_index) — Bm25Retriever port, NoReranker",
+  "arm_status" : "RUNNABLE — T-C14 landed (retriever + migration); benchmark arm only, NOT a production serving default",
+  "arms_registry" : {
+    "A" : "UNAVAILABLE — requires embedding backfill (0/2,333 embedded)",
+    "A0" : "RUNNABLE — recorded in run-002-a0 (production baseline; chunk axis = real zeros, resolution axis on record)",
+    "B" : "RUNNABLE — this run (production lexical arm, first recorded run)",
+    "B-proxy" : "RECORDED (run-001) — harness-internal probe; remains the early-signal instrument, never citable for promotion; historical evidence preserved",
+    "C/D" : "UNAVAILABLE — require A + B (A still unavailable)",
+    "E/F/G" : "UNAVAILABLE — require T-C15",
+    "H1" : "UNAVAILABLE — hierarchical filtering over C",
+    "H2" : "UNAVAILABLE — T-C06 chunking contract",
+    "H3" : "UNAVAILABLE — HyPE over A",
+    "I" : "UNAVAILABLE — KG expansion + best-of"
+  },
+  "chunk_axis" : {
+    "all_chunks_context" : { },
+    "validated_only_served" : {
+      "corpus_n" : 317,
+      "overall" : {
+        "evidence_precision@10" : 0.0045,
+        "false_positive_rate@10" : 0.0112,
+        "mrr" : 0.0449,
+        "ndcg@10" : 0.0449,
+        "recall@10" : 0.0247,
+        "recall@20" : 0.0247,
+        "recall@5" : 0.0247
+      },
+      "per_class" : {
+        "calculation" : {
+          "evidence_precision@10" : 0.01,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.1,
+          "ndcg@10" : 0.1,
+          "recall@10" : 0.02,
+          "recall@20" : 0.02,
+          "recall@5" : 0.02
+        },
+        "conceptual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "exam_question" : {
+          "evidence_precision@10" : 0.075,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.75,
+          "ndcg@10" : 0.75,
+          "recall@10" : 0.5,
+          "recall@20" : 0.5,
+          "recall@5" : 0.5
+        },
+        "factual" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "mark_scheme" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.125,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "misconception" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "multi_spec_point" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "prerequisite" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "vague_learner" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        },
+        "why_wrong" : {
+          "evidence_precision@10" : 0.0,
+          "false_positive_rate@10" : 0.0,
+          "mrr" : 0.0,
+          "ndcg@10" : 0.0,
+          "recall@10" : 0.0,
+          "recall@20" : 0.0,
+          "recall@5" : 0.0
+        }
+      },
+      "queries_scored" : 89,
+      "scope" : "VALIDATED-paper chunks only (the arm's compliant serving scope)"
+    },
+    "validation_boundary_violations" : 0,
+    "violation_refs" : [ ]
+  },
+  "code_version" : "e728b7deaf6a3c21acb78d420c93904c9213e13e",
+  "date" : "2026-09-27",
+  "determinism_check" : "PASS — scoring recomputed twice in-process (second full retrieval pass), aggregates byte-identical; serialization byte-stable",
+  "evaluation_contract" : {
+    "boundary_check" : "every returned hit audited against the loader's paper-state map; any non-VALIDATED hit is a VALIDATION_BOUNDARY_VIOLATION (hard fail)",
+    "chunk_axis" : "Recall@5/10/20, MRR (first tier-2 hit in top-20), nDCG@10 (2/1/0 tiers), evidence precision@10 and FP@10 over the fixed top-10 denominator — formulas identical to run-001/run-002 (BenchMetrics, pinned).",
+    "serving_scope" : "the arm serves curriculum-scoped VALIDATED-paper chunks only (production predicate); its ranked lists are therefore scored against the same gold labels on the VALIDATED-only reachable corpus (296 chunks) — the ALL-chunks (2,333) view is carried by run-001's B-proxy pair (AF-2) and is reproduced below for the §10-ruling-1 dual-denominator context",
+    "spec_resolution_axis" : "NOT SCOREABLE for arm B: the snapshot carries ZERO HUMAN_VALIDATED chunk→spec mapping rows (concept_attachments = 0, the T-C06/F-168 mapping substrate is pending), so a resolution number would be fabrication; recorded as a named data gap, not a zero, not an exclusion"
+  },
+  "executor" : "production code over a real Flyway-migrated Postgres, corpus loaded from the frozen snapshot; no scorer reimplemented. Arm = retrieval.Bm25Retriever through the RetrievalProvider fabric contract over ChunkLexicalRepository.searchServingEligible (T-C05 VALIDATED-only guard)",
+  "gold_set" : "gold-v3 (120 queries; frozen)",
+  "per_query_chunks" : {
+    "g2-002" : {
+      "gold_spec_points" : [ "4CH1-2.40C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-005" : {
+      "gold_spec_points" : [ "4CH1-2.12" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-007" : {
+      "gold_spec_points" : [ "4CH1-1.48" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-008" : {
+      "gold_spec_points" : [ "4CH1-4.19" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-009" : {
+      "gold_spec_points" : [ "4CH1-1.57C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-010" : {
+      "gold_spec_points" : [ "4CH1-4.41C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-011" : {
+      "gold_spec_points" : [ "4CH1-4.5" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-012" : {
+      "gold_spec_points" : [ "4CH1-4.37C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-013" : {
+      "gold_spec_points" : [ "4CH1-4.29C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-014" : {
+      "gold_spec_points" : [ "4CH1-1.30" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-015" : {
+      "gold_spec_points" : [ "4CH1-1.2" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-016" : {
+      "gold_spec_points" : [ "4CH1-1.28" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-017" : {
+      "gold_spec_points" : [ "4CH1-2.9" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-018" : {
+      "gold_spec_points" : [ "4CH1-4.34C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-019" : {
+      "gold_spec_points" : [ "4CH1-3.11" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-020" : {
+      "gold_spec_points" : [ "4CH1-2.4C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-021" : {
+      "gold_spec_points" : [ "4CH1-1.27" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-022" : {
+      "gold_spec_points" : [ "4CH1-4.50C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-023" : {
+      "gold_spec_points" : [ "4CH1-1.39" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-024" : {
+      "gold_spec_points" : [ "4CH1-1.47" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-025" : {
+      "gold_spec_points" : [ "4CH1-4.3" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-026" : {
+      "gold_spec_points" : [ "4CH1-2.31" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-028" : {
+      "gold_spec_points" : [ "4CH1-1.5C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-029" : {
+      "gold_spec_points" : [ "4CH1-1.43" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-031" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-032" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-033" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-034" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-035" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-036" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-037" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:7" ],
+      "scores" : [ 0.008513932 ]
+    },
+    "g2-038" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-039" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-040" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-041" : {
+      "gold_spec_points" : [ "4CH1-1.10", "4CH1-1.4", "4CH1-1.5C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-042" : {
+      "gold_spec_points" : [ "4CH1-1.41", "4CH1-1.58C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-043" : {
+      "gold_spec_points" : [ "4CH1-3.1", "4CH1-3.6C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-044" : {
+      "gold_spec_points" : [ "4CH1-3.10" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-045" : {
+      "gold_spec_points" : [ "4CH1-1.11", "4CH1-1.9" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-046" : {
+      "gold_spec_points" : [ "4CH1-1.32", "4CH1-1.33" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-047" : {
+      "gold_spec_points" : [ "4CH1-1.34C", "4CH1-3.10" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-048" : {
+      "gold_spec_points" : [ "4CH1-1.44", "4CH1-1.45", "4CH1-3.7C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-049" : {
+      "gold_spec_points" : [ "4CH1-1.57C", "4CH1-1.58C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-050" : {
+      "gold_spec_points" : [ "4CH1-1.10" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-051" : {
+      "gold_spec_points" : [ "4CH1-1.44", "4CH1-1.45", "4CH1-1.46" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-052" : {
+      "gold_spec_points" : [ "4CH1-3.1", "4CH1-3.21C", "4CH1-3.22C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-053" : {
+      "gold_spec_points" : [ "4CH1-3.21C", "4CH1-3.22C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-054" : {
+      "gold_spec_points" : [ "4CH1-1.47", "4CH1-1.48" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-055" : {
+      "gold_spec_points" : [ "4CH1-3.12", "4CH1-3.13" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-056" : {
+      "gold_spec_points" : [ "4CH1-1.1", "4CH1-1.3" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-057" : {
+      "gold_spec_points" : [ "4CH1-1.41" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-058" : {
+      "gold_spec_points" : [ "4CH1-1.34C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-059" : {
+      "gold_spec_points" : [ "4CH1-1.16", "4CH1-1.17" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-060" : {
+      "gold_spec_points" : [ "4CH1-3.4" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-061" : {
+      "gold_spec_points" : [ "4CH1-1.26", "4CH1-1.28" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-062" : {
+      "gold_spec_points" : [ "4CH1-3.7C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-063" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-064" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-065" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-066" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-067" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-068" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-069" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-070" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-071" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-072" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-074" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-075" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:3" ],
+      "scores" : [ 0.025 ]
+    },
+    "g2-077" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:2" ],
+      "scores" : [ 0.01 ]
+    },
+    "g2-081" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:2" ],
+      "scores" : [ 0.0328655 ]
+    },
+    "g2-083" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-084" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-085" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-086" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ "06c4f1f72748869ed805d867b271638317e3a31599f1daa9373279b83b40d9a5:10", "24919a05f6f049333ba132c077f60db92e3120912e739cc4aad12aba02ccd2a9:3", "06c4f1f72748869ed805d867b271638317e3a31599f1daa9373279b83b40d9a5:0", "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:2", "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:5", "06c4f1f72748869ed805d867b271638317e3a31599f1daa9373279b83b40d9a5:9", "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:6", "b2db6100bfd19ebef6d4e911652cb0339f5ef6d03a20eae5512b5c445ab58cbc:3", "f06f8084643a11c0d6edce65e56105a1c7ecfcb4a674adb607867aa71c5fbc89:5", "79bd80919c262be1a7698ce41dfdb06a796c207ab5729f027dd2470c282d4e2d:5", "960bce5cd160919487dd76582040f9957efc99d9e0211c97fb6cf02a41161d62:3", "babfe26bcbced152ff0ed975e83b39e6fa2535b3ba0fed6417f2b4ade4b68da6:5", "b8613965b79a51b9151cdb5e806ea3791003c8a010aa071c3de4b44c82a16bf3:1", "c396f41c067ee5536a0ca7f6c40848aeebd23852d4eecbb024abdd71c39ce058:5", "1e3c60eb51749b75326ddef01921593f018f11341066ad9c9f53aa86b2bdf0c1:5", "669b7691ec2c6eef2bee23d906c043680f49987a8b03655433e4a6970dcc984f:3", "f06f8084643a11c0d6edce65e56105a1c7ecfcb4a674adb607867aa71c5fbc89:6", "36455b08236bd0ed4c95767ab5e8823afb575bbc3cef0c2136272d0143418c35:3", "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:1", "df8fd0f8c28836a6f53d58906e2c30a0621c0c256631f83b1c053d644ee07d23:8" ],
+      "scores" : [ 1.1, 0.4, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2 ]
+    },
+    "g2-087" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-088" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-089" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-090" : {
+      "gold_spec_points" : [ ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-102" : {
+      "gold_spec_points" : [ "4CH1-2.8C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-104" : {
+      "gold_spec_points" : [ "4CH1-4.46" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-105" : {
+      "gold_spec_points" : [ "4CH1-1.6C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-107" : {
+      "gold_spec_points" : [ "4CH1-2.14" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-109" : {
+      "gold_spec_points" : [ "4CH1-1.34C", "4CH1-2.28" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-110" : {
+      "gold_spec_points" : [ "4CH1-2.28", "4CH1-3.4" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-111" : {
+      "gold_spec_points" : [ "4CH1-1.3", "4CH1-3.4" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-112" : {
+      "gold_spec_points" : [ "4CH1-1.3", "4CH1-4.45" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-113" : {
+      "gold_spec_points" : [ "4CH1-1.47", "4CH1-4.37C" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-114" : {
+      "gold_spec_points" : [ "4CH1-1.47", "4CH1-PR-08" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    },
+    "g2-115" : {
+      "gold_spec_points" : [ "4CH1-4.13", "4CH1-PR-08" ],
+      "ranked_refs" : [ ],
+      "scores" : [ ]
+    }
+  },
+  "queries_excluded_no_chunk_labels" : {
+    "count" : 31,
+    "ids" : [ "g2-027", "g2-030", "g2-116", "g2-117", "g2-118", "g2-119", "g2-120", "g2-073", "g2-076", "g2-078", "g2-079", "g2-080", "g2-082", "g2-001", "g2-003", "g2-004", "g2-006", "g2-091", "g2-092", "g2-093", "g2-094", "g2-095", "g2-096", "g2-097", "g2-098", "g2-099", "g2-100", "g2-101", "g2-103", "g2-106", "g2-108" ],
+    "reason" : "no chunk labels (substrate-absent classes / sparse auto-labels) — excluded from the chunk axis only; same rule as run-001/run-002"
+  },
+  "queries_scored_chunks" : 89,
+  "queries_total" : 120,
+  "queries_with_zero_results" : 112,
+  "run_id" : "run-003-b",
+  "snapshot" : "snap-004 (frozen snapshot)"
+}
