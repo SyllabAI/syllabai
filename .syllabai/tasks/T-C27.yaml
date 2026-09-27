@@ -76,3 +76,35 @@ task:
            freeze -> stage inputs -> workflows -> dispatch B->A->C -> record -> close T-C27)"
       unchanged: "status stays EXECUTING; the recorded run remains operator-held and
         un-executed — nothing was commissioned or self-started"
+
+    at_flip_directive_2026-09-27:
+      agent: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b) —
+        owner session executing the staged runbook (coordination check first per the
+        operator's directive)"
+      operator_directive: "\"T-C27 bench-at-serving-flip (other agent's lane — coordination
+        check first) proceed\" (trace 1a0e07674d2b1e19, 2026-09-27) — the explicit operator
+        commission required by AT_FLIP_RUNBOOK.md trigger B"
+      trigger: "B — operator-commissioned pre-flip recorded run: ALL-denominator measurement
+        on snap-003+gold-v2 as-is (compliant view reported honestly starved per the
+        dual-denominator semantics pinned in the runbook)"
+      coordination_check:
+        - "no commits on records main after 244827ebb (the staging commit) at execution
+           start; no r4 workflows, no r4 input dirs anywhere (bench/inputs holds only
+           snapshot-r3/gold-r3 and older); records Actions newest run is ops-g1-finish
+           09-22 — no r4 dispatch exists; the web-98866c45 staging is respected: its
+           runbook is executed verbatim, not re-derived"
+        - "flip re-probed live (read-only): all 298 T-C27 cards SUGGESTED — the single
+           VALIDATED EQ doc is a pre-existing 09-20-cohort document, not a T-C27 card;
+           the flip has NOT happened, the run proceeds pre-flip under trigger B"
+      substrate_reverified:
+        - "snap-003 SHA256SUMS 7/7 + gold-v2 14/14 re-verified byte-exact from main
+           (fetch-side writer newline bug found and fixed in the process — the artifacts
+           themselves were never wrong)"
+        - "gold_check PASS reproduced locally: 120 records, quotas ok, all anchors resolve"
+        - "production preload coverage 3,831/3,831 snapshot refs, every vector
+           gemini-embedding-001, chunk content_sha256 matches the snapshot 100%
+           (mixed-corpus guard) — preload-r4 built SELECT-only, 0 residual chunk API
+           calls expected; 120 gold queries embed fresh at backfill"
+      execution: "r4 generation per AT_FLIP_RUNBOOK.md steps 1-6 verbatim: vector freeze ->
+        stage inputs -> generate r4 workflows -> dispatch B -> A -> C -> record ->
+        close T-C27"
