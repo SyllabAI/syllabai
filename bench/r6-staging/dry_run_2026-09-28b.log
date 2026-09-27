@@ -1,0 +1,51 @@
+== chunks
+  [PASS] chunk.kind == document.kind on every row — 0 mismatches
+  [PASS] chunk content_sha256 self-consistency — 4181 rows
+  [PASS] no duplicate chunk_refs
+  [PASS] no snap-004 chunk_ref removed — 0 removed
+  [PASS] additive delta == the 350 EXTERNAL_NOTES chunks (SNAP5-F4), nothing else — {"EXTERNAL_NOTES": 350}
+  [PASS] all added notes chunks carry paper_state SUGGESTED (production truth; VALIDATED-only serving gate excludes them exactly as production does)
+  [PASS] chunk contents IDENTICAL to snap-004 on the carried set — 0 drifts
+  [PASS] chunk kinds IDENTICAL to snap-004 on the carried set — 0 drifts
+  [PASS] chunk spec_codes IDENTICAL to snap-004 on the carried set — 0 drifts
+  [PASS] no regressions to non-VALIDATED — 0 regressions
+  paper_state by kind: {"EXTERNAL_NOTES": {"SUGGESTED": 350}, "EXTERNAL_QUESTIONS": {"SUGGESTED": 1045, "VALIDATED": 11}, "MARK_SCHEME": {"SUGGESTED": 1333, "VALIDATED": 161}, "QUESTION_PAPER": {"SUGGESTED": 1136, "VALIDATED": 145}}
+  promoted chunks by kind|paper_code: {}
+== drift gate (chunk_spec_hv over exported chunk contents + pinned store)
+  [PASS] DRIFT GATE: all mappings re-verify over frozen bytes — 0 divergences
+  [PASS] DRIFT GATE: anchor-kind census == the records-committed bridge (205/4/0/1) — {"CLEAN": 205, "MULTI": 4, "SPAN": 0, "MISS": 1}
+  [PASS] DRIFT GATE: projection census == the handoff §4 census (210/209/164/181) — {"rows": 210, "rows_with_refs": 209, "distinct_chunk_refs": 164, "distinct_spec_codes": 181, "anchor_kinds": {"CLEAN": 205, "MULTI": 4, "SPAN": 0, "MISS": 1}}
+== spec_points
+  [PASS] spec_points BYTE-IDENTICAL to snap-004 (fidelity anchor) — 194 rows, b95361eff3ac5a70
+== graph_edges
+  [PASS] graph_edges BYTE-IDENTICAL to snap-004 (fidelity anchor) — 152 edges, f4dc1ddd10df2fa8
+== misconceptions
+  [PASS] misconceptions BYTE-IDENTICAL to snap-004 — 19 rows
+== question_anchors
+  [PASS] question_anchors BYTE-IDENTICAL to snap-004 (fidelity anchor) — 720 rows, 11a53c11e6e35cec
+== graph_code
+  [PASS] graph_code.concepts rows set-equal to snap-004 (pinned store @1245df0 unchanged)
+  [PASS] graph_code.misconceptions byte-equal — 19
+  [PASS] graph_code.counts equal — {"concepts": 98, "concepts_with_spec_attachment": 98, "misconceptions": 19, "total_spec_attachments": 117}
+  [PASS] no title drift on emitted nodes — []
+  [PASS] resources HEAD pin unchanged since snap-004 — 1245df009712216b309f163aacdd1c6d8ef39f1b
+== concept_attachments
+  [PASS] concept_attachments == 117 HUMAN_VALIDATED rows (c19 record)
+  [PASS] DB serving pairs (SUGGESTED, all CONCEPT->SUBTOPIC) == ratified HV pair set — db 117 pairs
+  [PASS] HV pairs present in pinned ratified concepts.yaml — 117/117
+  [PASS] concept_attachments BYTE-IDENTICAL to snap-004 (same ratified inputs) — bff866bc4d28edba
+
+== summary
+  counts: {"chunks": 4181, "chunks_by_kind": {"EXTERNAL_NOTES": 350, "EXTERNAL_QUESTIONS": 1056, "MARK_SCHEME": 1494, "QUESTION_PAPER": 1281}, "chunks_by_paper_state": {"EXTERNAL_NOTES": {"SUGGESTED": 350}, "EXTERNAL_QUESTIONS": {"SUGGESTED": 1045, "VALIDATED": 11}, "MARK_SCHEME": {"SUGGESTED": 1333, "VALIDATED": 161}, "QUESTION_PAPER": {"SUGGESTED": 1136, "VALIDATED": 145}}, "chunks_flipped_suggested_to_validated_vs_snap004": 0, "concept_attachments": 117, "edges": 152, "hv_projection": {"anchor_kinds": {"CLEAN": 205, "MISS": 1, "MULTI": 4, "SPAN": 0}, "distinct_chunk_refs": 164, "distinct_spec_codes": 181, "rows": 210, "rows_with_refs": 209}, "misconceptions": 19, "question_anchors": 720, "spec_points": 194}
+  chunk_spec_hv.json: sha256 b5b20ffa96b620bd…
+  chunks.jsonl.gz: sha256 fe076aaf1395a27a…
+  concept_attachments.json: sha256 bff866bc4d28edba…
+  graph_code.json: sha256 2ca4175b9775c4ec…
+  graph_edges.json: sha256 f4dc1ddd10df2fa8…
+  misconceptions.json: sha256 c659dbdc685a03a2…
+  question_anchors.json: sha256 11a53c11e6e35cec…
+  spec_points.json: sha256 b95361eff3ac5a70…
+
+ALL VERIFICATIONS PASS — snap-005 STAGING tree ready (/home/z/my-project/workspace/snap005/staging)
+Staging only: the FROZEN snapshot commit + gold re-pair + preload-r6 + workflows +
+dispatches happen at the real r6 freeze, after the operator card wave lands.

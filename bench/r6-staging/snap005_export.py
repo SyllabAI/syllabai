@@ -323,6 +323,26 @@ def main():
           "DRIFT GATE: anchor-kind census == the records-committed bridge (205/4/0/1)",
           json.dumps(recomputed_kinds))
 
+    # handoff §4 census block: computed LIVE from the artifact bytes (never
+    # hardcoded into the manifest) and asserted against the recorded bridge
+    # census at export time; the core loader re-derives it from the pinned
+    # bytes and fail-closes on any mismatch (verifyHvCensusAgainstManifest).
+    hv_census = {
+        "rows": len(projection["rows"]),
+        "rows_with_refs": sum(1 for row in projection["rows"]
+                              if any(r.strip() for r in row["chunk_refs"])),
+        "distinct_chunk_refs": len({r for row in projection["rows"]
+                                    for r in row["chunk_refs"] if r.strip()}),
+        "distinct_spec_codes": len({row["spec_code"] for row in projection["rows"]}),
+        "anchor_kinds": {k: recomputed_kinds.get(k, 0)
+                         for k in ("CLEAN", "MULTI", "SPAN", "MISS")},
+    }
+    check((hv_census["rows"], hv_census["rows_with_refs"],
+           hv_census["distinct_chunk_refs"], hv_census["distinct_spec_codes"])
+          == (210, 209, 164, 181),
+          "DRIFT GATE: projection census == the handoff §4 census (210/209/164/181)",
+          json.dumps(hv_census))
+
     DELTAS["SNAP5-H1_chunk_spec_hv_substrate"] = {
         "finding": "additive §8(d) substrate: chunk_spec_hv.json = the "
                    "chunk-sp-substrate-2026-09-27 projection (records 94d0d405c), copied "
@@ -544,6 +564,7 @@ def main():
             "chunks_flipped_suggested_to_validated_vs_snap004": len(up_flips),
             "concept_attachments": len(attachments),
             "edges": len(graph_edges),
+            "hv_projection": hv_census,
             "misconceptions": len(misconceptions),
             "question_anchors": len(anchors),
             "spec_points": len(spec_points),

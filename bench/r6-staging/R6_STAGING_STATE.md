@@ -60,3 +60,35 @@ not engineering — the r4 pre-flip staging precedent.
    embedded by then; 0-chunk-API-calls preload pattern).
 5. `ops-{embed-backfill,run003b,run004a,run005c}-r6.yml` (core pin = main at freeze time).
 6. Dispatches in runbook order → record runs → R6-GENERATION-NOTES + §8 verdict.
+
+## Addendum 2026-09-28 (s145, post-landing hardening): the §4 census gate
+
+The handoff §4 census requirement is now enforced END-TO-END on both sides of the freeze
+boundary (core `64c71ff`, records-side amendment here):
+
+- **Exporter** (this directory's `snap005_export.py`): the manifest now records
+  `counts.hv_projection` — rows / rows_with_refs / distinct_chunk_refs /
+  distinct_spec_codes + anchor_kinds — computed LIVE from the artifact bytes and asserted
+  against the handoff census (210/209/164/181 + 205/4/0/1) at export time
+  (`dry_run_2026-09-28b.log`: ALL PASS incl. the new census check, run twice 2026-09-28).
+- **Loader** (core `64c71ff` on top of `c91372c`+`670423a`+`b45b5d6`):
+  `BenchSnapshot` re-derives the census from the pinned bytes and fail-closes on any
+  mismatch against the manifest record — AND on a manifest that declares no census. A
+  snapshot carrying `chunk_spec_hv.json` without `counts.hv_projection` therefore ABORTS
+  by design: pre-freeze staging trees from before this amendment (incl. the 09-28 first
+  dry run) will not load — that is the intended fail-closed behavior, not a regression.
+  The r6 freeze re-runs the amended exporter, so the frozen manifest always carries the
+  census and loads clean.
+- Cross-lane note (disclosed, s145 reconciliation): a PARALLEL s145 draft of the same
+  export ran in this container 2026-09-27 (its evidence preserved at
+  `workspace/s145-reconciliation/` in the session sandbox, never committed — superseded by
+  this unit per the never-duplicate discipline). The two independently written exporters
+  converged byte-identical on 7/8 files (chunk_spec_hv.json b5b20ffa…, chunks.jsonl.gz
+  fe076aaf…, spec_points/graph_edges/misconceptions/question_anchors/concept_attachments
+  all equal); `graph_code.json` differs across ALL runs BY DESIGN (embedded source.date;
+  the invariant is rows-set-equal + counts-equal, verified in every dry run).
+
+D2 rider landed alongside (core `2267221`): `TutorAnsweredEvent.answerProvider` persists
+the deterministic refusal identity (`deterministic-refusal` vs `deterministic-paper-refusal`)
+into `KA_RAG_COMPLETED` telemetry — audit finding D2 closed; unrelated to the r6 freeze
+mechanics but part of the same §8(d) tranche.
