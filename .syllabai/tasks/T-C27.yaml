@@ -183,3 +183,57 @@ task:
            executed from this session"
       unchanged: "status stays DONE (the trigger-B outcome stands); the trigger-A re-run
         remains operator-held pending the flip + a production-read session"
+
+    trigger_a_execution_2026-09-27:
+      agent: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b) —
+        the OWNER session executing the handoff this file records; this session holds
+        the sanctioned production read (SYLLABAI_DATABASE_*) the web-98866c45 closeout
+        named as the remaining precondition"
+      operator_directive: "\"re-run trigger A\" (trace 1a0e23212e7b3cf5, chat
+        54c94863-9377-41e2-923e-dd45fe835c1a, 2026-09-27) — same operator call the
+        web-98866c45 claim records (trace 1a0e2220d22a90b1); executed by the session
+        that can verify the flip first-hand"
+      coordination_check:
+        - "locks [] re-verified at execution start; the web-98866c45 claim
+           (db3573a6b, claim-first) + closeout (a61bdb008) are honored verbatim —
+           nothing they landed was re-derived or re-executed; their core enabler
+           (e728b7d) is CONSUMED as the pinned core sha for the r5 generation"
+        - "no r5 dispatches existed at execution start (records Actions newest bench
+           runs remain the r4 generation 01:47-02:13Z); no concurrent r5 commit race
+           (push guard verifies parent == origin/main head)"
+      flip_verified_first_hand:
+        - "the wave the claim could not verify from its env: 13 exam_papers rows
+           VALIDATED (11 glmocr-era + 4CH1/2C June-2019 + 4CH1/1C January-2022) with
+           their 13 QP + 13 MS documents VALIDATED at doc level (documents were
+           uniformly SUGGESTED at the snap-003 freeze); 317 chunks flip
+           SUGGESTED -> VALIDATED (145 QP + 161 MS + 11 EQ — the pre-existing
+           09-20-cohort 4CH1/1C card doc, promoted in the same window)"
+        - "the card validation wave has NOT landed: all 298 T-C27 cards (2026-09-26)
+           remain SUGGESTED — the r5 at-flip run is cashed on the PAPER axis and the
+           11-chunk promoted card doc; the card-flip run (r6) stays available"
+      executed:
+        - "snap-004 freeze (scripts/snap004_export.py, snap003-exporter lineage):
+           chunk_ref set, contents, kinds, spec_codes IDENTICAL to snap-003
+           (programmatic per-field diff); spec_points/graph_edges/misconceptions/
+           question_anchors/concept_attachments BYTE-IDENTICAL (5/7 fidelity anchors);
+           graph_code set-equal; named deltas SNAP4-F1 (validation wave) + SNAP4-F2
+           (246 paper_code stamps) + SNAP4-F3 (subject_id projection per the
+           enabler) + SNAP4-M1; gzip mtime=0"
+        - "gold-v3 re-pair (bench/gold-v3, staged as gold-r5): 12 class files
+           BYTE-IDENTICAL to gold-v2 (anti-tuning — no query re-selected/re-labeled);
+           only the manifest snapshot pins move to snap-004, the validator's own
+           designed mechanism (gold_check FAILed the v2 pins against snap-004 —
+           observed and honored, never bypassed); gold_check PASS 120 records +
+           selftest 6/6"
+        - "preload-r5 (bench/inputs/embeddings/preload-r5): production-derived
+           chunk-vector mirror SELECT-only (3,831/3,831 refs, gemini-embedding-001@768,
+           per-row content_sha256 verified — mixed-corpus guard); 120 gold queries
+           embed fresh at the backfill dispatch"
+        - "r5 workflows staged (ops-embed-backfill-r5 / ops-run003b-r5 /
+           ops-run004a-r5 / ops-run005c-r5), cloned from the -r4 siblings with the
+           runbook's three deltas (input paths -> r5, prior-run results paths -> r5
+           run dirs, pinned core sha -> e728b7d); dispatch chain B -> A -> C with the
+           commit-prior-runs discipline follows as separate commits"
+      boundary: "no agent-asserted content validation anywhere — the wave was performed
+        by the operator/teacher before the directive; this lane only freezes the
+        state it found (read-only, zero production writes)"
