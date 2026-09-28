@@ -1,0 +1,89 @@
+{
+ "fails": [],
+ "V1_census_unchanged": {
+  "pass": true,
+  "detail": "{'SUGGESTED': 1, 'REJECTED': 14, 'VALIDATED': 89}"
+ },
+ "V2_rev1_total_22": {
+  "pass": true,
+  "detail": ""
+ },
+ "V2b_rev1_only_202101_sugg_embedded": {
+  "pass": true,
+  "detail": "[('4ch1-2c-202101/ms.pdf', 'SUGGESTED', True), ('4ch1-2c-202101/qp.pdf', 'SUGGESTED', True)]"
+ },
+ "V3_no_rev1_on_validated": {
+  "pass": true,
+  "detail": ""
+ },
+ "V4_eligible_2913": {
+  "pass": true,
+  "detail": "2913"
+ },
+ "V4b_backlog_subset": {
+  "pass": true,
+  "detail": "missing 0"
+ },
+ "V5_backlog_rev2_embedded_model": {
+  "pass": true,
+  "detail": "267 rows, revs={2}, models={'gemini-embedding-001'}"
+ },
+ "V6_events_zero": {
+  "pass": true,
+  "detail": ""
+ },
+ "V7_audit_untouched_max3733": {
+  "pass": true,
+  "detail": "3733"
+ },
+ "V8_g6_truth_clean": {
+  "pass": true,
+  "detail": "0"
+ },
+ "V8b_g6_on_20_docs": {
+  "pass": true,
+  "detail": "[]"
+ },
+ "L1_live_probe": [
+  {
+   "query": "electrolysis of molten lead bromide",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "why does the rate of reaction increase with temperature",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "covalent bonding in hydrogen chloride",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "titration calculation with sodium hydroxide",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "halogen displacement reactions",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  }
+ ],
+ "L1_all_queries_hit": {
+  "pass": true,
+  "detail": "[{'query': 'electrolysis of molten lead bromide', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'why does the rate of reaction increase with temperature', 'hits': 10, 'models': ['gemini-e"
+ },
+ "verdict": "ALL PASS"
+}

@@ -208,3 +208,17 @@ row), 1C VALIDATE with supersession context (only record of the examined paper;
 session_label caveat). O6 doc-batch defect caught by independent verify and
 remediated (append-only ledger, 54 audit rows). Evidence:
 bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-28/
+
+- [x] **restamp267 (2026-09-28, Task 62, trace 1a0e9e9407a8e239) — the "rev1 chunk
+  paired re-stamp backlog (267 chunks)" EXECUTED + VERIFIED.** 267 embedded rev1 chunks
+  on 20 VALIDATED QP/MS docs (validated after the Task-55 cut-over, therefore missed by
+  the 965-chunk wave; serving-invisible since) re-stamped 1->2 in one fail-closed tx
+  (COMMITTED 21:36:07Z; guards + rowcount gate + post-asserts; independent verify 11/11;
+  live probe 5/5). Serving pool 2,646 -> 2,913. Jan-2021 SUGGESTED pair (22 rev1 chunks)
+  correctly untouched — its re-stamp is in-tx with the operator's supersession sign-off
+  (Task-55 follow-up (a)). Audit ledger untouched per Task-55 stamp precedent (ck_cra_action
+  admits review verbs only; a borrowed verb would be provenance forgery — provenance
+  recorded in the evidence pack + worklog instead). Evidence:
+  `bench/review/psaxis-review-2026-09-28/restamp267-2026-09-28/`. Remaining open:
+  Jan-2021 sign-off (operator), §D1 retire (96 inert), bank-repair queue, sheet-generator
+  regex fix.

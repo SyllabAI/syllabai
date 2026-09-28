@@ -1,0 +1,15 @@
+{
+ "mode": "EXECUTE",
+ "trace": "1a0e9e9407a8e239",
+ "steps": [
+  "A1 backlog set identical (267 ids)",
+  "A2 eligible set unchanged (2646)",
+  "A3 events 0 / census 89-1-14 / rev1 total 289",
+  "A4 rowcount = 267 (UPDATE)",
+  "A5 post: rev1 remainder=22, eligible=2913, events 0",
+  "A6 audit rows = 0 (Task-55 precedent: stamp change is not a review action; ck_cra_action admits review verbs only; full provenance in evidence pack / records / worklog)",
+  "A7 ANALYZE document_chunks done"
+ ],
+ "aborts": [],
+ "result": "COMMITTED 2026-09-28T21:36:07Z"
+}
