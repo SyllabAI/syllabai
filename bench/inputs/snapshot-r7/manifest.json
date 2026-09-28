@@ -1,0 +1,138 @@
+{
+ "snapshot_version": "snap-006",
+ "generated": "2026-09-28T15:41:20Z",
+ "lineage": "snap-001 -> snap-002 -> snap-003 -> snap-004 -> snap-005 -> snap-006 (r7 serving-set eval)",
+ "files_sha256": {
+  "spec_points.json": "b95361eff3ac5a70040e0bc79af7b5f5666704db350505830ca409ead607d6fb",
+  "graph_edges.json": "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
+  "misconceptions.json": "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
+  "question_anchors.json": "d22eef80d197090dcfded600a4affa340918842b7a1ce6618b461bb6bf9b784c",
+  "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
+  "graph_code.json": "ab085c3b47dc1e0fa2c197e3343e4c63ccca1130eb477438813baef167635c6b",
+  "chunk_spec_hv.json": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+  "chunks.jsonl.gz": "4181e5987f3a9c76069a42a1a29af470908043ad595523d1df96f80906a21ee8"
+ },
+ "counts": {
+  "chunks": 4181,
+  "chunks_by_kind": {
+   "EXTERNAL_NOTES": 350,
+   "EXTERNAL_QUESTIONS": 1056,
+   "MARK_SCHEME": 1494,
+   "QUESTION_PAPER": 1281
+  },
+  "chunks_by_paper_state": {
+   "EXTERNAL_NOTES": {
+    "VALIDATED": 350
+   },
+   "MARK_SCHEME": {
+    "SUGGESTED": 1333,
+    "VALIDATED": 161
+   },
+   "QUESTION_PAPER": {
+    "SUGGESTED": 1136,
+    "VALIDATED": 145
+   },
+   "EXTERNAL_QUESTIONS": {
+    "SUGGESTED": 747,
+    "VALIDATED": 309
+   }
+  },
+  "chunks_flipped_suggested_to_validated_vs_snap005": 353,
+  "concept_attachments": 117,
+  "edges": 152,
+  "hv_projection": {
+   "rows": 210,
+   "rows_with_refs": 209,
+   "distinct_chunk_refs": 164,
+   "distinct_spec_codes": 181,
+   "anchor_kinds": {
+    "CLEAN": 205,
+    "MULTI": 4,
+    "SPAN": 0,
+    "MISS": 1
+   }
+  },
+  "misconceptions": 19,
+  "question_anchors": 731,
+  "spec_points": 194
+ },
+ "deltas_vs_snap-005": {
+  "SNAP6-F1_validation_flips": {
+   "finding": "validation-state flips since the snap-005 freeze, captured at freeze time as-is: the operator's flagged3 flip (3 EQ cards FLAGGED->VALIDATED, batch 0d5e4c4a) + the notes-axis promotion (112 EN documents SUGGESTED->VALIDATED with their 350 chunks, batch ef4c1fe4). Any other flip would be recorded; any DOWN-flip aborts (SNAP6-D1).",
+   "chunks_flipped_to_validated": 353,
+   "flips_by_kind_paper_code": {
+    "EXTERNAL_NOTES|None": 350,
+    "EXTERNAL_QUESTIONS|4CH1/2CR": 2,
+    "EXTERNAL_QUESTIONS|4CH1/2C": 1
+   },
+   "documents_with_promoted_chunks": 115,
+   "paper_state_by_kind": {
+    "EXTERNAL_NOTES": {
+     "VALIDATED": 350
+    },
+    "MARK_SCHEME": {
+     "SUGGESTED": 1333,
+     "VALIDATED": 161
+    },
+    "QUESTION_PAPER": {
+     "SUGGESTED": 1136,
+     "VALIDATED": 145
+    },
+    "EXTERNAL_QUESTIONS": {
+     "SUGGESTED": 747,
+     "VALIDATED": 309
+    }
+   },
+   "no_regressions": true,
+   "row_set_identity": "snap-005's 3,831 chunk_refs carried with IDENTICAL contents, kinds and spec_codes; paper_state (and metadata-only paper_code stamps, if any) are the only permitted value deltas on the carried set, verified programmatically"
+  },
+  "SNAP6-F2_chunk_paper_code_stamps": {
+   "finding": "metadata-only paper_code stamps since snap-005 (snap-005 recorded 246 stamps in SNAP4-F2; any further stamps are recorded here).",
+   "rows_stamped": 0,
+   "by_kind": {}
+  },
+  "SNAP6-M1_method_note": {
+   "finding": "unchanged read path: sanctioned production connection from the session env, READ-ONLY (set_session(readonly=True)), SELECT-only, rolled back; zero writes to any production table"
+  },
+  "SNAP6-F4_notes_axis_serving": {
+   "finding": "the notes axis now SERVES: operator directive 'pursue (a)' (trace 1a0e88af08e12df5) applied the notes-axis promotion (batch notes-axis-promotion-2026-09-28, batch_run_id ef4c1fe4-1b18-4697-b3bd-074e4e0f582b, 2026-09-28T15:22Z, records 9ea54e1): 112 EXTERNAL_NOTES documents SUGGESTED->VALIDATED + 350 notes chunks embed_rev 2->1 (vectors untouched). The 210 HUMAN_VALIDATED chunk->spec mappings (SNAP6-H1 substrate) are therefore REACHABLE in the served view and SS8(d) is scoreable-with-coverage at this freeze. This exporter captures the resulting paper_state flips at run time.",
+   "en_chunks_flipped": 350,
+   "eq_chunks_flipped": 3
+  },
+  "SNAP6-H1_chunk_spec_hv_substrate": {
+   "finding": "additive \u00a78(d) substrate: chunk_spec_hv.json = the chunk-sp-substrate-2026-09-27 projection (records 94d0d405c), copied BYTE-IDENTICAL and manifest-pinned so BenchSnapshot's fail-closed loader verifies it (present-but-unpinned aborts; the \u00a75 counting rule \u2014 validation_status, never tier \u2014 is enforced in the loader). \u00a78(d) flips NOT SCOREABLE -> scoreable-with-coverage at this freeze. Drift gate: every mapping's quote containment re-verified over the FROZEN chunk bytes against the pinned resources store (1245df009712216b309f163aacdd1c6d8ef39f1b, store sha256_16 e8b58a7109104bb7); anchor kinds recomputed {\"CLEAN\": 205, \"MULTI\": 4, \"SPAN\": 0, \"MISS\": 1}; census rows=210 refs=164.",
+   "projection_sha256": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+   "drift_gate_failures": 0
+  },
+  "SNAP6-F6_question_anchor_growth": {
+   "finding": "the VALIDATED question_versions anchor set grew after the snap-005 freeze via the app-side teacher wave on the papers/schemes axis (content_review_audit 2026-09-28, pilot.teacher@syllabai-test.dev: 11 question_version VALIDATE + 1 exam_paper VALIDATE_ALL). Fidelity is multiset superset \u2014 zero removal, zero mutation.",
+   "rows_added": 0,
+   "rows_snap005": 731,
+   "added_distinct_rows": 0
+  }
+ },
+ "r7_gate": {
+  "note": "recorded by the freeze run: the serving set this eval scores is post-flagged3-flip + post-notes-axis-promotion production truth; gate replica expectation 615 -> 965 eligible chunks, purely additive",
+  "operator_traces": {
+   "flagged3_decision": "1a0e7865c3b35715",
+   "notes_axis_decision": "1a0e88af08e12df5",
+   "eval_commission": "1a0e88bb060ed3b5"
+  },
+  "batches": {
+   "flagged3": "0d5e4c4a-cacc-454c-9dfe-5983e1f11661",
+   "notes_axis": "ef4c1fe4-1b18-4697-b3bd-074e4e0f582b"
+  },
+  "eq_chunks_flipped_this_freeze": 3,
+  "en_chunks_flipped_this_freeze": 350,
+  "prior_r6_gate_record": "content_review_audit run a5d13c0a-2503-4d06-bb14-9397e9a1cf37; operator sheet sha256 89c0714681ecd710\u2026; decisions 295 VALIDATE + 3 FLAG applied verbatim 2026-09-28 (records ab600e18f1)"
+ },
+ "graph_as_code_source": {
+  "head": "1245df009712216b309f163aacdd1c6d8ef39f1b",
+  "repo": "SyllabAI/syllabai-resources"
+ },
+ "chunk_spec_hv": {
+  "sha256": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+  "source": "records 94d0d405c bench/evidence/chunk-sp-substrate-2026-09-27/",
+  "drift_gate": "re-verified over frozen bytes at export; anchor census {\"CLEAN\": 205, \"MULTI\": 4, \"SPAN\": 0, \"MISS\": 1}"
+ }
+}

@@ -1,5 +1,25 @@
 # r7 staging unit — the serving-set eval generation (REGISTERED 2026-09-28)
 
+> **EXECUTING 2026-09-28 (same day):** the notes-axis promotion landed
+> mid-staging (records `9ea54e1`, operator trace `1a0e88af08e12df5` "pursue
+> (a)") — **scope UPDATED**: snap-006 captures BOTH operator decisions (the
+> flagged3 flip 3 EQ FLAGGED→VALIDATED + the notes-axis promotion 350 EN
+> SUGGESTED→VALIDATED); the serving pool this generation scores is
+> **612 → 965** (not the 612 → 615 this file was registered with — the plan
+> text below is preserved as registered; expectations in the freeze artifacts
+> govern). Freeze executed FOR REAL: ALL VERIFICATIONS PASS (4,181 chunks,
+> 353 up-flips, 0 down-flips, zero content/kind/spec drift, drift gate
+> 205/4/0/1, census EQ 309V/747S/0F + EN 350V → gate-eligible 965) —
+> `evidence/bench-001/snapshots/snap-006/` + `bench/inputs/snapshot-r7/`.
+> gold-v5 re-paired (set byte-identical; `gold_check` PASS, all 120 anchors
+> resolve into snap-006) → `bench/inputs/gold-r7/`. preload-r7 staged from the
+> BYTE-IDENTICAL frozen r6 vector rows (production embeddings unchanged — the
+> promotions touched states/stamps only; per-row deterministic-id + coverage
+> 4,181/4,181 + qid 120/120 guards PASS) →
+> `bench/inputs/embeddings/preload-r7/`. r7 workflows committed. Dispatches:
+> `ops-run003-b-r7` then `ops-run004-a-r7` (A consumes B's results), core pin
+> `d9cb3ddcf2`.
+
 **Commission.** Operator directive **"Proceed with (1) eval"** (IM trace
 `1a0e88bb060ed3b5`, 2026-09-28) executing item **(1)** of the corrected standing
 menu recorded in `evidence/serving-rev2-flipback-refutation-2026-09-28/REPORT.md`:
