@@ -299,7 +299,7 @@ validated their status-chip changes too).
 
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3b (SME visual parity re-shell)
 
-- [ ] HUB-ANSWER-BOX-W3B (IN PROGRESS, session web-98866c45, operator message
+- [x] HUB-ANSWER-BOX-W3B (EXECUTED 2026-09-29 as hub e50bfe2, session web-98866c45, operator message
 "Does not look quite right. Here is what SME one looks like… <Editor_wrapper DOM
 paste>") **answer-box re-shell to the pinned ground truth** — operator pasted
 SME's collapsed-state DOM (Editor_wrapper/collapsible/collapsed +
@@ -335,3 +335,28 @@ Hub-repo-only change: no resource lease required (wave 1/2 precedent).
   `bench/review/psaxis-review-2026-09-28/d1retire-2026-09-28/`. Remaining open:
   Jan-2021 sign-off (operator), §D1 leftovers (59), bank-repair queue,
   sheet-generator regex fix.
+W3B execution record (hub e50bfe2, rebased over content-package v0.2
+7ed728e): SME production CSS extracted from the four cdn bundles
+(Editor_wrapper/collapsed/collapsible/writtenMode/menu, Label_label,
+Textarea_label, token values — #e2e2e2 borders, 1rem padding, collapsed
+min-height:0 vs 10rem active, :focus-within outline, menu = flex-wrap
+.5rem strip with rounded bottom corners). AnswerTextarea re-shelled:
+label prop with htmlFor/useId association; collapsed rows=1 (54px box) vs
+active marks-proportional min-height floor (field-sizing:content ignores
+rows for height — floor rides min-height; SME's fixed 10rem inside the
+range); tool strip + palette render ONLY when active, attached below the
+box; statusSlot/hintSlot carry the exam surface's SIMULATED/live-draft
+badge, derived save chip and "Saved in this browser" honesty copy inside
+the active state (permanent meta row deleted; outer muted card flattened);
+placeholder copy to SME register, stem-verb hints kept, SME default
+"Enter your answer here..." verbatim. Practice label unified through the
+component. Plain-text contract, per-keystroke autosave, both mark lanes,
+session-gated ink pad, palette pref, Ctrl/Cmd+Enter gates: untouched.
+Verified: eslint+tsc clean; build green 629 pages; corpus gate passed;
+e2e 12/12 (axe a11y 8 routes + deck-flow 4) — suite deps installed frozen;
+browser probes on the standalone mock build: collapsed anatomy exact, no
+strip while pristine, activation growth 54->98px (3-mark), strip slots
+(badge/save chip/word count/hint), 24-glyph insert-at-caret with focus
+kept, 45-line cap exactly 384px content + internal scroll, blur-with-
+content persistence, 375px hOverflow=0, cold load 0 console errors.
+Screenshots: scripts/research/probe_collapsed.png, probe_active.png.
