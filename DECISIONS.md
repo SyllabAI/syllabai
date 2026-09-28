@@ -271,14 +271,16 @@ The complete decision record is canonical in `ADR-020-EDUCATIONAL_RETRIEVAL_ENGI
 
 ## ADR-021: Content Compiler and Portable Content Package
 
-**Status:** Proposed  
-**Date:** 2026-09-15
+**Status:** Accepted  
+**Date:** 2026-09-15 (proposed) · 2026-09-29 (accepted)
 
 Markdown is a first-class durable content/interchange representation for Revision Notes and parser/OCR-derived QP/MS artifacts; PostgreSQL remains the canonical operational/domain representation; a SyllabAI-specific SQLite Content Package is designed as a derived portable/reproducible corpus, QA, research and distribution format. SQLite packages are not authoritative learner state, curriculum truth, KG truth, or production multi-user storage. Generic MarkdownDB is not adopted as a core dependency. No package or Markdown artifact bypasses existing validation, authorization or learner-serving gates.
 
 The complete decision record is canonical in `ADR_021_CONTENT_COMPILER_AND_PORTABLE_CONTENT_PACKAGE.md`, with the architecture in `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` and the initial package contract in `CONTENT_PACKAGE_V0_1.md`. (Ledger entry registered 2026-09-15 by the documentation audit reconciliation to close the 020→022 numbering gap; the standalone file remains the authority. Promotion from PROPOSED requires implementation evidence and bounded reproducibility tests.)
 
 **Scope guard:** this ADR does not change Cycle-1 product scope and does not authorize bulk ingestion, learner-serving changes, or a production database migration.
+
+**Promoted PROPOSED → ACCEPTED 2026-09-29** (operator decision, chat bb263437, trace 1a0e9f879a8d8fe1) — the ADR's own gate (implementation evidence + bounded reproducibility tests, re-verified GREEN at current main on promotion day) satisfied by two CI-verified evidence bodies: (1) the **bounded real-corpus v0.1 reconstruction proof** — parser `tools/content-package-v0.1/`: one real Revision Note (operator-`HUMAN_VALIDATED` spec mappings) + one real learner-servable VALIDATED QP/MS pair (complete marking contract), compile → package (Markdown + SQLite + MANIFEST with SHA-256) → clean-room semantic reconstruction `R3.1`–`R3.9` all equal, negative gates fail closed `N1`–`N5`, deterministic provenance binding; parser-ci `content-package-proof` job GREEN, re-verified run `36161511189` at parser main `55166af` (record: `CONTENT_PACKAGE_V0_1_IMPLEMENTATION_STATUS.md`); (2) the **hub-corpus v0.1 tooling at production scale** — ADR-029 tranche 4.12, hub `0c589de`, evidence `download/s135/`: all 49 courses / 346 artifacts / 82.8 MB compile → `MANIFEST.json` (identity + per-artifact SHA-256 + counts + findings) + verbatim content + SQLite v0.1 projection; gates `G1`–`G5`/`V1`–`V8`/`R1`–`R4` fail closed; byte-deterministic SQLite + clock-free buildId CI-enforced (selftest compile+verify+restore+determinism+tamper); NO serving change — PostgreSQL + `content/` remain the operational truth, the ADR boundary held in execution; selftest step re-verified GREEN in hub-ci run `36487846248` at hub main `9a00eb1`. Acceptance covers the six decision points and the bounded v0.1 contract as implemented; it does NOT authorize bulk corpus migration, PostgreSQL replacement, package-driven learner serving, or the broader architecture claims (KG projection policy, distribution/versioning at scale, canonical-store integration) — those remain staged in `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` (stays PROPOSED) until separately proven. Full record: the ADR file's Promotion record; promotion evidence `download/s136/`.
 
 ## ADR-022: Contextual Learning Assistant — contract-first, platform-owned context
 

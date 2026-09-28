@@ -1,8 +1,8 @@
 # Content Package v0.1 Implementation Status
 
-**Status: IMPLEMENTED / VERIFIED — bounded real-corpus v0.1 reconstruction proof**
-**Scope: bounded proof only**
-**Architecture note: the Content Compiler / Portable Content Package architecture (ADR_021, `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md`) remains PROPOSED. This evidence covers the bounded v0.1 compiler/package/reconstruction proof, not the broader architectural claims (corpus-wide migration, KG projection, distribution at scale).**
+**Status: IMPLEMENTED / VERIFIED — the v0.1 contract proven at two scopes: the bounded real-corpus reconstruction proof (below) + the hub-corpus tooling over all 49 courses (ADR-029 tranche 4.12, hub `0c589de`)**
+**Scope: v0.1 compiler/package/verification contract; no serving change**
+**ADR-021: ACCEPTED since 2026-09-29** (operator decision, chat bb263437, trace 1a0e9f879a8d8fe1; the ADR's promotion gate — implementation evidence + bounded reproducibility tests — satisfied by the two evidence bodies below, re-verified GREEN at current main on promotion day: parser-ci run `36161511189` @ `55166af`, hub-ci run `36487846248` @ `9a00eb1` with the selftest step green; promotion record in the ADR file + DECISIONS.md). **Architecture note: the architecture companion (`CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md`) remains PROPOSED** — corpus-wide COMPILATION is now proven at hub scale (tranche 4.12), but corpus-wide migration, KG projection policy, distribution at scale and canonical-store integration remain staged until separately proven.
 
 ## Current implementation
 
@@ -42,11 +42,13 @@ Verdict line (verbatim from CI): `REAL-CORPUS PROOF VERDICT: GREEN 17/17`.
 
 ## Verification status
 
-**Bounded real-corpus v0.1 reconstruction proof: IMPLEMENTED / VERIFIED** (CI-executed, machine-generated verdicts, committed source materials, deterministic provenance binding). This promotes the *bounded proof* only.
+**Bounded real-corpus v0.1 reconstruction proof: IMPLEMENTED / VERIFIED** (CI-executed, machine-generated verdicts, committed source materials, deterministic provenance binding; re-verified at current parser main `55166af`, parser-ci run `36161511189`, `content-package-proof` job GREEN). This promoted the *bounded proof* only.
 
-The broader Content Compiler / Portable Content Package architecture remains **PROPOSED** until its remaining claims (corpus-wide compilation, KG projection policy, distribution/versioning at scale, canonical-store integration) are separately proven and reviewed.
+**Hub-corpus v0.1 tooling (2026-09-29, ADR-029 tranche 4.12): IMPLEMENTED / VERIFIED** — the same contract at production scale: hub `0c589de` `tools/content-package/` compiles all 49 courses / 346 artifacts / 82.8 MB → `MANIFEST.json` (identity + per-artifact SHA-256 + counts + findings) + verbatim content copies + SQLite v0.1 projection; gates `G1`–`G5`/`V1`–`V8`/`R1`–`R4` fail closed; NO serving change (PostgreSQL + `content/` remain operational truth). CI-enforced selftest (compile + verify + restore + determinism + tamper, ~3.4s) re-verified GREEN at hub main `9a00eb1` (run `36487846248`). Evidence: `download/s135/`.
 
-No claim of general byte-for-byte package determinism is made. Two consecutive compiles of the real inventory produced byte-identical packages in the verification environment (observed, recorded, not contractual).
+On these two bodies ADR-021 was promoted PROPOSED → ACCEPTED on 2026-09-29 (operator decision). The broader architecture companion remains **PROPOSED** — its remaining claims (KG projection policy, distribution/versioning at scale, canonical-store integration) are staged until separately proven; corpus-wide compilation is now proven at hub scale, corpus-wide MIGRATION remains unauthorized.
+
+Determinism: two consecutive compiles of the parser real inventory produced byte-identical packages in the verification environment (observed, recorded). The hub-corpus tooling strengthens this to a CI-enforced gate — byte-identical SQLite across consecutive compiles + clock-free buildId, verified in every hub-ci run (selftest determinism step).
 
 ## Explicit non-goals
 
@@ -66,4 +68,4 @@ No claim of general byte-for-byte package determinism is made. Two consecutive c
 
 ## Next gate
 
-Promote the architecture itself (ADR_021) from PROPOSED only via a reviewed decision covering the remaining architectural claims. A corpus-wide migration must NOT start on the strength of this bounded proof.
+~~Promote the architecture itself (ADR_021) from PROPOSED only via a reviewed decision covering the remaining architectural claims.~~ **EXECUTED 2026-09-29**: ADR-021 promoted PROPOSED → ACCEPTED by the operator decision (chat bb263437, trace 1a0e9f879a8d8fe1) — a reviewed decision that covers the remaining architectural claims by scoping them OUT of acceptance: they stay staged in `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` (PROPOSED) until separately proven. The prohibition holds and is restated by the promotion: a corpus-wide migration must NOT start — neither on the bounded proof nor on the hub-corpus tooling; PostgreSQL remains canonical. The forward gates are the architecture companion's staged claims: KG projection policy, distribution/versioning at scale, canonical-store integration.
