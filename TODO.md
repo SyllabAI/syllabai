@@ -163,7 +163,39 @@ supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/r
 
 ## 2026-09-29 — claim: workbench Tutor + CLA reference-look restyle (itutor.study + Save My Exams references)
 
-- [ ] TUTOR-CLA-LOOK (REGISTERED 2026-09-29, session web-bb263437, operator
+### TUTOR-CLA-LOOK EXECUTED (same session, web `132c15a` on base f041237, web-ci green run 36496410489, Vercel live — all 4 change markers in the deployed chunk)
+
+Delivered as claimed, presentation-only across 5 files (+492/−262): Tutor =
+the itutor.study chat-home look (identity strip with gradient avatar;
+assistant turns as avatar+name rows on the canvas, bubble box retired; user
+turns as muted gray bubbles with "Sep 27 · 9:41 PM" stamps; citation pills;
+rounded-2xl composer with the subject context pill (green dot + subjectName,
+new prop from page state), subject-aware placeholder, circular send; greeting
+hero over pill starters; conversations pane polish). CLA = the Save My Exams
+explain-panel look (amber honesty banner; ANCHOR/MODE pill segments — the s129
+overlay vocabulary now shared across all three CLA surfaces; compact
+selects; chat-style transcript; shared composer with anchor-summary pill +
+circular send; "What needs explaining?" on the question overlay; banner on
+the note overlay; AnswerBody citations as pills with unchanged anchor
+ids/hrefs). All behavioral pins diff-verified: s139 historyFor + 8-turn cap,
+s140/s141 §22 hydration+reattach, s143 pane semantics, F-043 citation jumps,
+§19 footers, §7 gate rendering, refusals, s136 honest degradation,
+MAX_QUESTION_CHARS, a11y labels, pure exports for the s139/s143 verify
+scripts. VERIFIED: eslint + type-checked production build clean; web-ci
+`36496410489` @ `132c15a` step-level success (Lint + Production build); mock-
+API visual probes (tutor empty/answered, CLA empty/answered, dark, 375px
+po=0) with VLM audit of every capture; Vercel probe GET / 200 + markers
+`answers only from validated course content` / `The assistant can make
+mistakes` / `What needs explaining?` / `or paste a homework question` all
+present in `/_next/static/chunks/38tbng3tuco0e.js`. Evidence:
+`download/web-bb263437/` (report, 10 captures incl. the operator's rendered
+references, full diff, CI + Vercel proofs, SHA256SUMS); harness
+`scripts/web_bb263437_{mock_api.mjs,visual_probe.sh,ci_poll.sh,vercel_probe.sh}`.
+Pearson's 4 AI-tutor snapshots were read as the secondary reference (dark
+theme, math keypad — recorded, deliberately not ported: the workbench's SME
+dual-theme system and the plain-text answer contract stay).
+
+- [x] TUTOR-CLA-LOOK (REGISTERED 2026-09-29, session web-bb263437, operator
 directive trace 1a0ea32e1f6c1f21 "I want to work on the frontend improvements
 of the Tutor and CLA. https://github.com/nawaf-al-hussain/FileUpload/blob/main/FrontendReferences.zip
 Here are some references on how it should look like") **restyle the
