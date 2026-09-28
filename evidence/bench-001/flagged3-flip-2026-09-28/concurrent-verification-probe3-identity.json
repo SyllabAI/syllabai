@@ -1,0 +1,197 @@
+{
+  "pinned_as_logical_document_id": [
+    {
+      "id_pk": "bccdacb2-0c2b-43b4-951e-8f66ccd8008f",
+      "document_id": "1195ca6c-0ecd-5890-b63e-4c2df7ebddba",
+      "kind": "EXTERNAL_QUESTIONS",
+      "validation_state": "VALIDATED",
+      "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2023-01-4CH1-2CR-qq1",
+      "created_at": "2026-09-26"
+    },
+    {
+      "id_pk": "bf07304e-6de7-4ea5-8a90-091843a58802",
+      "document_id": "1c15d529-661b-53a7-a8ed-a934328e6afb",
+      "kind": "EXTERNAL_QUESTIONS",
+      "validation_state": "VALIDATED",
+      "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2020-01-4CH1-2C-qq3",
+      "created_at": "2026-09-26"
+    },
+    {
+      "id_pk": "d84be99c-6022-485e-92b7-c1770128ee2c",
+      "document_id": "ee882008-88ca-5952-af9c-5505c8f76661",
+      "kind": "EXTERNAL_QUESTIONS",
+      "validation_state": "VALIDATED",
+      "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2020-06-4ch1-2CR-qq1",
+      "created_at": "2026-09-26"
+    }
+  ],
+  "post_1130_audit_rows": [
+    {
+      "target_id": "bf07304e-6de7-4ea5-8a90-091843a58802",
+      "action": "VALIDATE",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATED",
+      "detail": {
+        "applied_by": "agent session executing the operator's named instruction (the agent asserts no validation of its own)",
+        "basis_report_sha256": "23ead2a72ced108963621ac286059659a61681d1f25c55b67a27690bc901a305",
+        "batch": "flagged3-flip-2026-09-28",
+        "batch_run_id": "0d5e4c4a-cacc-454c-9dfe-5983e1f11661",
+        "cards": [
+          {
+            "card_document_id": "1c15d529-661b-53a7-a8ed-a934328e6afb",
+            "external_ref": "4ch1/past-papers/2020-01/4CH1-2C#q3",
+            "sheet_seq": 207
+          },
+          {
+            "card_document_id": "ee882008-88ca-5952-af9c-5505c8f76661",
+            "external_ref": "4ch1/past-papers/2020-06/4ch1-2CR#q1",
+            "sheet_seq": 278
+          },
+          {
+            "card_document_id": "1195ca6c-0ecd-5890-b63e-4c2df7ebddba",
+            "external_ref": "4ch1/past-papers/2023-01/4CH1-2CR#q1",
+            "sheet_seq": 291
+          }
+        ],
+        "decision_text": "named IM instruction (verbatim): \"flip #207/#278/#291 to VALIDATE. And continue you to work autonomously. I dont have time to do anything\"",
+        "decisions_file_sha256": "b6a6064e61f130297dfa8f74c0a1405f6436fcb79f2dfedaeaec91236046cbe2",
+        "operator": "operator \u2014 Nawaf Al Hussain Khondokar (the teacher who completed the 298-card review sheet)",
+        "operator_trace_id": "1a0e7865c3b35715",
+        "sheet_sha256": "89c0714681ecd710be0e2d4c402f4320b1c47faa545341f20d7ffdb5b861d67e"
+      },
+      "document_now": {
+        "id_pk": "bf07304e-6de7-4ea5-8a90-091843a58802",
+        "document_id": "1c15d529-661b-53a7-a8ed-a934328e6afb",
+        "kind": "EXTERNAL_QUESTIONS",
+        "validation_state": "VALIDATED",
+        "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2020-01-4CH1-2C-qq3"
+      }
+    },
+    {
+      "target_id": "d84be99c-6022-485e-92b7-c1770128ee2c",
+      "action": "VALIDATE",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATED",
+      "detail": {
+        "applied_by": "agent session executing the operator's named instruction (the agent asserts no validation of its own)",
+        "basis_report_sha256": "23ead2a72ced108963621ac286059659a61681d1f25c55b67a27690bc901a305",
+        "batch": "flagged3-flip-2026-09-28",
+        "batch_run_id": "0d5e4c4a-cacc-454c-9dfe-5983e1f11661",
+        "cards": [
+          {
+            "card_document_id": "1c15d529-661b-53a7-a8ed-a934328e6afb",
+            "external_ref": "4ch1/past-papers/2020-01/4CH1-2C#q3",
+            "sheet_seq": 207
+          },
+          {
+            "card_document_id": "ee882008-88ca-5952-af9c-5505c8f76661",
+            "external_ref": "4ch1/past-papers/2020-06/4ch1-2CR#q1",
+            "sheet_seq": 278
+          },
+          {
+            "card_document_id": "1195ca6c-0ecd-5890-b63e-4c2df7ebddba",
+            "external_ref": "4ch1/past-papers/2023-01/4CH1-2CR#q1",
+            "sheet_seq": 291
+          }
+        ],
+        "decision_text": "named IM instruction (verbatim): \"flip #207/#278/#291 to VALIDATE. And continue you to work autonomously. I dont have time to do anything\"",
+        "decisions_file_sha256": "b6a6064e61f130297dfa8f74c0a1405f6436fcb79f2dfedaeaec91236046cbe2",
+        "operator": "operator \u2014 Nawaf Al Hussain Khondokar (the teacher who completed the 298-card review sheet)",
+        "operator_trace_id": "1a0e7865c3b35715",
+        "sheet_sha256": "89c0714681ecd710be0e2d4c402f4320b1c47faa545341f20d7ffdb5b861d67e"
+      },
+      "document_now": {
+        "id_pk": "d84be99c-6022-485e-92b7-c1770128ee2c",
+        "document_id": "ee882008-88ca-5952-af9c-5505c8f76661",
+        "kind": "EXTERNAL_QUESTIONS",
+        "validation_state": "VALIDATED",
+        "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2020-06-4ch1-2CR-qq1"
+      }
+    },
+    {
+      "target_id": "bccdacb2-0c2b-43b4-951e-8f66ccd8008f",
+      "action": "VALIDATE",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATED",
+      "detail": {
+        "applied_by": "agent session executing the operator's named instruction (the agent asserts no validation of its own)",
+        "basis_report_sha256": "23ead2a72ced108963621ac286059659a61681d1f25c55b67a27690bc901a305",
+        "batch": "flagged3-flip-2026-09-28",
+        "batch_run_id": "0d5e4c4a-cacc-454c-9dfe-5983e1f11661",
+        "cards": [
+          {
+            "card_document_id": "1c15d529-661b-53a7-a8ed-a934328e6afb",
+            "external_ref": "4ch1/past-papers/2020-01/4CH1-2C#q3",
+            "sheet_seq": 207
+          },
+          {
+            "card_document_id": "ee882008-88ca-5952-af9c-5505c8f76661",
+            "external_ref": "4ch1/past-papers/2020-06/4ch1-2CR#q1",
+            "sheet_seq": 278
+          },
+          {
+            "card_document_id": "1195ca6c-0ecd-5890-b63e-4c2df7ebddba",
+            "external_ref": "4ch1/past-papers/2023-01/4CH1-2CR#q1",
+            "sheet_seq": 291
+          }
+        ],
+        "decision_text": "named IM instruction (verbatim): \"flip #207/#278/#291 to VALIDATE. And continue you to work autonomously. I dont have time to do anything\"",
+        "decisions_file_sha256": "b6a6064e61f130297dfa8f74c0a1405f6436fcb79f2dfedaeaec91236046cbe2",
+        "operator": "operator \u2014 Nawaf Al Hussain Khondokar (the teacher who completed the 298-card review sheet)",
+        "operator_trace_id": "1a0e7865c3b35715",
+        "sheet_sha256": "89c0714681ecd710be0e2d4c402f4320b1c47faa545341f20d7ffdb5b861d67e"
+      },
+      "document_now": {
+        "id_pk": "bccdacb2-0c2b-43b4-951e-8f66ccd8008f",
+        "document_id": "1195ca6c-0ecd-5890-b63e-4c2df7ebddba",
+        "kind": "EXTERNAL_QUESTIONS",
+        "validation_state": "VALIDATED",
+        "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2023-01-4CH1-2CR-qq1"
+      }
+    }
+  ],
+  "eq_documents_census_now": {
+    "VALIDATED": 299,
+    "SUGGESTED": 80,
+    "FLAGGED": 0,
+    "REJECTED": 0
+  },
+  "wave_flag_rows": [
+    {
+      "target_id": "bccdacb2-0c2b-43b4-951e-8f66ccd8008f",
+      "action": "FLAG",
+      "from_state": "SUGGESTED",
+      "to_state": "FLAGGED",
+      "detail": "teacher card wave import 2026-09-28 (sheet sha256 89c0714681ecd710); card 1195ca6c-0ecd-5890-b63e-4c2df7ebddba (sheet #291) | note: 0 marks, no syllabus spec linkage, and Q? / unknown question sequence; needs source verification.",
+      "document": {
+        "id_pk": "bccdacb2-0c2b-43b4-951e-8f66ccd8008f",
+        "document_id": "1195ca6c-0ecd-5890-b63e-4c2df7ebddba",
+        "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2023-01-4CH1-2CR-qq1"
+      }
+    },
+    {
+      "target_id": "bf07304e-6de7-4ea5-8a90-091843a58802",
+      "action": "FLAG",
+      "from_state": "SUGGESTED",
+      "to_state": "FLAGGED",
+      "detail": "teacher card wave import 2026-09-28 (sheet sha256 89c0714681ecd710); card 1c15d529-661b-53a7-a8ed-a934328e6afb (sheet #207) | note: 0 marks, no syllabus spec linkage, and Q? / unknown question sequence; needs source verification.",
+      "document": {
+        "id_pk": "bf07304e-6de7-4ea5-8a90-091843a58802",
+        "document_id": "1c15d529-661b-53a7-a8ed-a934328e6afb",
+        "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2020-01-4CH1-2C-qq3"
+      }
+    },
+    {
+      "target_id": "d84be99c-6022-485e-92b7-c1770128ee2c",
+      "action": "FLAG",
+      "from_state": "SUGGESTED",
+      "to_state": "FLAGGED",
+      "detail": "teacher card wave import 2026-09-28 (sheet sha256 89c0714681ecd710); card ee882008-88ca-5952-af9c-5505c8f76661 (sheet #278) | note: 0 marks, no syllabus spec linkage, and Q? / unknown question sequence; needs source verification.",
+      "document": {
+        "id_pk": "d84be99c-6022-485e-92b7-c1770128ee2c",
+        "document_id": "ee882008-88ca-5952-af9c-5505c8f76661",
+        "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2020-06-4ch1-2CR-qq1"
+      }
+    }
+  ]
+}

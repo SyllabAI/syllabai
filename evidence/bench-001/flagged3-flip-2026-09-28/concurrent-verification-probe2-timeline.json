@@ -1,0 +1,178 @@
+{
+  "db_host": "<neon-pooler-host-redacted>",
+  "flagged_eq_docs_here": [],
+  "audit_summary": {
+    "total": 365,
+    "min_occurred_at": "2026-09-14 22:17:44.345995+00",
+    "max_occurred_at": "2026-09-28 11:32:05.926448+00"
+  },
+  "audit_recent_12": [
+    {
+      "occurred_at": "2026-09-28 11:32:05.926448+00",
+      "actor_label": "operator \u2014 Nawaf Al Hussain Khondokar (the teacher who completed the 298-card review sheet)",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 11:32:05.926448+00",
+      "actor_label": "operator \u2014 Nawaf Al Hussain Khondokar (the teacher who completed the 298-card review sheet)",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 11:32:05.926448+00",
+      "actor_label": "operator \u2014 Nawaf Al Hussain Khondokar (the teacher who completed the 298-card review sheet)",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "VALIDATED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "FLAG",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "FLAGGED"
+    },
+    {
+      "occurred_at": "2026-09-28 08:03:31.496305+00",
+      "actor_label": "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]",
+      "action": "VALIDATE",
+      "target_type": "question",
+      "from_state": "SUGGESTED",
+      "to_state": "VALIDATED"
+    }
+  ],
+  "audit_action_breakdown": [
+    {
+      "action": "VALIDATE",
+      "target_type": "question",
+      "n": 298
+    },
+    {
+      "action": "VALIDATE",
+      "target_type": "question_version",
+      "n": 24
+    },
+    {
+      "action": "VALIDATE",
+      "target_type": "mark_scheme",
+      "n": 21
+    },
+    {
+      "action": "UNFLAG",
+      "target_type": "question_version",
+      "n": 4
+    },
+    {
+      "action": "FLAG",
+      "target_type": "question_version",
+      "n": 4
+    },
+    {
+      "action": "VALIDATE_ALL",
+      "target_type": "exam_paper",
+      "n": 3
+    },
+    {
+      "action": "FLAG",
+      "target_type": "question",
+      "n": 3
+    },
+    {
+      "action": "REJECT",
+      "target_type": "question_version",
+      "n": 2
+    },
+    {
+      "action": "REJECT",
+      "target_type": "exam_paper",
+      "n": 2
+    },
+    {
+      "action": "MAP_TOPICS",
+      "target_type": "question",
+      "n": 2
+    },
+    {
+      "action": "FLAG",
+      "target_type": "exam_paper",
+      "n": 1
+    },
+    {
+      "action": "UNFLAG",
+      "target_type": "exam_paper",
+      "n": 1
+    }
+  ],
+  "eq_validated_created_at_dist": {
+    "2026-09-20": 1,
+    "2026-09-26": 298
+  },
+  "wave_ref_docs_here": [],
+  "documents_total_vs_distinct_logical": {
+    "rows": 999,
+    "distinct_logical": 999
+  }
+}
