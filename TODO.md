@@ -178,23 +178,7 @@ of scope (would change the answer-format contract; operator decision pending —
 see HUB-ANSWER-BOX row 150 for wave 1/2 lineage). Lease: core-web-contract in
 .syllabai/locks.yaml (base 929b241/core fd4631e/hub 817c845, expires 48h).
 
-## 2026-09-29 — claim: ADR-029 tranche 4.13 — a11y + deck-flow Playwright E2E
-
-- [ ] TRANCHE-4.13 (IN PROGRESS, session web-fc62c099, operator trace
-1a0e9df1b1532a29 "Proceed with a11y + deck-flow Playwright E2E") **the last
-unclaimed ADR-029 follow-up** — two faces, one browser harness: (1)
-deck-flow Playwright E2E over the Ebbinghaus cycle (rate → due → resurface)
-with seeded historical trails (time-travel in localStorage — the honest way
-to test a days-scale scheduler in a seconds-scale test), keyboard-only
-traversal of the deck player, the learner "Flashcards due" section, and the
-"Review due first" stalest-first lift; (2) an a11y pass with axe-core scans
-on the key routes + keyboard pins, real cheap fixes landed, deliberate
-exceptions recorded in a committed baseline file. Mock mode (HUB_DATA_MODE=
-mock, bundled corpus) — deterministic, prod untouched. Files: tests/e2e/*,
-playwright.config.ts, package.json/bun.lock (devDeps), ci.yml (e2e job),
-small a11y component fixes (NOT answer-textarea/question-player — wave 3's
-active lease). Lease: none needed (no shared-resource class touched; a11y
-fixes coordinated fetch-before-push).
+## 2026-09-29 — ADR-029 tranche 4.13 EXECUTED: a11y + deck-flow Playwright E2E (session web-fc62c099, operator trace 1a0e9df1b1532a29)
 
 ### T-PS1 addendum 4 — OCR lane + COVID resolution APPLIED (2026-09-28, trace 1a0e9c4c5305d55d)
 
@@ -257,3 +241,32 @@ bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-28/
   status unverifiable from the sandbox (no gh auth) — local gates are the
   claim; live end-to-end probe needs a learner JWT (operator-gated, as T-C23).
   Lease released below.
+
+- [x] TRANCHE-4.13 (EXECUTED 2026-09-29, hub `9a00eb1` rebased on the wave-3
+`c92fbe3`/theme `34df0f9` union and re-verified green before push) **a11y +
+deck-flow Playwright E2E — the browser harness the deck flow earned**. (1)
+Deck-flow E2E (tests/e2e/deck-flow.spec.ts, 4 tests): the SME loop pins
+rating controls disabled until reveal; still-learning due IMMEDIATELY; fresh
+knows schedule without being due; a days-old trail — seeded by moving ONLY
+the overlay timestamps (the scheduler's input shape never faked) — surfaces
+the due badge at all FOUR altitudes from one derivation (deck header, on-card
+marker, deck-index chip, learner drawer section + open-deck deep link);
+"Review due first" lifts the stalest-due card; a re-rate empties the queue
+instantly; honest empty state + never-mastery footer pinned; keyboard-only
+Enter-flip via the card's role=button. (2) axe a11y gate
+(tests/e2e/a11y.spec.ts, 8 routes): gate = zero CRITICAL/SERIOUS violations;
+moderate/minor counted to the log as design backlog, never snapshotted. Five
+real contrast bugs found and FIXED (see DECISIONS): AI_SUGGESTED badge
+4.39:1 → text-warn-ink; course-shell count badge 4.11:1 + topic-tree meta
+4.34:1 + login switcher 4.34:1 → text-foreground/70; login story panel
+3.85:1 → full text-primary-foreground (5.4:1). (3) Harness
+(playwright.config.ts): drives the PRODUCTION standalone build in
+HUB_DATA_MODE=mock — deterministic, no core, no auth; /learner is
+RequireAuth-gated and mock has no core, so the learner section is pinned on
+the KG drawer hosting the SAME StateTab (one derivation, one UI). ci.yml
+gains an e2e job (chromium + build + playwright test, report artifact on
+failure); test:e2e scripts; artifacts gitignored. Coordination: push
+rejected once — the answer-box wave-3 lane (c92fbe3) + theme second-pass
+(34df0f9) landed in the fetch→push window; rebase clean (disjoint files),
+rebuild + full 12-test re-run green on the merged tree (the axe gate
+validated their status-chip changes too).
