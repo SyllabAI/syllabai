@@ -319,3 +319,19 @@ demoted + outer muted card flattened, practice label unified. Plain-text
 contract, per-keystroke autosave, both mark lanes untouched. Base: hub 9a00eb1
 (tranche 4.13 axe gate respected — label association + aria-expanded kept).
 Hub-repo-only change: no resource lease required (wave 1/2 precedent).
+
+- [x] **d1retire (2026-09-28, Task 63, trace 1a0ea024489b3ee9) — §D1 retire
+  decisions EXECUTED + VERIFIED: the 91 swapped-away shells (57 Task-59 + 34
+  Task-60, from-ids extracted from the audit ledger PLACE rows and cross-checked
+  vs the phaseC plan artifact) + the 5 OCR-lane retired candidates are now
+  REJECTED.** One fail-closed tx COMMITTED 22:06:57Z (rowcount 96; serving-neutral:
+  pool 2,913 unchanged; Jan-2021 pair untouched; 59 older §D1 leftovers stay
+  SUGGESTED for their own pass). 96 append-only REJECT audit rows with
+  operator-delegated provenance (no teacher session, events 0). 88/96 docs carry
+  display-only source_document_id citations — code-verified as never joined
+  (ContentReviewService projection); re-point logged as cosmetic follow-up.
+  Audit id gap 3734 = sequence value burned by the rolled-back Task-62 insert
+  attempt (NEXTVAL is not transactional). Evidence:
+  `bench/review/psaxis-review-2026-09-28/d1retire-2026-09-28/`. Remaining open:
+  Jan-2021 sign-off (operator), §D1 leftovers (59), bank-repair queue,
+  sheet-generator regex fix.
