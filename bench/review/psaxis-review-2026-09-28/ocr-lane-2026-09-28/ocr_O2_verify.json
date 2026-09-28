@@ -1,0 +1,482 @@
+{
+ "canonical_sections": {
+  "2": {
+   "sectionId": "q02",
+   "page": 6,
+   "title": "Question 2 (4 marks)"
+  },
+  "3": {
+   "sectionId": "q03",
+   "page": 7,
+   "title": "Question 3 (6 marks)"
+  },
+  "4": {
+   "sectionId": "q04",
+   "page": 8,
+   "title": "Question 4 (8 marks)"
+  },
+  "5": {
+   "sectionId": "q05",
+   "page": 3,
+   "title": "Question 5 (5 marks)"
+  },
+  "6": {
+   "sectionId": "q06",
+   "page": 6,
+   "title": "Question 6 (5 marks)"
+  },
+  "9": {
+   "sectionId": "q09",
+   "page": 3,
+   "title": "Question 9 (6 marks)"
+  },
+  "10": {
+   "sectionId": "q10",
+   "page": 5,
+   "title": "Question 10 (7 marks)"
+  },
+  "14": {
+   "sectionId": "q14",
+   "page": 8,
+   "title": "Question 14 (14 marks)"
+  }
+ },
+ "stems": [
+  {
+   "id": "1d1a881b-5d73-4d6c-8502-f2324060fa57",
+   "marks": 14,
+   "canon_pass": true,
+   "canon_cov": 1.0,
+   "ocr_page": null,
+   "ocr_cov": null
+  },
+  {
+   "id": "20da972a-faca-42d1-869f-eb5bc2b3d607",
+   "marks": 6,
+   "canon_pass": false,
+   "canon_cov": 0.483,
+   "ocr_page": "ocr_p04",
+   "ocr_cov": 0.483
+  },
+  {
+   "id": "27379362-6f0f-4b18-ae11-fa233b68a72f",
+   "marks": 4,
+   "canon_pass": true,
+   "canon_cov": 1.0,
+   "ocr_page": null,
+   "ocr_cov": null
+  },
+  {
+   "id": "34157e0b-52e5-4e92-975a-b9dc9bcea4bb",
+   "marks": 12,
+   "canon_pass": false,
+   "canon_cov": 0.611,
+   "ocr_page": "ocr_p20",
+   "ocr_cov": 1.0
+  },
+  {
+   "id": "401bbd83-1897-4b98-a54c-bf392545fd5b",
+   "marks": 9,
+   "canon_pass": false,
+   "canon_cov": 0.667,
+   "ocr_page": "ocr_p16",
+   "ocr_cov": 1.0
+  },
+  {
+   "id": "402c39e1-02ab-4820-99df-99405a138d66",
+   "marks": 6,
+   "canon_pass": true,
+   "canon_cov": 1.0,
+   "ocr_page": null,
+   "ocr_cov": null
+  },
+  {
+   "id": "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8",
+   "marks": 9,
+   "canon_pass": false,
+   "canon_cov": 0.644,
+   "ocr_page": "ocr_p26",
+   "ocr_cov": 1.0
+  },
+  {
+   "id": "67708b87-0c76-4bde-91e3-ccfb693e4d40",
+   "marks": 5,
+   "canon_pass": true,
+   "canon_cov": 1.0,
+   "ocr_page": null,
+   "ocr_cov": null
+  },
+  {
+   "id": "6b7fbbdb-a270-442d-acc3-07036888608b",
+   "marks": 8,
+   "canon_pass": true,
+   "canon_cov": 1.0,
+   "ocr_page": null,
+   "ocr_cov": null
+  },
+  {
+   "id": "6d51dcf2-881c-4b07-ab35-327636a80a3f",
+   "marks": 6,
+   "canon_pass": true,
+   "canon_cov": 1.0,
+   "ocr_page": null,
+   "ocr_cov": null
+  },
+  {
+   "id": "964b9b54-efbb-42b0-9480-b9f8bd7d6015",
+   "marks": 4,
+   "canon_pass": false,
+   "canon_cov": 0.5,
+   "ocr_page": "ocr_p04",
+   "ocr_cov": 1.0
+  },
+  {
+   "id": "aa7692ec-07b3-409c-bcab-a183ab0e3cf7",
+   "marks": 1,
+   "canon_pass": true,
+   "canon_cov": 1.0,
+   "ocr_page": null,
+   "ocr_cov": null
+  },
+  {
+   "id": "b4a2b62d-bcaa-4ef4-a334-c0460405f57c",
+   "marks": 9,
+   "canon_pass": false,
+   "canon_cov": 0.494,
+   "ocr_page": "ocr_p18",
+   "ocr_cov": 1.0
+  },
+  {
+   "id": "d80c0eed-0a86-4af7-b268-9bb0c4923523",
+   "marks": 5,
+   "canon_pass": true,
+   "canon_cov": 1.0,
+   "ocr_page": null,
+   "ocr_cov": null
+  },
+  {
+   "id": "f9537fc2-fba7-4a1c-820b-1b0d4e3ae98b",
+   "marks": 6,
+   "canon_pass": false,
+   "canon_cov": 0.304,
+   "ocr_page": "ocr_p12",
+   "ocr_cov": 1.0
+  }
+ ],
+ "qp_printed_totals_found": {
+  "1": 4,
+  "2": 4,
+  "3": 6,
+  "4": 8,
+  "5": 5,
+  "6": 5,
+  "8": 6,
+  "9": 6,
+  "10": 7,
+  "11": 9,
+  "12": 9,
+  "13": 12,
+  "14": 14,
+  "15": 9,
+  "7": 6
+ },
+ "qp_cover_total": 110,
+ "ms_printed_totals": {
+  "1": 4,
+  "2": 4,
+  "3": 6,
+  "4": 8,
+  "5": 5,
+  "6": 5,
+  "7": 6,
+  "8": 6,
+  "9": 6,
+  "10": 7,
+  "11": 9,
+  "12": 9,
+  "13": 12,
+  "14": 14,
+  "15": 9
+ },
+ "stem_question_map": {
+  "1d1a881b-5d73-4d6c-8502-f2324060fa57": {
+   "question": 14,
+   "via": "canonical",
+   "cov": 0.99
+  },
+  "20da972a-faca-42d1-869f-eb5bc2b3d607": {
+   "question": 8,
+   "via": "text_p13 (math-span)",
+   "cov": 1.0
+  },
+  "27379362-6f0f-4b18-ae11-fa233b68a72f": {
+   "question": 2,
+   "via": "canonical",
+   "cov": 1.0
+  },
+  "34157e0b-52e5-4e92-975a-b9dc9bcea4bb": {
+   "question": 13,
+   "via": "ocr:ocr_p20",
+   "cov": 1.0
+  },
+  "401bbd83-1897-4b98-a54c-bf392545fd5b": {
+   "question": 11,
+   "via": "ocr:ocr_p16",
+   "cov": 1.0
+  },
+  "402c39e1-02ab-4820-99df-99405a138d66": {
+   "question": 3,
+   "via": "canonical",
+   "cov": 1.0
+  },
+  "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8": {
+   "question": 15,
+   "via": "ocr:ocr_p26",
+   "cov": 1.0
+  },
+  "67708b87-0c76-4bde-91e3-ccfb693e4d40": {
+   "question": 5,
+   "via": "canonical",
+   "cov": 1.0
+  },
+  "6b7fbbdb-a270-442d-acc3-07036888608b": {
+   "question": 4,
+   "via": "canonical",
+   "cov": 1.0
+  },
+  "6d51dcf2-881c-4b07-ab35-327636a80a3f": {
+   "question": 9,
+   "via": "canonical",
+   "cov": 1.0
+  },
+  "964b9b54-efbb-42b0-9480-b9f8bd7d6015": {
+   "question": 1,
+   "via": "ocr:ocr_p04",
+   "cov": 1.0
+  },
+  "aa7692ec-07b3-409c-bcab-a183ab0e3cf7": {
+   "question": 10,
+   "via": "canonical",
+   "cov": 0.941
+  },
+  "b4a2b62d-bcaa-4ef4-a334-c0460405f57c": {
+   "question": 12,
+   "via": "ocr:ocr_p18",
+   "cov": 1.0
+  },
+  "d80c0eed-0a86-4af7-b268-9bb0c4923523": {
+   "question": 6,
+   "via": "canonical",
+   "cov": 1.0
+  },
+  "f9537fc2-fba7-4a1c-820b-1b0d4e3ae98b": {
+   "question": 7,
+   "via": "ocr:ocr_p12",
+   "cov": 1.0
+  }
+ },
+ "reconciliation": [
+  {
+   "question": 1,
+   "printed": 4,
+   "banked": 4,
+   "diff": 0,
+   "bank_rows": [
+    "964b9b54"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 2,
+   "printed": 4,
+   "banked": 4,
+   "diff": 0,
+   "bank_rows": [
+    "27379362"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 3,
+   "printed": 6,
+   "banked": 6,
+   "diff": 0,
+   "bank_rows": [
+    "402c39e1"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 4,
+   "printed": 8,
+   "banked": 8,
+   "diff": 0,
+   "bank_rows": [
+    "6b7fbbdb"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 5,
+   "printed": 5,
+   "banked": 5,
+   "diff": 0,
+   "bank_rows": [
+    "67708b87"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 6,
+   "printed": 5,
+   "banked": 5,
+   "diff": 0,
+   "bank_rows": [
+    "d80c0eed"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 7,
+   "printed": 6,
+   "banked": 6,
+   "diff": 0,
+   "bank_rows": [
+    "f9537fc2"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 8,
+   "printed": 6,
+   "banked": 6,
+   "diff": 0,
+   "bank_rows": [
+    "20da972a"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 9,
+   "printed": 6,
+   "banked": 6,
+   "diff": 0,
+   "bank_rows": [
+    "6d51dcf2"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 10,
+   "printed": 7,
+   "banked": 1,
+   "diff": 6,
+   "bank_rows": [
+    "aa7692ec"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 11,
+   "printed": 9,
+   "banked": 9,
+   "diff": 0,
+   "bank_rows": [
+    "401bbd83"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 12,
+   "printed": 9,
+   "banked": 9,
+   "diff": 0,
+   "bank_rows": [
+    "b4a2b62d"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 13,
+   "printed": 12,
+   "banked": 12,
+   "diff": 0,
+   "bank_rows": [
+    "34157e0b"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 14,
+   "printed": 14,
+   "banked": 14,
+   "diff": 0,
+   "bank_rows": [
+    "1d1a881b"
+   ],
+   "source": "ms_layout"
+  },
+  {
+   "question": 15,
+   "printed": 9,
+   "banked": 9,
+   "diff": 0,
+   "bank_rows": [
+    "5fb4726f"
+   ],
+   "source": "ms_layout"
+  }
+ ],
+ "printed_sum": 110,
+ "banked_sum": 104,
+ "covid_2c_duplicate_check": {
+  "nov_qp_doc_prefix": "6087c43e",
+  "chunks": 11,
+  "stems": 7,
+  "passed": 6,
+  "detail": [
+   {
+    "id": "471bbefb-d4de-4a0b-8c4e-f82558b0bb85",
+    "pass": true,
+    "cov": 1.0,
+    "chunk": "nov_chunk10"
+   },
+   {
+    "id": "6302db2c-9cee-4233-a71a-fe7a35e59ff8",
+    "pass": true,
+    "cov": 1.0,
+    "chunk": "nov_chunk06"
+   },
+   {
+    "id": "82e31fc6-56c5-49fe-a587-565cbbcd2c64",
+    "pass": true,
+    "cov": 1.0,
+    "chunk": "nov_chunk04"
+   },
+   {
+    "id": "a200ce7b-c0eb-4f0b-af30-3b3bc2bd19df",
+    "pass": false,
+    "cov": 0.0,
+    "chunk": null
+   },
+   {
+    "id": "cf58a45d-c561-4f3b-9e5f-b7e4386b949f",
+    "pass": true,
+    "cov": 1.0,
+    "chunk": "nov_chunk08"
+   },
+   {
+    "id": "e44caa5a-71e2-43a2-a3b0-bc3af51d5c0b",
+    "pass": true,
+    "cov": 1.0,
+    "chunk": "nov_chunk03"
+   },
+   {
+    "id": "fceab265-6810-4e52-9faf-3eba0d5f40ea",
+    "pass": true,
+    "cov": 1.0,
+    "chunk": "nov_chunk00"
+   }
+  ]
+ }
+}

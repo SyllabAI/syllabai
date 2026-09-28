@@ -1,0 +1,35 @@
+{
+ "census": {
+  "SUGGESTED": 1,
+  "REJECTED": 14,
+  "VALIDATED": 89
+ },
+ "audit_chain": [
+  [
+   "PLACE",
+   null,
+   null,
+   4
+  ],
+  [
+   "REJECT",
+   "FLAGGED",
+   "REJECTED",
+   1
+  ],
+  [
+   "UNFLAG",
+   "FLAGGED",
+   "SUGGESTED",
+   2
+  ],
+  [
+   "VALIDATE",
+   "SUGGESTED",
+   "VALIDATED",
+   47
+  ]
+ ],
+ "serving_pool": 1987,
+ "fails": []
+}

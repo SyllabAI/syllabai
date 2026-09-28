@@ -195,3 +195,16 @@ playwright.config.ts, package.json/bun.lock (devDeps), ci.yml (e2e job),
 small a11y component fixes (NOT answer-textarea/question-player — wave 3's
 active lease). Lease: none needed (no shared-resource class touched; a11y
 fixes coordinated fetch-before-push).
+
+### T-PS1 addendum 4 — OCR lane + COVID resolution APPLIED (2026-09-28, trace 1a0e9c4c5305d55d)
+
+All 3 remaining FLAGGED papers resolved; review queue EMPTY. Census
+89 V / 0 F / 1 S / 14 R; serving pool 2,581 -> 2,646 (rev1 267 untouched).
+4CH1/1C Jun-2019: pdflane-atoms-ocr/1.3.0 (tesseract @300dpi + slicer-missed
+text-layer page), gates 14/15 & 15/15, marks reconciliation solved (Q10 parts
+b-d = the 6-mark gap -> bank-repair backlog). 4CH1/1C+2C Jun-2020: web-researched
+COVID June/Nov pairing — 2C REJECT (phantom duplicate of the VALIDATED Nov-2020
+row), 1C VALIDATE with supersession context (only record of the examined paper;
+session_label caveat). O6 doc-batch defect caught by independent verify and
+remediated (append-only ledger, 54 audit rows). Evidence:
+bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-28/
