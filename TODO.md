@@ -161,6 +161,49 @@ identities. Census 87 V / 3 F / 1 S / 13 R; serving pool 2,020 -> 2,581.
 reconciliation), 4CH1/1C + 4CH1/2C Jun-2020 (COVID June/Nov pairing — operator
 supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/reingest-lane-2026-09-28/
 
+## 2026-09-29 — claim: workbench Tutor + CLA reference-look restyle (itutor.study + Save My Exams references)
+
+- [ ] TUTOR-CLA-LOOK (REGISTERED 2026-09-29, session web-bb263437, operator
+directive trace 1a0ea32e1f6c1f21 "I want to work on the frontend improvements
+of the Tutor and CLA. https://github.com/nawaf-al-hussain/FileUpload/blob/main/FrontendReferences.zip
+Here are some references on how it should look like") **restyle the
+workbench's core-backed Tutor + CLA surfaces to the operator's reference
+designs — presentation only, zero behavior change**. References decoded from
+the operator's FrontendReferences.zip (16 SingleFile snapshots): Tutor =
+itutor.study /public/chat-home (5 snapshots: conversation view + new-chat
+states; secondary: Pearson's AI-tutor page, 4 snapshots); CLA = Save My Exams
+pages (7 snapshots: 3 revision-notes + 4 exam-questions — exactly the two
+surfaces where the CLA overlays anchor). Look translation, Tutor (iTutor
+chat-home): assistant messages render as avatar + name-label rows on the
+canvas (no bubble box), user messages as muted gray bubbles (retiring the
+solid-primary bubble), citations as rounded pills, composer as a large
+rounded-2xl card with a subject context pill (green dot + subject name from
+page state, new prop) + borderless textarea + circular send button, empty
+state becomes a greeting hero (time-of-day + display name from the existing
+currentUser session) with suggested-starters as pill chips, per-message
+timestamps, conversations-pane row polish. Look translation, CLA (SME
+explain-panel): amber honesty banner ("can make mistakes — answers only from
+validated course material"), mode selector as pill segments (replacing the
+mode Select), compact anchor bar, transcript bubbles matching the new chat
+style, input placeholder moves to "What needs explaining?" on the question
+overlay. Shared AnswerBody/MetaRow restyle propagates to both overlays
+(QuestionClaOverlay s129 + NoteClaOverlay s135/s137). BEHAVIORAL PINS
+(unchanged, all of them): s139 working-memory historyFor + its 8-turn cap,
+s140 §22 session hydration + localStorage anchor, s141 session reattach, s143
+conversations pane (resume/delete/refresh semantics), F-043 citation
+marker-chips + jump-to-card + teacher-only deep links, §19 research footer
+(model/provider/latency/evidence) on every answer, §7 answer-leakage gate
+rendering (409 attempt_required = guidance), deterministic-refusal cards,
+honest AI-unavailable messages (s136), MAX_QUESTION_CHARS 2000, a11y labels
+throughout. Web-repo-only change on base f041237; files:
+src/components/syllabai/{TutorChatView,ClaAssistantView,QuestionClaOverlay,
+NoteClaOverlay}.tsx + src/app/page.tsx (subjectName prop pass). No lease
+needed (locks.yaml empty; no API/contract/core work — UI owns presentation
+per AGENT.md rule 1; the hub's HUB-TUTOR-SESSIONS lane touches hub files
+only, zero overlap). Verification: bun lint + type-checked production build
+(web-ci parity) + dev-server visual probes against the reference
+screenshots; evidence pack download/web-bb263437/.
+
 ## 2026-09-29 — claim: tutor §22 sessions + conversations pane on the hub (web s138–143 parity)
 
 ### HUB-TUTOR-SESSIONS EXECUTED (same session, hub `0549838` + ci re-trigger `3782049`, CI build+e2e green)
