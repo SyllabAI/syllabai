@@ -3,7 +3,7 @@ task:
   id: T-C31
   title: "Serving-emptiness observability — distinguish the three empty-causes on the teacher content search path (T-C23 recorded ticket candidate)"
   owner: "superz (main agent, zai session web-98866c45-9eb6-4100-a2b3-22cfb322258b)"
-  status: IN_REVIEW
+  status: DONE
   priority: P3
   base:
     repo: syllabai-core
@@ -54,3 +54,22 @@ task:
       follow-up, not this task"
   merge: "operator/owner lane — PR #29 is ready on a green CI; merge and deploy
     per the normal lane"
+  closeout:
+    merged: "PR #29 MERGED per operator directive 'merge PR #29' (trace
+      1a0e6aa4c3efe9d5) — merge commit d4e0f7a on core main (2026-09-28T06:23:59Z),
+      house-style title 'merge: T-C31 serving-emptiness observability — empty-cause
+      label for the teacher documents search (PR #29)'"
+    pre_merge_gates: "trust-but-verify before the merge: CI re-verified live on head
+      0cdba4b (build SUCCESS, check-run 108804367098); local git merge-tree CLEAN
+      vs the advanced main 2f11707 (identity rate-limit + card-boundary test lanes
+      landed after PR open — no content conflict); locks.yaml empty, no conflicting
+      claim; 8-file scope audit: no migrations, no validation endpoint, no card
+      surface (operator red lines 1a0e6753792f76fd held)"
+    outcome: "T-C23's three-identical-200+[] gap closed on main — every empty teacher
+      documents search now names WHY via the additive X-Search-Empty-Cause header
+      + structured 4-stage funnel log; serving semantics and the happy path are
+      byte-identical; T-C20 gate named-not-changed"
+    follow_ups:
+      - "web UI surfacing of the empty-cause label (additive, when a web caller exists)"
+      - "learner KA-RAG arm instrumentation (registered follow-up)"
+      - "resolveActive N+1 (~340 per-node reads per search) — T-C23 ticket 2"
