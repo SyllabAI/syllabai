@@ -1,5 +1,13 @@
 # r7 staging unit — the serving-set eval generation (REGISTERED 2026-09-28)
 
+> **EXECUTED 2026-09-28 (same day):** dispatches 36446065734 (ops-run003-b-r7,
+> SUCCESS) + 36446512908 (ops-run004a-r7, SUCCESS) on records `6db6bdd`; run
+> records committed under `evidence/bench-001/runs/run-003-b-r7/` +
+> `run-004-a-r7/`; generation record `evidence/bench-001/runs/R7-GENERATION-NOTES.md`
+> (r6↔r7 reconciliation, measured notes-displacement mechanism, leakage check
+> 0.4033, §8(d) 0.0 → 0.9167 micro, menu-1 verdict). Zero production writes;
+> zero API calls.
+>
 > **EXECUTING 2026-09-28 (same day):** the notes-axis promotion landed
 > mid-staging (records `9ea54e1`, operator trace `1a0e88af08e12df5` "pursue
 > (a)") — **scope UPDATED**: snap-006 captures BOTH operator decisions (the
