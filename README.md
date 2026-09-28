@@ -10,7 +10,9 @@ This is the **main repository**: the master project pack (specification, decisio
 |---|---|---|
 | `syllabai` (this) | Master project pack: spec, ADRs, backlog, research, papers | Markdown + spreadsheet |
 | `syllabai-core` | Backend modular monolith — all domain modules | Java 25 · Spring Boot 4.1 · Spring AI 2.0 |
-| `syllabai-web` | Web frontend | Next.js 16 · React 19 · TypeScript · Vercel |
+| `syllabai-hub` | **Product frontend** (ADR-029, promoted from syllabai-demo 2026-09-28): per-subject Learning Hubs, grounded tutor, CLA, learner model surfaces, teacher workspace; all AI through core; live at `syllabai-hub.vercel.app` | Next.js 16 · React 19 · TypeScript · Vercel |
+| `syllabai-web` | Internal teacher/ops console (demoted from product frontend per ADR-029; Smart Mark / marking queue home; product-surface development frozen) | Next.js 16 · React 19 · TypeScript · Vercel |
+| `syllabai-demo` | Frozen prototype playground (per ADR-029; received the pre-promotion corpus/UX waves — ported to the hub by tranche 4.3) | Next.js 16 · React 19 · TypeScript · Vercel |
 | `syllabai-parser` | Offline content pipeline (polyglot) | Java (opendataloader-pdf in-process) · GLM-OCR Python tooling (MinerU/Surya deferred) |
 | `syllabai-pastpapers` | Canonical exam-material corpus — manifests, SHA-256 provenance, ledgers | Markdown/YAML corpus + Python ingestion tooling |
 | `syllabai-resources` | RAG revision-note corpus + T-C09/T-C11 mapping/graph QA | Markdown corpus + Python governance scripts |

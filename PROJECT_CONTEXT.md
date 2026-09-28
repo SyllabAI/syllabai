@@ -46,7 +46,9 @@ The current repository set is:
 |---|---|
 | `syllabai` | this pack — spec, ADRs, backlog, research, papers |
 | `syllabai-core` | Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith (all domain modules) |
-| `syllabai-web` | Next.js 16 / React 19 / TypeScript frontend (Vercel) |
+| `syllabai-hub` | **Product frontend** (ADR-029, promoted from syllabai-demo 2026-09-28): per-subject Learning Hubs, grounded tutor + CLA through core proxies, 4CH1 real learner-model bridge, teacher workspace; live at `syllabai-hub.vercel.app` (Next.js 16 / React 19 / TypeScript / Vercel) |
+| `syllabai-web` | Internal teacher/ops console (demoted per ADR-029; Smart Mark / marking queue home; product-surface development frozen; Next.js 16 / React 19 / TypeScript / Vercel) |
+| `syllabai-demo` | Frozen prototype playground (per ADR-029); its pre-promotion corpus/UX waves were ported to the hub by tranche 4.3 |
 | `syllabai-parser` | polyglot offline content pipeline (opendataloader-pdf in-process; MinerU/Surya offline) |
 | `Past-Papers` | public official-content corpus repo for IAL/IGCSE Edexcel QP/MS PDFs + GLM-OCR markdown corpora (`paper 1` / `paper 2` = 4CH1 papers 1C/2C × 41 sessions, QP+MS pairs, MANIFEST.json provenance); raw staging feeding `syllabai-pastpapers`; no application code |
 | `syllabai-resources` | public content-ops corpus repo: 112 SME IGCSE Chemistry revision notes with spec-point mappings (T-C09 graph-as-code + T-C10, 209/209 HUMAN_VALIDATED), 4CH1 specification md/PDF, PMT Edexcel IGCSE Chemistry resources, Student-Book OCR runbook + pilot, KG build scripts |
