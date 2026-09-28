@@ -1,22 +1,21 @@
 name: ops-run004-a-r7
 
-# Run 004 — arm A semantic replay (T-C13), r7 serving-set eval generation
-# (snap-006 + gold-v5 staged as snapshot-r7/gold-r7; the flagged3 flip + the
-# notes-axis promotion are IN via SNAP6-F1, 2026-09-28 — the VALIDATED serving
-# pool this generation scores is 965 chunks: 615 + 350 notes; SS8(d)
-# scoreable-with-coverage). Benchmark-only; never on push/PR. Replays the
-# frozen preload-r7 vector artifact (4181/4181 chunks + 120 gold queries,
-# gemini-embedding-001@768, SHA256SUMS-pinned; the vectors are the BYTE-
-# IDENTICAL frozen r6 rows — production embeddings unchanged since the r6
-# freeze, zero API calls anywhere) through the PRODUCTION vector serving path
-# on a disposable pgvector service container. Fail-closed: checksum-verified
-# against the exact frozen snapshot/gold inputs; §8(d) census fail-closed on
-# the loader (counts.hv_projection). Core pin d9cb3ddcf2 = main at the r7
-# staging commit (serving SQL emission-identical to the r6 pin; c37582d
-# hygiene tranche). Output: results.json + RUN_REPORT.md + SHA256SUMS
-# (uploaded artifact). r7 delta vs run-004-a-r6: -r7 input paths, gold-r7
-# (gold-v5 re-pair), BENCH_RUN003B_RESULTS points at the r7 run-003-b results
-# committed to evidence/bench-001/runs/run-003-b-r7/.
+# Run 004 — arm A semantic replay (T-C13), R7 NOTES-AXIS-PROMOTION generation
+# (snap-006 + gold-v5 staged as snapshot-r7/gold-r7; the operator's notes-axis
+# promotion IS IN via SNAP6-F1, 2026-09-28). Benchmark-only; never on push/PR.
+# Replays the frozen R7 embedding artifact (embed-backfill-snap-006-r7:
+# 4181/4181 chunks + 120 gold queries, gemini-embedding-001@768, SHA256SUMS-
+# pinned) through the PRODUCTION vector serving path on a disposable pgvector
+# service container. ZERO API calls at run time — compute-once-freeze-forever.
+# Fail-closed: checksum-verified against the exact frozen snapshot/gold inputs;
+# §8(d) census fail-closed on the loader (counts.hv_projection). Core pin
+# 05f262169 = the r6 pin (bench code unchanged; only the freeze inputs move).
+# Output: results.json + RUN_REPORT.md + SHA256SUMS (uploaded artifact).
+# R7 delta vs run-004-a-r6 (2026-09-28): -r7 input paths, gold-r7 (gold-v5
+# re-pair), BENCH_RUN003B_RESULTS points at the R7 run-003-b results committed
+# to evidence/bench-001/runs/run-003-b-r7/. THE r7 HEADLINE: the served view
+# now contains the 350 HV-mapped notes chunks — §8(d)'s first coverage-bearing
+# measurement.
 
 on:
   workflow_dispatch:
@@ -49,7 +48,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: SyllabAI/syllabai-core
-          ref: d9cb3ddcf2b241411fe74e575fac8194c7ca9f8a
+          ref: 05f2621690843123758fe271bdfcacae9b4ed220
           path: core
 
       - name: Set up JDK 25
@@ -80,7 +79,7 @@ jobs:
           BENCH_EMBED_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload-r7
           BENCH_RUN_OUT: ${{ github.workspace }}/run004a-out
           BENCH_RUN003B_RESULTS: ${{ github.workspace }}/records/evidence/bench-001/runs/run-003-b-r7/results.json
-          BENCH_CORE_COMMIT: d9cb3ddcf2b241411fe74e575fac8194c7ca9f8a
+          BENCH_CORE_COMMIT: 05f2621690843123758fe271bdfcacae9b4ed220
           BENCH_RUN_DATE: "2026-09-28"
         run: java -Xmx3g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.Run004A
 

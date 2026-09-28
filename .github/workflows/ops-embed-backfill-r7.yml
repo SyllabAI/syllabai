@@ -1,0 +1,103 @@
+name: ops-embed-backfill-r7
+
+# R7 NOTES-AXIS-PROMOTION embed artifact (2026-09-28): the same
+# production-shaped EmbedBackfill runner, pinned core sha = the r6 pin
+# (05f262169 — carries the §8(d) substrate wiring c91372c+64c71ff+670423a+b45b5d6;
+# no core change is needed for r7: only the freeze inputs move), pointed at the
+# R7 staged inputs snapshot-r7 (= snap-006, the notes-axis-promotion freeze:
+# 350 notes chunks SUGGESTED->VALIDATED + 3 flagged-3 flips, both
+# operator-recorded decisions; records commit = the snap-006 freeze commit) +
+# gold-r7 (= gold-v5, class files byte-identical to gold-v4, re-paired to
+# snap-006). The staged preload-r7 INPUT is the production-derived chunk-vector
+# mirror carried byte-identical from the frozen r6 artifact (float4 identity
+# re-verified vs live production on a stratified sample 2026-09-28) — expected:
+# 0 chunk API calls, 120 gold query embeddings fresh. The dispatch output is
+# committed to this same path as the final preload-r7 (the r6 pattern).
+# Benchmark-only; manual dispatch only. Operator-directed (IM trace
+# 1a0e88af08e12df5 "pursue (a)" — the notes-axis promotion, batch ef4c1fe4…;
+# this generation measures §8(d) over a served view that finally contains the
+# HV-mapped notes chunks).
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Embedding model (dimension-compatible with vector(768))"
+        default: "gemini-embedding-001"
+      min_interval_ms:
+        description: "Min interval between embedding calls (ms)"
+        default: "600"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: bench
+          POSTGRES_PASSWORD: bench
+          POSTGRES_DB: postgres
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U bench"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - name: Checkout records repo (frozen inputs)
+        uses: actions/checkout@v4
+        with:
+          path: records
+
+      - name: Checkout core (runner code, pinned sha)
+        uses: actions/checkout@v4
+        with:
+          repository: SyllabAI/syllabai-core
+          ref: 05f2621690843123758fe271bdfcacae9b4ed220
+          path: core
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Cache Maven repo
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: embed-backfill-m2-r7-${{ hashFiles('core/pom.xml') }}
+          restore-keys: embed-backfill-m2-r7-
+
+      - name: Build classpath
+        working-directory: core
+        run: mvn -B -ntp -q test-compile dependency:build-classpath -Dmdep.outputFile=../cp.txt
+
+      - name: Run embedding backfill (production provider path)
+        working-directory: core
+        env:
+          BENCH_JDBC_URL: jdbc:postgresql://localhost:5433/postgres
+          BENCH_JDBC_USER: bench
+          BENCH_JDBC_PASSWORD: bench
+          BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot-r7
+          BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold-r7
+          BENCH_PRELOAD_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload-r7
+          BENCH_RUN_OUT: ${{ github.workspace }}/embed-out-r7
+          BENCH_CORE_COMMIT: 05f2621690843123758fe271bdfcacae9b4ed220
+          BENCH_RUN_DATE: "2026-09-28"
+          SYLLABAI_EMBEDDING_GEMINI_API_KEY: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEY }}
+          SYLLABAI_EMBEDDING_GEMINI_API_KEYS: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEYS }}
+          EMBED_MODEL: ${{ inputs.model }}
+          EMBED_MIN_INTERVAL_MS: ${{ inputs.min_interval_ms }}
+        run: java -Xmx2g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.EmbedBackfill
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: embed-backfill-snap-006-r7
+          path: embed-out-r7/
+          retention-days: 90

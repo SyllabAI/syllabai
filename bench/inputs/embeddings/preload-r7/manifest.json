@@ -1,9 +1,8 @@
 {
- "run_id": "embed-backfill-snap-006-preload-copy",
+ "run_id": "preload-r7-input",
  "model": "gemini-embedding-001",
  "dimension": 768,
  "task_types": {
-  "queries": "RETRIEVAL_QUERY",
   "chunks": "RETRIEVAL_DOCUMENT"
  },
  "snapshot_version": "snap-006",
@@ -13,37 +12,29 @@
   "graph_edges.json": "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
   "misconceptions.json": "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
   "question_anchors.json": "d22eef80d197090dcfded600a4affa340918842b7a1ce6618b461bb6bf9b784c",
-  "graph_code.json": "ab085c3b47dc1e0fa2c197e3343e4c63ccca1130eb477438813baef167635c6b",
+  "graph_code.json": "63ddb20ca7e80dc53b43896af59dbc5b62c892b9e14eb5c8d20d5b44c4f73730",
   "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
   "chunk_spec_hv.json": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3"
  },
- "gold_files_sha256": {
-  "class_calculation.json": "6e92e1ad2f2fc6d101e39c25b970abd4b190f77962869ffe879eaa8da9596561",
-  "class_conceptual.json": "b8fbffcdbd98424f4df846bee98458eace2b41db637be1f4a7e867ce9fbe5836",
-  "class_diagram_dependent.json": "1b42d6ba0e0ae21d469b8bf1fe02b4cb58cfcc89ffe4fd694a7d3a195b1518b8",
-  "class_exam_question.json": "1d1fdeed5d4d2cd626bf073cf44d1a843ebe6bbeef1328aab0a16d3d7fab650c",
-  "class_factual.json": "46c76030dfb428056690d5b64a26017293cd8cfc70410fdb913c5a563e167ab0",
-  "class_mark_scheme.json": "87ff1a214faf07513eeb5eea9127d80cfcab6ed0cc686a89f900d3c05017ee5a",
-  "class_misconception.json": "8e1eb3d05f30c9892fbe8f20af80979c4fd9eff60b2b59b13183acee2d2800ad",
-  "class_multi_spec_point.json": "a4e11972a4b66c558989abe2dbe4e0de1af3c8a585c1ee0b15d35a7012238a0f",
-  "class_prerequisite.json": "aac30ffa1962a0850edfc90d7cf5308d184f5fbd86406ed70b6e1644dd1561ca",
-  "class_revision_note.json": "e3491e18e94b8d9159ec95a021e3de1e9ef04cdabbfe0597880e72a4124d64ec",
-  "class_vague_learner.json": "41ff7f4df6fe103969dbbb36305bda9c3381c52f42a55757261b634b6cdd65b7",
-  "class_why_wrong.json": "0ff6384f90a104463caccdfac2a537dac28ab594083fc4a246db7b840642f3ea"
- },
  "counts": {
   "corpus_chunks": 4181,
-  "chunks_embedded_this_run": 0,
   "chunks_stored_total": 4181,
-  "pending_after": 0,
-  "queries_embedded": 120
+  "queries_embedded": 0
  },
- "core_commit": "d9cb3ddcf2b241411fe74e575fac8194c7ca9f8a",
+ "core_commit": "05f2621690843123758fe271bdfcacae9b4ed220",
  "run_date": "2026-09-28",
- "generated_at": "2026-09-28T15:44:17Z",
+ "provenance": {
+  "kind": "production-derived chunk-vector mirror, re-paired to snap-006",
+  "source_artifact": "bench/inputs/embeddings/preload-r6 @ records main (run_id embed-backfill-snap-005, the FROZEN r6 artifact; its chunk vectors were mirrored SELECT-only from production at the r6 build, 2026-09-28, float4 identity)",
+  "carry_verification": [
+   "source file sha256 verified against the frozen artifact's SHA256SUMS",
+   "row set == snap-006 chunk_ref set exactly (4181/4181, 0 missing, 0 extra) \u2014 snap-006 row-set and contents are exporter-verified byte-identical to snap-005",
+   "float4 identity vs LIVE production embeddings re-verified 2026-09-28 on a stratified sample (QP + MS + EQ + EN, one chunk each, all four exact) (scripts/verify_preload_vs_prod_20260928.py, SELECT-only, rolled back)"
+  ],
+  "queries": "intentionally absent \u2014 the r7 embed-backfill dispatch embeds the 120 gold queries fresh (gold-v5 class files byte-identical to v4; the dispatch's emitted artifact is the final preload-r7)"
+ },
  "notes": [
-  "compute-once-freeze-forever: vector rows are the BYTE-IDENTICAL frozen r6 artifact rows (embed-backfill-snap-005, SHA256SUMS-verified at copy time); the flagged3 flip + notes-axis promotion changed validation states and embed_rev stamps only \u2014 production embeddings are unchanged (no ingest since the 09-26 card import), so zero API calls are spent re-embedding byte-identical texts.",
-  "gold-v5 class files are byte-identical to gold-v4 (validator mechanism), so the frozen RETRIEVAL_QUERY rows remain the correct query vectors.",
-  "manifest pins re-issued to snap-006/gold-v5; all row guards re-verified (ref coverage 4181/4181, deterministic chunk ids, qid set 120/120, single model, 768 dims)."
+  "preload INPUT for ops-embed-backfill-r7; the dispatch output (chunks preloaded 0 chunk API calls + 120 fresh gold query embeddings) is committed to this same path as the final preload-r7 \u2014 the r6 pattern",
+  "compute-once-freeze-forever: benchmark replays apply the FINAL artifact offline; no API calls at replay time"
  ]
-} 
+}

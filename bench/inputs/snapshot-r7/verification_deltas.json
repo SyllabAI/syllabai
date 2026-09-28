@@ -1,0 +1,51 @@
+{
+ "SNAP6-F1_validation_flips": {
+  "finding": "validation-state flips since the snap-005 freeze, captured at freeze time as-is. Two cohorts, both recorded operator decisions verified first-hand before this freeze: (i) the notes-axis promotion (operator trace 1a0e88af08e12df5 'pursue (a)', batch notes-axis-promotion-2026-09-28, content_review_audit batch_run_id ef4c1fe4-1b18-4697-b3bd-074e4e0f582b): 112 EXTERNAL_NOTES documents SUGGESTED -> VALIDATED + their 350 chunks embed_rev 2 -> 1 \u2014 the serving-gate replica moved 615 -> 965 purely additively; (ii) the flagged-3 flip (records 7f3a8f3ec, applied 2026-09-28T11:34Z per the operator's named flip decision, trace 1a0e7865c3b35715): the 3 T-C27 cards #207/#278/#291 FLAGGED -> VALIDATED. This is the delta that moves \u00a78(d) off its r6 0.0: the VALIDATED-only serving gate no longer excludes the HV-mapped notes chunks.",
+  "chunks_flipped_to_validated": 353,
+  "notes_chunks_suggested_to_validated": 350,
+  "card_chunks_flagged_to_validated": 3,
+  "flips_by_kind_from_to": {
+   "EXTERNAL_NOTES|SUGGESTED->VALIDATED": 350,
+   "EXTERNAL_QUESTIONS|FLAGGED->VALIDATED": 3
+  },
+  "paper_state_by_kind": {
+   "EXTERNAL_NOTES": {
+    "VALIDATED": 350
+   },
+   "MARK_SCHEME": {
+    "SUGGESTED": 1333,
+    "VALIDATED": 161
+   },
+   "QUESTION_PAPER": {
+    "SUGGESTED": 1136,
+    "VALIDATED": 145
+   },
+   "EXTERNAL_QUESTIONS": {
+    "SUGGESTED": 747,
+    "VALIDATED": 309
+   }
+  },
+  "no_down_flips": true,
+  "row_set_identity": "snap-005's 4,181 chunk_refs carried with IDENTICAL contents, kinds and spec_codes; zero added, zero removed; paper_state (and metadata-only paper_code stamps, if any) are the only permitted value deltas, verified programmatically"
+ },
+ "SNAP6-F2_chunk_paper_code_stamps": {
+  "finding": "metadata-only paper_code stamps since snap-005 (recorded, never gating).",
+  "rows_stamped": 0,
+  "by_kind": {}
+ },
+ "SNAP6-M1_method_note": {
+  "finding": "unchanged read path: sanctioned production connection from the session env, READ-ONLY (set_session(readonly=True)), SELECT-only, rolled back; zero writes to any production table"
+ },
+ "SNAP6-H1_chunk_spec_hv_substrate": {
+  "finding": "\u00a78(d) substrate carried BYTE-IDENTICAL from snap-005 (sha256-pinned to the records-committed artifact, records 94d0d405c): the 210 HUMAN_VALIDATED chunk\u2192SP mappings are unchanged; what CHANGES at snap-006 is the serving state of the chunks those refs anchor \u2014 VALIDATED after the notes-axis promotion, so the served view now contains the mapped chunks and \u00a78(d) is measured with coverage (r6 scored it 0.0 over the same substrate because the gate excluded exactly these chunks). Drift gate: every mapping's quote containment re-verified over the FROZEN chunk bytes against the pinned resources store (1245df009712216b309f163aacdd1c6d8ef39f1b, store sha256_16 e8b58a7109104bb7); anchor kinds recomputed {\"CLEAN\": 205, \"MULTI\": 4, \"SPAN\": 0, \"MISS\": 1}; census rows=210 refs=164.",
+  "projection_sha256": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+  "drift_gate_failures": 0
+ },
+ "SNAP6-F3_question_anchor_movement": {
+  "finding": "the VALIDATED question_versions anchor set vs snap-005. Fidelity is multiset superset \u2014 zero removal, zero mutation; growth is recorded honestly (expected +0: the app-side teacher wave, pilot.teacher 11 qv + 1 ep, was already captured at snap-005 via SNAP5-F6; the T-PS1 papers/schemes sheet remains unapplied).",
+  "rows_added": 0,
+  "rows_removed": 0,
+  "rows_snap005": 731,
+  "rows_snap006": 731
+ }
+}

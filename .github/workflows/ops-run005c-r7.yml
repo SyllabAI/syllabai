@@ -1,18 +1,20 @@
-name: ops-run003-b-r7
+name: ops-run005-c-r7
 
-# Run 003B — arm B lexical (T-C13), R7 NOTES-AXIS-PROMOTION generation (snap-006
-# + gold-v5 staged as snapshot-r7/gold-r7; the operator's notes-axis promotion
-# IS IN via SNAP6-F1 — 350 notes chunks + 3 flagged-3 flips now VALIDATED,
-# 2026-09-28). Benchmark-only; never on push/PR. §8(d) was SCORED 0.0 at r6;
-# this generation scores it over a served view that contains the HV-mapped
-# notes chunks. Output: results.json + RUN_REPORT.md + SHA256SUMS (uploaded
-# artifact).
+# Run 005 — arm C hybrid RRF k=60 (T-C13), R7 NOTES-AXIS-PROMOTION generation
+# (snap-006 + gold-v5; the operator's notes-axis promotion IS IN via SNAP6-F1,
+# 2026-09-28). Benchmark-only; never on push/PR. Consumes the R7 arm-B and
+# arm-A results committed to evidence/bench-001/runs/. §8(d) scores with
+# coverage for the first time (the HV-mapped notes chunks now serve); the r6
+# interpretation pre-registration (records 09a624728) binds the reading — a
+# non-zero (d) beside weak (a)/(b)/(c) is a coverage signal, not a
+# retrieval-quality signal. Core pin 05f262169 = the r6 pin.
+# Output: results.json + RUN_REPORT.md + SHA256SUMS (uploaded artifact).
 
 on:
   workflow_dispatch:
 
 jobs:
-  run003b:
+  run005c:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     services:
@@ -30,7 +32,7 @@ jobs:
           --health-timeout 5s
           --health-retries 10
     steps:
-      - name: Checkout records repo (frozen inputs)
+      - name: Checkout records repo (frozen inputs + artifact + prior runs)
         uses: actions/checkout@v4
         with:
           path: records
@@ -52,14 +54,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.m2/repository
-          key: run003b-r7-m2-${{ hashFiles('core/pom.xml') }}
-          restore-keys: run003b-r7-m2-
+          key: run005c-r7-m2-${{ hashFiles('core/pom.xml') }}
+          restore-keys: run005c-r7-m2-
 
       - name: Build classpath
         working-directory: core
         run: mvn -B -ntp -q test-compile dependency:build-classpath -Dmdep.outputFile=../cp.txt
 
-      - name: Run arm B lexical replay (zero API calls)
+      - name: Run arm C hybrid replay (zero API calls)
         working-directory: core
         env:
           BENCH_JDBC_URL: jdbc:postgresql://localhost:5433/postgres
@@ -67,15 +69,18 @@ jobs:
           BENCH_JDBC_PASSWORD: bench
           BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot-r7
           BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold-r7
-          BENCH_RUN_OUT: ${{ github.workspace }}/run003b-out
+          BENCH_EMBED_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload-r7
+          BENCH_RUN_OUT: ${{ github.workspace }}/run005c-out
+          BENCH_RUN003B_RESULTS: ${{ github.workspace }}/records/evidence/bench-001/runs/run-003-b-r7/results.json
+          BENCH_RUN004A_RESULTS: ${{ github.workspace }}/records/evidence/bench-001/runs/run-004-a-r7/results.json
           BENCH_CORE_COMMIT: 05f2621690843123758fe271bdfcacae9b4ed220
           BENCH_RUN_DATE: "2026-09-28"
-        run: java -Xmx3g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.Run003B
+        run: java -Xmx3g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.Run005C
 
       - name: Upload run record
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: run-003-b-r7
-          path: run003b-out/
+          name: run-005-c-r7
+          path: run005c-out/
           retention-days: 90
