@@ -1,0 +1,2095 @@
+{
+ "started": "2026-09-28T19:01:55.383275+00:00",
+ "papers": {
+  "8197117d-6236-4992-a32e-487358de7295": {
+   "paper": "4CH0/1C \u00b7 January 2019",
+   "qv_all": 10,
+   "qv_active": 10,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "05ff6c75",
+     "claimed": 15,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "63cb7d7a",
+     "claimed": 16,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 15) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 16) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "be73332c-bf0f-463f-bbe6-72a1d4bf9b80": {
+   "paper": "4CH1/1C \u00b7 January 2020",
+   "qv_all": 10,
+   "qv_active": 10,
+   "schemes": 10,
+   "g5": "4/4 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "ffcaaf02",
+     "claimed": 16,
+     "actual": 16,
+     "embedded": 16,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "ac5b749f",
+     "claimed": 17,
+     "actual": 17,
+     "embedded": 17,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "d7f79cdc-3777-4f5c-a932-c682a1f5daa3": {
+   "paper": "4CH1/1C \u00b7 January 2021",
+   "qv_all": 11,
+   "qv_active": 11,
+   "schemes": 11,
+   "g5": "5/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "63d616b8",
+     "claimed": 16,
+     "actual": 16,
+     "embedded": 16,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "14db0bf4",
+     "claimed": 19,
+     "actual": 19,
+     "embedded": 19,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": []
+  },
+  "8afaaa22-b2ef-45dd-aa11-d6abe3ec3092": {
+   "paper": "4CH1/1C \u00b7 January 2023",
+   "qv_all": 12,
+   "qv_active": 12,
+   "schemes": 12,
+   "g5": "5/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "a24a3cd3",
+     "claimed": 13,
+     "actual": 13,
+     "embedded": 13,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "0a822c21",
+     "claimed": 20,
+     "actual": 20,
+     "embedded": 20,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": []
+  },
+  "e2033fc8-4154-45df-a02f-3f93916245f6": {
+   "paper": "4CH1/1C \u00b7 June 2023",
+   "qv_all": 10,
+   "qv_active": 10,
+   "schemes": 10,
+   "g5": "5/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "6d8f2ec9",
+     "claimed": 13,
+     "actual": 13,
+     "embedded": 13,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "9c39f7f7",
+     "claimed": 17,
+     "actual": 17,
+     "embedded": 17,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": []
+  },
+  "71fafec0-1b2f-432f-b459-a000cc35aed8": {
+   "paper": "4CH1/1CR \u00b7 January 2023",
+   "qv_all": 10,
+   "qv_active": 10,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "e717e9eb",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "05fbe687",
+     "claimed": 13,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 13) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "29bba2da-3235-4cb5-81d6-c0968d87ddac": {
+   "paper": "4CH1/1CR \u00b7 June 2024",
+   "qv_all": 12,
+   "qv_active": 12,
+   "schemes": 12,
+   "g5": "5/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "bf6abf8b",
+     "claimed": 14,
+     "actual": 14,
+     "embedded": 14,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "cb9ac56d",
+     "claimed": 17,
+     "actual": 17,
+     "embedded": 17,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "cd45e3ed-3d8c-4eb4-9259-51313adb0962": {
+   "paper": "4CH0/2C \u00b7 January 2012",
+   "qv_all": 8,
+   "qv_active": 8,
+   "schemes": 8,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "bbde8674",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "bbbe8a49",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "2 qv with empty stems"
+   ]
+  },
+  "fd511922-2cb3-4701-8d23-564d8141d6fd": {
+   "paper": "4CH0/2C \u00b7 June 2012",
+   "qv_all": 5,
+   "qv_active": 5,
+   "schemes": 5,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "31515d4c",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "f2f7a861",
+     "claimed": 14,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 14) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "980095b5-f109-4249-9810-33b8994c7f56": {
+   "paper": "4CH0/2C \u00b7 June 2014",
+   "qv_all": 8,
+   "qv_active": 8,
+   "schemes": 8,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "07501b64",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "c523dff7",
+     "claimed": 15,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 15) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "dcba6a4a-75c2-4608-90aa-f965ca33385c": {
+   "paper": "4CH0/2C \u00b7 June 2016",
+   "qv_all": 8,
+   "qv_active": 8,
+   "schemes": 8,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "9c672e2f",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "8d52fce1",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "c4c50062-745f-4376-9340-65e6cd9d864d": {
+   "paper": "4CH1/2C \u00b7 January 2020",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "4/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "a12efbbf",
+     "claimed": 12,
+     "actual": 12,
+     "embedded": 12,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "cba07e29",
+     "claimed": 13,
+     "actual": 13,
+     "embedded": 13,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": []
+  },
+  "7d40476f-13b3-436b-9e0d-f2877fe2ba0e": {
+   "paper": "4CH1/2C \u00b7 June 2020",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "89c93a69",
+     "claimed": 11,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "072911e9",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 11) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "e6c96a2e-1d1d-4310-aa4f-a46a98b99470": {
+   "paper": "4CH1/2C \u00b7 November 2020",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "4/4 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "5d9aa4e9",
+     "claimed": 11,
+     "actual": 11,
+     "embedded": 11,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "0aec7433",
+     "claimed": 13,
+     "actual": 13,
+     "embedded": 13,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "34c56cfa-d7dd-4388-904b-18a905bc3822": {
+   "paper": "4CH1/2C \u00b7 January 2022",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "5/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "d94226d5",
+     "claimed": 11,
+     "actual": 11,
+     "embedded": 11,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "85a90bdd",
+     "claimed": 14,
+     "actual": 14,
+     "embedded": 14,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": []
+  },
+  "47b57ed2-769a-49ab-8b08-459a11b74d6f": {
+   "paper": "4CH1/2C \u00b7 June 2022",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "3/3 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "98d12db3",
+     "claimed": 10,
+     "actual": 10,
+     "embedded": 10,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "045db549",
+     "claimed": 12,
+     "actual": 12,
+     "embedded": 12,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "2 qv with empty stems"
+   ]
+  },
+  "30cb3c9d-a77e-4441-80fe-bd0e0161cdfd": {
+   "paper": "4CH1/2C \u00b7 January 2023",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "4/4 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "bcc22499",
+     "claimed": 8,
+     "actual": 8,
+     "embedded": 8,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "54fa83a1",
+     "claimed": 12,
+     "actual": 12,
+     "embedded": 12,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "482f2333-c3bb-4d22-9eda-f463d3fa34b9": {
+   "paper": "4CH1/2C \u00b7 June 2023",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "5/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "e95b50e7",
+     "claimed": 8,
+     "actual": 8,
+     "embedded": 8,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "95166ba0",
+     "claimed": 12,
+     "actual": 12,
+     "embedded": 12,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": []
+  },
+  "9a462279-3c3d-442c-ade4-f8daec1fa304": {
+   "paper": "4CH1/2C \u00b7 June 2024",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "5f59325d",
+     "claimed": 8,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "5609219c",
+     "claimed": 11,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 8) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 11) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "d3d7e0f2-fd08-48c6-a02f-e94da725d441": {
+   "paper": "4CH1/2CR \u00b7 June 2020",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "5d373a46",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "5d9d62c1",
+     "claimed": 13,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 13) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "2 qv with empty stems"
+   ]
+  },
+  "f57ed5c2-fc23-43fe-adbc-50401539661d": {
+   "paper": "4CH1/2CR \u00b7 June 2022",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "4/4 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "43d7271f",
+     "claimed": 10,
+     "actual": 10,
+     "embedded": 10,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "6ca49d76",
+     "claimed": 17,
+     "actual": 17,
+     "embedded": 17,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "0f903acf-6024-4c22-a577-34dfee6e18e4": {
+   "paper": "4CH1/2CR \u00b7 June 2024",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "4/4 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "d801405c",
+     "claimed": 11,
+     "actual": 11,
+     "embedded": 11,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "301c1a66",
+     "claimed": 9,
+     "actual": 9,
+     "embedded": 9,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "1e935cfc-6ed2-424f-9c66-72d6d3532bd6": {
+   "paper": "4CH0/1C \u00b7 January 2016",
+   "qv_all": 15,
+   "qv_active": 15,
+   "schemes": 15,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "1443db21-4f44-4ec3-87f2-5dce3e1344c6": {
+   "paper": "4CH0/1C \u00b7 January 2018",
+   "qv_all": 16,
+   "qv_active": 16,
+   "schemes": 16,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "546d03ec-4de6-4e85-9fe3-4a0dc229f2ba": {
+   "paper": "4CH1/1C \u00b7 November 2023",
+   "qv_all": 10,
+   "qv_active": 10,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "2 qv with empty stems",
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "f948dc5f-6fce-410f-9bf4-da2c907ce261": {
+   "paper": "4CH1/1C \u00b7 November 2024",
+   "qv_all": 11,
+   "qv_active": 11,
+   "schemes": 11,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "97e4a975-c179-4b38-8964-8a4cd1cbdcac": {
+   "paper": "4CH1/1C \u00b7 November 2025",
+   "qv_all": 10,
+   "qv_active": 10,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "216d1073-756d-4753-af0e-81de951cf24c": {
+   "paper": "4CH1/1CR \u00b7 January 2020",
+   "qv_all": 11,
+   "qv_active": 11,
+   "schemes": 11,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems",
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "66085c4d-36f5-4c80-a1a3-c91f096a9419": {
+   "paper": "4CH1/1CR \u00b7 January 2021",
+   "qv_all": 10,
+   "qv_active": 10,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems",
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "255ba065-b683-4c58-8b6c-3e948cdf5102": {
+   "paper": "4CH1/2C \u00b7 November 2023",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "2 qv with empty stems",
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "d663471e-0ca6-4dab-a5a0-6b18a0485861": {
+   "paper": "4CH1/2C \u00b7 November 2024",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "3f72959a-6295-418c-89bb-0ec66b17b93f": {
+   "paper": "4CH1/2C \u00b7 June 2025",
+   "qv_all": 6,
+   "qv_active": 6,
+   "schemes": 6,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "31749450-eeb8-4c56-b944-39368b967cdd": {
+   "paper": "4CH1/2C \u00b7 November 2025",
+   "qv_all": 6,
+   "qv_active": 6,
+   "schemes": 6,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": null,
+    "MS": null
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "2 qv with empty stems",
+    "no linked QP doc (sheet \u00a7B linkless)"
+   ]
+  },
+  "a69a4e80-ff69-4894-b495-6c76f10a7373": {
+   "paper": "4CH0/1C \u00b7 January 2012",
+   "qv_all": 11,
+   "qv_active": 11,
+   "schemes": 11,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "2e729a4f",
+     "claimed": 13,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "b116d540",
+     "claimed": 20,
+     "actual": 20,
+     "embedded": 20,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 13) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "4 qv with empty stems"
+   ]
+  },
+  "4ff41810-8e47-42ed-849e-47d6ee92e627": {
+   "paper": "4CH0/1C \u00b7 June 2012",
+   "qv_all": 13,
+   "qv_active": 0,
+   "schemes": 13,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "d2d0b549",
+     "claimed": 15,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "5911f3da",
+     "claimed": 22,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 15) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 22) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "a81bc1e8-74d9-4ffb-ad82-11cad0c0737e": {
+   "paper": "4CH0/1C \u00b7 January 2013",
+   "qv_all": 10,
+   "qv_active": 0,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "6d17f234",
+     "claimed": 15,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "668a4af3",
+     "claimed": 24,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 15) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 24) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "31ad242a-43c6-4246-a158-bd79f586994a": {
+   "paper": "4CH0/1C \u00b7 June 2013",
+   "qv_all": 11,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "b64e5f56",
+     "claimed": 22,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "4bf61242",
+     "claimed": 23,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 22) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 23) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "f550479a-0c0d-4aed-8ec0-e9d2694cbc81": {
+   "paper": "4CH0/1C \u00b7 January 2014",
+   "qv_all": 14,
+   "qv_active": 0,
+   "schemes": 14,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "7dd1ec23",
+     "claimed": 18,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "28e50457",
+     "claimed": 17,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 18) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 17) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "0494f765-5f3f-41c7-9173-241ee7ee0d16": {
+   "paper": "4CH0/1C \u00b7 June 2014",
+   "qv_all": 15,
+   "qv_active": 0,
+   "schemes": 11,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "a77e519b",
+     "claimed": 14,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "d5a3ba39",
+     "claimed": 16,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 14) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 16) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "ad069fa9-3eb4-47b7-891c-784365aa1c45": {
+   "paper": "4CH0/1C \u00b7 January 2015",
+   "qv_all": 12,
+   "qv_active": 0,
+   "schemes": 1,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "018384c4",
+     "claimed": 18,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "92c47b29",
+     "claimed": 20,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 18) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 20) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "2b234bde-3d89-458e-9a43-b0288437dd5c": {
+   "paper": "4CH0/1C \u00b7 June 2015",
+   "qv_all": 11,
+   "qv_active": 0,
+   "schemes": 1,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "eade5096",
+     "claimed": 17,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "7525566f",
+     "claimed": 23,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 17) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 23) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "1db58ecb-d735-40de-8062-bc031fd37d5b": {
+   "paper": "4CH0/1C \u00b7 June 2016",
+   "qv_all": 16,
+   "qv_active": 0,
+   "schemes": 15,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "17a6f0d6",
+     "claimed": 16,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "162bc39e",
+     "claimed": 20,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 16) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 20) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "31236989-60fe-4dd9-b7c8-b86160f8a14e": {
+   "paper": "4CH0/1C \u00b7 January 2017",
+   "qv_all": 11,
+   "qv_active": 0,
+   "schemes": 8,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "6949826c",
+     "claimed": 15,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "9f717c8f",
+     "claimed": 18,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 15) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 18) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "e97797b8-6c19-4380-8f67-ee39a703b76e": {
+   "paper": "4CH0/1C \u00b7 June 2017",
+   "qv_all": 11,
+   "qv_active": 0,
+   "schemes": 9,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "3c89f9a4",
+     "claimed": 17,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "71dbee1e",
+     "claimed": 26,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 17) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 26) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "90975a33-63b4-4d32-bbe0-eed99a60ab26": {
+   "paper": "4CH0/1C \u00b7 June 2018",
+   "qv_all": 15,
+   "qv_active": 0,
+   "schemes": 15,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "0c536de6",
+     "claimed": 17,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "6b7790e9",
+     "claimed": 24,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 17) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 24) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "b2c9ec49-9e47-4ec5-83be-3b5d787322c4": {
+   "paper": "4CH0/1CR \u00b7 June 2013",
+   "qv_all": 11,
+   "qv_active": 0,
+   "schemes": 8,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "7bd5581f",
+     "claimed": 18,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "1ac98dd7",
+     "claimed": 17,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 18) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 17) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "129a3edc-2584-4028-9550-0390cd6f0d86": {
+   "paper": "4CH0/1CR \u00b7 June 2014",
+   "qv_all": 10,
+   "qv_active": 0,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "1c67a1d0",
+     "claimed": 16,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "272b786c",
+     "claimed": 17,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 16) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 17) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "1995f447-d824-4ae7-bf9a-590ff2cff5b3": {
+   "paper": "4CH0/1CR \u00b7 June 2016",
+   "qv_all": 12,
+   "qv_active": 0,
+   "schemes": 0,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "13c26d70",
+     "claimed": 17,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "8a58885f",
+     "claimed": 22,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 17) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 22) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "no mark_scheme rows (sheet-documented gap)"
+   ]
+  },
+  "a29dfbd8-54c4-41b0-97ec-8fa8fe94b966": {
+   "paper": "4CH0/1CR \u00b7 June 2017",
+   "qv_all": 15,
+   "qv_active": 0,
+   "schemes": 14,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "ce2521ed",
+     "claimed": 18,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "806fc94d",
+     "claimed": 24,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 18) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 24) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "7041ab60-1e67-4b7a-917e-7896ea0a0edf": {
+   "paper": "4CH0/2C \u00b7 June 2011",
+   "qv_all": 8,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "e75ebc34",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "22c65448",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "38aeec70-d6e1-4bd6-9eb3-173c4dd5eff8": {
+   "paper": "4CH0/2C \u00b7 January 2013",
+   "qv_all": 7,
+   "qv_active": 0,
+   "schemes": 5,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "f497027d",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "7fbace52",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "e7e03906-1a3f-4d2f-b98b-16fa2397d874": {
+   "paper": "4CH0/2C \u00b7 June 2013",
+   "qv_all": 7,
+   "qv_active": 0,
+   "schemes": 6,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "824246a8",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "a6185f1e",
+     "claimed": 11,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 11) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "ddaec35a-48d4-49f2-9b8c-259f6f94bb14": {
+   "paper": "4CH0/2C \u00b7 January 2015",
+   "qv_all": 9,
+   "qv_active": 0,
+   "schemes": 8,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "b1417a87",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "d8939cf8",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "2a21ff3d-7769-4747-a7e6-abb857822cdc": {
+   "paper": "4CH0/2C \u00b7 June 2015",
+   "qv_all": 6,
+   "qv_active": 0,
+   "schemes": 6,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "494b5bd6",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "21745e64",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "0a94f411-b2c4-4db8-ba22-150a4560c31c": {
+   "paper": "4CH0/2C \u00b7 June 2017",
+   "qv_all": 5,
+   "qv_active": 0,
+   "schemes": 5,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "7096b083",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "955b44b6",
+     "claimed": 14,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 14) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "73990d4b-8751-4fd3-ac37-2d65144cda44": {
+   "paper": "4CH0/2C \u00b7 June 2018",
+   "qv_all": 9,
+   "qv_active": 0,
+   "schemes": 9,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "aaa761f5",
+     "claimed": 11,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "d6a9d046",
+     "claimed": 13,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 11) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 13) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "59fc6548-9896-4acd-8624-21c6e01cde08": {
+   "paper": "4CH0/2C \u00b7 January 2019",
+   "qv_all": 10,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "82bf76bd",
+     "claimed": 11,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "5e49ab6b",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 11) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "cb2c0cf8-f60a-4a15-a244-d356cbb3899b": {
+   "paper": "4CH0/2CR \u00b7 June 2013",
+   "qv_all": 6,
+   "qv_active": 0,
+   "schemes": 6,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "a326bf00",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "4def7de2",
+     "claimed": 11,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 11) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "118e7ed4-5448-4fc9-93e8-0c06a6886a07": {
+   "paper": "4CH0/2CR \u00b7 June 2014",
+   "qv_all": 6,
+   "qv_active": 0,
+   "schemes": 0,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "63819230",
+     "claimed": 11,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "51f86ab6",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 11) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "no mark_scheme rows (sheet-documented gap)"
+   ]
+  },
+  "c41dad58-957f-4254-94ed-f26cf1d7b5ed": {
+   "paper": "4CH0/2CR \u00b7 June 2016",
+   "qv_all": 7,
+   "qv_active": 0,
+   "schemes": 0,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "d7cf99c6",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "a80da3a4",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": [
+    "no mark_scheme rows (sheet-documented gap)"
+   ]
+  },
+  "c2dab965-b9e9-4ca9-a37c-74a557e9b3b5": {
+   "paper": "4CH0/2CR \u00b7 June 2017",
+   "qv_all": 8,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "1952ef74",
+     "claimed": 9,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "67ce5882",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 9) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "0924a1fe-8672-413d-9b37-25c2e6f303de": {
+   "paper": "4CH1/1C \u00b7 June 2019",
+   "qv_all": 15,
+   "qv_active": 0,
+   "schemes": 2,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "7a60f0f2",
+     "claimed": 16,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "b64ae86d",
+     "claimed": 23,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 16) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 23) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "060f40c2-eb7b-410c-a593-947fe096c9c2": {
+   "paper": "4CH1/1C \u00b7 June 2020",
+   "qv_all": 10,
+   "qv_active": 0,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "5bb35249",
+     "claimed": 16,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "ddefe7b5",
+     "claimed": 19,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 16) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 19) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "84dbb606-faf4-47fb-a09b-506e4ee8c161": {
+   "paper": "4CH1/1C \u00b7 November 2021",
+   "qv_all": 11,
+   "qv_active": 0,
+   "schemes": 11,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "8ea6c154",
+     "claimed": 14,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "2be7d89a",
+     "claimed": 19,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 14) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 19) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "ce7d191b-9331-4b2c-85ee-23d19f0d30bc": {
+   "paper": "4CH1/1C \u00b7 June 2022",
+   "qv_all": 10,
+   "qv_active": 0,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "65a02beb",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "06c34b22",
+     "claimed": 16,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 16) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "a7aa6a5f-30c4-4eb9-ac1c-45c4898b8a5d": {
+   "paper": "4CH1/1C \u00b7 June 2024",
+   "qv_all": 10,
+   "qv_active": 0,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "0f74e861",
+     "claimed": 13,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "a29e98ea",
+     "claimed": 15,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 13) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 15) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "cdbbe3ea-60fa-48ef-b870-bb9ef345f545": {
+   "paper": "4CH1/1CR \u00b7 June 2019",
+   "qv_all": 10,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "ae7fe253",
+     "claimed": 14,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "fc28c5f8",
+     "claimed": 21,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 14) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 21) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "364e20fe-9441-4428-bfd4-e09e494d37ee": {
+   "paper": "4CH1/1CR \u00b7 June 2020",
+   "qv_all": 10,
+   "qv_active": 0,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "f7e4a04f",
+     "claimed": 14,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "da6286d5",
+     "claimed": 17,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 14) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 17) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "f70cb051-2c0f-4755-8aa7-3ab6979fca00": {
+   "paper": "4CH1/1CR \u00b7 January 2022",
+   "qv_all": 11,
+   "qv_active": 0,
+   "schemes": 11,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "ab12468d",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "a1bda511",
+     "claimed": 18,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 18) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "e0dfa4c1-79eb-4bde-b22b-e19ca6f1a94a": {
+   "paper": "4CH1/1CR \u00b7 June 2022",
+   "qv_all": 11,
+   "qv_active": 0,
+   "schemes": 10,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "8e11b32b",
+     "claimed": 14,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "0d4d2d2e",
+     "claimed": 14,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 14) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 14) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "2ae885c9-d3ba-4cf7-8434-aca830976ba1": {
+   "paper": "4CH1/1CR \u00b7 June 2023",
+   "qv_all": 11,
+   "qv_active": 11,
+   "schemes": 11,
+   "g5": "4/4 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "1dc67aa6",
+     "claimed": 12,
+     "actual": 12,
+     "embedded": 12,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "7ce71412",
+     "claimed": 17,
+     "actual": 17,
+     "embedded": 17,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "f10c6814-c4ce-425d-afb6-3501eb5f06e1": {
+   "paper": "4CH1/2C \u00b7 January 2021",
+   "qv_all": 7,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "5/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "6187eaf9",
+     "claimed": 11,
+     "actual": 11,
+     "embedded": 11,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "5414d1a9",
+     "claimed": 11,
+     "actual": 11,
+     "embedded": 11,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": []
+  },
+  "61c9976a-ee3a-48e2-8079-1f55d87e2dc6": {
+   "paper": "4CH1/2CR \u00b7 June 2019",
+   "qv_all": 7,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "2f4868c4",
+     "claimed": 11,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "a8d848c3",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 11) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "73b3c496-6190-4ad9-9a54-9cd62b4fc01c": {
+   "paper": "4CH1/2CR \u00b7 January 2021",
+   "qv_all": 8,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "e5ea9fb3",
+     "claimed": 13,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "bd3fc8a2",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 13) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "59e53b62-1d85-452a-aea7-bddc62cf2703": {
+   "paper": "4CH1/2CR \u00b7 January 2023",
+   "qv_all": 8,
+   "qv_active": 8,
+   "schemes": 8,
+   "g5": "4/4 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "12a2ff65",
+     "claimed": 11,
+     "actual": 11,
+     "embedded": 11,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "ffe22bd2",
+     "claimed": 13,
+     "actual": 13,
+     "embedded": 13,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": [
+    "1 qv with empty stems"
+   ]
+  },
+  "55d9f002-73e1-4072-b73a-0147a78025d6": {
+   "paper": "4CH1/2CR \u00b7 June 2023",
+   "qv_all": 7,
+   "qv_active": 0,
+   "schemes": 7,
+   "g5": "N/A (no linked QP doc)",
+   "docs": {
+    "QP": {
+     "doc_row": "30140330",
+     "claimed": 10,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "8a854a5e",
+     "claimed": 12,
+     "actual": 0,
+     "embedded": 0,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "FLAG",
+   "reasons": [
+    "G6: linked QP doc has 0 actual chunks (metadata claims 10) \u2014 no print evidence in chunk layer",
+    "G6: linked MS doc has 0 actual chunks (metadata claims 12) \u2014 no print evidence in chunk layer"
+   ],
+   "notes": []
+  },
+  "3945c4af-ca19-4688-9958-a235870f6045": {
+   "paper": "4CH1/2CR \u00b7 June 2025",
+   "qv_all": 7,
+   "qv_active": 7,
+   "schemes": 7,
+   "g5": "5/5 stems trace into QP doc",
+   "docs": {
+    "QP": {
+     "doc_row": "cd11dd6b",
+     "claimed": 10,
+     "actual": 10,
+     "embedded": 10,
+     "state": "SUGGESTED"
+    },
+    "MS": {
+     "doc_row": "5d3bfa8d",
+     "claimed": 12,
+     "actual": 12,
+     "embedded": 12,
+     "state": "SUGGESTED"
+    }
+   },
+   "verdict": "PASS",
+   "reasons": [],
+   "notes": []
+  }
+ },
+ "errors": [],
+ "census": {
+  "PASS": 28,
+  "FLAG": 49
+ },
+ "serving_preview": {
+  "embedded_chunks_pass_docs": 442,
+  "embedded_chunks_flag_docs": 20
+ }
+}
