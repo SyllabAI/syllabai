@@ -570,3 +570,31 @@ keeps symbols, cold load 0 console errors, pref-set reload clean.
 Screenshots: /home/z/my-project/scripts/w3c/w3c_active_panel_1440.png,
 w3c_active_narrow_375.png, w3c_nosession_375.png. CI/Vercel status
 unverifiable from sandbox (private repo) — honest-absent.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3d (keyboard look parity)
+
+- [ ] HUB-ANSWER-BOX-W3D (CLAIMED 2026-09-29, session web-98866c45, operator message
+"The keyboard does not quite look like the keyboard that appears in SME") **re-skin the
+answer-box symbol keyboard to the keyboard that actually appears in SME** — ground truth
+recovered from SME's production MathLive bundle (chunk 79d2298f-63d0ad2806548748.js,
+MathLive verbatim): their answer box has NO popover palette — the keyboard that appears
+is MathLive's stock virtual keyboard, body-mounted (no virtualKeyboardContainer in any
+SME chunk) as a viewport-fixed bottom sheet at SME's z-index override --keyboard-zindex:
+1055 (css_0308bb0b7a1ae6ad.css). Light theme verbatim: panel #cacfd7, top border #ddd,
+backdrop shadow 0 -5px 6px rgba(0,0,0,.08); toolbar tabs (glyph labels — "123" tex-math,
+"<i>αβγ</i>", "∞≠∈", "abc") text #2c2e2f, 135% size, min 42×34, radius 8px, hover #eee,
+selected = accent #0c75d8 text + 2px underline, toolbar max-width 996px centered;
+keycaps white, border #e5e6e9, bottom edge #8d8f92 (3D), radius 6px, height 60px,
+gap 8px, font clamp(16px,4cqw,24px), pressed = accent bg + white text; secondary
+action keys #a0a9b8 (hover #7d8795, bottom #989da6, text #060707, weight 600);
+row separators 1px #fff; dark theme palette also captured (#151515 panel, #1f2022
+keycaps, #e3e4e8 text, accent #0b5c9c). Hub rework, ZERO contract change: the
+wave-3c symbols popover becomes a MathLive-look keyboard sheet (portal to body,
+fixed bottom, z-1055) with tab strip + keycap rows over the SAME three plain-text
+glyph groups, keys never steal the caret (pointerdown swallowed, insert-at-caret
+unchanged), plus an honest action row: [left] [right] [backspace] [hide-keyboard]
+implementable exactly on a controlled textarea. Honest-absent, plain-text contract:
+undo/redo keys are NOT faked (controlled React state vs native textarea undo stack);
+"Insert equation" stays contract-gated (wave 3c record) — this is LOOK parity on the
+Unicode keyboard, not a LaTeX editor. Hub-repo-only change: no resource lease
+required (wave 1/2/3b/3c precedent). Base: hub 3730e79.
