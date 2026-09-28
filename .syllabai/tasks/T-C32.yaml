@@ -1,0 +1,34 @@
+version: 1
+task:
+  id: T-C32
+  title: "resolveActive N+1 — per-node KnowledgeNode reads on the serving-scope resolution path (T-C23 recorded ticket candidate 2)"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: EXECUTING
+  priority: P3
+  base:
+    repo: syllabai-core
+    commit: d4e0f7a (main at claim)
+  basis: "T-C23 recorded ticket candidate 'resolveActive N+1 (~340 per-node reads
+    per search)' (TODO.md T-C23 record; source analysis evidence/serving-0hit-anomaly-2026-09-25/)
+    + operator directive trace 1a0e6cbc57b92505 ('T-C23 ticket 2 (resolveActive N+1,
+    ~340 reads/search)')"
+  scope:
+    allowed:
+      - "core: CurriculumScopeResolver.hasValidatedStructure — replace the per-node
+        findById loop (one read per subtree node, per subject, per ACTIVE version,
+        per serving request) with a batched repository predicate over the SAME
+        findSubtreeIds id set (single source of truth for the subtree definition —
+        no SQL duplication); update CurriculumScopeResolverTest + add a
+        no-per-node-reads regression pin"
+    forbidden:
+      - "no resolution-semantics change — policy stays: ACTIVE-only candidates,
+        ownership = VALIDATED structure under a subject root OR exam papers,
+        exactly-one-owner resolve / zero-or-two refuse (T-C07)"
+      - "no schema/migration change; no serving-path behavior change; the scope
+        object (CurriculumScope surface set) is built exactly as before"
+      - "no scope creep beyond the resolver read pattern — intentSurface's single
+        recursive query per subject is not the ticket; RoutingController /
+        KaRagService call sites unchanged"
+  discipline: "claim-first registered BEFORE any code (S145 lesson); branch off core
+    main d4e0f7a; local-verified (full unit suite, JDK 25 / Maven user-space) before
+    push; core-ci green to merge; merge = operator/owner lane per T-C31 precedent"
