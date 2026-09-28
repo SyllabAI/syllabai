@@ -1,0 +1,881 @@
+{
+ "decisions": [
+  {
+   "document_id": "a9e7d6c3-d65b-5c47-8350-d8d82e7dcd34",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2012jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2012jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 4CH0/1C January 2012",
+    "label": "January 2012",
+    "ptr_uri": "4CH0-1C-201201/ms.pdf",
+    "chunks": 20
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 4CH0/1C January 2012' (January 2012) pointer 4CH0-1C-201201/ms.pdf (20 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "b6405e20-09b1-5494-9495-45a6bafb11e5",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2018jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2018jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": null,
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "KEEP",
+   "rule": null,
+   "reason": "KEEP: claims 4CH0 Chemistry 4CH0/1C January 2018/VALIDATED(code+label); VALIDATED claim has no serving same-kind pointer (pointer-less/empty) \u2014 doc-repair lane"
+  },
+  {
+   "document_id": "caf179e0-8543-5dc5-9862-25644f9d1184",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2018jan/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1C 2018jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": null,
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "KEEP",
+   "rule": null,
+   "reason": "KEEP: claims 4CH0 Chemistry 4CH0/1C January 2018/VALIDATED(code+label); VALIDATED claim has no serving same-kind pointer (pointer-less/empty) \u2014 doc-repair lane"
+  },
+  {
+   "document_id": "39935310-6428-5ae2-9826-46487b648f69",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2019jun/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2019jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1/1C June 2019",
+    "label": "June 2019",
+    "ptr_uri": "4CH1-1C-201906/ms.pdf",
+    "chunks": 12
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1/1C June 2019' (June 2019) pointer 4CH1-1C-201906/ms.pdf (12 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "cf68cf74-1e55-5c15-b170-441015fbe37e",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2019jun/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1C 2019jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1/1C June 2019",
+    "label": "June 2019",
+    "ptr_uri": "4CH1-1C-201906/qp.ocr-augmented.md",
+    "chunks": 18
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1/1C June 2019' (June 2019) pointer 4CH1-1C-201906/qp.ocr-augmented.md (18 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "5fbb5770-164b-53bd-95f8-9f344a6157ca",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2020jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2020jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C January 2020",
+    "label": "January 2020",
+    "ptr_uri": "4ch1-1c-202001/ms.pdf",
+    "chunks": 17
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C January 2020' (January 2020) pointer 4ch1-1c-202001/ms.pdf (17 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "68257c91-c1fd-591a-962a-3354be4857a0",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2020jan/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1C 2020jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C January 2020",
+    "label": "January 2020",
+    "ptr_uri": "4ch1-1c-202001/qp.pdf",
+    "chunks": 16
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C January 2020' (January 2020) pointer 4ch1-1c-202001/qp.pdf (16 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "495454e3-da2c-5ae9-8066-0ed7efe2b7a7",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2020janr/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1CR 2020jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": null,
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "KEEP",
+   "rule": null,
+   "reason": "KEEP: claims 4CH1 Chemistry 4CH1/1CR January 2020/VALIDATED(code+label); VALIDATED claim has no serving same-kind pointer (pointer-less/empty) \u2014 doc-repair lane"
+  },
+  {
+   "document_id": "27c8bd91-eed0-5606-96cd-f046a45a633f",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2020janr/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1CR 2020jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": null,
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "KEEP",
+   "rule": null,
+   "reason": "KEEP: claims 4CH1 Chemistry 4CH1/1CR January 2020/VALIDATED(code+label); VALIDATED claim has no serving same-kind pointer (pointer-less/empty) \u2014 doc-repair lane"
+  },
+  {
+   "document_id": "5f83d705-30b4-5b4c-84e6-3cb4ed2b0a0b",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2020jun/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2020jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1/1C June 2020",
+    "label": "June 2020",
+    "ptr_uri": "4CH1-1C-202011/ms.pdf",
+    "chunks": 19
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1/1C June 2020' (June 2020) pointer 4CH1-1C-202011/ms.pdf (19 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "8451369b-e8f8-551e-8ac7-5035787545c5",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2020jun/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1C 2020jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1/1C June 2020",
+    "label": "June 2020",
+    "ptr_uri": "4CH1-1C-202006/qp.pdf",
+    "chunks": 16
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1/1C June 2020' (June 2020) pointer 4CH1-1C-202006/qp.pdf (16 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2021jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2021jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C January 2021",
+    "label": "January 2021",
+    "ptr_uri": "4ch1-1c-202101/ms.pdf",
+    "chunks": 19
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C January 2021' (January 2021) pointer 4ch1-1c-202101/ms.pdf (19 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2021jan/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1C 2021jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C January 2021",
+    "label": "January 2021",
+    "ptr_uri": "4ch1-1c-202101/qp.pdf",
+    "chunks": 16
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C January 2021' (January 2021) pointer 4ch1-1c-202101/qp.pdf (16 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "d42eedc9-21aa-5a28-8a67-7e38e6f2156f",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2021janr/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1CR 2021jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": null,
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "KEEP",
+   "rule": null,
+   "reason": "KEEP: claims 4CH1 Chemistry 4CH1/1CR January 2021/VALIDATED(code+label); VALIDATED claim has no serving same-kind pointer (pointer-less/empty) \u2014 doc-repair lane"
+  },
+  {
+   "document_id": "3f246010-2896-5c73-9463-1ec98665eba3",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2021janr/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1CR 2021jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": null,
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "KEEP",
+   "rule": null,
+   "reason": "KEEP: claims 4CH1 Chemistry 4CH1/1CR January 2021/VALIDATED(code+label); VALIDATED claim has no serving same-kind pointer (pointer-less/empty) \u2014 doc-repair lane"
+  },
+  {
+   "document_id": "5268dd42-d16b-5f40-aba6-38b79c383dc8",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2022jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2022jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C January 2022",
+    "label": "January 2022",
+    "ptr_uri": "4ch1-1c-202201/ms.pdf",
+    "chunks": 18
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C January 2022' (January 2022) pointer 4ch1-1c-202201/ms.pdf (18 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "48021eb2-0254-5ce4-a408-dea9dd4766c5",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2022jan/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1C 2022jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C January 2022",
+    "label": "January 2022",
+    "ptr_uri": "4ch1-1c-202201/qp.pdf",
+    "chunks": 16
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C January 2022' (January 2022) pointer 4ch1-1c-202201/qp.pdf (16 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "c21cda0e-8fd1-5d2f-bb9a-c2cf387bfa01",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2023jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2023jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C January 2023",
+    "label": "January 2023",
+    "ptr_uri": "4ch1-1c-202301/ms.pdf",
+    "chunks": 20
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C January 2023' (January 2023) pointer 4ch1-1c-202301/ms.pdf (20 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "21103232-d2d0-585c-ba8c-a7034ddd4436",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2023jan/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1C 2023jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C January 2023",
+    "label": "January 2023",
+    "ptr_uri": "4ch1-1c-202301/qp.pdf",
+    "chunks": 13
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C January 2023' (January 2023) pointer 4ch1-1c-202301/qp.pdf (13 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "7588bc70-6e72-5da9-9507-1ef620f6d342",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2023jun/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1C 2023jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C June 2023",
+    "label": "June 2023",
+    "ptr_uri": "4ch1-1c-202306/ms.pdf",
+    "chunks": 17
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C June 2023' (June 2023) pointer 4ch1-1c-202306/ms.pdf (17 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "abc866ed-e792-5bf9-a7e1-7e53014b05c1",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2023jun/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1C 2023jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1C June 2023",
+    "label": "June 2023",
+    "ptr_uri": "4ch1-1c-202306/qp.pdf",
+    "chunks": 13
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1C June 2023' (June 2023) pointer 4ch1-1c-202306/qp.pdf (13 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "eb8706d3-0977-5e0d-9328-7ad07f0da803",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2023junr/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1CR 2023jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 4CH1/1CR June 2023",
+    "label": "June 2023",
+    "ptr_uri": "4CH1-1CR-202306/ms.pdf",
+    "chunks": 17
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 4CH1/1CR June 2023' (June 2023) pointer 4CH1-1CR-202306/ms.pdf (17 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "4c602f3f-2ed6-58a1-b818-710a6f0f3423",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2023junr/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1CR 2023jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 4CH1/1CR June 2023",
+    "label": "June 2023",
+    "ptr_uri": "4CH1-1CR-202306/qp.pdf",
+    "chunks": 12
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 4CH1/1CR June 2023' (June 2023) pointer 4CH1-1CR-202306/qp.pdf (12 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "b911c188-cf2a-5087-b4d1-6206f74b94e1",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2024junr/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "1CR 2024jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1CR June 2024",
+    "label": "June 2024",
+    "ptr_uri": "4CH1-1CR-202406/ms.pdf",
+    "chunks": 17
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1CR June 2024' (June 2024) pointer 4CH1-1CR-202406/ms.pdf (17 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "083360d5-a964-5c9a-b843-3fd131223992",
+   "source_uri": "corpus/igcse-chemistry-4ch0-1c-2024junr/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "1CR 2024jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/1CR June 2024",
+    "label": "June 2024",
+    "ptr_uri": "4CH1-1CR/qp.pdf",
+    "chunks": 14
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/1CR June 2024' (June 2024) pointer 4CH1-1CR/qp.pdf (14 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "94dcb19c-0a2e-54b6-bd22-41d90472eb18",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2019jun/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2C 2019jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C June 2019",
+    "label": "June 2019",
+    "ptr_uri": "4ch1-2c-201906/ms.pdf",
+    "chunks": 15
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C June 2019' (June 2019) pointer 4ch1-2c-201906/ms.pdf (15 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "0f050385-2a19-5e18-9d13-76932365b882",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2019jun/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2C 2019jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C June 2019",
+    "label": "June 2019",
+    "ptr_uri": "4ch1-2c-201906/qp.pdf",
+    "chunks": 11
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C June 2019' (June 2019) pointer 4ch1-2c-201906/qp.pdf (11 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "afd92fdf-716a-549d-b85d-81fc0115d664",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2020jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2C 2020jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C January 2020",
+    "label": "January 2020",
+    "ptr_uri": "4ch1-2c-202001/ms.pdf",
+    "chunks": 13
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C January 2020' (January 2020) pointer 4ch1-2c-202001/ms.pdf (13 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "0ec525a0-a858-5c19-a4d5-7d74c69cb8cd",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2020jan/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2C 2020jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C January 2020",
+    "label": "January 2020",
+    "ptr_uri": "4ch1-2c-202001/qp.pdf",
+    "chunks": 12
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C January 2020' (January 2020) pointer 4ch1-2c-202001/qp.pdf (12 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "20135ce7-80e7-521a-a01c-e5ff06afc6a5",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2022jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2C 2022jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C January 2022",
+    "label": "January 2022",
+    "ptr_uri": "4ch1-2c-202201/ms.pdf",
+    "chunks": 14
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C January 2022' (January 2022) pointer 4ch1-2c-202201/ms.pdf (14 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "1121bc8d-f209-5f2d-82ab-06856eb0ad07",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2022jan/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2C 2022jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C January 2022",
+    "label": "January 2022",
+    "ptr_uri": "4ch1-2c-202201/qp.pdf",
+    "chunks": 11
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C January 2022' (January 2022) pointer 4ch1-2c-202201/qp.pdf (11 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "b1a609ef-577e-514d-aba6-3870903a07a0",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2022jun/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2C 2022jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C June 2022",
+    "label": "June 2022",
+    "ptr_uri": "4ch1-2c-202206/ms.pdf",
+    "chunks": 12
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C June 2022' (June 2022) pointer 4ch1-2c-202206/ms.pdf (12 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "3fe332a3-7419-5cc5-8925-1503d7d382de",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2022jun/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2C 2022jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C June 2022",
+    "label": "June 2022",
+    "ptr_uri": "4ch1-2c-202206/qp.pdf",
+    "chunks": 10
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C June 2022' (June 2022) pointer 4ch1-2c-202206/qp.pdf (10 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "05e99ca4-2f1f-5055-8bc9-305baa2d5663",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2022junr/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2CR 2022jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2CR June 2022",
+    "label": "June 2022",
+    "ptr_uri": "4CH1-2CR-202206/ms.pdf",
+    "chunks": 17
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2CR June 2022' (June 2022) pointer 4CH1-2CR-202206/ms.pdf (17 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "bf8b720c-8ee0-5ead-848a-e13333ef61ce",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2022junr/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2CR 2022jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2CR June 2022",
+    "label": "June 2022",
+    "ptr_uri": "4CH1-2CR-202206/qp.pdf",
+    "chunks": 10
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2CR June 2022' (June 2022) pointer 4CH1-2CR-202206/qp.pdf (10 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "41191e53-9272-5a9d-b044-3086f010a5f3",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2023jan/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2C 2023jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C January 2023",
+    "label": "January 2023",
+    "ptr_uri": "4ch1-2c-202301/ms.pdf",
+    "chunks": 12
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C January 2023' (January 2023) pointer 4ch1-2c-202301/ms.pdf (12 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2023jan/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2C 2023jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C January 2023",
+    "label": "January 2023",
+    "ptr_uri": "4ch1-2c-202301/qp.pdf",
+    "chunks": 8
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C January 2023' (January 2023) pointer 4ch1-2c-202301/qp.pdf (8 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "2547ec16-b9ef-5d3c-99c5-9317865f4825",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2023janr/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2CR 2023jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 4CH1/2CR January 2023",
+    "label": "January 2023",
+    "ptr_uri": "4CH1-2CR-202301/ms.pdf",
+    "chunks": 13
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 4CH1/2CR January 2023' (January 2023) pointer 4CH1-2CR-202301/ms.pdf (13 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "b43b3a44-0f76-51e2-a14a-a181a7d3385b",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2023janr/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2CR 2023jan",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 4CH1/2CR January 2023",
+    "label": "January 2023",
+    "ptr_uri": "4CH1-2CR-202301/qp.pdf",
+    "chunks": 11
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 4CH1/2CR January 2023' (January 2023) pointer 4CH1-2CR-202301/qp.pdf (11 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "00b9eba1-ce24-5c58-93ca-c60bf602b8b2",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2023jun/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2C 2023jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C June 2023",
+    "label": "June 2023",
+    "ptr_uri": "4ch1-2c-202306/ms.pdf",
+    "chunks": 12
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C June 2023' (June 2023) pointer 4ch1-2c-202306/ms.pdf (12 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "c643b857-decf-5f2e-bc22-8fb03b89c644",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2023jun/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2C 2023jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2C June 2023",
+    "label": "June 2023",
+    "ptr_uri": "4ch1-2c-202306/qp.pdf",
+    "chunks": 8
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2C June 2023' (June 2023) pointer 4ch1-2c-202306/qp.pdf (8 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "e2f20701-d23b-5349-be9a-226bfef95a63",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2024junr/MS.md",
+   "kind": "MARK_SCHEME",
+   "sitting": "2CR 2024jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2CR June 2024",
+    "label": "June 2024",
+    "ptr_uri": "4CH1-2CR-202406/ms.pdf",
+    "chunks": 9
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2CR June 2024' (June 2024) pointer 4CH1-2CR-202406/ms.pdf (9 chunks); this 0-chunk row is redundant"
+  },
+  {
+   "document_id": "67887db8-09a7-544b-99bc-136e13f8c3e8",
+   "source_uri": "corpus/igcse-chemistry-4ch0-2c-2024junr/QP.md",
+   "kind": "QUESTION_PAPER",
+   "sitting": "2CR 2024jun",
+   "link_states": [],
+   "claim_states": [
+    "VALIDATED"
+   ],
+   "sup": {
+    "paper": "4CH1 Chemistry 4CH1/2CR June 2024",
+    "label": "June 2024",
+    "ptr_uri": "4CH1-2CR/qp.pdf",
+    "chunks": 11
+   },
+   "qv_citations": 0,
+   "scheme_citations": 0,
+   "decision": "REJECT",
+   "rule": "SUPERSEDED",
+   "reason": "sitting serves via VALIDATED '4CH1 Chemistry 4CH1/2CR June 2024' (June 2024) pointer 4CH1-2CR/qp.pdf (11 chunks); this 0-chunk row is redundant"
+  }
+ ],
+ "counts": {
+  "reject": 37,
+  "keep": 6
+ }
+}

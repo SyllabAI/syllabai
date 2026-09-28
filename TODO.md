@@ -541,6 +541,15 @@ Screenshots: scripts/research/probe_collapsed.png, probe_active.png.
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3c (expanded toolbar look parity)
 
 - [x] HUB-ANSWER-BOX-W3C (EXECUTED 2026-09-29 as hub 3730e79, session web-98866c45, operator message
+- [x] **d1leftovers (2026-09-28, Task 65, trace 1a0ea3c208e16699) — the "§D1 leftovers
+  pass (57 zero-chunk SUGGESTED docs)" EXECUTED + VERIFIED.** 49 retired with per-row
+  evidence (37 SUPERSEDED: sitting serves via VALIDATED paper's same-kind pointer;
+  12 OWNER-REJECTED: all owning papers REJECTED), 8 KEEP (2 specimen-owned, 6
+  VALIDATED-but-pointer-less sittings' only doc records). One fail-closed tx, 49 REJECT
+  audit rows 3891-3939, rows retained, serving-neutral. Documents census 567V/305S/147R.
+  Evidence: `bench/review/psaxis-review-2026-09-28/d1leftovers-2026-09-28/`. Remaining
+  open: bank-repair queue, sheet-generator regex fix, stale-citation re-point (cosmetic),
+  sibling supersession sign-offs (per-package APPROVE).
 "I want the expanded toolbar look matched too") **expanded-state toolbar restyle to
 the SME ground truth** — ground truth upgraded from CSS to the COMPONENT BUNDLE:
 SME question-player chunk 3273-abb6c54ac7049c60.js yields the editor's verbatim
