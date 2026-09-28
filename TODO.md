@@ -161,6 +161,42 @@ identities. Census 87 V / 3 F / 1 S / 13 R; serving pool 2,020 -> 2,581.
 reconciliation), 4CH1/1C + 4CH1/2C Jun-2020 (COVID June/Nov pairing — operator
 supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/reingest-lane-2026-09-28/
 
+## 2026-09-29 — claim: tutor §22 sessions + conversations pane on the hub (web s138–143 parity)
+
+- [ ] HUB-TUTOR-SESSIONS (REGISTERED 2026-09-29, session web-fc62c099, operator
+directive trace 1a0ea1deccb37015 "I want tutor parity too (web's s138–143:
+conversations pane, working memory)") **port the server-backed tutor session
+layer + the server conversations pane from web s140/s143 onto the hub's
+/tutor** — the hub's tutor is UI-richer than web's (real SSE streaming
+e784c1c, edit-resend/regenerate/feedback/export) and ALREADY sends working
+memory (historyFor rides each ask, s139 parity), but its threads are
+localStorage-only and the chat route explicitly records "bridging them onto
+core's §22 session store is a recorded follow-up tranche". Core needs ZERO
+changes: TutorAskRequest (shared by /ask and /ask/stream) already takes
+history + sessionId with the §22 foreign-session fail-fast probe, and
+TutorSessionController serves POST/GET-list/GET-one/GET-latest/DELETE.
+Scope: (route) /api/ai/chat accepts + forwards sessionId (stream AND legacy
+fallback); (threads) Thread gains a lazily-bound sessionId — first ask of a
+signed-in chat creates the §22 session (failed create degrades to an
+unpersisted ask), foreign-id 404 unbinds honestly; (hydration) fresh-browser
+signed-in mount restores the most recent server conversation (the s140
+"chat survives the refresh" value in the hub's terms — local transcripts
+already survive refresh; the server is the store of record);
+(pane) ThreadSidebar gains the synced-conversations section when signed in —
+server list refreshed after every completed ask and delete, resume binds the
+thread to that session and hydrates from tutorSessionGet, delete confirms
+(AlertDialog — server deletes are not undoable) and unbinds an active chat,
+pane errors degrade honestly; (BUG FIX, found in recon) hub historyFor caps
+at 16 turns of ≤4000 chars but core validates @Size(max=12) turns of
+@Size(max=2000) chars — any conversation whose 13th turn or any >2000-char
+answer rode the next ask would 400; hub now caps 12 turns × 2000 chars
+(web dodged this with its 8-turn cap). s138 (markdown+KaTeX) and the mhchem
+fix (4fb2ed5) are judged already-at-parity: the hub's MessageItem renders
+through the shared Markdown pipeline (KaTeX + mhchem hardened in tranche 1).
+Files: src/app/tutor/{chat,threads,thread-sidebar}.tsx,
+src/app/api/ai/chat/route.ts. Hub-repo-only change; no lease required
+(wave 1/2/3b precedent); zero overlap with active work (locks.yaml empty).
+
 ## 2026-09-29 — claim: exam-question CLA on the hub (web s129 parity)
 
 ### HUB-QUESTION-CLA EXECUTED (same session, hub `8d8fa78` on base e50bfe2, CI build+e2e green)
