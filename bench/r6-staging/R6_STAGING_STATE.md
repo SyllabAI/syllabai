@@ -98,3 +98,38 @@ D2 rider landed alongside (core `2267221`): `TutorAnsweredEvent.answerProvider` 
 the deterministic refusal identity (`deterministic-refusal` vs `deterministic-paper-refusal`)
 into `KA_RAG_COMPLETED` telemetry — audit finding D2 closed; unrelated to the r6 freeze
 mechanics but part of the same §8(d) tranche.
+
+## Addendum 2026-09-28 (interpretation pre-registration): the first §8(d) number must be read against two unmitigated risks
+
+Recorded per the operator's external-review follow-up (trace `1a0e699e61629235`). The
+tranche's structural safeguards are already pinned (dual granularity both reported; dual
+denominator with the SUGGESTED-notes caveat; unbridged codes surface as explicit misses,
+never coerced; absent artifact = NOT SCOREABLE; census fail-closed on both sides of the
+freeze). Two risks, however, are **interpretation obligations only** — the runner records
+the inputs but nothing in the code flags them. The R6-GENERATION-NOTES interpretation pass
+MUST check both before any §8(d) reading is trusted:
+
+1. **Gold-query leakage into the corpus (inflation risk).** If any of the 120 gold asks
+   near-duplicates an ingested chunk (card bodies, notes prose — the arms retrieve over the
+   same corpus the gold was authored against), a semantic arm can serve the right refs by
+   embedding/lexical memorization, not by retrieval quality. §8(d) inherits this: correct SP
+   coverage via a memorized serve proves nothing about serving real learners. The
+   interpretation pass must (a) measure the overlap (gold ask vs its top served chunk, per
+   arm), (b) mark any near-duplicate serve as leakage-suspect, and (c) carry the flag into
+   the reading — the recorded NUMBER stays verbatim in the run report (no post-hoc
+   exclusion); only the interpretation is qualified.
+
+2. **Correct SP attribution via the wrong retrieval path (attribution risk).** §8(d) scores
+   the SERVED SET's mapping coverage — it never asks HOW a ref was surfaced. A chunk ranked
+   for the wrong reason (lexical accident, fusion noise) that happens to carry the right HV
+   code — especially a chunk holding several codes through the §1 many-to-many — scores (d)
+   well while (a)/(b)/(c) stay weak. A high (d) beside weak (a)/(b)/(c) is therefore a
+   coverage signal, NOT a retrieval-quality signal, and must be read as such; §8(d) alone
+   must never be cited as "retrieval works" or used to promote anything.
+
+Both checks use inputs the runners already record (per-query served refs, per-arm
+rankings); neither requires a code change, a contract change, or a threshold change. The
+pinned rules are untouched: gate arithmetic stays on the ALL denominator per ruling 1,
+full-coverage granularity pending the §10 ruling, no promotion claim on (d) at r6. The r6
+gate itself is unchanged — WAITING_FOR_GENUINE_TEACHER_VALIDATION (trace
+`1a0e6753792f76fd`).
