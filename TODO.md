@@ -161,6 +161,32 @@ identities. Census 87 V / 3 F / 1 S / 13 R; serving pool 2,020 -> 2,581.
 reconciliation), 4CH1/1C + 4CH1/2C Jun-2020 (COVID June/Nov pairing — operator
 supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/reingest-lane-2026-09-28/
 
+## 2026-09-29 — claim: exam-question CLA on the hub (web s129 parity)
+
+- [ ] HUB-QUESTION-CLA (REGISTERED 2026-09-29, session web-fc62c099, operator
+directive trace 1a0ea01d0f9a8495 "In syllabai-web, the exam question had some
+extra stuff. syllabai-hub does not have it. One example is CLA") **port the
+question-anchored CLA overlay from web to the hub's exam-questions player** —
+web `91a4f5f` (s129) ships the exam-question CLA surface (Understand =
+PAST_PAPER_QUESTION EXPLAIN decode-only on the family's first row; Approach =
+HINT, part-scoped QUESTION_PART or atomic-MCQ PAST_PAPER_QUESTION; CHECK
+stays out — post-attempt review lives with Smart Mark; SUMMARIZE is a
+notes/topic mode) against core's production contract
+`POST /api/v1/learners/me/cla/ask`. The hub already carries the client half
+(`api.claAsk` + full ClaAnswerView types) but no question surface calls it —
+the overlay is the first hub surface on the production CLA contract (the
+note island and /assistant tab are the demo twins on /api/ai/cla). Hub
+adaptation: anchors resolve ONLY through the 4CH1 identity bridge's
+server-side join (corpus part id -> core question/part UUID, same
+honesty rule as attempts — a question the join cannot verify is never
+anchored); bridge-off states (not pilot / signed out / core unreachable)
+hide the entries honestly instead of dead-ending. Files:
+`src/components/cla/question-cla-overlay.tsx` (new),
+`src/app/courses/[course]/exam-questions/[topicSlug]/question-player.tsx`
+(header "Ask CLA" + per-answer-box lightbulb + one page-level overlay,
+transcripts lifted per whole question). Zero core changes, zero overlap with
+any active lease (locks.yaml `locks: []`).
+
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3 (free/no-card input wave)
 
 - [x] HUB-ANSWER-BOX-W3 (EXECUTED 2026-09-29, session web-98866c45, operator trace
