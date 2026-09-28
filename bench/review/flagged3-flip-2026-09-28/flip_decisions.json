@@ -53,9 +53,11 @@
   ],
   "expected_census_delta": {
     "documents_kind_EXTERNAL_QUESTIONS": {
-      "before": { "VALIDATED": 306, "SUGGESTED": 747, "FLAGGED": 3, "REJECTED": 0 },
-      "after": { "VALIDATED": 309, "SUGGESTED": 747, "FLAGGED": 0, "REJECTED": 0 }
+      "before": { "VALIDATED": 296, "SUGGESTED": 80, "FLAGGED": 3, "REJECTED": 0 },
+      "after": { "VALIDATED": 299, "SUGGESTED": 80, "FLAGGED": 0, "REJECTED": 0 },
+      "census_correction_2026_09_28": "AMENDED before execution: the kit author held no production credentials and recorded a derived (not probed) census 306V/747S/3F. Live probe (sanctioned scripts/.render_env.json, SELECT-only, 2026-09-28 ~11:2xZ, re-probed twice): documents total 999, EXTERNAL_QUESTIONS 296 VALIDATED / 80 SUGGESTED / 3 FLAGGED / 0 REJECTED — consistent with the 298-card wave (run a5d13c0a) + 80 neighbors + 1 pre-existing VALIDATED. The delta (+3 VALIDATED, -3 FLAGGED) is unchanged."
     }
   },
   "boundary": "content unchanged; only documents.validation_state moves FLAGGED -> VALIDATED for exactly these 3 rows, plus one content_review_audit row each (target_type='question' vocabulary, the proven wave-import vocabulary). No embedding writes; no chunk writes (document_chunks carries no state column — serving state derives from the parent document via the JOIN). The 3 cards have spec linkage = none (the honest skips stand; the flip does not fabricate any)."
 }
+

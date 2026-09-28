@@ -22,7 +22,7 @@ Connection (the sanctioned per-session pattern, never printed, never persisted):
 
 Fail-closed guarantees:
   * every card must exist, be kind EXTERNAL_QUESTIONS, and be FLAGGED pre-state;
-  * the kind census must match the recorded pre-census exactly (306V/747S/3F)
+  * the kind census must match the recorded pre-census exactly (296V/80S/3F — amended 2026-09-28 to the live-probed census; the kit author's original 306V/747S was derived, not probed)
     — if production moved under us, abort and re-verify first;
   * idempotent: a prior application of THIS batch (same batch id in the audit
     detail) is detected and no-ops with SUCCESS+already_applied; audit rows from
@@ -256,3 +256,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+

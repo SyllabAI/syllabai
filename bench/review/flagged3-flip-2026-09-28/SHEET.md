@@ -29,10 +29,15 @@ adopts the operator's judgment on content authenticity and does not fabricate li
 
 | EXTERNAL_QUESTIONS documents | before | after |
 |---|---|---|
-| VALIDATED | 306 | **309** |
-| SUGGESTED | 747 | 747 |
+| VALIDATED | 296 | **299** |
+| SUGGESTED | 80 | 80 |
 | FLAGGED | 3 | **0** |
 | REJECTED | 0 | 0 |
 
 The importer aborts unless production shows the exact "before" census — if anything
 moved since the snap-005 freeze, re-verify first; the flip never runs on drift.
+
+**Census correction 2026-09-28:** figures above re-probed live (the kit author held no
+production credentials; the original 306V/747S were derived, not probed) — the probed
+census is 296V/80S/3F before → 299V/80S/0F after. Decision and delta unchanged.
+

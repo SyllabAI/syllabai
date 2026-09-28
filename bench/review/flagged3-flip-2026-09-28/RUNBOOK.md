@@ -11,6 +11,16 @@ idempotent re-run (ALREADY_APPLIED, no double-apply); post-apply external drift
 zeros; the recorded census vocabulary includes REJECTED: 0 so any rejected EQ doc
 triggers drift-abort).
 
+**CENSUS CORRECTION 2026-09-28 (pre-execution, this session):** the kit author held no
+production credentials and recorded a derived (not probed) census — 306V/747S/3F, whose
+total 1,056 equals the snap-003 EQ *chunk* count, not the EQ *document* census. Live
+probed twice (sanctioned scripts/.render_env.json, SELECT-only): documents total 999;
+EXTERNAL_QUESTIONS **296 VALIDATED / 80 SUGGESTED / 3 FLAGGED / 0 REJECTED**. All
+census figures in this RUNBOOK, SHEET.md and flip_decisions.json are amended to the
+probed values; the decision and the +3/−3 delta are unchanged. The integration test
+remains valid — it exercised the tool's paths, and its scratch was seeded to the then-
+recorded (wrong) numbers; the production gate now compares against the probed truth.
+
 The decision is RECORDED (operator trace `1a0e7865c3b35715`); execution needs a session
 holding the sanctioned production connection material (the per-session handoff, or
 `scripts/.render_env.json` — the snap005 path). Any session with either can finish this
@@ -24,7 +34,7 @@ SYLLABAI_DATABASE_URL='...' FLIP_DRY_RUN=1 python3 apply_flip.py
 ```
 
 Expected: `"status": "DRY_RUN_OK"`, census_before exactly
-`{VALIDATED: 306, SUGGESTED: 747, FLAGGED: 3}`, all 3 cards reported pre_state FLAGGED.
+`{VALIDATED: 296, SUGGESTED: 80, FLAGGED: 3, REJECTED: 0}`, all 3 cards reported pre_state FLAGGED.
 Anything else → STOP, do not force; re-verify against the freeze.
 
 ## 2. apply (single transaction, fail-closed)
@@ -33,8 +43,8 @@ Anything else → STOP, do not force; re-verify against the freeze.
 SYLLABAI_DATABASE_URL='...' python3 apply_flip.py
 ```
 
-Expected: `"status": "APPLIED"`, census_after `{VALIDATED: 309, SUGGESTED: 747,
-FLAGGED: 0}`, final_states all VALIDATED, audit_rows_committed 3. Re-running prints
+Expected: `"status": "APPLIED"`, census_after `{VALIDATED: 299, SUGGESTED: 80,
+FLAGGED: 0, REJECTED: 0}`, final_states all VALIDATED, audit_rows_committed 3. Re-running prints
 `"status": "ALREADY_APPLIED"` (idempotent by batch id, no double-apply possible).
 
 ## 3. record the execution (records lane)
@@ -59,3 +69,4 @@ The flip decision is the operator's own (named instruction, recorded verbatim in
 detail says exactly that. After the flip the 3 cards satisfy the VALIDATED-only serving
 gate; whether the live read filter serves them (embed_rev question, TODO) is a separate,
 already-recorded probe — not assumed here.
+
