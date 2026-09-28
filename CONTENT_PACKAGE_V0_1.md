@@ -1,8 +1,8 @@
 # SyllabAI Content Package v0.1 Specification
 
-**Status:** PROPOSED  
-**Date:** 2026-09-15  
-**Related architecture:** `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md`
+**Status:** Accepted  
+**Date:** 2026-09-15 (proposed) · 2026-09-29 (accepted, with ADR-021)  
+**Related architecture:** `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` · **Successor:** `CONTENT_PACKAGE_V0_2.md` (KG projection + distribution, accepted 2026-09-29)
 
 ## 1. Purpose
 
