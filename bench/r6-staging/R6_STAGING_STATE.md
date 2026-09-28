@@ -1,3 +1,5 @@
+> **EXECUTED 2026-09-28 (same day):** the gate discharged (operator wave landed, run a5d13c0a…); steps 1-6 complete — snap-005 frozen (ab600e18f1), gold-v4 (c8ae9e6c1c), inputs + workflows (60f57e87b3, f7bb66e641), 4/4 dispatches SUCCESS, run records + R6-GENERATION-NOTES.md under evidence/bench-001/runs/. The staging record below is preserved as history.
+
 # r6 staging unit — EXECUTING (the gate discharged 2026-09-28)
 
 **Status 2026-09-28 (records `ab600e18f1` + this commit): the r6 gate — the operator/teacher
