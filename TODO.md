@@ -508,7 +508,7 @@ Screenshots: scripts/research/probe_collapsed.png, probe_active.png.
 
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3c (expanded toolbar look parity)
 
-- [ ] HUB-ANSWER-BOX-W3C (CLAIMED 2026-09-29, session web-98866c45, operator message
+- [x] HUB-ANSWER-BOX-W3C (EXECUTED 2026-09-29 as hub 3730e79, session web-98866c45, operator message
 "I want the expanded toolbar look matched too") **expanded-state toolbar restyle to
 the SME ground truth** — ground truth upgraded from CSS to the COMPONENT BUNDLE:
 SME question-player chunk 3273-abb6c54ac7049c60.js yields the editor's verbatim
@@ -536,3 +536,37 @@ LaTeX editor — all three are deferred pending the answer-format contract
 decision and will NOT be faked with Unicode lookalikes. Wave-3 chem/notation
 glyphs kept. Hub-repo-only change: no resource lease required (wave 1/2/3b
 precedent). Base: hub 8d8fa78.
+W3C execution record (hub 3730e79, rebased over hub 3782049 — the tutor-sessions
+lane landed mid-flight): AnswerTextarea strip restyled to the component-bundle
+anatomy — composite bordered box (focus ring via :focus-within, SME's
+.Editor_writtenMode:focus-within parity) with the menu strip INSIDE it (bottom
+corners on the strip, top corners on the box); left group = icon-only 2rem
+"Insert symbol" square (Omega, aria-expanded fill = SME's MenuButton active),
+right group = radius-50rem labeled pills Write/Upload (padding-inline
+.5rem .75rem, labels hidden by a real @container 540px query — Tailwind v4
+container queries); strip padding .5rem (.25rem <768px), gap .25rem,
+mousedown swallowed on dead space (SME verbatim — caret never moves when a
+tool toggles); Symbols popover = SME's exact shadow 0 4px 30px
+rgba(59,68,89,.16) (computed-style verified byte-for-byte), xs-bold legends,
+7-column grid, groups Mathematical + Greek letters VERBATIM from SME chunk
+3273 + "Chemistry & notation" carrying the wave-3 IGCSE glyphs SME lacks
+(deduped: 13, no glyph twice). Upload pill routes the picked file into
+AnswerInkPad via pendingFile (ref-guarded, consumed-once, deferred convert —
+react-hooks/set-state-in-effect compliant) so toolbar and pad share ONE
+transcribe → editable-preview → insert-at-caret honesty path. Activation bug
+caught by probe: textarea-only focus state tore the strip down when focus
+moved to a strip button (click never landed) — fixed with SME's own pattern:
+blur only drops activation when relatedTarget leaves the composite. Latent
+wave-3b defect fixed: palette pref was read during first render → SSR/client
+disagreement → React #418 on every reload with the pref set; now read
+post-hydration. Verified: eslint+tsc clean; build 629 pages; corpus gate
+PASSED; e2e 12/12 (axe 8 routes + deck-flow 4 — stale :3000 server killed
+first, the wave-3b incident not repeated); browser probes: collapsed 52px/0
+buttons, activation 144px (3 marks), symbol square 32×32, pill radius 50rem,
+H₂ insert-at-caret with focus restore + panel persistence, dead-space
+mousedown keeps caret, SIMULATED badge + save chip + word count ride the
+strip, 375px labels hidden + hOverflow=0, no-session hides Write/Upload and
+keeps symbols, cold load 0 console errors, pref-set reload clean.
+Screenshots: /home/z/my-project/scripts/w3c/w3c_active_panel_1440.png,
+w3c_active_narrow_375.png, w3c_nosession_375.png. CI/Vercel status
+unverifiable from sandbox (private repo) — honest-absent.
