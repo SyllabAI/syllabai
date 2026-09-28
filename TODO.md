@@ -639,3 +639,46 @@ undo/redo keys are NOT faked (controlled React state vs native textarea undo sta
 "Insert equation" stays contract-gated (wave 3c record) — this is LOOK parity on the
 Unicode keyboard, not a LaTeX editor. Hub-repo-only change: no resource lease
 required (wave 1/2/3b/3c precedent). Base: hub 3730e79.
+
+## 2026-09-29 — claim: the reference-look restyle onto the HUB's Tutor + CLA (TUTOR-CLA-LOOK hub port)
+
+- [ ] HUB-TUTOR-CLA-LOOK (REGISTERED 2026-09-29, session web-bb263437 continuation,
+operator directive trace 1a0ea32e1f6c1f21 "I want to work on the frontend improvements
+of the Tutor and CLA. https://github.com/nawaf-al-hussain/FileUpload/blob/main/FrontendReferences.zip
+Here are some references on how it should look like" + the operator correction this
+session, trace 1a0ea59699213df9 "Why the fuck did you apply it to syllabai-web? Did you
+forget that we are now working on syllabai-hub?") **port the TUTOR-CLA-LOOK
+reference-look restyle onto the hub's Tutor + CLA surfaces — presentation only, zero
+behavior change**. Honest context: the first execution of this directive landed on the
+WEB repo (web `132c15a`, claim c775bc3, evidence download/web-bb263437/) — the operator
+has corrected the target: the hub is the active frontend. Web `132c15a` stays live
+(presentation-only, all pins verified, reversible with one clean revert on the
+operator's word); this claim is the same reference look on the sanctioned repo, ported
+from the web diff (download/web-bb263437/change-full.diff) and adapted to the hub's
+component structure + dual-theme semantic-token system. Look translation, Tutor
+(/tutor): message-item — assistant rows keep avatar+name but the avatar becomes the
+gradient circle and the bubble box retires (answer on the canvas), user turns become
+muted gray bubbles with date-aware stamps, citations become rounded-full pills; composer
+— rounded-2xl card, subject context pill (green dot + "Chemistry (4CH1)", the honest
+single-corpus scope), circular send (ArrowUp); chat header — the identity strip
+(gradient avatar, thread title + honest subtitle), all hub affordances kept (provider +
+corpus badges, about, export, clear, sidebar); Welcome — the greeting hero (time-of-day
++ first name from identity) over pill starters; thread-sidebar rows rounded-lg.
+Look translation, CLA: question-cla-overlay + note-cla — the amber honesty banner
+(theme-aware warn tokens, the SME reference's signature), labeled mode pills with icons
+(Explain/Hint; Explain/Summarize), gray user bubbles, citation pills, "What needs
+explaining?" placeholder on the question overlay; /assistant tab — identity strip
+avatar, amber banner, pill-segment context tabs + compact selects, labeled mode pills,
+the shared rounded-2xl composer card with anchor-summary pill + circular send, gray
+bubbles, citation pills. BEHAVIORAL PINS (unchanged, all of them): SSE streaming +
+edit-resend/regenerate/feedback/export, §22 sessions + hydration + synced conversations
+pane (12×2000 historyFor caps), anchored-spec banner + deep-link boot, dictation +
+paperclip honesty + stop, jump-to-latest, claTargetsOf bridge-gated anchors, §7 gate
+guidance rendering, deterministic refusal cards, provider/model/latency/evidence
+footers, MAX caps, a11y labels (axe gate on /tutor), pure exports for verify scripts.
+Files: src/app/tutor/{chat,composer,message-item,thread-sidebar}.tsx,
+src/components/cla/{question-cla-overlay,note-cla}.tsx,
+src/app/assistant/assistant-client.tsx. ZERO overlap with the active HUB-ANSWER-BOX-W3D
+claim (answer-textarea.tsx / answer-ink-pad.tsx / question-player.tsx untouched).
+Hub-repo-only change; no lease required (locks.yaml empty, wave 1/2/3b/3c/3d precedent).
+Base: hub 3730e79.
