@@ -6,6 +6,12 @@ small r6-staging unit ... ready to execute the moment you flip the card wave", t
 `1a0e4325cefc7b51`), the unit is STAGED NOW so the real freeze at the flip is execution,
 not engineering — the r4 pre-flip staging precedent.
 
+> **Status 2026-09-28 (operator directive, trace `1a0e6753792f76fd`): the r6 execution
+> dependency is WAITING_FOR_GENUINE_TEACHER_VALIDATION.** The 298 T-C27 cards stay
+> SUGGESTED and byte-untouched — no agent flip, no DB mutation; no validation endpoint
+> is to be implemented unless independently product-useful. This unit executes only
+> when a genuine teacher validation wave lands.
+
 ## What is in place
 
 | Piece | State | Where |
