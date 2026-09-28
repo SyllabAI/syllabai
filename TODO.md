@@ -270,3 +270,26 @@ rejected once — the answer-box wave-3 lane (c92fbe3) + theme second-pass
 (34df0f9) landed in the fetch→push window; rebase clean (disjoint files),
 rebuild + full 12-test re-run green on the merged tree (the axe gate
 validated their status-chip changes too).
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3b (SME visual parity re-shell)
+
+- [ ] HUB-ANSWER-BOX-W3B (IN PROGRESS, session web-98866c45, operator message
+"Does not look quite right. Here is what SME one looks like… <Editor_wrapper DOM
+paste>") **answer-box re-shell to the pinned ground truth** — operator pasted
+SME's collapsed-state DOM (Editor_wrapper/collapsible/collapsed +
+Label_label/Textarea_label + tiptap writtenMode, data-placeholder "Enter your
+answer here..."); SME production CSS extracted from the four cdn bundles pins
+the anatomy: bold label above a single 1px-border rounded box (white, 1rem
+padding), collapsed = content height (min-height:0), focus = 1px outline on the
+container via :focus-within, options menu attaches below ONLY when active
+(flex wrap, .5rem padding, rounded bottom corners). Hub rework, zero contract
+change: AnswerTextarea re-shelled (label prop with htmlFor/useId pairing,
+collapsed rows=1 vs active marks-proportional floor, tool strip + palette
+attached below the box only when active, statusSlot/hintSlot so the exam
+surface's live-draft badge, save chip and "saved in this browser" honesty copy
+render inside the active state instead of a permanent meta row, placeholder
+copy to SME register with stem-verb hints kept), TypedAnswerWorkspace meta row
+demoted + outer muted card flattened, practice label unified. Plain-text
+contract, per-keystroke autosave, both mark lanes untouched. Base: hub 9a00eb1
+(tranche 4.13 axe gate respected — label association + aria-expanded kept).
+Hub-repo-only change: no resource lease required (wave 1/2 precedent).
