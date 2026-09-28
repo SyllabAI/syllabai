@@ -3,7 +3,7 @@ task:
   id: T-C32
   title: "resolveActive N+1 — per-node KnowledgeNode reads on the serving-scope resolution path (T-C23 recorded ticket candidate 2)"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: IN_REVIEW
+  status: DONE
   priority: P3
   base:
     repo: syllabai-core
@@ -51,7 +51,29 @@ task:
     - "no resolution-semantics change (T-C07 matrix intact); no schema/migration;
       no serving-path behavior change; intentSurface + RoutingController /
       KaRagService call sites untouched"
-  merge: "operator/owner lane — PR #30 ready on green CI"
+  merge: "landed 2026-09-28 — see closeout_2026-09-28 (no PR merge event; linear tranche)"
   follow_ups:
     - "post-merge: the ~340 per-node reads per serving request drop to 2 queries
       per subject root (subtree CTE + batched predicate)"
+  closeout_2026-09-28:
+    landing_path: "content reached core main WITHOUT a PR #30 merge event: the
+      deep-audit 09-28 tranche (1551c1a fix(boundary) M2-M5, df6ef7e test(it) M5
+      follow-up, 795a7ac fix(integrity) M6+M7, 05f2621 test(it) M6 cascade IT)
+      was pushed as a LINEAR stack whose base is 42534db (this task's commit);
+      no merge commit exists in 42534db..05f2621. PR #30 (head == 42534db,
+      verified via API, merged=False) closed 2026-09-28 as superseded — zero
+      diff remains between head and main; branch
+      perf/t-c32-resolve-active-n-plus-one left intact at 42534db."
+    verification: "42534db verified first-hand as an ancestor of origin/main
+      (git merge-base --is-ancestor); core main @ 05f2621690843123 (the r6
+      freeze pin) check-runs: build completed SUCCESS — the fix is
+      CI-validated on main and the no-per-node-reads regression pin travels
+      with the commit"
+    outcome: "~340 per-node findById reads per serving request → 2 queries per
+      subject root (subtree CTE + one batched predicate); resolution semantics
+      byte-identical (ACTIVE-only candidates, T-C07 ownership matrix, empty
+      subtree fail-closed); intentSurface / RoutingController / KaRagService
+      call sites untouched"
+    honest_note: "the house merge-commit convention was not used — the landing
+      came as the audit lane's linear push; recorded as found, no history
+      rewritten, no lane attribution asserted beyond the commit trail"
