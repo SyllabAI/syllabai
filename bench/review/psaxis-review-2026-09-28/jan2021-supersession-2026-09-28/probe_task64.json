@@ -1,0 +1,653 @@
+{
+ "generated_at": null,
+ "paper_id": "f10c6814-c4ce-425d-afb6-3501eb5f06e1",
+ "checks": {},
+ "detail": {
+  "paper_live": {
+   "id": "f10c6814-c4ce-425d-afb6-3501eb5f06e1",
+   "subject_id": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+   "title": "4CH1/2C January 2021",
+   "board": "Edexcel",
+   "qualification": "unknown",
+   "unit": null,
+   "session_label": "January 2021",
+   "paper_code": "4CH1/2C",
+   "question_paper_document_id": "a4a8a5e1-dbf6-5e9d-8e02-54d39eca315d",
+   "mark_scheme_document_id": "d74802bc-d832-5896-ba58-9122bd0cc6dd",
+   "validation_state": "SUGGESTED",
+   "provenance": "PAST_PAPER",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JAN",
+   "year": 2021,
+   "created_at": "2026-09-14 12:03:04.866470+00:00"
+  },
+  "chain_counts_live": {
+   "questions": 7,
+   "question_versions": 7,
+   "question_parts": 48,
+   "mark_schemes": 7,
+   "mark_points": 34
+  },
+  "archive_diff": {
+   "questions": {
+    "arch_n": 7,
+    "live_n": 7,
+    "missing_live": [],
+    "extra_live": [],
+    "changed": [
+     "12b71631-0cc6-45f5-a789-6df822db484a",
+     "148ed375-f37a-4b63-86f4-ee56a1eb3450",
+     "3892dcc2-c122-4436-a2f1-ebe21dc006ab",
+     "68cb5777-2b43-4929-9de7-54f5385482ff",
+     "77f084ef-a9ab-474c-b8a1-423186c2acfd",
+     "b45ddb5e-864e-48a9-9d81-a634762ac532"
+    ]
+   },
+   "question_versions": {
+    "arch_n": 7,
+    "live_n": 7,
+    "missing_live": [],
+    "extra_live": [],
+    "changed": [
+     "0d7ce8a2-4a55-4dac-a675-27bf4f9db74b",
+     "27733df4-cc00-4017-a5c4-d83a392b0c7a",
+     "43a6dc5c-f7fb-406c-8da3-6ce7db157dbf",
+     "662594ce-aaee-453f-8936-4507cb2e7fd5",
+     "99b6f970-9438-4750-a663-3401f724e93b",
+     "acdb8dce-47ec-4f8c-8b0a-1bcf5aab4941"
+    ]
+   },
+   "question_parts": {
+    "arch_n": 48,
+    "live_n": 48,
+    "missing_live": [],
+    "extra_live": [],
+    "changed": [
+     "001a94bc-23bf-4c84-bb86-9d4e724b5fc1",
+     "064d586d-637a-453e-b417-42d422bfa3d7",
+     "0ed683df-379c-4852-a7d3-e438592c3133",
+     "187041eb-7e87-4529-9ac8-1839201d8e42",
+     "18acf559-f8e8-4897-b498-5a95ccd5a05b",
+     "1a55a388-6c20-4036-8c49-0db8bf27ad88"
+    ]
+   },
+   "mark_schemes": {
+    "arch_n": 7,
+    "live_n": 7,
+    "missing_live": [],
+    "extra_live": [],
+    "changed": [
+     "1e1c8adb-2599-4972-a711-779afac1118a",
+     "7ae33f6d-1059-454f-9808-4e22c915d9c6",
+     "bca746ff-ce3b-4302-a6ce-40db4ac4593a",
+     "c5f1c492-1296-4d3f-b6cb-3e77328771bd",
+     "cc964eb9-8de9-4b0d-a489-c8ff9589bbf2",
+     "ea575c6c-33b8-4850-be0b-9f53c49f250e"
+    ]
+   },
+   "mark_points": {
+    "arch_n": 28,
+    "live_n": 34,
+    "missing_live": [],
+    "extra_live": [
+     "161ab4ee-163f-417c-872b-bb808210417d",
+     "1704f746-e222-4c90-be4a-98803fa037b8",
+     "6ab6cc38-af80-46b0-978e-d4eebdad0f4e",
+     "71c1bc3f-1f9d-413e-8a22-798f26ed933a",
+     "93d0b80f-8f12-4100-89bf-90febcaf77b3",
+     "e4099e99-9add-4ced-903c-89365d78cb04"
+    ],
+    "changed": [
+     "01171d70-5615-4476-996e-04735d6f1cc2",
+     "0452317d-93a5-4666-9943-e774b791b58b",
+     "196dae1c-71e6-4eac-bb6d-8a18400d127e",
+     "267ad489-b7be-419f-b678-3d413b86234f",
+     "29f340dc-c8de-4137-8b65-c4c02333b70e",
+     "399aa0ac-9649-4f00-8dbf-125cfa2955dc"
+    ]
+   }
+  },
+  "changed_detail": {
+   "questions": {
+    "12b71631-0cc6-45f5-a789-6df822db484a": {},
+    "148ed375-f37a-4b63-86f4-ee56a1eb3450": {},
+    "3892dcc2-c122-4436-a2f1-ebe21dc006ab": {}
+   },
+   "question_versions": {
+    "0d7ce8a2-4a55-4dac-a675-27bf4f9db74b": {},
+    "27733df4-cc00-4017-a5c4-d83a392b0c7a": {},
+    "43a6dc5c-f7fb-406c-8da3-6ce7db157dbf": {}
+   },
+   "question_parts": {
+    "001a94bc-23bf-4c84-bb86-9d4e724b5fc1": {},
+    "064d586d-637a-453e-b417-42d422bfa3d7": {},
+    "0ed683df-379c-4852-a7d3-e438592c3133": {}
+   },
+   "mark_schemes": {
+    "1e1c8adb-2599-4972-a711-779afac1118a": {},
+    "7ae33f6d-1059-454f-9808-4e22c915d9c6": {},
+    "bca746ff-ce3b-4302-a6ce-40db4ac4593a": {}
+   },
+   "mark_points": {
+    "01171d70-5615-4476-996e-04735d6f1cc2": {},
+    "0452317d-93a5-4666-9943-e774b791b58b": {},
+    "196dae1c-71e6-4eac-bb6d-8a18400d127e": {}
+   }
+  },
+  "bridge_live": {
+   "id": "34e1334d-3f7d-4194-bf5b-b19c48037faf",
+   "paper_id": "f10c6814-c4ce-425d-afb6-3501eb5f06e1",
+   "bridge": "glm-ocr-v1",
+   "qp_document_id": "0751cabc-52fc-556c-8d3f-87ab6b8b2813",
+   "ms_document_id": "f2237b67-6699-5fee-8ce7-805f922c9aa5",
+   "qp_document_row_id": "1c44c795-c353-4aff-a069-62d94f244414",
+   "ms_document_row_id": "586d0599-ef84-43dd-b370-bdd8ca56a523",
+   "qp_checksum": "13b8cded84321a508bb84d6f9d28a305c83001b6c4b81721ef09741394f95329",
+   "ms_checksum": "b0cd2f7b2531285c5866e0d77c08ee9d4438795a06f1ea34b5d052a4419b3bd5",
+   "extraction_methods": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "reconciliation_status": "OK",
+   "review_findings": "[{'detail': 'Q1: QP total 5 vs MS total unknown (qp-only)', 'source': 'RECONCILIATION', 'msMarks': None, 'qpMarks': 5, 'severity': 'qp-only', 'questionNumber': '1'}, {'detail': 'Q2: QP total 5 vs MS total unknown (qp-only)', 'source': 'RECONCILIATION', 'msMarks': None, 'qpMarks': 5, 'severity': 'qp-only', 'questionNumber': '2'}, {'detail': 'Q4: QP total 9 vs MS total unknown (qp-only)', 'source': 'RECONCILIATION', 'msMarks': None, 'qpMarks': 9, 'severity': 'qp-only', 'questionNumber': '4'}, {'detail': 'Q6: QP total 15 vs MS total unknown (qp-only)', 'source': 'RECONCILIATION', 'msMarks': None, 'qpMarks': 15, 'severity': 'qp-only', 'questionNumber': '6'}, {'detail': 'Q7: QP total 14 vs MS total unknown (qp-only)', 'source': 'RECONCILIATION', 'msMarks': None, 'qpMarks': 14, 'severity': 'qp-only', 'questionNumber': '7'}, {'detail': 'unclassified heading: maximum mass=', 'source': 'QP_WARNING', 'msMarks': None, 'qpMarks': None, 'severity': 'warning', 'questionNumber': None}, {'detail': 'Q3: incomplete MCQ option set folded into stem', 'source': 'QP_WARNING', 'msMarks': None, 'qpMarks': None, 'severity': 'warning', 'questionNumber': None}, {'detail': 'Q4: incomplete MCQ option set folded into stem', 'source': 'QP_WARNING', 'msMarks': None, 'qpMarks': None, 'severity': 'warning', 'questionNumber': None}, {'detail': '5(a)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)', 'source': 'MS_WARNING', 'msMarks': None, 'qpMarks': None, 'severity': 'warning', 'questionNumber': None}, {'detail': '6(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)', 'source': 'MS_WARNING', 'msMarks': None, 'qpMarks': None, 'severity': 'warning', 'questionNumber': None}, {'detail': '6(a): extra integer cell \"1\" skipped (rubric/rowspan ambiguity)', 'source': 'MS_WARNING', 'msMarks': None, 'qpMarks': None, 'severity': 'warning', 'questionNumber': None}, {'detail': '7(c)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)', 'source': 'MS_WARNING', 'msMarks': None, 'qpMarks': None, 'severity': 'warning', 'questionNumber': None}]",
+   "qp_draft": "{'paper': {'board': 'Edexcel', 'session': 'January 2021', 'subject': None, 'duration': 'Morning (Time: 1 hour 15 minutes)', 'examDate': 'Thursday 14 January 2021', 'logNumber': None, 'qualification': None, 'paperReference': '4CH1/2C', 'publicationCode': None, 'canonicalDocumentId': '0751cabc-52fc-556c-8d3f-87ab6b8b2813'}, 'warnings': ['unclassified heading: maximum mass=', 'Q3: incomplete MCQ option set folded into stem', 'Q4: incomplete MCQ option set folded into stem'], 'questions': [{'mcq': False, 'qwc': False, 'stem': 'The diagram shows an atom of an element.', 'marks': 5, 'parts': [{'qwc': False, 'text': 'What is the name of the particle labelled Y? A electron B ion C neutron D proton', 'label': 'a', 'marks': None, 'partId': 'q01-0751cabc-pa', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Give the mass number of this atom.', 'label': 'a-ii', 'marks': None, 'partId': 'q01-0751cabc-pa-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Name this element. Use the Periodic Table on page 2 to help you.', 'label': 'a-iii', 'marks': None, 'partId': 'q01-0751cabc-pa-iii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'There are two isotopes of this element. Give one way, in terms of sub-atomic particles, that these isotopes are the same and one way that they are different.', 'label': 'b', 'marks': None, 'partId': 'q01-0751cabc-pb', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}], 'number': 1, 'figures': [{'url': 'assets/crop_1_1789064212759.png', 'width': 560, 'format': 'png', 'height': 452, 'sha256': '52ac40b4d05d415ef85663fbe78ede3ad0701587a5feb328df372a59a98fcf12', 'assetId': 'img:52ac40b4d05d415ef85663fbe78ede3ad0701587a5feb328df372a59a98fcf12', 'mimeType': 'image/jpeg', 'elementId': 'e000023', 'sourceName': 'assets/crop_1_1789064212759.png', 'availability': 'available', 'formatMismatch': True}], 'options': [], 'section': None, 'confidence': 0.6, 'marksKnown': True, 'questionId': 'q01-0751cabc', 'answerPrompts': [], 'numberingStyle': 'space', 'tableElementIds': []}, {'mcq': False, 'qwc': False, 'stem': 'This question is about gases.', 'marks': 5, 'parts': [{'qwc': False, 'text': 'The box gives the names of some gases. Use gases from the box to answer these questions. Each gas may be used once, more than once or not at all.', 'label': 'a', 'marks': None, 'partId': 'q02-0751cabc-pa', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': \"Name the most abundant gas in the Earth's atmosphere.\", 'label': 'a-i', 'marks': None, 'partId': 'q02-0751cabc-pa-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Name the gas that is a compound.', 'label': 'a-ii', 'marks': None, 'partId': 'q02-0751cabc-pa-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Name the least reactive of the gases.', 'label': 'a-iii', 'marks': None, 'partId': 'q02-0751cabc-pa-iii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Name the gas formed by the complete combustion of hydrocarbons.', 'label': 'a-iv', 'marks': None, 'partId': 'q02-0751cabc-pa-iv', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Describe the test for hydrogen gas.', 'label': 'b', 'marks': None, 'partId': 'q02-0751cabc-pb', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}], 'number': 2, 'figures': [], 'options': [], 'section': None, 'confidence': 0.6, 'marksKnown': True, 'questionId': 'q02-0751cabc', 'answerPrompts': [], 'numberingStyle': 'space', 'tableElementIds': ['e000037']}, {'mcq': False, 'qwc': False, 'stem': \"This question is about carboxylic acids. Solutions of carboxylic acids react with magnesium metal to form hydrogen gas. This is the student's method. pour some carboxylic acid solution into a conical flask add some magnesium powder quickly connect the gas syringe and start a timer record the time taken to collect $ 1 0 \\\\mathrm{c m}^{3} $ of hydrogen gas The student repeats the method with three other carboxylic acids. A student uses this apparatus to investigate the time taken to produce $ 1 0 \\\\mathrm{c m}^{3} $ of hydrogen gas from different carboxylic acids.\", 'marks': 0, 'parts': [{'qwc': False, 'text': 'All the carboxylic acids are of the same concentration. Give two other variables the student should control in his investigation.', 'label': 'a', 'marks': None, 'partId': 'q03-0751cabc-pa', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Give a reason why it is important to connect the gas syringe quickly.', 'label': 'a-ii', 'marks': None, 'partId': 'q03-0751cabc-pa-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': \"The table shows the student's results.\", 'label': 'b', 'marks': None, 'partId': 'q03-0751cabc-pb', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Calculate the mean (average) time for propanoic acid to produce $ 1 0 \\\\mathrm{c m}^{3} $ of hydrogen gas.', 'label': 'b-i', 'marks': None, 'partId': 'q03-0751cabc-pb-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Deduce the relationship between the number of carbon atoms in the molecule and the time taken to produce $ 1 0 \\\\mathrm{c m}^{3} $ of hydrogen gas.', 'label': 'b-ii', 'marks': None, 'partId': 'q03-0751cabc-pb-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'An ester is formed by adding ethanoic acid to ethanol in the presence of sulfuric acid. Give the displayed formula of the ester produced when ethanoic acid reacts with ethanol.', 'label': 'c', 'marks': None, 'partId': 'q03-0751cabc-pc', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}], 'number': 3, 'figures': [{'url': 'assets/crop_1_1789064212775.png', 'width': 1341, 'format': 'png', 'height': 448, 'sha256': '62e149cd7aa7ed1279c930be3af31634fe79b283a44e03d750b565f803b615c5', 'assetId': 'img:62e149cd7aa7ed1279c930be3af31634fe79b283a44e03d750b565f803b615c5', 'mimeType': 'image/jpeg', 'elementId': 'e000049', 'sourceName': 'assets/crop_1_1789064212775.png', 'availability': 'available', 'formatMismatch': True}], 'options': [], 'section': None, 'confidence': 0.45, 'marksKnown': False, 'questionId': 'q03-0751cabc', 'answerPrompts': [], 'numberingStyle': 'space', 'tableElementIds': ['e000060']}, {'mcq': False, 'qwc': False, 'stem': 'This question is about sodium and potassium. A trough is filled with water and a few drops of phenolphthalein indicator are added.', 'marks': 9, 'parts': [{'qwc': False, 'text': 'A small piece of sodium is dropped into the water. One of the products of the reaction is an alkali.', 'label': 'a', 'marks': None, 'partId': 'q04-0751cabc-pa', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Complete the chemical equation for the reaction of sodium with water. $\\\\mathrm {N a} (\\\\dots \\\\dots \\\\dots \\\\dots \\\\dots) + \\\\mathrm {H} _ {2} \\\\mathrm {O} (\\\\mathrm {I}) \\\\rightarrow \\\\mathrm {N a O H} (\\\\dots \\\\dots \\\\dots \\\\dots) + \\\\mathrm {H} _ {2} (\\\\mathrm {g})$', 'label': 'a-i', 'marks': None, 'partId': 'q04-0751cabc-pa-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Identify the ion that causes the solution to become alkaline.', 'label': 'a-ii', 'marks': None, 'partId': 'q04-0751cabc-pa-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Give three observations that would be made when sodium reacts with water.', 'label': 'a-iii', 'marks': None, 'partId': 'q04-0751cabc-pa-iii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Explain why potassium is more reactive than sodium. Refer to the electronic configurations of the atoms in your answer.', 'label': 'b', 'marks': None, 'partId': 'q04-0751cabc-pb', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}], 'number': 4, 'figures': [], 'options': [], 'section': None, 'confidence': 0.6, 'marksKnown': True, 'questionId': 'q04-0751cabc', 'answerPrompts': [], 'numberingStyle': 'space', 'tableElementIds': []}, {'mcq': False, 'qwc': False, 'stem': 'This question is about the metal aluminium.', 'marks': 0, 'parts': [{'qwc': False, 'text': 'Aluminium is malleable and conducts electricity. The diagram shows the arrangement of the ions in aluminium metal. aluminium ion', 'label': 'a', 'marks': None, 'partId': 'q05-0751cabc-pa', 'figures': [{'url': 'assets/crop_1_1789064212864.png', 'width': 714, 'format': 'png', 'height': 416, 'sha256': '5e3f00bb555f0a1a052fe4f6e50ab01cb86a5904f3d5edd4ea58eb67bc8c3108', 'assetId': 'img:5e3f00bb555f0a1a052fe4f6e50ab01cb86a5904f3d5edd4ea58eb67bc8c3108', 'mimeType': 'image/jpeg', 'elementId': 'e000079', 'sourceName': 'assets/crop_1_1789064212864.png', 'availability': 'available', 'formatMismatch': True}], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Explain why aluminium is malleable.', 'label': 'a-i', 'marks': None, 'partId': 'q05-0751cabc-pa-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Explain why aluminium conducts electricity.', 'label': 'a-ii', 'marks': None, 'partId': 'q05-0751cabc-pa-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Aluminium cannot be extracted by heating a mixture of carbon and aluminium oxide. Give a reason why heating a mixture of aluminium oxide and carbon does not produce aluminium.', 'label': 'b', 'marks': None, 'partId': 'q05-0751cabc-pb', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Aluminium is extracted industrially by the electrolysis of molten aluminium oxide $ \\\\mathrm{A l_{2} O_{3}} $ at a temperature of about $ 9 5 0^{\\\\circ} \\\\mathrm{C}\u3002 $ Aluminium metal forms at the negative electrode and oxygen gas forms at the positive electrode. The positive and negative electrodes are made of graphite. The diagram shows the apparatus used.', 'label': 'c', 'marks': None, 'partId': 'q05-0751cabc-pc', 'figures': [{'url': 'assets/crop_1_1789064212876.png', 'width': 1147, 'format': 'png', 'height': 649, 'sha256': 'aa5a921771636953835f2e6e6097856c21a429cf0308fb7bff8c0f8906d80811', 'assetId': 'img:aa5a921771636953835f2e6e6097856c21a429cf0308fb7bff8c0f8906d80811', 'mimeType': 'image/jpeg', 'elementId': 'e000088', 'sourceName': 'assets/crop_1_1789064212876.png', 'availability': 'available', 'formatMismatch': True}], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Explain how aluminium metal forms at the negative electrode.', 'label': 'c-i', 'marks': None, 'partId': 'q05-0751cabc-pc-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Write an ionic half-equation for the formation of oxygen gas at the positive electrode.', 'label': 'c-ii', 'marks': None, 'partId': 'q05-0751cabc-pc-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Suggest why carbon dioxide gas is also produced at the positive electrode.', 'label': 'c-iii', 'marks': None, 'partId': 'q05-0751cabc-pc-iii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Aluminium reacts with iron(III) oxide. The reaction is exothermic. $2 \\\\mathrm {A l} + \\\\mathrm {F e} _ {2} \\\\mathrm {O} _ {3} \\\\rightarrow \\\\mathrm {A l} _ {2} \\\\mathrm {O} _ {3} + 2 \\\\mathrm {F e}$ The equation for the reaction is', 'label': 'd', 'marks': None, 'partId': 'q05-0751cabc-pd', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'State how the equation shows that iron(III) oxide is reduced.', 'label': 'd-i', 'marks': None, 'partId': 'q05-0751cabc-pd-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Draw an energy level diagram for the reaction between aluminium and iron(III) oxide.', 'label': 'd-ii', 'marks': None, 'partId': 'q05-0751cabc-pd-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}], 'number': 5, 'figures': [{'url': 'assets/crop_1_1789064212864.png', 'width': 714, 'format': 'png', 'height': 416, 'sha256': '5e3f00bb555f0a1a052fe4f6e50ab01cb86a5904f3d5edd4ea58eb67bc8c3108', 'assetId': 'img:5e3f00bb555f0a1a052fe4f6e50ab01cb86a5904f3d5edd4ea58eb67bc8c3108', 'mimeType': 'image/jpeg', 'elementId': 'e000079', 'sourceName': 'assets/crop_1_1789064212864.png', 'availability': 'available', 'formatMismatch': True}, {'url': 'assets/crop_1_1789064212876.png', 'width': 1147, 'format': 'png', 'height': 649, 'sha256': 'aa5a921771636953835f2e6e6097856c21a429cf0308fb7bff8c0f8906d80811', 'assetId': 'img:aa5a921771636953835f2e6e6097856c21a429cf0308fb7bff8c0f8906d80811', 'mimeType': 'image/jpeg', 'elementId': 'e000088', 'sourceName': 'assets/crop_1_1789064212876.png', 'availability': 'available', 'formatMismatch': True}], 'options': [], 'section': None, 'confidence': 0.45, 'marksKnown': False, 'questionId': 'q05-0751cabc', 'answerPrompts': [], 'numberingStyle': 'space', 'tableElementIds': []}, {'mcq': False, 'qwc': False, 'stem': 'This question is about the insoluble salt silver chloride (AgCl). Silver chloride can be made by the reaction between copper(II) chloride and silver nitrate.', 'marks': 15, 'parts': [{'qwc': False, 'text': 'Describe how a student could prepare a pure, dry sample of silver chloride starting with copper(II) chloride solution and silver nitrate solution.', 'label': 'a', 'marks': None, 'partId': 'q06-0751cabc-pa', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': \"A student investigates the quantity of silver chloride produced when different volumes of silver nitrate solution are added to copper(II) chloride solution. This is the student's method. pour $ 5. 0 \\\\mathrm{c m}^{3} $ of copper(II) chloride solution into a test tube add 1.0 $ cm^{3} $ of silver nitrate solution to the test tube allow the silver chloride precipitate to settle measure the height of the precipitate The student repeats the method using different volumes of silver nitrate solution. The table shows the student's results.\", 'label': 'b', 'marks': None, 'partId': 'q06-0751cabc-pb', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': \"Plot the student's results.\", 'label': 'b-i', 'marks': None, 'partId': 'q06-0751cabc-pb-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Draw two straight lines of best fit, ignoring the anomalous result. Volume of silver nitrate added in $ \\\\mathrm{c m}^{3} $', 'label': 'b-ii', 'marks': None, 'partId': 'q06-0751cabc-pb-ii', 'figures': [{'url': 'assets/crop_1_1789064212921.png', 'width': 834, 'format': 'png', 'height': 855, 'sha256': 'c232dde90b3cf5e142d10b0eb1d46d5e35529045c12000f9a51979c73d133c00', 'assetId': 'img:c232dde90b3cf5e142d10b0eb1d46d5e35529045c12000f9a51979c73d133c00', 'mimeType': 'image/jpeg', 'elementId': 'e000111', 'sourceName': 'assets/crop_1_1789064212921.png', 'availability': 'available', 'formatMismatch': True}], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Suggest a mistake the student made to cause the anomalous result.', 'label': 'b-iii', 'marks': None, 'partId': 'q06-0751cabc-pb-iii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Give a reason why the last three heights are the same.', 'label': 'b-iv', 'marks': None, 'partId': 'q06-0751cabc-pb-iv', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'The equation for the reaction between copper(II) chloride and silver nitrate is $\\\\mathrm {C u C l} _ {2} (\\\\mathrm {a q}) + 2 \\\\mathrm {A g N O} _ {3} (\\\\mathrm {a q}) \\\\rightarrow 2 \\\\mathrm {A g C l} (\\\\mathrm {s}) + \\\\mathrm {C u} \\\\left(\\\\mathrm {N O} _ {3}\\\\right) _ {2} (\\\\mathrm {a q})$ A student measures $ 2 5. 0 \\\\mathrm{c m}^{3} $ of $ 0. 5 0 0 \\\\mathrm{m o l} / \\\\mathrm{d m}^{3} $ copper(II) chloride solution and reacts it with silver nitrate solution.', 'label': 'c', 'marks': None, 'partId': 'q06-0751cabc-pc', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Name a piece of apparatus suitable for measuring $ 2 5. 0 \\\\mathrm{c m}^{3} $ of copper(II) chloride solution.', 'label': 'c-i', 'marks': None, 'partId': 'q06-0751cabc-pc-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Calculate the maximum mass, in grams, of silver chloride that could be produced. $ [ M_{r} $ of $ \\\\mathrm{A g C l}=1 4 3. 5] $', 'label': 'c-ii', 'marks': None, 'partId': 'q06-0751cabc-pc-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'In an experiment using different solutions, the mass of silver chloride produced is 0.744 g. The maximum mass of silver chloride that could be produced is 0.850 g. Calculate the percentage yield.', 'label': 'c-iii', 'marks': None, 'partId': 'q06-0751cabc-pc-iii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}], 'number': 6, 'figures': [{'url': 'assets/crop_1_1789064212921.png', 'width': 834, 'format': 'png', 'height': 855, 'sha256': 'c232dde90b3cf5e142d10b0eb1d46d5e35529045c12000f9a51979c73d133c00', 'assetId': 'img:c232dde90b3cf5e142d10b0eb1d46d5e35529045c12000f9a51979c73d133c00', 'mimeType': 'image/jpeg', 'elementId': 'e000111', 'sourceName': 'assets/crop_1_1789064212921.png', 'availability': 'available', 'formatMismatch': True}], 'options': [], 'section': None, 'confidence': 0.6, 'marksKnown': True, 'questionId': 'q06-0751cabc', 'answerPrompts': [], 'numberingStyle': 'space', 'tableElementIds': ['e000108']}, {'mcq': False, 'qwc': False, 'stem': 'This question is about octane $ \\\\left( \\\\mathrm{C}_{8} \\\\mathrm{H}_{1 8} \\\\right) $ which is produced in the gasoline fraction during fractional distillation of crude oil.', 'marks': 14, 'parts': [{'qwc': False, 'text': 'The diagram shows a fractionating column. Describe how crude oil is separated into fractions in the fractionating column.', 'label': 'a', 'marks': None, 'partId': 'q07-0751cabc-pa', 'figures': [{'url': 'assets/crop_1_1789064212939.png', 'width': 1016, 'format': 'png', 'height': 578, 'sha256': '1aa2acd2022bc247c214343602976f3426ef1c0eb2aa7f7bceb4d9e901513839', 'assetId': 'img:1aa2acd2022bc247c214343602976f3426ef1c0eb2aa7f7bceb4d9e901513839', 'mimeType': 'image/jpeg', 'elementId': 'e000127', 'sourceName': 'assets/crop_1_1789064212939.png', 'availability': 'available', 'formatMismatch': True}], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Octane can also be produced by the process of cracking. Give the conditions for cracking.', 'label': 'b', 'marks': None, 'partId': 'q07-0751cabc-pb', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'A car is driven at constant speed for 4.00 km. The exhaust gases are collected and their volume at room temperature and pressure (rtp) is $ 5.02\\\\times10^{5}\\\\mathrm{cm}^{3}. $ The exhaust gases include carbon dioxide and oxides of nitrogen. The carbon dioxide is removed from the exhaust gases. The volume of the remaining gases at rtp is $ 2.96\\\\times10^{5}\\\\mathrm{cm}^{3}. $', 'label': 'c', 'marks': None, 'partId': 'q07-0751cabc-pc', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Explain how oxides of nitrogen form in a car engine.', 'label': 'c-i', 'marks': None, 'partId': 'q07-0751cabc-pc-i', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Give a reason why oxides of nitrogen should not be released into the atmosphere.', 'label': 'c-ii', 'marks': None, 'partId': 'q07-0751cabc-pc-ii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}, {'qwc': False, 'text': 'Show that the car produces less than 100g of carbon dioxide per km. [molar volume of carbon dioxide at rtp=24000 $ cm^{3} $]', 'label': 'c-iii', 'marks': None, 'partId': 'q07-0751cabc-pc-iii', 'figures': [], 'confidence': 0.55, 'answerPrompts': []}], 'number': 7, 'figures': [{'url': 'assets/crop_1_1789064212939.png', 'width': 1016, 'format': 'png', 'height': 578, 'sha256': '1aa2acd2022bc247c214343602976f3426ef1c0eb2aa7f7bceb4d9e901513839', 'assetId': 'img:1aa2acd2022bc247c214343602976f3426ef1c0eb2aa7f7bceb4d9e901513839', 'mimeType': 'image/jpeg', 'elementId': 'e000127', 'sourceName': 'assets/crop_1_1789064212939.png', 'availability': 'available', 'formatMismatch': True}], 'options': [], 'section': None, 'confidence': 0.6, 'marksKnown': True, 'questionId': 'q07-0751cabc', 'answerPrompts': [], 'numberingStyle': 'space', 'tableElementIds': []}], 'paperTotal': 70, 'schemaVersion': '1.0', 'sectionTotals': {}, 'questionTotals': {'1': 5, '2': 5, '4': 9, '6': 15, '7': 14}, 'reviewRequired': True, 'extractionMethod': 'glm-ocr-qp-v1', 'frontMatterFigures': []}",
+   "ms_draft": "{'paper': {'board': 'Edexcel', 'session': 'January 2021', 'subject': None, 'duration': None, 'examDate': None, 'logNumber': None, 'qualification': None, 'paperReference': None, 'publicationCode': '4CH1_2C_2101_MS', 'canonicalDocumentId': 'f2237b67-6699-5fee-8ce7-805f922c9aa5'}, 'entries': [{'mcq': False, 'qwc': False, 'label': '1(a)(i)', 'marks': 1, 'number': 1, 'entryId': 'ms-f2237b67-q1ai', 'guidance': [], 'answerText': 'D\\nD is the correct answer because protons occur in the nucleus and have a positive charge.\\nA is not the correct answer since electrons occur in the energy levels.\\nB is not the answer since ions do not occur in the nucleus.\\nC is not the correct answer since neutrons have no charge.', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'two-level label row'}, {'mcq': False, 'qwc': False, 'label': '1(a)(ii)', 'marks': 1, 'number': 1, 'entryId': 'ms-f2237b67-q1aii', 'guidance': [], 'answerText': '7', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '1(a)(iii)', 'marks': 1, 'number': 1, 'entryId': 'ms-f2237b67-q1aiii', 'guidance': [{'kind': 'allow', 'text': 'ALLOW Li'}], 'answerText': 'lithium', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '1(b)(i)', 'marks': 2, 'number': 1, 'entryId': 'ms-f2237b67-q1bi', 'guidance': [{'kind': 'allow', 'text': 'ALLOW same number of electrons'}, {'kind': 'note', 'text': '2'}, {'kind': 'ignore', 'text': 'IGNORE references to mass number and atomic number.'}], 'answerText': 'M1 same number of protons\\nM2 different number of neutrons\\n5 marks', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '2(a)(i)', 'marks': 1, 'number': 2, 'entryId': 'ms-f2237b67-q2ai', 'guidance': [{'kind': 'allow', 'text': 'ALLOWN2/N'}], 'answerText': 'nitrogen', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'label row'}, {'mcq': False, 'qwc': False, 'label': '2(a)(ii)', 'marks': 1, 'number': 2, 'entryId': 'ms-f2237b67-q2aii', 'guidance': [{'kind': 'allow', 'text': 'ALLOWCO2'}], 'answerText': 'carbon dioxide', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '2(a)(iii)', 'marks': 1, 'number': 2, 'entryId': 'ms-f2237b67-q2aiii', 'guidance': [{'kind': 'allow', 'text': 'ALLOWAr'}], 'answerText': 'argon', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '2(a)(iv)', 'marks': 1, 'number': 2, 'entryId': 'ms-f2237b67-q2aiv', 'guidance': [{'kind': 'allow', 'text': 'ALLOWCO2'}], 'answerText': 'carbon dioxide', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '2(b)', 'marks': 1, 'number': 2, 'entryId': 'ms-f2237b67-q2b', 'guidance': [], 'answerText': 'lighted splint (produces squeaky) pop\\n5 marks', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '3(a)(i)', 'marks': 2, 'number': 3, 'entryId': 'ms-f2237b67-q3ai', 'guidance': [{'kind': 'allow', 'text': 'ALLOW so no gas escapes'}, {'kind': 'ignore', 'text': 'IGNORE references to accuracy'}, {'kind': 'note', 'text': 'REJECT references to gas getting in'}], 'answerText': 'Any two from:\\nM1 volume of acid\\nM2 temperature\\nM3 mass/moles of magnesium\\nM4 surface area/size of pieces of magnesium\\n(ii)so as little gas as possible escapes', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'label row'}, {'mcq': False, 'qwc': False, 'label': '3(b)(i)', 'marks': 2, 'number': 3, 'entryId': 'ms-f2237b67-q3bi', 'guidance': [{'kind': 'note', 'text': 'Answer of70withorwithoutworkingscores2'}, {'kind': 'note', 'text': 'Answerof76or75.8or75.75withorwithoutworkingscores1'}], 'answerText': 'M1(69+70+71)\u00f73\\nM270s\\n(ii)as the(number of)carbonsincreases the time(to produce10cm3ofhydrogen)increasesORA', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '3(c)', 'marks': 2, 'number': 3, 'entryId': 'ms-f2237b67-q3c', 'guidance': [], 'answerText': 'M1ester linkage as a displayed structure\\nM2rest ofmoleculecorrectasafullydisplayedstructure\\n8marks', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '4(a)(i)', 'marks': 2, 'number': 4, 'entryId': 'ms-f2237b67-q4ai', 'guidance': [{'kind': 'note', 'text': 'M1 correct balancing numbers'}, {'kind': 'allow', 'text': 'ALLOW multiples or fractions.'}, {'kind': 'note', 'text': 'M2(s)\u548c(aq) for state symbols'}], 'answerText': '$2\\\\text{Na}(\\\\mathbf{s})+2\\\\text{H}_{2}\\\\text{O}(\\\\mathrm{l})\\\\rightarrow 2\\\\text{NaOH}(\\\\mathbf{aq})+\\\\text{H}_{2}(\\\\mathrm{g})$', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'label row'}, {'mcq': False, 'qwc': False, 'label': '4(a)(ii)', 'marks': 1, 'number': 4, 'entryId': 'ms-f2237b67-q4aii', 'guidance': [{'kind': 'note', 'text': 'REJECT OH'}], 'answerText': 'hydroxide or OH^{-}$', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '4(a)(iii)', 'marks': 3, 'number': 4, 'entryId': 'ms-f2237b67-q4aiii', 'guidance': [{'kind': 'note', 'text': 'M1 the sodium moves(on the surface)'}, {'kind': 'allow', 'text': 'ALLOW sodium floats'}, {'kind': 'note', 'text': 'M2 effervescence or bubbles(of gas)'}, {'kind': 'ignore', 'text': 'IGNORE gas or hydrogen produced'}, {'kind': 'note', 'text': 'M3(indicator or phenolphthalein or water) turns pink'}, {'kind': 'ignore', 'text': 'IGNORE initial colour of indicator'}, {'kind': 'note', 'text': 'M4 the sodium gets smaller'}, {'kind': 'allow', 'text': 'ALLOW the sodium disappears/(appears to) dissolve'}, {'kind': 'note', 'text': 'M5 the sodium melts or turns into a ball'}], 'answerText': 'Any three from:', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '4(b)', 'marks': 3, 'number': 4, 'entryId': 'ms-f2237b67-q4b', 'guidance': [{'kind': 'allow', 'text': 'ALLOW the outer shell is further from the nucleus'}, {'kind': 'note', 'text': 'M2 outer electron less attracted(to the nucleus of potassium)'}, {'kind': 'allow', 'text': 'ALLOW potassium has more shells'}, {'kind': 'note', 'text': 'M3 therefore(outer shell electron)is more easily lost'}, {'kind': 'allow', 'text': 'ALLOW reverse argument for sodium'}], 'answerText': 'M1 electron configuration of sodium is2,8,1and electron configuration of potassium is2,8,8,1\\n9 marks', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '5(a)(i)', 'marks': 2, 'number': 5, 'entryId': 'ms-f2237b67-q5ai', 'guidance': [{'kind': 'note', 'text': 'M2 can slide over one another'}, {'kind': 'note', 'text': 'M2 is dependent on mention of layers/rows in M1'}, {'kind': 'note', 'text': 'M1 delocalised electronsM2 can move/can flow/are free to move(throughout the structure)'}, {'kind': 'ignore', 'text': 'IGNORE references to charge or currentIGNORE free electronsM2 dependent on mention of electrons in M1'}], 'answerText': 'M1 layers/rows(of atoms/ions)', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'label row'}, {'mcq': False, 'qwc': False, 'label': '5(b)', 'marks': 1, 'number': 5, 'entryId': 'ms-f2237b67-q5b', 'guidance': [{'kind': 'allow', 'text': 'ALLOW references to position in reactivity series e.g. aluminium is higher in reactivity series than carbon.ALLOW carbon is less reactive than aluminium'}], 'answerText': 'aluminium is more reactive than carbon', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '5(c)(i)', 'marks': 2, 'number': 5, 'entryId': 'ms-f2237b67-q5ci', 'guidance': [{'kind': 'note', 'text': 'M2 where they gain electrons(forming aluminium)'}, {'kind': 'allow', 'text': 'ALLOW Al3+ + 3e-\u2192AlIGNORE references to reduction'}], 'answerText': 'M1 aluminium/Al3+ions are attracted to the negative electrode/cathode(because they are positively charged)', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '5(c)(ii)', 'marks': 1, 'number': 5, 'entryId': 'ms-f2237b67-q5cii', 'guidance': [{'kind': 'allow', 'text': 'ALLOW 2O2- - 4e-\u2192O2'}], 'answerText': '2O2-\u2192O2+4e-', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '5(c)(iii)', 'marks': 2, 'number': 5, 'entryId': 'ms-f2237b67-q5ciii', 'guidance': [{'kind': 'note', 'text': 'M2 which reacts with/burns in oxygen'}], 'answerText': 'M1 electrodes are made of carbon', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '5(d)(i)', 'marks': 1, 'number': 5, 'entryId': 'ms-f2237b67-q5di', 'guidance': [{'kind': 'ignore', 'text': 'IGNORE references to electrons'}], 'answerText': 'iron oxide loses oxygen', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'table-start continuation row'}, {'mcq': False, 'qwc': False, 'label': '5(d)(ii)', 'marks': 3, 'number': 5, 'entryId': 'ms-f2237b67-q5dii', 'guidance': [{'kind': 'ignore', 'text': 'IGNORE horizontal axis drawn'}, {'kind': 'note', 'text': 'M1 right hand line below left hand line'}, {'kind': 'note', 'text': 'M2 correct name/formula of both reactants'}, {'kind': 'note', 'text': 'M3 correct name/formula of both products'}, {'kind': 'note', 'text': 'If only use words reactants(on left)\u548c products(on right) award 1 mark from M2 and M3'}, {'kind': 'note', 'text': 'M2 and M3 can be scored from an endothermic diagram'}], 'answerText': 'aluminium+iron oxide\\niron+aluminium oxide\\n14 marks', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '6(a)', 'marks': 4, 'number': 6, 'entryId': 'ms-f2237b67-q6a', 'guidance': [{'kind': 'ignore', 'text': 'IGNORE references to heating'}, {'kind': 'note', 'text': 'M2 filter(the silver chloride)'}, {'kind': 'note', 'text': 'M3 wash with(deionised/distilled)water'}, {'kind': 'note', 'text': 'M4 dry in a warm ovenor dry with filter paperor leave/allow to dry(on a windowsill)or dry in a desiccator'}, {'kind': 'note', 'text': 'If evaporation is mentioned to form crystals max=1'}, {'kind': 'note', 'text': '(b)'}, {'kind': 'note', 'text': '(i)'}, {'kind': 'note', 'text': 'M1 and M2 all points correctly plotted to\u00b1half a square'}, {'kind': 'note', 'text': 'Deduct1mark for every incorrect point.'}], 'answerText': 'M1 mix/stir/add(silver nitrate and copper(II) chloride)', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'two-level label row'}, {'mcq': False, 'qwc': False, 'label': '6(a)(ii)', 'marks': None, 'number': 6, 'entryId': 'ms-f2237b67-q6aii', 'guidance': [], 'answerText': 'M3 two straight lines of best fit which must meet at3cmand6cm3', 'confidence': 0.5, 'markPoints': [], 'correctOption': None, 'marksCellSource': None}, {'mcq': False, 'qwc': False, 'label': '6(a)(iii)', 'marks': None, 'number': 6, 'entryId': 'ms-f2237b67-q6aiii', 'guidance': [{'kind': 'allow', 'text': 'ALLOW measured the height too earlyIGNORE references to human error unqualified'}], 'answerText': \"Anyone from:the precipitate wasn't left to settle(for long enough)the tube was on a slantnot enough/less than3.0cm3of silver nitrate added\", 'confidence': 0.5, 'markPoints': [], 'correctOption': None, 'marksCellSource': None}, {'mcq': False, 'qwc': False, 'label': '6(a)(iv)', 'marks': 1, 'number': 6, 'entryId': 'ms-f2237b67-q6aiv', 'guidance': [{'kind': 'allow', 'text': 'ALLOWthe silver nitrate is in excess/not all the silver nitrate has reacted'}], 'answerText': 'all the copper[(II)]chloride has reacted', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '6(c)(i)', 'marks': 1, 'number': 6, 'entryId': 'ms-f2237b67-q6ci', 'guidance': [{'kind': 'allow', 'text': 'ALLOW measuring cylinder'}, {'kind': 'note', 'text': '(volumetric) pipette'}, {'kind': 'note', 'text': 'REJECT beaker'}], 'answerText': 'Any one from:burette', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'table-start continuation row'}, {'mcq': False, 'qwc': False, 'label': '6(c)(ii)', 'marks': 3, 'number': 6, 'entryId': 'ms-f2237b67-q6cii', 'guidance': [{'kind': 'note', 'text': 'M1 moles of coper chloride=(25x0.50)\u00f71000 OR0.0125 moles'}, {'kind': 'note', 'text': 'M2 moles of silver chloride=0.0250'}, {'kind': 'allow', 'text': 'ALLOW answer to M1x2'}, {'kind': 'note', 'text': 'M3 mass of silver chloride=3.59g'}, {'kind': 'allow', 'text': 'ALLOW answer to M1or M2x143.5ALLOW2or more significant figuresCorrect answer of 3.59g scores3 marks'}], 'answerText': 'Example calculation', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '6(c)(iii)', 'marks': 2, 'number': 6, 'entryId': 'ms-f2237b67-q6ciii', 'guidance': [{'kind': 'note', 'text': 'M287.5(%)'}, {'kind': 'allow', 'text': 'ALLOW2or more significant figures'}], 'answerText': 'M1(0.744\u00f70.850)x100\\n15 marks', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '7(a)', 'marks': 4, 'number': 7, 'entryId': 'ms-f2237b67-q7a', 'guidance': [{'kind': 'allow', 'text': 'ALLOW boiled'}, {'kind': 'note', 'text': 'M2 vapours/gases/compounds/hydrocarbons rise up the column'}, {'kind': 'allow', 'text': 'ALLOW temperature gradient of the column'}, {'kind': 'note', 'text': 'M3 the column is hotter at the bottom than the top'}, {'kind': 'allow', 'text': 'ALLOW vapours/compounds/hydrocarbons/condense at different heights'}, {'kind': 'note', 'text': 'M4 vapours/compounds/hydrocarbons condense at their boiling point'}, {'kind': 'allow', 'text': 'ALLOW the vapours/compounds/hydrocarbons/fractions have different boiling points.'}], 'answerText': 'M1 crude oil is heated/vapourised', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'label row'}, {'mcq': False, 'qwc': False, 'label': '7(b)', 'marks': 2, 'number': 7, 'entryId': 'ms-f2237b67-q7b', 'guidance': [{'kind': 'note', 'text': 'M2 catalyst of silica/alumina'}, {'kind': 'allow', 'text': 'ALLOW aluminosilicates/zeolites/silicon dioxide/aluminium oxide'}, {'kind': 'ignore', 'text': 'IGNORE references to pressure'}], 'answerText': 'M1 temperature of 600\u2103-700\u2103', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}, {'mcq': False, 'qwc': False, 'label': '7(c)(i)', 'marks': 2, 'number': 7, 'entryId': 'ms-f2237b67-q7ci', 'guidance': [{'kind': 'note', 'text': 'REJECT any implication that oxygen or nitrogen come from the fuel.'}], 'answerText': 'M1 nitrogen(from the air) reacts/combines with oxygen(from the air)\\nM2 at high temperatures(in the car engine)', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'table-start continuation row'}, {'mcq': False, 'qwc': False, 'label': '7(c)(ii)', 'marks': 5, 'number': 7, 'entryId': 'ms-f2237b67-q7cii', 'guidance': [{'kind': 'note', 'text': 'Division by 4 can happen in M1,M2,M3 or M5ALLOW M1\u00f74M3(51500\u00f724000)=2.15 molesALLOW M2 orM1\u00f724000M4Mrof carbon dioxide is44M5 mass of carbon dioxide per Km=94.4gALLOW 94-95gALLOW ecf from incorrectMrCorrect answer of 94-95g scores 5 marks.'}], 'answerText': 'Any one from:acid rainrespiratory problems\\n14 marks', 'confidence': 0.75, 'markPoints': [], 'correctOption': None, 'marksCellSource': 'continuation label row'}], 'icTable': None, 'warnings': ['5(a)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)', '6(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)', '6(a): extra integer cell \"1\" skipped (rubric/rowspan ambiguity)', '7(c)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)'], 'paperTotal': None, 'schemaVersion': '1.0', 'questionTotals': {}, 'reviewRequired': True, 'extractionMethod': 'glm-ocr-ms-v1'}",
+   "reconciliation": "{'findings': [{'msMarks': None, 'qpMarks': 5, 'severity': 'qp-only', 'questionNumber': '1'}, {'msMarks': None, 'qpMarks': 5, 'severity': 'qp-only', 'questionNumber': '2'}, {'msMarks': None, 'qpMarks': 9, 'severity': 'qp-only', 'questionNumber': '4'}, {'msMarks': None, 'qpMarks': 15, 'severity': 'qp-only', 'questionNumber': '6'}, {'msMarks': None, 'qpMarks': 14, 'severity': 'qp-only', 'questionNumber': '7'}], 'msPaperTotal': None, 'qpPaperTotal': 70, 'mismatchCount': 0, 'paperTotalConflict': False}",
+   "created_by": "None",
+   "created_at": "2026-09-14 12:03:04.876822+00:00"
+  },
+  "fks_into_chain": [
+   [
+    "answers",
+    "question_parts",
+    "question_part_id",
+    "id"
+   ],
+   [
+    "attempts",
+    "questions",
+    "question_id",
+    "id"
+   ],
+   [
+    "glm_ocr_bridge_records",
+    "exam_papers",
+    "paper_id",
+    "id"
+   ],
+   [
+    "mark_points",
+    "mark_schemes",
+    "mark_scheme_id",
+    "id"
+   ],
+   [
+    "mark_points",
+    "question_parts",
+    "question_part_id",
+    "id"
+   ],
+   [
+    "mark_schemes",
+    "question_versions",
+    "question_version_id",
+    "id"
+   ],
+   [
+    "question_options",
+    "questions",
+    "question_id",
+    "id"
+   ],
+   [
+    "question_parts",
+    "question_versions",
+    "question_version_id",
+    "id"
+   ],
+   [
+    "question_spec_points",
+    "questions",
+    "question_id",
+    "id"
+   ],
+   [
+    "question_topics",
+    "questions",
+    "question_id",
+    "id"
+   ],
+   [
+    "question_versions",
+    "questions",
+    "question_id",
+    "id"
+   ],
+   [
+    "questions",
+    "exam_papers",
+    "exam_paper_id",
+    "id"
+   ],
+   [
+    "smart_mark_agreement_evaluations",
+    "exam_papers",
+    "exam_paper_id",
+    "id"
+   ],
+   [
+    "smart_mark_results",
+    "mark_schemes",
+    "mark_scheme_id",
+    "id"
+   ]
+  ],
+  "reference_counts": {
+   "attempts(qv)": "ERR column \"question_version_id\" does not exist\nLINE 1: SELECT count(*) FROM attempt",
+   "attempts(q)": 3,
+   "smr_eval(qv)": "ERR column \"question_version_id\" does not exist\nLINE 1: ...nt(*) FROM smart_mark_agr",
+   "attempts(paper)": "ERR column \"exam_paper_id\" does not exist\nLINE 1: SELECT count(*) FROM attempts WHER"
+  },
+  "generic_ref_counts": {
+   "answers.question_part_id->question_parts": 14,
+   "attempts.question_id->questions": 3,
+   "mark_points.mark_scheme_id->mark_schemes": 34,
+   "mark_points.question_part_id->question_parts": 28,
+   "mark_schemes.question_version_id->question_versions": 7,
+   "question_options.question_id->questions": 0,
+   "question_parts.question_version_id->question_versions": 48,
+   "question_spec_points.question_id->questions": 0,
+   "question_topics.question_id->questions": 0,
+   "question_versions.question_id->questions": 7,
+   "smart_mark_results.mark_scheme_id->mark_schemes": 0
+  },
+  "docs_live": [
+   {
+    "id": "1c44c795-c353-4aff-a069-62d94f244414",
+    "document_id": "0751cabc-52fc-556c-8d3f-87ab6b8b2813",
+    "kind": "QUESTION_PAPER",
+    "source_uri": "corpus/igcse-chemistry-4ch0-2c-2021jan/QP.md",
+    "validation_state": "SUGGESTED",
+    "chunk_count": "10",
+    "created_at": "2026-09-14 12:03:03.308267+00:00"
+   },
+   {
+    "id": "586d0599-ef84-43dd-b370-bdd8ca56a523",
+    "document_id": "f2237b67-6699-5fee-8ce7-805f922c9aa5",
+    "kind": "MARK_SCHEME",
+    "source_uri": "corpus/igcse-chemistry-4ch0-2c-2021jan/MS.md",
+    "validation_state": "SUGGESTED",
+    "chunk_count": "10",
+    "created_at": "2026-09-14 12:03:03.971193+00:00"
+   }
+  ],
+  "doc_chunks": [],
+  "census_ep": {
+   "SUGGESTED": 1,
+   "REJECTED": 14,
+   "VALIDATED": 89
+  },
+  "census_doc": {
+   "SUGGESTED": 358,
+   "REJECTED": 96,
+   "VALIDATED": 565
+  },
+  "rev1_total": 22,
+  "rev1_non_jan": 22,
+  "pool_rev2": 2913,
+  "events": 0,
+  "audit_max_id": 3830,
+  "paper_code_dupes": [
+   [
+    "f10c6814-c4ce-425d-afb6-3501eb5f06e1",
+    "SUGGESTED"
+   ]
+  ],
+  "live_qv_marks_multiset": [
+   1,
+   1,
+   5,
+   5,
+   9,
+   14,
+   15
+  ],
+  "live_qv_marks_sum": 50,
+  "live_mp_marks_sum": 63,
+  "doc_topology": [
+   {
+    "id": "b464e974-25e6-4cef-a1ef-7dc14bf14d9b",
+    "document_id": "958dffb5-5b86-5194-8151-146eb94a92e0",
+    "kind": "MARK_SCHEME",
+    "source_uri": "4CH1-1CR-202101/ms.pdf",
+    "validation_state": "SUGGESTED",
+    "chunk_count": "18",
+    "actual": "18",
+    "embedded": "18",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "0dd125c0-400b-4045-a232-bc78371077d0",
+    "document_id": "114f204a-775a-5cca-95f2-873db5f0208c",
+    "kind": "QUESTION_PAPER",
+    "source_uri": "4CH1-1CR-202101/qp.pdf",
+    "validation_state": "SUGGESTED",
+    "chunk_count": "16",
+    "actual": "16",
+    "embedded": "16",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "b4af4821-7b2b-4dc2-86da-2333843ee165",
+    "document_id": "60bdfdb6-a243-5f51-a1ab-d9de9f81b90a",
+    "kind": "MARK_SCHEME",
+    "source_uri": "4CH1-2CR-202101/ms.pdf",
+    "validation_state": "VALIDATED",
+    "chunk_count": "14",
+    "actual": "14",
+    "embedded": "14",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "fbc5a395-7d3c-4521-ba74-c98c6baf2edb",
+    "document_id": "da1f341d-75d8-55de-89ce-eca5c475e583",
+    "kind": "QUESTION_PAPER",
+    "source_uri": "4CH1-2CR-202101/qp.pdf",
+    "validation_state": "VALIDATED",
+    "chunk_count": "11",
+    "actual": "11",
+    "embedded": "11",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "14db0bf4-cfef-4e52-b83a-40dac8ab73bd",
+    "document_id": "d6a975b2-c1eb-5359-bd77-f0ccbd6e950d",
+    "kind": "MARK_SCHEME",
+    "source_uri": "4ch1-1c-202101/ms.pdf",
+    "validation_state": "VALIDATED",
+    "chunk_count": "19",
+    "actual": "19",
+    "embedded": "19",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "63d616b8-fdfe-4eea-b70d-a7c3784e9ab1",
+    "document_id": "54b5290d-b775-5306-9e06-b9b14b1e47ff",
+    "kind": "QUESTION_PAPER",
+    "source_uri": "4ch1-1c-202101/qp.pdf",
+    "validation_state": "VALIDATED",
+    "chunk_count": "16",
+    "actual": "16",
+    "embedded": "16",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "5414d1a9-3d62-44eb-a2cf-cc243c9c4971",
+    "document_id": "d74802bc-d832-5896-ba58-9122bd0cc6dd",
+    "kind": "MARK_SCHEME",
+    "source_uri": "4ch1-2c-202101/ms.pdf",
+    "validation_state": "SUGGESTED",
+    "chunk_count": "11",
+    "actual": "11",
+    "embedded": "11",
+    "min_rev": "1",
+    "max_rev": "1"
+   },
+   {
+    "id": "6187eaf9-c79c-4c80-9b01-f7108673838e",
+    "document_id": "a4a8a5e1-dbf6-5e9d-8e02-54d39eca315d",
+    "kind": "QUESTION_PAPER",
+    "source_uri": "4ch1-2c-202101/qp.pdf",
+    "validation_state": "SUGGESTED",
+    "chunk_count": "11",
+    "actual": "11",
+    "embedded": "11",
+    "min_rev": "1",
+    "max_rev": "1"
+   },
+   {
+    "id": "088487d2-c006-41b0-9bda-e4899952624a",
+    "document_id": "85103935-4526-536b-8630-5d58e0b99bdd",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq1",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "2cc75ff1-2703-4130-bf6c-b951ececc491",
+    "document_id": "d2ed84cf-0549-5d7d-a329-69283ba76a3b",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq10",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "e1cd0ca5-2542-488f-bcc8-0610d0cbd1c8",
+    "document_id": "7d1dbd0d-0d64-506b-8f2a-87f89c09cc00",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq2",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "51a9f705-1f43-4059-8623-b5dbb5c71231",
+    "document_id": "35d53b8d-608c-57c0-9cb0-bf1fb520f78d",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq3",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "f05d9e24-3cf9-458e-93c3-ec2a8c817050",
+    "document_id": "410a2aea-bb0a-5439-8378-a240a49e9df8",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq4",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "3774bf47-1999-4c46-89fe-446829040b58",
+    "document_id": "e2f450d0-a82c-548c-9e62-45747c5e772b",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq5",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "65300cb5-06df-4b01-afd8-779b8bba990a",
+    "document_id": "33630279-3d28-526b-8ee2-7b85acd8a028",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq6",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "4e85f0d9-235d-454c-89b6-9c4addfb6c42",
+    "document_id": "1da51413-8cfd-548e-9af8-6c55c632d096",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq7",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "c3fd88e8-c217-4ff5-867c-1d553a47b01b",
+    "document_id": "53401722-a9cb-5af2-9075-f515015478d8",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-1cr-202101-qq9",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "c6f8e2de-cd29-4474-a9d6-5c8380f8a368",
+    "document_id": "16eaef8b-18c3-59c9-bf36-2f0ad7193872",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq1",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "233da31c-3b1a-470e-88c5-58b7818d9ec9",
+    "document_id": "86888221-3650-5f0d-af52-dd4b11f99d88",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq10",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "2945d832-6290-44c4-b1ff-6c042c013024",
+    "document_id": "9084373e-9cd7-5808-9b7a-024f9eb13ed5",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq11",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "f00d8766-c3b6-465e-b0fa-b1ada17fb31d",
+    "document_id": "fe7fa725-3572-5dc0-a0c9-1a3f7d37ea93",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq2",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "27434115-4eae-4cd9-93ca-134dc8165bcf",
+    "document_id": "bf80b622-b549-5df4-bc4e-5a7ee292aac3",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq3",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "c65ca16a-9ab6-4cb4-85b9-c7c3ea9ebff3",
+    "document_id": "13be55ec-2b31-5af6-a7d8-7df6208661d4",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq4",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "6be2ea3d-31a6-4561-839b-e6215ad7382b",
+    "document_id": "6fac5599-dfb6-539d-b0f8-4bb240eae088",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq5",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "91c8c051-604b-458f-ba5f-771207e56200",
+    "document_id": "4b336926-528a-5bc0-b058-e079a38998ba",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq6",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "6814293c-cdd3-4892-83cf-925ee1582b8e",
+    "document_id": "9fb586ff-b13f-5d17-9c59-da1c049d7a19",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq7",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "143aac48-da83-431a-a3db-2bfb150cf16e",
+    "document_id": "6d2df934-48b7-506c-b0d0-d508eb7ceafc",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq8",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   },
+   {
+    "id": "0f0eca52-10a5-46e2-a003-14b5436684a3",
+    "document_id": "f9a517f4-ad2a-5899-8573-bb3e45faaaf3",
+    "kind": "EXTERNAL_QUESTIONS",
+    "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2021-01-4CH1-1C-qq9",
+    "validation_state": "VALIDATED",
+    "chunk_count": "1",
+    "actual": "1",
+    "embedded": "1",
+    "min_rev": "2",
+    "max_rev": "2"
+   }
+  ]
+ }
+}

@@ -1,0 +1,382 @@
+{
+ "generated_at": null,
+ "trace": "1a0ea189623183e5",
+ "checks": {
+  "P0_sha_REVIEW.md": {
+   "pass": true,
+   "detail": "6f8ca5be39cc74b7 vs 6f8ca5be39cc74b7"
+  },
+  "P0_sha_current-rows-archive.json": {
+   "pass": true,
+   "detail": "5a8038c9525e1f9b vs 5a8038c9525e1f9b"
+  },
+  "P0_sha_proposed-draft.json": {
+   "pass": true,
+   "detail": "0783c746fbf90767 vs 0783c746fbf90767"
+  },
+  "P0b_draft_7q_marks": {
+   "pass": true,
+   "detail": "[5, 5, 8, 9, 14, 14, 15]"
+  },
+  "P0b_draft_48_parts": {
+   "pass": true,
+   "detail": "48"
+  },
+  "P0b_draft_39_points_sum70": {
+   "pass": true,
+   "detail": "(39, 70)"
+  },
+  "P0b_draft_schema": {
+   "pass": true,
+   "detail": "('1.0', 'pdflane-atoms-draft-v1')"
+  },
+  "P0b_draft_paper_meta": {
+   "pass": true,
+   "detail": "{'board': 'Edexcel', 'qualification': '4CH1', 'subject': 'Chemistry', 'unit': '2C', 'sessionLabel': 'January 2021', 'paperCode': '4CH1/2C', 'questionPaperDocumentId': '0751cabc-52fc-556c-8d3f-87ab6b8b2813', 'markSchemeDocumentId': 'f2237b67-6699-5fee-8ce7-805f922c9aa5'}"
+  },
+  "P0b_draft_doc_refs_are_shells": {
+   "pass": true,
+   "detail": "staged pre-corpus-wave; pointer repair planned in TX-2 (recorded)"
+  },
+  "P0b_archive_shape": {
+   "pass": true,
+   "detail": "{'exam_papers': 1, 'questions': 7, 'glm_ocr_bridge_records': 1, 'smart_mark_agreement_evaluations': 0, 'question_versions': 7, 'question_parts': 48, 'mark_schemes': 7, 'mark_points': 28}"
+  },
+  "G1_census_ep_89V_1S_14R": {
+   "pass": true,
+   "detail": "{'SUGGESTED': 1, 'REJECTED': 14, 'VALIDATED': 89}"
+  },
+  "G2_paper_identity": {
+   "pass": true,
+   "detail": "{'subject_id': 'e56dc9ee-aa74-426f-94a6-4b72d3dc346b', 'title': '4CH1/2C January 2021', 'paper_code': '4CH1/2C', 'session_label': 'January 2021', 'series': 'JAN', 'year': '2021', 'validation_state': 'SUGGESTED', 'extraction_method': 'glm-ocr-qp-v1+glm-ocr-ms-v1', 'qp_doc': 'a4a8a5e1-dbf6-5e9d-8e02-54d39eca315d', 'ms_doc': 'd74802bc-d832-5896-ba58-9122bd0cc6dd', 'provenance': 'PAST_PAPER'}"
+  },
+  "G2_paper_pointers_chunkful": {
+   "pass": true,
+   "detail": "('a4a8a5e1', 'd74802bc')"
+  },
+  "G3_chunkful_QUESTION_PAPER": {
+   "pass": true,
+   "detail": "{'row_id': '6187eaf9-c79c-4c80-9b01-f7108673838e', 'kind': 'QUESTION_PAPER', 'state': 'SUGGESTED', 'meta_n': 11, 'actual_n': 11, 'embedded': 11, 'rev1': 11, 'model': 'gemini-embedding-001', 'paper_links': 1, 'engine': 'pdflane-atoms', 'created_at': '2026-09-25 16:05:36.731913+00:00'}"
+  },
+  "G3_chunkful_MARK_SCHEME": {
+   "pass": true,
+   "detail": "{'row_id': '5414d1a9-3d62-44eb-a2cf-cc243c9c4971', 'kind': 'MARK_SCHEME', 'state': 'SUGGESTED', 'meta_n': 11, 'actual_n': 11, 'embedded': 11, 'rev1': 11, 'model': 'gemini-embedding-001', 'paper_links': 1, 'engine': 'pdflane-atoms', 'created_at': '2026-09-25 16:06:39.457685+00:00'}"
+  },
+  "G4_chain_counts_7_7_48_7_34": {
+   "pass": true,
+   "detail": "(7, 7, 48, 7, 34)"
+  },
+  "G4_qv_marks_multiset_50": {
+   "pass": true,
+   "detail": "[1, 1, 5, 5, 9, 14, 15]"
+  },
+  "G4_qv_all_teacher_VALIDATED": {
+   "pass": true,
+   "detail": "{'VALIDATED': 7}"
+  },
+  "G4_schemes_all_VALIDATED": {
+   "pass": true,
+   "detail": "{'VALIDATED': 7}"
+  },
+  "G4_live_mp_sum_63": {
+   "pass": true,
+   "detail": "63"
+  },
+  "G4_chain_id_sets": {
+   "pass": true,
+   "detail": "frozen"
+  },
+  "G4_archive_ids_subset_questions": {
+   "pass": true,
+   "detail": "arch 7 live 7"
+  },
+  "G4_archive_ids_subset_question_versions": {
+   "pass": true,
+   "detail": "arch 7 live 7"
+  },
+  "G4_archive_ids_subset_question_parts": {
+   "pass": true,
+   "detail": "arch 48 live 48"
+  },
+  "G4_archive_ids_subset_mark_schemes": {
+   "pass": true,
+   "detail": "arch 7 live 7"
+  },
+  "G4_archive_ids_subset_mark_points": {
+   "pass": true,
+   "detail": "arch 28 live 34"
+  },
+  "G5_attempts_3": {
+   "pass": true,
+   "detail": "[('5339af51', 'web-structured-v1'), ('7cf3ac8c', 'web-structured-v1'), ('e7561e40', 'web-structured-v1')]"
+  },
+  "G5_attempts_chosen_option_null": {
+   "pass": true,
+   "detail": "[None, None, None]"
+  },
+  "G5_answers_14": {
+   "pass": true,
+   "detail": "14"
+  },
+  "G5_smr_eval_0": {
+   "pass": true,
+   "detail": "0"
+  },
+  "G5_smart_mark_results_0": {
+   "pass": true,
+   "detail": "0"
+  },
+  "G5_question_options_0": {
+   "pass": true,
+   "detail": "0"
+  },
+  "G5_question_spec_points_0": {
+   "pass": true,
+   "detail": "0"
+  },
+  "G5_question_topics_0": {
+   "pass": true,
+   "detail": "0"
+  },
+  "G5_bridge_row_1": {
+   "pass": true,
+   "detail": "1"
+  },
+  "G6_shell_QUESTION_PAPER": {
+   "pass": true,
+   "detail": "{'row_id': '1c44c795-c353-4aff-a069-62d94f244414', 'state': 'SUGGESTED', 'chunks': 0, 'paper_links': 0}"
+  },
+  "G6_shell_MARK_SCHEME": {
+   "pass": true,
+   "detail": "{'row_id': '586d0599-ef84-43dd-b370-bdd8ca56a523', 'state': 'SUGGESTED', 'chunks': 0, 'paper_links': 0}"
+  },
+  "G7_census_doc_565V_358S_96R": {
+   "pass": true,
+   "detail": "{'SUGGESTED': 358, 'REJECTED': 96, 'VALIDATED': 565}"
+  },
+  "G7_rev1_22_all_on_chunkful": {
+   "pass": true,
+   "detail": "(22, 22)"
+  },
+  "G7_pool_2913": {
+   "pass": true,
+   "detail": "2913"
+  },
+  "G7_events_0": {
+   "pass": true,
+   "detail": "0"
+  },
+  "G7_audit_max_3830": {
+   "pass": true,
+   "detail": "3830"
+  },
+  "G8_single_paper_row": {
+   "pass": true,
+   "detail": "[('f10c6814-c4ce-425d-afb6-3501eb5f06e1', 'SUGGESTED')]"
+  },
+  "P9_undo_archive_complete": {
+   "pass": true,
+   "detail": "{'exam_papers': 1, 'questions': 7, 'question_versions': 7, 'question_parts': 48, 'mark_schemes': 7, 'mark_points': 34, 'glm_ocr_bridge_records': 1, 'attempts': 3, 'answers': 14}"
+  }
+ },
+ "snapshots": {
+  "paper_row": {
+   "subject_id": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+   "title": "4CH1/2C January 2021",
+   "paper_code": "4CH1/2C",
+   "session_label": "January 2021",
+   "series": "JAN",
+   "year": "2021",
+   "validation_state": "SUGGESTED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "qp_doc": "a4a8a5e1-dbf6-5e9d-8e02-54d39eca315d",
+   "ms_doc": "d74802bc-d832-5896-ba58-9122bd0cc6dd",
+   "provenance": "PAST_PAPER"
+  },
+  "chunkful_docs": {
+   "a4a8a5e1-dbf6-5e9d-8e02-54d39eca315d": {
+    "row_id": "6187eaf9-c79c-4c80-9b01-f7108673838e",
+    "kind": "QUESTION_PAPER",
+    "state": "SUGGESTED",
+    "meta_n": 11,
+    "actual_n": 11,
+    "embedded": 11,
+    "rev1": 11,
+    "model": "gemini-embedding-001",
+    "paper_links": 1,
+    "engine": "pdflane-atoms",
+    "created_at": "2026-09-25 16:05:36.731913+00:00"
+   },
+   "d74802bc-d832-5896-ba58-9122bd0cc6dd": {
+    "row_id": "5414d1a9-3d62-44eb-a2cf-cc243c9c4971",
+    "kind": "MARK_SCHEME",
+    "state": "SUGGESTED",
+    "meta_n": 11,
+    "actual_n": 11,
+    "embedded": 11,
+    "rev1": 11,
+    "model": "gemini-embedding-001",
+    "paper_links": 1,
+    "engine": "pdflane-atoms",
+    "created_at": "2026-09-25 16:06:39.457685+00:00"
+   }
+  },
+  "chain_ids": {
+   "questions": [
+    "12b71631-0cc6-45f5-a789-6df822db484a",
+    "148ed375-f37a-4b63-86f4-ee56a1eb3450",
+    "3892dcc2-c122-4436-a2f1-ebe21dc006ab",
+    "68cb5777-2b43-4929-9de7-54f5385482ff",
+    "77f084ef-a9ab-474c-b8a1-423186c2acfd",
+    "b45ddb5e-864e-48a9-9d81-a634762ac532",
+    "dab528b3-06b5-4061-9b41-4f12526e21f9"
+   ],
+   "question_versions": [
+    "0d7ce8a2-4a55-4dac-a675-27bf4f9db74b",
+    "27733df4-cc00-4017-a5c4-d83a392b0c7a",
+    "43a6dc5c-f7fb-406c-8da3-6ce7db157dbf",
+    "662594ce-aaee-453f-8936-4507cb2e7fd5",
+    "99b6f970-9438-4750-a663-3401f724e93b",
+    "acdb8dce-47ec-4f8c-8b0a-1bcf5aab4941",
+    "c8131269-2b66-41e5-98f3-11b178aba147"
+   ],
+   "question_parts": [
+    "001a94bc-23bf-4c84-bb86-9d4e724b5fc1",
+    "064d586d-637a-453e-b417-42d422bfa3d7",
+    "0ed683df-379c-4852-a7d3-e438592c3133",
+    "187041eb-7e87-4529-9ac8-1839201d8e42",
+    "18acf559-f8e8-4897-b498-5a95ccd5a05b",
+    "1a55a388-6c20-4036-8c49-0db8bf27ad88",
+    "1a6f8e1b-d39b-40d8-9051-38fb9ec8cd67",
+    "1f3c1ec1-a29e-4d47-937e-0e1d3513d903",
+    "22e1e6e9-7e0b-434d-af5b-78484a240bec",
+    "23293f61-ed50-49f2-8553-5df75f2cf4af",
+    "2c91c7a2-9d36-46cb-84af-734cda398dc1",
+    "2d7e670b-5ed8-436c-a281-7396331ea43d",
+    "334b2534-c5e4-4a2f-b199-9f349ad18873",
+    "336cf6b1-8581-4bd2-b1a1-f05de8e07748",
+    "48166641-e130-4bca-9226-32588b4032af",
+    "4e757846-2355-4cd6-a0c5-bd939826f7b2",
+    "516bf3de-6a0b-458b-836f-698339206724",
+    "533cef31-53a8-4ae5-bfd0-833235579934",
+    "5440ccbd-9a32-4a8f-9a2c-397249806657",
+    "6a057397-d51d-44dc-b778-b147b7f9861c",
+    "7017fbd3-b101-4a2c-858c-caf64e61dcbd",
+    "7090f8ca-0089-4d30-9f41-c6cbb9de7383",
+    "74772636-9b25-4614-8187-0e5189739310",
+    "7d7a8c14-1bdd-4a91-aaf5-b5fb72b51f23",
+    "85a6647b-8cf5-42d6-81c1-02beca6cfe77",
+    "87506962-4436-4b89-81fe-39ecc5f4ae2b",
+    "9255ac42-3258-48a1-9bc8-2d5578251137",
+    "92aa4bbd-613c-45f5-9859-92abb7c4dfa2",
+    "971a2087-8bbd-4091-bed8-0ea72360d759",
+    "98012c37-166b-44d6-92b1-6f3c61ab9715",
+    "a1ce2d27-102d-492d-8ad7-7fb9aeb85fc0",
+    "a2bde25e-a242-4b92-9ddc-164390a2d1cf",
+    "a7cf0f43-2be2-45a6-bc2c-df4f82be6759",
+    "b7871578-5726-472f-86e6-6f247946dd5f",
+    "b7b124a5-1d5c-4db5-b8e7-53ba438811b9",
+    "b7be2e6a-2c85-47de-806b-874daa908485",
+    "bdf6d584-0865-4657-a22d-102b214a7d02",
+    "c1410ee6-f097-47c8-b601-663bf0c0549c",
+    "c77a3af6-e627-47e0-99c1-2b2a573219fb",
+    "ca8a9f03-0ee7-474b-8994-cb70b2fd6b37",
+    "cab73efe-2424-4b4c-a835-b2e2e5b66de3",
+    "cffff9b0-7332-43fe-b049-b1afd6b7c6a8",
+    "d5dbc4ae-7542-4fb9-824f-5c63710317c2",
+    "d9dbb00f-0b1c-400a-a030-b8e7b28431c8",
+    "ea7c5844-7c23-42cb-907f-89e7d2a1c2dd",
+    "efe572fb-eed1-46ad-be1a-887033174e87",
+    "fb328b35-9fde-48c0-951b-d0e0cb7e7e68",
+    "ffe3b190-7b31-477d-960e-4fbc16a78935"
+   ],
+   "mark_schemes": [
+    "1e1c8adb-2599-4972-a711-779afac1118a",
+    "7ae33f6d-1059-454f-9808-4e22c915d9c6",
+    "bca746ff-ce3b-4302-a6ce-40db4ac4593a",
+    "c5f1c492-1296-4d3f-b6cb-3e77328771bd",
+    "cc964eb9-8de9-4b0d-a489-c8ff9589bbf2",
+    "ea575c6c-33b8-4850-be0b-9f53c49f250e",
+    "fd8441e6-6037-4135-86dc-c3a7ad6a8033"
+   ],
+   "mark_points": [
+    "01171d70-5615-4476-996e-04735d6f1cc2",
+    "0452317d-93a5-4666-9943-e774b791b58b",
+    "161ab4ee-163f-417c-872b-bb808210417d",
+    "1704f746-e222-4c90-be4a-98803fa037b8",
+    "196dae1c-71e6-4eac-bb6d-8a18400d127e",
+    "267ad489-b7be-419f-b678-3d413b86234f",
+    "29f340dc-c8de-4137-8b65-c4c02333b70e",
+    "399aa0ac-9649-4f00-8dbf-125cfa2955dc",
+    "43cba76d-964d-4fe7-ba4f-0e05db73476f",
+    "45ce11d1-2c3e-46ad-b17f-c7f45c291374",
+    "5a7b3875-2509-46db-b45f-c23be1da1668",
+    "5aebfbd3-8334-479f-ae2d-9f872dd6b2b0",
+    "5c696cd6-9662-4beb-8acc-8f94801aae12",
+    "609bacaf-81dc-4546-b2ca-62339c4fbc66",
+    "6ab6cc38-af80-46b0-978e-d4eebdad0f4e",
+    "6dbe7b9c-2e99-44ae-85f4-26c9d6337394",
+    "71c1bc3f-1f9d-413e-8a22-798f26ed933a",
+    "80880613-32fb-45aa-a707-d1772d8422c6",
+    "84bfcc98-1e57-48eb-8c90-db7f642d16d9",
+    "93d0b80f-8f12-4100-89bf-90febcaf77b3",
+    "a13f1efd-b903-437a-9495-32a427102d6e",
+    "a54f10fa-e409-4f62-bfeb-0cb766c854c2",
+    "a593a7c9-3f86-4b57-98a2-fa4661c5f23a",
+    "aab6c7de-2cd0-4bd3-b8d1-2a9a738077ef",
+    "ad877eb0-0294-4ec4-b26c-89279bcb5fc6",
+    "b64044f0-fe09-4633-97b8-6585134edb32",
+    "bc3095eb-77d5-4931-8d0e-e36dc4c28cdc",
+    "c2295a98-d82f-4f9b-b9e5-3da7a6e0aaaf",
+    "c3bcf5d9-2830-4b49-bbd8-e66f96ab8890",
+    "c57b2cdf-0dfc-4da1-b2db-85781f89cb56",
+    "c5a17436-e00f-49c2-a900-4d4b319690f1",
+    "ca986ffc-8a28-4062-8e53-70b56b6c8b10",
+    "e4099e99-9add-4ced-903c-89365d78cb04",
+    "e9abe071-3b52-45b2-9ee4-6d4052d59678"
+   ]
+  },
+  "attempts": [
+   [
+    "5339af51-28ce-4480-8752-efe50073ee9d",
+    "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+    "12b71631-0cc6-45f5-a789-6df822db484a",
+    "None",
+    "web-structured-v1",
+    "2026-09-14 19:22:50.535501+00:00"
+   ],
+   [
+    "7cf3ac8c-3e8e-4e41-a55e-41ad79b4f93e",
+    "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+    "12b71631-0cc6-45f5-a789-6df822db484a",
+    "None",
+    "web-structured-v1",
+    "2026-09-14 19:22:53.312838+00:00"
+   ],
+   [
+    "e7561e40-cfc5-4cfd-abda-3b257d705617",
+    "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+    "dab528b3-06b5-4061-9b41-4f12526e21f9",
+    "None",
+    "web-structured-v1",
+    "2026-09-14 19:22:59.715793+00:00"
+   ]
+  ],
+  "shells": {
+   "0751cabc-52fc-556c-8d3f-87ab6b8b2813": {
+    "row_id": "1c44c795-c353-4aff-a069-62d94f244414",
+    "state": "SUGGESTED",
+    "chunks": 0,
+    "paper_links": 0
+   },
+   "f2237b67-6699-5fee-8ce7-805f922c9aa5": {
+    "row_id": "586d0599-ef84-43dd-b370-bdd8ca56a523",
+    "state": "SUGGESTED",
+    "chunks": 0,
+    "paper_links": 0
+   }
+  },
+  "audit_rows_for_paper": 0
+ },
+ "verdict": "GO"
+}

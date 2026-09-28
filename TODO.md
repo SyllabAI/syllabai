@@ -422,6 +422,21 @@ Hub-repo-only change: no resource lease required (wave 1/2 precedent).
   `bench/review/psaxis-review-2026-09-28/d1retire-2026-09-28/`. Remaining open:
   Jan-2021 sign-off (operator), §D1 leftovers (59), bank-repair queue,
   sheet-generator regex fix.
+- [x] **jan2021-supersession (2026-09-28, Task 64, trace 1a0ea189623183e5) — the
+  "Jan-2021 supersession sign-off" EXECUTED + VERIFIED.** Operator APPROVE; package
+  `bench/review/validated-supersession/4ch1-2c-202101` executed per its REVIEW.md
+  contract (archive re-verify — staged export missing 6 mark_points reconciled;
+  guarded delete incl. 7 teacher-VALIDATED rows + 3 attempts + 14 answers, all
+  archived; draft POSTed, arithmetic gate EXACT) + one fail-closed resolve tx
+  (pointers -> corpus-wave chunk-ful docs, series/year JAN/2021, paper+7qv+7schemes
+  +2docs VALIDATED, 2 shells REJECTED, 22 parked rev1 chunks re-stamped rev2 in-tx
+  per Task-55 follow-up (a)). Papers census 90V/0F/0S/14R — **no SUGGESTED paper
+  left in the corpus**. Pool 2,913 -> 2,935. Audit rows 3871-3890 (gap 3831-3870 =
+  NEXTVAL burn from rolled-back insert attempts, documented). Evidence:
+  `bench/review/psaxis-review-2026-09-28/jan2021-supersession-2026-09-28/`.
+  Sibling packages 4ch1-2cr-202001 / 4ch0-2c-201701 still await sign-off.
+  Remaining open: §D1 leftovers (57 after this pass's 2 shells), bank-repair queue,
+  sheet-generator regex fix, stale-citation re-point (cosmetic).
 W3B execution record (hub e50bfe2, rebased over content-package v0.2
 7ed728e): SME production CSS extracted from the four cdn bundles
 (Editor_wrapper/collapsed/collapsible/writtenMode/menu, Label_label,
