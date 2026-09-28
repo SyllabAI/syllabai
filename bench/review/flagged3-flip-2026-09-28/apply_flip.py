@@ -33,6 +33,7 @@ Fail-closed guarantees:
 Output: JSON run report on stdout (zero credentials, zero connection material).
 """
 import datetime
+import hashlib
 import json
 import os
 import sys
@@ -57,6 +58,9 @@ def resolve_db_url():
         if os.path.exists(path):
             env = json.load(open(path))
             env = env.get("env", env)
+            if isinstance(env, list):
+                # sanctioned file format: {"env": [{"key": ..., "value": ...}, ...]}
+                env = {e["key"]: e["value"] for e in env}
             raw = env.get("SYLLABAI_DATABASE_URL")
             if not raw:
                 continue
@@ -115,19 +119,35 @@ def main() -> int:
     committed = False
     try:
         # ---- idempotence: has THIS batch already been applied? ----------------
+        # NOTE: resolve rows by document_id (varchar) FIRST — content_review_audit
+        # target_id is the documents.id ROW UUID (the proven wave vocabulary, run
+        # a5d13c0a: target_id = row uuid, card document_id in the detail text).
+        cur.execute(
+            "SELECT id::text, document_id, kind, validation_state, source_uri "
+            "FROM documents WHERE document_id = ANY(%s) ORDER BY document_id",
+            ([c["document_id"] for c in cards],))
+        rows = {r[1]: r for r in cur.fetchall()}
+        row_ids = []
+        for c in cards:
+            r = rows.get(c["document_id"])
+            if r is None:
+                raise AssertionError(f"card #{c['sheet_seq']} {c['document_id']} not found by document_id")
+            if r[2] != "EXTERNAL_QUESTIONS":
+                raise AssertionError(f"card #{c['sheet_seq']} kind={r[2]} != EXTERNAL_QUESTIONS")
+            row_ids.append(r[0])
         cur.execute(
             f"SELECT count(*) FROM {AUDIT_TABLE} WHERE target_type='question' "
             f"AND target_id::text = ANY(%s) AND action='VALIDATE' "
             f"AND to_state='VALIDATED' AND detail LIKE %s",
-            ([c["document_id"] for c in cards], "%" + batch + "%"))
+            (row_ids, "%" + batch + "%"))
         already = cur.fetchone()[0]
         if already == len(cards):
             cur.execute(
                 "SELECT id::text, validation_state FROM documents "
                 "WHERE id::text = ANY(%s) ORDER BY id",
-                ([c["document_id"] for c in cards],))
+                (row_ids,))
             states = {r[0]: r[1] for r in cur.fetchall()}
-            if all(states.get(c["document_id"]) == "VALIDATED" for c in cards):
+            if all(states.get(rid) == "VALIDATED" for rid in row_ids):
                 report["status"] = "ALREADY_APPLIED"
                 report["final_states"] = states
                 report["census_after"] = census(cur)
@@ -152,18 +172,9 @@ def main() -> int:
             conn.rollback()
             return 4
 
-        # ---- pre-assert 2: each card exists, right kind, FLAGGED -------------
-        cur.execute(
-            "SELECT id::text, document_id, kind, validation_state, source_uri "
-            "FROM documents WHERE id::text = ANY(%s) ORDER BY id",
-            ([c["document_id"] for c in cards],))
-        rows = {r[0]: r for r in cur.fetchall()}
-        for c in cards:
-            r = rows.get(c["document_id"])
-            if r is None:
-                raise AssertionError(f"card #{c['sheet_seq']} {c['document_id']} not found")
-            if r[2] != "EXTERNAL_QUESTIONS":
-                raise AssertionError(f"card #{c['sheet_seq']} kind={r[2]} != EXTERNAL_QUESTIONS")
+        # ---- pre-assert 2: each card FLAGGED (row already resolved by id) -----
+        for c, rid in zip(cards, row_ids):
+            r = rows[c["document_id"]]
             if r[3] != "FLAGGED":
                 raise AssertionError(
                     f"card #{c['sheet_seq']} pre-state={r[3]} != FLAGGED (fail-closed)")
@@ -175,7 +186,7 @@ def main() -> int:
         cur.execute(
             f"SELECT count(*) FROM {AUDIT_TABLE} WHERE target_type='question' "
             f"AND target_id::text = ANY(%s) AND action='VALIDATE' AND to_state='VALIDATED'",
-            ([c["document_id"] for c in cards],))
+            (row_ids,))
         foreign = cur.fetchone()[0]
         if foreign:
             raise AssertionError(
@@ -198,13 +209,16 @@ def main() -> int:
             "decision_text": decisions["decision_authority"]["decision_medium"],
             "basis_report_sha256": decisions["decision_authority"]["basis_report_sha256"],
             "sheet_sha256": decisions["decision_authority"]["parent_wave"]["sheet_sha256"],
+            "decisions_file_sha256": hashlib.sha256(open(DECISIONS_PATH, "rb").read()).hexdigest(),
+            "cards": [{"sheet_seq": c["sheet_seq"], "card_document_id": c["document_id"],
+                       "external_ref": c["external_ref"]} for c in cards],
             "applied_by": "agent session executing the operator's named instruction "
                           "(the agent asserts no validation of its own)",
         }, sort_keys=True)
-        for c in cards:
+        for c, rid in zip(cards, row_ids):
             cur.execute(
                 "UPDATE documents SET validation_state = 'VALIDATED' "
-                "WHERE id::text = %s AND validation_state = 'FLAGGED'",
+                "WHERE document_id = %s AND validation_state = 'FLAGGED'",
                 (c["document_id"],))
             if cur.rowcount != 1:
                 raise AssertionError(
@@ -215,7 +229,7 @@ def main() -> int:
                 " from_state, to_state, detail) VALUES "
                 "(NULL, %s, 'VALIDATE', 'question', %s, 'FLAGGED', 'VALIDATED', %s)",
                 (decisions["decision_authority"]["decision_owner"][:254],
-                 c["document_id"], detail_base))
+                 rid, detail_base))
         post = census(cur)
         report["census_after"] = post
         if post != expected_post:
@@ -227,8 +241,8 @@ def main() -> int:
 
         # ---- post-commit re-probe --------------------------------------------
         cur.execute(
-            "SELECT id::text, validation_state FROM documents "
-            "WHERE id::text = ANY(%s) ORDER BY id",
+            "SELECT document_id, validation_state FROM documents "
+            "WHERE document_id = ANY(%s) ORDER BY document_id",
             ([c["document_id"] for c in cards],))
         report["final_states"] = {r[0]: r[1] for r in cur.fetchall()}
         cur.execute(

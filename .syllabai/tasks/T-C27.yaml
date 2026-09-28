@@ -298,3 +298,23 @@ task:
           teacher_validation_events CHECK domain still excludes documents and stays 0),
           audit detail carries the operator trace + both sha256 pins + the honest
           applied-by note. One command for any session holding the sanctioned URL."
+      flagged3_flip_2026-09-28:
+        execution_state: "APPLIED — 2026-09-28T11:32:04Z, batch_run_id 0d5e4c4a-cacc-454c-9dfe-5983e1f11661
+          (this session holds the sanctioned scripts/.render_env.json). Dry-run DRY_RUN_OK first,
+          then one transaction: 3 documents.validation_state FLAGGED->VALIDATED (#207/#278/#291,
+          row uuids bf07304e/d84be99c/bccdacb2) + 3 content_review_audit rows (action VALIDATE,
+          target_type 'question', target_id = row uuid per the proven wave vocabulary, detail
+          carries the operator trace 1a0e7865c3b35715 + basis/sheet sha256 pins + the honest
+          applied-by note). Census 296V/80S/3F -> 299V/80S/0F exactly as recorded; idempotent
+          re-run returned ALREADY_APPLIED; independent 8-point landing verification (fresh
+          read-only connection): 3 docs VALIDATED, audit total 365 = 362+3, 80 neighbors
+          untouched, teacher_validation_events 0. TWO production-blocking kit defects were
+          fixed pre-apply, both caught fail-closed with zero writes lost: (1) the recorded
+          pre-census was derived not probed (306V/747S totals the snap-003 EQ chunk count
+          1,056 — commit db17167912 corrected the gate to the probed 296V/80S/3F); (2) the kit
+          keyed documents by documents.id while the decisions carry the document_id varchar,
+          assumed a flat render-env format (the sanctioned file is {"env":[{key,value},...]}),
+          and used document_id as audit target_id (the wave's proven semantics is row uuid
+          target / varchar in detail) — all fixed in the executed apply_flip.py.
+          Run report: evidence/bench-001/flagged3-flip-2026-09-28/ (run_report.json +
+          dry_run_report.json).

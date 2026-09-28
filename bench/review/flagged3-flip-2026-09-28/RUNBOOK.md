@@ -1,5 +1,17 @@
 # RUNBOOK — flagged3 flip execution
 
+**EXECUTED 2026-09-28T11:32Z — APPLIED.** batch_run_id `0d5e4c4a-cacc-454c-9dfe-5983e1f11661`:
+dry-run DRY_RUN_OK -> single transaction -> census 296V/80S/3F -> 299V/80S/0F; idempotent
+re-run ALREADY_APPLIED; independent 8-point landing verification PASS (3 docs VALIDATED,
+audit 365 = 362+3, 80 neighbors untouched, teacher_validation_events 0). Two
+production-blocking defects fixed pre-apply, both caught fail-closed with zero writes:
+(1) derived-not-probed census gate (corrected in db17167912); (2) the kit keyed documents
+by documents.id while the decisions carry document_id varchar (row uuids
+bf07304e/d84be99c/bccdacb2), assumed a flat render-env format (the sanctioned file is
+{"env":[{key,value},...]}) — and the audit rows needed the proven wave vocabulary
+(target_id = row uuid, varchar in detail). All fixed in the executed apply_flip.py.
+Run report: evidence/bench-001/flagged3-flip-2026-09-28/.
+
 **INTEGRATION-TESTED 2026-09-28: 23/23 checks green** on a scratch PostgreSQL 17.2
 (self-signed SSL, `content_review_audit` DDL verbatim from core V22 incl. CHECKs,
 seeded to the exact 306V/747S/3F census): dry-run OK + zero writes; census-drift

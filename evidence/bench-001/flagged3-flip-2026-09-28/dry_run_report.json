@@ -1,0 +1,42 @@
+{
+  "batch": "flagged3-flip-2026-09-28",
+  "batch_run_id": "b69a14f6-2adc-4e1b-bc3c-fc2d78576280",
+  "started_at_utc": "2026-09-28T11:31:51.903395+00:00",
+  "operator_trace_id": "1a0e7865c3b35715",
+  "dry_run": true,
+  "credential_source": "render_env:.render_env.json",
+  "census_before": {
+    "VALIDATED": 296,
+    "SUGGESTED": 80,
+    "FLAGGED": 3,
+    "REJECTED": 0
+  },
+  "cards": [
+    {
+      "sheet_seq": 207,
+      "id": "bf07304e-6de7-4ea5-8a90-091843a58802",
+      "document_id_varchar": "1c15d529-661b-53a7-a8ed-a934328e6afb",
+      "pre_state": "FLAGGED",
+      "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2020-01-4CH1-2C-qq3",
+      "to_state": "VALIDATED"
+    },
+    {
+      "sheet_seq": 278,
+      "id": "d84be99c-6022-485e-92b7-c1770128ee2c",
+      "document_id_varchar": "ee882008-88ca-5952-af9c-5505c8f76661",
+      "pre_state": "FLAGGED",
+      "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2020-06-4ch1-2CR-qq1",
+      "to_state": "VALIDATED"
+    },
+    {
+      "sheet_seq": 291,
+      "id": "bccdacb2-0c2b-43b4-951e-8f66ccd8008f",
+      "document_id_varchar": "1195ca6c-0ecd-5890-b63e-4c2df7ebddba",
+      "pre_state": "FLAGGED",
+      "source_uri": "syllabai-bank/igcse-chemistry-4ch1/cards/4ch1-past-papers-2023-01-4CH1-2CR-qq1",
+      "to_state": "VALIDATED"
+    }
+  ],
+  "status": "DRY_RUN_OK",
+  "note": "all asserts passed; rolled back (FLIP_DRY_RUN=1)"
+}
