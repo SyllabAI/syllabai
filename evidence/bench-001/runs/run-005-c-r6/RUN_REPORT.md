@@ -1,0 +1,75 @@
+# Run 005 — C hybrid arm, first recorded run (the retrieval fabric orchestrator)
+
+**Status:** RECORDED — production hybrid arm on record (deterministic, offline replay, zero API calls; snapshot snap-005 (frozen snapshot)).
+**Arm:** C hybrid — PRODUCTION retrieval fabric (com.syllabai.retrieval.RetrievalFabric: explicit arms [pgvector, bm25], central BoundaryPolicy, shipped ReciprocalRankFusion k=60, rank-only, NoReranker) over arm A's production vector path and arm B's production lexical path; chunk+query vectors replayed from the frozen artifact embed-backfill-snap-005, zero API calls at run time
+**Executor:** production code over a real Flyway-migrated Postgres, corpus loaded from the frozen snapshot; chunk vectors applied from the checksummed compute-once-freeze-forever artifact and query vectors served through the production EmbeddingProvider port; no retrieval SQL changed, no fusion code written (the shipped ReciprocalRankFusion runs unchanged) — code `05f2621690843123758fe271bdfcacae9b4ed220`.
+**Date:** 2026-09-28 | **Gold:** gold-v3 (120 queries; frozen) | **Determinism:** double retrieval pass, byte-identical aggregates (both views).
+
+## Fabric provenance
+
+- Orchestrator: the registered gap CLOSED — `RetrievalFabric` composes the explicit arms [pgvector, bm25] (never injection-implied, E-1 forward note), applies the serving boundary ONCE centrally pre-fusion, and fuses with the shipped `ReciprocalRankFusion` k=60 — no new fusion code, no retrieval SQL changed. Per-arm candidate bound 20.
+- Frozen artifact `embed-backfill-snap-005`: model `gemini-embedding-001` @ 768 dims; verified fail-closed against this run's frozen inputs before anything ran; SHA-256 echo in results.json `embedding_artifact.sha256_echo`.
+
+## Overall (chunk axis, n=89 labeled queries)
+
+- **C served (fabric over components as they stand, ALL denominator, 4181 embedded chunks):** recall@5 0.0627 · recall@10 0.074 · recall@20 0.0852 · mrr 0.064 · ndcg@10 0.1384 · evidence_precision@10 0.0213 · false_positive_rate@10 0.9787
+- **C compliant (central VALIDATED gate pre-fusion, 322 reachable chunks — the T-C05-closed configuration):** recall@5 0.0627 · recall@10 0.074 · recall@20 0.0852 · mrr 0.064 · ndcg@10 0.1384 · evidence_precision@10 0.0213 · false_positive_rate@10 0.9787
+- **B (run-003, production lexical, VALIDATED-served):** evidence_precision@10 0.0045 · false_positive_rate@10 0.0112 · mrr 0.0449 · ndcg@10 0.0449 · recall@10 0.0247 · recall@20 0.0247 · recall@5 0.0247
+- **A served (run-004, production vector, ALL denominator):** evidence_precision@10 0.0213 · false_positive_rate@10 0.9787 · mrr 0.035 · ndcg@10 0.1166 · recall@10 0.074 · recall@20 0.0852 · recall@5 0.0627
+- **A compliant view (run-004, post-hoc VALIDATED-only filter):** evidence_precision@10 0.0213 · false_positive_rate@10 0.9787 · mrr 0.035 · ndcg@10 0.1166 · recall@10 0.074 · recall@20 0.0852 · recall@5 0.0627
+
+## Per class (C served view)
+
+| class | recall@5 | recall@10 | recall@20 | mrr | ndcg@10 | prec@10 | fp@10 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| calculation | 0.02 | 0.02 | 0.02 | 0.1 | 0.1 | 0.01 | 0.99 |
+| conceptual | 0.0385 | 0.0385 | 0.0538 | 0.0 | 0.0769 | 0.0077 | 0.9923 |
+| exam_question | 0.5 | 0.5 | 0.5 | 0.75 | 0.75 | 0.075 | 0.925 |
+| factual | 0.0545 | 0.1455 | 0.1636 | 0.0 | 0.2121 | 0.0364 | 0.9636 |
+| mark_scheme | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 |
+| misconception | 0.02 | 0.02 | 0.06 | 0.0 | 0.0387 | 0.01 | 0.99 |
+| multi_spec_point | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 |
+| prerequisite | 0.05 | 0.05 | 0.0667 | 0.0 | 0.1053 | 0.025 | 0.975 |
+| vague_learner | 0.125 | 0.125 | 0.125 | 0.0 | 0.1077 | 0.025 | 0.975 |
+| why_wrong | 0.0983 | 0.0983 | 0.0983 | 0.17 | 0.2905 | 0.05 | 0.95 |
+
+## Per class (C compliant view — T-C05-closed configuration)
+
+| class | recall@5 | recall@10 | recall@20 | mrr | ndcg@10 | prec@10 | fp@10 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| calculation | 0.02 | 0.02 | 0.02 | 0.1 | 0.1 | 0.01 | 0.99 |
+| conceptual | 0.0385 | 0.0385 | 0.0538 | 0.0 | 0.0769 | 0.0077 | 0.9923 |
+| exam_question | 0.5 | 0.5 | 0.5 | 0.75 | 0.75 | 0.075 | 0.925 |
+| factual | 0.0545 | 0.1455 | 0.1636 | 0.0 | 0.2121 | 0.0364 | 0.9636 |
+| mark_scheme | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 |
+| misconception | 0.02 | 0.02 | 0.06 | 0.0 | 0.0387 | 0.01 | 0.99 |
+| multi_spec_point | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 |
+| prerequisite | 0.05 | 0.05 | 0.0667 | 0.0 | 0.1053 | 0.025 | 0.975 |
+| vague_learner | 0.125 | 0.125 | 0.125 | 0.0 | 0.1077 | 0.025 | 0.975 |
+| why_wrong | 0.0983 | 0.0983 | 0.0983 | 0.17 | 0.2905 | 0.05 | 0.95 |
+
+## S8 gate arithmetic (ratified v1.0; ruling 1: ALL denominator = served view)
+
+- (a) Recall@10: **0.074** vs floor 0.3249 -> FAIL
+
+- (b) MRR: **0.064** vs floor 0.2964 -> FAIL
+
+- (c) nDCG@10: **0.1384** vs floor 0.4799 -> FAIL
+
+- (d) SpecificationPoint resolution: not scoreable (zero chunk-to-SP HUMAN_VALIDATED rows — named data gap; nothing to regress).
+- (e) p95 latency: not evaluable from records (A0 p95 not recorded); this run records retrieval-only p50/p95; a deployed hybrid adds the production query-embedding round-trip.
+- (f) Validation boundary: served view surfaced **0** non-VALIDATED hits (the T-C20 vector-surface gap) — hard fail per §5.1 for the as-served configuration; the compliant view audited **0** by construction.
+- (g) Per-class regression: trivially satisfied vs the zero A0 baseline.
+- **VERDICT: NOT PROMOTED**
+
+## Boundary + resolution axes
+
+- VALIDATION_BOUNDARY_VIOLATIONS (served view): 0. **Named finding, not a silent patch:** the production vector surface predates T-C05; the compliant view's central pre-fusion gate (this run's new production capability) audited ZERO violations across all 120 queries — the gate is the T-C20 closure shape.
+- Zero-result queries (served): 0/120.
+- Compliant-starved queries: 0 (served non-empty but every eligible-rank hit sits on a non-VALIDATED paper).
+- SpecificationPoint resolution: SCORED (spec_resolution_hv) — full-coverage 0.0 · micro-average 0.0 over 84 gold points on 89 scored queries (served ALL-denominator view; the HV-mapped notes chunks are SUGGESTED content, so a near-zero number on a compliant view is honest production truth — see the section's dual-view caveat). First §8(d)-scoreable run: this run sets the chunk-arm baseline.
+## Reading
+
+- The fabric is production code but NOT a serving default: nothing in production constructs a RetrievalFabric; promotion happens in the owning lane with its own verification discipline after the owner accepts a verdict.
+- C vs A/B: fusion rewards agreement; read the dual view against the recorded arms. The compliant view is the configuration a promotion would actually serve; the served view is the production-truth measurement the ratified gate runs on.
+- Determinism: no clocks in scoring (latency is an ops field, measured outside rankings); aggregates byte-identical across the double pass.
