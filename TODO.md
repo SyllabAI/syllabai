@@ -163,7 +163,34 @@ supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/r
 
 ## 2026-09-29 — claim: tutor §22 sessions + conversations pane on the hub (web s138–143 parity)
 
-- [ ] HUB-TUTOR-SESSIONS (REGISTERED 2026-09-29, session web-fc62c099, operator
+### HUB-TUTOR-SESSIONS EXECUTED (same session, hub `0549838` + ci re-trigger `3782049`, CI build+e2e green)
+
+Delivered as claimed: /api/ai/chat accepts + forwards sessionId (stream AND
+legacy fallback — the route's "recorded follow-up tranche" comment cashed);
+threads bind lazily to §22 sessions (first ask of a signed-in chat creates;
+failed create → honest unpersisted ask; foreign-id 404 → unbind + self-heal);
+the sidebar gains the synced-conversations section when signed in (server
+list refreshed after every completed ask and delete; resume reuses a bound
+thread or hydrates via tutorSessionGet; AlertDialog delete — a §22 delete has
+no undo — unbinds the active chat; honest inline errors); a fresh-browser
+signed-in mount restores the most recent server conversation (s140's value in
+hub terms — local transcripts already survive refresh). BUG FIX as claimed:
+historyFor now mirrors core's validation bounds exactly (12 turns × 2000
+chars; the old 16 × 4000 cap would 400 any 13th turn or any >2000-char
+answer riding the next ask). s138/mhchem judged already-at-parity (shared
+Markdown pipeline). Verification: tsc + full lint + mock-mode build +
+selftest + 12/12 Playwright locally; NEW 8-pin prod probe
+`tutor_sessions_prod_probe.py` ALL GREEN (create → persisted ask → transcript
+→ titled list row → foreign-id 404 fail-fast → 12×2000 pass + 13-turn 400 →
+delete 204/404) plus the FULL-CHAIN through the live hub proxy: hub
+/api/ai/chat with a bound sessionId → 43 SSE events → done → the exchange
+recorded in the session (2 turns) → cleanup 404; prod chunk 2hhhq5kns6f6h.js
+carries the synced-pane + unbind markers. First CI run on 0549838: e2e green
+but build failed with ALL its steps (lint / mock build / selftest) green
+locally — empty-tree re-trigger 3782049 went build ✅ + e2e ✅ (infra flake,
+no code delta). Core: zero changes. No lease required (locks.yaml empty).
+
+- [x] HUB-TUTOR-SESSIONS (REGISTERED 2026-09-29, session web-fc62c099, operator
 directive trace 1a0ea1deccb37015 "I want tutor parity too (web's s138–143:
 conversations pane, working memory)") **port the server-backed tutor session
 layer + the server conversations pane from web s140/s143 onto the hub's
