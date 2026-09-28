@@ -138,3 +138,49 @@ different decision than the re-stamp. Both remain operator-gated.
 - Zero production writes anywhere in this generation; the only production
   reads were the snap-006 exporter's SELECT-only freeze path (readonly
   session, rolled back).
+
+
+
+## Addendum 2026-09-28 (arm C completion + the two-lane staging reconciliation — session web-23eb7684, trace 1a0e8a8180a3f8cd)
+
+**Arm C recorded — the r7 generation now covers all three arms in the r6 shape.**
+`ops-run005-c-r7` (dispatch 36449508022, SUCCESS, core pin `d9cb3ddcf2`, workflow
+committed at records `8e7229949`) consumed the committed run-003-b-r7 +
+run-004-a-r7 results and the same snap-006/gold-v5/preload-r7 fail-closed
+inputs. Run record committed byte-for-byte from the workflow artifact:
+`evidence/bench-001/runs/run-005-c-r7/` @ records `5b49b3868`. Arm C §8(d)
+spec_resolution_hv = full-coverage **0.5618** · micro **0.9167** over 84 gold
+points on 89 scored queries (both views — agrees with arm A through the RRF
+fusion, as expected); C chunk-axis recall@10 0.0515 / MRR 0.0615 / nDCG@10
+0.0913; §8 gate verdict **NOT PROMOTED** — (a)/(b)/(c) floors fail by wide
+margins, (f) 0 violations, (g) trivially satisfied, (e) not evaluable from
+records. **The menu-1 verdict above is UNCHANGED by arm C**: the non-zero (d)
+beside the failing (a)/(b)/(c) is exactly the pre-registered attribution-risk
+shape — a coverage signal (the 350 HV-mapped notes chunks now serve), not a
+retrieval-quality claim; nothing is promoted and item (2) stays operator-gated.
+
+**Arm B §8(d) note (for the record):** B's spec axis scores 0.0 — the lexical
+surface is paper-anchored by design (the pinned asymmetry) and never serves the
+notes chunks, so the HV-covered set is empty. Honest zero, not a defect.
+
+**The two-lane staging reconciliation (recorded honestly).** A second, independent
+r7 staging unit ran concurrently in session web-23eb7684 (operator instruction
+"run the next bench freeze to get §8(d)'s first non-zero score"): it adapted the
+same snap-005 exporter with the same two whitelisted flip cohorts and produced a
+snap-006 that converged BYTE-IDENTICAL with this generation's freeze on 7/8
+artifacts (chunks.jsonl.gz `4181e598…`, chunk_spec_hv.json `b5b20ffa…`,
+spec_points / graph_edges / misconceptions / question_anchors /
+concept_attachments equal; graph_code rows-set-equal by design — source.date
+differs) — the s145 two-exporter precedent reproduced on r7, materially
+strengthening the freeze's integrity. That unit's staging commit `792491c18`
+inadvertently overwrote four run-verified files (it landed between this
+generation's freeze and its run-record commits); the bytes were restored from
+`6db6bddc6` in `5a13b8688` + `8e7229949` (gold-r7 manifest+sums, preload-r7
+manifest+sums, snapshot manifest+sums+graph_code both locations, the two
+executed workflow files, this generation's FREEZE_RECORD + exporter kept
+canonical). Kept as additive evidence: the independent export's
+`verification_deltas.json` (snap-006) and the remote-coherence verification
+(snapshot SHA256SUMS == manifest pins == actual bytes; gold_check pair PASS;
+preload snapshot+gold echoes == local sums — ALL PASS post-reconciliation).
+The unused `ops-embed-backfill-r7.yml` was dropped (no embed dispatch exists in
+this generation — the preload carried the 120 query vectors byte-identical).
