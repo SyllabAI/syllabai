@@ -1,0 +1,53 @@
+{
+  "label": "final",
+  "at_utc": "2026-09-28T17:35:20Z",
+  "health": "{\"groups\":[\"liveness\",\"readiness\"],\"status\":\"UP\"}",
+  "queries": [
+    {
+      "q": "electrolysis of molten lead bromide",
+      "hits": 10,
+      "top_score": 0.8021942672907869,
+      "models": [
+        "gemini-embedding-001"
+      ],
+      "empty_cause": null
+    },
+    {
+      "q": "why does the rate of reaction increase with temperature",
+      "hits": 10,
+      "top_score": 0.7536062103346008,
+      "models": [
+        "gemini-embedding-001"
+      ],
+      "empty_cause": null
+    },
+    {
+      "q": "covalent bonding in hydrogen chloride",
+      "hits": 10,
+      "top_score": 0.7328952251285186,
+      "models": [
+        "gemini-embedding-001"
+      ],
+      "empty_cause": null
+    },
+    {
+      "q": "titration calculation with sodium hydroxide",
+      "hits": 10,
+      "top_score": 0.6717153719242415,
+      "models": [
+        "gemini-embedding-001"
+      ],
+      "empty_cause": null
+    },
+    {
+      "q": "halogen displacement reactions",
+      "hits": 10,
+      "top_score": 0.7396771109021438,
+      "models": [
+        "gemini-embedding-001"
+      ],
+      "empty_cause": null
+    }
+  ],
+  "total_hits": 50
+}

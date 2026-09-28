@@ -1,0 +1,28 @@
+{
+  "incident": "live serving under-delivery after the 965-row re-stamp changed HNSW graph topology",
+  "discovered": "post-cut-over live probe: query 5 returned 6/10 then 5/10 hits with a bit-identical top-1 score while the served chunk-id set was proven identical (965 ids)",
+  "root_cause": {
+    "index": "ix_document_chunks_embedding (V11, HNSW vector_cosine_ops)",
+    "settings": {"hnsw.iterative_scan": "off", "hnsw.ef_search": 40},
+    "mechanism": "the serving filter (embed_rev + VALIDATED/scope) applies AFTER the ANN traversal; rejected candidates are not replaced; 3378 SUGGESTED rev2-stamped chunks can exhaust the candidate budget in SUGGESTED-dense neighborhoods, returning fewer than LIMIT rows",
+    "pre_existing": "yes - same structure existed pre-cut-over with the rev filter reversed; the re-stamp only changed graph topology, making a previously-lucky query unlucky"
+  },
+  "diagnosis_evidence": [
+    "EXPLAIN shows Index Scan using ix_document_chunks_embedding with post Filter ((embedding IS NOT NULL) AND (embed_rev = 2) AND scope branches)",
+    "fake-vector delivery test pre-REINDEX: limit 10 -> 8 rows via index; seq scan -> 10",
+    "prepared-statement (JDBC generic plan) probe with a SUGGESTED-dense vector: 0 rows (iterative off)",
+    "direct query same probe: 2 rows (off) -> 10 rows (strict_order)",
+    "exact nearest passing row at distance 0.2065; 965 rows pass the filter"
+  ],
+  "remedy": [
+    {"op": "REINDEX INDEX ix_document_chunks_embedding", "duration_seconds": 3.43, "relation_size": "17 MB, 4343 rows"},
+    {"op": "ANALYZE document_chunks"},
+    {"op": "ALTER DATABASE neondb SET hnsw.iterative_scan = 'strict_order'", "reversible": "ALTER DATABASE neondb RESET hnsw.iterative_scan"},
+    {"op": "pg_terminate_backend(5444) - one idle pooled 'PostgreSQL JDBC Driver' backend so the app pool reconnects under the new DB default"}
+  ],
+  "verification": {
+    "worst_case_db_probe_after": "10/10 rows delivered (was 0)",
+    "live_app_final": "50/50 hits across the 5-probe battery, every top-1 score bit-identical to the pre-cut-over baseline (probe_final.json)"
+  },
+  "at_utc": "2026-09-28T17:33:00Z - 17:40:00Z"
+}
