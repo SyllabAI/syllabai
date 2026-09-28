@@ -1,0 +1,13 @@
+{
+ "mode": "EXECUTE",
+ "trace": "1a0ea024489b3ee9",
+ "steps": [
+  "A1 96 docs present, SUGGESTED, zero paper links",
+  "A2 census 89-1-14, pool 2913, events 0, audit tail 3733",
+  "A3 UPDATE rowcount = 96",
+  "A4 post: 96 REJECTED, Jan-2021 intact, pool 2913 (serving-neutral), leftovers 59",
+  "A5 audit rows inserted = 96 (action=REJECT, append-only)"
+ ],
+ "aborts": [],
+ "result": "COMMITTED 2026-09-28T22:06:57Z"
+}

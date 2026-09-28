@@ -1,0 +1,45 @@
+{
+ "fails": [],
+ "V1_96_all_rejected_retained": {
+  "pass": true,
+  "detail": "96 rows, states={'REJECTED'}"
+ },
+ "V2_census_unchanged": {
+  "pass": true,
+  "detail": "{'SUGGESTED': 1, 'REJECTED': 14, 'VALIDATED': 89}"
+ },
+ "V3_jan2021_intact": {
+  "pass": true,
+  "detail": ""
+ },
+ "V4_pool_2913_unchanged": {
+  "pass": true,
+  "detail": "2913"
+ },
+ "V5_leftovers_59": {
+  "pass": true,
+  "detail": "59"
+ },
+ "V6_audit_96_reject_rows_traced": {
+  "pass": true,
+  "detail": "96 rows, 96 traced"
+ },
+ "V6b_audit_tail_3830_with_gap": {
+  "pass": true,
+  "detail": "tail=3830, reject span 3735..3830 n=96 (3734 burned by the rolled-back Task-62 insert attempt)"
+ },
+ "V7_events_zero": {
+  "pass": true,
+  "detail": ""
+ },
+ "doc_census": {
+  "SUGGESTED": 358,
+  "REJECTED": 96,
+  "VALIDATED": 565
+ },
+ "V9_candidate_chunks_retained": {
+  "pass": true,
+  "detail": ""
+ },
+ "verdict": "ALL PASS"
+}
