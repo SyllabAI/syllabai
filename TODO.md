@@ -163,7 +163,29 @@ supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/r
 
 ## 2026-09-29 — claim: exam-question CLA on the hub (web s129 parity)
 
-- [ ] HUB-QUESTION-CLA (REGISTERED 2026-09-29, session web-fc62c099, operator
+### HUB-QUESTION-CLA EXECUTED (same session, hub `8d8fa78` on base e50bfe2, CI build+e2e green)
+
+Delivered as claimed: `src/components/cla/question-cla-overlay.tsx` (new) + the
+player wiring (header "Ask CLA" + per-answer-box lightbulb on list AND
+full-screen, transcripts lifted per whole question, one page-level overlay).
+Verification, all on the pushed tree: tsc + eslint + 629-page build + the full
+12-test Playwright suite (deck-flow E2E + axe gate) re-run on BOTH merge bases
+(after content-package v0.2 `7ed728e` and after wave-3b `e50bfe2` — zero
+overlap with the re-shell; TypedAnswerWorkspace/AnswerTextarea untouched); NEW
+7-pin prod contract probe `cla_prod_probe.py` — login → hub bridge root
+(4CH1) → families (561) → Understand 200 PAST_PAPER_QUESTION EXPLAIN
+(decode-only, provider groq, 6 evidence chunks, 3 read-only tools, marks=7
+echoed) → Approach 200 QUESTION_PART HINT (partLabel=a, marks=2 echoed) →
+CHECK pre-attempt 409 attempt_required (§7 gate) → unknown id 404 fail-closed;
+prod chunk `0vk36tn91sy33.js` on the live 4CH1 topic page carries the
+overlay + "Ask CLA" markers (SSR HTML honestly lacks them — the entries
+render only when the identity bridge is ready). Ruling recorded: the hub's
+CLA anchors ride the 4CH1 identity bridge join — anchors are never
+client-invented (the attempt-bridge honesty rule extended to asks), and
+bridge-off states hide the surface instead of dead-ending. CI check-runs on
+`8d8fa78`: build success + e2e success.
+
+- [x] HUB-QUESTION-CLA (REGISTERED 2026-09-29, session web-fc62c099, operator
 directive trace 1a0ea01d0f9a8495 "In syllabai-web, the exam question had some
 extra stuff. syllabai-hub does not have it. One example is CLA") **port the
 question-anchored CLA overlay from web to the hub's exam-questions player** —
