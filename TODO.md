@@ -177,3 +177,21 @@ storage/session decision — honest-absent). MathLive/LaTeX storage explicitly o
 of scope (would change the answer-format contract; operator decision pending —
 see HUB-ANSWER-BOX row 150 for wave 1/2 lineage). Lease: core-web-contract in
 .syllabai/locks.yaml (base 929b241/core fd4631e/hub 817c845, expires 48h).
+
+## 2026-09-29 — claim: ADR-029 tranche 4.13 — a11y + deck-flow Playwright E2E
+
+- [ ] TRANCHE-4.13 (IN PROGRESS, session web-fc62c099, operator trace
+1a0e9df1b1532a29 "Proceed with a11y + deck-flow Playwright E2E") **the last
+unclaimed ADR-029 follow-up** — two faces, one browser harness: (1)
+deck-flow Playwright E2E over the Ebbinghaus cycle (rate → due → resurface)
+with seeded historical trails (time-travel in localStorage — the honest way
+to test a days-scale scheduler in a seconds-scale test), keyboard-only
+traversal of the deck player, the learner "Flashcards due" section, and the
+"Review due first" stalest-first lift; (2) an a11y pass with axe-core scans
+on the key routes + keyboard pins, real cheap fixes landed, deliberate
+exceptions recorded in a committed baseline file. Mock mode (HUB_DATA_MODE=
+mock, bundled corpus) — deterministic, prod untouched. Files: tests/e2e/*,
+playwright.config.ts, package.json/bun.lock (devDeps), ci.yml (e2e job),
+small a11y component fixes (NOT answer-textarea/question-player — wave 3's
+active lease). Lease: none needed (no shared-resource class touched; a11y
+fixes coordinated fetch-before-push).
