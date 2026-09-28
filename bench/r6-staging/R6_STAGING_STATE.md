@@ -1,3 +1,36 @@
+# r6 staging unit — EXECUTING (the gate discharged 2026-09-28)
+
+**Status 2026-09-28 (records `ab600e18f1` + this commit): the r6 gate — the operator/teacher
+card validation wave — LANDED 2026-09-28 ~08:03Z.** The operator (Nawaf Al Hussain Khondokar)
+completed the 298-card review sheet (sha256 `89c07146…`, delivered via their own GitHub upload)
+and the recorded decisions — 295 VALIDATE + 3 FLAG (#207/#278/#291) — were applied VERBATIM in
+one fail-closed transaction (content_review_audit run `a5d13c0a-2503-4d06-bb14-9397e9a1cf37`,
+298 operator-labeled rows). No agent-asserted validation anywhere. The earlier
+WAITING_FOR_GENUINE_TEACHER_VALIDATION marker is therefore DISCHARGED — the wave is genuine,
+operator-named, audit-evidenced.
+
+At-flip execution state (per the "Remaining AT THE FLIP" list below):
+
+1. Gate re-probed first-hand: documents census 296 VALIDATED / 3 FLAGGED / 80 SUGGESTED
+   neighbors untouched; chunks mirror (295 up-flips + 3 flag decisions, 0 regressions). DONE.
+2. `snap005_export.py` run FOR REAL — ALL VERIFICATIONS PASS after two narrowly-scoped,
+   manifest-bound exporter amendments (SNAP5-F5: SUGGESTED→FLAGGED card decisions are the
+   operator's own, not regressions; SNAP5-F6: question_anchors grew +11 rows additively from
+   the app-side teacher wave on the papers/schemes axis — multiset superset, audit-evidenced).
+   Freeze committed: `evidence/bench-001/snapshots/snap-005/` @ records `ab600e18f1`
+   (+ FREEZE_RECORD.md + amended exporter as provenance). DONE.
+3. gold re-pair: **gold-v4** — 12 class files BYTE-IDENTICAL to gold-v3 (anti-tuning held),
+   manifest pins move to snap-005; `gold_check.py (snap-005, gold-v4)` PASS (120 records,
+   quotas ok, all anchors resolve; selftest 6/6). DONE (this commit).
+4. preload-r6 — NEXT.
+5. `ops-{embed-backfill,run003b,run004a,run005c}-r6.yml` — NEXT.
+6. Dispatches in runbook order → run records → R6-GENERATION-NOTES + §8 verdict (the
+   interpretation pre-registration `09a624728` binds the first §8(d) reading). PENDING.
+
+The original staging record is preserved below (historical).
+
+---
+
 # r6 staging unit — READY (staged pre-flip, 2026-09-28)
 
 The r6 gate is the operator/teacher **card validation wave** (298 T-C27 cards; re-probed
