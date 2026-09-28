@@ -1,0 +1,61 @@
+{
+  "batch": "notes-axis-promotion-2026-09-28",
+  "batch_run_id": "ef4c1fe4-1b18-4697-b3bd-074e4e0f582b",
+  "started_at_utc": "2026-09-28T15:22:23.463615+00:00",
+  "operator_trace_id": "1a0e88af08e12df5",
+  "dry_run": false,
+  "credential_source": "render_env:.render_env.json",
+  "pre_chunk_census": {
+    "2": {
+      "chunks": 350,
+      "embedded": 350,
+      "wrong_model": 0,
+      "null_subject": 0,
+      "wrong_subject": 0
+    }
+  },
+  "pre_non_interference": {
+    "EXTERNAL_QUESTIONS": {
+      "VALIDATED": 299,
+      "SUGGESTED": 80,
+      "FLAGGED": 0,
+      "REJECTED": 0
+    },
+    "QUESTION_PAPER": {
+      "VALIDATED": 13,
+      "SUGGESTED": 164,
+      "FLAGGED": 0,
+      "REJECTED": 0
+    },
+    "MARK_SCHEME": {
+      "VALIDATED": 13,
+      "SUGGESTED": 156,
+      "FLAGGED": 0,
+      "REJECTED": 0
+    },
+    "SYLLABUS": {
+      "VALIDATED": 0,
+      "SUGGESTED": 162,
+      "FLAGGED": 0,
+      "REJECTED": 0
+    }
+  },
+  "pre_audit_rows": 365,
+  "pre_teacher_validation_events": 0,
+  "pre_gate_eligible": 615,
+  "post_gate_eligible": 965,
+  "post_chunk_census": {
+    "1": {
+      "chunks": 350,
+      "embedded": 350,
+      "wrong_model": 0,
+      "null_subject": 0,
+      "wrong_subject": 0
+    }
+  },
+  "audit_rows_written": 112,
+  "docs_flipped": 112,
+  "chunks_restamped": 350,
+  "status": "APPLIED",
+  "finished_at_utc": "2026-09-28T15:22:55.588533+00:00"
+}
