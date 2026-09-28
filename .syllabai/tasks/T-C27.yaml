@@ -278,3 +278,23 @@ task:
           directive, trace 1a0e6753792f76fd). r6 fires only after a genuine teacher
           validation wave; the staged unit (bench/r6-staging/) makes that moment
           execution, not engineering."
+      flagged3_flip_decision_2026-09-28:
+        decision: "OPERATOR NAMED — flip #207/#278/#291 to VALIDATE. Verbatim instruction:
+          \"flip #207/#278/#291 to VALIDATE. And continue you to work autonomously. I dont
+          have time to do anything\" (IM trace 1a0e7865c3b35715, 2026-09-28). Basis: the
+          source-verification REPORT (3/3 faithful, sha 23ead2a7…); the operator, being
+          the reviewing teacher, adopted the flip on that basis. The disposition question
+          opened by the flagged-3 verification is CLOSED at the decision level."
+        execution_state: "PREPARED — NOT YET APPLIED. The preparing session holds no
+          sanctioned production connection material (per-session handoff; the
+          scripts/.render_env.json path was rollback-wiped; no SYLLABAI_DATABASE_URL in
+          env) and no core document-flip endpoint exists (bank axis only; building one is
+          excluded by the standing trace 1a0e6753792f76fd boundary). Execution kit:
+          bench/review/flagged3-flip-2026-09-28/ (SHEET.md + flip_decisions.json +
+          apply_flip.py + RUNBOOK.md) — fail-closed, single transaction, idempotent by
+          batch id, census-gated (306V/747S/3F -> 309V/747S/0F abort-on-drift), writes
+          exactly 3 documents.validation_state flips + 3 content_review_audit rows
+          (action VALIDATE, target_type 'question' — the proven wave-import vocabulary;
+          teacher_validation_events CHECK domain still excludes documents and stays 0),
+          audit detail carries the operator trace + both sha256 pins + the honest
+          applied-by note. One command for any session holding the sanctioned URL."
