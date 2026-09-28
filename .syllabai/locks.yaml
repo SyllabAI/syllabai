@@ -1,13 +1,11 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
 version: 1
-locks:
-  - resource: core-web-contract
-    owner: session-web-98866c45
-    task: "HUB-ANSWER-BOX wave 3 — free/no-card input wave: core AI image-transcription endpoint (vision model already provisioned in core) + hub consumption (math Unicode palette, ink canvas, photo upload -> transcription -> insert-at-caret into shared AnswerTextarea; plain-text contract preserved). Base: coordination 929b241, core fd4631e, hub 817c845. Operator approval trace 1a0e9d0b24f445c1 'route (1) adds a core endpoint sounds good'."
-    base_commit: 929b241
-    acquired_at: 2026-09-29T18:40:00Z
-    expires_at: 2026-10-01T18:40:00Z
+locks: []
+# (HUB-ANSWER-BOX wave 3's core-web-contract lease was fulfilled — core da1717d
+# + hub c92fbe3 pushed on bases core fd4631e / hub 817c845; released per the
+# reclaim rule. CI status unverifiable from the sandbox (private repo) — the
+# local gates (core 1028 green, hub build 629 pages) are the recorded claim.)
 # (T-C30's authoritative-kg-promotion lease was fulfilled — the operator-directed
 #  activation ran under the recorded directive, twice, idempotently (runs
 #  36253537636 + 36253728888 SUCCESS, 0 -> 182 applicability nodes); web PR #11

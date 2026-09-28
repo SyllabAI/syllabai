@@ -163,7 +163,7 @@ supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/r
 
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3 (free/no-card input wave)
 
-- [ ] HUB-ANSWER-BOX-W3 (IN PROGRESS, session web-98866c45, operator trace
+- [x] HUB-ANSWER-BOX-W3 (EXECUTED 2026-09-29, session web-98866c45, operator trace
 1a0e9d0b24f445c1 "route (1) adds a core endpoint sounds good") **answer-box
 free-input wave** — operator constraint "must be free and no credit card" rules
 out Mathpix/MyScript/Wiris/cloud-vision APIs; route = existing core AI stack.
@@ -222,3 +222,38 @@ bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-28/
   `bench/review/psaxis-review-2026-09-28/restamp267-2026-09-28/`. Remaining open:
   Jan-2021 sign-off (operator), §D1 retire (96 inert), bank-repair queue, sheet-generator
   regex fix.
+
+  **EXECUTED as core da1717d + hub c92fbe3 (both pushed; local gates green):**
+  core leg — LlmRequest gains optional LlmMedia (legacy ctors preserved);
+  LlmProvider.supportsMedia() capability flag with the media filter living in
+  the SHARED routing step (routingOf) so generate() and the SSE stream() can
+  never drift apart on it; text-only members never receive an image; pinned
+  media to a text-only provider fails loudly; distinct "no vision-capable
+  provider" exhaustion message. SpringAiChatModelAdapter maps LlmMedia onto
+  Spring AI Media (UserMessage builder; messages() feeds both paths); gemini
+  registered as the chain's vision-capable member. New
+  com.syllabai.answerinput: POST /api/v1/learners/me/answer-input/transcribe —
+  plain-text-only transcription policy (Unicode math + linear notation, never
+  LaTeX) so the ANSWER FORMAT CONTRACT IS UNCHANGED; mime whitelist + 4MB
+  decoded cap validated BEFORE any model call; blank/[empty] -> 422; chain
+  exhaustion -> 503 with fixed served messages per the M2 posture; the
+  transcription path joins the llm:ask per-learner rate budget (R8 cost-tier
+  rule). Tests: FailoverLlmChainMediaTest (6) + AnswerInputTranscriptionService
+  Test (8); full suite 1028 green (2 pre-existing skips) offline on JDK 25.
+  hub leg — new answer-ink-pad.tsx (pointer-events ink canvas: pen/touch/mouse
+  draw inside the pad while the stylus keeps OS mouse behaviour elsewhere —
+  no vendor, platform default; undo/clear; photo upload with client-side
+  ≤1600px JPEG downscale; → core transcribe → EDITABLE PREVIEW → insert at
+  caret: transcription is a hint under human control, never a silent rewrite;
+  per-status error copy mirroring the core contract; honest "the image is
+  never stored"); answer-textarea.tsx gains the maths symbols group (√ π ≤ ≥
+  ≠ ≈ ± ÷ ∫ Σ ∞ ⁄ — plain text) and the "write" toggle, hidden without a
+  learner session (authenticated per-learner spend; a button that always 401s
+  would be dishonest); api.transcribeHandwriting(). eslint + tsc clean,
+  production build green (629 pages). Both surfaces inherit via the shared
+  component. QR phone-upload deferred (storage/session decision —
+  honest-absent); MathLive/LaTeX answers deferred (answer-format contract
+  decision pending, see the W3 explanation). Caveats: repo private → CI
+  status unverifiable from the sandbox (no gh auth) — local gates are the
+  claim; live end-to-end probe needs a learner JWT (operator-gated, as T-C23).
+  Lease released below.
