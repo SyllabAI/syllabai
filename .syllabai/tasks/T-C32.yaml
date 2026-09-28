@@ -3,7 +3,7 @@ task:
   id: T-C32
   title: "resolveActive N+1 — per-node KnowledgeNode reads on the serving-scope resolution path (T-C23 recorded ticket candidate 2)"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: EXECUTING
+  status: IN_REVIEW
   priority: P3
   base:
     repo: syllabai-core
@@ -32,3 +32,26 @@ task:
   discipline: "claim-first registered BEFORE any code (S145 lesson); branch off core
     main d4e0f7a; local-verified (full unit suite, JDK 25 / Maven user-space) before
     push; core-ci green to merge; merge = operator/owner lane per T-C31 precedent"
+  executed:
+    - "implemented on core branch perf/t-c32-resolve-active-n-plus-one (commit
+      42534db, +93/-32 across 3 files): hasValidatedStructure now answers the
+      VALIDATED-structure question with ONE batched
+      existsByIdInAndNodeTypeInAndValidationStatus over the SAME findSubtreeIds
+      id set (recursive CTE never duplicated — single source of truth; enums bind
+      through the entity's STRING mapping); resolution policy byte-identical
+      (ACTIVE-only candidates, VALIDATED-structure-or-papers ownership,
+      exactly-one-owner refusal matrix, empty-subtree fail-closed)"
+    - "verification: CurriculumScopeResolverTest re-stubbed to the batched predicate
+      + T-C32 regression pin (verify never findById — the N+1 is dead; predicate
+      runs exactly once per subject root carrying the FULL subtree id set, the
+      pinned UNIT/TOPIC/SUBTOPIC list, the VALIDATED literal); full unit suite
+      green locally 925 tests / 0 failures; PR #30 opened, core-ci build SUCCESS
+      on head 42534db"
+  boundaries_respected:
+    - "no resolution-semantics change (T-C07 matrix intact); no schema/migration;
+      no serving-path behavior change; intentSurface + RoutingController /
+      KaRagService call sites untouched"
+  merge: "operator/owner lane — PR #30 ready on green CI"
+  follow_ups:
+    - "post-merge: the ~340 per-node reads per serving request drop to 2 queries
+      per subject root (subtree CTE + batched predicate)"
