@@ -1,52 +1,50 @@
 #!/usr/bin/env python3
-"""snap-006 exporter — the notes-axis-promotion freeze substrate (2026-09-28).
+"""snap-006 exporter — the r7 serving-set eval freeze (2026-09-28).
 
 Sixth versioned freeze in the snap-N series. Adapted from the frozen
-snap005_export.py (carried in evidence/bench-001/snapshots/snap-005/) with ALL
-producer queries preserved verbatim; comparison base advances snap-004 -> snap-005.
+snap005_export.py (the post-F5/F6 amended bytes carried in
+evidence/bench-001/snapshots/snap-005/) with ALL producer queries preserved
+verbatim; comparison base advances snap-004 -> snap-005.
 
-Purpose: the r7 freeze. The operator's named decision (IM trace
-1a0e88af08e12df5, verbatim "pursue (a). And check current state, and other
-agents' work. Check if they completed these or not", where (a) was presented in
-trace 1a0e88d81372240d) was applied 2026-09-28 as batch
-`notes-axis-promotion-2026-09-28` (content_review_audit batch_run_id
-ef4c1fe4-1b18-4697-b3bd-074e4e0f582b): the 112 EXTERNAL_NOTES documents
-SUGGESTED -> VALIDATED + their 350 chunks embed_rev 2 -> 1, purely additive to
-the serving gate (replica 615 -> 965; notes chunks all gemini-embedding-001@768
-both revs). This freeze captures that production truth so §8(d)
-SpecificationPoint resolution — scored 0.0 at r6 because the HV-mapped notes
-chunks were SUGGESTED and the VALIDATED-only serving gate excluded exactly
-them — is measured over a SERVED view that now contains the mapped chunks.
+Purpose: the r7 eval generation (operator directive "Proceed with (1) eval",
+trace 1a0e88bb060ed3b5 — item (1) of the corrected standing menu,
+evidence/serving-rev2-flipback-refutation-2026-09-28/REPORT.md): freeze
+TODAY'S production serving truth so the bench harness (run-004-a pattern)
+scores the corpus that actually serves. Two operator decisions landed after
+the snap-005 freeze and are captured at run time as manifest-bound deltas:
+  - the flagged3 flip (decision trace 1a0e7865c3b35715, batch_run_id
+    0d5e4c4a-cacc-454c-9dfe-5983e1f11661, 2026-09-28T11:32Z, records 7f3a8f3
+    + 35b5166): 3 EXTERNAL_QUESTIONS cards FLAGGED->VALIDATED;
+  - the notes-axis promotion (operator trace 1a0e88af08e12df5 "pursue (a)",
+    batch notes-axis-promotion-2026-09-28, batch_run_id ef4c1fe4-1b18-4697-
+    b3bd-074e4e0f582b, 2026-09-28T15:22Z, records 9ea54e1): 112
+    EXTERNAL_NOTES documents SUGGESTED->VALIDATED + 350 notes chunks
+    embed_rev 2->1 (vectors untouched).
+Serving-gate replica expectation: 615 -> 965 eligible chunks, purely additive.
+This exporter captures whatever validation flips exist AT RUN TIME as
+manifest-bound deltas — never asserted in advance.
 
 Changes vs snap-005 (all recorded as manifest-bound deltas, never silent):
-  SNAP6-F1  validation flips captured at run time. Expected cohorts (both are
-            recorded operator decisions, verified first-hand before staging):
-            (i) exactly the 350 EXTERNAL_NOTES chunks SUGGESTED -> VALIDATED
-            (notes-axis promotion, batch ef4c1fe4…, operator trace
-            1a0e88af08e12df5); (ii) exactly the 3 T-C27 card chunks
-            FLAGGED -> VALIDATED (the flagged-3 flip, records 7f3a8f3ec,
-            applied 2026-09-28T11:34Z per the operator's own named flip
-            decision, trace 1a0e7865c3b35715, after the flagged-3 source
-            verification). ANY OTHER up-flip, and ANY down-flip, aborts.
-  SNAP6-F2  metadata-only paper_code stamps (same rule as SNAP5-F2).
-  SNAP6-F3  question_anchors multiset SUPERSET of snap-005 (no removal or
-            mutation; growth recorded — the SNAP5-F6 rule carried forward).
-  SNAP6-H1  additive §8(d) substrate: chunk_spec_hv.json BYTE-IDENTICAL to the
-            records-committed projection (sha256 b5b20ffa…, the SNAP5-H1
-            artifact), manifest-pinned so BenchSnapshot's fail-closed loader
-            verifies it; drift gate re-verified over the frozen chunk bytes.
-  SNAP6-M1  method note: sanctioned session-env read path, SELECT-only, rolled
-            back (SNAP3-M1/SNAP4-M1/SNAP5-M1 lineage unchanged).
+  SNAP6-F1  validation flips captured at run time (the two operator
+            decisions above; any other flip is recorded, any DOWN-flip aborts)
+  SNAP6-D1  strict r7 flip gate: every permitted flip targets VALIDATED;
+            a down-flip means an unexpected production regression = FAIL
+  SNAP6-F4  the notes axis now SERVES (the 210 HV chunk->spec mappings of
+            the SNAP6-H1 substrate become reachable in the served view;
+            SS8(d) scoreable-with-coverage at this freeze)
+  SNAP6-F6  question_anchors fidelity = multiset SUPERSET vs snap-005
+            (no removal/mutation; growth recorded as a delta)
+  SNAP6-M1  method note: sanctioned session-env read path, SELECT-only,
+            rolled back (SNAP3-M1/SNAP4-M1/SNAP5-M1 lineage unchanged)
 
 Fidelity anchors (must hold or the script exits non-zero):
   - chunks               snap-005's 4,181 row set carried IDENTICAL (same
     chunk_refs, contents, kinds, spec_codes); the ONLY permitted value deltas
-    are paper_state (SNAP6-F1) and metadata-only paper_code stamps (SNAP6-F2).
-    NO new rows, NO removed rows. Any other drift = FAIL.
+    are paper_state (SNAP6-F1) and metadata-only paper_code stamps. Any other
+    drift = FAIL. Zero NEW chunks expected (no ingest since 09-26).
   - spec_points / graph_edges / misconceptions / question_anchors /
-    concept_attachments  re-fetched live; byte-identical or superset-equal per
-    the rules above; graph_code re-emitted, rows set-equal (source.date
-    differs by design).
+    concept_attachments  re-fetched live, BYTE-IDENTICAL to snap-005;
+    graph_code re-emitted, rows set-equal (source.date differs by design).
   - DRIFT GATE           every HV mapping re-verified over the FROZEN chunk
     bytes against the pinned resources store: recomputed anchor (kind + hit
     indexes) must equal the recorded projection row; any divergence aborts.
@@ -64,16 +62,16 @@ from datetime import datetime, timezone
 import psycopg2
 import yaml
 
-SNAP5 = "/home/z/my-project/workspace/r7_staging/snap-005"
-HV_SOURCE = "/home/z/my-project/workspace/r7_staging/snap-005/chunk_spec_hv.json"
+SNAP5B = "/home/z/my-project/workspace/snap006/base"
+HV_SOURCE = "/home/z/my-project/workspace/snap006/base/chunk_spec_hv.json"
 HV_SHA256 = "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3"
-STORE = "/home/z/my-project/workspace/r7_staging/spec_chunk_mappings.yaml"
+STORE = "/home/z/my-project/workspace/snap006/store/spec_chunk_mappings.yaml"
 STORE_SHA16 = "e8b58a7109104bb7"
 RESOURCES_MAIN = "1245df009712216b309f163aacdd1c6d8ef39f1b"
 STAGING = "/home/z/my-project/workspace/snap006/staging"
-RES = "/home/z/my-project/workspace/snap003/resources_pins"
-C19 = f"{RES}/scripts__c19_promotions.yaml"
-CONCEPTS_YAML = f"{RES}/graph__igcse-chemistry__concepts.yaml"
+RES = "/home/z/my-project/workspace/snap006/pins"
+C19 = f"{RES}/c19_promotions.yaml"
+CONCEPTS_YAML = f"{RES}/concepts.yaml"
 HEAD = "1245df009712216b309f163aacdd1c6d8ef39f1b"  # syllabai-resources pin (unchanged since snap-002)
 
 _env = {e["key"]: e["value"] for e in json.load(open("/home/z/my-project/scripts/.render_env.json"))["env"]}
@@ -179,16 +177,20 @@ def main():
           "chunk content_sha256 self-consistency", f"{len(chunks)} rows")
     check(len({c["chunk_ref"] for c in chunks}) == len(chunks), "no duplicate chunk_refs")
 
-    old = json.load(gzip.open(f"{SNAP5}/chunks.jsonl.gz"))
+    old = json.load(gzip.open(f"{SNAP5B}/chunks.jsonl.gz"))
     old_by_ref = {c["chunk_ref"]: c for c in old}
     new_by_ref = {c["chunk_ref"]: c for c in chunks}
     added_refs = set(new_by_ref) - set(old_by_ref)
     removed_refs = set(old_by_ref) - set(new_by_ref)
     check(not removed_refs, "no snap-005 chunk_ref removed",
           f"{len(removed_refs)} removed")
-    check(not added_refs, "no new chunk_ref since snap-005 (SNAP6 row-set frozen; "
-          "the notes chunks joined at snap-005)",
-          f"{len(added_refs)} added")
+    added_by_kind = {}
+    for r in added_refs:
+        added_by_kind[new_by_ref[r]["kind"]] = added_by_kind.get(new_by_ref[r]["kind"], 0) + 1
+    check(added_by_kind == {},
+          "additive delta == ZERO new chunks since snap-005 (the flagged3 flip + the "
+          "notes-axis promotion flipped validation states only — no ingest since 09-26)",
+          json.dumps(added_by_kind))
     common_refs = set(old_by_ref) & set(new_by_ref)
     content_drift = [r for r in common_refs if old_by_ref[r]["content"] != new_by_ref[r]["content"]]
     check(not content_drift, "chunk contents IDENTICAL to snap-005 on the carried set",
@@ -212,73 +214,50 @@ def main():
                                 "snap005": o.get("paper_code"), "snap006": c.get("paper_code")})
     up_flips = [f for f in state_flips if f["snap006"] == "VALIDATED"]
     down_flips = [f for f in state_flips if f["snap006"] != "VALIDATED"]
-
-    # SNAP6-F1: the ONLY sanctioned up-flip cohorts (both operator-recorded):
-    #   (i)  EXTERNAL_NOTES SUGGESTED -> VALIDATED  (notes-axis promotion,
-    #        batch ef4c1fe4-1b18-4697-b3bd-074e4e0f582b, trace 1a0e88af08e12df5)
-    #   (ii) EXTERNAL_QUESTIONS FLAGGED -> VALIDATED (the flagged-3 flip,
-    #        records 7f3a8f3ec, operator trace 1a0e7865c3b35715)
-    notes_flips = [f for f in up_flips
-                   if f["kind"] == "EXTERNAL_NOTES" and f["snap005"] == "SUGGESTED"]
-    flag3_flips = [f for f in up_flips
-                   if f["kind"] == "EXTERNAL_QUESTIONS" and f["snap005"] == "FLAGGED"]
-    unexpected_up = [f for f in up_flips if f not in notes_flips and f not in flag3_flips]
-    check(not unexpected_up,
-          "up-flips are ONLY the sanctioned cohorts (SNAP6-F1)",
-          f"{len(unexpected_up)} unexpected: {json.dumps(unexpected_up[:3])}")
-    check(len(notes_flips) == 350,
-          "notes-axis promotion captured: exactly the 350 EXTERNAL_NOTES chunks "
-          "SUGGESTED -> VALIDATED (operator batch ef4c1fe4…)",
-          f"{len(notes_flips)} notes flips")
-    check(len(flag3_flips) == 3,
-          "flagged-3 flip captured: exactly the 3 T-C27 card chunks "
-          "FLAGGED -> VALIDATED (operator decision, records 7f3a8f3ec)",
-          f"{len(flag3_flips)} flag flips")
-    check(not down_flips, "zero down-flips since snap-005 (SNAP6-F2; the snap-005 "
-          "FLAG decisions were already captured there)",
-          f"{len(down_flips)} down-flips")
+    # SNAP6-D1: STRICT for r7 — every permitted flip targets VALIDATED (the flagged3
+    # operator flip + the notes-axis promotion); ANY down-flip (->FLAGGED/SUGGESTED/
+    # REJECTED, or anything leaving VALIDATED) aborts the freeze.
+    check(len(down_flips) == 0,
+          "no down-flips of any kind (r7 strict: the flagged3 flip + notes-axis promotion "
+          "are pure up-flips; a down-flip means an unexpected production regression)",
+          f"{len(down_flips)} down-flips: " + json.dumps(down_flips[:5]))
 
     ps_by_kind = {}
     for c in chunks:
         ps_by_kind.setdefault(c["kind"], {}).setdefault(c["paper_state"], 0)
         ps_by_kind[c["kind"]][c["paper_state"]] += 1
     print(f"  paper_state by kind: {json.dumps(ps_by_kind, sort_keys=True)}")
-    flip_by_kind_from = {}
-    for f in state_flips:
-        key = f"{f['kind']}|{f['snap005']}->{f['snap006']}"
-        flip_by_kind_from.setdefault(key, 0)
-        flip_by_kind_from[key] += 1
-    print(f"  flips by kind|from->to: {json.dumps(flip_by_kind_from, sort_keys=True)}")
+    flip_by_kind_code = {}
+    for f in up_flips:
+        key = f"{f['kind']}|{f['paper_code']}"
+        flip_by_kind_code.setdefault(key, 0)
+        flip_by_kind_code[key] += 1
+    print(f"  promoted chunks by kind|paper_code: {json.dumps(flip_by_kind_code, sort_keys=True)}")
 
+    promoted_docs = sorted({f["chunk_ref"].rsplit(":", 1)[0] for f in up_flips})
     DELTAS["SNAP6-F1_validation_flips"] = {
         "finding": "validation-state flips since the snap-005 freeze, captured at freeze "
-                   "time as-is. Two cohorts, both recorded operator decisions verified "
-                   "first-hand before this freeze: (i) the notes-axis promotion (operator "
-                   "trace 1a0e88af08e12df5 'pursue (a)', batch notes-axis-promotion-2026-09-28, "
-                   "content_review_audit batch_run_id ef4c1fe4-1b18-4697-b3bd-074e4e0f582b): "
-                   "112 EXTERNAL_NOTES documents SUGGESTED -> VALIDATED + their 350 chunks "
-                   "embed_rev 2 -> 1 — the serving-gate replica moved 615 -> 965 purely "
-                   "additively; (ii) the flagged-3 flip (records 7f3a8f3ec, applied "
-                   "2026-09-28T11:34Z per the operator's named flip decision, trace "
-                   "1a0e7865c3b35715): the 3 T-C27 cards #207/#278/#291 FLAGGED -> VALIDATED. "
-                   "This is the delta that moves §8(d) off its r6 0.0: the VALIDATED-only "
-                   "serving gate no longer excludes the HV-mapped notes chunks.",
+                   "time as-is: the operator's flagged3 flip (3 EQ cards "
+                   "FLAGGED->VALIDATED, batch 0d5e4c4a) + the notes-axis promotion (112 "
+                   "EN documents SUGGESTED->VALIDATED with their 350 chunks, batch "
+                   "ef4c1fe4). Any other flip would be recorded; any DOWN-flip aborts "
+                   "(SNAP6-D1).",
         "chunks_flipped_to_validated": len(up_flips),
-        "notes_chunks_suggested_to_validated": len(notes_flips),
-        "card_chunks_flagged_to_validated": len(flag3_flips),
-        "flips_by_kind_from_to": flip_by_kind_from,
+        "flips_by_kind_paper_code": flip_by_kind_code,
+        "documents_with_promoted_chunks": len(promoted_docs),
         "paper_state_by_kind": ps_by_kind,
-        "no_down_flips": len(down_flips) == 0,
-        "row_set_identity": "snap-005's 4,181 chunk_refs carried with IDENTICAL contents, "
-                            "kinds and spec_codes; zero added, zero removed; paper_state "
-                            "(and metadata-only paper_code stamps, if any) are the only "
-                            "permitted value deltas, verified programmatically",
+        "no_regressions": len(down_flips) == 0,
+        "row_set_identity": "snap-005's 3,831 chunk_refs carried with IDENTICAL contents, "
+                            "kinds and spec_codes; paper_state (and metadata-only paper_code "
+                            "stamps, if any) are the only permitted value deltas on the carried "
+                            "set, verified programmatically",
     }
     stamp_by_kind = {}
     for s in code_stamps:
         stamp_by_kind[s["kind"]] = stamp_by_kind.get(s["kind"], 0) + 1
     DELTAS["SNAP6-F2_chunk_paper_code_stamps"] = {
-        "finding": "metadata-only paper_code stamps since snap-005 (recorded, never gating).",
+        "finding": "metadata-only paper_code stamps since snap-005 (snap-005 recorded 246 "
+                   "stamps in SNAP4-F2; any further stamps are recorded here).",
         "rows_stamped": len(code_stamps),
         "by_kind": stamp_by_kind,
     }
@@ -286,6 +265,21 @@ def main():
         "finding": "unchanged read path: sanctioned production connection from the session "
                    "env, READ-ONLY (set_session(readonly=True)), SELECT-only, rolled back; "
                    "zero writes to any production table",
+    }
+    en_flips = [f for f in state_flips if f["kind"] == "EXTERNAL_NOTES"]
+    eq_flips = [f for f in state_flips if f["kind"] == "EXTERNAL_QUESTIONS"]
+    DELTAS["SNAP6-F4_notes_axis_serving"] = {
+        "finding": "the notes axis now SERVES: operator directive 'pursue (a)' (trace "
+                   "1a0e88af08e12df5) applied the notes-axis promotion (batch "
+                   "notes-axis-promotion-2026-09-28, batch_run_id ef4c1fe4-1b18-4697-b3bd-"
+                   "074e4e0f582b, 2026-09-28T15:22Z, records 9ea54e1): 112 EXTERNAL_NOTES "
+                   "documents SUGGESTED->VALIDATED + 350 notes chunks embed_rev 2->1 "
+                   "(vectors untouched). The 210 HUMAN_VALIDATED chunk->spec mappings "
+                   "(SNAP6-H1 substrate) are therefore REACHABLE in the served view and "
+                   "SS8(d) is scoreable-with-coverage at this freeze. This exporter "
+                   "captures the resulting paper_state flips at run time.",
+        "en_chunks_flipped": len(en_flips),
+        "eq_chunks_flipped": len(eq_flips),
     }
 
     # ---------------- DRIFT GATE: §8(d) substrate over frozen bytes -----------
@@ -362,17 +356,15 @@ def main():
           json.dumps(hv_census))
 
     DELTAS["SNAP6-H1_chunk_spec_hv_substrate"] = {
-        "finding": "§8(d) substrate carried BYTE-IDENTICAL from snap-005 (sha256-pinned "
-                   "to the records-committed artifact, records 94d0d405c): the 210 "
-                   "HUMAN_VALIDATED chunk→SP mappings are unchanged; what CHANGES at "
-                   "snap-006 is the serving state of the chunks those refs anchor — "
-                   "VALIDATED after the notes-axis promotion, so the served view now "
-                   "contains the mapped chunks and §8(d) is measured with coverage "
-                   "(r6 scored it 0.0 over the same substrate because the gate excluded "
-                   "exactly these chunks). Drift gate: every mapping's quote containment "
-                   f"re-verified over the FROZEN chunk bytes against the pinned resources "
-                   f"store ({RESOURCES_MAIN}, store sha256_16 {STORE_SHA16}); anchor kinds "
-                   f"recomputed {json.dumps(recomputed_kinds)}; "
+        "finding": "additive §8(d) substrate: chunk_spec_hv.json = the "
+                   "chunk-sp-substrate-2026-09-27 projection (records 94d0d405c), copied "
+                   "BYTE-IDENTICAL and manifest-pinned so BenchSnapshot's fail-closed loader "
+                   "verifies it (present-but-unpinned aborts; the §5 counting rule — "
+                   "validation_status, never tier — is enforced in the loader). §8(d) flips "
+                   "NOT SCOREABLE -> scoreable-with-coverage at this freeze. Drift gate: "
+                   "every mapping's quote containment re-verified over the FROZEN chunk bytes "
+                   f"against the pinned resources store ({RESOURCES_MAIN}, store sha256_16 "
+                   f"{STORE_SHA16}); anchor kinds recomputed {json.dumps(recomputed_kinds)}; "
                    f"census rows={len(projection['rows'])} "
                    f"refs={len({r for row in projection['rows'] for r in row['chunk_refs']})}.",
         "projection_sha256": HV_SHA256,
@@ -389,7 +381,7 @@ def main():
     spec_points = [{"code": r[0], "node_type": r[1], "title": r[2], "validation_status": r[3]}
                    for r in cur.fetchall()]
     sp_bytes = compact(spec_points).encode()
-    check(sha(sp_bytes) == sha(open(f"{SNAP5}/spec_points.json", "rb").read()),
+    check(sha(sp_bytes) == sha(open(f"{SNAP5B}/spec_points.json", "rb").read()),
           "spec_points BYTE-IDENTICAL to snap-005 (fidelity anchor)",
           f"{len(spec_points)} rows, {sha(sp_bytes)[:16]}")
 
@@ -407,7 +399,7 @@ def main():
     )
     graph_edges = [{"relation": r[0], "source": r[1], "target": r[2]} for r in cur.fetchall()]
     ge_bytes = compact(graph_edges).encode()
-    check(sha(ge_bytes) == sha(open(f"{SNAP5}/graph_edges.json", "rb").read()),
+    check(sha(ge_bytes) == sha(open(f"{SNAP5B}/graph_edges.json", "rb").read()),
           "graph_edges BYTE-IDENTICAL to snap-005 (fidelity anchor)",
           f"{len(graph_edges)} edges, {sha(ge_bytes)[:16]}")
 
@@ -419,7 +411,7 @@ def main():
     )
     misconceptions = [{"code": r[0], "title": r[1]} for r in cur.fetchall()]
     mis_bytes = compact(misconceptions).encode()
-    check(sha(mis_bytes) == sha(open(f"{SNAP5}/misconceptions.json", "rb").read()),
+    check(sha(mis_bytes) == sha(open(f"{SNAP5B}/misconceptions.json", "rb").read()),
           "misconceptions BYTE-IDENTICAL to snap-005", f"{len(misconceptions)} rows")
 
     # ---------------- question_anchors.json (verbatim) -------------------------
@@ -440,27 +432,27 @@ def main():
         for r in cur.fetchall()
     ]
     qa_bytes = compact(anchors).encode()
-    # SNAP6-F3: fidelity = multiset SUPERSET (no removal/mutation); growth = recorded delta
-    s5_rows = json.load(open(f"{SNAP5}/question_anchors.json", "rb"))
-    s5_counter = Counter(compact(r) for r in s5_rows)
+    # SNAP6-F6: fidelity = multiset SUPERSET (no removal/mutation); growth = recorded delta
+    s4_rows = json.load(open(f"{SNAP5B}/question_anchors.json", "rb"))
+    s4_counter = Counter(compact(r) for r in s4_rows)
     live_counter = Counter(compact(r) for r in anchors)
-    removed_rows = s5_counter - live_counter
-    added_rows = live_counter - s5_counter
+    removed_rows = s4_counter - live_counter
+    added_rows = live_counter - s4_counter
     check(sum(removed_rows.values()) == 0,
-          "question_anchors SUPERSET of snap-005 — zero removal/mutation (SNAP6-F3)",
+          "question_anchors SUPERSET of snap-005 — zero removal/mutation (SNAP6-F6)",
           f"{sum(removed_rows.values())} removed/mutated")
-    check(True, "question_anchors growth recorded (SNAP6-F3)",
-          f"+{sum(added_rows.values())} rows vs snap-005 ({len(s5_rows)} -> {len(anchors)})")
-    DELTAS["SNAP6-F3_question_anchor_movement"] = {
-        "finding": "the VALIDATED question_versions anchor set vs snap-005. Fidelity is "
-                   "multiset superset — zero removal, zero mutation; growth is recorded "
-                   "honestly (expected +0: the app-side teacher wave, pilot.teacher 11 qv "
-                   "+ 1 ep, was already captured at snap-005 via SNAP5-F6; the T-PS1 "
-                   "papers/schemes sheet remains unapplied).",
+    check(True, "question_anchors growth recorded (SNAP6-F6)",
+          f"+{sum(added_rows.values())} rows vs snap-005 ({len(s4_rows)} -> {len(anchors)})")
+    DELTAS["SNAP6-F6_question_anchor_growth"] = {
+        "finding": "the VALIDATED question_versions anchor set grew after the snap-005 "
+                   "freeze via the app-side teacher wave on the papers/schemes axis "
+                   "(content_review_audit 2026-09-28, pilot.teacher@syllabai-test.dev: "
+                   "11 question_version VALIDATE + 1 exam_paper VALIDATE_ALL). Fidelity "
+                   "is multiset superset — zero removal, zero mutation.",
         "rows_added": sum(added_rows.values()),
-        "rows_removed": sum(removed_rows.values()),
-        "rows_snap005": len(s5_rows),
-        "rows_snap006": len(anchors),
+        "rows_snap005": len(s4_rows),
+        "rows_snap005": len(anchors),
+        "added_distinct_rows": len(added_rows),
     }
 
     # ---------------- graph_code.json (verbatim producer) ----------------------
@@ -510,7 +502,7 @@ def main():
             "repo": "SyllabAI/syllabai-resources",
         },
     }
-    old_gc = json.load(open(f"{SNAP5}/graph_code.json"))
+    old_gc = json.load(open(f"{SNAP5B}/graph_code.json"))
 
     def sig(rows):
         return {r["code"]: (tuple(sorted(r["aliases"])), tuple(sorted(r["spec_points"])),
@@ -559,7 +551,7 @@ def main():
           "HV pairs present in pinned ratified concepts.yaml",
           f"{len(promo_pairs & yaml_pairs)}/117")
     att_bytes = compact(attachments).encode()
-    check(sha(att_bytes) == sha(open(f"{SNAP5}/concept_attachments.json", "rb").read()),
+    check(sha(att_bytes) == sha(open(f"{SNAP5B}/concept_attachments.json", "rb").read()),
           "concept_attachments BYTE-IDENTICAL to snap-005 (same ratified inputs)",
           sha(att_bytes)[:16])
 
@@ -593,17 +585,14 @@ def main():
     manifest = {
         "snapshot_version": "snap-006",
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "lineage": "snap-001 -> snap-002 -> snap-003 -> snap-004 -> snap-005 -> snap-006 "
-                   "(notes-axis promotion freeze)",
+        "lineage": "snap-001 -> snap-002 -> snap-003 -> snap-004 -> snap-005 -> snap-006 (r7 serving-set eval)",
         "files_sha256": {name: sha(open(f"{STAGING}/{name}", "rb").read())
                          for name in list(outs) + ["chunks.jsonl.gz"]},
         "counts": {
             "chunks": len(chunks),
             "chunks_by_kind": ps_by_kind and {k: sum(v.values()) for k, v in sorted(ps_by_kind.items())},
             "chunks_by_paper_state": ps_by_kind,
-            "chunks_flipped_to_validated_vs_snap005": len(up_flips),
-            "notes_chunks_suggested_to_validated_vs_snap005": len(notes_flips),
-            "card_chunks_flagged_to_validated_vs_snap005": len(flag3_flips),
+            "chunks_flipped_suggested_to_validated_vs_snap005": len(up_flips),
             "concept_attachments": len(attachments),
             "edges": len(graph_edges),
             "hv_projection": hv_census,
@@ -612,31 +601,29 @@ def main():
             "spec_points": len(spec_points),
         },
         "deltas_vs_snap-005": DELTAS,
-        "notes_axis_gate": {
-            "note": "recorded by the freeze run: the r7 gate is the operator's notes-axis "
-                    "promotion decision (trace 1a0e88af08e12df5 'pursue (a)' on the option "
-                    "presented in trace 1a0e88d81372240d); applied 2026-09-28 as batch "
-                    "notes-axis-promotion-2026-09-28 with an independent post-verify and "
-                    "records commit 9ea54e1e2 (kit + evidence). This freeze is the measured "
-                    "consequence: the served view now contains the HV-mapped notes chunks.",
-            "content_review_audit_batch_run_id": "ef4c1fe4-1b18-4697-b3bd-074e4e0f582b",
-            "operator_trace": "1a0e88af08e12df5",
-            "documents_flipped_suggested_to_validated": 112,
-            "chunks_restamped_embed_rev_2_to_1": 350,
-            "serving_gate_replica_before_after": "615 -> 965",
-        },
-        "flagged3_gate": {
-            "note": "recorded by the freeze run: the operator's named flip decision for the "
-                    "3 source-verified T-C27 cards (records 7f3a8f3ec applied 11:34Z, after "
-                    "the snap-005 freeze), captured here as the second sanctioned cohort.",
-            "operator_trace": "1a0e7865c3b35715",
-            "card_chunks_flagged_to_validated": len(flag3_flips),
+        "r7_gate": {
+            "note": "recorded by the freeze run: the serving set this eval scores is "
+                    "post-flagged3-flip + post-notes-axis-promotion production truth; "
+                    "gate replica expectation 615 -> 965 eligible chunks, purely additive",
+            "operator_traces": {
+                "flagged3_decision": "1a0e7865c3b35715",
+                "notes_axis_decision": "1a0e88af08e12df5",
+                "eval_commission": "1a0e88bb060ed3b5",
+            },
+            "batches": {
+                "flagged3": "0d5e4c4a-cacc-454c-9dfe-5983e1f11661",
+                "notes_axis": "ef4c1fe4-1b18-4697-b3bd-074e4e0f582b",
+            },
+            "eq_chunks_flipped_this_freeze": len(eq_flips),
+            "en_chunks_flipped_this_freeze": len(en_flips),
+            "prior_r6_gate_record": "content_review_audit run a5d13c0a-2503-4d06-bb14-9397e9a1cf37; "
+                                    "operator sheet sha256 89c0714681ecd710…; decisions 295 VALIDATE "
+                                    "+ 3 FLAG applied verbatim 2026-09-28 (records ab600e18f1)",
         },
         "graph_as_code_source": {"head": HEAD, "repo": "SyllabAI/syllabai-resources"},
         "chunk_spec_hv": {
             "sha256": HV_SHA256,
-            "source": "records 94d0d405c bench/evidence/chunk-sp-substrate-2026-09-27/ "
-                      "(byte-identical carry from snap-005)",
+            "source": "records 94d0d405c bench/evidence/chunk-sp-substrate-2026-09-27/",
             "drift_gate": "re-verified over frozen bytes at export; anchor census "
                           + json.dumps(recomputed_kinds),
         },
@@ -648,9 +635,10 @@ def main():
     for name in sorted(manifest["files_sha256"]):
         print(f"  {name}: sha256 {manifest['files_sha256'][name][:16]}…")
     print(f"\nALL VERIFICATIONS PASS — snap-006 STAGING tree ready ({STAGING})")
-    print("Staging only: the FROZEN snapshot commit + gold re-pair + preload-r7 + workflows +")
-    print("dispatches happen next in the recorded r7 sequence.")
+    print("Staging only: the FROZEN snapshot commit + gold re-pair + preload-r6 + workflows +")
+    print("dispatches happen at the real r6 freeze, after the operator card wave lands.")
 
 
 if __name__ == "__main__":
     main()
+

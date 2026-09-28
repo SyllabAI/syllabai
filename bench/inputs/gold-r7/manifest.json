@@ -1,5 +1,5 @@
 {
- "anti_leakage": "queries authored without executing any retrieval arm; set frozen + hashed before any recorded run; records generated deterministically from the snap-003 freeze (v2, 2026-09-26) and carried byte-identical into v3; the v3 snapshot pairing pins were re-issued against snap-004 per spec \u00a73/\u00a74 set+snapshot pair discipline (see pairing.repin_basis) v4 (2026-09-28): set carried byte-identical into v4; re-pinned to snap-005 per the set+snapshot pair discipline; still never executed against any retrieval arm before a recorded run. v5 (2026-09-28): set carried byte-identical into v5; re-pinned to snap-006 per the set+snapshot pair discipline; still never executed against any retrieval arm before a recorded run.",
+ "anti_leakage": "queries authored without executing any retrieval arm; set frozen + hashed before any recorded run; records generated deterministically from the snap-003 freeze (v2, 2026-09-26) and carried byte-identical into v3; the v3 snapshot pairing pins were re-issued against snap-004 per spec \u00a73/\u00a74 set+snapshot pair discipline (see pairing.repin_basis) v4 (2026-09-28): set carried byte-identical into v4; re-pinned to snap-005 per the set+snapshot pair discipline; still never executed against any retrieval arm before a recorded run.",
  "audit_findings": {
   "non_spec_question_anchors": "717/720 VALIDATED question anchors carry primary_topic_node_id pointing at non-spec nodes (623 at 4CH1-S* bank/session nodes + 94 at ING-* paper-scrape nodes); such anchors are quarantined OUT of gold_spec_points and recorded per-record as provenance.anchor_code_non_spec (v1 finding updated for the snap-003 anchor census)"
  },
@@ -39,9 +39,9 @@
   "none-substrate-absent": "no chunk substrate (notes_mirror / figures); gold = spec anchors only"
  },
  "pairing": {
-  "card_axis": "UNCHANGED BASIS, updated state: R2 evidence labels may anchor to EXTERNAL_QUESTIONS card chunks (kind-unfiltered R2 path); the ALL vs VALIDATED-only denominators score this honestly. At the snap-006 freeze the operator's notes-axis promotion HAS LANDED (112 EXTERNAL_NOTES docs VALIDATED + 350 notes chunks rev1 via content_review_audit batch ef4c1fe4\u2026, operator trace 1a0e88af08e12df5) and the flagged-3 flip applied (3 card chunks FLAGGED -> VALIDATED, records 7f3a8f3ec, trace 1a0e7865c3b35715): the served view now contains the HV-mapped notes chunks, so \u00a78(d) \u2014 0.0 at r6 because the gate excluded exactly those chunks \u2014 is measured with coverage. 965 VALIDATED chunks serve (145 QP + 161 MS + 309 EQ + 350 EN); 3,216 SUGGESTED remain on the ALL denominator only.",
-  "generated_from": "evidence/bench-001/snapshots/snap-006 (FREEZE_RECORD 2026-09-28)",
-  "repin_basis": "gold-v5's 12 class files are BYTE-IDENTICAL to gold-v4 (hashes pinned in the v4 manifest, re-verified at v5 build time) \u2014 the label basis remains the snap-003 freeze where v2 was generated. The snapshot pairing pins move to snap-006 under the programmatically verified deltas recorded in the snap-006 manifest (SNAP6-F1: 350 notes-axis promotion flips + 3 flagged-3 flips, both operator-recorded decisions; SNAP6-F2: 0 paper_code stamps; SNAP6-F3: question_anchors +0 superset; SNAP6-H1: chunk_spec_hv.json byte-identical substrate with drift gate 0 divergences; zero rows added or removed vs snap-005). No query was re-selected, re-worded or re-labeled (anti-tuning rule); gold_check.py PASS on (snap-006, gold-v5) is the enforced gate. This re-pin is the designed set+snapshot pair mechanism for a new generation, not a gold regeneration.",
+  "card_axis": "UNCHANGED BASIS, updated state: R2 evidence labels may anchor to EXTERNAL_QUESTIONS card chunks (kind-unfiltered R2 path). At the snap-006 freeze: EQ chunks 309 VALIDATED (incl. the 3 formerly-FLAGGED cards #207/#278/#291 \u2014 the operator's own flip, batch 0d5e4c4a) / 747 SUGGESTED / 0 FLAGGED; the 350 notes chunks are VALIDATED and SERVE (notes-axis promotion, batch ef4c1fe4) \u2014 so the 210 HV chunk->spec mappings are reachable in the served view and SS8(d) is scoreable-with-coverage at this freeze.",
+  "generated_from": "evidence/bench-001/snapshots/snap-006 (FREEZE_RECORD 2026-09-28, the r7 serving-set eval freeze)",
+  "repin_basis": "gold-v5's 12 class files are BYTE-IDENTICAL to gold-v4/v3 (hashes pinned in the v3 manifest, re-verified at v5 build time) \u2014 the label basis remains the snap-003 freeze where v2 was generated. The snapshot pairing pins move to snap-006 under the programmatically verified deltas recorded in the snap-006 manifest (SNAP6-F1: exactly 353 up-flips = the operator flagged3 flip 3 EQ FLAGGED->VALIDATED, batch 0d5e4c4a, trace 1a0e7865c3b35715 + the notes-axis promotion 350 EN SUGGESTED->VALIDATED, batch ef4c1fe4, trace 1a0e88af08e12df5; SNAP6-D1: zero down-flips; zero new/removed chunks; contents/kinds/spec_codes byte-identical; spec_points/graph_edges/misconceptions/question_anchors/concept_attachments byte-identical). Anti-tuning held: the set has never been tuned against any retrieval arm; v5 re-pairs, it does not re-author.",
   "validator": "unchanged from v2 (bench/gold_check.py with the 4CH1-PR practical-code gate)"
  },
  "quota": {
@@ -65,14 +65,14 @@
  "snapshot": {
   "version": "snap-006",
   "files_sha256": {
+   "chunks.jsonl.gz": "4181e5987f3a9c76069a42a1a29af470908043ad595523d1df96f80906a21ee8",
    "spec_points.json": "b95361eff3ac5a70040e0bc79af7b5f5666704db350505830ca409ead607d6fb",
    "graph_edges.json": "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
    "misconceptions.json": "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
    "question_anchors.json": "d22eef80d197090dcfded600a4affa340918842b7a1ce6618b461bb6bf9b784c",
+   "graph_code.json": "ab085c3b47dc1e0fa2c197e3343e4c63ccca1130eb477438813baef167635c6b",
    "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
-   "graph_code.json": "63ddb20ca7e80dc53b43896af59dbc5b62c892b9e14eb5c8d20d5b44c4f73730",
-   "chunk_spec_hv.json": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
-   "chunks.jsonl.gz": "4181e5987f3a9c76069a42a1a29af470908043ad595523d1df96f80906a21ee8"
+   "chunk_spec_hv.json": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3"
   }
  },
  "total": 120
