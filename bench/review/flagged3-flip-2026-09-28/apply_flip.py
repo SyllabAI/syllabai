@@ -74,7 +74,11 @@ def census(cur):
     cur.execute(
         "SELECT validation_state, count(*) FROM documents "
         "WHERE kind = 'EXTERNAL_QUESTIONS' GROUP BY 1 ORDER BY 1")
-    return dict(cur.fetchall())
+    observed = dict(cur.fetchall())
+    # zero-count states have no GROUP BY row — normalize so the recorded
+    # census format (explicit zeros, e.g. FLAGGED: 0 after the flip) compares equal
+    return {s: observed.get(s, 0)
+            for s in ("VALIDATED", "SUGGESTED", "FLAGGED", "REJECTED")}
 
 
 def main() -> int:

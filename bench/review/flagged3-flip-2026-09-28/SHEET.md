@@ -32,6 +32,7 @@ adopts the operator's judgment on content authenticity and does not fabricate li
 | VALIDATED | 306 | **309** |
 | SUGGESTED | 747 | 747 |
 | FLAGGED | 3 | **0** |
+| REJECTED | 0 | 0 |
 
 The importer aborts unless production shows the exact "before" census — if anything
 moved since the snap-005 freeze, re-verify first; the flip never runs on drift.

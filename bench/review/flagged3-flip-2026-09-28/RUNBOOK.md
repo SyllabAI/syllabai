@@ -1,5 +1,16 @@
 # RUNBOOK — flagged3 flip execution
 
+**INTEGRATION-TESTED 2026-09-28: 23/23 checks green** on a scratch PostgreSQL 17.2
+(self-signed SSL, `content_review_audit` DDL verbatim from core V22 incl. CHECKs,
+seeded to the exact 306V/747S/3F census): dry-run OK + zero writes; census-drift
+abort; per-card pre-state abort; foreign-batch abort; real apply (APPLIED,
+309V/747S/0F, 3 audit rows with the exact vocabulary + provenance detail);
+idempotent re-run (ALREADY_APPLIED, no double-apply); post-apply external drift
+(INCONSISTENT, manual review). The harness also caught one real bug pre-production
+(zero-count census states vanish from GROUP BY — census now normalizes explicit
+zeros; the recorded census vocabulary includes REJECTED: 0 so any rejected EQ doc
+triggers drift-abort).
+
 The decision is RECORDED (operator trace `1a0e7865c3b35715`); execution needs a session
 holding the sanctioned production connection material (the per-session handoff, or
 `scripts/.render_env.json` — the snap005 path). Any session with either can finish this

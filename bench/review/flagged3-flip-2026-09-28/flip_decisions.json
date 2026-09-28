@@ -53,8 +53,8 @@
   ],
   "expected_census_delta": {
     "documents_kind_EXTERNAL_QUESTIONS": {
-      "before": { "VALIDATED": 306, "SUGGESTED": 747, "FLAGGED": 3 },
-      "after": { "VALIDATED": 309, "SUGGESTED": 747, "FLAGGED": 0 }
+      "before": { "VALIDATED": 306, "SUGGESTED": 747, "FLAGGED": 3, "REJECTED": 0 },
+      "after": { "VALIDATED": 309, "SUGGESTED": 747, "FLAGGED": 0, "REJECTED": 0 }
     }
   },
   "boundary": "content unchanged; only documents.validation_state moves FLAGGED -> VALIDATED for exactly these 3 rows, plus one content_review_audit row each (target_type='question' vocabulary, the proven wave-import vocabulary). No embedding writes; no chunk writes (document_chunks carries no state column — serving state derives from the parent document via the JOIN). The 3 cards have spec linkage = none (the honest skips stand; the flip does not fabricate any)."
