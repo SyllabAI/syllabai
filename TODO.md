@@ -158,3 +158,20 @@ identities. Census 87 V / 3 F / 1 S / 13 R; serving pool 2,020 -> 2,581.
 3 stay FLAGGED: 4CH1/1C Jun-2019 (scanned pages, needs OCR lane + marks
 reconciliation), 4CH1/1C + 4CH1/2C Jun-2020 (COVID June/Nov pairing — operator
 supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/reingest-lane-2026-09-28/
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3 (free/no-card input wave)
+
+- [ ] HUB-ANSWER-BOX-W3 (IN PROGRESS, session web-98866c45, operator trace
+1a0e9d0b24f445c1 "route (1) adds a core endpoint sounds good") **answer-box
+free-input wave** — operator constraint "must be free and no credit card" rules
+out Mathpix/MyScript/Wiris/cloud-vision APIs; route = existing core AI stack.
+Scope: (core) image-transcription endpoint reusing the provisioned vision model
+behind core auth + RBAC; (hub) math Unicode palette extension of the shared
+AnswerTextarea (sibling of the chemistry palette), ink canvas (pointer events,
+undo/clear, exports PNG), photo upload with client-side downscale, transcription
+result inserted at caret as plain text — plain-text answer contract, per-keystroke
+autosave, and both mark lanes untouched. QR phone-upload deferred (needs a
+storage/session decision — honest-absent). MathLive/LaTeX storage explicitly out
+of scope (would change the answer-format contract; operator decision pending —
+see HUB-ANSWER-BOX row 150 for wave 1/2 lineage). Lease: core-web-contract in
+.syllabai/locks.yaml (base 929b241/core fd4631e/hub 817c845, expires 48h).
