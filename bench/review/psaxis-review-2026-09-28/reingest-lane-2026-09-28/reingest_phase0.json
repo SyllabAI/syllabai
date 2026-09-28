@@ -1,0 +1,1530 @@
+{
+ "generated": "2026-09-28T19:55:55.293376+00:00",
+ "remaining": [
+  {
+   "paper_id": "980095b5-f109-4249-9810-33b8994c7f56",
+   "paper": "4CH0/2C \u00b7 June 2014",
+   "code": "4CH0/2C",
+   "session": "June 2014",
+   "ep_state": "FLAGGED",
+   "extraction_method": "pdflane-atoms-draft-v1",
+   "series": "JUN",
+   "year": 2014,
+   "n_qv": 8,
+   "n_schemes": 8,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "e06585b7-ec49-5f86-8f73-85d1b62a255f",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2014jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "ca0bce24-e61f-5d4c-ba8e-d4169d90e13c",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2014jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "712f005c-55bb-543b-8237-e5dc0d873265",
+     "uri": "4CH0-2C-201406/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 12,
+     "embedded": 12,
+     "map_chunks": 12
+    },
+    "MARK_SCHEME": {
+     "doc": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+     "uri": "4CH0-2C-201406/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 9,
+     "embedded": 9,
+     "map_chunks": 9
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "e06585b7-ec49-5f86-8f73-85d1b62a255f": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2014jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "fe343325ea1a5467ade80d7be6abd48e181152069b4f4ead9d519f3956ed02f1"
+    },
+    "ca0bce24-e61f-5d4c-ba8e-d4169d90e13c": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2014jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "56b6c614efe3f7f3d5db0597c6146c6269dbd3975d1c51423e23536e3522ff9f"
+    },
+    "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH0-2C-201406/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 9,
+     "embedded": 9,
+     "checksum": "3f6d336dc271c76ae2d882ec0b5d2b137879768288e26bc7ae8593a3119b1ee5"
+    },
+    "712f005c-55bb-543b-8237-e5dc0d873265": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH0-2C-201406/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 12,
+     "embedded": 12,
+     "checksum": "aa1b11cff9c757c6805cf0fe2c0b0b8975c161e73b9efdbda6cc339bc8ed178b"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "dcba6a4a-75c2-4608-90aa-f965ca33385c",
+   "paper": "4CH0/2C \u00b7 June 2016",
+   "code": "4CH0/2C",
+   "session": "June 2016",
+   "ep_state": "FLAGGED",
+   "extraction_method": "pdflane-atoms-draft-v1",
+   "series": "JUN",
+   "year": 2016,
+   "n_qv": 8,
+   "n_schemes": 8,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "a413a8db-d984-5640-945e-1be0552ce0d6",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2016jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "acccc3cb-3394-50ec-86f9-54c550dabdac",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2016jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "e075a114-11fc-5994-828b-435dea3d824c",
+     "uri": "4CH0-2C-201606/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 10,
+     "embedded": 10,
+     "map_chunks": 10
+    },
+    "MARK_SCHEME": {
+     "doc": "9fcd9d72-6811-5985-b3c2-af93a25f97ca",
+     "uri": "4CH0-2C-201606/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 12,
+     "embedded": 12,
+     "map_chunks": 12
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "a413a8db-d984-5640-945e-1be0552ce0d6": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2016jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "821c1d9f59677ffd1a6c48c1c5305bde636d863603696027e6bd268290b74088"
+    },
+    "acccc3cb-3394-50ec-86f9-54c550dabdac": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2016jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "7af5654149ba6ebbda3d3d86b8a87590b0a7f5b532f5b82ba51c3398077eeef8"
+    },
+    "9fcd9d72-6811-5985-b3c2-af93a25f97ca": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH0-2C-201606/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 12,
+     "embedded": 12,
+     "checksum": "95ede68db0160975035273a5460bf94725aa970bab2139a431a293df46265ad0"
+    },
+    "e075a114-11fc-5994-828b-435dea3d824c": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH0-2C-201606/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 10,
+     "embedded": 10,
+     "checksum": "af18b5e37a089345ebff06e7ed04d0e5d414943c23b49425ca07311c125ccd2d"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "7d40476f-13b3-436b-9e0d-f2877fe2ba0e",
+   "paper": "4CH1/2C \u00b7 June 2020",
+   "code": "4CH1/2C",
+   "session": "June 2020",
+   "ep_state": "FLAGGED",
+   "extraction_method": "pdflane-atoms-draft-v1",
+   "series": "JUN",
+   "year": 2020,
+   "n_qv": 7,
+   "n_schemes": 7,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "41bc5a1a-63e6-5668-9245-6176567cc3a8",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2020jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2020jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "db39d41b-5432-563e-a3d6-0195f1de0d7b",
+     "uri": "4CH1-2C-202006/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 11,
+     "embedded": 11,
+     "map_chunks": 11
+    },
+    "MARK_SCHEME": {
+     "doc": "f9211ea5-8b00-5c3e-91bc-47008195f2a5",
+     "uri": "4CH1-2C-202006/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 11,
+     "embedded": 11,
+     "map_chunks": 11
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "41bc5a1a-63e6-5668-9245-6176567cc3a8": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2020jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "da0b8fe107f8d3dd12a6f7c2c37c814e1065546a5ffd648a80e75e3f698747b6"
+    },
+    "1cf11a41-f60f-51ba-90e3-b34c7ceefd74": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2020jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "4f0879cf87ff0532b38e7c132d688d6e6ffb744aa5b3bde1660f619eb26acdfe"
+    },
+    "f9211ea5-8b00-5c3e-91bc-47008195f2a5": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH1-2C-202006/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 11,
+     "embedded": 11,
+     "checksum": "b9c1824d22915c00099422acaf921f3ae9713739337a75bdb52015455034227a"
+    },
+    "db39d41b-5432-563e-a3d6-0195f1de0d7b": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH1-2C-202006/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 11,
+     "embedded": 11,
+     "checksum": "3a280ff330b75f3ca8853c572ff39361d0bd7add2475647916f44b27bdd36943"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "31ad242a-43c6-4246-a158-bd79f586994a",
+   "paper": "4CH0/1C \u00b7 June 2013",
+   "code": "4CH0/1C",
+   "session": "June 2013",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2013,
+   "n_qv": 11,
+   "n_schemes": 7,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "6d968517-2c04-5fb6-8ee3-e52549fbe7c9",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2013jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "72f6d4e2-5398-52b1-99aa-9ff3346688c5",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2013jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "2f52e30b-1dc7-5b6a-8e0e-84ddb845ce8a",
+     "uri": "4CH0-1C-201306/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 24,
+     "embedded": 24,
+     "map_chunks": 24
+    },
+    "MARK_SCHEME": {
+     "doc": "8936b097-52a6-57f7-a6cb-b464c6524d49",
+     "uri": "4CH0-1C-201306/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 21,
+     "embedded": 21,
+     "map_chunks": 21
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "6d968517-2c04-5fb6-8ee3-e52549fbe7c9": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2013jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "d59ce7ec2cbb30c80bdae34e3912138a2bec7f90c58d1509bd01bc3788b026fc"
+    },
+    "72f6d4e2-5398-52b1-99aa-9ff3346688c5": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2013jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "0ec62ea71773ab8e28bad1c9ac79e9e6fee4752e60fd96c4b2110c5c79110de3"
+    },
+    "8936b097-52a6-57f7-a6cb-b464c6524d49": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH0-1C-201306/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 21,
+     "embedded": 21,
+     "checksum": "b45e7d8549f7f3fd7029d8b9d9ff5ab1c8483c435823503981e40db825294a3e"
+    },
+    "2f52e30b-1dc7-5b6a-8e0e-84ddb845ce8a": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH0-1C-201306/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 24,
+     "embedded": 24,
+     "checksum": "bdbf981128aa3ef1392480c4da928aa13f70597219fa7694a35006569ec75722"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "0494f765-5f3f-41c7-9173-241ee7ee0d16",
+   "paper": "4CH0/1C \u00b7 June 2014",
+   "code": "4CH0/1C",
+   "session": "June 2014",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2014,
+   "n_qv": 15,
+   "n_schemes": 11,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "1da77322-2eda-541e-b8b2-af4edb2fa49c",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2014jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "29f6d3e9-e4f5-5d2a-bb1c-d793a5cba9bd",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2014jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "7762dfe6-4b6a-51b9-800f-32049f0f7ff6",
+     "uri": "4CH0-1C-201406/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 20,
+     "embedded": 20,
+     "map_chunks": 20
+    },
+    "MARK_SCHEME": {
+     "doc": "712079d5-3b8c-58a4-9569-e1c803364520",
+     "uri": "4CH0-1C-201406/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 17,
+     "embedded": 17,
+     "map_chunks": 17
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "1da77322-2eda-541e-b8b2-af4edb2fa49c": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2014jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "96bdc4705e39ebcd8fd28e95f007173614daf1ff3c9c1253eff608db0519a1e2"
+    },
+    "29f6d3e9-e4f5-5d2a-bb1c-d793a5cba9bd": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2014jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "27ad5f8b8001baca8ee9329ac6a00a2b01cd341b48427c06e9894268a6c26adf"
+    },
+    "712079d5-3b8c-58a4-9569-e1c803364520": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH0-1C-201406/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 17,
+     "embedded": 17,
+     "checksum": "b81fd2bc25bac1fb611e44b68b38d6f771ae1aca261f4c84962ddcd8f437a026"
+    },
+    "7762dfe6-4b6a-51b9-800f-32049f0f7ff6": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH0-1C-201406/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 20,
+     "embedded": 20,
+     "checksum": "b1fa10107dad8964471cf4bd0b119f520bc56c65daf15d1eabc67c34b65d5da0"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "1db58ecb-d735-40de-8062-bc031fd37d5b",
+   "paper": "4CH0/1C \u00b7 June 2016",
+   "code": "4CH0/1C",
+   "session": "June 2016",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2016,
+   "n_qv": 16,
+   "n_schemes": 15,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "2701ad3c-f24a-5dd3-8431-dc26c59be9c9",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2016jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "4a98df7b-2dc7-54dd-ac93-a37d529d88be",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2016jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "78510d0f-ae39-5d13-9126-70e6c4940d41",
+     "uri": "4CH0-1C-201606/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 20,
+     "embedded": 20,
+     "map_chunks": 20
+    },
+    "MARK_SCHEME": {
+     "doc": "b27f9358-bd57-5545-8c69-aeeb5cdbd476",
+     "uri": "4CH0-1C-201606/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 21,
+     "embedded": 21,
+     "map_chunks": 21
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "2701ad3c-f24a-5dd3-8431-dc26c59be9c9": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2016jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "46b20b9dbfe0397f8f2de6f4a90367e6a4d9e44aa43180f6ded6ad2b4bb3c4d3"
+    },
+    "4a98df7b-2dc7-54dd-ac93-a37d529d88be": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2016jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "d4dbfed8a094ec95de802b28081bed77fc2c418d4ecdd6504a33f988df4cc36c"
+    },
+    "b27f9358-bd57-5545-8c69-aeeb5cdbd476": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH0-1C-201606/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 21,
+     "embedded": 21,
+     "checksum": "cfe40a1bb0954221cd71a43bdfca46eecd3707818b29264cdefb2a6f7f2eabda"
+    },
+    "78510d0f-ae39-5d13-9126-70e6c4940d41": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH0-1C-201606/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 20,
+     "embedded": 20,
+     "checksum": "d5d0f929000f076cfd5e753ac711646ba8c33d3819dcef189e64127448dd8b2d"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "e97797b8-6c19-4380-8f67-ee39a703b76e",
+   "paper": "4CH0/1C \u00b7 June 2017",
+   "code": "4CH0/1C",
+   "session": "June 2017",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2017,
+   "n_qv": 11,
+   "n_schemes": 9,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "8b9f4957-5efb-5adc-bfa2-8b038914ddf9",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2017jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "7a07b898-eacd-5262-8801-eb75854038a6",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2017jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "c6437e05-c992-5844-b3d2-a71991795044",
+     "uri": "4CH0-1C-201706/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 21,
+     "embedded": 21,
+     "map_chunks": 21
+    },
+    "MARK_SCHEME": {
+     "doc": "7195d701-ad3b-5667-8d4c-1dd743021e27",
+     "uri": "4CH0-1C-201706/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 24,
+     "embedded": 24,
+     "map_chunks": 24
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "8b9f4957-5efb-5adc-bfa2-8b038914ddf9": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2017jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "2a5501950dbb17042ffaa986f8af60695ec634b5318f5efd8d985219fab737c7"
+    },
+    "7a07b898-eacd-5262-8801-eb75854038a6": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2017jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "d7c4a09cd630ab79a774b6315a9dd715729aa0f65422eaa4c5e397bf6a440104"
+    },
+    "7195d701-ad3b-5667-8d4c-1dd743021e27": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH0-1C-201706/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 24,
+     "embedded": 24,
+     "checksum": "f1b6e819adc5bfbdfb64c095c7b53d18b4b95dcdc1c5b6a63218c52e1d300eac"
+    },
+    "c6437e05-c992-5844-b3d2-a71991795044": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH0-1C-201706/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 21,
+     "embedded": 21,
+     "checksum": "fa8769bea3b6ef523b0e2c6a3f339fab8502ddf317ba7d9444cb8da034bc1c5b"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "b2c9ec49-9e47-4ec5-83be-3b5d787322c4",
+   "paper": "4CH0/1CR \u00b7 June 2013",
+   "code": "4CH0/1CR",
+   "session": "June 2013",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2013,
+   "n_qv": 11,
+   "n_schemes": 8,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "57202de4-25eb-5bae-b3e4-7d128464d1d2",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2013junr/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "37de7d90-dbc8-5691-919a-b9c45482a22e",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2013junr/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": null,
+    "MARK_SCHEME": null
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "57202de4-25eb-5bae-b3e4-7d128464d1d2": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2013junr/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "c8b8f0758bb915f86f537bd0f5df3342af9ac60868624e30509210b1b4ca9a26"
+    },
+    "37de7d90-dbc8-5691-919a-b9c45482a22e": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2013junr/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "fc38cf9a0bd05b5596b4996e4215cb75137a5725a3057fe2cfb43279110f4927"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "129a3edc-2584-4028-9550-0390cd6f0d86",
+   "paper": "4CH0/1CR \u00b7 June 2014",
+   "code": "4CH0/1CR",
+   "session": "June 2014",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2014,
+   "n_qv": 10,
+   "n_schemes": 10,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "9b60c673-8ef8-531e-95b4-c4ad355c5099",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2014junr/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "cd09e220-1d16-543a-b1be-6668d6341155",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2014junr/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": null,
+    "MARK_SCHEME": null
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "9b60c673-8ef8-531e-95b4-c4ad355c5099": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2014junr/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "93db3ed10166d26df54bb09a9be78a3c0d18cbb45418ff96ff0a41f5ca5a3a1f"
+    },
+    "cd09e220-1d16-543a-b1be-6668d6341155": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2014junr/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "95544412b9e1c744d7ae91d8c4ffee4db5419d62140371c809bf4e998820ce15"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "1995f447-d824-4ae7-bf9a-590ff2cff5b3",
+   "paper": "4CH0/1CR \u00b7 June 2016",
+   "code": "4CH0/1CR",
+   "session": "June 2016",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2016,
+   "n_qv": 12,
+   "n_schemes": 0,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "5273dfa3-5a16-51cf-b1ce-9470be8f5925",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2016junr/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "c93afcc4-35d5-52ca-ba55-0399fd1ce1ec",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2016junr/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": null,
+    "MARK_SCHEME": null
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "5273dfa3-5a16-51cf-b1ce-9470be8f5925": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2016junr/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "f6ca23616eaff8c8612c7544f526df3fe3420fdd65f04b1a66209d23655fcc74"
+    },
+    "c93afcc4-35d5-52ca-ba55-0399fd1ce1ec": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2016junr/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "bf5d339c22895a9e1cafeff9c91b20525bbb194ed764dae0c5b73a02167ba9f3"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "a29dfbd8-54c4-41b0-97ec-8fa8fe94b966",
+   "paper": "4CH0/1CR \u00b7 June 2017",
+   "code": "4CH0/1CR",
+   "session": "June 2017",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2017,
+   "n_qv": 15,
+   "n_schemes": 14,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "b4e24b82-2908-53e6-be5f-a587bf1716de",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2017junr/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "3c333fce-057f-554c-be1f-1964834aa10c",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2017junr/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": null,
+    "MARK_SCHEME": null
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "b4e24b82-2908-53e6-be5f-a587bf1716de": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2017junr/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "06cf3bd4371a54ae3aebd6564a9a094dac1e8f9bf0e7d2b9fb56eed974ca40a9"
+    },
+    "3c333fce-057f-554c-be1f-1964834aa10c": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2017junr/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "34a856d7caf3cd39ed260d2bf982f9688dd9934f2eeda72e1e50c6d29101da4c"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "e7e03906-1a3f-4d2f-b98b-16fa2397d874",
+   "paper": "4CH0/2C \u00b7 June 2013",
+   "code": "4CH0/2C",
+   "session": "June 2013",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2013,
+   "n_qv": 7,
+   "n_schemes": 6,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "a404cc12-628b-5506-a68d-02eca754e5f8",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2013jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "f032b5f3-0ed8-5592-878c-199c53cb38d3",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2013jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "33ba399c-4640-5b04-b1bb-b520fa2ba94c",
+     "uri": "4CH0-2C-201306/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 11,
+     "embedded": 11,
+     "map_chunks": 11
+    },
+    "MARK_SCHEME": {
+     "doc": "1d17abcc-fb53-5115-b266-911fbab52ab9",
+     "uri": "4CH0-2C-201306/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 10,
+     "embedded": 10,
+     "map_chunks": 10
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "a404cc12-628b-5506-a68d-02eca754e5f8": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2013jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "61abeb4e83d0a173b9002a0e71452a072b3002ded9153b4b5bd5bd53277c83be"
+    },
+    "f032b5f3-0ed8-5592-878c-199c53cb38d3": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2013jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "f67d0dfb4a1d7a843657eb2b3d3d99370cec36de0660f7e5e18e553e00e060e8"
+    },
+    "1d17abcc-fb53-5115-b266-911fbab52ab9": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH0-2C-201306/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 10,
+     "embedded": 10,
+     "checksum": "8aacda5ad15110f8ab88ae158afbf6ab1af475ebab59f99f16be2840585d3a6c"
+    },
+    "33ba399c-4640-5b04-b1bb-b520fa2ba94c": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH0-2C-201306/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 11,
+     "embedded": 11,
+     "checksum": "9394357770611a6a9d6653ea2f9715bfa7a0198fec8a59ec254ac2235bc1f774"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "0a94f411-b2c4-4db8-ba22-150a4560c31c",
+   "paper": "4CH0/2C \u00b7 June 2017",
+   "code": "4CH0/2C",
+   "session": "June 2017",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2017,
+   "n_qv": 5,
+   "n_schemes": 5,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "dbac910c-b6d4-5f55-b3dc-3237f9997baa",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2017jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "5b4b3b6a-8152-51b8-a3be-c0d6273010b2",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2017jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "e9ebba09-cfa9-5fcf-86ad-f4624448f4f5",
+     "uri": "4CH0-2C-201706/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 13,
+     "embedded": 13,
+     "map_chunks": 13
+    },
+    "MARK_SCHEME": {
+     "doc": "a03f9ddf-8f22-54ea-aa64-68e8304bca9a",
+     "uri": "4CH0-2C-201706/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 12,
+     "embedded": 12,
+     "map_chunks": 12
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "dbac910c-b6d4-5f55-b3dc-3237f9997baa": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2017jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "e52b6bf1b304a77c53d18e9150d4a05df4f58ee02313fdf2b57eca13c8d81506"
+    },
+    "5b4b3b6a-8152-51b8-a3be-c0d6273010b2": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2017jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "f004376e7520a90e1e08b01bf6e0fbb9f4b2ce629f27cf5617f498d02ed9e57e"
+    },
+    "a03f9ddf-8f22-54ea-aa64-68e8304bca9a": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH0-2C-201706/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 12,
+     "embedded": 12,
+     "checksum": "8f78764dd2c1e35423ec2821cdf61004a71b80b3db3cf1ba054e6fb19f92e11e"
+    },
+    "e9ebba09-cfa9-5fcf-86ad-f4624448f4f5": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH0-2C-201706/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 13,
+     "embedded": 13,
+     "checksum": "50d9308f0b5534aee8c0c27d5387e84d73e156158154bdbc34394d08fd9d0d43"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "cb2c0cf8-f60a-4a15-a244-d356cbb3899b",
+   "paper": "4CH0/2CR \u00b7 June 2013",
+   "code": "4CH0/2CR",
+   "session": "June 2013",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2013,
+   "n_qv": 6,
+   "n_schemes": 6,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "cdfcbae1-e909-5fab-877f-572b29981d28",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2013junr/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "70b23e58-60f0-5b96-8337-da490e265a66",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2013junr/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": null,
+    "MARK_SCHEME": null
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "cdfcbae1-e909-5fab-877f-572b29981d28": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2013junr/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "7eb1bfb34dfe99dc354d05583fa4b65e1265938f7deece6ee6507f33a09438b8"
+    },
+    "70b23e58-60f0-5b96-8337-da490e265a66": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2013junr/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "9bb3e3d6ffb61c52225e28d2a92044e68602f5084c750de2fdbd73000270423a"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+   "paper": "4CH0/2CR \u00b7 June 2014",
+   "code": "4CH0/2CR",
+   "session": "June 2014",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2014,
+   "n_qv": 6,
+   "n_schemes": 0,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "d5815b70-20fe-54a9-b359-b2192a6a4790",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2014junr/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "adf74518-e62d-5344-9663-02a02d99363a",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2014junr/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": null,
+    "MARK_SCHEME": null
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "d5815b70-20fe-54a9-b359-b2192a6a4790": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2014junr/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "682b67c88046c069c57b11ea4d6a03d3c4c8aaa7bb90a9fcbb91beeac9254da7"
+    },
+    "adf74518-e62d-5344-9663-02a02d99363a": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2014junr/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "5f50ac083e0baf2d9e371675364bb0c34a7797afa1b38ad8213bc21724d25d68"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "c41dad58-957f-4254-94ed-f26cf1d7b5ed",
+   "paper": "4CH0/2CR \u00b7 June 2016",
+   "code": "4CH0/2CR",
+   "session": "June 2016",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2016,
+   "n_qv": 7,
+   "n_schemes": 0,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "6ab313e4-7bee-565c-a7d0-8c912824ac9e",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2016junr/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "0cba6822-f780-5f53-ad04-14c307778436",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2016junr/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": null,
+    "MARK_SCHEME": null
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "6ab313e4-7bee-565c-a7d0-8c912824ac9e": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2016junr/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "d626943ef432dec77d36840a03d8c294c3c7eb5e5ff7793b4e3e088192e6ef64"
+    },
+    "0cba6822-f780-5f53-ad04-14c307778436": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2016junr/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "1cb8718120203461cd919a520fe2e5ee18ed47ac7278bf3c7e6ad1afea1b5ed2"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "c2dab965-b9e9-4ca9-a37c-74a557e9b3b5",
+   "paper": "4CH0/2CR \u00b7 June 2017",
+   "code": "4CH0/2CR",
+   "session": "June 2017",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2017,
+   "n_qv": 8,
+   "n_schemes": 7,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "c8e045a4-c04b-5493-aa15-ca13b23aee5f",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2017junr/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "c5c34898-8a0a-533c-bf24-68eb258f7fab",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2017junr/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": null,
+    "MARK_SCHEME": null
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "c8e045a4-c04b-5493-aa15-ca13b23aee5f": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2017junr/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "7cabba009ad542f88bd9a3d655a1c14ad15aaf84af7b78032c66a89a78f40997"
+    },
+    "c5c34898-8a0a-533c-bf24-68eb258f7fab": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-2c-2017junr/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "b1308cf83b22c70f305370acbcad57c3477e18b04db5965d977f86e0a29e5309"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "paper": "4CH1/1C \u00b7 June 2019",
+   "code": "4CH1/1C",
+   "session": "June 2019",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2019,
+   "n_qv": 15,
+   "n_schemes": 2,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "cf68cf74-1e55-5c15-b170-441015fbe37e",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2019jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "39935310-6428-5ae2-9826-46487b648f69",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2019jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "bbedea1b-7c26-5cbc-ad2d-1ecc37e70cfe",
+     "uri": "4CH1-1C-201906/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 13,
+     "embedded": 13,
+     "map_chunks": 13
+    },
+    "MARK_SCHEME": {
+     "doc": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+     "uri": "4CH1-1C-201906/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 12,
+     "embedded": 12,
+     "map_chunks": 12
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "cf68cf74-1e55-5c15-b170-441015fbe37e": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2019jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "6c825d7517bc254619ece659d21d1248da10b9fe49278f477595cfe3dbab6bc6"
+    },
+    "39935310-6428-5ae2-9826-46487b648f69": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2019jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "311da39817c816c9485707722879583d28fd7862f3267e4786759cb516b4b0ba"
+    },
+    "02e4c38c-d477-52f9-b97c-32a173a04d59": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH1-1C-201906/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 12,
+     "embedded": 12,
+     "checksum": "2429332c17d9919019eb51b5f0a06f2be5c8863992a7442e62aa6b9e146f92e6"
+    },
+    "bbedea1b-7c26-5cbc-ad2d-1ecc37e70cfe": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH1-1C-201906/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 13,
+     "embedded": 13,
+     "checksum": "dab46d233def98fa0496d7b22298a660b3a98cc951665d33d9dc22c8d35252f6"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "060f40c2-eb7b-410c-a593-947fe096c9c2",
+   "paper": "4CH1/1C \u00b7 June 2020",
+   "code": "4CH1/1C",
+   "session": "June 2020",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2020,
+   "n_qv": 10,
+   "n_schemes": 10,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "8451369b-e8f8-551e-8ac7-5035787545c5",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2020jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "5f83d705-30b4-5b4c-84e6-3cb4ed2b0a0b",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2020jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "4219d680-aad9-5ec9-b5d1-e082adac0e3d",
+     "uri": "4CH1-1C-202006/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 15,
+     "embedded": 15,
+     "map_chunks": 15
+    },
+    "MARK_SCHEME": {
+     "doc": "b0a9f0f8-271c-5ad3-be30-ed0612a61cca",
+     "uri": "4CH1-1C-202006/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 19,
+     "embedded": 19,
+     "map_chunks": 19
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "8451369b-e8f8-551e-8ac7-5035787545c5": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2020jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "5a0d064fb5370b1df2e9eb0e7b649aace6acae57f49bb649ed7eacc8447f87ef"
+    },
+    "5f83d705-30b4-5b4c-84e6-3cb4ed2b0a0b": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2020jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "295c56c31b8497bd3d93ab59e8a8a8d5ed3b15a084150f16f72e5d9889230312"
+    },
+    "b0a9f0f8-271c-5ad3-be30-ed0612a61cca": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH1-1C-202006/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 19,
+     "embedded": 19,
+     "checksum": "3797f4918e2288921963bcce55be4136e7464640a99fd9ff0d87c19a7c4e3c2b"
+    },
+    "4219d680-aad9-5ec9-b5d1-e082adac0e3d": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH1-1C-202006/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 15,
+     "embedded": 15,
+     "checksum": "70e0ade7f2e69199580ca8bf749b29350b2425b81fe26e72d1640242bf371e91"
+    }
+   },
+   "diag": null
+  },
+  {
+   "paper_id": "ce7d191b-9331-4b2c-85ee-23d19f0d30bc",
+   "paper": "4CH1/1C \u00b7 June 2022",
+   "code": "4CH1/1C",
+   "session": "June 2022",
+   "ep_state": "FLAGGED",
+   "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+   "series": "JUN",
+   "year": 2022,
+   "n_qv": 10,
+   "n_schemes": 10,
+   "own": {
+    "QUESTION_PAPER": {
+     "doc": "9fb5b712-af32-5d73-bd3b-495a83d58fc5",
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2022jun/QP.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    },
+    "MARK_SCHEME": {
+     "doc": "983ac80b-834b-5cd6-8a22-cf3e7570da28",
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2022jun/MS.md",
+     "state": "SUGGESTED",
+     "actual": 0,
+     "embedded": 0
+    }
+   },
+   "fixes": {
+    "QUESTION_PAPER": {
+     "doc": "b09a8700-914c-5502-9c71-1e77c5c9b0c0",
+     "uri": "4CH1-1C-202206/qp.pdf",
+     "state": "SUGGESTED",
+     "actual": 15,
+     "embedded": 15,
+     "map_chunks": 15
+    },
+    "MARK_SCHEME": {
+     "doc": "a472ddd8-b1c9-5d94-9038-c5f9beca71ec",
+     "uri": "4CH1-1C-202206/ms.pdf",
+     "state": "SUGGESTED",
+     "actual": 19,
+     "embedded": 19,
+     "map_chunks": 19
+    }
+   },
+   "fix_alts": {
+    "QUESTION_PAPER": [],
+    "MARK_SCHEME": []
+   },
+   "live": {
+    "9fb5b712-af32-5d73-bd3b-495a83d58fc5": {
+     "kind": "QUESTION_PAPER",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2022jun/QP.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "08e880c6d5fba8ce2d9922972f05aa9e3ed7beb159088cd9642ee85b7bd870b3"
+    },
+    "983ac80b-834b-5cd6-8a22-cf3e7570da28": {
+     "kind": "MARK_SCHEME",
+     "uri": "corpus/igcse-chemistry-4ch0-1c-2022jun/MS.md",
+     "state": "SUGGESTED",
+     "chunks": 0,
+     "embedded": 0,
+     "checksum": "66d376b5b90272b64e0c25bc99a5099fedcf28cdde76d38709467fcdd77b5d26"
+    },
+    "a472ddd8-b1c9-5d94-9038-c5f9beca71ec": {
+     "kind": "MARK_SCHEME",
+     "uri": "4CH1-1C-202206/ms.pdf",
+     "state": "SUGGESTED",
+     "chunks": 19,
+     "embedded": 19,
+     "checksum": "afb5a2aa5a763505e6113a48a2168a1a789723c75cba0df2205ebc193c174156"
+    },
+    "b09a8700-914c-5502-9c71-1e77c5c9b0c0": {
+     "kind": "QUESTION_PAPER",
+     "uri": "4CH1-1C-202206/qp.pdf",
+     "state": "SUGGESTED",
+     "chunks": 15,
+     "embedded": 15,
+     "checksum": "f21e970f2cb67b8333e2271689e8278aa3c2a131dab449f534b2bb11cf548ff9"
+    }
+   },
+   "diag": null
+  }
+ ],
+ "classification": {
+  "divergent_candidate": [],
+  "no_content_anywhere": [
+   "4CH0/2C \u00b7 June 2014",
+   "4CH0/2C \u00b7 June 2016",
+   "4CH1/2C \u00b7 June 2020",
+   "4CH0/1C \u00b7 June 2013",
+   "4CH0/1C \u00b7 June 2014",
+   "4CH0/1C \u00b7 June 2016",
+   "4CH0/1C \u00b7 June 2017",
+   "4CH0/1CR \u00b7 June 2013",
+   "4CH0/1CR \u00b7 June 2014",
+   "4CH0/1CR \u00b7 June 2016",
+   "4CH0/1CR \u00b7 June 2017",
+   "4CH0/2C \u00b7 June 2013",
+   "4CH0/2C \u00b7 June 2017",
+   "4CH0/2CR \u00b7 June 2013",
+   "4CH0/2CR \u00b7 June 2014",
+   "4CH0/2CR \u00b7 June 2016",
+   "4CH0/2CR \u00b7 June 2017",
+   "4CH1/1C \u00b7 June 2019",
+   "4CH1/1C \u00b7 June 2020",
+   "4CH1/1C \u00b7 June 2022"
+  ]
+ }
+}
