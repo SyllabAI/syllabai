@@ -384,3 +384,34 @@ strip while pristine, activation growth 54->98px (3-mark), strip slots
 kept, 45-line cap exactly 384px content + internal scroll, blur-with-
 content persistence, 375px hOverflow=0, cold load 0 console errors.
 Screenshots: scripts/research/probe_collapsed.png, probe_active.png.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3c (expanded toolbar look parity)
+
+- [ ] HUB-ANSWER-BOX-W3C (CLAIMED 2026-09-29, session web-98866c45, operator message
+"I want the expanded toolbar look matched too") **expanded-state toolbar restyle to
+the SME ground truth** — ground truth upgraded from CSS to the COMPONENT BUNDLE:
+SME question-player chunk 3273-abb6c54ac7049c60.js yields the editor's verbatim
+toolbar JSX + MenuButton/Symbols CSS modules. Editor_menu = flex-wrap gap .25rem,
+justify-content:space-between, padding .5rem (max-width:767.98px viewport: .25rem),
+white bg, radius 0 0 .5rem .5rem; LEFT group = icon-only 2rem square MenuButtons
+(transparent bg, hover/active/aria-expanded bg neutral-400, focus-visible 4px
+brand-200 ring, disabled opacity .64): Italic / Subscript / Superscript + an
+"Insert symbol" dropdown; RIGHT group = labeled pills (width auto, gap .25rem,
+padding-inline .5rem .75rem, radius 50rem): "Insert equation" / "Write" / "Upload";
+labels hidden under a @container (max-width: 540px) query; Symbols_menu popover =
+padding .25rem, border, shadow 0 4px 30px rgba(59,68,89,.16), xs-bold legends,
+7-column grid of square symbol buttons, verbatim groups "Mathematical"
+(+ − ± × · = ≠ ≈ < > ≤ ≥ → ⇌ ° % ∝ ⊥ ∥) and "Greek letters"
+(α β γ Δ δ ε η θ λ μ ν π ρ ∑ σ τ Φ φ ψ Ω ω). Hub rework, zero contract change:
+AnswerTextarea strip restyled to this anatomy (icon square for the symbols toggle,
+Write/Upload pills, active box gets top-only radius so the strip attaches like
+SME's composite, focus ring via :focus-within, container-query label hiding,
+SME-verbatim symbol groups + the wave-3 chem extras deduped into their own
+fieldset), Upload pill surfaces the EXISTING pad photo→core-transcribe flow
+(pendingFile prop into AnswerInkPad; same editable-preview-first honesty).
+Honest-absent, plain-text contract: SME's Italic/Subscript/Superscript are
+rich-text toggles (markdown storage) and "Insert equation" is the MathLive
+LaTeX editor — all three are deferred pending the answer-format contract
+decision and will NOT be faked with Unicode lookalikes. Wave-3 chem/notation
+glyphs kept. Hub-repo-only change: no resource lease required (wave 1/2/3b
+precedent). Base: hub 8d8fa78.
