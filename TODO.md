@@ -642,7 +642,41 @@ required (wave 1/2/3b/3c precedent). Base: hub 3730e79.
 
 ## 2026-09-29 — claim: the reference-look restyle onto the HUB's Tutor + CLA (TUTOR-CLA-LOOK hub port)
 
-- [ ] HUB-TUTOR-CLA-LOOK (REGISTERED 2026-09-29, session web-bb263437 continuation,
+### HUB-TUTOR-CLA-LOOK EXECUTED (same session, hub `15ce2ba` on base `3730e79` rebased over the concurrent wave-3d `74edc86` + spec-mastery `0bed119` — clean, zero overlap; hub-ci run `36500292761` build+e2e green step-level; Vercel live)
+
+Delivered as claimed, presentation-only across 7 files (+355/-168): Tutor =
+the itutor.study chat-home look on the hub's own surfaces — assistant turns
+as gradient-avatar + name rows on the canvas (bubble box retired), user turns
+as muted gray bubbles with date-aware always-visible stamps, citation pills,
+the rounded-2xl composer card with the subject context pill (green dot +
+"Chemistry (4CH1)", the honest single-corpus scope) + circular send, the
+identity-strip header (thread title kept, all hub affordances kept), the
+greeting hero (time-of-day + first name from identity) over pill starters,
+sidebar rows rounded-lg. CLA = the Save My Exams explain-panel look — amber
+honesty banners on both overlays (theme-aware warn tokens, NOT literal
+ambers, preserving the design-audit's semantic-slot rule), labeled mode
+pills with icons (Explain/Hint, Explain/Summarize; disabled pills labeled),
+gray user bubbles, citation pills, "What needs explaining?" on the question
+overlay, and /assistant restructured into the full explain-panel (identity
+strip, banner, anchor pill segments + compact selects, chat transcript, the
+shared rounded-2xl composer with anchor-summary pill + circular send, the
+§7 gate guidance as a border strip). Every behavioral pin verified intact:
+SSE streaming, edit-resend/regenerate/feedback/export, §22 sessions +
+hydration + synced pane, anchored-spec boot, dictation/stop, claTargetsOf
+bridge gating, §7 gate, refusals, §19 footers, MAX caps, a11y labels.
+Verified on the pushed tree: eslint + tsc clean; corpus gate PASSED, 629
+pages; e2e 12/12 (axe incl. /tutor + deck-flow); 9 browser probes —
+overflow=0 at 375px/1440px, dark + candy-shop variants, seeded transcript,
+note-CLA panel open (the single console 404 = the designed §22
+conversations degradation with a probe-forged token and no core — request-
+verified, not a regression); VLM audits of every capture; Vercel probe —
+GET / + /tutor 200 and all six change markers live in the deployed chunks
+(2g-vu02mptts7.js / 21tnqdakgni72.js / 0q027ca7q2_a_.js / 3oergpr5n49d1.js).
+The web `132c15a` question (revert or keep) is the operator's call — one
+clean revert + web-ci + Vercel probe, ready on request. Evidence:
+`download/hub-bb263437/`; harness `scripts/hub_bb263437_visual_probe.mjs`.
+
+- [x] HUB-TUTOR-CLA-LOOK (EXECUTED 2026-09-29 as hub `15ce2ba`, session web-bb263437 continuation,
 operator directive trace 1a0ea32e1f6c1f21 "I want to work on the frontend improvements
 of the Tutor and CLA. https://github.com/nawaf-al-hussain/FileUpload/blob/main/FrontendReferences.zip
 Here are some references on how it should look like" + the operator correction this
