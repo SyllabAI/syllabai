@@ -614,7 +614,7 @@ unverifiable from sandbox (private repo) — honest-absent.
 
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3d (keyboard look parity)
 
-- [ ] HUB-ANSWER-BOX-W3D (CLAIMED 2026-09-29, session web-98866c45, operator message
+- [x] HUB-ANSWER-BOX-W3D (EXECUTED 2026-09-29 as hub 74edc86, session web-98866c45, operator message
 "The keyboard does not quite look like the keyboard that appears in SME") **re-skin the
 answer-box symbol keyboard to the keyboard that actually appears in SME** — ground truth
 recovered from SME's production MathLive bundle (chunk 79d2298f-63d0ad2806548748.js,
@@ -682,3 +682,37 @@ src/app/assistant/assistant-client.tsx. ZERO overlap with the active HUB-ANSWER-
 claim (answer-textarea.tsx / answer-ink-pad.tsx / question-player.tsx untouched).
 Hub-repo-only change; no lease required (locks.yaml empty, wave 1/2/3b/3c/3d precedent).
 Base: hub 3730e79.
+
+W3D execution record (hub 74edc86, ff-only push 3730e79..74edc86): the wave-3c
+symbols popover was the wrong species — SME ships NO popover; the keyboard that
+appears there is MathLive's stock virtual keyboard, body-mounted as a viewport-
+fixed bottom sheet. AnswerTextarea now portals the keyboard to document.body:
+fixed bottom, full width, z-1055, MathLive light palette verbatim (#cacfd7
+sheet, #ddd top border, 0 -5px 6px rgba(0,0,0,.08) backdrop shadow, white 60px
+keycaps, #e5e6e9 borders + #8d8f92 bottom edge, 6px radius — the probe CAUGHT
+rounded-md resolving to 8px in this theme and it was pinned to the extracted
+6px — 8px gaps, 1px white row rules, 10 caps per row like MathLive's layers)
+plus MathLive's dark palette under the hub's class dark mode (#151515 sheet,
+#1f2022 keycaps, #e3e4e8 text, accent #0b5c9c). Tab strip in MathLive's glyph-
+label register: ∞≠∈ (their symbols album label) / italic αβγ (their greek
+label) / ₂⁺° (ours — MathLive has no chemistry album), 135% labels, min 42×34,
+radius 8px, hover #eee, selected = 2px accent underline. Action row honest:
+[left] [right] [backspace ×2] [hide-keyboard] — the four keys a controlled
+textarea implements exactly; undo/redo NOT faked (no native-undo contract on
+controlled React state); Insert equation stays contract-gated (wave 3c
+record). Keys swallow mousedown so the caret never leaves the textarea (probe
+proved mid-string insert: "12" caret@1 + × -> "1×2", then α -> "1×α2" — the
+keyboard never jumps the caret). Pref/hydration semantics unchanged
+(post-hydration read, no React #418). Verified: eslint+tsc clean; build 629
+pages; corpus gate PASSED (prebuild); e2e 12/12; browser probe matrix: sheet
+fixed/z-1055/full-bleed, computed styles byte-matched (sheet bg
+rgb(202,207,215), keycap border-bottom rgb(141,143,146), tab accent
+rgb(12,117,216) at 2px), tab switch, backspace, caret moves, hide + pref 0,
+pref-1 reload open, dark bg rgb(21,21,21) / keycap rgb(31,32,34), 375px
+full-width hOverflow=0, cold load 0 console errors. Incident, disclosed: the
+throwaway cleanup `rm -rf src/app/experiments` also deleted OTHER lanes'
+tracked experiments pages (kg-navigation/semantic-search/page.tsx) — restored
+via git checkout in the same breath; final tree = exactly one modified file.
+Screenshots: /home/z/my-project/scripts/w3d/w3d_keyboard_1440.png,
+w3d_keyboard_375.png, w3d_keyboard_dark.png. CI/Vercel status unverifiable
+from sandbox (private repo) — honest-absent.
