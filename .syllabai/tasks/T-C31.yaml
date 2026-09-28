@@ -1,0 +1,33 @@
+version: 1
+task:
+  id: T-C31
+  title: "Serving-emptiness observability — distinguish the three empty-causes on the teacher content search path (T-C23 recorded ticket candidate)"
+  owner: "superz (main agent, zai session web-98866c45-9eb6-4100-a2b3-22cfb322258b)"
+  status: EXECUTING
+  priority: P3
+  base:
+    repo: syllabai-core
+    commit: fc07389 (main at claim)
+  basis: "T-C23 recorded ticket candidate 'serving-emptiness observability (all three
+    empty-causes return identical 200+[])' + operator directive trace 1a0e680dc0ac32a9
+    ('Proceed with (1)')"
+  scope:
+    allowed:
+      - "core: on the EMPTY path of the teacher content search only — diagnostic
+        stage-funnel counts (docs in scope / at current embed_rev / VALIDATED) +
+        a machine-readable empty-cause classification (SCOPE_UNRESOLVED /
+        EMBED_REV_EMPTY / VALIDATION_GATE_EMPTY / INTERSECTION_EMPTY / UNEXPECTED),
+        logged structured + returned as an ADDITIVE optional response field"
+      - "unit tests for the cause classification matrix (one test per cause, plus
+        the non-empty path emits nothing extra)"
+    forbidden:
+      - "no serving-semantics change — empty stays empty; the T-C20
+        unvalidated_content_must_not_serve boundary is untouched (this labels WHY
+        a result is empty, never changes WHAT is empty)"
+      - "no non-empty-path cost — happy path runs exactly the queries it runs today"
+      - "no web/contract breaking change — additive optional field only; web UI
+        surfacing is a follow-up, not this task"
+      - "no production writes; no learner KA-RAG arm changes (registered follow-up)"
+  discipline: "claim-first registered BEFORE any code (S145 lesson); PR branch
+    observability/t-c31-empty-cause off main; local-verified (JDK 25 + Maven
+    user-space rebuild after sandbox rollback) before push; core-ci green to merge"
