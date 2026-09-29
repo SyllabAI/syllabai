@@ -1431,3 +1431,42 @@ f9130b3 = success (API-verified). Zero contract delta; hub-only, no lease
 (waves 5/6 precedent). Files: src/components/answer-textarea.tsx,
 scripts/w7_symbols_palette_probe.mjs.
 
+
+## 2026-09-29 — claim: HUB-TEACHER-DASH wave 1 (the teacher dashboard becomes the student one — class cards, add-class → subjects, tools+resources inside)
+
+- [ ] HUB-TEACHER-DASH-W1 (IN PROGRESS, session web-98866c45, operator trace
+1a0ec61d5612aa6d "The teacher dashboard (in syllabai-hub) is not how I
+envisioned. All the tools, resources will be inside a certain
+Subject/Class/Section. Basically the dashboard will look like student one,
+but instead of subject it is a class card. Teacher will add class, then
+select subjects. Then inside there, all the tools and course resources will
+exist." + "pull latest version" — environment reset recovered first: hub
+re-cloned at 235f5cd (also lands the parallel PP-VIEWER / outbound-CLA /
+notes-source lanes), coordination fast-forwarded 314a895 -> 5ec6279 over the
+stale-snapshot dirty files (T-C30-era WIP discarded — superseded by origin's
+own DONE records), credentials restored after the reset wiped
+~/.git-credentials). Design (hub-only, ZERO contract delta, no lease — the
+wave reuses /api/course-stats and every existing route; no core call
+changes): (1) NEW hub-local class store (src/lib/teacher/my-classes.ts,
+my-subjects.ts useSyncExternalStore pattern, key
+"syllabai-hub:teacher-classes.v1") — a class = {id, name, subjectSlugs[],
+createdAt}, browser-local demo-truth like the student's subject roster, and
+the honesty copy says so; (2) /teacher REBUILT to the student dashboard's
+anatomy (dashboard-client.tsx parity): greeting header, "My classes" card
+grid where each CLASS card mirrors SubjectCard (eyebrow, name, subject
+chips, per-SUBJECT rows with real course-stats counts, open-workspace link,
+remove X), the trailing "Got another class?" slot card, empty state with
+CTA; the old overview sections (console cards / resources grid) move INSIDE
+the class workspace per the directive; (3) NEW AddClassOverlay (the
+AddCourseOverlay cascade reused): step 1 class name -> step 2 board ->
+step 3 level -> subject MULTI-select toggling into a pending set, one
+"Create class" commits name + selected subjects; edit mode reopens it for
+an existing class; (4) /teacher/classes/[id] becomes a dispatcher — a
+hub-local id renders the NEW local class workspace (per-subject sections:
+resource rows -> /courses/<slug>/... plus the corpus tools Test Builder /
+Assignments / Validation with ?course=, class-level live console links:
+Marking review + Class intelligence, and the live-roster pointer to the
+core Classes surface), a core id falls through to the EXISTING
+ClassDetailClient untouched (two honest class concepts never blur:
+browser-local container vs core RBAC roster). TeacherNav, layout RBAC gate,
+core Classes surface: unchanged. Base: hub 235f5cd.
