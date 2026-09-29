@@ -1532,3 +1532,23 @@ src/lib/teacher/my-classes.ts, src/app/teacher/{page.tsx,teacher-client.tsx,
 add-class-overlay.tsx}, src/app/teacher/classes/[id]/{page.tsx,
 class-workspace-dispatcher.tsx,class-workspace-local.tsx},
 scripts/w8_teacher_dash_probe.mjs.
+
+## 2026-09-29 — claim: HUB-TEACHER-DASH wave 2 (the per-subject Knowledge Graph entry inside the class workspace)
+
+- [ ] HUB-TEACHER-DASH-W2 (IN PROGRESS, session web-98866c45, operator trace
+1a0ec95548b5f1e1 "The teacher should also have a knowledge graph view right?").
+Verified state at claim time: students open the per-subject graph from every
+course hub (/knowledge-graph?course=<slug> — the OpenHuman explorer over the
+canonical spec tree; no course switcher by operator decision trace
+1a0e8568eb6bb545 — the graph is a property of the subject); teachers on CORE
+classes already have the cohort-level F-072 class KG heatmap
+(/teacher/classes/[id]/knowledge-graph, T-C35) plus class intelligence — both
+unchanged this wave. The gap: wave 1's local class workspace renders
+per-subject resource rows (Revision Notes / Exam Questions / Flashcards)
+WITHOUT the Knowledge Graph, so a teacher has no per-subject KG entry inside
+the class container. Design (hub-only, ZERO contract delta, no lease —
+reuses /api/course-stats and the existing /knowledge-graph surface): the
+RESOURCES band in class-workspace-local.tsx gains a Knowledge Graph card —
+deep link /knowledge-graph?course=<slug> (the exact course-hub deep link,
+Network icon), honest count from the same course-stats payload ("N topics in
+the corpus"); resource grid 3 -> 4 columns. No new routes, no API changes.
