@@ -1552,3 +1552,31 @@ RESOURCES band in class-workspace-local.tsx gains a Knowledge Graph card —
 deep link /knowledge-graph?course=<slug> (the exact course-hub deep link,
 Network icon), honest count from the same course-stats payload ("N topics in
 the corpus"); resource grid 3 -> 4 columns. No new routes, no API changes.
+
+## 2026-09-29 — DONE: HUB-TEACHER-DASH wave 2 (the per-subject Knowledge Graph entry inside the class workspace)
+
+- [x] HUB-TEACHER-DASH-W2 (operator trace 1a0ec95548b5f1e1 "The teacher
+should also have a knowledge graph view right?") — LANDED hub 0913147
+(ff over 7359262; no concurrent lanes this stand-down). The class
+workspace's per-subject resource band now carries FOUR cards: Revision
+Notes / Exam Questions / Flashcards / Knowledge Graph — the KG deep-links
+/knowledge-graph?course=<slug>, the EXACT link the student course hub uses
+(the graph is a property of the SUBJECT — operator decision trace
+1a0e8568eb6bb545 — so no class-level graph was invented). The count is the
+honest course-stats TOPIC census ("N topics in the corpus") from the same
+/api/course-stats payload the other cards read (countKey decoupled from
+the card key; countLabel rendering). Cohort-level class KG heatmap stays
+the core-class surface (F-072, /teacher/classes/[id]/knowledge-graph +
+class intelligence) — untouched. ZERO contract delta: no new routes, no
+API changes, no lease. Grid 3 -> 4 columns (sm:grid-cols-2 lg:grid-cols-4).
+Verification: tsc + eslint clean; unit suite 19/19; production build green
+(built with the scaffold server SIGSTOP'd per the wave-1 memory precedent,
+resumed after); CDP probe 16/16 (scripts/w9_teacher_kg_probe.mjs, real
+clicks, production standalone :3100 — four cards, exact deep link, three
+regression hrefs, "4 topics in the corpus" census, click-through to
+/knowledge-graph?course=igcse-chemistry-19 with the live data-path chip
+"nodes · edges · spec points", zero page errors); wave-1 matrix re-run
+26/26 (no regression). hub-ci on 0913147: build SUCCESS + e2e SUCCESS;
+Vercel Production success (API-verified). Probe file numbering note:
+scripts continue the hub w-numbering (w9) while the ledger calls this
+wave 2.
