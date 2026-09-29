@@ -933,3 +933,44 @@ unchanged. Zero overlap with any active lane (locks.yaml empty). Base: hub
   `bench/review/psaxis-review-2026-09-28/bankrepair-2026-09-29/`. Remaining
   open: §C children review, sibling supersession sign-offs (operator),
   sheet-generator regex fix, stale-citation re-point.
+
+## 2026-09-29 — claim: SME's expanded sidebar physically reflows the page + the CLA panel's density diet (HUB-CLA-POPUP wave 3)
+
+- [ ] HUB-CLA-SIDEBAR (REGISTERED 2026-09-29, session web-bb263437
+continuation, operator directive trace 1a0ea8ffd673a661 "The sidebar mode
+still not like SME. In SME, CLA physically changes layout so that it can fit
+in the right side and the rest of the page is scrollable. But here it is
+just a side overlay on top. And also the CLA has way to much info, right?
+Too much text") **two corrections on the hub's CLA panels** (note-cla island
++ question-cla overlay): (1) SIDEBAR = PHYSICAL LAYOUT, not an overlay —
+honest finding: wave 2's sidebar shell is the Radix right Sheet, which
+floats OVER the page (content stays full-width underneath). SME's ground
+truth (their own CSS, re-extracted from the FrontendReferences snapshots):
+the expanded chat wrapper goes `flex: 0 0 400px; position: static` inside
+the page's flex row — the page content physically cedes 400px and keeps
+scrolling; the ChatPanel goes width auto, border-radius 0, sticky top
+navbar, height calc(100vh − navbar); the expand affordance exists ≥1400px
+only (display:none below — expanded falls back to the floating popup, SME's
+inert-media-query behaviour). Hub adaptation: while the CLA dock is open on
+≥1400px, the course-shell row gets a 400px right inset (SME's 0.2s
+ease-in-out transition timing, reduced-motion guarded) and the panel docks
+as a fixed right column under the 56px navbar (radius 0, border-l, z below
+dialogs); below 1400px the popup form renders regardless of pref; below lg
+the Sheet fullscreen wash stays. (2) DENSITY DIET toward SME's panel
+anatomy (their verbatim structure: short gradient title + 3 circle buttons,
+ONE-LINE banner "Chat can make mistakes. Please check all responses
+carefully.", 2-col prefilled-prompt chip grid as the empty state, chat +
+input — nothing else): banner cut to one line; context card collapses to a
+single anchor line (note title / "Question N · marks · parts", spec points
+to a tooltip); the question surface's Part row merges into that line; mode
+row loses its label + disabled-vocabulary pills (keeps the 2 live pills);
+quick actions become SME-style chips shown in the EMPTY state only, no mode
+badges; empty-state paragraph deleted (chips carry it); busy line
+shortened; per-answer trace (provider/model/mode/evidence/latency/tools)
+collapses behind a tiny disclosure, citations pills stay. Floating CLA
+button hides while open (SME hides theirs). No API/contract/anchor change:
+same endpoints, same anchors, same refusal semantics, same pref key.
+Files: src/components/cla/cla-panel-mode.ts, note-cla.tsx,
+question-cla-overlay.tsx, src/components/hub/course-shell.tsx (one class),
+src/app/globals.css (the dock inset rule). Zero overlap with active lanes
+(locks.yaml empty). Base: hub 8480350.
