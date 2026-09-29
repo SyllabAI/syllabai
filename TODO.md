@@ -1170,6 +1170,40 @@ candidate).
   sheet-generator regex fix, T-QSP3 (284 remaining ING-anchored), bank-scheme
   sparsity (91 qv).
 
+- [x] **tqsp3-primary-topics (2026-09-29, Task 69, trace 1a0ebc845dcee229) —
+  T-QSP3 EXECUTED + VERIFIED: the remaining 284 ING-anchored questions now
+  carry REAL primary topics — bank-wide ING-anchored active 284 → 0.** Cohort
+  (measured, zero drift vs the Task-68 census): 284 active questions on
+  synthetic `ING-*` per-paper ingestion anchors, all spec-point mapped
+  (284 PRIMARY + 335 SECONDARY, AI_VALIDATED), zero question_topics rows,
+  278 VALIDATED / 6 SUGGESTED latest-version states (no state flips anywhere).
+  Mechanical parent-TOPIC-of-PRIMARY derivation (live KG PART_OF edges;
+  secondaries = distinct parents of SECONDARY points minus primary, cap 4) —
+  validated on 4 independent layers BEFORE any write: reproduction proof
+  69/69 on all pre-existing real mappings bank-wide; repo-KG explorer_blob
+  @ resources main HEAD 4ad167376f agreement 284/284 primary + 56/56
+  secondary; title agreement 28/28; dry-run tx with in-tx asserts then
+  ROLLBACK. Execution = Task-66-class single fail-closed tx: 284 guarded
+  primary UPDATEs (rowcount==1 each, only off the exact ING anchor) + 340
+  uq/NOT-EXISTS-guarded question_topics INSERTs (284 primary + 56 secondary);
+  in-tx asserts all green (ING census 0; qt 766 → 1106 exact; qsp 2578
+  unchanged; exactly one primary row per cohort question; bank-wide
+  primary-row distribution {0:877, 1:69} → {0:593, 1:353} exactly — the 593
+  remainder is the known sme-orphan pool, untouched; every inserted row a
+  real 4CH1-S% TOPIC; zero ING refs in question_topics). Verify 3-layer
+  green: DB fresh-conn census + per-plan 284/284; serve path 5 papers /
+  55 questions all rendering with specPoints (+1 honest SKIP: 2023-06 2CR has
+  no exam_papers row); evidence path e2e fresh learner → structured attempt +
+  full self-mark on repaired 2022-01 2C#q1 → evidenceFired=True → REAL topic
+  skillState **4CH1-S4-d (TOPIC)** + 4CH1-4.23/4.25, NO ING-* state (second
+  probe on 1C#q4 → 4CH1-S2-c "Gases in the atmosphere" confirms the delta).
+  Observations: probe marksTotal vs awarded mismatches = the known parent/
+  child part-sum artifact (Task-54 class, evidence path unaffected); 104 ING
+  anchor nodes remain as unreferenced KG placeholders by design. Evidence:
+  `bench/review/psaxis-review-2026-09-28/tqsp3-primary-topics-2026-09-29/`.
+  Remaining open: sibling supersession sign-offs (operator per-package
+  APPROVE), sheet-generator regex fix, bank-scheme sparsity (91 qv).
+
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 5 (the equation mathfield embedded in the text)
 
 - [x] HUB-ANSWER-BOX-W5 (EXECUTED 2026-09-29 as hub dff764c, hub-ci
@@ -1222,3 +1256,4 @@ commit, prefilled re-edit, real undo over math, empty-atom deletion, draft
 survives reload rich, 375px hOverflow=0, cold load 0 console errors);
 pushed 9096b72..dff764c ff-only; hub-ci 36524400542 completed/success.
 Files: answer-editor.tsx, answer-textarea.tsx, globals.css.
+
