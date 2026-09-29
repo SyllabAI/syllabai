@@ -974,3 +974,33 @@ Files: src/components/cla/cla-panel-mode.ts, note-cla.tsx,
 question-cla-overlay.tsx, src/components/hub/course-shell.tsx (one class),
 src/app/globals.css (the dock inset rule). Zero overlap with active lanes
 (locks.yaml empty). Base: hub 8480350.
+
+- [x] **qsp-repair (2026-09-29, trace 1a0ea81eb466e08d) — question_spec_points
+  coverage bumped to 630/630 for the recon cohort: the 9 unmapped pilot-cohort
+  questions now carry spec-point mappings (30 rows, table 2359 -> 2389).**
+  Cohort identification (measured, not guessed): tranche 4.15's 630 = the
+  09-19 SME pilot landing (593 sme-eq-*) + the 09-22 paper batch (37); the
+  09-26 mapping wave (+634) went to the 09-24/25 batches and never touched
+  these. The 9: 4ch0/2012-01/1C q2 q3 q5 q7, 4ch1/2023-01/2CR q1 q4,
+  4ch1/2023-06/1CR q3, sme-eq-2-7 q3-p1 + q3-s. Derivations grounded in part
+  content vs the live 194-node 4CH1 SUBTOPIC vocabulary, style copied from
+  same-paper mapped siblings (2012-1C q1 -> 1.10P+1.8S+1.9S establishes the
+  4CH0->4CH1 cross-spec house practice; SME twin questions q4-p1/p2/s share
+  identical mappings, so q3-p1 == q3-s). Mechanics = Task-66 class: single
+  fail-closed tx, NOT-EXISTS-guarded inserts, in-tx asserts (9 refs mapped,
+  exactly one PRIMARY each, cohort 630/630, every new node a 4CH1 SUBTOPIC),
+  dry-run ROLLBACK then COMMIT; provenance/validation_state AI_VALIDATED (the
+  table's only existing values). Verify 3-layer green: (1) DB post-commit
+  630/630 cohort, bank-wide active unmapped 60 -> 51; (2) serve path —
+  GET /exam-papers/{id} exposes the new specPoints on all repaired paper
+  questions, indistinguishable from house-mapped siblings; (3) evidence path —
+  fresh learner structured attempt + full self-mark on repaired 2CR-Jan23 q1
+  fires SUBTOPIC skillStates 4CH1-2.29 / 4CH1-1.24 / 4CH1-1.8 (mastery 0.357)
+  beside the topic row — before the repair this question could only fire
+  topic-level evidence. Observations recorded, no action taken: sme q3-p1 MCQ
+  options are empty strings (image-option ingestion loss; stem readable,
+  mapping unaffected); NEW open item **T-QSP2** — the 51 remaining unmapped
+  (09-24/25/26/28 batches) all carry synthetic ING-* primary topic anchors and
+  need real primary-topic assignment + spec-point mapping before their
+  evidence can paint anywhere meaningful. Evidence:
+  `bench/review/psaxis-review-2026-09-28/qsp-coverage-repair-2026-09-29/`.
