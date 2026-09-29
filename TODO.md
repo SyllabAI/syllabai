@@ -1332,3 +1332,12 @@ on base 5eb2e10 = origin/main HEAD at commit time; the push is a clean
 ff-only the moment credentials return (same for this repo's claim+done
 commits). Files: src/components/answer-editor.tsx, src/app/globals.css,
 src/lib/answer-format.ts (+test).
+W6 push addendum (2026-09-29, same session): the operator supplied a GitHub
+PAT in-session; credentials restored — hub 04785e5 pushed ff-only
+(5eb2e10 → 04785e5, origin/main verified post-push); this repo's claim+done
+rebased over the concurrent Task 69 lane (f8e9ff4 → 13c04bb, TODO.md both-
+appended conflict resolved keep-both) as 74265c3 + 2842dcd and pushed. The
+HONEST-ABSENT above is now closed with verified status: hub-ci run #45
+SUCCESS (build + e2e both success on 04785e5) and the Vercel Production
+deployment for 04785e5 = success (API-verified, created 2026-09-29T07:17Z).
+Screenshots scripts/w6_*.png remain untracked local probe evidence.
