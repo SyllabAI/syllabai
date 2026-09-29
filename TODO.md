@@ -1172,7 +1172,8 @@ candidate).
 
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 5 (the equation mathfield embedded in the text)
 
-- [ ] HUB-ANSWER-BOX-W5 (IN PROGRESS, session web-98866c45, operator trace
+- [x] HUB-ANSWER-BOX-W5 (EXECUTED 2026-09-29 as hub dff764c, hub-ci
+36524400542 SUCCESS, session web-98866c45, operator trace
 1a0eb5e936962765 "Yes want the equation mathfield embedded in the text" — the
 green light on wave 4's recorded refinement candidate: "SME edits the
 mathfield IN the text; ours is an anchored popover"). Wave 5 retires the
@@ -1191,3 +1192,33 @@ eslint+tsc, prod build + corpus gate, browser probe matrix (insert → inline
 mathfield → keyboard → commit → KaTeX static → draft round-trip verbatim →
 reload rich → undo → 375px po=0 → 0 console errors), hub-ci green, then
 closeout here.
+
+W5 execution record: the wave-4 anchored popover RETIRES — the answerEquation
+atom's node view now hosts the MathLive mathfield INLINE in the ProseMirror
+text flow, SME's exact interaction (static KaTeX at rest; click edits in
+place, prefilled; Insert equation drops an atom at the caret already
+editing; blur / Escape / tapping elsewhere commits; an empty commit deletes
+the atom — no invisible $…$ in the dialect; Escape hands the caret back to
+the text AFTER the atom). ZERO contract delta: answer-format-v2
+serialization untouched, hub-only (no core, no lease — the v2 contract the
+operator asked about was settled in wave 4: answerText stays ONE UTF-8
+string whose interpretation is the corpus dialect CommonMark + $…$ /
+$$…$$ LaTeX + mhchem + <sub>/<sup>/<br/>, strictly backward compatible).
+TWO REAL DEFECTS FOUND+FIXED by the probe: (1) TipTap's setNodeMarkup
+(updateAttributes on every mathfield keystroke) DEMOTES the session's
+NodeSelection, so the selection-away guard committed after the first
+keystroke and the field's own unmount fired a stray blur whose second
+commit read an empty value and DELETED the atom — fixed by re-pinning the
+NodeSelection after each live write-back + a commit latch (a session
+closes exactly once) + an isConnected guard on blur; (2) probe-harness
+residue (localStorage drafts from prior runs) created phantom atoms that
+flaked the prefill/undo assertions — probe now starts from a cleared draft
+store. Verified: bun test 15/15 (serializer untouched); eslint+tsc clean;
+production build 629 pages + CORPUS GATE PASSED; browser probe matrix
+21/21 on a clean draft store (inline-in-flow, popover absent, keyboard
+z-1055 measured + light/dark themes, live write-back to the stored draft
+verbatim $rac{1}{2}mv^{2}$, Escape commit + caret-after, click-away
+commit, prefilled re-edit, real undo over math, empty-atom deletion, draft
+survives reload rich, 375px hOverflow=0, cold load 0 console errors);
+pushed 9096b72..dff764c ff-only; hub-ci 36524400542 completed/success.
+Files: answer-editor.tsx, answer-textarea.tsx, globals.css.
