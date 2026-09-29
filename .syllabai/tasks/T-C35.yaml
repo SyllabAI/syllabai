@@ -5,7 +5,7 @@ task:
     aggregates member skill states into §13.3 distributions and fuses the TFA-03
     teaching-coverage overlay (syllabai-core aggregation + syllabai-hub surface)"
   owner: "superz (main agent, zai session discord:ObviousGazelle)"
-  status: IN_PROGRESS
+  status: DONE
   priority: P1
   base:
     repo: syllabai-core + syllabai-hub
@@ -109,9 +109,39 @@ task:
       too)
     - worklog + TODO claim/closeout entries in the master pack
   claims:
-    VERIFIED: []
+    VERIFIED: ["core-ci SUCCESS on b02364f (full suite + failsafe ITs incl. ClassKnowledgeGraphFlowIT 3/3 — theFullHeatmap, gates + archived readability, empty-class honesty)", "hub-ci SUCCESS on ee31ad1 (typechecked production build + Playwright e2e + axe a11y gate) with /teacher/classes/[id]/knowledge-graph registered", "core unit suite 1,048 green locally (JDK 25) incl. ClassKnowledgeGraphServiceTest 6/6 + ClassKnowledgeGraphControllerTest 2/2", "independent-student rule IT-proven: a non-member student with stronger evidence than every member on the same nodes leaves every aggregate byte-identical"]
     INFERRED: []
     REPORTED: []
-    UNVERIFIED: []
+    UNVERIFIED: ["core-ci SUCCESS on b02364f (full suite + failsafe ITs incl. ClassKnowledgeGraphFlowIT 3/3 — theFullHeatmap, gates + archived readability, empty-class honesty)", "hub-ci SUCCESS on ee31ad1 (typechecked production build + Playwright e2e + axe a11y gate) with /teacher/classes/[id]/knowledge-graph registered", "core unit suite 1,048 green locally (JDK 25) incl. ClassKnowledgeGraphServiceTest 6/6 + ClassKnowledgeGraphControllerTest 2/2", "independent-student rule IT-proven: a non-member student with stronger evidence than every member on the same nodes leaves every aggregate byte-identical"]
   execution_notes: >
-    (in progress)
+    Stacked both repos: core tfa-class-kg-heatmap on tfa-teaching-coverage (PR
+    #33 base tfa-teaching-coverage — merge order #31 → #32 → #33), hub
+    f072-class-kg-heatmap on the PR #1 head 3f5dec2 (PR #2 base
+    tfa-classroom-foundation). ONE CI catch on core, and it is the same
+    lesson T-C34 wrote down: the unit mock (anyCollection) hid a wrong
+    query argument — the service passed the TOPIC ids (misconceptionsOf is
+    keyed by parent) where the MISCONCEPTION node ids were required, so the
+    unit suite was green while the Testcontainers IT failed the prevalence
+    assertion (expected 1, was 0). Fix: collect() now also emits the flat
+    misco-node-id set; the query boundary is pinned in BOTH layers
+    (containsExactly(miscoA) in units, real SQL in the IT). Hub caught
+    nothing — but the new react-hooks set-state-in-effect rule forced the
+    house data-fetching shape (state lands in async callbacks only).
+    Design decisions worth keeping: aggregation means EFFECTIVE (decayed)
+    mastery at one pinned asOf ("aggregate what the student KG shows", not
+    ClassAnalyticsService's stored mastery); distribution buckets = the
+    shared DecayParams.bandOf vocabulary (LOW/DEVELOPING/SECURE =
+    struggling/developing/proficient); coverageState is derived SERVER-SIDE
+    (spec points verbatim, topics from descendant rows with counts exposed)
+    so the client never re-derives; archived classes stay READABLE by
+    design (409 is a write gate); engine color = the v75 bandColor palette
+    (the §13.1 UI-decision allowance) with not-taught as a DASHED grey ring
+    — grey/dashed means absent coverage, never low understanding.
+  next_safe_actions:
+    - TFA-07 KG drill-down (click a weak node → affected students →
+      individual graphs) — the aggregation here is its substrate
+    - TFA-05 Teacher Data Assistant reading coverage as a query dimension
+    - coverage checklist UI inside /teacher/classes/[id] (T-C34
+      next_safe_action, still open) so teachers can mark from the hub
+    - after #31/#32/#33 + hub #1/#2 merge, retarget and fast-forward the
+      stacked PRs in order
