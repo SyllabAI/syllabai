@@ -750,3 +750,39 @@ via git checkout in the same breath; final tree = exactly one modified file.
 Screenshots: /home/z/my-project/scripts/w3d/w3d_keyboard_1440.png,
 w3d_keyboard_375.png, w3d_keyboard_dark.png. CI/Vercel status unverifiable
 from sandbox (private repo) — honest-absent.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 4 (answer format contract v2 — the deferred rich-math decision)
+
+- [ ] HUB-ANSWER-BOX-W4 (IN PROGRESS, session web-98866c45, operator trace 1a0ea6d4ca777a75
+"Go on with updating the answer format" — the green light for the answer-format contract
+decision that waves 3b/3c/3d repeatedly deferred: Italic/Subscript/Superscript and Insert
+equation were recorded honest-absent as "owned by the still-open answer-format contract
+decision"). Lease: core-web-contract in .syllabai/locks.yaml (bases core 9a83511 / hub
+15ce2ba; acquired 2026-09-29T00:02Z). Scope, contract first: **answer format v2 = the
+corpus dialect itself** — answerText stays ONE UTF-8 string, cap 4000 (R7) unchanged, but
+its declared interpretation upgrades from "plain text" to "Markdown with embedded LaTeX
+math and limited inline HTML", precisely what the hub's existing corpus renderer
+(markdown.tsx: remark-gfm + remark-math + KaTeX/mhchem + rehype-raw/sanitize allow-list)
+already interprets: inline $…$ / display $$…$$, mhchem \ce{}, <sub>/<sup>/<br/>. Strictly
+backward compatible (every v1 answer is a valid v2 answer; literal $ escaped \$ by the
+producer). Storage: NO migration (answers.answer_text already text). Consumers: Smart
+Mark reads it verbatim (prompt gains a format note — interpret math literally); legacy
+/api/ai/mark and tutor CLA context unchanged (verbatim strings). Core answerinput: the
+wave-3 transcription policy upgrades from "plain text, never LaTeX" to the v2 dialect
+(handwritten math → $…$ LaTeX, words → plain text) — that policy existed only to
+preserve the old contract. Hub: the answer box grows the real rich-text layer — TipTap
+(MIT; the verified SME editor, matches their ground-truth `tiptap ProseMirror` DOM)
+inside the UNCHANGED wave-3b/3c shell (label, composite box, strip, pills, ink pad,
+slots, shortcut all kept); Italic/Sub/Sup become real marks; Insert equation opens a
+MathLive mathfield (MIT; the verified SME math editor) whose own stock virtual keyboard
+supersedes the wave-3d look replica — the real keyboard IS the keyboard that appears in
+SME; the Ω square returns to SME's Insert-symbol dropdown species (wave-3c verbatim
+groups) inserting Unicode at the rich caret; serialization to v2 dialect + limited
+dialect parser for draft reload (plain v1 drafts parse as text). Planned disclosed
+repair, one line: hub ci.yml push trigger is committed mangled (`branches: ain]` —
+push CI literally cannot match main; consistent with waves 3b–3d recording CI as
+unverifiable) — restored to `branches: [main]` so this wave's CI can actually run and
+be verified. Files: src/components/answer-textarea.tsx, src/components/answer-editor.tsx
+(new), src/lib/answer-format.ts (new), package.json (+@tiptap/react +mathlive),
+.github/workflows/ci.yml (trigger repair); core: AnswerInputTranscriptionService,
+LlmMarkingCandidateGenerator, PartAnswerRequest (docs/policy), tests.
