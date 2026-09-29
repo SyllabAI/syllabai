@@ -32,9 +32,11 @@ task:
         /api/v1/teacher/classes/{id}/coverage) + views"
       - "core: PUT marking is fail-closed and idempotent — class must exist
         (404) and be the teacher's (403), class must be ACTIVE (409), node must
-        exist (404) and be a spec-point node (400); same-status re-mark is the
-        idempotent no-op it honestly is (no new event, no timestamp bump);
-        status change appends an event and updates the state row in one tx"
+        exist (404) and be a spec-point node (400); an identical re-mark (same
+        status AND same normalized note) is the idempotent no-op it honestly is
+        (no new event, no timestamp bump); any information change (status flip
+        or note re-assertion) appends one event and updates the state row in
+        one tx"
       - "core: the spec-point gate is the V39 invariant — applicability is
         populated ONLY on seed-owned spec-point rows, so a NULL-applicability
         node is refused (fail-closed, never a guess)"
