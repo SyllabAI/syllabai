@@ -1111,3 +1111,35 @@ vercel_probe}.sh. Question-surface probes skipped honestly (bridge-off,
 shared code proven on the note island; strings verified in prod chunks).
 SME's "New chat" header button still honest-absent (follow-up
 candidate).
+=======
+- [x] **tqsp2-primary-topics (2026-09-29, trace 1a0eaa53be2628f5) — T-QSP2
+  executed: the 51 ING-anchored unmapped questions now carry REAL primary
+  topics + spec-point mappings; bank-wide active unmapped 51 → 0.** Cohort
+  (measured): all 51 unmapped carry synthetic `ING-*` per-paper ingestion
+  anchors as primary_topic_node_id — 09-24 ×12, 09-25 ×13, 09-26 ×19
+  (1CR+2CR Jun-2024 full papers), 09-28 ×7 (2C Jan-2021 full paper), 21
+  papers, all PAST_PAPER STRUCTURED. Two-part assignment mirroring §10
+  mapQuestionTopics semantics: (1) real TOPIC primary = parent TOPIC of the
+  question's PRIMARY spec point (mechanical, from the canonical KG
+  pointSubtopics hierarchy) + question_topics rows (51 primary + 69
+  secondary, cap-4 distinct-parent secondaries); (2) spec-point mappings
+  qsp-repair style — PRIMARY = dominant assessed point (largest mark block,
+  framing tie-break), SECONDARY = substantively assessed supporting points
+  (max 4), grounded in stems + 350 part prompts + 283 mark points vs the
+  live 194-node vocabulary (4CH0→4CH1 cross-spec per house practice).
+  Mechanics = Task-66 class single fail-closed tx: 51 guarded primary
+  UPDATEs (only off an ING- anchor), 120 topic rows, 189 qsp rows (table
+  2389 → 2578; question_topics 625 → 745), in-tx asserts (real 4CH1-S%
+  TOPIC primaries, exactly one primary per question in both tables, exact
+  deltas, all new spec-point nodes 4CH1 SUBTOPIC, ING census 353 → 302),
+  dry-run ROLLBACK then COMMIT; AI_VALIDATED provenance. Verify 3-layer
+  green: DB bank unmapped 0; serve path 12 spot-checks across 6 papers
+  (all 4 landing days) ALL PASS; evidence path e2e on repaired 2CR-Jun24 q2
+  fires 4 skillStates — **4CH1-S1-c "Atomic structure" REAL topic anchor**
+  (the delta vs the 9-question repair, whose topic row was the invisible ING
+  anchor) + 4CH1-1.16 P / 1.15 S / 1.17 S at 0.357 — topic evidence now
+  paints in the KG. NEW open item **T-QSP3**: the 302 already-mapped
+  questions still on ING-* anchors (spec-point evidence paints; topic-level
+  evidence fires at disconnected placeholders) — the same parent-TOPIC
+  derivation clears them in one pass. Evidence:
+  `bench/review/psaxis-review-2026-09-28/tqsp2-primary-topics-2026-09-29/`.
