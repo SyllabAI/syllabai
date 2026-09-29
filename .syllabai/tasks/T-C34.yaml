@@ -5,7 +5,7 @@ task:
     overlay that lets the Class KG distinguish not-yet-taught curriculum from
     taught-but-weak (syllabai-core only)"
   owner: "superz (main agent, zai session discord:ObviousGazelle)"
-  status: IN_PROGRESS
+  status: DONE
   priority: P0.5
   base:
     repo: syllabai-core
@@ -87,10 +87,25 @@ task:
     - CI run green on the stacked branch (which runs the T-C33 suite too)
     - worklog + PROGRESS claim/closeout entries in the master pack
   claims:
-    VERIFIED: []
+    VERIFIED: ["core-ci SUCCESS on daf89bf (full suite incl. TeachingCoverageFlowIT 4/4 on Testcontainers — lifecycle, gates, honest empties, honesty pin, curriculum immutability)", "core unit suite 1,049 green locally (JDK 25, incl. TeachingCoverageControllerTest 10/10)", "V52 SQL applied verbatim against a disposable Postgres 17: all three CHECKs, composite PK, NO-ACTION FK on knowledge_nodes, and the class cascade all enforced", "curriculum immutability proven on CI: knowledge_nodes byte-identical after every coverage write"]
     INFERRED: []
     REPORTED: []
-    UNVERIFIED: []
+    UNVERIFIED: ["core-ci SUCCESS on daf89bf (full suite incl. TeachingCoverageFlowIT 4/4 on Testcontainers — lifecycle, gates, honest empties, honesty pin, curriculum immutability)", "core unit suite 1,049 green locally (JDK 25, incl. TeachingCoverageControllerTest 10/10)", "V52 SQL applied verbatim against a disposable Postgres 17: all three CHECKs, composite PK, NO-ACTION FK on knowledge_nodes, and the class cascade all enforced", "curriculum immutability proven on CI: knowledge_nodes byte-identical after every coverage write"]
+  execution_notes: >
+    Stacked on the T-C33 branch (core 18ad8b7) because V52 composes with the V51
+    classroom schema; PR #32 opened with base tfa-classroom-foundation so the
+    diff shows only TFA-03 — retarget/merge after PR #31. Four CI iterations,
+    four real catches: (1) method security resolves ROLE_TEACHER from the
+    SecurityContext on direct controller calls — the IT had no authentication,
+    invisible in the sandbox (no Docker), caught on CI; (2) marked_at and
+    created_at were two clock reads microseconds apart — the entity now takes
+    ONE read so the first-assertion provenance is the row creation by
+    construction; (3) a blank note on a NOTED row is a note CLEARANCE, an
+    information change the audit correctly records — the IT step became a
+    pad-trim same-note no-op (the null-note no-op stays pinned in units);
+    (4) Postgres TIMESTAMPTZ truncates to microseconds — provenance
+    comparisons anchor to DB-loaded views, and the in-memory first view is
+    pre-flush nanoseconds (same moment, different precision).
   next_safe_actions:
     - hub surface for TFA-03 (coverage checklist inside /teacher/classes/[id])
       once PR #31 merges — the API contract here is its substrate
