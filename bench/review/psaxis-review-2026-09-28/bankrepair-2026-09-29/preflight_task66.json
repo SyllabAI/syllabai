@@ -1,0 +1,288 @@
+{
+ "generated": "2026-09-29T00:00:12.157007+00:00",
+ "trace": "1a0ea5a6dbc30c79",
+ "checks": {
+  "G1_census_papers": {
+   "ok": true,
+   "detail": {
+    "REJECTED": 14,
+    "VALIDATED": 90
+   }
+  },
+  "G1_census_documents": {
+   "ok": true,
+   "detail": {
+    "SUGGESTED": 305,
+    "REJECTED": 147,
+    "VALIDATED": 567
+   }
+  },
+  "G1_pool_2935": {
+   "ok": true,
+   "detail": 2935
+  },
+  "G1_rev1_zero": {
+   "ok": true,
+   "detail": 0
+  },
+  "G1_events_zero": {
+   "ok": true,
+   "detail": 0
+  },
+  "G1_audit_tail_3939": {
+   "ok": true,
+   "detail": 3939
+  },
+  "G2_defect_count_37": {
+   "ok": true,
+   "detail": 37
+  },
+  "G2_defect_audit_ids": {
+   "ok": true,
+   "detail": "[3680, 3681, 3682, 3683, 3684]...[3720, 3721, 3722] vs 3680-3696+3703-3722"
+  },
+  "G2_all_live_SUGGESTED": {
+   "ok": true,
+   "detail": "{'SUGGESTED'}"
+  },
+  "G2_flip_shape_25_12": {
+   "ok": true,
+   "detail": [
+    25,
+    12
+   ]
+  },
+  "G3_two_papers": {
+   "ok": true,
+   "detail": [
+    "0924a1fe-8672-413d-9b37-25c2e6f303de",
+    "060f40c2-eb7b-410c-a593-947fe096c9c2"
+   ]
+  },
+  "G3_q10_paper_in_defect_set": {
+   "ok": true,
+   "detail": [
+    "0924a1fe-8672-413d-9b37-25c2e6f303de",
+    [
+     "060f40c2-eb7b-410c-a593-947fe096c9c2",
+     "0924a1fe-8672-413d-9b37-25c2e6f303de"
+    ]
+   ]
+  },
+  "G3_jun19_1c_paper_validated": {
+   "ok": true,
+   "detail": [
+    [
+     "SUGGESTED",
+     15
+    ]
+   ]
+  },
+  "G3_jun19_1c_qv_all_SUGGESTED": {
+   "ok": true,
+   "detail": [
+    [
+     "SUGGESTED",
+     15
+    ]
+   ]
+  },
+  "G3_jun19_1c_schemes_all_SUGGESTED": {
+   "ok": true,
+   "detail": [
+    [
+     "SUGGESTED",
+     2
+    ]
+   ]
+  },
+  "G3_jun20_1c_paper_validated": {
+   "ok": true,
+   "detail": [
+    [
+     "SUGGESTED",
+     10
+    ]
+   ]
+  },
+  "G3_jun20_1c_qv_all_SUGGESTED": {
+   "ok": true,
+   "detail": [
+    [
+     "SUGGESTED",
+     10
+    ]
+   ]
+  },
+  "G3_jun20_1c_schemes_all_SUGGESTED": {
+   "ok": true,
+   "detail": [
+    [
+     "SUGGESTED",
+     10
+    ]
+   ]
+  },
+  "G3_flip_equals_full_children": {
+   "ok": true,
+   "detail": "flip set == union of both papers' full child sets"
+  },
+  "G4_jan2022_1c_zero_audit_rows": {
+   "ok": true,
+   "detail": 0
+  },
+  "G4_jun2019_2c_zero_audit_rows": {
+   "ok": true,
+   "detail": 0
+  },
+  "G5_q10_qv_marks_1": {
+   "ok": true,
+   "detail": 1
+  },
+  "G5_q10_mirror_marks_1": {
+   "ok": true,
+   "detail": 1
+  },
+  "G5_q10_stems_equal": {
+   "ok": true,
+   "detail": "stems byte-equal"
+  },
+  "G5_q10_parts_shape": {
+   "ok": true,
+   "detail": [
+    [
+     "4d22ffd4-cf13-4cee-9b1f-c016684b5542",
+     "b",
+     0,
+     0
+    ],
+    [
+     "b9a1ff6e-c5bb-4d38-b678-c9c348808885",
+     "b-i",
+     0,
+     1
+    ],
+    [
+     "de91f126-2884-4dbd-91ec-bc5a813c638a",
+     "b-ii",
+     0,
+     2
+    ]
+   ]
+  },
+  "G5_q10_no_attempts": {
+   "ok": true,
+   "detail": 0
+  },
+  "G6_mirror_marks_all_equal": {
+   "ok": true,
+   "detail": [
+    1533,
+    0,
+    1533,
+    0
+   ]
+  },
+  "G6_mirror_stems_all_equal": {
+   "ok": true,
+   "detail": [
+    1533,
+    0,
+    1533,
+    0
+   ]
+  },
+  "G7_jun19_banked_sum_104": {
+   "ok": true,
+   "detail": 104
+  },
+  "G8_qp_p15_tokens": {
+   "ok": true,
+   "detail": []
+  },
+  "G8_ms_q10_chunk": {
+   "ok": true,
+   "detail": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q10 | p.15\nM"
+  },
+  "G9_archive_complete": {
+   "ok": true,
+   "detail": "37 child rows + Q10 row + 3 parts frozen"
+  }
+ },
+ "baseline": {
+  "census_papers": {
+   "REJECTED": 14,
+   "VALIDATED": 90
+  },
+  "census_documents": {
+   "SUGGESTED": 305,
+   "REJECTED": 147,
+   "VALIDATED": 567
+  },
+  "pool": 2935,
+  "rev1": 0,
+  "events": 0,
+  "audit_tail": 3939
+ },
+ "flip": {
+  "qv": [
+   "1d1a881b-5d73-4d6c-8502-f2324060fa57",
+   "20da972a-faca-42d1-869f-eb5bc2b3d607",
+   "27379362-6f0f-4b18-ae11-fa233b68a72f",
+   "29df859a-c401-4f08-9ebe-26e639b26a9b",
+   "34157e0b-52e5-4e92-975a-b9dc9bcea4bb",
+   "401bbd83-1897-4b98-a54c-bf392545fd5b",
+   "402c39e1-02ab-4820-99df-99405a138d66",
+   "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8",
+   "630b465c-ebc7-4716-823a-747c66ac6454",
+   "67708b87-0c76-4bde-91e3-ccfb693e4d40",
+   "6b7fbbdb-a270-442d-acc3-07036888608b",
+   "6d51dcf2-881c-4b07-ab35-327636a80a3f",
+   "8237474c-ae79-4bee-a836-0d0ebc085fd8",
+   "964b9b54-efbb-42b0-9480-b9f8bd7d6015",
+   "a304224c-4241-4e32-b876-a34f44f2e103",
+   "a6d8d350-d047-4c72-81c0-c734dc9e3c6c",
+   "aa7692ec-07b3-409c-bcab-a183ab0e3cf7",
+   "b4a2b62d-bcaa-4ef4-a334-c0460405f57c",
+   "c84570f1-1070-4f82-bb44-9190beb20121",
+   "d1f9051b-39d3-4653-a6e7-e68e64c21377",
+   "d80c0eed-0a86-4af7-b268-9bb0c4923523",
+   "e279203d-3f2c-4a35-a243-7a35be9ab3ce",
+   "e7b7470d-c7db-4459-adc8-3ca54d1810db",
+   "e7e8276e-1ffa-45b6-8790-063efa91511c",
+   "f9537fc2-fba7-4a1c-820b-1b0d4e3ae98b"
+  ],
+  "ms": [
+   "2596a249-0aaf-40b9-9da8-40cfc2b3b35e",
+   "3170412a-4a0d-453b-9726-2a342b08eea3",
+   "75c30c6f-e1fd-4594-b67d-694fe9ce2160",
+   "8e5db990-fb8f-4305-857f-9921de44d9cd",
+   "9ef27daa-7248-4ace-b146-ba594e619fda",
+   "9f423e8f-3ed5-4d7b-b959-1958b1e82f72",
+   "a4b290fa-717b-4fee-97b1-83fd93afd31d",
+   "b2d06efb-f2ce-44c0-b2cd-56977e32fed1",
+   "b3a034c2-f8d9-48eb-8001-c202ee1948ea",
+   "e2be9916-0204-4899-8172-09a508c83664",
+   "ec84c48a-8dd5-4890-939d-6b6b90b1ffbe",
+   "fc7d3832-7431-4b97-a647-b5936d5eef39"
+  ]
+ },
+ "papers": {
+  "jun19_1c": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+  "jun20_1c": "060f40c2-eb7b-410c-a593-947fe096c9c2"
+ },
+ "q10": {
+  "qv": "aa7692ec-07b3-409c-bcab-a183ab0e3cf7",
+  "question_row": "9226e373-b602-4383-b0bc-c3012cdba118",
+  "parts": {
+   "b": "4d22ffd4-cf13-4cee-9b1f-c016684b5542",
+   "b-i": "b9a1ff6e-c5bb-4d38-b678-c9c348808885",
+   "b-ii": "de91f126-2884-4dbd-91ec-bc5a813c638a"
+  }
+ },
+ "evidence_shas": {
+  "qp_p15_text.txt": "08e8a0325ee4beea8305016d6160cbd80df584ca4cd20401341d6199bccf70ff",
+  "ms_q10_chunk.txt": "7b7dae43baa2091a268e97611df752f9c0acb9e6fe9c3a7b4bd1856195626973"
+ },
+ "verdict": "PASS"
+}

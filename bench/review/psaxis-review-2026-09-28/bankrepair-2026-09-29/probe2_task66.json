@@ -1,0 +1,1014 @@
+{
+ "generated": "2026-09-28T23:45:33.162728+00:00",
+ "ledger_vs_live_total": 1408,
+ "ledger_vs_live_mismatches": [
+  {
+   "audit_id": 1,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "7975cd44-0ba5-474c-afc2-78de5de5e307",
+   "to_state": "VALIDATED",
+   "live": "REJECTED",
+   "occurred_at": "2026-09-14 22:17:44.345995+00:00"
+  },
+  {
+   "audit_id": 2,
+   "action": "FLAG",
+   "target_type": "question_version",
+   "target_id": "7975cd44-0ba5-474c-afc2-78de5de5e307",
+   "to_state": "FLAGGED",
+   "live": "REJECTED",
+   "occurred_at": "2026-09-14 22:17:45.200752+00:00"
+  },
+  {
+   "audit_id": 3,
+   "action": "UNFLAG",
+   "target_type": "question_version",
+   "target_id": "7975cd44-0ba5-474c-afc2-78de5de5e307",
+   "to_state": "SUGGESTED",
+   "live": "REJECTED",
+   "occurred_at": "2026-09-14 22:17:45.916649+00:00"
+  },
+  {
+   "audit_id": 6,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "2e9105a2-8db8-4a40-b379-ae2c374652af",
+   "to_state": "VALIDATED",
+   "live": "REJECTED",
+   "occurred_at": "2026-09-14 22:31:08.058429+00:00"
+  },
+  {
+   "audit_id": 7,
+   "action": "FLAG",
+   "target_type": "question_version",
+   "target_id": "2e9105a2-8db8-4a40-b379-ae2c374652af",
+   "to_state": "FLAGGED",
+   "live": "REJECTED",
+   "occurred_at": "2026-09-14 22:31:09.409348+00:00"
+  },
+  {
+   "audit_id": 8,
+   "action": "UNFLAG",
+   "target_type": "question_version",
+   "target_id": "2e9105a2-8db8-4a40-b379-ae2c374652af",
+   "to_state": "SUGGESTED",
+   "live": "REJECTED",
+   "occurred_at": "2026-09-14 22:31:10.121827+00:00"
+  },
+  {
+   "audit_id": 11,
+   "action": "FLAG",
+   "target_type": "question_version",
+   "target_id": "f1516f20-89c5-493c-b1b5-62d63e977dba",
+   "to_state": "FLAGGED",
+   "live": "VALIDATED",
+   "occurred_at": "2026-09-14 23:00:08.039887+00:00"
+  },
+  {
+   "audit_id": 12,
+   "action": "UNFLAG",
+   "target_type": "question_version",
+   "target_id": "f1516f20-89c5-493c-b1b5-62d63e977dba",
+   "to_state": "SUGGESTED",
+   "live": "VALIDATED",
+   "occurred_at": "2026-09-14 23:00:10.620031+00:00"
+  },
+  {
+   "audit_id": 37,
+   "action": "FLAG",
+   "target_type": "question_version",
+   "target_id": "6889ba87-5b26-42e3-b75e-ec2777b18def",
+   "to_state": "FLAGGED",
+   "live": "VALIDATED",
+   "occurred_at": "2026-09-14 23:00:31.288519+00:00"
+  },
+  {
+   "audit_id": 38,
+   "action": "UNFLAG",
+   "target_type": "question_version",
+   "target_id": "6889ba87-5b26-42e3-b75e-ec2777b18def",
+   "to_state": "SUGGESTED",
+   "live": "VALIDATED",
+   "occurred_at": "2026-09-14 23:00:32.590048+00:00"
+  },
+  {
+   "audit_id": 3680,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3681,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "964b9b54-efbb-42b0-9480-b9f8bd7d6015",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3682,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "27379362-6f0f-4b18-ae11-fa233b68a72f",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3683,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "402c39e1-02ab-4820-99df-99405a138d66",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3684,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "6b7fbbdb-a270-442d-acc3-07036888608b",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3685,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "67708b87-0c76-4bde-91e3-ccfb693e4d40",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3686,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "d80c0eed-0a86-4af7-b268-9bb0c4923523",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3687,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "f9537fc2-fba7-4a1c-820b-1b0d4e3ae98b",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3688,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "20da972a-faca-42d1-869f-eb5bc2b3d607",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3689,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "6d51dcf2-881c-4b07-ab35-327636a80a3f",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3690,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "aa7692ec-07b3-409c-bcab-a183ab0e3cf7",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3691,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "401bbd83-1897-4b98-a54c-bf392545fd5b",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3692,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "b4a2b62d-bcaa-4ef4-a334-c0460405f57c",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3693,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "34157e0b-52e5-4e92-975a-b9dc9bcea4bb",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3694,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "1d1a881b-5d73-4d6c-8502-f2324060fa57",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3695,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "3170412a-4a0d-453b-9726-2a342b08eea3",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3696,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "b3a034c2-f8d9-48eb-8001-c202ee1948ea",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3703,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "a304224c-4241-4e32-b876-a34f44f2e103",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3704,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "8237474c-ae79-4bee-a836-0d0ebc085fd8",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3705,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "e7b7470d-c7db-4459-adc8-3ca54d1810db",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3706,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "a6d8d350-d047-4c72-81c0-c734dc9e3c6c",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3707,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "630b465c-ebc7-4716-823a-747c66ac6454",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3708,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "29df859a-c401-4f08-9ebe-26e639b26a9b",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3709,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "e7e8276e-1ffa-45b6-8790-063efa91511c",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3710,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "c84570f1-1070-4f82-bb44-9190beb20121",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3711,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "e279203d-3f2c-4a35-a243-7a35be9ab3ce",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3712,
+   "action": "VALIDATE",
+   "target_type": "question_version",
+   "target_id": "d1f9051b-39d3-4653-a6e7-e68e64c21377",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3713,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "2596a249-0aaf-40b9-9da8-40cfc2b3b35e",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3714,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "a4b290fa-717b-4fee-97b1-83fd93afd31d",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3715,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "b2d06efb-f2ce-44c0-b2cd-56977e32fed1",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3716,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "9ef27daa-7248-4ace-b146-ba594e619fda",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3717,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "75c30c6f-e1fd-4594-b67d-694fe9ce2160",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3718,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "8e5db990-fb8f-4305-857f-9921de44d9cd",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3719,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "e2be9916-0204-4899-8172-09a508c83664",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3720,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "9f423e8f-3ed5-4d7b-b959-1958b1e82f72",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3721,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "fc7d3832-7431-4b97-a647-b5936d5eef39",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  },
+  {
+   "audit_id": 3722,
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "ec84c48a-8dd5-4890-939d-6b6b90b1ffbe",
+   "to_state": "VALIDATED",
+   "live": "SUGGESTED",
+   "occurred_at": "2026-09-28 21:19:36.373742+00:00"
+  }
+ ],
+ "mismatch_count": 47,
+ "mismatch_by_action": {
+  "VALIDATE": [
+   "7975cd44",
+   "2e9105a2",
+   "5fb4726f",
+   "964b9b54",
+   "27379362",
+   "402c39e1",
+   "6b7fbbdb",
+   "67708b87",
+   "d80c0eed",
+   "f9537fc2",
+   "20da972a",
+   "6d51dcf2",
+   "aa7692ec",
+   "401bbd83",
+   "b4a2b62d",
+   "34157e0b",
+   "1d1a881b",
+   "3170412a",
+   "b3a034c2",
+   "a304224c",
+   "8237474c",
+   "e7b7470d",
+   "a6d8d350",
+   "630b465c",
+   "29df859a",
+   "e7e8276e",
+   "c84570f1",
+   "e279203d",
+   "d1f9051b",
+   "2596a249",
+   "a4b290fa",
+   "b2d06efb",
+   "9ef27daa",
+   "75c30c6f",
+   "8e5db990",
+   "e2be9916",
+   "9f423e8f",
+   "fc7d3832",
+   "ec84c48a"
+  ],
+  "FLAG": [
+   "7975cd44",
+   "2e9105a2",
+   "f1516f20",
+   "6889ba87"
+  ],
+  "UNFLAG": [
+   "7975cd44",
+   "2e9105a2",
+   "f1516f20",
+   "6889ba87"
+  ]
+ },
+ "2019-1C_paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+ "2019-1C_qv_states": {
+  "SUGGESTED": 15
+ },
+ "2019-1C_scheme_states": {
+  "SUGGESTED": 2
+ },
+ "2019-1C_paper": {
+  "title": "4CH1/1C June 2019",
+  "session_label": "June 2019",
+  "validation_state": "VALIDATED",
+  "question_paper_document_id": "98622045-ab65-5c94-a571-e7a7cb76e593",
+  "mark_scheme_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59"
+ },
+ "2020-1C_paper_id": "060f40c2-eb7b-410c-a593-947fe096c9c2",
+ "2020-1C_qv_states": {
+  "SUGGESTED": 10
+ },
+ "2020-1C_scheme_states": {
+  "SUGGESTED": 10
+ },
+ "2020-1C_paper": {
+  "title": "4CH1/1C June 2020",
+  "session_label": "June 2020",
+  "validation_state": "VALIDATED",
+  "question_paper_document_id": "4afeccc7-eb21-5bfb-bd75-493e45dd5f45",
+  "mark_scheme_document_id": "c4cd01d6-e1f2-55ba-a8d7-e10a3d3a2769"
+ },
+ "jun19_questions_mirror": [
+  [
+   "98c5d3ea-d261-4187-a3e1-c9f6348d5ab9",
+   "Potassium permanganate is a purple solid that is soluble in ",
+   4,
+   "964b9b54-efbb-42b0-9480-b9f8bd7d6015",
+   "Potassium permanganate is a purple solid that is soluble in ",
+   4
+  ],
+  [
+   "30a8905a-7b43-4bc3-b268-5dd970557ed3",
+   "The diagram shows part of the Periodic Table, with elements ",
+   4,
+   "27379362-6f0f-4b18-ae11-fa233b68a72f",
+   "The diagram shows part of the Periodic Table, with elements ",
+   4
+  ],
+  [
+   "aca89514-73e8-4e2c-ba2f-1a50fc52abd3",
+   "A student does these two tests on a solution made from a whi",
+   6,
+   "402c39e1-02ab-4820-99df-99405a138d66",
+   "A student does these two tests on a solution made from a whi",
+   6
+  ],
+  [
+   "ce19114e-3eec-42da-8216-f0ba18ee8434",
+   "A student uses this apparatus to investigate the colours in ",
+   8,
+   "6b7fbbdb-a270-442d-acc3-07036888608b",
+   "A student uses this apparatus to investigate the colours in ",
+   8
+  ],
+  [
+   "3cc8e5f7-1188-476f-b3bd-eb84f2f6e791",
+   "In 1937 an airship full of hydrogen gas flew from Germany to",
+   5,
+   "67708b87-0c76-4bde-91e3-ccfb693e4d40",
+   "In 1937 an airship full of hydrogen gas flew from Germany to",
+   5
+  ],
+  [
+   "8957d826-fc1c-4ef9-aea1-9d15f4187685",
+   "The reactions of metals with water and with dilute sulfuric ",
+   5,
+   "d80c0eed-0a86-4af7-b268-9bb0c4923523",
+   "The reactions of metals with water and with dilute sulfuric ",
+   5
+  ],
+  [
+   "4697e711-5ad4-491e-8076-0cf6c5378229",
+   "Diamond, graphite and silicon dioxide all have giant covalen",
+   6,
+   "f9537fc2-fba7-4a1c-820b-1b0d4e3ae98b",
+   "Diamond, graphite and silicon dioxide all have giant covalen",
+   6
+  ],
+  [
+   "ccbd1fa2-1ba0-41e7-9b8e-910a2a22ae55",
+   "Ethene $ \\left( \\mathrm{C}_{2} \\mathrm{H}_{4} \\right) $ can ",
+   6,
+   "20da972a-faca-42d1-869f-eb5bc2b3d607",
+   "Ethene $ \\left( \\mathrm{C}_{2} \\mathrm{H}_{4} \\right) $ can ",
+   6
+  ],
+  [
+   "c672fba2-cbda-494e-8527-4194863fe53e",
+   "Halon 1301 is a compound used in some fire extinguishers. Ha",
+   6,
+   "6d51dcf2-881c-4b07-ab35-327636a80a3f",
+   "Halon 1301 is a compound used in some fire extinguishers. Ha",
+   6
+  ],
+  [
+   "9226e373-b602-4383-b0bc-c3012cdba118",
+   "(a) There are three isomers with the molecular formula $ \\ma",
+   1,
+   "aa7692ec-07b3-409c-bcab-a183ab0e3cf7",
+   "(a) There are three isomers with the molecular formula $ \\ma",
+   1
+  ],
+  [
+   "97f1c4e0-f583-49d1-aebb-642e8e438a87",
+   "The gas burned in a Bunsen burner is methane. The equation f",
+   9,
+   "401bbd83-1897-4b98-a54c-bf392545fd5b",
+   "The gas burned in a Bunsen burner is methane. The equation f",
+   9
+  ],
+  [
+   "092262d0-67a3-42b5-b620-6434d19cf659",
+   "A student uses this apparatus to investigate the temperature",
+   9,
+   "b4a2b62d-bcaa-4ef4-a334-c0460405f57c",
+   "A student uses this apparatus to investigate the temperature",
+   9
+  ],
+  [
+   "4cc9e88c-e78c-4ce9-add1-7de35b2c1ceb",
+   "A student uses this apparatus to investigate the rate of rea",
+   12,
+   "34157e0b-52e5-4e92-975a-b9dc9bcea4bb",
+   "A student uses this apparatus to investigate the rate of rea",
+   12
+  ],
+  [
+   "5623d3cd-0fbe-422a-b8d8-44fedc806fc1",
+   "A salt can be made by reacting an acid with an insoluble bas",
+   14,
+   "1d1a881b-5d73-4d6c-8502-f2324060fa57",
+   "A salt can be made by reacting an acid with an insoluble bas",
+   14
+  ],
+  [
+   "7e005f11-e246-4b77-b0ab-1504d5a029f9",
+   "Hydrated ammonium iron(III) sulfate is a violet solid that h",
+   9,
+   "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8",
+   "Hydrated ammonium iron(III) sulfate is a violet solid that h",
+   9
+  ]
+ ],
+ "jun19_ms_chunk_count": 0,
+ "jun19_ms_q10_chunks": [],
+ "empty_stem_shape": [
+  [
+   "a69a4e80-ff69-4894-b495-6c76f10a7373",
+   "4CH1 4CH0/1C January 2012",
+   "January 2012",
+   "882dfd22-9aa5-466b-9fc1-3c588c449dec",
+   13,
+   8,
+   8,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "a69a4e80-ff69-4894-b495-6c76f10a7373",
+   "4CH1 4CH0/1C January 2012",
+   "January 2012",
+   "237b327d-e41e-4ae4-a959-59b351955acf",
+   9,
+   6,
+   6,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "cd45e3ed-3d8c-4eb4-9259-51313adb0962",
+   "4CH0 Chemistry 4CH0/2C January 2012",
+   "January 2012",
+   "a00dc573-6121-432a-8012-3dd0170ada18",
+   6,
+   8,
+   8,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "a69a4e80-ff69-4894-b495-6c76f10a7373",
+   "4CH1 4CH0/1C January 2012",
+   "January 2012",
+   "416bb7ab-7a65-4c39-9ff6-bcaef6d1fb12",
+   8,
+   7,
+   7,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "cd45e3ed-3d8c-4eb4-9259-51313adb0962",
+   "4CH0 Chemistry 4CH0/2C January 2012",
+   "January 2012",
+   "5e64db1f-3cae-4611-bea3-10e64eaaf215",
+   10,
+   5,
+   5,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "a69a4e80-ff69-4894-b495-6c76f10a7373",
+   "4CH1 4CH0/1C January 2012",
+   "January 2012",
+   "8c2512c6-1a74-48ef-8e0c-3ada1a87ebdf",
+   11,
+   10,
+   10,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "980095b5-f109-4249-9810-33b8994c7f56",
+   "4CH0 Chemistry 4CH0/2C June 2014",
+   "June 2014",
+   "15c35cb8-ef7d-4b53-bda4-21e420c891dc",
+   11,
+   8,
+   8,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "8197117d-6236-4992-a32e-487358de7295",
+   "4CH0 Chemistry 4CH0/1C January 2019",
+   "January 2019",
+   "690da26a-3ad9-441e-86e4-dda9fb4aa595",
+   11,
+   7,
+   7,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "216d1073-756d-4753-af0e-81de951cf24c",
+   "4CH1 Chemistry 4CH1/1CR January 2020",
+   "January 2020",
+   "d3bddbc3-9479-432b-9aec-f07201a0ef8c",
+   14,
+   7,
+   7,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "be73332c-bf0f-463f-bbe6-72a1d4bf9b80",
+   "4CH1 Chemistry 4CH1/1C January 2020",
+   "January 2020",
+   "8df94cf1-336b-4bd9-a6d3-b18546419cda",
+   11,
+   5,
+   5,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "d3d7e0f2-fd08-48c6-a02f-e94da725d441",
+   "4CH1 Chemistry 4CH1/2CR June 2020",
+   "June 2020",
+   "ff5c20fe-d2f1-4368-a840-fbf3b457217b",
+   16,
+   12,
+   12,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "d3d7e0f2-fd08-48c6-a02f-e94da725d441",
+   "4CH1 Chemistry 4CH1/2CR June 2020",
+   "June 2020",
+   "e9e57f47-3070-49b6-bd52-8dfb30acc063",
+   8,
+   6,
+   6,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "e6c96a2e-1d1d-4310-aa4f-a46a98b99470",
+   "4CH1 Chemistry 4CH1/2C November 2020",
+   "November 2020",
+   "cf838fdf-1866-4ff5-8fe0-8402b6abb1f4",
+   10,
+   5,
+   5,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "66085c4d-36f5-4c80-a1a3-c91f096a9419",
+   "4CH1 Chemistry 4CH1/1CR January 2021",
+   "January 2021",
+   "6f7e7a08-66e1-4913-ae5b-902d3c41232c",
+   15,
+   9,
+   9,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "566c24ca-1049-4c64-9419-b52ae3ed2213",
+   "4CH1 Chemistry 4CH1/1C January 2022",
+   "January 2022",
+   "7266a643-3e0a-411a-9f5f-f21213765111",
+   11,
+   7,
+   7,
+   "SUGGESTED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "47b57ed2-769a-49ab-8b08-459a11b74d6f",
+   "4CH1 Chemistry 4CH1/2C June 2022",
+   "June 2022",
+   "edcc269b-78ec-4ae1-a639-584b507f3013",
+   12,
+   13,
+   13,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "47b57ed2-769a-49ab-8b08-459a11b74d6f",
+   "4CH1 Chemistry 4CH1/2C June 2022",
+   "June 2022",
+   "b39fb19d-37fe-404f-8140-3693a0034888",
+   9,
+   8,
+   8,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "f57ed5c2-fc23-43fe-adbc-50401539661d",
+   "4CH1 Chemistry 4CH1/2CR June 2022",
+   "June 2022",
+   "8c89128e-00a7-4b3b-8110-88fe6f20820a",
+   11,
+   7,
+   7,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "59e53b62-1d85-452a-aea7-bddc62cf2703",
+   "4CH1 4CH1/2CR January 2023",
+   "January 2023",
+   "0c146ae1-b9e8-42d6-9bc7-2b2fe1951dc3",
+   9,
+   8,
+   8,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "30cb3c9d-a77e-4441-80fe-bd0e0161cdfd",
+   "4CH1 Chemistry 4CH1/2C January 2023",
+   "January 2023",
+   "37c26be9-e1af-42e8-a3ef-98d8cf7c3bd4",
+   7,
+   5,
+   5,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "71fafec0-1b2f-432f-b459-a000cc35aed8",
+   "4CH1 Chemistry 4CH1/1CR January 2023",
+   "January 2023",
+   "478b405a-b37a-4763-b978-7c135ac3faa2",
+   10,
+   8,
+   8,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "2ae885c9-d3ba-4cf7-8434-aca830976ba1",
+   "4CH1 4CH1/1CR June 2023",
+   "June 2023",
+   "509fa574-5ce5-4044-a482-c33326d9ffa6",
+   8,
+   8,
+   8,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "255ba065-b683-4c58-8b6c-3e948cdf5102",
+   "4CH1 Chemistry 4CH1/2C November 2023",
+   "November 2023",
+   "b700a9db-22ee-420f-91da-053049c78dc4",
+   11,
+   6,
+   6,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "255ba065-b683-4c58-8b6c-3e948cdf5102",
+   "4CH1 Chemistry 4CH1/2C November 2023",
+   "November 2023",
+   "8cdd4346-6c6e-4c93-804f-b94e818e8dfc",
+   14,
+   10,
+   10,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "546d03ec-4de6-4e85-9fe3-4a0dc229f2ba",
+   "4CH1 Chemistry 4CH1/1C November 2023",
+   "November 2023",
+   "e5915f46-2d9b-4a68-b86c-0d886a9def5b",
+   11,
+   5,
+   5,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "546d03ec-4de6-4e85-9fe3-4a0dc229f2ba",
+   "4CH1 Chemistry 4CH1/1C November 2023",
+   "November 2023",
+   "a0b1f4a1-b16d-4fdf-af08-e030bc525057",
+   10,
+   8,
+   8,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "29bba2da-3235-4cb5-81d6-c0968d87ddac",
+   "4CH1 Chemistry 4CH1/1CR June 2024",
+   "June 2024",
+   "0fc6d8dd-0f0b-43df-9c58-d77f35048f25",
+   14,
+   7,
+   7,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "0f903acf-6024-4c22-a577-34dfee6e18e4",
+   "4CH1 Chemistry 4CH1/2CR June 2024",
+   "June 2024",
+   "9c6a38a6-5d21-4bbc-9d0c-6c459ce0ba26",
+   6,
+   6,
+   6,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "31749450-eeb8-4c56-b944-39368b967cdd",
+   "4CH1 Chemistry 4CH1/2C November 2025",
+   "November 2025",
+   "817828db-6864-4ac4-8c43-dd130097faed",
+   15,
+   9,
+   9,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ],
+  [
+   "31749450-eeb8-4c56-b944-39368b967cdd",
+   "4CH1 Chemistry 4CH1/2C November 2025",
+   "November 2025",
+   "ec48f75f-0ec5-47f7-b1d7-c8f42ac60440",
+   14,
+   13,
+   13,
+   "VALIDATED",
+   "pdflane-atoms-draft-v1"
+  ]
+ ],
+ "empty_stem_all_have_parts": true,
+ "jan21_qv_stems": [
+  [
+   "f46f6498-0bb5-405c-88b7-42af127d4f47",
+   5,
+   "Answer ALL questions. Write your answers in the spaces provided.\n1 The diagram s",
+   4
+  ],
+  [
+   "d86032db-35d7-4ea3-bd88-f7932c66a74c",
+   5,
+   "This question is about gases.",
+   6
+  ],
+  [
+   "32b31dba-8430-4a55-a517-82648f14170e",
+   9,
+   "This question is about sodium and potassium.\nA trough is filled with water and a",
+   5
+  ],
+  [
+   "e8bf635c-76a9-4c2b-8042-f5084d47852f",
+   8,
+   "This question is about carboxylic acids.\nSolutions of carboxylic acids react wit",
+   6
+  ],
+  [
+   "56cb4792-20dc-461b-a8d6-ae27ad71bf0d",
+   14,
+   "This question is about the metal aluminium.",
+   11
+  ],
+  [
+   "0a23dcd8-cf28-4c3b-8ac8-9c2d00289b19",
+   15,
+   "This question is about the insoluble salt silver chloride (AgCl).\nSilver chlorid",
+   10
+  ],
+  [
+   "a543effb-18ce-4ab2-af71-7afbc9abcc17",
+   14,
+   "This question is about octane (C8H18) which is produced in the gasoline fraction",
+   6
+  ]
+ ]
+}

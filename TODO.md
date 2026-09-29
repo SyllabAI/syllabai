@@ -884,3 +884,26 @@ src/components/cla/cla-panel-mode.ts (new), note-cla.tsx,
 question-cla-overlay.tsx. /assistant is a full page, not a popup —
 unchanged. Zero overlap with any active lane (locks.yaml empty). Base: hub
 15ce2ba.
+
+- [x] **bankrepair (2026-09-29, Task 66, trace 1a0ea5a6dbc30c79) — bank-repair
+  lane EXECUTED + VERIFIED, plus the O6 children landing defect it surfaced.**
+  Probe: global ledger-vs-live reconciliation (1,408 rows) found 37 VALIDATE
+  audit rows (ids 3680-3696 + 3703-3722, Task-61 O6 commit 21:19:52Z) whose
+  child UPDATEs never ran (apply script had no UPDATE for
+  question_versions/mark_schemes; post-asserts + O7 never checked children) —
+  25 qv + 12 schemes stuck SUGGESTED under 2 VALIDATED papers. TX-A: guarded
+  flips -> VALIDATED + 37 corrective audit rows 3940-3976 (O6b pattern,
+  append-only, originals retained). TX-B: Q10 marks repair on 4CH1/1C Jun-2019
+  from sha-frozen printed evidence (QP p15: (a)(i)=2 (a)(ii)=2 (b)(i)=2
+  (b)(ii)=1 = 7): qv+questions 1->7, parts b-i 0->2 / b-ii 0->1; banked sum
+  104->110 = printed 110; stems byte-unchanged; no audit rows (mechanics
+  precedent). Dispositions: "2 missing scheme rows" = 13-scheme extraction
+  gap (no fabrication from lossy MS chunk); 30 empty-stem qv = accepted
+  content-in-parts shape; Sep-14 demo-era ledger mismatches untouched. NEW
+  open item: T-PS1 §C children (Jan-2022 1C 11+11, Jun-2019 2C 8+8, zero
+  audit rows, unreviewed) await their own review evidence. Verify 28/28 +
+  L1 live 5/5. Censuses unchanged (90V/14R papers, 567V/305S/147R docs, pool
+  2,935, events 0). Evidence:
+  `bench/review/psaxis-review-2026-09-28/bankrepair-2026-09-29/`. Remaining
+  open: §C children review, sibling supersession sign-offs (operator),
+  sheet-generator regex fix, stale-citation re-point.
