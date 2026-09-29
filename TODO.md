@@ -1257,3 +1257,35 @@ survives reload rich, 375px hOverflow=0, cold load 0 console errors);
 pushed 9096b72..dff764c ff-only; hub-ci 36524400542 completed/success.
 Files: answer-editor.tsx, answer-textarea.tsx, globals.css.
 
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 6 (SME's Insert Matrix / mathfield Menu buttons)
+
+- [ ] HUB-ANSWER-BOX-W6 (IN PROGRESS, session web-98866c45, operator trace
+1a0ebc1b93638915 "I want SME's Insert Matrix / mathfield Menu buttons").
+Wave 5 shipped the inline mathfield with MathLive 0.110.0's STOCK toggles —
+the same two buttons SME's mathfield renders ("Toggle Virtual Keyboard" /
+"Menu", verbatim strings in their chunk 79d2298f = MathLive 0.110.0's own
+l10n) — but live probes (dev + syllabai-hub.vercel.app/practice production)
+prove they are EFFECTIVELY UNUSABLE on our inline atom: the editing chip is
+94×44 px, the two 34×34 toggles (flex-shrink:0 inside .ML__toggles, stock
+CSS) leave ~10 px for the formula — the operator sees a cramped two-icon
+box, not SME's equation editor. Wave 6 makes the stock buttons first-class:
+(1) the editing mathfield gets a usable inline min-width (12rem) so formula
++ toggles coexist — chip still flows inline, grows with content, capped
+max-width 100%; (2) Escape while the stock menu is open now dismisses ONLY
+the menu (MathLive's .ui-menu-container in the mathfield shadow root is
+detected and the commit is deferred) — today our capture handler commits the
+session on the first Escape, killing the menu with the atom; a second
+Escape still commits + caret-after, unchanged; (3) verified-live stock
+behavior this wave rides on (no re-implementation, zero invention): Menu
+button opens MathLive's stock menu (Insert Matrix ▸ 5×5 ☐ grid →
+\begin{pmatrix}#?&…\\…\end{pmatrix} with placeholder slots, Borders ▸
+matrix/pmatrix/bmatrix/vmatrix/Bmatrix, array Add/Delete Row/Column when the
+caret is inside a matrix, Insert ▸ Abs/Root/Log/Calculus/Complex, Mode,
+Font Style, Color/Background, Cut/Copy/Paste/Select All — SME's exact
+surface, same library version); ⌨ toggle hides/shows the virtual keyboard
+sheet without ending the session; blur-commit guard already survives menu
+focus (activeElement = host math-field, closest() matches). ZERO contract
+delta: answer-format-v2 serialization untouched (\begin{pmatrix} is plain
+LaTeX inside $…$ — the v2 dialect already carries it; KaTeX renders it at
+rest); hub-only (no core, no lease — wave 5 precedent). Base: hub 5eb2e10.
+Files (planned): src/components/answer-editor.tsx, src/app/globals.css.
