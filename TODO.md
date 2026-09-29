@@ -1368,3 +1368,33 @@ removed once so affected browsers self-heal) and Radix onOpenChange
 becomes the single source of truth (outside click / Escape / trigger
 toggle all close; aria-expanded stays truthful). Files (planned):
 src/components/answer-textarea.tsx. Base: hub 0bc6ee9.
+
+- [x] **HUB-ANSWER-BOX-W7 (EXECUTED 2026-09-29 as hub f9130b3, session
+web-98866c45, operator trace 1a0ec11bc830f67d).** Both mechanical defects
+retired in answer-textarea.tsx: (1) the wave-3c localStorage open-pref and
+its mount-time effect are GONE — the palette is transient, always closed on
+load, and the stale "syllabai-hub:answer-symbols-open" key is swept once so
+affected browsers self-heal; (2) the controlled Radix Popover now wires
+onOpenChange as the single source of truth — outside pointer-down, Escape
+and the Ω toggle all close the palette (previously every Radix dismissal
+routed to a no-op and the layer stayed mounted). Verification: 12/12 CDP
+probe matrix (scripts/w7_symbols_palette_probe.mjs, real clicks/keyboard,
+dev :3100) — S1 default-closed WITH the stale pref seeded "1" (the exact
+reported repro; the old code re-opened it one tick after hydration), S1b
+legacy key swept, S2/S2b Ω opens + all three SME legends + truthful
+aria-expanded, S3 outside-click closes, S4 Escape closes, S5 Ω re-click
+closes, S6 no resurrection after reload, S7/S7b/S7c symbol insert lands,
+palette closes after the insert and the EDITOR holds focus. The
+post-insert close is INSTRUMENTED (scripts/w7_s7b_instrument.mjs): no
+pointerDownOutside fires — TipTap hands the caret back after insertText and
+Radix's standard focusOutside dismissal closes the palette; SME's own
+close-on-insert behavior is honest-absent (not verifiable for free) and the
+Radix standard is the recorded choice. Rebased twice over concurrent lanes
+(0bc6ee9 notes-source, then 43c1fde outbound-CLA — no file overlap, clean
+rebases; the first push hit 43c1fde mid-flight and was re-landed ff-only).
+Gates: bun test 19/19, eslint+tsc clean, production build green incl.
+corpus gate. hub f9130b3 pushed ff-only (43c1fde → f9130b3); hub-ci run #48
+SUCCESS (build + e2e both success); Vercel Production deployment for
+f9130b3 = success (API-verified). Zero contract delta; hub-only, no lease
+(waves 5/6 precedent). Files: src/components/answer-textarea.tsx,
+scripts/w7_symbols_palette_probe.mjs.
