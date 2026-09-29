@@ -1,0 +1,129 @@
+{
+ "generated": "2026-09-29T00:40:30.166461+00:00",
+ "V1_papers": {
+  "ok": true,
+  "detail": ""
+ },
+ "V1_documents": {
+  "ok": true,
+  "detail": ""
+ },
+ "V1_pool_2935": {
+  "ok": true,
+  "detail": ""
+ },
+ "V1_rev1_zero": {
+  "ok": true,
+  "detail": ""
+ },
+ "V1_events_zero": {
+  "ok": true,
+  "detail": ""
+ },
+ "V2_jan2022_1c_matrices": {
+  "ok": true,
+  "detail": "({'VALIDATED': 11}, {'VALIDATED': 11})"
+ },
+ "V2_jun2019_2c_matrices": {
+  "ok": true,
+  "detail": "({'VALIDATED': 8}, {'VALIDATED': 8})"
+ },
+ "V2_flip_all_validated": {
+  "ok": true,
+  "detail": "({'VALIDATED': 19}, {'VALIDATED': 19})"
+ },
+ "V3_audit_count_38": {
+  "ok": true,
+  "detail": "38"
+ },
+ "V3_audit_ids_contiguous": {
+  "ok": true,
+  "detail": "3977..4014"
+ },
+ "V3_audit_actions": {
+  "ok": true,
+  "detail": "verbs/actor/states"
+ },
+ "V3_audit_trace": {
+  "ok": true,
+  "detail": "trace on every row"
+ },
+ "V3_audit_targets_exact": {
+  "ok": true,
+  "detail": "target set equality"
+ },
+ "V3_audit_types": {
+  "ok": true,
+  "detail": "['mark_scheme', 'question_version']"
+ },
+ "V4_ledger_vs_live_10_demo": {
+  "ok": true,
+  "detail": "10 mismatches: [(1, '7975cd44', 'VALIDATED', 'REJECTED'), (2, '7975cd44', 'FLAGGED', 'REJECTED'), (3, '7975cd44', 'SUGGESTED', 'REJECTED')]"
+ },
+ "V5_stems_byte_unchanged": {
+  "ok": true,
+  "detail": "0"
+ },
+ "V5_marks_unchanged": {
+  "ok": true,
+  "detail": "0"
+ },
+ "V5_banked_110": {
+  "ok": true,
+  "detail": ""
+ },
+ "V5_banked_70": {
+  "ok": true,
+  "detail": ""
+ },
+ "V6_mirror_invariant": {
+  "ok": true,
+  "detail": "(0, 0)"
+ },
+ "V7_servable_19": {
+  "ok": true,
+  "detail": "19"
+ },
+ "L1_live_probe": [
+  {
+   "query": "electrolysis of molten lead bromide",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "why does the rate of reaction increase with temperature",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "covalent bonding in hydrogen chloride",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "isomers of pentane bromine substitution",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "rusting of iron galvanising",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  }
+ ],
+ "L1_all_queries_hit": {
+  "ok": true,
+  "detail": "[{'query': 'electrolysis of molten lead bromide', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'why does the rate of reaction increase with temperature', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'covalent bonding in hydrogen chloride', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'isomers of pentane bromine substitution', 'hits': 10, 'models': ['gemini"
+ },
+ "verdict": "VERIFIED"
+}

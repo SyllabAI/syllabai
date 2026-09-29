@@ -1,0 +1,430 @@
+{
+ "papers": {
+  "4CH1/1C JAN 2022": {
+   "checks": {
+    "R1_question_census": true,
+    "R2_all": true,
+    "R3a_all": true,
+    "R3b_all": true,
+    "R4_all": true,
+    "R5_all": true,
+    "paper_total": true
+   },
+   "fail": [],
+   "printed_ms_totals": {
+    "1": 7,
+    "2": 9,
+    "3": 7,
+    "4": 8,
+    "5": 11,
+    "6": 9,
+    "7": 8,
+    "8": 15,
+    "9": 15,
+    "10": 9,
+    "11": 12
+   },
+   "printed_qp_questions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "printed_ms_point_counts": {
+    "1": 6,
+    "2": 6,
+    "3": 5,
+    "4": 6,
+    "5": 6,
+    "6": 5,
+    "7": 4,
+    "8": 10,
+    "9": 8,
+    "10": 4,
+    "11": 5
+   },
+   "per_question": {
+    "1": {
+     "printed_total": 7,
+     "qv_marks": "7",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      6,
+      6
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 7,
+      "qv_marks": 7,
+      "container_problems": []
+     }
+    },
+    "2": {
+     "printed_total": 9,
+     "qv_marks": "9",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      6,
+      6
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 9,
+      "qv_marks": 9,
+      "container_problems": []
+     }
+    },
+    "3": {
+     "printed_total": 7,
+     "qv_marks": "7",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      5,
+      5
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 7,
+      "qv_marks": 7,
+      "container_problems": []
+     }
+    },
+    "4": {
+     "printed_total": 8,
+     "qv_marks": "8",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      6,
+      6
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 8,
+      "qv_marks": 8,
+      "container_problems": []
+     }
+    },
+    "5": {
+     "printed_total": 11,
+     "qv_marks": "11",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      6,
+      6
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 11,
+      "qv_marks": 11,
+      "container_problems": []
+     }
+    },
+    "6": {
+     "printed_total": 9,
+     "qv_marks": "9",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      5,
+      5
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 9,
+      "qv_marks": 9,
+      "container_problems": []
+     }
+    },
+    "7": {
+     "printed_total": 8,
+     "qv_marks": "8",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      4,
+      4
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 8,
+      "qv_marks": 8,
+      "container_problems": []
+     }
+    },
+    "8": {
+     "printed_total": 15,
+     "qv_marks": "15",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      10,
+      10
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 15,
+      "qv_marks": 15,
+      "container_problems": []
+     }
+    },
+    "9": {
+     "printed_total": 15,
+     "qv_marks": "15",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      8,
+      8
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 15,
+      "qv_marks": 15,
+      "container_problems": []
+     }
+    },
+    "10": {
+     "printed_total": 9,
+     "qv_marks": "9",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      4,
+      4
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 9,
+      "qv_marks": 9,
+      "container_problems": []
+     }
+    },
+    "11": {
+     "printed_total": 12,
+     "qv_marks": "12",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      5,
+      5
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 12,
+      "qv_marks": 12,
+      "container_problems": []
+     }
+    }
+   },
+   "banked_sum": 110,
+   "printed_sum_of_totals": 110,
+   "printed_cover_total": null
+  },
+  "4CH1/2C JUN 2019": {
+   "checks": {
+    "R1_question_census": true,
+    "R2_all": true,
+    "R3a_all": true,
+    "R3b_all": true,
+    "R4_all": true,
+    "R5_all": true,
+    "paper_total": true
+   },
+   "fail": [],
+   "printed_ms_totals": {
+    "1": 6,
+    "2": 9,
+    "3": 9,
+    "4": 7,
+    "5": 10,
+    "6": 14,
+    "7": 8,
+    "8": 7
+   },
+   "printed_qp_questions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "printed_ms_point_counts": {
+    "1": 3,
+    "2": 3,
+    "3": 5,
+    "4": 4,
+    "5": 5,
+    "6": 9,
+    "7": 6,
+    "8": 4
+   },
+   "per_question": {
+    "1": {
+     "printed_total": 6,
+     "qv_marks": "6",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      3,
+      3
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 6,
+      "qv_marks": 6,
+      "container_problems": []
+     }
+    },
+    "2": {
+     "printed_total": 9,
+     "qv_marks": "9",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      3,
+      3
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 9,
+      "qv_marks": 9,
+      "container_problems": []
+     }
+    },
+    "3": {
+     "printed_total": 9,
+     "qv_marks": "9",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      5,
+      5
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 9,
+      "qv_marks": 9,
+      "container_problems": []
+     }
+    },
+    "4": {
+     "printed_total": 7,
+     "qv_marks": "7",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      4,
+      4
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 7,
+      "qv_marks": 7,
+      "container_problems": []
+     }
+    },
+    "5": {
+     "printed_total": 10,
+     "qv_marks": "10",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      5,
+      5
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 10,
+      "qv_marks": 10,
+      "container_problems": []
+     }
+    },
+    "6": {
+     "printed_total": 14,
+     "qv_marks": "14",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      9,
+      9
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 14,
+      "qv_marks": 14,
+      "container_problems": []
+     }
+    },
+    "7": {
+     "printed_total": 8,
+     "qv_marks": "8",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      6,
+      6
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 8,
+      "qv_marks": 8,
+      "container_problems": []
+     }
+    },
+    "8": {
+     "printed_total": 7,
+     "qv_marks": "7",
+     "R2_total_match": true,
+     "n_points_bank_vs_printed": [
+      4,
+      4
+     ],
+     "R3a_marks_multiset": true,
+     "R3b_point_text_attribution": [],
+     "R4_prompt_attribution_failures": [],
+     "R5_effective_marks": {
+      "effective": 7,
+      "qv_marks": 7,
+      "container_problems": []
+     }
+    }
+   },
+   "banked_sum": 70,
+   "printed_sum_of_totals": 70,
+   "printed_cover_total": null
+  }
+ }
+}

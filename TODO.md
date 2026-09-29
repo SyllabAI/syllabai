@@ -1004,3 +1004,22 @@ src/app/globals.css (the dock inset rule). Zero overlap with active lanes
   need real primary-topic assignment + spec-point mapping before their
   evidence can paint anywhere meaningful. Evidence:
   `bench/review/psaxis-review-2026-09-28/qsp-coverage-repair-2026-09-29/`.
+
+- [x] **sectionC-children (2026-09-29, Task 67, trace 1a0ea8242c254e35) —
+  T-PS1 §C VALIDATE_ALL EXECUTED + VERIFIED.** The §C leftover children
+  (4CH1/1C Jan-2022 11 qv + 11 schemes, 4CH1/2C Jun-2019 8+8 — all SUGGESTED,
+  zero audit rows, never reviewed under VALIDATED papers) received the
+  sheet's row-1/2 review: content reconciliation against the sha-frozen
+  printed QP/MS chunks of the papers' linked VALIDATED docs passed all
+  checks (question census, per-question printed totals 19/19, scheme point
+  marks multisets + text attribution, prompt attribution, effective-marks
+  arithmetic; banked 110/110 and 70/70). Extraction not suspect -> guarded
+  flips -> VALIDATED + 38 audit rows 3977-4014 (agent-performed, operator-
+  delegated, no teacher events). States only — stems/marks byte-unchanged.
+  Verify 22/22 (ledger-vs-live still exactly the 10 demo-era mismatches; 19
+  questions now servable) + L1 live 5/5. Censuses unchanged (90V/14R papers,
+  567V/305S/147R docs, pool 2,935, events 0). Evidence:
+  `bench/review/psaxis-review-2026-09-28/sectionC-children-2026-09-29/`.
+  Remaining open: sibling supersession sign-offs (operator per-package
+  APPROVE), sheet-generator regex fix, stale-citation re-point, by-topic
+  mapping for the 19 newly-servable questions.
