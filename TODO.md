@@ -1170,6 +1170,38 @@ candidate).
   sheet-generator regex fix, T-QSP3 (284 remaining ING-anchored), bank-scheme
   sparsity (91 qv).
 
+- [x] **sibling-supersession (2026-09-29, Task 70, trace 1a0ec06fbd199a99) —
+  the two standing per-package sign-offs EXECUTED + VERIFIED: packages
+  4ch1-2cr-202001 and 4ch0-2c-201701 superseded on the operator's
+  "APPROVE both".** Task-64 pattern per package: package SHAs re-verified
+  byte-exact; fresh live archives as undo records (2cr: 7q/7qv/43 parts/7
+  schemes/31 mp/1 bridge + 3 attempts/19 answers/19 human_marks/19
+  smart_mark_results; 2c: 8q/8qv/44 parts/8 schemes/34 mp/1 bridge/12 qt
+  mappings — the staged side-by-side counts were part-linked subset views;
+  all old rows created 09-14, zero post-staging mutation); TX-1 guarded
+  deletes rowcount-gated per table incl. the 15 teacher-VALIDATED versions;
+  drafts POSTed verbatim (2cr 201 -> d180d1b6 7q/48p/38mp; 2c 201 ->
+  21041891 8q/44p/37mp); arithmetic gates bank==draft EXACT (2cr 70/70,
+  2c 60/60 vs print — the glmocr rows were 43/70 and part-sum 2/point-sum
+  54); TX-2 resolution (2cr pointers already the live chunk-ful docs — no
+  PLACE row; 2c PLACE 1 to d7d00cea/d04e464e; series/year JAN/2020, JAN/2017;
+  VALIDATE 2 papers + 15 qv + 15 schemes; re-stamp guard 0 rev1). Audit rows
+  4015-4047 contiguous 33 rows (VALIDATE 32 + PLACE 1), actor Nawaf Al
+  Hussain Khondokar, trace + honesty note per row; teacher_validation_events
+  0. Independent landing verify ALL GREEN: papers census 90V/0F/0S/14R,
+  docs census unchanged 567V/305S/147R, serving pool unchanged 2,935
+  (additive-only: docs stayed VALIDATED, 0 rev1 involved), old chains gone,
+  new rows VALIDATED + ING-anchored (anchors reused find-or-create), fresh
+  learner live probe renders 7/8 questions with draft mark multisets. New
+  rows carry bank-namespace external_refs (4ch1/past-papers/2020-01/4ch1-2CR#qN,
+  4ch0-2c-201701#qN) — the qcard-bridge citation namespace, restoring
+  card-bank identity for these sittings. Follow-ups: the 15 new questions
+  join the next topic-mapping pass (Jan-2021 rows' path via Task 68/69);
+  2c's 12 archived qt mappings restorable from the undo record if wanted.
+  Evidence: `bench/review/psaxis-review-2026-09-28/sibling-supersession-2026-09-29/`.
+  Remaining open: sheet-generator regex fallback fix (code lane),
+  bank-scheme sparsity (91 qv without scheme rows on VALIDATED papers).
+
 - [x] **tqsp3-primary-topics (2026-09-29, Task 69, trace 1a0ebc845dcee229) —
   T-QSP3 EXECUTED + VERIFIED: the remaining 284 ING-anchored questions now
   carry REAL primary topics — bank-wide ING-anchored active 284 → 0.** Cohort
@@ -1398,3 +1430,4 @@ SUCCESS (build + e2e both success); Vercel Production deployment for
 f9130b3 = success (API-verified). Zero contract delta; hub-only, no lease
 (waves 5/6 precedent). Files: src/components/answer-textarea.tsx,
 scripts/w7_symbols_palette_probe.mjs.
+
