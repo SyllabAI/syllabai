@@ -1,0 +1,125 @@
+version: 1
+task:
+  id: T-C36
+  title: "CI trigger verdict + the phantom 'corrupted branches' correction, and
+    hub font pinning — commit every Google Font as a repo asset and switch
+    next/font/google → next/font/local so production builds are hermetic
+    (kills the recurring Turbopack font-fetch CI flake)"
+  owner: "superz (main agent, zai session discord:ObviousGazelle)"
+  status: DONE
+  priority: P1
+  base:
+    repo: syllabai-master (verdict doc + records) + syllabai-hub (font pin)
+    commit: master 8f80d11 (origin/main) + hub 235f5cd (origin/main)
+  basis: >
+    Operator directive (Discord DM, 2026-09-29): "fix the triggers ② the font
+    flake deserves pinned fonts". Part ① refers to the standing infra item
+    carried in the worklog and TODO since T-C33: "push-trigger CI reads
+    corrupted `branches: ain]`". Part ② refers to the recurring
+    next/font/google Turbopack build flake (3 occurrences on 2026-09-29,
+    green on every retry/local/Vercel build) flagged at the T-C35-merge
+    closeout.
+  findings_part1_triggers:
+    - "The corruption NEVER EXISTED. Byte-level proof: git show origin/main
+      .github/workflows/ci.yml for BOTH core and hub renders
+      `branches: [main]` with every byte present (od -c dump preserved in
+      backlog/CI-TRIGGER-VERDICT-2026-09-29.md)."
+    - "Root cause of the phantom: `[m` inside `[main]` is a valid ANSI/SGR
+      reset sequence when stripped without requiring the ESC prefix, so
+      colorized tool output piped through the session's ANSI-stripping layer
+      displayed `branches: ain]`. The artifact infected its own correction:
+      a previous session already concluded 'the mangled ain] reading was a
+      terminal display artifact' in TODO.md, but that sentence's own
+      `[main]` was mangled to `ain]` in the stored record, so the ghost kept
+      propagating (T-C33/T-C34/T-C35 worklogs + the T-C35-merge standing
+      reminder all repeat it)."
+    - "Behavioral proof the triggers WORK: GitHub Actions run history (API,
+      2026-09-29) shows push-triggered runs firing on every main push on
+      both repos, all green — core 5b946ba (the #33 merge) push run SUCCESS;
+      hub 0bc6ee9/43c1fde/f9130b3/50ca841/9c3c74d/b02178e/235f5cd push runs
+      SUCCESS — including 50ca841, the exact commit the T-C35-merge record
+      claims was 'push-CI broken'. The earlier quiet period was the Actions
+      minutes quota blackout (CI-RECOVERY-RUNBOOK), not YAML corruption."
+  scope:
+    allowed:
+      - "master: backlog/CI-TRIGGER-VERDICT-2026-09-29.md — the byte-level +
+        Actions-run evidence bundle and the artifact post-mortem; dated
+        correction notes on the TODO rows that carry the phantom"
+      - "hub: commit pinned latin woff2 files for the 8 layout.tsx families
+        (Plus Jakarta Sans var, Kodchasan 400/500/600/700, Instrument Sans
+        var, Bricolage Grotesque 600/700, Spline Sans Mono var, Fraunces
+        600/700, Nunito 400/600/700/800, Inter 400/500/600/700) into
+        src/fonts/ + a pin manifest (source URL, gstatic version path, fetch
+        date, OFL license note)"
+      - "hub: rewrite src/app/layout.tsx font loaders to next/font/local with
+        IDENTICAL CSS variable names (--font-jakarta … --font-inter),
+        identical display:'swap', identical preload semantics (jakarta +
+        kodchasan preload, the six theme faces preload:false); comment
+        updates in layout.tsx + next.config.ts"
+    forbidden:
+      - "no dependency additions (no @fontsource packages — files are vendored
+        directly; bun.lock untouched)"
+      - "no change to globals.css font chains or any theme's --app-font-*
+        wiring (the variable CONTRACT is the html className)"
+      - "no weight-coverage change: static instances stay static (the same
+        instanced files css2 serves for the weight arrays), variable faces
+        stay variable; no style:italic addition"
+      - "no CI workflow YAML edits in either repo — the trigger verdict is
+        that nothing is broken; editing ci.yml to 'fix' a phantom would be a
+        lie in the diff"
+      - "no font subset expansion (latin only, exactly what subsets:[latin]
+        served yesterday)"
+  acceptance:
+    - "bun run build (HUB_DATA_MODE=mock) green with ZERO network font
+      fetches — next/font/local cannot fetch by construction"
+    - "eslint green; the built HTML still sets the same 8 CSS variables on
+      <html>; preload set unchanged (jakarta+kodchasan only)"
+    - "hub-ci green on the PR; the merge push to main fires a push-triggered
+      run — the live capstone proof for part ①"
+    - "master pack carries the correction so no future session re-reports
+      the phantom"
+  dependencies:
+    - T-C35-merge (the standing reminder this task corrects)
+  shared_resources: []
+  tests:
+    - "byte-dump + Actions-run table recorded in the verdict doc"
+    - "hub: bun run lint + bun run build locally; hub-ci on the PR"
+  evidence_required: []
+  claims:
+    VERIFIED: ["hub-ci SUCCESS on the PR head e893980 (pull_request run:
+      lint + typechecked production build + ADR-021 selftest + Playwright e2e
+      + axe)", "push-triggered run on main 4f1dd75 (the PR #3 merge commit)
+      FIRED and completed SUCCESS — the live capstone proof that main push
+      triggers work, closing part ①", "local: eslint green; production build
+      (HUB_DATA_MODE=mock) green; built CSS carries all 8 --font-* variables
+      and exactly 11 @font-face blocks with the served weight descriptors;
+      prerendered HTML preloads exactly the 5 faces (jakarta + 4 kodchasan)
+      preloaded before the pin", "byte-level + Actions evidence bundle at
+      backlog/CI-TRIGGER-VERDICT-2026-09-29.md"]
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: []
+  execution_notes: >
+    Part ① needed NO repo change — the phantom was corrected with evidence
+    (backlog/CI-TRIGGER-VERDICT-2026-09-29.md): od -c byte dump of both
+    origin/main ci.yml trigger blocks (branches: [main] intact), Actions API
+    run history (every recent main push fired a push run; 50ca841 — previously
+    recorded as "push-CI broken" — actually has a SUCCESS push run), and the
+    root-cause post-mortem of the ANSI-stripping artifact that ate its own
+    earlier debunking in TODO.md. Part ② landed as hub PR #3 (branch
+    font-pin-local @ e893980, merged 4f1dd75): 11 pinned woff2 assets (7
+    variable faces — fvar-verified that Google serves the same variable file
+    per discrete weight — + 4 Kodchasan statics) with MANIFEST.md provenance
+    (css2 queries, gstatic version paths, sha256s) and verbatim OFL 1.1 texts
+    vendored per family; layout.tsx switched to next/font/local with
+    identical CSS variable names, display:'swap', preload semantics and
+    adjustFontFallback:'Arial' parity; next.config.ts CSP comment updated.
+    Fetch tooling note: urllib's SSL handshake times out in this environment
+    while curl works — scripts/fetch_hub_fonts.py uses curl as transport.
+    Re-derivation = re-run the script; any upstream font drift becomes a
+    reviewable diff of src/fonts/.
+  next_safe_actions:
+    - "closeout: flip status DONE with the PR/CI evidence"
+    - "optional follow-up: a CI guard asserting the build makes no external
+      font fetches is unnecessary under next/font/local (hermetic by
+      construction) — only add if the flake reappears"
