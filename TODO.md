@@ -1486,3 +1486,49 @@ core Classes surface: unchanged. Base: hub 235f5cd.
 - **Part ① verdict: the push triggers were never broken; no YAML change made.** Evidence bundle `backlog/CI-TRIGGER-VERDICT-2026-09-29.md`: byte-level `od -c` dump of both repos' origin/main ci.yml (`branches: [main]` intact — core @ 5b946ba, hub @ 235f5cd) + Actions run history (all recent main pushes fired push runs, all green, including 50ca841 which the T-C35-merge record wrongly marked "push-CI broken" — the quiet months were the Actions-minutes quota blackout per CI-RECOVERY-RUNBOOK-2026-09-27). Root cause: `[m` inside `[main]` is a valid SGR-reset tail; ANSI-stripping without the ESC byte requirement renders `[main]` as `ain]` — and the artifact ate its own earlier debunking in this file (the "are clean `ain]`" line and "expected `ain]`" are mangled `[main]`s). Live capstone: the T-C36 hub merge push to main (4f1dd75) fired a push-triggered run → SUCCESS. Standing instruction for future sessions: before believing mangled bracket content, re-read byte-level (`od -c` / `--color=never`).
 - **Part ② landed: hub PR #3 merged (4f1dd75) — all 8 layout.tsx families pinned as committed assets.** 11 woff2 in `src/fonts/` (7 variable faces — fvar-verified that Google serves one variable file per discrete weight — + 4 Kodchasan statics), `MANIFEST.md` with css2 queries + immutable gstatic version paths + sha256s, verbatim OFL 1.1 texts in `src/fonts/licenses/`. `layout.tsx` on `next/font/local`: identical CSS variable names, `display:'swap'`, preload set (jakarta + kodchasan), `adjustFontFallback:'Arial'` parity. Builds hermetic by construction — the next/font/google Turbopack flake is retired, not retried. Verified: eslint + production build (HUB_DATA_MODE=mock) green locally; hub-ci SUCCESS on PR head e893980; push run SUCCESS on main. No dependency changes, no bun.lock delta, no ci.yml edits, no globals.css changes.
 - Records: `.syllabai/tasks/T-C36.yaml` (DONE with VERIFIED claims); worklog T-C36; fetch tooling kept at `/home/z/my-project/scripts/fetch_hub_fonts.py` (curl transport — urllib's SSL handshake times out in this environment).
+- [x] **HUB-TEACHER-DASH-W1 (EXECUTED 2026-09-29 as hub 7bb04f1 + fixup
+7359262, session web-98866c45, operator trace 1a0ec61d5612aa6d).** The
+teacher dashboard is the student one now: greeting header; "My classes"
+card grid where each CLASS card mirrors SubjectCard (eyebrow "Edexcel · N
+subjects", name, per-SUBJECT rows with real /api/course-stats counts,
+open-workspace link, remove X, edit-subjects); the trailing "Got another
+class?" slot card; empty state with CTA; the old overview's console/tools/
+resources sections moved INSIDE the class workspace. New hub-local class
+store (lib/teacher/my-classes.ts — {id,name,subjectSlugs,createdAt} in
+localStorage "syllabai-hub:teacher-classes.v1", my-subjects.ts
+useSyncExternalStore pattern, browser-local demo-truth honesty); the
+AddClassOverlay cascade (name -> board -> level -> subject MULTI-select
+with a visible removable pending set; inner form mounts fresh per open via
+Radix presence + key — zero setState-in-effect); /teacher/classes/[id]
+dispatcher: local- ids render the new class workspace (per-subject
+resource rows + corpus tools Test Builder/Assignments/Validation with
+?course=, live console links, core-roster pointer, browser-local honesty
+box), core ids fall through to the existing ClassDetailClient untouched,
+unknown local- ids get an honest missing-class card. TeacherNav, the RBAC
+layout gate and the live core Classes surface untouched; ZERO contract
+delta (reuses /api/course-stats + existing routes only).
+Environment notes (this wave's honest ledger): (1) environment reset
+recovered first — hub re-cloned, coordination ff'd over stale-snapshot
+dirty files, credentials re-seeded after ~/.git-credentials was wiped;
+(2) the sandbox cannot cold-fetch Google Fonts in dev (next/font/google
+500s) — probes ran against the PRODUCTION standalone build instead, and
+the concurrent font-pin-local lane (e893980, T-C36) removes the dependency
+permanently; (3) the production build OOMs at 4GB while the platform
+dev-server holds 1.3GB — build ran with the scaffold server paused,
+restored after (NODE_OPTIONS max-old-space-size 3072); (4) NEXT.JS GITIGNORE
+TRAP (recorded for every future lane): the repo's .gitignore "local-*"
+scratch rule silently excluded local-class-workspace.tsx from the wave
+commit — the sandbox stayed green on the untracked file while hub-ci
+36550303009 failed "Module not found: Can't resolve './local-class-
+workspace'" — fixed by renaming to class-workspace-local.tsx (hub
+7359262), rule untouched. Verification: tsc+eslint clean; unit suite 19/19
+(bun test src/lib; bare bun test also picks up playwright specs —
+pre-existing); production build green incl. corpus gate; 26/26 CDP probe
+matrix (scripts/w8_teacher_dash_probe.mjs, real clicks, production
+standalone). Landed: hub 7bb04f1 rebased over c68ed91 (PP-ZOOMOUT +
+font-pin lanes), fixup 7359262; hub-ci 36550303009-successor run SUCCESS
+(build + e2e); Vercel Production = success (API-verified). Files:
+src/lib/teacher/my-classes.ts, src/app/teacher/{page.tsx,teacher-client.tsx,
+add-class-overlay.tsx}, src/app/teacher/classes/[id]/{page.tsx,
+class-workspace-dispatcher.tsx,class-workspace-local.tsx},
+scripts/w8_teacher_dash_probe.mjs.
