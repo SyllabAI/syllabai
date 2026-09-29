@@ -786,3 +786,44 @@ be verified. Files: src/components/answer-textarea.tsx, src/components/answer-ed
 (new), src/lib/answer-format.ts (new), package.json (+@tiptap/react +mathlive),
 .github/workflows/ci.yml (trigger repair); core: AnswerInputTranscriptionService,
 LlmMarkingCandidateGenerator, PartAnswerRequest (docs/policy), tests.
+
+## 2026-09-29 — claim: SME chat-widget popup form + expand/collapse toggle on the CLA panels (HUB-TUTOR-CLA-LOOK wave 2)
+
+- [ ] HUB-CLA-POPUP (REGISTERED 2026-09-29, session web-bb263437 continuation,
+operator directive trace 1a0ea762cba38339 "in SME, the CLA is a popup, which
+can also be moved to the right as a sidebar. Did you implement that?")
+**add SME's chat-widget dual-form mechanics to the hub's two CLA panels**
+(note-cla island + question-cla overlay) — honest finding: wave 1 shipped only
+the right-docked panel (≈ SME's expanded form); the popup default and the
+toggle were NOT implemented. Ground truth re-extracted from the operator's
+FrontendReferences snapshots (SME's own CSS module rules, chunk-verbatim):
+POPUP = position:fixed inset-block-end:1rem inset-inline-end:1rem, z-1029,
+width 410px, height 640px, min-height 400px, max-height calc(100vh −
+(navbar-height + 2rem)), border-radius 1.5rem, shadow-md, white, flex-col,
+NO backdrop on desktop (page stays interactive), full-page wash under it on
+mobile (<768px); EXPANDED/SIDEBAR = wrapper flex 0 0 400px static column,
+panel width auto, max-height none, border-radius 0, sticky top navbar,
+height calc(100vh − navbar), offered ≥1400px only (expand button
+display:none below); header = circle icon buttons "New chat" · "Collapse
+chat"/"Expand chat" (the toggle, SME-verbatim labels) · "Close chat";
+ChatPanel_headerTitle uses background-clip:text gradient fill. Hub
+adaptation (zero contract change): a shared pref
+syllabai.cla.panel = "popup"|"sidebar" (default popup, hydration-safe
+useSyncExternalStore — the wave-3c first-render-pref lesson) + a matchMedia
+lg gate; popup shell = hand-rolled fixed bottom-right window with SME's
+geometry (410×640/min-400/max-calc(100dvh−5.5rem), rounded-3xl, shadow-lg,
+role=dialog aria-modal=false, ESC closes, no backdrop) — the hub's Sheet is
+the equivalent of SME's sticky full-height column so SIDEBAR = the existing
+right Sheet unchanged; toggle button in both headers (aria-label/title
+"Expand chat" ↔ "Collapse chat", lucide PanelRightOpen/Minimize2, hidden
+below lg — SME hides <1400px; below lg the Sheet's fullscreen form matches
+SME's mobile wash); gradient text on the panel titles. The transcript/
+draft/busy state lives in the parents, so a mid-session toggle switches
+shells without losing the thread. Honest-absent: SME's popup "New chat"
+header button is NOT ported this wave (the hub panels' transcript-reset
+semantics differ — note island owns local state, the question overlay lifts
+to the player; recorded as a follow-up candidate, not faked). Files:
+src/components/cla/cla-panel-mode.ts (new), note-cla.tsx,
+question-cla-overlay.tsx. /assistant is a full page, not a popup —
+unchanged. Zero overlap with any active lane (locks.yaml empty). Base: hub
+15ce2ba.
