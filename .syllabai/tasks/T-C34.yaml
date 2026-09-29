@@ -1,0 +1,96 @@
+version: 1
+task:
+  id: T-C34
+  title: "TFA-03 Teaching Coverage Model — the teacher/class/subject taught-state
+    overlay that lets the Class KG distinguish not-yet-taught curriculum from
+    taught-but-weak (syllabai-core only)"
+  owner: "superz (main agent, zai session discord:ObviousGazelle)"
+  status: IN_PROGRESS
+  priority: P0.5
+  base:
+    repo: syllabai-core
+    commit: 18ad8b7 (tfa-classroom-foundation — stacked on the T-C33 classroom
+      package, which PR #31 holds; this branch is the V52 consumer of that
+      schema and must merge after it)
+  basis: >
+    Operator directive (Discord DM, 2026-09-29): "Proceed with TFA-03".
+    teacher-lms-feature-addendum.tsv TFA-03 (P0.5, Wave 2+, syllabai-core),
+    TEACHER_ARCHITECTURE.md §13.4 (coverage = separate teacher-side overlay:
+    Curriculum Graph + Teaching Coverage + Class Learner Aggregation; the
+    taught/not-taught × understanding matrix), §19 TeachingCoverage shape
+    (specification_point_id / graph_node_id, status NOT_TAUGHT/TAUGHT etc.,
+    recorded_at, teacher_id, provenance/audit), T-C33 next_safe_actions row.
+  scope:
+    allowed:
+      - "core: V52 migration — teaching_coverage (current state, composite PK
+        (class_id, spec_point_node_id)) + teaching_coverage_events (append-only
+        audit trail with previous_status); CHECKs mirror the shipped enum"
+      - "core: new coverage surface in the classroom package —
+        TeachingCoverage/TeachingCoverageEvent entities (@IdClass composite PK
+        per the AnnouncementRead house pattern) + repositories +
+        TeachingCoverageController (teacher-only routes under
+        /api/v1/teacher/classes/{id}/coverage) + views"
+      - "core: PUT marking is fail-closed and idempotent — class must exist
+        (404) and be the teacher's (403), class must be ACTIVE (409), node must
+        exist (404) and be a spec-point node (400); same-status re-mark is the
+        idempotent no-op it honestly is (no new event, no timestamp bump);
+        status change appends an event and updates the state row in one tx"
+      - "core: the spec-point gate is the V39 invariant — applicability is
+        populated ONLY on seed-owned spec-point rows, so a NULL-applicability
+        node is refused (fail-closed, never a guess)"
+      - "core: GET returns only recorded rows (absence of a row is the honest
+        unrecorded state — no fabricated NOT_TAUGHT rows for the whole
+        curriculum) plus per-point history (the audit trail)"
+    forbidden:
+      - "NOT_TAUGHT is not a mastery state — coverage is an overlay, never a
+        learner-model write: no BKT/SkillState/misconception/review rows from
+        coverage traffic (pinned by IT)"
+      - "no curriculum mutation — knowledge_nodes are read-only here; coverage
+        rows reference them, never alter them; knowledge_nodes FK has the V30
+        NO-ACTION rule so a curriculum refresh cannot silently wipe teacher
+        assertions"
+      - "no course registry in core — no course_slug cross-check against
+        spec-point codes (slug is hub-owned opaque, the V47/V48/V49/V51 ruling);
+        the hub only offers its own course's spec points, core enforces what it
+        can honestly know: ownership + node type"
+      - "no REVIEWED or other invented states — the shipped vocabulary is
+        TAUGHT | NOT_TAUGHT exactly (the two states the addendum and §13.4
+        name); extensions are additive CHECK migrations, not silent enum drift"
+      - "teacher-only surface — no learner-facing coverage read in this task"
+  dependencies:
+    - T-C33 (classroom foundation: classes table, TeacherClassController house,
+      V51) — currently open as core PR #31; this branch is stacked on it
+  shared_resources:
+    - flyway-version (V52 — serialized lease held in locks.yaml)
+    - core-web-contract (additive teacher endpoints only; zero change to any
+      existing payload — deploy-skew safe)
+  acceptance:
+    - A teacher marks spec points taught/not-taught on their own active class;
+      a second teacher is 403; archived class is 409; a non-spec-point node is
+      400; an unknown node is 404
+    - Re-marking the same state changes nothing observable (no event row, no
+      marked_at bump); changing state appends exactly one event and moves the
+      state row (audit trail reconstructs the full history per point)
+    - Coverage traffic leaves SkillState/BKT/misconception/review tables empty
+      (the honesty pin, IT-enforced)
+    - knowledge_nodes stays byte-identical after coverage writes (no curriculum
+      mutation)
+  tests:
+    - core: TeachingCoverageControllerTest (unit, Mockito — gates, idempotent
+      no-op, event append, honest empties, history ordering)
+    - core: TeachingCoverageFlowIT (Testcontainers — end-to-end marking +
+      authorization + audit trail + honesty pin + curriculum immutability)
+    - CI: core-ci green on the feature branch
+  evidence_required:
+    - CI run green on the stacked branch (which runs the T-C33 suite too)
+    - worklog + PROGRESS claim/closeout entries in the master pack
+  claims:
+    VERIFIED: []
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: []
+  next_safe_actions:
+    - hub surface for TFA-03 (coverage checklist inside /teacher/classes/[id])
+      once PR #31 merges — the API contract here is its substrate
+    - F-072 Class KG heatmap consuming this overlay (grey = no coverage row)
+    - TFA-05 Data Assistant reading coverage as a query dimension
