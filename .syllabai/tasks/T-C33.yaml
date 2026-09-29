@@ -1,0 +1,77 @@
+version: 1
+task:
+  id: T-C33
+  title: "TFA-01 + TFA-02 foundation — explicit Class entity, teacher class management,
+    announcements, and the classroom student capability layer (class-membership
+    overlay; independent students unchanged)"
+  owner: "superz (main agent, zai session discord:ObviousGazelle)"
+  status: VERIFYING
+  priority: P0.5
+  base:
+    repo: syllabai-core
+    commit: aee2af1 (main at claim; hub base 9096b72)
+  basis: >
+    Operator directive (Discord DM, 2026-09-29): "TFA-01/02. and also you know
+    about independent students as well right? They will not have those extra
+    classroom features basically." TEACHER_ARCHITECTURE.md §4.2/§8/§9/§22
+    (Foundation group), teacher-lms-feature-addendum.tsv TFA-01/TFA-02 (P0.5),
+    replacing V49's pilot cohort shortcut with explicit class membership
+    (the V49 "NO CLASS ENTITY INTRODUCED" ruling explicitly anticipated this).
+  scope:
+    allowed:
+      - "core: V51 migration — classes, class_members, announcements,
+        announcement_reads; optional nullable assignments.class_id"
+      - "core: new classroom package — SchoolClass/ClassMember/Announcement/
+        AnnouncementRead entities + repositories + TeacherClassController +
+        LearnerClassroomController + ClassroomViews"
+      - "core: TeacherAssignmentController.create gains optional classId
+        (fail-closed: must exist, be teacher-owned, match course_slug);
+        LearnerAssignmentController.list filters to class membership when
+        class_id is set (NULL = every enabled student, the V49 default)"
+      - "hub: /teacher/classes + /teacher/classes/[id] (roster, enroll by
+        email, announcements with read-state), teacher nav Classes tab,
+        assignment create gains cohort|class target selector"
+      - "hub: learner classroom overlay — Announcements + class assignment
+        visibility on /learner and the course hub, rendered ONLY when the
+        learner holds membership (independent students: zero UI change)"
+    forbidden:
+      - "no curriculum mutation — classes never touch knowledge nodes;
+        NOT_TAUGHT/teaching-coverage is TFA-03, NOT in this task"
+      - "no new authority: announcements are not an AI channel (TEACHER_ARCHITECTURE §9)"
+      - "no course registry in core — course_slug/course_label stay the
+        hub-owned opaque refs (the V47/V48/V49 ruling, reused verbatim)"
+      - "no breaking change to existing assignment consumers — class_id NULL
+        preserves the exact V49 behavior"
+      - "independent students must observe ZERO behavior change: no membership
+        → empty classroom reads, unchanged assignment visibility for NULL-target
+        assignments"
+  dependencies: []
+  shared_resources:
+    - core-web-contract (additive endpoints + additive nullable column only)
+  acceptance:
+    - Teacher creates class on a hub course, enrolls a student by email,
+      publishes an announcement; the enrolled student sees the announcement
+      and the class-targeted assignment; an independent student sees neither
+    - V49 default preserved: class_id NULL assignments remain visible to every
+      enabled student including independent ones
+    - Backend authorization enforced (teacher owns the class; student reads
+      derive from membership rows only)
+    - AssignmentFlowIT discipline holds — classroom workflow writes no BKT/
+      SkillState/misconception/review rows
+  tests:
+    - core: ClassroomFlowIT (Testcontainers, end-to-end two-student flow)
+    - core: TeacherClassControllerTest + LearnerClassroomControllerTest (unit,
+      Mockito — authorization, fail-closed gates, honest empties)
+    - hub: type-checked build + eslint; e2e suite stays green
+  evidence_required:
+    - CI runs (core-ci + hub-ci) green on the feature branches
+    - worklog + PROGRESS entries in the master pack
+  claims:
+    VERIFIED: ["core unit suite 1,026 green locally (JDK 25)", "V51 SQL verified against disposable Postgres 17 (constraints enforced)", "hub tsc+eslint+production build green"]
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: ["core unit suite 1,026 green locally (JDK 25)", "V51 SQL verified against disposable Postgres 17 (constraints enforced)", "hub tsc+eslint+production build green"]
+  next_safe_actions:
+    - TFA-03 teaching coverage model (core, serialized migration V52)
+    - teacher assignment roster view for class-targeted assignments (hub polish)
+    - announcement categories in the hub composer (already schema-backed)
