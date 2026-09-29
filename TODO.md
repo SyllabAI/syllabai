@@ -161,6 +161,63 @@ identities. Census 87 V / 3 F / 1 S / 13 R; serving pool 2,020 -> 2,581.
 reconciliation), 4CH1/1C + 4CH1/2C Jun-2020 (COVID June/Nov pairing — operator
 supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/reingest-lane-2026-09-28/
 
+## 2026-09-29 — ADR-029 tranche 4.15 EXECUTED: spec-point mastery paints — evidence at spec-point granularity + topic down-propagation (session web-fc62c099, operator directive "(a) map questions to spec points in core, (b) down-propagate topic mastery to points", trace 1a0ea567a157e70d)
+
+### The gap (measured, not guessed — the same session's KG audit, trace 1a0ea47839d33005)
+
+The hub KG painted zero measured spec points for accounts with REAL evidence:
+core's marked attempts fired BKT only on topic nodes (0/630 pilot questions
+mapped at SUBTOPIC level in the question taxonomy), while the T-C18
+question_spec_points mapping (V30) sat fully populated (621/630) with nothing
+consuming it on the evidence path. The hub's point join was already built for
+exactly those nodes — "spec-point mastery appears in the graph as soon as
+evidence exists at that granularity" was a promise nothing could fulfill.
+
+### (a) Core `da1717d..905e85b` (core-ci green run 36499743890-fix, Render live)
+
+AssessmentEvidenceRecordedEvent carries specPointNodeIds (additive field,
+deduped against topics, empty-never-null on unmapped questions);
+EvidencePublisher resolves question_spec_points once per emitted attempt (both
+the MCQ submit path and the graded path — the once-only guard unchanged);
+LearnerModelService processes topics + spec points identically (same BKT
+update, same decay, same review scheduling) while fluency gaps stay
+topic-scoped (the condition aggregate attributes attempts via the primary
+topic — a per-point split would always aggregate empty; documented). No schema
+change. Suite 1032 green locally. En-route CI repair (main was already red on
+da1717d, another lane's commit): SmartFeedbackFlowIT mocked the LlmProvider
+INTERFACE, which replaced the named failoverLlmChain bean with an interface
+mock, and the answer-input wave's AnswerInputTranscriptionService — the first
+context consumer of the CONCRETE type — failed context load
+(BeanNotOfRequiredTypeException); the IT now mocks FailoverLlmChain itself
+(905e85b, ci green, the worklog IT-pattern lesson from the mock-type side).
+
+### (b) Hub `74edc86..0bed119` (rebased over the concurrent answer-box 3d lane, zero overlap; hub-ci build+e2e green, Vercel live)
+
+Two evidence granularities meet in the core derivation: DIRECT point skills
+join 1:1 onto bridge pointIds with zero hub code change (the join pre-existed);
+DOWN-PROPAGATION (operator decision) fills descendant spec points from
+topic/unit skills where no direct skill exists — deterministic precedence
+(topic beats unit, higher effective mastery, more attempts, lexicographic
+tie-break), direct evidence always wins, derived rows never fabricate attempts
+or review scheduling, PointState.derivedFrom carries the covering topic and
+the drawer tags those rows "via <topic>" with the honesty footnote explaining
+the fill rule. Derived rows count as measured (the chip now agrees with the
+painted graph) and show core's decayed effectiveMastery. GRAPH_CONTRACT v1.0
+untouched; eslint + tsc + build clean; e2e 12/12.
+
+### Verification + decision record
+
+Prod black-box (post-deploy): fresh learner → structured attempt + self-mark
+on a mapped question → /state skillStates gain SUBTOPIC-typed nodes
+(4CH1-1.x codes) beside the topic rows → KG chip counts measured points,
+graph paints them, drawer shows direct rows plus "via topic" fills. Honesty
+boundaries intact: self-report classes (ratings/votes) still never produce
+mastery; down-propagation covers DISPLAY of topic-measured accounts only and
+is tagged. Operator decisions recorded: (1) attempts fire at BOTH topic and
+spec-point granularity (topic table keeps its drawer role); (2) topic
+mastery down-propagates to points for display until direct point evidence
+exists — a display-provenance rule, not a mastery-invention rule.
+
 ## 2026-09-29 — claim: workbench Tutor + CLA reference-look restyle (itutor.study + Save My Exams references)
 
 ### TUTOR-CLA-LOOK EXECUTED (same session, web `132c15a` on base f041237, web-ci green run 36496410489, Vercel live — all 4 change markers in the deployed chunk)
