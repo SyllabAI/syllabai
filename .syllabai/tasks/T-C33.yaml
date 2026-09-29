@@ -5,7 +5,7 @@ task:
     announcements, and the classroom student capability layer (class-membership
     overlay; independent students unchanged)"
   owner: "superz (main agent, zai session discord:ObviousGazelle)"
-  status: VERIFYING
+  status: DONE
   priority: P0.5
   base:
     repo: syllabai-core
@@ -67,10 +67,10 @@ task:
     - CI runs (core-ci + hub-ci) green on the feature branches
     - worklog + PROGRESS entries in the master pack
   claims:
-    VERIFIED: ["core unit suite 1,026 green locally (JDK 25)", "V51 SQL verified against disposable Postgres 17 (constraints enforced)", "hub tsc+eslint+production build green"]
+    VERIFIED: ["core-ci SUCCESS on 18ad8b7 (full suite incl. ClassroomFlowIT 4/4 on Testcontainers)", "hub-ci SUCCESS on 3f5dec2 (build + e2e + axe gate)", "core unit suite 1,026 green locally (JDK 25)", "V51 SQL verified against disposable Postgres 17 (constraints enforced)"]
     INFERRED: []
     REPORTED: []
-    UNVERIFIED: ["core unit suite 1,026 green locally (JDK 25)", "V51 SQL verified against disposable Postgres 17 (constraints enforced)", "hub tsc+eslint+production build green"]
+    UNVERIFIED: ["core-ci SUCCESS on 18ad8b7 (full suite incl. ClassroomFlowIT 4/4 on Testcontainers)", "hub-ci SUCCESS on 3f5dec2 (build + e2e + axe gate)", "core unit suite 1,026 green locally (JDK 25)", "V51 SQL verified against disposable Postgres 17 (constraints enforced)"]
   next_safe_actions:
     - TFA-03 teaching coverage model (core, serialized migration V52)
     - teacher assignment roster view for class-targeted assignments (hub polish)
