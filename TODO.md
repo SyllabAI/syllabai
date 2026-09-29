@@ -1023,3 +1023,37 @@ src/app/globals.css (the dock inset rule). Zero overlap with active lanes
   Remaining open: sibling supersession sign-offs (operator per-package
   APPROVE), sheet-generator regex fix, stale-citation re-point, by-topic
   mapping for the 19 newly-servable questions.
+
+- [x] **HUB-CLA-SIDEBAR (EXECUTED 2026-09-29, session web-bb263437 wave 3,
+operator trace 1a0ea8ffd673a661) — hub f0fec6d, hub-ci run 36504776426
+GREEN step-level, Vercel live.** Both operator corrections landed: (1)
+the sidebar is now a PHYSICAL layout member, not an overlay — SME's own
+expanded mechanics (flex 0 0 400px static in the page row; the page cedes
+exactly 400px and keeps scrolling) mirrored as: useClaDock marks
+<html data-cla-sidebar=open>, globals.css gives .course-shell-row a 400px
+right inset at >=1400px (SME's .2s ease-in-out, reduced-motion guarded),
+the panel docks as a fixed right column under the 56px navbar (radius 0,
+border-l); below 1400px the dock can't exist (SME's expand button is
+display:none there — a stored sidebar pref degrades to the popup), below
+lg the Sheet fullscreen wash stays. Probes: content box narrowed exactly
+1440->1040, article 768->432, column edge == dock edge (zero overlap),
+page scrolls behind, expand/collapse round-trip, pref persists, Escape,
+1280 degradation, 375 po=0. (2) density diet to SME's panel anatomy:
+their verbatim ONE-LINE banner ("Chat can make mistakes. Please check
+all responses carefully."), ONE anchor line (note title w/ spec points
+in tooltip; "Question N . marks . parts" + Approach part pills merged),
+mode row = 2 live pills above the input (label + dashed disabled pills
+removed), quick actions as SME PrefilledPrompts chips in the EMPTY state
+only, empty paragraph + long busy line + metadata footer gone (trace
+collapses behind a tiny disclosure; citations pills unchanged), title =
+short gradient "CLA". No API/contract/anchor change; same pref key.
+Gates: eslint+tsc clean, corpus gate PASSED 629 pages, e2e 12/12, 43/43
+probes + VLM audits (light/dark), Vercel markers + the deployed CSS rule
+byte-verified (0do9vwuuef9qy.css). Evidence:
+download/hub-bb263437-w3/ (report, 8 captures, diff, probe logs, CI
+jobs, Vercel probe, SHA256SUMS); harness
+scripts/hub_bb263437_w3_{dock,dark}_probe.mjs + hub_w3_{ci_poll_once,
+vercel_probe}.sh. Question-surface probes skipped honestly (bridge-off,
+shared code proven on the note island; strings verified in prod chunks).
+SME's "New chat" header button still honest-absent (follow-up
+candidate).
