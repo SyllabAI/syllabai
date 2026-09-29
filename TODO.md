@@ -846,7 +846,33 @@ LlmMarkingCandidateGenerator, PartAnswerRequest (docs/policy), tests.
 
 ## 2026-09-29 — claim: SME chat-widget popup form + expand/collapse toggle on the CLA panels (HUB-TUTOR-CLA-LOOK wave 2)
 
-- [ ] HUB-CLA-POPUP (REGISTERED 2026-09-29, session web-bb263437 continuation,
+### HUB-CLA-POPUP EXECUTED (same session, hub `8480350` on base `15ce2ba`; hub-ci run `36501950115` build+e2e green step-level, head_sha verified; Vercel live — all 5 markers in chunk 2uoi_b5hz03gk.js)
+
+Delivered as claimed (3 files, +525/-221): cla-panel-mode.ts (new — the
+shared syllabai.cla.panel pref, hydration-safe useSyncExternalStore +
+useIsDesktop matchMedia gate + SME's circle button class), note-cla.tsx and
+question-cla-overlay.tsx restructured into dual shells — POPUP = body-
+portaled fixed bottom-right window, SME-verbatim geometry byte-probed
+(fixed/16px/16px/410px/640px/24px radius, no backdrop, non-modal, ESC
+closes; portaled after the probe caught an ancestor transform stealing the
+containing block — bottom measured 36px pre-fix, 16px post-fix), SIDEBAR =
+the existing right Sheet (SME's expanded equivalent, fullscreen below lg =
+their mobile wash), SME-verbatim toggle labels (Expand chat / Collapse
+chat) + Close chat on circle header buttons, gradient panel title
+(background-clip:text, primary→primary/60 token-safe), one shared panel
+body so a mid-conversation toggle preserves the thread. Honest-absent:
+SME's popup New chat button (per-surface transcript-reset semantics differ
+— follow-up candidate, not faked). Verified: eslint + tsc + corpus gate
+PASSED (629 pages) + e2e 12/12 + 21/21 behavior probes (geometry, expand/
+collapse round-trip, pref persistence across reload, Escape, page
+scrollable, mobile = Sheet + 0px overflow, 0 console errors; question-
+surface probes SKIP honestly — bridge-off hides entries, shared shell code
+proven on the note island) + VLM audits + Vercel markers ("Expand chat",
+"Collapse chat", "syllabai.cla.panel", the geometry class, "Close chat").
+Evidence: `download/hub-bb263437-w2/`; harness
+`scripts/hub_bb263437_w2_popup_probe.mjs`.
+
+- [x] HUB-CLA-POPUP (EXECUTED 2026-09-29 as hub `8480350`, session web-bb263437 continuation,
 operator directive trace 1a0ea762cba38339 "in SME, the CLA is a popup, which
 can also be moved to the right as a sidebar. Did you implement that?")
 **add SME's chat-widget dual-form mechanics to the hub's two CLA panels**
