@@ -1143,3 +1143,29 @@ candidate).
   evidence fires at disconnected placeholders) — the same parent-TOPIC
   derivation clears them in one pass. Evidence:
   `bench/review/psaxis-review-2026-09-28/tqsp2-primary-topics-2026-09-29/`.
+
+- [x] **servable19-topics-citations (2026-09-29, Task 68, trace 1a0eb3255bd898c9) —
+  the two non-operator Task-67 leftovers EXECUTED + VERIFIED: by-topic mappings
+  for the 19 newly-servable questions + the stale-citation re-point (cosmetic).**
+  Probe correction: the 19 (Jan-2022 1C ×11 + Jun-2019 2C ×8, qv+ms VALIDATED)
+  already carried 45 spec-point rows but zero real topic anchors — 18 ING-*
+  anchored with no question_topics rows; q5 (867c9a42) already house-mapped.
+  Lane A: mechanical parent-TOPIC-of-PRIMARY derivation (KG PART_OF edges, zero
+  orphans; reproduces q5's rows exactly) — 18 guarded primary UPDATEs + 21
+  question_topics rows (18 primary + 3 secondary), fail-closed tx, ING 302→284,
+  qt 745→766, qsp unchanged. Lane B: citations store CANONICAL document_id;
+  measured 106 REJECTED docs cited by 949 rows (the Task-63 88 + Task-64/65/OCR
+  rejects); targets = owning paper's CURRENT same-kind VALIDATED link derived
+  from the PLACE ledger (95 parsed pairs across link-repair/re-ingest/re-link +
+  covid formats, + the Jan-2021 pair from audit 3871 detail) and 4 Task-65
+  SUPERSEDED pointers; 12 OWNER-REJECTED docs (99 rows) stay (no target, audit-
+  evidenced). 850 rows re-pointed across 94 docs, per-doc rowcounts asserted;
+  no audit rows (mechanics precedent: display-only metadata, no state flips).
+  Verify 3-layer green: DB 24/24; serve path 11/11 + 8/8 questions with
+  specPoints; e2e fresh learner → structured attempt + full self-mark on
+  1C-Jan22 q6 → REAL topic skillState 4CH1-S1-f "Ionic bonding" + 4CH1-1.40/1.41
+  (the ING-placeholder delta). T-QSP3 narrows 302 → 284. Evidence:
+  `bench/review/psaxis-review-2026-09-28/task68-servable19-topics-citations-2026-09-29/`.
+  Remaining open: sibling supersession sign-offs (operator per-package APPROVE),
+  sheet-generator regex fix, T-QSP3 (284 remaining ING-anchored), bank-scheme
+  sparsity (91 qv).
