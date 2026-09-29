@@ -1,13 +1,12 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
 version: 1
-locks:
-  - resource: core-web-contract
-    owner: "Super Z (session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
-    task: "HUB-ANSWER-BOX wave 4 — answer format contract v2 (markdown+LaTeX dialect): transcription output policy, Smart Mark format note, PartAnswerRequest dialect doc; hub TipTap+MathLive editor serializing to the corpus dialect"
-    base_commit: "core 9a83511 / hub 15ce2ba"
-    acquired_at: "2026-09-29T00:02Z"
-    expires_at: "2026-09-30T00:02Z"
+locks: []
+# (HUB-ANSWER-BOX wave 4's core-web-contract lease was fulfilled — core aee2af1
+#  (rebased over 905e85b) + hub fb2b1ae/9096b72 pushed on bases core 9a83511 /
+#  hub 15ce2ba (rebased over the CLA lanes mid-flight); released per the
+#  reclaim rule. CI verified this wave: hub-ci 36506471899 + 36506472250 both
+#  SUCCESS on 9096b72; core suite 1018 green offline JDK25.)
 # (HUB-ANSWER-BOX wave 3's core-web-contract lease was fulfilled — core da1717d
 # + hub c92fbe3 pushed on bases core fd4631e / hub 817c845; released per the
 # reclaim rule. CI status unverifiable from the sandbox (private repo) — the

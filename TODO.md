@@ -810,7 +810,8 @@ from sandbox (private repo) — honest-absent.
 
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 4 (answer format contract v2 — the deferred rich-math decision)
 
-- [ ] HUB-ANSWER-BOX-W4 (IN PROGRESS, session web-98866c45, operator trace 1a0ea6d4ca777a75
+- [x] HUB-ANSWER-BOX-W4 (EXECUTED 2026-09-29 as core aee2af1 + hub fb2b1ae, css-splice fix 9096b72,
+session web-98866c45, operator trace 1a0ea6d4ca777a75
 "Go on with updating the answer format" — the green light for the answer-format contract
 decision that waves 3b/3c/3d repeatedly deferred: Italic/Subscript/Superscript and Insert
 equation were recorded honest-absent as "owned by the still-open answer-format contract
@@ -840,9 +841,62 @@ repair, one line: hub ci.yml push trigger is committed mangled (`branches: ain]`
 push CI literally cannot match main; consistent with waves 3b–3d recording CI as
 unverifiable) — restored to `branches: [main]` so this wave's CI can actually run and
 be verified. Files: src/components/answer-textarea.tsx, src/components/answer-editor.tsx
-(new), src/lib/answer-format.ts (new), package.json (+@tiptap/react +mathlive),
-.github/workflows/ci.yml (trigger repair); core: AnswerInputTranscriptionService,
-LlmMarkingCandidateGenerator, PartAnswerRequest (docs/policy), tests.
+(new), src/lib/answer-format.ts + answer-format.test.ts (new), src/types/answer-editor.d.ts
+(new), src/app/globals.css, question-player.tsx, package.json (+@tiptap/react
+@tiptap/starter-kit @tiptap/pm @tiptap/extensions @tiptap/extension-{subscript,superscript}
+3.31.3 + mathlive 0.110.0, bun-types dev); core: AnswerInputTranscriptionService,
+TranscriptionController, LlmMarkingCandidateGenerator, PartAnswerRequest (policy/docs).
+
+W4 execution record: CONTRACT — answerText stays ONE UTF-8 string (no migration;
+answers.answer_text already text; 4000-char R7 cap unchanged) whose declared
+interpretation upgrades from plain text to the corpus dialect: CommonMark + inline
+$…$ / display $$…$$ LaTeX (+mhchem \ce{}) + <sub>/<sup>/<br/> inline HTML — the
+exact dialect src/components/markdown.tsx already renders, so answer v2 is
+renderable by the same renderer the questions use. Strictly backward compatible
+(v1 answers are valid v2; literal dollars protected by remark-math's
+whitespace/currency guards, which the editor's parser mirrors). Consumers: Smart
+Mark reads it verbatim — its LEARNER ANSWER prompt header now carries the v2
+format note (read math/markup literally as the learner's working); legacy
+/api/ai/mark and tutor CLA context unchanged (verbatim strings). The wave-3
+transcription policy "plain text, never LaTeX" existed only to preserve v1 — it
+now outputs the v2 dialect: handwritten math → $…$ LaTeX, words → plain text
+(core aee2af1; suite 1018 green offline JDK25 via tools/jdk25 — the JDK the
+environment reset had hidden). HUB (fb2b1ae): TipTap 3 + MathLive 0.110.0 (both
+MIT — the SME-verified stack) inside the UNCHANGED wave-3b/3c shell; the
+contenteditable reproduces SME's ground-truth DOM (tiptap ProseMirror,
+translate=no, aria-labelledby, p[data-placeholder] is-empty is-editor-empty via
+the Placeholder extension); Italic/Subscript/Superscript are REAL marks
+(honest-absent since 3c); the answerEquation atom renders KaTeX and edits in a
+MathLive mathfield whose own stock virtual keyboard mounts body-fixed at SME's
+--keyboard-zindex: 1055 (light + the hub's class dark mode via MathLive's theme
+attribute on the keyboard layer) — the wave-3d REPLICA retires, superseded by
+the real thing, and TipTap history delivers the real undo the replica honestly
+could not; the Ω square returns to SME's Insert-symbol dropdown species (3c
+verbatim groups). Serialization boundary src/lib/answer-format.ts (15 bun
+tests, round-trip green): italic *…*, sub/sup <sub>/<sup>, equation $…$,
+paragraphs \n\n, producer escapes (\$ \* \\ &lt;) so plain text round-trips
+byte-faithfully. DEFECT FOUND+FIXED by the draft-reload probe (question-player):
+the workspace captured useState(savedText) during the SSR-hydration render
+(server snapshot = empty), the persisted draft never re-entered state, and the
+first blur persisted "" — saveTypedAnswer treats "" as DELETE — silently
+wiping a saved (now equation-bearing) draft on reload+click; the store value is
+now adopted once the client snapshot lands (unless the user diverged). PROBE
+MATRIX: typed/word count, 3 marks, 53-glyph dropdown insert, equation
+popover→mathfield→real keyboard (light+dark, z-1055 measured), insert → KaTeX
+atom, stored draft verbatim "Energy grows $\frac{1}{2}mv^2$", draft survives
+reload rich, real undo, 375px hOverflow=0, cold load 0 console errors (after
+NodeViewWrapper fix — plain-span node views break TipTap's mutation observer).
+Equation popover refinement note: SME edits the mathfield IN the text; ours is
+an anchored popover with the same mathfield+keyboard — recorded as the wave-5
+candidate. CORRECTION to the claim above: the committed ci.yml trigger was
+NEVER mangled — "branches: ain]" was a terminal-rendering artifact of the
+probe output (the bytes are branches: [main], byte-verified; consistent with
+hub-ci running green on the parallel lanes' commits); ci.yml is untouched, no
+repair was needed. Verified: bun test 15/15; eslint+tsc clean; build 629 pages
++ CORPUS GATE PASSED (incl. after rebase over the CLA lanes — their globals.css
+block kept, one splice-brace fix committed honestly as 9096b72); e2e 12/12
+post-rebase; hub-ci 36506471899 + 36506472250 SUCCESS on 9096b72 (first
+API-verified CI of the answer-box waves). Lease released.
 
 ## 2026-09-29 — claim: SME chat-widget popup form + expand/collapse toggle on the CLA panels (HUB-TUTOR-CLA-LOOK wave 2)
 
