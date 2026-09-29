@@ -1259,7 +1259,7 @@ Files: answer-editor.tsx, answer-textarea.tsx, globals.css.
 
 ## 2026-09-29 — claim: HUB-ANSWER-BOX wave 6 (SME's Insert Matrix / mathfield Menu buttons)
 
-- [ ] HUB-ANSWER-BOX-W6 (IN PROGRESS, session web-98866c45, operator trace
+- [x] HUB-ANSWER-BOX-W6 (EXECUTED 2026-09-29 as hub 04785e5, session web-98866c45, operator trace
 1a0ebc1b93638915 "I want SME's Insert Matrix / mathfield Menu buttons").
 Wave 5 shipped the inline mathfield with MathLive 0.110.0's STOCK toggles —
 the same two buttons SME's mathfield renders ("Toggle Virtual Keyboard" /
@@ -1289,3 +1289,46 @@ delta: answer-format-v2 serialization untouched (\begin{pmatrix} is plain
 LaTeX inside $…$ — the v2 dialect already carries it; KaTeX renders it at
 rest); hub-only (no core, no lease — wave 5 precedent). Base: hub 5eb2e10.
 Files (planned): src/components/answer-editor.tsx, src/app/globals.css.
+W6 execution record: probes FIRST established the ground truth — the wave-5
+mathfield ALREADY renders MathLive 0.110.0's stock toggles (dev + production
+verified: [part=virtual-keyboard-toggle] + [part=menu-toggle] present and
+display:flex), so the wave re-derives SME's actual gap: at min-width 4ch the
+editing chip measured 94×44px and the two 34×34 flex-shrink-0 toggles left
+~10px of formula area — the buttons existed but were unusable, AND the
+session-open path could leave the chip behind the risen keyboard sheet
+(menu toggle probed at y=749 under the sheet at y≤481 — MathLive only
+self-scrolls on its OWN toggle path). Fixes, all hub-side, ZERO contract
+delta: (1) editing chip min-width 12rem (192×44 measured, formula area
+103px, still inline, max-width 100%); (2) session-open scroll-above-sheet —
+walks scrollable ancestors then window against the .MLK__backdrop edge (the
+outer .ML__keyboard element is a full-viewport hit area at top 0 — first
+selector attempt was wrong and caught by the probe); (3) Escape with the
+stock menu open dismisses ONLY the menu (.ui-menu-container detected in the
+shadow root; commit deferred) — second Escape commits + caret-after, wave-5
+semantics intact; (4) normalizeMathPlaceholders() strips EMPTY \placeholder{}
+groups (MathLive serializes unfilled Insert-Matrix cells that way; KaTeX
+paints them red) at the editor boundary — write-back AND commit — so the
+stored dialect carries plain empty cells; filled placeholders left verbatim
+(MathLive REPLACES the atom on typing, so they cannot occur from the UI);
+serializer/parser untouched, strictly backward compatible, 4 new bun tests.
+Probe matrix (real mouse/keyboard via CDP, clean draft store, dev :3100):
+chip 192px + toggles in-chip + chip clears the sheet (bottom 465 < sheet top
+481); real-click Menu opens the verbatim stock menu (Insert Matrix, Insert,
+Mode, Font Style, Color, Background, Cut, Copy, Paste, Select All); with the
+caret inside the matrix the menu grows Add Row Before/After, Add Column
+Before/After, Delete Row, Delete Column + Borders; Insert Matrix 5×5 grid
+highlights exactly row×col cells (6 active for 2×3) and inserts the pmatrix;
+Add Row After grows it to 3 rows; commit → rest KaTeX with zero
+\placeholder{} in the stored tex; ⌨ toggle hides AND re-shows the sheet
+with the session alive; Escape(menu open) keeps the session; Escape(menu
+closed) commits + caret-after; 3× Ctrl+Z fully removes the math (real TipTap
+history); 375px hOverflow=0 with the menu open; cold load 0 console errors.
+Verified: bun test 19/19; eslint+tsc clean; production build green incl.
+corpus gate (147 files). Screenshots: scripts/w6_dev_menu.png,
+w6_matrix_rest.png, w6_375_menu.png. HONEST-ABSENT: hub-ci + Vercel status —
+the sandbox lost GitHub write credentials in the environment reset (no
+token, no gh, no ssh; https push prompts for a username). hub 04785e5 sits
+on base 5eb2e10 = origin/main HEAD at commit time; the push is a clean
+ff-only the moment credentials return (same for this repo's claim+done
+commits). Files: src/components/answer-editor.tsx, src/app/globals.css,
+src/lib/answer-format.ts (+test).
