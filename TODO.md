@@ -1341,3 +1341,30 @@ HONEST-ABSENT above is now closed with verified status: hub-ci run #45
 SUCCESS (build + e2e both success on 04785e5) and the Vercel Production
 deployment for 04785e5 = success (API-verified, created 2026-09-29T07:17Z).
 Screenshots scripts/w6_*.png remain untracked local probe evidence.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 7 (the symbols palette opens by default and cannot be closed)
+
+- [ ] HUB-ANSWER-BOX-W7 (IN PROGRESS, session web-98866c45, operator trace
+1a0ec11bc830f67d "When I open Exam Questions, the Mathematics, Greek
+Letters, Chemistry notation pop up stays opened up by default, cant close
+it as well"). Root cause established in code before any edit (both legs
+reproduce mechanically): (1) DEFAULT-OPEN — wave 3c persisted the palette
+open-state under localStorage "syllabai-hub:answer-symbols-open"
+(answer-textarea.tsx SYMBOLS_PREF_KEY) and a mount-time effect re-applies
+it one tick after hydration, so any browser that ever toggled the Ω button
+loads every Exam Questions / practice answer box with the palette ALREADY
+expanded — a transient Insert-symbol dropdown was never supposed to
+outlive the session (SME's own dropdown is transient, no persistence);
+(2) UNCLOSABLE — the palette is a CONTROLLED Radix Popover
+(<Popover open={symOpen}>) wired WITHOUT onOpenChange (the ui/popover.tsx
+wrapper is a thin Radix passthrough), so every dismiss path Radix offers —
+outside pointer-down, Escape, focus-away — routes to onOpenChange(false)
+which is a NO-OP; open stays true and the layer stays mounted. Only the
+tiny Ω trigger itself toggles, which reads to the operator as "can't
+close". Fix (hub-only, zero contract delta, no lease — waves 5/6
+precedent): the palette becomes fully transient — persistence RETIRES
+(the mount effect + SYMBOLS_PREF_KEY writes go; the stale key is actively
+removed once so affected browsers self-heal) and Radix onOpenChange
+becomes the single source of truth (outside click / Escape / trigger
+toggle all close; aria-expanded stays truthful). Files (planned):
+src/components/answer-textarea.tsx. Base: hub 0bc6ee9.
