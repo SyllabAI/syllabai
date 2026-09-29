@@ -1169,3 +1169,25 @@ candidate).
   Remaining open: sibling supersession sign-offs (operator per-package APPROVE),
   sheet-generator regex fix, T-QSP3 (284 remaining ING-anchored), bank-scheme
   sparsity (91 qv).
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 5 (the equation mathfield embedded in the text)
+
+- [ ] HUB-ANSWER-BOX-W5 (IN PROGRESS, session web-98866c45, operator trace
+1a0eb5e936962765 "Yes want the equation mathfield embedded in the text" — the
+green light on wave 4's recorded refinement candidate: "SME edits the
+mathfield IN the text; ours is an anchored popover"). Wave 5 retires the
+popover: the answerEquation atom's node view hosts the MathLive mathfield
+INLINE in the ProseMirror text flow — click an equation and it becomes a live
+mathfield in place (SME's exact interaction); Insert equation drops a new
+atom at the caret already in edit mode; the stock virtual keyboard still
+mounts body-fixed at --keyboard-zindex 1055 (light/dark tracked); blur /
+Escape / selection-away commits the LaTeX back into the node (an empty commit
+deletes the atom — no invisible atoms in the dialect); static KaTeX renders
+when not editing. ZERO contract delta: answer-format-v2 serialization
+untouched ($…$ inline, the 15-test round-trip suite still governs) — this
+wave is editing-UX only, hub-only (no core, no lease). Files:
+answer-editor.tsx, answer-textarea.tsx, globals.css. Gates: bun test 15/15,
+eslint+tsc, prod build + corpus gate, browser probe matrix (insert → inline
+mathfield → keyboard → commit → KaTeX static → draft round-trip verbatim →
+reload rich → undo → 375px po=0 → 0 console errors), hub-ci green, then
+closeout here.
