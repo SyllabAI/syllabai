@@ -1705,3 +1705,20 @@ commit was prepared and dropped in favor of origin's truth. hub-ci on
 - **All TFA-07 legs GREEN on production**: F-072 class KG heatmap 200 (329 nodes, 4CH1 root 297a8706…, distribution + coverage keys present); §13.5 node→students 200 (the full contract: struggling/proficient/developing counts + coverageState; per-student band, mastery, effectiveMastery, misconceptions, recentAttempts); §14 member individual KG 200 (374 nodes — the SAME F-034 model); §14 on an INDEPENDENT learner (pilot.monitor@) → **404 = the §17 backend gate proven live**; archive 200 + §14 archived-readable re-check 200 (the archived-readable guarantee holds).
 - **Write ledger (10, all API-path, TEST-conventioned)**: 1 class row (ARCHIVED post-drill), 1 user+role, 1 membership, 6 attempts (+ derived skill states/misconception evidence), 1 status flip. Drill-learner password single-use, not persisted.
 - Records: `.syllabai/tasks/T-C37.yaml` (live leg UNVERIFIED→VERIFIED); TSV/XLSX TFA-07 Agent Notes carry the live-verification line (parity re-verified 0 drift). **Watch: tonight's 20:30 UTC anchor-sweep should stay 12/12 — the fixture writes touch no VALIDATED content anchors.**
+
+## 2026-09-30 — claim: T-C39 provenance-gap closure (the B2 data-wave identification; operator trace 1a0f281f435be551)
+
+- [ ] **T-C39 (IN PROGRESS, session web-98866c45).** Operator: "Proceed with
+Provenance gap" — closes the T-C38 recorded open item ("no master-pack ledger
+entry identifies the ingest/validation wave that moved the 1C docs to
+VALIDATED"). Scope: master-pack ledger files + the core anchor-sweep docstring
+pointer; NO DB writes, no content-state changes, sha-frozen evidence packs
+untouched. STAND-DOWN AT CLAIM TIME: coordination origin/main = f638022 (three
+interleaved lane commits since 2b72e87 — T-C37 live-verification COMPLETE,
+qsp15-topic-mappings, T-C27.yaml parse fix — none claim or touch T-C39);
+core origin/main = 0522b08 (PR #37 T-C11 concept layer — disjoint from
+scripts/anchor_matrix_sweep.py); locks []. RE-REGISTRATION NOTE (honest): the
+claim was first staged locally as 524230d but sandbox reset #4 wiped the local
+commits before any push; re-registered verbatim on the new base. PAT note:
+operator provisioned a fresh credential (IM trace 1a0f3c866fb4b2bd, GET /user
+200, stored 0600) — rotation of the previously-recorded token still applies.

@@ -1,0 +1,41 @@
+version: 1
+task:
+  id: T-C39
+  title: "Provenance-gap closure — identify the ingest/validation wave that moved the 4CH1/1C June-2019 QP/MS docs to VALIDATED (the B2 data-wave)"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: EXECUTING
+  priority: P2
+  base:
+    repo: syllabai (master pack)
+    commit: this record
+  basis: >
+    Operator directive (IM trace 1a0f28e487c98135): "Proceed with Provenance
+    gap" — executes the T-C38 next_safe_action ("record the missing
+    ingest/validation-wave ledger entry for the June-2019-1C docs (the B2
+    flip's provenance gap, recorded not accepted)"). Credential provisioning
+    (IM trace 1a0f3c866fb4b2bd) unblocked the ledger landing.
+  scope:
+    allowed:
+      - "master-pack ledger files (TODO.md dated sections + this record)"
+      - "core scripts/anchor_matrix_sweep.py docstring pointer update
+        (monitor-script docs only, no runtime code)"
+    forbidden:
+      - "no DB writes of any kind; no content/validation state changes; no
+        prod writes; no edits to sha-frozen evidence packs (the
+        psaxis-review folders stay byte-identical)"
+  acceptance:
+    - "a dated TODO.md entry identifies the wave (which lane, which operator
+      trace, which commits/timestamps) with the B2 window brackets shown"
+    - "every claim resolves to sha-frozen evidence (ocr-lane pack,
+      bankrepair pack, sweep run 36697034459) — no inferred fact presented
+      as verified"
+    - "the sweep docstring no longer records the gap as open; it points at
+      the ledger entry"
+  claims:
+    VERIFIED: []
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: []
+  next_safe_actions:
+    - "land: push claim -> core docstring pointer + core-ci check -> closeout
+      commit (this yaml DONE + TODO DONE section with run ids)"
