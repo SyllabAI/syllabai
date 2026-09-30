@@ -1,0 +1,129 @@
+version: 1
+task:
+  id: T-C37
+  title: "TFA-07 — Teacher KG Drill-Down & Individual Graphs: the class-KG
+    heatmap node becomes an affected-students panel and the teacher opens ONE
+    student's SAME F-034 subject graph behind the roster gate
+    (TEACHER_ARCHITECTURE §13.5 + §14, the drill chain class graph → weak
+    node → affected students → individual student graph → evidence → action)"
+  owner: "superz (main agent, zai session discord:ObviousGazelle)"
+  status: VERIFYING
+  priority: P0.5
+  base:
+    repo: syllabai-core (endpoints + tests) + syllabai-hub (drill-down UI)
+    commit: core PR #34 branch tfa07-kg-drill-down @ f6d4399 (base 5b946ba) +
+      hub PR #4 branch tfa07-kg-drill-down (base 0913147)
+  basis: >
+    Operator directive (Discord DM, 2026-09-30): "Proceed with TFA-07".
+    TFA-07 row (teacher-lms-feature-addendum.tsv + master workbook): "Class
+    heatmaps must lead to actionable student-level inspection. Click class
+    node → affected students → evidence distribution → individual subject
+    graph → assessment/resources → teacher action." Constraints: same graph
+    model/read model as student KG; teacher-authorized context; no second KG
+    implementation. The wave-2 hub surface (0913147) already renders the F-072
+    heatmap through KGExplorer but had NO node interaction — that missing
+    front door plus the two missing read legs are exactly what this task adds.
+  scope:
+    allowed:
+      - "core: two read endpoints on ClassKnowledgeGraphController (same §17
+        ownership gate): GET .../knowledge-graph/nodes/{nodeId}/students
+        (§13.5 — enabled-member roster at student grain: raw BKT + effective
+        decayed mastery + shared band vocabulary, BDT misconception estimates
+        on misconception nodes under the node, up to 3 recent roster-scoped
+        attempts per student, distribution restated, weakest-first, subject
+        isolation 404, archived classes readable) and GET
+        .../knowledge-graph/learners/{learnerId}/knowledge-graph (§14 — the
+        SAME F-034 LearnerKnowledgeGraphService, gated to enabled members of
+        THIS class, 404 otherwise)"
+      - "core: new roster-scoped AttemptRepository.findRecentByTopicNodeAndLearnerIdIn
+        (the evidence leg cannot leak an independent student either); new
+        views in ClassKnowledgeGraphViews (ClassNodeStudentsView /
+        ClassNodeStudentView / StudentMisconceptionView /
+        StudentEvidenceItemView)"
+      - "hub: classKnowledgeGraphHost optional onInspectNode (node action
+        'Affected students'); NEW learnerKnowledgeGraphHost (F-034 view →
+        KGX verbatim); drill-down panel component on the wave-2 page with
+        the §13.5 table + §14 individual graph + §16 action links (Test
+        Builder, topic drill-down console)"
+      - "hub: api.ts + types.ts mirrors of the two core endpoints"
+    forbidden:
+      - "no second KG implementation: the individual graph DELEGATES to
+        LearnerKnowledgeGraphService (F-034) — pinned by a service unit test
+        asserting delegation identity"
+      - "no learner-state mutation anywhere (both endpoints are read models;
+        read-only pin extended to the drill reads)"
+      - "no class-aggregation change: the heatmap aggregation math is
+        untouched; the panel restates the SAME band distribution from the
+        SAME states"
+      - "no new authorization surface: the §17 gates are backend-enforced
+        (ownedClass + enabled-membership); the UI hiding data is not
+        authorization"
+      - "no TFA-05 Data Assistant scope, no at-risk scoring invention —
+        misconception rows carry probability + raw attempts (inspectable
+        evidence), nothing labeled 'risk' that isn't already a BDT active
+        estimate"
+  dependencies:
+    - F-072 (class KG heatmap, T-C35) + TFA-03 coverage overlay
+    - F-034 (learner knowledge graph read model)
+    - wave-2 hub teacher KG page (hub 0913147)
+  shared_resources:
+    - "ClassKnowledgeGraphService/Controller + Views (core) — extended, not
+      rewritten; constructor grew AttemptRepository + LearnerKnowledgeGraphService"
+  acceptance:
+    - "core-ci green on PR #34 (unit + IT; the flow-IT legs run the REAL
+      evidence pipeline: two members submit attempts, drill-down reads the
+      BKT/BDT states the pipeline wrote)"
+    - "hub-ci green on PR #4 (lint + typechecked build + e2e/axe); local
+      bun lint + HUB_DATA_MODE=mock build ALREADY green"
+    - "member-only: an independent student with FULL learner model evidence
+      on the same node appears nowhere in the panel (flow-IT pin)"
+    - "privacy: non-member / disabled member individual-graph reads are 404
+      (unit + IT pins)"
+    - "read-only: skill/misconception/attempt counts unchanged by drill reads"
+  tests:
+    - "core: ClassKnowledgeGraphControllerTest (new-endpoint gates +
+      delegation), ClassKnowledgeGraphServiceTest (restored + constructor
+      update + 3 §14 pins), ClassKnowledgeGraphFlowIT (2 new tests over the
+      V6 seed subject)"
+    - "hub: bun run lint; HUB_DATA_MODE=mock bun run build"
+  evidence_required: []
+  claims:
+    VERIFIED: ["hub: eslint green; HUB_DATA_MODE=mock production build green
+      (typecheck + prerender + corpus gate) on branch @ push",
+      "core: static self-review (imports used, accessor existence, record
+      arities, mock identity in tests) — local compile impossible (no
+      Maven/JDK25 in sandbox; core CI owns the green, the established
+      arrangement)"]
+    INFERRED: ["BKT ordering weak<strong after wrong/correct single attempts
+      (the analytics IT relies on the same semantics; asserted relatively)"]
+    REPORTED: []
+    UNVERIFIED: ["core-ci / hub-ci verdicts on the PR heads (pending at
+      claim-closeout time; flip to VERIFIED in the merge record)",
+      "live-path drill on the deployed Render core + Vercel hub (blocked on
+      core merge + redeploy; the hub renders 404s as error alerts until then)"]
+  execution_notes: >
+    Design choices worth remembering: (1) the §13.5 panel lists EVERY enabled
+    member with honest nulls for unmeasured — weakest measured first — because
+    §13.5 says 'student list' and the §15 rule forbids letting a mean stand
+    for the class; (2) the misconception leg exposes estimates ONLY on
+    misconception nodes attached UNDER the drilled node (the heatmap's own
+    miscoByNode discipline, now at student grain); (3) the evidence leg is
+    roster-scoped AT THE QUERY (new JPQL), not filtered client-side, so the
+    independent-student rule survives payload-size growth; (4) non-member
+    reads are 404 (not 403) — the roster is the privacy boundary and an
+    absent membership neither confirms nor denies enrollment elsewhere;
+    (5) the hub page wires the node action through a ref so the memoized
+    host never needs rebuilding on selection. Incident logged: the first
+    core commit accidentally clobbered the existing
+    ClassKnowledgeGraphServiceTest (a Write replaced the 389-line F-072
+    aggregation test) — restored verbatim in the follow-up commit, its
+    constructor call updated for the two new collaborators, and the §14 pins
+    appended (nothing lost; verified by git show HEAD~1 diff).
+  next_safe_actions:
+    - "after both PRs merge: live-path drill probe on Render core (cold-start
+      patient loop) with pilot-teacher credentials; record in the merge note"
+    - "hub: teacher-action links currently point at /teacher/test-builder and
+      /teacher/class plain — consider deep-linking Test Builder weakness
+      options with the node id when TFA-06 lands"
+    - "hygiene follow-up (T-C38 candidate): the stale TSV/PROGRESS/AGENT.md
+      items recorded in the state check"
