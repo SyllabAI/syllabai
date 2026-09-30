@@ -7,7 +7,7 @@ task:
     (TEACHER_ARCHITECTURE §13.5 + §14, the drill chain class graph → weak
     node → affected students → individual student graph → evidence → action)"
   owner: "superz (main agent, zai session discord:ObviousGazelle)"
-  status: VERIFYING
+  status: DONE
   priority: P0.5
   base:
     repo: syllabai-core (endpoints + tests) + syllabai-hub (drill-down UI)
@@ -88,19 +88,23 @@ task:
     - "hub: bun run lint; HUB_DATA_MODE=mock bun run build"
   evidence_required: []
   claims:
-    VERIFIED: ["hub: eslint green; HUB_DATA_MODE=mock production build green
-      (typecheck + prerender + corpus gate) on branch @ push",
-      "core: static self-review (imports used, accessor existence, record
-      arities, mock identity in tests) — local compile impossible (no
-      Maven/JDK25 in sandbox; core CI owns the green, the established
-      arrangement)"]
+    VERIFIED: ["core-ci SUCCESS on PR #34 head b7b8e90 (build: compile + 1063
+      tests incl. the flow-IT drill legs over the real evidence pipeline —
+      two fix commits: UnfinishedStubbing in the §14 unit pins, then the IT
+      controller arg-order fix nodeId-in-path/rootId-in-query)",
+      "hub-ci on PR #4 head c8fdb60: build SUCCESS + e2e SUCCESS + Vercel
+      Preview success; local lint + mock-mode build green before push",
+      "merged: core main b034c5c (PR #34) + hub main 86b43b7 (PR #4);
+      push-triggered runs fired on both merge commits",
+      "core: static self-review held until CI — the two CI-caught defects
+      were test-mechanics only (Mockito stubbing order, IT argument order);
+      zero production-code defects found by CI"]
     INFERRED: ["BKT ordering weak<strong after wrong/correct single attempts
-      (the analytics IT relies on the same semantics; asserted relatively)"]
+      (asserted relatively; CI-green on the flow-IT leg)"]
     REPORTED: []
-    UNVERIFIED: ["core-ci / hub-ci verdicts on the PR heads (pending at
-      claim-closeout time; flip to VERIFIED in the merge record)",
-      "live-path drill on the deployed Render core + Vercel hub (blocked on
-      core merge + redeploy; the hub renders 404s as error alerts until then)"]
+    UNVERIFIED: ["live-path drill on the deployed Render core + Vercel hub
+      after the redeploy — needs pilot-teacher credentials (operator-held);
+      next_safe_action recorded"]
   execution_notes: >
     Design choices worth remembering: (1) the §13.5 panel lists EVERY enabled
     member with honest nulls for unmeasured — weakest measured first — because

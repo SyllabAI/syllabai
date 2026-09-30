@@ -1283,7 +1283,8 @@ store. Verified: bun test 15/15 (serializer untouched); eslint+tsc clean;
 production build 629 pages + CORPUS GATE PASSED; browser probe matrix
 21/21 on a clean draft store (inline-in-flow, popover absent, keyboard
 z-1055 measured + light/dark themes, live write-back to the stored draft
-verbatim $rac{1}{2}mv^{2}$, Escape commit + caret-after, click-away
+verbatim $
+rac{1}{2}mv^{2}$, Escape commit + caret-after, click-away
 commit, prefilled re-edit, real undo over math, empty-atom deletion, draft
 survives reload rich, 375px hOverflow=0, cold load 0 console errors);
 pushed 9096b72..dff764c ff-only; hub-ci 36524400542 completed/success.
@@ -1631,3 +1632,10 @@ the heatmap — no second mastery graph); (3) class-workspace-local.tsx: a
 "Geography progress" card next to Class intelligence + honest "no corpus
 package" badges replacing the eternal Skeleton on resource cards when
 hasBundle is false (the KG card included — the operator's ask).
+### T-C37 closeout — TFA-07 LANDED: core PR #34 (main b034c5c) + hub PR #4 (main 86b43b7), CI green end-to-end
+
+- **CI evidence**: core-ci SUCCESS on head b7b8e90 (compile + 1063 tests, 0 failures — including the two new flow-IT legs that run the REAL evidence pipeline: two members submit a misconception-tagged wrong answer and a correct one, and the drill-down reads the BKT/BDT states the pipeline wrote; member-only rows weakest-first; the read-only pin extended to the drill reads). Hub-ci on its head: build + e2e + Vercel preview ALL SUCCESS; local lint + mock-mode build green pre-push. Push-triggered runs fired on both merge commits (the T-C36 capstone pattern).
+- **CI caught exactly two defects, both test-mechanics, zero production-code**: (1) UnfinishedStubbing — the §14 unit pins built their user mocks INSIDE `thenReturn(...)`; (2) the flow-IT called the controller's `(classId, nodeId, rootId)` signature in the service's `(rootId, nodeId)` order, which produced beautifully confusing inverted failures (the happy path 404'd itself; the isolation case re-ran the happy pair). Both recorded here so the next session doesn't rediscover them.
+- **Incident (already logged at claim time)**: the first core commit clobbered `ClassKnowledgeGraphServiceTest` via a Write; restored verbatim in f6d4399 with the constructor updated + §14 pins appended. Nothing lost.
+- **Honest remaining state**: live-path drill verification on the redeployed Render core + Vercel hub needs pilot-teacher credentials (operator-held) — next_safe_action in the yaml. The anchor B2 flip + B3 addition (from the B2 triage) remains PROPOSED-awaiting-operator, untouched by this task.
+- Records: `.syllabai/tasks/T-C37.yaml` (DONE, VERIFIED CI claims); TSVs → Completed / superz (master workbook row 175 + teacher-lms addendum row; XLSX re-export belongs to the T-C38 hygiene sweep).
