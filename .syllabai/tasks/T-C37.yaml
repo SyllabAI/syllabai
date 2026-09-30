@@ -10,9 +10,9 @@ task:
   status: DONE
   priority: P0.5
   base:
-    repo: syllabai-core (endpoints + tests) + syllabai-hub (drill-down UI)
-    commit: core PR #34 branch tfa07-kg-drill-down @ f6d4399 (base 5b946ba) +
-      hub PR #4 branch tfa07-kg-drill-down (base 0913147)
+    repo: "syllabai-core (endpoints + tests) + syllabai-hub (drill-down UI)"
+    commit: "core PR #34 branch tfa07-kg-drill-down @ f6d4399 (base 5b946ba) +
+      hub PR #4 branch tfa07-kg-drill-down (base 0913147)"
   basis: >
     Operator directive (Discord DM, 2026-09-30): "Proceed with TFA-07".
     TFA-07 row (teacher-lms-feature-addendum.tsv + master workbook): "Class
@@ -98,14 +98,35 @@ task:
       push-triggered runs fired on both merge commits",
       "core: static self-review held until CI — the two CI-caught defects
       were test-mechanics only (Mockito stubbing order, IT argument order);
-      zero production-code defects found by CI"]
+      zero production-code defects found by CI",
+      "2026-09-30 LIVE-PATH DRILL on the redeployed Render core (pilot-teacher
+      credentials operator-supplied and live-verified: login 200 roles
+      [TEACHER]): the pilot teacher owned ZERO classes — F-072/TFA-07 surfaces
+      had never held prod data — so the drill first walked the REAL product
+      path via public/authorized API only (zero SQL; TEST-convention fixture:
+      class 'TEST — TFA-07 live drill' 4ch1, learner
+      pilot.drill-44a29646@syllabai-test.dev via the register API, enrollment
+      by email, 6 MCQ attempts with returned misconception evidence). ALL
+      legs GREEN: F-072 class KG 200 (329 nodes, 4CH1 root 297a8706); §13.5
+      node→students 200 (struggling/proficient/developing counts +
+      coverageState; per-student band/mastery/effectiveMastery/misconceptions/
+      recentAttempts); §14 member individual KG 200 (374 nodes, the SAME
+      F-034 model); §14 on an INDEPENDENT learner → 404 (the §17 backend gate
+      proven live); archive 200; §14 archived-readable re-check 200. Write
+      ledger: 10 (1 class row archived post-drill, 1 user+role, 1 membership,
+      6 attempts + derived states, 1 status flip)"]
     INFERRED: ["BKT ordering weak<strong after wrong/correct single attempts
       (asserted relatively; CI-green on the flow-IT leg)"]
     REPORTED: []
-    UNVERIFIED: ["live-path drill on the deployed Render core + Vercel hub
-      after the redeploy — needs pilot-teacher credentials (operator-held);
-      next_safe_action recorded"]
+    UNVERIFIED: []
   execution_notes: >
+    LIVE-VERIFICATION ADDENDUM (2026-09-30): the drill surfaced that the pilot
+    teacher owned zero classes — production had never exercised the class-KG
+    surface, so the live proof required manufacturing a TEST-convention
+    fixture through the real product path (API-only, all 10 writes reported).
+    Cosmetic gap noted: the learner-KG edge count lives in the
+    prerequisiteEdges key (the drill probe read a wrong 'edges' key and
+    printed 0; count not captured).
     Design choices worth remembering: (1) the §13.5 panel lists EVERY enabled
     member with honest nulls for unmeasured — weakest measured first — because
     §13.5 says 'student list' and the §15 rule forbids letting a mean stand
@@ -124,10 +145,6 @@ task:
     constructor call updated for the two new collaborators, and the §14 pins
     appended (nothing lost; verified by git show HEAD~1 diff).
   next_safe_actions:
-    - "after both PRs merge: live-path drill probe on Render core (cold-start
-      patient loop) with pilot-teacher credentials; record in the merge note"
     - "hub: teacher-action links currently point at /teacher/test-builder and
       /teacher/class plain — consider deep-linking Test Builder weakness
       options with the node id when TFA-06 lands"
-    - "hygiene follow-up (T-C38 candidate): the stale TSV/PROGRESS/AGENT.md
-      items recorded in the state check"
