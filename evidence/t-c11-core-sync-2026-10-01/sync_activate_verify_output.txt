@@ -1,0 +1,56 @@
+== Part 1: activation (API) ==
+login: 200, token received: True
+activate: 200
+{
+ "curriculumVersionId": "356840e6-81e2-49df-8182-93ab6504d591",
+ "subjectId": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+ "rootNodeId": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+ "sections": 4,
+ "subsections": 28,
+ "specPoints": 182,
+ "practicals": 12,
+ "conceptNodes": 193,
+ "validatedSemanticEdges": 272,
+ "nodesCreated": 0,
+ "nodesReused": 420,
+ "edgesCreated": 0,
+ "edgesReused": 709,
+ "alreadyActive": true
+}
+teacher edges view: status 400 (path may differ; DB probe below is authoritative)
+
+== Part 2: prod DB ground truth (read-only; KG is flat, codes carry the 4CH1 namespace) ==
+  node CONCEPT        SUGGESTED  167
+  node MISCONCEPTION  SUGGESTED  26
+  node SUBTOPIC       VALIDATED  194
+  node TOPIC          VALIDATED  28
+  node UNIT           VALIDATED  4
+  edge COMMONLY_CONFUSED_WITH   VALIDATED  2
+  edge EXPLAINED_BY             VALIDATED  11
+  edge MISCONCEPTION_OF         VALIDATED  2
+  edge PART_OF                  SUGGESTED  211
+  edge PART_OF                  VALIDATED  226
+  edge RELATED_TO               VALIDATED  2
+  edge REMEDIATED_BY            VALIDATED  25
+  edge REQUIRES_PREREQUISITE    VALIDATED  206
+  edge WRONG_ANSWER_PATTERN     VALIDATED  24
+
+== the 7 practical-origin edges (must be VALIDATED) ==
+  4CH1-PR-01   -[VALIDATED]-> 4CH1-CON-SATURATED-SOLUTION
+  4CH1-PR-01   -[VALIDATED]-> 4CH1-CON-SOLUBILITY
+  4CH1-PR-02   -[VALIDATED]-> 4CH1-CON-CHROMATOGRAPHY
+  4CH1-PR-02   -[VALIDATED]-> 4CH1-CON-RF-VALUE
+  4CH1-PR-03   -[VALIDATED]-> 4CH1-CON-EXP-FORMULA-DEDUCTION
+  4CH1-PR-04   -[VALIDATED]-> 4CH1-CON-AQUEOUS-DISCHARGE
+  4CH1-PR-04   -[VALIDATED]-> 4CH1-CON-ELECTROLYSIS
+  4CH1-PR-05   -[VALIDATED]-> 4CH1-CON-O2-PERCENT-DETERMINATION
+  4CH1-PR-06   -[VALIDATED]-> 4CH1-CON-REACT-ARRANGE
+  4CH1-PR-07   -[VALIDATED]-> 4CH1-CON-SALT-INSOLUBLE-REACTANT
+  4CH1-PR-08   -[VALIDATED]-> 4CH1-CON-SALT-PRECIPITATION
+  4CH1-PR-09   -[VALIDATED]-> 4CH1-CON-CALORIMETRY
+  4CH1-PR-12   -[VALIDATED]-> 4CH1-CON-ACID-REACTIONS
+  4CH1-PR-12   -[VALIDATED]-> 4CH1-CON-ESTERS
+  4CH1-PR-12   -[VALIDATED]-> 4CH1-CON-SIMPLE-DISTILLATION
+
+== frozen five must be ABSENT ==
+  frozen semantic rows on prod: 0 (expect 0: the 3 pilot HOLDs + 2 REVIEW_REQUIRED never materialize)

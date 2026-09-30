@@ -1,0 +1,233 @@
+{
+ "copy_files": {
+  "concepts.yaml": {
+   "sha256": "24fa91ac7149682b1083ff47112362a11180bcfb7899c1343c6f536682447e3f",
+   "bytes": 398823
+  },
+  "concept_edges.yaml": {
+   "sha256": "cbef02513ddbb0121a7ba139512c128185311ae3ebf0ef5121e1ed792522aa10",
+   "bytes": 698843
+  }
+ },
+ "loader_constants": {
+  "CONCEPT_NODE_COUNT": 193,
+  "ANCHOR_EDGE_COUNT": 211,
+  "VALIDATED_SEMANTIC_EDGE_COUNT": 272,
+  "EXCLUDED_SEMANTIC_EDGE_COUNT": 5,
+  "CONCEPTS_SHA256": "24fa91ac7149682b1083ff47112362a11180bcfb7899c1343c6f536682447e3f",
+  "CONCEPT_EDGES_SHA256": "cbef02513ddbb0121a7ba139512c128185311ae3ebf0ef5121e1ed792522aa10"
+ },
+ "test_sums": {
+  "nodes": 420,
+  "edges_ever_saved": 709
+ },
+ "package": [
+  {
+   "edge": "4CH1-PR-05 REQUIRES 4CH1-CON-O2-PERCENT-DETERMINATION",
+   "batch": "5",
+   "method": "USED_WITHOUT_RETEACHING",
+   "concept_core_anchors": [
+    "4CH1-2.10"
+   ],
+   "practical_sp": "4CH1-2.14",
+   "projected_pair": "4CH1-2.10 -> 4CH1-2.14",
+   "boundary_ruling_noted": null,
+   "notes_head": "Practical -> conceptual (the pilot test #5 requirement, the PR-09 -> CON-CALORIMETRY batch-4 shape): the 2.14 practical "
+  },
+  {
+   "edge": "4CH1-PR-06 REQUIRES 4CH1-CON-REACT-ARRANGE",
+   "batch": "6",
+   "method": "USED_WITHOUT_RETEACHING",
+   "concept_core_anchors": [
+    "4CH1-2.15"
+   ],
+   "practical_sp": "4CH1-2.21",
+   "projected_pair": "4CH1-2.15 -> 4CH1-2.21",
+   "boundary_ruling_noted": null,
+   "notes_head": "Practical->conceptual (the pilot test #5 requirement, the PR-05->CON-O2-PERCENT-DETERMINATION shape): the 2.21 practical"
+  },
+  {
+   "edge": "4CH1-PR-07 REQUIRES 4CH1-CON-SALT-INSOLUBLE-REACTANT",
+   "batch": "7",
+   "method": "USED_WITHOUT_RETEACHING",
+   "concept_core_anchors": [
+    "4CH1-2.39"
+   ],
+   "practical_sp": "4CH1-2.42",
+   "projected_pair": "4CH1-2.39 -> 4CH1-2.42",
+   "boundary_ruling_noted": null,
+   "notes_head": "Practical->conceptual (the PR-05/PR-06 shape): the 2.42 practical RUNS the method its concept owns \u2014 the named practical"
+  },
+  {
+   "edge": "4CH1-PR-08 REQUIRES 4CH1-CON-SALT-PRECIPITATION",
+   "batch": "7",
+   "method": "USED_WITHOUT_RETEACHING",
+   "concept_core_anchors": [
+    "4CH1-2.41C"
+   ],
+   "practical_sp": "4CH1-2.43C",
+   "projected_pair": "4CH1-2.41C -> 4CH1-2.43C",
+   "boundary_ruling_noted": null,
+   "notes_head": "Practical->conceptual (the PR-05/PR-06 shape): the 2.43C practical RUNS the precipitation route its concept owns \u2014 lead("
+  },
+  {
+   "edge": "4CH1-PR-12 REQUIRES 4CH1-CON-ESTERS",
+   "batch": "11",
+   "method": "EXPLICIT_TEACH_SEQUENCE",
+   "concept_core_anchors": [
+    "4CH1-4.38C",
+    "4CH1-4.39C",
+    "4CH1-4.40C",
+    "4CH1-4.41C",
+    "4CH1-4.42C"
+   ],
+   "practical_sp": "4CH1-4.43C",
+   "projected_pair": "4CH1-4.38C -> 4CH1-4.43C",
+   "boundary_ruling_noted": null,
+   "notes_head": "IN-SLICE (the batch-3 PR-04 -> ELECTROLYSIS pattern) \u2014 the practical's Aim instantiates the esterification the esters fa"
+  },
+  {
+   "edge": "4CH1-PR-12 REQUIRES 4CH1-CON-SIMPLE-DISTILLATION",
+   "batch": "11",
+   "method": "USED_WITHOUT_RETEACHING",
+   "concept_core_anchors": [
+    "4CH1-1.10"
+   ],
+   "practical_sp": "4CH1-4.43C",
+   "projected_pair": "4CH1-1.10 -> 4CH1-4.43C",
+   "boundary_ruling_noted": true,
+   "notes_head": "SANCTIONED BOUNDARY EDGE (session-66 ruling TARGET-5, the batch-1 owner) \u2014 the distil-off-early collection step IS the b"
+  },
+  {
+   "edge": "4CH1-PR-12 REQUIRES 4CH1-CON-ACID-REACTIONS",
+   "batch": "11",
+   "method": "USED_WITHOUT_RETEACHING",
+   "concept_core_anchors": [
+    "4CH1-2.37"
+   ],
+   "practical_sp": "4CH1-4.43C",
+   "projected_pair": "4CH1-2.37 -> 4CH1-4.43C",
+   "boundary_ruling_noted": true,
+   "notes_head": "SANCTIONED BOUNDARY EDGE (session-66 ruling TARGET-6, the batch-7 owner) \u2014 the purification step runs the batch-7 acid+c"
+  }
+ ],
+ "new_nodes": [
+  "4CH1-CON-ACID-ALKALI-IONS",
+  "4CH1-CON-ACID-RAIN-CAUSES",
+  "4CH1-CON-ACID-REACTIONS",
+  "4CH1-CON-ADDITION-POLYMERS",
+  "4CH1-CON-AIR-COMPOSITION",
+  "4CH1-CON-ALCOHOLS",
+  "4CH1-CON-ALKANE-HALOGEN-SUBSTITUTION",
+  "4CH1-CON-ALKANES",
+  "4CH1-CON-ALKENES",
+  "4CH1-CON-ALLOY-HARDNESS",
+  "4CH1-CON-ALLOYS",
+  "4CH1-CON-ANION-TESTS",
+  "4CH1-CON-BASES-ALKALIS",
+  "4CH1-CON-BROMINE-WATER-TEST",
+  "4CH1-CON-CARBOXYLIC-ACID-REACTIONS",
+  "4CH1-CON-CARBOXYLIC-ACIDS",
+  "4CH1-CON-CATION-TESTS",
+  "4CH1-CON-CO-POISONING",
+  "4CH1-CON-CO2-FROM-CARBONATES",
+  "4CH1-CON-CO2-GREENHOUSE",
+  "4CH1-CON-COMBUSTION-O2",
+  "4CH1-CON-CONDENSATION-POLYMERS",
+  "4CH1-CON-CRACKING",
+  "4CH1-CON-CRUDE-OIL",
+  "4CH1-CON-CRUDE-OIL-FRACTIONS",
+  "4CH1-CON-ESTERS",
+  "4CH1-CON-ETHANOL-MANUFACTURE",
+  "4CH1-CON-ETHANOL-OXIDATION",
+  "4CH1-CON-EXTRACTION-EVALUATION",
+  "4CH1-CON-EXTRACTION-METHOD",
+  "4CH1-CON-FLAME-TEST",
+  "4CH1-CON-FUELS-COMBUSTION",
+  "4CH1-CON-G1-FAMILY-EVIDENCE",
+  "4CH1-CON-G1-PREDICTION",
+  "4CH1-CON-G1-REACTIVITY-ECONFIG",
+  "4CH1-CON-G1-TREND",
+  "4CH1-CON-G7-DISPLACEMENT",
+  "4CH1-CON-G7-PREDICTION",
+  "4CH1-CON-G7-PROPERTIES",
+  "4CH1-CON-G7-REACTIVITY-ECONFIG",
+  "4CH1-CON-GAS-TESTS",
+  "4CH1-CON-HOMOLOGOUS-SERIES",
+  "4CH1-CON-HYDROCARBON",
+  "4CH1-CON-INDICATORS",
+  "4CH1-CON-ISOMERS",
+  "4CH1-CON-IUPAC-NAMING",
+  "4CH1-CON-METAL-DISPLACEMENT",
+  "4CH1-CON-METAL-USES",
+  "4CH1-CON-NEUTRALISATION",
+  "4CH1-CON-O2-PERCENT-DETERMINATION",
+  "4CH1-CON-ORES",
+  "4CH1-CON-ORGANIC-FORMULAE",
+  "4CH1-CON-ORGANIC-REACTION-CLASSES",
+  "4CH1-CON-OX-RED-AGENTS",
+  "4CH1-CON-PH-SCALE",
+  "4CH1-CON-POLYMER-DISPOSAL",
+  "4CH1-CON-PROTON-TRANSFER",
+  "4CH1-CON-REACT-ARRANGE",
+  "4CH1-CON-REACT-ORDER",
+  "4CH1-CON-RUST-PREVENTION",
+  "4CH1-CON-RUSTING",
+  "4CH1-CON-SALT-INSOLUBLE-REACTANT",
+  "4CH1-CON-SALT-PRECIPITATION",
+  "4CH1-CON-SALT-TITRATION-ROUTE",
+  "4CH1-CON-SOLUBILITY-RULES",
+  "4CH1-CON-TITRATION",
+  "4CH1-CON-UNIVERSAL-INDICATOR",
+  "4CH1-CON-WATER-CUSO4-TEST",
+  "4CH1-CON-WATER-PURITY-TEST",
+  "4CH1-MIS-CUO-COLOUR",
+  "4CH1-MIS-ENDPOINT-PH-ABOVE-7",
+  "4CH1-MIS-G1-SHELL-EXPLANATION",
+  "4CH1-MIS-GLOWING-SPLINT-HYDROGEN",
+  "4CH1-MIS-HALIDE-TEST-HCL",
+  "4CH1-MIS-HALOGEN-HALIDE",
+  "4CH1-MIS-ION-OXIDE-REASONING",
+  "4CH1-MIS-KEROSENE-DOUBLE-BONDS",
+  "4CH1-MIS-POLYMER-DOUBLE-BOND",
+  "4CH1-MIS-PRECIPITATE-IN-FILTRATE",
+  "4CH1-MIS-PROPANOL-POSITION"
+ ],
+ "added_hv_practical": [
+  [
+   "4CH1-PR-12",
+   "REQUIRES_PREREQUISITE",
+   "4CH1-CON-ESTERS"
+  ],
+  [
+   "4CH1-PR-12",
+   "REQUIRES_PREREQUISITE",
+   "4CH1-CON-SIMPLE-DISTILLATION"
+  ],
+  [
+   "4CH1-PR-07",
+   "REQUIRES_PREREQUISITE",
+   "4CH1-CON-SALT-INSOLUBLE-REACTANT"
+  ],
+  [
+   "4CH1-PR-08",
+   "REQUIRES_PREREQUISITE",
+   "4CH1-CON-SALT-PRECIPITATION"
+  ],
+  [
+   "4CH1-PR-05",
+   "REQUIRES_PREREQUISITE",
+   "4CH1-CON-O2-PERCENT-DETERMINATION"
+  ],
+  [
+   "4CH1-PR-12",
+   "REQUIRES_PREREQUISITE",
+   "4CH1-CON-ACID-REACTIONS"
+  ],
+  [
+   "4CH1-PR-06",
+   "REQUIRES_PREREQUISITE",
+   "4CH1-CON-REACT-ARRANGE"
+  ]
+ ]
+}
