@@ -1639,3 +1639,50 @@ hasBundle is false (the KG card included — the operator's ask).
 - **Incident (already logged at claim time)**: the first core commit clobbered `ClassKnowledgeGraphServiceTest` via a Write; restored verbatim in f6d4399 with the constructor updated + §14 pins appended. Nothing lost.
 - **Honest remaining state**: live-path drill verification on the redeployed Render core + Vercel hub needs pilot-teacher credentials (operator-held) — next_safe_action in the yaml. The anchor B2 flip + B3 addition (from the B2 triage) remains PROPOSED-awaiting-operator, untouched by this task.
 - Records: `.syllabai/tasks/T-C37.yaml` (DONE, VERIFIED CI claims); TSVs → Completed / superz (master workbook row 175 + teacher-lms addendum row; XLSX re-export belongs to the T-C38 hygiene sweep).
+=======
+
+## 2026-09-30 — DONE: HUB-TEACHER-DASH wave 3 (My Class Geography Progress + no-corpus badges)
+
+- [x] HUB-TEACHER-DASH-W3 (operator trace 1a0f0e078fde5fb1) — LANDED hub
+42dd614 (rebased over the mid-flight T-C37 merge 86b43b7 — PR #4 landed
+during stand-down; ZERO file overlap confirmed before rebasing:
+knowledge-graph client/drill-panel/kg-explorer/api.ts/types.ts untouched by
+wave 3). BOTH operator items shipped. (1) MY CLASS GEOGRAPHY PROGRESS: new
+class-level section in the workspace (honest "browser-local · corpus
+coverage per subtopic — not learner mastery" framing) + new page
+/teacher/classes/[id]/geography backed by the NEW hub-local read-only route
+/api/teacher/class-geography?slugs=... composing getCourseBundle +
+buildSpecTreeIndex + resourceCounts — the canonical spec-tree machinery the
+revision-notes index already uses (subject → topics → subtopics with
+per-subtopic notes/questions/flashcards; zero subtopic numbers estimated,
+bare subtopics marked "no coverage yet"). Honesty boundary enforced in
+product: local- unknown ids → the missing-class card; CORE ids → a pointer
+to the core heatmap surfaces — NO second mastery graph was built (the
+drill-chain lane owns mastery; T-C37 coexists). No-corpus package state
+renders the honest "no corpus package" card per subject. (2) NO-CORPUS
+BADGES: resource cards render a "no corpus package" badge instead of an
+eternal Skeleton when course-stats says hasBundle=false (the KG card
+included). ZERO contract delta: the route reads committed content bundles
+only, no core calls, no lease. Verification: tsc + eslint clean (exit-code
+verified properly — an earlier pass read the pipe's tail exit, exposed and
+corrected), unit suite 19/19, production build green (scaffold dev-server
+TERMINATED for this build — SIGSTOP no longer freed enough after the reset;
+:3000 next-dev restored after, 200); CDP probe 19/19
+(scripts/w10_teacher_geography_probe.mjs, real clicks, production
+standalone :3100 — real create flow, geography section, badge branch
+exercised via intercepted course-stats hasBundle:false response — every
+current registry course HAS a bundle, so the pixel branch is otherwise
+unreachable: honest probe note —, coverage map anatomy incl. "5/23/37
+n/q/f" on 1.1 States of matter, unknown-id and core-id honesty, zero page
+errors); wave-2 16/16 + wave-1 26/26 re-run (no regression). ENVIRONMENT
+NOTES (ledger-grade): the reset wiped the hub clone (re-cloned),
+~/.git-credentials (re-seeded from the operator's recorded PAT, masked
+ghp_…iZVh, GET /user 200 — ROTATION STILL RECOMMENDED) and the global
+credential.helper (restored: git config --global credential.helper store);
+bun.lock is gitignored so the fresh clone installs via npm install
+(package-lock absent); the reset also chmod'd repo-wide mode-only diffs
+(local core.fileMode=false) and left a stale working-tree locks.yaml whose
+phantom T-C30 lease was NOT committed history — a redundant reconciliation
+commit was prepared and dropped in favor of origin's truth. hub-ci on
+42dd614: build SUCCESS + e2e SUCCESS; Vercel Production success
+(API-verified).
