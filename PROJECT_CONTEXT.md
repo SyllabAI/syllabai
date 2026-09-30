@@ -37,6 +37,9 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `backlog/learning-evidence-feature-addendum.tsv`: committed feature-tracker addendum for F-055/F-056/F-057/F-058/F-059 and their integrations; folded into the master workbook in session 17 (2026-09-07) as decision notes and priority updates — it remains the detailed supplement, not a competing inventory.
 - `backlog/recommendation-system-feature-addendum.tsv`: committed feature-tracker addendum for the learning-first recommendation architecture; folded into the master workbook in session 17 (2026-09-07) as decision notes and priority updates — it remains the detailed supplement, not a competing inventory.
 - `backlog/mock-exam-generator-feature-addendum.tsv`: committed feature-tracker addendum extending F-051 with F-171…F-176; folded into the master workbook in session 18 (2026-09-08: F-051 updated in place, six rows appended, TSV/XLSX parity 181=181) — it remains the detailed supplement, not a competing inventory.
+- `docs/research/SUBJECT_INTELLIGENCE_BUILD_V1.md`: proposed cross-subject Subject Intelligence Build (SIB-1.0) protocol; one notebook per subject/qualification context; standardized research families and generation order.
+- `docs/research/SIB_ARTIFACT_SCHEMA_V1.md`: proposed research-artifact metadata, provenance, temporal-scope, chunking and runtime-eligibility contract.
+- `docs/research/SIB_NOTEBOOKLM_PROMPTS_V1.md`: proposed reusable NotebookLM master, family, QA and final-audit prompts; prompts are standardized across subjects and applicability is manifest-driven.
 
 ## Repositories
 
