@@ -313,8 +313,8 @@ task:
           pre-census was derived not probed (306V/747S totals the snap-003 EQ chunk count
           1,056 — commit db17167912 corrected the gate to the probed 296V/80S/3F); (2) the kit
           keyed documents by documents.id while the decisions carry the document_id varchar,
-          assumed a flat render-env format (the sanctioned file is {"env":[{key,value},...]}),
+          assumed a flat render-env format (the sanctioned file is {\"env\":[{key,value},...]}),
           and used document_id as audit target_id (the wave's proven semantics is row uuid
           target / varchar in detail) — all fixed in the executed apply_flip.py.
           Run report: evidence/bench-001/flagged3-flip-2026-09-28/ (run_report.json +
-          dry_run_report.json).
+          dry_run_report.json)."
