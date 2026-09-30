@@ -1722,3 +1722,55 @@ claim was first staged locally as 524230d but sandbox reset #4 wiped the local
 commits before any push; re-registered verbatim on the new base. PAT note:
 operator provisioned a fresh credential (IM trace 1a0f3c866fb4b2bd, GET /user
 200, stored 0600) — rotation of the previously-recorded token still applies.
+
+## 2026-09-30 — DONE: T-C39 — the B2 data-wave identified: the 2026-09-28 T-PS1 OCR lane (O6/O6b)
+
+- [x] **T-C39 (operator trace 1a0f281f435be551 "Proceed with Provenance
+gap") — the ingest/validation wave that moved the 4CH1/1C June-2019 QP/MS
+docs to VALIDATED is IDENTIFIED: the T-PS1 OCR lane + COVID resolution,
+2026-09-28, operator IM trace 1a0e9c4c5305d55d ("…green light the OCR
+lane"), agent-performed under the Task-58→60 delegation chain,
+teacher_validation_events 0 throughout.** The identification is a read-only
+evidence walk — zero DB writes, zero probes, sha-frozen packs untouched.
+Wave anatomy (evidence `bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-28/`):
+
+  - **O5 ingest**: `POST /documents?kind=QUESTION_PAPER` → fresh doc
+    `98622045` (18 chunks, engine `pdflane-atoms-ocr/1.3.0`, `/embed` 18/18
+    gemini-embedding-001 @ rev2); MS doc `02e4c38c` = the genuine corpus MS
+    ingested in Task 60.
+  - **O6 apply — one fail-closed tx, dry-run first, COMMITTED 2026-09-28
+    21:19:52Z** (ocr_O6_report.json): PLACE QP shell `cf68cf74` → `98622045`;
+    PLACE MS shell `39935310` → `02e4c38c`; UNFLAG+VALIDATE the paper;
+    VALIDATE children (June-2019: 15 qv + 2 schemes; June-2020: 10 qv + 10
+    schemes) + 4 doc-VALIDATE rows; 50 audit rows; doc census 87→89
+    VALIDATED (+2 net).
+  - **O6b remediation — COMMITTED 21:21:27Z** (ocr_O6b_remediation_report.json):
+    the independent O7 verify caught that O6 wrote the 4 doc-VALIDATE audit
+    rows but omitted the documents UPDATE itself; guarded tx performed it
+    (rowcount 4) + 4 corrective cross-referenced rows, append-only (54 rows
+    total; O7 audit-chain PLACE 4 / REJECT 1 / UNFLAG 2 / VALIDATE 47,
+    fails []).
+  - **Timeline fit — the B2 window brackets the wave**: sweep `2a1676a`
+    GREEN 09-28 11:16Z (pre-wave) → O6 21:19:52Z + O6b 21:21:27Z → scheduled
+    sweep `aee2af1` 09-29 00:27Z B2-only RED (serving real 1C cites). The
+    sibling June-2020-1C doc pair rode the same tx (COVID supersession
+    context); children of both papers landed 09-29 via Task 66 TX-A
+    (corrective rows 3940–3976, trace `1a0ea5a6dbc30c79`, verify 28/28).
+    The B2 flip decision itself: 2026-09-30, Discord trace
+    `b4fc2bee098c230126cc126e5ca72457`, core PR #35 → linear `77c7a7c`,
+    sweep 12/12 PASS (run 36697034459).
+  - **Live MS cite ids beyond `02e4c38c`** (`f3a234b6`/`f8efe458`/`aa079c51`)
+    are serving-pool composition — retrieval may cite sibling MS chunks;
+    the gate-flip is attributable to the paper row + linked-doc VALIDATEs
+    above (the A-family control on the sibling 2C paper refusing throughout
+    proves coverage, not pool bleed).
+
+- **Core pointer**: `scripts/anchor_matrix_sweep.py` docstring PROVENANCE GAP
+  note replaced with the identification + ledger-entry pointer (docstring-only,
+  zero runtime delta; commit `8ee3da6` on main `0522b08..8ee3da6`;
+  py_compile clean; ci.yml correctly skipped by its own path filters —
+  scripts/ not in the trigger set; anchor-sweep DISPATCHED on the new head:
+  run **36767462742 = SUCCESS**, the fail-closed 12-anchor gate stays green
+  with the edited docstring). The anchor's own record now names its
+  data-wave.
+- Records: `.syllabai/tasks/T-C39.yaml` (DONE, claims below).

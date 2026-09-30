@@ -3,7 +3,7 @@ task:
   id: T-C39
   title: "Provenance-gap closure — identify the ingest/validation wave that moved the 4CH1/1C June-2019 QP/MS docs to VALIDATED (the B2 data-wave)"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: EXECUTING
+  status: DONE
   priority: P2
   base:
     repo: syllabai (master pack)
@@ -31,11 +31,35 @@ task:
       as verified"
     - "the sweep docstring no longer records the gap as open; it points at
       the ledger entry"
+  outcome: >
+    The wave is IDENTIFIED: the T-PS1 OCR lane + COVID resolution of
+    2026-09-28 (operator IM trace 1a0e9c4c5305d55d) — O5 ingest of QP doc
+    98622045, O6 apply COMMITTED 2026-09-28 21:19:52Z (50 audit rows), O6b
+    doc-UPDATE remediation 21:21:27Z (rowcount 4, 4 corrective rows, 54
+    total). The B2 window brackets it: 2a1676a GREEN 09-28 11:16Z ->
+    O6/O6b ~21:20Z -> aee2af1 B2-only RED 09-29 00:27Z. Children landed
+    09-29 via Task 66 TX-A (rows 3940-3976).
   claims:
-    VERIFIED: []
-    INFERRED: []
+    VERIFIED:
+      - "wave identification resolves end-to-end to sha-frozen evidence:
+        ocr_O6_report.json (COMMITTED 21:19:52Z, 50 rows),
+        ocr_O6b_remediation_report.json (21:21:27Z, 4 rows),
+        ocr_O7_verify.json (chain PLACE 4 / REJECT 1 / UNFLAG 2 / VALIDATE
+        47, fails [])"
+      - "B2 window brackets the wave: 2a1676a GREEN 09-28 11:16Z -> O6
+        21:19:52Z + O6b 21:21:27Z -> aee2af1 B2-only RED 09-29 00:27Z"
+      - "core docstring pointer landed: main 0522b08..8ee3da6
+        (docstring-only, py_compile clean; ci.yml correctly skipped by its
+        own src/**-scoped path filters); anchor-sweep DISPATCHED on the new
+        head: run 36767462742 = completed/SUCCESS — the fail-closed
+        12-anchor gate stays green with the edited docstring"
+      - "ledger landed: TODO.md claim e53e296 + this DONE record; zero DB
+        writes, zero probes, sha-frozen packs byte-untouched"
+    INFERRED:
+      - "the four doc-VALIDATE rows cover both 1C pairs (June-2019 +
+        June-2020); doc census +2 net with PLACE semantics reconciled only
+        at row level (O7 chain), not per-doc"
     REPORTED: []
     UNVERIFIED: []
   next_safe_actions:
-    - "land: push claim -> core docstring pointer + core-ci check -> closeout
-      commit (this yaml DONE + TODO DONE section with run ids)"
+    - "none owed by this task — the T-C38 provenance item is closed"
