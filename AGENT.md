@@ -73,7 +73,7 @@ The Master Spec is the engineering source of truth. Research papers remain autho
 
 ```text
 syllabai                 main repo: spec, ADRs, backlog, research dossiers, papers
-syllabai-web             Next.js 16 / React 19 / TypeScript frontend
+syllabai-hub             Next.js 16 / React 19 / TypeScript frontend (the Vercel project keeps the historical syllabai-web name)
 syllabai-core            Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith
 syllabai-parser          polyglot offline content pipeline
 syllabai-pastpapers      canonical exam corpus: manifests, provenance, ledgers

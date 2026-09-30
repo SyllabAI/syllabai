@@ -1639,7 +1639,6 @@ hasBundle is false (the KG card included — the operator's ask).
 - **Incident (already logged at claim time)**: the first core commit clobbered `ClassKnowledgeGraphServiceTest` via a Write; restored verbatim in f6d4399 with the constructor updated + §14 pins appended. Nothing lost.
 - **Honest remaining state**: live-path drill verification on the redeployed Render core + Vercel hub needs pilot-teacher credentials (operator-held) — next_safe_action in the yaml. The anchor B2 flip + B3 addition (from the B2 triage) remains PROPOSED-awaiting-operator, untouched by this task.
 - Records: `.syllabai/tasks/T-C37.yaml` (DONE, VERIFIED CI claims); TSVs → Completed / superz (master workbook row 175 + teacher-lms addendum row; XLSX re-export belongs to the T-C38 hygiene sweep).
-=======
 
 ## 2026-09-30 — DONE: HUB-TEACHER-DASH wave 3 (My Class Geography Progress + no-corpus badges)
 
@@ -1686,3 +1685,15 @@ phantom T-C30 lease was NOT committed history — a redundant reconciliation
 commit was prepared and dropped in favor of origin's truth. hub-ci on
 42dd614: build SUCCESS + e2e SUCCESS; Vercel Production success
 (API-verified).
+
+
+## 2026-09-30 — DONE: T-C38 hygiene sweep + anchor B2 flip/B3 pin + partial T-C37 drill (operator directive: "Proceed with ① live-path drill … ② the anchor B2 flip + B3 addition … ③ T-C38 hygiene sweep")
+
+### T-C38 closeout (superz, zai Discord session ObviousGazelle)
+
+- **② anchor B2 flip + B3 addition — core PR #35 MERGED (rebase, linear `77c7a7c`); dispatched anchor-sweep run 36697034459 = SUCCESS, 12/12 anchors PASS: B2 `SERVED(cites)` PASS, B3 `GUARD-REFUSAL` PASS, A1–A5/B1/C1/D1/E1/E2 all PASS.** The flip executes B2's own DATA-COUPLED contract (trace 1a0e323dbeb8a161): 4CH1/1C June-2019 QP/MS reached VALIDATED between the 09-28 11:16Z GREEN run (2a1676a) and the 09-29 00:27Z B2-only RED (aee2af1; repeated 5b946ba); live cites were the real 1C QP/MS docs (98622045… QP p7/p11; 02e4c38c/f3a234b6/f8efe458/aa079c51 MS), A-family control green ⇒ coverage, not pool bleed; guard code exonerated (resolver last touched 09-27, before the green run). B3 = `explain question 99 from june 2019 paper 1` → `GUARD-REFUSAL` keeps the 1C refusal side pinned now that Q3 legitimately serves. Matrix 11→12 asks; the decision record lives in the sweep docstring + RULES + workflow header. **PROVENANCE GAP (recorded, open): no master-pack ledger entry identifies the ingest/validation wave that moved the 1C docs to VALIDATED — the flip is deliberate, the source wave unrecorded.**
+- **③ TSV↔XLSX parity restored** (`backlog/syllabai-master-project.xlsx` vs `syllabai-master-project.tsv`; physical-line parse — the csv module silently swallows rows at 3 stray quote chars on lines 2/60/93, which had hidden the TFA rows from naive checks; 181↔181 rows): 6 cells fixed — TFA-07 Status `Planned→Completed` + Owner `Unassigned→superz (T-C37)` (full row now 25/25 equal), F-040 + F-160 Status `Not Started→In Progress`, F-040 + F-160 Agent Notes synced to canonical TSV text. Residual Status/Owner drift: 0. TFA-01/02/03 verified as honestly `Planned` in both files (no tracked claim/implementation found) — left untouched.
+- **③ PROGRESS.md marker refreshed** — the `Last updated` header was stuck at Session 116 (09-22) while per-session sections end at Session 129 and sessions 130+ live in TODO entries/task-registry/ledgers; the header now states current truth plus that tracking convention (section backfill deliberately out of T-C38 scope).
+- **③ AGENT.md repo table** — `syllabai-web` → `syllabai-hub` (the frontend repo all FE work lands in; note kept that the Vercel project retains the historical name).
+- **① live-path drill — partial, honest state:** the redeployed Render core fingerprinted live: `/actuator/health` 200; both NEW TFA-07 routes (`/api/v1/teacher/classes/{id}/knowledge-graph/nodes/{nodeId}/students`, `…/knowledge-graph/learners/{learnerId}/knowledge-graph`) return 401 (route exists ⇒ TFA-07 backend deployed), alongside the F-072 root's 401. The AUTHENTICATED teacher leg is blocked on the pilot-teacher password: operator-held (syllabai-ops README — the session-59 delivery report was lost; the GitHub secret is write-only; the session-118 credential cache died with the sandbox reset). Zero prod writes during probing. Next: operator pastes current/rotated creds → the authenticated chain re-runs immediately (core stays warm; curl transport).
+- Records: `.syllabai/tasks/T-C38.yaml` (DONE).
