@@ -1592,3 +1592,42 @@ wave 2.
 - **Tests**: core — controller gates + delegation unit tests, service §14 pins (non-member 404 / disabled-member 404 / F-034 delegation), flow-IT legs over the V6 seed subject where two members submit REAL attempts (misconception-tagged wrong + correct) and the drill reads the BKT/BDT states the pipeline wrote, plus the drill-down edition of the read-only pin. Hub — local lint + mock-mode build green pre-push; CI owns the final verdicts (pending at claim time).
 - **Incident, logged**: the first core commit clobbered the existing 389-line `ClassKnowledgeGraphServiceTest` (a Write replaced it; my TFA-07 service test would have silently destroyed the F-072 aggregation pins). Restored verbatim in the follow-up commit `f6d4399`, constructor updated for the two new collaborators, §14 pins appended. Verified by `git show HEAD~1` diff. Reminder to future sessions: ALWAYS `git status` + check for an existing file before naming a new test file after a concept that already has one.
 - Records: `.syllabai/tasks/T-C37.yaml` (VERIFYING); TSVs: TFA-07 → In Progress / superz (both the master workbook row 175 and the addendum row).
+
+## 2026-09-30 — claim: HUB-TEACHER-DASH wave 3 (class geography progress view + no-corpus badges; operator trace 1a0f0e078fde5fb1)
+
+- [ ] HUB-TEACHER-DASH-W3 (IN PROGRESS, session web-98866c45, operator trace
+1a0f0e078fde5fb1: "Proceed with Add a class-level 'My Class Geography
+Progress' view next to the core class KG heatmap, or add badges to the KG
+cards if a subject doesn't have a corpus package. And also check recent
+progress before."). Both items proceed (complementary: the badge handles the
+no-bundle case honestly; the view is the geography surface). RECENT-PROGRESS
+REVIEW AT CLAIM TIME: hub origin/main = 0913147 (wave 2, unmoved since);
+coordination head 94b86a5; the environment reset wiped the hub clone
+(re-cloned at 0913147) and ~/.git-credentials (re-seeded from the operator's
+recorded PAT, masked ghp_…iZVh, GET /user 200 — rotation still recommended);
+STALE-STATE NOTE: the reset also left a stale working-tree snapshot of
+locks.yaml showing a live T-C30 entry — the committed history already had
+it reconciled (locks: [] + the 2026-09-26 note), a reconciliation commit
+was briefly prepared and then DROPPED as redundant against origin's truth
+(wave-1 precedent: origin's own records supersede stale-snapshot dirty
+files); mode-only diffs from the reset's chmod were silenced with a local
+core.fileMode=false. CONCURRENT LANE CHECKED: T-C37 (TFA-07 drill chain,
+hub PR #4 open, merged: False, base 0913147) touches
+knowledge-graph/client.tsx, drill-down-panel, kg-explorer/adapters.ts,
+lib/api.ts, lib/types.ts — wave 3's file set is DISJOINT (new geography
+route + class-workspace-local.tsx only; lib/api.ts and lib/types.ts
+untouched), and the no-duplication constraint is respected: the geography
+view is the LOCAL class container's corpus-coverage surface, NOT a second
+mastery graph — cohort mastery stays core's heatmap + T-C37 drill chain.
+Design (hub-only, ZERO contract delta, no lease — reads the committed
+content bundles only): (1) NEW hub-local read-only route
+/api/teacher/class-geography?slugs=... composing getCourseBundle +
+buildSpecTreeIndex + resourceCounts (the canonical spec-tree machinery the
+revision-notes index already uses — subject → topics → subtopics with
+per-subtopic notes/questions/flashcards counts, in-process cache + the
+course-stats CDN header); (2) NEW page /teacher/classes/[id]/geography for
+local- ids (unknown ids → the honest missing card; core ids → a pointer to
+the heatmap — no second mastery graph); (3) class-workspace-local.tsx: a
+"Geography progress" card next to Class intelligence + honest "no corpus
+package" badges replacing the eternal Skeleton on resource cards when
+hasBundle is false (the KG card included — the operator's ask).
