@@ -54,6 +54,7 @@ from .anchors import AnchorRegistry, build_registry
 from .artifact_validator import VALID_APPLICABILITY, content_fingerprint, validate_artifact
 from .errors import Codes, SEVERITY_ERROR, ValidationReport
 from .frontmatter import parse_front_matter
+from .yamlmini import load_yaml
 
 _LIBRARY_SUBDIRS = ("artifacts", "staged", "published", "qa-reports", "chunks")
 
@@ -123,9 +124,8 @@ class SibLibrary:
         if not os.path.isfile(path):
             return None
         try:
-            import yaml
             with open(path, "r", encoding="utf-8") as fh:
-                data = yaml.safe_load(fh) or {}
+                data = load_yaml(fh.read()) or {}
         except Exception:
             return []
         ids: List[str] = []

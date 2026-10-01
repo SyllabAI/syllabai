@@ -34,14 +34,13 @@ import os
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
 
-import yaml
-
 from . import taxonomy
 from .errors import (Codes, SEVERITY_ERROR, SEVERITY_INFO, SEVERITY_WARNING,
                      ValidationReport)
 from .lifecycle import (STATUS_GENERATED, STATUS_PUBLISHED, STATUS_QA_FAILED,
                         STATUS_QA_PASSED, STATUS_STAGED, ALL_STATUSES)
 from .artifact_validator import VALID_APPLICABILITY  # single source of truth
+from .yamlmini import load_yaml
 
 # statuses a manifest row may legally carry
 _MANIFEST_ROW_STATUSES = frozenset(ALL_STATUSES)
@@ -88,7 +87,7 @@ def load_manifest(path: str) -> Tuple[Optional[Manifest], Optional[str]]:
     """Load and parse manifest.yaml. Returns (manifest, None) or (None, error)."""
     try:
         with open(path, "r", encoding="utf-8") as fh:
-            data = yaml.safe_load(fh)
+            data = load_yaml(fh.read())
     except FileNotFoundError:
         return None, f"manifest file not found: {path}"
     except Exception as exc:

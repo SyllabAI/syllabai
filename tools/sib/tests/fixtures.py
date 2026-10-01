@@ -1,6 +1,7 @@
 """Deterministic artifact/manifest fixtures for the SIB test suite.
 
-All builders are pure functions of their arguments -- no clocks, no random.
+All builders are pure functions of their arguments -- no clocks, no random,
+no PyYAML (the suite must run on stdlib-only environments).
 """
 from __future__ import annotations
 
@@ -97,7 +98,20 @@ def artifact_text(
         f"{records}\n")
 
 
-def minimal_manifest(
+def _rows_yaml(rows: List[Dict]) -> str:
+    out = []
+    for r in rows:
+        out.append(f"  - artifact_id: {r['artifact_id']}")
+        out.append(f"    applicability: {r['applicability']}")
+        out.append(f"    status: {r['status']}")
+        if r.get("filename"):
+            out.append(f"    filename: {r['filename']}")
+        if r.get("notes"):
+            out.append(f"    notes: {r['notes']}")
+    return "\n".join(out)
+
+
+def minimal_manifest_dict(
     rows: Optional[List[Dict]] = None,
     subject: str = "Chemistry",
     specification: str = "4CH1",
@@ -107,8 +121,8 @@ def minimal_manifest(
     source_manifest: str = "src-man-4ch1-2017",
     source_gaps: Optional[List[Dict]] = None,
     backlog: Optional[List[Dict]] = None,
-) -> str:
-    import yaml
+) -> Dict:
+    """Build the manifest as a dict (for from_dict-based tests)."""
     data = {
         "sib_protocol": "SIB-1.0",
         "manifest_version": "1.0",
@@ -128,10 +142,47 @@ def minimal_manifest(
         data["source_gaps"] = source_gaps
     if backlog:
         data["backlog"] = backlog
-    return yaml.safe_dump(data, sort_keys=False)
+    return data
+
+
+def minimal_manifest(**kwargs) -> str:
+    """Build the manifest as hand-written YAML text (deterministic)."""
+    data = minimal_manifest_dict(**kwargs)
+    lines = [
+        f"sib_protocol: {data['sib_protocol']}",
+        f"manifest_version: \"{data['manifest_version']}\"",
+        f"subject: {data['subject']}",
+        f"qualification: {data['qualification']}",
+        f"specification: {data['specification']}",
+        f"curriculum_version: \"{data['curriculum_version']}\"",
+        f"notebook: {data['notebook']}",
+        f"source_manifest: {data['source_manifest']}",
+        "artifacts:",
+        _rows_yaml(data["artifacts"]),
+    ]
+    for gap in data.get("source_gaps") or []:
+        lines.append("source_gaps:" if "source_gaps:" not in lines else "")
+        lines.append(f"  - id: {gap['id']}")
+        lines.append(f"    description: {gap['description']}")
+    for item in data.get("backlog") or []:
+        lines.append("backlog:" if "backlog:" not in lines else "")
+        lines.append(f"  - id: {item['id']}")
+        lines.append(f"    description: {item['description']}")
+    return "\n".join(lines) + "\n"
+
+
+def registry_dict(ids: Optional[List[str]] = None) -> Dict:
+    return {"specification_points":
+            ids if ids is not None else ["1.4", "1.5", "2.30"]}
 
 
 def registry_yaml(ids: Optional[List[str]] = None) -> str:
-    import yaml
-    ids = ids if ids is not None else ["1.4", "1.5", "2.30"]
-    return yaml.safe_dump({"specification_points": ids}, sort_keys=False)
+    data = registry_dict(ids)
+    lines = ["specification_points:"]
+    lines += [f'  - "{i}"' for i in data["specification_points"]]
+    return "\n".join(lines) + "\n"
+
+
+def source_manifest_yaml(ids: List[str]) -> str:
+    lines = ["sources:"] + [f"  - {i}" for i in ids]
+    return "\n".join(lines) + "\n"

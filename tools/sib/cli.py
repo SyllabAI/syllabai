@@ -36,9 +36,9 @@ def _registry_ids(library_dir: str) -> Optional[List[str]]:
     path = os.path.join(library_dir, "curriculum_registry.yaml")
     if not os.path.isfile(path):
         return None
-    import yaml
+    from tools.sib.yamlmini import load_yaml
     with open(path, "r", encoding="utf-8") as fh:
-        data = yaml.safe_load(fh) or {}
+        data = load_yaml(fh.read()) or {}
     ids = data.get("specification_points") or data.get("identifiers") or []
     return [str(i) for i in ids]
 

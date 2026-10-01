@@ -8,7 +8,8 @@ import unittest
 from tools.sib.errors import Codes
 from tools.sib.manifest_model import (from_dict, load_manifest,
                                       manifest_counts, validate_manifest)
-from tools.sib.tests.fixtures import artifact_text, minimal_manifest
+from tools.sib.tests.fixtures import (artifact_text, minimal_manifest,
+                                      minimal_manifest_dict)
 
 VALID_ROW = {"artifact_id": "MIS-01", "applicability": "REQUIRED",
              "status": "GENERATED",
@@ -33,8 +34,7 @@ class _ManifestTestBase(unittest.TestCase):
 
 class TestManifestStructure(_ManifestTestBase):
     def test_valid_minimal_manifest(self):
-        import yaml
-        manifest = from_dict(yaml.safe_load(minimal_manifest()))
+        manifest = from_dict(minimal_manifest_dict())
         rep = validate_manifest(manifest, None)
         self.assertTrue(rep.qa_passed, rep.to_json())
 
@@ -44,51 +44,42 @@ class TestManifestStructure(_ManifestTestBase):
         self.assertIn(Codes.MANIFEST_MALFORMED, rep.codes())
 
     def test_missing_required_field(self):
-        import yaml
-        data = yaml.safe_load(minimal_manifest())
+        data = minimal_manifest_dict()
         del data["specification"]
         rep = validate_manifest(from_dict(data), None)
         self._expect(rep, Codes.MANIFEST_FIELD, "specification")
 
     def test_missing_provenance_fields(self):
-        import yaml
-        data = yaml.safe_load(minimal_manifest(notebook="TBD"))
-        rep = validate_manifest(from_dict(data), None)
+        rep = validate_manifest(from_dict(minimal_manifest_dict(notebook="TBD")), None)
         self._expect(rep, Codes.MANIFEST_FIELD, "notebook")
 
     def test_duplicate_artifact_rows(self):
-        import yaml
         rows = [VALID_ROW, dict(VALID_ROW)]
-        rep = validate_manifest(from_dict(yaml.safe_load(minimal_manifest(rows))), None)
+        rep = validate_manifest(from_dict(minimal_manifest_dict(rows)), None)
         self._expect(rep, Codes.MANIFEST_DUP)
 
     def test_unknown_artifact_id(self):
-        import yaml
         rows = [dict(VALID_ROW, artifact_id="ZZ-99")]
-        rep = validate_manifest(from_dict(yaml.safe_load(minimal_manifest(rows))), None)
+        rep = validate_manifest(from_dict(minimal_manifest_dict(rows)), None)
         self._expect(rep, Codes.MANIFEST_UNKNOWN_ID)
 
     def test_invalid_applicability(self):
-        import yaml
         rows = [dict(VALID_ROW, applicability="MAYBE")]
-        rep = validate_manifest(from_dict(yaml.safe_load(minimal_manifest(rows))), None)
+        rep = validate_manifest(from_dict(minimal_manifest_dict(rows)), None)
         self._expect(rep, Codes.MANIFEST_FIELD, "applicability")
 
     def test_invalid_status(self):
-        import yaml
         rows = [dict(VALID_ROW, status="ACCEPTED")]
-        rep = validate_manifest(from_dict(yaml.safe_load(minimal_manifest(rows))), None)
+        rep = validate_manifest(from_dict(minimal_manifest_dict(rows)), None)
         self._expect(rep, Codes.MANIFEST_STATUS)
 
     def test_not_applicable_cannot_be_published(self):
-        import yaml
         rows = [dict(VALID_ROW, applicability="NOT_APPLICABLE",
                      status="PUBLISHED")]
-        rep = validate_manifest(from_dict(yaml.safe_load(minimal_manifest(rows))), None)
+        rep = validate_manifest(from_dict(minimal_manifest_dict(rows)), None)
         self._expect(rep, Codes.MANIFEST_COMBINATION)
 
     def test_optional_and_not_applicable_are_first_class(self):
-        import yaml
         rows = [
             dict(VALID_ROW),
             {"artifact_id": "CUR-06", "applicability": "OPTIONAL",
@@ -96,14 +87,13 @@ class TestManifestStructure(_ManifestTestBase):
             {"artifact_id": "PRA-03", "applicability": "NOT_APPLICABLE",
              "status": ""},
         ]
-        rep = validate_manifest(from_dict(yaml.safe_load(minimal_manifest(rows))), None)
+        rep = validate_manifest(from_dict(minimal_manifest_dict(rows)), None)
         self.assertTrue(rep.qa_passed, rep.to_json())
 
     def test_all_95_not_required(self):
         """A manifest with one row must pass disk-less validation: the 95
         taxonomy slots are inventory, not obligations."""
-        import yaml
-        rep = validate_manifest(from_dict(yaml.safe_load(minimal_manifest())), None)
+        rep = validate_manifest(from_dict(minimal_manifest_dict()), None)
         self.assertTrue(rep.qa_passed)
 
 
@@ -131,6 +121,9 @@ class TestManifestAgainstDisk(_ManifestTestBase):
 
     def test_manifest_artifact_status_disagreement(self):
         _write(self.tmp, "manifest.yaml", minimal_manifest())
+        # the manifest disk cross-check reads front matter directly (it is
+        # not the artifact QA path), so a STAGED file simply disagrees with
+        # the manifest's GENERATED row
         _write(self.tmp, "artifacts/CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md",
                artifact_text(status="STAGED"))
         manifest, err = load_manifest(os.path.join(self.tmp, "manifest.yaml"))
@@ -143,8 +136,7 @@ class TestManifestAgainstDisk(_ManifestTestBase):
         _write(self.tmp, "artifacts/CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md",
                artifact_text())
         _write(self.tmp, "artifacts/CHEMISTRY_4CH1_CUR-01_CURRICULUM_OVERVIEW.md",
-               artifact_text(artifact_id="CUR-01",
-                             status="GENERATED"))
+               artifact_text(artifact_id="CUR-01", status="GENERATED"))
         manifest, err = load_manifest(os.path.join(self.tmp, "manifest.yaml"))
         rep = validate_manifest(manifest, err,
                                 artifacts_dir=os.path.join(self.tmp, "artifacts"))
@@ -153,20 +145,18 @@ class TestManifestAgainstDisk(_ManifestTestBase):
         self.assertTrue(hits)
 
     def test_unsupported_publication_requires_qa_evidence(self):
-        import yaml
         rows = [dict(VALID_ROW, status="PUBLISHED")]
-        _write(self.tmp, "manifest.yaml", minimal_manifest(rows))
+        _write(self.tmp, "manifest.yaml", minimal_manifest(rows=rows))
         manifest, err = load_manifest(os.path.join(self.tmp, "manifest.yaml"))
         rep = validate_manifest(manifest, err,
                                 artifacts_dir=os.path.join(self.tmp, "artifacts"))
         self._expect(rep, Codes.MANIFEST_PUBLISH)
 
     def test_source_gaps_and_backlog_reported(self):
-        import yaml
-        data = yaml.safe_load(minimal_manifest(
+        data = minimal_manifest_dict(
             source_gaps=[{"id": "GAP-SRC-001",
                           "description": "examiner reports missing"}],
-            backlog=[{"id": "BL-001", "description": "legacy mapping"}]))
+            backlog=[{"id": "BL-001", "description": "legacy mapping"}])
         rep = validate_manifest(from_dict(data), None)
         self.assertIn(Codes.MANIFEST_GAP, rep.codes())
         self.assertIn(Codes.MANIFEST_BACKLOG, rep.codes())
@@ -176,8 +166,7 @@ class TestManifestAgainstDisk(_ManifestTestBase):
 
 class TestManifestCounts(unittest.TestCase):
     def test_counts_shape(self):
-        import yaml
-        m = from_dict(yaml.safe_load(minimal_manifest()))
+        m = from_dict(minimal_manifest_dict())
         counts = manifest_counts(m)
         self.assertEqual(counts["artifacts_defined"], 95)
         self.assertEqual(counts["REQUIRED"], 1)

@@ -133,11 +133,18 @@ sorted-key and byte-stable for identical input.
 ## 7. Tests / CI
 
 * Suite: `python3 -m tools.sib.tests.run_all` — stdlib `unittest` only,
-  repo-conventional standalone runner. 102 tests cover valid artifacts
+  repo-conventional standalone runner. 111 tests cover valid artifacts
   (full/optional/NOT_APPLICABLE/current/legacy), every rejection path above,
   determinism (repeated runs, cross-path byte-equality), and the runtime
   boundary (self-publication rejection, path-traversal refusal, no canonical
   write surface, purity of validation).
+* **Stdlib-only is proven, not claimed:** the entire suite passes with PyYAML
+  import-blocked (CI `setup-python` images do not ship it).
+  `tools/sib/yamlmini.py` provides a deterministic YAML-subset loader
+  (manifests, source manifests, registries, front matter) used when PyYAML is
+  absent; parity is tested. Registry ids must be QUOTED strings
+  (`- "2.30"`) — unquoted ids lose trailing zeros to YAML float typing
+  (pinned by test).
 * CI: `.github/workflows/sib-validator-ci.yml` runs the suite on every push/PR
   touching `tools/sib/**`.
 

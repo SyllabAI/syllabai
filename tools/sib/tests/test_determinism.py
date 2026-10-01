@@ -12,7 +12,8 @@ from tools.sib.artifact_validator import content_fingerprint, validate_artifact
 from tools.sib.chunking import chunk_artifact
 from tools.sib.ingest import SibLibrary
 from tools.sib.manifest_model import from_dict, load_manifest, manifest_counts, validate_manifest
-from tools.sib.tests.fixtures import artifact_text, minimal_manifest
+from tools.sib.tests.fixtures import (artifact_text, minimal_manifest,
+                                      minimal_manifest_dict)
 
 FILENAME = "CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md"
 
@@ -43,10 +44,9 @@ class TestDeterminism(unittest.TestCase):
         self.assertNotEqual(a, b)  # changes are observable via hash
 
     def test_manifest_counts_deterministic(self):
-        import yaml
-        m = from_dict(yaml.safe_load(minimal_manifest()))
+        m = from_dict(minimal_manifest_dict())
         c1 = json.dumps(manifest_counts(m), sort_keys=True)
-        c2 = json.dumps(manifest_counts(from_dict(yaml.safe_load(minimal_manifest()))), sort_keys=True)
+        c2 = json.dumps(manifest_counts(from_dict(minimal_manifest_dict())), sort_keys=True)
         self.assertEqual(c1, c2)
 
     def test_qa_report_file_byte_identical_in_libraries_at_different_paths(self):

@@ -171,7 +171,23 @@ def validate_anchors(artifact_text: str, artifact_id: str,
 
 
 def build_registry(identifiers: Optional[List[str]]) -> AnchorRegistry:
-    """Convenience constructor used by the CLI/ingest layer."""
+    """Convenience constructor used by the CLI/ingest layer.
+
+    Registry identifiers are string contracts. YAML-typed scalars are
+    defensively coerced (``1`` -> ``"1"``, ``2.30`` -> ``"2.3"``), but the
+    documented best practice is to QUOTE ids in ``curriculum_registry.yaml``
+    (`- "2.30"`) so no trailing zero is lost to float typing.
+    """
     if not identifiers:
         return AnchorRegistry(None)
-    return AnchorRegistry(frozenset(identifiers))
+    norm = set()
+    for i in identifiers:
+        if isinstance(i, bool):
+            continue  # not an identifier
+        if isinstance(i, int):
+            norm.add(str(i))
+        elif isinstance(i, float):
+            norm.add(repr(i))
+        elif isinstance(i, str):
+            norm.add(i)
+    return AnchorRegistry(frozenset(norm))

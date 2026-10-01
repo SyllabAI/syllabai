@@ -17,6 +17,7 @@ if __package__ in (None, ""):
 
 MODULES = [
     "tools.sib.tests.test_taxonomy",
+    "tools.sib.tests.test_yamlmini",
     "tools.sib.tests.test_frontmatter",
     "tools.sib.tests.test_lifecycle",
     "tools.sib.tests.test_artifact_validator",

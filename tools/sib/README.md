@@ -17,11 +17,13 @@ Key properties:
   evidence-gated, path-confined actions.
 * **Deterministic** — byte-identical reports/chunks for identical input;
   no clocks or randomness in identity.
-* **Stdlib-only core** — PyYAML is used when present (guarded), with a
-  tested parity fallback parser.
+* **Stdlib-only core (proven by test)** — PyYAML is used when present
+  (guarded); `yamlmini.py` provides a tested deterministic YAML-subset
+  fallback for manifests/registries/front matter. The full suite passes with
+  PyYAML import-blocked.
 
 ```bash
-# run the test suite (102 tests)
+# run the test suite (111 tests)
 python3 -m tools.sib.tests.run_all
 
 # CLI
