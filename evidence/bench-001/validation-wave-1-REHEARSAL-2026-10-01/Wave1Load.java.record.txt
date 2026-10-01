@@ -1,0 +1,150 @@
+package com.syllabai.bench;
+
+import java.nio.file.Path;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import org.flywaydb.core.Flyway;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+/**
+ * T-C41 wave-1 REHEARSAL loader (bench_replay on :5433 — disposable replay DB).
+ *
+ * Rebuilds the exact wave-1 prestate from frozen, checksummed inputs:
+ *   1. Flyway migrate (real migration set, V1..V56)
+ *   2. Run004A.verifyArtifact — fail-closed artifact verification
+ *   3. Run003B.loadSnapshot — the production loader (snap-006 corpus)
+ *   4. Run004A.applyChunkVectors + assertStoredState — bit-exact frozen vectors
+ *   5. The 2026-09-28 cut-over mirror stamp: embed_rev=2 EXACTLY for the
+ *      pre-wave serving-eligible set (paper-VALIDATED QP/MS docs + doc-VALIDATED
+ *      docs); everything else stays at the V33 default rev1 — so the wave kit's
+ *      restamp step is exercised against a real rev1 population, as in production.
+ *   6. Prints the wave-1 prestate census (per unit, per document kind)
+ *   7. Seeds the bench teacher principal (users + user_roles TEACHER) whose uid
+ *      goes into the locally-minted rehearsal JWT.
+ *
+ * NOT production. NOT a validation assertion: bench_replay is a disposable
+ * replay database; no production row is touched by this lane.
+ */
+public final class Wave1Load {
+
+    private static final String[] UNITS = {"4CH1/2C", "4CH0/2C", "4CH1/2CR", "4CH1/1C"};
+
+    public static void main(String[] args) throws Exception {
+        Path snapshotDir = Path.of(req("BENCH_SNAPSHOT"));
+        Path artifactDir = Path.of(req("BENCH_EMBED_ARTIFACT"));
+        Path goldDir = Path.of(System.getenv().getOrDefault("BENCH_GOLD", "bench/inputs/gold"));
+        String url = req("BENCH_JDBC_URL");
+        String user = req("BENCH_JDBC_USER");
+        String pass = req("BENCH_JDBC_PASSWORD");
+
+        BenchSnapshot snapshot = BenchSnapshot.load(snapshotDir);
+        BenchGold gold = BenchGold.load(goldDir);
+
+        Flyway.configure().dataSource(url, user, pass).load().migrate();
+        JdbcTemplate jdbc = new JdbcTemplate(new DriverManagerDataSource(url, user, pass));
+
+        log("verifying artifact checksums (fail-closed)");
+        Run004A.verifyArtifact(artifactDir, snapshotDir, goldDir, gold, snapshot, true);
+
+        log("loading " + snapshot.snapshotVersion() + " corpus through the production loader");
+        Run003B.SnapshotLoad load = Run003B.loadSnapshot(jdbc, snapshot);
+        int dbChunks = jdbc.queryForObject("select count(*) from document_chunks", Integer.class);
+        if (dbChunks != snapshot.chunkCount()) {
+            throw new IllegalStateException("document_chunks " + dbChunks + " != snapshot "
+                    + snapshot.chunkCount() + " (fail-closed)");
+        }
+        log("corpus loaded: " + load.documents() + " documents, " + dbChunks + " chunks, "
+                + load.papers() + " per-document paper rows");
+
+        log("applying frozen chunk vectors (bit-exact replay)");
+        int applied = Run004A.applyChunkVectors(jdbc, artifactDir, snapshot);
+        Run004A.assertStoredState(jdbc, artifactDir);
+        log("vectors applied: " + applied);
+
+        // ── the 2026-09-28 cut-over mirror stamp (see class doc) ────────────
+        int restamped = jdbc.update("""
+                update document_chunks c set embed_rev = 2, embedded_at = now()
+                where c.embedding is not null and c.embed_rev = 1
+                  and (exists (select 1 from documents d, exam_papers p
+                               where (d.document_id = p.question_paper_document_id
+                                   or d.document_id = p.mark_scheme_document_id)
+                                 and c.document_row_id = d.id
+                                 and p.validation_state = 'VALIDATED')
+                    or exists (select 1 from documents d2
+                               where d2.id = c.document_row_id
+                                 and d2.validation_state = 'VALIDATED'))
+                """);
+        Integer atRev2 = jdbc.queryForObject(
+                "select count(*) from document_chunks where embedding is not null and embed_rev = 2",
+                Integer.class);
+        Integer atRev1 = jdbc.queryForObject(
+                "select count(*) from document_chunks where embedding is not null and embed_rev = 1",
+                Integer.class);
+        log("cut-over mirror stamp: " + restamped + " chunks -> rev2; census: rev2=" + atRev2
+                + " rev1=" + atRev1);
+
+        // ── wave-1 prestate census (per unit, per document kind) ────────────
+        System.out.println();
+        System.out.println("== WAVE-1 PRESTATE (bench_replay, snap-006) ==");
+        for (String unit : UNITS) {
+            System.out.println("-- unit " + unit);
+            var rows = jdbc.queryForList("""
+                    select p.id as paper_id, p.paper_code, p.validation_state as paper_state,
+                           d.kind, d.validation_state as doc_state,
+                           count(c.id) as chunks,
+                           count(c.id) filter (where c.embedding is not null) as embedded,
+                           count(c.id) filter (where c.embedding is not null and c.embed_rev = 1) as at_rev1,
+                           count(c.id) filter (where c.embedding is not null and c.embed_rev = 2) as at_rev2
+                    from exam_papers p
+                    join documents d on d.document_id = p.question_paper_document_id
+                                  or d.document_id = p.mark_scheme_document_id
+                    left join document_chunks c on c.document_row_id = d.id
+                    where p.paper_code = ?
+                    group by 1, 2, 3, 4, 5 order by 4
+                    """, unit);
+            for (Map<String, Object> r : rows) {
+                System.out.println("   paper " + r.get("paper_id") + " " + r.get("paper_state")
+                        + " | " + r.get("kind") + " doc " + r.get("doc_state")
+                        + " | chunks " + r.get("chunks") + " embedded " + r.get("embedded")
+                        + " at_rev1 " + r.get("at_rev1") + " at_rev2 " + r.get("at_rev2"));
+            }
+            if (rows.isEmpty()) {
+                System.out.println("   (no paper rows found for this code)");
+            }
+        }
+
+        // ── bench teacher principal for the API rehearsal ───────────────────
+        UUID teacherId = UUID.nameUUIDFromBytes("bench-teacher|wave1-rehearsal".getBytes());
+        jdbc.update("delete from user_roles where user_id = ?", teacherId);
+        jdbc.update("delete from users where id = ?", teacherId);
+        jdbc.update("""
+                insert into users (id, email, password_hash, display_name, enabled, created_at)
+                values (?, 'wave1-rehearsal@bench.syllabai.test', 'bench-no-login',
+                        'Wave 1 Rehearsal Teacher', true, now())
+                """, teacherId);
+        jdbc.update("insert into user_roles (user_id, role) values (?, 'TEACHER')", teacherId);
+        jdbc.update("update users set token_version = 0 where id = ?", teacherId);
+        log("bench teacher principal seeded: uid=" + teacherId + " (rehearsal JWT audience)");
+
+        System.out.println();
+        System.out.println("WAVE1LOAD OK — prestate ready; run the wave driver next");
+    }
+
+    private static String req(String k) {
+        String v = System.getenv(k);
+        if (v == null || v.isBlank()) {
+            throw new IllegalArgumentException("missing env " + k);
+        }
+        return v;
+    }
+
+    private static void log(String m) {
+        System.out.println("[wave1load] " + m);
+    }
+
+    private Wave1Load() {
+    }
+}

@@ -8,8 +8,9 @@ BEGIN;
 update document_chunks c
 set embed_rev = 2, embedded_at = now()
 from documents d, exam_papers p
-where (d.id = p.question_paper_document_id or d.id = p.mark_scheme_document_id)
-  and p.paper_code = :paper_code
+where (d.document_id = p.question_paper_document_id
+    or d.document_id = p.mark_scheme_document_id)
+  and p.paper_code = :'paper_code'
   and c.document_row_id = d.id
   and c.embedding is not null
   and c.embed_rev = 1
