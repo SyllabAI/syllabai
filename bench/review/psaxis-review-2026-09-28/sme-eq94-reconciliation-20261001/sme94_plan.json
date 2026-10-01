@@ -1,0 +1,1252 @@
+{
+ "generated": "2026-10-01",
+ "trace": "1a0f5b2b7bf5bf7d",
+ "instruction": "Proceed with 94 sme-eq-* disagreements",
+ "disposition": "D1: questions.primary_topic_node_id := parent TOPIC of the qsp role=PRIMARY point (bank-wide house rule, T-QSP2 semantics, matches 867/946 pre-existing + qsp15 cohort). Old anchor preserved as SECONDARY question_topics row (verified parent of a real SECONDARY point; never deleted). qsp content coding untouched byte-for-byte (no role flips \u2014 re-flagging would fabricate assessed-content coding). qt-primary mirror inserted for the 94 (sme-eq lane has 0/593; past-paper lane 368/368).",
+ "facts_verified": {
+  "F1 old anchor == plurality-winner of point-parent distribution (import filing rule)": "94/94",
+  "F2 expected == parent TOPIC of the single PRIMARY point, real 4CH1-S TOPIC": "94/94",
+  "F3 qt shape: no primary rows (94/94), anchor absent from qt (94/94), expected present as secondary": {
+   "flip": 92,
+   "insert_primary": 2
+  }
+ },
+ "mechanics_counts": {
+  "anchor UPDATEs": 94,
+  "qt secondary INSERTs (old anchor)": 94,
+  "qt expected-row flips sec->pri": 92,
+  "qt expected-row INSERTs (twins)": 2,
+  "qsp rows changed": 0
+ },
+ "expected_post_state": {
+  "L1 census": "checked=961 agree=961 disagree=0 qt_conflicts=0",
+  "qsp_total": 2637,
+  "qt_total": 1226,
+  "questions_active": 961,
+  "sme-eq with qt primary": 94
+ },
+ "entries": [
+  {
+   "question_id": "537e55d9-164b-4260-8d59-a3e4d6740f2f",
+   "external_ref": "sme-eq-4-4-alkenes-q8-s",
+   "old_anchor_code": "4CH1-S4-d",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "6ca3741a-225a-4a03-a064-ea83e78efba5",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q19",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S3-b",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_expected_row": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "685ebdac-89f9-4345-b12a-8ea6aca0591e",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q5",
+   "old_anchor_code": "4CH1-S1-b",
+   "new_anchor_code": "4CH1-S2-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "anchor_to": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_expected_row": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_insert_secondary": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "5ca996cc-f371-4a56-b7c6-fcb66f9bc06b",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q16",
+   "old_anchor_code": "4CH1-S1-d",
+   "new_anchor_code": "4CH1-S1-c",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "anchor_to": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_expected_row": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_insert_secondary": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "8b6a5910-d190-41ff-a046-b4d0fa2c1dec",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q11",
+   "old_anchor_code": "4CH1-S1-g",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "f91315e2-c435-4271-a3c2-1d40ea627f5e",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q21",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S2-c",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_expected_row": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "8fd0b130-5460-4d71-a3f6-ddb9647bf43f",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q22",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S1-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_expected_row": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "ac279215-52b0-4dc5-b155-d2ccea637ad9",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q24",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S2-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_expected_row": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "4fdf75fe-62e5-4dc1-a47a-31f7887e58a4",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q1-p1",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_expected_row": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "213549c4-80fc-4dd9-abe5-4bd254e3538f",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q1-p2",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_expected_row": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "5153163c-ddbd-4adf-850b-d69e833984ad",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q1-p3",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_expected_row": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "10e32372-4948-4604-805f-b10cd777dc99",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q1-p4",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_expected_row": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "715d67ac-4c1c-4f6d-b9a4-10eb6d684bee",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q14",
+   "old_anchor_code": "4CH1-S1-i",
+   "new_anchor_code": "4CH1-S2-b",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "anchor_to": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_expected_row": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_insert_secondary": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "ef7f488d-ad3a-416d-adc9-eac422b98857",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q16",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "3bcd06c3-2bd0-4ac6-b1e6-64322b33bb09",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q3",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-d",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_expected_row": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "c3deccf9-348c-4bee-b1b7-7333250bc193",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q9",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-d",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_expected_row": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "ceb334e5-e9d4-48ab-8fb8-ca1419fe19d8",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q15",
+   "old_anchor_code": "4CH1-S1-g",
+   "new_anchor_code": "4CH1-S2-f",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "anchor_to": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_expected_row": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_insert_secondary": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "d8052a22-771e-44c6-9fe3-e7bcf4abd526",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q5",
+   "old_anchor_code": "4CH1-S1-g",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "6f523f05-7b28-4d1a-a9b2-a06b9054797a",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q7",
+   "old_anchor_code": "4CH1-S1-g",
+   "new_anchor_code": "4CH1-S1-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "anchor_to": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_expected_row": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_insert_secondary": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "e7239fc5-00a2-45a8-b0c9-993cc3fe2db9",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q8",
+   "old_anchor_code": "4CH1-S1-g",
+   "new_anchor_code": "4CH1-S1-d",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "anchor_to": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_expected_row": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_insert_secondary": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "646fdf52-0165-4a2d-af52-586c2c69556a",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q11-p1",
+   "old_anchor_code": "4CH1-S2-e",
+   "new_anchor_code": "4CH1-S1-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "anchor_to": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_expected_row": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_insert_secondary": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "8c4c6bd6-7d5f-4d98-b7ed-bcdf6fb8b679",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q11-s",
+   "old_anchor_code": "4CH1-S2-e",
+   "new_anchor_code": "4CH1-S1-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "anchor_to": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_expected_row": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_insert_secondary": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "a5c404df-4e30-48d3-8231-97a34516db13",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q8",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-d",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_expected_row": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "ca6911fa-a70f-4ddc-b6e6-51a56f3bd48f",
+   "external_ref": "sme-eq-1-9-electrolysis-q10",
+   "old_anchor_code": "4CH1-S1-i",
+   "new_anchor_code": "4CH1-S1-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "anchor_to": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_expected_row": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_insert_secondary": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "e810307a-bdef-41d8-9067-abf3a85a03e9",
+   "external_ref": "sme-eq-1-9-electrolysis-q11",
+   "old_anchor_code": "4CH1-S1-i",
+   "new_anchor_code": "4CH1-S2-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "anchor_to": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_expected_row": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_insert_secondary": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "83cfa6d1-8fdf-4f49-a932-d7c956f24931",
+   "external_ref": "sme-eq-1-9-electrolysis-q12",
+   "old_anchor_code": "4CH1-S2-d",
+   "new_anchor_code": "4CH1-S1-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "anchor_to": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_expected_row": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_insert_secondary": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "1b8ac432-099e-423e-b753-4cd76bf8877b",
+   "external_ref": "sme-eq-1-9-electrolysis-q14",
+   "old_anchor_code": "4CH1-S1-h",
+   "new_anchor_code": "4CH1-S1-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "anchor_to": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_expected_row": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_insert_secondary": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "37544561-9bc6-4461-b75a-e847fb4d9959",
+   "external_ref": "sme-eq-1-9-electrolysis-q15",
+   "old_anchor_code": "4CH1-S1-i",
+   "new_anchor_code": "4CH1-S2-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "anchor_to": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_expected_row": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_insert_secondary": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "3395419a-4a0e-44b6-bb15-bf280217cafd",
+   "external_ref": "sme-eq-1-9-electrolysis-q3",
+   "old_anchor_code": "4CH1-S1-i",
+   "new_anchor_code": "4CH1-S2-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "anchor_to": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_expected_row": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_insert_secondary": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "43d3ffb5-9127-47d1-a72e-50bfdbe27c8a",
+   "external_ref": "sme-eq-1-9-electrolysis-q5",
+   "old_anchor_code": "4CH1-S1-i",
+   "new_anchor_code": "4CH1-S1-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "anchor_to": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_expected_row": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_insert_secondary": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "7c2cdf99-a05c-4896-833f-af83c1bbe68e",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q12",
+   "old_anchor_code": "4CH1-S3-a",
+   "new_anchor_code": "4CH1-S2-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "anchor_to": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_expected_row": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_insert_secondary": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "c78129eb-e39d-415d-8154-00d1cd21b7b0",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q6",
+   "old_anchor_code": "4CH1-S1-f",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "16b01118-693f-49b2-a86a-1fdd99b828ca",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q8",
+   "old_anchor_code": "4CH1-S2-f",
+   "new_anchor_code": "4CH1-S2-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "anchor_to": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_expected_row": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_insert_secondary": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "06ee356b-7785-451e-bf21-f9bcbfc0cad4",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q12",
+   "old_anchor_code": "4CH1-S2-b",
+   "new_anchor_code": "4CH1-S1-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "anchor_to": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_expected_row": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_insert_secondary": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "acec0f44-9da0-42b8-ad03-8c37f3988d22",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q16",
+   "old_anchor_code": "4CH1-S4-b",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "25c8b9db-4c4f-40a4-ad75-de479a34a43d",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q12",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S2-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_expected_row": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "9dbabb67-895d-4a7c-93d3-73c97ef2e446",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q14",
+   "old_anchor_code": "4CH1-S2-f",
+   "new_anchor_code": "4CH1-S2-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "anchor_to": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_expected_row": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_insert_secondary": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "b48ba2fc-0c87-420d-9b7a-c9493d918618",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q3-p1",
+   "old_anchor_code": "4CH1-S2-g",
+   "new_anchor_code": "4CH1-S2-f",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_from": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "anchor_to": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_expected_row": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_insert_secondary": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "afff3107-083f-44e8-9722-ae8fd25c23a4",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q3-s",
+   "old_anchor_code": "4CH1-S2-g",
+   "new_anchor_code": "4CH1-S2-f",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_from": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "anchor_to": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_expected_row": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_insert_secondary": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "eb825984-68a1-4b77-be53-a698321460a7",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q4-p1",
+   "old_anchor_code": "4CH1-S2-g",
+   "new_anchor_code": "4CH1-S2-f",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "anchor_to": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_expected_row": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_insert_secondary": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "9ba8fa44-84f7-4139-a8a4-71bddcd60bd0",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q4-p2",
+   "old_anchor_code": "4CH1-S2-g",
+   "new_anchor_code": "4CH1-S2-f",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "anchor_to": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_expected_row": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_insert_secondary": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "7073718d-7164-49fe-adcb-fde36d7b5a43",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q4-s",
+   "old_anchor_code": "4CH1-S2-g",
+   "new_anchor_code": "4CH1-S2-f",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "anchor_to": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_expected_row": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_insert_secondary": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "4fef4dcb-38c3-48a3-a634-aaa1a85177f3",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q5",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S2-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_expected_row": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "f4628caf-2459-4ecd-8a3c-f9e44b2e318a",
+   "external_ref": "sme-eq-2-8-chemical-tests-q12",
+   "old_anchor_code": "4CH1-S2-h",
+   "new_anchor_code": "4CH1-S2-c",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "anchor_to": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_expected_row": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_insert_secondary": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "862453e9-224a-4d9a-8f8d-31d03d931615",
+   "external_ref": "sme-eq-2-8-chemical-tests-q15",
+   "old_anchor_code": "4CH1-S2-h",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "aec8e63c-2520-406a-8ddb-fe2262f1449e",
+   "external_ref": "sme-eq-2-8-chemical-tests-q5",
+   "old_anchor_code": "4CH1-S2-h",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "730913f4-08ba-4c94-8ea3-642044ff7236",
+   "external_ref": "sme-eq-2-8-chemical-tests-q6",
+   "old_anchor_code": "4CH1-S2-h",
+   "new_anchor_code": "4CH1-S2-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "anchor_to": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_expected_row": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_insert_secondary": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "206d2255-52d1-45c8-aef1-b53c2bfad8eb",
+   "external_ref": "sme-eq-3-1-energetics-q14-p1",
+   "old_anchor_code": "4CH1-S3-a",
+   "new_anchor_code": "4CH1-S2-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "anchor_to": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_expected_row": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_insert_secondary": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "839f3ea9-fad7-42d2-b0be-4dbfba3a2d2c",
+   "external_ref": "sme-eq-3-1-energetics-q14-s",
+   "old_anchor_code": "4CH1-S3-a",
+   "new_anchor_code": "4CH1-S2-h",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "anchor_to": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_expected_row": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_insert_secondary": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "7040a6d6-a119-47d0-b50c-2f2c841abf12",
+   "external_ref": "sme-eq-3-1-energetics-q20",
+   "old_anchor_code": "4CH1-S3-a",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "d74fbdc7-e2d6-4b4d-b12c-c1a1cc1e1eb7",
+   "external_ref": "sme-eq-3-1-energetics-q9",
+   "old_anchor_code": "4CH1-S3-a",
+   "new_anchor_code": "4CH1-S1-d",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "anchor_to": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_expected_row": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_insert_secondary": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "7d94cdf1-d14c-4066-878b-2a1c4a152e4b",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q13",
+   "old_anchor_code": "4CH1-S3-b",
+   "new_anchor_code": "4CH1-S4-b",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "anchor_to": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_expected_row": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_insert_secondary": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "44840f28-21f2-41b6-9e69-40e251049d58",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q14",
+   "old_anchor_code": "4CH1-S3-b",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "88764d98-d8a9-4bc8-80d6-0bd3d702902d",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q16",
+   "old_anchor_code": "4CH1-S3-b",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "a7098f2e-6b1a-4a2a-bdf8-efc1fc106174",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q20",
+   "old_anchor_code": "4CH1-S3-b",
+   "new_anchor_code": "4CH1-S1-b",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "anchor_to": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_expected_row": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_insert_secondary": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "37b9acb2-e932-472b-902d-4424721494c9",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q22",
+   "old_anchor_code": "4CH1-S3-b",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "b9fabae9-4def-44f3-b3ed-76b61a5b9b0c",
+   "external_ref": "sme-eq-4-1-introduction-q12",
+   "old_anchor_code": "4CH1-S4-a",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "b5828305-0617-459c-9eaf-7c81394de937",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q5",
+   "old_anchor_code": "4CH1-S3-c",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "2ca2bcf7-2274-4536-bd01-eac6c2aa68db",
+   "external_ref": "sme-eq-4-1-introduction-q15",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "7bcb1caf-9b41-4d9d-be0d-871688faee87",
+   "external_ref": "sme-eq-4-1-introduction-q5",
+   "old_anchor_code": "4CH1-S4-d",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "37962bc1-8ec5-4d70-962c-48d7aff2b7b2",
+   "external_ref": "sme-eq-4-2-crude-oil-q14",
+   "old_anchor_code": "4CH1-S4-b",
+   "new_anchor_code": "4CH1-S4-c",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "anchor_to": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_expected_row": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_insert_secondary": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "1789285b-7ad0-499a-9a9c-2edefd696719",
+   "external_ref": "sme-eq-4-2-crude-oil-q5",
+   "old_anchor_code": "4CH1-S4-b",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "4e2d2c19-dfa4-4aea-9e26-dd24966f2b01",
+   "external_ref": "sme-eq-4-2-crude-oil-q6",
+   "old_anchor_code": "4CH1-S4-b",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "9eeefc0d-1cb7-4616-bb85-22525dac1563",
+   "external_ref": "sme-eq-4-3-alkanes-q14",
+   "old_anchor_code": "4CH1-S1-g",
+   "new_anchor_code": "4CH1-S4-c",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "anchor_to": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_expected_row": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_insert_secondary": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "4846af8b-bf8b-49c1-a7ed-0d461c907858",
+   "external_ref": "sme-eq-4-3-alkanes-q15",
+   "old_anchor_code": "4CH1-S3-a",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "61c766b0-265b-4534-bba9-ded293697624",
+   "external_ref": "sme-eq-4-3-alkanes-q5",
+   "old_anchor_code": "4CH1-S4-h",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "b809ff6f-7d70-46ba-83ce-2c2007b15bf1",
+   "external_ref": "sme-eq-4-3-alkanes-q6",
+   "old_anchor_code": "4CH1-S4-c",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "c60672c2-389c-4003-8ea4-90efa7480c69",
+   "external_ref": "sme-eq-4-3-alkanes-q9-p1",
+   "old_anchor_code": "4CH1-S4-a",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "eddc1930-afdc-4d6d-a2ec-7dbcfb08f92c",
+   "external_ref": "sme-eq-4-3-alkanes-q9-s",
+   "old_anchor_code": "4CH1-S4-a",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "fca9bea3-ace2-4fb8-9f98-80dd2dc10c30",
+   "external_ref": "sme-eq-4-4-alkenes-q10",
+   "old_anchor_code": "4CH1-S4-d",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "7301eb5f-a3e8-447b-8f44-027156bd7c61",
+   "external_ref": "sme-eq-4-4-alkenes-q11",
+   "old_anchor_code": "4CH1-S4-h",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "3d58820e-f69d-4683-9c7f-8d9f0627d44a",
+   "external_ref": "sme-eq-4-4-alkenes-q15",
+   "old_anchor_code": "4CH1-S4-d",
+   "new_anchor_code": "4CH1-S4-b",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "anchor_to": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_expected_row": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_insert_secondary": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "1ee28936-8e02-4a7c-9c0e-7eaef8d23530",
+   "external_ref": "sme-eq-4-4-alkenes-q3",
+   "old_anchor_code": "4CH1-S4-d",
+   "new_anchor_code": "4CH1-S4-c",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "anchor_to": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_expected_row": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_insert_secondary": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "47eaad7b-3c1b-4a5e-823f-b5ab96de29d3",
+   "external_ref": "sme-eq-4-4-alkenes-q8-p1",
+   "old_anchor_code": "4CH1-S4-d",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "d398f3d5-b99b-4118-98b6-26cf065bfed0",
+   "external_ref": "sme-eq-4-5-alcohols-q11",
+   "old_anchor_code": "4CH1-S4-e",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "32dec4dc-0efe-4691-9074-cd89072cf7ee",
+   "external_ref": "sme-eq-4-5-alcohols-q14",
+   "old_anchor_code": "4CH1-S4-e",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "b0241cc3-cda8-4847-b3fb-7d2b048e93c0",
+   "external_ref": "sme-eq-4-5-alcohols-q15",
+   "old_anchor_code": "4CH1-S3-c",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "9de1b0b2-6117-4cbe-9d98-2ae3b2c0d0dc",
+   "external_ref": "sme-eq-4-5-alcohols-q16",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S1-b",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_expected_row": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "ee5af2f9-12ec-45b5-997d-66c9492df6fc",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q7",
+   "old_anchor_code": "4CH1-S4-h",
+   "new_anchor_code": "4CH1-S4-d",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "anchor_to": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_expected_row": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_insert_secondary": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "5d5e8760-f363-490a-9dca-21d8eddda83d",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q13-p1",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S4-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_expected_row": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "4aa3a477-e69f-4feb-bc78-132f9ddb795f",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q13-s",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S4-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_expected_row": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "d6f8e7b2-7a1b-43ba-b115-ef0d7cf03f05",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q14",
+   "old_anchor_code": "4CH1-S4-f",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "b812b950-bc2e-47a5-a8a4-685459fd452d",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q8",
+   "old_anchor_code": "4CH1-S4-f",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "f86e8b4b-4f7e-47a8-9a11-78d80a672627",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q9-p1",
+   "old_anchor_code": "4CH1-S2-f",
+   "new_anchor_code": "4CH1-S4-f",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "anchor_to": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_expected_row": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_insert_secondary": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "39d06ab8-4546-446c-bd6b-89c5ad7e7e27",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q9-p2",
+   "old_anchor_code": "4CH1-S2-f",
+   "new_anchor_code": "4CH1-S4-f",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "anchor_to": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_expected_row": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_insert_secondary": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "ea27a9a5-2f81-48cf-a4ff-7d293b34d9e6",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q9-s",
+   "old_anchor_code": "4CH1-S2-f",
+   "new_anchor_code": "4CH1-S4-f",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "anchor_to": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_expected_row": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_insert_secondary": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "33c2c683-eb72-4331-857d-bb1ade86fa98",
+   "external_ref": "sme-eq-4-7-esters-q11",
+   "old_anchor_code": "4CH1-S3-c",
+   "new_anchor_code": "4CH1-S4-f",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "anchor_to": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_expected_row": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_insert_secondary": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "22cb45fc-462c-4920-8cc0-2537047422b9",
+   "external_ref": "sme-eq-4-7-esters-q15",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S3-c",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_expected_row": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "6788148e-ddb2-44f4-86b2-8ac6cbc36708",
+   "external_ref": "sme-eq-4-7-esters-q3-p1",
+   "old_anchor_code": "4CH1-S3-c",
+   "new_anchor_code": "4CH1-S4-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "anchor_to": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_expected_row": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_insert_secondary": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "5b640714-b348-471e-92f5-f83f68eb6131",
+   "external_ref": "sme-eq-4-7-esters-q3-s",
+   "old_anchor_code": "4CH1-S3-c",
+   "new_anchor_code": "4CH1-S4-g",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "anchor_to": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_expected_row": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_insert_secondary": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "185af345-b60e-4547-b626-a96152f4d361",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q10",
+   "old_anchor_code": "4CH1-S1-e",
+   "new_anchor_code": "4CH1-S4-d",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "23751488-285f-47af-8013-8c0901b842cd",
+    "anchor_to": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_expected_row": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_insert_secondary": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "74740178-7946-47b1-8072-3af3f1f93d6b",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q12",
+   "old_anchor_code": "4CH1-S4-d",
+   "new_anchor_code": "4CH1-S1-e",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "anchor_to": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_expected_row": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_insert_secondary": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "fb0b82b8-f715-4922-818b-3c7209396822",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q14",
+   "old_anchor_code": "4CH1-S4-h",
+   "new_anchor_code": "4CH1-S4-a",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "anchor_to": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_expected_row": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_insert_secondary": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "ef91e37b-1169-425c-a24c-6e91fa1b7188",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q4",
+   "old_anchor_code": "4CH1-S4-h",
+   "new_anchor_code": "4CH1-S4-d",
+   "mechanics": "flip",
+   "guards": {
+    "anchor_from": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "anchor_to": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_expected_row": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_insert_secondary": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  }
+ ]
+}

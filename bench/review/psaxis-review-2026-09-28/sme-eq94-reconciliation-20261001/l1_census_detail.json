@@ -1,0 +1,2184 @@
+{
+ "generated": "2026-10-01",
+ "rule": "expected anchor = PART_OF parent TOPIC of the qsp role=PRIMARY spec point",
+ "population": "active questions with non-ING TOPIC anchor and >=1 qsp PRIMARY row",
+ "census": {
+  "checked": 961,
+  "agree": 867,
+  "disagree": 94,
+  "ambiguous": 0,
+  "qt_primary_conflicts": 0
+ },
+ "pin_expectation": {
+  "checked": 961,
+  "agree": 867,
+  "disagree": 94,
+  "all_sme": true,
+  "qt_conflicts": 0
+ },
+ "pin_ok": true,
+ "disagreements": [
+  {
+   "question_id": "6ca3741a-225a-4a03-a064-ea83e78efba5",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q19",
+   "question_type": "STRUCTURED",
+   "marks": 14,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-3.9",
+    "title": "describe experiments to investigate the effects of changes in surface area of a solid, concentration of a solution, temperature and the use of a catalyst on the rate of a reaction"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S3-b",
+     "title": "Rates of reaction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "685ebdac-89f9-4345-b12a-8ea6aca0591e",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q5",
+   "question_type": "STRUCTURED",
+   "marks": 5,
+   "anchor": {
+    "code": "4CH1-S1-b",
+    "title": "Elements, compounds and mixtures"
+   },
+   "primary_point": {
+    "code": "4CH1-2.46",
+    "title": "know the colours formed in flame tests for these cations: \u00b7 Li$^{+}$ is red \u00b7 Na$^{+}$ is yellow \u00b7 K$^{+}$ is lilac \u00b7 Ca$^{2+}$ is orange-red \u00b7 Cu$^{2+}$ is blue-green."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-h",
+     "title": "Chemical tests"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "5ca996cc-f371-4a56-b7c6-fcb66f9bc06b",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q16",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S1-d",
+    "title": "The Periodic Table"
+   },
+   "primary_point": {
+    "code": "4CH1-1.15",
+    "title": "know the structure of an atom in terms of the positions, relative masses and relative charges of sub-atomic particles"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-c",
+     "title": "Atomic structure"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "8b6a5910-d190-41ff-a046-b4d0fa2c1dec",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q11",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S1-g",
+    "title": "Covalent bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-4.2",
+    "title": "understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "f91315e2-c435-4271-a3c2-1d40ea627f5e",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q21",
+   "question_type": "STRUCTURED",
+   "marks": 12,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.12",
+    "title": "describe the formation of carbon dioxide from the thermal decomposition of metal carbonates,including copper(II) carbonate"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-c",
+     "title": "Gases in the atmosphere"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "8fd0b130-5460-4d71-a3f6-ddb9647bf43f",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q22",
+   "question_type": "STRUCTURED",
+   "marks": 14,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-1.47",
+    "title": "explain why substances with a simple molecular structures are gases or liquids, or solids with low melting and boiling points the term intermolecular forces of attraction can be used to represent all "
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-g",
+     "title": "Covalent bonding"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "ac279215-52b0-4dc5-b155-d2ccea637ad9",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q24",
+   "question_type": "STRUCTURED",
+   "marks": 12,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.49",
+    "title": "describe a test for the presence of water using anhydrous copper(II) sulfate"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-h",
+     "title": "Chemical tests"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "4fdf75fe-62e5-4dc1-a47a-31f7887e58a4",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q1-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.1",
+    "title": "understand the three states of matter in terms of the arrangement, movement and energy of the particles"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-a",
+     "title": "States of matter"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "213549c4-80fc-4dd9-abe5-4bd254e3538f",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q1-p2",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.1",
+    "title": "understand the three states of matter in terms of the arrangement, movement and energy of the particles"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-a",
+     "title": "States of matter"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "5153163c-ddbd-4adf-850b-d69e833984ad",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q1-p3",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.1",
+    "title": "understand the three states of matter in terms of the arrangement, movement and energy of the particles"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-a",
+     "title": "States of matter"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "10e32372-4948-4604-805f-b10cd777dc99",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q1-p4",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.1",
+    "title": "understand the three states of matter in terms of the arrangement, movement and energy of the particles"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-a",
+     "title": "States of matter"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "715d67ac-4c1c-4f6d-b9a4-10eb6d684bee",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q14",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S1-i",
+    "title": "Electrolysis"
+   },
+   "primary_point": {
+    "code": "4CH1-2.5",
+    "title": "know the colours,physical states(at room temperature)and trends in physical properties of these elements"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-b",
+     "title": "Group 7 (halogens) \u2013 chlorine, bromine and iodine"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "ef7f488d-ad3a-416d-adc9-eac422b98857",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q16",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "3bcd06c3-2bd0-4ac6-b1e6-64322b33bb09",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q3",
+   "question_type": "STRUCTURED",
+   "marks": 8,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.18",
+    "title": "understand how elements are arranged in the Periodic Table\uff1a \u2022in order of atomic number \u2022in groups and periods."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-d",
+     "title": "The Periodic Table"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "c3deccf9-348c-4bee-b1b7-7333250bc193",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q9",
+   "question_type": "STRUCTURED",
+   "marks": 14,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.20",
+    "title": "understand how to use electrical conductivity and the acid-base character of oxides to classify elements as metals or non-metals"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-d",
+     "title": "The Periodic Table"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "ceb334e5-e9d4-48ab-8fb8-ca1419fe19d8",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q15",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S1-g",
+    "title": "Covalent bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-2.29",
+    "title": "understand how to use the pH scale, from 0-14, can be used to classify solutions as strongly acidic(0-3), weakly acidic(4-6), neutral(7), weakly alkaline(8-10)\u548c strongly alkaline(11-14)"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-f",
+     "title": "Acids, alkalis and titrations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "d8052a22-771e-44c6-9fe3-e7bcf4abd526",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q5",
+   "question_type": "STRUCTURED",
+   "marks": 6,
+   "anchor": {
+    "code": "4CH1-S1-g",
+    "title": "Covalent bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.33",
+    "title": "calculate empirical and molecular formulae from experimental data"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "6f523f05-7b28-4d1a-a9b2-a06b9054797a",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q7",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S1-g",
+    "title": "Covalent bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.2",
+    "title": "understand the interconversions between the three states of matter in terms of: \u2022 the names of the interconversions \u2022 how they are achieved \u2022 the changes in arrangement, movement and energy of the par"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-a",
+     "title": "States of matter"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "e7239fc5-00a2-45a8-b0c9-993cc3fe2db9",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q8",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S1-g",
+    "title": "Covalent bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.22",
+    "title": "understand how the electronic configuration of a main group element is related to its position in the Periodic Table"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-d",
+     "title": "The Periodic Table"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "646fdf52-0165-4a2d-af52-586c2c69556a",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q11-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S2-e",
+    "title": "Extraction and uses of metals"
+   },
+   "primary_point": {
+    "code": "4CH1-1.53C",
+    "title": "understand metallic bonding in terms of electrostatic attractions"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-h",
+     "title": "Metallic bonding"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "8c4c6bd6-7d5f-4d98-b7ed-bcdf6fb8b679",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q11-s",
+   "question_type": "STRUCTURED",
+   "marks": 6,
+   "anchor": {
+    "code": "4CH1-S2-e",
+    "title": "Extraction and uses of metals"
+   },
+   "primary_point": {
+    "code": "4CH1-1.53C",
+    "title": "understand metallic bonding in terms of electrostatic attractions"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-h",
+     "title": "Metallic bonding"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "a5c404df-4e30-48d3-8231-97a34516db13",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q8",
+   "question_type": "STRUCTURED",
+   "marks": 12,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.19",
+    "title": "understand how to deduce the electronic configurations of the first 20 elements from their positions in the Periodic Table"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-d",
+     "title": "The Periodic Table"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "ca6911fa-a70f-4ddc-b6e6-51a56f3bd48f",
+   "external_ref": "sme-eq-1-9-electrolysis-q10",
+   "question_type": "STRUCTURED",
+   "marks": 7,
+   "anchor": {
+    "code": "4CH1-S1-i",
+    "title": "Electrolysis"
+   },
+   "primary_point": {
+    "code": "4CH1-1.54C",
+    "title": "explain typical physical properties of metals, including electrical conductivity and malleability"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-h",
+     "title": "Metallic bonding"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "e810307a-bdef-41d8-9067-abf3a85a03e9",
+   "external_ref": "sme-eq-1-9-electrolysis-q11",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S1-i",
+    "title": "Electrolysis"
+   },
+   "primary_point": {
+    "code": "4CH1-2.25C",
+    "title": "explain the uses of aluminium, copper, iron and steel in terms of their properties the types of steel will be limited to low-carbon (mild), high-carbon and stainless"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-e",
+     "title": "Extraction and uses of metals"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "83cfa6d1-8fdf-4f49-a932-d7c956f24931",
+   "external_ref": "sme-eq-1-9-electrolysis-q12",
+   "question_type": "STRUCTURED",
+   "marks": 14,
+   "anchor": {
+    "code": "4CH1-S2-d",
+    "title": "Reactivity series"
+   },
+   "primary_point": {
+    "code": "4CH1-1.54C",
+    "title": "explain typical physical properties of metals, including electrical conductivity and malleability"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-h",
+     "title": "Metallic bonding"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "1b8ac432-099e-423e-b753-4cd76bf8877b",
+   "external_ref": "sme-eq-1-9-electrolysis-q14",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S1-h",
+    "title": "Metallic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.51",
+    "title": "know that covalent compounds do not usually conduct electricity"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-g",
+     "title": "Covalent bonding"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "37544561-9bc6-4461-b75a-e847fb4d9959",
+   "external_ref": "sme-eq-1-9-electrolysis-q15",
+   "question_type": "STRUCTURED",
+   "marks": 12,
+   "anchor": {
+    "code": "4CH1-S1-i",
+    "title": "Electrolysis"
+   },
+   "primary_point": {
+    "code": "4CH1-2.41C",
+    "title": "describe an experiment to prepare a pure,dry sample of an insoluble salt,starting from two soluble reactants"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-g",
+     "title": "Acids, bases and salt preparations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "3395419a-4a0e-44b6-bb15-bf280217cafd",
+   "external_ref": "sme-eq-1-9-electrolysis-q3",
+   "question_type": "STRUCTURED",
+   "marks": 10,
+   "anchor": {
+    "code": "4CH1-S1-i",
+    "title": "Electrolysis"
+   },
+   "primary_point": {
+    "code": "4CH1-2.48",
+    "title": "describe tests for these anions: \u00b7 Cl$^{-}$, Br$^{-}$ and I$^{-}$ using acidified silver nitrate solution \u00b7 SO$_{4}^{2-}$ using acidified barium chloride solution \u00b7 CO$_{3}^{2-}$ using hydrochloric ac"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-h",
+     "title": "Chemical tests"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "43d3ffb5-9127-47d1-a72e-50bfdbe27c8a",
+   "external_ref": "sme-eq-1-9-electrolysis-q5",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S1-i",
+    "title": "Electrolysis"
+   },
+   "primary_point": {
+    "code": "4CH1-1.54C",
+    "title": "explain typical physical properties of metals, including electrical conductivity and malleability"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-h",
+     "title": "Metallic bonding"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "7c2cdf99-a05c-4896-833f-af83c1bbe68e",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q12",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S3-a",
+    "title": "Energetics"
+   },
+   "primary_point": {
+    "code": "4CH1-2.1",
+    "title": "understand how the similarities in the reactions of these elements with water provide evidence for their recognition as a family of elements"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-a",
+     "title": "Group 1 (alkali metals) \u2013 lithium, sodium and potassium"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "c78129eb-e39d-415d-8154-00d1cd21b7b0",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q6",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S1-f",
+    "title": "Ionic bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "16b01118-693f-49b2-a86a-1fdd99b828ca",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q8",
+   "question_type": "STRUCTURED",
+   "marks": 6,
+   "anchor": {
+    "code": "4CH1-S2-f",
+    "title": "Acids, alkalis and titrations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.2",
+    "title": "understand how the differences between the reactions of these elements with air and water provide evidence for the trend in reactivity in Group1"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-a",
+     "title": "Group 1 (alkali metals) \u2013 lithium, sodium and potassium"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "06ee356b-7785-451e-bf21-f9bcbfc0cad4",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q12",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S2-b",
+    "title": "Group 7 (halogens) \u2013 chlorine, bromine and iodine"
+   },
+   "primary_point": {
+    "code": "4CH1-1.48",
+    "title": "explain why the melting and boiling points of substances with simple molecular structures increase, in general, with increasing relative molecular mass"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-g",
+     "title": "Covalent bonding"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "acec0f44-9da0-42b8-ad03-8c37f3988d22",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q16",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S4-b",
+    "title": "Crude oil"
+   },
+   "primary_point": {
+    "code": "4CH1-1.29",
+    "title": "calculate reacting masses using experimental data and chemical equations"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "25c8b9db-4c4f-40a4-ad75-de479a34a43d",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q12",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.41C",
+    "title": "describe an experiment to prepare a pure,dry sample of an insoluble salt,starting from two soluble reactants"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-g",
+     "title": "Acids, bases and salt preparations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "9dbabb67-895d-4a7c-93d3-73c97ef2e446",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q14",
+   "question_type": "STRUCTURED",
+   "marks": 7,
+   "anchor": {
+    "code": "4CH1-S2-f",
+    "title": "Acids, alkalis and titrations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.40C",
+    "title": "describe an experiment to prepare a pure,dry sample of a soluble salt,starting from an acid and alkali"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-g",
+     "title": "Acids, bases and salt preparations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "eb825984-68a1-4b77-be53-a698321460a7",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q4-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S2-g",
+    "title": "Acids, bases and salt preparations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.31",
+    "title": "know that acids in aqueous solution are a source of hydrogen ions and alkalis in aqueous solution are a source of hydroxide ions"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-f",
+     "title": "Acids, alkalis and titrations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "9ba8fa44-84f7-4139-a8a4-71bddcd60bd0",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q4-p2",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S2-g",
+    "title": "Acids, bases and salt preparations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.31",
+    "title": "know that acids in aqueous solution are a source of hydrogen ions and alkalis in aqueous solution are a source of hydroxide ions"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-f",
+     "title": "Acids, alkalis and titrations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "7073718d-7164-49fe-adcb-fde36d7b5a43",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q4-s",
+   "question_type": "STRUCTURED",
+   "marks": 2,
+   "anchor": {
+    "code": "4CH1-S2-g",
+    "title": "Acids, bases and salt preparations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.31",
+    "title": "know that acids in aqueous solution are a source of hydrogen ions and alkalis in aqueous solution are a source of hydroxide ions"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-f",
+     "title": "Acids, alkalis and titrations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "4fef4dcb-38c3-48a3-a634-aaa1a85177f3",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q5",
+   "question_type": "STRUCTURED",
+   "marks": 14,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.39",
+    "title": "describe an experiment to prepare a pure,dry sample of a soluble salt,starting from an insoluble reactant"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-g",
+     "title": "Acids, bases and salt preparations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "f4628caf-2459-4ecd-8a3c-f9e44b2e318a",
+   "external_ref": "sme-eq-2-8-chemical-tests-q12",
+   "question_type": "STRUCTURED",
+   "marks": 8,
+   "anchor": {
+    "code": "4CH1-S2-h",
+    "title": "Chemical tests"
+   },
+   "primary_point": {
+    "code": "4CH1-2.12",
+    "title": "describe the formation of carbon dioxide from the thermal decomposition of metal carbonates,including copper(II) carbonate"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-c",
+     "title": "Gases in the atmosphere"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "862453e9-224a-4d9a-8f8d-31d03d931615",
+   "external_ref": "sme-eq-2-8-chemical-tests-q15",
+   "question_type": "STRUCTURED",
+   "marks": 8,
+   "anchor": {
+    "code": "4CH1-S2-h",
+    "title": "Chemical tests"
+   },
+   "primary_point": {
+    "code": "4CH1-1.33",
+    "title": "calculate empirical and molecular formulae from experimental data"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "aec8e63c-2520-406a-8ddb-fe2262f1449e",
+   "external_ref": "sme-eq-2-8-chemical-tests-q5",
+   "question_type": "STRUCTURED",
+   "marks": 9,
+   "anchor": {
+    "code": "4CH1-S2-h",
+    "title": "Chemical tests"
+   },
+   "primary_point": {
+    "code": "4CH1-1.29",
+    "title": "calculate reacting masses using experimental data and chemical equations"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "730913f4-08ba-4c94-8ea3-642044ff7236",
+   "external_ref": "sme-eq-2-8-chemical-tests-q6",
+   "question_type": "STRUCTURED",
+   "marks": 9,
+   "anchor": {
+    "code": "4CH1-S2-h",
+    "title": "Chemical tests"
+   },
+   "primary_point": {
+    "code": "4CH1-2.34",
+    "title": "know the general rules for predicting the solubility of ionic compounds in water: \u2022 common sodium, potassium and ammonium compounds are soluble \u2022 all nitrates are soluble \u2022 common chlorides are solubl"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-g",
+     "title": "Acids, bases and salt preparations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "206d2255-52d1-45c8-aef1-b53c2bfad8eb",
+   "external_ref": "sme-eq-3-1-energetics-q14-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S3-a",
+    "title": "Energetics"
+   },
+   "primary_point": {
+    "code": "4CH1-2.44",
+    "title": "describe tests for these gases: \u00b7 hydrogen \u00b7 oxygen \u00b7 carbon dioxide \u00b7 ammonia \u00b7 chlorine."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-h",
+     "title": "Chemical tests"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "839f3ea9-fad7-42d2-b0be-4dbfba3a2d2c",
+   "external_ref": "sme-eq-3-1-energetics-q14-s",
+   "question_type": "STRUCTURED",
+   "marks": 7,
+   "anchor": {
+    "code": "4CH1-S3-a",
+    "title": "Energetics"
+   },
+   "primary_point": {
+    "code": "4CH1-2.44",
+    "title": "describe tests for these gases: \u00b7 hydrogen \u00b7 oxygen \u00b7 carbon dioxide \u00b7 ammonia \u00b7 chlorine."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-h",
+     "title": "Chemical tests"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "7040a6d6-a119-47d0-b50c-2f2c841abf12",
+   "external_ref": "sme-eq-3-1-energetics-q20",
+   "question_type": "STRUCTURED",
+   "marks": 9,
+   "anchor": {
+    "code": "4CH1-S3-a",
+    "title": "Energetics"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "d74fbdc7-e2d6-4b4d-b12c-c1a1cc1e1eb7",
+   "external_ref": "sme-eq-3-1-energetics-q9",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S3-a",
+    "title": "Energetics"
+   },
+   "primary_point": {
+    "code": "4CH1-1.19",
+    "title": "understand how to deduce the electronic configurations of the first 20 elements from their positions in the Periodic Table"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-d",
+     "title": "The Periodic Table"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "7d94cdf1-d14c-4066-878b-2a1c4a152e4b",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q13",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S3-b",
+    "title": "Rates of reaction"
+   },
+   "primary_point": {
+    "code": "4CH1-4.8",
+    "title": "describe how the industrial process of fractional distillation separates crude oil into fractions"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-b",
+     "title": "Crude oil"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "44840f28-21f2-41b6-9e69-40e251049d58",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q14",
+   "question_type": "STRUCTURED",
+   "marks": 16,
+   "anchor": {
+    "code": "4CH1-S3-b",
+    "title": "Rates of reaction"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "88764d98-d8a9-4bc8-80d6-0bd3d702902d",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q16",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S3-b",
+    "title": "Rates of reaction"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "a7098f2e-6b1a-4a2a-bdf8-efc1fc106174",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q20",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S3-b",
+    "title": "Rates of reaction"
+   },
+   "primary_point": {
+    "code": "4CH1-1.10",
+    "title": "describe these experimental techniques for the separation of mixtures: \u7b80\u5355 distillation fractional distillation filtration crystallisation paper chromatography."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-b",
+     "title": "Elements, compounds and mixtures"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "37b9acb2-e932-472b-902d-4424721494c9",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q22",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S3-b",
+    "title": "Rates of reaction"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "b5828305-0617-459c-9eaf-7c81394de937",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q5",
+   "question_type": "STRUCTURED",
+   "marks": 7,
+   "anchor": {
+    "code": "4CH1-S3-c",
+    "title": "Reversible reactions and equilibria"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "b9fabae9-4def-44f3-b3ed-76b61a5b9b0c",
+   "external_ref": "sme-eq-4-1-introduction-q12",
+   "question_type": "STRUCTURED",
+   "marks": 5,
+   "anchor": {
+    "code": "4CH1-S4-a",
+    "title": "Introduction"
+   },
+   "primary_point": {
+    "code": "4CH1-1.33",
+    "title": "calculate empirical and molecular formulae from experimental data"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "2ca2bcf7-2274-4536-bd01-eac6c2aa68db",
+   "external_ref": "sme-eq-4-1-introduction-q15",
+   "question_type": "STRUCTURED",
+   "marks": 12,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-4.2",
+    "title": "understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "7bcb1caf-9b41-4d9d-be0d-871688faee87",
+   "external_ref": "sme-eq-4-1-introduction-q5",
+   "question_type": "STRUCTURED",
+   "marks": 6,
+   "anchor": {
+    "code": "4CH1-S4-d",
+    "title": "Alkenes"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "37962bc1-8ec5-4d70-962c-48d7aff2b7b2",
+   "external_ref": "sme-eq-4-2-crude-oil-q14",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S4-b",
+    "title": "Crude oil"
+   },
+   "primary_point": {
+    "code": "4CH1-4.21",
+    "title": "understand how to draw the structural and displayed formulae for alkanes with up to five carbon atoms in the molecule,and to name the unbranched-chain isomers"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-c",
+     "title": "Alkanes"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "1789285b-7ad0-499a-9a9c-2edefd696719",
+   "external_ref": "sme-eq-4-2-crude-oil-q5",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S4-b",
+    "title": "Crude oil"
+   },
+   "primary_point": {
+    "code": "4CH1-4.3",
+    "title": "know what is meant by the terms homologous series, functional group and isomerism"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "4e2d2c19-dfa4-4aea-9e26-dd24966f2b01",
+   "external_ref": "sme-eq-4-2-crude-oil-q6",
+   "question_type": "STRUCTURED",
+   "marks": 12,
+   "anchor": {
+    "code": "4CH1-S4-b",
+    "title": "Crude oil"
+   },
+   "primary_point": {
+    "code": "4CH1-4.2",
+    "title": "understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "9eeefc0d-1cb7-4616-bb85-22525dac1563",
+   "external_ref": "sme-eq-4-3-alkanes-q14",
+   "question_type": "STRUCTURED",
+   "marks": 8,
+   "anchor": {
+    "code": "4CH1-S1-g",
+    "title": "Covalent bonding"
+   },
+   "primary_point": {
+    "code": "4CH1-4.21",
+    "title": "understand how to draw the structural and displayed formulae for alkanes with up to five carbon atoms in the molecule,and to name the unbranched-chain isomers"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-c",
+     "title": "Alkanes"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "4846af8b-bf8b-49c1-a7ed-0d461c907858",
+   "external_ref": "sme-eq-4-3-alkanes-q15",
+   "question_type": "STRUCTURED",
+   "marks": 9,
+   "anchor": {
+    "code": "4CH1-S3-a",
+    "title": "Energetics"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "61c766b0-265b-4534-bba9-ded293697624",
+   "external_ref": "sme-eq-4-3-alkanes-q5",
+   "question_type": "STRUCTURED",
+   "marks": 14,
+   "anchor": {
+    "code": "4CH1-S4-h",
+    "title": "Synthetic polymers"
+   },
+   "primary_point": {
+    "code": "4CH1-4.3",
+    "title": "know what is meant by the terms homologous series, functional group and isomerism"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "b809ff6f-7d70-46ba-83ce-2c2007b15bf1",
+   "external_ref": "sme-eq-4-3-alkanes-q6",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S4-c",
+    "title": "Alkanes"
+   },
+   "primary_point": {
+    "code": "4CH1-1.32",
+    "title": "know what is meant by the terms empirical formula and molecular formula"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "c60672c2-389c-4003-8ea4-90efa7480c69",
+   "external_ref": "sme-eq-4-3-alkanes-q9-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S4-a",
+    "title": "Introduction"
+   },
+   "primary_point": {
+    "code": "4CH1-1.32",
+    "title": "know what is meant by the terms empirical formula and molecular formula"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "eddc1930-afdc-4d6d-a2ec-7dbcfb08f92c",
+   "external_ref": "sme-eq-4-3-alkanes-q9-s",
+   "question_type": "STRUCTURED",
+   "marks": 6,
+   "anchor": {
+    "code": "4CH1-S4-a",
+    "title": "Introduction"
+   },
+   "primary_point": {
+    "code": "4CH1-1.32",
+    "title": "know what is meant by the terms empirical formula and molecular formula"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "fca9bea3-ace2-4fb8-9f98-80dd2dc10c30",
+   "external_ref": "sme-eq-4-4-alkenes-q10",
+   "question_type": "STRUCTURED",
+   "marks": 10,
+   "anchor": {
+    "code": "4CH1-S4-d",
+    "title": "Alkenes"
+   },
+   "primary_point": {
+    "code": "4CH1-4.2",
+    "title": "understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "7301eb5f-a3e8-447b-8f44-027156bd7c61",
+   "external_ref": "sme-eq-4-4-alkenes-q11",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S4-h",
+    "title": "Synthetic polymers"
+   },
+   "primary_point": {
+    "code": "4CH1-4.2",
+    "title": "understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "3d58820e-f69d-4683-9c7f-8d9f0627d44a",
+   "external_ref": "sme-eq-4-4-alkenes-q15",
+   "question_type": "STRUCTURED",
+   "marks": 18,
+   "anchor": {
+    "code": "4CH1-S4-d",
+    "title": "Alkenes"
+   },
+   "primary_point": {
+    "code": "4CH1-4.17",
+    "title": "describe how long-chain alkanes are converted to alkenes and shorter-chain alkanes by catalytic cracking(using silica or alumina as the catalyst and a temperature in the range of 600-700\u2103)"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-b",
+     "title": "Crude oil"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "1ee28936-8e02-4a7c-9c0e-7eaef8d23530",
+   "external_ref": "sme-eq-4-4-alkenes-q3",
+   "question_type": "STRUCTURED",
+   "marks": 7,
+   "anchor": {
+    "code": "4CH1-S4-d",
+    "title": "Alkenes"
+   },
+   "primary_point": {
+    "code": "4CH1-4.21",
+    "title": "understand how to draw the structural and displayed formulae for alkanes with up to five carbon atoms in the molecule,and to name the unbranched-chain isomers"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-c",
+     "title": "Alkanes"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "47eaad7b-3c1b-4a5e-823f-b5ab96de29d3",
+   "external_ref": "sme-eq-4-4-alkenes-q8-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S4-d",
+    "title": "Alkenes"
+   },
+   "primary_point": {
+    "code": "4CH1-4.2",
+    "title": "understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "537e55d9-164b-4260-8d59-a3e4d6740f2f",
+   "external_ref": "sme-eq-4-4-alkenes-q8-s",
+   "question_type": "STRUCTURED",
+   "marks": 6,
+   "anchor": {
+    "code": "4CH1-S4-d",
+    "title": "Alkenes"
+   },
+   "primary_point": {
+    "code": "4CH1-4.2",
+    "title": "understand how to represent organic molecules using empirical formulae, molecular formulae, general formulae, structural formulae and displayed formulae"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "d398f3d5-b99b-4118-98b6-26cf065bfed0",
+   "external_ref": "sme-eq-4-5-alcohols-q11",
+   "question_type": "STRUCTURED",
+   "marks": 7,
+   "anchor": {
+    "code": "4CH1-S4-e",
+    "title": "Alcohols"
+   },
+   "primary_point": {
+    "code": "4CH1-1.26",
+    "title": "calculate relative formula masses(including relative molecular masses) $ (M_{r}) $ from relative atomic masses $ (A_{r}) $"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "32dec4dc-0efe-4691-9074-cd89072cf7ee",
+   "external_ref": "sme-eq-4-5-alcohols-q14",
+   "question_type": "STRUCTURED",
+   "marks": 14,
+   "anchor": {
+    "code": "4CH1-S4-e",
+    "title": "Alcohols"
+   },
+   "primary_point": {
+    "code": "4CH1-4.3",
+    "title": "know what is meant by the terms homologous series, functional group and isomerism"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "b0241cc3-cda8-4847-b3fb-7d2b048e93c0",
+   "external_ref": "sme-eq-4-5-alcohols-q15",
+   "question_type": "STRUCTURED",
+   "marks": 14,
+   "anchor": {
+    "code": "4CH1-S3-c",
+    "title": "Reversible reactions and equilibria"
+   },
+   "primary_point": {
+    "code": "4CH1-1.30",
+    "title": "calculate percentage yield"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "9de1b0b2-6117-4cbe-9d98-2ae3b2c0d0dc",
+   "external_ref": "sme-eq-4-5-alcohols-q16",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-1.10",
+    "title": "describe these experimental techniques for the separation of mixtures: \u7b80\u5355 distillation fractional distillation filtration crystallisation paper chromatography."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-b",
+     "title": "Elements, compounds and mixtures"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "5d5e8760-f363-490a-9dca-21d8eddda83d",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q13-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-4.31C",
+    "title": "know that ethanol can be oxidised by: burning in air or oxygen(complete combustion) reaction with oxygen in the air to form ethanoic acid(microbial oxidation) heating with potassium dichromate(VI)in d"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-e",
+     "title": "Alcohols"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "4aa3a477-e69f-4feb-bc78-132f9ddb795f",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q13-s",
+   "question_type": "STRUCTURED",
+   "marks": 8,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-4.31C",
+    "title": "know that ethanol can be oxidised by: burning in air or oxygen(complete combustion) reaction with oxygen in the air to form ethanoic acid(microbial oxidation) heating with potassium dichromate(VI)in d"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-e",
+     "title": "Alcohols"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "d6f8e7b2-7a1b-43ba-b115-ef0d7cf03f05",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q14",
+   "question_type": "STRUCTURED",
+   "marks": 19,
+   "anchor": {
+    "code": "4CH1-S4-f",
+    "title": "Carboxylic acids"
+   },
+   "primary_point": {
+    "code": "4CH1-4.3",
+    "title": "know what is meant by the terms homologous series, functional group and isomerism"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "b812b950-bc2e-47a5-a8a4-685459fd452d",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q8",
+   "question_type": "STRUCTURED",
+   "marks": 12,
+   "anchor": {
+    "code": "4CH1-S4-f",
+    "title": "Carboxylic acids"
+   },
+   "primary_point": {
+    "code": "4CH1-4.3",
+    "title": "know what is meant by the terms homologous series, functional group and isomerism"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "f86e8b4b-4f7e-47a8-9a11-78d80a672627",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q9-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S2-f",
+    "title": "Acids, alkalis and titrations"
+   },
+   "primary_point": {
+    "code": "4CH1-4.36C",
+    "title": "describe the reactions of aqueous solutions of carboxylic acids with metals and metal carbonates"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-f",
+     "title": "Carboxylic acids"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "39d06ab8-4546-446c-bd6b-89c5ad7e7e27",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q9-p2",
+   "question_type": "MCQ_SINGLE",
+   "marks": 3,
+   "anchor": {
+    "code": "4CH1-S2-f",
+    "title": "Acids, alkalis and titrations"
+   },
+   "primary_point": {
+    "code": "4CH1-4.36C",
+    "title": "describe the reactions of aqueous solutions of carboxylic acids with metals and metal carbonates"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-f",
+     "title": "Carboxylic acids"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "ea27a9a5-2f81-48cf-a4ff-7d293b34d9e6",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q9-s",
+   "question_type": "STRUCTURED",
+   "marks": 5,
+   "anchor": {
+    "code": "4CH1-S2-f",
+    "title": "Acids, alkalis and titrations"
+   },
+   "primary_point": {
+    "code": "4CH1-4.36C",
+    "title": "describe the reactions of aqueous solutions of carboxylic acids with metals and metal carbonates"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-f",
+     "title": "Carboxylic acids"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "33c2c683-eb72-4331-857d-bb1ade86fa98",
+   "external_ref": "sme-eq-4-7-esters-q11",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S3-c",
+    "title": "Reversible reactions and equilibria"
+   },
+   "primary_point": {
+    "code": "4CH1-4.36C",
+    "title": "describe the reactions of aqueous solutions of carboxylic acids with metals and metal carbonates"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-f",
+     "title": "Carboxylic acids"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "22cb45fc-462c-4920-8cc0-2537047422b9",
+   "external_ref": "sme-eq-4-7-esters-q15",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-3.20C",
+    "title": "know that the characteristics of a reaction at dynamic equilibrium are: \u2022 the forward and reverse reactions occur at the same rate \u2022 the concentrations of reactants and products remain constant."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S3-c",
+     "title": "Reversible reactions and equilibria"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "6788148e-ddb2-44f4-86b2-8ac6cbc36708",
+   "external_ref": "sme-eq-4-7-esters-q3-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S3-c",
+    "title": "Reversible reactions and equilibria"
+   },
+   "primary_point": {
+    "code": "4CH1-4.41C",
+    "title": "understand how to write the structural and displayed formulae of an ester, given the name or formula of the alcohol and carboxylic acid from which it is formed and vice versa"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-g",
+     "title": "Esters"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "5b640714-b348-471e-92f5-f83f68eb6131",
+   "external_ref": "sme-eq-4-7-esters-q3-s",
+   "question_type": "STRUCTURED",
+   "marks": 5,
+   "anchor": {
+    "code": "4CH1-S3-c",
+    "title": "Reversible reactions and equilibria"
+   },
+   "primary_point": {
+    "code": "4CH1-4.41C",
+    "title": "understand how to write the structural and displayed formulae of an ester, given the name or formula of the alcohol and carboxylic acid from which it is formed and vice versa"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-g",
+     "title": "Esters"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "185af345-b60e-4547-b626-a96152f4d361",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q10",
+   "question_type": "STRUCTURED",
+   "marks": 15,
+   "anchor": {
+    "code": "4CH1-S1-e",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "primary_point": {
+    "code": "4CH1-4.26",
+    "title": "understand how to draw the structural and displayed formulae for alkenes with up to four carbon atoms in the molecule,and name the unbranched-chain isomers knowledge of cis/trans or E/Z notation is no"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-d",
+     "title": "Alkenes"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "74740178-7946-47b1-8072-3af3f1f93d6b",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q12",
+   "question_type": "STRUCTURED",
+   "marks": 11,
+   "anchor": {
+    "code": "4CH1-S4-d",
+    "title": "Alkenes"
+   },
+   "primary_point": {
+    "code": "4CH1-1.25",
+    "title": "write word equations and balanced chemical equations(including state symbols):for reactions studied in this specificationfor unfamiliar reactions where suitable information is provided."
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S1-e",
+     "title": "Chemical formulae, equations and calculations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "fb0b82b8-f715-4922-818b-3c7209396822",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q14",
+   "question_type": "STRUCTURED",
+   "marks": 12,
+   "anchor": {
+    "code": "4CH1-S4-h",
+    "title": "Synthetic polymers"
+   },
+   "primary_point": {
+    "code": "4CH1-4.3",
+    "title": "know what is meant by the terms homologous series, functional group and isomerism"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-a",
+     "title": "Introduction"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "ef91e37b-1169-425c-a24c-6e91fa1b7188",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q4",
+   "question_type": "STRUCTURED",
+   "marks": 8,
+   "anchor": {
+    "code": "4CH1-S4-h",
+    "title": "Synthetic polymers"
+   },
+   "primary_point": {
+    "code": "4CH1-4.26",
+    "title": "understand how to draw the structural and displayed formulae for alkenes with up to four carbon atoms in the molecule,and name the unbranched-chain isomers knowledge of cis/trans or E/Z notation is no"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-d",
+     "title": "Alkenes"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "ee5af2f9-12ec-45b5-997d-66c9492df6fc",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q7",
+   "question_type": "STRUCTURED",
+   "marks": 13,
+   "anchor": {
+    "code": "4CH1-S4-h",
+    "title": "Synthetic polymers"
+   },
+   "primary_point": {
+    "code": "4CH1-4.26",
+    "title": "understand how to draw the structural and displayed formulae for alkenes with up to four carbon atoms in the molecule,and name the unbranched-chain isomers knowledge of cis/trans or E/Z notation is no"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S4-d",
+     "title": "Alkenes"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "b48ba2fc-0c87-420d-9b7a-c9493d918618",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q3-p1",
+   "question_type": "MCQ_SINGLE",
+   "marks": 1,
+   "anchor": {
+    "code": "4CH1-S2-g",
+    "title": "Acids, bases and salt preparations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.33C",
+    "title": "describe how to carry out an acid-alkali titration"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-f",
+     "title": "Acids, alkalis and titrations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  },
+  {
+   "question_id": "afff3107-083f-44e8-9722-ae8fd25c23a4",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q3-s",
+   "question_type": "STRUCTURED",
+   "marks": 4,
+   "anchor": {
+    "code": "4CH1-S2-g",
+    "title": "Acids, bases and salt preparations"
+   },
+   "primary_point": {
+    "code": "4CH1-2.33C",
+    "title": "describe how to carry out an acid-alkali titration"
+   },
+   "expected_topic_parents": [
+    {
+     "code": "4CH1-S2-f",
+     "title": "Acids, alkalis and titrations"
+    }
+   ],
+   "ambiguous_multi_parent": false,
+   "no_topic_parent": false,
+   "qt_primary_conflict_rows": 0
+  }
+ ]
+}

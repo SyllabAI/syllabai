@@ -1144,6 +1144,27 @@ candidate).
   derivation clears them in one pass. Evidence:
   `bench/review/psaxis-review-2026-09-28/tqsp2-primary-topics-2026-09-29/`.
 
+  **ADDENDUM (2026-10-01, trace 1a0f5b2b7bf5bf7d — the Task-55-recorded 94
+  sme-eq-* L1 disagreements RECONCILED):** the L1 rule was re-implemented and
+  pin-validated (checked=961 agree=867 disagree=94, all sme-eq-*, 0 ambiguous,
+  0 qt conflicts — reproduces the 09-30 pinned 946/852/94 on the pre-qsp15
+  state). Ground truth: 94/94 the old anchor is the plurality-winner of the
+  question's point-parent distribution (the SME import's filing rule) while
+  its single PRIMARY qsp point's parent TOPIC differs; 94/94 lack qt-primary
+  mirrors (lane 0/593 vs past-paper 368/368); the 2 qsp-repair twins
+  (q3-p1/-q3-s) additionally had zero qt rows. Disposition D1 (content-truth
+  direction, no coding rewrites): 94 guarded primary-topic UPDATEs to the
+  parent TOPIC of the PRIMARY point + old anchors preserved as SECONDARY qt
+  rows + 92 secondary→primary flips + 2 twin primary INSERTs; qsp rows
+  byte-identical (asserted pre/post); plan pinned pre-write (sha256
+  cb4cb2cb…9a7d0); dry-run ROLLBACK then COMMIT (first dry-run caught
+  question_topics having no id/created_at DB defaults — explicit uuid+now()).
+  Fresh-connection verify ALL PINS PASS: census 961/961/0 — the bank-wide
+  house rule (filing = topic of the dominant assessed point) now holds for
+  every active question; qt 1130→1226; ING/cohort fingerprints unchanged.
+  Evidence: `bench/review/psaxis-review-2026-09-28/sme-eq94-reconciliation-20261001/`.
+  Open residue: sme-eq qt-primary backfill for the other 499 (L1-compliant;
+  serve-shape only).
 - [x] **servable19-topics-citations (2026-09-29, Task 68, trace 1a0eb3255bd898c9) —
   the two non-operator Task-67 leftovers EXECUTED + VERIFIED: by-topic mappings
   for the 19 newly-servable questions + the stale-citation re-point (cosmetic).**
