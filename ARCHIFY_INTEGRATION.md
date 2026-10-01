@@ -130,6 +130,12 @@ Key rules baked into this workflow:
 | `docs/archify/tools/quiet-green-manual-browser-evidence.json` | Evidence results for the restyle (5/5 PASS) |
 | `docs/archify/tools/quiet-green-evidence/*.png` | 12 committed screenshots (all five artifacts × light/dark + full-page) |
 | `docs/archify/T-ARCHIFY-QUIET-GREEN-EVIDENCE-REPORT.md` | Evidence report for the design-system restyle |
+| `docs/archify/T-ARCHIFY-REFRESH-EVIDENCE-REPORT.md` | Evidence report for the 2026-10-02 refresh (pin bump + drift + v3 toolchain) |
+| `docs/archify/*.finalize.json`, `*.finalize-summary.json` | v3 handoff receipts per artifact (spec/artifact SHA-256 + gate states) |
+| `docs/archify/*.delivery.json`, `*.browser-check.json` | v3 delivery provenance + per-attempt browser-check receipts (pre-QG bytes) |
+| `docs/archify/tools/visual_evidence_refresh.py` | Refresh browser-evidence script (new-fact DOM presence + containment) |
+| `docs/archify/tools/refresh-manual-browser-evidence.json` | Refresh evidence results (5/5 PASS, SHA-256-bound to committed artifacts) |
+| `docs/archify/tools/qg-browser-check/` | Packaged browser-check receipts attempted on post-QG bytes (environmental fail, recorded) |
 
 ## 5. Browser evidence status (honest record)
 
@@ -291,3 +297,32 @@ perceptually reviewed. Honest limits recorded in the report: the packaged
 describe the pre-restyle deliver output), and fonts load from Google Fonts
 with in-file fallback stacks offline (embedded JetBrains Mono remains the
 deepest mono fallback).
+
+## 10. Refresh to the current canonical state (2026-10-02)
+
+All five diagrams re-pinned to `syllabai-core @ 5e4d155f26e2d2bcd02b64799019de46f86fb83a`
+(was `14b5e3d`, 97 commits behind) and re-verified: every `sources[]` anchor
+audited against the new pin, 12 drifted line anchors re-anchored, and the
+semantic drift folded in honestly — the κ release gate's live state (OPEN on an
+unvouchable passed row, session 117; operator human round supersedes) replacing
+the stale "gate closed" claims, the retrieval diagram carrying the
+paper-question fail-open guard + session-memory context assembly + per-kind RRF
+weights + the rev1 corpus pin (T-C23 Option B), the marking diagram carrying
+pipeline 1.2.1 (partial marks, scaled budget, `TRUNCATED_OUTPUT`), G-5 queue
+pagination and prompt v3, and the overview carrying the 09-28 security-wave
+boundary rate limiting. Full change table + receipts:
+`T-ARCHIFY-REFRESH-EVIDENCE-REPORT.md`.
+
+Toolchain: the skill install was re-established after the sandbox reset and
+delivered **Archify v3.0** (was 2.17). v3's `finalize` (validate → deliver →
+strict check → browser gate) passed validate/deliver/check on all five; the
+browser gate remains environmentally unavailable here (`Runtime.evaluate`
+15000 ms timeouts — same record as §5/§8; receipts committed). v3 also requires
+`meta.output` (added, pointing at the committed paths — this lane keeps the
+repo-root delivery layout, not the per-request `.archify/` folder convention)
+and now renders `connections[]` as labeled edges + SRC chips. The regeneration
+pipeline is unchanged: `finalize → tools/apply_quiet_green.py → committed
+artifact` (QG re-applied byte-stably; the v3 template carries the same token
+vocabulary). Manual evidence 5/5 + 5/5 (QG + refresh scripts, both committed,
+SHA-256-bound to the committed post-QG bytes); perceptual review performed on
+all five across both themes.

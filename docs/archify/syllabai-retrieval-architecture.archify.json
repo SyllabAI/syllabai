@@ -5,12 +5,13 @@
     "title": "SyllabAI — Retrieval & Grounded AI (source-backed)",
     "locale": "en",
     "quality_profile": "showcase",
+    "output": "docs/archify/syllabai-retrieval-architecture.html",
     "viewBox": [1130, 580],
     "repository": {
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
     },
     "views": [
       {
@@ -60,7 +61,8 @@
       "sublabel": "deterministic intent · no LLM",
       "tag": "IMPLEMENTED · deterministic",
       "sources": [
-        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 89, "label": "ask()" },
+        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 151, "label": "ask()" },
+        { "path": "src/main/java/com/syllabai/tutor/PaperQuestionResolver.java", "line": 90, "label": "paper-question identity (deterministic)" },
         { "path": "src/main/java/com/syllabai/retrieval/StructuredRetrievalQuery.java", "line": 38, "label": "normalized query" }
       ],
       "pos": [20, 80],
@@ -100,7 +102,7 @@
       "tag": "IMPLEMENTED · degrades to KG-only",
       "sources": [
         { "path": "src/main/java/com/syllabai/tutor/ContentVectorRetriever.java", "line": 45, "label": "vector retrieve" },
-        { "path": "src/main/java/com/syllabai/content/ContentRetrievalService.java", "line": 35, "label": "scoped search" }
+        { "path": "src/main/java/com/syllabai/content/ContentRetrievalService.java", "line": 42, "label": "scoped search" }
       ],
       "pos": [710, 80],
       "size": [170, 70]
@@ -109,10 +111,11 @@
       "id": "fusion",
       "type": "backend",
       "label": "Rank fusion",
-      "sublabel": "RRF k=60 · rank-only",
+      "sublabel": "RRF k=60 · per-kind weights",
       "tag": "IMPLEMENTED · SERVING",
       "sources": [
-        { "path": "src/main/java/com/syllabai/tutor/ReciprocalRankFusion.java", "line": 22, "label": "fuse()" }
+        { "path": "src/main/java/com/syllabai/tutor/ReciprocalRankFusion.java", "line": 22, "label": "fuse()" },
+        { "path": "src/main/java/com/syllabai/tutor/ReciprocalRankFusion.java", "line": 51, "label": "plan per-kind weights (serving)" }
       ],
       "pos": [940, 80],
       "size": [170, 70]
@@ -134,11 +137,12 @@
       "id": "selection",
       "type": "backend",
       "label": "Evidence selection",
-      "sublabel": "cap 6 · learner + knowledge brief",
+      "sublabel": "cap 6 · briefs + session memory",
       "tag": "IMPLEMENTED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 118, "label": "rerank + cap" },
-        { "path": "src/main/java/com/syllabai/tutor/LearnerContextAssembler.java", "line": 37, "label": "assemble context" }
+        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 227, "label": "rerank + cap" },
+        { "path": "src/main/java/com/syllabai/tutor/LearnerContextAssembler.java", "line": 37, "label": "assemble context" },
+        { "path": "src/main/java/com/syllabai/tutor/ContextAssembler.java", "line": 24, "label": "learner + memory + knowledge briefs" }
       ],
       "pos": [710, 270],
       "size": [170, 70]
@@ -147,10 +151,10 @@
       "id": "sufficiency",
       "type": "security",
       "label": "Evidence sufficiency",
-      "sublabel": "empty ⇒ deterministic refusal",
+      "sublabel": "empty / unanchored ⇒ refusal",
       "tag": "IMPLEMENTED · fail-closed",
       "sources": [
-        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 126, "label": "grounding gate" },
+        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 243, "end_line": 252, "label": "grounding gate + fail-open guard" },
         { "path": "src/main/java/com/syllabai/retrieval/EvidenceRequirements.java", "line": 25, "label": "requirements" }
       ],
       "pos": [480, 270],
@@ -163,9 +167,9 @@
       "sublabel": "KaRAG tutor + CLA · context-only",
       "tag": "IMPLEMENTED · KaRAG UNVERIFIED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/tutor/GroundedTutorGenerator.java", "line": 37, "label": "generate" },
-        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 33, "label": "KaRAG service" },
-        { "path": "src/main/java/com/syllabai/cla/ClaService.java", "line": 86, "label": "CLA service" }
+        { "path": "src/main/java/com/syllabai/tutor/GroundedTutorGenerator.java", "line": 77, "label": "generate" },
+        { "path": "src/main/java/com/syllabai/tutor/KaRagService.java", "line": 40, "label": "KaRAG service" },
+        { "path": "src/main/java/com/syllabai/cla/ClaService.java", "line": 90, "label": "CLA service" }
       ],
       "pos": [250, 270],
       "size": [170, 70]
@@ -202,7 +206,7 @@
       "sublabel": "fusion + dedup + boundary policy",
       "tag": "IMPLEMENTED · UNWIRED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/retrieval/RetrievalFabric.java", "line": 102, "label": "retrieve()" },
+        { "path": "src/main/java/com/syllabai/retrieval/RetrievalFabric.java", "line": 145, "label": "retrieve()" },
         { "path": "src/main/java/com/syllabai/retrieval/BoundaryPolicy.java", "line": 29, "label": "boundary port" }
       ],
       "pos": [710, 460],
@@ -212,7 +216,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "Serving hybrid — KaRAG tutor + CLA (pinned at 14b5e3d)",
+      "label": "Serving hybrid — KaRAG tutor + CLA (pinned at 5e4d155)",
       "wraps": [
         "query_intent",
         "scope_resolution",
@@ -325,7 +329,7 @@
       "title": "How to read status",
       "items": [
         "IMPLEMENTED = code exists in the pinned repository/commit; SERVING adds that the path runs on the live tutor/CLA request path",
-        "sources[] = file:line verified at syllabai-core @ 14b5e3d via Archify evidence verification",
+        "sources[] = file:line verified at syllabai-core @ 5e4d155 via Archify evidence verification",
         "NOT SERVED / UNWIRED / no-op v0 / degrades are explicit statuses — never read them as live capability"
       ]
     },
@@ -336,7 +340,7 @@
         "Lexical BM25 arm — implemented against the V28 column, but enters the served fusion only if the T-C13 benchmark promotes it",
         "RetrievalFabric multi-arm orchestrator — deliberately not a Spring bean, zero consumers by design (explicit composition, run-003-b E-1)",
         "Gemini File Search arm — stub with available() = false",
-        "Vector leg degrades honestly to empty (KG-only evidence) when no embedding provider is keyed; ingestion paused pending Embedding v2"
+        "Vector leg degrades honestly to empty (KG-only evidence) when no embedding provider is keyed; ingestion paused pending Embedding v2; corpus serving pinned to the VALIDATED rev1 embed (T-C23 Option B)"
       ]
     },
     {
@@ -345,6 +349,8 @@
       "items": [
         "The authoritative KG is canonical curriculum truth — retrieval-derived graph signals (Local Intelligence Layer) are PROPOSED and appear nowhere in serving",
         "Serving retrieval is NOT PDF→chunks→embeddings→vector DB→LLM: it is curriculum-scope-gated hybrid retrieval (KG + vector) fused rank-only, capped, and refused deterministically when nothing survives",
+        "A parsed paper-question identity that binds zero validated anchors refuses deterministically (fail-open guard) — telemetry separates deterministic-paper-refusal from the grounding-gate refusal (D2)",
+        "Working memory (prior turns, s139) and the cross-session episodic digest (s140) enter the assembled context — learner overlay, never canonical truth",
         "LLMs generate from the assembled context only — they never mark answers and never own curriculum truth",
         "Every citation resolves from surviving evidence items; there is no free-floating claim path. The sufficiency→generator edge is intentionally unlabeled: admission-on-pass is the gate's contract, refusal is documented here"
       ]
@@ -353,8 +359,8 @@
       "dot": "cyan",
       "title": "Sources",
       "items": [
-        "All 12 nodes are syllabai-core packages, pinned at 14b5e3d780956b39267bce2a8b831865ca4f89bb",
-        "KaRAG pipeline contract (intent → KG context → hybrid retrieval → fusion → rerank → grounded generation → citations) is documented in KaRagService.java:18-19",
+        "All 12 nodes are syllabai-core packages, pinned at 5e4d155f26e2d2bcd02b64799019de46f86fb83a",
+        "KaRAG pipeline contract (intent → KG context → hybrid retrieval → fusion → rerank → grounded generation → citations) is documented in KaRagService.java:21-22",
         "CLA follows the same contract (ClaService.java:59-61) with the §7 answer-leakage gate (ClaLeakagePolicy)"
       ]
     }

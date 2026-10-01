@@ -1,0 +1,98 @@
+{
+  "generated": "2026-10-02",
+  "tool": "visual_evidence_refresh.py",
+  "note": "Refresh evidence: new-fact DOM presence + horizontal containment on the Quiet Green post-processed committed artifacts. QG cascade + needle evidence: quiet-green-manual-browser-evidence.json (5/5 PASS, same run shape). Packaged browser-check: environmentally unavailable (DevTools Runtime.evaluate 15000 ms timeout, recorded per artifact in tools/qg-browser-check/).",
+  "artifacts": {
+    "syllabai-architecture-overview.html": {
+      "containment": {
+        "1440x1000": true,
+        "1600x1000": true,
+        "1920x1080": true,
+        "2048x1200": true
+      },
+      "needles": {
+        "rate-limited": true,
+        "RateLimitFilter.java": true,
+        "IMPLEMENTED \u00b7 fail-closed": true,
+        "holds the gate OPEN (session 117": true,
+        "deep-audit 09-28": true,
+        "SyllabAI/syllabai @ f1a7eb2 (main)": true
+      },
+      "ok": true,
+      "html_sha256": "a74ff926aaf4e4fa30b3643981cafad9ff843e38c04bc67572032c115f7b0ec3"
+    },
+    "syllabai-learning-loop.html": {
+      "containment": {
+        "1440x1000": true,
+        "1600x1000": true,
+        "1920x1080": true,
+        "2048x1200": true
+      },
+      "needles": {
+        "pinned at 5e4d155": true,
+        "IMPLEMENTED \u00b7 fail-closed": true,
+        "gate OPEN (session 117)": true,
+        "any-credit convention (n=25)": true
+      },
+      "ok": true,
+      "html_sha256": "a0ef080888269b1cfe1b9172082d7a703679d646a89449ec0934969c9391d872"
+    },
+    "syllabai-retrieval-architecture.html": {
+      "containment": {
+        "1440x1000": true,
+        "1600x1000": true,
+        "1920x1080": true,
+        "2048x1200": true
+      },
+      "needles": {
+        "pinned at 5e4d155": true,
+        "PaperQuestionResolver.java": true,
+        "empty / unanchored \u21d2 refusal": true,
+        "KaRagService.java": true,
+        "RRF k=60 \u00b7 per-kind weights": true,
+        "briefs + session memory": true,
+        "ContextAssembler.java": true,
+        "fail-open guard": true,
+        "cross-session episodic digest (s140)": true,
+        "VALIDATED rev1 embed (T-C23 Option B)": true,
+        "KaRagService.java:21-22": true
+      },
+      "ok": true,
+      "html_sha256": "3dc52f1525f078a97562dfd8618244f81580b96721084e78835411e8d229a4cd"
+    },
+    "syllabai-assessment-marking.html": {
+      "containment": {
+        "1440x1000": true,
+        "1600x1000": true,
+        "1920x1080": true,
+        "2048x1200": true
+      },
+      "needles": {
+        "@ 5e4d155": true,
+        "pipeline 1.2.1 \u00b7 partial marks": true,
+        "SmartMarkResult.java": true,
+        "TeacherMarkingQueueService.java": true,
+        "TRUNCATED_OUTPUT": true,
+        "release gate OPEN on an unvouchable passed row (session 117)": true,
+        "any-credit convention pinned in core e7a55fe": true
+      },
+      "ok": true,
+      "html_sha256": "22259832e982c8e1830ef9b000ce18086cfac3fb400f21b8100cc81d269216ef"
+    },
+    "syllabai-ingestion-pipeline.html": {
+      "containment": {
+        "1440x1000": true,
+        "1600x1000": true,
+        "1920x1080": true,
+        "2048x1200": true
+      },
+      "needles": {
+        "@ 5e4d155": true,
+        "ContentDocumentController.java": true,
+        "SmeQuestionIngestService.java": true
+      },
+      "ok": true,
+      "html_sha256": "6446c5e8489dbb17259deb3442f04af2ba777b053bd9eb3d550a8b04aab570b7"
+    }
+  }
+}

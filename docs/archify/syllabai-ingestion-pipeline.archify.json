@@ -5,6 +5,7 @@
     "title": "SyllabAI — Ingestion & Content Pipeline (source-backed)",
     "locale": "en",
     "quality_profile": "showcase",
+    "output": "docs/archify/syllabai-ingestion-pipeline.html",
     "viewBox": [
       1130,
       600
@@ -13,7 +14,7 @@
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
     },
     "views": [
       {
@@ -299,7 +300,7 @@
         },
         {
           "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 206,
+          "line": 204,
           "label": "QuestionSpecPoint"
         }
       ]
@@ -390,7 +391,7 @@
         },
         {
           "path": "src/main/java/com/syllabai/content/ContentDocumentController.java",
-          "line": 87,
+          "line": 101,
           "label": "/embed endpoint"
         }
       ]
@@ -399,7 +400,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core @ 14b5e3d — ingestion fabric",
+      "label": "syllabai-core @ 5e4d155 — ingestion fabric",
       "wraps": [
         "bridge",
         "curriculum_ingest",
@@ -562,7 +563,7 @@
       "dot": "cyan",
       "title": "How to read status",
       "items": [
-        "Core nodes carry line-anchored sources verified at syllabai-core 14b5e3d",
+        "Core nodes carry line-anchored sources verified at syllabai-core 5e4d155",
         "syllabai-parser (pdflane, engine 1.1.1 @ eef89fb) and the normalized-papers repo of record (syllabai-pastpapers @ 6354773) are cross-repo text-cited",
         "The corpus node is source data, not code"
       ]

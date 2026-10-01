@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.archify.json",
+    "sha256": "f9697055d8c4d91be0de6fc2e61e946b22cdbb7746775f95c5ef2a7f34ed6d87",
+    "bytes": 15469
+  },
+  "artifact": {
+    "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.html",
+    "sha256": "c941fba1e7d3ea5e84205563df0c2f116c04f49841b94a841f67330148447dda",
+    "bytes": 780073
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "fail"
+  },
+  "failedStage": "browser-check",
+  "diagnostics": [
+    {
+      "code": "viewer/evidence-path-conflict",
+      "severity": "error",
+      "message": "browser-check will not replace the existing unowned evidence path \"/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.browser-check.json\".",
+      "subject": {
+        "artifact": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.html",
+        "evidencePath": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.browser-check.json"
+      },
+      "evidence": {
+        "reason": {
+          "code": "ownership-artifact-mismatch"
+        }
+      },
+      "supportedFixes": [
+        "move the conflicting file aside, or choose a separate --out-dir, then rerun browser-check"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 1,
+    "shown": 1,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.finalize.json",
+    "summaryReceipt": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.finalize-summary.json",
+    "browserCheckReceipt": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-01T19:41:37.338Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1176
+}

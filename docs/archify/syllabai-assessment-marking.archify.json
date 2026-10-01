@@ -5,6 +5,7 @@
     "title": "SyllabAI — Assessment & Marking (source-backed)",
     "locale": "en",
     "quality_profile": "showcase",
+    "output": "docs/archify/syllabai-assessment-marking.html",
     "viewBox": [
       1130,
       600
@@ -13,7 +14,7 @@
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
     },
     "views": [
       {
@@ -38,7 +39,7 @@
           "kappa_gate",
           "release"
         ],
-        "note": "Batch Smart Mark: VALIDATED-only, prompt v2, κ agreement decides release."
+        "note": "Batch Smart Mark: VALIDATED-only, prompt v3, κ agreement decides release."
       },
       {
         "id": "scheme-validation",
@@ -97,17 +98,17 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
-          "line": 44,
+          "line": 56,
           "label": "marking routes"
         },
         {
           "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
-          "line": 104,
+          "line": 204,
           "label": "queue-v2"
         },
         {
           "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
-          "line": 133,
+          "line": 231,
           "label": "smart-mark-batch"
         }
       ]
@@ -129,17 +130,17 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
-          "line": 49,
+          "line": 51,
           "label": "queue service"
         },
         {
           "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
-          "line": 84,
-          "label": "markingQueue"
+          "line": 109,
+          "label": "markingQueue (G-5 pagination)"
         },
         {
           "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
-          "line": 240,
+          "line": 340,
           "label": "smartMarkBatch"
         }
       ]
@@ -148,7 +149,7 @@
       "id": "smartmark",
       "type": "backend",
       "label": "Smart Mark engine",
-      "sublabel": "per-part pipeline · prompt v2",
+      "sublabel": "pipeline 1.2.1 · partial marks",
       "tag": "IMPLEMENTED · VALIDATED-only (G-2)",
       "pos": [
         710,
@@ -161,11 +162,6 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
-          "line": 41,
-          "label": "Smart Mark engine"
-        },
-        {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
           "line": 106,
           "label": "VALIDATED-only selection"
         },
@@ -173,6 +169,11 @@
           "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
           "line": 185,
           "label": "honest refusal row"
+        },
+        {
+          "path": "src/main/java/com/syllabai/smartmark/SmartMarkResult.java",
+          "line": 40,
+          "label": "pipeline version 1.2.1"
         }
       ]
     },
@@ -198,7 +199,7 @@
         },
         {
           "path": "src/main/java/com/syllabai/smartmark/LlmMarkingCandidateGenerator.java",
-          "line": 58,
+          "line": 80,
           "label": "chain.generate"
         }
       ]
@@ -396,7 +397,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core @ 14b5e3d — marking fabric",
+      "label": "syllabai-core @ 5e4d155 — marking fabric",
       "wraps": [
         "marking_api",
         "marking_queue",
@@ -444,7 +445,7 @@
       "id": "smartmark-to-llm",
       "from": "smartmark",
       "to": "llm_chain",
-      "label": "prompt v2",
+      "label": "prompt v3",
       "fromSide": "right",
       "toSide": "left",
       "labelDy": -29
@@ -556,7 +557,7 @@
       "dot": "cyan",
       "title": "How to read status",
       "items": [
-        "IMPLEMENTED nodes carry line-anchored sources verified at syllabai-core 14b5e3d",
+        "IMPLEMENTED nodes carry line-anchored sources verified at syllabai-core 5e4d155",
         "syllabai-web — Teacher is cross-repo text-cited (no pin-verified path from this diagram's repository pin)",
         "Statuses use the project vocabulary; nothing here is upgraded beyond its evidence"
       ]
@@ -566,9 +567,10 @@
       "title": "Fail-closed honesty (V34)",
       "items": [
         "Only a VALIDATED scheme backs marking (G-2) — anything else returns an honest SCHEME_NOT_VALIDATED row at zero LLM cost",
+        "Refusals are honest rows: SCHEME_NOT_VALIDATED (pre-LLM gate), UNPARSEABLE_OUTPUT, TRUNCATED_OUTPUT — the completion budget scales with the point's marks and truncated raw output is persisted",
         "A FLAGGED scheme never backs marking, from SUGGESTED or VALIDATED",
         "SMART_MARKED stays provisional until the κ gate passes; the threshold is recorded per evaluation row",
-        "No κ value exists yet — the first real calibration is the operator's marking round"
+        "First real κ measured in the agent calibration round (n=25, production pairing, any-credit convention pinned in core e7a55fe); release gate OPEN on an unvouchable passed row (session 117) — the operator's human round supersedes"
       ]
     },
     {

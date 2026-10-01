@@ -5,6 +5,7 @@
     "title": "SyllabAI — Source-Backed Architecture Overview",
     "locale": "en",
     "quality_profile": "showcase",
+    "output": "docs/archify/syllabai-architecture-overview.html",
     "viewBox": [
       2350,
       1580
@@ -13,7 +14,7 @@
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
     },
     "views": [
       {
@@ -65,7 +66,7 @@
           "embedding_lane",
           "kappa_gate"
         ],
-        "note": "Local Intelligence Layer proposed; pgvector lane unverified; κ gate closed."
+        "note": "Local Intelligence Layer proposed; pgvector ingestion lane unverified; κ gate fail-closed — release OPEN on an unvouchable row (s117)."
       }
     ]
   },
@@ -134,7 +135,7 @@
       "id": "api_core",
       "type": "backend",
       "label": "syllabai-core REST API",
-      "sublabel": "Spring Boot · /api/v1 · identity",
+      "sublabel": "Spring Boot · /api/v1 · identity · rate-limited",
       "tag": "IMPLEMENTED · VERIFIED",
       "pos": [
         90,
@@ -149,6 +150,11 @@
           "path": "src/main/java/com/syllabai/SyllabAiApplication.java",
           "line": 18,
           "label": "boot entrypoint"
+        },
+        {
+          "path": "src/main/java/com/syllabai/ratelimit/RateLimitFilter.java",
+          "line": 59,
+          "label": "boundary rate limiting (auth + LLM tiers)"
         }
       ]
     },
@@ -431,8 +437,8 @@
         },
         {
           "path": "src/main/java/com/syllabai/smartmark/LlmMarkingCandidateGenerator.java",
-          "line": 69,
-          "label": "marking prompt"
+          "line": 41,
+          "label": "marking prompt v3"
         }
       ]
     },
@@ -515,7 +521,7 @@
       "id": "tutor",
       "type": "backend",
       "label": "KaRAG grounded tutor",
-      "sublabel": "fusion · rerank · citations",
+      "sublabel": "fusion · memory · paper anchors",
       "tag": "IMPLEMENTED · UNVERIFIED",
       "pos": [
         760,
@@ -528,7 +534,7 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/tutor/KaRagService.java",
-          "line": 33,
+          "line": 40,
           "label": "KaRAG service"
         },
         {
@@ -555,7 +561,7 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/cla/ClaService.java",
-          "line": 86,
+          "line": 90,
           "label": "CLA service"
         }
       ]
@@ -565,7 +571,7 @@
       "type": "security",
       "label": "κ agreement gate (F-161)",
       "sublabel": "κ ≥ 0.60 · fail-closed",
-      "tag": "IMPLEMENTED · gate closed",
+      "tag": "IMPLEMENTED · fail-closed",
       "pos": [
         1740,
         1080
@@ -1149,9 +1155,10 @@
       "dot": "violet",
       "title": "Gates and honest status",
       "items": [
-        "κ ≥ 0.60 agreement gate (F-161) is fail-closed: no passing evaluation on file, smart marks stay provisional",
+        "κ agreement gate (F-161) is fail-closed by code; live release state 2026-10-02: a passed κ row of unknowable provenance holds the gate OPEN (session 117, keep-and-document) — the operator's human round supersedes",
         "Retrieval serving is benchmark-gated (T-C05); the pgvector semantic lane is PREPARED · UNVERIFIED",
         "Content ingestion paused pending Embedding v2 — pastpapers corpus imports through validation gates only",
+        "The security chain rate-limits at the boundary — auth tier per client IP, LLM tier per learner — with per-target-account login budgets (deep-audit 09-28)",
         "KaRAG tutor, the CLA and Smart Mark all call the shared failover LLM chain; it generates, it never marks or owns truth",
         "Teacher Workbench validates SME packages upstream of every import gate; teacher per-point decisions pair with Smart Mark decisions in evaluateAgreement",
         "The REST API fronts every subsystem including the CLA; the CLA reads learner work and canonical anchors through read-only context resolution"
@@ -1165,7 +1172,7 @@
         "syllabai-teacher-workbench @ 39ad5d8 (main) — SME validation tooling",
         "syllabai-parser @ eef89fb (tc17-work) — offline parsing",
         "syllabai-pastpapers @ 6354773 (main) — normalized corpus + provenance",
-        "SyllabAI/syllabai @ 6df88d3 (tc17-rec) — specs, ADRs, knowledge map"
+        "SyllabAI/syllabai @ f1a7eb2 (main) — specs, ADRs, knowledge map"
       ]
     }
   ]

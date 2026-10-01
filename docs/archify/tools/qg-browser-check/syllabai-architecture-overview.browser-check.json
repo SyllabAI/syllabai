@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "browser-check",
+  "evidenceKind": "automated-browser",
+  "status": "fail",
+  "visualReview": "not-requested",
+  "provenance": "unknown",
+  "artifact": {
+    "path": "/tmp/qgbc/syllabai-architecture-overview.html",
+    "sha256": "a74ff926aaf4e4fa30b3643981cafad9ff843e38c04bc67572032c115f7b0ec3",
+    "bytes": 826417
+  },
+  "state": {
+    "detail": "read",
+    "motion": "still"
+  },
+  "chrome": {
+    "status": "available",
+    "executable": "/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/browser-check-runtime",
+      "severity": "error",
+      "message": "browser-check could not complete its Chrome inspection.",
+      "subject": {
+        "artifact": "/tmp/qgbc/syllabai-architecture-overview.html"
+      },
+      "evidence": {
+        "reason": "Chrome navigation failed: net::ERR_FAILED"
+      },
+      "supportedFixes": [
+        "resolve the reported Chrome inspection error, then rerun browser-check"
+      ]
+    }
+  ],
+  "containment": {
+    "status": "fail",
+    "policy": "fit-or-reader-declared-readable-vertical-scroll",
+    "viewports": []
+  },
+  "themeStates": {
+    "status": "fail",
+    "viewports": []
+  },
+  "readability": {
+    "status": "fail",
+    "minimumProjectedNodeTextPx": 6,
+    "viewports": []
+  },
+  "viewerChrome": {
+    "status": "fail",
+    "viewports": []
+  },
+  "captures": {
+    "status": "not-requested",
+    "screenshots": [],
+    "contactSheet": null
+  },
+  "sidecars": {
+    "directory": "/home/z/my-project/repos/syllabai/docs/archify/tools/qg-browser-check",
+    "receipt": "syllabai-architecture-overview.browser-check.json",
+    "files": []
+  },
+  "error": "Chrome navigation failed: net::ERR_FAILED"
+}

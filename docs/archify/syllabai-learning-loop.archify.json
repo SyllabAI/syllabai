@@ -5,12 +5,13 @@
     "title": "SyllabAI — Learning Loop (source-backed)",
     "locale": "en",
     "quality_profile": "showcase",
+    "output": "docs/archify/syllabai-learning-loop.html",
     "viewBox": [1130, 580],
     "repository": {
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "14b5e3d780956b39267bce2a8b831865ca4f89bb"
+      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
     },
     "views": [
       {
@@ -71,7 +72,7 @@
       "tag": "IMPLEMENTED",
       "sources": [
         { "path": "src/main/java/com/syllabai/assessment/AttemptController.java", "line": 24, "label": "attempts API" },
-        { "path": "src/main/java/com/syllabai/tutor/TutorController.java", "line": 21, "label": "tutor API" },
+        { "path": "src/main/java/com/syllabai/tutor/TutorController.java", "line": 39, "label": "tutor API" },
         { "path": "src/main/java/com/syllabai/learner/TutorEngagementRecorder.java", "line": 32, "label": "engagement recorder" }
       ],
       "pos": [250, 80],
@@ -96,7 +97,7 @@
       "type": "security",
       "label": "κ agreement gate (F-161)",
       "sublabel": "κ ≥ 0.60 · fail-closed",
-      "tag": "IMPLEMENTED · gate closed",
+      "tag": "IMPLEMENTED · fail-closed",
       "sources": [
         { "path": "src/main/java/com/syllabai/smartmark/KappaAgreementService.java", "line": 22, "label": "cohenKappa" },
         { "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java", "line": 207, "label": "kappaGatePassed" }
@@ -199,7 +200,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core · Spring Boot — pinned at 14b5e3d",
+      "label": "syllabai-core · Spring Boot — pinned at 5e4d155",
       "wraps": [
         "interaction_api",
         "assessment_smartmark",
@@ -313,7 +314,7 @@
       "title": "How to read status",
       "items": [
         "IMPLEMENTED = code exists in the pinned repository/commit; VERIFIED adds acceptance evidence from project records",
-        "sources[] = file:line verified at syllabai-core @ 14b5e3d via Archify evidence verification",
+        "sources[] = file:line verified at syllabai-core @ 5e4d155 via Archify evidence verification",
         "gate closed / not wired / overlay only are explicit statuses — never read them as live capability"
       ]
     },
@@ -333,7 +334,7 @@
       "items": [
         "AI (Smart Mark) marks reach learners only when per-paper κ ≥ 0.60 against human marks",
         "Human marks are always authoritative — the top edge bypasses the gate by design (DECISION_016)",
-        "Fail-closed: no passing calibration on file, so the gate is closed today (G-4 calibration pending operator marking round)"
+        "Fail-closed by code; the agent calibration round measured κ under the pinned any-credit convention (n=25) and a passed row of unknowable provenance now holds the gate OPEN (session 117) — G-4's genuine human round is the operator's and supersedes"
       ]
     },
     {
