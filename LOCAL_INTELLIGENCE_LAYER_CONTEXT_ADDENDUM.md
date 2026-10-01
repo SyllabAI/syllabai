@@ -96,4 +96,10 @@ The local model must not:
 6. Add Smart Mark/evidence/remediation and Tutor escalation.
 7. Only then consider richer local models or SyllabAI-specific fine-tuning.
 
+## Post-research updates (2026-10-01 — recorded in full in the canonical document's correction block; verbatim-preserving)
+
+1. **ADR-029 alignment:** "the website" now means `syllabai-hub` (product frontend per ADR-029, 2026-09-28); `syllabai-web` is the internal teacher/ops console. Semantic Page Context and the deterministic tool broker belong in the hub, through core proxies.
+2. **Retrieval-quality gate:** LIL's fast-path value is gated on the retrieval promotion lane (VALIDATED-only serving is 317/3,831 chunks; all RAG §8 promotion verdicts NOT PROMOTED; live refusal 27–31% per the Tutor current-state audit 2026-09-28). Phases 2+ must not be scheduled ahead of it.
+3. **Model refresh:** Cactus released Needle 3 (121M params, 8–29 MB weight slices, tool-calling-only) on 2026-09-17/19 — see the canonical document §4.1b. The Phase 2 benchmark set is now Needle 2 vs Needle 3. All external claims remain UNVERIFIED for SyllabAI.
+
 See `LOCAL_INTELLIGENCE_LAYER_ARCHITECTURE.md` for the full research, tool catalogue, performance plan, benchmark, failure modes, security boundaries and rollout plan.
