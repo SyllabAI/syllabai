@@ -1,0 +1,20 @@
+ref,paper,session,qn,bank,best_var,attr,own,own_echo,ms_corr,class
+q08-57202de4,4CH0/1CR,June 2013,8,8,R,"{""R"": 0.967, ""reg"": 0.567}",R,8,"[""tot"", 8, ""ms_totals""]",NO-DEFECT
+q09-57202de4,4CH0/1CR,June 2013,9,1,R,"{""R"": 0.961, ""reg"": 0.804}",R,9,"[""tot"", 9, ""ms_totals""]",REPAIR
+q03-d5815b70,4CH0/2CR,June 2014,3,5,R,"{""R"": 0.949, ""reg"": 0.359}",R,5,"[""tot"", 5, ""ms_totals""]",NO-DEFECT
+q11-22184324,4CH1/1CR,June 2022,11,1,R,"{""R"": 0.95}",R,10,"[""tot"", 10, ""ms_totals""]",REPAIR
+q01-5273dfa3,4CH0/1CR,June 2016,1,1,R,"{""R"": 1.0, ""reg"": 0.69}",R,7,"[""rows"", 7, 7, ""ms_rows_sum""]",REPAIR
+q02-5273dfa3,4CH0/1CR,June 2016,2,6,R,"{""R"": 0.946, ""reg"": 0.811}",R,6,"[""rows"", 4, 2, ""ms_rows_sum""]",NO-DEFECT
+q03-5273dfa3,4CH0/1CR,June 2016,3,4,R,"{""R"": 0.968, ""reg"": 0.581}",R,4,"[""rows"", 3, 3, ""ms_rows_sum""]",NO-DEFECT
+q04-5273dfa3,4CH0/1CR,June 2016,4,8,R,"{""R"": 0.983, ""reg"": 0.7}",R,8,"[""rows"", 5, 3, ""ms_rows_sum""]",NO-DEFECT
+q05-5273dfa3,4CH0/1CR,June 2016,5,9,R,"{""R"": 0.967, ""reg"": 0.417}",R,9,"[""rows"", 3, 1, ""ms_rows_sum""]",NO-DEFECT
+q08-5273dfa3,4CH0/1CR,June 2016,8,8,R,"{""R"": 0.958, ""reg"": 0.708}",R,8,"[""rows"", 7, 4, ""ms_rows_sum""]",NO-DEFECT
+q09-5273dfa3,4CH0/1CR,June 2016,9,1,R,"{""R"": 0.967, ""reg"": 0.817}",R,13,"[""rows"", 6, 2, ""ms_rows_sum""]",UNRESOLVED
+q10-5273dfa3,4CH0/1CR,June 2016,10,15,R,"{""R"": 0.967, ""reg"": 0.7}",R,15,"[""rows"", 3, 1, ""ms_rows_sum""]",NO-DEFECT
+q11-5273dfa3,4CH0/1CR,June 2016,11,1,R,"{""R"": 0.917, ""reg"": 0.6}",R,15,"[""rows"", 11, 6, ""ms_rows_sum""]",UNRESOLVED
+q12-5273dfa3,4CH0/1CR,June 2016,12,13,R,"{""R"": 0.95, ""reg"": 0.533}",R,13,"[""rows"", 6, 4, ""ms_rows_sum""]",NO-DEFECT
+q10-2701ad3c,4CH0/1C,June 2016,10,1,reg,"{""R"": 0.756, ""reg"": 1.0}",reg,6,"[""rows"", 6, 3, ""ms_rows_sum""]",REPAIR
+q01-6ab313e4,4CH0/2CR,June 2016,1,4,R,"{""R"": 0.98, ""reg"": 0.5}",R,4,"[""rows"", 2, 2, ""ms_rows_sum""]",NO-DEFECT
+q02-6ab313e4,4CH0/2CR,June 2016,2,8,R,"{""R"": 1.0, ""reg"": 0.4}",R,8,"[""rows"", 3, 1, ""ms_rows_sum""]",NO-DEFECT
+q04-6ab313e4,4CH0/2CR,June 2016,4,6,R,"{""R"": 1.0, ""reg"": 0.765}",R,6,null,NO-DEFECT
+q06-6ab313e4,4CH0/2CR,June 2016,6,1,R,"{""R"": 0.9, ""reg"": 0.575}",R,8,"[""rows"", 6, 2, ""ms_rows_sum""]",UNRESOLVED
