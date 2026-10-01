@@ -7,11 +7,28 @@
 
 Canonical filename:
 
-`<SUBJECT>_<QUALIFICATION>_<ARTIFACT_ID>_<SLUG>.md`
+`<SUBJECT>_<SPECIFICATION>_<ARTIFACT_ID>_<SLUG>.md`
 
 Example:
 
 `CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md`
+
+Filename-contract definition (resolved 2026-10-01, before any 4CH1 generation):
+
+* Segment 2 is the **specification code** (`4CH1`), not the qualification name.
+  This makes the template and the worked example agree: the example has always
+  filled this slot with `4CH1`, which is the stable specification context
+  SyllabAI uses for identity.
+* The **qualification** (`International GCSE`) remains a required front-matter
+  metadata field; it participates in validation and chunk metadata but not in
+  the filename.
+* `<SLUG>` is the artifact title slug (`MISCONCEPTION_ATLAS` for `MIS-01`);
+  deterministic derivation is pinned by the validator tooling
+  (`tools/sib/taxonomy.py::canonical_filename`).
+* This definition is made while the SIB architecture is still PROPOSED; the
+  convention is recorded as `PROPOSED/DEFINED` and is binding for SIB v1
+  artifact generation once the protocol is accepted. No architecture-status
+  promotion is implied by this clarification.
 
 ## 2. Required front matter
 
