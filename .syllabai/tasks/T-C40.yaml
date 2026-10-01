@@ -1,0 +1,106 @@
+version: 1
+task:
+  id: T-C40
+  title: "Execute the RAG-review fix order items ①–④: corpus-validation
+    worklist (throughput lane), §8 floor re-index (v1.1 dual-view bars),
+    three cheap risk-killers (HNSW migration persistence, citation-stripping
+    observability, embedding-drift durability), MIN_COSINE calibration"
+  owner: "superz (main agent, zai-web session, operator trace 1a0f5db42c67bd41)"
+  status: DONE
+  priority: P1
+  base:
+    repo: syllabai (master pack) @ 5bbb764; syllabai-core @ cd9e574
+  basis: >
+    Operator directive (2026-10-01): "validate corpus → re-index the S8 floors
+    (they're structurally unpassable) → three cheap risk-killers → cosine
+    calibration" — the approved order of items 1–4 from
+    download/RAG_ENGINE_REVIEW_2026-10-01.md §5 (review delivered the same day).
+  scope:
+    allowed:
+      - "master-pack: bench tooling + evidence packs + harness spec §8.1 +
+        knowledge-map/invariant docs + tracker/worklog/locks"
+      - "syllabai-core: one Flyway migration (V54, lease held), tutor
+        citation-stripping observability (+ tests), Run005C gate arithmetic
+        v1.1 extension (bench/test lane only)"
+    forbidden:
+      - "NO content validation flips (AGENT.md core rule 6 — operator-gated)"
+      - "NO MIN_COSINE constant change (gated on the Run005C re-record +
+        production probe — the calibration pack is the evidence, not the flip)"
+      - "NO recorded-verdict re-judging; NO frozen artifact mutation; NO
+        serving-behavior change"
+  acceptance:
+    - "each of the four order items has a durable, evidence-labeled artifact"
+    - "the S8 floors re-index derives bars from a committed re-baseline with
+      the same arithmetic as v1.0, applied per view, re-judging nothing"
+    - "every code change carries its test; the migration is serially allocated"
+  claims:
+    VERIFIED:
+      - "① worklist RECORDED: evidence/bench-001/validation-worklist-2026-10-01/
+        (worklist.json + REPORT.md + SHA256SUMS) — 132 batches from snap-006
+        bytes; census 965/4,181 VALIDATED (23.1%); zero-recall-class unlock
+        analysis (e.g. 4CH1/2C MARK_SCHEME batch: 186 SUGGESTED chunks, 30
+        tier-1 gold queries incl. mark_scheme/multi_spec_point); deterministic
+        tool committed at bench/validation_worklist.py; flips stay operator-gated"
+      - "② re-baseline RECORDED: run-006-bproxy (bproxy_score.py over snap-006 ×
+        gold-v5, env-driven run identity — the tool can no longer silently write
+        run-001 provenance): ALL view r@10 0.1745/mrr 0.0737/ndcg 0.1816,
+        VALIDATED view 0.0667/0.0684/0.1183 → §8.1 v1.1 bars 0.1920/0.1237/
+        0.2316 (ALL) + 0.0734/0.1184/0.1683 (VALIDATED), same +10%/+0.05/+0.05
+        arithmetic per view; spec §8.1 committed; Run005C gate arithmetic
+        extended to the dual view (v1.0 retained as reference; no verdict
+        re-judged); orientation: r7's recorded numbers still fail all six v1.1
+        checks — the corpus conclusion stands"
+      - "③a V54 migration committed (lease held + released in locks.yaml):
+        hnsw.iterative_scan='strict_order' + hnsw.ef_search=40 pinned at
+        database level via current_database() DO block (portable across
+        neondb/test/Testcontainers); cites hnsw_incident.json + review R6"
+      - "③b citation range enforcement VERIFIED already-landed (deep-audit
+        09-28 H2): GroundedTutorGenerator.sanitizeAnswer strips out-of-range
+        [n]/【n】 on the blocking path, StreamSanitizer holds the same contract
+        on the stream path — the review's R7 'no marker-range enforcement' is
+        CORRECTED to 'enforcement existed; observability did not'. Landed:
+        stripping now reports the exact marker numbers (blocking + stream),
+        output byte-identical (sink-carrying overload, 4-arg unchanged);
+        tests added (GroundedTutorGeneratorTest, StreamSanitizerTest)"
+      - "③c drift root cause durable-ized: EMBEDDING_TRANSPORT_INVARIANT.md +
+        knowledge-map §7 row. The root cause WAS named 2026-09-20 in
+        embed-bridge-v2/CORRECTION.md (CI single-call REST vs Spring AI batched
+        transport; content byte-identical 300/300; per-chunk cosine 0.8619–
+        0.9467, mean 0.9083; top-10 agreement 0.7907) — the review's R5 'nobody
+        has named the cause' is CORRECTED to 'the naming was not durable'.
+        Mechanism narrowed (float noise excluded by magnitude; payload/parameter
+        candidates ranked); decisive experiment recorded in the invariant"
+      - "④ calibration RECORDED: evidence/bench-001/cosine-calibration-2026-10-01/
+        (calibration.json + REPORT.md + SHA256SUMS) from bench/cosine_calibration.py
+        — recomputed every probe→chunk cosine from frozen vectors, self-verified
+        against the recorded eval top-3 (10/10 PASS). Headline: at MIN_COSINE
+        0.15 the floor is a NO-OP on the measured space (100.0% of chunks clear
+        it for every probe). Recommendation MIN_COSINE = 0.50 (worst hit 0.6069
+        − observed artifact→DB downshift 0.024 = 0.5829, rounded down to grid,
+        minus one grid step as transfer-safety margin); 0.55 rejected (~0.0002
+        above the worst production-transferred hit); flip gated on the Run005C
+        re-record + the production probe SQL in the pack"
+    INFERRED:
+      - "the production-space effect size of MIN_COSINE=0.50 (artifact-space
+        sweep cuts 10% of corpus at 0.50 and 57% at 0.55; production
+        distributions sit lower by the measured 0.024–0.057 downshift, so the
+        production cut is larger — exact number pending the re-record)"
+    REPORTED: []
+    UNVERIFIED:
+      - "Java compilation/CI of the core changes (sandbox has JDK 21 only, no
+        Maven/Docker — CI is the verifier; changes are mechanical and mirrored
+        by new tests)"
+      - "live production effect of V54 on pooled connections before the next
+        deploy restart (ALTER DATABASE SET applies to new connections; deploy
+        flow restarts the service after migrate)"
+  next_safe_actions:
+    - "operator: run the validation waves top-down from the worklist (teacher
+      validation surface only), smallest honest batch first"
+    - "core lane: run the Run005C re-record (JDK 25 + Docker Postgres +
+      BENCH_EMBED_ARTIFACT preload) with MIN_COSINE=0.50 + the v1.1 gate; if
+      no vector-axis regression, land the one-line constant change with the
+      calibration pack as its evidence"
+    - "operator: run the embedding decisive experiment (EMBEDDING_TRANSPORT_
+      INVARIANT.md) — 5-chunk dual-transport matrix, then close the mechanism"
+    - "fold the review's item 5 (fabric promotion for robustness) into the next
+      planning session — not started here by design"
