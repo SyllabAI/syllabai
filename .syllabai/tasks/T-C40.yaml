@@ -19,7 +19,7 @@ task:
     allowed:
       - "master-pack: bench tooling + evidence packs + harness spec §8.1 +
         knowledge-map/invariant docs + tracker/worklog/locks"
-      - "syllabai-core: one Flyway migration (V54, lease held), tutor
+      - "syllabai-core: one Flyway migration (V56; V54 AND V55 were both taken mid-flight by the concurrent retarget lane, AGENT.md rule 1), tutor
         citation-stripping observability (+ tests), Run005C gate arithmetic
         v1.1 extension (bench/test lane only)"
     forbidden:
@@ -50,10 +50,15 @@ task:
         extended to the dual view (v1.0 retained as reference; no verdict
         re-judged); orientation: r7's recorded numbers still fail all six v1.1
         checks — the corpus conclusion stands"
-      - "③a V54 migration committed (lease held + released in locks.yaml):
+      - "③a V56 migration committed (V54 AND V55 were both taken MID-FLIGHT by the
+        concurrent retarget lane on origin/core — the first attempt failed
+        fail-closed in CI on the Flyway duplicate-version check, the correct
+        behavior; renumbered per AGENT.md rule 1; lease held + released in
+        locks.yaml):
         hnsw.iterative_scan='strict_order' + hnsw.ef_search=40 pinned at
         database level via current_database() DO block (portable across
-        neondb/test/Testcontainers); cites hnsw_incident.json + review R6"
+        neondb/test/Testcontainers); cites hnsw_incident.json + review R6;
+        lands via PR syllabai-core#38 (branch tc40-rag-review-fixes)"
       - "③b citation range enforcement VERIFIED already-landed (deep-audit
         09-28 H2): GroundedTutorGenerator.sanitizeAnswer strips out-of-range
         [n]/【n】 on the blocking path, StreamSanitizer holds the same contract
@@ -70,6 +75,12 @@ task:
         has named the cause' is CORRECTED to 'the naming was not durable'.
         Mechanism narrowed (float noise excluded by magnitude; payload/parameter
         candidates ranked); decisive experiment recorded in the invariant"
+      - "core CI VERIFIED GREEN on the final head 4481469 (PR syllabai-core#38,
+        run 36821886508 = SUCCESS: full build + suite incl. the 3 new tests
+        and V56 applied on Testcontainers) — the earlier V55 duplicate-version
+        failure was the Flyway check working fail-closed, not a code defect;
+        first CI failure attribution: concurrent-lane V55 collision, mine to fix,
+        which is what the renumber commit did"
       - "④ calibration RECORDED: evidence/bench-001/cosine-calibration-2026-10-01/
         (calibration.json + REPORT.md + SHA256SUMS) from bench/cosine_calibration.py
         — recomputed every probe→chunk cosine from frozen vectors, self-verified
@@ -86,11 +97,8 @@ task:
         distributions sit lower by the measured 0.024–0.057 downshift, so the
         production cut is larger — exact number pending the re-record)"
     REPORTED: []
-    UNVERIFIED:
-      - "Java compilation/CI of the core changes (sandbox has JDK 21 only, no
-        Maven/Docker — CI is the verifier; changes are mechanical and mirrored
-        by new tests)"
-      - "live production effect of V54 on pooled connections before the next
+    UNVERIFIED: []
+      - "live production effect of V56 on pooled connections before the next
         deploy restart (ALTER DATABASE SET applies to new connections; deploy
         flow restarts the service after migrate)"
   next_safe_actions:
