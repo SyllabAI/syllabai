@@ -300,17 +300,20 @@ deepest mono fallback).
 
 ## 10. Refresh to the current canonical state (2026-10-02)
 
-All five diagrams re-pinned to `syllabai-core @ 5e4d155f26e2d2bcd02b64799019de46f86fb83a`
-(was `14b5e3d`, 97 commits behind) and re-verified: every `sources[]` anchor
-audited against the new pin, 12 drifted line anchors re-anchored, and the
-semantic drift folded in honestly — the κ release gate's live state (OPEN on an
-unvouchable passed row, session 117; operator human round supersedes) replacing
-the stale "gate closed" claims, the retrieval diagram carrying the
-paper-question fail-open guard + session-memory context assembly + per-kind RRF
-weights + the rev1 corpus pin (T-C23 Option B), the marking diagram carrying
-pipeline 1.2.1 (partial marks, scaled budget, `TRUNCATED_OUTPUT`), G-5 queue
-pagination and prompt v3, and the overview carrying the 09-28 security-wave
-boundary rate limiting. Full change table + receipts:
+All five diagrams re-pinned to `syllabai-core @ 93850118819053a8a7404902d5a7a83ab09d0dbd`
+(was `14b5e3d`, 166 commits behind by delivery time — the refresh ran in two
+passes because the concurrent operator lane advanced core main mid-flight) and
+re-verified: every `sources[]` anchor audited at the pin, 21 drifted anchors
+re-anchored, and the semantic drift folded in honestly — the κ release gate's
+**G-4 CLOSE** (the operator's genuine human round: κ=1.0, n=113, threshold 0.60,
+PASSED — superseding the agent round's unvouchable row) replacing the stale
+"gate closed" claims, the retrieval diagram carrying the paper-question
+fail-open guard + session-memory context assembly + per-kind RRF weights +
+per-course scope resolution (ADR-030) + the rev2 serving state (T-C23's rev1
+rollback superseded; wave-1 2026-10-02), the marking diagram carrying pipeline
+1.2.1 (partial marks, scaled budget, `TRUNCATED_OUTPUT`), G-5 queue pagination
+and prompt v3, and the overview carrying the 09-28 security-wave boundary rate
+limiting. Full change table + receipts:
 `T-ARCHIFY-REFRESH-EVIDENCE-REPORT.md`.
 
 Toolchain: the skill install was re-established after the sandbox reset and
@@ -325,4 +328,6 @@ pipeline is unchanged: `finalize → tools/apply_quiet_green.py → committed
 artifact` (QG re-applied byte-stably; the v3 template carries the same token
 vocabulary). Manual evidence 5/5 + 5/5 (QG + refresh scripts, both committed,
 SHA-256-bound to the committed post-QG bytes); perceptual review performed on
-all five across both themes.
+all five across both themes. Tracker note: this lane's record is Session 137 in
+WORKLOG.md (the concurrent lane held sessions 118–136; PROGRESS.md per-session
+sections end at 129 by its own header note).

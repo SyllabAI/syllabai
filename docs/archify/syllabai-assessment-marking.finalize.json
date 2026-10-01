@@ -5,15 +5,15 @@
   "status": "fail",
   "type": "architecture",
   "quality": "showcase",
-  "startedAt": "2026-10-01T19:51:33.796Z",
+  "startedAt": "2026-10-01T20:07:25.112Z",
   "specification": {
     "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.archify.json",
-    "sha256": "f9697055d8c4d91be0de6fc2e61e946b22cdbb7746775f95c5ef2a7f34ed6d87",
-    "bytes": 15469
+    "sha256": "a6e0f430280e392b0936c7bc4a03c5b9786ae78854e6a71122122f401fabb3bc",
+    "bytes": 15466
   },
   "artifact": {
     "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.html",
-    "sha256": "c941fba1e7d3ea5e84205563df0c2f116c04f49841b94a841f67330148447dda",
+    "sha256": "03ffbe58775f3bb63b35b5ba0fcbd8209e04590c631144f750cac31a5b1c0378",
     "bytes": 780073
   },
   "stages": {
@@ -40,8 +40,8 @@
         "ok": true,
         "command": "validate",
         "specification": {
-          "sha256": "f9697055d8c4d91be0de6fc2e61e946b22cdbb7746775f95c5ef2a7f34ed6d87",
-          "bytes": 15469
+          "sha256": "a6e0f430280e392b0936c7bc4a03c5b9786ae78854e6a71122122f401fabb3bc",
+          "bytes": 15466
         },
         "validation": {
           "checksPassed": 9,
@@ -56,7 +56,7 @@
     "deliver": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 929,
+      "durationMs": 832,
       "command": [
         "/usr/bin/node",
         "/home/z/.claude/skills/archify/bin/archify.mjs",
@@ -72,18 +72,18 @@
       ],
       "receipt": {
         "schemaVersion": 1,
-        "receiptId": "e3329ff8-b7e8-4893-8855-d9a29d048b60",
+        "receiptId": "a9877511-8e9a-47c9-9916-2d64f45f80a3",
         "ok": true,
         "command": "deliver",
         "type": "architecture",
         "input": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.archify.json",
         "output": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.html",
         "specification": {
-          "sha256": "f9697055d8c4d91be0de6fc2e61e946b22cdbb7746775f95c5ef2a7f34ed6d87",
-          "bytes": 15469
+          "sha256": "a6e0f430280e392b0936c7bc4a03c5b9786ae78854e6a71122122f401fabb3bc",
+          "bytes": 15466
         },
         "artifact": {
-          "sha256": "c941fba1e7d3ea5e84205563df0c2f116c04f49841b94a841f67330148447dda",
+          "sha256": "03ffbe58775f3bb63b35b5ba0fcbd8209e04590c631144f750cac31a5b1c0378",
           "bytes": 780073
         },
         "validation": {
@@ -97,7 +97,7 @@
         "evidence": {
           "verified": true,
           "repository": "https://github.com/SyllabAI/syllabai-core",
-          "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a",
+          "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd",
           "references": 25
         },
         "update": {
@@ -116,7 +116,7 @@
     "check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 167,
+      "durationMs": 161,
       "command": [
         "/usr/bin/node",
         "/home/z/.claude/skills/archify/bin/archify.mjs",
@@ -128,7 +128,7 @@
         "ok": true,
         "file": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.html",
         "artifact": {
-          "sha256": "c941fba1e7d3ea5e84205563df0c2f116c04f49841b94a841f67330148447dda",
+          "sha256": "03ffbe58775f3bb63b35b5ba0fcbd8209e04590c631144f750cac31a5b1c0378",
           "bytes": 780073
         },
         "checks": [
@@ -248,13 +248,13 @@
           "issues": []
         },
         "provenance": "current",
-        "deliveryReceiptId": "e3329ff8-b7e8-4893-8855-d9a29d048b60"
+        "deliveryReceiptId": "a9877511-8e9a-47c9-9916-2d64f45f80a3"
       }
     },
     "browser-check": {
       "status": "fail",
       "exitCode": 1,
-      "durationMs": 10,
+      "durationMs": 9,
       "command": [
         "/usr/bin/node",
         "/home/z/.claude/skills/archify/bin/archify.mjs",
@@ -272,10 +272,10 @@
         "status": "fail",
         "visualReview": "not-requested",
         "provenance": "current",
-        "deliveryReceiptId": "e3329ff8-b7e8-4893-8855-d9a29d048b60",
+        "deliveryReceiptId": "a9877511-8e9a-47c9-9916-2d64f45f80a3",
         "artifact": {
           "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-assessment-marking.html",
-          "sha256": "c941fba1e7d3ea5e84205563df0c2f116c04f49841b94a841f67330148447dda",
+          "sha256": "03ffbe58775f3bb63b35b5ba0fcbd8209e04590c631144f750cac31a5b1c0378",
           "bytes": 780073
         },
         "state": {
@@ -362,8 +362,8 @@
   },
   "visualReview": "not-requested",
   "failedStage": "browser-check",
-  "finishedAt": "2026-10-01T19:51:34.973Z",
-  "durationMs": 1176,
+  "finishedAt": "2026-10-01T20:07:26.183Z",
+  "durationMs": 1070,
   "update": {
     "status": "current",
     "installedVersion": "3.0.1",

@@ -2,108 +2,117 @@
 
 **Commission:** operator, "Update archify diagrams" (trace `1a0f8e77cd478f29`).
 **Scope:** refresh all five source-backed diagrams to the current canonical state —
-new `syllabai-core` pin, drifted line anchors re-verified, semantic drift from 97
+new `syllabai-core` pin, drifted line anchors re-verified, semantic drift from the
 upstream core commits folded into the honest-status layer, Quiet Green re-applied.
 
-## 1. What drove the refresh
+## 1. What drove the refresh — including a mid-lane overtake
 
-The five diagrams were pinned at `syllabai-core @ 14b5e3d` (2026-09-21/22). Core
-main has since moved **97 commits** (66 first-parent) to `5e4d155`, including
-material architecture change:
+The five diagrams were pinned at `syllabai-core @ 14b5e3d` (2026-09-21/22). While
+this lane was in flight, the concurrent operator lane landed heavily upstream;
+the refresh therefore happened in TWO passes and the final pin is the true
+current core main:
 
-- **κ release gate live state** — sessions 115–117 (canonical tracker): agent
-  calibration measured the first real κ (n=25, any-credit convention pinned in
-  core `e7a55fe`); a passed κ evaluation row of unknowable provenance was
-  live-verified holding the release gate OPEN (session 117, keep-and-document);
-  the operator's genuine human round (G-4) supersedes. Every diagram said
-  "gate closed" — now honestly re-stated (code semantics unchanged, live state
-  recorded).
-- **Retrieval/tutor** — deterministic paper-question resolver + fail-open guard
-  (second deterministic refusal class; D2 telemetry separates
-  `deterministic-paper-refusal` from `deterministic-refusal`), §22 session store
-  + working memory (s139) + cross-session episodic digest (s140), per-kind RRF
-  weights reaching serving fusion, prompt v3/v4, untrusted prompt-block fencing,
-  CURRENT_EMBED_REV rolled back to the VALIDATED rev1 corpus (T-C23 Option B).
-- **Assessment/marking** — marking pipeline **1.2.1** (partial marks within
-  compound points, scaled completion budget, `TRUNCATED_OUTPUT` self-forensic
-  refusals with persisted raw output), G-5 opt-in marking-queue pagination,
-  prompt v3.
-- **Security wave (deep-audit 09-28, R1–R19)** — boundary rate limiting (auth
-  tier per client IP, LLM tier per learner), per-target-account login budgets,
-  `@PreAuthorize` layer, FK closure, token revocation, content-type allowlist.
-- **Verified-unchanged facts** (kept): cross-repo pins (web `bfc9850`, workbench
-  `39ad5d8`, parser `eef89fb` tc17-work, pastpapers `6354773` — all still the
-  clone heads), BM25/fabric non-serving, Gemini File Search stub, cosine floor
-  0.15, `rules-v0.2`, `nba-rules/v1.3`, V13/V15/V33 bridge invariants,
-  InterventionRunService having no automatic producer, ingestion paused.
+- **Pass 1** re-pinned to `5e4d155` (the clone's then-HEAD, 97 commits / 66
+  first-parent past the diagrams' pin).
+- **Pass 2** re-pinned to **`9385011`** (true `origin/main`, 69 commits further)
+  after the merge reconciliation surfaced the concurrent lane's results, which
+  overtook two facts pass 1 had just written:
+
+1. **κ release gate — G-4 is CLOSED.** Incoming Session 118 (2026-09-24)
+   records the operator's genuine human reference round executed end-to-end:
+   blind packet → 26/26 human marks → smart-mark batch 26/26 SKIPPED
+   (idempotent) → gate row **κ=1.0, observed 1.0, n=113, threshold 0.60,
+   PASSED**, persisted and read back; the PASSED row supersedes the unvouchable
+   pre-existing one; Step-4 probe returned `authoritative=true`. Pass 1's
+   "gate OPEN on an unvouchable row (session 117)" text was already history —
+   the diagrams now state the human-backed release honestly.
+2. **Embed-rev state — rev1 rollback superseded.** `CURRENT_EMBED_REV` is back
+   at **2** at the pin, and the 2026-10-02 wave-1 production record shows the
+   QP/MS corpus VALIDATED and serving at rev2 (T-C23 Option B's rev1 rollback
+   superseded; the T-C23 trap cannot fire). The "VALIDATED rev1 embed" line
+   written in pass 1 was replaced; the pgvector lanes' `PREPARED · UNVERIFIED`
+   tags became `IMPLEMENTED · rev2 serving`.
+
+Other drift folded in (both passes): deterministic paper-question resolver +
+fail-open guard (second deterministic refusal class; D2 telemetry separates
+`deterministic-paper-refusal` from `deterministic-refusal`), §22 session store +
+working memory (s139) + cross-session episodic digest (s140), per-kind RRF
+weights reaching serving fusion, prompt v3/v4, marking pipeline **1.2.1**
+(partial marks within compound points, scaled completion budget,
+`TRUNCATED_OUTPUT` self-forensic refusals with persisted raw output), G-5 opt-in
+marking-queue pagination, V53 **per-course scope resolution (ADR-030)**, the
+09-28 deep-audit security wave (boundary rate limiting — auth tier per client
+IP, LLM tier per learner — per-target-account login budgets), `prompt v2` →
+`prompt v3` on the marking→LLM edge.
+
+Verified-unchanged (kept): cross-repo pins (web `bfc9850`, workbench `39ad5d8`,
+parser `eef89fb` tc17-work, pastpapers `6354773` — still the clone heads),
+BM25/fabric non-serving, Gemini File Search stub, **cosine floor 0.15** (the
+T-C42 0.50 flip is PR #44, unmerged at the pin), `rules-v0.2`,
+`nba-rules/v1.3`, V13/V15/V33 bridge invariants, no automatic producer for the
+intervention run ledger.
 
 ## 2. Pin bump + evidence re-verification
 
-`meta.repository.revision` → `5e4d155f26e2d2bcd02b64799019de46f86fb83a` in all
-five IRs. Every one of the 60 `sources[]` refs was audited against the new pin
+`meta.repository.revision` → `93850118819053a8a7404902d5a7a83ab09d0dbd` in all
+five IRs. Every one of the 60 `sources[]` refs was audited against the pin
 (`git show <pin>:<path>` — file exists, range in bounds, cited content still
-supports its label). 12 anchors had drifted with code growth and were re-anchored
-(class/method declarations that moved); new facts carry new refs. All five IRs
-**validate PASS** at the new pin (Archify verifies blobs at the revision, not
-the working tree).
+supports its label). Across both passes 21 anchors were re-anchored where code
+growth moved them (class/method declarations; the KaRag pipeline contract
+javadoc moved to lines 25-26; the guard+gate range now 512-521). All five IRs
+**validate PASS** at the pin with 0 errors / 0 warnings (Archify verifies blobs
+at the pinned revision, not the working tree).
 
 ## 3. Toolchain note — Archify skill v2.17 → v3.0
 
 The sandbox reset had wiped the skill install; the documented `npx skills add
-tt-a1i/archify -g` re-install delivered **Archify v3.0** (was 2.17 at the
-original delivery). Consequences, handled:
+tt-a1i/archify -g` re-install delivered **Archify v3.0** (was 2.17). Handled:
 
-- v3 requires `meta.output` (added: `docs/archify/<name>.html`, matching this
-  repo's committed layout — the per-request `.archify/<folder>` convention was
-  NOT adopted; this lane's regeneration workflow stays `deliver →
-  apply_quiet_green.py → committed artifact`, §9).
+- v3 requires `meta.output` (added: `docs/archify/<name>.html` — this lane keeps
+  the repo-root delivery layout, not the per-request `.archify/<folder>`
+  convention; the regeneration workflow stays `finalize →
+  apply_quiet_green.py → committed artifact`).
 - v3 `finalize` = validate → deliver → strict check → **real-browser
   browser-check**. All five: validate/deliver/check **pass**; browser-check
-  failed environmentally (below).
+  failed environmentally (§6).
 - v3 renders the IRs' `connections[]` as labeled edges + SRC chips — a renderer
   upgrade; layouts re-solved automatically, containment re-proven.
 
-## 4. Per-diagram changes (summary)
+## 4. Per-diagram changes (final state)
 
 | Diagram | Semantic edits |
 |---|---|
-| overview | api_core `· rate-limited` + RateLimitFilter ref; tutor sublabel → `fusion · memory · paper anchors`; κ tag `gate closed` → `fail-closed` + gates-card live-state line + security-wave line; cross-repo card self-pin → `syllabai @ f1a7eb2 (main)`; proposed-view note honest gate state; KaRag/Cla/prompt line anchors |
-| learning-loop | region + card pin → `5e4d155`; κ tag → `fail-closed`; κ card records the agent calibration (n=25) and the OPEN live state with operator supersession; tutor API re-anchored (s139 javadoc) |
-| retrieval | region/card pin; `ask()` re-anchored (session-anchored ask, L151) + PaperQuestionResolver ref; sufficiency → `empty / unanchored ⇒ refusal` + guard+gate range (L243–252); fusion → `per-kind weights` + PLAN_V2_WEIGHTS ref; selection → `briefs + session memory` + ContextAssembler.TutorContext ref; not-serving card + rev1 pin (T-C23 Option B); truth-boundaries card + fail-open guard/D2 + s140 digest lines; sources card → new pin + contract lines 21-22 |
-| assessment-marking | region/card pin; smartmark → `pipeline 1.2.1 · partial marks` + SmartMarkResult ref (3-source cap respected); marking API/queue re-anchored (queue-v2 L204, batch L231, paginated markingQueue L109, smartMarkBatch L340); chain.generate → L80; V34 card: first real κ + OPEN live state + refusal family (UNPARSEABLE_OUTPUT / TRUNCATED_OUTPUT, persisted raw output); smartmark→llm edge + view note → `prompt v3` |
-| ingestion | region/card pin; QuestionSpecPoint → L204; /embed → L101 (content unchanged otherwise — verified still accurate) |
+| overview | api_core `· rate-limited` + RateLimitFilter ref; tutor sublabel → `fusion · memory · paper anchors`; κ tag `gate closed` → `fail-closed` + gates-card: **G-4 human round κ=1.0 PASSED**; pgvector lane → `IMPLEMENTED · rev2 serving` + wave-1 line; security-wave card line; cross-repo card self-pin → `syllabai @ f1a7eb2 (main)`; proposed-view note updated (≤140 chars) |
+| learning-loop | region + card pin → `9385011`; κ tag → `fail-closed`; κ card: **G-4 human round κ=1.0 (n=113) PASSED**, superseding the n=25 agent calibration; tutor API / evidence / scope anchors re-anchored |
+| retrieval | region/card pin; `ask()` re-anchored (session-anchored ask) + PaperQuestionResolver ref; sufficiency → `empty / unanchored ⇒ refusal` + guard+gate range (512-521); fusion → `per-kind weights` + PLAN_V2_WEIGHTS ref; selection → `briefs + session memory` + ContextAssembler.TutorContext ref; scope → `per-course · fail-closed (T-C07)` + `resolveForCourse` (ADR-030); not-serving card: rev2 serving supersedes the rev1 rollback; truth-boundaries card: fail-open guard/D2 + s140 digest lines; sources card → new pin + contract lines 25-26 |
+| assessment-marking | region/card pin; smartmark → `pipeline 1.2.1 · partial marks` + SmartMarkResult ref; queue/API re-anchored (queue-v2, batch, paginated markingQueue, smartMarkBatch); chain.generate re-anchored; V34 card: first real κ (agent n=25 → **human round κ=1.0 n=113 PASSED**) + refusal family (UNPARSEABLE_OUTPUT / TRUNCATED_OUTPUT, persisted raw output); `prompt v3` on the smartmark→llm edge + view note |
+| ingestion | region/card pin; SME anchors re-anchored (ingest L139, schemes-VALIDATED contract L53, QuestionSpecPoint L272); /embed → L101; embedding lane → `IMPLEMENTED · rev2 serving`; paused-card: Embedding v2 wait resolved, rev2 validated + serving in production, remaining SUGGESTED surface is the non-QP/MS axes |
 
-## 5. Delivery receipts (finalize, v3.0)
+## 5. Delivery receipts (finalize, v3.0, final attempts)
 
 | Diagram | quality | spec sha256 | artifact (delivered) | gates |
 |---|---|---|---|---|
-| overview | standard | `bab4cff97eb1…` | `e3a30c817fea…` 819,403 B | validate/deliver/check pass |
-| learning-loop | showcase | `65e549e85860…` | `273860877653…` 776,794 B | validate/deliver/check pass |
-| retrieval | showcase | `d50d9514b8a2…` | `ea5e05629a8b…` 778,648 B | validate/deliver/check pass |
-| assessment | showcase | `f9697055d8c4…` | `c941fba1e7d3…` 780,073 B | validate/deliver/check pass |
-| ingestion | showcase | `695f24f3558f…` | `97decb988fa6…` 780,232 B | validate/deliver/check pass |
+| overview | standard | `07f03dc3da78…` | `f72f47d3d417…` 819,489 B | validate/deliver/check pass |
+| learning-loop | showcase | `e0585446f861…` | `059e4ecd23b8…` 776,782 B | validate/deliver/check pass |
+| retrieval | showcase | `ca8b02cb599d…` | `f6e2a1002bc4…` 778,691 B | validate/deliver/check pass |
+| assessment | showcase | `a6e0f430280e…` | `03ffbe58775f…` 780,073 B | validate/deliver/check pass |
+| ingestion | showcase | `7a2449a2797a…` | `a90ecd3ae795…` 780,344 B | validate/deliver/check pass |
 
-All specs: 0 errors, 0 warnings. Overview/assessment were re-finalized once each
-after late text fixes (view-note 140-char limit; `prompt v2` → `prompt v3`
-connection label found during perceptual review) — the receipts above are the
-final attempts; per-artifact sidecars (`*.finalize.json`,
-`*.finalize-summary.json`, `*.delivery.json`, `*.browser-check.json`) are
-committed beside the artifacts.
+All specs: 0 errors, 0 warnings. Per-artifact sidecars (`*.finalize.json`,
+`*.finalize-summary.json`, `*.delivery.json`, `*.browser-check.json`) committed
+beside the artifacts.
 
 ## 6. Browser evidence — honest record
 
 The packaged `browser-check` (DevTools transport) **could not complete** in this
 sandbox: `Runtime.evaluate` timed out after 15000 ms on every artifact (plus one
 `net::ERR_FAILED` navigation) — the same environmental failure recorded in §5/§8
-of this document for prior rounds. Retried standalone per the contract; receipts
-committed (`*.browser-check.json`, status `fail`, reason recorded).
-
-Additionally attempted on the post-QG bytes in a sidecar-free copy directory
-(`tools/qg-browser-check/` receipts): same environmental timeout. With a
-delivery sidecar present, v3 refuses to inspect bytes that differ from the
-delivered artifact — so the post-QG committed artifacts cannot pass the packaged
-gate while the QG post-processor stays outside Archify's provenance chain. This
-is recorded as a pipeline property, not normalized away.
+for prior rounds; receipts committed with status `fail`, retried standalone and
+on post-QG copies (`tools/qg-browser-check/`). With a delivery sidecar present,
+v3 refuses to inspect bytes that differ from the delivered artifact — the QG
+post-processor sits outside Archify's provenance chain by design, so the
+committed (post-QG) bytes cannot pass the packaged gate; recorded as a pipeline
+property, not normalized away.
 
 Manual Playwright evidence (the established fallback, both scripts committed):
 
@@ -111,46 +120,51 @@ Manual Playwright evidence (the established fallback, both scripts committed):
   (tokens + fonts via computed styles), horizontal containment EXACT at
   1440/1600/1920/2048 both themes, 7/7 IR-derived needle labels per artifact;
   12 screenshots regenerated (`tools/quiet-green-evidence/`).
-- `tools/visual_evidence_refresh.py` (NEW, this round) → **5/5 PASS** —
-  refresh-specific: every new fact (pin strings, κ live-state lines, rate-limit
-  sublabel, refusal-family card text, G-5/pipeline-1.2.1 anchors, source-ref
-  paths) verified present; DOM check for visible text, artifact-bytes check for
-  interactive SRC-layer refs (same method as the committed needle check); 4-viewport
-  horizontal containment exact. SHA-256-bound to the committed artifacts
+- `tools/visual_evidence_refresh.py` (NEW) → **5/5 PASS** — every new fact
+  verified (pin strings, G-4 κ=1.0 PASSED lines, rate-limit sublabel, rev2
+  serving lines, per-course scope, pipeline-1.2.1/G-5 anchors, source-ref
+  paths): DOM check for visible text, artifact-bytes check for interactive
+  SRC-layer refs; 4-viewport horizontal containment exact;
+  SHA-256-bound to the committed artifacts
   (`tools/refresh-manual-browser-evidence.json`).
 
 ## 7. Quiet Green re-application
 
-`tools/apply_quiet_green.py` re-applied to all five fresh v3 deliveries
+`tools/apply_quiet_green.py` re-applied to all five final deliveries
 (deterministic, marker-wrapped, byte-stable on re-run — verified). The v3
-template carries the same token vocabulary the QG layer targets (verified before
-application), so no tool change was needed. Committed artifact SHAs (post-QG):
-overview `a74ff926aaf4…`, learning-loop `a0ef08088826…`, retrieval
-`3dc52f1525f0…`, assessment `22259832e982…`, ingestion `6446c5e8489d…` — the
-SHA bindings in `refresh-manual-browser-evidence.json` match exactly.
+template carries the same token vocabulary the QG layer targets. Committed
+artifact SHAs (post-QG): overview `21f94417f52a…`, learning-loop `f07d5af58bda…`,
+retrieval `edc8154e38d2…`, assessment `28e00d9b0043…`, ingestion `32f25e6d78d5…`
+— the SHA bindings in `refresh-manual-browser-evidence.json` match exactly.
 
 ## 8. Perceptual review
 
 All five artifacts inspected as rendered captures across both themes (overview
-light+dark, learning-loop light, retrieval light, assessment dark+light,
+light+dark, learning-loop light, retrieval light+dark, assessment dark+light,
 ingestion dark): regions, nodes, status chips, SRC chips, labeled edges, guided
 views and conclusion cards all render; the new facts are legible on-canvas (κ
 gate red/fail-closed, `rate-limited` API, `pipeline 1.2.1 · partial marks`,
 `prompt v3`, `empty / unanchored ⇒ refusal`, `RRF k=60 · per-kind weights`,
-`briefs + session memory`, `pinned at 5e4d155`). One defect found and fixed
-during review: a stale `prompt v2` edge label on the assessment diagram.
+`briefs + session memory`, `per-course · fail-closed (T-C07)`,
+`pinned at 9385011`). Defects found and fixed during review across the rounds:
+a stale `prompt v2` edge label, a 140-char view-note overflow, a 3-source node
+cap overflow, and a sublabel width violation.
 
 ## 9. Honest limits
 
 - The packaged browser gate remains environmentally unavailable in this sandbox;
-  its receipts record `fail`, and the automated browser_evidence status for this
+  its receipts record `fail` — the automated browser_evidence status for this
   round is **failed (environmental)**, not skipped and not passed.
 - The QG layer keeps delivery provenance intentionally stale (pre-QG sha in
   `*.delivery.json`); committed bytes are bound by the finalize + refresh
   evidence receipts instead.
-- Live gate state ("OPEN") is a point-in-time operational fact (session 117
-  method); the diagrams' code-semantics claims carry the architecture truth and
-  the card text dates the observation (2026-10-02).
+- The gate's PASSED row is the concurrent lane's committed record (incoming
+  Session 118 + Step-4 probe); this lane cites it rather than re-measuring it.
+- The cosine-floor text stays 0.15 — the T-C42 0.50 flip is PR #44, unmerged at
+  the pin; when it merges, that one sublabel changes with it.
 - No new subsystem NODES were added (session store, resolver, rate limiter are
   carried as facts/refs on existing nodes and in cards) — node counts and
-  layouts are unchanged by design; adding nodes is a future authoring decision.
+  layouts are unchanged by design.
+- Tracker note: the concurrent lane had consumed session numbers through 136;
+  this lane's record is **Session 137** in WORKLOG.md (PROGRESS.md per-session
+  sections end at 129 by its own header note).

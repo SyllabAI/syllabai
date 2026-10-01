@@ -14,7 +14,7 @@
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
+      "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd"
     },
     "views": [
       {
@@ -66,7 +66,7 @@
           "embedding_lane",
           "kappa_gate"
         ],
-        "note": "Local Intelligence Layer proposed; pgvector ingestion lane unverified; κ gate fail-closed — release OPEN on an unvouchable row (s117)."
+        "note": "Local Intelligence Layer proposed; pgvector lane serving rev2; κ gate fail-closed — G-4 human round κ=1.0 PASSED (s118)."
       }
     ]
   },
@@ -153,7 +153,7 @@
         },
         {
           "path": "src/main/java/com/syllabai/ratelimit/RateLimitFilter.java",
-          "line": 59,
+          "line": 62,
           "label": "boundary rate limiting (auth + LLM tiers)"
         }
       ]
@@ -268,7 +268,7 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java",
-          "line": 46,
+          "line": 58,
           "label": "scope resolver"
         }
       ]
@@ -299,8 +299,8 @@
       "id": "embedding_lane",
       "type": "backend",
       "label": "pgvector semantic lane",
-      "sublabel": "provider present · not serving",
-      "tag": "PREPARED · UNVERIFIED",
+      "sublabel": "provider present · serving rev2",
+      "tag": "IMPLEMENTED · rev2 serving",
       "pos": [
         770,
         680
@@ -361,7 +361,7 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java",
-          "line": 19,
+          "line": 21,
           "label": "evidence publisher"
         }
       ]
@@ -459,7 +459,7 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/infrastructure/llm/FailoverLlmChain.java",
-          "line": 32,
+          "line": 41,
           "label": "failover chain"
         },
         {
@@ -534,7 +534,7 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/tutor/KaRagService.java",
-          "line": 40,
+          "line": 44,
           "label": "KaRAG service"
         },
         {
@@ -1155,8 +1155,8 @@
       "dot": "violet",
       "title": "Gates and honest status",
       "items": [
-        "κ agreement gate (F-161) is fail-closed by code; live release state 2026-10-02: a passed κ row of unknowable provenance holds the gate OPEN (session 117, keep-and-document) — the operator's human round supersedes",
-        "Retrieval serving is benchmark-gated (T-C05); the pgvector semantic lane is PREPARED · UNVERIFIED",
+        "κ agreement gate (F-161) is fail-closed by code; release state 2026-10-02: the operator's genuine human reference round (G-4) measured κ=1.0 (n=113, threshold 0.60) — PASSED and superseding; authoritative release is backed by real human evidence",
+        "Retrieval serving is benchmark-gated (T-C05); the pgvector semantic lane serves embed_rev 2 in production (2026-10-02 wave-1 record)",
         "Content ingestion paused pending Embedding v2 — pastpapers corpus imports through validation gates only",
         "The security chain rate-limits at the boundary — auth tier per client IP, LLM tier per learner — with per-target-account login budgets (deep-audit 09-28)",
         "KaRAG tutor, the CLA and Smart Mark all call the shared failover LLM chain; it generates, it never marks or owns truth",

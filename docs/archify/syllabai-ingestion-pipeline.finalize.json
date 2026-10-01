@@ -5,16 +5,16 @@
   "status": "fail",
   "type": "architecture",
   "quality": "showcase",
-  "startedAt": "2026-10-01T19:43:20.851Z",
+  "startedAt": "2026-10-01T20:07:26.305Z",
   "specification": {
     "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.archify.json",
-    "sha256": "695f24f3558fe0f1cd5294b8a5d98215e4c92bc8b2cd9ad809b603e9ac03afab",
-    "bytes": 15334
+    "sha256": "7a2449a2797a951f1c6471c5a9b060f6bd20f5aabc033ca30ed8b5fa422d2395",
+    "bytes": 15437
   },
   "artifact": {
     "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.html",
-    "sha256": "97decb988fa6514e4de984b7851444722c4d4cac01ae63ed9c2d95258ee3e248",
-    "bytes": 780232
+    "sha256": "a90ecd3ae7955f763ab6727634c92b22e9a27812db1acc765323bb58e9aeb8fc",
+    "bytes": 780344
   },
   "stages": {
     "validate": {
@@ -40,8 +40,8 @@
         "ok": true,
         "command": "validate",
         "specification": {
-          "sha256": "695f24f3558fe0f1cd5294b8a5d98215e4c92bc8b2cd9ad809b603e9ac03afab",
-          "bytes": 15334
+          "sha256": "7a2449a2797a951f1c6471c5a9b060f6bd20f5aabc033ca30ed8b5fa422d2395",
+          "bytes": 15437
         },
         "validation": {
           "checksPassed": 9,
@@ -56,7 +56,7 @@
     "deliver": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 952,
+      "durationMs": 851,
       "command": [
         "/usr/bin/node",
         "/home/z/.claude/skills/archify/bin/archify.mjs",
@@ -72,19 +72,19 @@
       ],
       "receipt": {
         "schemaVersion": 1,
-        "receiptId": "405344a1-a2e7-45bf-b149-268e1aee013b",
+        "receiptId": "bc6f4a7a-a56b-46a8-90bf-70f6644303dd",
         "ok": true,
         "command": "deliver",
         "type": "architecture",
         "input": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.archify.json",
         "output": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.html",
         "specification": {
-          "sha256": "695f24f3558fe0f1cd5294b8a5d98215e4c92bc8b2cd9ad809b603e9ac03afab",
-          "bytes": 15334
+          "sha256": "7a2449a2797a951f1c6471c5a9b060f6bd20f5aabc033ca30ed8b5fa422d2395",
+          "bytes": 15437
         },
         "artifact": {
-          "sha256": "97decb988fa6514e4de984b7851444722c4d4cac01ae63ed9c2d95258ee3e248",
-          "bytes": 780232
+          "sha256": "a90ecd3ae7955f763ab6727634c92b22e9a27812db1acc765323bb58e9aeb8fc",
+          "bytes": 780344
         },
         "validation": {
           "checksPassed": 9,
@@ -97,7 +97,7 @@
         "evidence": {
           "verified": true,
           "repository": "https://github.com/SyllabAI/syllabai-core",
-          "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a",
+          "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd",
           "references": 27
         },
         "update": {
@@ -116,7 +116,7 @@
     "check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 134,
+      "durationMs": 148,
       "command": [
         "/usr/bin/node",
         "/home/z/.claude/skills/archify/bin/archify.mjs",
@@ -128,8 +128,8 @@
         "ok": true,
         "file": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.html",
         "artifact": {
-          "sha256": "97decb988fa6514e4de984b7851444722c4d4cac01ae63ed9c2d95258ee3e248",
-          "bytes": 780232
+          "sha256": "a90ecd3ae7955f763ab6727634c92b22e9a27812db1acc765323bb58e9aeb8fc",
+          "bytes": 780344
         },
         "checks": [
           {
@@ -246,13 +246,13 @@
           "issues": []
         },
         "provenance": "current",
-        "deliveryReceiptId": "405344a1-a2e7-45bf-b149-268e1aee013b"
+        "deliveryReceiptId": "bc6f4a7a-a56b-46a8-90bf-70f6644303dd"
       }
     },
     "browser-check": {
       "status": "fail",
       "exitCode": 1,
-      "durationMs": 16207,
+      "durationMs": 10,
       "command": [
         "/usr/bin/node",
         "/home/z/.claude/skills/archify/bin/archify.mjs",
@@ -270,33 +270,36 @@
         "status": "fail",
         "visualReview": "not-requested",
         "provenance": "current",
-        "deliveryReceiptId": "405344a1-a2e7-45bf-b149-268e1aee013b",
+        "deliveryReceiptId": "bc6f4a7a-a56b-46a8-90bf-70f6644303dd",
         "artifact": {
           "path": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.html",
-          "sha256": "97decb988fa6514e4de984b7851444722c4d4cac01ae63ed9c2d95258ee3e248",
-          "bytes": 780232
+          "sha256": "a90ecd3ae7955f763ab6727634c92b22e9a27812db1acc765323bb58e9aeb8fc",
+          "bytes": 780344
         },
         "state": {
           "detail": "read",
           "motion": "still"
         },
         "chrome": {
-          "status": "available",
-          "executable": "/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+          "status": "not-checked",
+          "executable": null
         },
         "diagnostics": [
           {
-            "code": "viewer/browser-check-runtime",
+            "code": "viewer/evidence-path-conflict",
             "severity": "error",
-            "message": "browser-check could not complete its Chrome inspection.",
+            "message": "browser-check will not replace the existing unowned evidence path \"/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.browser-check.json\".",
             "subject": {
-              "artifact": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.html"
+              "artifact": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.html",
+              "evidencePath": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.browser-check.json"
             },
             "evidence": {
-              "reason": "Chrome DevTools protocol timeout failed: Runtime.evaluate: timed out after 15000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\nct to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[5811:5811:1001/194321.287857:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5811:1001/194321.295081:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.295405:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.297079:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5811:1001/194321.357358:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: \n[5811:5811:1001/194321.364300:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.364689:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.394441:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.394641:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.448987:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.452282:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[5811:5811:1001/194321.467465:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.NetworkManager.GetDevices: object_path= /org/freedesktop/NetworkManager: unknown error type: \n[1001/194323.333496:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)\n[1001/194323.333557:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)\nReceived signal 4 ILL_ILLOPN 5629903dc908\nCFI: Most likely a control flow integrity violation; for more information see:\nhttps://www.chromium.org/developers/testing/control-flow-integrity\n#0 0x56298b6fcbc3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a9abc2)\n#1 0x5629903c2494 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0xb760493)\n#2 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#3 0x562989b12bb9 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eb0bb8)\n#4 0x562989b0e3f2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eac3f1)\n#5 0x562989b0ae31 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4ea8e30)\n#6 0x5629896644e6 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a024e5)\n#7 0x562989664df1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02df0)\n#8 0x562989664ca2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02ca1)\n#9 0x562988f3b3f7 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x42d93f6)\n#10 0x56298b67b7a1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a197a0)\n#11 0x5629897881a3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4b261a2)\n#12 0x5629881f316a (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3591169)\n#13 0x5629889e0c44 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3d7ec43)\n#14 0x562988a1824d (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db624c)\n#15 0x562988a17936 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db5935)\n#16 0x562988a15093 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db3092)\n#17 0x562989a8a030 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4e2802f)\n#18 0x7f7347d608bb (/usr/lib/x86_64-linux-gnu/libc.so.6+0x928ba)\n  r8: 0000000000000050  r9: 0000000000000000 r10: 0000000000000000 r11: 0000000000000246\n r12: 0000000000040000 r13: 00007f72bbffc950 r14: 00007f72bbffcbd8 r15: 00007f72bbffca98\n  di: 00007f72bbffc848  si: 0000000000000000  bp: 00007f72bbffc850  bx: 00007f72bbffca20\n  dx: 0000000000000000  ax: 00007f72bbffc848  cx: 00000000ffffffff  sp: 00007f72bbffc840\n  ip: 00005629903dc908 efl: 0000000000010202 cgf: 002b000000000033 erf: 0000000000000000\n trp: 0000000000000006 msk: 0000000000000000 cr2: 0000000000000000\n[end of stack trace]\n../../sandbox/linux/seccomp-bpf-helpers/sigsys_handlers.cc:**CRASHING**:seccomp-bpf failure in syscall nr=0x25 arg1=0x5 arg2=0x7f72bbffac50 arg3=0x0 arg4=0x8\nReceived signal 11 SEGV_ACCERR 000005005025\n#0 0x56298b6fcbc3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a9abc2)\n#1 0x5629903c2494 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0xb760493)\n#2 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#3 0x562989815213 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4bb3212)\n#4 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#5 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#6 0x562989b12bb9 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eb0bb8)\n#7 0x562989b0e3f2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eac3f1)\n#8 0x562989b0ae31 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4ea8e30)\n#9 0x5629896644e6 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a024e5)\n#10 0x562989664df1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02df0)\n#11 0x562989664ca2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02ca1)\n#12 0x562988f3b3f7 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x42d93f6)\n#13 0x56298b67b7a1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a197a0)\n#14 0x5629897881a3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4b261a2)\n#15 0x5629881f316a (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3591169)\n#16 0x5629889e0c44 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3d7ec43)\n#17 0x562988a1824d (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db624c)\n#18 0x562988a17936 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db5935)\n#19 0x562988a15093 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db3092)\n#20 0x562989a8a030 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4e2802f)\n#21 0x7f7347d608bb (/usr/lib/x86_64-linux-gnu/libc.so.6+0x928ba)\n  r8: 00007f72bbff9df0  r9: 00007f72bbff9df0 r10: 00007f72bbff9df0 r11: 0000000000000246\n r12: 0000000000000000 r13: 00007f7347dab037 r14: 0000000000000025 r15: 0000000000000000\n  di: 0000000000000002  si: 0000562986ce8c5f  bp: 00007f72bbff9f40  bx: 00007f72bbff9f70\n  dx: 0000000000000001  ax: 0000000000005000  cx: 0000000005005025  sp: 00007f72bbff9f20\n  ip: 00005629919bb82a efl: 0000000000010202 cgf: 002b000000000033 erf: 0000000000000006\n trp: 000000000000000e msk: 0000000000000008 cr2: 0000000005005025\n[end of stack trace]\n../../sandbox/linux/seccomp-bpf-helpers/sigsys_handlers.cc:**CRASHING**:seccomp-bpf failure in syscall nr=0x25 arg1=0x5 arg2=0x7f72bbff8350 arg3=0x0 arg4=0x8\nChrome transport: Node v24.21.0, libuv 1.52.1, linux; pid=5811, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=10877, messages=47, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=15, writtenBytes=27960, bufferedBytes=0."
+              "reason": {
+                "code": "ownership-artifact-mismatch"
+              }
             },
             "supportedFixes": [
-              "resolve the reported Chrome inspection error, then rerun browser-check"
+              "move the conflicting file aside, or choose a separate --out-dir, then rerun browser-check"
             ]
           }
         ],
@@ -327,23 +330,26 @@
           "receipt": "syllabai-ingestion-pipeline.browser-check.json",
           "files": []
         },
-        "error": "Chrome DevTools protocol timeout failed: Runtime.evaluate: timed out after 15000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\nct to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[5811:5811:1001/194321.287857:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5811:1001/194321.295081:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.295405:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.297079:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5811:1001/194321.357358:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: \n[5811:5811:1001/194321.364300:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.364689:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.394441:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.394641:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.448987:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.452282:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[5811:5811:1001/194321.467465:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.NetworkManager.GetDevices: object_path= /org/freedesktop/NetworkManager: unknown error type: \n[1001/194323.333496:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)\n[1001/194323.333557:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)\nReceived signal 4 ILL_ILLOPN 5629903dc908\nCFI: Most likely a control flow integrity violation; for more information see:\nhttps://www.chromium.org/developers/testing/control-flow-integrity\n#0 0x56298b6fcbc3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a9abc2)\n#1 0x5629903c2494 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0xb760493)\n#2 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#3 0x562989b12bb9 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eb0bb8)\n#4 0x562989b0e3f2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eac3f1)\n#5 0x562989b0ae31 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4ea8e30)\n#6 0x5629896644e6 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a024e5)\n#7 0x562989664df1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02df0)\n#8 0x562989664ca2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02ca1)\n#9 0x562988f3b3f7 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x42d93f6)\n#10 0x56298b67b7a1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a197a0)\n#11 0x5629897881a3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4b261a2)\n#12 0x5629881f316a (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3591169)\n#13 0x5629889e0c44 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3d7ec43)\n#14 0x562988a1824d (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db624c)\n#15 0x562988a17936 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db5935)\n#16 0x562988a15093 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db3092)\n#17 0x562989a8a030 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4e2802f)\n#18 0x7f7347d608bb (/usr/lib/x86_64-linux-gnu/libc.so.6+0x928ba)\n  r8: 0000000000000050  r9: 0000000000000000 r10: 0000000000000000 r11: 0000000000000246\n r12: 0000000000040000 r13: 00007f72bbffc950 r14: 00007f72bbffcbd8 r15: 00007f72bbffca98\n  di: 00007f72bbffc848  si: 0000000000000000  bp: 00007f72bbffc850  bx: 00007f72bbffca20\n  dx: 0000000000000000  ax: 00007f72bbffc848  cx: 00000000ffffffff  sp: 00007f72bbffc840\n  ip: 00005629903dc908 efl: 0000000000010202 cgf: 002b000000000033 erf: 0000000000000000\n trp: 0000000000000006 msk: 0000000000000000 cr2: 0000000000000000\n[end of stack trace]\n../../sandbox/linux/seccomp-bpf-helpers/sigsys_handlers.cc:**CRASHING**:seccomp-bpf failure in syscall nr=0x25 arg1=0x5 arg2=0x7f72bbffac50 arg3=0x0 arg4=0x8\nReceived signal 11 SEGV_ACCERR 000005005025\n#0 0x56298b6fcbc3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a9abc2)\n#1 0x5629903c2494 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0xb760493)\n#2 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#3 0x562989815213 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4bb3212)\n#4 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#5 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#6 0x562989b12bb9 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eb0bb8)\n#7 0x562989b0e3f2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eac3f1)\n#8 0x562989b0ae31 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4ea8e30)\n#9 0x5629896644e6 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a024e5)\n#10 0x562989664df1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02df0)\n#11 0x562989664ca2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02ca1)\n#12 0x562988f3b3f7 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x42d93f6)\n#13 0x56298b67b7a1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a197a0)\n#14 0x5629897881a3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4b261a2)\n#15 0x5629881f316a (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3591169)\n#16 0x5629889e0c44 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3d7ec43)\n#17 0x562988a1824d (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db624c)\n#18 0x562988a17936 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db5935)\n#19 0x562988a15093 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db3092)\n#20 0x562989a8a030 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4e2802f)\n#21 0x7f7347d608bb (/usr/lib/x86_64-linux-gnu/libc.so.6+0x928ba)\n  r8: 00007f72bbff9df0  r9: 00007f72bbff9df0 r10: 00007f72bbff9df0 r11: 0000000000000246\n r12: 0000000000000000 r13: 00007f7347dab037 r14: 0000000000000025 r15: 0000000000000000\n  di: 0000000000000002  si: 0000562986ce8c5f  bp: 00007f72bbff9f40  bx: 00007f72bbff9f70\n  dx: 0000000000000001  ax: 0000000000005000  cx: 0000000005005025  sp: 00007f72bbff9f20\n  ip: 00005629919bb82a efl: 0000000000010202 cgf: 002b000000000033 erf: 0000000000000006\n trp: 000000000000000e msk: 0000000000000008 cr2: 0000000005005025\n[end of stack trace]\n../../sandbox/linux/seccomp-bpf-helpers/sigsys_handlers.cc:**CRASHING**:seccomp-bpf failure in syscall nr=0x25 arg1=0x5 arg2=0x7f72bbff8350 arg3=0x0 arg4=0x8\nChrome transport: Node v24.21.0, libuv 1.52.1, linux; pid=5811, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=10877, messages=47, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=15, writtenBytes=27960, bufferedBytes=0."
+        "error": "browser-check will not replace the existing unowned evidence path \"/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.browser-check.json\"."
       }
     }
   },
   "diagnostics": [
     {
-      "code": "viewer/browser-check-runtime",
+      "code": "viewer/evidence-path-conflict",
       "severity": "error",
-      "message": "browser-check could not complete its Chrome inspection.",
+      "message": "browser-check will not replace the existing unowned evidence path \"/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.browser-check.json\".",
       "subject": {
-        "artifact": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.html"
+        "artifact": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.html",
+        "evidencePath": "/home/z/my-project/repos/syllabai/docs/archify/syllabai-ingestion-pipeline.browser-check.json"
       },
       "evidence": {
-        "reason": "Chrome DevTools protocol timeout failed: Runtime.evaluate: timed out after 15000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\nct to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[5811:5811:1001/194321.287857:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5811:1001/194321.295081:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.295405:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.297079:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5811:1001/194321.357358:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: \n[5811:5811:1001/194321.364300:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.364689:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.394441:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.394641:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[5811:5811:1001/194321.448987:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[5811:5847:1001/194321.452282:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[5811:5811:1001/194321.467465:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.NetworkManager.GetDevices: object_path= /org/freedesktop/NetworkManager: unknown error type: \n[1001/194323.333496:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)\n[1001/194323.333557:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)\nReceived signal 4 ILL_ILLOPN 5629903dc908\nCFI: Most likely a control flow integrity violation; for more information see:\nhttps://www.chromium.org/developers/testing/control-flow-integrity\n#0 0x56298b6fcbc3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a9abc2)\n#1 0x5629903c2494 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0xb760493)\n#2 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#3 0x562989b12bb9 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eb0bb8)\n#4 0x562989b0e3f2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eac3f1)\n#5 0x562989b0ae31 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4ea8e30)\n#6 0x5629896644e6 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a024e5)\n#7 0x562989664df1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02df0)\n#8 0x562989664ca2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02ca1)\n#9 0x562988f3b3f7 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x42d93f6)\n#10 0x56298b67b7a1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a197a0)\n#11 0x5629897881a3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4b261a2)\n#12 0x5629881f316a (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3591169)\n#13 0x5629889e0c44 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3d7ec43)\n#14 0x562988a1824d (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db624c)\n#15 0x562988a17936 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db5935)\n#16 0x562988a15093 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db3092)\n#17 0x562989a8a030 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4e2802f)\n#18 0x7f7347d608bb (/usr/lib/x86_64-linux-gnu/libc.so.6+0x928ba)\n  r8: 0000000000000050  r9: 0000000000000000 r10: 0000000000000000 r11: 0000000000000246\n r12: 0000000000040000 r13: 00007f72bbffc950 r14: 00007f72bbffcbd8 r15: 00007f72bbffca98\n  di: 00007f72bbffc848  si: 0000000000000000  bp: 00007f72bbffc850  bx: 00007f72bbffca20\n  dx: 0000000000000000  ax: 00007f72bbffc848  cx: 00000000ffffffff  sp: 00007f72bbffc840\n  ip: 00005629903dc908 efl: 0000000000010202 cgf: 002b000000000033 erf: 0000000000000000\n trp: 0000000000000006 msk: 0000000000000000 cr2: 0000000000000000\n[end of stack trace]\n../../sandbox/linux/seccomp-bpf-helpers/sigsys_handlers.cc:**CRASHING**:seccomp-bpf failure in syscall nr=0x25 arg1=0x5 arg2=0x7f72bbffac50 arg3=0x0 arg4=0x8\nReceived signal 11 SEGV_ACCERR 000005005025\n#0 0x56298b6fcbc3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a9abc2)\n#1 0x5629903c2494 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0xb760493)\n#2 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#3 0x562989815213 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4bb3212)\n#4 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#5 0x7f7347d0dd70 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x3fd6f)\n#6 0x562989b12bb9 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eb0bb8)\n#7 0x562989b0e3f2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4eac3f1)\n#8 0x562989b0ae31 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4ea8e30)\n#9 0x5629896644e6 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a024e5)\n#10 0x562989664df1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02df0)\n#11 0x562989664ca2 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4a02ca1)\n#12 0x562988f3b3f7 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x42d93f6)\n#13 0x56298b67b7a1 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x6a197a0)\n#14 0x5629897881a3 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4b261a2)\n#15 0x5629881f316a (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3591169)\n#16 0x5629889e0c44 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3d7ec43)\n#17 0x562988a1824d (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db624c)\n#18 0x562988a17936 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db5935)\n#19 0x562988a15093 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x3db3092)\n#20 0x562989a8a030 (/home/z/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome+0x4e2802f)\n#21 0x7f7347d608bb (/usr/lib/x86_64-linux-gnu/libc.so.6+0x928ba)\n  r8: 00007f72bbff9df0  r9: 00007f72bbff9df0 r10: 00007f72bbff9df0 r11: 0000000000000246\n r12: 0000000000000000 r13: 00007f7347dab037 r14: 0000000000000025 r15: 0000000000000000\n  di: 0000000000000002  si: 0000562986ce8c5f  bp: 00007f72bbff9f40  bx: 00007f72bbff9f70\n  dx: 0000000000000001  ax: 0000000000005000  cx: 0000000005005025  sp: 00007f72bbff9f20\n  ip: 00005629919bb82a efl: 0000000000010202 cgf: 002b000000000033 erf: 0000000000000006\n trp: 000000000000000e msk: 0000000000000008 cr2: 0000000005005025\n[end of stack trace]\n../../sandbox/linux/seccomp-bpf-helpers/sigsys_handlers.cc:**CRASHING**:seccomp-bpf failure in syscall nr=0x25 arg1=0x5 arg2=0x7f72bbff8350 arg3=0x0 arg4=0x8\nChrome transport: Node v24.21.0, libuv 1.52.1, linux; pid=5811, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=10877, messages=47, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=15, writtenBytes=27960, bufferedBytes=0."
+        "reason": {
+          "code": "ownership-artifact-mismatch"
+        }
       },
       "supportedFixes": [
-        "resolve the reported Chrome inspection error, then rerun browser-check"
+        "move the conflicting file aside, or choose a separate --out-dir, then rerun browser-check"
       ]
     }
   ],
@@ -354,8 +360,8 @@
   },
   "visualReview": "not-requested",
   "failedStage": "browser-check",
-  "finishedAt": "2026-10-01T19:43:38.222Z",
-  "durationMs": 17371,
+  "finishedAt": "2026-10-01T20:07:27.388Z",
+  "durationMs": 1083,
   "update": {
     "status": "current",
     "installedVersion": "3.0.1",

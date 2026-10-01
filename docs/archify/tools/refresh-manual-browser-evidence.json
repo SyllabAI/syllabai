@@ -14,12 +14,13 @@
         "rate-limited": true,
         "RateLimitFilter.java": true,
         "IMPLEMENTED \u00b7 fail-closed": true,
-        "holds the gate OPEN (session 117": true,
+        "\u03ba=1.0 (n=113, threshold 0.60) \u2014 PASSED": true,
         "deep-audit 09-28": true,
-        "SyllabAI/syllabai @ f1a7eb2 (main)": true
+        "SyllabAI/syllabai @ f1a7eb2 (main)": true,
+        "serving rev2": true
       },
       "ok": true,
-      "html_sha256": "a74ff926aaf4e4fa30b3643981cafad9ff843e38c04bc67572032c115f7b0ec3"
+      "html_sha256": "21f94417f52a10ea1adf355ca37fcb5e72697e159be227d9a60ad9f6a0c17d83"
     },
     "syllabai-learning-loop.html": {
       "containment": {
@@ -29,13 +30,13 @@
         "2048x1200": true
       },
       "needles": {
-        "pinned at 5e4d155": true,
+        "pinned at 9385011": true,
         "IMPLEMENTED \u00b7 fail-closed": true,
-        "gate OPEN (session 117)": true,
-        "any-credit convention (n=25)": true
+        "\u03ba=1.0 (n=113, threshold 0.60) \u2014 PASSED": true,
+        "unvouchable row (n=25 calibration)": true
       },
       "ok": true,
-      "html_sha256": "a0ef080888269b1cfe1b9172082d7a703679d646a89449ec0934969c9391d872"
+      "html_sha256": "f07d5af58bda9b830457f674bf3abd4f03a3e5596438f4cea6ce8e68746a23d6"
     },
     "syllabai-retrieval-architecture.html": {
       "containment": {
@@ -45,7 +46,7 @@
         "2048x1200": true
       },
       "needles": {
-        "pinned at 5e4d155": true,
+        "pinned at 9385011": true,
         "PaperQuestionResolver.java": true,
         "empty / unanchored \u21d2 refusal": true,
         "KaRagService.java": true,
@@ -54,11 +55,12 @@
         "ContextAssembler.java": true,
         "fail-open guard": true,
         "cross-session episodic digest (s140)": true,
-        "VALIDATED rev1 embed (T-C23 Option B)": true,
-        "KaRagService.java:21-22": true
+        "CURRENT_EMBED_REV=2 on the validated corpus": true,
+        "per-course \u00b7 fail-closed (T-C07)": true,
+        "KaRagService.java:25-26": true
       },
       "ok": true,
-      "html_sha256": "3dc52f1525f078a97562dfd8618244f81580b96721084e78835411e8d229a4cd"
+      "html_sha256": "edc8154e38d2eb0c4f779a4009d378b94bb29547dc2361815d8ba2bbf93408ed"
     },
     "syllabai-assessment-marking.html": {
       "containment": {
@@ -68,16 +70,16 @@
         "2048x1200": true
       },
       "needles": {
-        "@ 5e4d155": true,
+        "@ 9385011": true,
         "pipeline 1.2.1 \u00b7 partial marks": true,
         "SmartMarkResult.java": true,
         "TeacherMarkingQueueService.java": true,
         "TRUNCATED_OUTPUT": true,
-        "release gate OPEN on an unvouchable passed row (session 117)": true,
+        "\u03ba=1.0 (n=113, threshold 0.60) PASSED": true,
         "any-credit convention pinned in core e7a55fe": true
       },
       "ok": true,
-      "html_sha256": "22259832e982c8e1830ef9b000ce18086cfac3fb400f21b8100cc81d269216ef"
+      "html_sha256": "28e00d9b0043c16d804592bfa18670f48ca3037b6d662a9d60257c72d092d276"
     },
     "syllabai-ingestion-pipeline.html": {
       "containment": {
@@ -87,12 +89,13 @@
         "2048x1200": true
       },
       "needles": {
-        "@ 5e4d155": true,
+        "@ 9385011": true,
         "ContentDocumentController.java": true,
+        "Embedding v2 wait is resolved": true,
         "SmeQuestionIngestService.java": true
       },
       "ok": true,
-      "html_sha256": "6446c5e8489dbb17259deb3442f04af2ba777b053bd9eb3d550a8b04aab570b7"
+      "html_sha256": "32f25e6d78d5bfa5ff0492959221665db727e219306de47d5d5080df6862829e"
     }
   }
 }

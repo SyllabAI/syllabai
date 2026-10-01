@@ -11,7 +11,7 @@
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
+      "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd"
     },
     "views": [
       {
@@ -72,7 +72,7 @@
       "tag": "IMPLEMENTED",
       "sources": [
         { "path": "src/main/java/com/syllabai/assessment/AttemptController.java", "line": 24, "label": "attempts API" },
-        { "path": "src/main/java/com/syllabai/tutor/TutorController.java", "line": 39, "label": "tutor API" },
+        { "path": "src/main/java/com/syllabai/tutor/TutorController.java", "line": 66, "label": "tutor API" },
         { "path": "src/main/java/com/syllabai/learner/TutorEngagementRecorder.java", "line": 32, "label": "engagement recorder" }
       ],
       "pos": [250, 80],
@@ -112,8 +112,8 @@
       "sublabel": "first authoritative mark · once",
       "tag": "IMPLEMENTED · VERIFIED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java", "line": 46, "label": "publishGraded" },
-        { "path": "src/main/java/com/syllabai/shared/events/AssessmentEvidenceRecordedEvent.java", "line": 36, "label": "evidence event" }
+        { "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java", "line": 51, "label": "publishGraded" },
+        { "path": "src/main/java/com/syllabai/shared/events/AssessmentEvidenceRecordedEvent.java", "line": 44, "label": "evidence event" }
       ],
       "pos": [940, 80],
       "size": [170, 70]
@@ -190,7 +190,7 @@
       "sublabel": "canonical truth · versioned",
       "tag": "IMPLEMENTED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java", "line": 46, "label": "scope resolver" },
+        { "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java", "line": 58, "label": "scope resolver" },
         { "path": "src/main/java/com/syllabai/curriculum/CurriculumController.java", "line": 21, "label": "curriculum API" }
       ],
       "pos": [710, 460],
@@ -200,7 +200,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core · Spring Boot — pinned at 5e4d155",
+      "label": "syllabai-core · Spring Boot — pinned at 9385011",
       "wraps": [
         "interaction_api",
         "assessment_smartmark",
@@ -314,7 +314,7 @@
       "title": "How to read status",
       "items": [
         "IMPLEMENTED = code exists in the pinned repository/commit; VERIFIED adds acceptance evidence from project records",
-        "sources[] = file:line verified at syllabai-core @ 5e4d155 via Archify evidence verification",
+        "sources[] = file:line verified at syllabai-core @ 9385011 via Archify evidence verification",
         "gate closed / not wired / overlay only are explicit statuses — never read them as live capability"
       ]
     },
@@ -334,7 +334,7 @@
       "items": [
         "AI (Smart Mark) marks reach learners only when per-paper κ ≥ 0.60 against human marks",
         "Human marks are always authoritative — the top edge bypasses the gate by design (DECISION_016)",
-        "Fail-closed by code; the agent calibration round measured κ under the pinned any-credit convention (n=25) and a passed row of unknowable provenance now holds the gate OPEN (session 117) — G-4's genuine human round is the operator's and supersedes"
+        "Fail-closed by code; the operator's genuine human reference round (G-4) has since measured κ=1.0 (n=113, threshold 0.60) — PASSED, superseding the agent round's unvouchable row (n=25 calibration); authoritative release is human-backed"
       ]
     },
     {

@@ -14,7 +14,7 @@
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
+      "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd"
     },
     "views": [
       {
@@ -290,17 +290,17 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 111,
+          "line": 139,
           "label": "package ingest"
         },
         {
           "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 165,
+          "line": 53,
           "label": "schemes VALIDATED"
         },
         {
           "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 204,
+          "line": 272,
           "label": "QuestionSpecPoint"
         }
       ]
@@ -369,7 +369,7 @@
       "type": "backend",
       "label": "pgvector semantic lane",
       "sublabel": "768-dim · re-runnable /embed",
-      "tag": "PREPARED · UNVERIFIED",
+      "tag": "IMPLEMENTED · rev2 serving",
       "pos": [
         710,
         460
@@ -400,7 +400,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core @ 5e4d155 — ingestion fabric",
+      "label": "syllabai-core @ 9385011 — ingestion fabric",
       "wraps": [
         "bridge",
         "curriculum_ingest",
@@ -563,7 +563,7 @@
       "dot": "cyan",
       "title": "How to read status",
       "items": [
-        "Core nodes carry line-anchored sources verified at syllabai-core 5e4d155",
+        "Core nodes carry line-anchored sources verified at syllabai-core 9385011",
         "syllabai-parser (pdflane, engine 1.1.1 @ eef89fb) and the normalized-papers repo of record (syllabai-pastpapers @ 6354773) are cross-repo text-cited",
         "The corpus node is source data, not code"
       ]
@@ -591,8 +591,8 @@
       "dot": "violet",
       "title": "Paused & prepared",
       "items": [
-        "Content ingestion is paused pending Embedding v2 (ops state; the V33 identity mirror is already in the ingest path)",
-        "The semantic lane is PREPARED · UNVERIFIED: exactly one Gemini 768-dim provider by design, /embed is re-runnable, and content lands even with zero API keys",
+        "Content ingestion remained paused as of the 2026-10-02 record — the Embedding v2 wait is resolved (rev2 validated + serving in production); the V33 identity mirror is in the ingest path",
+        "The semantic lane serves embed_rev 2 in production (wave-1 2026-10-02): exactly one Gemini 768-dim provider by design, /embed is re-runnable, and content lands even with zero API keys",
         "Serving-side consumption of these stores is diagrammed separately — see syllabai-retrieval-architecture.html"
       ]
     }

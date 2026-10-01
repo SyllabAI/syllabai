@@ -14,7 +14,7 @@
       "url": "https://github.com/SyllabAI/syllabai-core",
       "provider": "github",
       "link_mode": "web",
-      "revision": "5e4d155f26e2d2bcd02b64799019de46f86fb83a"
+      "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd"
     },
     "views": [
       {
@@ -302,7 +302,7 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java",
-          "line": 46,
+          "line": 51,
           "label": "publishGraded once"
         },
         {
@@ -383,12 +383,12 @@
       "sources": [
         {
           "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 111,
+          "line": 139,
           "label": "package ingest"
         },
         {
           "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 165,
+          "line": 53,
           "label": "schemes VALIDATED"
         }
       ]
@@ -397,7 +397,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core @ 5e4d155 — marking fabric",
+      "label": "syllabai-core @ 9385011 — marking fabric",
       "wraps": [
         "marking_api",
         "marking_queue",
@@ -557,7 +557,7 @@
       "dot": "cyan",
       "title": "How to read status",
       "items": [
-        "IMPLEMENTED nodes carry line-anchored sources verified at syllabai-core 5e4d155",
+        "IMPLEMENTED nodes carry line-anchored sources verified at syllabai-core 9385011",
         "syllabai-web — Teacher is cross-repo text-cited (no pin-verified path from this diagram's repository pin)",
         "Statuses use the project vocabulary; nothing here is upgraded beyond its evidence"
       ]
@@ -570,7 +570,7 @@
         "Refusals are honest rows: SCHEME_NOT_VALIDATED (pre-LLM gate), UNPARSEABLE_OUTPUT, TRUNCATED_OUTPUT — the completion budget scales with the point's marks and truncated raw output is persisted",
         "A FLAGGED scheme never backs marking, from SUGGESTED or VALIDATED",
         "SMART_MARKED stays provisional until the κ gate passes; the threshold is recorded per evaluation row",
-        "First real κ measured in the agent calibration round (n=25, production pairing, any-credit convention pinned in core e7a55fe); release gate OPEN on an unvouchable passed row (session 117) — the operator's human round supersedes"
+        "First real κ: agent calibration (n=25, any-credit convention pinned in core e7a55fe), then the operator's genuine human round — κ=1.0 (n=113, threshold 0.60) PASSED; that gate row supersedes the agent round's unvouchable one"
       ]
     },
     {

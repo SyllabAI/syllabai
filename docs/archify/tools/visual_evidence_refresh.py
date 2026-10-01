@@ -22,18 +22,19 @@ NEEDLES = {
         "rate-limited",                       # api_core sublabel (security wave)
         "RateLimitFilter.java",           # api_core new source anchor
         "IMPLEMENTED · fail-closed",          # kappa_gate tag (was: gate closed)
-        "holds the gate OPEN (session 117",   # gates card live-state honesty
+        "κ=1.0 (n=113, threshold 0.60) — PASSED",  # gates card: G-4 closed
         "deep-audit 09-28",                   # security hardening line
         "SyllabAI/syllabai @ f1a7eb2 (main)", # cross-repo self pin refresh
+        "serving rev2",                        # pgvector lane tag/sublabel
             ],
     "syllabai-learning-loop.html": [
-        "pinned at 5e4d155",                  # region label
+        "pinned at 9385011",                  # region label
         "IMPLEMENTED · fail-closed",          # kappa_gate tag
-        "gate OPEN (session 117)",            # kappa card live state
-        "any-credit convention (n=25)",       # agent calibration fact
+        "κ=1.0 (n=113, threshold 0.60) — PASSED",  # kappa card: G-4 closed
+        "unvouchable row (n=25 calibration)", # agent calibration superseded
     ],
     "syllabai-retrieval-architecture.html": [
-        "pinned at 5e4d155",                  # region label
+        "pinned at 9385011",                  # region label
         "PaperQuestionResolver.java",     # query_intent new source anchor
         "empty / unanchored ⇒ refusal",       # sufficiency sublabel (both classes)
         "KaRagService.java",             # sufficiency guard+gate anchor
@@ -42,21 +43,23 @@ NEEDLES = {
         "ContextAssembler.java",          # assembler briefs anchor
         "fail-open guard",                    # truth-boundaries card (D2 text)
         "cross-session episodic digest (s140)",     # truth-boundaries card
-        "VALIDATED rev1 embed (T-C23 Option B)",    # not-serving card
-        "KaRagService.java:21-22",            # sources card contract lines
+        "CURRENT_EMBED_REV=2 on the validated corpus",  # not-serving card rev state
+        "per-course · fail-closed (T-C07)",   # scope sublabel (ADR-030)
+        "KaRagService.java:25-26",            # sources card contract lines
     ],
     "syllabai-assessment-marking.html": [
-        "@ 5e4d155",                          # region label
+        "@ 9385011",                          # region label
         "pipeline 1.2.1 · partial marks",     # smartmark sublabel
         "SmartMarkResult.java",           # pipeline version anchor
         "TeacherMarkingQueueService.java",  # G-5 pagination anchor
         "TRUNCATED_OUTPUT",                   # V34 refusal-family line
-        "release gate OPEN on an unvouchable passed row (session 117)",  # V34 card
+        "κ=1.0 (n=113, threshold 0.60) PASSED",  # V34 card: G-4 closed
         "any-credit convention pinned in core e7a55fe",  # V34 card
     ],
     "syllabai-ingestion-pipeline.html": [
-        "@ 5e4d155",                          # region label
+        "@ 9385011",                          # region label
         "ContentDocumentController.java",   # /embed anchor
+        "Embedding v2 wait is resolved",      # paused card rev2 state
         "SmeQuestionIngestService.java",    # QuestionSpecPoint anchor
     ],
 }
