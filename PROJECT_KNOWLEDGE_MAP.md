@@ -47,6 +47,8 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Platform/provider research | `PLATFORM_RESEARCH.md`, current AI runtime/provider report | Provider and platform evidence |
 | Content representation/package | `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md`, `CONTENT_PACKAGE_V0_1.md`, ADR-021 | Markdown artifacts, PostgreSQL boundary and portable SQLite package direction |
 | Source-backed architecture diagrams | `ARCHIFY_INTEGRATION.md`, `docs/archify/` | Archify tooling workflow (dev/documentation only, never a runtime dependency); derived diagrams, not canonical architecture truth |
+| Subject Intelligence Build (SIB) protocol | `docs/research/SUBJECT_INTELLIGENCE_BUILD_V1.md`, `docs/research/SIB_ARTIFACT_SCHEMA_V1.md`, `docs/research/SIB_NOTEBOOKLM_PROMPTS_V1.md` (land via PR `agent-chatgpt/subject-intelligence-build-v1`) | Cross-subject research-generation protocol; PROPOSED, not accepted production architecture |
+| SIB validator / ingestion tooling | `tools/sib/`, implementation record `docs/research/SIB_VALIDATOR_IMPLEMENTATION_V1.md` | Deterministic artifact/manifest validation, provenance + anchor boundary, STAGED/PUBLISHED governance, SIB chunk metadata; implements the PROPOSED protocol without promoting it |
 
 ## 4. Curriculum, subject and knowledge graph
 
