@@ -1,0 +1,136 @@
+== wave-1 PRODUCTION run — T-C41 ① (teacher surface, no force) ==
+active scope (resolveActive mirror): 4CH1-2017 356840e6-81e2-49df-8182-93ab6504d591
+baseline: {'reachable_chunks': 2935, 'reachable_at_rev2': 2935}
+
+---- unit 4CH1/2C ----
+prestate rows: 26
+  23ef5e6e-7cd2-4180-94d5-f180af2cca22 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=   8 emb=   8 rev1=0 rev2=8 bridge=OK
+  30cb3c9d-a77e-4441-80fe-bd0e0161cdfd state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=NO_BRIDGE
+  34c56cfa-d7dd-4388-904b-18a905bc3822 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  14 emb=  14 rev1=0 rev2=14 bridge=NO_BRIDGE
+  37f7f180-6643-4635-9921-88ee8bc6aad1 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  15 emb=  15 rev1=0 rev2=15 bridge=NO_BRIDGE
+  47b57ed2-769a-49ab-8b08-459a11b74d6f state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=NO_BRIDGE
+  482f2333-c3bb-4d22-9eda-f463d3fa34b9 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=NO_BRIDGE
+  7d40476f-13b3-436b-9e0d-f2877fe2ba0e state=REJECTED   MARK_SCHEME      doc=REJECTED   chunks=   0 emb=   0 rev1=0 rev2=0 bridge=NO_BRIDGE
+  890f8634-700a-4e16-a02f-f67b1bf1f625 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  9a462279-3c3d-442c-ade4-f8daec1fa304 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=NO_BRIDGE
+  b1068e09-d65d-42b5-b225-b53637e1dc5c state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=OK
+  c4c50062-745f-4376-9340-65e6cd9d864d state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=NO_BRIDGE
+  e6c96a2e-1d1d-4310-aa4f-a46a98b99470 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=NO_BRIDGE
+  e850e6fe-4d43-41b1-97b1-ef6845ef5caf state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+  23ef5e6e-7cd2-4180-94d5-f180af2cca22 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=OK
+  30cb3c9d-a77e-4441-80fe-bd0e0161cdfd state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   8 emb=   8 rev1=0 rev2=8 bridge=NO_BRIDGE
+  34c56cfa-d7dd-4388-904b-18a905bc3822 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  37f7f180-6643-4635-9921-88ee8bc6aad1 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  47b57ed2-769a-49ab-8b08-459a11b74d6f state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  10 emb=  10 rev1=0 rev2=10 bridge=NO_BRIDGE
+  482f2333-c3bb-4d22-9eda-f463d3fa34b9 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   8 emb=   8 rev1=0 rev2=8 bridge=NO_BRIDGE
+  7d40476f-13b3-436b-9e0d-f2877fe2ba0e state=REJECTED   QUESTION_PAPER   doc=REJECTED   chunks=   0 emb=   0 rev1=0 rev2=0 bridge=NO_BRIDGE
+  890f8634-700a-4e16-a02f-f67b1bf1f625 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  9a462279-3c3d-442c-ade4-f8daec1fa304 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   8 emb=   8 rev1=0 rev2=8 bridge=NO_BRIDGE
+  b1068e09-d65d-42b5-b225-b53637e1dc5c state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   9 emb=   9 rev1=0 rev2=9 bridge=OK
+  c4c50062-745f-4376-9340-65e6cd9d864d state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=NO_BRIDGE
+  e6c96a2e-1d1d-4310-aa4f-a46a98b99470 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  e850e6fe-4d43-41b1-97b1-ef6845ef5caf state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+papers=13 (already-validated 13) todo(SUGGESTED docs)=[] expected_unlock(SUGGESTED∩emb)=0 at_rev1=0
+  no SUGGESTED documents in this unit — validate-all would be a no-op; recording prestate only (kit: zero delta = nothing to do)
+  poststate: {'reachable_chunks': 2935, 'reachable_at_rev2': 2935}  delta=0 (expected 0)
+
+---- unit 4CH0/2C ----
+prestate rows: 32
+  0a94f411-b2c4-4db8-ba22-150a4560c31c state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  10 emb=  10 rev1=0 rev2=10 bridge=REVIEW_REQUIRED
+  21041891-11f6-4168-9136-771e666cd8fa state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  2852f64f-29ff-427d-aa0e-55a612a66cd3 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=   9 emb=   9 rev1=0 rev2=9 bridge=OK
+  2a21ff3d-7769-4747-a7e6-abb857822cdc state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  10 emb=  10 rev1=0 rev2=10 bridge=REVIEW_REQUIRED
+  2f6675a3-925b-40ea-9407-e6d2a3c9ed46 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+  38aeec70-d6e1-4bd6-9eb3-173c4dd5eff8 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=   8 emb=   8 rev1=0 rev2=8 bridge=REVIEW_REQUIRED
+  59fc6548-9896-4acd-8624-21c6e01cde08 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=OK
+  7041ab60-1e67-4b7a-917e-7896ea0a0edf state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  10 emb=  10 rev1=0 rev2=10 bridge=OK
+  73990d4b-8751-4fd3-ac37-2d65144cda44 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  14 emb=  14 rev1=0 rev2=14 bridge=REVIEW_REQUIRED
+  7f3ecd08-5682-419e-9d68-e2acfcaf202e state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+  980095b5-f109-4249-9810-33b8994c7f56 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  16 emb=  16 rev1=0 rev2=16 bridge=NO_BRIDGE
+  cd45e3ed-3d8c-4eb4-9259-51313adb0962 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  dcba6a4a-75c2-4608-90aa-f965ca33385c state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=NO_BRIDGE
+  ddaec35a-48d4-49f2-9b8c-259f6f94bb14 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=OK
+  e7e03906-1a3f-4d2f-b98b-16fa2397d874 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=REVIEW_REQUIRED
+  fd511922-2cb3-4701-8d23-564d8141d6fd state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  0a94f411-b2c4-4db8-ba22-150a4560c31c state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   8 emb=   8 rev1=0 rev2=8 bridge=REVIEW_REQUIRED
+  21041891-11f6-4168-9136-771e666cd8fa state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  2852f64f-29ff-427d-aa0e-55a612a66cd3 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   7 emb=   7 rev1=0 rev2=7 bridge=OK
+  2a21ff3d-7769-4747-a7e6-abb857822cdc state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=REVIEW_REQUIRED
+  2f6675a3-925b-40ea-9407-e6d2a3c9ed46 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+  38aeec70-d6e1-4bd6-9eb3-173c4dd5eff8 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=REVIEW_REQUIRED
+  59fc6548-9896-4acd-8624-21c6e01cde08 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=OK
+  7041ab60-1e67-4b7a-917e-7896ea0a0edf state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+  73990d4b-8751-4fd3-ac37-2d65144cda44 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=REVIEW_REQUIRED
+  7f3ecd08-5682-419e-9d68-e2acfcaf202e state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+  980095b5-f109-4249-9810-33b8994c7f56 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=NO_BRIDGE
+  cd45e3ed-3d8c-4eb4-9259-51313adb0962 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  10 emb=  10 rev1=0 rev2=10 bridge=NO_BRIDGE
+  dcba6a4a-75c2-4608-90aa-f965ca33385c state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  10 emb=  10 rev1=0 rev2=10 bridge=NO_BRIDGE
+  ddaec35a-48d4-49f2-9b8c-259f6f94bb14 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=OK
+  e7e03906-1a3f-4d2f-b98b-16fa2397d874 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=REVIEW_REQUIRED
+  fd511922-2cb3-4701-8d23-564d8141d6fd state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  FINDING: 5 already-VALIDATED paper(s) carry REVIEW_REQUIRED bridge findings — recorded for operator review
+papers=16 (already-validated 16) todo(SUGGESTED docs)=[] expected_unlock(SUGGESTED∩emb)=0 at_rev1=0
+  no SUGGESTED documents in this unit — validate-all would be a no-op; recording prestate only (kit: zero delta = nothing to do)
+  poststate: {'reachable_chunks': 2935, 'reachable_at_rev2': 2935}  delta=0 (expected 0)
+
+---- unit 4CH1/2CR ----
+prestate rows: 20
+  0f903acf-6024-4c22-a577-34dfee6e18e4 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=   9 emb=   9 rev1=0 rev2=9 bridge=NO_BRIDGE
+  3638b166-faea-4ad0-8aa7-06be702d10ae state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+  3945c4af-ca19-4688-9958-a235870f6045 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=NO_BRIDGE
+  55d9f002-73e1-4072-b73a-0147a78025d6 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  14 emb=  14 rev1=0 rev2=14 bridge=REVIEW_REQUIRED
+  59e53b62-1d85-452a-aea7-bddc62cf2703 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=NO_BRIDGE
+  61c9976a-ee3a-48e2-8079-1f55d87e2dc6 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=REVIEW_REQUIRED
+  73b3c496-6190-4ad9-9a54-9cd62b4fc01c state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  14 emb=  14 rev1=0 rev2=14 bridge=OK
+  d180d1b6-eafe-4468-af94-f88125da4569 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=NO_BRIDGE
+  d3d7e0f2-fd08-48c6-a02f-e94da725d441 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  16 emb=  16 rev1=0 rev2=16 bridge=NO_BRIDGE
+  f57ed5c2-fc23-43fe-adbc-50401539661d state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  17 emb=  17 rev1=0 rev2=17 bridge=NO_BRIDGE
+  0f903acf-6024-4c22-a577-34dfee6e18e4 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  3638b166-faea-4ad0-8aa7-06be702d10ae state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   9 emb=   9 rev1=0 rev2=9 bridge=OK
+  3945c4af-ca19-4688-9958-a235870f6045 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  10 emb=  10 rev1=0 rev2=10 bridge=NO_BRIDGE
+  55d9f002-73e1-4072-b73a-0147a78025d6 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   9 emb=   9 rev1=0 rev2=9 bridge=REVIEW_REQUIRED
+  59e53b62-1d85-452a-aea7-bddc62cf2703 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  61c9976a-ee3a-48e2-8079-1f55d87e2dc6 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=   9 emb=   9 rev1=0 rev2=9 bridge=REVIEW_REQUIRED
+  73b3c496-6190-4ad9-9a54-9cd62b4fc01c state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=OK
+  d180d1b6-eafe-4468-af94-f88125da4569 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  d3d7e0f2-fd08-48c6-a02f-e94da725d441 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  11 emb=  11 rev1=0 rev2=11 bridge=NO_BRIDGE
+  f57ed5c2-fc23-43fe-adbc-50401539661d state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  10 emb=  10 rev1=0 rev2=10 bridge=NO_BRIDGE
+  FINDING: 2 already-VALIDATED paper(s) carry REVIEW_REQUIRED bridge findings — recorded for operator review
+papers=10 (already-validated 10) todo(SUGGESTED docs)=[] expected_unlock(SUGGESTED∩emb)=0 at_rev1=0
+  no SUGGESTED documents in this unit — validate-all would be a no-op; recording prestate only (kit: zero delta = nothing to do)
+  poststate: {'reachable_chunks': 2935, 'reachable_at_rev2': 2935}  delta=0 (expected 0)
+
+---- unit 4CH1/1C ----
+prestate rows: 24
+  060f40c2-eb7b-410c-a593-947fe096c9c2 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  19 emb=  19 rev1=0 rev2=19 bridge=REVIEW_REQUIRED
+  0924a1fe-8672-413d-9b37-25c2e6f303de state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=REVIEW_REQUIRED
+  566c24ca-1049-4c64-9419-b52ae3ed2213 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  18 emb=  18 rev1=0 rev2=18 bridge=NO_BRIDGE
+  84dbb606-faf4-47fb-a09b-506e4ee8c161 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  17 emb=  17 rev1=0 rev2=17 bridge=OK
+  8afaaa22-b2ef-45dd-aa11-d6abe3ec3092 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  20 emb=  20 rev1=0 rev2=20 bridge=NO_BRIDGE
+  a7aa6a5f-30c4-4eb9-ac1c-45c4898b8a5d state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  17 emb=  17 rev1=0 rev2=17 bridge=REVIEW_REQUIRED
+  be73332c-bf0f-463f-bbe6-72a1d4bf9b80 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  17 emb=  17 rev1=0 rev2=17 bridge=NO_BRIDGE
+  c30856ff-9a6f-478a-970b-2c9e2c8f4c51 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  15 emb=  15 rev1=0 rev2=15 bridge=OK
+  ce7d191b-9331-4b2c-85ee-23d19f0d30bc state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  19 emb=  19 rev1=0 rev2=19 bridge=OK
+  d7f79cdc-3777-4f5c-a932-c682a1f5daa3 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  19 emb=  19 rev1=0 rev2=19 bridge=NO_BRIDGE
+  e2033fc8-4154-45df-a02f-3f93916245f6 state=VALIDATED  MARK_SCHEME      doc=VALIDATED  chunks=  17 emb=  17 rev1=0 rev2=17 bridge=NO_BRIDGE
+  fd1bf331-138c-4872-a92e-17d613c11924 state=VALIDATED  MARK_SCHEME      doc=SUGGESTED  chunks=   0 emb=   0 rev1=0 rev2=0 bridge=OK
+  060f40c2-eb7b-410c-a593-947fe096c9c2 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  16 emb=  16 rev1=0 rev2=16 bridge=REVIEW_REQUIRED
+  0924a1fe-8672-413d-9b37-25c2e6f303de state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  18 emb=  18 rev1=0 rev2=18 bridge=REVIEW_REQUIRED
+  566c24ca-1049-4c64-9419-b52ae3ed2213 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  16 emb=  16 rev1=0 rev2=16 bridge=NO_BRIDGE
+  84dbb606-faf4-47fb-a09b-506e4ee8c161 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  17 emb=  17 rev1=0 rev2=17 bridge=OK
+  8afaaa22-b2ef-45dd-aa11-d6abe3ec3092 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=NO_BRIDGE
+  a7aa6a5f-30c4-4eb9-ac1c-45c4898b8a5d state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=REVIEW_REQUIRED
+  be73332c-bf0f-463f-bbe6-72a1d4bf9b80 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  16 emb=  16 rev1=0 rev2=16 bridge=NO_BRIDGE
+  c30856ff-9a6f-478a-970b-2c9e2c8f4c51 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=OK
+  ce7d191b-9331-4b2c-85ee-23d19f0d30bc state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  12 emb=  12 rev1=0 rev2=12 bridge=OK
+  d7f79cdc-3777-4f5c-a932-c682a1f5daa3 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  16 emb=  16 rev1=0 rev2=16 bridge=NO_BRIDGE
+  e2033fc8-4154-45df-a02f-3f93916245f6 state=VALIDATED  QUESTION_PAPER   doc=VALIDATED  chunks=  13 emb=  13 rev1=0 rev2=13 bridge=NO_BRIDGE
+  fd1bf331-138c-4872-a92e-17d613c11924 state=VALIDATED  QUESTION_PAPER   doc=SUGGESTED  chunks=   0 emb=   0 rev1=0 rev2=0 bridge=OK
+  FINDING: 3 already-VALIDATED paper(s) carry REVIEW_REQUIRED bridge findings — recorded for operator review
+papers=12 (already-validated 11) todo(SUGGESTED docs)=['fd1bf331-138c-4872-a92e-17d613c11924'] expected_unlock(SUGGESTED∩emb)=0 at_rev1=0
+  validate-all fd1bf331-138c-4872-a92e-17d613c11924 -> HTTP 200: {"paperId": "fd1bf331-138c-4872-a92e-17d613c11924", "paperState": "VALIDATED", "totalVersions": 11, "versionsValidated": 0, "schemesValidated": 0}
+  restamp rowcount=0 (assert == prestate at_rev1=0)
+  poststate: {'reachable_chunks': 2935, 'reachable_at_rev2': 2935}  delta=0 (expected 0) -> OK
+
+== final: {'reachable_chunks': 2935, 'reachable_at_rev2': 2935} ==
+log written: /home/z/my-project/audit/master/evidence/bench-001/validation-wave-1-PRODUCTION-2026-10-02/wave1_production_log.json

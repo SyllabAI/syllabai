@@ -5,8 +5,34 @@ task:
     gate 2) — operator-run probe kit, evidence recording, then the flip
     decision"
   owner: "superz (main agent, zai session discord:1548651031783673867)"
-  status: ACTIVE
+  status: ACTIVE  # gates both PASS + flip decision recorded; ACTIVE until PR #44 merges
   priority: P1
+  execution_record: >
+    2026-10-02 (Session 136, operator directive trace 1a0f8d431a7cbc8d: "the
+    production probe + wave-1 run" — operator provided Neon API key,
+    pilot-teacher password, Gemini key). Gate 2 PRODUCTION probe RECORDED:
+    Neon branch `production` (billowing-cherry-15418366/neondb), VALIDATED pool
+    at embed_rev=2 n=2,935, PRB-01 canonical pct_above_050 = **59.5%**
+    (1,745/2,935), histogram peak 0.50–0.55, zero pool mass below 0.40 → the
+    pack's binding mass rule is satisfied. Transport deviation recorded: the
+    executing sandbox's egress IP is geo-blocked by the Generative Language API,
+    so the frozen SHA-pinned PRB-01 vector (embed-bridge-v2/frozen,
+    sha256-verified, drift 3.4e-05) was bound into the byte-identical gate-2
+    SQL; live Path A remains operator-available. Both gates now PASS → flip
+    decision **LAND**, executed as core PR #44 (branch
+    `t-c42-min-cosine-050-flip` @ 8dc315a off main 9385011 — a fresh one-line
+    change; the stale replay branch would have reverted V57/course-aware main
+    work). Same session also executed the wave-1 PRODUCTION run (T-C41 ①):
+    all four units already fully validated on production (the 1,464-chunk
+    snapshot unlock was pre-executed by earlier teacher work); the last
+    0-chunk SUGGESTED pair was validate-all'ed (HTTP 200, 0 versions); final
+    funnel reachable_chunks == reachable_at_rev2 == 2,935 (zero rev-residue).
+    Findings F-PROD-1..4 recorded in
+    evidence/bench-001/validation-wave-1-PRODUCTION-2026-10-02/REPORT.md —
+    notably F-PROD-1: 25 papers serve while carrying unresolved
+    REVIEW_REQUIRED bridge findings (teacher review owed), and F-PROD-2: the
+    kit's poststate curriculum-resolution was stale vs resolveActive (corrected
+    SQL shipped in the pack).
   base:
     repo: syllabai (master pack) @ d73ce9e; syllabai-core @ b30e603 (main);
       staged flip on tc40-min-cosine-050 @ 06297f2 (NO PR by design)
@@ -38,8 +64,13 @@ task:
     - "the flip decision (land / hold) is evidence-backed per the pack's
       binding rule and recorded in the same addendum"
   next_safe_actions:
-    - "operator: run the kit (one env var, one command, or the two manual
-      paste blocks) and paste the bucket table back"
-    - "core lane (this session): on PASS, land the flip as the one-line
-      change with the pack as evidence; on HOLD, record why and return to
-      the worklist"
+    - "operator: review + merge core PR #44 (the one-line MIN_COSINE 0.50
+      flip with the pack as evidence); watch the tutor retrieval refusal rate
+      at the 0.50 floor post-deploy (baseline 27–31% under the no-op 0.15
+      floor is expected to rise — designed behavior)"
+    - "teacher (operator-held): item-by-item review of the 25 serving papers
+      carrying REVIEW_REQUIRED bridge findings (F-PROD-1)"
+    - "next lane: compose wave 2 from a FRESH snapshot re-freeze — the live
+      SUGGESTED surface is EQ 747 / SYLLABUS 162 / unplaced-ingest QP 369 +
+      MS 395, not the QP/MS paper axis (F-PROD-3); patch the committed kit
+      poststate to the resolveActive-mirroring version first (F-PROD-2)"
