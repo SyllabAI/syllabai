@@ -32,15 +32,20 @@ from tools.sib.ingest import SibLibrary
 
 
 def _registry_ids(library_dir: str) -> Optional[List[str]]:
-    """Optional curriculum registry at <library>/curriculum_registry.yaml."""
+    """Optional curriculum registry at <library>/curriculum_registry.yaml.
+
+    Values are returned raw (no str() coercion here): integer scalars are
+    losslessly stringified by ``build_registry``, while float scalars are
+    deliberately REFUSED there -- an unquoted ``- 2.30`` must fail closed,
+    never silently become "2.3".
+    """
     path = os.path.join(library_dir, "curriculum_registry.yaml")
     if not os.path.isfile(path):
         return None
     from tools.sib.yamlmini import load_yaml
     with open(path, "r", encoding="utf-8") as fh:
         data = load_yaml(fh.read()) or {}
-    ids = data.get("specification_points") or data.get("identifiers") or []
-    return [str(i) for i in ids]
+    return data.get("specification_points") or data.get("identifiers") or []
 
 
 def _load_text(path: str) -> str:

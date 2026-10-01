@@ -3,10 +3,12 @@ from __future__ import annotations
 
 import unittest
 
-from tools.sib.anchors import (AnchorRegistry, extract_anchor_refs,
-                               valid_identifier_shape, validate_anchors)
+from tools.sib.anchors import (AnchorRegistry, build_registry,
+                               extract_anchor_refs, valid_identifier_shape,
+                               validate_anchors)
 from tools.sib.errors import Codes
-from tools.sib.tests.fixtures import artifact_text
+from tools.sib.tests.fixtures import artifact_text, registry_yaml
+from tools.sib.yamlmini import load_yaml
 
 
 class TestAnchorShape(unittest.TestCase):
@@ -71,6 +73,38 @@ class TestAnchorResolution(unittest.TestCase):
                                registry=AnchorRegistry(frozenset({"1.4"})))
         self.assertTrue(rep.issues)
         self.assertIn("7.7", text)
+
+
+class TestRegistryConstruction(unittest.TestCase):
+    def test_quoted_ids_survive_yaml_typing(self):
+        """Canonical registry convention: ids are QUOTED ("- \"2.30\"")
+        so the identifier '2.30' survives verbatim (never becomes 2.3)."""
+        data = load_yaml(registry_yaml(["1.4", "1.5", "2.30"]))
+        reg = build_registry(data["specification_points"])
+        self.assertEqual(reg.resolve("2.30"), "resolved")
+        self.assertEqual(reg.resolve("2.3"), "unresolved")  # distinct ids
+
+    def test_float_ids_fail_closed(self):
+        """An unquoted '- 2.30' arrives as the float 2.3. The tooling must
+        refuse it loudly, never silently mint the different identifier
+        \"2.3\"."""
+        with self.assertRaises(ValueError) as ctx:
+            build_registry(["1.4", 2.30])
+        self.assertIn("2.3", str(ctx.exception))
+        self.assertIn("Quote registry ids", str(ctx.exception))
+
+    def test_unquoted_registry_yaml_fails_closed_end_to_end(self):
+        """End-to-end: registry YAML with an unquoted id -> load_yaml (YAML
+        float semantics) -> build_registry raises ValueError."""
+        data = load_yaml("specification_points:\n  - 1.4\n  - 2.30\n")
+        self.assertEqual(data["specification_points"][0], 1.4)  # float
+        with self.assertRaises(ValueError):
+            build_registry(data["specification_points"])
+
+    def test_integer_ids_are_losslessly_stringified(self):
+        reg = build_registry([1, 12])
+        self.assertEqual(reg.resolve("1"), "resolved")
+        self.assertEqual(reg.resolve("12"), "resolved")
 
 
 if __name__ == "__main__":

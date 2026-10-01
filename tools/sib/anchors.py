@@ -173,10 +173,14 @@ def validate_anchors(artifact_text: str, artifact_id: str,
 def build_registry(identifiers: Optional[List[str]]) -> AnchorRegistry:
     """Convenience constructor used by the CLI/ingest layer.
 
-    Registry identifiers are string contracts. YAML-typed scalars are
-    defensively coerced (``1`` -> ``"1"``, ``2.30`` -> ``"2.3"``), but the
-    documented best practice is to QUOTE ids in ``curriculum_registry.yaml``
-    (`- "2.30"`) so no trailing zero is lost to float typing.
+    Registry identifiers are string contracts. YAML-typed integer scalars
+    are coercibly stringified (``1`` -> ``"1"``, lossless). FLOAT-typed
+    scalars are REFUSED (ValueError): an unquoted ``- 2.30`` arrives as the
+    float 2.3, and coercing it to "2.3" would silently mint a DIFFERENT
+    identifier (2.3 and 2.30 are distinct specification points). The
+    documented convention is to QUOTE ids in ``curriculum_registry.yaml``
+    (`- "2.30"`); malformed input fails closed instead of being silently
+    transformed.
     """
     if not identifiers:
         return AnchorRegistry(None)
@@ -187,7 +191,13 @@ def build_registry(identifiers: Optional[List[str]]) -> AnchorRegistry:
         if isinstance(i, int):
             norm.add(str(i))
         elif isinstance(i, float):
-            norm.add(repr(i))
+            raise ValueError(
+                f"curriculum-registry identifier {i!r} arrived as a YAML "
+                "float; unquoted registry ids lose trailing zeros "
+                f"(2.30 -> {i!r}) and would silently become a different "
+                'identifier. Quote registry ids (e.g. - "2.30") in '
+                "curriculum_registry.yaml; SIB tooling refuses to invent "
+                "identifiers")
         elif isinstance(i, str):
             norm.add(i)
     return AnchorRegistry(frozenset(norm))
