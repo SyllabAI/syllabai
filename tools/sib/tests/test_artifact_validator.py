@@ -197,6 +197,20 @@ class TestInvalidArtifacts(unittest.TestCase):
         self.assertTrue(rep.qa_passed)
         self.assertIn(Codes.IDENT_FILENAME_CANON, rep.codes())
 
+    def test_canonical_filename_agrees_with_specification_slot(self):
+        # SIB_ARTIFACT_SCHEMA_V1.md §1 (PROPOSED/DEFINED 2026-10-01): slot 2
+        # is the SPECIFICATION (4CH1); the qualification (International
+        # GCSE) is metadata only. A canonical filename therefore produces
+        # ZERO filename issues even though qualification != filename slot 2.
+        from tools.sib.taxonomy import canonical_filename
+        canonical = canonical_filename("Chemistry", "4CH1", "MIS-01")
+        self.assertEqual(canonical,
+                         "CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md")
+        rep = validate_artifact(artifact_text(), filename=canonical)
+        self.assertTrue(rep.qa_passed, rep.to_json())
+        self.assertNotIn(Codes.IDENT_FILENAME, rep.codes())
+        self.assertNotIn(Codes.IDENT_FILENAME_CANON, rep.codes())
+
     def test_bad_protocol_version(self):
         text = artifact_text().replace("sib_protocol: SIB-1.0",
                                        "sib_protocol: SIB-0.9")

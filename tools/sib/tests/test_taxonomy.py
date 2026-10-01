@@ -40,6 +40,26 @@ class TestTaxonomy(unittest.TestCase):
             taxonomy.canonical_filename("Chemistry", "4CH1", "MIS-01"),
             "CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md")
 
+    def test_canonical_filename_template_is_specification_based(self):
+        # SIB_ARTIFACT_SCHEMA_V1.md §1 (PROPOSED/DEFINED 2026-10-01):
+        # <SUBJECT>_<SPECIFICATION>_<ARTIFACT_ID>_<SLUG>.md — slot 2 is the
+        # specification code, and the qualification NEVER participates in
+        # the filename (it stays a front-matter metadata field).
+        canonical = taxonomy.canonical_filename("Chemistry", "4CH1", "MIS-01")
+        self.assertEqual(canonical,
+                         "CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md")
+        self.assertNotIn("INTERNATIONAL_GCSE", canonical)
+        # deterministic: same inputs -> same filename, no environment input
+        self.assertEqual(
+            canonical,
+            taxonomy.canonical_filename("Chemistry", "4CH1", "MIS-01"))
+        # every taxonomy artifact yields a canonical name for the same
+        # subject/specification context (95-slot invariant)
+        for aid in taxonomy.all_artifact_ids():
+            fn = taxonomy.canonical_filename("Chemistry", "4CH1", aid)
+            self.assertTrue(fn.startswith("CHEMISTRY_4CH1_"), fn)
+            self.assertTrue(fn.endswith(".md"), fn)
+
     def test_record_vs_artifact_id_shape(self):
         self.assertTrue(taxonomy.is_valid_record_id("MIS-001"))
         self.assertFalse(taxonomy.is_valid_record_id("MIS-01"))

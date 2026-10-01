@@ -259,10 +259,11 @@ def _filename_matches_metadata(filename: str,
                                meta: Dict[str, Any]) -> Tuple[bool, str]:
     """Deterministic filename identity check.
 
-    Expected shape: <SUBJECT>_<SPECIFICATION>_<ARTIFACT_ID>_<SLUG>.md where
-    SLUG is uppercase letters/digits/underscores. See
-    docs/research/SIB_VALIDATOR_IMPLEMENTATION_V1.md for the documented
-    template/example divergence.
+    Canonical shape (SIB_ARTIFACT_SCHEMA_V1.md §1, PROPOSED/DEFINED
+    2026-10-01): <SUBJECT>_<SPECIFICATION>_<ARTIFACT_ID>_<SLUG>.md where
+    slot 2 is the specification code (e.g. 4CH1) and SLUG is uppercase
+    letters/digits/underscores. The qualification is metadata only and
+    never appears in the filename.
     """
     subject = str(meta.get("subject") or "").upper().replace(" ", "_")
     spec = str(meta.get("specification") or "").upper().replace(" ", "_")

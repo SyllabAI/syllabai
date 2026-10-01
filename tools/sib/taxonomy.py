@@ -166,13 +166,14 @@ def canonical_filename(subject: str, specification: str, artifact_id: str,
                        slug: str | None = None) -> str:
     """Canonical artifact filename.
 
-    Schema template: <SUBJECT>_<QUALIFICATION>_<ARTIFACT_ID>_<SLUG>.md
-    Schema example:  CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md
+    Contract (SIB_ARTIFACT_SCHEMA_V1.md §1, PROPOSED/DEFINED 2026-10-01):
 
-    The worked example fills the template's QUALIFICATION slot with the
-    specification code. This implementation treats the worked example as
-    canonical (segment 2 = specification) and records the template/example
-    divergence in docs/research/SIB_VALIDATOR_IMPLEMENTATION_V1.md.
+        <SUBJECT>_<SPECIFICATION>_<ARTIFACT_ID>_<SLUG>.md
+
+    Slot 2 is the SPECIFICATION code (e.g. ``4CH1``) -- the template and the
+    worked example agree on this. The qualification (e.g. International
+    GCSE) is required front-matter metadata but never participates in the
+    filename.
     """
     norm_subj = (subject or "").upper().replace(" ", "_")
     norm_spec = (specification or "").upper().replace(" ", "_")
