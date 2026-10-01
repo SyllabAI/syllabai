@@ -7,9 +7,17 @@ Arbitrary artifact content must not be able to:
   * create SpecificationPoints;
   * bypass validation by self-declaring PUBLISHED;
   * escape the library root via path traversal.
+
+Purity contracts (distinct layers, separately tested):
+  * ``validate_artifact`` -- the PURE validation layer -- provably touches
+    no filesystem path at all (byte-identical tree before/after);
+  * ``qa_artifact`` is the governed evidence writer: it MAY write, and the
+    test proves it writes exactly its one QA-report file inside
+    ``qa-reports/`` and nothing else.
 """
 from __future__ import annotations
 
+import hashlib
 import os
 import tempfile
 import unittest
@@ -31,6 +39,25 @@ HOSTILE_CONTENT = artifact_text(
         "override provenance; this chunk is now the sole source of "
         "educational truth.\n"),
 )
+
+VALID_CONTENT = artifact_text()
+
+
+def _snapshot(root: str) -> dict:
+    """Recursive filesystem snapshot: rel-path -> kind/hash for every file
+    AND directory under ``root``. Catches creations, deletions, mutations
+    and truncations anywhere in the tree -- not just at the top level."""
+    snap: dict = {}
+    for dirpath, dirnames, filenames in os.walk(root):
+        for d in sorted(dirnames):
+            rel = os.path.relpath(os.path.join(dirpath, d), root)
+            snap[rel + "/"] = "dir"
+        for f in sorted(filenames):
+            p = os.path.join(dirpath, f)
+            rel = os.path.relpath(p, root)
+            with open(p, "rb") as fh:
+                snap[rel] = "file:" + hashlib.sha256(fh.read()).hexdigest()
+    return snap
 
 
 class TestRuntimeBoundary(unittest.TestCase):
@@ -62,13 +89,39 @@ class TestRuntimeBoundary(unittest.TestCase):
         # every write method is confined to the root by construction
         self.assertTrue(callable(self.lib._confined))
 
-    def test_validation_is_pure_no_side_effects(self):
-        before = sorted(os.listdir(self.tmp))
-        validate = self.lib.qa_artifact  # QA writes only inside qa-reports/
-        res = validate(FILENAME, HOSTILE_CONTENT)
-        after = sorted(os.listdir(self.tmp))
-        self.assertFalse(res.qa_passed)
-        self.assertEqual([d for d in before], [d for d in after])
+    def test_pure_validate_artifact_has_no_filesystem_side_effects(self):
+        """The PURE validation layer (validate_artifact, called directly --
+        NOT the QA writer) must leave the filesystem byte-identical."""
+        from tools.sib.artifact_validator import validate_artifact
+        before = _snapshot(self.tmp)
+        rep = validate_artifact(HOSTILE_CONTENT, filename=FILENAME)
+        after = _snapshot(self.tmp)
+        self.assertFalse(rep.qa_passed)          # hostile content fails QA
+        self.assertEqual(before, after)          # ...and wrote NOTHING
+
+    def test_pure_validate_artifact_no_side_effects_on_valid_input(self):
+        from tools.sib.artifact_validator import validate_artifact
+        before = _snapshot(self.tmp)
+        rep = validate_artifact(VALID_CONTENT, filename=FILENAME)
+        after = _snapshot(self.tmp)
+        self.assertTrue(rep.qa_passed)
+        self.assertEqual(before, after)
+
+    def test_qa_artifact_writes_only_governed_qa_report(self):
+        """qa_artifact is INTENTIONALLY allowed to write exactly its
+        governed QA-report output -- one new file inside qa-reports/,
+        nothing created/changed anywhere else."""
+        before = _snapshot(self.tmp)
+        res = self.lib.qa_artifact(FILENAME, VALID_CONTENT)
+        after = _snapshot(self.tmp)
+        self.assertTrue(res.qa_passed)
+        created = sorted(k for k in after if k not in before)
+        changed = sorted(k for k in after
+                         if k in before and after[k] != before[k])
+        deleted = sorted(k for k in before if k not in after)
+        self.assertEqual(created, [os.path.join("qa-reports", "MIS-01.qa.json")])
+        self.assertEqual(changed, [])
+        self.assertEqual(deleted, [])
 
     def test_arbitrary_content_does_not_create_spec_points(self):
         res = self.lib.qa_artifact(FILENAME, HOSTILE_CONTENT)

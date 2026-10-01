@@ -22,12 +22,18 @@ Hard runtime boundary (task §8). SIB ingestion MUST NOT:
   * become the sole source of educational truth.
 
 Enforcement model:
-  * validation functions are pure (no filesystem writes);
+  * validation functions are pure (no filesystem writes); the pure layer is
+    ``artifact_validator.validate_artifact``; only the explicit QA/stage/
+    publish/chunk actions write, and only inside the library root;
   * mutating helpers (stage/publish) write ONLY under the library root,
     enforced by ``_confined`` path checks (SIB-ING-001 on violation);
-  * transitions strictly follow lifecycle.py; QA evidence (a passing QA
-    report) is a precondition for staging; STAGED is a precondition for
-    publication;
+  * transitions strictly follow lifecycle.py: a PASSING QA report bound to
+    the exact landing content is a precondition for staging, and a PASSING
+    QA report is ALSO re-verified at publication time (SIB-ING-002) -- a
+    file dropped directly into staged/ cannot be published without QA
+    evidence;
+  * NOT_APPLICABLE artifacts are valid inventory but never advance to
+    QA_PASSED/STAGED/PUBLISHED through this pipeline;
   * no Subject Tutor integration is implemented here.
 
 Library layout (all under the library root, e.g. research/sib/CHEMISTRY_4CH1/):
@@ -147,8 +153,7 @@ class SibLibrary:
         action transitions it via the lifecycle.
         """
         meta = parse_front_matter(text).metadata
-        aid = str(meta.get("artifact_id") or "") or re.sub(
-            r".*_([A-Z]{2,3}-\d{2})_.*\.md$", r"\1", filename)
+        aid = str(meta.get("artifact_id") or "") or _aid_from(filename)
         rep = validate_artifact(
             text, filename=filename,
             known_artifact_ids=known_artifact_ids,
@@ -177,8 +182,16 @@ class SibLibrary:
         QA_PASSED -> STAGED), updating the artifact's front-matter status.
 
         Preconditions (all machine-checked, SIB-ING-002 otherwise):
-          * QA report exists and passes;
-          * artifact front-matter status is GENERATED or QA_PASSED.
+          * QA report exists, passes, and is bound to the EXACT current
+            landing content (``content_sha256`` match) -- QA-then-edit is
+            detected and refused;
+          * the QA report is keyed by the artifact's front-matter
+            ``artifact_id`` (not by filename segment);
+          * artifact front-matter status is GENERATED or QA_PASSED (both
+            legal lifecycle predecessors of STAGED); re-staging an already
+            STAGED artifact is idempotent;
+          * applicability is not NOT_APPLICABLE (NOT_APPLICABLE artifacts
+            are inventory; they never advance through the pipeline).
         """
         src = self._confined(os.path.join(self._dir("artifacts"), filename))
         if not os.path.isfile(src):
@@ -186,29 +199,47 @@ class SibLibrary:
             rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
                     f"artifact not found in landing zone: artifacts/{filename}")
             return IngestResult(_aid_from(filename), "stage", False, rep)
+        text = open(src, "r", encoding="utf-8").read()
+        meta = parse_front_matter(text).metadata
+        aid = str(meta.get("artifact_id") or "") or _aid_from(filename)
+        rep = ValidationReport(subject_unit=aid)
+
         qa_path = self._confined(os.path.join(self._dir("qa-reports"),
-                                              f"{_aid_from(filename)}.qa.json"))
-        rep = ValidationReport(subject_unit=_aid_from(filename))
+                                              f"{aid}.qa.json"))
         if not os.path.isfile(qa_path):
             rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
                     "no QA report; run the qa action before staging")
-            return IngestResult(_aid_from(filename), "stage", False, rep)
+            return IngestResult(aid, "stage", False, rep)
         with open(qa_path, "r", encoding="utf-8") as fh:
             qa = json.load(fh)
         if not qa.get("qa_passed"):
             rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
                     "QA report does not pass; staging refused (errors are "
                     "never downgraded to allow ingestion)")
-            return IngestResult(_aid_from(filename), "stage", False, rep)
+            return IngestResult(aid, "stage", False, rep)
+        recorded = str(qa.get("content_sha256") or "")
+        if recorded and recorded != content_fingerprint(text):
+            rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
+                    "QA report content_sha256 does not match the current "
+                    "landing content; the artifact changed after QA -- "
+                    "re-run the qa action (evidence is content-bound)")
+            return IngestResult(aid, "stage", False, rep)
 
-        text = open(src, "r", encoding="utf-8").read()
-        status = str(parse_front_matter(text).metadata.get("status") or "")
-        aid = str(parse_front_matter(text).metadata.get("artifact_id")
-                  or _aid_from(filename))
+        status = str(meta.get("status") or "")
+        applicability = str(meta.get("applicability") or "")
+        if applicability == "NOT_APPLICABLE":
+            rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
+                    "NOT_APPLICABLE artifacts never advance to "
+                    "QA_PASSED/STAGED/PUBLISHED; they are inventory, not "
+                    "pipeline candidates")
+            return IngestResult(aid, "stage", False, rep)
         if status == lifecycle.STATUS_GENERATED and apply_status:
             # GENERATED -> QA_PASSED -> STAGED (two legal transitions)
             text = _set_status(text, lifecycle.STATUS_STAGED,
                                via=lifecycle.STATUS_QA_PASSED)
+        elif status == lifecycle.STATUS_QA_PASSED and apply_status:
+            # QA_PASSED -> STAGED (single legal transition)
+            text = _set_status(text, lifecycle.STATUS_STAGED)
         elif status != lifecycle.STATUS_STAGED:
             rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
                     f"artifact status {status!r} cannot be staged (lifecycle "
@@ -224,7 +255,16 @@ class SibLibrary:
     # -- publication -----------------------------------------------------------------
     def publish_artifact(self, filename: str, *, apply_status: bool = True
                          ) -> IngestResult:
-        """STAGED -> PUBLISHED. Requires staged presence; writes to published/."""
+        """STAGED -> PUBLISHED. Writes to published/.
+
+        Preconditions (all machine-checked, SIB-ING-002 otherwise):
+          * the artifact file exists in staged/;
+          * a PASSING QA report exists for the artifact (re-verified here so
+            a file dropped directly into staged/ cannot bypass QA evidence);
+          * front-matter status is STAGED -- checked regardless of
+            ``apply_status`` (the flag controls whether the status line is
+            rewritten, never whether preconditions hold).
+        """
         src = self._confined(os.path.join(self._dir("staged"), filename))
         rep = ValidationReport(subject_unit=_aid_from(filename))
         if not os.path.isfile(src):
@@ -234,8 +274,22 @@ class SibLibrary:
         text = open(src, "r", encoding="utf-8").read()
         meta = parse_front_matter(text).metadata
         status = str(meta.get("status") or "")
-        aid = str(meta.get("artifact_id") or _aid_from(filename))
-        if status != lifecycle.STATUS_STAGED and apply_status:
+        aid = str(meta.get("artifact_id") or "") or _aid_from(filename)
+        qa_path = self._confined(os.path.join(self._dir("qa-reports"),
+                                              f"{aid}.qa.json"))
+        if not os.path.isfile(qa_path):
+            rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
+                    "no QA report; publication requires QA evidence "
+                    "(SIB-ING-002)")
+            return IngestResult(aid, "publish", False, rep)
+        with open(qa_path, "r", encoding="utf-8") as fh:
+            qa = json.load(fh)
+        if not qa.get("qa_passed"):
+            rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
+                    "QA report does not pass; publication refused "
+                    "(no publication without QA evidence)")
+            return IngestResult(aid, "publish", False, rep)
+        if status != lifecycle.STATUS_STAGED:
             rep.add(Codes.INGEST_ORDER, SEVERITY_ERROR,
                     f"artifact status {status!r} cannot be published directly; "
                     "STAGED is required (no GENERATED/QA_PASSED shortcut)")
