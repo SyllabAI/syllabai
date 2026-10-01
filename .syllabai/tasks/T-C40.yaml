@@ -112,3 +112,18 @@ task:
       INVARIANT.md) — 5-chunk dual-transport matrix, then close the mechanism"
     - "fold the review's item 5 (fabric promotion for robustness) into the next
       planning session — not started here by design"
+  closeout:
+    merge: "core PR syllabai-core#38 SQUASH-MERGED to main as b30e603 (2026-10-01);
+      head 4481469 = the CI-VERIFIED-GREEN head (run 36821886508, build SUCCESS
+      incl. V56 on Testcontainers); branch tc40-rag-review-fixes deleted after
+      merge"
+    post_merge_state:
+      - "V56 applies on the next Render deploy (migrate then service restart);
+        the live production effect stays UNVERIFIED until that restart — the
+        claim above is unchanged, not re-judged"
+      - "MIN_COSINE 0.50 flip remains STAGED on core branch tc40-min-cosine-050
+        @ 06297f2 (run-005-c-r8 re-record gate PASS per T-C41); execution gated
+        on the operator-run production probe SQL in
+        evidence/bench-001/cosine-calibration-2026-10-01/"
+      - "remaining next_safe_actions unchanged: operator validation waves,
+        operator embedding decisive experiment, review item 5 to planning"
