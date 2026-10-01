@@ -1,6 +1,6 @@
 # ADR-030: Per-course tutor scoping — the tutor ask carries a course reference, core resolves it fail-closed against its own curriculum registry, and tutor sessions record the course they served
 
-**Status:** Proposed (implementation-ready; becomes Accepted on merge)
+**Status:** **Accepted (2026-10-01)** — promoted PROPOSED → ACCEPTED on merge (operator decision). Implementation evidence: `syllabai-core` V53 (migration + `resolveForCourse` fail-closed + ask wiring + session write-once, 9 new tests) on `main` as `4cb5714`; `syllabai-hub` registry patch (`curriculumCode` field + `/tutor?course=` gating + `courseRef` pass-through) merged via [PR #5](https://github.com/SyllabAI/syllabai-hub/pull/5) — hub CI `build` + `e2e` green at the merge commit; core `main` CI `build` green post-merge (`f1a3a5e`). This docs record merged via [PR #12](https://github.com/SyllabAI/syllabai/pull/12) as `4c2ffa6`. ERD delta recorded in `docs/DATA_MODEL_ERD.md` §8.
 **Date:** 2026-09-30
 **Owner:** syllabai (this file + a `DECISIONS.md` entry), syllabai-core (V53 + resolver), syllabai-hub (registry field + tutor surface)
 **Supersedes:** nothing (extends the scope policy in ADR-029 tranche work; refines the serving-scope behavior first fixed by T-C07)
@@ -70,3 +70,4 @@ Retrieval (KG + vector), the CLA surfaces, the learner model, content search (no
 - Drafted 2026-09-30 (operator authorization "Now proceed"), after the ADR-029-era state check of all repos (core `5b946ba`, hub `0913147`, migration numbers V51/V52 re-verified as consumed).
 - Companion artifacts: the DECISIONS.md entry (house condensed block), the ERD delta with the mermaid source (`V53_TUTOR_COURSE_ERD.md`, rendered to `tutor_course_erd_v53.png`), and the implementation patches (core + hub) exported from the `v53-per-course-tutor-scoping` branches.
 - Status flips to **Accepted** when both implementation PRs merge (the DECISIONS.md entry carries the same conditional line, and the promotion record is pre-drafted in the PR description).
+- **Promoted to Accepted 2026-10-01** on operator go: PR #12 merged as `4c2ffa6` after both implementation PRs were on main (core `4cb5714`; hub PR #5, CI `build` + `e2e` green at `0c75dd6`) — the merge-gate conditions above are met.
