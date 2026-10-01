@@ -1,0 +1,73 @@
+version: 1
+task:
+  id: T-C43
+  title: "Recalibrate KaRagFlowIT's embedding double to production geometry —
+    the PR #44 CI finding: the bag-of-hashed-words double structurally caps
+    relevant-pair cosines at ~0.15–0.4 and cannot exercise the calibrated
+    0.50 floor; the flip must not merge with its serving-path IT red"
+  owner: "superz (main agent, zai-web session, operator directive \"① Process
+    PR #44 (first fix T-C43 IT substitute)\")"
+  status: DONE
+  priority: P1
+  base:
+    repo: "syllabai (master pack) @ ff74789; syllabai-core PR #44 branch @
+      85329e1 (flip 8dc315a + boundary fixtures 85329e1, CI red — only
+      KaRagFlowIT.hybridAsk of 162 tests failing)"
+  basis: >
+    The T-C42 record's next_safe_actions proposal (full analysis: core PR #44
+    comment 5939122074) — CI on PR #44 caught a REAL consequence of the
+    calibration, not a typo-level break: the IT's HashingEmbeddingProvider is
+    a sparse bag-of-hashed-words embedder whose relevant-pair cosines
+    (cos = shared/√(C·q), q≈4 query buckets vs C≈60 chunk buckets) top out at
+    ~0.15–0.4 — that geometry happened to clear the old no-op floor of 0.15
+    and cannot clear the production-calibrated 0.50. The operator's directive
+    names the fix-first order explicitly: fix T-C43's IT substitute, then
+    process PR #44.
+  scope:
+    allowed:
+      - "syllabai-core: KaRagFlowIT's test double ONLY (nested
+        TestConfiguration provider) — the production MIN_COSINE constant and
+        the serving path were already evidence-cleared by the T-C42 pack"
+      - "master-pack: this task record, T-C42 close-out, TODO/WORKLOG entries"
+    forbidden:
+      - "NO change to the production constant, ContentVectorRetriever
+        semantics, or any other test's double (ContentPipelineIT keeps its
+        own hashing double — its assertions never cross the retrieval floor)"
+      - "NO weakening of the IT's assertions (hybridAsk must still demand a
+        MARK_SCHEME citation; refusalAsk must still refuse deterministically)"
+  execution_record: >
+    2026-10-02. Fix: `ProductionGeometryEmbeddingProvider` replaces the
+    hashing double inside KaRagFlowIT (commit 9649e52 on the PR branch, one
+    file +103/−12). Design (candidate (b) of the PR-comment analysis,
+    refined): a deterministic fixed-seed unit "corpus semantics" axis u;
+    a text carrying the fixture's topic vocabulary is lifted
+    v = 0.9·u + √0.19·r(text), r = the orthogonalized bag-of-hashed-words
+    direction (Gram–Schmidt, guarded); unanchored texts return the pure
+    remainder. This is NOT the ruled-out universal common-component lift —
+    the axis component is gated on topical vocabulary, so refusalAsk's
+    off-corpus query never touches the axis and keeps sub-floor geometry BY
+    CONSTRUCTION. Resulting envelope vs the calibration pack's measured
+    production geometry: same-topic pairs [0.62, 1.0] by construction (pack
+    relevant ≥ 0.55); unrelated pairs ≤ √0.19 ≈ 0.436 (pack irrelevant
+    ≤ 0.45). LOCAL VERIFICATION (no Docker in the sandbox — the IT itself is
+    CI-certified): a harness compiled the provider class extracted
+    byte-mechanically from the edited file and asserted the envelope against
+    the three verbatim IT queries and every one of the 636 fixture-document
+    strings (a superset of anything ChunkingService can emit): 64 relevant
+    pairs min cosine 0.8091; max unrelated cosine 0.0441 (the refusal
+    query's token collision-freedom holds under the remainder leg too);
+    determinism across instances, unit norms, and doc/query symmetry all
+    pass; mvn test-compile green on JDK 25. CI: run 36919822481 on the PR
+    head 9649e52 — FULL SUITE GREEN (the previous run's sole failure,
+    KaRagFlowIT.hybridAsk:241 "expected MARK_SCHEME but was
+    KNOWLEDGE_NODE", is gone). Design record posted as PR #44 comment
+    5939665505. PR #44 MERGED as core 5ef132b (merge-commit method per the
+    PR #41 precedent; concurrent lane PR #43/4ecbdc0 had landed on main
+    while #44 was open — both parent heads individually CI-green; main CI
+    auto-fired on the merge commit, run 36921164632).
+  next_safe_actions:
+    - "watch the tutor retrieval refusal rate at the 0.50 floor post-deploy
+      (baseline 27–31% under the no-op 0.15 floor is expected to rise —
+      designed behavior, T-C42's record)"
+    - "the wave-2 composition + F-PROD-1..4 follow-ups of the T-C42 record
+      are unchanged and still open"
