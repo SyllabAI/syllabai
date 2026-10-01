@@ -1,0 +1,5520 @@
+{
+ "generated": "2026-10-01",
+ "trace": "1a0f5de1684a7045",
+ "instruction": "proceed with one of the open items -> sme-eq qt-primary backfill for the other 499 agreeing questions",
+ "disposition": "ADDITIVE serve-shape backfill only: for each of the 499 L1-agreeing sme-eq questions, mirror the (already-correct) anchor as a question_topics is_primary=true row \u2014 INSERT when absent, guarded FLIP of an existing SECONDARY row when present. NO questions updates (anchors untouched), NO qsp changes (content coding byte-identical), no rows deleted. Aligns the sme-eq lane with the past-paper lane's serve shape (368/368) and makes bank-wide qt-primary coverage 961/961.",
+ "pre_state_pins": {
+  "L1 census": "checked=961 agree=961 disagree=0 (post-Task-59 state; the 94 anchors were moved in Task 59)",
+  "questions_active": 961,
+  "sme-eq total": 593,
+  "sme-eq with qt primary": 94,
+  "past-paper with qt primary": 368,
+  "qt_total": 1226,
+  "qsp_total": 2637
+ },
+ "mechanics_counts": {
+  "qt primary INSERTs (anchor absent)": 499,
+  "qt secondary->primary flips (anchor secondary)": 0,
+  "questions updates": 0,
+  "qsp rows changed": 0,
+  "rows deleted": 0
+ },
+ "expected_post_state": {
+  "qt_total": 1725,
+  "sme-eq with qt primary": 593,
+  "past-paper with qt primary": 368,
+  "bank-wide qt-primary coverage": "961/961 (exactly one per active question, == anchor)",
+  "L1 census": "checked=961 agree=961 disagree=0 (unchanged)"
+ },
+ "entries": [
+  {
+   "question_id": "ffebb936-b720-47e9-86cb-7f046dd43a10",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q8-s",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "b2f34d4a-11c8-4651-b426-4e17e2de4ccd",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q23",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "9a845260-ffd0-4a99-96d4-2533bf550111",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q12",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "28993b8f-1ef7-4324-aa87-51c6461fdfa9",
+   "external_ref": "sme-eq-4-5-alcohols-q6",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "a1484512-64c4-47cc-82f9-ec58b8f91e73",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q32",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.36",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "85145834-aabf-4fc9-8c28-ef25253cf778",
+   "external_ref": "sme-eq-1-3-atomic-structure-q9-p2",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "c793f854-fe93-4eae-b554-f8e73a21fbbf",
+   "external_ref": "sme-eq-4-4-alkenes-q2",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "e358840d-900b-440a-b789-6142213ec03b",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q7",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.25C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "27503f26-ab48-4b23-8c72-04448afdd018",
+   "external_ref": "sme-eq-1-1-states-of-matter-q2",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.4",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "5d9af368-1ca7-44d8-a29c-ea42fc12286f",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q6",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.14",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "81c307aa-1b0c-40cf-94fe-a7f82edf58a4",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q11-p1",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.8C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "93454e3c-53ed-4797-997e-0beb90d5a8ab",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q7",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "1ae69136-384c-46a8-8d97-50233be51cfb",
+   "external_ref": "sme-eq-4-4-alkenes-q4-p1",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "5480a664-00db-465f-9634-36729a6b68c1",
+   "external_ref": "sme-eq-4-2-crude-oil-q11",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "6e7ca3c4-b27a-4053-9907-63c5f5116c4e",
+   "external_ref": "sme-eq-2-8-chemical-tests-q1",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.47",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "a2e29a79-7c3f-45b2-9dae-b3469fac51a5",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q15",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.36C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "55769848-55f5-46f9-88f2-139dffc814b0",
+   "external_ref": "sme-eq-4-3-alkanes-q12",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "78054701-dea5-4145-9e62-0a3d12892889",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q14",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "54ed915b-5de8-4838-931d-1ac4e1f6ffaf",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q16",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "a572524c-919e-46b2-b502-e3c741704e53",
+   "external_ref": "sme-eq-2-4-reactivity-series-q13",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "205e0331-8b31-43e8-bdf2-58d7172cebbd",
+   "external_ref": "sme-eq-4-7-esters-q0",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "f686a3db-f40a-4cf9-ba5e-827b79dfee79",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q3-p1",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.20",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "71d606cd-a8d2-4c3e-b33e-033aae3d06fc",
+   "external_ref": "sme-eq-3-1-energetics-q24",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.7C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "1337818e-4400-4bed-9d0b-cbf052f43c2c",
+   "external_ref": "sme-eq-4-4-alkenes-q12",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "450c6191-2594-4e7a-8f94-24132d55dd9a",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q6",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.19",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "1b87161c-6171-437f-8501-4fa7c7005e36",
+   "external_ref": "sme-eq-1-1-states-of-matter-q7",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "6298f87f-69ba-49ef-8454-8e627157b6b9",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q1",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "ca23eb5e-a1a0-4827-9f7c-28f78f03ba51",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q2",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "3f1b5f8d-1f9e-47fd-8731-25683c9a59d9",
+   "external_ref": "sme-eq-4-5-alcohols-q9",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "6e11da4a-09f8-4a8a-a3d1-6778f02d39bf",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q24-p1",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.7C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "e14b20a8-a962-4c88-9544-a3d2d073b8cb",
+   "external_ref": "sme-eq-4-2-crude-oil-q2",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "8cc8b72a-79c0-4b2e-9024-c3728bb55113",
+   "external_ref": "sme-eq-4-2-crude-oil-q1",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.14",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "8cd88fb6-4323-49b1-a806-0b243197951a",
+   "external_ref": "sme-eq-3-1-energetics-q7",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "c9f68bb4-d23d-4440-9286-565f005ad91a",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q18",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.7",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "bfb717d0-320b-4d15-80e2-360fb1a08d3c",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q9",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "0e48b298-fad4-47a8-a168-ccaae058d0bf",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q9",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.20C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "903f03ab-e64c-4b87-bab5-8ee8f0b1bd9b",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q15",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.14",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "8cdc7f70-34ad-4476-bb89-41964293193b",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q11-p1",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "79507a5d-1e6c-4c1c-9105-56ce9538c8e2",
+   "external_ref": "sme-eq-4-5-alcohols-q10",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "7ac5c797-aab2-4f97-9600-c5d8d5253135",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q0-p4",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "b9473196-cab4-4b2a-a015-b736148e2076",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q12",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "d53b4777-3891-4bb2-a64a-858a11fe54ef",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q7",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.53C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "e0289ff1-45aa-44c8-9e10-5a24bcdcb0a1",
+   "external_ref": "sme-eq-2-4-reactivity-series-q15",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.20",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "f8fb6207-071c-4ce4-9c2d-9a61041c21ce",
+   "external_ref": "sme-eq-4-1-introduction-q2",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "70f72642-9e80-4691-88c0-a8f6c45c6ebb",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q10",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "a83a351e-3c22-4880-bd4a-4070f6937548",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q15",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.26C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "9f5db7b0-8094-4ebc-bb3f-aef5e97db56d",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q12",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.39",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "049200e7-3f87-4207-8fe3-42a3bc85a303",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q3-p3",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "21c41997-b4d0-4763-be33-dc2be5f829e8",
+   "external_ref": "sme-eq-4-2-crude-oil-q9",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "8a977438-3d8a-4c3f-96b5-d232c86d9929",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q29",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.31",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "dfb828ef-ef94-4e89-8ea4-eff6dcbbec60",
+   "external_ref": "sme-eq-4-2-crude-oil-q18",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.12",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "4f9aab81-f21b-44a8-a35b-8fd78ab96551",
+   "external_ref": "sme-eq-4-5-alcohols-q17",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "fc66ecaa-9548-43e9-a5c1-8cb83b4a1e3c",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q11-s",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "6f9feb2d-56a1-4e6a-89cd-ef61d514484d",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q3",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "4d55809b-3508-43ee-aabc-fb459a4d894a",
+   "external_ref": "sme-eq-1-9-electrolysis-q8",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.59C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "f47972c0-fea1-41ca-a3aa-6ab5702bba54",
+   "external_ref": "sme-eq-4-7-esters-q14-p1",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "582ebca2-73f2-4fbc-b0a2-4115c0a56d5a",
+   "external_ref": "sme-eq-2-8-chemical-tests-q14",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "bf252c6f-4733-44ee-ac17-be9b61ba7172",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q16-p1",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "057947a1-0d9c-4041-9016-bf5071188dd3",
+   "external_ref": "sme-eq-1-1-states-of-matter-q4",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "c2146b90-e7f3-40b1-a751-be547610be11",
+   "external_ref": "sme-eq-4-1-introduction-q13",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "3facbef4-8ec3-42a8-975d-6bb67afc942e",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q14",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.23",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "6861e10d-2eef-4b48-a408-093e14cb58b1",
+   "external_ref": "sme-eq-4-3-alkanes-q1",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "23cf59e8-33df-4474-a968-65d5e3966564",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q6",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.54C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "4f3baecc-5259-48bc-bc31-e8420eb2ecc1",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q8",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.13",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "b724055d-961a-436a-aea5-591d4dd2e287",
+   "external_ref": "sme-eq-1-1-states-of-matter-q18",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "deedb5a3-9050-45aa-b0d4-81dea2b48031",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q3",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "8928b151-a2c2-46d2-bb26-36f722a47411",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q16-p1",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "2f8065b7-feb6-4f51-9405-347cfd5a67c7",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q6",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "43c869e5-e563-4e02-b09a-5418b4e9e156",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q26",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "2ba089dc-4472-4bbe-8e17-6eff7a085565",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q21",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "044e65c2-8980-491a-a81b-f87cb2befa8f",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q10",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "a9752ea7-8dac-4130-854f-c5bd75fcd331",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q10",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "95f3e507-e60c-4316-a13b-f9aa53d6a54f",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q11",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.36",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "66d96ff4-a16d-493b-ba07-13e1a1ef2caf",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q9",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.23",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "06c2ab7c-1444-47f0-a2be-7e9c916f9ecf",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q1",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "8894a55f-279a-4b4e-8bc2-d101c3d40b62",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q15",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.34C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "2e2ffa24-5a97-48a9-9c9f-d58dad7f6011",
+   "external_ref": "sme-eq-4-3-alkanes-q3-p1",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "7aa684a0-0da6-439a-a584-854aca8177bd",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q17",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.49",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "91bb7082-1fea-4faa-b170-9104551f0706",
+   "external_ref": "sme-eq-4-1-introduction-q1",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "5b1c5172-22af-4222-8614-3e68f714310b",
+   "external_ref": "sme-eq-3-1-energetics-q11",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "aad2c3c2-1c82-4c88-8199-42831a6ec340",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q23",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.12",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "0db1ba75-c4b0-4d9e-8e1b-6e5dd30e0e4d",
+   "external_ref": "sme-eq-3-1-energetics-q23",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "43983504-0a5c-42cd-812f-ada0eb525540",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q7",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "a191bb25-5d22-4bb8-b9ee-cbba91e4423a",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q10",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "88c20300-e54b-4b64-8344-ec07c430aeb2",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q10",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.50",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "470869ba-602a-4943-b9bb-2c71f7c1032d",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q2",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.54C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "a106bc77-6b78-4c06-8fcd-50cf5bb743a3",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q2",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.46",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "6fe73a21-9762-405a-8cfc-adddb371dbd6",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q11-p2",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.8C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "b502c920-23d8-411e-9d50-db7ab80f3564",
+   "external_ref": "sme-eq-2-4-reactivity-series-q4-p1",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "94d173ae-9115-4a14-bbfd-403bb790d9ea",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q13",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.54C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "9bb2b2d4-2f34-4cc2-bcf5-6719a3f1e2a4",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q7",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.14",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "e82f8d2f-538b-494e-92f0-4c4bb6b82ead",
+   "external_ref": "sme-eq-4-4-alkenes-q5",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "17a393b6-cbd0-4a25-8cc9-1ac99b533f36",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q11",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "40c11e23-aab6-41e2-ae65-35adff89b63f",
+   "external_ref": "sme-eq-4-7-esters-q4-s",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.39C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "81d4da93-183c-4b8c-becf-802b8f152eeb",
+   "external_ref": "sme-eq-1-1-states-of-matter-q20",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.7C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "86ea299f-3056-4755-9d81-440d8b7cfd4a",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q12",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "d9b5bed5-34fb-4818-b28a-33b2b2047a47",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q8",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "7086da4b-f6e6-43d7-82d5-9788ff236af2",
+   "external_ref": "sme-eq-1-3-atomic-structure-q4",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "fed8116a-267e-4640-ac7c-42102a874921",
+   "external_ref": "sme-eq-4-5-alcohols-q5",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "1a2ec76f-88f0-4ca5-9fcf-f15e880327fa",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q2",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.36C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "1486c351-873f-428a-a8d3-cee31a9fe6fa",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q3-p2",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "ff0665d3-d128-4771-8ca1-f0846d419b98",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q10",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "653a3392-337a-4c0f-8d8a-50c6ca221d6c",
+   "external_ref": "sme-eq-1-9-electrolysis-q7",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.59C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "b98c0be8-46cd-4064-8d7e-7a22a3fc209f",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q2",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.29",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "433533fa-7e67-4f5d-a978-19d75953ea42",
+   "external_ref": "sme-eq-2-8-chemical-tests-q0",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.46",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "d1ba6de6-f417-4a53-a9ab-97884c27bca6",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q3-s",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.20",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "affff34c-fde0-43bf-88b6-f4e1b44df6aa",
+   "external_ref": "sme-eq-4-4-alkenes-q9",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.27",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "a56fde66-bb1a-44f5-9e6a-8cf4e0dbe72a",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q12",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.47",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "03089f79-4e0f-4128-a593-d92826e145d4",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q1",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "281365d1-03c5-4e7c-9d21-ce321fcbe298",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q9-p1",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.46",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "07723ff0-5012-4e32-99da-37406d4c5acb",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q15",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "b482d79f-a277-453b-a487-9bb32669f8f5",
+   "external_ref": "sme-eq-3-1-energetics-q16",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "8253651c-5b38-4133-a953-a82cbeb79681",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q3",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "a5d91f95-dcab-43e8-aad3-8656979dbf57",
+   "external_ref": "sme-eq-4-2-crude-oil-q15-s",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "ca67444c-b4a3-44e3-920e-9bb4b8d1a0c2",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q9-s",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.46",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "99a733de-10f2-4624-aa65-77a8f227c474",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q0",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "cd818723-c6c0-455b-8ca6-d5e4f405d6c3",
+   "external_ref": "sme-eq-4-7-esters-q12",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "fab6a9d8-b444-4af2-942c-e5fb83d95cc3",
+   "external_ref": "sme-eq-4-3-alkanes-q0",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "679d821b-341d-4f75-8caf-1d860a021760",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q3-p1",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "3352b393-c4e3-42c1-873c-8852258aa4c7",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q0",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.47",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "c77a1553-7bec-48db-97e1-3274d93e39c2",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q13",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.8C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "c23065c8-a05a-4190-8e78-dc654b7dc4eb",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q11",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.11",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "4826dee0-28c8-487c-83ec-8466b82b9653",
+   "external_ref": "sme-eq-1-9-electrolysis-q4",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.58C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "72163cbf-76c3-4080-ac4b-c289db117c5f",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q7",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.32",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "84ba033a-09a1-4052-b260-9f7dfd9b96d9",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q14",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "5cce7870-26f2-4bfa-8635-461574dcd624",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q0-p3",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "d3ad4e34-00ce-4ed3-a26b-a638e784521d",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q5",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "059a33bf-ed90-4e48-8a31-b8572f751889",
+   "external_ref": "sme-eq-1-3-atomic-structure-q14",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "425e23f9-14a2-4745-a868-c370597c81f4",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q13",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.40",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "5bafd1f7-0e4a-4369-aadb-17bb82c6b4db",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q2",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "ff1e562f-e26a-481b-9474-f6e4c8439b42",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q0",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "71eda7ef-bf35-4e27-a39f-af5c32f96d4e",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q13",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "b38daf57-1359-4149-b9df-c113e8197e48",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q8-p1",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "6151c8ae-da27-48f7-95c3-e28a50827f02",
+   "external_ref": "sme-eq-4-4-alkenes-q13",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "a46c1fff-b5bf-43dd-a72c-fff260bbd24b",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q8",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "5471f0d3-adbf-4282-984b-cdc826938e82",
+   "external_ref": "sme-eq-2-8-chemical-tests-q9",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "265a0acd-82ee-4195-a122-217ac5d732f8",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q3-s",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "5bb838de-11e7-45ac-8dd9-a24a65280213",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q9",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "79a04991-f384-48da-a61b-aea6609bed73",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q17",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "e5b14b3e-dbac-44cc-b0e1-49e499e393f5",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q11",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "a3493617-c297-47db-968e-dfc716d24cc7",
+   "external_ref": "sme-eq-4-7-esters-q14-s",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "4a8da6c9-603e-4ded-83f0-7b611904b785",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q5",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "956da8a4-4897-4b73-8667-0246f68a6e8c",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q1-p1",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "c93649f0-3b26-4aff-8b2d-883af9325921",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q13-p1",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.24",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "50ea85ca-5e60-43ed-8cb7-d4429aa0b9a6",
+   "external_ref": "sme-eq-1-3-atomic-structure-q2-p4",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "e4d4362d-d973-4dea-8218-3bbab2b1f4ed",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q0-p1",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "9df7a395-4758-4cdd-a23f-37c11fa16ec9",
+   "external_ref": "sme-eq-4-7-esters-q1",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.39C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "fc7165b4-9894-42bd-8074-66bfb8af452b",
+   "external_ref": "sme-eq-4-2-crude-oil-q16",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "3a79aa09-d4fc-49dd-b386-a21f25164cd2",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q7",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.41",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "af16e508-0270-4b96-8ec8-a1086bbeb63e",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q3",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "4d0492fd-ed6d-45be-b05f-f410c24487d0",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q0-p2",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "fc601f43-07a7-417b-aa56-9f895d97ca8a",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q18",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.42",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "c9b9c54d-abb1-4266-9d17-a33bc0c18c39",
+   "external_ref": "sme-eq-4-3-alkanes-q13",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "53ff7d89-6fde-4162-b5f6-4b50f978ec45",
+   "external_ref": "sme-eq-1-1-states-of-matter-q3",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "7dafb19b-2f60-4add-bbe7-9958c3189a35",
+   "external_ref": "sme-eq-1-1-states-of-matter-q12",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "ec4a6add-e8c3-4111-a576-7845b6d4149c",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q11",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "419ac1fe-ecd1-476e-ac01-8d5bd918e7d4",
+   "external_ref": "sme-eq-1-9-electrolysis-q16",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.42",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "3d22b54b-84ef-4d5b-9005-e5cb8af11314",
+   "external_ref": "sme-eq-3-1-energetics-q1",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "cfc715d3-6f44-4401-ba0e-e25a42981b83",
+   "external_ref": "sme-eq-3-1-energetics-q12",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "5efae88f-accb-4818-9b5c-0fc5810d2ba2",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q13",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "c08fd685-c42e-4828-b32e-f13eee1b2317",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q33",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "d211e900-fb9b-4ad5-9601-0e28bb095d7b",
+   "external_ref": "sme-eq-4-7-esters-q10-p1",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.20C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "47dc2d6f-e67e-4866-90fa-fa0dcf88fa52",
+   "external_ref": "sme-eq-4-4-alkenes-q7",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.27",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "9eca53ac-2dab-4338-a2d0-03e4bce06197",
+   "external_ref": "sme-eq-1-1-states-of-matter-q21",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.7C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "bef792be-6191-4527-a4aa-834473aa9335",
+   "external_ref": "sme-eq-4-5-alcohols-q4-s",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "17233f08-0dba-4e91-a1cd-381c3c0995d5",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q7",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.20",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "12066a57-76f3-4b6f-96f0-1873462295f1",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q16-s",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "f64fbefc-de4f-4bc8-81b0-1cc7a9a34d8d",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q2",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.26C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "a61b6d1d-4f21-49c5-acfc-50198233935a",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q9",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.53C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "bb135f04-09d2-41be-a37b-45728320cb40",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q8",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.40",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "27941ead-8f80-4048-a218-42c24653c624",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q7",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.32",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "10a04ce7-6a3e-4ea9-9aee-538bbf51e122",
+   "external_ref": "sme-eq-1-3-atomic-structure-q13",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "60975aaa-ec5a-452a-a525-fb0e098e62f5",
+   "external_ref": "sme-eq-2-4-reactivity-series-q5",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "1e08e9b3-c92e-4805-a050-3426626c25b8",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q6",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.33",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "cae29767-3276-4bcd-beab-be229bcb0163",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q31",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "a85b4a53-2f1c-4aa3-8740-8890fd3d3098",
+   "external_ref": "sme-eq-1-3-atomic-structure-q9-s",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "9aa9eb6d-96df-447d-89b4-e4696297a74a",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q4-s",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.20C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "e459358c-fbdf-444e-ad2d-223f6dc773c9",
+   "external_ref": "sme-eq-2-4-reactivity-series-q6",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.20",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "4736804f-c7d0-4e58-bddd-028679c82225",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q6",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.49",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "9e6eba54-fa5c-43e8-9739-df8a33dbd9e7",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q4",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "972e42a2-7121-4e36-be33-8b13d9fe7f93",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q2",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "2a01d8b4-1095-4a19-b39c-1ee354efbda8",
+   "external_ref": "sme-eq-3-1-energetics-q18",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "0b40f5a9-adc1-471d-aa57-45588a0fcffd",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q17",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "2d73ce58-c4ac-4edd-8a59-67e1ba4d070d",
+   "external_ref": "sme-eq-4-1-introduction-q6",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "17ba9010-2064-485f-ba50-f1236539defa",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q0",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "f23efb49-206f-42ba-a350-b958533f596a",
+   "external_ref": "sme-eq-4-7-esters-q5",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "e5dce8b4-e7ce-45f0-b23e-fd7437334b2d",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q14",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "aaa20876-e5ae-40f2-afca-089f6c147f81",
+   "external_ref": "sme-eq-4-4-alkenes-q0",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "e80213f6-887e-4274-80c2-2fbd4023906a",
+   "external_ref": "sme-eq-4-3-alkanes-q8",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.22",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "7fb8a269-7209-4e50-9ecd-07ad5108caee",
+   "external_ref": "sme-eq-3-1-energetics-q3",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.5C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "52446cf3-4e3b-4045-9939-b1840ad013ff",
+   "external_ref": "sme-eq-4-3-alkanes-q11",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "613fdec9-304b-4f9b-8d00-41ba5e59d80d",
+   "external_ref": "sme-eq-2-8-chemical-tests-q4",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "f2500fa4-13ec-4b14-941c-a96990d39678",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q1",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "3a727e7d-2013-4e30-bb39-578748b8bede",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q18-p1",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "eefdc87e-2b7b-47a9-9519-0f357ba83b1d",
+   "external_ref": "sme-eq-3-1-energetics-q5",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "b80a5f55-95a3-4358-b412-84cb6565718f",
+   "external_ref": "sme-eq-2-4-reactivity-series-q1",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "e3432af0-646b-4b49-9157-5545e124ee41",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q7",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.7",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "32507d7e-6fcd-4305-b61d-6c1cc1581aaf",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q9",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.46",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "318d4300-7809-4a56-a5d0-748a329961b6",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q1-s",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "801b7531-99e9-4c26-a9d7-2206ed4df90e",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q4",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "176ed8d3-6155-4383-be26-05854516e401",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q15",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "6f7e9350-db0b-4846-b441-03cb28ad3ed6",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q8",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "1b223d20-7d8e-4742-9843-9f8cded02c55",
+   "external_ref": "sme-eq-4-1-introduction-q7",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.6",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "9064b45e-f7e0-4829-8539-4f4d3a87969a",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q1",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.34",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "1ff5f477-9469-4934-ad04-5124fdec71bd",
+   "external_ref": "sme-eq-2-4-reactivity-series-q14",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "0bb3c60d-b080-478c-a8d5-d692f17a1e10",
+   "external_ref": "sme-eq-1-3-atomic-structure-q10",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "f0de9caf-2a5f-4df4-b6b3-99413fe7815b",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q1",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.45",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "fa750419-cdfb-499e-bc0f-b8f1f5028f7c",
+   "external_ref": "sme-eq-4-7-esters-q10-s",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.20C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "6088eace-d44f-424d-9a85-102ac05bb8af",
+   "external_ref": "sme-eq-4-3-alkanes-q2",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.4",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "7a366c2a-be20-4b5c-9dc9-e10c790f6b86",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q15",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "dc855563-a522-468d-919a-3d57019ad5be",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q6-p1",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "779a0d6e-0d0a-4c4e-aa24-2f2e5e365934",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q12",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.20C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "07f75c75-d5d6-4a5b-9d85-09301d7d93d6",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q0",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "558b5bcd-7864-4d2f-8cdf-77bd18d508dd",
+   "external_ref": "sme-eq-1-9-electrolysis-q2",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.56C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "cef3eafd-32da-4e1a-b1a9-5c681c0daa15",
+   "external_ref": "sme-eq-1-3-atomic-structure-q2-p3",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "114a8abf-72cc-47dc-832e-958cbd63174f",
+   "external_ref": "sme-eq-1-3-atomic-structure-q0",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "4acfb3bb-b542-4bb0-8b84-ecc71a9b7bbf",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q5",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.54C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "c3463097-183e-43f2-9724-2ad140989cde",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q8",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "94dd147d-e10c-44b4-b9c4-ccb53e57586d",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q16-s",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "3c4fb7ed-0149-4692-a957-b6f298a54a34",
+   "external_ref": "sme-eq-4-2-crude-oil-q13",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.17",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "ea766456-6154-4df1-acbc-7f438089694d",
+   "external_ref": "sme-eq-1-1-states-of-matter-q14",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "0b1cc452-8bc0-42d2-a65d-794082406fbb",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q0",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.53C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "b3b7f442-c1d5-47b7-a593-a14474181297",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q13",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.24",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "763001f4-5747-496f-87ec-069e5d48d6e1",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q15",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "4a0a864e-fd9a-4830-9e58-fad7e4c308e1",
+   "external_ref": "sme-eq-3-1-energetics-q17",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "559ecab3-be40-4ea6-af7e-35b991528028",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q4-p2",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "45f84d5f-96cd-43a7-b085-3d23dc8959f9",
+   "external_ref": "sme-eq-2-8-chemical-tests-q7",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.46",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "c072c06d-528f-4890-9122-cba1e69ec45d",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q16",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "988ab69a-fab8-496f-9792-82fea66e3bb0",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q9",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "dac445e5-b947-472e-989d-2355f2624775",
+   "external_ref": "sme-eq-4-7-esters-q13",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "3aecdbb1-c53f-456e-83e9-394aeb3de46b",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q13",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "d68030df-909e-4a75-b782-17af1bea6911",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q30",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.58C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "4d702ecf-11a7-475c-b7ef-63d302f28cd2",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q20",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "9de3d7c1-fa1c-417b-813b-cbbfc51f0cd6",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q8",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.7",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "ae81f86e-64bc-4c67-bc88-e633036bf199",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q19",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "38b637c5-b108-43cc-a772-7e900926087d",
+   "external_ref": "sme-eq-1-1-states-of-matter-q22",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.6C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "918d0f0e-1037-4be0-a8e3-c8eb48c40c09",
+   "external_ref": "sme-eq-4-2-crude-oil-q0",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.12",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "78dfa09b-0366-45e4-bc6e-725af59b9663",
+   "external_ref": "sme-eq-4-1-introduction-q14",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "2c57e78d-1ca9-4858-9988-144202d86649",
+   "external_ref": "sme-eq-4-5-alcohols-q3-p2",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "2822a44e-14b7-474e-b255-23b13eababd5",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q4",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "2b188068-85ee-4714-9a31-ce1eca487dc5",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q0",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.49",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "4473f678-ce63-4bc1-9866-fb08500175f5",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q10",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "c7fab634-f04e-4a3a-a5c5-cdea65cf8e01",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q10",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.8C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "99de88d0-8c2e-4966-b68f-c35e844c352b",
+   "external_ref": "sme-eq-3-1-energetics-q6",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "bcb39f65-054f-4cd8-ba47-28130aaff46f",
+   "external_ref": "sme-eq-4-5-alcohols-q12",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.32C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "168b765d-5778-4088-9b66-335184d4f7b6",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q0-s",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "d5999645-8967-4a9d-a652-8521fe839276",
+   "external_ref": "sme-eq-1-1-states-of-matter-q6",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "f7d97f3a-d305-4497-bee9-3e2cd0f147cf",
+   "external_ref": "sme-eq-3-1-energetics-q15",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.7C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "e21fd423-dc0e-4f93-a13c-2aaf6b2c1bc1",
+   "external_ref": "sme-eq-3-1-energetics-q8",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "b4480a6e-bdeb-4b98-ac5d-96e0d4aa60ef",
+   "external_ref": "sme-eq-3-1-energetics-q4",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.5C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "3186e037-d3e7-4413-a0c1-3dccf1e4c184",
+   "external_ref": "sme-eq-4-2-crude-oil-q10",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "52d3d1d7-600e-45db-a179-6c5d913c9af1",
+   "external_ref": "sme-eq-4-1-introduction-q9",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "0b5bb85b-9b7f-43e5-984f-195943bd1582",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q17",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "d396149c-7aeb-4728-979d-7b37aaef2058",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q15",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "d45d397d-e892-40dc-a186-d6f88f1b95cb",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q25",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "8c4ce8aa-fa9e-4bc9-aaf1-efb84db4176d",
+   "external_ref": "sme-eq-4-3-alkanes-q7",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.22",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "3d5ae898-e026-437e-baf4-6396ed6093d8",
+   "external_ref": "sme-eq-1-3-atomic-structure-q3",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "2fc50307-3f95-4ca5-96a5-eb82edc7c1ba",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q6",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.38",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "b44cd8cb-2649-483c-a54d-9ce7859833b5",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q28",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.31",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "5836f352-1756-4dd5-a1e6-ba5a56c80dc7",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q27",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.12",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "30d7b675-64cd-4c98-b14b-6eb85372833f",
+   "external_ref": "sme-eq-1-3-atomic-structure-q9-p1",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "ebcd70f5-1fd4-43fe-bd86-0b50693e2167",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q2",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "322d6b68-efe2-47be-b849-4ffa5deae515",
+   "external_ref": "sme-eq-4-5-alcohols-q8",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.31C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "a236ef79-f927-477a-ae48-a1beb3032c11",
+   "external_ref": "sme-eq-4-3-alkanes-q3-p2",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "3870cb37-3f46-4c96-9563-979517009f8d",
+   "external_ref": "sme-eq-2-4-reactivity-series-q11",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "2fa9d8a9-a5eb-464f-9e76-c3241e8bf4da",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q14",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.46",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "4e5922f0-717b-4162-82da-8975ee6d0c07",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q4",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "d115fe8f-12b4-4366-8559-2e55820e8134",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q7-p1",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "ff933c94-abf7-484b-99d1-a0e17a619ded",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q5",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "9739be8a-fd06-4e23-8221-f7e17d305dc1",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q17",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "5484f525-5518-41af-ae22-faf7db15fcbb",
+   "external_ref": "sme-eq-4-5-alcohols-q13",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "1c66b2a2-7238-4c27-a0a7-42db6b4cb975",
+   "external_ref": "sme-eq-2-4-reactivity-series-q3",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "2e2dbe7c-8691-4497-a123-1ec6e0b75349",
+   "external_ref": "sme-eq-4-5-alcohols-q3-s",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "e32c8377-e828-4bd5-8f21-b1923af4763c",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q4-p1",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "61bf8718-099d-4123-8320-625d53ba5734",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q4-s",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.48",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "10d63a0b-5c49-4eb0-ba46-1162e879387c",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q4-p1",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.48",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "4a86e5a3-081e-4c43-98ae-107d106b6347",
+   "external_ref": "sme-eq-4-7-esters-q4-p1",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.39C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "8fe34c91-5050-40d5-885f-45754a244d03",
+   "external_ref": "sme-eq-4-2-crude-oil-q17",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.17",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "a9814db0-6076-45e7-9b89-82e05d501505",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q2",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.12",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "47322a00-e75b-417b-aa5f-de7519bcd6fd",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q4",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "62b5ccaa-1f54-4ed0-8b05-c6ec997430bc",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q4-s",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "42b16bbe-5eeb-4408-8c82-e8acdf9f76cd",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q18",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "9eebf4d2-698f-4ce8-a00d-70045cf7831c",
+   "external_ref": "sme-eq-1-3-atomic-structure-q5",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.14",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "2536b81e-6ed6-4bcb-a4d6-b76aeabd7e2c",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q2",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "f109f274-414c-4bd8-83b3-db2b925187c7",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q5",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.45",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "8342d505-2776-46d3-8f01-a9a093c553ed",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q6",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.53C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "52ab7bda-bc61-4d7c-a119-e0cb10179d56",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q0",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.11",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "c68c94a5-aaef-444b-a81e-822bc373c397",
+   "external_ref": "sme-eq-2-4-reactivity-series-q4-s",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "348798e2-35e7-49eb-8f1a-e2895c38d50e",
+   "external_ref": "sme-eq-2-4-reactivity-series-q18-s",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "82d7a3e4-7b67-479a-86cf-0012ae88d634",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q13",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.49C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "9806ec7d-d20a-4217-9168-60f448fd7ab3",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q5",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.36C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "3c153145-af8c-48f2-8fda-73d24eb8e97f",
+   "external_ref": "sme-eq-3-1-energetics-q22",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "5df7d98e-4cef-48ac-9e5b-dc5b71861243",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q3-p1",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "64987459-2284-4da0-99d5-9968f71c7421",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q0",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "e16d85ca-0594-4e5f-914b-43990e764438",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q4-p1",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.20C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "c4283394-f8e5-4e91-a0b6-5e5141375615",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q5",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.29",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "b1c84e30-e803-437e-9529-43ca9a6b79a4",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q12",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.53C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "cee2e0c3-3d8f-4961-9ba7-04a363742e85",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q10",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "0dc0bbae-af30-49b4-adc6-559c7a26e1b6",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q3-s",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "cbc4b765-e8ff-4222-aa3d-19eb84b7738c",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q14",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.41",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "15692fd2-85c1-49ab-b128-c36097b43a1b",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q9",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "0037634b-b3cc-4251-89e2-14d11bc835e6",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q7",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "27727f16-7fb0-40a0-9326-dfd9087a76de",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q11",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.45",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "ca601c69-c5e5-4d0a-be9a-c80dda98a3e4",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q9",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "23c4daca-fcb8-46e7-b244-0db1a1b05c03",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q3-p1",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "e3816749-14a3-42df-af3e-e79e634c058f",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q8",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "334b5046-af65-4c91-94e0-2deb10572557",
+   "external_ref": "sme-eq-1-3-atomic-structure-q12",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "d007a01e-42a8-41b4-9d89-21645092dc45",
+   "external_ref": "sme-eq-1-1-states-of-matter-q0",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "4902b29b-a33b-4cfe-bd02-87d48f125782",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q3",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.31",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "43e0ce9e-dcd0-46bd-b127-867c30fe4e8c",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q2",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.41",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "a0fd5b8f-01ec-4074-9b49-73c9f527b00d",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q15",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "04387153-16f7-4913-9a9e-10891772be22",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q11",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.42",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "533f4681-abe4-4b06-8bb4-9591417a69c6",
+   "external_ref": "sme-eq-1-1-states-of-matter-q16-s",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "91e1b63f-6d77-41ea-9614-85e6f6bc9a72",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q4",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "e550e6b4-4cf0-47b0-8dad-0fb6445b1f73",
+   "external_ref": "sme-eq-1-3-atomic-structure-q7",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.17",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "601aff37-f5af-41d0-b213-b5482bd1d022",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q7-s",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "61cef3fd-e0f1-4a84-8d10-3fa5359db0a4",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q10",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.23C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "83f4d91c-a7d8-45a8-bacd-6340a310a291",
+   "external_ref": "sme-eq-4-7-esters-q9",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.31C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "5c64eb31-c828-4869-a5f9-4485639afacb",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q9",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.29",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "3259a4af-c7a2-43e2-9ed0-4c87cb89bf82",
+   "external_ref": "sme-eq-1-1-states-of-matter-q11",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.38",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "2c61c50b-1612-41dc-8c68-6c5c02995741",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q6",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "d2dc2b71-2962-4929-8ad2-af5c2252e9d0",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q1",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.23C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "0180965e-b982-474b-9656-9234eb24be11",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q15-p1",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "4357d9db-65ab-4691-acb5-5526f7b1c00a",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q4-p1",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "e360e688-cee7-4d92-8bd0-53b05ec1085f",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q6-s",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "e1fcc1e1-39ea-4b75-885a-97535fddde05",
+   "external_ref": "sme-eq-2-8-chemical-tests-q10",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.47",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "a02a215f-fe59-44d3-8f5e-9a382b4fbdd9",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q3",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.46",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "1368545c-b7ba-476c-9814-8fde89847fa8",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q3-s",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "e46eed8a-bbeb-4558-928f-8229b5530d56",
+   "external_ref": "sme-eq-1-3-atomic-structure-q2-s",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "0a0f5b28-a2d7-49d0-bcf9-f9f009c3c2c4",
+   "external_ref": "sme-eq-4-2-crude-oil-q12",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "13292905-0d9f-4aa1-b5bd-981a7b6a06f8",
+   "external_ref": "sme-eq-2-4-reactivity-series-q0",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "2990bdbe-2e6f-42af-8343-147fa8290656",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q14-p1",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "8ca465f3-991a-4d48-b7af-38099be602cf",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q11",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "14edd417-c9c1-4981-9417-47889e36bce8",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q4",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "89fe3034-ce64-4de6-b7f1-39a4ed556949",
+   "external_ref": "sme-eq-4-1-introduction-q0",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "4bee3165-972a-43a0-b210-33bf1bb92be0",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q1",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "0c9f3a76-5efd-4f45-8eba-e8eb91770eb3",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q11",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "d5391895-cfae-4b83-907e-90320ea40488",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q15",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.7",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "074b5959-cf48-4fd2-bbd0-1e3622db1435",
+   "external_ref": "sme-eq-1-1-states-of-matter-q15",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "63f548de-be02-4732-aaf2-a0fa99afe192",
+   "external_ref": "sme-eq-1-1-states-of-matter-q1",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "762cd361-0ebb-4578-9d7f-82520158dbe1",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q13",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "50193262-9c8a-4785-ae3c-f3334a969c87",
+   "external_ref": "sme-eq-2-4-reactivity-series-q2",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.19",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "cef553e5-484d-4c0b-9db2-62d06b8a3251",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q12",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.11",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "9bd460a3-b929-43df-aff9-b8e484151761",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q10",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.53C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "4cf686dd-2ae9-4246-80cb-d92743086e71",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q4",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "bb281dec-fb67-47e6-a7c7-dee66bb99fa5",
+   "external_ref": "sme-eq-1-3-atomic-structure-q2-p1",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "0954a7d6-b1b9-4881-bb6c-68914235f59f",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q9",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "690ac805-465c-4ef9-ba36-8e16fb36e7e2",
+   "external_ref": "sme-eq-1-3-atomic-structure-q8",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "c6142006-eb9c-4fc4-aaca-cc06b69513cf",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q18-s",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "e705c369-d122-49fc-81eb-4b8c54436898",
+   "external_ref": "sme-eq-4-1-introduction-q8",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "cf577207-15e0-4117-843b-8525b0191078",
+   "external_ref": "sme-eq-4-7-esters-q7",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.39C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "937847f8-a325-4d92-b5f8-8d028ada277e",
+   "external_ref": "sme-eq-4-4-alkenes-q14",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "705ddbaf-80e8-4575-b329-bc204c2093cc",
+   "external_ref": "sme-eq-4-5-alcohols-q3-p1",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "595a372b-3980-4483-9475-6675097ce90e",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q10",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "324bf2ba-597f-4d77-ac9c-2258906a5a23",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q16",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.39",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "6af1b2c6-a332-472d-b0a0-f1b3ed9e3bd6",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q11-p3",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.8C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "7dc9dbdd-3df6-4124-8dd7-4f21c7e4d785",
+   "external_ref": "sme-eq-1-1-states-of-matter-q8",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.4",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "851b0ecf-3c48-425a-ab85-77d7fb5a9f09",
+   "external_ref": "sme-eq-3-1-energetics-q13",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.7C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "8efa1017-c9e6-4f4e-8d52-6bd5d331e6df",
+   "external_ref": "sme-eq-2-4-reactivity-series-q12",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "b388cb59-8b9e-42d2-b57f-8f704de36e15",
+   "external_ref": "sme-eq-4-7-esters-q2",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "352e7e32-08ef-41ce-9d54-ca199dcf3856",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q14",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.12",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "a921d346-ae32-406c-a656-f918a7d38135",
+   "external_ref": "sme-eq-1-9-electrolysis-q13",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "6c5ab902-e8d5-4d77-9a41-4d9341919006",
+   "external_ref": "sme-eq-4-3-alkanes-q4",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "a0abbf14-6a07-4905-9702-68c3e71872d6",
+   "external_ref": "sme-eq-1-1-states-of-matter-q13",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "525eee8a-4b2a-4223-8fdb-a2ab55555cf4",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q1",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "55ecc5e9-c1bd-4bae-b416-da241a1bedb9",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q13",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.32",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "eb19f2f0-9109-4780-a785-d51e6b32bd1a",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q1",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "eff14a52-b4df-43a2-be73-b711968acd11",
+   "external_ref": "sme-eq-1-9-electrolysis-q1",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.58C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "cd3f5d66-c13d-476b-99a0-a946c92c9dd7",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q16",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "ad05ff67-033e-4e25-963f-c463b39f76e7",
+   "external_ref": "sme-eq-1-3-atomic-structure-q15",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "9f3a8363-077a-43e3-a9e9-04377a894341",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q13",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "fcefba8f-f90f-45ec-9ace-03e3840a8ae9",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q1",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "e6a83300-c63c-42e0-90b5-a2e24e716a6d",
+   "external_ref": "sme-eq-4-7-esters-q6",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.36C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "48ae7469-68d0-4b2a-8036-2b9edd4208b6",
+   "external_ref": "sme-eq-2-4-reactivity-series-q8",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.17",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "7a2b9d66-3c72-4cde-be37-bfc7c12c5100",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q4",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "c356c80a-5e69-4ef4-a1f2-9df954d5cb2b",
+   "external_ref": "sme-eq-4-1-introduction-q3",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "e08bea5f-d30f-4275-b093-dcb044c41aa7",
+   "external_ref": "sme-eq-1-1-states-of-matter-q17",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.5C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "3303430a-03a1-4c6a-8352-a24ad0ad0508",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q13-s",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.24",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "7d46f0c0-38e5-433d-898c-d362395fac6e",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q14",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.11",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "ad567d72-1a42-419a-9521-a176b745666d",
+   "external_ref": "sme-eq-4-4-alkenes-q1",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "2ca24552-dea3-4397-8008-7bba2fa2c7d2",
+   "external_ref": "sme-eq-1-3-atomic-structure-q1",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "69af6806-a1c0-4ba8-8241-030895a15004",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q4",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.25C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "b0f52ff1-5be0-4799-93ab-4240b23ceba7",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q6",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.14C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "a38815b7-ba73-4297-a27d-89d7774b809e",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q3",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "1798138b-3429-45b6-85e1-772911497b55",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q12",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "caa0e0ac-e62f-4ea8-8e24-55be4290514a",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q6",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "c00ecbcf-2e38-4259-9df9-3b1a973447c0",
+   "external_ref": "sme-eq-1-3-atomic-structure-q2-p2",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "27b3a023-0970-4eb4-8e40-7d35eb1e4448",
+   "external_ref": "sme-eq-2-4-reactivity-series-q18-p1",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "7f0a0b6b-deee-49da-9f5a-1c89ff1bd350",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q14-s",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "d52bc855-43f6-4ac3-ad05-9e5e1a6b1a8d",
+   "external_ref": "sme-eq-4-4-alkenes-q6",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "9d323e91-546e-4f7c-88cc-7a26af30bb40",
+   "external_ref": "sme-eq-1-1-states-of-matter-q9",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "6ac98672-8eb9-4152-96de-9c76d6825d84",
+   "external_ref": "sme-eq-4-1-introduction-q4",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.4",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "fe37ef48-e401-46c0-8ca3-ae9acf4806a3",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q11",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "97577492-afe6-4bec-8366-976b6c4aba5d",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q12",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.11",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "27877f65-6bfa-4fe5-bd5b-3bf42844ff9d",
+   "external_ref": "sme-eq-2-4-reactivity-series-q9",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.19",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "a1034445-593c-4628-8350-6af83dd28747",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q8",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "b43ea4b7-d042-4e14-8ee9-ab2bb08a0d0a",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q10",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.19",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "95ebd239-ba08-479a-8513-fe57e583201d",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q14",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "e89675d9-d946-4554-9cb7-340999ded236",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q3",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.4C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "2dc90f41-a4db-4a51-bb74-9743c052d64f",
+   "external_ref": "sme-eq-4-2-crude-oil-q3",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "e64bf521-47ad-4ba2-a0a1-6b1db705e83b",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q0",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "13099f64-2542-4c2a-98ea-6a1261b43a41",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q5",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "e10ecba7-93aa-452e-a75b-0efa6ca51fc1",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q17",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.40",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "691f357b-76a3-47bb-8c04-67403ed3c70c",
+   "external_ref": "sme-eq-4-5-alcohols-q2",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "6335d05a-077e-4e74-9f30-bce09ffb5038",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q1",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.20",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "cd85a568-a1ed-4810-89e9-9630b0cfd0a0",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q18",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.32",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "db57dc3e-31d2-486e-b3e7-9a736008642c",
+   "external_ref": "sme-eq-2-4-reactivity-series-q16",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "ef27fb49-fe2e-47fd-9565-56cffeebac76",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q7",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "7669f3ca-d5e7-4b8a-b6cf-cf45bbe33f8d",
+   "external_ref": "sme-eq-1-3-atomic-structure-q11",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "b99483dd-fa72-450e-8c0f-929014836da0",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q3",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "f63f69c3-7910-4992-a72b-9ef448e8eac2",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q5",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "32e0781f-6077-4f20-90be-47732a2e0bcc",
+   "external_ref": "sme-eq-2-8-chemical-tests-q8",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "90db81bb-c557-4a88-85b5-25f1c6888793",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q15-s",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.37",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "32cd781b-3830-4a4e-b22a-6782a5ad5631",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q1",
+   "anchor_code": "4CH1-S1-h",
+   "primary_point_code": "4CH1-1.54C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "qt_row_node": "176a69ea-c780-4110-8e6a-43c3f54b148a"
+   }
+  },
+  {
+   "question_id": "1a6a982f-6a7b-4c33-90e0-2cec5ebbe777",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q6",
+   "anchor_code": "4CH1-S4-f",
+   "primary_point_code": "4CH1-4.35C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "1ad8a619-151b-4995-b83b-64832a963c95",
+    "qt_row_node": "1ad8a619-151b-4995-b83b-64832a963c95"
+   }
+  },
+  {
+   "question_id": "1fac7116-1094-49d7-8a3e-14cb7ab82011",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q2",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.49",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "a2bfc531-e967-40cb-8989-a98b044cdf82",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q14",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "8bf87b48-0248-4e04-88af-95bde9b776e1",
+   "external_ref": "sme-eq-2-8-chemical-tests-q11",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.47",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "d44a4f0c-8fc4-4bd0-b8f9-4fc370f5d08b",
+   "external_ref": "sme-eq-2-4-reactivity-series-q7",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "8b4b5bdd-c442-4b4c-8401-d1a16a7013fd",
+   "external_ref": "sme-eq-1-1-states-of-matter-q16-p2",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "21cc6203-d168-4eb2-bf10-0c0dc0a50086",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q11-s",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.8C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "eaf979f2-f28f-4380-badf-e16dd6e5e329",
+   "external_ref": "sme-eq-1-9-electrolysis-q9",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.59C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "faef723e-2b5c-492c-8de3-5329c6637581",
+   "external_ref": "sme-eq-1-9-electrolysis-q0",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.58C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "a16cbe6e-2c74-449d-aff7-7127f58eb4bd",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q10",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.20C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "e3574e4a-34c9-455d-91cf-eed05abb6014",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q22-s",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.34",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "723d33fa-532e-4abd-a611-212d28101ef5",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q7",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "def30a45-9d30-4e6f-ae21-158377671e4a",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q20",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "4af16574-60d1-4a90-ab98-815a77629400",
+   "external_ref": "sme-eq-3-1-energetics-q21",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  },
+  {
+   "question_id": "438f07d7-5a05-4615-b3eb-29a77a7f4c5a",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q15",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "bb5a94d8-3517-436b-8933-fb6a543f6b51",
+   "external_ref": "sme-eq-1-3-atomic-structure-q6",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "87e7be41-b465-47c9-9c6c-243946104545",
+   "external_ref": "sme-eq-4-8-synthetic-polymers-q8",
+   "anchor_code": "4CH1-S4-h",
+   "primary_point_code": "4CH1-4.49C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b934af15-492e-4075-ad52-aab6ce472d9b",
+    "qt_row_node": "b934af15-492e-4075-ad52-aab6ce472d9b"
+   }
+  },
+  {
+   "question_id": "61beb273-64bd-4ab6-a8d5-1742b4523a64",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q6",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.32",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "0c37cd96-db9e-470b-a0d8-160cd652b579",
+   "external_ref": "sme-eq-4-5-alcohols-q4-p1",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.30C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "9cc5bbc2-e046-48e4-8d3f-8fd38b61d37c",
+   "external_ref": "sme-eq-4-1-introduction-q10",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "c40b3ccf-e45d-446b-8ec0-3e555f2787e6",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q2",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.39",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "6bd06ae6-7c16-44a6-ad00-d0fd904b3108",
+   "external_ref": "sme-eq-4-5-alcohols-q0",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.31C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "f2a4bb62-9f71-4bbd-987d-59fae0142bea",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q23",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.36",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "eb2cb6c0-aa96-412a-8e6a-8df5d99bfb01",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q0",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.20C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "d7f6cb60-4b71-485d-b87b-a876f61b1b6b",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q9",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "6cfb6855-64bc-4dc0-bcd2-d66ce23abe4f",
+   "external_ref": "sme-eq-2-8-chemical-tests-q2",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.48",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "9013d382-aa59-4337-a565-1b9172c6bbac",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q22-p1",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.34",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "9659807e-1bd6-4b3e-8818-a6c6e36392b6",
+   "external_ref": "sme-eq-3-1-energetics-q0",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "36b9ff8f-b2f7-40f9-a70d-5ceaefbbdd03",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q24-s",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.7C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "95d0064c-2660-400f-9154-c93bb1464fb9",
+   "external_ref": "sme-eq-2-7-acids-bases-and-salt-preparations-q0",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.36",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "aa4d78c8-80ce-4049-928f-fe1fff3b07df",
+   "external_ref": "sme-eq-4-4-alkenes-q4-s",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "2f69fc38-f7ad-4f96-93cd-7ae198948d98",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q10",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.12",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "5d2f96ca-fc39-44ed-aeb3-f7f75afba79d",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q19",
+   "anchor_code": "4CH1-S2-g",
+   "primary_point_code": "4CH1-2.34",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "qt_row_node": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6"
+   }
+  },
+  {
+   "question_id": "1183a0ac-c673-4507-98e7-e9abae3a5677",
+   "external_ref": "sme-eq-4-6-carboxylic-acids-q11",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "a38c6344-d941-4ea5-889d-41e8672ef746",
+   "external_ref": "sme-eq-1-9-electrolysis-q6",
+   "anchor_code": "4CH1-S1-i",
+   "primary_point_code": "4CH1-1.59C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+    "qt_row_node": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf"
+   }
+  },
+  {
+   "question_id": "e8d65868-6cd4-43dd-9ae8-9f2cf2c09947",
+   "external_ref": "sme-eq-1-6-ionic-bonding-q0",
+   "anchor_code": "4CH1-S1-f",
+   "primary_point_code": "4CH1-1.42",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "qt_row_node": "dcc1c814-b133-4d01-a28e-fe0a3be934b4"
+   }
+  },
+  {
+   "question_id": "30ab51b4-a7b3-4423-8de2-6fadbdce564a",
+   "external_ref": "sme-eq-4-3-alkanes-q10",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "bea65933-394f-4732-8eee-d1721ee2eb77",
+   "external_ref": "sme-eq-4-4-alkenes-q4-p2",
+   "anchor_code": "4CH1-S4-d",
+   "primary_point_code": "4CH1-4.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "668b7080-921f-4a7a-84f3-0597c08df9b5",
+    "qt_row_node": "668b7080-921f-4a7a-84f3-0597c08df9b5"
+   }
+  },
+  {
+   "question_id": "8f6f5eca-c991-4ed1-81b4-e624f90fb867",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q2",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "0f446056-164d-4481-86b8-3c899699f0c2",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q17",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "5716360f-adff-4e65-b865-4d327a33afde",
+   "external_ref": "sme-eq-4-5-alcohols-q7",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.32C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "daadc048-1bc9-48bd-b0f9-fe6b4127dcdc",
+   "external_ref": "sme-eq-4-7-esters-q8",
+   "anchor_code": "4CH1-S4-g",
+   "primary_point_code": "4CH1-4.41C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "359473e4-c661-4656-a600-4910521e44d3",
+    "qt_row_node": "359473e4-c661-4656-a600-4910521e44d3"
+   }
+  },
+  {
+   "question_id": "6acbaaa8-216b-41a8-b997-a0a5fd059bb3",
+   "external_ref": "sme-eq-1-1-states-of-matter-q5",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.4",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "eeda60bf-a78d-4435-8d51-7fc7893578fd",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q1",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.26",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "65d6e0dc-0dca-424c-af67-a64baa2ecd65",
+   "external_ref": "sme-eq-4-2-crude-oil-q4",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "1d724800-739d-4555-a683-58948bc49280",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q4-s",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.16",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "0f6ed092-a7d9-4ac9-ab7f-128650d190db",
+   "external_ref": "sme-eq-2-8-chemical-tests-q13",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.47",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "bee74755-e251-4d3a-b38b-787ff3f8a866",
+   "external_ref": "sme-eq-4-2-crude-oil-q15-p1",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.8",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "502a0192-31d0-41ee-91a2-51bd6959d5d7",
+   "external_ref": "sme-eq-1-1-states-of-matter-q19",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "f84b3c85-9c44-4d7e-8c0d-fc62b2841dfe",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q11",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.11",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "d236f48d-6f54-4a38-afdc-60edc7fd636a",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q2",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "176dfb38-8a77-42e1-9eea-d6dfbc96bf25",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q8",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.18",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "ccc73048-f855-4a56-80be-c02aeb4676dd",
+   "external_ref": "sme-eq-4-2-crude-oil-q7",
+   "anchor_code": "4CH1-S4-b",
+   "primary_point_code": "4CH1-4.17",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "qt_row_node": "b970a094-cc2f-4b90-8add-e5f0029a0d48"
+   }
+  },
+  {
+   "question_id": "1c77b728-12b7-484c-b78a-483662b3bc84",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q9",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "2c7c8074-8877-47a8-8c50-d82c6900a18c",
+   "external_ref": "sme-eq-4-1-introduction-q11",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.4",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "8c3d1976-dad9-485e-9f93-9bfc9194ecf7",
+   "external_ref": "sme-eq-3-1-energetics-q2",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "36a6c64a-f0e1-4314-819a-ac7718308f4d",
+   "external_ref": "sme-eq-2-8-chemical-tests-q3",
+   "anchor_code": "4CH1-S2-h",
+   "primary_point_code": "4CH1-2.49",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "qt_row_node": "352dec69-2785-4a03-a00f-eb8e6f644b47"
+   }
+  },
+  {
+   "question_id": "46aea677-b67c-4530-99a9-6a5c699e1a59",
+   "external_ref": "sme-eq-2-1-group-1-alkali-metals-q0",
+   "anchor_code": "4CH1-S2-a",
+   "primary_point_code": "4CH1-2.1",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "qt_row_node": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567"
+   }
+  },
+  {
+   "question_id": "7a8a9bea-1e7b-4cea-8529-e6ffb00916ad",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q21",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "cd0c0b24-a6df-40aa-9844-d545aab2e453",
+   "external_ref": "sme-eq-3-1-energetics-q25",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "45ad6a53-5606-49df-80bc-eb944e985446",
+   "external_ref": "sme-eq-1-3-atomic-structure-q17",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "f099879a-527f-4397-8cbd-6d48790f6db4",
+   "external_ref": "sme-eq-4-2-crude-oil-q8",
+   "anchor_code": "4CH1-S4-a",
+   "primary_point_code": "4CH1-4.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a",
+    "qt_row_node": "40a83c40-7198-4cfd-baf1-fa54ce34f42a"
+   }
+  },
+  {
+   "question_id": "e05a2a8f-d603-407f-9365-f8736a3802b1",
+   "external_ref": "sme-eq-1-1-states-of-matter-q10",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "5f7404a5-8a10-4ef9-9acb-45350a0b76d2",
+   "external_ref": "sme-eq-3-3-reversible-reactions-and-equilibria-q6",
+   "anchor_code": "4CH1-S3-c",
+   "primary_point_code": "4CH1-3.22C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "qt_row_node": "a0e51768-6645-4ddd-9b76-b163c0b68f8e"
+   }
+  },
+  {
+   "question_id": "c41ab87d-19dd-4024-a4ff-984c92333474",
+   "external_ref": "sme-eq-3-1-energetics-q19",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.3",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "155554cb-e449-44e3-9880-5d2fe10e31f7",
+   "external_ref": "sme-eq-2-4-reactivity-series-q17",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.25",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "af990867-ac8e-4a0a-af8c-b3cbfac5ab63",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q1-p2",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "a69fd131-fd9d-4ad5-b939-7d780c570453",
+   "external_ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q16",
+   "anchor_code": "4CH1-S1-e",
+   "primary_point_code": "4CH1-1.34C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "23751488-285f-47af-8013-8c0901b842cd",
+    "qt_row_node": "23751488-285f-47af-8013-8c0901b842cd"
+   }
+  },
+  {
+   "question_id": "6bc1a6a5-3433-4a59-8299-00e375ecb58f",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q13",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.44",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "b6be331e-b643-457f-ab05-29a87c9bb181",
+   "external_ref": "sme-eq-1-8-metallic-bonding-q3-p2",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.20",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "ab68d1ca-920e-4a89-b7ba-15056a9d286a",
+   "external_ref": "sme-eq-3-2-rates-of-reaction-q17",
+   "anchor_code": "4CH1-S3-b",
+   "primary_point_code": "4CH1-3.11",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+    "qt_row_node": "a9ea76ff-9326-4121-8b4b-d4144d4b901f"
+   }
+  },
+  {
+   "question_id": "fa0ef2c8-d2f4-4474-88b6-d81b2726a69c",
+   "external_ref": "sme-eq-1-3-atomic-structure-q16",
+   "anchor_code": "4CH1-S1-c",
+   "primary_point_code": "4CH1-1.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556",
+    "qt_row_node": "c9f87f27-124f-49a8-ad29-88cf7bb76556"
+   }
+  },
+  {
+   "question_id": "5b5a88fe-e6d2-4f5c-a793-213496aed170",
+   "external_ref": "sme-eq-1-4-the-periodic-table-q5",
+   "anchor_code": "4CH1-S1-d",
+   "primary_point_code": "4CH1-1.19",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "qt_row_node": "5d968157-ff9c-448d-ad56-807c02e3f96b"
+   }
+  },
+  {
+   "question_id": "b83f5954-3d31-4dfa-ba1d-375061634cf9",
+   "external_ref": "sme-eq-2-2-group-7-halogens-q5",
+   "anchor_code": "4CH1-S2-b",
+   "primary_point_code": "4CH1-2.5",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "f0abc392-9772-4209-ab50-a5aa543c2113",
+    "qt_row_node": "f0abc392-9772-4209-ab50-a5aa543c2113"
+   }
+  },
+  {
+   "question_id": "833e1e3e-c62f-4055-9c1d-8a4a3f77913c",
+   "external_ref": "sme-eq-4-5-alcohols-q1",
+   "anchor_code": "4CH1-S4-e",
+   "primary_point_code": "4CH1-4.32C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "qt_row_node": "80f733e8-4c6b-478e-ad5a-8622f92be9d0"
+   }
+  },
+  {
+   "question_id": "00aa3268-2cbb-4690-943e-0ef1927f7b2c",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q13",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.28",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "4813e9e5-fef0-4e00-b822-649e65b955cb",
+   "external_ref": "sme-eq-2-5-extraction-and-uses-of-metals-q5",
+   "anchor_code": "4CH1-S2-e",
+   "primary_point_code": "4CH1-2.25C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+    "qt_row_node": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c"
+   }
+  },
+  {
+   "question_id": "2ba5ce0e-de6a-41bb-8cff-ec61bce88aa8",
+   "external_ref": "sme-eq-2-3-gases-in-the-atmosphere-q0",
+   "anchor_code": "4CH1-S2-c",
+   "primary_point_code": "4CH1-2.9",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "496e5679-bd4c-4a07-aa47-42696b850d63",
+    "qt_row_node": "496e5679-bd4c-4a07-aa47-42696b850d63"
+   }
+  },
+  {
+   "question_id": "de6adbdd-ff4e-46c9-87a6-6af50041e797",
+   "external_ref": "sme-eq-2-6-acids-alkalis-and-titrations-q12",
+   "anchor_code": "4CH1-S2-f",
+   "primary_point_code": "4CH1-2.33C",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54",
+    "qt_row_node": "70a48c9a-ce5a-4662-92a6-c825a2d50c54"
+   }
+  },
+  {
+   "question_id": "e67fee08-b363-4f32-8480-ed3d026aef48",
+   "external_ref": "sme-eq-1-7-covalent-bonding-q18",
+   "anchor_code": "4CH1-S1-g",
+   "primary_point_code": "4CH1-1.49",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+    "qt_row_node": "843338a7-8c02-4adf-bfe2-e0aa753416b7"
+   }
+  },
+  {
+   "question_id": "e7b6ff1d-868d-47bf-bfc4-86e2eb14a470",
+   "external_ref": "sme-eq-4-3-alkanes-q3-s",
+   "anchor_code": "4CH1-S4-c",
+   "primary_point_code": "4CH1-4.21",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "525adc73-7d83-430a-8b63-00c2348e396a",
+    "qt_row_node": "525adc73-7d83-430a-8b63-00c2348e396a"
+   }
+  },
+  {
+   "question_id": "f238672b-2c92-40a4-a1df-dc9e59e94e5e",
+   "external_ref": "sme-eq-1-2-elements-compounds-and-mixtures-q12",
+   "anchor_code": "4CH1-S1-b",
+   "primary_point_code": "4CH1-1.10",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "qt_row_node": "92e3fa7c-971d-4a76-a6e3-31513551ce2f"
+   }
+  },
+  {
+   "question_id": "85231e8a-f940-47a3-838a-ff4b81b32552",
+   "external_ref": "sme-eq-1-1-states-of-matter-q16-p1",
+   "anchor_code": "4CH1-S1-a",
+   "primary_point_code": "4CH1-1.2",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882",
+    "qt_row_node": "2fa5ee0e-1bd1-44a7-b993-83b08241d882"
+   }
+  },
+  {
+   "question_id": "809eae95-b7b9-4a6e-89c3-cc48d9c40637",
+   "external_ref": "sme-eq-3-1-energetics-q10",
+   "anchor_code": "4CH1-S3-a",
+   "primary_point_code": "4CH1-3.4",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "qt_row_node": "3226cc1a-feff-4f2c-b7b4-4a5b786442de"
+   }
+  },
+  {
+   "question_id": "9749ab23-700a-4e04-9f6c-2a9518564bd0",
+   "external_ref": "sme-eq-2-4-reactivity-series-q10",
+   "anchor_code": "4CH1-S2-d",
+   "primary_point_code": "4CH1-2.15",
+   "mechanics": "insert_primary",
+   "guards": {
+    "anchor_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "qt_row_node": "b42b8847-3d7e-4273-b8b2-d584e46824c9"
+   }
+  }
+ ]
+}

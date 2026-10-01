@@ -1165,6 +1165,26 @@ candidate).
   Evidence: `bench/review/psaxis-review-2026-09-28/sme-eq94-reconciliation-20261001/`.
   Open residue: sme-eq qt-primary backfill for the other 499 (L1-compliant;
   serve-shape only).
+  **ADDENDUM (2026-10-01, trace 1a0f5eba1935f439 — the 499 residue CLOSED):
+  sme-eq qt-primary backfill EXECUTED + VERIFIED.** The 499 L1-agreeing sme-eq
+  questions (anchors already correct — they agree under the bank-wide house
+  rule) received their qt-primary mirrors: 499 NOT-EXISTS-guarded INSERTs
+  (explicit uuid+now(); question_topics has no DB defaults), 0 flips (measured,
+  not assumed: the anchor is absent from question_topics for all 499), NO
+  questions/qsp changes, no deletions; plan pinned pre-write (sha256
+  7a1eb14b…bf0e3); dry-run ROLLBACK then COMMIT, in-tx asserts green (L1
+  961/961/0, qsp 2637, qt 1226→1725, 499 qt-primary==anchor, bank-wide
+  coverage failures 0, qsp byte-identical). Fresh-connection verify ALL PINS
+  PASS (P1-P7): 94-cohort regression intact (primary==anchor 94/94, old
+  anchors kept as SECONDARY 94/94), sme-eq mirrors 593/593, past-paper
+  368/368, qsp15 cohort 15/59/36, ING 0-0-0 — bank-wide serve shape now
+  uniform: every active question has exactly one qt primary row equal to its
+  anchor (961/961, 0 conflicts). Evidence:
+  `bench/review/psaxis-review-2026-09-28/sme-eq499-backfill-20261001/`.
+  (Plan-builder honesty note: the first staged assert used the stale PRE-fix
+  L1 pin 961/867 and FAILED CLOSED; a read-only diagnostic re-measured the
+  live post-Task-59 state 961/961/0 before any write existed, and the pin was
+  corrected — zero DB writes preceded the pinned dry-run/execute sequence.)
 - [x] **servable19-topics-citations (2026-09-29, Task 68, trace 1a0eb3255bd898c9) —
   the two non-operator Task-67 leftovers EXECUTED + VERIFIED: by-topic mappings
   for the 19 newly-servable questions + the stale-citation re-point (cosmetic).**
