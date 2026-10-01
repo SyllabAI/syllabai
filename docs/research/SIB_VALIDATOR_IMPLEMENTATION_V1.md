@@ -86,7 +86,10 @@ All writes are confined to the library root (path traversal raises
   without rows (`-008`), publication without QA evidence (`-009`),
   declared source gaps (`-011` WARNING) and backlog (`-012` INFO).
   `OPTIONAL` / `NOT_APPLICABLE` are first-class; the 95 slots are inventory,
-  not obligations — a one-row manifest validates.
+  not obligations — a one-row manifest validates. The ingestion boundary
+  mirrors the manifest rule locally: NOT_APPLICABLE artifacts pass QA as
+  valid inventory but are refused at staging (they never advance to
+  QA_PASSED/STAGED/PUBLISHED through the pipeline).
 
 ## 4. Determinism
 
@@ -133,53 +136,66 @@ sorted-key and byte-stable for identical input.
 ## 7. Tests / CI
 
 * Suite: `python3 -m tools.sib.tests.run_all` — stdlib `unittest` only,
-  repo-conventional standalone runner. 111 tests cover valid artifacts
+  repo-conventional standalone runner. 126 tests cover valid artifacts
   (full/optional/NOT_APPLICABLE/current/legacy), every rejection path above,
   determinism (repeated runs, cross-path byte-equality), and the runtime
   boundary (self-publication rejection, path-traversal refusal, no canonical
-  write surface, purity of validation).
+  write surface, purity of validation -- proven against the pure
+  `validate_artifact` layer, with `qa_artifact`'s governed report write
+  tested separately).
 * **Stdlib-only is proven, not claimed:** the entire suite passes with PyYAML
-  import-blocked (CI `setup-python` images do not ship it).
+  import-blocked (CI `setup-python` images do not ship it); the ONLY 2 skips
+  under the blocker are the two PyYAML-parity tests, which by definition
+  require PyYAML (expected skips, marked in-code).
   `tools/sib/yamlmini.py` provides a deterministic YAML-subset loader
   (manifests, source manifests, registries, front matter) used when PyYAML is
   absent; parity is tested. Registry ids must be QUOTED strings
-  (`- "2.30"`) — unquoted ids lose trailing zeros to YAML float typing
-  (pinned by test).
+  (`- "2.30"`) — unquoted ids lose trailing zeros to YAML float typing and
+  now FAIL CLOSED (`build_registry` raises ValueError) instead of being
+  silently coerced into a different identifier (2.30 ≠ 2.3).
 * CI: `.github/workflows/sib-validator-ci.yml` runs the suite on every push/PR
   touching `tools/sib/**`.
 
-## 8. Documented divergences (not silently resolved)
+## 8. Reconciliation record (2026-10-01)
 
-1. **Filename template vs example.** `SIB_ARTIFACT_SCHEMA_V1.md` §1 template
-   says `<SUBJECT>_<QUALIFICATION>_<ARTIFACT_ID>_<SLUG>.md` but its worked
-   example fills slot 2 with the specification code
-   (`CHEMISTRY_4CH1_MIS-01_…`, where 4CH1 is the specification). This
-   implementation treats the worked example as canonical
-   (`SUBJECT_SPECIFICATION_…`); identity-relevant mismatches are `ERROR`,
-   non-canonical-but-consistent filenames are `INFO`. If PR #13 is amended,
-   re-align `taxonomy.canonical_filename`.
-2. **SIB docs are not on `main` yet.** They land via open PR
-   `agent-chatgpt/subject-intelligence-build-v1`. This branch implements those
-   documents without vendoring them; merge order is independent but the docs
-   and this tooling should land in the same release window.
-3. **Landing-status rule.** The schema does not state which status a landing
-   artifact file may declare; the protocol ("NotebookLM-generated output
-   begins as GENERATED") is implemented as: landing artifacts must declare
-   `GENERATED` (or `QA_FAILED`); `QA_PASSED/STAGED/PUBLISHED` in the landing
-   zone is `ERROR SIB-STATUS-003`. Staging tooling rewrites status when
-   moving files across the boundary.
+1. **Filename contract — RESOLVED (PROPOSED/DEFINED), no longer a divergence.**
+   `SIB_ARTIFACT_SCHEMA_V1.md` §1 previously showed template
+   `<SUBJECT>_<QUALIFICATION>_<ARTIFACT_ID>_<SLUG>.md` beside the example
+   `CHEMISTRY_4CH1_MIS-01_…` (slot 2 = specification code). The schema doc now
+   defines the canonical template as
+   `<SUBJECT>_<SPECIFICATION>_<ARTIFACT_ID>_<SLUG>.md`; template and example
+   agree, and this implementation already matched that contract. The
+   qualification stays a required front-matter field and never enters the
+   filename. Pinned by deterministic tests
+   (`test_canonical_filename_template_is_specification_based`,
+   `test_canonical_filename_agrees_with_specification_slot`). Recorded while
+   the SIB architecture remains PROPOSED — no status promotion.
+2. **Branch reconciliation.** Both PR #13 (protocol/schema/prompts) and this
+   branch were reconciled against current `main` (`5bbb764`) by merging main
+   in; the earlier not-mergeable report on PR #13 was stale GitHub
+   mergeability state after main advanced twice — the only overlapping file
+   (`PROJECT_CONTEXT.md`) auto-merges and now carries both the SIB doc
+   bullets and the newer main-side corrections.
+3. **Landing-status rule (still a documented divergence).** The schema does
+   not state which status a landing artifact file may declare; the protocol
+   ("NotebookLM-generated output begins as GENERATED") is implemented as:
+   landing artifacts must declare `GENERATED` (or `QA_FAILED`);
+   `QA_PASSED/STAGED/PUBLISHED` in the landing zone is `ERROR
+   SIB-STATUS-003`. Staging tooling rewrites status when moving files across
+   the boundary.
 
 ## 9. Component status ledger
 
 | Component | Status |
 |---|---|
 | SIB v1 protocol / architecture | PROPOSED (unchanged; owner: PR #13 docs) |
-| Artifact validator (schema v1) | IMPLEMENTED (102/102 tests green) |
+| Filename convention | PROPOSED/DEFINED (schema §1; slot 2 = specification) |
+| Artifact validator (schema v1) | IMPLEMENTED (see §7 for exact verified test counts) |
 | Manifest validator | IMPLEMENTED |
 | Provenance validation | IMPLEMENTED (operator source_manifest cross-check) |
 | Temporal / source semantics | IMPLEMENTED |
 | Curriculum-anchor validation | IMPLEMENTED (shape + optional registry resolution; never mutates) |
-| STAGED/PUBLISHED governed boundary | IMPLEMENTED (path-confined, evidence-gated) |
+| STAGED/PUBLISHED governed boundary | IMPLEMENTED (path-confined, evidence-gated; QA evidence re-verified at publish; evidence content-bound at stage) |
 | SIB chunk metadata model | IMPLEMENTED (deterministic) |
 | 4CH1 SIB artifact generation | BLOCKED (explicitly out of scope; awaits PR #13 acceptance) |
 | Subject Tutor retrieval integration | BLOCKED (separate runtime decision) |

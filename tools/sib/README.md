@@ -23,9 +23,17 @@ Key properties:
   PyYAML import-blocked.
 
 ```bash
-# run the test suite (111 tests)
+# run the test suite (126 tests; with PyYAML import-blocked: 124 passed +
+# 2 expected skips -- the PyYAML-parity tests)
 python3 -m tools.sib.tests.run_all
 
 # CLI
 python3 -m tools.sib.cli --help
 ```
+
+Filename contract (SIB_ARTIFACT_SCHEMA_V1.md §1, PROPOSED/DEFINED
+2026-10-01): `<SUBJECT>_<SPECIFICATION>_<ARTIFACT_ID>_<SLUG>.md` — slot 2 is
+the specification code (`4CH1`); the qualification is metadata only.
+Registry ids in `curriculum_registry.yaml` must be quoted (`- "2.30"`);
+unquoted float-typed ids fail closed instead of being silently coerced into
+a different identifier.
