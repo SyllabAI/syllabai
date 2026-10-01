@@ -1,0 +1,102 @@
+{
+ "generated": "2026-10-01",
+ "trace": "1a0f5fdf6226bdc9",
+ "all_pass": true,
+ "checks": {
+  "V1.sparse": {
+   "got": 56,
+   "want": 56,
+   "pass": true
+  },
+  "V1.lane_schemes": {
+   "got": 35,
+   "want": 35,
+   "pass": true
+  },
+  "V1.lane_all_suggested": {
+   "got": 35,
+   "want": 35,
+   "pass": true
+  },
+  "V1.lane_source_set": {
+   "got": 35,
+   "want": 35,
+   "pass": true
+  },
+  "V2.per_entry_mismatches": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V3.validated": {
+   "got": 1360,
+   "want": 1360,
+   "pass": true
+  },
+  "V3.suggested": {
+   "got": 95,
+   "want": 95,
+   "pass": true
+  },
+  "V3.total": {
+   "got": 1455,
+   "want": 1455,
+   "pass": true
+  },
+  "V3.tve": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V3.audit_max": {
+   "got": 4047,
+   "want": 4047,
+   "pass": true
+  },
+  "V4.qsp": {
+   "got": 2637,
+   "want": 2637,
+   "pass": true
+  },
+  "V4.qt": {
+   "got": 1725,
+   "want": 1725,
+   "pass": true
+  },
+  "V4.active": {
+   "got": 961,
+   "want": 961,
+   "pass": true
+  },
+  "V4.qv_pool": {
+   "got": 1533,
+   "want": 1533,
+   "pass": true
+  },
+  "V4.L1_checked": {
+   "got": 961,
+   "want": 961,
+   "pass": true
+  },
+  "V4.L1_agree": {
+   "got": 961,
+   "want": 961,
+   "pass": true
+  },
+  "V4.L1_disagree": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V5.fidelity_violations": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V6.plan_sha": {
+   "got": "a5d77ac4b790f010bf1a52a43934a8d69d1c9471fbadd3915735e33949907674",
+   "want": "a5d77ac4b790f010bf1a52a43934a8d69d1c9471fbadd3915735e33949907674",
+   "pass": true
+  }
+ }
+}

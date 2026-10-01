@@ -1,0 +1,149 @@
+{
+ "census_pre": {
+  "qsp_total": 2637,
+  "qt_total": 1725,
+  "questions_active": 961,
+  "questions_total": 1533,
+  "knowledge_nodes_total": 539,
+  "knowledge_edges_total": 734,
+  "ing_nodes": 104
+ },
+ "ing_sweep": {
+  "node_type_dist": {
+   "TOPIC": 104
+  },
+  "codes_sample": [
+   "ING-4CH01CJANUARY2012",
+   "ING-4CH01CJANUARY2013",
+   "ING-4CH01CJANUARY2014",
+   "ING-4CH01CJANUARY2015",
+   "ING-4CH01CJANUARY2016",
+   "ING-4CH01CJANUARY2017",
+   "ING-4CH01CJANUARY2018",
+   "ING-4CH01CJANUARY2019"
+  ],
+  "codes_count": 104,
+  "code_prefixes": {
+   "ING": 104
+  },
+  "fk_columns_into_knowledge_nodes": [
+   [
+    "knowledge_edges",
+    "source_node_id"
+   ],
+   [
+    "knowledge_edges",
+    "target_node_id"
+   ],
+   [
+    "question_spec_points",
+    "spec_point_node_id"
+   ],
+   [
+    "struggle_inferences",
+    "topic_node_id"
+   ],
+   [
+    "teaching_coverage",
+    "spec_point_node_id"
+   ],
+   [
+    "teaching_coverage_events",
+    "spec_point_node_id"
+   ]
+  ],
+  "name_pattern_columns": [
+   [
+    "flashcard_ratings",
+    "node_id"
+   ],
+   [
+    "knowledge_edges",
+    "source_node_id"
+   ],
+   [
+    "knowledge_edges",
+    "target_node_id"
+   ],
+   [
+    "misconception_states",
+    "misconception_node_id"
+   ],
+   [
+    "note_votes",
+    "node_id"
+   ],
+   [
+    "question_options",
+    "misconception_node_id"
+   ],
+   [
+    "question_spec_points",
+    "spec_point_node_id"
+   ],
+   [
+    "question_topics",
+    "node_id"
+   ],
+   [
+    "questions",
+    "primary_topic_node_id"
+   ],
+   [
+    "review_schedules",
+    "node_id"
+   ],
+   [
+    "skill_states",
+    "node_id"
+   ],
+   [
+    "struggle_inferences",
+    "topic_node_id"
+   ],
+   [
+    "subjects",
+    "knowledge_node_id"
+   ],
+   [
+    "teaching_coverage",
+    "spec_point_node_id"
+   ],
+   [
+    "teaching_coverage_events",
+    "spec_point_node_id"
+   ],
+   [
+    "tutor_topic_engagements",
+    "node_id"
+   ]
+  ],
+  "references_into_ing": {
+   "knowledge_edges.source_node_id": {
+    "count": 4,
+    "detail": ""
+   },
+   "questions.primary_topic_node_id": {
+    "count": 538,
+    "detail": "{False: 538}"
+   },
+   "review_schedules.node_id": {
+    "count": 13,
+    "detail": ""
+   },
+   "skill_states.node_id": {
+    "count": 13,
+    "detail": ""
+   }
+  },
+  "edges_ing_to_ing": 0,
+  "edges_ing_to_non_ing": 4,
+  "edges_non_ing_to_ing": 0,
+  "cross_edge_samples": [
+   "ING-4CH11CRJUNE2023 -> 4CH1",
+   "ING-4CH12CRJANUARY2023 -> 4CH1",
+   "ING-4CH12CRJUNE2025 -> 4CH1",
+   "ING-4CH01CJANUARY2012 -> 4CH1"
+  ]
+ }
+}

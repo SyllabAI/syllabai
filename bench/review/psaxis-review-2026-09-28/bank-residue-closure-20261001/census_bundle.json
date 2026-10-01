@@ -1,0 +1,103 @@
+{
+ "generated": "2026-10-01",
+ "trace": "1a0f5fdf6226bdc9",
+ "bundle": "final bank census after the residue-closure items",
+ "census": {
+  "papers": {
+   "VALIDATED": 90,
+   "REJECTED": 14
+  },
+  "qv_pool": 1533,
+  "qv_states": {
+   "VALIDATED": 1465,
+   "SUGGESTED": 66,
+   "REJECTED": 2
+  },
+  "questions_total": 1533,
+  "questions_active": 961,
+  "qsp_total": 2637,
+  "qt_total": 1725,
+  "L1_active": {
+   "checked": 961,
+   "agree": 961,
+   "disagree": 0
+  },
+  "sme_primary_mirrors": 593,
+  "past_paper_primary_mirrors": 368,
+  "qt_primary_conflicts_bankwide": 0,
+  "cohort_active": 15,
+  "cohort_qsp_rows": 59,
+  "cohort_qt_rows": 36,
+  "mark_schemes_total": 1455,
+  "mark_scheme_states": {
+   "VALIDATED": 1360,
+   "SUGGESTED": 95
+  },
+  "mark_points_total": 5558,
+  "scheme_sparse_qv": 56,
+  "lane_extracted_schemes": 35,
+  "knowledge_nodes": 492,
+  "kn_validation_status": {
+   "VALIDATED": 228,
+   "SUGGESTED": 193,
+   "UNVALIDATED": 71
+  },
+  "knowledge_edges": 730,
+  "ing_nodes_remaining": 57,
+  "ing_nodes_anchored_by_archive": 57,
+  "ing_refs_active_questions": 0,
+  "ing_refs_qsp": 0,
+  "ing_refs_qt": 0,
+  "ing_refs_edges": 0,
+  "ing_refs_skill_states": 0,
+  "ing_refs_review_schedules": 0,
+  "skill_states_total": 185,
+  "review_schedules_total": 120,
+  "documents": {
+   "VALIDATED": 567,
+   "SUGGESTED": 305,
+   "REJECTED": 147
+  },
+  "audit_max_id": 4047,
+  "teacher_validation_events": 0
+ },
+ "expectation": {
+  "papers": {
+   "VALIDATED": 90,
+   "REJECTED": 14
+  },
+  "qv_pool": 1533,
+  "questions_active": 961,
+  "qsp_total": 2637,
+  "qt_total": 1725,
+  "L1_active": {
+   "checked": 961,
+   "agree": 961,
+   "disagree": 0
+  },
+  "sme_primary_mirrors": 593,
+  "past_paper_primary_mirrors": 368,
+  "qt_primary_conflicts_bankwide": 0,
+  "cohort_active": 15,
+  "cohort_qsp_rows": 59,
+  "cohort_qt_rows": 36,
+  "mark_schemes_total": 1455,
+  "mark_points_total": 5558,
+  "scheme_sparse_qv": 56,
+  "lane_extracted_schemes": 35,
+  "knowledge_nodes": 492,
+  "knowledge_edges": 730,
+  "ing_nodes_remaining": 57,
+  "ing_refs_active_questions": 0,
+  "ing_refs_qsp": 0,
+  "ing_refs_qt": 0,
+  "ing_refs_edges": 0,
+  "ing_refs_skill_states": 0,
+  "ing_refs_review_schedules": 0,
+  "skill_states_total": 185,
+  "review_schedules_total": 120,
+  "teacher_validation_events": 0
+ },
+ "drift": {},
+ "verdict": "ALL PINS MATCH"
+}

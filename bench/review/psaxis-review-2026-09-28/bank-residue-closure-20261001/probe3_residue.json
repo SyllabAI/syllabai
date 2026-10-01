@@ -1,0 +1,197 @@
+{
+ "distinct_learner_ids": [],
+ "users_cols": [
+  "id",
+  "email",
+  "password_hash",
+  "display_name",
+  "enabled",
+  "created_at",
+  "token_version"
+ ],
+ "learner_existence": [],
+ "skill_states_total": 185,
+ "review_schedules_total": 120,
+ "skill_states_non_ing": 185,
+ "review_schedules_non_ing": 120,
+ "l1_pre": {
+  "checked": 961,
+  "agree": 961,
+  "disagree": 0
+ },
+ "audit_tail": {
+  "max_id": 4047,
+  "count": 2489
+ },
+ "teacher_validation_events": 0,
+ "non_ing_unvalidated": [
+  "MIS-T1.1-01 (MISCONCEPTION)",
+  "MIS-T2.1-01 (MISCONCEPTION)",
+  "MIS-T3.1-01 (MISCONCEPTION)",
+  "MIS-T3.2-01 (MISCONCEPTION)",
+  "WCH11 (UNIT)",
+  "WCH11-T1 (TOPIC)",
+  "WCH11-T1.1 (SUBTOPIC)",
+  "WCH11-T1.2 (SUBTOPIC)",
+  "WCH11-T2 (TOPIC)",
+  "WCH11-T2.1 (SUBTOPIC)",
+  "WCH11-T2.2 (SUBTOPIC)",
+  "WCH11-T3 (TOPIC)",
+  "WCH11-T3.1 (SUBTOPIC)",
+  "WCH11-T3.2 (SUBTOPIC)"
+ ],
+ "ms_samples": {
+  "4CH1_1C_JUN2019": {
+   "paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "code": "4CH1/1C",
+   "session": "June 2019",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_doc_row": "ab0820fe-a5bc-4607-a36f-8fdf14bdfa32",
+   "chunk_previews": [
+    {
+     "idx": 0,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q1 | p.4\nMark scheme for Question 1\nQuestion 1 printed total: 4 marks (verification FAILED)\nQ1 P1 (1 mark): B (the crystal dissolves in water)\nnote: C is not correct as the crystal does not ev"
+    },
+    {
+     "idx": 1,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q2 | p.5\nMark scheme for Question 2\nQuestion 2 printed total: 4 marks\nQ2 P1 (1 mark): T\nQ2 P2 (1 mark): they have the same number of electrons in their\nallow: they have the; outer energy; they"
+    },
+    {
+     "idx": 2,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q3 | p.6\nMark scheme for Question 3\nQuestion 3 printed total: 6 marks\nQ3 P1 (1 mark): Li+\nallow: Sr2+\nQ3 P2 (1 mark): silver bromide / AgBr\nignore: incorrect\nnote: If correct name given\nnote: "
+    },
+    {
+     "idx": 3,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q4 | p.7\nMark scheme for Question 4\nQuestion 4 printed total: 8 marks (verification FAILED)\nQ4 P1 (4 marks): Explanations that link together the following two\nallow: pencil will; the spots\nnot"
+    },
+    {
+     "idx": 4,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q5 | p.8\nMark scheme for Question 5\nQuestion 5 printed total: 5 marks\nQ5 P1 (1 mark): C (it has a low density)\nnote: irrelevant\nnote: B is not correct as the solubility of the gas is\nnote: irr"
+    },
+    {
+     "idx": 5,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q6 | p.9\nMark scheme for Question 6\nQuestion 6 printed total: 5 marks\nQ6 P1 (1 mark): B (Z X Y W)\nnote: C is not correct as Z is the most reactive metal\nnote: D is not correct as X is more rea"
+    }
+   ],
+   "sparse_qv": [
+    {
+     "ref": "q01-5273dfa3",
+     "qv": "15c80312-459f-4861-86f2-7be3a40d81f1",
+     "marks": 1,
+     "stem_head": "The Periodic Table is shown on page 2.",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q02-5273dfa3",
+     "qv": "8618bcdb-ee1a-4ec3-896d-880e2314a379",
+     "marks": 6,
+     "stem_head": "In chemistry, the state symbols (s), (l), (g) and (aq) are often used.",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q03-5273dfa3",
+     "qv": "0ccf7961-49cc-4fda-a5fb-29e355b3c786",
+     "marks": 4,
+     "stem_head": "Techniques used in the separation of mixtures include For each separation, select the most",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q04-5273dfa3",
+     "qv": "45735ade-dc18-4579-84f5-a6fb4b302714",
+     "marks": 8,
+     "stem_head": "The table gives information about some of the elements in Group 7 of the Periodic Table.",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q05-5273dfa3",
+     "qv": "d433c97d-d936-4479-bb8f-fa7490270381",
+     "marks": 9,
+     "stem_head": "A student investigates the pigments found in some vegetables and fruit. She obtains some c",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q06-5273dfa3",
+     "qv": "9376db57-124e-48d7-94ff-f28fea1cf58d",
+     "marks": 10,
+     "stem_head": "Hydrogen chloride is formed in the reaction between hydrogen and chlorine. The equation fo",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q07-5273dfa3",
+     "qv": "bb783a97-97d7-4a56-823a-ea520b7dc057",
+     "marks": 12,
+     "stem_head": "The table shows the displayed formulae of some organic compounds. A B C D E F",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q08-5273dfa3",
+     "qv": "16561c45-8131-442e-9707-5c883e3db308",
+     "marks": 8,
+     "stem_head": "Neodymium is a metal used in powerful magnets.",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q09-5273dfa3",
+     "qv": "567b7a6d-6669-42ea-8fa7-ef377fa16a0f",
+     "marks": 1,
+     "stem_head": "A student investigates the reactions between acids and alkalis. He uses this apparatus to ",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q10-5273dfa3",
+     "qv": "65aff0a8-bbfd-49f7-957b-63d0dddf169c",
+     "marks": 15,
+     "stem_head": "Sodium thiosulfate solution and dilute hydrochloric acid react together slowly to form a p",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q11-5273dfa3",
+     "qv": "4b8fa946-8a2c-4cbe-a302-56cf77df55c5",
+     "marks": 1,
+     "stem_head": "The flow diagram shows how a fertiliser is manufactured from raw materials. The hydrogen n",
+     "state": "VALIDATED"
+    },
+    {
+     "ref": "q12-5273dfa3",
+     "qv": "29ae8f0c-aeb4-4c13-ba12-1c84b1d0995a",
+     "marks": 13,
+     "stem_head": "The production of polymers from crude oil involves several processes, including fractional",
+     "state": "VALIDATED"
+    }
+   ]
+  },
+  "4CH0_1CR_JUN2016": {
+   "paper_id": "1995f447-d824-4ae7-bf9a-590ff2cff5b3",
+   "code": "4CH0/1CR",
+   "session": "June 2016",
+   "ms_document_id": "b27f9358-bd57-5545-8c69-aeeb5cdbd476",
+   "ms_doc_row": "4aa18ec4-5398-4bb2-9c09-d7a9c7414c27",
+   "chunk_previews": [
+    {
+     "idx": 0,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2016 | 4CH0/1C | Paper 1C | Q1 | p.4\nMark scheme for Question 1\nQ1 P1 (1 mark): atomic number\nallow: proton number; number of protons\nQ1 P2 (1 mark): (relative) atomic mass\nreject: mass number\nQ1 P3 (1 mark): electrons\nQ"
+    },
+    {
+     "idx": 1,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2016 | 4CH0/1C | Paper 1C | Q2 | p.5\nMark scheme for Question 2\nQ2 M1 (3 marks): l AND g in first row\nallow: upper case\nreject: words\nnote: State    State\nnote: symbol   symbol   M2    g AND s in second row\nnote: Change "
+    },
+    {
+     "idx": 2,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2016 | 4CH0/1C | Paper 1C | Q3 | p.6\nMark scheme for Question 3\nQ3 P1 (1 mark): D / simple distillation\nQ3 P2 (1 mark): C / fractional distillation\nQ3 P3 (1 mark): B / filtration"
+    },
+    {
+     "idx": 3,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2016 | 4CH0/1C | Paper 1C | Q4 | p.7\nMark scheme for Question 4\nQ4 P1 (1 mark): C\nreject: any other colour given with black\nignore: just darker than iodine\nnote: (green)\nnote: b      value in range 120 - 250             "
+    },
+    {
+     "idx": 4,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2016 | 4CH0/1C | Paper 1C | Q5 | p.9\nMark scheme for Question 5"
+    },
+    {
+     "idx": 5,
+     "head": "International GCSE Chemistry 4CH1 | Jun 2016 | 4CH0/1C | Paper 1C | Q5 | p.9\nQ5 M1 (3 marks): cross in box A (chlorophyll is not present in carrots, sweet\nnote: If more than three answers\nnote: potatoes or tomatoes)                                             "
+    }
+   ]
+  }
+ }
+}

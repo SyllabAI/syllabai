@@ -1,0 +1,177 @@
+{
+ "learner_profiles": [],
+ "ms_row_samples": [
+  "('402c39e1-02ab-4820-99df-99405a138d66', '1', 'SUGGESTED', '02e4c38c-d477-52f9-b97c-32a173a04d59', 'ms-chunk-gated-extraction-v1', datetime.date(2026, 10, 1), '')",
+  "('67708b87-0c76-4bde-91e3-ccfb693e4d40', '1', 'SUGGESTED', '02e4c38c-d477-52f9-b97c-32a173a04d59', 'ms-chunk-gated-extraction-v1', datetime.date(2026, 10, 1), '')",
+  "('b41846f4-c42e-428d-88fc-deea4e3c9294', '1', 'SUGGESTED', 'fba61740-0d3b-5603-9637-71934939b517', 'ms-chunk-gated-extraction-v1', datetime.date(2026, 10, 1), '')",
+  "('27379362-6f0f-4b18-ae11-fa233b68a72f', '1', 'SUGGESTED', '02e4c38c-d477-52f9-b97c-32a173a04d59', 'ms-chunk-gated-extraction-v1', datetime.date(2026, 10, 1), '')",
+  "('ce320109-0a47-4c92-9bbb-11cbc04298ac', '1', 'SUGGESTED', 'fba61740-0d3b-5603-9637-71934939b517', 'ms-chunk-gated-extraction-v1', datetime.date(2026, 10, 1), '')",
+  "('d80c0eed-0a86-4af7-b268-9bb0c4923523', '1', 'SUGGESTED', '02e4c38c-d477-52f9-b97c-32a173a04d59', 'ms-chunk-gated-extraction-v1', datetime.date(2026, 10, 1), '')"
+ ],
+ "ms_state_census": {
+  "SUGGESTED": 95,
+  "VALIDATED": 1360
+ },
+ "ms_extraction_methods": {
+  "sme-corpus-import-v1 (ADR-026)": 593,
+  "glm-ocr-qp-v1+glm-ocr-ms-v1": 456,
+  "pdflane-atoms-draft-v1": 368,
+  "ms-chunk-gated-extraction-v1": 35,
+  "sprint-acceptance": 3
+ },
+ "ms_source_null": 117,
+ "ms_source_type": "character varying",
+ "mp_row_samples": [
+  "('M2', 5, 1, '\u2013 divide by 100', True, True, 1.0)",
+  "('M3', 6, 1, '\u2013 24.3', True, True, 1.0)",
+  "('M1', 4, 1, '\u2013 (79 x 24) + (10 x 25) + (11 x 26)', True, True, 1.0)",
+  "('P1', 0, 1, '12', True, True, 1.0)",
+  "('M1', 1, 1, '\u2013 2', True, True, 1.0)",
+  "('P2', 3, 1, 'X2+', True, True, 1.0)",
+  "('M2', 2, 1, '\u2013 two electrons in outer/valence shell', True, True, 1.0)",
+  "('P1', 0, 1, 'C', True, True, 1.0)"
+ ],
+ "mp_part_links": {
+  "total": 5558,
+  "with_part": 4725
+ },
+ "audit_cols": [
+  [
+   "id",
+   "bigint"
+  ],
+  [
+   "occurred_at",
+   "timestamp with time zone"
+  ],
+  [
+   "actor_user_id",
+   "uuid"
+  ],
+  [
+   "actor_label",
+   "character varying"
+  ],
+  [
+   "action",
+   "character varying"
+  ],
+  [
+   "target_type",
+   "character varying"
+  ],
+  [
+   "target_id",
+   "uuid"
+  ],
+  [
+   "from_state",
+   "character varying"
+  ],
+  [
+   "to_state",
+   "character varying"
+  ],
+  [
+   "detail",
+   "text"
+  ]
+ ],
+ "audit_tail_samples": [
+  {
+   "id": "4047",
+   "occurred_at": "2026-09-29 07:56:08.409171+00:00",
+   "actor_user_id": null,
+   "actor_label": "Nawaf Al Hussain Khondokar",
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "6fb65b5b-01e0-4412-ad3e-9730f34dbec9",
+   "from_state": "SUGGESTED",
+   "to_state": "VALIDATED",
+   "detail": "operator APPROVE via IM trace 1a0ec06fbd199a99: validated-supersession sign-off "
+  },
+  {
+   "id": "4046",
+   "occurred_at": "2026-09-29 07:56:08.409171+00:00",
+   "actor_user_id": null,
+   "actor_label": "Nawaf Al Hussain Khondokar",
+   "action": "VALIDATE",
+   "target_type": "mark_scheme",
+   "target_id": "9f63dce4-0fd4-4d75-9589-46792b523ef7",
+   "from_state": "SUGGESTED",
+   "to_state": "VALIDATED",
+   "detail": "operator APPROVE via IM trace 1a0ec06fbd199a99: validated-supersession sign-off "
+  }
+ ],
+ "ms_doc_meta": {
+  "row_id": "ab0820fe-a5bc-4607-a36f-8fdf14bdfa32",
+  "document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+  "kind": "MARK_SCHEME",
+  "state": "VALIDATED",
+  "chunks": 12,
+  "has_canonical": true
+ },
+ "canonical_head": "{\"pages\": [{\"width\": null, \"height\": null, \"pageNumber\": 1}, {\"width\": null, \"height\": null, \"pageNumber\": 2}, {\"width\": null, \"height\": null, \"pageNumber\": 3}, {\"width\": null, \"height\": null, \"pageNumber\": 4}, {\"width\": null, \"height\": null, \"pageNumber\": 5}, {\"width\": null, \"height\": null, \"pageNumber\": 6}, {\"width\": null, \"height\": null, \"pageNumber\": 7}, {\"width\": null, \"height\": null, \"pageNumber\": 8}, {\"width\": null, \"height\": null, \"pageNumber\": 9}, {\"width\": null, \"height\": null, \"pageNumber\": 10}, {\"width\": null, \"height\": null, \"pageNumber\": 11}, {\"width\": null, \"height\": null, \"page",
+ "ms_chunk_kinds": {
+  "MARK_SCHEME": 12
+ },
+ "ms_chunk_full": {
+  "idx": 1,
+  "content": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q2 | p.5\nMark scheme for Question 2\nQuestion 2 printed total: 4 marks\nQ2 P1 (1 mark): T\nQ2 P2 (1 mark): they have the same number of electrons in their\nallow: they have the; outer energy; they need to\nnote: outer shell                                        same number of\nnote: valence electrons/\nnote: OR                                                 they have one valence\nnote: they have one electron in the outer shell          electron\nnote: level\nnote: lose 1 electron from\nnote: the outer shell/ to gain\nnote: a full outer shell\nQ2 P3 (2 marks): An explanation linking the following two points:\nallow: they are in the\nignore: reference to\nnote: M1 33                                              ALLOW R has two\nnote: more protons than Q\nnote: M2 because the atomic number of R is two           ACCEPT for each\nnote: more (than Q)                                      successive element (in\nnote: the period) there is\nnote: OR because R is two places to the right / two      one more (proton)\nnote: places further on/along (in the period)            /the atomic number\nnote: increases by one\nnote: same period but Q is\nnote: in group 3 and R is in\nnote: group 5\nnote: electrons"
+ },
+ "top_sparse_qv": [
+  {
+   "ref": "q04-cf68cf74",
+   "qv": "6b7fbbdb-a270-442d-acc3-07036888608b",
+   "marks": 8,
+   "stem_head": "A student uses this apparatus to investigate the colours in four different inks, A, B, C a",
+   "state": "VALIDATED"
+  },
+  {
+   "ref": "q07-cf68cf74",
+   "qv": "f9537fc2-fba7-4a1c-820b-1b0d4e3ae98b",
+   "marks": 6,
+   "stem_head": "Diamond, graphite and silicon dioxide all have giant covalent structures. The diagram show",
+   "state": "VALIDATED"
+  },
+  {
+   "ref": "q10-cf68cf74",
+   "qv": "aa7692ec-07b3-409c-bcab-a183ab0e3cf7",
+   "marks": 7,
+   "stem_head": "(a) There are three isomers with the molecular formula $ \\mathrm{C_{5} H_{1 2}} $ One of t",
+   "state": "VALIDATED"
+  },
+  {
+   "ref": "q11-cf68cf74",
+   "qv": "401bbd83-1897-4b98-a54c-bf392545fd5b",
+   "marks": 9,
+   "stem_head": "The gas burned in a Bunsen burner is methane. The equation for the complete combustion of ",
+   "state": "VALIDATED"
+  },
+  {
+   "ref": "q12-cf68cf74",
+   "qv": "b4a2b62d-bcaa-4ef4-a334-c0460405f57c",
+   "marks": 9,
+   "stem_head": "A student uses this apparatus to investigate the temperature change that occurs when ammon",
+   "state": "VALIDATED"
+  },
+  {
+   "ref": "q14-cf68cf74",
+   "qv": "1d1a881b-5d73-4d6c-8502-f2324060fa57",
+   "marks": 14,
+   "stem_head": "A salt can be made by reacting an acid with an insoluble base. The student uses this metho",
+   "state": "VALIDATED"
+  },
+  {
+   "ref": "q15-cf68cf74",
+   "qv": "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8",
+   "marks": 9,
+   "stem_head": "Hydrated ammonium iron(III) sulfate is a violet solid that has the formula $ \\mathrm{(N H_",
+   "state": "VALIDATED"
+  }
+ ],
+ "attempt_tables": [
+  "answers",
+  "attempts"
+ ]
+}

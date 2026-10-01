@@ -1,0 +1,862 @@
+{
+ "schema": {
+  "exam_papers": [
+   [
+    "id",
+    "uuid"
+   ],
+   [
+    "subject_id",
+    "uuid"
+   ],
+   [
+    "title",
+    "character varying"
+   ],
+   [
+    "board",
+    "character varying"
+   ],
+   [
+    "qualification",
+    "character varying"
+   ],
+   [
+    "unit",
+    "character varying"
+   ],
+   [
+    "session_label",
+    "character varying"
+   ],
+   [
+    "paper_code",
+    "character varying"
+   ],
+   [
+    "question_paper_document_id",
+    "character varying"
+   ],
+   [
+    "mark_scheme_document_id",
+    "character varying"
+   ],
+   [
+    "validation_state",
+    "character varying"
+   ],
+   [
+    "provenance",
+    "character varying"
+   ],
+   [
+    "extraction_method",
+    "character varying"
+   ],
+   [
+    "created_by",
+    "uuid"
+   ],
+   [
+    "created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "series",
+    "character varying"
+   ],
+   [
+    "year",
+    "integer"
+   ]
+  ],
+  "question_versions": [
+   [
+    "id",
+    "uuid"
+   ],
+   [
+    "question_id",
+    "uuid"
+   ],
+   [
+    "version",
+    "integer"
+   ],
+   [
+    "stem",
+    "text"
+   ],
+   [
+    "marks",
+    "integer"
+   ],
+   [
+    "difficulty",
+    "integer"
+   ],
+   [
+    "expected_time_seconds",
+    "integer"
+   ],
+   [
+    "command_word",
+    "character varying"
+   ],
+   [
+    "validation_state",
+    "character varying"
+   ],
+   [
+    "source_document_id",
+    "character varying"
+   ],
+   [
+    "extraction_confidence",
+    "double precision"
+   ],
+   [
+    "extraction_method",
+    "character varying"
+   ],
+   [
+    "created_at",
+    "timestamp with time zone"
+   ]
+  ],
+  "mark_schemes": [
+   [
+    "id",
+    "uuid"
+   ],
+   [
+    "question_version_id",
+    "uuid"
+   ],
+   [
+    "version_label",
+    "character varying"
+   ],
+   [
+    "source_document_id",
+    "character varying"
+   ],
+   [
+    "validation_state",
+    "character varying"
+   ],
+   [
+    "extraction_method",
+    "character varying"
+   ],
+   [
+    "created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "general_guidance",
+    "text"
+   ]
+  ],
+  "mark_points": [
+   [
+    "id",
+    "uuid"
+   ],
+   [
+    "mark_scheme_id",
+    "uuid"
+   ],
+   [
+    "question_part_id",
+    "uuid"
+   ],
+   [
+    "ref",
+    "character varying"
+   ],
+   [
+    "ordering",
+    "integer"
+   ],
+   [
+    "text",
+    "text"
+   ],
+   [
+    "marks",
+    "integer"
+   ],
+   [
+    "acceptance_criteria",
+    "jsonb"
+   ],
+   [
+    "extraction_confidence",
+    "double precision"
+   ],
+   [
+    "created_at",
+    "timestamp with time zone"
+   ]
+  ],
+  "documents": [
+   [
+    "id",
+    "uuid"
+   ],
+   [
+    "document_id",
+    "character varying"
+   ],
+   [
+    "schema_version",
+    "character varying"
+   ],
+   [
+    "doc_version",
+    "integer"
+   ],
+   [
+    "kind",
+    "character varying"
+   ],
+   [
+    "source_uri",
+    "character varying"
+   ],
+   [
+    "file_name",
+    "character varying"
+   ],
+   [
+    "mime_type",
+    "character varying"
+   ],
+   [
+    "checksum",
+    "character varying"
+   ],
+   [
+    "checksum_algorithm",
+    "character varying"
+   ],
+   [
+    "page_count",
+    "integer"
+   ],
+   [
+    "element_count",
+    "integer"
+   ],
+   [
+    "text_element_count",
+    "integer"
+   ],
+   [
+    "chunk_count",
+    "integer"
+   ],
+   [
+    "source_engine",
+    "character varying"
+   ],
+   [
+    "source_engine_version",
+    "character varying"
+   ],
+   [
+    "extracted_at",
+    "timestamp with time zone"
+   ],
+   [
+    "canonical_json",
+    "jsonb"
+   ],
+   [
+    "ingested_by",
+    "uuid"
+   ],
+   [
+    "created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "validation_state",
+    "character varying"
+   ]
+  ],
+  "knowledge_nodes": [
+   [
+    "id",
+    "uuid"
+   ],
+   [
+    "code",
+    "character varying"
+   ],
+   [
+    "node_type",
+    "character varying"
+   ],
+   [
+    "title",
+    "character varying"
+   ],
+   [
+    "description",
+    "character varying"
+   ],
+   [
+    "validation_status",
+    "character varying"
+   ],
+   [
+    "provenance",
+    "character varying"
+   ],
+   [
+    "created_by",
+    "character varying"
+   ],
+   [
+    "version",
+    "integer"
+   ],
+   [
+    "created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "applicability",
+    "jsonb"
+   ]
+  ],
+  "review_schedules": [
+   [
+    "id",
+    "uuid"
+   ],
+   [
+    "learner_id",
+    "uuid"
+   ],
+   [
+    "node_id",
+    "uuid"
+   ],
+   [
+    "due_at",
+    "timestamp with time zone"
+   ],
+   [
+    "reason",
+    "character varying"
+   ],
+   [
+    "mastery_at_trigger",
+    "double precision"
+   ],
+   [
+    "status",
+    "character varying"
+   ],
+   [
+    "created_at",
+    "timestamp with time zone"
+   ]
+  ],
+  "skill_states": [
+   [
+    "id",
+    "uuid"
+   ],
+   [
+    "learner_id",
+    "uuid"
+   ],
+   [
+    "node_id",
+    "uuid"
+   ],
+   [
+    "mastery",
+    "double precision"
+   ],
+   [
+    "attempts",
+    "integer"
+   ],
+   [
+    "correct_count",
+    "integer"
+   ],
+   [
+    "last_practiced_at",
+    "timestamp with time zone"
+   ],
+   [
+    "created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "updated_at",
+    "timestamp with time zone"
+   ],
+   [
+    "procedural_fluency_gap",
+    "double precision"
+   ],
+   [
+    "version",
+    "bigint"
+   ]
+  ]
+ },
+ "ing_detail": {
+  "fk_map": {
+   "questions.primary_topic_node_id": false,
+   "review_schedules.node_id": false,
+   "skill_states.node_id": false,
+   "knowledge_edges.source_node_id": true,
+   "knowledge_edges.target_node_id": true,
+   "question_topics.node_id": false,
+   "question_spec_points.spec_point_node_id": true
+  },
+  "cross_edges": [],
+  "review_schedules_cols": [
+   "id",
+   "learner_id",
+   "node_id",
+   "due_at",
+   "reason",
+   "mastery_at_trigger",
+   "status",
+   "created_at",
+   "code"
+  ],
+  "review_schedules_rows": [],
+  "skill_states_cols": [
+   "id",
+   "learner_id",
+   "node_id",
+   "mastery",
+   "attempts",
+   "correct_count",
+   "last_practiced_at",
+   "created_at",
+   "updated_at",
+   "procedural_fluency_gap",
+   "version",
+   "code"
+  ],
+  "skill_states_rows": []
+ },
+ "kn_validation_status_dist": {
+  "VALIDATED": 228,
+  "SUGGESTED": 193,
+  "UNVALIDATED": 71
+ },
+ "ing_validation_status": {
+  "UNVALIDATED": 57
+ },
+ "ing_created_span": [
+  "2026-09-14",
+  "2026-09-14"
+ ],
+ "user_tables": [
+  "learner_self_marks",
+  "user_roles",
+  "users"
+ ],
+ "user_table_cols": {
+  "learner_self_marks": [
+   "id",
+   "answer_id",
+   "learner_id",
+   "marks_awarded",
+   "comment",
+   "created_at"
+  ]
+ },
+ "ing_learners": [],
+ "l1_pre": {
+  "checked": 961,
+  "agree": 961,
+  "disagree": 0
+ },
+ "audit_tail": {
+  "max_id": 4047
+ },
+ "teacher_validation_events": 0,
+ "bank_scheme": {
+  "paper_census": {
+   "VALIDATED": 90,
+   "REJECTED": 14
+  },
+  "qv_pool": 1533,
+  "schemes_total": 1455,
+  "mark_points_total": 5558,
+  "qv_state_census": {
+   "VALIDATED": 1465,
+   "SUGGESTED": 66,
+   "REJECTED": 2
+  },
+  "definitions": {
+   "d1_all_qv": 56,
+   "d2_qv_validated": 56,
+   "d3_latest_per_q": 56,
+   "d1_nonrejected": 56
+  },
+  "closest_to_91": [
+   "d1_all_qv",
+   56
+  ],
+  "per_paper_any_state": [
+   {
+    "paper": "1995f447-d824-4ae7-bf9a-590ff2cff5b3",
+    "state": "VALIDATED",
+    "sparse_qv": 12
+   },
+   {
+    "paper": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+    "state": "VALIDATED",
+    "sparse_qv": 7
+   },
+   {
+    "paper": "c41dad58-957f-4254-94ed-f26cf1d7b5ed",
+    "state": "VALIDATED",
+    "sparse_qv": 7
+   },
+   {
+    "paper": "2b234bde-3d89-458e-9a43-b0288437dd5c",
+    "state": "VALIDATED",
+    "sparse_qv": 6
+   },
+   {
+    "paper": "da53c201-4cc2-4828-9dd5-4f47ae542085",
+    "state": "REJECTED",
+    "sparse_qv": 6
+   },
+   {
+    "paper": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+    "state": "VALIDATED",
+    "sparse_qv": 5
+   },
+   {
+    "paper": "0e3d9cfa-dc8b-447f-9856-40440a0c9e53",
+    "state": "REJECTED",
+    "sparse_qv": 3
+   },
+   {
+    "paper": "b2c9ec49-9e47-4ec5-83be-3b5d787322c4",
+    "state": "VALIDATED",
+    "sparse_qv": 3
+   },
+   {
+    "paper": "c0c8b771-9367-4257-975e-927ccb2959e1",
+    "state": "REJECTED",
+    "sparse_qv": 3
+   },
+   {
+    "paper": "59fc6548-9896-4acd-8624-21c6e01cde08",
+    "state": "VALIDATED",
+    "sparse_qv": 3
+   },
+   {
+    "paper": "0494f765-5f3f-41c7-9173-241ee7ee0d16",
+    "state": "VALIDATED",
+    "sparse_qv": 2
+   },
+   {
+    "paper": "31236989-60fe-4dd9-b7c8-b86160f8a14e",
+    "state": "VALIDATED",
+    "sparse_qv": 2
+   },
+   {
+    "paper": "38aeec70-d6e1-4bd6-9eb3-173c4dd5eff8",
+    "state": "VALIDATED",
+    "sparse_qv": 2
+   },
+   {
+    "paper": "cdbbe3ea-60fa-48ef-b870-bb9ef345f545",
+    "state": "VALIDATED",
+    "sparse_qv": 2
+   },
+   {
+    "paper": "73b3c496-6190-4ad9-9a54-9cd62b4fc01c",
+    "state": "VALIDATED",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "31ad242a-43c6-4246-a158-bd79f586994a",
+    "state": "VALIDATED",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "1db58ecb-d735-40de-8062-bc031fd37d5b",
+    "state": "VALIDATED",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "f2afb69f-3cf0-46ff-a62b-20066eacb5eb",
+    "state": "REJECTED",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+    "state": "VALIDATED",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "e0dfa4c1-79eb-4bde-b22b-e19ca6f1a94a",
+    "state": "VALIDATED",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "aeea7975-70e9-4c21-bb02-6184fbd9eff4",
+    "state": "REJECTED",
+    "sparse_qv": 1
+   }
+  ],
+  "per_paper_d1": [
+   {
+    "paper": "1995f447-d824-4ae7-bf9a-590ff2cff5b3",
+    "sparse_qv": 12
+   },
+   {
+    "paper": "c41dad58-957f-4254-94ed-f26cf1d7b5ed",
+    "sparse_qv": 7
+   },
+   {
+    "paper": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+    "sparse_qv": 7
+   },
+   {
+    "paper": "2b234bde-3d89-458e-9a43-b0288437dd5c",
+    "sparse_qv": 6
+   },
+   {
+    "paper": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+    "sparse_qv": 5
+   },
+   {
+    "paper": "59fc6548-9896-4acd-8624-21c6e01cde08",
+    "sparse_qv": 3
+   },
+   {
+    "paper": "b2c9ec49-9e47-4ec5-83be-3b5d787322c4",
+    "sparse_qv": 3
+   },
+   {
+    "paper": "0494f765-5f3f-41c7-9173-241ee7ee0d16",
+    "sparse_qv": 2
+   },
+   {
+    "paper": "31236989-60fe-4dd9-b7c8-b86160f8a14e",
+    "sparse_qv": 2
+   },
+   {
+    "paper": "38aeec70-d6e1-4bd6-9eb3-173c4dd5eff8",
+    "sparse_qv": 2
+   },
+   {
+    "paper": "cdbbe3ea-60fa-48ef-b870-bb9ef345f545",
+    "sparse_qv": 2
+   },
+   {
+    "paper": "31ad242a-43c6-4246-a158-bd79f586994a",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "1db58ecb-d735-40de-8062-bc031fd37d5b",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "e0dfa4c1-79eb-4bde-b22b-e19ca6f1a94a",
+    "sparse_qv": 1
+   },
+   {
+    "paper": "73b3c496-6190-4ad9-9a54-9cd62b4fc01c",
+    "sparse_qv": 1
+   }
+  ],
+  "paper_sample": [
+   "('041ce480-421d-4f68-8882-4271b458a2aa', 'Edexcel', 'IGCSE', 'Paper 2C', 'Audit E2E 653449ee', None, None, 'AUDIT-653449ee', True)",
+   "('0494f765-5f3f-41c7-9173-241ee7ee0d16', 'Edexcel', 'unknown', None, 'June 2014', 'JUN', 2014, '4CH0/1C', True)",
+   "('060f40c2-eb7b-410c-a593-947fe096c9c2', 'Edexcel', 'unknown', None, 'June 2020', 'JUN', 2020, '4CH1/1C', True)",
+   "('0924a1fe-8672-413d-9b37-25c2e6f303de', 'Edexcel', 'unknown', None, 'June 2019', 'JUN', 2019, '4CH1/1C', True)",
+   "('0a94f411-b2c4-4db8-ba22-150a4560c31c', 'Edexcel', 'unknown', None, 'June 2017', 'JUN', 2017, '4CH0/2C', True)"
+  ],
+  "sparse_papers_named": [
+   {
+    "series": "JUN",
+    "year": 2016,
+    "unit": null,
+    "session": "June 2016",
+    "code": "4CH0/1CR",
+    "sparse_qv": 12,
+    "has_ms_doc": true,
+    "ms_chunks": 21
+   },
+   {
+    "series": "JUN",
+    "year": 2016,
+    "unit": null,
+    "session": "June 2016",
+    "code": "4CH0/2CR",
+    "sparse_qv": 7,
+    "has_ms_doc": true,
+    "ms_chunks": 12
+   },
+   {
+    "series": "JUN",
+    "year": 2019,
+    "unit": null,
+    "session": "June 2019",
+    "code": "4CH1/1C",
+    "sparse_qv": 7,
+    "has_ms_doc": true,
+    "ms_chunks": 12
+   },
+   {
+    "series": "JUN",
+    "year": 2015,
+    "unit": null,
+    "session": "June 2015",
+    "code": "4CH0/1C",
+    "sparse_qv": 6,
+    "has_ms_doc": true,
+    "ms_chunks": 21
+   },
+   {
+    "series": "JAN",
+    "year": 2015,
+    "unit": null,
+    "session": "January 2015",
+    "code": "4CH0/1C",
+    "sparse_qv": 5,
+    "has_ms_doc": true,
+    "ms_chunks": 21
+   },
+   {
+    "series": "JUN",
+    "year": 2013,
+    "unit": null,
+    "session": "June 2013",
+    "code": "4CH0/1CR",
+    "sparse_qv": 3,
+    "has_ms_doc": true,
+    "ms_chunks": 21
+   },
+   {
+    "series": "JAN",
+    "year": 2019,
+    "unit": null,
+    "session": "January 2019",
+    "code": "4CH0/2C",
+    "sparse_qv": 3,
+    "has_ms_doc": true,
+    "ms_chunks": 13
+   },
+   {
+    "series": "JAN",
+    "year": 2017,
+    "unit": null,
+    "session": "January 2017",
+    "code": "4CH0/1C",
+    "sparse_qv": 2,
+    "has_ms_doc": true,
+    "ms_chunks": 18
+   },
+   {
+    "series": "JUN",
+    "year": 2014,
+    "unit": null,
+    "session": "June 2014",
+    "code": "4CH0/1C",
+    "sparse_qv": 2,
+    "has_ms_doc": true,
+    "ms_chunks": 20
+   },
+   {
+    "series": "JAN",
+    "year": 2013,
+    "unit": null,
+    "session": "January 2013",
+    "code": "4CH0/2C",
+    "sparse_qv": 2,
+    "has_ms_doc": true,
+    "ms_chunks": 8
+   },
+   {
+    "series": "JUN",
+    "year": 2019,
+    "unit": null,
+    "session": "June 2019",
+    "code": "4CH1/1CR",
+    "sparse_qv": 2,
+    "has_ms_doc": true,
+    "ms_chunks": 23
+   },
+   {
+    "series": "JUN",
+    "year": 2022,
+    "unit": null,
+    "session": "June 2022",
+    "code": "4CH1/1CR",
+    "sparse_qv": 1,
+    "has_ms_doc": true,
+    "ms_chunks": 20
+   },
+   {
+    "series": "JAN",
+    "year": 2021,
+    "unit": null,
+    "session": "January 2021",
+    "code": "4CH1/2CR",
+    "sparse_qv": 1,
+    "has_ms_doc": true,
+    "ms_chunks": 14
+   },
+   {
+    "series": "JUN",
+    "year": 2013,
+    "unit": null,
+    "session": "June 2013",
+    "code": "4CH0/1C",
+    "sparse_qv": 1,
+    "has_ms_doc": true,
+    "ms_chunks": 26
+   },
+   {
+    "series": "JUN",
+    "year": 2014,
+    "unit": null,
+    "session": "June 2014",
+    "code": "4CH0/2CR",
+    "sparse_qv": 1,
+    "has_ms_doc": true,
+    "ms_chunks": 9
+   },
+   {
+    "series": "JUN",
+    "year": 2016,
+    "unit": null,
+    "session": "June 2016",
+    "code": "4CH0/1C",
+    "sparse_qv": 1,
+    "has_ms_doc": true,
+    "ms_chunks": 25
+   }
+  ],
+  "documents_link_cols": [
+   "kind",
+   "mime_type"
+  ]
+ }
+}
