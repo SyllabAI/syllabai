@@ -1,0 +1,71 @@
+version: 1
+task:
+  id: T-KG-B
+  title: "Resources-side kg_export reconciliation vs the v75 golden sample —
+    corpus-derived exporter + golden-sample regression gate (the standing
+    task-B thread from the T-KG-2 closeout)"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: EXECUTING
+  priority: P2
+  base:
+    repo: syllabai-resources
+    commit: feb0e1c9caceb527661d5683b997edb612349164
+  scope:
+    allowed:
+      - "scripts/kg_export.py: NEW corpus-derived exporter —
+        graph/igcse-chemistry/{topics,specification_points}.yaml ->
+        GRAPH_CONTRACT v1.0 canonicalKG payload; --check-only validates and
+        writes nothing; --verify-golden runs the regression gate; fail-closed
+        structural gates (unique ids, referential integrity, exactly one
+        subtopic parent per point, strict orderings, paper census vs pinned
+        PAPER_META)"
+      - "graph/igcse-chemistry/_golden/: NEW vendored golden fixture
+        (byte-copy of the demo repo's canonicalKG.edexcel-chemistry-4ch1.json,
+        sha256-pinned, re-hashed by the gate every run) + provenance README"
+      - "graph/reports/KG_TASKB_GOLDEN_GATE.json: NEW pinned acceptance
+        ledger generated from the reconciliation evidence (variant pairs,
+        curated triples, counts)"
+      - "graph/reports/KG_TASKB_RECONCILIATION_2026-10-01.md: NEW full
+        reconciliation report"
+      - ".github/workflows/scripts-tests.yml: +1 gate step
+        (python3 scripts/kg_export.py --verify-golden)"
+    forbidden:
+      - "no edits to ratified store data files (graph/igcse-chemistry/*.yaml)
+        — reconciliation is read-only on the corpus"
+      - "no synthesized pre/rel edges — the 35 v75-curated point-level edges
+        have no resources-side source; they are pinned as expected-golden-only
+        and stay golden-side until the operator ratifies a point-edge store"
+      - "no changes to the demo repo's golden artifact (the vendored fixture
+        must remain a byte-copy)"
+      - "no exporter output committed as serving truth — resources export is
+        a regression projection, demo public/kg/data remains the serving path"
+  dependencies:
+    - T-KG-1 # golden sample extraction (demo repo, 2026-09-21) + Phase-2 plan
+    - T-KG-2 # per-course KG export (demo-side counterpart) that opened task B
+    - T-C11 # concept web / relationships lineage (lane awareness; no overlap)
+  shared_resources:
+    - resources-kg-golden-gate # lease on the new gate + fixture paths in
+      # syllabai-resources; ratified corpus data untouched
+  acceptance:
+    - "exporter reproduces the golden sample within the pinned ledger:
+      node id sets identical (0 resources-only), hier 214/214 + assess 8/8
+      exact set match, 173/182 statements byte-exact, all 19 text variants
+      pinned verbatim, 35 golden-only curated edges pinned (30 pre + 5 rel)"
+    - "gate fails closed: negative tests prove RED on unaccepted field diff,
+      pinned-pair drift, fixture sha drift, and resources-only node/edge"
+    - "PR to syllabai-resources green on scripts-tests (including the new
+      kg golden-gate step)"
+    - "coordination record: report + ledger committed in-repo; closeout
+      appends outcome + evidence"
+  tests:
+    - "python3 scripts/kg_export.py --check-only (structural gates)"
+    - "python3 scripts/kg_export.py --verify-golden (GREEN in sandbox; RED
+      under three mutation classes: unaccepted statement diff, accepted
+      variant pair drift, restored state GREEN again)"
+    - "CI scripts-tests run on the PR executes the gate step"
+  evidence_required:
+    - "PR URL + CI run (build success incl. kg golden-gate step)"
+    - "reconciliation report (in-repo) + evidence JSON retained in session
+      worklog artifacts"
+  outcome: {}
+  evidence: []
