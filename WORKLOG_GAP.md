@@ -5,6 +5,8 @@
 
 **Method:** every row below is derived from durable in-repository records: PROGRESS.md "Last updated" headers, session headlines and findings; TODO.md row annotations; per-repo README status rows. Nothing is invented; where no record was located, the session is honestly listed in Table B rather than reconstructed by guesswork.
 
+> **MAINTENANCE UPDATE 2026-10-01 (documentation accuracy audit F-3, operator commission trace 1a0f5c00737a2801).** The tables below are preserved verbatim per the maintenance rule; this note is the reconciliation of record. (1) **Table B is stale as written:** sessions 40, 43, 44, 46–53 and 68 HAVE durable WORKLOG.md entries (backfilled after 2026-09-15) — only **7 and 54** remain unrecovered from the original Table B. (2) **Post-71 extension:** sessions **79, 104 and 105** have no durable record in WORKLOG.md, PROGRESS.md, TODO.md or any per-repo status row and are added to Table B (see below). (3) **Coverage beyond session 71:** sessions 72–77, 80–83, 85–90, 92–93, 96, 106–118, 120, 122, 126, 128–130 live in WORKLOG.md; sessions 78, 84, 91, 94–95, 97–103 and 109–129 live in PROGRESS.md, whose 2026-09-30 header records the convention that its per-session sections end at Session 129 (sessions 130+ tracked in TODO.md task entries, `.syllabai/tasks/` and repo ledgers). (4) **Session 131** (T-C11 core sync, previously recorded only in commit `c2b8e2e` + `evidence/t-c11-core-sync-2026-10-01/`) was reconstructed into WORKLOG.md on 2026-10-01 per the Method above. The WORKLOG.md top banner was corrected on 2026-10-01 (the 2026-09-15 banner is preserved verbatim beneath it).
+
 ## Table A — sessions with durable evidence (recovered)
 
 | Session | Date | What happened (from durable records) | Evidence pointer |
@@ -50,6 +52,12 @@
 
 ## Table B — sessions with no durable record located
 
+*(original scope 2026-09-15; post-71 extension added 2026-10-01)*
+
 Sessions **7, 40, 43, 44, 46-54 and 68**: no durable one-line record was found in PROGRESS.md, TODO.md, WORKLOG.md or the per-repo status rows as of 2026-09-15. They are assumed to have been ephemeral-workspace sessions; corpus-acquisition work from that window is partially reflected in the `syllabai-pastpapers` ingestion reports and ledgers. Marked unrecoverable from repository artifacts alone rather than fabricated.
+
+**Table B — post-71 extension (added 2026-10-01, audit trace 1a0f5c00737a2801)**
+
+Sessions **79, 104 and 105**: no durable one-line record found in WORKLOG.md, PROGRESS.md, TODO.md or the per-repo status rows as of 2026-10-01. Same status as the original Table B: unrecoverable from repository artifacts alone rather than fabricated. (Session 131, which had also been absent everywhere, was reconstructed into WORKLOG.md on 2026-10-01 from commit `c2b8e2e` + `evidence/t-c11-core-sync-2026-10-01/` and is therefore NOT listed here.)
 
 **Maintenance rule:** when a Table A summary needs correction or a Table B session is recovered from a durable artifact, update this file with the reconstruction date alongside the entry — do not rewrite WORKLOG.md history.
