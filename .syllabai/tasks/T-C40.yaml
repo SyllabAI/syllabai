@@ -75,6 +75,12 @@ task:
         has named the cause' is CORRECTED to 'the naming was not durable'.
         Mechanism narrowed (float noise excluded by magnitude; payload/parameter
         candidates ranked); decisive experiment recorded in the invariant"
+      - "core CI VERIFIED GREEN on the final head 4481469 (PR syllabai-core#38,
+        run 36821585110 = SUCCESS: full build + suite incl. the 3 new tests
+        and V56 applied on Testcontainers) — the earlier V55 duplicate-version
+        failure was the Flyway check working fail-closed, not a code defect;
+        first CI failure attribution: concurrent-lane V55 collision, mine to fix,
+        which is what the renumber commit did"
       - "④ calibration RECORDED: evidence/bench-001/cosine-calibration-2026-10-01/
         (calibration.json + REPORT.md + SHA256SUMS) from bench/cosine_calibration.py
         — recomputed every probe→chunk cosine from frozen vectors, self-verified
@@ -91,10 +97,7 @@ task:
         distributions sit lower by the measured 0.024–0.057 downshift, so the
         production cut is larger — exact number pending the re-record)"
     REPORTED: []
-    UNVERIFIED:
-      - "Java compilation/CI of the core changes (sandbox has JDK 21 only, no
-        Maven/Docker — CI is the verifier: PR syllabai-core#38 build run;
-        changes are mechanical and mirrored by new tests)"
+    UNVERIFIED: []
       - "live production effect of V56 on pooled connections before the next
         deploy restart (ALTER DATABASE SET applies to new connections; deploy
         flow restarts the service after migrate)"
