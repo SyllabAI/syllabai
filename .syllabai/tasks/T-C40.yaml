@@ -97,7 +97,7 @@ task:
         distributions sit lower by the measured 0.024–0.057 downshift, so the
         production cut is larger — exact number pending the re-record)"
     REPORTED: []
-    UNVERIFIED: []
+    UNVERIFIED:
       - "live production effect of V56 on pooled connections before the next
         deploy restart (ALTER DATABASE SET applies to new connections; deploy
         flow restarts the service after migrate)"
