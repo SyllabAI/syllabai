@@ -176,13 +176,24 @@ sorted-key and byte-stable for identical input.
    mergeability state after main advanced twice — the only overlapping file
    (`PROJECT_CONTEXT.md`) auto-merges and now carries both the SIB doc
    bullets and the newer main-side corrections.
-3. **Landing-status rule (still a documented divergence).** The schema does
-   not state which status a landing artifact file may declare; the protocol
-   ("NotebookLM-generated output begins as GENERATED") is implemented as:
-   landing artifacts must declare `GENERATED` (or `QA_FAILED`);
-   `QA_PASSED/STAGED/PUBLISHED` in the landing zone is `ERROR
-   SIB-STATUS-003`. Staging tooling rewrites status when moving files across
-   the boundary.
+3. **Landing-status rule — RESOLVED (PROPOSED/DEFINED), no longer a
+   divergence.** The schema was previously silent on which status a landing
+   artifact file may declare; the protocol ("NotebookLM-generated output
+   begins as GENERATED") is implemented as: landing artifacts must declare
+   `GENERATED` (or `QA_FAILED`); `QA_PASSED/STAGED/PUBLISHED` in the landing
+   zone is `ERROR SIB-STATUS-003`. Staging tooling rewrites status when
+   moving files across the boundary. `SIB_ARTIFACT_SCHEMA_V1.md` §3
+   (Publication lifecycle, `PROPOSED/DEFINED` 2026-10-01, PR #13) now
+   defines this explicitly: canonical
+   `GENERATED → QA_PASSED → STAGED → PUBLISHED` with failure path
+   `GENERATED → QA_FAILED`; front matter never self-authorizes promotion;
+   `STAGED`/`PUBLISHED` require valid QA evidence (content-bound,
+   re-verified at publication); `NOT_APPLICABLE` never enters the lifecycle;
+   structural validation is not educational correctness and never promotes
+   an artifact into canonical curriculum/KG/learner/assessment truth. This
+   implementation already matches that definition; no behavioral change was
+   made or needed. Recorded while the SIB architecture remains PROPOSED —
+   no status promotion.
 
 ## 9. Component status ledger
 
@@ -190,6 +201,7 @@ sorted-key and byte-stable for identical input.
 |---|---|
 | SIB v1 protocol / architecture | PROPOSED (unchanged; owner: PR #13 docs) |
 | Filename convention | PROPOSED/DEFINED (schema §1; slot 2 = specification) |
+| Publication lifecycle | PROPOSED/DEFINED (schema §3; landing rule: GENERATED/QA_FAILED only) |
 | Artifact validator (schema v1) | IMPLEMENTED (see §7 for exact verified test counts) |
 | Manifest validator | IMPLEMENTED |
 | Provenance validation | IMPLEMENTED (operator source_manifest cross-check) |
