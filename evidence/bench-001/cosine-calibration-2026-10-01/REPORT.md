@@ -94,3 +94,30 @@ group by 1 order by 1;
   transfers; exact cutoffs are confirmed by the flip gate above, not assumed.
 - 10 topical probes + 9 FETCH pairs is a small n; the sweep's shape (cliff between 0.55 and 0.65)
   is the robust part, the exact cliff edge is not.
+
+---
+
+## Flip-gate outcome (addendum 2026-10-01, T-C41 ②) — re-record PASSED
+
+**run-005-c-r8** (evidence/bench-001/runs/run-005-c-r8/, code 06297f2 = PR #38 base + MIN_COSINE 0.50
++ the paired embed_rev stamp mirror): executed on a real Flyway-migrated Postgres 17.11 + pgvector
+0.8.6 (local sandbox provisioning), frozen artifact preload-r7 (SHAs verified fail-closed by the
+harness), gold-v5 × snap-006, double-pass determinism byte-identical.
+
+| axis | r7 (0.15) | r8 (0.50) |
+|---|---|---|
+| recall@5 / @10 / @20 | 0.0386 / 0.0515 / 0.0717 | **unchanged** |
+| §8(d) full / micro | 0.5618 / 0.9167 | **unchanged (77/84 points)** |
+| MRR / nDCG@10 | 0.0615 / 0.0913 | 0.0559 / 0.0871 (−0.0056 / −0.0042) |
+| zero-result / violations | 0/120 · 0 | 0/120 · 0 |
+
+Reading: the floor removes zero gold-relevant candidates at every cutoff and leaves the flagship
+§8(d) axis byte-identical; the small MRR/nDCG cost is sub-0.50 cosine junk that held top ranks on a
+few exam_question queries — precisely the candidate-hygiene class the floor exists for. **Re-record
+gate: PASS. Production probe: PENDING (operator, read-only SQL above).** The constant flip remains
+staged on `tc40-min-cosine-050` (syllabai-core) and merges after the probe — the pack's gate stands.
+
+Bench-lane honesty note: the r8 replay initially returned 120/120 zero-result — the bench loader's
+inserts land at the V33 default embed_rev=1 while both serving arms gate at CURRENT_EMBED_REV=2.
+Fixed with a paired re-stamp mirroring the 09-28 production cut-over (fail-closed census assert in
+Run005C), not by touching the gate.
