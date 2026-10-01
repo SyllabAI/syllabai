@@ -1,0 +1,30 @@
+name: SIB validator CI
+
+on:
+  push:
+    paths:
+      - 'tools/sib/**'
+      - '.github/workflows/sib-validator-ci.yml'
+  pull_request:
+    paths:
+      - 'tools/sib/**'
+      - '.github/workflows/sib-validator-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sib-validator-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run SIB validator test suite
+        run: python3 -m tools.sib.tests.run_all
