@@ -71,7 +71,77 @@ provenance:
 
 Fields may be extended, but the required fields above must not be removed.
 
-## 3. Universal sections
+The `status` field participates in the publication lifecycle defined in §3.
+It is declared by the generator as `GENERATED` and is never self-promoted;
+promotion happens only through governed SIB ingestion operations.
+
+## 3. Publication lifecycle
+
+Canonical lifecycle (defined 2026-10-01; recorded as `PROPOSED/DEFINED`):
+
+```text
+GENERATED
+    ↓
+QA_PASSED
+    ↓
+STAGED
+    ↓
+PUBLISHED
+```
+
+Failure path:
+
+```text
+GENERATED
+    ↓
+QA_FAILED
+```
+
+Status rules (binding for SIB v1 artifacts; the same terminology is used by
+the SIB validator tooling on the governed ingestion path):
+
+1. Newly generated NotebookLM/SIB artifacts must enter as `GENERATED`. A
+   landing artifact may declare only `GENERATED` (or `QA_FAILED` after a
+   failed QA run); any other status is a validation error.
+2. An artifact's own front matter MUST NOT be trusted to self-authorize
+   `QA_PASSED`, `STAGED` or `PUBLISHED`. These statuses are only reachable
+   through the governed staging path; a landing artifact self-declaring them
+   is rejected as an unsupported publication state.
+3. `QA_PASSED` is assigned only after the SIB validator/QA process produces
+   valid evidence — a passing QA report bound to the artifact's exact
+   content.
+4. `STAGED` requires valid QA evidence: the QA report must exist, pass, and
+   match the current artifact content. QA followed by an edit is detected
+   and refused; evidence must be re-produced for the changed content.
+5. `PUBLISHED` requires valid QA evidence — re-verified at publication time
+   — and the governed staging/publication operation. There is no
+   `GENERATED -> PUBLISHED` or `QA_PASSED -> PUBLISHED` shortcut.
+6. `NOT_APPLICABLE` artifacts do not enter the publication lifecycle. They
+   are inventory, not pipeline candidates, and never advance to
+   `QA_PASSED`, `STAGED` or `PUBLISHED`.
+7. Structural validation does not mean educational correctness. A passing
+   validation report is a structural QA verdict only.
+8. Passing SIB validation does not promote an artifact into canonical
+   curriculum truth, authoritative KG truth, learner truth or assessment
+   truth. SIB does not silently promote generated research into canonical
+   educational truth (Subject Intelligence Build v1, §5).
+
+Terminal-status invariants (matching the implemented lifecycle):
+
+* `QA_FAILED` is terminal for a given `artifact_version`; regeneration
+  produces a new `artifact_version` whose status starts at `GENERATED`.
+* `PUBLISHED` is terminal; further edits require a new `artifact_version`.
+* The validator itself never performs a status transition and never
+  rewrites artifact status; transitions happen only through the governed
+  ingestion operations (qa / stage / publish) inside the research-library
+  root.
+
+This lifecycle definition is made while the SIB architecture is still
+PROPOSED; the definition is recorded as `PROPOSED/DEFINED` and is binding
+for SIB v1 artifact generation and ingestion once the protocol is accepted.
+No architecture-status promotion is implied by this definition.
+
+## 4. Universal sections
 
 Every artifact must contain:
 
@@ -85,7 +155,7 @@ Every artifact must contain:
 
 Family-specific sections follow.
 
-## 4. Claim conventions
+## 5. Claim conventions
 
 Where practical, claims should identify:
 - subject/topic;
@@ -98,7 +168,7 @@ Where practical, claims should identify:
 
 Do not invent SpecificationPoint IDs. If the corpus does not support a precise mapping, say so.
 
-## 5. Current vs legacy
+## 6. Current vs legacy
 
 Legacy evidence must be explicitly labelled.
 
@@ -110,7 +180,7 @@ Use:
 
 A historical observation must not be phrased as current curriculum truth without current evidence.
 
-## 6. Machine-readable research records
+## 7. Machine-readable research records
 
 When an artifact contains repeated records, use stable IDs:
 
@@ -136,7 +206,7 @@ Example:
 **Evidence:** ...
 ```
 
-## 7. No silent normalization
+## 8. No silent normalization
 
 Do not silently:
 - merge distinct concepts;
@@ -147,7 +217,7 @@ Do not silently:
 
 Such findings remain research claims until governed by SyllabAI validation.
 
-## 8. Determinism
+## 9. Determinism
 
 Repeated ingestion of the same artifact must preserve:
 - artifact ID;
@@ -158,7 +228,7 @@ Repeated ingestion of the same artifact must preserve:
 
 Content may be regenerated, but the pipeline must make changes observable through hashes/diffs.
 
-## 9. Chunking expectations
+## 10. Chunking expectations
 
 The final Markdown is authored for semantic chunking, not arbitrary fixed-size splitting.
 
@@ -172,8 +242,8 @@ Prefer boundaries around:
 
 Chunks should retain artifact ID, record ID, subject, qualification, temporal scope and relevant curriculum anchors in metadata.
 
-## 10. Runtime eligibility
+## 11. Runtime eligibility
 
-A research artifact/chunk is Tutor-servable only when its SyllabAI publication status permits serving.
+A research artifact/chunk is Tutor-servable only when its SyllabAI publication status (§3) permits serving.
 
 NotebookLM output alone does not confer runtime eligibility.
