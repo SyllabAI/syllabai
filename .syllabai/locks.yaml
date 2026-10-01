@@ -1,11 +1,13 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
-# (T-C40's flyway-version lease for V55 was fulfilled — V55__hnsw_filtered_
+# (T-C40's flyway-version lease for V56 was fulfilled — V56__hnsw_filtered_
 # scan_settings.sql lands in this same session's core tranche (branch
-# tc40-rag-review-fixes, PR syllabai-core#38; V54→V55 renumber mid-flight —
-# the concurrent retarget lane took V54); released per the reclaim rule.
-# Allocation window honoured: V53 stood at branch time; V54 was claimed by
-# the retarget lane and is respected — this lease reserved V55 only.)
+# tc40-rag-review-fixes, PR syllabai-core#38; renumbered twice mid-flight —
+# the concurrent retarget lane took V54 then V55; the V55 collision was
+# caught fail-closed in CI by Flyway's duplicate-version check); released
+# per the reclaim rule. Allocation window honoured: V53 stood at branch
+# time; V54/V55 were claimed by the retarget lane and are respected —
+# this lease reserved V56 only.)
 version: 1
 locks:
   - resource: resources-kg-golden-gate
