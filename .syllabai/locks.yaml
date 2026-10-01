@@ -8,19 +8,17 @@
 # per the reclaim rule. Allocation window honoured: V53 stood at branch
 # time; V54/V55 were claimed by the retarget lane and are respected —
 # this lease reserved V56 only.)
+# (T-KG-B's resources-kg-golden-gate lease was fulfilled — reconciliation
+# closed (PR syllabai-resources#14, gate step CI-GREEN) and the operator
+# ratification "① ratify the 35 edges as point_edges.yaml (golden → 257/257),
+# accept asymmetry" (2026-10-01) executed as commit 0197d84: point_edges.yaml
+# (35 rows, OPERATOR_RATIFIED, sha-pinned dfb1fcb0…), exporter pre/rel
+# emission, ledger v2 (golden-only exception retired), gate 257/257
+# FULL-SET MATCH (sandbox + CI run 36822660100 step 5 SUCCESS); task DONE,
+# released per the reclaim rule. Merge of PR #14 stays HELD on the
+# pre-existing c12 C3 main red — owning lane to repair.)
 version: 1
-locks:
-  - resource: resources-kg-golden-gate
-    owner: "superz (main agent, zai session web-98866c45)"
-    task: T-KG-B
-    base_commit: feb0e1c9caceb527661d5683b997edb612349164
-    acquired_at: 2026-10-01T05:10:00Z
-    expires_at: 2026-10-03T05:10:00Z
-    note: >-
-      Claim-first lease for the T-KG-B reconciliation deliverables in
-      syllabai-resources (scripts/kg_export.py, graph/igcse-chemistry/_golden/,
-      graph/reports/KG_TASKB_*, scripts-tests gate step). Ratified corpus
-      data files are read-only in this task. PR SyllabAI/syllabai-resources#14.
+locks: []
 
 # (HUB-ANSWER-BOX wave 4's core-web-contract lease was fulfilled — core aee2af1
 #  (rebased over 905e85b) + hub fb2b1ae/9096b72 pushed on bases core 9a83511 /
