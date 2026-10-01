@@ -1,0 +1,73 @@
+{
+ "L1_active": {
+  "checked": 361,
+  "with_topic": 361
+ },
+ "audit_max_id": 4048,
+ "documents": {
+  "REJECTED": 147,
+  "SUGGESTED": 305,
+  "VALIDATED": 567
+ },
+ "drift": {},
+ "expectation": {
+  "audit_max_id": 4048,
+  "ing_nodes_remaining": 57,
+  "knowledge_edges": 730,
+  "knowledge_nodes": 492,
+  "mark_points_total": 5652,
+  "qsp_total": 2637,
+  "qt_total": 1725,
+  "questions_active": 961,
+  "questions_total": 1533,
+  "qv_pool": 1533,
+  "review_schedules_total": 120,
+  "scheme_sparse_qv": 43,
+  "schemes_total": 1468,
+  "skill_states_total": 185,
+  "teacher_validation_events": 0
+ },
+ "ing_nodes_remaining": 57,
+ "knowledge_edges": 730,
+ "knowledge_nodes": 492,
+ "laneA": {
+  "plan_sha256": "7a131db17940c12a5d1a874af1a6e83864c9146a38d40f7e10f7c342cabacb80",
+  "repaired_qv": 7
+ },
+ "laneB": {
+  "inserted_points": 94,
+  "inserted_schemes": 13,
+  "plan_sha256": "f4e1d2e114d9d2d0e5134e4ebf7cf997098b8d989fd6afde9307333501b11e29",
+  "sparse_56_to": 43
+ },
+ "laneC": {
+  "ci": "build SUCCESS on head 36c66b6",
+  "merge_sha": "93850118819053a8a7404902d5a7a83ab09d0dbd",
+  "note": "V57 executes at next deploy; ING nodes 57 until then",
+  "pr": "SyllabAI/syllabai-core#42"
+ },
+ "mark_points_total": 5652,
+ "papers": {
+  "REJECTED": 14,
+  "VALIDATED": 90
+ },
+ "qsp_total": 2637,
+ "qt_total": 1725,
+ "questions_active": 961,
+ "questions_total": 1533,
+ "qv_pool": 1533,
+ "qv_states": {
+  "REJECTED": 2,
+  "SUGGESTED": 66,
+  "VALIDATED": 1465
+ },
+ "review_schedules_total": 120,
+ "scheme_sparse_qv": 43,
+ "scheme_states": {
+  "SUGGESTED": 108,
+  "VALIDATED": 1360
+ },
+ "schemes_total": 1468,
+ "skill_states_total": 185,
+ "teacher_validation_events": 0
+}
