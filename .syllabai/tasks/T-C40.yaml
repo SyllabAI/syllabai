@@ -76,7 +76,7 @@ task:
         Mechanism narrowed (float noise excluded by magnitude; payload/parameter
         candidates ranked); decisive experiment recorded in the invariant"
       - "core CI VERIFIED GREEN on the final head 4481469 (PR syllabai-core#38,
-        run 36821585110 = SUCCESS: full build + suite incl. the 3 new tests
+        run 36821886508 = SUCCESS: full build + suite incl. the 3 new tests
         and V56 applied on Testcontainers) — the earlier V55 duplicate-version
         failure was the Flyway check working fail-closed, not a code defect;
         first CI failure attribution: concurrent-lane V55 collision, mine to fix,
