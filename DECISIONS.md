@@ -60,7 +60,7 @@ All AI inference for the Cycle-1 pilot runs on verified free tiers behind `LlmPr
 
 ## ADR-010: Cycle-1 pilot scope (execution override)
 
-**Status:** Accepted
+**Status:** Accepted — subject scope superseded by ADR-019 (2026-09-11: Edexcel IAL Chemistry → Edexcel International GCSE Chemistry 4CH1); the Cycle-1 row count is now 36 in the live tracker (documentation accuracy audit F-6, 2026-10-01). Body preserved verbatim.
 **Date:** 2026-09-03
 
 The authoritative execution scope is Paper B's Cycle-1 pilot: Edexcel IAL Chemistry, ~50 retake-path students, 8 weeks, Tutor + Assessor agents only, predictions P1–P8. Backlog rows marked `Cycle 1` (34 rows; 12-spine critical path) define the cut. The build waves remain the full-system roadmap, but Cycle 2+ features must not be pulled into Cycle 1. Exit criteria in Master Spec §39a (κ ≥ 0.60 Smart Mark gate; Paper B §3.5 telemetry fields live).
