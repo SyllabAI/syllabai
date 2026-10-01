@@ -5,7 +5,7 @@ task:
     corpus-derived exporter + golden-sample regression gate (the standing
     task-B thread from the T-KG-2 closeout)"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: EXECUTING
+  status: VERIFYING
   priority: P2
   base:
     repo: syllabai-resources
@@ -28,7 +28,8 @@ task:
       - "graph/reports/KG_TASKB_RECONCILIATION_2026-10-01.md: NEW full
         reconciliation report"
       - ".github/workflows/scripts-tests.yml: +1 gate step
-        (python3 scripts/kg_export.py --verify-golden)"
+        (python3 scripts/kg_export.py --verify-golden), ordered first in the
+        job so the pre-existing c12 red cannot skip it"
     forbidden:
       - "no edits to ratified store data files (graph/igcse-chemistry/*.yaml)
         — reconciliation is read-only on the corpus"
@@ -53,19 +54,77 @@ task:
       pinned verbatim, 35 golden-only curated edges pinned (30 pre + 5 rel)"
     - "gate fails closed: negative tests prove RED on unaccepted field diff,
       pinned-pair drift, fixture sha drift, and resources-only node/edge"
-    - "PR to syllabai-resources green on scripts-tests (including the new
-      kg golden-gate step)"
+    - "PR to syllabai-resources: kg golden-gate step GREEN in CI (job-level
+      red is the pre-existing c12 negative-control failure on main — see
+      outcome; not attributable to this PR)"
     - "coordination record: report + ledger committed in-repo; closeout
       appends outcome + evidence"
   tests:
     - "python3 scripts/kg_export.py --check-only (structural gates)"
     - "python3 scripts/kg_export.py --verify-golden (GREEN in sandbox; RED
       under three mutation classes: unaccepted statement diff, accepted
-      variant pair drift, restored state GREEN again)"
-    - "CI scripts-tests run on the PR executes the gate step"
+      variant pair drift, fixture sha drift; restored state GREEN)"
+    - "CI scripts-tests run on the PR executes the gate step (run
+      36818514304 step 5 SUCCESS)"
   evidence_required:
     - "PR URL + CI run (build success incl. kg golden-gate step)"
     - "reconciliation report (in-repo) + evidence JSON retained in session
       worklog artifacts"
-  outcome: {}
-  evidence: []
+  outcome:
+    reconciliation:
+      verdict: "GREEN within the pinned ledger — the resources ratified store
+        regenerates the v75 golden canonicalKG for 4CH1 exactly on every
+        corpus-provable dimension"
+      nodes: "217/217 ids identical, 0 resources-only; statements 173/182
+        byte-exact; 19 variants = 9 PDF formula-spacing (R f/Rf, dm 3/dm3,
+        Δ H/ΔH) + 2 en-dash subtopic titles + 8 cascaded point.subtopic"
+      edges: "hier 214/214 + assess 8/8 exact set match; 0 resources-only;
+        35 golden-only curated edges (30 pre + 5 rel) have NO resources-side
+        source (relationships.yaml is hierarchy-only; concept web is
+        concept-level) — pinned as expected-gap, operator decision open
+        (report §7: ratify point_edges.yaml / accept asymmetry / fold into
+        T-C11 next wave)"
+      triangulation: "demo serving lane matches golden only 119 exact + 6
+        normalized of 182 — the ratified resources store (173 exact) is the
+        closest textual source to v75"
+    delivery:
+      pr: "SyllabAI/syllabai-resources#14 (branch codex/kg-task-b-golden-recon,
+        head 65ad1d0)"
+      gate_ci: "run 36818514304 job 110228775754 step 5 SUCCESS — GOLDEN GATE
+        GREEN (217 nodes / 222 edges; 173/182 exact; 19 variants; 35 pinned)"
+      ci_red_not_ours: "corpus-gates job RED at the c12 negative test (check
+        C3 4.15-style control, [('4CH1-4.16',0.4894),('4CH1-2.11',0.3306)]) —
+        identical red on main since 2026-09-30 09:27Z (runs 36696231248 ...
+        36815671928); T-C11 batch-10/11 store-growth territory, flagged for
+        the owning lane; gate reordered first so it reports regardless"
+    claims:
+      VERIFIED:
+        - "every parity figure mechanically diffed (analysis evidence JSON
+          retained; ledger generated FROM the evidence, never hand-typed)"
+        - "negative tests: unaccepted field diff RED; accepted-variant pair
+          drift RED; fixture-sha drift wired; resources-only invention RED;
+          restore GREEN"
+        - "gate step CI-GREEN on the PR (step 5 of run 36818514304)"
+        - "pre-existing main red diagnosed to check C3 with run history —
+          unrelated to this PR's files"
+      REPORTED:
+        - "PDF-lane DIFF_VS_RATIFIED.json (in-repo, other lane) corroborates
+          ratified-vs-PDF-direct wording equality; not re-derived here"
+        - "merge is HELD pending the c12-lane repair or operator override —
+          the PR adds one green step and removes none"
+      UNVERIFIED: []
+    next_safe_actions:
+      - "operator decision on the 35 curated pre/rel edges (report §7
+        options 1-3; option 1 with operator ratification would make the
+        golden match 257/257)"
+      - "c12/T-C11 lane: repair the negative-control check C3 on main (it
+        blocks every scripts-tests PR in resources since 09-30)"
+      - "merge PR #14 after the lane repair (or operator override)"
+      - "optional: normalize the two en-dash subtopic titles; capture the
+        assessment table into the parsed corpus (report §5/§6)"
+  evidence:
+    - "syllabai-resources#14 + CI run 36818514304 (gate step SUCCESS)"
+    - "in-repo: graph/reports/KG_TASKB_RECONCILIATION_2026-10-01.md +
+      graph/reports/KG_TASKB_GOLDEN_GATE.json"
+    - "session artifacts: kg-analysis/out/taskB_recon_evidence.json (analysis
+      diff), worklog entry T-KG-B"
