@@ -5,7 +5,7 @@ task:
     re-pin of the c12 negative-test C2 absolute pin before T-C35/T-C11
     registry growth consumes the remaining 19%"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: ACTIVE
+  status: DONE
   priority: P1
   authority: "operator directive 'C2 physics control headroom' (zai-web,
     2026-10-02, trace 1a0f8f83eef96001) — direct continuation of the merged
@@ -28,5 +28,27 @@ task:
     - "all other checks unchanged and green (37/37 total on main state)"
     - "local CI simulation green before push; PR corpus-gates fully green"
     - "repair-negative: violating the new invariant is still caught"
-  evidence: []
-  merge_status: "no PR yet — diagnosis/implementation in progress"
+  evidence:
+    - "burn curve (all ten registry states, physics control top): bb51b88
+      0.1306 [4CH1-1.16 via 'mass'] -> batch6 766fdd7 +0.1083 in ONE step
+      [4CH1-2.25C via 'density'(IDF 5.52)+'steel'(IDF 5.11)] -> batches
+      7-11 +0.004 -> main 0.2437; zero chemistry-registry commits since
+      ee0524d (2026-09-25); T-C35/T-C36 maths batches exclude chemistry"
+    - "fix: C2 absolute KEPT as production tripwire (weak-marking must fire
+      on the real WPH11 fixture; red = designed data-side escalation signal,
+      mechanism now in the failure detail); NEW C2b comparative: control
+      ranks below EVERY anchored positive — machine-derived, PASS on all
+      ten states (control 0.1306-0.2437 vs weakest positive >=0.7439);
+      inflation trip points C2 x1.23 / C2b x3.58"
+    - "verification: 38/38 main-state sandbox; repair-negatives exact (x1.3
+      -> only C2; x4.0 -> C2+C2b); backward stable 38/38 on bb51b88-era
+      registry; five of six scripts-tests steps simulated green locally
+      (graph_check needs the notes corpus excluded from the sparse sandbox —
+      inputs untouched, green on identical tree in run 36912298393); PR CI
+      36917452274 all steps SUCCESS"
+    - "no production semantics touched (WEAK_SCORE, tagger, fixtures,
+      registry data all unchanged; one file: scripts/c12_negative_test.py)"
+  merge_status: "PR #16 OPEN (codex/c12-c2-comparative-backstop, commit
+    621202a, base e4d4557 incl. T-C36 B04 — file blob drift-guarded 2feb4a4):
+    CI run 36917452274 every corpus-gates step SUCCESS. Merge awaiting
+    operator word per resources lane convention (explicit merge words)."
