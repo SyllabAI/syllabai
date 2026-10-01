@@ -2,7 +2,7 @@
 
 **Tooling status:** IMPLEMENTED (this document, `tools/sib/`)
 **SIB architecture status:** PROPOSED — unchanged by this work
-**Implements:** `docs/research/SUBJECT_INTELLIGENCE_BUILD_V1.md` + `docs/research/SIB_ARTIFACT_SCHEMA_V1.md` (both currently on open PR `agent-chatgpt/subject-intelligence-build-v1`)
+**Implements:** `docs/research/SUBJECT_INTELLIGENCE_BUILD_V1.md` + `docs/research/SIB_ARTIFACT_SCHEMA_V1.md` (both on `main` as of 2026-10-01, landed via PR #13)
 **Implements NOT:** artifact generation, NotebookLM integration, Subject Tutor retrieval, canonical-KG/mastery/assessment changes.
 
 ---
