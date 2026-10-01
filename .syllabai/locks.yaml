@@ -1,7 +1,24 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
+# (T-C40's flyway-version lease for V54 was fulfilled — V54__hnsw_filtered_
+# scan_settings.sql lands in this same session's core tranche (branch
+# tc40-rag-review-fixes, PR route; see .syllabai/tasks/T-C40.yaml); released
+# per the reclaim rule. No concurrent flyway allocation observed in the
+# window: origin main topped out at V53 for the whole lease.)
 version: 1
-locks: []
+locks:
+  - resource: resources-kg-golden-gate
+    owner: "superz (main agent, zai session web-98866c45)"
+    task: T-KG-B
+    base_commit: feb0e1c9caceb527661d5683b997edb612349164
+    acquired_at: 2026-10-01T05:10:00Z
+    expires_at: 2026-10-03T05:10:00Z
+    note: >-
+      Claim-first lease for the T-KG-B reconciliation deliverables in
+      syllabai-resources (scripts/kg_export.py, graph/igcse-chemistry/_golden/,
+      graph/reports/KG_TASKB_*, scripts-tests gate step). Ratified corpus
+      data files are read-only in this task. PR SyllabAI/syllabai-resources#14.
+
 # (HUB-ANSWER-BOX wave 4's core-web-contract lease was fulfilled — core aee2af1
 #  (rebased over 905e85b) + hub fb2b1ae/9096b72 pushed on bases core 9a83511 /
 #  hub 15ce2ba (rebased over the CLA lanes mid-flight); released per the

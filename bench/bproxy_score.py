@@ -1,13 +1,30 @@
 #!/usr/bin/env python3
-"""bproxy_score.py — T-C13 Run 1: harness-internal BM25 probe over the frozen snapshot (arm B-proxy).
+"""bproxy_score.py — T-C13: harness-internal BM25 probe over the frozen snapshot (arm B-proxy).
 Deterministic Okapi BM25 (k1=1.2, b=0.75). Two scopes: ALL chunks and VALIDATED-paper chunks only
-(validation-boundary probe, Gemini §16 test 5). Arms A0/A/C/D/E/F/G report UNAVAILABLE with named reasons."""
+(validation-boundary probe, Gemini §16 test 5). Arms A0/A/C/D/E/F/G report UNAVAILABLE with named reasons.
+
+Run identity is env-driven so a re-baseline over a later set+snapshot pair cannot silently
+write run-001 provenance (the run-006 re-baseline, T-C40 ②, is the reason this exists):
+  BENCH_RUN_ID / BENCH_RUN_DATE  — run identity + date (defaults preserve run-001 values)
+  BENCH_GOLD_LABEL               — gold-set label; default reads manifest set_version
+"""
 import gzip, hashlib, json, math, os, re, unicodedata
 
 import os
 SNAP = os.environ.get("BENCH_SNAPSHOT", "evidence/bench-001/snapshot")
 GOLD = os.environ.get("BENCH_GOLD", "bench/gold")
 RUN = os.environ.get("BENCH_RUN_OUT", "evidence/bench-001/runs/run-001-bproxy")
+RUN_ID = os.environ.get("BENCH_RUN_ID", "run-001-bproxy")
+RUN_DATE = os.environ.get("BENCH_RUN_DATE", "2026-09-17")
+
+def _gold_label():
+    try:
+        m = json.load(open(f"{GOLD}/manifest.json"))
+        return m.get("set_version") or m.get("version") or "gold-v1"
+    except Exception:
+        return "gold-v1"
+
+GOLD_LABEL = os.environ.get("BENCH_GOLD_LABEL") or _gold_label()
 os.makedirs(RUN, exist_ok=True)
 K1, B, STOP = 1.2, 0.75, set(
     "the a an of to in on for and or is are was were be been with as by at from that this it its what which how "
@@ -91,12 +108,12 @@ val_scope = run_scope("VALIDATED-paper-chunks-only", [c for c in chunks if c.get
 unlabeled = [r["id"] for r in recs if not r["gold_evidence"]]
 
 results = {
-    "run_id": "run-001-bproxy", "date": "2026-09-17", "arm": "B-proxy (harness-internal Okapi BM25 k1=1.2 b=0.75)",
+    "run_id": RUN_ID, "date": RUN_DATE, "arm": "B-proxy (harness-internal Okapi BM25 k1=1.2 b=0.75)",
     "arm_status": "PROXY — NOT a production arm; never citable for promotion decisions",
-    "gold_set": "gold-v1 (120 queries; frozen)",
+    "gold_set": f"{GOLD_LABEL} ({len(recs)} queries; frozen)",
     "arms_unavailable": {
-        "A0": "requires syllabai-core Java lane (Java 25 + Maven unavailable in authoring env) — PREPARED, not RUNNABLE here",
-        "A": "requires T-C07 + embedding backfill (0/2,333 chunks embedded)",
+        "A0": "requires syllabai-core Java lane — PREPARED, not RUNNABLE in this authoring env",
+        "A": f"requires T-C07 + embedding backfill (embedding state not probed here; snapshot carries {len(chunks)} chunks)",
         "B": "requires T-C14 Bm25Retriever + tsvector migration",
         "C/D": "require A + B", "E/F/G": "require T-C15",
     },
@@ -110,7 +127,7 @@ open(f"{RUN}/results.json", "w").write(json.dumps(results, indent=1, sort_keys=T
 
 def fmt(d):
     return " | ".join(f"{k} {v}" for k, v in d.items() if k != "gold_n")
-md = f"""# Run 001 — B-proxy baseline (T-C13 M1, partial)
+md = f"""# {RUN_ID} — B-proxy probe (T-C13 harness-internal lexical arm)
 
 **Status:** RECORDED — harness-internal probe, LOCAL VERIFIED (deterministic, offline, snapshot {json.load(open(f'{SNAP}/manifest.json'))['snapshot_version']}).
 **Arm:** {results['arm']} — {results['arm_status']}.
@@ -147,7 +164,7 @@ with open(f"{RUN}/SHA256SUMS", "w") as f:
     for fn in ("results.json", "RUN_REPORT.md"):
         h = hashlib.sha256(open(f"{RUN}/{fn}", "rb").read()).hexdigest()
         f.write(f"{h}  {fn}\n")
-print("run-001-bproxy recorded")
+print(f"{RUN_ID} recorded")
 print("ALL :", fmt(all_scope["overall"]))
 print("VALIDATED-only:", fmt(val_scope["overall"]))
 print("excluded (no labels):", len(unlabeled), "| per-class classes scored:", len(all_scope["per_class"]))

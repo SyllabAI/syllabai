@@ -1144,6 +1144,47 @@ candidate).
   derivation clears them in one pass. Evidence:
   `bench/review/psaxis-review-2026-09-28/tqsp2-primary-topics-2026-09-29/`.
 
+  **ADDENDUM (2026-10-01, trace 1a0f5b2b7bf5bf7d — the Task-55-recorded 94
+  sme-eq-* L1 disagreements RECONCILED):** the L1 rule was re-implemented and
+  pin-validated (checked=961 agree=867 disagree=94, all sme-eq-*, 0 ambiguous,
+  0 qt conflicts — reproduces the 09-30 pinned 946/852/94 on the pre-qsp15
+  state). Ground truth: 94/94 the old anchor is the plurality-winner of the
+  question's point-parent distribution (the SME import's filing rule) while
+  its single PRIMARY qsp point's parent TOPIC differs; 94/94 lack qt-primary
+  mirrors (lane 0/593 vs past-paper 368/368); the 2 qsp-repair twins
+  (q3-p1/-q3-s) additionally had zero qt rows. Disposition D1 (content-truth
+  direction, no coding rewrites): 94 guarded primary-topic UPDATEs to the
+  parent TOPIC of the PRIMARY point + old anchors preserved as SECONDARY qt
+  rows + 92 secondary→primary flips + 2 twin primary INSERTs; qsp rows
+  byte-identical (asserted pre/post); plan pinned pre-write (sha256
+  cb4cb2cb…9a7d0); dry-run ROLLBACK then COMMIT (first dry-run caught
+  question_topics having no id/created_at DB defaults — explicit uuid+now()).
+  Fresh-connection verify ALL PINS PASS: census 961/961/0 — the bank-wide
+  house rule (filing = topic of the dominant assessed point) now holds for
+  every active question; qt 1130→1226; ING/cohort fingerprints unchanged.
+  Evidence: `bench/review/psaxis-review-2026-09-28/sme-eq94-reconciliation-20261001/`.
+  Open residue: sme-eq qt-primary backfill for the other 499 (L1-compliant;
+  serve-shape only).
+  **ADDENDUM (2026-10-01, trace 1a0f5eba1935f439 — the 499 residue CLOSED):
+  sme-eq qt-primary backfill EXECUTED + VERIFIED.** The 499 L1-agreeing sme-eq
+  questions (anchors already correct — they agree under the bank-wide house
+  rule) received their qt-primary mirrors: 499 NOT-EXISTS-guarded INSERTs
+  (explicit uuid+now(); question_topics has no DB defaults), 0 flips (measured,
+  not assumed: the anchor is absent from question_topics for all 499), NO
+  questions/qsp changes, no deletions; plan pinned pre-write (sha256
+  7a1eb14b…bf0e3); dry-run ROLLBACK then COMMIT, in-tx asserts green (L1
+  961/961/0, qsp 2637, qt 1226→1725, 499 qt-primary==anchor, bank-wide
+  coverage failures 0, qsp byte-identical). Fresh-connection verify ALL PINS
+  PASS (P1-P7): 94-cohort regression intact (primary==anchor 94/94, old
+  anchors kept as SECONDARY 94/94), sme-eq mirrors 593/593, past-paper
+  368/368, qsp15 cohort 15/59/36, ING 0-0-0 — bank-wide serve shape now
+  uniform: every active question has exactly one qt primary row equal to its
+  anchor (961/961, 0 conflicts). Evidence:
+  `bench/review/psaxis-review-2026-09-28/sme-eq499-backfill-20261001/`.
+  (Plan-builder honesty note: the first staged assert used the stale PRE-fix
+  L1 pin 961/867 and FAILED CLOSED; a read-only diagnostic re-measured the
+  live post-Task-59 state 961/961/0 before any write existed, and the pin was
+  corrected — zero DB writes preceded the pinned dry-run/execute sequence.)
 - [x] **servable19-topics-citations (2026-09-29, Task 68, trace 1a0eb3255bd898c9) —
   the two non-operator Task-67 leftovers EXECUTED + VERIFIED: by-topic mappings
   for the 19 newly-servable questions + the stale-citation re-point (cosmetic).**
@@ -1785,8 +1826,12 @@ Wave anatomy (evidence `bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-2
 
 ## 2026-10-01 — DONE: T-SIB-VAL — SIB v1 validator + ingestion scaffolding implemented (branch `agent-zai/sib-validator-ingestion-scaffolding`, Super Z, operator trace 1a0f5aedbda05c95: "You are working on SyllabAI … implement the SIB v1 validator and ingestion scaffolding")
 - **Scope honored exactly:** validator + manifest + ingestion boundary + chunk metadata + tests + CI only. NO 4CH1 artifact generation, NO NotebookLM runtime dependency, NO Subject Tutor integration, NO canonical-KG/mastery/assessment changes, SIB architecture stays **PROPOSED** (its docs land via PR `agent-chatgpt/subject-intelligence-build-v1` — implemented, not vendored, to avoid touching that PR's files).
-- **Implemented** `tools/sib/` (stdlib-only core, PyYAML guarded): `taxonomy.py` (12 families / 95 artifact IDs, artifact-vs-record ID conventions), `errors.py` (SIB-* code registry, ERROR/WARNING/INFO), `frontmatter.py` (deterministic front matter; PyYAML + tested parity fallback), `lifecycle.py` (exact transition table; QA_FAILED and PUBLISHED terminal), `artifact_validator.py` (15 required metadata fields, identity/filename/family/applicability/duplicates, 7 universal sections, status rules, CURRENT/LEGACY semantics + contradiction detection, provenance sufficiency, record IDs), `anchors.py` (spec-point shape + optional registry resolution; unresolved reported never repaired), `manifest_model.py` (manifest validation incl. REQUIRED-on-disk, manifest/artifact disagreement, unsupported publication, gaps/backlog as first-class), `chunking.py` (deterministic record/section chunker preserving the full provenance envelope), `ingest.py` (path-confined `SibLibrary`: qa → stage → publish, evidence-gated), `cli.py` (7 commands), `tests/` (102 tests), `.github/workflows/sib-validator-ci.yml`.
+- **Implemented** `tools/sib/` (stdlib-only core, PyYAML guarded): `taxonomy.py` (12 families / 95 artifact IDs, artifact-vs-record ID conventions), `errors.py` (SIB-* code registry, ERROR/WARNING/INFO), `frontmatter.py` (deterministic front matter; PyYAML + tested parity fallback), `lifecycle.py` (exact transition table; QA_FAILED and PUBLISHED terminal), `artifact_validator.py` (15 required metadata fields, identity/filename/family/applicability/duplicates, 7 universal sections, status rules, CURRENT/LEGACY semantics + contradiction detection, provenance sufficiency, record IDs), `anchors.py` (spec-point shape + optional registry resolution; unresolved reported never repaired), `manifest_model.py` (manifest validation incl. REQUIRED-on-disk, manifest/artifact disagreement, unsupported publication, gaps/backlog as first-class), `chunking.py` (deterministic record/section chunker preserving the full provenance envelope), `ingest.py` (path-confined `SibLibrary`: qa → stage → publish, evidence-gated), `cli.py` (7 commands), `tests/` (111 tests), `.github/workflows/sib-validator-ci.yml`.
 - **Runtime boundary enforced:** validation is pure evidence; staging/publication confined to the library root (path traversal → `SIB-ING-001`); landing artifacts self-declaring QA_PASSED/STAGED/PUBLISHED → `SIB-STATUS-003`; publication requires passing QA evidence; no canonical write surface exists on the library API. Hostile-content and traversal tests pin this.
 - **Determinism proven by test:** byte-identical QA JSON over 5 runs and across different library roots; sorted issue ordering; no clocks/randomness in identity; content SHA-256 for observable change detection.
-- **Divergences documented (not silently resolved):** filename template-vs-example slot ambiguity; SIB docs not yet on main; landing-status rule — see `docs/research/SIB_VALIDATOR_IMPLEMENTATION_V1.md` §8 (component status ledger §9).
-- **Verification:** `python3 -m tools.sib.tests.run_all` → UNIT_TESTS: 102 passed / 0 failed / 0 skipped. CI: `.github/workflows/sib-validator-ci.yml` (3.12, path-filtered).
+- **Divergences — all three RESOLVED 2026-10-01** (reconciliation record: `docs/research/SIB_VALIDATOR_IMPLEMENTATION_V1.md` §8; component status ledger §9): filename contract (PROPOSED/DEFINED, schema §1); landing-status rule (PROPOSED/DEFINED, schema §3 — canonical lifecycle GENERATED → QA_PASSED → STAGED → PUBLISHED, failure GENERATED → QA_FAILED, front matter never self-authorizes promotion); SIB docs land via PR `agent-chatgpt/subject-intelligence-build-v1`.
+- **Verification:** `python3 -m tools.sib.tests.run_all` → UNIT_TESTS: 111 passed / 0 failed / 0 skipped (hardening pass 2026-10-01: 126 / 0 / 0 — see §7). CI: `.github/workflows/sib-validator-ci.yml` (3.12, path-filtered).
+
+## 2026-10-01 — DONE: T-C40 RAG-review fix order items ①–④ executed (operator directive: "validate corpus → re-index the S8 floors (they're structurally unpassable) → three cheap risk-killers → cosine calibration")
+- [x] **T-C40 (operator trace 1a0f5db42c67bd41; the 2026-10-01 RAG engine review §5 order items 1–4; record `.syllabai/tasks/T-C40.yaml`).** ① **Corpus-validation worklist RECORDED** (`evidence/bench-001/validation-worklist-2026-10-01/`, tool `bench/validation_worklist.py`): 132 prioritized batches derived deterministically from snap-006 × gold-v5 bytes — census 965/4,181 VALIDATED (23.1%); the zero-recall gold classes (mark_scheme/misconception/multi_spec_point) are locked behind SUGGESTED batches (top batch 4CH1/2C MARK_SCHEME: 186 SUGGESTED chunks carrying 30 tier-1 gold unlocks); NO flips performed — content validation stays operator-gated (AGENT.md core rule 6). ② **§8 floor re-index LANDED as spec §8.1 (v1.1, dual-view)**: fresh B-proxy re-baseline `run-006-bproxy` (tool now env-identes runs so a re-baseline can't write run-001 provenance) over snap-006 × gold-v5 → v1.1 bars ALL 0.1920/0.1237/0.2316 + VALIDATED 0.0734/0.1184/0.1683 (same +10% rel / +0.05 abs arithmetic per view); Run005C gate arithmetic extended (v1.0 retained as reference; **no recorded verdict re-judged** — r7 still fails all six v1.1 checks, the corpus conclusion is unchanged, but the bars are now reachable in principle). ③ **Risk-killers:** (a) core `V54__hnsw_filtered_scan_settings.sql` persists the HNSW incident remedy in a migration (lease held+released; portable `current_database()` DO block); (b) citation-marker range enforcement VERIFIED as already-landed (deep-audit H2) — review R7 corrected; the missing half (observability) landed: exact stripped-marker numbers now logged on both paths, output byte-identical, +3 tests; (c) embedding-drift root cause durable-ized: `EMBEDDING_TRANSPORT_INVARIANT.md` + knowledge-map §7 row (the 09-20 CORRECTION.md had named it — transport non-transparency, mean 0.9083 — below discoverability; review R5 corrected; mechanism narrowed + decisive experiment recorded). ④ **MIN_COSINE calibration RECORDED** (`evidence/bench-001/cosine-calibration-2026-10-01/`, tool `bench/cosine_calibration.py`): recomputed from frozen vectors, self-verified 10/10 against the recorded eval; **at 0.15 the floor is a no-op (100% of the measured corpus clears it)**; recommendation **0.50** (stated rule incl. the measured artifact→DB transport downshift + explicit safety margin; 0.55 rejected); **constant NOT changed** — flip gated on the Run005C re-record + the production probe SQL in the pack.
+- Claims: VERIFIED per the yaml record; INFERRED: production-space effect size of 0.50; UNVERIFIED: core CI (sandbox lacks JDK 25/Maven/Docker), V54 effect on pre-restart pooled connections. (Super Z)
