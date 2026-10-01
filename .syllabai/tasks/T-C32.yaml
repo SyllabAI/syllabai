@@ -51,7 +51,10 @@ task:
     - "no resolution-semantics change (T-C07 matrix intact); no schema/migration;
       no serving-path behavior change; intentSurface + RoutingController /
       KaRagService call sites untouched"
-  merge: "landed 2026-09-28 — see closeout_2026-09-28 (no PR merge event; linear tranche)"
+  merge: "landed 2026-10-01 via syllabai-core PR #41 (merge commit 69365ff, house
+    merge-commit convention, operator-directed flag-fix) — core-ci run 36835793706
+    SUCCESS on the integration ref; supersedes the 09-28 linear-tranche note — the
+    content had in fact never reached main (see closeout_2026-09-28 + errata_2026-10-01)"
   follow_ups:
     - "post-merge: the ~340 per-node reads per serving request drop to 2 queries
       per subject root (subtree CTE + batched predicate)"
@@ -77,3 +80,22 @@ task:
     honest_note: "the house merge-commit convention was not used — the landing
       came as the audit lane's linear push; recorded as found, no history
       rewritten, no lane attribution asserted beyond the commit trail"
+
+  errata_2026-10-01:
+    correction: "The 2026-09-28 closeout's landing claims are corrected by first-hand
+      commit-graph evidence: 1551c1a (the deep-audit stack root) has parent d4e0f7a —
+      the pushed stack never contained 42534db, and pickaxe over pre-merge main
+      (b30e603) finds zero commits ever touching the batched-predicate string in
+      CurriculumScopeResolver.java. The closeout claims '42534db verified first-hand
+      as an ancestor of origin/main' and 'zero diff remains between head and main'
+      were recording errors — no history rewrite occurred (1551c1a's surviving parent
+      chain is dispositive). The M2-M7 audit fixes themselves DID land (1551c1a,
+      df6ef7e, 795a7ac, 05f2621 are all ancestors of main). Net: the ~340-reads/search
+      fix was silently absent from serving main for 3 days."
+    restoration: "PR #41 reopened the task's own branch (head 42534db, byte-unchanged)
+      onto current main; clean auto-merge with V53's resolveForCourse additions to the
+      same class verified locally before opening; core-ci run 36835793706 SUCCESS on
+      the integration ref; merged as 69365ff."
+    lesson: "task-ledger landing claims must be content-verified (pickaxe/tree), not
+      just SHA-claimed; the 2026-10-01 project-state audit caught this by grepping
+      main's resolver before trusting the DONE record."
