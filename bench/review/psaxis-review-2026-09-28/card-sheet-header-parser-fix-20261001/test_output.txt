@@ -1,0 +1,21 @@
+test_duplicate_marks (__main__.TestFailClosed.test_duplicate_marks) ... ok
+test_missing_marks (__main__.TestFailClosed.test_missing_marks) ... ok
+test_missing_qnum (__main__.TestFailClosed.test_missing_qnum) ... ok
+test_missing_type (__main__.TestFailClosed.test_missing_type) ... ok
+test_non_integer_marks (__main__.TestFailClosed.test_non_integer_marks) ... ok
+test_renderer_never_fabricates (__main__.TestFailClosed.test_renderer_never_fabricates) ... ok
+test_stem_with_pipes_survives (__main__.TestFailClosed.test_stem_with_pipes_survives) ... ok
+test_unrecognized_bare_segment (__main__.TestFailClosed.test_unrecognized_bare_segment) ... ok
+test_wrong_marker (__main__.TestFailClosed.test_wrong_marker) ... ok
+test_no_qmark_fallback_in_module (__main__.TestNoRegressionToFabrication.test_no_qmark_fallback_in_module) ... ok
+test_smoke_cli_runs_on_real_headers (__main__.TestNoRegressionToFabrication.test_smoke_cli_runs_on_real_headers) ... ok
+test_renderer_emits_true_header_not_qmark (__main__.TestRealNoLinkageHeaders.test_renderer_emits_true_header_not_qmark) ... ok
+test_spec_note_wording (__main__.TestRealNoLinkageHeaders.test_spec_note_wording) ... ok
+test_true_values_parsed (__main__.TestRealNoLinkageHeaders.test_true_values_parsed) ... ok
+test_empty_spec_is_honest_none (__main__.TestSpecPresentHeaders.test_empty_spec_is_honest_none) ... ok
+test_full_parse_with_spec (__main__.TestSpecPresentHeaders.test_full_parse_with_spec) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.009s
+
+OK
