@@ -25,10 +25,10 @@ This is the **main repository**: the master project pack (specification, decisio
 
 ## Start here
 
-1. `MASTER_SPEC.md` — engineering source of truth (v1.3.0 — 2026-09-11 Cycle-1 scope revision per ADR-019; originally merged & verified 2026-09-03 as v1.1; Addenda 1.4 (Learner Interaction Memory) & 1.5 (Contextual Learning Assistant), 2026-09-15, govern the newest layers)
+1. `MASTER_SPEC.md` — engineering source of truth (v1.3.1 — 2026-10-01 documentation-accuracy alignment of v1.3.0, whose 2026-09-11 Cycle-1 scope revision per ADR-019 remains the last architecture change; originally merged & verified 2026-09-03 as v1.1; Addenda 1.4 (Learner Interaction Memory) & 1.5 (Contextual Learning Assistant), 2026-09-15, govern the newest layers)
 2. `AGENT.md` — operating manual for coding/research agents
 3. `backlog/syllabai-master-project.xlsx` — **definitive feature tracker** (TSV export alongside; `Cycle` column = Paper B Cycle-1 pilot cut; green = Cycle 1, amber = critical-path spine)
-4. `DECISIONS.md` — architecture decision records (ADR-001…022; ADR-021 mirrored from its standalone file)
+4. `DECISIONS.md` — architecture decision records (ADR-001…029; standalone root mirrors exist for ADR-017/020/021/023/025/027 — `DECISIONS.md` is canonical)
 5. `REPOSITORY_RESEARCH.md` — external repo dossier (section 0 = verified integration verdicts & license corrections)
 6. `ARCHITECTURE_REFERENCE_REGISTER.md` — curated architecture/UX/orchestration reference list (OpenHuman added 2026-09-05)
 7. `PLATFORM_RESEARCH.md` — verified platform/free-tier research
@@ -37,7 +37,7 @@ This is the **main repository**: the master project pack (specification, decisio
 
 ## Execution scope
 
-**Cycle 1 = the course project**: Edexcel International GCSE Chemistry (4CH1) — subject scope moved from IAL Chemistry by ADR-019 (2026-09-11) — ~50 retake-path students, 8 weeks, Tutor + Assessor agents only (Paper B's own Cycle-1 definition). 34 backlog rows, 12 of them the critical-path spine. Everything else is Cycle 2+. See Master Spec §39a.
+**Cycle 1 = the course project**: Edexcel International GCSE Chemistry (4CH1) — subject scope moved from IAL Chemistry by ADR-019 (2026-09-11) — ~50 retake-path students, 8 weeks, Tutor + Assessor agents only (Paper B's own Cycle-1 definition). 36 backlog rows, 12 of them the critical-path spine (count re-verified against `backlog/syllabai-master-project.tsv` col `Cycle` on 2026-10-01 — documentation accuracy audit F-1; the tracker is authoritative). Everything else is Cycle 2+. See Master Spec §39a.
 
 ## Source hierarchy (do not silently resolve conflicts)
 

@@ -1,7 +1,7 @@
 # SyllabAI Master Technical Specification
 
 **Document status:** Canonical project specification  
-**Specification version:** 1.3.0 (Cycle-1 scope revision, 2026-09-11 — ADR-019: the Cycle-1 pilot subject moves from Edexcel IAL Chemistry to Edexcel International GCSE Chemistry (4CH1); §39a Subject bullet rewritten, all other architecture content unchanged from v1.2.1)  
+**Specification version:** 1.3.1 (2026-10-01 — documentation-accuracy alignment only: §3 repository set amended for ADR-029/`syllabai-ops` and the parser engine line corrected; §39a Cycle-1 row count corrected 34→36; no architecture content changed from v1.3.0, which remains the last architecture revision — Cycle-1 scope, 2026-09-11, ADR-019: the Cycle-1 pilot subject moves from Edexcel IAL Chemistry to Edexcel International GCSE Chemistry (4CH1); §39a Subject bullet rewritten)  
 **Research date:** 2026-09-02  
 **Project:** SyllabAI  
 **Academic context:** Advanced Object Oriented Programming (Java backend)  
@@ -113,13 +113,24 @@ Never introduce a paid-only infrastructure dependency when an equivalent free/op
 SyllabAI is a multi-repository project. Repositories are separated only where a component has an independent responsibility, lifecycle, runtime, language, test strategy, or deployment model.
 
 ```text
-SyllabAI GitHub account (github.com/SyllabAI) — 8 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`; amended 2026-09-13: the content-ops repositories `syllabai-pastpapers` + `syllabai-resources` complete the then-7-repo set; amended 2026-09-15: `syllabai-teacher-workbench` (teacher validation workbench: staged decision importer, evidence packs, release/verification tooling) joins as the 8th repository — the README repo map is the authoritative list)
+SyllabAI GitHub account (github.com/SyllabAI) — 11 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`; amended 2026-09-13: the content-ops repositories `syllabai-pastpapers` + `syllabai-resources` complete the then-7-repo set; amended 2026-09-15: `syllabai-teacher-workbench` (teacher validation workbench: staged decision importer, evidence packs, release/verification tooling) joins as the 8th repository; amended 2026-10-01 (documentation accuracy audit F-2): ADR-029 (2026-09-28) promoted `syllabai-demo` to the product frontend as the new repo `syllabai-hub` (`syllabai-web` demoted to the internal teacher/ops console; `syllabai-demo` frozen), and `syllabai-ops` (automation & ops) joined — the README repo map remains the authoritative list)
 │
 ├── syllabai  (this repo — the "main repo")
 │   └── master project pack: spec, ADRs, backlog, research dossiers, papers
 │
+├── syllabai-hub  (public)
+│   └── PRODUCT FRONTEND (ADR-029, promoted from syllabai-demo
+│       2026-09-28): Next.js 16 / React 19 / TypeScript
+│       (Vercel, syllabai-hub.vercel.app)
+│
 ├── syllabai-web
-│   └── Next.js 16 / React 19 / TypeScript frontend (Vercel)
+│   └── internal teacher/ops console (demoted per ADR-029):
+│       Next.js 16 / React 19 / TypeScript (Vercel);
+│       Smart Mark / marking queue home; product-surface
+│       development frozen
+│
+├── syllabai-demo  (public)
+│   └── frozen prototype playground (per ADR-029)
 │
 ├── syllabai-core
 │   └── Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith
@@ -129,8 +140,10 @@ SyllabAI GitHub account (github.com/SyllabAI) — 8 repositories (ADR-012 amende
 │
 ├── syllabai-parser
 │   └── polyglot offline content pipeline: Java in-process
-│       (opendataloader-pdf via Maven) + Python/Rust offline engines
-│       (MinerU / Surya / anydoc / pdf-inspector)
+│       (opendataloader-pdf via Maven) + Python GLM-OCR tooling
+│       (Markdown/QP-MS extraction); MinerU / Surya / anydoc /
+│       pdf-inspector adapters DEFERRED behind the DocumentParser
+│       port (corrected 2026-10-01 per the parser README — audit F-10)
 │
 ├── syllabai-pastpapers  (public)
 │   └── canonical exam-material corpus: manifests, SHA-256 provenance,
@@ -143,6 +156,10 @@ SyllabAI GitHub account (github.com/SyllabAI) — 8 repositories (ADR-012 amende
 ├── syllabai-teacher-workbench  (public)
 │   └── teacher validation workbench: staged decision importer,
 │       evidence packs, release/verification tooling
+│
+├── syllabai-ops  (public)
+│   └── automation & ops: dashboard refresh + Discord pulse
+│       (GitHub Actions)
 │
 └── Past-Papers  (public, 689 MB)
     └── official content corpus: Edexcel IAL/IGCSE past papers +
@@ -1500,7 +1517,7 @@ The build waves in section 39 describe the full-system roadmap. The **authoritat
 - **Population:** ~50 retake-path students, 8 weeks.
 - **Agents in scope:** **Tutor + Assessor only** (Paper B Cycle 1). No coach/counselor agents.
 - **Study:** pre-registered predictions P1–P8 evaluated against learning-log telemetry.
-- **Feature cut:** the rows marked `Cycle 1` in the definitive backlog (34 rows; 12 of them are the critical-path spine: F-020 syllabus parser → F-032 KG → F-033 overlay → F-040 KA-RAG → F-041/F-043 tutor chat with citations → F-047 Smart Mark → F-055 attempt logging → F-137/F-138 learner model + BKT → F-148 LLM provider → F-160 learning log).
+- **Feature cut:** the rows marked `Cycle 1` in the definitive backlog (36 rows — corrected from 34 on 2026-10-01 per the documentation accuracy audit F-1, tracker `backlog/syllabai-master-project.tsv` col `Cycle` is authoritative; 12 of them are the critical-path spine: F-020 syllabus parser → F-032 KG → F-033 overlay → F-040 KA-RAG → F-041/F-043 tutor chat with citations → F-047 Smart Mark → F-055 attempt logging → F-137/F-138 learner model + BKT → F-148 LLM provider → F-160 learning log).
 - **Everything else** (teacher analytics depth, DAT, gamification, mobile, community, multimodal, mock-exam blueprints) is Cycle 2+ and must not be pulled into Cycle 1. The 2026-09-07 architecture extensions — subject-first workspaces (F-164+), the teacher/classroom LMS layer (TFA-01…TFA-08), point-level question tagging (F-168), the learning-first recommender (ADR-017) and the blueprint-driven Mock Exam Generator (ADR-018, F-171…F-176) — are likewise Cycle 2+ unless individually promoted by an explicit scope decision.
 
 **Cycle-1 exit criteria:** BKT updates live for all pilot topics; KA-RAG answers carry verbatim citations; Smart Mark released to students only after the κ ≥ 0.60 agreement gate (F-161) vs human double-marking; the learning log captures the Paper B §3.5 research fields (keystroke/dwell timing, self-doubt flag, response latency, IRT item parameters); the timed-vs-untimed fluency-gap construct (F-162) is computed for every pilot student.
