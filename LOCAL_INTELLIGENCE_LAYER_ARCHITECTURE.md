@@ -5,6 +5,12 @@
 **Scope:** Browser-local intelligence for the SyllabAI website, with emphasis on mobile browsers, low/mid-range devices, fast perceived performance, bounded tool use, Knowledge Graph navigation, learner-state-aware actions, and escalation to server/large-model paths.
 **Primary artifact:** This document is the durable research and architecture record for the Local Intelligence Layer discussion.
 
+**Post-research corrections (2026-10-01, verbatim-preserving — nothing below is silently rewritten):**
+
+1. **ADR-029 hub alignment.** This research was written 2026-09-17, before ADR-029 (2026-09-28) promoted `syllabai-hub` to the product frontend and demoted `syllabai-web` to the internal teacher/ops console. Every "SyllabAI website" / "SyllabAI Web" reference below now reads as **`syllabai-hub`** (Next.js 16 · React 19 · TypeScript, live at `syllabai-hub.vercel.app`): the Semantic Page Context layer (§7), the LocalStore/cache abstraction (§18) and the deterministic tool broker (§25 Phase 1) belong in the hub, with every governed read/action flowing through `syllabai-core` proxies exactly as the tutor/CLA surfaces do today.
+2. **Retrieval-quality dependency (the missing gate).** The escalation ladder in §17 terminates in the Tutor deep path. Per the Tutor current-state audit (2026-09-28), serving is VALIDATED-only (317/3,831 chunks), every RAG §8 promotion verdict to date is NOT PROMOTED, and the live refusal rate is 27–31%. A perfectly-routed local action can therefore still terminate in a deterministic refusal today. **LIL's fast-path value proposition is gated on the retrieval promotion lane (corpus validation + §8(d) scoring); Phases 2+ must not be scheduled ahead of it.**
+3. **Model research refresh — Needle 3.** Cactus released Needle 3 on 2026-09-17/19, immediately after this document's research date. §4.1b records the successor research (REPORTED/UNVERIFIED); the Phase 2 benchmark comparison set becomes Needle 2 vs Needle 3.
+
 ## 1. Executive summary
 
 SyllabAI should investigate a **Local Intelligence Layer** that makes the website locally agentic without making browser LLM inference a prerequisite for using SyllabAI.
@@ -124,6 +130,18 @@ A recent third-party evaluation reported weaknesses with a 16-tool catalogue and
 
 **Status: PROPOSED primary candidate; benchmark required.**
 
+### 4.1b Needle 3 — successor released 2026-09-17/19 (post-research refresh 2026-10-01)
+
+Cactus released Needle 3 one to two days after this document's research date, so §4's original survey could not see it. Third-party coverage and the official `Cactus-Compute/needle3` repository describe a **121M-parameter** tool-calling model distributed as **8–29 MB "slices"** of one weight set — a 2→20-layer "intelligence ladder" — built on a Laddered Simple Attention Network recipe (Monarch Hadamard MLP replacing the FFN, GQA attention). Like Needle 2 it produces structured tool calls / JSON rather than open-ended chat, keeping the controller-not-tutor positioning. These are vendor/third-party claims and remain **UNVERIFIED for SyllabAI** until measured on the target device matrix.
+
+Why it matters for SyllabAI:
+
+- the slice ladder maps naturally onto the §5 device tiers (smaller slices for Tier B ordinary mobile, a fuller ladder for Tier C capable devices) — IF slice-wise capability and confidence behaviour hold up, which is exactly what the Phase 2 benchmark must test;
+- the larger parameter count may blunt the small-catalogue weakness seen in the third-party Needle 2 evaluation, but the §29 open questions must be re-asked against Needle 3 before any conclusion — especially open question #3: whether a Needle 3 slice carries a larger effective context than Needle 2's 256 tokens is decisive for tool schemas + Semantic Page Context;
+- Needle 2 is **not** deprecated by this: the Phase 2 comparison set becomes **Needle 2 vs Needle 3** (with the server controller baseline), and FunctionGemma/LFM2.5 drop to optional extras only if both Needle models measure poorly.
+
+**Status: REPORTED — successor candidate; benchmark alongside Needle 2 required.**
+
 ### 4.2 FunctionGemma 270M
 
 FunctionGemma is a function-calling model attractive for concrete API specialization and fine-tuning. Mobile deployment footprint is the concern. A current ecosystem deployment example reports an INT8 artifact around 271 MB, substantially larger than Needle's reported 14 MB. This example is not an official SyllabAI benchmark. citeturn0search9
@@ -187,6 +205,8 @@ Do not choose one universal model. Make the **tool contract** the stable archite
 - additional local language functionality.
 
 All tiers use the same semantic tool contract.
+
+(2026-10-01 refresh: the §4.1b Needle 3 slice ladder may become the preferred Tier-B/C controller — benchmark against Needle 2 before any tier assignment. The tier structure itself is unchanged.)
 
 ## 6. Local Intelligence Layer architecture
 
@@ -737,6 +757,7 @@ Compare:
 
 ```text
 Needle 2
+Needle 3 (121M ladder slices — §4.1b, added 2026-10-01)
 server controller baseline
 LFM2.5 230M/350M (optional)
 FunctionGemma 270M (optional)
@@ -939,4 +960,11 @@ This document builds on the canonical project architecture, especially `MASTER_S
 - WebLLM official repository: browser-local WebGPU inference and OpenAI-compatible interface. citeturn0search8
 - Independent Needle evaluation: evidence of tool/argument accuracy degradation with larger catalogues and the need for confidence-gated fallback. citeturn0search7
 
-External claims are research evidence, not SyllabAI verification. Device performance and production suitability remain **UNVERIFIED** until measured on SyllabAI's target device matrix.
+### Post-research external check performed 2026-10-01
+
+- Cactus `Cactus-Compute/needle3` official repository + third-party coverage (nodesdaily.com 2026-09-19; pirateface.co model card 2026-09-20; spectrumailab.com 2026-09-21): Needle 3 is a 121M-parameter automation/tool-calling model shipping 8–29 MB weight slices (2→20-layer ladder), Laddered Simple Attention Network (Monarch Hadamard MLP, GQA), structured tool calls/JSON rather than chat.
+- LiquidAI cookbook (checked 2026-10-01): LFM2 now documents in-browser WebGPU tool calling — the Tier-C optional path is stronger than at research time.
+- Needle 2 claims from 2026-09-17 remain externally consistent (45M/14 MB agentic model; Aug 2026 coverage agrees).
+- Retrieval-quality dependency evidence: `TUTOR_CURRENT_STATE_AUDIT_2026-09-28.md` (VALIDATED-only serving 317/3,831 chunks; all §8 promotion verdicts NOT PROMOTED; live refusal 27–31%).
+
+These claims remain REPORTED/UNVERIFIED for SyllabAI purposes; device performance and production suitability are still gated on the §26 benchmark. External claims are research evidence, not SyllabAI verification. Device performance and production suitability remain **UNVERIFIED** until measured on SyllabAI's target device matrix.

@@ -1,0 +1,174 @@
+{
+  "purpose": "pre-flight for standing-menu item (2): eval-gated embed_rev re-stamp of the VALIDATED serving pool 1->2 + CURRENT_EMBED_REV flip",
+  "operator_trace_id": "1a0e8efc1773852d",
+  "mode": "READ_ONLY (set_session(readonly=True))",
+  "started_at_utc": "2026-09-28T17:08:31.687248+00:00",
+  "active_curriculum_versions": [
+    {
+      "id": "356840e6-81e2-49df-8182-93ab6504d591",
+      "code": "4CH1-2017",
+      "status": "ACTIVE"
+    }
+  ],
+  "supply_matrix": [
+    {
+      "kind": "EXTERNAL_NOTES",
+      "doc_state": "VALIDATED",
+      "embed_rev": 1,
+      "chunks": 350,
+      "embedded": 350
+    },
+    {
+      "kind": "EXTERNAL_QUESTIONS",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 747,
+      "embedded": 747
+    },
+    {
+      "kind": "EXTERNAL_QUESTIONS",
+      "doc_state": "VALIDATED",
+      "embed_rev": 1,
+      "chunks": 309,
+      "embedded": 309
+    },
+    {
+      "kind": "MARK_SCHEME",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 1,
+      "chunks": 160,
+      "embedded": 160
+    },
+    {
+      "kind": "MARK_SCHEME",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 1173,
+      "embedded": 1173
+    },
+    {
+      "kind": "MARK_SCHEME",
+      "doc_state": "VALIDATED",
+      "embed_rev": 1,
+      "chunks": 161,
+      "embedded": 161
+    },
+    {
+      "kind": "QUESTION_PAPER",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 1,
+      "chunks": 129,
+      "embedded": 129
+    },
+    {
+      "kind": "QUESTION_PAPER",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 1007,
+      "embedded": 1007
+    },
+    {
+      "kind": "QUESTION_PAPER",
+      "doc_state": "VALIDATED",
+      "embed_rev": 1,
+      "chunks": 145,
+      "embedded": 145
+    },
+    {
+      "kind": "SYLLABUS",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 162,
+      "embedded": 162
+    }
+  ],
+  "exact_gate_rev1_serving_today": {
+    "eligible_chunks": 965,
+    "of_them_embedded": 965
+  },
+  "exact_gate_rev2_after_flip": {
+    "eligible_chunks": 0,
+    "of_them_embedded": 0
+  },
+  "gate_rev1_kind_split": {
+    "EXTERNAL_NOTES": 350,
+    "EXTERNAL_QUESTIONS": 309,
+    "MARK_SCHEME": 161,
+    "QUESTION_PAPER": 145
+  },
+  "scope_integrity": {
+    "null_embedding": 0,
+    "wrong_model": 0,
+    "subject_branch_null_subject": 0,
+    "subject_branch_unvalidated_doc": 0,
+    "model": "gemini-embedding-001"
+  },
+  "documents_census": {
+    "EXTERNAL_NOTES:VALIDATED": 112,
+    "EXTERNAL_QUESTIONS:SUGGESTED": 80,
+    "EXTERNAL_QUESTIONS:VALIDATED": 299,
+    "MARK_SCHEME:SUGGESTED": 156,
+    "MARK_SCHEME:VALIDATED": 13,
+    "QUESTION_PAPER:SUGGESTED": 164,
+    "QUESTION_PAPER:VALIDATED": 13,
+    "SYLLABUS:SUGGESTED": 162
+  },
+  "teacher_validation_events": 0,
+  "audit_tail": [
+    {
+      "occurred_at": "2026-09-28 15:22:24.877260+00:00",
+      "actor": "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)",
+      "action": "VALIDATE",
+      "target_type": "document"
+    },
+    {
+      "occurred_at": "2026-09-28 15:22:24.877260+00:00",
+      "actor": "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)",
+      "action": "VALIDATE",
+      "target_type": "document"
+    },
+    {
+      "occurred_at": "2026-09-28 15:22:24.877260+00:00",
+      "actor": "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)",
+      "action": "VALIDATE",
+      "target_type": "document"
+    },
+    {
+      "occurred_at": "2026-09-28 15:22:24.877260+00:00",
+      "actor": "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)",
+      "action": "VALIDATE",
+      "target_type": "document"
+    },
+    {
+      "occurred_at": "2026-09-28 15:22:24.877260+00:00",
+      "actor": "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)",
+      "action": "VALIDATE",
+      "target_type": "document"
+    },
+    {
+      "occurred_at": "2026-09-28 15:22:24.877260+00:00",
+      "actor": "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)",
+      "action": "VALIDATE",
+      "target_type": "document"
+    },
+    {
+      "occurred_at": "2026-09-28 15:22:24.877260+00:00",
+      "actor": "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)",
+      "action": "VALIDATE",
+      "target_type": "document"
+    },
+    {
+      "occurred_at": "2026-09-28 15:22:24.877260+00:00",
+      "actor": "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)",
+      "action": "VALIDATE",
+      "target_type": "document"
+    }
+  ],
+  "audit_rows_total": 477,
+  "served_set_snapshot": {
+    "file": "served_set_pre.json",
+    "chunk_ids": 965
+  },
+  "status": "PREFLIGHT_OK",
+  "finished_at_utc": "2026-09-28T17:08:36.598830+00:00"
+}

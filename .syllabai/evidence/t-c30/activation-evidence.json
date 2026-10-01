@@ -1,0 +1,34 @@
+{
+  "task": "T-C30",
+  "title": "Operator-directed KG-tree applicability backfill activation",
+  "date": "2026-09-26",
+  "operator_directive": "operator chose option (a) in session web-98866c45, 2026-09-26",
+  "vehicle": "syllabai-web PR #11 (ec29148, merged 6a3971a) — ConceptGraphActivate workflow_dispatch + scripts/ops/tc30_concept_graph_activate.py",
+  "runs": [
+    {
+      "run_id": 36253537636,
+      "conclusion": "success",
+      "activation_status": 200,
+      "seed_summary": {"sections": 4, "subsections": 28, "specPoints": 182, "practicals": 12, "conceptNodes": 113, "validatedSemanticEdges": 153, "nodesCreated": 0, "nodesReused": 340, "edgesCreated": 0, "edgesReused": 496, "alreadyActive": true},
+      "pre_activation_learner_kg": {"rootCode": "4CH1", "nodes": 374, "nonNullApplicability": 0, "missingApplicabilityKey": 0},
+      "post_activation_learner_kg": {"rootCode": "4CH1", "nodes": 374, "nonNullApplicability": 182, "missingApplicabilityKey": 0}
+    },
+    {
+      "run_id": 36253728888,
+      "purpose": "idempotency proof (acceptance criterion)",
+      "conclusion": "success",
+      "activation_status": 200,
+      "seed_summary": {"nodesCreated": 0, "nodesReused": 340, "edgesCreated": 0, "edgesReused": 496, "alreadyActive": true},
+      "pre_activation_learner_kg": {"rootCode": "4CH1", "nodes": 374, "nonNullApplicability": 182},
+      "post_activation_learner_kg": {"rootCode": "4CH1", "nodes": 374, "nonNullApplicability": 182},
+      "drift_warning": false
+    }
+  ],
+  "independent_sweep_verification": {
+    "tool": "tc28_post_deploy_sweep.py re-run 2026-09-26T15:57Z",
+    "verdict": "GREEN 6/6",
+    "learner_kg_non_null_applicability": 182,
+    "paper_detail_first_ref": {"code": "4CH1-4.23", "role": "PRIMARY", "applicability": {"papers": ["1C", "2C"], "double_award_shared": true, "rule": "C-suffixed points are Chemistry-only content (not in Science Double Award) and are assessed in Paper 2C only; non-C points are shared with 4SD0 and assessed in both papers (PDF pages 7, 13, 14)"}},
+    "note": "ref-level applicability inherits from the same KG nodes via the T-C24 shared projection — papers surface (T-C25/T-C29) and MasteryMap (T-C29) both activate at once"
+  }
+}

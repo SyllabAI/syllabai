@@ -1,0 +1,151 @@
+[
+ {
+  "slug": "4ch0-1c-201106",
+  "exit": 0,
+  "ref_class": "HOLD-FLAGS",
+  "ref_flags": [
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "ref_q": 11,
+  "ref_marks": 120,
+  "ref_verified": false,
+  "new_q": 11,
+  "new_marks": 120,
+  "new_verified": true,
+  "new_flags": [
+   "PART-MARKS-MISMATCH"
+  ],
+  "cleared": [
+   "MS-POINTS-DONT-CLOSE"
+  ],
+  "gained": []
+ },
+ {
+  "slug": "4ch0-2c-201201",
+  "exit": 2,
+  "ref_class": "HOLD-FLAGS",
+  "ref_flags": [
+   "MS-PART-NO-POINTS",
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "ref_q": 8,
+  "ref_marks": 60,
+  "ref_verified": false,
+  "new_q": 8,
+  "new_marks": 60,
+  "new_verified": false,
+  "new_flags": [
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "cleared": [
+   "MS-PART-NO-POINTS"
+  ],
+  "gained": []
+ },
+ {
+  "slug": "4ch0-1c-201401",
+  "exit": 0,
+  "ref_class": "HOLD-FLAGS",
+  "ref_flags": [
+   "MS-PART-NO-POINTS",
+   "MS-POINT-UNKNOWN-PART",
+   "MS-POINTS-DONT-CLOSE",
+   "MS-QUESTION-MISSING",
+   "PART-MARKS-MISMATCH"
+  ],
+  "ref_q": 14,
+  "ref_marks": 120,
+  "ref_verified": false,
+  "new_q": 14,
+  "new_marks": 120,
+  "new_verified": false,
+  "new_flags": [
+   "MS-PART-NO-POINTS",
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "cleared": [
+   "MS-POINT-UNKNOWN-PART",
+   "MS-QUESTION-MISSING"
+  ],
+  "gained": []
+ },
+ {
+  "slug": "4ch1-1c-201906",
+  "exit": 0,
+  "ref_class": "HOLD-FLAGS",
+  "ref_flags": [
+   "MS-PART-NO-POINTS",
+   "MS-POINT-UNKNOWN-PART",
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH",
+   "PRINTED-TOTAL-DISCREPANCY-QP-VS-MS"
+  ],
+  "ref_q": 10,
+  "ref_marks": 110,
+  "ref_verified": false,
+  "new_q": 8,
+  "new_marks": 55,
+  "new_verified": false,
+  "new_flags": [
+   "MS-PART-NO-POINTS",
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "cleared": [
+   "MS-POINT-UNKNOWN-PART",
+   "PRINTED-TOTAL-DISCREPANCY-QP-VS-MS"
+  ],
+  "gained": []
+ },
+ {
+  "slug": "4ch1-2c-202106",
+  "exit": 0,
+  "ref_class": "HOLD-FLAGS",
+  "ref_flags": [
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "ref_q": 7,
+  "ref_marks": 70,
+  "ref_verified": false,
+  "new_q": 7,
+  "new_marks": 70,
+  "new_verified": false,
+  "new_flags": [
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "cleared": [],
+  "gained": []
+ },
+ {
+  "slug": "4ch1-1c-202406",
+  "exit": 0,
+  "ref_class": "HOLD-FLAGS",
+  "ref_flags": [
+   "MS-PART-NO-POINTS",
+   "MS-POINT-UNKNOWN-PART",
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "ref_q": 10,
+  "ref_marks": 110,
+  "ref_verified": false,
+  "new_q": 10,
+  "new_marks": 110,
+  "new_verified": false,
+  "new_flags": [
+   "MS-PART-NO-POINTS",
+   "MS-POINTS-DONT-CLOSE",
+   "PART-MARKS-MISMATCH"
+  ],
+  "cleared": [
+   "MS-POINT-UNKNOWN-PART"
+  ],
+  "gained": []
+ }
+]

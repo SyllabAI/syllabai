@@ -1,0 +1,28 @@
+{
+ "mode": "EXECUTE",
+ "started": "2026-09-28T19:09:37.762269+00:00",
+ "papers_total": 104,
+ "audit_pre": {
+  "rows": 477,
+  "latest": "2026-09-28 15:22:24.87726+00"
+ },
+ "plan": {
+  "validate_papers": 27,
+  "validate_qv": 246,
+  "validate_sch": 246,
+  "validate_docs": 32,
+  "flag_papers": 0
+ },
+ "served_eligible_pre": 965,
+ "audit_rows_written": 600,
+ "papers_post": {
+  "FLAGGED": 49,
+  "REJECTED": 13,
+  "SUGGESTED": 1,
+  "VALIDATED": 41
+ },
+ "audit_post_rows": 1077,
+ "served_eligible_post": 1118,
+ "committed": "2026-09-28T19:14:04.987237+00:00",
+ "ok": true
+}

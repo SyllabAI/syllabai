@@ -1,0 +1,249 @@
+# SIB Artifact Schema v1
+
+**Status:** PROPOSED  
+**Protocol:** SIB v1
+
+## 1. Filename
+
+Canonical filename:
+
+`<SUBJECT>_<SPECIFICATION>_<ARTIFACT_ID>_<SLUG>.md`
+
+Example:
+
+`CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md`
+
+Filename-contract definition (resolved 2026-10-01, before any 4CH1 generation):
+
+* Segment 2 is the **specification code** (`4CH1`), not the qualification name.
+  This makes the template and the worked example agree: the example has always
+  filled this slot with `4CH1`, which is the stable specification context
+  SyllabAI uses for identity.
+* The **qualification** (`International GCSE`) remains a required front-matter
+  metadata field; it participates in validation and chunk metadata but not in
+  the filename.
+* `<SLUG>` is the artifact title slug (`MISCONCEPTION_ATLAS` for `MIS-01`);
+  deterministic derivation is pinned by the validator tooling
+  (`tools/sib/taxonomy.py::canonical_filename`).
+* This definition is made while the SIB architecture is still PROPOSED; the
+  convention is recorded as `PROPOSED/DEFINED` and is binding for SIB v1
+  artifact generation once the protocol is accepted. No architecture-status
+  promotion is implied by this clarification.
+
+## 2. Required front matter
+
+Every artifact must begin with YAML front matter:
+
+```yaml
+---
+sib_protocol: SIB-1.0
+artifact_id: MIS-01
+artifact_version: 1.0
+subject: Chemistry
+qualification: International GCSE
+specification: 4CH1
+curriculum_version: "2017"
+
+research_family: misconception_intelligence
+applicability: REQUIRED
+
+temporal_scope:
+  current: true
+  legacy: true
+
+source_scope:
+  specification: true
+  textbook: true
+  question_papers: true
+  mark_schemes: true
+  examiner_reports: true
+  supplementary: true
+
+status: GENERATED
+generated_by: notebooklm
+generated_at: YYYY-MM-DD
+
+provenance:
+  notebook: "<subject notebook identifier>"
+  source_manifest: "<source manifest identifier>"
+---
+```
+
+Fields may be extended, but the required fields above must not be removed.
+
+The `status` field participates in the publication lifecycle defined in §3.
+It is declared by the generator as `GENERATED` and is never self-promoted;
+promotion happens only through governed SIB ingestion operations.
+
+## 3. Publication lifecycle
+
+Canonical lifecycle (defined 2026-10-01; recorded as `PROPOSED/DEFINED`):
+
+```text
+GENERATED
+    ↓
+QA_PASSED
+    ↓
+STAGED
+    ↓
+PUBLISHED
+```
+
+Failure path:
+
+```text
+GENERATED
+    ↓
+QA_FAILED
+```
+
+Status rules (binding for SIB v1 artifacts; the same terminology is used by
+the SIB validator tooling on the governed ingestion path):
+
+1. Newly generated NotebookLM/SIB artifacts must enter as `GENERATED`. A
+   landing artifact may declare only `GENERATED` (or `QA_FAILED` after a
+   failed QA run); any other status is a validation error.
+2. An artifact's own front matter MUST NOT be trusted to self-authorize
+   `QA_PASSED`, `STAGED` or `PUBLISHED`. These statuses are only reachable
+   through the governed staging path; a landing artifact self-declaring them
+   is rejected as an unsupported publication state.
+3. `QA_PASSED` is assigned only after the SIB validator/QA process produces
+   valid evidence — a passing QA report bound to the artifact's exact
+   content.
+4. `STAGED` requires valid QA evidence: the QA report must exist, pass, and
+   match the current artifact content. QA followed by an edit is detected
+   and refused; evidence must be re-produced for the changed content.
+5. `PUBLISHED` requires valid QA evidence — re-verified at publication time
+   — and the governed staging/publication operation. There is no
+   `GENERATED -> PUBLISHED` or `QA_PASSED -> PUBLISHED` shortcut.
+6. `NOT_APPLICABLE` artifacts do not enter the publication lifecycle. They
+   are inventory, not pipeline candidates, and never advance to
+   `QA_PASSED`, `STAGED` or `PUBLISHED`.
+7. Structural validation does not mean educational correctness. A passing
+   validation report is a structural QA verdict only.
+8. Passing SIB validation does not promote an artifact into canonical
+   curriculum truth, authoritative KG truth, learner truth or assessment
+   truth. SIB does not silently promote generated research into canonical
+   educational truth (Subject Intelligence Build v1, §5).
+
+Terminal-status invariants (matching the implemented lifecycle):
+
+* `QA_FAILED` is terminal for a given `artifact_version`; regeneration
+  produces a new `artifact_version` whose status starts at `GENERATED`.
+* `PUBLISHED` is terminal; further edits require a new `artifact_version`.
+* The validator itself never performs a status transition and never
+  rewrites artifact status; transitions happen only through the governed
+  ingestion operations (qa / stage / publish) inside the research-library
+  root.
+
+This lifecycle definition is made while the SIB architecture is still
+PROPOSED; the definition is recorded as `PROPOSED/DEFINED` and is binding
+for SIB v1 artifact generation and ingestion once the protocol is accepted.
+No architecture-status promotion is implied by this definition.
+
+## 4. Universal sections
+
+Every artifact must contain:
+
+1. Purpose
+2. Scope
+3. Executive Summary
+4. Main Analysis
+5. Evidence / Source Basis
+6. Limitations / Coverage Gaps
+7. Research Status
+
+Family-specific sections follow.
+
+## 5. Claim conventions
+
+Where practical, claims should identify:
+- subject/topic;
+- SpecificationPoint(s);
+- concept(s);
+- source evidence;
+- current/legacy temporal scope;
+- assessment context;
+- confidence or strength where the research format supports it.
+
+Do not invent SpecificationPoint IDs. If the corpus does not support a precise mapping, say so.
+
+## 6. Current vs legacy
+
+Legacy evidence must be explicitly labelled.
+
+Use:
+- CURRENT — AUTHORITATIVE
+- LEGACY — HISTORICAL
+- SUPPLEMENTARY
+- RESEARCH / INFERRED
+
+A historical observation must not be phrased as current curriculum truth without current evidence.
+
+## 7. Machine-readable research records
+
+When an artifact contains repeated records, use stable IDs:
+
+`MIS-001`, `MIS-002`, etc.
+
+Each record should preserve provenance and subject anchors.
+
+Example:
+
+```markdown
+### MIS-001 — [short name]
+
+**Concepts:** ...
+**Specification Points:** ...
+**Temporal scope:** CURRENT
+**Assessment context:** ...
+**Misconception:** ...
+**Why it occurs:** ...
+**Correct understanding:** ...
+**Typical manifestation:** ...
+**Diagnostic signals:** ...
+**Intervention ideas:** ...
+**Evidence:** ...
+```
+
+## 8. No silent normalization
+
+Do not silently:
+- merge distinct concepts;
+- convert legacy terminology into current terminology;
+- infer a prerequisite as canonical;
+- turn co-occurrence into a pedagogical dependency;
+- treat semantic similarity as educational truth.
+
+Such findings remain research claims until governed by SyllabAI validation.
+
+## 9. Determinism
+
+Repeated ingestion of the same artifact must preserve:
+- artifact ID;
+- metadata;
+- record IDs;
+- source references;
+- temporal labels.
+
+Content may be regenerated, but the pipeline must make changes observable through hashes/diffs.
+
+## 10. Chunking expectations
+
+The final Markdown is authored for semantic chunking, not arbitrary fixed-size splitting.
+
+Prefer boundaries around:
+- one research claim;
+- one misconception;
+- one question archetype;
+- one concept explanation;
+- one procedure;
+- one tutor pattern.
+
+Chunks should retain artifact ID, record ID, subject, qualification, temporal scope and relevant curriculum anchors in metadata.
+
+## 11. Runtime eligibility
+
+A research artifact/chunk is Tutor-servable only when its SyllabAI publication status (§3) permits serving.
+
+NotebookLM output alone does not confer runtime eligibility.

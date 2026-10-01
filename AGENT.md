@@ -73,14 +73,19 @@ The Master Spec is the engineering source of truth. Research papers remain autho
 
 ```text
 syllabai                 main repo: spec, ADRs, backlog, research dossiers, papers
-syllabai-web             Next.js 16 / React 19 / TypeScript frontend
+syllabai-hub             Next.js 16 / React 19 / TypeScript PRODUCT frontend (ADR-029, promoted from syllabai-demo 2026-09-28; the Vercel project keeps the historical syllabai-web name)
+syllabai-web             internal teacher/ops console (demoted per ADR-029; Smart Mark / marking queue home; product-surface development frozen)
+syllabai-demo            frozen prototype playground (per ADR-029)
 syllabai-core            Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith
 syllabai-parser          polyglot offline content pipeline
 syllabai-pastpapers      canonical exam corpus: manifests, provenance, ledgers
 Past-Papers              official QP/MS corpus source repository
 syllabai-resources       validated revision/content corpus and corpus QA
 syllabai-teacher-workbench teacher validation workbench / staged decision importer
+syllabai-ops             automation & ops: dashboard refresh + Discord pulse (GitHub Actions)
 ```
+
+*(list corrected to the full 11-repo set on 2026-10-01 — documentation accuracy audit F-2; the T-C38 sweep of 2026-09-30 had corrected `syllabai-hub` only, leaving web/demo/ops unlisted.)*
 
 All domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live inside `syllabai-core` unless a real runtime/lifecycle boundary justifies separation.
 

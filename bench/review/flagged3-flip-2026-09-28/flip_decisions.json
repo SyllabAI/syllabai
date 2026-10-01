@@ -1,0 +1,63 @@
+{
+  "batch": "flagged3-flip-2026-09-28",
+  "decision_authority": {
+    "decision_owner": "operator — Nawaf Al Hussain Khondokar (the teacher who completed the 298-card review sheet)",
+    "decision_medium": "named IM instruction (verbatim): \"flip #207/#278/#291 to VALIDATE. And continue you to work autonomously. I dont have time to do anything\"",
+    "operator_trace_id": "1a0e7865c3b35715",
+    "decision_date_utc": "2026-09-28",
+    "basis_report_sha256": "23ead2a72ced108963621ac286059659a61681d1f25c55b67a27690bc901a305",
+    "basis": "source verification REPORT.md (sha256 23ead2a72ced108963621ac286059659a61681d1f25c55b67a27690bc901a305): 3/3 faithful to bank rows, no fabrication; the flag drivers (sheet-renderer artifact + honest spec skip) are explained; the operator, being the reviewing teacher, adopted the flip for all 3 on that basis",
+    "parent_wave": {
+      "sheet_sha256": "89c0714681ecd710be0e2d4c402f4320b1c47faa545341f20d7ffdb5b861d67e",
+      "wave_import": "content_review_audit batch, 298 operator-labeled rows, run a5d13c0a-2503-4d06-bb14-9397e9a1cf37 (import trace 1a0e702ed9960375)",
+      "flag_note_on_sheet": "0 marks, no syllabus spec linkage, and Q? / unknown question sequence; needs source verification."
+    }
+  },
+  "decisions": [
+    {
+      "sheet_seq": 207,
+      "document_id": "1c15d529-661b-53a7-a8ed-a934328e6afb",
+      "kind": "EXTERNAL_QUESTIONS",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATE",
+      "external_ref": "4ch1/past-papers/2020-01/4CH1-2C#q3",
+      "question_id": "335f5e7a-5e94-47be-a23a-732fa9133974",
+      "bank_marks": 11,
+      "spec_points": 0,
+      "verification": "SOURCE-VERIFIED — genuine question, thin stem (bank granularity); QP chunk 3 anchored"
+    },
+    {
+      "sheet_seq": 278,
+      "document_id": "ee882008-88ca-5952-af9c-5505c8f76661",
+      "kind": "EXTERNAL_QUESTIONS",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATE",
+      "external_ref": "4ch1/past-papers/2020-06/4ch1-2CR#q1",
+      "question_id": "53b9c1b6-13a5-4a6e-b112-5ff98fa7ab70",
+      "bank_marks": 5,
+      "spec_points": 0,
+      "verification": "SOURCE-VERIFIED (partial anchor) — genuine question + front-matter chrome in stem; no DB chunks for sitting, parts 4+1 corroborate"
+    },
+    {
+      "sheet_seq": 291,
+      "document_id": "1195ca6c-0ecd-5890-b63e-4c2df7ebddba",
+      "kind": "EXTERNAL_QUESTIONS",
+      "from_state": "FLAGGED",
+      "to_state": "VALIDATE",
+      "external_ref": "4ch1/past-papers/2023-01/4CH1-2CR#q1",
+      "question_id": "6b083408-6865-4610-a5b1-d806de385e58",
+      "bank_marks": 4,
+      "spec_points": 0,
+      "verification": "SOURCE-VERIFIED — genuine question opener + front-matter chrome in stem; QP chunk 0 + MS chunk 0 anchored (\"total for question 1 = 4 marks\")"
+    }
+  ],
+  "expected_census_delta": {
+    "documents_kind_EXTERNAL_QUESTIONS": {
+      "before": { "VALIDATED": 296, "SUGGESTED": 80, "FLAGGED": 3, "REJECTED": 0 },
+      "after": { "VALIDATED": 299, "SUGGESTED": 80, "FLAGGED": 0, "REJECTED": 0 },
+      "census_correction_2026_09_28": "AMENDED before execution: the kit author held no production credentials and recorded a derived (not probed) census 306V/747S/3F. Live probe (sanctioned scripts/.render_env.json, SELECT-only, 2026-09-28 ~11:2xZ, re-probed twice): documents total 999, EXTERNAL_QUESTIONS 296 VALIDATED / 80 SUGGESTED / 3 FLAGGED / 0 REJECTED — consistent with the 298-card wave (run a5d13c0a) + 80 neighbors + 1 pre-existing VALIDATED. The delta (+3 VALIDATED, -3 FLAGGED) is unchanged."
+    }
+  },
+  "boundary": "content unchanged; only documents.validation_state moves FLAGGED -> VALIDATED for exactly these 3 rows, plus one content_review_audit row each (target_type='question' vocabulary, the proven wave-import vocabulary). No embedding writes; no chunk writes (document_chunks carries no state column — serving state derives from the parent document via the JOIN). The 3 cards have spec linkage = none (the honest skips stand; the flip does not fabricate any)."
+}
+

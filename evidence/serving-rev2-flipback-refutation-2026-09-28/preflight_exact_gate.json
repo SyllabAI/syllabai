@@ -1,0 +1,106 @@
+{
+  "supply_matrix": [
+    {
+      "kind": "EXTERNAL_NOTES",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 350,
+      "embedded": 350
+    },
+    {
+      "kind": "EXTERNAL_QUESTIONS",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 747,
+      "embedded": 747
+    },
+    {
+      "kind": "EXTERNAL_QUESTIONS",
+      "doc_state": "VALIDATED",
+      "embed_rev": 1,
+      "chunks": 309,
+      "embedded": 309
+    },
+    {
+      "kind": "MARK_SCHEME",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 1,
+      "chunks": 160,
+      "embedded": 160
+    },
+    {
+      "kind": "MARK_SCHEME",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 1173,
+      "embedded": 1173
+    },
+    {
+      "kind": "MARK_SCHEME",
+      "doc_state": "VALIDATED",
+      "embed_rev": 1,
+      "chunks": 161,
+      "embedded": 161
+    },
+    {
+      "kind": "QUESTION_PAPER",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 1,
+      "chunks": 129,
+      "embedded": 129
+    },
+    {
+      "kind": "QUESTION_PAPER",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 1007,
+      "embedded": 1007
+    },
+    {
+      "kind": "QUESTION_PAPER",
+      "doc_state": "VALIDATED",
+      "embed_rev": 1,
+      "chunks": 145,
+      "embedded": 145
+    },
+    {
+      "kind": "SYLLABUS",
+      "doc_state": "SUGGESTED",
+      "embed_rev": 2,
+      "chunks": 162,
+      "embedded": 162
+    }
+  ],
+  "rev2_serving_supply": {
+    "doc_axis_eq_notes": 0,
+    "paper_axis_qp_ms": 0,
+    "total": 0
+  },
+  "rev1_serving_supply_today": 615,
+  "curriculum_versions_columns": [
+    "id",
+    "board",
+    "qualification",
+    "code",
+    "title",
+    "status",
+    "created_at"
+  ],
+  "active_curriculum_versions": [
+    {
+      "id": "356840e6-81e2-49df-8182-93ab6504d591",
+      "status": "ACTIVE",
+      "code": "4CH1-2017",
+      "title": "Pearson Edexcel International GCSE (9-1) Chemistry (4CH1, Issue 3)"
+    }
+  ],
+  "rev2_validated_paper_parts": 0,
+  "exact_gate_rev1_serving_today": {
+    "eligible_chunks": 615,
+    "of_them_embedded": 615
+  },
+  "exact_gate_rev2_after_flip": {
+    "eligible_chunks": 0,
+    "of_them_embedded": 0
+  }
+}

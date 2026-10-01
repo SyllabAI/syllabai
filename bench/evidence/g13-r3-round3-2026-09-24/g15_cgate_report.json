@@ -1,0 +1,90 @@
+{
+ "gates": [
+  {
+   "gate": "zero-teacher-validated-rows-destroyed",
+   "validated_rows_in_archives": 0,
+   "pass": true
+  },
+  {
+   "gate": "untouched-validated-january-2021-2c",
+   "pass": true,
+   "detail": [
+    {
+     "id": "f10c6814-c4ce-425d-afb6-3501eb5f06e1",
+     "state": "VALIDATED",
+     "extraction": "glm-ocr-qp-v1+glm-ocr-ms-v1"
+    }
+   ]
+  },
+  {
+   "gate": "untouched-validated-january-2020-2cr",
+   "pass": true,
+   "detail": [
+    {
+     "id": "6a50e784-ae71-4756-b932-40b8f0371094",
+     "state": "VALIDATED",
+     "extraction": "glm-ocr-qp-v1+glm-ocr-ms-v1"
+    }
+   ]
+  },
+  {
+   "gate": "untouched-validated-january-2017-2c",
+   "pass": true,
+   "detail": [
+    {
+     "id": "a14b48ef-23e3-4cd2-881a-5ee8b96bb172",
+     "state": "VALIDATED",
+     "extraction": "glm-ocr-qp-v1+glm-ocr-ms-v1"
+    }
+   ]
+  }
+ ],
+ "papers": [
+  {
+   "slug": "4ch0-1c-201801",
+   "bank_vs_draft_vs_atoms": true,
+   "draft_questions": 16,
+   "draft_sum": 120,
+   "draft_mp": 120,
+   "atoms_mp": 120
+  },
+  {
+   "slug": "4ch1-1cr-202001",
+   "bank_vs_draft_vs_atoms": true,
+   "draft_questions": 11,
+   "draft_sum": 110,
+   "draft_mp": 110,
+   "atoms_mp": 110
+  },
+  {
+   "slug": "4ch1-1cr-202101",
+   "bank_vs_draft_vs_atoms": true,
+   "draft_questions": 10,
+   "draft_sum": 110,
+   "draft_mp": 110,
+   "atoms_mp": 110
+  },
+  {
+   "slug": "4ch1-2c-201906",
+   "bank_vs_draft_vs_atoms": true,
+   "draft_questions": 8,
+   "draft_sum": 70,
+   "draft_mp": 70,
+   "atoms_mp": 70
+  }
+ ],
+ "bank_after": {
+  "questions": 1468,
+  "versions": 1468,
+  "mark_points": 4796,
+  "exam_papers": 97,
+  "version_extraction_methods": {
+   "glm-ocr-qp-v1+glm-ocr-ms-v1": 670,
+   "sme-corpus-import-v1 (ADR-026)": 593,
+   "pdflane-atoms-draft-v1": 194,
+   "v3-flat-backfill": 8,
+   "sprint-acceptance": 3
+  }
+ },
+ "all_arithmetic_ok": true
+}

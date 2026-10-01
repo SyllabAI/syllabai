@@ -1,0 +1,20 @@
+{
+ "mode": "--execute",
+ "trace": "1a0ea3c208e16699",
+ "steps": [
+  "pre-asserts green (universe 57 frozen, 49 rows SUGGESTED+0chunks, census/tail/events unchanged)",
+  "retire UPDATE rowcount = 49",
+  "audit rows = 49 (ids 3891..3939; actor Nawaf Al Hussain Khondokar)",
+  "post-asserts green (docs 567V/305S/147R \u00b7 ep 90V/0S/14R \u00b7 zero-chunk S 8=KEEP \u00b7 pool 2,935 \u00b7 events 0)",
+  "COMMITTED",
+  "ANALYZE documents done"
+ ],
+ "phases": {
+  "audit_ids": [
+   3891,
+   3939
+  ],
+  "retire_n": 49
+ },
+ "verdict": "EXECUTED"
+}

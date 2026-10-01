@@ -1,0 +1,4910 @@
+{
+ "slugs": [
+  "4ch0-1c-201106",
+  "4ch0-1c-201206",
+  "4ch0-1c-201301",
+  "4ch0-1c-201306",
+  "4ch0-1c-201401",
+  "4ch0-1c-201406",
+  "4ch0-1c-201501",
+  "4ch0-1c-201506",
+  "4ch0-1c-201601",
+  "4ch0-1c-201606",
+  "4ch0-1c-201701",
+  "4ch0-1c-201706",
+  "4ch0-1c-201801",
+  "4ch0-1c-201806",
+  "4ch0-1c-201901",
+  "4ch0-2c-201301",
+  "4ch0-2c-201306",
+  "4ch0-2c-201401",
+  "4ch0-2c-201501",
+  "4ch0-2c-201506",
+  "4ch0-2c-201601",
+  "4ch0-2c-201701",
+  "4ch0-2c-201706",
+  "4ch1-1c-201906",
+  "4ch1-1c-202001",
+  "4ch1-1c-202106",
+  "4ch1-1c-202111",
+  "4ch1-1c-202206",
+  "4ch1-1c-202406",
+  "4ch1-1cr-201906",
+  "4ch1-1cr-202001",
+  "4ch1-1cr-202006",
+  "4ch1-1cr-202101",
+  "4ch1-1cr-202201",
+  "4ch1-2c-201906",
+  "4ch1-2c-202001",
+  "4ch1-2c-202106",
+  "4ch1-2c-202201",
+  "4ch1-2cr-201906",
+  "4ch1-2cr-202101"
+ ],
+ "flagged_questions": 96,
+ "letter_findings": {
+  "SUB-MARKS-DIFF": 18,
+  "LETTER-SUM-DIFF": 49,
+  "QP-EXTRA-SUB": 39,
+  "MS-NO-POINTS": 50,
+  "QP-MISSING-SUB": 22,
+  "MS-ONLY-LETTER": 10,
+  "QP-INTERNAL": 2
+ },
+ "q_shapes": {
+  "LETTER-SUM-DIFF": 21,
+  "QP-EXTRA-SUB": 17,
+  "LETTER-SUM-DIFF+MS-NO-POINTS": 10,
+  "SUB-MARKS-DIFF": 8,
+  "MS-NO-POINTS+QP-MISSING-SUB": 8,
+  "MS-NO-POINTS+QP-EXTRA-SUB": 5,
+  "LETTER-SUM-DIFF+QP-EXTRA-SUB": 3,
+  "MS-NO-POINTS+SUB-MARKS-DIFF": 3,
+  "LETTER-SUM-DIFF+SUB-MARKS-DIFF": 2,
+  "LETTER-SUM-DIFF+QP-MISSING-SUB": 2,
+  "MS-ONLY-LETTER+QP-EXTRA-SUB+QP-MISSING-SUB": 2,
+  "MS-ONLY-LETTER+QP-EXTRA-SUB": 2,
+  "LETTER-SUM-DIFF+MS-NO-POINTS+QP-EXTRA-SUB": 2,
+  "MS-NO-POINTS+QP-EXTRA-SUB+QP-MISSING-SUB": 2,
+  "LETTER-SUM-DIFF+MS-ONLY-LETTER+QP-EXTRA-SUB": 1,
+  "MS-NO-POINTS+QP-EXTRA-SUB+QP-MISSING-SUB+SUB-MARKS-DIFF": 1,
+  "LETTER-SUM-DIFF+MS-NO-POINTS+QP-MISSING-SUB": 1,
+  "QP-EXTRA-SUB+QP-INTERNAL": 1,
+  "MS-NO-POINTS+QP-EXTRA-SUB+SUB-MARKS-DIFF": 1,
+  "QP-MISSING-SUB": 1,
+  "LETTER-SUM-DIFF+MS-NO-POINTS+MS-ONLY-LETTER": 1,
+  "QP-EXTRA-SUB+SUB-MARKS-DIFF": 1,
+  "MS-NO-POINTS+MS-ONLY-LETTER+QP-INTERNAL": 1
+ },
+ "papers": {
+  "4ch0-1c-201106": {
+   "n_flagged_q": 1,
+   "marksVerified": true,
+   "questions": [
+    {
+     "q": 8,
+     "atom_marks": 18,
+     "shape": "LETTER-SUM-DIFF+SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "c",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "diffs": {
+         "i": [
+          2,
+          1
+         ]
+        }
+       }
+      ],
+      [
+       "d",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ],
+      [
+       "e",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 4,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 2
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 3,
+         "iii": 2
+        },
+        "diffs": {
+         "ii": [
+          1,
+          3
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201206": {
+   "n_flagged_q": 4,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 8,
+     "atom_marks": 6,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 11,
+     "atom_marks": 10,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 12,
+     "atom_marks": 11,
+     "shape": "SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "b",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 3
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "diffs": {
+         "ii": [
+          3,
+          2
+         ]
+        }
+       }
+      ],
+      [
+       "c",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 5,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 2,
+         "iv": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 3,
+         "iv": 1
+        },
+        "diffs": {
+         "iii": [
+          2,
+          3
+         ]
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 13,
+     "atom_marks": 8,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201301": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 7,
+     "atom_marks": 17,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 9,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 9
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201306": {
+   "n_flagged_q": 4,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 5,
+     "atom_marks": 17,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 6,
+        "ms": 5,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "iv"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 2,
+         "iv": 2
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 3
+        },
+        "qp_extra_detail": {
+         "iv": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 6,
+     "atom_marks": 14,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 8,
+        "ms": 7,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 3,
+         "ii": 2,
+         "iii": 3
+        },
+        "ms_subs": {
+         "null": 2,
+         "ii": 2,
+         "iii": 3
+        },
+        "qp_extra_detail": {
+         "i": 3
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 8,
+     "atom_marks": 14,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 4
+        },
+        "ms_subs": {
+         "null": 3
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 11,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 3
+        },
+        "qp_extra_detail": {
+         "ii": 2
+        }
+       }
+      ],
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 5,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 5
+        },
+        "ms_subs": {
+         "null": 6
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201401": {
+   "n_flagged_q": 8,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 4,
+     "atom_marks": 5,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 5,
+     "atom_marks": 7,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ],
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 8,
+     "atom_marks": 14,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii",
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 2
+        },
+        "ms_subs": {
+         "i": 3
+        },
+        "qp_extra_detail": {
+         "ii": 1,
+         "iii": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 9,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 10,
+     "atom_marks": 7,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 11,
+     "atom_marks": 7,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "d",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 12,
+     "atom_marks": 6,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 2
+        },
+        "qp_extra_detail": {
+         "ii": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 13,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ],
+      [
+       "d",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201406": {
+   "n_flagged_q": 5,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 5,
+     "atom_marks": 11,
+     "shape": "LETTER-SUM-DIFF+SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 5,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 3,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 3,
+         "ii": 3
+        },
+        "diffs": {
+         "ii": [
+          2,
+          3
+         ]
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 9,
+     "atom_marks": 11,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1
+        },
+        "ms_subs": {
+         "ii": 1,
+         "iii": 1
+        },
+        "qp_extra_detail": {
+         "i": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 5,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1
+        },
+        "ms_subs": {
+         "i": 5
+        },
+        "qp_extra_detail": {
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    },
+    {
+     "q": 11,
+     "atom_marks": 5,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 14,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 4
+        },
+        "ms_subs": {
+         "null": 3
+        }
+       }
+      ],
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 15,
+     "atom_marks": 15,
+     "shape": "SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "b",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 6,
+        "ms": 5,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 3,
+         "ii": 2,
+         "iii": 1
+        },
+        "ms_subs": {
+         "i": 3,
+         "ii": 1,
+         "iii": 1
+        },
+        "diffs": {
+         "ii": [
+          2,
+          1
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201501": {
+   "n_flagged_q": 2,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 7,
+     "atom_marks": 17,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "e",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 8,
+     "atom_marks": 10,
+     "shape": "SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "f",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1
+        },
+        "diffs": {
+         "i": [
+          2,
+          1
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201506": {
+   "n_flagged_q": 2,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 6,
+     "atom_marks": 17,
+     "shape": "MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "c",
+       "QP-MISSING-SUB",
+       {
+        "qp": 3,
+        "ms": 5,
+        "ms_missing_subs": [
+         "ii"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 3,
+         "ii": 2
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    },
+    {
+     "q": 8,
+     "atom_marks": 14,
+     "shape": "MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "e",
+       "QP-MISSING-SUB",
+       {
+        "qp": 3,
+        "ms": 8,
+        "ms_missing_subs": [
+         "iii"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 3,
+         "ii": 3,
+         "iii": 2
+        }
+       }
+      ],
+      [
+       "f",
+       "MS-NO-POINTS",
+       {
+        "qp": 5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201601": {
+   "n_flagged_q": 12,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 1,
+     "atom_marks": 7,
+     "shape": "LETTER-SUM-DIFF+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 3,
+        "ms": 5,
+        "ms_missing_subs": [
+         "v",
+         "iv"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1,
+         "iv": 1,
+         "v": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 2,
+     "atom_marks": 7,
+     "shape": "MS-ONLY-LETTER+QP-EXTRA-SUB+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 5,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 4,
+         "ii": 1
+        },
+        "ms_subs": {
+         "null": 1
+        },
+        "qp_extra_detail": {
+         "i": 4,
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 2,
+        "ms": 5,
+        "ms_missing_subs": [
+         "i"
+        ],
+        "ms_missing_marks": 5,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "i": 5
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 2
+       }
+      ]
+     ]
+    },
+    {
+     "q": 3,
+     "atom_marks": 7,
+     "shape": "MS-ONLY-LETTER+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 6,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "ii",
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2,
+         "iii": 2
+        },
+        "ms_subs": {
+         "null": 1
+        },
+        "qp_extra_detail": {
+         "i": 2,
+         "ii": 2,
+         "iii": 2
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 1
+       }
+      ],
+      [
+       "d",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 2
+       }
+      ]
+     ]
+    },
+    {
+     "q": 4,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "ii",
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1
+        },
+        "ms_subs": {
+         "null": 1
+        },
+        "qp_extra_detail": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "e",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ]
+     ]
+    },
+    {
+     "q": 5,
+     "atom_marks": 8,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 2,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1
+        },
+        "ms_subs": {
+         "null": 3
+        },
+        "qp_extra_detail": {
+         "i": 1,
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 3,
+        "ms": 5,
+        "ms_missing_subs": [
+         "iv",
+         "iii"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 2,
+         "iii": 1,
+         "iv": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    },
+    {
+     "q": 6,
+     "atom_marks": 8,
+     "shape": "MS-ONLY-LETTER+QP-EXTRA-SUB+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 6,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "ii",
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 3,
+         "ii": 1,
+         "iii": 2
+        },
+        "ms_subs": {
+         "null": 4
+        },
+        "qp_extra_detail": {
+         "i": 3,
+         "ii": 1,
+         "iii": 2
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 3
+       }
+      ]
+     ]
+    },
+    {
+     "q": 7,
+     "atom_marks": 17,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 4
+        },
+        "ms_subs": {
+         "null": 3
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ],
+      [
+       "e",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "f",
+       "MS-NO-POINTS",
+       {
+        "qp": 4
+       }
+      ]
+     ]
+    },
+    {
+     "q": 8,
+     "atom_marks": 10,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "e",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ],
+      [
+       "f",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    },
+    {
+     "q": 9,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ],
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 4,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 4,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "i": 2,
+         "ii": 2
+        }
+       }
+      ],
+      [
+       "d",
+       "QP-MISSING-SUB",
+       {
+        "qp": 2,
+        "ms": 3,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 3,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "i": 2,
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "e",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 3,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 3,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 10,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF+MS-ONLY-LETTER+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 5,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 5
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ],
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2,
+         "iii": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "qp_extra_detail": {
+         "iii": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 3
+       }
+      ],
+      [
+       "d",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 3
+       }
+      ],
+      [
+       "e",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 1
+       }
+      ]
+     ]
+    },
+    {
+     "q": 11,
+     "atom_marks": 14,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB+QP-MISSING-SUB+SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "ms_subs": {
+         "null": 2
+        },
+        "qp_extra_detail": {
+         "i": 1,
+         "ii": 2
+        }
+       }
+      ],
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 3,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 3
+        },
+        "diffs": {
+         "ii": [
+          2,
+          3
+         ]
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 5
+       }
+      ]
+     ]
+    },
+    {
+     "q": 12,
+     "atom_marks": 15,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-MISSING-SUB",
+       {
+        "qp": 2,
+        "ms": 4,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 4,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "i": 2,
+         "ii": 2
+        }
+       }
+      ],
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ],
+      [
+       "e",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "f",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ],
+      [
+       "g",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201606": {
+   "n_flagged_q": 1,
+   "marksVerified": true,
+   "questions": [
+    {
+     "q": 4,
+     "atom_marks": 9,
+     "shape": "QP-EXTRA-SUB+QP-INTERNAL",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 11,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "v",
+         "ii",
+         "iv",
+         "vi",
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 6,
+         "ii": 1,
+         "iii": 1,
+         "iv": 1,
+         "v": 1,
+         "vi": 1
+        },
+        "ms_subs": {
+         "i": 6
+        },
+        "qp_extra_detail": {
+         "v": 1,
+         "ii": 1,
+         "iv": 1,
+         "vi": 1,
+         "iii": 1
+        }
+       }
+      ],
+      [
+       null,
+       "QP-INTERNAL",
+       {
+        "leaf_sum": 14,
+        "atom_marks": 9
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201701": {
+   "n_flagged_q": 2,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 5,
+     "atom_marks": 17,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 7,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "v"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1,
+         "iii": 2,
+         "iv": 1,
+         "v": 1
+        },
+        "ms_subs": {
+         "i": 2,
+         "ii": 1,
+         "iii": 2,
+         "iv": 1
+        },
+        "qp_extra_detail": {
+         "v": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 10,
+     "atom_marks": 10,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 7,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 3,
+         "ii": 1,
+         "iii": 2,
+         "iv": 1
+        },
+        "ms_subs": {
+         "ii": 1,
+         "iii": 2,
+         "iv": 1
+        },
+        "qp_extra_detail": {
+         "i": 3
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201706": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 2,
+     "atom_marks": 11,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB+SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ],
+      [
+       "d",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 3,
+         "ii": 1
+        },
+        "ms_subs": {
+         "i": 3
+        },
+        "qp_extra_detail": {
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "e",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 4,
+        "ms": 5,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 3,
+         "ii": 1
+        },
+        "ms_subs": {
+         "i": 4,
+         "ii": 1
+        },
+        "diffs": {
+         "i": [
+          3,
+          4
+         ]
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 4,
+     "atom_marks": 13,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "d",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 5,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2,
+         "iii": 1,
+         "iv": 1
+        },
+        "ms_subs": {
+         "ii": 2,
+         "iii": 1,
+         "iv": 1
+        },
+        "qp_extra_detail": {
+         "i": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 10,
+     "atom_marks": 18,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1
+        },
+        "ms_subs": {
+         "null": 2
+        },
+        "qp_extra_detail": {
+         "i": 2,
+         "ii": 1
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201801": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 6,
+     "shape": "LETTER-SUM-DIFF+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ],
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "ms_subs": {
+         "ii": 2
+        },
+        "qp_extra_detail": {
+         "i": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 12,
+     "atom_marks": 7,
+     "shape": "MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 5,
+        "ms_missing_subs": [
+         "i",
+         "ii",
+         "iii"
+        ],
+        "ms_missing_marks": 4,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 1,
+         "i": 2,
+         "ii": 1,
+         "iii": 1
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 4
+       }
+      ]
+     ]
+    },
+    {
+     "q": 16,
+     "atom_marks": 8,
+     "shape": "MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 6,
+        "ms_missing_subs": [
+         "ii",
+         "iii"
+        ],
+        "ms_missing_marks": 4,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 2,
+         "ii": 1,
+         "iii": 3
+        }
+       }
+      ],
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201806": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 8,
+     "atom_marks": 11,
+     "shape": "SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "d",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 3,
+        "ms": 9,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 8
+        },
+        "diffs": {
+         "ii": [
+          2,
+          8
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-1c-201901": {
+   "n_flagged_q": 1,
+   "marksVerified": true,
+   "questions": [
+    {
+     "q": 2,
+     "atom_marks": 9,
+     "shape": "MS-NO-POINTS+SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "a",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ],
+      [
+       "b",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 3,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1
+        },
+        "ms_subs": {
+         "i": 5,
+         "ii": 1
+        },
+        "diffs": {
+         "i": [
+          2,
+          5
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-2c-201301": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 2,
+     "atom_marks": 4,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1
+        },
+        "ms_subs": {
+         "i": 1
+        },
+        "qp_extra_detail": {
+         "ii": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 6,
+     "atom_marks": 11,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "d",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 3
+        },
+        "ms_subs": {
+         "ii": 3
+        },
+        "qp_extra_detail": {
+         "i": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 7,
+     "atom_marks": 10,
+     "shape": "SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "a",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 8,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1,
+         "iii": 2,
+         "iv": 3
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1,
+         "iv": 3
+        },
+        "diffs": {
+         "i": [
+          2,
+          1
+         ],
+         "iii": [
+          2,
+          1
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-2c-201306": {
+   "n_flagged_q": 4,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "d",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 4,
+     "atom_marks": 7,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 6,
+     "atom_marks": 19,
+     "shape": "LETTER-SUM-DIFF+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 5,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 5
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ],
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 6
+        }
+       }
+      ],
+      [
+       "d",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 5,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 3,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 3
+        },
+        "qp_extra_detail": {
+         "ii": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 7,
+     "atom_marks": 9,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ],
+      [
+       "d",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 1
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-2c-201401": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 5,
+     "atom_marks": 13,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-2c-201501": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 10,
+     "shape": "QP-MISSING-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 3,
+        "ms": 10,
+        "ms_missing_subs": [
+         "i",
+         "ii"
+        ],
+        "ms_missing_marks": 7,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 3,
+         "i": 2,
+         "ii": 5
+        }
+       }
+      ],
+      [
+       "d",
+       "QP-MISSING-SUB",
+       {
+        "qp": 3,
+        "ms": 4,
+        "ms_missing_subs": [
+         "ii"
+        ],
+        "ms_missing_marks": 1,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 3,
+         "ii": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 4,
+     "atom_marks": 15,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "a",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 7
+       }
+      ],
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 6
+        }
+       }
+      ],
+      [
+       "d",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 4,
+        "ms": 9,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 4
+        },
+        "ms_subs": {
+         "null": 9
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 7,
+     "atom_marks": 6,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 8,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 8
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-2c-201506": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 2,
+     "atom_marks": 8,
+     "shape": "MS-NO-POINTS+SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "c",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 3,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 2
+        },
+        "diffs": {
+         "iii": [
+          1,
+          2
+         ]
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ]
+     ]
+    },
+    {
+     "q": 3,
+     "atom_marks": 10,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 8,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "iv"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1,
+         "iv": 2,
+         "v": 1,
+         "vi": 2
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1,
+         "v": 1,
+         "vi": 2
+        },
+        "qp_extra_detail": {
+         "iv": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 6,
+     "atom_marks": 14,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 9,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 2,
+         "null": 7
+        },
+        "qp_extra_detail": {
+         "ii": 2
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-2c-201601": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 10,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ],
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 5,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 3,
+         "ii": 1,
+         "iii": 1
+        },
+        "ms_subs": {
+         "i": 3,
+         "ii": 1
+        },
+        "qp_extra_detail": {
+         "iii": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 5,
+     "atom_marks": 11,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 6,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2,
+         "iii": 2
+        },
+        "ms_subs": {
+         "i": 2,
+         "iii": 2
+        },
+        "qp_extra_detail": {
+         "ii": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 7,
+     "atom_marks": 6,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 3,
+        "ms": 9,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 3
+        },
+        "ms_subs": {
+         "null": 9
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-2c-201701": {
+   "n_flagged_q": 1,
+   "marksVerified": true,
+   "questions": [
+    {
+     "q": 5,
+     "atom_marks": 8,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ],
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch0-2c-201706": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 5,
+     "atom_marks": 15,
+     "shape": "SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "b",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 8,
+        "ms": 12,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 2,
+         "ii": 4,
+         "iii": 2
+        },
+        "ms_subs": {
+         "i": 2,
+         "ii": 8,
+         "iii": 2
+        },
+        "diffs": {
+         "ii": [
+          4,
+          8
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1c-201906": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 9,
+     "atom_marks": 6,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 10,
+     "atom_marks": 7,
+     "shape": "MS-NO-POINTS+SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "a",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 4,
+        "ms": 5,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 2,
+         "ii": 3
+        },
+        "diffs": {
+         "ii": [
+          2,
+          3
+         ]
+        }
+       }
+      ],
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    },
+    {
+     "q": 14,
+     "atom_marks": 14,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 1,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 3
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1c-202001": {
+   "n_flagged_q": 2,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 2,
+     "atom_marks": 8,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 5,
+        "ms": 10,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 5
+        },
+        "ms_subs": {
+         "null": 10
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 6,
+     "atom_marks": 12,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 1,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 4
+        }
+       }
+      ],
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1c-202106": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 5,
+     "atom_marks": 15,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 3,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2,
+         "iii": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "qp_extra_detail": {
+         "iii": 1
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1c-202111": {
+   "n_flagged_q": 2,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 1,
+     "atom_marks": 5,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS+MS-ONLY-LETTER",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 7,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 7
+        }
+       }
+      ],
+      [
+       "i",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "a",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 3
+       }
+      ]
+     ]
+    },
+    {
+     "q": 2,
+     "atom_marks": 6,
+     "shape": "SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "b",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 4,
+        "ms": 10,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 2,
+         "ii": 8
+        },
+        "diffs": {
+         "ii": [
+          2,
+          8
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1c-202206": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 5,
+     "atom_marks": 11,
+     "shape": "SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "a",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 6,
+        "ms": 7,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1,
+         "iii": 1,
+         "iv": 2
+        },
+        "ms_subs": {
+         "i": 3,
+         "ii": 1,
+         "iii": 1,
+         "iv": 2
+        },
+        "diffs": {
+         "i": [
+          2,
+          3
+         ]
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1c-202406": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 10,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "b",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 6
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 4
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1cr-201906": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 15,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 6,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2,
+         "iii": 2
+        },
+        "ms_subs": {
+         "ii": 2,
+         "iii": 2
+        },
+        "qp_extra_detail": {
+         "i": 2
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 4,
+     "atom_marks": 13,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 7,
+        "ms": 9,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "iv"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2,
+         "iii": 1,
+         "iv": 2
+        },
+        "ms_subs": {
+         "ii": 7,
+         "iii": 2
+        },
+        "qp_extra_detail": {
+         "i": 2,
+         "iv": 2
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 4
+       }
+      ]
+     ]
+    },
+    {
+     "q": 5,
+     "atom_marks": 13,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 5,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i",
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1
+        },
+        "ms_subs": {
+         "null": 5
+        },
+        "qp_extra_detail": {
+         "i": 2,
+         "ii": 1
+        }
+       }
+      ],
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 2,
+        "ms": 8,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 2
+        },
+        "ms_subs": {
+         "null": 8
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1cr-202001": {
+   "n_flagged_q": 2,
+   "marksVerified": true,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 9,
+     "shape": "QP-EXTRA-SUB+SUB-MARKS-DIFF",
+     "findings": [
+      [
+       "c",
+       "SUB-MARKS-DIFF",
+       {
+        "qp": 4,
+        "ms": 5,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 3,
+         "ii": 1
+        },
+        "ms_subs": {
+         "i": 3,
+         "ii": 2
+        },
+        "diffs": {
+         "ii": [
+          1,
+          2
+         ]
+        }
+       }
+      ],
+      [
+       "d",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "ms_subs": {
+         "ii": 2
+        },
+        "qp_extra_detail": {
+         "i": 1
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 11,
+     "atom_marks": 15,
+     "shape": "MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 5,
+        "ms": 13,
+        "ms_missing_subs": [
+         "iv",
+         "iii"
+        ],
+        "ms_missing_marks": 6,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "i": 4,
+         "ii": 1
+        },
+        "ms_subs": {
+         "i": 4,
+         "ii": 3,
+         "iii": 4,
+         "iv": 2
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 8
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1cr-202006": {
+   "n_flagged_q": 2,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 1,
+     "atom_marks": 6,
+     "shape": "MS-NO-POINTS+MS-ONLY-LETTER+QP-INTERNAL",
+     "findings": [
+      [
+       "i",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "a",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 3
+       }
+      ],
+      [
+       null,
+       "QP-INTERNAL",
+       {
+        "leaf_sum": 5,
+        "atom_marks": 6
+       }
+      ]
+     ]
+    },
+    {
+     "q": 3,
+     "atom_marks": 14,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-MISSING-SUB",
+       {
+        "qp": 4,
+        "ms": 7,
+        "ms_missing_subs": [
+         "ii"
+        ],
+        "ms_missing_marks": 2,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 4
+        },
+        "ms_subs": {
+         "null": 5,
+         "ii": 2
+        }
+       }
+      ],
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ],
+      [
+       "d",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 4,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 2
+        },
+        "qp_extra_detail": {
+         "ii": 2
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1cr-202101": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 4,
+     "atom_marks": 9,
+     "shape": "MS-NO-POINTS+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 6,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "i"
+        ],
+        "qp_subs": {
+         "i": 2,
+         "ii": 1
+        },
+        "ms_subs": {
+         "null": 2,
+         "ii": 4
+        },
+        "qp_extra_detail": {
+         "i": 2
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-1cr-202201": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 8,
+     "atom_marks": 15,
+     "shape": "MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "a",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 6,
+        "ms_missing_subs": [
+         "v",
+         "ii",
+         "iv",
+         "iii"
+        ],
+        "ms_missing_marks": 4,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 2,
+         "ii": 1,
+         "iii": 1,
+         "iv": 1,
+         "v": 1
+        }
+       }
+      ],
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-2c-201906": {
+   "n_flagged_q": 1,
+   "marksVerified": true,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 9,
+     "shape": "MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-MISSING-SUB",
+       {
+        "qp": 1,
+        "ms": 7,
+        "ms_missing_subs": [
+         "i",
+         "ii",
+         "iii"
+        ],
+        "ms_missing_marks": 6,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 1,
+         "i": 2,
+         "ii": 2,
+         "iii": 2
+        }
+       }
+      ],
+      [
+       "c",
+       "MS-NO-POINTS",
+       {
+        "qp": 6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-2c-202001": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 1,
+     "atom_marks": 5,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "iii": 1
+        },
+        "qp_extra_detail": {
+         "ii": 1
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-2c-202106": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 7,
+     "atom_marks": 12,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "c",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 1,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "ii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 2
+        },
+        "ms_subs": {
+         "i": 1
+        },
+        "qp_extra_detail": {
+         "ii": 2
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-2c-202201": {
+   "n_flagged_q": 1,
+   "marksVerified": true,
+   "questions": [
+    {
+     "q": 3,
+     "atom_marks": 9,
+     "shape": "MS-ONLY-LETTER+QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 5,
+        "ms": 4,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "iv"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 2,
+         "iv": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 2
+        },
+        "qp_extra_detail": {
+         "iv": 1
+        }
+       }
+      ],
+      [
+       "g",
+       "MS-ONLY-LETTER",
+       {
+        "ms": 1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-2cr-201906": {
+   "n_flagged_q": 3,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 2,
+     "atom_marks": 7,
+     "shape": "LETTER-SUM-DIFF",
+     "findings": [
+      [
+       "a",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 5,
+        "ms": 21,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 5
+        },
+        "ms_subs": {
+         "null": 21
+        }
+       }
+      ]
+     ]
+    },
+    {
+     "q": 4,
+     "atom_marks": 15,
+     "shape": "MS-NO-POINTS+QP-MISSING-SUB",
+     "findings": [
+      [
+       "d",
+       "QP-MISSING-SUB",
+       {
+        "qp": 5,
+        "ms": 8,
+        "ms_missing_subs": [
+         "i",
+         "ii",
+         "iii"
+        ],
+        "ms_missing_marks": 3,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 5
+        },
+        "ms_subs": {
+         "null": 5,
+         "i": 1,
+         "ii": 1,
+         "iii": 1
+        }
+       }
+      ],
+      [
+       "e",
+       "MS-NO-POINTS",
+       {
+        "qp": 3
+       }
+      ]
+     ]
+    },
+    {
+     "q": 5,
+     "atom_marks": 11,
+     "shape": "QP-EXTRA-SUB",
+     "findings": [
+      [
+       "b",
+       "QP-EXTRA-SUB",
+       {
+        "qp": 3,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [
+         "iii"
+        ],
+        "qp_subs": {
+         "i": 1,
+         "ii": 1,
+         "iii": 1
+        },
+        "ms_subs": {
+         "i": 1,
+         "ii": 1
+        },
+        "qp_extra_detail": {
+         "iii": 1
+        }
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  "4ch1-2cr-202101": {
+   "n_flagged_q": 1,
+   "marksVerified": false,
+   "questions": [
+    {
+     "q": 7,
+     "atom_marks": 6,
+     "shape": "LETTER-SUM-DIFF+MS-NO-POINTS",
+     "findings": [
+      [
+       "b",
+       "MS-NO-POINTS",
+       {
+        "qp": 2
+       }
+      ],
+      [
+       "c",
+       "LETTER-SUM-DIFF",
+       {
+        "qp": 1,
+        "ms": 2,
+        "ms_missing_subs": [],
+        "ms_missing_marks": 0,
+        "qp_extra_subs": [],
+        "qp_subs": {
+         "null": 1
+        },
+        "ms_subs": {
+         "null": 2
+        }
+       }
+      ],
+      [
+       "d",
+       "MS-NO-POINTS",
+       {
+        "qp": 1
+       }
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "samples": {
+  "SUB-MARKS-DIFF": [
+   {
+    "slug": "4ch0-1c-201106",
+    "q": 8,
+    "letter": "c",
+    "detail": {
+     "qp": 4,
+     "ms": 3,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 2,
+      "ii": 2
+     },
+     "ms_subs": {
+      "i": 1,
+      "ii": 2
+     },
+     "diffs": {
+      "i": [
+       2,
+       1
+      ]
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201106",
+    "q": 8,
+    "letter": "e",
+    "detail": {
+     "qp": 4,
+     "ms": 6,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 2
+     },
+     "ms_subs": {
+      "i": 1,
+      "ii": 3,
+      "iii": 2
+     },
+     "diffs": {
+      "ii": [
+       1,
+       3
+      ]
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201206",
+    "q": 12,
+    "letter": "b",
+    "detail": {
+     "qp": 4,
+     "ms": 3,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 1,
+      "ii": 3
+     },
+     "ms_subs": {
+      "i": 1,
+      "ii": 2
+     },
+     "diffs": {
+      "ii": [
+       3,
+       2
+      ]
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201206",
+    "q": 12,
+    "letter": "c",
+    "detail": {
+     "qp": 5,
+     "ms": 6,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 2,
+      "iv": 1
+     },
+     "ms_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 3,
+      "iv": 1
+     },
+     "diffs": {
+      "iii": [
+       2,
+       3
+      ]
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201406",
+    "q": 5,
+    "letter": "c",
+    "detail": {
+     "qp": 5,
+     "ms": 6,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 3,
+      "ii": 2
+     },
+     "ms_subs": {
+      "i": 3,
+      "ii": 3
+     },
+     "diffs": {
+      "ii": [
+       2,
+       3
+      ]
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201406",
+    "q": 15,
+    "letter": "b",
+    "detail": {
+     "qp": 6,
+     "ms": 5,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 3,
+      "ii": 2,
+      "iii": 1
+     },
+     "ms_subs": {
+      "i": 3,
+      "ii": 1,
+      "iii": 1
+     },
+     "diffs": {
+      "ii": [
+       2,
+       1
+      ]
+     }
+    }
+   }
+  ],
+  "LETTER-SUM-DIFF": [
+   {
+    "slug": "4ch0-1c-201106",
+    "q": 8,
+    "letter": "d",
+    "detail": {
+     "qp": 2,
+     "ms": 1,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 2
+     },
+     "ms_subs": {
+      "null": 1
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201206",
+    "q": 8,
+    "letter": "b",
+    "detail": {
+     "qp": 3,
+     "ms": 2,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 3
+     },
+     "ms_subs": {
+      "null": 2
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201206",
+    "q": 11,
+    "letter": "b",
+    "detail": {
+     "qp": 3,
+     "ms": 1,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 3
+     },
+     "ms_subs": {
+      "null": 1
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201206",
+    "q": 13,
+    "letter": "c",
+    "detail": {
+     "qp": 2,
+     "ms": 1,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 2
+     },
+     "ms_subs": {
+      "null": 1
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201301",
+    "q": 7,
+    "letter": "c",
+    "detail": {
+     "qp": 3,
+     "ms": 9,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 3
+     },
+     "ms_subs": {
+      "null": 9
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201306",
+    "q": 8,
+    "letter": "b",
+    "detail": {
+     "qp": 4,
+     "ms": 3,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 4
+     },
+     "ms_subs": {
+      "null": 3
+     }
+    }
+   }
+  ],
+  "QP-EXTRA-SUB": [
+   {
+    "slug": "4ch0-1c-201306",
+    "q": 5,
+    "letter": "a",
+    "detail": {
+     "qp": 6,
+     "ms": 5,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [
+      "iv"
+     ],
+     "qp_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 2,
+      "iv": 2
+     },
+     "ms_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 3
+     },
+     "qp_extra_detail": {
+      "iv": 2
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201306",
+    "q": 6,
+    "letter": "b",
+    "detail": {
+     "qp": 8,
+     "ms": 7,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [
+      "i"
+     ],
+     "qp_subs": {
+      "i": 3,
+      "ii": 2,
+      "iii": 3
+     },
+     "ms_subs": {
+      "null": 2,
+      "ii": 2,
+      "iii": 3
+     },
+     "qp_extra_detail": {
+      "i": 3
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201306",
+    "q": 11,
+    "letter": "a",
+    "detail": {
+     "qp": 4,
+     "ms": 3,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [
+      "ii"
+     ],
+     "qp_subs": {
+      "i": 2,
+      "ii": 2
+     },
+     "ms_subs": {
+      "i": 3
+     },
+     "qp_extra_detail": {
+      "ii": 2
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201401",
+    "q": 8,
+    "letter": "c",
+    "detail": {
+     "qp": 4,
+     "ms": 3,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [
+      "ii",
+      "iii"
+     ],
+     "qp_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 2
+     },
+     "ms_subs": {
+      "i": 3
+     },
+     "qp_extra_detail": {
+      "ii": 1,
+      "iii": 2
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201401",
+    "q": 12,
+    "letter": "a",
+    "detail": {
+     "qp": 4,
+     "ms": 2,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [
+      "ii"
+     ],
+     "qp_subs": {
+      "i": 2,
+      "ii": 2
+     },
+     "ms_subs": {
+      "i": 2
+     },
+     "qp_extra_detail": {
+      "ii": 2
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201406",
+    "q": 9,
+    "letter": "a",
+    "detail": {
+     "qp": 3,
+     "ms": 2,
+     "ms_missing_subs": [],
+     "ms_missing_marks": 0,
+     "qp_extra_subs": [
+      "i"
+     ],
+     "qp_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 1
+     },
+     "ms_subs": {
+      "ii": 1,
+      "iii": 1
+     },
+     "qp_extra_detail": {
+      "i": 1
+     }
+    }
+   }
+  ],
+  "MS-NO-POINTS": [
+   {
+    "slug": "4ch0-1c-201406",
+    "q": 9,
+    "letter": "d",
+    "detail": {
+     "qp": 3
+    }
+   },
+   {
+    "slug": "4ch0-1c-201506",
+    "q": 6,
+    "letter": "d",
+    "detail": {
+     "qp": 3
+    }
+   },
+   {
+    "slug": "4ch0-1c-201506",
+    "q": 8,
+    "letter": "f",
+    "detail": {
+     "qp": 5
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 4,
+    "letter": "d",
+    "detail": {
+     "qp": 2
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 4,
+    "letter": "e",
+    "detail": {
+     "qp": 2
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 5,
+    "letter": "c",
+    "detail": {
+     "qp": 3
+    }
+   }
+  ],
+  "QP-MISSING-SUB": [
+   {
+    "slug": "4ch0-1c-201506",
+    "q": 6,
+    "letter": "c",
+    "detail": {
+     "qp": 3,
+     "ms": 5,
+     "ms_missing_subs": [
+      "ii"
+     ],
+     "ms_missing_marks": 2,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 3
+     },
+     "ms_subs": {
+      "null": 3,
+      "ii": 2
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201506",
+    "q": 8,
+    "letter": "e",
+    "detail": {
+     "qp": 3,
+     "ms": 8,
+     "ms_missing_subs": [
+      "iii"
+     ],
+     "ms_missing_marks": 2,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 1,
+      "ii": 2
+     },
+     "ms_subs": {
+      "i": 3,
+      "ii": 3,
+      "iii": 2
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 1,
+    "letter": "a",
+    "detail": {
+     "qp": 1,
+     "ms": 2,
+     "ms_missing_subs": [
+      "i",
+      "ii"
+     ],
+     "ms_missing_marks": 2,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 1
+     },
+     "ms_subs": {
+      "i": 1,
+      "ii": 1
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 1,
+    "letter": "b",
+    "detail": {
+     "qp": 3,
+     "ms": 5,
+     "ms_missing_subs": [
+      "v",
+      "iv"
+     ],
+     "ms_missing_marks": 2,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 1
+     },
+     "ms_subs": {
+      "i": 1,
+      "ii": 1,
+      "iii": 1,
+      "iv": 1,
+      "v": 1
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 2,
+    "letter": "b",
+    "detail": {
+     "qp": 2,
+     "ms": 5,
+     "ms_missing_subs": [
+      "i"
+     ],
+     "ms_missing_marks": 5,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "null": 2
+     },
+     "ms_subs": {
+      "i": 5
+     }
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 5,
+    "letter": "b",
+    "detail": {
+     "qp": 3,
+     "ms": 5,
+     "ms_missing_subs": [
+      "iv",
+      "iii"
+     ],
+     "ms_missing_marks": 2,
+     "qp_extra_subs": [],
+     "qp_subs": {
+      "i": 1,
+      "ii": 2
+     },
+     "ms_subs": {
+      "i": 1,
+      "ii": 2,
+      "iii": 1,
+      "iv": 1
+     }
+    }
+   }
+  ],
+  "MS-ONLY-LETTER": [
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 2,
+    "letter": "c",
+    "detail": {
+     "ms": 2
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 3,
+    "letter": "c",
+    "detail": {
+     "ms": 1
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 3,
+    "letter": "d",
+    "detail": {
+     "ms": 2
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 6,
+    "letter": "d",
+    "detail": {
+     "ms": 3
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 10,
+    "letter": "c",
+    "detail": {
+     "ms": 3
+    }
+   },
+   {
+    "slug": "4ch0-1c-201601",
+    "q": 10,
+    "letter": "d",
+    "detail": {
+     "ms": 3
+    }
+   }
+  ],
+  "QP-INTERNAL": [
+   {
+    "slug": "4ch0-1c-201606",
+    "q": 4,
+    "letter": null,
+    "detail": {
+     "leaf_sum": 14,
+     "atom_marks": 9
+    }
+   },
+   {
+    "slug": "4ch1-1cr-202006",
+    "q": 1,
+    "letter": null,
+    "detail": {
+     "leaf_sum": 5,
+     "atom_marks": 6
+    }
+   }
+  ]
+ }
+}

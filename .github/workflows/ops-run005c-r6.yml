@@ -1,0 +1,85 @@
+name: ops-run005-c-r6
+
+# Run 005 — arm C hybrid RRF k=60 (T-C13), R6 AT-FLIP generation (snap-005 +
+# gold-v4; the operator card wave is IN via SNAP5-F1/F5, 2026-09-28).
+# Benchmark-only; never on push/PR. Consumes the R6 arm-B and arm-A results
+# committed to evidence/bench-001/runs/. The §8(d) axis scores for the first
+# time (SNAP5-H1); the interpretation pre-registration (records 09a624728)
+# binds the first §8(d) reading. Core pin 05f262169 = main at the r6 freeze.
+# Output: results.json + RUN_REPORT.md + SHA256SUMS (uploaded artifact).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run005c:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: bench
+          POSTGRES_PASSWORD: bench
+          POSTGRES_DB: postgres
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U bench"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - name: Checkout records repo (frozen inputs + artifact + prior runs)
+        uses: actions/checkout@v4
+        with:
+          path: records
+
+      - name: Checkout core (harness, pinned sha)
+        uses: actions/checkout@v4
+        with:
+          repository: SyllabAI/syllabai-core
+          ref: 05f2621690843123758fe271bdfcacae9b4ed220
+          path: core
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Cache Maven repo
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: run005c-r6-m2-${{ hashFiles('core/pom.xml') }}
+          restore-keys: run005c-r6-m2-
+
+      - name: Build classpath
+        working-directory: core
+        run: mvn -B -ntp -q test-compile dependency:build-classpath -Dmdep.outputFile=../cp.txt
+
+      - name: Run arm C hybrid replay (zero API calls)
+        working-directory: core
+        env:
+          BENCH_JDBC_URL: jdbc:postgresql://localhost:5433/postgres
+          BENCH_JDBC_USER: bench
+          BENCH_JDBC_PASSWORD: bench
+          BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot-r6
+          BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold-r6
+          BENCH_EMBED_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload-r6
+          BENCH_RUN_OUT: ${{ github.workspace }}/run005c-out
+          BENCH_RUN003B_RESULTS: ${{ github.workspace }}/records/evidence/bench-001/runs/run-003-b-r6/results.json
+          BENCH_RUN004A_RESULTS: ${{ github.workspace }}/records/evidence/bench-001/runs/run-004-a-r6/results.json
+          BENCH_CORE_COMMIT: 05f2621690843123758fe271bdfcacae9b4ed220
+          BENCH_RUN_DATE: "2026-09-28"
+        run: java -Xmx3g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.Run005C
+
+      - name: Upload run record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-005-c-r6
+          path: run005c-out/
+          retention-days: 90
+

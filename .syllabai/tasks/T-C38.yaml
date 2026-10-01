@@ -1,0 +1,55 @@
+version: 1
+task:
+  id: T-C38
+  title: "Hygiene sweep: TSV<->XLSX parity (TFA-07 rows included), PROGRESS.md
+    marker, AGENT.md repo table — executed in the same session as the anchor
+    B2 flip + B3 pin and the partial T-C37 live-path drill"
+  owner: "superz (main agent, zai session discord:ObviousGazelle)"
+  status: DONE
+  priority: P2
+  base:
+    repo: syllabai (master pack)
+    commit: this record
+  basis: >
+    Operator directive (Discord DM, 2026-09-30): "Proceed with ① live-path
+    drill on the redeployed Render core with pilot-teacher credentials;
+    ② the anchor B2 flip + B3 addition ...; ③ T-C38 hygiene sweep (TSV/XLSX
+    parity — my TFA-07 rows included, PROGRESS.md marker, AGENT.md repo
+    table)".
+  scope:
+    allowed:
+      - "master-pack ledger files + the master workbook parity fix"
+    forbidden:
+      - "no runtime code changes, no content/validation state changes, no
+        TFA-01/02/03 state rewrites without evidence-backed claims (they
+        stay Planned — no tracked claim or implementation found)"
+  acceptance:
+    - "workbook mirrors the canonical TSV Status/Owner for ALL in-both rows"
+    - "TFA-07 row fully equal across the two files"
+    - "PROGRESS header states current truth instead of the 09-22 snapshot"
+    - "AGENT.md repo table names the repo frontend work actually lands in"
+  claims:
+    VERIFIED: ["workbook 181<->181 rows (physical-line parse; the csv module
+      silently swallows rows at 3 stray quote chars on lines 2/60/93);
+      after a 6-cell fix residual Status/Owner drift = 0 and TFA-07 is
+      25/25 columns equal (Status Planned->Completed, Owner
+      Unassigned->superz (T-C37), F-040/F-160 Status + Agent Notes synced)",
+      "core PR #35 merged rebase 77c7a7c; dispatched anchor-sweep run
+      36697034459 SUCCESS = 12/12 PASS (B2 SERVED(cites) PASS, B3
+      GUARD-REFUSAL PASS, all other anchors untouched PASS)",
+      "Render core live fingerprint: health 200; both new TFA-07 routes
+      (knowledge-graph/nodes/{nodeId}/students,
+      knowledge-graph/learners/{learnerId}/knowledge-graph) 401 => TFA-07
+      backend deployed; zero prod writes during probing"]
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: ["authenticated teacher drill leg — the pilot-teacher
+      password is operator-held (syllabai-ops README: the session-59
+      delivery report holding it was lost; GitHub secret write-only;
+      session-118 credential cache died with the sandbox reset)"]
+  next_safe_actions:
+    - "operator: paste current or rotated pilot-teacher credentials, then
+      re-run the authenticated drill (core already warm; curl transport)"
+    - "record the missing ingest/validation-wave ledger entry for the
+      June-2019-1C docs (the B2 flip's provenance gap, recorded not accepted)"
+    - "optional backfill: PROGRESS per-session sections for sessions 130+"

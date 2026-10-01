@@ -1,0 +1,46 @@
+{
+ "chunk_join_census": [
+  {
+   "kind": "MARK_SCHEME",
+   "embed_rev": 1,
+   "chunks": 321,
+   "q_hit": 182,
+   "with_spec": 0
+  },
+  {
+   "kind": "MARK_SCHEME",
+   "embed_rev": 2,
+   "chunks": 79,
+   "q_hit": 79,
+   "with_spec": 0
+  },
+  {
+   "kind": "QUESTION_PAPER",
+   "embed_rev": 1,
+   "chunks": 274,
+   "q_hit": 145,
+   "with_spec": 0
+  },
+  {
+   "kind": "QUESTION_PAPER",
+   "embed_rev": 2,
+   "chunks": 43,
+   "q_hit": 43,
+   "with_spec": 0
+  }
+ ],
+ "qsp_precedent": [
+  {
+   "role": "SECONDARY",
+   "provenance": "AI_VALIDATED",
+   "validation_state": "AI_VALIDATED",
+   "n": 1134
+  },
+  {
+   "role": "PRIMARY",
+   "provenance": "AI_VALIDATED",
+   "validation_state": "AI_VALIDATED",
+   "n": 591
+  }
+ ]
+}

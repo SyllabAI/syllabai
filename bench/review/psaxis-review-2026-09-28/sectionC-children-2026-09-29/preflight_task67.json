@@ -1,0 +1,149 @@
+{
+ "generated": "2026-09-29T00:34:13.741282+00:00",
+ "G1_papers": {
+  "ok": true,
+  "detail": "papers census"
+ },
+ "G1_documents": {
+  "ok": true,
+  "detail": "docs census"
+ },
+ "G1_pool_2935": {
+  "ok": true,
+  "detail": ""
+ },
+ "G1_rev1_zero": {
+  "ok": true,
+  "detail": ""
+ },
+ "G1_events_zero": {
+  "ok": true,
+  "detail": ""
+ },
+ "G1_tail_3976": {
+  "ok": true,
+  "detail": "3976"
+ },
+ "audit_tail": 3976,
+ "G2_4CH1/1C_JAN_2022_unique": {
+  "ok": true,
+  "detail": "[('566c24ca-1049-4c64-9419-b52ae3ed2213', 'pdflane-atoms-draft-v1')]"
+ },
+ "G2_4CH1/2C_JUN_2019_unique": {
+  "ok": true,
+  "detail": "[('37f7f180-6643-4635-9921-88ee8bc6aad1', 'pdflane-atoms-draft-v1')]"
+ },
+ "paper_ids": {
+  "4CH1/1C": "566c24ca-1049-4c64-9419-b52ae3ed2213",
+  "4CH1/2C": "37f7f180-6643-4635-9921-88ee8bc6aad1"
+ },
+ "G3_4CH1/1C_counts": {
+  "ok": true,
+  "detail": "(11, 11)"
+ },
+ "G3_4CH1/2C_counts": {
+  "ok": true,
+  "detail": "(8, 8)"
+ },
+ "G3_all_suggested": {
+  "ok": true,
+  "detail": "({'SUGGESTED': 19}, {'SUGGESTED': 19})"
+ },
+ "flip": {
+  "qv": [
+   "15574f42-2c1e-462e-8544-8efbf51a8555",
+   "415d5fb9-efef-43b3-9c3b-684dcea7fcc1",
+   "5eb6a690-ac23-41ae-8db5-e1bf95e4aba9",
+   "7266a643-3e0a-411a-9f5f-f21213765111",
+   "7e07b31f-c2f2-4014-a58c-0d8f52dad43c",
+   "9b13292f-ea0b-4904-9398-0966e782e621",
+   "a5e416a6-e1fe-4a1c-a036-ed2799c23430",
+   "bec72ad0-22ea-47bb-8b4d-e824f243c159",
+   "c9e29652-398e-4578-ab5e-25a2b9725a41",
+   "e8545953-51af-4612-86a2-d310ec50a204",
+   "fea7381b-29be-449a-9d21-d45f7e290b28",
+   "43f6aa74-f954-468d-84d1-999cd859dd6f",
+   "46ebd8f7-7168-40aa-943e-11d7f2a9b8b8",
+   "488dfb03-e940-4fe4-b329-7a3d57646ae9",
+   "54588e6b-d49a-4c32-a6d9-8b5e8d943c9b",
+   "833472a6-bbf3-4db4-92ae-4353d59a9e8a",
+   "dcd64a2b-ca23-4ecc-b4a4-c712447b7ab5",
+   "df7135a4-46ab-4aca-9cbb-fd1c5e2b87d8",
+   "fa9827b6-22a0-454c-80c0-ed5143b45aa3"
+  ],
+  "ms": [
+   "201af8b6-31a9-4a10-a6a7-f1078ab88555",
+   "419270f5-fbf3-43de-a225-ee84c6835de3",
+   "6066e2fc-85bf-41cc-9868-0bf64c9566c6",
+   "63cdfc41-4f6f-446e-80de-95aa4e15f457",
+   "7ed65cb7-0fab-4318-8835-861124ab4871",
+   "8ad0932f-e2f5-4da6-92a0-b87462ce747c",
+   "a987c89d-14fb-46da-8d2a-bf618a60644d",
+   "b0b75e39-e58a-4cf3-92df-4ce476ea392d",
+   "b953e1c0-c44f-4bdf-a7e1-86000f24b8a8",
+   "c3a5650a-2964-4351-ac09-6b801b631969",
+   "ea6c77c0-77c4-47eb-836f-faa18772b69b",
+   "104de4e8-c499-47e6-b639-bcced5ee8328",
+   "531997a6-7f50-49a8-a7d2-56810b538c9e",
+   "59e8da4a-6328-4c2c-975a-39f538b50042",
+   "77127c37-fe9a-46d5-9b46-45594fa5e61a",
+   "814f4337-1216-4ea6-a3c4-e702ebd629c1",
+   "9981064e-0cc5-4400-97cb-af25bc730829",
+   "bdf0ef95-bff1-4074-af4c-b456305b9777",
+   "ed3f3d85-3bbb-449b-9c39-03fd70fb1596"
+  ]
+ },
+ "G4_zero_audit_on_targets": {
+  "ok": true,
+  "detail": "0"
+ },
+ "G5_flip_mirror": {
+  "ok": true,
+  "detail": "0"
+ },
+ "G5_bank_wide_mirror": {
+  "ok": true,
+  "detail": "0"
+ },
+ "G6_active_structured": {
+  "ok": true,
+  "detail": "0"
+ },
+ "G7_4CH1/1C JAN 2022_review_all_true": {
+  "ok": true,
+  "detail": "{'R1_question_census': True, 'R2_all': True, 'R3a_all': True, 'R3b_all': True, 'R4_all': True, 'R5_all': True, 'paper_total': True}"
+ },
+ "G7_4CH1/2C JUN 2019_review_all_true": {
+  "ok": true,
+  "detail": "{'R1_question_census': True, 'R2_all': True, 'R3a_all': True, 'R3b_all': True, 'R4_all': True, 'R5_all': True, 'paper_total': True}"
+ },
+ "G7_banked_sums": {
+  "ok": true,
+  "detail": "(110, 70)"
+ },
+ "evidence_shas": {
+  "review_task67.json": "9a0789e0bcbefc2e603924256b835b1e28c4e632e7eab07d20714b406284a466",
+  "probe_task67.json": "aa0b076e2bd7db24450fe9d432278543cf4b265bc405bb53d01ef2eeafdebeba",
+  "evidence/chunks_4CH1_1C_JAN_2022_qp_doc.txt": "1eccd5f10a8c74ba3ab5b4abb86d4d7f32035d294b2cc7b774d9968ac57939dd",
+  "evidence/chunks_4CH1_1C_JAN_2022_ms_doc.txt": "57318cbb9496157e9b1b9bbc4692e4368fcec9114b53151dd673ccd37b7977ab",
+  "evidence/chunks_4CH1_2C_JUN_2019_qp_doc.txt": "956663accd97b41fb224b9ccfc72e61c2e9a3c19a4a86ca39b6aeb9acd4e675a",
+  "evidence/chunks_4CH1_2C_JUN_2019_ms_doc.txt": "a09684b18cfac7109f911a7579d3e339071b35ad24f77af1f83668dd33102461"
+ },
+ "serving_context": {
+  "4CH1/1C": {
+   "questions_with_topics": 0,
+   "active_questions": 11,
+   "questions_total": 11
+  },
+  "4CH1/2C": {
+   "questions_with_topics": 0,
+   "active_questions": 8,
+   "questions_total": 8
+  }
+ },
+ "G9_archive_frozen": {
+  "ok": true,
+  "detail": "before-images"
+ },
+ "verdict": "OPEN"
+}

@@ -1,0 +1,21 @@
+{
+  "query": "SELECT embed_rev, embedding_model, count(*), embedded, dims FROM document_chunks GROUP BY 1,2",
+  "captured_utc": "2026-09-28T12:0xZ (post-flagged3-flip, pre-flipback)",
+  "rows": [
+    {
+      "embed_rev": 1,
+      "embedding_model": "gemini-embedding-001",
+      "chunks": 904,
+      "embedded": 904,
+      "vector_dims": 768
+    },
+    {
+      "embed_rev": 2,
+      "embedding_model": "gemini-embedding-001",
+      "chunks": 3439,
+      "embedded": 3439,
+      "vector_dims": 768
+    }
+  ],
+  "reading": "identical model + dims on both revs, 100% embedded \u2014 the embed_rev stamp is a corpus-content-generation marker, NOT a model marker; a rev re-stamp of VALIDATED chunks would not mix models."
+}

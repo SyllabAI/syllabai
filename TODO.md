@@ -2,7 +2,7 @@
 
 **Scope guard:** only rows marked `Cycle 1` in `backlog/syllabai-master-project.xlsx` belong in the current execution window. The 12-spine critical path is F-020 → F-032 → F-033 → F-040 → F-041/F-043 → F-047 → F-055 → F-137/F-138 → F-148 → F-160.
 
-## Wave 0 — foundations (this week)
+## Wave 0 — foundations (week of 2026-09-03 — complete; date-stamped 2026-10-01 per the documentation accuracy audit F-9, the old relative "this week" was 4 weeks stale)
 
 - [x] T-001 Bootstrap `syllabai-core`: Spring Boot 4.1.x + Java 25 + Spring AI 2.0 skeleton, Maven, package structure per Master Spec §30. (F-002, F-008)
 - [x] T-002 Flyway + Neon connection; pgvector extension enabled; dev profile with local Postgres via Docker Compose.
@@ -47,15 +47,17 @@
   - **Web PR #2 — MERGED** (fast-forward `3402230` → `18543d2`, after core PR #6 per the runtime dependency; PR closed/merged, merge_commit_sha `18543d2`; post-merge CI 34053451121 SUCCESS — Lint ✓, Production build type-checked ✓): `DashboardView` (F-060) — mastery summary (band chips + avg effective mastery + as-of), due reviews (overdue first + Practise CTA), focus areas (lowest MEASURED mastery — labeled facts, not recommendations), misconception watch, recent activity, predicted grade = explicit not-implemented state (never a fabricated number); `KnowledgeGraphView` (F-036) — 2D-first SVG (layered columns by KG depth, band-colored nodes, solid PART_OF + dashed prerequisite edges with arrowheads, legend, keyboard-selectable nodes with aria-labels; tree view stays the accessible alternative); `MasteryMap` refactored onto ONE personalized payload — the client-side tree + /state join is retired (F-034's purpose); Tree/Graph toggle + graph node detail card + on-demand prerequisite chains + Practise CTAs; controlled tabs with dashboard → practice topic deep links (`api.questions(topicNodeId)` already existed; honest "no validated questions on this topic yet" empty state); `lib/format.ts` shared formatters (StateView deduped). Local `bun run lint` clean + `bunx next build` (type-checked) SUCCESS. **PR CI run 34051246049 SUCCESS — step-level verified (Lint ✓, Production build type-checked ✓).**
   - Deliberately out of scope: 3D force-graph (F-036 is 2D-first by scope), pan/zoom, SSE, teacher surfaces (T-029 next), recommendation policy (the recommendation package stays empty), any change to GLM-OCR/T-C04 state, core PR #1 (T-026/T-027) untouched.
 
+- [ ] DEEP-AUDIT-DOC (coordination ask to the deep-audit 09-28 lane, operator directive trace 1a0e6b95154d5cb5) **Commit the deep-audit findings document** — the lane's Tutor-safety hardening is landed and CI-green on core main (H1 `63df406`/`ae15cf4`/`fc07389` paraphrase qnum grammar + 11-anchor matrix; H2 `e5cc266` per-request untrusted-prompt fencing + citation-marker range validation, prompt v6; M1 `2f11707`/`84991b9` security-chain rate limiting), but the audit document those commits cite ("deep-audit 09-28") is committed NOWHERE — every branch of both repos searched, all lane commits are code/tests only — and the lane has no task entry in the registry (ends at T-C31). The findings taxonomy (what H1/H2/M1 are; whether H3+/M2+ exist), methodology, per-finding rationale, and what remains OPEN post-fix are recoverable only by reverse-engineering commit messages. Ask: commit the doc (canonical root beside TUTOR_CURRENT_STATE_AUDIT_2026-09-28.md is the precedent location; the lane's choice governs — durability, not location, is the requirement), enumerate ALL findings incl. any not yet fixed, state per finding what remains open after the landed fixes (for H2: claim-evidence entailment is explicitly out of the commit's scope and must not read as closed), and register a task entry per the .syllabai DAG convention. No code/serving change; r6 untouched (WAITING_FOR_GENUINE_TEACHER_VALIDATION, trace 1a0e6753792f76fd).
+
 ## Wave 4 — pilot hardening
 
 - [x] T-029 Teacher minimal surface: class list, Smart Mark review queue, overrides. — **COMPLETE and MERGED 2026-09-07 (session 16, after the user-mandated pre-merge audit passed). The documented merge order was respected: core PR #7 FIRST, then web PR #3 — both merged as fast-forward pushes (linear history, no merge commit; each main is exactly the CI-verified head, GitHub marked both PRs closed/merged with merge_commit_sha = the pushed head). The audit added one test-only commit to the core branch BEFORE merging (real-HTTP JWT RBAC regression `TeacherRouteSecurityIT`); no product code changed by the audit.**
   - **Core PR #7 — MERGED** (fast-forward `ab7a52b` → `c7d22b9`; PR closed/merged, merge_commit_sha `c7d22b9`; branch CI 34054418641 on `095a9c1` SUCCESS (214/214 unit + 23/23 IT) and audit-fix head CI **34093970676** on `c7d22b9` SUCCESS — 240/240 tests: 217 unit (214 executed + 3 new security IT) + 23/23 IT; post-merge main CI **34094254832** SUCCESS, log-inspected: 0 failures/errors/skipped, TeacherRouteSecurityIT 3/3, GlmOcrBatchIT 5/5, GlmOcrBridgeIT 7/7, MultipartMarkingFlowIT 2/2, KaRagFlowIT 3/3, BUILD SUCCESS): `GET /api/v1/teacher/learners` (`TeacherRosterController` + `UserRepository.findEnabledByRole` JPQL — the honest class list IS the enabled STUDENT cohort; the pilot has no class entity; identity projection only: id/displayName/email/createdAt, test-pinned to exactly 4 record components so password hashes/roles cannot leak); `learnerDisplayName` composed SERVER-SIDE into `AnswerMarkingView` (one batched `findAllById` per queue read; empty queue skips the lookup — the F-034 lesson: server composes the teacher read model, no client-side join). The marking/override/κ backend itself already existed on main (T-021/T-022). **Authorization (audit section 4, the mandatory proof): backend route rule `SecurityConfig` `.requestMatchers("/api/v1/teacher/**").hasAnyRole("TEACHER","ADMIN")` — NOT frontend hiding; now regression-proven by `TeacherRouteSecurityIT` (real HTTP + real JWTs over the embedded server: a STUDENT token is proven VALID on its own `/api/v1/learners/me/state` surface then denied 403 on ALL seven teacher endpoints incl. roster/queue/detail/smart-mark/human-mark/κ-latest/κ-evaluate; anonymous and forged tokens 401 with no email leakage in the body; TEACHER and ADMIN 200).** One CI iteration pre-audit, a real find: the new IT ingested the same draft as the sibling test → duplicate `uq_knowledge_node_code` on the ingestion anchor → drafts now take distinct paper codes per test.
   - **Web PR #3 — MERGED** (fast-forward `18543d2` → `2c404a4`, after core PR #7 per the runtime dependency; PR closed/merged, merge_commit_sha `2c404a4`; post-merge main CI **34094459463** SUCCESS — Lint ✓, Production build type-checked ✓, log-inspected "Compiled successfully" + "Running TypeScript"): role-gated Teacher tab (TEACHER/ADMIN — a UI affordance, never authorization; the backend route rule above is the boundary); `TeacherReviewView` — class list (cohort table with honest "classes are a Cycle-2+ concept" framing), marking queue with state tabs mapping exactly the backend `Answer.MarkingState` values (PENDING/SMART_MARKED/HUMAN_MARKED/OVERRIDDEN), answer review panel (part prompt, learner answer, latest Smart Mark with failure reasons rendered verbatim — never fabricated — and model/pipeline traceability, latest human mark), **Run Smart Mark** action (single-flight, refreshes detail+queue+κ), **Record human mark (override)** form (0..partMarks integer validation client-side, backend re-validates via ConflictException; per-point decisions seeded from the smart breakdown for κ pairing, rationale comments; first-mark-fires-evidence-once / overrides-never-re-fire semantics in the UI copy), κ gate panel (latest evaluation κ/sample/threshold/passed/scope/age + recompute + honest 404 "no evaluation recorded yet" / 409 "no paired decisions available yet" states — fail-closed framing). Local `bun run lint` clean + `bunx next build` (type-checked) SUCCESS (audit-rerun on the branch head). API integration audited: all 7 client methods match backend paths/DTOs exactly, no hardcoded learner or marking IDs anywhere.
   - Deliberately out of scope: class management (no class entity in Cycle 1), teacher analytics/heatmaps (F-074 is Cycle 2+), content-validation workflow UI (T-C04 acceptance criteria unchanged — this surface must not be declared to satisfy T-C04), per-learner diagnostics drill-downs (§6.10 deeper items), SSE. Note: this UI may eventually provide an application-native surface for portions of the T-C04 human validation workflow, but that does NOT redefine T-C04, and T-029's UI must not be declared to satisfy T-C04 (validation remains a human gate with its own evidence package).
-  - Audit findings (session 16, classified per the audit protocol): **A (blockers): none** — the authorization boundary was already enforced by SecurityConfig; the missing executable proof was closed pre-merge by `TeacherRouteSecurityIT` (test-only commit, CI-verified before merge). **B (non-blocking, documented):** web `loadKappa` renders non-404/409 errors (network/5xx) as the "No κ evaluation recorded yet" empty state — the Evaluate κ button still surfaces the real error; cosmetic honesty nit, not fixed to avoid scope creep. Stale `tab` value edge case if a session's role changed mid-login. **C (future work, NOT in this PR):** κ panel per-paper scoping UI (backend supports PAPER scope; the UI calls ALL scope only — tracked in the F-161 note); marking-queue pagination/ordering beyond pilot scale; roster → learner drill-down (§6.10).
+  - Audit findings (session 16, classified per the audit protocol): **A (blockers): none** — the authorization boundary was already enforced by SecurityConfig; the missing executable proof was closed pre-merge by `TeacherRouteSecurityIT` (test-only commit, CI-verified before merge). **B (non-blocking, documented):** web `loadKappa` renders non-404/409 errors (network/5xx) as the "No κ evaluation recorded yet" empty state — the Evaluate κ button still surfaces the real error; cosmetic honesty nit, not fixed to avoid scope creep. Stale `tab` value edge case if a session's role changed mid-login. **C (future work, NOT in this PR):** κ panel per-paper scoping UI + marking-queue pagination/ordering beyond pilot scale — **BOTH CLOSED 2026-09-25 (session 126, the G-5 teacher lane: core `ef302c0` — opt-in pagination on `/answers` row pages (total order createdAt+id, 1..200/page) and `/queue-v2` WHOLE paper-group pages (1..100/page, mark→next chain page-scoped, honest totals) + paper context (examPaperId/paperTitle) on queue rows; web `08c4d41` — κ scope selector fed by the queue's paper groups (unfiled bank group excluded BY DESIGN), scoped latest/evaluate through the existing backend contract, Prev/Next with backend-owned totals; gate/threshold/κ semantics byte-unchanged; 9 new core unit tests; web lint+build green, core CI owns the green)**; roster → learner drill-down (§6.10) remains open (Cycle-2+).
 - [ ] T-030 Research export (anonymized) + experiment registry v0. (F-146, F-154)
-- [x] T-031 Render deployment (Docker, keep-alive, cold-start UX) + Vercel production env. (F-001, F-156) — **DEPLOYED + VERIFIED 2026-09-14 (session 67): operator credentials arrived; service LIVE at origin/main; runbook §3 checklist + learner journey 18/19 green on the deployed URLs (evidence: release t-031-prod-ingestion; the 1 failing item is the tutor LLM chain — the provider keys were wiped in a disclosed env-var incident and need operator re-provision; every other check incl. CORS, boundaries, contamination, papers browser passed; the canonical corpus is IN the prod DB — 81 papers/766 versions, verify 32/32). Remaining for full closure: re-provision SYLLABAI_GROQ/GEMINI/OPENROUTER_API_KEY (+ optional embedding key) in the Render dashboard.** History: configs + runbook MERGED 2026-09-08 (core PR #10) — **configs + runbook MERGED 2026-09-08 (core PR #10, branch `codex/t-031-pilot-deploy-configs`): `render.yaml` Blueprint (Docker, free plan, /actuator/health check, all secrets sync:false — Neon JDBC, JWT, CORS origins, LLM keys, R2) + `docs/DEPLOYMENT.md` pilot runbook (provision order, account policy incl. the one-time teacher provisioning path, the pre-pilot verification checklist = T-032 gate inputs, cold-start/decay/backup notes). The actual Render/Vercel deployment itself remains a manual operator step (credentials outside the repo) — this task stays open until the deployed URL passes the runbook checklist.** Session-20/21 note: the runbook's Vercel env-var instruction was corrected in core PR #11 (MERGED 2026-09-08; the old `.../api/v1` value doubled the prefix — browser-verified locally); the full student+teacher browser E2E has been executed once against a LOCAL live stack (evidence in `download/e2e-evidence/`), so the runbook checklist is now proven executable — re-run it against the DEPLOYED URLs after provisioning.
+- [x] T-031 Render deployment (Docker, keep-alive, cold-start UX) + Vercel production env. (F-001, F-156) — **DEPLOYED + VERIFIED 2026-09-14 (session 67): operator credentials arrived; service LIVE at origin/main; runbook §3 checklist + learner journey 18/19 green on the deployed URLs (evidence: release t-031-prod-ingestion; the 1 failing item is the tutor LLM chain — the provider keys were wiped in a disclosed env-var incident and need operator re-provision; every other check incl. CORS, boundaries, contamination, papers browser passed; the canonical corpus is IN the prod DB — 81 papers/766 versions, verify 32/32). RESIDUAL CLOSED 2026-10-01 (documentation accuracy audit F-7): the LLM chain is live in production — proven by the session-116–118 Smart Mark pipeline (real LLM candidate generation, refusal re-run → budget fix core `d2849fc` → post-deploy re-run q7|b SMART_MARKED 3/5, sample 26/26 validation-passed); the Session-67 tutor 503 was the last record of the key gap, so no operator re-provision action remains.** History: configs + runbook MERGED 2026-09-08 (core PR #10) — **configs + runbook MERGED 2026-09-08 (core PR #10, branch `codex/t-031-pilot-deploy-configs`): `render.yaml` Blueprint (Docker, free plan, /actuator/health check, all secrets sync:false — Neon JDBC, JWT, CORS origins, LLM keys, R2) + `docs/DEPLOYMENT.md` pilot runbook (provision order, account policy incl. the one-time teacher provisioning path, the pre-pilot verification checklist = T-032 gate inputs, cold-start/decay/backup notes). The actual Render/Vercel deployment itself remains a manual operator step (credentials outside the repo) — this task stays open until the deployed URL passes the runbook checklist.** Session-20/21 note: the runbook's Vercel env-var instruction was corrected in core PR #11 (MERGED 2026-09-08; the old `.../api/v1` value doubled the prefix — browser-verified locally); the full student+teacher browser E2E has been executed once against a LOCAL live stack (evidence in `download/e2e-evidence/`), so the runbook checklist is now proven executable — re-run it against the DEPLOYED URLs after provisioning.
 - [ ] T-032 Cycle-1 pilot readiness review against Master Spec §39a exit criteria.
 
 ## Wave 5 — pilot hardening (session 20, ship/verify/harden mode)
@@ -67,19 +69,22 @@
 
 ## Content-ops track (parallel)
 
+- [x] HUB-IMPORT (EXECUTED 2026-09-28, session 131 — operator decisions trace 1a0e721469ee8ef5, ADR-028) **Learning Hub import into syllabai-web** — the demo's 39-course resource-hub frontend imported to production web `f041237` (03210b3..f041237): all courses serve read-only under `/courses/*` + `/dashboard` (revision notes reader, exam questions with self-mark flow, flashcard decks, past-papers pdf.js viewer, practice papers, specification reader, strengths & weaknesses, my-subjects dashboard), the dual-theme design system adopted globally (SME default + Quiet Green, light/dark, no-flash bootstrap), 80 MB content bundles + pastpapers index committed. Hardening at the seam: rehype-sanitize gates every corpus HTML render (closes the demo's unsanitized rehype-raw XSS surface), local rehypeKatexMhchem replaces upstream rehype-katex (\ce{} renders), Neon provider + mock identity + `/api/ai/*` (frontend-held keys) NOT ported, note-CL A mirrors the workbench api.claAsk NOTE_SECTION contract (pilot-gated 4CH1, fail-closed), AI-mark on bundle questions explicitly off (self-mark is the path). Verified: tsc + eslint clean, build green 25 routes, browser-verified end-to-end incl. theme switching + workbench regression. **REMAINING (the follow-up tranches, in priority order):** (1) 4CH1 real-learner-model bridge — hub overlay → core BKT/decay state, attempts → core evidence, needs the spec-code↔KG-node mapping + core NOTE_SECTION serving at runtime; (2) teacher surfaces (test-builder, assignments, class tools) behind core RBAC; (3) KG/graph-explorer/experiments visualizers; (4) streamed tutor (core has NO SSE — needs a core contract); (5) flashcard ratings → core evidence class; (6) ADR-021 content packages for the 80 MB bundle payload + perf pass (blanket force-dynamic, image CDN); (7) a11y audit + hub E2E tests (promotion-plan Phase-1 items).
+- [x] HUB-PROMOTION (EXECUTED 2026-09-28, session 132 — operator decision trace 1a0e747677812df5, ADR-029) **syllabai-demo promoted to the product frontend as new repo SyllabAI/syllabai-hub; web demoted to internal teacher/ops console** — cloned demo @ a8f8fba (history preserved, demo frozen), promoted in 4 commits (a8f8fba..700c881, hub-ci green): local AI/DB stacks removed (no LLM keys, no Neon/Prisma/drizzle — R3), s142 math pipeline + rehype-sanitize XSS gate, real core auth (web's 71-method client + session-backed identity, login/register on core AuthController, RequireAuth + teacher RBAC gates), all AI via core proxies (tutor /ask→SSE-adapted with citation mapping; CLA note→NOTE_SECTION / topic→KG_TOPIC with tree-code resolution / question→fail-closed; mark unavailable — self-mark), hub-ci pipeline + pinned eslint toolchain. Browser-verified against live core: register+login (fresh STUDENT account), tutor answered through core's groq chain with citations, topic CLA anchored-refusal through KG_TOPIC, RBAC gates, dual themes + dark, KaTeX/mhchem clean, zero console errors. **OPERATOR PREREQS:** Vercel project for syllabai-hub + add hub origin to SYLLABAI_CORS_ORIGINS on Render. **REMAINING (re-scoped from ADR-028):** (1) 4CH1 real-learner-model bridge (attempts→evidence, overlay→BKT/decay, spec-code↔node + question-ID mapping); (2) missing core contracts: tutor SSE, NOTE_SECTION runtime, flashcard ratings, note votes, assignments, Ebbinghaus queue, course-stats; (3) teacher workspace onto core RBAC data; (4) ADR-021 content packages + perf pass; (5) a11y + E2E; (6) master-pack repo-map registration.
+- [x] HUB-PROMOTION TRANCHE 4 (EXECUTED 2026-09-28, same trace — ADR-029 addendum) **the 4CH1 bridge + production deployment — the hub is LIVE at https://syllabai-hub.vercel.app** — question identity bridge verified 1:1 against production (28 topics / 524 questions, family sme-eq-<topic>-q<order> ↔ core rows, marks sanity-checked, unverified questions stay local-only); real attempts (MCQ fire-and-observe + structured submit), Smart Mark with κ-gate honesty + Explain/Improve coaching, KG learner model from core read models (CORE_MEASURED vs SIMULATED provenance, topic-mastery section), note views → core progress; Vercel project created (env: NEXT_PUBLIC_API_BASE_URL + SYLLABAI_CORE_BASE_URL → core, HUB_DATA_MODE=mock) + Render CORS updated with the hub origin — the ADR-029 operator prerequisites are retired. Two bugs fixed en route: core 2a1676a (TelemetryEvent Map.copyOf NPE on the contract-optional null confidence — 500'd POST /attempts after the attempt row saved; regression-tested) and hub e471e08 (tutor Send-button passed the click event as the override question → .trim() TypeError; Enter-to-send had masked it). Verified live on production: register/login, MCQ recorded, structured + Smart Mark (authoritative, per-part), KG drawer CORE_MEASURED + topic mastery + history of real attempts, tutor cited (groq), CLA anchored+cited, non-pilot silent local-only, signed-out honest prompt, zero console errors. hub 700c881..e471e08, hub-ci green; core 5e4d155..2a1676a, core-ci green.
 - [x] T-C01 GLM-OCR parser pipeline: real-corpus Markdown adapter + QP/MS extraction + mark reconciliation + image-reality handling + deterministic canonical identity + Python/Java conformance. (Session 8/9 — syllabai-parser @ `9eb35ab`, 68/68 tests + 12/12 conformance in CI; validation report `docs/validation/session9-real-corpus-validation.md`)
 - [x] T-C02 GLM-OCR → core ingestion bridge: parser verified drafts → existing T-011 ingestion path → canonical persistence → T-013 chunk pipeline. — **COMPLETE and merged: PR #3 merged 2026-09-05 (fast-forward, no merge commit — main is now exactly `7c6f122`, the new content baseline)**. History: implemented on branch `codex/t-c02-glmocr-bridge` (CI run 33912946878: 185/185 unit + 16/16 IT incl. GlmOcrBridgeIT 6/6 on the 3 real WPH11 pairs; V13 bridge record keeps the verbatim parser contract — October Q18 + 1A 80-vs-120 conflicts review-visible; rerun-idempotent; embedding structurally separate; controlled entries = teacher endpoint + ops CLI; `docs/t-c02-bridge.md`); pre-merge correctness fix `7c6f122` "distinguish empty glm-ocr findings from missing bridge record" (missing bridge record → 404; existing record with empty `review_findings` → 200 `[]`) — 188/188 unit + CI run 33981175174 SUCCESS on the branch. **Post-merge verification on main @ `7c6f122`: CI run 33982065341 (push, main) — 188/188 unit + 17/17 IT (GlmOcrBridgeIT 7/7), BUILD SUCCESS; local `mvn test` 188/188 + `mvn verify` BUILD SUCCESS (ITs skipped locally, no Docker — as designed).** No new architecture; no embedding changes.
 - [x] T-C03 ONE controlled Past-Papers batch end-to-end + human review, before any wider corpus run (the 3-pair proof is done; 40 batches stay parked until T-C03 review). Scope locked 2026-09-05: **a single bounded batch of real GLM-OCR QP/MS pairs through GLM-OCR → canonical documents → T-013 chunks → T-011 paper/question/mark-scheme model → bridge audit**; all imported content stays SUGGESTED; deterministic reruns (zero new rows); conflict preservation (never merged away); **no automatic embedding and no learner-facing serving**; batch audit report for human review before any wider run. Not a corpus-wide firehose. — **COMPLETE and merged 2026-09-06: parser PR #1 merged (main `9eb35ab` → `ba36ceb`, fast-forward; post-merge CI run 34015403577 — 71/71 + FULL conformance) + core PR #5 merged (main `7c6f122` → `1976540`, fast-forward; post-merge CI run 34015454011 — 196/196 unit + 22/22 IT incl. GlmOcrBatchIT 5/5, BUILD SUCCESS)**. History: implemented on branch `codex/t-c03-batch` in both repos (core PR #5 @ `4b820cc` CI 33983936464: 196/196 + 20/20 IT; parser PR #1 @ `ba36ceb` CI 33983496464: 71/71 + conformance). **Pre-merge review (session 12) found the product code sound but the two critical claims unproven by tests — added two regression ITs at `1976540` (branch CI 34015269882 green): (1) whole-batch atomicity — a late-failing pair (re-identified 1A copy whose canonical docs ingest fresh, then T-011 refuses the duplicate paper) rolls back the ENTIRE batch to pristine seed; (2) the real learner-serving boundary — QuestionController selection excludes all 59 imported ids while the 8 seed MCQs still serve, anchor-topic query empty, imported fetch 404, authoritative fetch serves.** Batch evidence (audit artifact, CI-verified): +6 canonical documents / +91 chunks (91/91 pending — no implicit embedding) / +3 papers / +59 versions / +59 schemes / +173 points / +3 bridge records, all SUGGESTED, second run zero new rows; June 20q/20p/51mp OK (80/80) findings 25; October 20/26/53 OK (80/null) findings 27 (Q18 visible); 1A 19/25/69 REVIEW_REQUIRED (80-vs-120 preserved) findings 32; all five invariants PASS; audit artifact downloadable from CI + workspace `download/t-c03-batch-audit-report.json`. **Next gate: T-C03 human content validation (see below) — only then any wider batch.** No new migration; no new HTTP endpoint; bridge untouched; PR #1 (T-026/T-027) untouched.
 - [x] T-C05 Pre-Ingestion Standard + content-corpus architecture for the operator's manually prepared **Edexcel International GCSE Chemistry (4CH1)** corpus (specification / Student Book / past papers / Save My Exams notes & questions — operator converts manually with ocr.z.ai; SyllabAI does NOT convert and does NOT touch Cycle 1 IAL scope). Delivered as a contract-only design, no code: source-role model (5 roles, never flattened), **Corpus Markdown Convention (CMC v1.0)** for the manual conversion (front-matter schemas, heading grammar, chemistry notation rules, marks/MS conventions, assets & figure-missing markers), canonical metadata contract, chemistry-specific OCR lint vs human-review split, pipeline-stages × six-validation-axes lifecycle on the existing SUGGESTED→VALIDATED gate, four-tier spec-point mapping provenance (PUBLISHER/PROVIDER · AI_SUGGESTED · RULE_DERIVED · HUMAN_VALIDATED), evidence-based difficulty states (UNEVIDENCED→PROVISIONAL→EMERGING→EVIDENCED, per-CurriculumVersion population), provenance/versioning chain, five-level dedup semantics, `syllabai-corpus` repo layout, system-gap audit (SPEC_POINT node type + F-168 mapping provenance + `documents.kind`/`questions.provenance` enum extensions registered), and the **IAL↔IGCSE coexistence audit** (found: `ContentRetrievalService`/`ContentVectorRetriever` have NO curriculum scoping — registered as T-C07, a hard prerequisite before corpus embeddings are enabled; KG node codes must be namespaced `4CH1-*` because `knowledge_nodes.code` is globally unique). Doc: `CONTENT_CORPUS_ARCHITECTURE.md`. (Session 25, 2026-09-10) **Review pass on the first uploaded batch (same day, session 26): `syllabai-resources` reviewed and repaired (repo `8b9b5c3` → `c2b0e69`) — 5 expiring ocr.z.ai spec images rescued to local `assets/` (URLs died 2026-09-17), CMC front matter added to the spec md (`status: raw_ocr`), Web-Clipper `{pageTitle}` image bug repaired across all 112 SME notes (244/247 refs resolve; 3 figure-missing markers; re-runnable `scripts/c05_repair_clipper_refs.py` shipped in the repo), quality verdict: spec-point backbone intact (all sections + C-points + 12 practicals + Appendix 5 command words), chemistry notation degraded exactly as CMC predicted (CJK leak, lost sub/superscripts, full-width punctuation) — pipeline lint owns the fixes, not hand-editing; Student Book: convert the 383-page 1-up file, not the 192-page 2-up (page-level provenance). Findings + operator guidance: ` Same-session addendum: **Student Book OCR tooling decided (side task) — baidu/Unlimited-OCR (MIT, 25k stars) replaces ocr.z.ai for the 383-page image-only book.** Pilot verdict STRONG YES on 5 chemistry-stress pages via the HF demo Space (ion charges, subscripts, and full equations with state symbols preserved as LaTeX — vs ocr.z.ai's flattened CO32- on identical content); shipped c05_book_ocr.py (resumable per-page conversion driver, CMC front matter + 29-chapter map, two backends: official vLLM docker image for the full run on a rented GPU, HF Space for pilots — anonymous ZeroGPU quota empirically exhausts after ~8 calls); evidence + execution paths in syllabai-resources/BOOK_OCR_RUNBOOK.md + student-book-pilot/. Residual damage class ((l)→()/(1), Ar→A,, figure placeholders) stays lint-owned; LaTeX→HTML sub/sup normalization registered as a deterministic T-C06 converter step. (repo 53656a9)**
 - [ ] T-C06 (PARKED — **precondition MET 2026-09-17: the starter corpus tranche has been live in production since session 67 and the T-C04 batches are closed — UNPARKED, kickoff pending; see the DB-reality addendum at the end of this row**) CMC→canonical converter + corpus lint: syllabai-parser adapter + core ingestion endpoint targeting canonical schema 1.0 + draft DTOs; `documents.kind` += TEXTBOOK/EXTERNAL_NOTES/EXTERNAL_QUESTIONS; `questions.provenance` += EXTERNAL_BANK; `SPEC_POINT` node type with namespaced codes (`4CH1-…`); F-168 mapping-provenance columns on question mapping; stimulus/figure attachment design. All corpus imports land SUGGESTED; nothing serves without human validation. **DB-reality addendum (2026-09-17, reconciliation pass — Neon production, read-only):** production now holds 94 exam papers (15 VALIDATED) / 854 question versions (127 VALIDATED, +8 vs the 09-16 check) / 172 documents (91 QUESTION_PAPER + 81 MARK_SCHEME) / 2,333 chunks (still ZERO embedded — embeddings stay gated on T-C07 curriculum scoping). Contract-vs-DB deltas for this row's deliverables: the 182/182 4CH1 spec-point nodes that serve today are VALIDATED but typed SUBTOPIC with namespaced 4CH1-dotted codes — the contracted `SPEC_POINT` node type is NOT in production (enum extension unshipped); `documents.kind` carries only QUESTION_PAPER/MARK_SCHEME (TEXTBOOK/EXTERNAL_NOTES/EXTERNAL_QUESTIONS absent); `questions.provenance` carries only PAST_PAPER/SEED_DEMO (EXTERNAL_BANK absent); no CMC→canonical converter or corpus-lint code exists in syllabai-parser or syllabai (tree-scanned 2026-09-17 — the parser's `canonical/` package is the pre-existing parse schema, not the CMC adapter); F-168 mapping-provenance columns likewise absent. Open deliverable unchanged: converter + lint + the three enum extensions + F-168 columns. **2026-09-17: PREPARED** — converter contract + enum migration draft V28 (documents.kind += TEXTBOOK/EXTERNAL_NOTES/EXTERNAL_QUESTIONS; questions.provenance += EXTERNAL_BANK; SPEC_POINT node type with a proposed retype-in-place backfill of the 182 SUBTOPIC-typed spec-point nodes; F-168 columns) committed in the package doc §4. Sequencing: after T-C07 (shared scoping joins), parallel with M2 arms; feeds the notes_mirror/figures substrates that gold classes 9/12 are N/A on today. **2026-09-18: chunk→SP mapping substrate CONSTRUCTED (the keystone data-construction step; session-96 diagnosis steps 1–2 executed — resources `75755855f9`):** `graph/spec_chunk_mappings.yaml` — the T-C10 note-level store (209 HUMAN_VALIDATED `spec_map` front-matter blocks) refined to chunk level by deterministic quote-anchor construction (`scripts/c13_chunk_sp_substrate.py@1.0.0`, zero-LLM, fail-closed): **197/209 (94.3%) evidence quotes anchor to their exact passage chunks** under the PINNED convention `c13-chunk-convention-1` (chunk 0 = intro; leaf sections cut at h2..h4; chunk text includes its own heading; anchoring targets content sections only — the convention the future converter/ChunkingService MUST reproduce or chunk identities fail closed at join time); 172/182 SP codes covered; worklist enumerated from data (12 excerpt-region quote rows needing fresh authored passage quotes + 4CH1-4.15 registered gap); every row SUGGESTED / tier RULE_DERIVED with upstream.validation_status = HUMAN_VALIDATED as a reference (anti-forgery G5: the tool cannot emit HUMAN_VALIDATED); gates G1–G7 green incl. double-run byte-identical + 9/9 negative corruption classes (`scripts/c13_substrate_negative_test.py`). Operator gate: `graph/reports/C13_CHUNK_SP_SUBSTRATE_REVIEW_SHEET.md` (seed `2be697213aa8ccad`: 42 spot-check rows + 13 worklist decisions; ≥90% precision → deterministic promotion apply, never hand-edits). Cross-check (context only, not a §8(d) claim): 58/63 distinct gold spec points already have ≥1 anchored row on the notes surface. Still open on this row: converter + enum extensions + F-168 columns + notes ingestion (diagnosis step 4) — snap-001 stays paper-chunks-only until then, so §8(d) remains NOT SCOREABLE today. **Addendum (Session 100, 2026-09-18):** operator review sheet FILLED by the agent as operator-delegate (resources `88dc8dd6a3`): Part A 42/42 CONFIRM (mechanical re-verification 42/42 PASS under the pinned convention + semantic judgment; precision 100% ≥ 90% gate), Part B 13/13 decided — 12 fresh verbatim passage quotes authored + verified (containment + exactly-one-chunk uniqueness, target chunks sha-pinned) and 4CH1-4.15 DEFERred (registered corpus gap → content acquisition; C12 covers at question level). Promotion-gate arithmetic PASSES; rows still flip to HUMAN_VALIDATED only in the recorded deterministic apply step, whose inputs are now staged (12 authored quotes + 4 supplementary-anchor recommendations + 1 deferral). Converter + notes ingestion + snap v2 remain open — §8(d) still NOT SCOREABLE today. **Addendum (Session 103, 2026-09-18 — notes ingestion STARTED per the operator's directive to use `SME-RevisionNotes/ial-chemistry-17`):** the scraped IAL Chemistry (2017) tranche (196 notes, manifest sha256 `006f13b86aaa50b6…`, pinned at resources `69c81cc0f744`) converted to canonical 1.0 and ingestion STAGED. Parser adapter `sme-revision-note/1.0.0` (syllabai-parser `14519dc`; suite 154/154 green): identity = CanonicalIdentity over the note md + engine; sidecar JSON enriches provenance only (pairing-guarded); verbatim posture v1 — provider LaTeX and <sub>/<sup> preserved byte-exact, the registered LaTeX→HTML sub/sup step DEFERRED with recorded reason (inside math fences it would corrupt provider LaTeX; broader notation rewriting is operator-ratified work). V29 (syllabai-core `9ac219d`; unit suite 673/0/1 green, additive+reversible): `documents.kind` += TEXTBOOK/EXTERNAL_NOTES/EXTERNAL_QUESTIONS; `documents.validation_state` born-SUGGESTED (write-side today — no serving predicate reads it; the T-C07 paper-join predicates keep note chunks fail-closed unservable); `questions.provenance` += EXTERNAL_BANK. Lint PASS 196/196 (0 hard; 262 provider spec-point ids ↔ 262 body markers exact; 1 remote CDN figure ref = the manifest's `asset_failures: 1` correlate). Batch conversion: double-run byte-identical, cross-language documentId conformance verified for all 196 notes, ids unique; payload committed (resources `1ec553ea`: 196 canonical docs + BUNDLE_MANIFEST.json sha256 spine; 11,359 text blocks / 564 figures / 30 tables / 1,420 sections) with tooling (c06_lint_corpus.py / c06_convert_batch.py / c06_ingest_notes.py) and the runbook `graph/reports/C06_NOTES_INGESTION_REPORT.md`. DB import NOT executed (operator TEACHER/ADMIN credential boundary — staged, checksum-verified, idempotent-by-checksum). Remaining on this row: SPEC_POINT node type + namespaced codes, F-168 columns, spcpt_*→IAL code resolution (PROVIDER tier, human-validated before authoritative), CMC converter for the manual 4CH1 corpus; §8(d) snap v2 still gated on the 4CH1 notes tranche + c13-chunk-convention-1 chunk-identity alignment.
 - [ ] T-C07 (REGISTERED from the T-C05 coexistence audit — pre-embedding prerequisite) Curriculum-scoped retrieval for the tutor evidence path: `documents`/`document_chunks` scope + vector query filter by the learner's active CurriculumVersion (index-time AND query-time); evidence source labels distinguishing spec/textbook/third-party providers. Required BEFORE any corpus embedding is enabled; today it is latent only because the GLM-OCR corpus is quarantined and unembedded. **2026-09-17: PREPARED** — implementation contract committed (`RETRIEVAL_FRONTIER_PREPARED_PACKAGE_2026-09-17.md` §1: join-path scoping predicate documents→exam_papers→subject/curriculum, fail-closed on unresolvable curriculum, negative-control ITs; one schema point — curriculum_versions↔subjects join — flagged for first-session verification). AF-1 strengthens this row's case: 85/119 VALIDATED question anchors point at ING-* nodes, so anchor resolution needs the same scoping predicate, not just chunk paths. No code committed (no Java toolchain in the authoring env) — status UNVERIFIED until a Maven lane runs the ITs. **2026-09-17 late: IMPLEMENTED in core `0d7dfaa` (Java lane, LOCAL VERIFIED)** — `CurriculumScope`+`CurriculumScopeResolver` (single-owning-ACTIVE-curriculum resolution: subject-root VALIDATED structure subtree OR exam-paper ownership; zero/ambiguous owners ⇒ empty scope ⇒ deterministic refusal), mandatory scope argument on every chunk-serving + KG-intent path (ports `KnowledgeRetriever`/`VectorRetriever` changed — no unscoped overload exists), `ChunkVectorRepository` gains a bound-parameter EXISTS predicate over the **DB-verified** join (the prepared package's guessed cv↔subjects direction was wrong: FK is `subjects.curriculum_version_id → curriculum_versions`; `exam_papers.question_paper_document_id` is varchar joining `documents.document_id`; 2,333/2,333 chunks resolve, 0 double-join), KG intent surface = subject-root PART_OF subtree (DB-verified: covers all 226 VALIDATED structure nodes, zero outside — structurally excludes ING-*/WCH11- scrape nodes, AF-1 containment); KaRagService resolves once per ask, unresolved ⇒ refusal with telemetry; CLA scopes per its owning-subject house rule. Verified: 604 unit tests green (resolver policy, scope filtering, unscoped-refusal, SQL predicate marker); ContentPipelineIT now carries the T-C07 positive + negative controls (foreign-curriculum scope, unlinked document) — Docker-ITs remain on the CI route; production SQL predicate executed read-only on the real DB (4CH1-2017 scope = 2,333 chunks, IAL = 0, random = 0); harness replay of Run-002 vs recorded evidence byte-identical (ff959b40) — scoping provably does not perturb A0. Residual (unchanged scope): evidence source labels (spec/textbook/third-party) not in this change; per-learner curriculum selector is the documented follow-up the ambiguous-owner refusal forces.
-- [ ] T-C13 (REGISTERED 2026-09-17 from the retrieval doc-gap audit — the ADR-020 benchmark gate) Retrieval benchmark harness over the 4CH1 pilot corpus, per `RAG_RETRIEVAL_RESEARCH.md` §6 as extended by `GEMINI_FILE_SEARCH_AND_NOTEBOOK_ARCHITECTURE_RESEARCH.md` §16: 100–200 gold-labeled tutor queries across the 12 query classes (factual / conceptual / calculation / prerequisite / misconception / why-wrong / exam-question / mark-scheme / revision-note / vague learner language / multi-SpecPoint / diagram-dependent); comparison arms A–G (A pgvector semantic baseline · B BM25/lexical · C hybrid · D hybrid+reranker · E Gemini File Search · F hybrid+FS · G KG-aware hybrid+FS); metrics Recall@5/10/20, MRR, nDCG, SpecificationPoint resolution accuracy, evidence precision, false-positive rate + grounding (evidence sufficiency, citation correctness, claim-to-evidence alignment, unsupported-claim rate) + ops (p50/p95 latency, query cost, index footprint); gold labels derive from the 209 HUMAN_VALIDATED note→point mappings + VALIDATED question versions; provider-specific tests per FS doc §16 (metadata filtering accuracy, document-identity fidelity, page/figure fidelity, corpus update behavior, validation boundary, subject isolation, scale, portability). **This row is the promotion gate for every retrieval technique (ADR-020 acceptance principle; integration rule 12 "benchmark before promotion") — no retrieval change becomes a production default without it.** Registration basis: TODO/PROGRESS contained zero references to the benchmark (Recall@/MRR/nDCG absent) despite two ACCEPTED research docs gating production promotion on it; DB-verified preconditions live in production Neon (182 distinct 4CH1 spec-point nodes, 112 VALIDATED prerequisite edges, 2,333 chunks — embeddings still 0, gated by T-C07). **2026-09-17: spec committed — `RETRIEVAL_BENCHMARK_HARNESS_SPEC.md` (`c2126f7`), Draft v0.1 awaiting owner ratification of §10 (acceptance thresholds, set size 120 vs 200, labeling ownership, M2 judge budget, B-proxy legitimacy, H2 arm timing). M0 (gold set authoring + freeze) and M1 (harness + A0 baseline + B-proxy, Run 1 on record) are startable immediately post-ratification and deliberately do NOT block on T-C14/T-C15 — arms light up in recorded runs on the same frozen v1 set as their prerequisite rows land.** **2026-09-17 execution lane (M0 DONE, M1 PARTIAL — LOCAL VERIFIED, offline+deterministic):** gold set **gold-v1 FROZEN** (120 queries / 12 classes; per-class files + manifest + SHA256SUMS under `bench/gold/`; label rules R1/R2/R3 recorded per record; anti-leakage freeze before Run 1; quota amendment: calculation 4 cue-matched + 6 numeric-stem fill because `questions.command_word` is 119/119 NULL). Snapshot **snap-001** committed (`evidence/bench-001/snapshot/` — 2,333 chunks portable identity, 182 spec points, 152 VALIDATED non-structural edges, graph-as-code 98 concepts + 19 misconceptions pinned at syllabai-resources@b2bff3f). `gold_check` PASS incl. 6/6 negative corruption classes. **Run 1 (B-proxy) RECORDED** (`evidence/bench-001/runs/run-001-bproxy/`) — ALL-chunks Recall@10 0.2954 / MRR 0.2464 / nDCG@10 0.4299 vs VALIDATED-only 0.1449 / 0.2330 / 0.3237 = AF-2 (the validation boundary halves lexical retrieval). A0 baseline + B/C arms remain for a Java 25/Maven lane (harness pieces PREPARED in the package doc). Audit findings AF-1/AF-3 in `RETRIEVAL_FRONTIER_PREPARED_PACKAGE_2026-09-17.md`. **2026-09-17: SPEC RATIFIED — §10 rulings 1–6 recorded in the spec (now v1.0): §8 thresholds binding unchanged (+ mandatory dual-denominator ALL vs VALIDATED-only reporting in every run report, gate arithmetic on ALL); gold-v1 @ 120 stands (v2→200 only on demonstrated per-class need); auto-derived labels + operator spot-check (20% stratified + 100% classes 4/5/6; <90% class precision → manual re-author before next run — owner action item); M2 judge budget capped (free chain, 80 calls/run, ceiling 120, no paid judging without re-ratification); B-proxy confirmed legitimate early-signal/diagnostics instrument (never promotion-eligible); H2 stays behind the C/D verdict. Ratification retroactively adopts gold-v1/snap-001/Run-001 as the v1.0 basis (timeline-honesty note in spec §10) — no frozen file changed. Next: Java-lane M1 completion (A0/B/C) — PREPARED, UNVERIFIED; T-C07 merge gate before embeddings. 2026-09-17 late: agent lane BOOTSTRAPPED (Temurin JDK 25.0.4 + Maven 3.9.11 user-space; core 7eb621a test-compile green, unit tests execute green) — M1 completion is now writable from the agent lane; Docker-ITs still need Docker (CI route).** **2026-09-17 Run 002 (A0) RECORDED — M1 DONE:** harness live in syllabai-core `src/test/java/com/syllabai/bench/` (core `9690c00`, LOCAL VERIFIED: 11/11 harness tests; production GraphKnowledgeRetriever + ReciprocalRankFusion run UNMODIFIED over snapshot-backed repo stubs; fail-closed SHA-256 loaders; metrics pinned line-for-line to Run-001 formulas). Spec-resolution axis (n=120, A0's native output): coverage 0.5569 · exact-hit 0.5083 · matched_ratio 0.60 · precision-over-matched 0.2944; per-class: factual/conceptual/vague/notes 1.0 (R2 authoring circularity caveat recorded), prerequisite 0.69, misconception 0.65, stem-derived classes 0.0. Chunk axis = REAL ZEROS per ratified spec §6 (A0 emits no chunks at 0/2,333 embedded — the engine-without-fuel baseline on record); zero VALIDATION_BOUNDARY_VIOLATIONS; determinism double-run PASS. **Finding (durable):** prerequisite + misconception signals fire ZERO times across 492 matched topics — the settled pedagogy edges live on 4CH1-CON-* concept nodes, all SUGGESTED (invisible to production matching) with 0 VALIDATED attachment rows bridging to spec points; the tutor's pedagogy context is structurally unreachable in production today (arm I / T-C06+T-C11 lane work). Evidence: `evidence/bench-001/runs/run-002-a0/`. Remaining for T-C13 exit: arms A/B/C (T-C07 + embeddings + T-C14) + owner acceptance of the first promotion verdict.** **2026-09-17 session 92 — arm A embedding backfill PREPARED (infrastructure landed, execution blocked):** `EmbedBackfill` runner merged to core main `b0be54da` (PR #20; core-ci GREEN incl. hermetic `EmbedBackfillReplayIT` 3/3; float4-exact `vector::real[]` artifact, pending-only idempotent + resumable, compute-once-freeze-forever); frozen inputs + `ops-embed-backfill.yml` (dispatch-only) + Gemini key (sealed-box secret) staged on private master. Dispatch run `35205181761` failed at setup with zero steps — org Actions billing (spending limit / failed payment) blocks PRIVATE-repo runs; re-dispatch after operator unblock (billing fix = clean; public-core encrypted-inputs variant requires explicit operator sign-off). Model: `text-embedding-004` RETIRED (404 v1+v1beta probe with valid key) -> **`gemini-embedding-001` @ outputDimensionality 768** (vector(768)-compatible). **2026-09-17 follow-up rows registered (session 92):** (1) production embedding default repair — `EmbeddingProperties` default model text-embedding-004 (RETIRED) -> gemini-embedding-001@768 + `model_versions` row registration, evidence-backed, NOT executed in the benchmark-only slice; (2) `core-ci.yml` push trigger reads mangled `branches: ain]` (expected `[main]`) — behaves as catch-all; house-keeping fix when convenient. **2026-09-17 run-003-b (arm B recorded, session 86):** B = production lexical arm, RUNNABLE through the fabric contract over flyway-migrated PG + snap-001; A0 untouched (chunk-axis real zeros stand); A/C/D/E/F/G/H1/H2/H3/I honestly UNAVAILABLE. B reads BELOW the B-proxy probe on the VALIDATED-only corpus (ts_rank_cd coverage vs Okapi IDF-sum — different scorers, honestly recorded for the hybrid-C verdict, no promotion argument either way); query-form diagnostic (AND vs OR) routed to the dev-subset/gold-v2 route per the anti-tuning rule. **Session 95 status:** arm A harness + backfill hardening MERGED (core `621b38c4`, PR #21, main CI `35212879880` GREEN) and the backfill is EXECUTING against the free-tier daily quota wall with checkpoint-resume (7/2,333 frozen in run `35212922018`, clean INCOMPLETE exit 3 verified live; two operator unblock routes in session 95); arm A's recorded run (run-004-a) stays UNAVAILABLE until the artifact is COMPLETE — never estimated. **Session-96 addendum (2026-09-17, the operator's Track-3 reframing executed — 'why is SP-aware retrieval failing, what data construction before promotion'): the NOTES-corpus + mapping-granularity diagnosis, complementary to the paper-corpus benchmark lane above.** Corpus+mapping audit over the SME notes (112 notes → 732 heading-level chunks; chunk text = heading title + body; markdown-insensitive normalization) + a three-provider evaluation (BM25-over-chunks vs SP-note-routing vs quote-anchor route) over the 181 SP-wording queries + 5 real questions with operator-validated golds (the 4 C12 ratifications + the session-96 pilot's live tutor question): BM25 top-5 note-gold hit 97.8% (lexical is not the problem on the notes surface); SP-note-routing — the ONLY SP-aware path the current mapping data supports — returns mean 7.95 chunks/SP (max 29) at a 13.7% chunk-level precision ceiling with ZERO ranking signal; **197/209 (94.3%) of the T-C10 evidence quotes anchor deterministically to a specific chunk** (169/182 SPs) — the quotes were passage anchors stored at the wrong granularity = the concrete construction seed for the chunk→SP store that run-003-b named as its unscoreable spec-resolution data gap; the spec-wording resolver MISROUTES real learner phrasing (the pilot tutor question: gold 4CH1-1.42/1.43 absent from resolver top-5 → 39 wrong chunks, while BM25-over-chunks finds the right notes at ranks 1–2) — the 'retrieve-then-attribute' resolver flip rides exactly the missing chunk→SP rows. Corpus-quality worklist enumerated (12 mangled-link/LaTeX passages, 12 anchorless SPs, 1 unmapped SP 4CH1-4.15). Harness: syllabai-resources `scripts/c13_retrieval_audit.py` + `c13_retrieval_eval.py` (deterministic, zero-LLM; reports `graph/reports/C13_*`) — pushed to `bench/c13-notes-corpus-harness` (remote main gained multi-GB artifact commits from the concurrent lane, beyond this sandbox's 9.9 GB disk to fetch; merge the branch to land the harness on main). Diagnosis + the 6-step data-construction requirement: `backlog/RETRIEVAL-DIAGNOSIS-2026-09-17.md`. **2026-09-17 run-004-a RECORDED (arm A semantic, first recorded run; ops workflow `bd8e782c422e`, Actions run `35245265781` SUCCESS ~3 min, ZERO API calls; backfill COMPLETE first — 2,333/2,333 chunks + 120/120 gold queries frozen at `759e106d23` on keys 3/6 after the 403-denied keys 4/5 were probe-caught and removed): frozen artifact verified fail-closed then replayed bit-exact through the production vector serving path. SERVED view (ALL denominator, n=98 labeled): recall@10 0.1806 · MRR 0.1226 · nDCG@10 0.2418 · zero-result 0/120. COMPLIANT view (post-hoc VALIDATED-only filter, comparable scope with arm B): 0.1128 / 0.159 / 0.2107 vs run-003-b's 0.074 / 0.1224 / 0.1224 (+52% / +30% / +72% relative) — semantic > lexical on the comparable scope, and semantic never returned zero results where the AND-form lexical arm zeroed 106/120. 2,026 served boundary findings = the known T-C05 gap on the vector surface (T-C20, named not patched); compliant-starved 10; spec-resolution NOT SCOREABLE (zero chunk→SP HUMAN_VALIDATED rows — the same named gap; the session-96 quote-anchor construction is the unlock). Double-pass determinism PASS both views. §8 arithmetic (ruling 1, ALL denominator): arm A served BELOW the ratified promotion floors (0.1806 < 0.3249, 0.1226 < 0.2964, 0.2418 < 0.4799) — NO promotion claim; the §8 candidate remains the hybrid arm C (RRF over A+B), which requires the retrieval-fabric orchestrator (registered gap: port + 4 adapters, zero consumers). Evidence: `evidence/bench-001/runs/run-004-a/` (2/2 SHA-verified).** **2026-09-17 run-005-c RECORDED (arm C hybrid, first recorded run — the orchestrator gap CLOSED: core `c05efb98355a` `RetrievalFabric`+`BoundaryPolicy`, explicit arms, central pre-fusion gate, shipped RRF k=60, no serving wiring; CI `35251733721` green, suite 670; ops workflow `d8ed88dbc41e`, Actions run `35252384978` SUCCESS ~3 min, zero API calls): SERVED view (ALL denominator) recall@10 0.1908 · MRR 0.167 · nDCG@10 0.2775, zero-result 0/120; COMPLIANT view (central VALIDATED gate, 0 violations by construction, audited) MRR 0.1913 · nDCG@10 0.235 — best compliant-arm MRR on record. **§8 VERDICT: NOT PROMOTED** — (a) 0.1908 < 0.3249, (b) 0.167 < 0.2964, (c) 0.2775 < 0.4799, (f) 2,027 served boundary findings (T-C20), (d) not scoreable (zero chunk→SP rows), (g) trivial pass. Registry now: A0/A/B/C runnable+recorded; D needs a reranker; E/F/G need T-C15. The gate is un-passable on the current corpus BY CONSTRUCTION: ALL-denominator floors exceed any compliant arm's reach while most gold sits on SUGGESTED papers (AF-2) — the promotion path is corpus work (T-C04 validation throughput) + the chunk→SP substrate (session-96 quote-anchor construction), not a better scorer. Evidence: `evidence/bench-001/runs/run-005-c/` (2/2 SHA-verified).** **2026-09-18 resolution-axis substrate CONSTRUCTED (session-96 steps 1–2 → resources `75755855f9`):** chunk→SP store landed at chunk granularity — 197/209 quotes anchored (94.3%, convention pinned), 172/182 SPs, all rows SUGGESTED pending the operator review-sheet gate — the spec-resolution axis becomes SCOREABLE at the next snapshot version ONLY after (a) operator promotion of the substrate rows and (b) T-C06 notes ingestion + snap v2; until then §8(d) stays honestly NOT SCOREABLE on the paper-chunks snapshot. No frozen file changed; no run re-judged. **Addendum (Session 100, 2026-09-18):** the C13 operator gate EXECUTED (resources `88dc8dd6a3`): Part A 42/42 CONFIRM (100% ≥ 90%), Part B 13/13 decided (12 authored+verified quotes, 1 deferral) — gate arithmetic PASSES and the promotion apply step is fully staged; §8(d) still NOT SCOREABLE until the apply step + T-C06 notes ingestion + snap v2. No bench run re-judged; no frozen file touched. **Addendum (Session 102, 2026-09-18):** the promotion apply step EXECUTED (resources `69c81cc0f744`) via the committed deterministic apply tool (`scripts/c13_apply_promotion.py@1.0.0`, never hand-edits): gate arithmetic asserted from the sheet (42/42 = 100% + 13/13 decided), substrate reproduction proven BYTE-IDENTICAL at `a091f9d379`, all 209 anchored rows G4-re-verified mechanically (quote-in-chunk, sha/heading/chars, registry), 209 rows flipped + 1 reviewer-recommended supplementary anchor reified (4CH1-3.3 @ ordinal 3 — same upstream quote mechanically verified in the recommended chunk) = **210 HUMAN_VALIDATED anchored rows**; 4 supplementary recommendations DEFERRED fail-closed (upstream quote does not anchor in the recommended chunks — operator quote authoring required, dispositions recorded); worklist row 4CH1-4.15 stays SUGGESTED (enumerated gap, never promoted); per-row promotion provenance + meta apply block; apply record at `graph/reports/C13_APPLY_RECORD.{json,md}`. No frozen file touched; no bench run re-judged. REMAINING for §8(d): T-C06 notes ingestion + snap v2 rescore.
+- [ ] T-C13 (REGISTERED 2026-09-17 from the retrieval doc-gap audit — the ADR-020 benchmark gate) Retrieval benchmark harness over the 4CH1 pilot corpus, per `RAG_RETRIEVAL_RESEARCH.md` §6 as extended by `GEMINI_FILE_SEARCH_AND_NOTEBOOK_ARCHITECTURE_RESEARCH.md` §16: 100–200 gold-labeled tutor queries across the 12 query classes (factual / conceptual / calculation / prerequisite / misconception / why-wrong / exam-question / mark-scheme / revision-note / vague learner language / multi-SpecPoint / diagram-dependent); comparison arms A–G (A pgvector semantic baseline · B BM25/lexical · C hybrid · D hybrid+reranker · E Gemini File Search · F hybrid+FS · G KG-aware hybrid+FS); metrics Recall@5/10/20, MRR, nDCG, SpecificationPoint resolution accuracy, evidence precision, false-positive rate + grounding (evidence sufficiency, citation correctness, claim-to-evidence alignment, unsupported-claim rate) + ops (p50/p95 latency, query cost, index footprint); gold labels derive from the 209 HUMAN_VALIDATED note→point mappings + VALIDATED question versions; provider-specific tests per FS doc §16 (metadata filtering accuracy, document-identity fidelity, page/figure fidelity, corpus update behavior, validation boundary, subject isolation, scale, portability). **This row is the promotion gate for every retrieval technique (ADR-020 acceptance principle; integration rule 12 "benchmark before promotion") — no retrieval change becomes a production default without it.** Registration basis: TODO/PROGRESS contained zero references to the benchmark (Recall@/MRR/nDCG absent) despite two ACCEPTED research docs gating production promotion on it; DB-verified preconditions live in production Neon (182 distinct 4CH1 spec-point nodes, 112 VALIDATED prerequisite edges, 2,333 chunks — embeddings still 0, gated by T-C07). **2026-09-17: spec committed — `RETRIEVAL_BENCHMARK_HARNESS_SPEC.md` (`c2126f7`), Draft v0.1 awaiting owner ratification of §10 (acceptance thresholds, set size 120 vs 200, labeling ownership, M2 judge budget, B-proxy legitimacy, H2 arm timing). M0 (gold set authoring + freeze) and M1 (harness + A0 baseline + B-proxy, Run 1 on record) are startable immediately post-ratification and deliberately do NOT block on T-C14/T-C15 — arms light up in recorded runs on the same frozen v1 set as their prerequisite rows land.** **2026-09-17 execution lane (M0 DONE, M1 PARTIAL — LOCAL VERIFIED, offline+deterministic):** gold set **gold-v1 FROZEN** (120 queries / 12 classes; per-class files + manifest + SHA256SUMS under `bench/gold/`; label rules R1/R2/R3 recorded per record; anti-leakage freeze before Run 1; quota amendment: calculation 4 cue-matched + 6 numeric-stem fill because `questions.command_word` is 119/119 NULL). Snapshot **snap-001** committed (`evidence/bench-001/snapshot/` — 2,333 chunks portable identity, 182 spec points, 152 VALIDATED non-structural edges, graph-as-code 98 concepts + 19 misconceptions pinned at syllabai-resources@b2bff3f). `gold_check` PASS incl. 6/6 negative corruption classes. **Run 1 (B-proxy) RECORDED** (`evidence/bench-001/runs/run-001-bproxy/`) — ALL-chunks Recall@10 0.2954 / MRR 0.2464 / nDCG@10 0.4299 vs VALIDATED-only 0.1449 / 0.2330 / 0.3237 = AF-2 (the validation boundary halves lexical retrieval). A0 baseline + B/C arms remain for a Java 25/Maven lane (harness pieces PREPARED in the package doc). Audit findings AF-1/AF-3 in `RETRIEVAL_FRONTIER_PREPARED_PACKAGE_2026-09-17.md`. **2026-09-17: SPEC RATIFIED — §10 rulings 1–6 recorded in the spec (now v1.0): §8 thresholds binding unchanged (+ mandatory dual-denominator ALL vs VALIDATED-only reporting in every run report, gate arithmetic on ALL); gold-v1 @ 120 stands (v2→200 only on demonstrated per-class need); auto-derived labels + operator spot-check (20% stratified + 100% classes 4/5/6; <90% class precision → manual re-author before next run — owner action item); M2 judge budget capped (free chain, 80 calls/run, ceiling 120, no paid judging without re-ratification); B-proxy confirmed legitimate early-signal/diagnostics instrument (never promotion-eligible); H2 stays behind the C/D verdict. Ratification retroactively adopts gold-v1/snap-001/Run-001 as the v1.0 basis (timeline-honesty note in spec §10) — no frozen file changed. Next: Java-lane M1 completion (A0/B/C) — PREPARED, UNVERIFIED; T-C07 merge gate before embeddings. 2026-09-17 late: agent lane BOOTSTRAPPED (Temurin JDK 25.0.4 + Maven 3.9.11 user-space; core 7eb621a test-compile green, unit tests execute green) — M1 completion is now writable from the agent lane; Docker-ITs still need Docker (CI route).** **2026-09-17 Run 002 (A0) RECORDED — M1 DONE:** harness live in syllabai-core `src/test/java/com/syllabai/bench/` (core `9690c00`, LOCAL VERIFIED: 11/11 harness tests; production GraphKnowledgeRetriever + ReciprocalRankFusion run UNMODIFIED over snapshot-backed repo stubs; fail-closed SHA-256 loaders; metrics pinned line-for-line to Run-001 formulas). Spec-resolution axis (n=120, A0's native output): coverage 0.5569 · exact-hit 0.5083 · matched_ratio 0.60 · precision-over-matched 0.2944; per-class: factual/conceptual/vague/notes 1.0 (R2 authoring circularity caveat recorded), prerequisite 0.69, misconception 0.65, stem-derived classes 0.0. Chunk axis = REAL ZEROS per ratified spec §6 (A0 emits no chunks at 0/2,333 embedded — the engine-without-fuel baseline on record); zero VALIDATION_BOUNDARY_VIOLATIONS; determinism double-run PASS. **Finding (durable):** prerequisite + misconception signals fire ZERO times across 492 matched topics — the settled pedagogy edges live on 4CH1-CON-* concept nodes, all SUGGESTED (invisible to production matching) with 0 VALIDATED attachment rows bridging to spec points; the tutor's pedagogy context is structurally unreachable in production today (arm I / T-C06+T-C11 lane work). Evidence: `evidence/bench-001/runs/run-002-a0/`. Remaining for T-C13 exit: arms A/B/C (T-C07 + embeddings + T-C14) + owner acceptance of the first promotion verdict.** **2026-09-17 session 92 — arm A embedding backfill PREPARED (infrastructure landed, execution blocked):** `EmbedBackfill` runner merged to core main `b0be54da` (PR #20; core-ci GREEN incl. hermetic `EmbedBackfillReplayIT` 3/3; float4-exact `vector::real[]` artifact, pending-only idempotent + resumable, compute-once-freeze-forever); frozen inputs + `ops-embed-backfill.yml` (dispatch-only) + Gemini key (sealed-box secret) staged on private master. Dispatch run `35205181761` failed at setup with zero steps — org Actions billing (spending limit / failed payment) blocks PRIVATE-repo runs; re-dispatch after operator unblock (billing fix = clean; public-core encrypted-inputs variant requires explicit operator sign-off). Model: `text-embedding-004` RETIRED (404 v1+v1beta probe with valid key) -> **`gemini-embedding-001` @ outputDimensionality 768** (vector(768)-compatible). **2026-09-17 follow-up rows registered (session 92):** (1) production embedding default repair — `EmbeddingProperties` default model text-embedding-004 (RETIRED) -> gemini-embedding-001@768 + `model_versions` row registration, evidence-backed, NOT executed in the benchmark-only slice; (2) `core-ci.yml` push trigger reads mangled `branches: ain]` (expected `[main]`) — behaves as catch-all; house-keeping fix when convenient. **2026-09-17 run-003-b (arm B recorded, session 86):** B = production lexical arm, RUNNABLE through the fabric contract over flyway-migrated PG + snap-001; A0 untouched (chunk-axis real zeros stand); A/C/D/E/F/G/H1/H2/H3/I honestly UNAVAILABLE. B reads BELOW the B-proxy probe on the VALIDATED-only corpus (ts_rank_cd coverage vs Okapi IDF-sum — different scorers, honestly recorded for the hybrid-C verdict, no promotion argument either way); query-form diagnostic (AND vs OR) routed to the dev-subset/gold-v2 route per the anti-tuning rule. **Session 95 status:** arm A harness + backfill hardening MERGED (core `621b38c4`, PR #21, main CI `35212879880` GREEN) and the backfill is EXECUTING against the free-tier daily quota wall with checkpoint-resume (7/2,333 frozen in run `35212922018`, clean INCOMPLETE exit 3 verified live; two operator unblock routes in session 95); arm A's recorded run (run-004-a) stays UNAVAILABLE until the artifact is COMPLETE — never estimated. **Session-96 addendum (2026-09-17, the operator's Track-3 reframing executed — 'why is SP-aware retrieval failing, what data construction before promotion'): the NOTES-corpus + mapping-granularity diagnosis, complementary to the paper-corpus benchmark lane above.** Corpus+mapping audit over the SME notes (112 notes → 732 heading-level chunks; chunk text = heading title + body; markdown-insensitive normalization) + a three-provider evaluation (BM25-over-chunks vs SP-note-routing vs quote-anchor route) over the 181 SP-wording queries + 5 real questions with operator-validated golds (the 4 C12 ratifications + the session-96 pilot's live tutor question): BM25 top-5 note-gold hit 97.8% (lexical is not the problem on the notes surface); SP-note-routing — the ONLY SP-aware path the current mapping data supports — returns mean 7.95 chunks/SP (max 29) at a 13.7% chunk-level precision ceiling with ZERO ranking signal; **197/209 (94.3%) of the T-C10 evidence quotes anchor deterministically to a specific chunk** (169/182 SPs) — the quotes were passage anchors stored at the wrong granularity = the concrete construction seed for the chunk→SP store that run-003-b named as its unscoreable spec-resolution data gap; the spec-wording resolver MISROUTES real learner phrasing (the pilot tutor question: gold 4CH1-1.42/1.43 absent from resolver top-5 → 39 wrong chunks, while BM25-over-chunks finds the right notes at ranks 1–2) — the 'retrieve-then-attribute' resolver flip rides exactly the missing chunk→SP rows. Corpus-quality worklist enumerated (12 mangled-link/LaTeX passages, 12 anchorless SPs, 1 unmapped SP 4CH1-4.15). Harness: syllabai-resources `scripts/c13_retrieval_audit.py` + `c13_retrieval_eval.py` (deterministic, zero-LLM; reports `graph/reports/C13_*`) — pushed to `bench/c13-notes-corpus-harness` (remote main gained multi-GB artifact commits from the concurrent lane, beyond this sandbox's 9.9 GB disk to fetch; merge the branch to land the harness on main). Diagnosis + the 6-step data-construction requirement: `backlog/RETRIEVAL-DIAGNOSIS-2026-09-17.md`. **2026-09-17 run-004-a RECORDED (arm A semantic, first recorded run; ops workflow `bd8e782c422e`, Actions run `35245265781` SUCCESS ~3 min, ZERO API calls; backfill COMPLETE first — 2,333/2,333 chunks + 120/120 gold queries frozen at `759e106d23` on keys 3/6 after the 403-denied keys 4/5 were probe-caught and removed): frozen artifact verified fail-closed then replayed bit-exact through the production vector serving path. SERVED view (ALL denominator, n=98 labeled): recall@10 0.1806 · MRR 0.1226 · nDCG@10 0.2418 · zero-result 0/120. COMPLIANT view (post-hoc VALIDATED-only filter, comparable scope with arm B): 0.1128 / 0.159 / 0.2107 vs run-003-b's 0.074 / 0.1224 / 0.1224 (+52% / +30% / +72% relative) — semantic > lexical on the comparable scope, and semantic never returned zero results where the AND-form lexical arm zeroed 106/120. 2,026 served boundary findings = the known T-C05 gap on the vector surface (T-C20, named not patched); compliant-starved 10; spec-resolution NOT SCOREABLE (zero chunk→SP HUMAN_VALIDATED rows — the same named gap; the session-96 quote-anchor construction is the unlock). Double-pass determinism PASS both views. §8 arithmetic (ruling 1, ALL denominator): arm A served BELOW the ratified promotion floors (0.1806 < 0.3249, 0.1226 < 0.2964, 0.2418 < 0.4799) — NO promotion claim; the §8 candidate remains the hybrid arm C (RRF over A+B), which requires the retrieval-fabric orchestrator (registered gap: port + 4 adapters, zero consumers). Evidence: `evidence/bench-001/runs/run-004-a/` (2/2 SHA-verified).** **2026-09-17 run-005-c RECORDED (arm C hybrid, first recorded run — the orchestrator gap CLOSED: core `c05efb98355a` `RetrievalFabric`+`BoundaryPolicy`, explicit arms, central pre-fusion gate, shipped RRF k=60, no serving wiring; CI `35251733721` green, suite 670; ops workflow `d8ed88dbc41e`, Actions run `35252384978` SUCCESS ~3 min, zero API calls): SERVED view (ALL denominator) recall@10 0.1908 · MRR 0.167 · nDCG@10 0.2775, zero-result 0/120; COMPLIANT view (central VALIDATED gate, 0 violations by construction, audited) MRR 0.1913 · nDCG@10 0.235 — best compliant-arm MRR on record. **§8 VERDICT: NOT PROMOTED** — (a) 0.1908 < 0.3249, (b) 0.167 < 0.2964, (c) 0.2775 < 0.4799, (f) 2,027 served boundary findings (T-C20), (d) not scoreable (zero chunk→SP rows), (g) trivial pass. Registry now: A0/A/B/C runnable+recorded; D needs a reranker; E/F/G need T-C15. The gate is un-passable on the current corpus BY CONSTRUCTION: ALL-denominator floors exceed any compliant arm's reach while most gold sits on SUGGESTED papers (AF-2) — the promotion path is corpus work (T-C04 validation throughput) + the chunk→SP substrate (session-96 quote-anchor construction), not a better scorer. Evidence: `evidence/bench-001/runs/run-005-c/` (2/2 SHA-verified).** **2026-09-18 resolution-axis substrate CONSTRUCTED (session-96 steps 1–2 → resources `75755855f9`):** chunk→SP store landed at chunk granularity — 197/209 quotes anchored (94.3%, convention pinned), 172/182 SPs, all rows SUGGESTED pending the operator review-sheet gate — the spec-resolution axis becomes SCOREABLE at the next snapshot version ONLY after (a) operator promotion of the substrate rows and (b) T-C06 notes ingestion + snap v2; until then §8(d) stays honestly NOT SCOREABLE on the paper-chunks snapshot. No frozen file changed; no run re-judged. **Addendum (Session 100, 2026-09-18):** the C13 operator gate EXECUTED (resources `88dc8dd6a3`): Part A 42/42 CONFIRM (100% ≥ 90%), Part B 13/13 decided (12 authored+verified quotes, 1 deferral) — gate arithmetic PASSES and the promotion apply step is fully staged; §8(d) still NOT SCOREABLE until the apply step + T-C06 notes ingestion + snap v2. No bench run re-judged; no frozen file touched. **Addendum (Session 102, 2026-09-18):** the promotion apply step EXECUTED (resources `69c81cc0f744`) via the committed deterministic apply tool (`scripts/c13_apply_promotion.py@1.0.0`, never hand-edits): gate arithmetic asserted from the sheet (42/42 = 100% + 13/13 decided), substrate reproduction proven BYTE-IDENTICAL at `a091f9d379`, all 209 anchored rows G4-re-verified mechanically (quote-in-chunk, sha/heading/chars, registry), 209 rows flipped + 1 reviewer-recommended supplementary anchor reified (4CH1-3.3 @ ordinal 3 — same upstream quote mechanically verified in the recommended chunk) = **210 HUMAN_VALIDATED anchored rows**; 4 supplementary recommendations DEFERRED fail-closed (upstream quote does not anchor in the recommended chunks — operator quote authoring required, dispositions recorded); worklist row 4CH1-4.15 stays SUGGESTED (enumerated gap, never promoted); per-row promotion provenance + meta apply block; apply record at `graph/reports/C13_APPLY_RECORD.{json,md}`. No frozen file touched; no bench run re-judged. REMAINING for §8(d): T-C06 notes ingestion + snap v2 rescore. **2026-09-26 SNAP-003 RE-FREEZE + GOLD-V2 (T-C13 set+snapshot pair discipline, operator directive "Proceed with retrieval bench (snap-003 re-freeze + gold-v2)" — lifts the T-C27 operator hold on the bench SUBSTRATE):** `evidence/bench-001/snapshots/snap-003/` frozen (snap003_export.py carried as provenance; read-only sanctioned session-env connection, SELECT-only, rolled back — method delta SNAP3-M1 recorded: no Neon management credential in session, unlike snap-002's isolated branch). Fidelity anchors: spec_points, graph_edges, misconceptions, question_anchors, concept_attachments ALL BYTE-IDENTICAL to snap-002 (graph_code rows set-equal, pinned store @1245df0 unchanged); chunks 3,831 rows across 575 documents (1,281 QP + 1,494 MS + 1,056 EXTERNAL_QUESTIONS). Named deltas: SNAP3-F1 predicate extension adds the T-C27 card kind (all SUGGESTED/serving-inert at freeze; EXTERNAL_NOTES 350 + SYLLABUS 162 excluded with counts) so the serving-flip recorded run consumes snap-003+gold-v2 without a further freeze; SNAP3-F2 QP/MS evolution 2,517→2,775 (rw-9b/bank-wave/T-C23); SNAP3-F3 chunk rows carry the V33 spec_codes column (jsonb→sorted strings; reconciles T-C27's 512→923 exactly: 350 notes + 162 syllabus + 411 QP/MS; cards add 295). **gold-v2** compiled (`bench/gold-v2/`, gold_generate_v2.py carried; label logic byte-identical to v1 — metadata only): 120 queries / 12 classes quota-exact, 77 with spec anchors, 89 with chunk evidence (11 R1 stem-verbatim hits), 15 records with card-anchored evidence (honest R2 path over the extended corpus); manifest pins snap-003 files_sha256 exactly. **bench/gold_check.py format gate EXTENDED** to accept the 12 practicals 4CH1-PR-01..12 (VALIDATED SUBTOPICs since snap-002; t0 regex predated them; backward-compatible — gold-v1 carries zero PR codes, re-validates green; selftest 6/6 post-change; 2 g2 prerequisite records legitimately anchor 4CH1-PR-08). LOAD-CHECK PASS: python re-implementation of BenchSnapshot/BenchGold fail-closed rules (SHA verification, counts, chunk_ref uniqueness, enum safety, pairing pins, cross-file id coverage, all anchors resolve). Remaining: the serving-flip recorded run (arms) — owed at the flip per T-C27. **2026-09-27 R4 STAGING (T-C27 bench-at-serving-flip — operator-commissioned pre-flip trigger B, directive trace 1a0e07674d2b1e19 recorded in T-C27.yaml; AT_FLIP_RUNBOOK.md executed verbatim):** `bench/inputs/snapshot-r4` (snap-003 staged byte-identical, 9 files, SHA-verified) + `bench/inputs/gold-r4` (gold-v2 staged, 14 files) + `bench/inputs/embeddings/preload-r4` (production-derived chunk preload 3,831/3,831 refs @ gemini-embedding-001@768 mirrored SELECT-only with chunk content_sha256 corpus-identity proven 100% — 0 residual chunk API calls expected; 120 gold query embeddings embed fresh at backfill) + `ops-{embed-backfill,run003b,run004a,run005c}-r4.yml` dispatch-only workflows (core pin 45f6774d7 = main, harness unit-green via core-ci). Flip re-probed NOT HAPPENED (298/298 cards SUGGESTED; the one VALIDATED EQ doc is the pre-existing 09-20 cohort). **R4 RECORDED RUN 2026-09-27 (trigger B, pre-flip — directive trace 1a0e07674d2b1e19; AT_FLIP_RUNBOOK.md executed verbatim):** vector freeze ops-embed-backfill-r4 run 36286617830 SUCCESS (frozen artifact 3831/3831 chunk vectors preloaded from the production-derived preload — 0 chunk API calls — + 120 gold query embeddings fresh, key sha256:01ac5264a3, gemini-embedding-001@768, SHA256SUMS-pinned; committed as preload-r4 @ c704591f5) → arm B ops-run003-b-r4 run 36286954444 SUCCESS (run-003-b-r4 @ 573fa2777) → arm A ops-run004-a-r4 run 36287130564 SUCCESS (run-004-a-r4 @ 22b98687) → arm C ops-run005-c-r4 run 36287897846 SUCCESS (run-005-c-r4 @ 361750356c; first dispatch 36287567921 superseded — prior-arm context honestly UNAVAILABLE before the run-004-a commit, ordering slip disclosed). **All served metrics honestly 0.0 across 120 queries × 3 arms: the T-C05/T-C20 VALIDATED-only gate on core main 45f6774d7 serves nothing from a corpus whose chunks are uniformly SUGGESTED at doc level (FREEZE_RECORD finding 4) — the gate HELD (0 validation-boundary violations, served and compliant views agree, determinism PASS on all arms); vector space verified healthy (query-chunk cos 0.54-0.69), so the zeros are the starved snapshot truth, not a floor or preload artifact. §8 verdict recorded verbatim: NOT PROMOTED. Interpretive addendum: evidence/bench-001/runs/R4-GENERATION-NOTES.md. r3-vs-r4 cross-generation comparison invalid (c05efb98 pre-gate vs 45f6774d7 post-gate — the r4 record is the first recorded run of the post-T-C20 surface). The meaningful at-flip re-run is the runbook's trigger-A path (operator validation wave), operator-held.** T-C27 last §5 item cashed — T-C27.yaml → DONE with these run IDs as outcome evidence. **2026-09-27 R5 AT-FLIP RECORDED RUN (trigger A — the operator directive "re-run trigger A", traces 1a0e23212e7b3cf5 (owner session, sanctioned production read) + 1a0e2220d22a90b1 (claim-first lane; its core enabler is consumed, not re-derived); coordination handoff db3573a6b/a61bdb008 honored; locks [] re-verified at execution start; AT_FLIP_RUNBOOK.md trigger A executed):** snap-004 at-flip freeze (evidence/bench-001/snapshots/snap-004/ + FREEZE_RECORD: chunk_ref set/contents/kinds/spec_codes IDENTICAL to snap-003, 5/7 artifacts BYTE-IDENTICAL, graph_code set-equal; 317 validation-wave flips = 13 papers' QP/MS docs + the 09-20-cohort 4CH1/1C card doc VALIDATED at doc level — verified first-hand from the production read; 298 T-C27 cards still SUGGESTED — the card wave has NOT landed, honest scope; named deltas SNAP4-F1/F2(246 paper_code stamps)/F3(subject_id projection per the enabler)/M1) + gold-v3 re-pair (bench/gold-v3, staged as gold-r5: 12 class files BYTE-IDENTICAL to gold-v2 — anti-tuning; only the manifest snapshot pins move to snap-004, the validator's own designed mechanism (gold_check FAILed the v2 pins against snap-004 — observed and honored, never bypassed); gold_check PASS 120 records + selftest 6/6) + preload-r5 (bench/inputs/embeddings/preload-r5: 3,831/3,831 production-derived chunk-vector mirror, SELECT-only, per-row content_sha256 guard) + r5 workflows (ops-{embed-backfill,run003b,run004a,run005c}-r5.yml; core pin e728b7d = the at-flip enabler: Run003B.loadSnapshot carries documents.validation_state from the per-document paper_state + bench-scope subject stamps so BOTH searchServingEligible branches are production-faithful; core-ci 36310569728 green). Dispatches: embed-backfill-r5 run 36311624648 SUCCESS (frozen artifact embed-backfill-snap-004: 3831/3831 chunks applied from the preload — 0 chunk API calls, pending_after=0 — + 120 gold queries fresh; committed @ 5770133f2) → arm B ops-run003-b-r5 run 36311973564 (@ d003a45e0) → arm A ops-run004-a-r5 run 36312145176 (@ 7723d90d8) → arm C ops-run005-c-r5 run 36312444139 (@ 61ec5120; runbook ordering held — prior runs committed before each next dispatch). **THE R4→R5 DIFFERENTIAL IS THE FLIP: the served view is non-empty for the first time post-T-C20** — B: VALIDATED-served corpus 317 chunks (the wave's exact flip count), recall@10 0.0247 · mrr 0.0449 · ndcg@10 0.0449 (112/120 zero-result = the known lexical AND-form starvation, honest empties); A: recall@10 0.0762 · mrr 0.0543 · ndcg@10 0.1376 (VALIDATED-only gate, 27 reachable chunks, zero-result 0/120); C compliant: recall@10 0.0762 · mrr 0.0674 · ndcg@10 0.1473 — fusion lifts ranking over A at identical recall; exam_question the standout class (A recall@10 0.5/mrr 0.5833; B 0.5/0.75); 0 validation-boundary violations on all arms across 120 queries — the T-C20 gate held under real post-flip load; determinism PASS ×3. §8 verdict recorded verbatim: **NOT PROMOTED** — (a) 0.0762 < 0.3249 FAIL, (b) 0.0674 < 0.2964 FAIL, (c) 0.1473 < 0.4799 FAIL, (d) NOT SCOREABLE (zero HUMAN_VALIDATED chunk→SP rows — the standing named gap), (f) boundary PASS 0 violations; the honest at-flip truth: the paper-axis wave alone does not clear the promotion floors — the card wave (298 T-C27 cards) is the next denominator change and the r6 card-flip run stays available for it. Interpretive addendum + runner template-text caveat (arm C report's static "(f) hard fail" prose vs results.json f_boundary.pass=true): evidence/bench-001/runs/R5-GENERATION-NOTES.md.** **2026-09-27 addendum: the §8(d) chunk→SP HUMAN_VALIDATED substrate is bridged onto production chunks — the resources C13 store (210 HV rows, byte-verified pin `e8b58a7109104bb7`, apply session-102) projects 209/210 rows onto live EXTERNAL_NOTES document_chunks (205 CLEAN / 4 MULTI / 1 MISS = 4CH1-1.52C page-chrome quote, upstream mapping real; 180/182 SP codes; 58/58 gold spec points covered) with snapshot-scheme `chunk_refs` — artifact `bench/evidence/chunk-sp-substrate-2026-09-27/chunk_spec_hv_projection.json`; the next freeze (snap-005 at the r6 card-flip) carries it and §8(d) flips NOT SCOREABLE → scoreable-with-coverage; r6 itself stays gated on the card validation wave (re-probed 09-27: 298 cards still SUGGESTED, 317 VALIDATED chunks unchanged).** **2026-09-28 addendum: §8(d) SCORING HANDOFF for the core lane authored — `bench/S8D_SCORING_HANDOFF_2026-09-28.md` (snap-005 export contract with fail-closed drift gate + BenchSnapshot accessor + runner scoring spec, verification vectors, the counting rule that §8(d) counts by `validation_status` not `tier` [RULE_DERIVED-origin rows are operator-promoted HUMAN_VALIDATED], dual full-coverage/micro-average granularity reported with gate on full coverage pending a §10 owner ruling, dual-denominator view extended to (d) with the EXTERNAL_NOTES=SUGGESTED-content caveat). Core main verified `a28e932b1` 2026-09-28: implementation not started. r6 gate re-probed live 09-28: still operator-held (EQ 378 SUGGESTED + 1 VALIDATED, 317 VALIDATED chunks unchanged). **2026-09-28 second addendum: the handoff FOUNDATION is IMPLEMENTED on core main — `c91372c435ed56d34c2f3d0702073393cf103913` (ff fe5983f..c91372c; branch CI run 36341510062 SUCCESS, full suite, Java 25; local 21/21): BenchSnapshot optional chunk_spec_hv.json load with all fail-closed guards (unpinned aborts, validation_status-not-tier counting rule in code, MISS rows recorded), hvSpecCodesByChunkRef() + census accessors, ChunkSpecHvResolution pure scorer (both granularities, honest zeros, unbridged-code misses), real-bridge-vector tests 7+7. Run-class wiring + snap-005 export stay sequenced to the r6 staging per handoff §6; recorded-generation behavior unchanged by construction. **2026-09-28 third addendum: r6 staging unit BUILT pre-flip (operator directive, trace 1a0e4325cefc7b51): core run-class wiring LANDED (`670423a`+`b45b5d6` re-based; branch CI 36343466505 SUCCESS — ArmAReplayIT's snapshot=null replay mode caught a missing null-guard on the first CI pass and the fix landed; Run003B/Run004A/Run005C now score §8(d) via ChunkSpecHvResolution when the snapshot carries chunk_spec_hv.json, absent path byte-identical incl. the seeded-corpus replay; gate line d_spec_resolution flips SCORED with a first-scoreable-run baseline note) — and `bench/r6-staging/snap005_export.py` STAGED with dry-run ALL PASS (4,181 chunks = snap-004's 3,831 carried identical + SNAP5-F4's 350 EXTERNAL_NOTES chunks [SUGGESTED, unservable — included solely for the §8(d) join and the ALL-denominator view]; drift gate 210/210 re-verified over frozen bytes, anchor census 205/4/0/1 exact; SNAP5-H1 byte-identical manifest-pinned projection). AT-THE-FLIP checklist in bench/r6-staging/R6_STAGING_STATE.md: freeze → gold re-pair → preload-r6 → workflows → dispatches. r6 still operator-held.** **2026-09-28 fourth addendum (s145, the audit-tranche close-out — lane collision disclosed and reconciled): a PARALLEL s145 draft of the same handoff was mid-flight in the tutor-audit session's container when the upstream lane landed c91372c+670423a+b45b5d6; the draft (BenchSnapshot HV accessor + SpecResolutionAxis scorer + runner wiring + vectors + its own export dry-run, 886 unit-green) was SUPERSEDED per the never-duplicate discipline — preserved at workspace/s145-reconciliation/ in the session sandbox, never committed — and the LANDED implementation was verified first-hand instead: upstream suite re-run locally 883/883 green, and real-bytes verification through the landed accessor (frozen snap-004 absent path + snap-005 staging tree present path + every handoff §7 vector: the efc19a2773331632/4CH1-1.1 CLEAN ref, the 1d97fd710f098a74/4CH1-1.52C MISS row unreachable by construction, the c19e1b3cca1d9eee MULTI indexes 1/2/4, many-to-many real up to 4 codes on one ref). Two gaps over the landed state were closed as the session's contribution, both pushed to core main: (1) **the handoff §4 census gate** — core `64c71ff`: the loader now fail-closes when chunk_spec_hv.json is present but the manifest declares no counts.hv_projection, or when the declared census mismatches the bytes-parsed census (3 regression tests; the staged snap005_export.py amended to record the census live from the artifact — dry_run_2026-09-28b.log ALL PASS incl. the 210/209/164/181 check, run live read-only 2026-09-28; pre-amendment staging manifests now abort by design — the r6 freeze re-runs the amended exporter); (2) **the D2 rider** — core `2267221`: TutorAnsweredEvent.answerProvider persists the deterministic refusal identity (deterministic-refusal vs deterministic-paper-refusal) into KA_RAG_COMPLETED telemetry with regression assertions at all three layers (unit event, telemetry persistence, IT e2e) — audit finding D2 closed. Suite on the final state: 889/889 unit-green. Cross-lane convergence recorded: the two independently written exporters produced byte-identical output on 7/8 files (graph_code.json differs by design — embedded source.date, rows-set-equal is the invariant). §8(d) SpecificationPoint-resolution measurement is now EXECUTABLE end-to-end (export census gate → fail-closed loader → both-granularity scorer → runner wiring); the first §8(d) number lands with the r6 run class at the card-flip freeze — r6 remains operator-held (card wave not landed as of 09-28).** **2026-09-28 OPERATOR DIRECTIVE (trace 1a0e6753792f76fd): r6 execution dependency marked WAITING_FOR_GENUINE_TEACHER_VALIDATION — the 298 T-C27 cards must NOT be flipped or mutated by any agent, and no validation endpoint is to be implemented unless independently product-useful; r6 remains operator-gated on a genuine teacher wave (marker also recorded in T-C27.yaml + bench/r6-staging/R6_STAGING_STATE.md). Ledger correction to the 09-17 house-keeping note: byte-level re-verification (od -c) shows all four `branches:` lines (core/web ci.yml, resources discord-notify + scripts-tests) are clean `[main]` — the "mangled ain]" reading was a terminal display artifact; runner labels are uniformly ubuntu-latest across all 35 workflows in five repos — the queued runner-label-hygiene PR is CLOSED honest-absent/no-op.** **2026-09-28 CARD-AXIS SERVING-BOUNDARY PIN (trace 1a0e67315a95fc09, operator directive: continue development WITHOUT the card wave — cards stay SUGGESTED and non-servable, no validation state altered, no validation events created):** core `b697492` (4 commits ff-merged onto e5cc266; branch CI run 36384982647 SUCCESS — 894 unit + 112 ITs incl. 7 card-boundary) lands `CardServingBoundaryIT` + 4 lexical serving-gate unit tests: the 298 T-C27 cards are pinned as SUGGESTED NON-SERVABLE fixtures on both serving surfaces — vector branch 2 row-level proven state-gated (the T-C20 SQL-text gate now has DB-level proof), the flip contract proves exclusion is doc-validation-driven not kind-driven (flip exercised inside the throwaway container only — the mechanism the genuine teacher wave will rely on), the arm-B VALIDATION_BOUNDARY_VIOLATION hard-fail is encoded as a permanent fixture, the neutral ALL-denominator view is guarded against over-tightening, and the lexical paper-anchored-only asymmetry (cards unreachable even on the neutral lexical view) is PINNED. Two fixture bugs caught by the IT itself and recorded as design facts (paper→document_id STRING semantics production-probed 90/0; websearch tsquery AND-vocabulary). Main-HEAD CI red at identity `2f117073a` (RateLimitFilter context load) is attributed to that lane — identical content ran green pre-2f117073a. Complements (does not amend) the WAITING_FOR_GENUINE_TEACHER_VALIDATION marker: r6 stays operator-gated; production re-probed read-only unchanged (EQ 378 SUGGESTED + 1 VALIDATED, teacher_validation_events 0 rows). Evidence: `bench/card-serving-boundary-2026-09-28/STATUS.md`.* **2026-09-28 (r6 AT-FLIP EXECUTED — the first §8(d)-scoreable generation, this session):** the operator card wave landed (sheet sha256 89c07146…, 295 VALIDATE + 3 FLAG applied verbatim = content_review_audit run a5d13c0a…; import trace 1a0e702ed9960375); snap-005 frozen (records ab600e18f1; SNAP5-F1/F4/F5/F6/H1; the two exporter amendments manifest-bound + fail-closed); gold-v4 re-pair PASS (c8ae9e6c1c); inputs staged (60f57e87b3); the four ops-*-r6 workflows dispatched in runbook order — all SUCCESS, zero production writes (embed 36400373270: 4,181/4,181 preloaded 0 chunk API calls + 120 fresh queries; run-003-b-r6 @ 5f409767a5; run-004-a-r6 @ 34a96f5379; run-005-c-r6 + R6-GENERATION-NOTES recorded this commit). Headline: A/C served 671 VALIDATED EXTERNAL_QUESTIONS refs (the card wave entering serving — B lexical 0, pinned asymmetry held); §8(d) spec_resolution_hv SCORED for the first time (full-coverage 0.0 / micro 0.0 over 84 gold points, honest production truth — the HV mappings anchor on SUGGESTED notes chunks the serving gate excludes; no promotion claim). Interpretation pre-registration 09a624728 discharged: leakage measured (max ratio 0.4033 < 0.8 — no near-duplicates; containment flags 3/89 recorded, not inflation), attribution risk moot (no high-(d) to misread). **2026-09-28 (r7 EXECUTED — §8(d) first NON-ZERO, this row's headline movement):** the operator's notes-axis promotion (trace 1a0e88af08e12df5 'pursue (a)', batch ef4c1fe4…: 112 EXTERNAL_NOTES docs VALIDATED + 350 notes chunks rev1, gate 615→965) + the flagged-3 flip (3 EQ FLAGGED→VALIDATED) captured as snap-006 (353 up-flips, 0 down-flips, row-set identity with snap-005 verified, drift gate 0 divergences; TWO independent exporters converged byte-identical on 7/8 artifacts — the s145 precedent, records 6db6bddc6 + 792491c18/8e7229949); gold-v5 re-pair PASS (set byte-identical); preload-r7 = frozen r6 vector rows byte-identical (zero embedding API calls this generation); dispatches run-003-b-r7 36446065734 + run-004-a-r7 36446512908 (records 6a35b6088) + run-005-c-r7 36449508022 (record 5b49b3868), all SUCCESS, core pin d9cb3ddcf2, zero production writes. §8(d) spec_resolution_hv 0.0 → full-coverage 0.5618 / micro 0.9167 over 84 gold points on 89 scored queries, both views, arms A+C (B lexical 0.0 — paper-anchored asymmetry, honest zero); chunk-axis (a)/(b)/(c) moved DOWN vs r6 (measured notes displacement, 448/890 top-10 slots) — §8 gate verdict NOT PROMOTED, per the pre-registration the non-zero (d) beside failing (a)/(b)/(c) is a coverage signal, not retrieval quality; item (2) stays operator-gated; leakage re-measured clean (max 0.4033 < 0.8).
 - [ ] T-C14 (REGISTERED 2026-09-17 from the retrieval doc-gap audit — P0 per `RAG_RETRIEVAL_RESEARCH.md` §7) Provider-neutral retrieval contracts + the missing lexical arm: `RetrievalProvider` port (`StructuredRetrievalQuery` → `RetrievalCandidate`s) unifying the existing `VectorRetriever` + `KnowledgeRetriever` behind one contract and adding the BM25/lexical provider (Postgres FTS candidate — no new infrastructure, free-tier preserved); today's RRF fusion covers only 2 of the research doc's 4 candidate-generation arms (semantic + KG; lexical and metadata-filter arms absent); lexical carries no contract, no implementation, and previously no tracker row. Benchmark arm B/C/D of T-C13 decides promotion; reranking stays behind `EvidenceReranker` (NoReranker until benchmark evidence). Honesty constraints unchanged: deterministic fusion, embeddings never educational truth, no vendor-specific domain model in the contract (§8 rules 2/4/10). **2026-09-17: PREPARED** — migration draft V27 (generated `content_tsv` tsvector column + GIN) and `Bm25Retriever`/`RetrievalProvider` ratification checklist committed in the package doc §3; fused by the existing `ReciprocalRankFusion` (k=60) — no new fusion code. Run-001 B-proxy gives the early lexical profile (formal spec-title queries weak, stem-verbatim strong) for comparison once arm B lands. Code UNVERIFIED until a Maven lane compiles + ITs green. **2026-09-17 IMPLEMENTED + RECORDED (session 86, reconciled onto the retrieval-fabric lane's `99be333`):** the `RetrievalProvider` fabric (`StructuredRetrievalQuery`/`RetrievalCandidate`), `ChunkLexicalRepository` (V28 tsvector+GIN) and the `Bm25Retriever` arm landed by the concurrent fabric lane and kept as the base (duplicates dropped, no overwriting); this session added the **T-C05 serving-eligible boundary** (`searchServingEligible` — owning paper must be VALIDATED, so SUGGESTED/FLAGGED/REJECTED chunks are unreachable; `LexicalBoundaryIT` proves suggested→never-served, validate→served, flag→gated through the arm in real Docker CI run `35162299609`) and the **benchmark arm-B record** (`bench.ArmB`/`Run003B`: the production provider over a flyway-migrated PG loaded with the frozen snap-001 corpus; run-003-b RECORDED — recall@5/10/20 0.074, mrr 0.1224, ndcg@10 0.1224 on gold-v1's 98 labeled queries, ZERO validation-boundary violations, determinism double-pass PASS; spec-resolution axis NOT SCOREABLE — zero HUMAN_VALIDATED chunk→spec mapping rows, named data gap). Query-form finding routed honestly: the bare-word AND form leaves 106/120 queries zero-candidate; a term-union diagnostic measured better in-session but was NOT adopted against the frozen set (anti-tuning rule) — dev-subset/gold-v2 decision. **IMPLEMENTED + RECORDED; NOT a production serving default; promotion stays behind the T-C13 gate.** **2026-09-17: IMPLEMENTED (lexical arm + fabric contract, core `99be333`, LOCAL VERIFIED)** — the prepared package's migration draft V27 was RENUMBERED to **V28** (`V28__content_lexical_search.sql`: `content_tsv` GENERATED ALWAYS tsvector + GIN; additive, reverse SQL recorded in the header — V27 had been taken by the revision-notes lane, and the T-C06 draft number V28 is consumed with it, so T-C06's enum migration becomes V29+ when it lands). The `RetrievalProvider` fabric landed per the ratified-on-merge sketch with ONE recorded deviation: `StructuredRetrievalQuery` carries the resolved `CurriculumScope` (T-C07's canonical scope carrier, incl. the KG intent surface the KG adapter needs) instead of a bare curriculum-version id; `LearnerSignals`/`EvidenceRequirements` are sketch-shaped placeholders (Phase G). `Bm25Retriever` implements the contract exactly: `websearch_to_tsquery('english', q)`, `ts_rank_cd` ordering with a deterministic chunk-id tiebreak, the T-C07 EXISTS curriculum predicate as a bound parameter, blank-query fail-closed-empty before any SQL, candidate limit from the query record; `ChunkLexicalRepository` owns the native SQL (ChunkVectorRepository posture). Adapters for the two existing ports (`PgVectorRetrievalProvider`, `AuthoritativeKgRetrievalProvider` — topics only, pedagogy context never a candidate) + the `GeminiFileSearchRetriever` contract stub (`available()=false`, deliberately not a bean — T-C15) complete the arm-registry surface. Tests: 27 new unit tests (SQL shape + fail-closed contracts + mapping fidelity) green in the bootstrap lane; full suite 631/631 with 1 Docker skip at `48db7f7`; `ChunkLexicalSearchIT` (stem-verbatim top-5 ranking sanity, foreign-curriculum + unlinked-document negative controls, deterministic ordering) rides the CI lane with the other Docker-ITs. Honest scope: **serving wiring untouched** — BM25 becomes a served candidate source only through the T-C13 benchmark verdict; an arm-B run additionally needs V28 applied (CI/production flyway), which the agent sandbox cannot do. Side note: this lane surfaced the latent Mockito defect in the T-C07 `CurriculumScopeResolverTest.ambiguousOwnersRefuse` (nested same-mock call inside a thenReturn argument); fixed upstream in `d191ea9` while this lane worked — adopted. **Session-96 addendum (2026-09-17): the chunk→SpecificationPoint mapping store is the keystone prerequisite** — the diagnosis quantifies why: zero chunk→SP rows exist in ANY store (production V11 chunks carry no SP; the content-package v0.1 schema models note-level only; run-003-b's spec-resolution axis is unscoreable for exactly this reason), and note-level inheritance (the only SP-aware routing available) has a 13.7% chunk-level precision ceiling. The construction path is NOT a new mapping campaign: seed = the 197 derivable anchors from the already-HUMAN_VALIDATED T-C10 quotes (94.3% anchor deterministically), plus authored candidates for the ~25-row enumerable gap worklist, through the C10/C12 governance (verbatim quote + confidence + rationale + SUGGESTED → operator HUMAN_VALIDATED). Dependency order recorded in `backlog/RETRIEVAL-DIAGNOSIS-2026-09-17.md` §4: mapping store → corpus repair → chunking canonicalization (heading-title inclusion pinned in production ChunkingService) → notes-corpus ingestion (documents/document_chunks; the arm-A backfill currently covers the paper corpus, not the SME notes) → retrieve-then-attribute resolver → the fair chunk-granularity evaluation protocol (held-out validated gold + the real-learner query regression set, case #1 = the session-96 pilot tutor question). **Addendum (Session 102, 2026-09-18 — state correction):** an in-session audit misread this row's tail as "registered, not started"; the authoritative record above stands — the lexical arm + `RetrievalProvider` fabric have been IMPLEMENTED + RECORDED since session 86 (V28 tsvector+GIN, `Bm25Retriever`, `LexicalBoundaryIT` in Docker CI, run-003-b RECORDED), with the production-serving default still gated on the T-C13 §8 verdict by design. The Session-102 apply (resources `69c81cc0f744`, 210 HUMAN_VALIDATED chunk→SP rows) unblocks the spec-resolution axis for the next benchmark snapshot; remaining chain per the §4 dependency order: T-C06 notes ingestion → snap v2 → retrieve-then-attribute resolver → the chunk-granularity evaluation protocol.
 - [ ] T-C15 (REGISTERED 2026-09-17 from the retrieval doc-gap audit — executes the explicit next action in `GEMINI_FILE_SEARCH_AND_NOTEBOOK_ARCHITECTURE_RESEARCH.md` §20, doc dated 2026-09-14) Gemini File Search POC + benchmark arm: minimal corpus slice per Experiment A (a few HUMAN_VALIDATED revision notes + validated exam questions + matching mark schemes + one supplementary Class-C teacher PDF), SyllabAI metadata projection (≤20 custom fields: resource id/version, curriculum scope, spec point ids, validation status), citation normalization into the SyllabAI evidence chain (FS citation = input to evidence handling, never final provenance); benchmark arms E/F/G ride T-C13; authority boundary absolute — FS never becomes authoritative for curriculum/spec points/prerequisites/misconceptions/mastery (§5), never the sole durable representation (§14-G portability), no production default until benchmark evidence. Registration basis: zero references in TODO/PROGRESS/AGENT/MASTER_SPEC despite "Yes, investigate immediately" in the doc's §18 decision matrix.
 - [ ] T-C16 (REGISTERED 2026-09-17 from the Path-3 parsing-flow assessment — corpus acquisition/organization tooling; **DESIGN RATIFIED 2026-09-17** via owner-delegated self-review, ratification record in spec §12 — legacy manifest shape re-verified against `paper 1/MANIFEST.json` (sessions was always a keyed dict — §7 corrected), image-island form pinned to the verified single-line center-div shape, `--from-staging` promoted into the scrub CLI contract, filename-collision + duplicate-document fail-closed rules added) `tools/corpus_ops/` in syllabai-parser: makes the Stage A/A′ loop a committed, tested artifact instead of agent folklore (the 2026-09-11…13 `paper 1/` cycle — same-second download of 2,002 crops, `operator_cleanup` of 1,362 images with reference scrub, `structural_repair` of 7 files, `operator_cleanup_2` — was executed ad-hoc and the tooling never committed). Four commands: `intake` (retro image rescue from already-converted markdown before ~1-week signed-URL expiry + pair organization into the `Past-Papers` per-session layout, operator-confirmed pairing — never content-inferred identity), `scrub` (deletion-manifest-driven reference removal, grammar-aware, fail-closed, orphan detection hard-Fails), `verify` (read-only manifest↔filesystem agreement), `rename` (provisional `UNIDENTIFIED-*` sessions fixed via the same proposal/confirm pattern). MANIFEST schema v1.1 additive (legacy `paper 1/MANIFEST.json` keys canonical + `ops_log[]` + per-session `clean{}` derivative block; v1.1 additions narrowed at ratification to `mime`/dimensions/document `size` — `images` keys already are the source URLs); deterministic writer; mocked-HTTP + fixture-tree CI tests; `clean_diff.py` (Stage B gate G3 implementation) rides this package (synthetic-pair tested now; corpus-proven only after Stage B's first real pair). Spec ratified: `CORPUS_OPS_TOOLING_DESIGN.md` (v1.1). **IMPLEMENTED 2026-09-17**: `tools/corpus_ops/` committed to syllabai-parser (intake/scrub/verify/rename + clean_diff + mocked-HTTP & fixture-tree unit tests, all green). Rollout gate owner-held: dogfood on the next ocr.z.ai conversion batch BEFORE it touches `Past-Papers`; replay the historical `paper 1/` manifest as the integration oracle.
 - [ ] T-C17 (REGISTERED 2026-09-17 from the Path-3 parsing-flow assessment — the Stage B clean-and-verify protocol) Subtractive, grammar-preserving clean-and-verify pass over QP/MS GLM-OCR markdown BEFORE extraction: removes covers/instructions/formula-sheet/periodic-table/marking-preamble boilerplate (the known, mechanical, located cause of the "boilerplate spillover" defect class — real 4CH0/1C Jan 2012 pair yields 27 draft questions from a 20-question paper), applies the §7.1 bounded fix taxonomy (fence balancing, unambiguous table closure, byte-identical page-split dedup), and escalates everything else to the operator via `clean-proposals.json`. **Grammar contract RATIFIED 2026-09-17 against `GlmOcrMarkdownParser` v1.2.0 source (syllabai-parser tree `5c93317`): 10 invariants anchored to the parser's actual regexes/bounded-scan predicates — including image-island exact single-line shape (a reformatted image line silently degrades to a raw-HTML paragraph), QWC-asterisk/list-item interaction (`*(c)` survives, `* (c)` reclassifies), entity-decode ownership (cleaning never pre-decodes), P-11 `$$` span discipline — and gate G5 upgraded to the parser's provenance honesty counters (`unterminatedTableBlocks`/`orphanMathFences`/`unclosedCenterDivs`/`greedyMathLines` must be absent from the clean parse).** Acceptance gates G1–G5 (pair CLI end-to-end; health.py zero FAIL; raw-vs-clean draft diff with mark-identity invariant + element-id shift expected; report completeness; grammar counters) block ingestion of any un-CLEANED pair; cleaning never changes validation state (SUGGESTED/reviewRequired untouched). Artifacts per session: `clean/{QP,MS}.md + clean-report.json (+ clean-proposals.json)`; raw stays the ADR-021 provenance root. Spec committed: `CLEAN_VERIFY_PROTOCOL_QP_MS_MARKDOWN.md` (v1.1); operational brief for the executing agent: `STAGE_B_AGENT_TASK_BRIEF.md`. **FIRST EXECUTION 2026-09-17 (Session 92) — real corpus, protocol machinery VERIFIED, session itself NOT CLEANED:** executed against `Past-Papers/paper 1/2012-Jan` (the protocol's own motivating spillover case) in a sandbox copy with the canonical clone read-only (B.0 anchors re-verified at every run: raw QP `136b500f…`/MS `f2afa60d…` match the manifest). B.0 captured printed totals (QP 120; MS total line absent → null) + identity + per-question totals (Q5/Q11 Total lines absent → escalation, never reconstructed). Subtractive removal pass: 52 QP lines (cover table, Instructions/Information/Advice, periodic table, `## Answer ALL questions.`, BLANK PAGE ×2) + 40 MS lines (cover + corporate preamble, publications footer), all logged per-class with line ranges; marking tables + every `Total` line kept verbatim; image islands 11→11; entities untouched (`&#x27;`/`&quot;` survive; `entityDecodedLines` 2→2). Gates: **G1 PASS** (pair CLI end-to-end on clean pair, five-file bundle), **G2 FAIL — inherited, pre-existing**: printed paper total 120 vs markdown question-sum 98 (the OCR markdown carries questions 1–11 only; Q5/Q11 totals lost to OCR) → the pair is correctly blocked from ingestion and escalated (`clean-proposals.json`: E-001 missing Q5/Q11 totals, E-002 content completeness 120≠98, E-003 MS total absent, E-004 in-table OCR artifacts `和`/fused marks cells — all `awaiting_operator`); **G3 PASS** (11→11 questions, 85 shared (number,part,marks) identical, mark points 0→0, no new warning classes, paperTotalConflict unchanged — now incl. **G3.2b** question-total identity); **G4 PASS** (ledger complete, anchors verified); **G5 PASS** (failure counters absent from clean parse, `signedUrlFigureRefs` unchanged, `sourceLineCount` deltas == ledger exactly). **Negative controls 8/8 DETECTED** (real-mark mutation → G3.2b FAIL; phantom question → G3.1 FAIL; image-island reformat → figure 11→10; orphan `$$` → `orphanMathFences` emitted; QWC `*(c)`→`* (c)` → block role `list_item` (synthetic probe — the real pair has no QWC lines); entity pre-decode → `entityDecodedLines` 2→0; tampered raw → B.0 HARD STOP; new warning class → G3.4 FAIL). **Determinism**: pair CLI re-run = bundle byte-identical modulo `extractedAt`; clean_diff re-run byte-identical. Two tooling gaps found by the controls were FIXED by strengthening with tests (40/40 parser suite green): verify pair-completeness checks disk not just the manifest listing + document checksums verified (`c9ad722`); clean_diff G3.2b question-level printed-total identity (`7b8bcba`) — protocol §13 updated with both findings. Read-only `corpus_ops verify` on the FULL live corpora with the strengthened tooling: paper 1 + paper 2 = 0 FAIL / 0 WARN each (164 documents checksum-verified). **Verdict: T-C17 protocol machinery = VERIFIED (implemented tooling → protocol execution → real-corpus evidence → negative controls → determinism); session 2012-Jan = NOT CLEANED (G2 inherited FAIL, operator escalations open); no ingestion of anything; T-C16 production rollout gate (next ocr.z.ai batch) remains owner-held — IGCSE/IAL trees are still source PDFs, so no batch exists to dogfood.** Evidence: `.syllabai/evidence/t-c17/`. **SECOND EXECUTION 2026-09-17 (operator-directed: "You can parse the pdf version add it. Make it complete yourself") — session 2012-Jan CLEANED, escalations resolved by a fresh complete parse of the official PDFs:** the operator directive answered session-92's awaiting_operator escalations by supplying the missing input itself. A full 28+28-page conversion batch was produced from `IGCSE/Edexcel/Chemistry/Paper 1/January 2012 {QP,MS} - Paper 1C Edexcel Chemistry IGCSE.pdf` over the internal-gateway vision endpoint (served model `glm-5v-turbo`; HONEST ENGINE DEVIATION — the ocr.z.ai `layout_parsing` service has no key in the sandbox, so **the true next-ocr.z.ai-batch rollout gate stays owner-held**; no layout stage → no crop figures → the fresh raw carries zero image islands and the prior 11 assets are retained with the archived raw; prompt sha256s and per-page records in the batch manifest). Fresh raw = **complete**: all 11 printed per-question totals (10, 8, 13, 8, 11, 14, 9, 10, 18, 8, 11 — sum 120 = printed 120, Q5=11/Q11=11 recovered from the printed pages), both paper-total witnesses verbatim, raw-pair health REVIEW-only ZERO FAIL (prior raw FAILED 120 vs 98), raw QP draft = exactly 11 questions (no boilerplate spillover vs the prior 27-draft-question defect), E-004 fused-cell artifacts (e.g. `H2O和O2`) gone. Chain: corpus_ops intake/verify dogfood on the batch (0 FAIL / 0 WARN) → Stage B on the new session (B.0 anchors vs MANIFEST; removals 93+3+2 QP / 35+21 MS lines per-class logged, 0 repairs, 0 escalations; identity line kept per session-92 precedent). **Gates: G1 pass** (five-file bundle; deviation: conformance-verified python twin — Java 25/mvn unavailable in sandbox), **G2 pass** (0 FAIL findings; REVIEW-only extractor part-marks attribution + MS paper total absent-as-printed), **G3 PASS** (11=11 questions; 37 shared (number,part,marks) identical; G3.2b 11 totals identical; no new warning classes; no paperTotalConflict), **G4 pass** (ledger line-math exact 846−98−3=745 / 1256−56−2=1198), **G5 pass** (honesty counters absent — note: counters live at `provenance.extractionParams`, a first probe reading `params` produced a false pass and was corrected before recording). **Negative controls 6/6 DETECTED** (part-mark mutation→G3.2 FAIL; phantom question+minted total→G3.1+G3.2b FAIL; mid-document orphan `$$`→`orphanMathFences=1`; QWC `*(c)`→`* (c)`→list_item; tampered raw→B.0 HARD STOP; new warning class→G3.4 FAIL) + 2 honestly N/A with session-92 cross-refs (image-island reformat, entity pre-decode — no islands/entities in this parse; both were DETECTED on the real pair in the first execution). **Determinism verified** (clean re-run content-identical modulo `generated_at_utc`; clean_diff re-run byte-identical). New finding for the parser owner: an orphan `$$` at EOF does not increment `orphanMathFences` in the python twin (mid-document control unaffected). G2 sidecar-witness integration remains owner-held/unimplemented (unchanged). **Canonical supersession applied and pushed: SyllabAI/Past-Papers `d31ca91..9746af8`** — `2012-Jan` now carries the fresh raw (prior raw archived as `*.raw-superseded-20260911.md`, archive checksums verified against the manifest before replacing), the MANIFEST v1.1 additive update (schema_version, ops_log raw-supersession entry with full engine provenance, `clean{}` block), and the `clean/` artifacts; `corpus_ops verify` over the full tree after supersession = **0 FAIL / 0 WARN / 0 informational**. **Verdict: T-C17 machinery = VERIFIED (second real execution); session 2012-Jan = CLEANED (first CLEANED session — G2 now passes on recovered printed totals; E-001/E-002/E-003/E-004 superseded by the fresh parse; validation states untouched, nothing ingested); remaining owner-held: G2 sidecar-witness tool integration, the true ocr.z.ai-batch rollout dogfood, and (candidate, owner decision) promoting the gateway-vision backend into `tools/ocr_batch` with the repo's test discipline.** Evidence: `.syllabai/evidence/t-c17/` + `.syllabai/evidence/t-c17/second-execution-20260917/`.
 - [x] T-C19 (REGISTERED 2026-09-17 from the T-C13 Run-002 A0 finding + run-003-b reconciliation, session 86; **EXECUTED 2026-09-18/19, session 106, as the named expansion round** — spec CONCEPT_SPEC_POINT_MAPPING_VALIDATION_LANE.md RATIFIED v1.1 with self-review record §12, under rulings R1 4CH1-only + R2 PDF-direct-parse anchor; substrate verified 117/117 mechanically (M1–M5) with fail-closed negative controls and cross-layout byte-identical determinism, seed 32c2aa9bbe9c4b0e; operator-delegate gate under the operator's explicit proceed directive: Part A 39/39 CONFIRM = 100% ≥ 90% per class, Part B 5/5 DEFER→T-C11 (resources 40e256e); attachment-promotion pathway built additively exactly as c11_promote.py's PART_OF refusal named it — c19_promote.py + generator G19 + graph_check c11.10 allowance via exact c19 record match, with zero-c19 byte-identity, regeneration-with-record byte-identity, idempotence and post-apply materialization all proven; 117 PART_OF rows SUGGESTED→HUMAN_VALIDATED (validated_by operator-directive-session-106; provenance.tier stays AI_SUGGESTED; ALL 113 nodes byte-unchanged SUGGESTED — scope guard held); graph_check ALL PASS 270 HV / 0 from generation; CI: c19_promote_test + substrate selftest wired. NOT CLAIMED: any production change, snap-002 (operator-held credential boundary — concept_attachments.json fills on the versioned re-freeze), any pedagogy-edge status change, authoring for the 5 gap SPs / 4 held misconceptions) Concept-node mapping/validation lane: the settled pedagogy edge store (112 REQUIRES_PREREQUISITE + 14 REMEDIATED_BY + 13 WRONG_ANSWER_PATTERN + 2 COMMONLY_CONFUSED_WITH, all HUMAN_VALIDATED) attaches to `4CH1-CON-*` concept nodes that are ALL SUGGESTED and carry ZERO HUMAN_VALIDATED attachment rows bridging them to the spec-point serving surface (snapshot concept_attachments = 0) — so A0 never emits pedagogy context. **Classification (session 86): GRAPH-MAPPING GAP** — the missing validated concept→spec-point mapping substrate; the SUGGESTED state itself is correct governance and must NOT be "fixed" by promotion. NOT a retrieval gap (the governed surfaces behave as designed), NOT intent-matching (A0 matched_ratio 0.60), NOT benchmark-authoring (gold honestly mirrors the served state). Fix path: validated mapping rows (T-C06/F-168 four-tier provenance family) + the validation lane; surfacing then rides arm I / KG-expansion with its own benchmark record. Scope guard: never make SUGGESTED nodes servable to close the gap.
-- [ ] T-C20 (REGISTERED 2026-09-17 from the arm A benchmark construction, session 95; renumbered 94→95 — the T-C18 errata lane published 94 first, session-89/93 precedent) The production VECTOR serving surface predates T-C05: `ChunkVectorRepository.search` enforces the T-C07 curriculum-scope EXISTS predicate but carries NO `validation_state='VALIDATED'` predicate — the VALIDATED-only serving-eligible surface exists on the lexical side only (`ChunkLexicalRepository.searchServingEligible`, T-C14). Found by construction of the arm A boundary audit (CI-proven on fixtures: `ArmAReplayIT` asserts the SUGGESTED-paper duplicate IS served by the production path; the recorded run surfaces it as a named finding). NOT silently patched: run-004-a records a served view (production truth) + a post-hoc VALIDATED-only compliant view (the run-001 B-proxy validated_only discipline), and this row owns the fix — a vector serving-eligible surface mirroring the lexical one, or the fabric's central enforcer. NO current serving exposure: with 0/2,333 production embeddings the vector arm degrades honestly to empty, and the gap only becomes real when production embeddings exist, which is gated on the §8 arithmetic. (session 95)
+- [x] T-C20 (REGISTERED 2026-09-17 from the arm A benchmark construction, session 95; renumbered 94→95 — the T-C18 errata lane published 94 first, session-89/93 precedent) The production VECTOR serving surface predates T-C05: `ChunkVectorRepository.search` enforces the T-C07 curriculum-scope EXISTS predicate but carries NO `validation_state='VALIDATED'` predicate — the VALIDATED-only serving-eligible surface exists on the lexical side only (`ChunkLexicalRepository.searchServingEligible`, T-C14). Found by construction of the arm A boundary audit (CI-proven on fixtures: `ArmAReplayIT` asserts the SUGGESTED-paper duplicate IS served by the production path; the recorded run surfaces it as a named finding). NOT silently patched: run-004-a records a served view (production truth) + a post-hoc VALIDATED-only compliant view (the run-001 B-proxy validated_only discipline), and this row owns the fix — a vector serving-eligible surface mirroring the lexical one, or the fabric's central enforcer. NO current serving exposure: with 0/2,333 production embeddings the vector arm degrades honestly to empty, and the gap only becomes real when production embeddings exist, which is gated on the §8 arithmetic. (session 95) **CLOSED 2026-09-24, session 121 (core `c8798d4` + `637502d`, CI GREEN run 36029994848-family): `ContentRetrievalService` (the learner KA-RAG vector arm + the teacher/ops content search) now drives `ChunkVectorRepository.searchServingEligible` — the T-C07 scope predicate gains the T-C05 VALIDATED-only serving gate on BOTH branches: the owning exam paper (paper branch; the exact vector mirror of `ChunkLexicalRepository.searchServingEligible`) and the chunk's own document (knowledge-layer subject branch; the V29 `documents.validation_state` substrate keeps corpus imports born SUGGESTED unservable once embedded). The neutral `search` stays unchanged as the T-C13 benchmark/audit surface. Row-level proof: ContentPipelineIT Orders 8/9 state-flip ITs (SUGGESTED never serves; the neutral surface proves data presence under the closed gate; pinning VALIDATED flips serving on for the SAME rows) + 3 new SQL/bind unit tests; harness proof: `ArmAReplayIT` served view (production path) now asserts the boundary HOLDS (SUGGESTED-paper duplicate excluded, violations == 0 — zero is the contract, any violation is a regression); the historical run-004-a record is preserved unchanged. KaRagFlowIT's MS fixture pinned VALIDATED (positive-control ripple). Timing note kept honest: 0 embedded chunks in production today ⇒ no serving behavior change yet; the gate is load-bearing the moment the embedding backfill executes (2026-09-27 CI-quota window).**
 - [ ] T-C18 (REGISTERED 2026-09-17 from the Path-3 parsing-flow assessment — post-review metadata completion so Test Builder filtering becomes real; **DESIGN RATIFIED 2026-09-17** via owner-delegated self-review, ratification record in spec §11 — one material correction: a type substrate ALREADY exists (`Question.Type {MCQ_SINGLE, SHORT_ANSWER, STRUCTURED}`, hardcoded `STRUCTURED` at ingestion and load-bearing in STRUCTURED-gated serving paths), so §3 v1.1 replaces the proposed version-level `question_type` column with additive `detected_type`/`type_source`/`type_state` on `Question` (signal persisted, serving semantics untouched, MCQ promotion explicitly rides the MCQ end-to-end project); two-axis source/state rule clarified for §6 "EVIDENCE-validated"; migrations corrected V27-current → V28, renumbered **V29** (2026-09-17 errata: V28 consumed by the T-C14 lexical arm)) Closes the three verified gaps blocking "filter by difficulty/type/syllabus point" (F-050): (1) `difficulty` is hardcoded `3` at ingestion (`PastPaperIngestionService` "difficulty unknown until review") — becomes nullable + `difficulty_source` enum (UNKNOWN|SME|EVIDENCE|HEURISTIC) with backfill `UNKNOWN`, SME authoritative, evidence-derived values are always proposal-only (SUGGESTED, never self-applied), heuristic bands excluded from serving filters; (2) the parser's MCQ signal dies at the ingestion boundary — §3 v1.1 (post-ratification): persist it as additive `detected_type`/`type_source`/`type_state` on `Question` (the existing serving `Question.type` column is untouched; see the ratified prefix above); (3) no question↔spec-point relation in core DB (T-C12 tagger output lives corpus-side only) — new `question_spec_points` table (PRIMARY/SECONDARY, SUGGESTED→VALIDATED, provenance jsonb, unique constraint) fed by a fail-closed T-C12 importer with curriculum-family scoping (4CH1↔IGCSE family; cross-family rejected loudly). Test Builder contract §6: filters consume only SME/EVIDENCE-validated sources; UNKNOWN excluded from candidate pools, never approximated; empty pools are explicit blueprint failures. Additive-only Flyway (V29 next — V28 consumed by the T-C14 lexical arm; V27 verified current at ratification). Sub-rows T-C18a–e in the spec §10 (T-C18a rescoped per §11: V29 = nullable difficulty + source/state + detected-type columns on Question + `question_spec_points`). Spec ratified: `POST_REVIEW_METADATA_COMPLETION.md` (v1.1).
 - [ ] T-C08 (future) Evidence-based difficulty states wired into serving policies: per-(question part, CurriculumVersion population) statistics jobs (p̂, discrimination, response time, sample state); recommendation/mock weighting by evidence state; new-question exploration share.
 - [x] T-C09 (KG build Phase 1) Deterministic specification-skeleton extraction from the 4CH1 Issue 3 spec md → graph-as-code in syllabai-resources. — **COMPLETE (session 28, 2026-09-11; repo `c09-phase1`): `scripts/c09_spec_graph_extract.py` (deterministic, zero-LLM, hard-gated) + `scripts/graph_check.py` (validator, 8 check groups, negative-tested against 8 corruption classes) + `graph/` = 6 YAML files (182 specification_points · 4 topics + 28 subtopics · 210 PART_OF edges · 25 command words · 12 practicals · 3 AOs + 2 papers) + 2 reports (`PHASE1_COMPLETENESS.md`, seeded 20-statement `SPOT_CHECK_SHEET.md`). Ground truth amended by the statement-level PDF reconciliation: **182 unique codes (S1:60/S2:50/S3:22/S4:50) / 52 C-points / 28 subsections** — supersedes the plan's §5 167/40/29 baseline (evidence in PHASE1_COMPLETENESS §2; the md holds all 182 but 4.49C/4.50C are OCR-orphans outside the HTML tables). Cross-check: 119 exact / 52 normalized / 11 fuzzy (residual OCR damage) / **0 mismatch**, statement order identical, md↔PDF code sets equal; damage policy honored (verbatim text, 54/182 flagged, never fixed; 4SD0 whitelisted only inside the Double-Award applicability rule). Two real defects found by the gated first run and fixed in the extractor: (1) PDF-walk listing pollution — the section-start sub-topic TOC listings glued onto the previous section's last statement (1.60C/2.50 mismatches + 3.22C hidden fuzzy false-pass) → listing-state machine; (2) table-classifier ordering — Appendix 1's 'Paper codes' row substring-matched `paper_overview` before `codes_appendix`, emitting a bogus third paper record → check reorder + `papers: 2` gate. Per-node provenance: issue + md line anchor + table/row index + row shape + PDF page + match level; edge vocabulary = live V2 enum (PART_OF only, names never invented); `4CH1-*` namespace enforced everywhere. DB wiring rides T-C06 (CurriculumDraftDto → SPEC_POINT, built in T-010). Operator gates: SPOT_CHECK_SHEET (20 statements) + git PR review = the HUMAN_VALIDATED promotion.**
@@ -92,6 +97,16 @@
 
 - [ ] T-C21 (REGISTERED 2026-09-18 from the operator's Smart Mark product-contract clarification — ADR-025) **Exam Questions Smart Mark surface** — build the product contract, not a chatbot: parsed question web render with a View-Mark-Scheme action; MCQ clickable options / structured part inputs; self-mark path (scheme view + human mark) as a first-class alternative; per-part Smart Mark widget (marking unit STAYS per-part — one Answer per QuestionPart, scheme points scoped to that part; full-question/full-scheme rendering is presentation context only); bounded post-mark actions "Explain my feedback" / "Improve my answer" (single-purpose governed generation over the learner's answer + the question's own validated scheme points, post-attempt leakage rules, no chatbox, no free conversation) + re-mark on resubmission with append-only result history; input presentation is a web-layer choice (combined multi-part box permitted) but persistence stays per-part (skipped-part detection preserved). Dependencies: T-C18 for the filter/difficulty/type substrate (Test Builder filters; Target Test difficulty ladder = SME/EVIDENCE-validated values only); student-facing Smart Mark expansion stays behind the κ ≥ 0.60 release gate (F-161). NOT in scope: whole-question marking unit (rejected, ADR-025), tutor/CLA awarding marks, Smart Mark chat UI.
 - [ ] T-C22 (EXECUTED 2026-09-18, session 105 — ADR-026; the s104 session's work, reconstructed after sandbox loss) **SME question-bank + revision-notes import (igcse-chemistry-19) and the SME practice tranche** — the operator's "replace the question bank with the SME bank, replace the revision notes" directive, executed end-to-end: core `8b0c65c` (V30 question_spec_points/difficulty_source/question_asset renumbered from V29 after T-C06's V29 collision; V31 SELF_MARKED states + learner_self_marks — the SME reveal-and-self-mark flow, settle/evidence mechanics identical to the teacher path, provenance structurally excluded from the κ sample; specPointCodes on the learner question view; 688/0/1 green, CI 35348037939 SUCCESS, deployed + live-verified) + both packages rebuilt by the s104 builders (593 questions / 228 MCQ / 365 structured / 585 assets / 27.9 MB; 112 notes / 28 subtopics / 194 assets / 14.0 MB; mapping gates A-D re-verified: 1,404/1,404 parts coded all in the 182 registry, 112/112 notes coded, 28/28 subtopics reached) + web `20c8f85` (QuestionMarkdown GFM+KaTeX+authed-assets, MCQ four-button grid + worked solution, reveal-and-self-mark, question-help panel joining specPointCodes to notes). **REMAINING: the package upload is one operator action away** — Path A (dispatched workflow, run 35348458620) honestly recorded OPERATOR_BOUNDARY (pilot-teacher is TEACHER-only, admin probe 403, no ADMIN secret exists in any repo — the T-C06 precedent); the operator executes runbook Path B (curl, ~5 min) or grants ADMIN and re-dispatches. Packages + verification + runbook: download/s104-sme-import/ + web release `sme-corpus-2026-09-18` (sha256-pinned). NOT in scope: flashcards, IAL/other courses (Cycle 2+, ADR-014; T-C06 owns the IAL notes canonical track).
+- [ ] T-C23 (REGISTERED 2026-09-25, session 128 — operator-directed dig into the 0-hit serving anomaly; evidence: `evidence/serving-0hit-anomaly-2026-09-25/REPORT.md`) **Production serving restoration — the teacher-content decision that re-opens `/teacher/content/documents/search` (and the learner KA-RAG vector arm) after T-C20** — root cause PROVEN (not the scope refusal): the serving-eligible intersection (`embed_rev=2` × VALIDATED-paper/doc × scope) is EMPTY — the only VALIDATED papers (4CH1/2C Specimen 2017, 4CH0 2C Jan-2014/2018, 4CH0 1C Jun-2011, + the glmocr-era 4ch1-2c-202101 / 4ch1-2cr-202001 / 4ch0-2c-201701) point at **2026-09-14 rev1 documents**, excluded by the V33 `CURRENT_EMBED_REV=2` read filter; the entire rev2 corpus (528 docs / 3,787 chunks, fully embedded 09-20→22) is **born SUGGESTED** (every bank drive lands SUGGESTED), excluded by the T-C20 VALIDATED-only predicate; scope resolves fine (4CH1-2017 sole owner — **IAL-CHEM-2018 ARCHIVED 2026-09-25 per the operator's pilot-1 decision "we are not doing the ial chemistry, we moved to igcse"**, the designed archive surface, reversible, postcheck-verified). The anomaly APPEARED when T-C20 closed 09-24 (the pre-T-C20 neutral search had been serving SUGGESTED rev2 chunks — the exact named gap). **THE FIX IS OPERATOR-GATED content validation (never agent assertion — the validated-supersession precedent):** Option A (recommended, §7 designed path) — validate rev2-era papers via `validate-all`/workbench (smallest honest batch: placed 4CH1 papers whose QP/MS docs were created 09-20/21/22; everything is already embedded, chunks serve the moment a paper validates); Option B (rollback lever) — flip `CURRENT_EMBED_REV` to 1, instantly serving the VALIDATED rev1 corpus at honestly-worse measured quality (rev1 0/9 vs rev2 9/9 hit@10 on the frozen gold subset); Option C — stay 0-hit until R5 completes. Ticket candidates recorded: serving-emptiness observability (all three empty-causes return identical 200+[]); resolveActive N+1 (~340 per-node reads per search). **2026-09-28 (session web-98866c45): BOTH ticket candidates CASHED — ticket 1 = T-C31 serving-emptiness observability (core main `d4e0f7a` via PR #29: additive `X-Search-Empty-Cause` header + structured 4-stage funnel log distinguishing the three empty-causes); ticket 2 = T-C32 resolveActive N+1 (core `42534db`: per-node findById loop → ONE batched predicate over the same subtree-CTE id set, ~340 reads/search → 2 queries/subject root; reached main via the deep-audit linear tranche `1551c1a..05f2621`, PR #30 superseded-closed, T-C32.yaml DONE @ records `ea86259`).** The root-cause fix lane itself (operator-gated content validation, Option A) was EXECUTED by the operator's own waves: papers axis 09-27 (r5), the 298-card wave 09-28 (r6, audit run `a5d13c0a`), and the app-side specimen wave (SNAP5-F6) — production state is now VALIDATED-bearing (snap-005 census: EQ 306V/3F/747S chunks; QP 145V/MS 161V) and serving is proven through the frozen-corpus replay (r6 arms A/C served 671 VALIDATED card refs). **Row stays open on one honest remainder:** a live teacher-authed `/teacher/content/documents/search` end-to-end probe (teacher-credential session) has not been re-run post-wave — every verification so far is census + frozen-replay evidence, and the serving endpoint itself stays unprobed from agent sessions (auth-gated by design). What the live endpoint will actually serve also depends on the read filter: `CURRENT_EMBED_REV` has been 1 since the 09-25 Option B flip (`d523f57`; the standing menu says rev2 serves after teacher validation), and whether the post-09-25 documents (the 298 cards included) carry rev 1 or rev 2 stamps is not determinable from the coordination records alone — reconciling the standing-menu flip-back question against the documents table's embed_rev column is part of that live probe, not assumed here.
+  - **T-C23 COMPLETE — serving RESTORED 2026-09-25 session 130 (operator handed the Render PAT: "do it yourself")** — the REAL root cause was deeper than the dig concluded: R5 (09-21) had DELETED all 2,333 rev1 chunk rows while retaining the 172 doc rows, and the Option B pre-flight had counted the STALE `documents.chunk_count` column (an embed probe: row claims 12 chunks, embed endpoint reports totalChunks=0) — the flip served an EMPTY generation; Render was never the blocker (7803102 LIVE at 16:20Z via API check, deploy dep-dar9uj9k55hc73fh). REPAIR (guarded, identity-faithful, app-mediated): Phase-0 read-only guards all PASS (no FK on documents; canonicals checksum-match for all 22 VALIDATED-paper docs) → per-doc guarded DELETE (id+checksum+zero-chunks) → re-INGEST through the live build (chunker + metadata mirror + embed_rev=1) → idempotent EMBED (gemini-embedding-001 = query-time model; ~243 chunks) — 22/22, 0 errors. **verify probe: all 5 queries 5/5 hits, scores 0.60-0.73; tutor probe 11/11 with 6 citations (weighted RRF live).** Evidence: `evidence/serving-restore-complete-2026-09-25/`. CURRENT_EMBED_REV stays 1 (rev2 serves after teacher validation per the standing menu).
+  - **T-C23 Option B EXECUTED 2026-09-25 session 129** (operator decision verbatim: "I dont want to manually sit and review papers. We have very less time" — eliminates A and C): `CURRENT_EMBED_REV` rolled 2→1, core commit **`d523f57`** (the V33-documented rollback lever; flip is purely additive — the rev2 serving set was empty; honest trade-off on the javadoc record: rev1 0/9 vs rev2 9/9 hit@10, interim until rev2-era papers are teacher-validated, then flip back to 2). core-ci **SUCCESS** run 36139951583 on `d523f57`. Verification probe (5 IGCSE-chemistry queries): still 0 hits through 13:54Z — Render auto-deploy (`autoDeploy: true`) not observed live from the sandbox ~38 min after push; needs one dashboard check (Deployments > last deploy for d523f57). Expected signal when live: search returns hits from the VALIDATED rev1 papers' chunks. Probe + outputs: `evidence/serving-restore-rev1-2026-09-25/`.
+  - **T-C23 flip-back REFUTED at pre-flight 2026-09-28 (operator "Proceed" on the standing-menu item, trace 1a0e7e245416ef65) — NOT EXECUTED, zero writes:** the read-only exact-gate probe (SQL mirrors `searchServingEligible` `SCOPE_EXISTS_VALIDATED`, scope = sole-ACTIVE 4CH1-2017) returns **rev2 eligible = 0 chunks vs rev1 = 615** — the entire VALIDATED corpus is rev1-STAMPED, because `embed_rev` stamps at ingest time and `d523f57` (09-25) had already rolled the constant to 1 when the 09-25 papers re-ingest (13 QP + 13 MS), the 09-26 card import (298 cards, 1 chunk each), and every subsequent ingest ran. The 09-27/28 teacher waves validated that rev1-stamped content; the actual rev2 bridge corpus is still 100% SUGGESTED (80 EQ docs / 747 chunks + bridge QP/MS/notes). Flipping would recur the exact 0-hit anomaly (615 → 0). Embedding model is `gemini-embedding-001` 768-d on BOTH revs (no model mix; rev = content-generation marker). Corrected menu in `evidence/serving-rev2-flipback-refutation-2026-09-28/REPORT.md`: (1) EVAL the never-eval'd rev1-stamped VALIDATED corpus first (no writes); (2) eval-gated re-stamp 615 chunks 1→2 + constant flip; (3) original path — validate the rev2 bridge corpus. Correction recorded: the prior note "papers axis wave validated rev2-era papers" was wrong (rev1-stamped docs).
+
+- [x] T-C26 (EXECUTED 2026-09-25, session 130 — the plan cash-out: "I want the plan fully cashed out") **Plan §7 per-kind RRF weights reach the serving fusion** — the weighted fuse existed since 30a8ae4 but only RetrievalFabric (zero production consumers) consumed it; `ReciprocalRankFusion` is now the canonical home of `PLAN_V2_WEIGHTS` (NOTE 1.0 / SYLLABUS 0.9 / QUESTION_PAPER 0.8 / TEXTBOOK 0.7 / MARK_SCHEME 0.6 / CARD 0.3; unmapped sources incl. KG anchors weigh 1.0) + `fuseWithPlanWeights()`; `RetrievalFabric.PLAN_V2_WEIGHTS` aliases the same immutable map; **KaRagService + ClaService serving fusion calls the weighted overload** — rank order inside each list untouched, unweighted 1-arg fuse bit-identical for bench replays. `ServingPlanWeightsTest` pins the table, the induced ordering, the 1.0 default, agreement accumulation, bit-identity. core `7803102`, core-ci **SUCCESS** run 36160128846. Plan §9 note: unit gates pin the ordering; the T-C13 bench re-runs on the next corpus change (weights behaviorally inert while the corpus arm serves only QP/MS rev1 chunks pre-deploy). Evidence: `evidence/plan-cash-out-2026-09-25/`.
+- [ ] T-C27 (REGISTERED 2026-09-25, session 130 — from the plan cash-out audit) **Question cards corpus + chunk→spec-code linkage (bank layer v2)** — the two remaining plan §4.2/§2.5 bank-layer items, now substrate-complete: parser G5 (executed `55166af`) emits per-atom `summaryHint` + populated `commandWord` (card source fields verbatim from print, I1-compatible); `EvidenceSource.CARD` maps `EXTERNAL_QUESTIONS` chunks (weight 0.3 wired into serving fusion via T-C26); the corpus already carries 81 EXTERNAL_QUESTIONS + 112 EXTERNAL_NOTES + 162 SYLLABUS docs (spec-coverage census 2026-09-25). **Cash-out spec:** (1) card emission — deterministic per-bank-question card documents (header + tags + summaryHint ≤60 tok, token-subset of print) ingested under the sanctioned teacher-authed embed drive, eval-gated per plan §9; (2) chunk→spec linkage — the controlled-taxonomy join on the stable `paperDir#qN` key (pdflane analysis §4 guard rail: no tags inside atoms; bridge v1.2.0 emits specCodes null by design), landing in the V33 `spec_codes` GIN column; both unblock the CARD retrieval arm + spec-axis note/question joins. NOT in scope: textbook tier (P4 by design, §13.3 licensing open), agent-asserted validation of any content. **EXECUTING 2026-09-26** (owner superz, item-① directive): spec-linkage LANDED (qsp +634 AI_VALIDATED after the AI-mapping pass over the 298 cardable questions — 295 mapped, min-conf 0.80, 144/182 codes; chunk.spec_codes 512→923, GIN verified); cards LANDED (298 deterministic qcard-bridge-family drafts ingested 201×298, documents 701→999, chunks 4,045→4,343, all SUGGESTED, serving-inert); **embeds BLOCKED exogenously** — the configured Gemini key returns 403 'project has been denied access' (search 500s on live 1a644d5 are the same root cause; operator must restore the key; embed window 09-27 blocked too); recorded bench (snap-003 + gold-v2) owed at the serving flip. Pack: `bench/evidence/tc27-cards-speclinkage-2026-09-26/`. **2026-09-26 bench substrate COMPLETE (this session, operator directive):** snap-003 re-freeze + gold-v2 landed — `evidence/bench-001/snapshots/snap-003/` + `bench/gold-v2/` (card axis IN the snapshot via SNAP3-F1, so the serving-flip recorded run needs no further freeze); the recorded run itself remains owed at the serving flip; T-C13 row carries the full freeze record. **2026-09-28 CARD WAVE LANDED + r6 executed (this session):** the operator completed the 298-card review sheet (their own GitHub upload; sha256 89c07146…) recording 295 VALIDATE + 3 FLAG (#207/#278/#291, the no-spec-linkage cards, notes verbatim); decisions applied VERBATIM in one fail-closed transaction (content_review_audit run a5d13c0a-2503-4d06-bb14-9397e9a1cf37, 298 operator-labeled rows, target_type='question', sheet sha256-pinned; documents 296 VALIDATED / 3 FLAGGED / 80 neighbors untouched; teacher_validation_events stays 0 — CHECK domain excludes documents). The r6 card-flip bench executed the same day (T-C13 addendum): snap-005 froze the flip; arms A/C served 671 VALIDATED card-chunk refs; the 3 FLAGGED cards never serve. The serving-flip item is cashed with run IDs 36400373270/36401105223/36401616124/36402153529 as outcome evidence. **2026-09-28 (flagged-3 source verification, operator-directed):** the 3 FLAGGED cards #207/#278/#291 verified against primary sources across 4 layers (card canonical_json → bank questions/question_versions/question_parts → question_spec_points → QP/MS document_chunks): all 3 byte-faithful to their bank rows (normalized containment; #291 prefix per token-subset rule), bank marks 11/5/4 confirmed (leaf part sums 11=2+2+1+2+4, 5=4+1, 4=4×1; MS chunk 0 of 4CH1/2CR Jan 2023 states 'total for question 1 = 4 marks'), #207 anchored in QP chunk 3 (pp.6–7 copper question), #291 anchored in QP chunk 0 + MS chunk 0, #278 partial anchor (sitting QP/MS have 0 DB chunks — noted honestly). The sheet's 'Q? · 0 marks' was a renderer artifact (header regex requires the spec: segment the no-linkage cards omit); spec_points=0 confirms these are the T-C27 '3 honest skips'. No fabrication/mis-quote/wrong-paper found. Evidence: bench/evidence/flagged3-source-verify-2026-09-28/. **2026-09-28 (flagged3 DISPOSITION DECIDED — operator named):** "flip #207/#278/#291 to VALIDATE" (verbatim IM trace 1a0e7865c3b35715) — the 3 cards adopt VALIDATE on the operator's own authority, the honest spec-skips standing (no linkage fabricated). Execution PREPARED but NOT applied: the preparing session holds no sanctioned DB connection (per-session handoff; the render-env path was rollback-wiped) and no document-flip endpoint exists (building one excluded by the standing boundary, trace 1a0e6753792f76fd) — kit committed at bench/review/flagged3-flip-2026-09-28/ (SHEET.md + flip_decisions.json + apply_flip.py + RUNBOOK.md): fail-closed, single transaction, idempotent by batch id, census-gated 306V/3F→309V/0F abort-on-drift, writes exactly 3 documents.validation_state flips + 3 content_review_audit rows (target_type='question' vocabulary, wave-import-faithful; teacher_validation_events stays 0). One command for any session holding the sanctioned URL; execution outcome to be recorded in T-C27.yaml `flagged3_flip_2026-09-28` + the run report. **2026-09-28 (flagged3 flip EXECUTED — this session, sanctioned render-env holder):** dry-run DRY_RUN_OK -> single transaction APPLIED (batch_run_id 0d5e4c4a-cacc-454c-9dfe-5983e1f11661): 3 documents FLAGGED->VALIDATED (#207/#278/#291, row uuids bf07304e/d84be99c/bccdacb2), 3 content_review_audit rows (target_type='question', row-uuid targets, detail = operator trace 1a0e7865c3b35715 + basis/sheet sha256 pins + honest applied-by note), census 296V/80S/3F -> 299V/80S/0F, 80 neighbors untouched, teacher_validation_events 0; idempotent re-run ALREADY_APPLIED; independent 8-point verification PASS (audit 365 = 362+3). Two production-blocking kit defects fixed pre-apply, both caught fail-closed with zero writes: the derived-not-probed census gate (corrected db17167912) and the document_id-vs-row-uuid keying + render-env list format + audit vocabulary (fixed in the executed apply_flip.py). Run report: evidence/bench-001/flagged3-flip-2026-09-28/. **2026-10-01 (sheet header-parser fix — operator directive "sheet-generator regex", trace 1a0f589bdf33b151):** the renderer artifact identified 2026-09-28 (header regex requiring the spec: segment the no-linkage cards omit) is FIXED at the parser layer — the original generator was an agent-side sandbox script lost in the 2026-10-01 sandbox rollbacks, so the parser core was reconstructed into the repo with the fix: segment-scanning parse (spec optional, all other fields parse independently), fail-closed HeaderParseError (no 'Q? · 0 marks · ?' fabrication path, AST-guarded), renderer requires fully parsed fields. Regression suite 16/16 OK grounded on the 3 REAL no-linkage headers (flagged3_canonical.json verbatim) -> true values Q3/11, Q1/5, Q1/4 (bank-verified leaf sums), + spec-present format guard + fail-closed matrix. Pinned sheet + DB wave untouched (historical); future sheets import from the repo kit. Kit: bench/review/psaxis-review-2026-09-28/card-sheet-header-parser-fix-20261001/ (parser + tests + README + test_output.txt + SHA256SUMS). Coordination-record note: the same rollback wave severed the agent worklog twice; a worklog snapshot is committed at bench/agent-worklog/worklog-snapshot-20261001.md (covers Tasks 1-58; operator veto invited on the convention).
+- [x] T-PS1 (agent-generated 2026-09-28, session web-23eb7684 — operator picked item 2 "papers/schemes axis" from the Task-55 next menu, trace 1a0e7f15fe039725) **Papers/schemes review wave sheet** — `bench/review/psaxis-review-2026-09-28/PAPERS_SCHEMES_REVIEW_SHEET_2026-09-28.md`: the 77 SUGGESTED papers (722 SUGGESTED qv + 631 SUGGESTED schemes + 132 linked SUGGESTED QP/MS docs) as per-paper decision rows (A=VALIDATE_ALL / F=FLAG / R=REJECT / D=DEFER, independent V/F marks per linked doc); scope arithmetic closes exactly (800 SUGGESTED qv = 722 §A + 19 §C under two VALIDATED papers + 59 §E parked under REJECTED papers); §B deterministic (source_uri-fingerprint) doc-link repair proposals for the 11 linkless papers (22 slots / 23 candidates, one double-lane set flagged); §C leftover children incl. the 4CH1/2C Jan-2021 supersession deference; §D orphan curation — 94 dup/supersede docs (3 sittings DEFER to the existing `bench/review/validated-supersession/` sign-off packages, no double-deciding), 46 paperization proposals (19 sittings), 13 session-unresolved; §E context (14 VALIDATED / 13 REJECTED / audit trail). Mechanics documented live: in-app VALIDATE_ALL flips paper+qv+schemes (force=false) but NOT document validation_state (Specimen-2017 counterexample). Sheet records decisions only — flips stay operator-named per the audit-trail rule; SELECT-only probes, zero DB writes. **COMPLETED 2026-09-28 (round-trip closed, trace 1a0e94359c8447b5):** completed sheet arrived via nawaf-al-hussain/FileUpload (sha256 8877ccba…95bf, 46,160 B) — filled by "ChatGPT — document completion only; not a teacher/operator validation session". Verified census (psaxis_completion_verify_20260928.py, file-level): §A 77 × D (DEFER), 0 × A/F/R; §B 0/22; §C 3 × Recommended-D; §D1/D2/D3 0 of 51/19/13; sheet's own clauses: "Production mutations authorized by this sheet: NONE" / "Teacher-validation claims: NONE". Import disposition: ZERO production DB writes (DEFER = status quo; sheet authorizes no mutations; anti-forgery boundary honored — no audit rows written either, the durable record is COMPLETION_DISPOSITION.md + the archived completed sheet in bench/review/psaxis-review-2026-09-28/). The 77 papers + 722 qv + 631 schemes + 132 docs remain SUGGESTED; supersession packages stay on teacher-sign-off path. Real decisions now require the in-app teacher review queue (operator action queue items 1–8 in the completed sheet); named-instruction import path remains proven and ready.
+
+- [x] R7-EVAL (EXECUTED 2026-09-28, session web-98866c45 — run records evidence/bench-001/runs/run-003-b-r7 + run-004-a-r7 + R7-GENERATION-NOTES.md; dispatches 36446065734/36446512908 SUCCESS; headline: §8(d) 0.0 → 0.9167 micro via the promoted notes substrate, chunk axis recall@10 0.0740 → 0.0515 via MEASURED notes displacement 448/890 top-10 slots, 0 boundary violations, leakage clean 0.4033, verdict: serving corpus NOT bridge-quality on the chunk axis — item (2) re-stamp stays operator-gated with this record as input) — operator directive "Proceed with (1) eval", trace 1a0e88bb060ed3b5, executing item (1) of the corrected standing menu in evidence/serving-rev2-flipback-refutation-2026-09-28/REPORT.md) **Bench generation r7 — the run-004-a pattern against today's (post-flagged3-flip) serving set** — snap-006 freeze (comparison base snap-005, expected delta = exactly the 3 flagged3 FLAGGED->VALIDATED flips, batch 0d5e4c4a) -> snapshot-r7 + preload-r7 (frozen r6 vectors, manifest re-pinned, per-row content_sha256 guards re-verified) + gold-v5 re-pair (set byte-identical) -> ops-run003b-r7 + ops-run004a-r7 dispatched benchmark-only on disposable pgvector, core pin = main at the staging commit -> run records + RUN_REPORT reconciling r6 (612-chunk pool, pre-flip) vs r7 (615-chunk pool, post-flip) and answering the corrected-menu bridge-quality question (gates the item-(2) re-stamp). SELECT-only production reads; zero production writes; zero serving changes; menu items (2)/(3) stay operator-gated. State: bench/r7-staging/R7_STAGING_STATE.md.
 
 
 ## Deferred (do not start — Cycle 2+)
@@ -104,3 +119,1745 @@ DAT / teacher analytics depth · gamification · mock-exam blueprints & Mock Dro
 - [ ] P-002 Update backlog row status/owner as work lands (spreadsheet is definitive).
 - [ ] P-003 Re-verify Groq/Gemini free-tier limits at build time (limits drift).
 - [ ] P-004 Pin exact opendataloader-pdf version + record license check in worklog.
+
+- [x] HUB-PROMOTION TRANCHE 4.1 (EXECUTED 2026-09-28, operator trace 1a0e8568eb6bb545 — ADR-029 addendum) **KG single-course scoping + real-model My Progress** — all-courses switcher removed (graph = the course it was opened for, ?course= deep links from course pages, pilot default); renderer sample map dead on arrival in loader mode (no fabricated mastery can paint, even on host failure or standalone opens) + provenance-aware legend/peek text; host always posts the overlay with provenance; /learner retired the fabricated sim viewer and now renders the KG's own derivation (stat tiles, topic mastery, review queue, mastery table, history) with CORE_MEASURED/SIMULATED provenance. Verified end-to-end against live core (fresh account → real MCQ attempt → topic mastery 11% low + history event + KG "live · my state" chip + core-provenance legend), tsc/eslint/build clean, zero console errors. hub e471e08..d2681aa, hub-ci green. Remaining from tranche 4 TODO: missing core contracts (tutor SSE, flashcard ratings, note votes, assignments, Ebbinghaus queue surfacing, course-stats), teacher workspace onto core RBAC data, ADR-021 content packages + perf, a11y + E2E.
+- [x] HUB-PROMOTION TRANCHE 4.2 (EXECUTED 2026-09-28 — ADR-029 addendum) **teacher console port — the last web-only capability lands on the hub** — /teacher/marking (class list, paper-grouped queue-v2 with backend-owned pagination, Run Smart Mark + bounded batch, human-mark overrides with per-point κ-pairing decisions, Record & next, κ gate ALL/paper scope with honest 404/409/500 trichotomy, throughput) and /teacher/class (subject selector over core subjects, overview stats, weak prerequisites, topic heatmap, §5 drill-down with remediation assembly, learner attention table, v75 class graph over REAL aggregates — kg-explorer engine ported verbatim, classGraphHost trimmed) ported from web's TeacherReviewView/ClassIntelligenceView with every honesty rule intact; SAMPLE class-graph retired (URL-level 308 → /teacher/class); overview SAMPLE cohort snapshot retired, LIVE console cards added. RBAC verified live (student 403 on all teacher endpoints, anonymous 401, role gates on every route, zero console errors); positive path proven by re-dispatched s2-class-probe + s2-marking-probe with pilot-teacher credentials (ALL OK: 82 pending / 5 groups; enrolled=223, 26/329 topics measured); tsc/eslint/build clean; hub d2681aa..e83dfd7, hub-ci green, Vercel deployed. Teacher-eye browser E2E packaged for the operator (credentials operator-held). Remaining from tranche 4 TODO: missing core contracts (tutor SSE — in flight by another lane, flashcard ratings, note votes, assignments, Ebbinghaus queue surfacing, course-stats), ADR-021 content packages + perf, a11y + E2E.
+
+- [x] HUB-PROMOTION TRANCHE 4.3 (EXECUTED 2026-09-28, operator trace 1a0e8814f9ce8fbd — ADR-029 addendum) **tutor SSE streaming — the first missing core contract lands** — true token streaming end-to-end: core `POST /api/v1/tutor/ask/stream` (commit 1357408 + 6a4931d, core-ci green, Render live) generates incrementally through Spring AI 2.x StreamingChatModel (ChatModel extends it; Groq/OpenRouter/Gemini all stream) with the free-chain failover contract preserved exactly up to the first token (free restart before any byte reaches the client; committed streams surface mid-stream death honestly instead of resuming on a second provider — no duplicated text); retrieval steps 0-4.5 extracted verbatim into KaRagService.prepare() shared by /ask and /ask/stream so the two delivery modes cannot drift; the StreamSanitizer holdback window gives streamed text the EXACT blocking-path output hygiene (joined deltas == sanitizeAnswer(fullRaw), pinned by a split-battery test — fence echoes and out-of-range citation markers never reach the learner); citations stream BEFORE generation (the learner sees evidence while the model thinks), meta commits with the first delta, TutorAnsweredEvent publishes once on completion, a failed stream persists nothing (parity with a throwing /ask), the fail-open guard streams its byte-identical deterministic-paper-refusal, and /ask/stream joins the R8 LLM tier (one admission per ask — OncePerRequestFilter skips async dispatch); the blocking /ask stays byte-identical (anchor-matrix sweep untouched by construction). Hub `e784c1c..9d48a12` (hub-ci green, Vercel live): /api/ai/chat pipes core's SSE verbatim (browser contract unchanged — chat.tsx needed only a 3-line spec-compliant field parse, Spring's SseEmitter writes 'event:name' with no space), remaps citation payloads, 15s heartbeats, client cancel releases the upstream, and a legacy-JSON/404 response from core falls back to the blocking /ask adaptation so deploy order never matters. Incidents caught by the verification chain, both fixed same-session: two-constructor bean without @Autowired killed the first Render deploy AND the CI ITs (No default constructor found — the IT context boot is the real safety net for wiring), and the strict SSE parsers parsed zero events from a live 8KB stream (spec-compliant parsing fixed consumers, not the producer). Prod black-box probe (core scripts/tutor_stream_prod_probe.py): served ask 135 events (citations→meta→132 deltas→done, groq, 6 citations, hygiene OK), guard ask exactly 4 events with the deterministic refusal, zero 429s; full-chain E2E through Vercel /api/ai/chat → core stream → 125 events. Grounding-gate reality documented: generic gibberish never reaches the deterministic gate on prod (top-k vector candidates; the MODEL refuses inline, refused=false) — verified byte-equal between /ask and /ask/stream. +27 core tests, suite 1002/1002. Remaining from tranche 4 TODO: flashcard ratings, note votes, assignments, Ebbinghaus queue surfacing, course-stats, ADR-021 content packages + perf, a11y + E2E.
+
+- [x] NOTES-AXIS PROMOTION (EXECUTED 2026-09-28, operator trace 1a0e88af08e12df5 "pursue (a)") — the 112 EXTERNAL_NOTES docs SUGGESTED→VALIDATED + 350 notes chunks embed_rev 2→1 (instrumental, pre-flight-proven: the serving gate reads embed_rev=CURRENT_EMBED_REV=1, flip-only adds 0; re-stamp is purely additive 615→965, same model both revs, reversible by kind). All 350 notes chunks subject-resolve into the sole ACTIVE curriculum 4CH1-2017, so the 210 HV chunk→spec-point mappings (chunk_spec_hv_projection.json blob 47fa2cd6415b) now sit in the served view — §8(d) scoreable-with-coverage at the next freeze (exact value = next r-run's measurement, not asserted). content_review_audit +112 rows target_type 'document' (ck_cra_target_type widened additively in-transaction; core to codify via Flyway); teacher_validation_events 0 throughout. Kit: bench/review/notes-axis-promotion-2026-09-28/ (fail-closed, census-gated, idempotent — re-run returns ALREADY_APPLIED). Out of scope, not named: SYLLABUS 162 rev2 SUGGESTED, 80 SUGGESTED sme-bank cards. R6 follow-ups disposition: flagged-3 flip executed separately (7f3a8f3ec, 299V/80S/0F); T-PS1 papers/schemes sheet awaits operator; embed_rev flip-back REFUTED (aba781d16).
+
+- [x] SERVING CUT-OVER — standing-menu item (2) EXECUTED (2026-09-28, operator trace 1a0e8efc1773852d "Proceed with (2) (eval-gated rev1→2 re-stamp/cut-over) now has its gate input") — the eval-gated embed_rev re-stamp + CURRENT_EMBED_REV flip: core `665d7aa8` flips the constant 1→2 (Render deploy dep-data1im7 live 17:20:03Z) and the fail-closed DB leg re-stamps EXACTLY the 965 gate-eligible rev1 chunks 1→2 (EQ 309 + QP 145 + MS 161 + EN 350 — the searchServingEligible replica set) in one transaction committed 17:20:12Z; served-set chunk-id multiset proven IDENTICAL across the boundary (pre-flight snapshot re-asserted in-tx pre/post), rev2 gate-eligible supply was 0 immediately before so the flip is additive (nothing SUGGESTED becomes servable; VALIDATED-only gate untouched), zero-hit window measured 8.9 s, teacher_validation_events 0 throughout, content_review_audit untouched (serving-infrastructure mutation, not a content review). POST-VERIFY INCIDENT FOUND AND FIXED: the filtered HNSW scan (V11 index, iterative_scan=off, ef_search=40) under-delivers when SUGGESTED-dense neighborhoods exhaust the candidate budget — pre-existing mechanism, exposed by the re-stamp's graph-topology change (live probe 50/50→46/50); remedied with REINDEX ix_document_chunks_embedding (3.4 s) + ALTER DATABASE neondb SET hnsw.iterative_scan='strict_order' (the pgvector-documented filtered-scan fix) + one pooled-backend recycle — final live probe 50/50 with every top-1 score BIT-IDENTICAL to the pre-cut-over baseline, worst-case DB probe 0→10 rows. Eval-gate provenance: the r7 generation (traces 1a0e88bb060ed3b5/1a0e8a8180a3f8cd, §8(d) 0.5618 full / 0.9167 micro). Follow-ups: future validation waves on rev1-stamped SUGGESTED docs (80 sme-bank cards, QP/MS SUGGESTED) must carry a paired rev re-stamp in-transaction; rev1 retirement stays gated at R5. Evidence: evidence/serving-rev2-restamp-cutover-2026-09-28/ (REPORT.md + preflight + served-set snapshot + 4 live probes + hnsw_incident.json + SHA256SUMS).
+
+- [x] HUB-PROMOTION TRANCHE 4.4 (EXECUTED 2026-09-28, operator chat bb263437 "We should port the new fixes" — ADR-029 addendum) **demo frontend-fix wave ported to the hub** — syllabai-demo's UI-fix wave (501782b P1 + 648e2ae P2 + c6251ff scope decision + 8c2c38c blueprints regen) assessed file-by-file against the hub (15 byte-identical = defect present + ports cleanly; 12 diverged = 11 apply cleanly anyway since divergence sat elsewhere, 1 adapted by hand) and ported as hub 8cc598a. P1 mobile: course drawer closes ONLY on real navigation (expand-caret taps no longer unmount it and reset TopicTree state — no topic beyond the auto-expanded one was reachable on phones); note pagination caps each button at 48% with real ellipsis (two nowrap titles measured 402-426px in the 343px column); .katex-display/.prose-sm pre scroll in place; signed-out phones get a Sign-in item in the study-tools menu. P2 honesty: teacher surfaces surface fetch failures (destructive Alert + honest "Class: unavailable" — dead error flags and the 'Queue clear'/'No subtopics' false-empty lies retired); validation-queue comment drafts are per-item (a shared string leaked one row's text into every input and the next committed verdict). P2 touch/dvh: dialog/sheet closes 36px, PDF toolbar/find 36px, MCQ letters 44px, test-builder pill wraps, paper-viewer Split gating unified on lg, dvh cascade. c6251ff: 4CH0 legacySpecs promoted onto double-award chemistry (its Paper 1 IS 4CH0 Paper 1, covers-print-both-codes evidence); 2-series single-award papers stay out of Mode 1 with the 'Single-award paper' scope chip on unmatched recons (scope purity beats interactive counts); blueprints regenerated for the shared corpus tree 029c6ec9 (+1 paper, 5 refined — hub had been one regen behind the same tree). App-shell adapted one-way: the demo mirrors sign-in AND sign-out below sm, but the hub's identity dropdown renders at every width, so only the signed-out Sign-in mirror was ported. Three hub-specific 375px defects the demo's probe method exposed (invisible to the demo — its header shows no identity on mobile) fixed in the same wave: app header fits signed-in phones (wordmark ' Hub' suffix + icon-only study-tools trigger below sm, name max-w-16), teacher identity card shrinks (min-w-0 — its nowrap min-content ran 130px past the viewport), status badge wraps. OUT OF SCOPE, flagged for the operator: 8bfcdb7 next-best-actions card + cascading add-course overlay (+1147 lines — a feature wave, not fixes). Verified on the prod build (tsc/eslint/build clean; hub-ci green after one transient npm-registry 404 rerun; Vercel deployed): runtime probes at 375px/1440px — drawer survives expand taps + closes on leaf links, pagination ellipsizes with po=0, served-CSS katex scroll-in-place, signed-out mobile Sign-in menu item, per-item drafts don't leak (row1 typed, row2 empty), destructive alerts on aborted fetches on all three teacher surfaces, 4CH0 papers + 24 scope chips + 40 legacy badges in prod SSR, drawer close-on-link-only confirmed in the prod JS bundle, po=0 on 12 probed pages, zero console errors.
+- [x] HUB-PROMOTION TRANCHE 4.5 (EXECUTED 2026-09-28, operator trace 1a0e8ebb1f436dbd "Proceed with flashcard ratings" — ADR-029 addendum) **flashcard ratings → core evidence class** — the tracked gap closes: hub deck ratings (browser-local only since forever) now record to the learner's core account as an append-only SELF-REPORT evidence class, and the mapping question answered by measurement: the operator's guess was right for notes (112/112 coded) and question parts (1358/1404) but WRONG for flashcards — 0/909 pilot cards carried spec codes in the content map (specPointCode null on every card); the join was derivable but unwired, via each card's subtopicCode anchor (4CH1-S1-a → the curriculum PART_OF edges → its spec points), verified numerically 909/909 before any code was written. Core b61a268 (core-ci green, Render live): V47 flashcard_ratings append-only rows (learner, resolved structure node, opaque hub card id, rating, occurred_at) + POST /api/v1/learners/me/flashcard-ratings with FAIL-CLOSED ATTRIBUTION — the anchor must resolve to a curriculum-structure node below the subject root (UNIT/TOPIC/SUBTOPIC); unknown codes, the subject root and the semantic layer (CONCEPT/MISCONCEPTION) are 404 and nothing is written (prod's 4CH1 ingestion maps the deck-anchor level to TOPIC — caught by the black-box probe after the ITs passed on my own IT fixture's shape, gate widened from level-typed to structural, prod graph re-probed level by level before the fix); LearnerStateView.flashcardRatings (latest 50, additive = deploy-skew safe both directions); THE HONESTY PIN (ratings never produce mastery — no BKT/SkillState/BDT/review writes) pinned twice: FlashcardRatingFlowIT asserts SkillStateRepository stays empty after ratings, and the prod probe asserts skillStates==[] on a ratings-only learner; ratings deliberately NOT in the R8 LLM tier (zero LLM cost). Hub ed28c72 (hub-ci green, Vercel live): kg-learner-bridge flashcardCodes 0/909 → 909/909 via the subtopic-anchor join (content-maps stays primary; exact anchor shape only — other courses' slug-style deck codes stay honestly unmapped); deck player mirrors each rating best-effort (pilot + signed in + reachable only, every negative degrades silently to the local overlay) with an honest mode chip; core-branch My State/KG consumes the trail: stats.flashcards from the view, history events (every re-rate its own event), per-point exposure via the same bridge join the sim path uses — rated-but-never-attempted points stay "Not measured" (exposure, never mastery). Prod probe scripts/flashcard_ratings_prod_probe.py ALL PINS GREEN: 201×3 + anchors echoed, 404/404/400/401 negatives, state carries the trail newest-first, honesty pin, re-rate appends with latest-per-card semantics. Incidents in the verification chain, all same-session: (1) two CI reds from the shared-DB IT (global count() ordering-sensitivity, then a mis-derived newest-first expectation + CI clock ties — fixed with learner-scoped counts and human-paced POSTs); (2) the concurrent 665d7aa embed_rev 1→2 cut-over left CardServingBoundaryIT's seed at the embed_rev column default — on a FRESH testcontainer there is no pre-existing pool to re-stamp, so the rev-gated searches returned 0 hits; fixed constant-derived in the same run (cross-lane, credited). Coordination: 3 concurrent pushes reconciled by fetch-before-push (core 665d7aa retrieval lane, hub 8cc598a frontend-fix lane, syllabai 43d0312) — zero file overlaps throughout. Remaining from tranche 4 TODO: note votes, assignments, Ebbinghaus queue surfacing (the rating trail here is its natural feed), course-stats, ADR-021 content packages + perf, a11y + E2E.
+
+- [x] HUB-PROMOTION TRANCHE 4.6 (EXECUTED 2026-09-28, operator chat bb263437 "Add the NBA card + add-course overlay" — ADR-029 addendum; the hub commit message self-labels 4.5 — renumbered here to keep the ledger linear after the parallel flashcards lane's 4.5 TODO row landed first) **demo feature wave 8bfcdb7 ported: NBA card + cascading add-course overlay** — hub `e225a33..2b06683` (hub-ci green, Vercel live). Next-best-actions card (web T-033/F-092/ADR-017 parity, client-derived from the browser-local evidence chain): 5 ranked tiers — misconception remediation (SIMULATED-labelled active sim states), review-due topics (forgetting decay), problem-question retry (<50%), low-mastery practise, note coverage — ranked across all my subjects, deep-linked, honest empty states + deterministic policy footer. Cascading board→level→subject add-course overlay (Edexcel lane, IGCSE 36/IAL 13 census chips, filterable lane rows with exam codes) replaces the full-registry catalogue; dashboard lists only added subjects. Bridge API +pointTexts(182)/+noteTitles(112), union-merged with the parallel flashcards lane's pointSubtopics anchor join (their 909 anchored flashcardCodes coexist). Port discipline: progress.ts keeps the syllabai-hub:progress:* key (the demo key would wipe prod progress); "demo registry" user copy adapted; harness ported with hub keys + scrollIntoView hardening (Chemistry row below the 42dvh fold at small viewports — a missing coordinate click lands on the backdrop and closes the overlay). LATENT MOBILE DEFECT FOUND+FIXED (inherited from the demo, invisible to its harness): DialogContent's grid track sized to the overlay's nowrap lane-label min-content (503px) — below ~560px the Add buttons were genuinely off-viewport while po probes stayed green (overflow-x:auto on the list + fixed-position dialogs don't hit scrollWidth); fixed component-level with [grid-template-columns:minmax(0,1fr)] (rendering-neutral at ≥sm, protects all dialog consumers) + the overlay drops its unconditional max-w-lg for the base's mobile margin cap; 375px: dialog 343/16px margins, list 293=scrollWidth, button in-viewport; 1440px: 512 unchanged. Verified: tsc/eslint/build clean; harness 32/32 ×3; s132 probe 18/18 (po=0 375/1440, scrolls-in-place, roster persistence, seeded NBA rows, zero console errors); view-answer dialog consumer regression-checked; Vercel probe-verified (bridge fields on prod, NBA card in SSR, catalogue gone, overlay + grid fix in deployed JS). Polish list: unknown topic slugs soft-404 (200 + 404 UI, pre-existing both repos); question-player po=36 at 375px (pre-existing, likely Q3/Q22 tables).
+- [x] HUB-PROMOTION TRANCHE 4.7 (EXECUTED 2026-09-28, operator chat bb263437 "Proceed with the polish list" — ADR-029 addendum; hub `b3b76e7` self-labels 4.7, the number this row's 4.8 neighbour reserved) **The s132 polish list — real 404s, 375px overflow, dialog mobile caps** — hub `2b06683..b3b76e7` (hub-ci green run 36466218794, Vercel live). (1) Soft-404 root-caused to the course layout's `<Suspense>` flushing the shell with 200 before page-level `notFound()` + non-deduped `loadHubCourse` — fixed by dropping the boundary and React-`cache()`-deduping the loader; all 5 unknown-slug classes now 404 (course 404, valid 200, legacy redirect chain intact); the soft-404 had been masking broken seeded hrefs from link checkers (the s132 harness's stripped slug 'passed' at 200). (2) The po=36 item was systemic: 12/28 topic sets + 53/53 paper pages overflowed 375px (worst po=884) — dot-leader answer lines (153 questions, unbreakable 12–135-dot runs, min-content 1226px) fixed with `.prose-sm p/li { overflow-wrap: anywhere }`, sentence-length `whitespace-nowrap` framing badges fixed at the usage sites; post-fix po=0 across every course page class at 375px/1440px. (3) question-player's unprefixed `max-w-3xl`/`max-w-4xl` dialog overrides (full-bleed on phones — the exact class the 4.6 overlay fix warned about) `sm:`-prefixed: 375px dialogs 343/16px margins, 1440px caps 768/896 unchanged. Regressions: NBA/overlay harness 32/32 (seed slug corrected), 5 API routes 200, merged-tree rebuild green, zero console errors. Remaining from tranche 4 TODO: note votes, assignments, course-stats, ADR-021 content packages + perf, a11y + E2E.
+- [x] HUB-PROMOTION TRANCHE 4.8 (EXECUTED 2026-09-28, operator trace 1a0e947969e75df1 "Start with 1 (Ebbinghaus queue)" — ADR-029 addendum; the hub commit `2cd4a28` self-labels 4.6 — that number was unclaimed on the lane's session-start fetch, but ledger 4.6 was concurrently assigned to the NBA port by 2fa35a8's DECISIONS addendum and hub `b3b76e7` self-labels 4.7; renumbered to 4.8 here per the 2fa35a8 precedent — self-labels stand on the commits, the ledger stays linear, drift recorded not rewritten) **Ebbinghaus flashcard review queue — the rating trail gets its consumer** — hub `ed28c72..2cd4a28` (hub-ci green run 36467091333, Vercel live probe-verified: new copy in prod HTML + scheduler markers in the served client chunks + deck page 200). Scheduler `lib/flashcard-review.ts` (new, pure): "still learning" resurfaces immediately; a know-streak n resurfaces on the expanding Ebbinghaus ladder 1·2·4·8·16 days capped at a 32-day maintenance cycle (streak ≥6 keeps a slow heartbeat — no graduation fiction); every re-rate resets the clock (still-learning after knows drops the card back to due-now); legacy pre-4.6 records schedule conservatively (no trail → single know = streak 1, the SHORTER interval — cards resurface sooner, never never); never-rated cards get no schedule at all; THE HONESTY PIN carries from 4.5 — self-report drives review TIMING only, the forgetting.ts mastery arithmetic stays a separate evidence class (a due card's spec points stay "Not measured"). Store: `progress.ts` rateFlashcard appends to a bounded per-card trail (TRAIL_CAP 10 ≥ ladder length, so capping can never understate an interval; optional field = pre-4.6 localStorage loads unchanged). Drawer: `cardReviews` stamped ONCE at the useLearnerState convergence point so the core and simulated paths cannot drift; My State / KG drawer gain a "Flashcards due" section beside — never merged into — the attempts-derived review queue (per-deck counts, open-deck deep links via the new optional `course` prop threaded through StateTab/LearnerStateDrawer from both call sites, "Nothing due — next card due in Xd" empty state, honesty footer naming the ladder and the timing-only rule; section hidden entirely when no card was ever rated). Deck player: "N due for review" badge, "Review due first" lifting due cards stalest-first ahead of the current run order, and an on-card "due for review" marker that recomputes on every rating (a just-rated card leaves or joins the queue immediately). Deck index: per-deck due chip (client component, renders nothing for unrated decks — no empty promise). Verification: `scripts/verify_flashcard_review.ts` 27-pin bun harness ALL GREEN (ladder boundaries incl. cap + negative streak, tail-run streak derivation, conservative legacy, scheduling semantics at ±1d boundaries, stalest-first ordering, re-rate reset, deck counts, summary shape, null-when-unrated, store↔scheduler cap wiring); one harness expectation initially mis-derived (forgot legacy dueAt = at+1d, so the stalest-first order is b1/a1/a2) — fixed by deriving every dueAt before asserting, the ratings-tranche ordering lesson applied; eslint + type-checked production build clean on the merged base. Coordination: 4-commit concurrent wave (e225a33 CSP/rate-limits, 2b06683 NBA port, e727369 core-topics fix, b3b76e7 polish) reconciled by fetch-before-push + fast-forward + stash-pop union (progress.ts auto-merge verified hunk-by-hunk — their multi-course useAllCourseProgress hook and my trail field occupy disjoint hunks); zero file overlap with their feature code; their NBA review-due tier is the mastery forgetting model, mine the card trail — complementary evidence classes, deliberately separate. Remaining from tranche 4 TODO: note votes, assignments, course-stats, ADR-021 content packages + perf, a11y + E2E.
+- [x] HUB-PROMOTION TRANCHE 4.9 (EXECUTED 2026-09-29, operator trace 1a0e95906dd17959 "Proceed with note votes" — ADR-029 addendum) **note votes → core evidence class — the tracked gap the note-footnote docblock itself carried ("core has no votes contract yet") closes** — the V47 ratings pattern mirrored exactly across both repos. Core `b61a268..bd2fb93` (core-ci green incl. NoteVoteFlowIT 5/5 on the testcontainer Postgres, Render live = bd2fb93, prod probe scripts/note_votes_prod_probe.py ALL PINS GREEN): V48 `note_votes` append-only rows (learner, resolved structure node, opaque hub note id "rn_*", vote, occurred_at) — the latest row per note is the current vote and a vote CHANGE is preserved as new evidence rather than overwriting; POST /api/v1/learners/me/note-votes with the SAME fail-closed structural attribution gate as ratings (the hub's note anchor must resolve to a curriculum-structure node below the subject root — unknown codes / the subject root / CONCEPT-MISCONCEPTION are 404 and nothing is written); tolerant parse accepts the hub's local "up"/"down" wire forms and echoes the canonical helpful/not-helpful; LearnerStateView.noteVotes (latest 50, additive — the V47 6-arg constructor keeps compiling with an honest empty slice, deploy-skew safe both directions; vote traffic never touches the ratings slice, pinned); THE HONESTY PIN twice over (NoteVoteFlowIT asserts SkillStateRepository stays empty after votes, the prod probe asserts skillStates==[] on a votes-only learner) plus a third ruling: a vote is NEVER a content-quality verdict — the pipeline's VALIDATED states are operator-owned; deliberately NOT in the R8 LLM tier (zero LLM cost, same ruling as V47). Hub `c789d2e` on top of the racing Candy-Shop theme wave 9c3c6ef (rebase, zero overlap; hub-ci green, Vercel live — footnote SSR + note-vote markers in the served chunks): lib/note-vote-bridge.ts mirrors flashcard-bridge (pilot + signed in + anchor resolved only, every negative degrades silently, syllabai:core-evidence re-derives the state surfaces, unplaced notes skip the mirror without a round trip); the note footer's "Thanks" line is now honest about where the vote landed (account / local + signed out / local + unreachable) instead of the old unconditional "recorded to your local overlay"; the vote trail joins the core-path history (every vote and vote change its own "Note voted" exposure event, points via the existing noteCodes join — 112/112 notes spec-coded, verified by computing subtopicOfNote over the corpus BEFORE writing code: 112/112 resolve to 4CH1-S#-# anchors core's structural gate accepts); rated notes' spec points stay "Not measured" without marked attempts. Verification: core mvn test 1002/1002 (JDK 25.0.4.1, Docker absent locally so ITs ran in CI); eslint + type-checked production build clean. Attribution shape measured, not guessed: notes carry multiple specPointCodes (e.g. rn_2VnK66PqbvFKdKYt → 4CH1-1.1 + 4CH1-1.2) but the hub's placement (courses.ts noteSubtopic via spec-tree subtopicOfNote, first placed sub-topic) yields ONE anchor per note — the same single-anchor contract as deck ratings, no fan-out rows. Remaining from tranche 4 TODO: assignments, course-stats, ADR-021 content packages + perf, a11y + E2E.
+- [x] HUB-PROMOTION TRANCHE 4.10 (EXECUTED 2026-09-29, operator trace 1a0e96ec82bacae5 "Proceed with assignments" — ADR-029 addendum) **assignments → core contract — the two-party workflow goes live, the SAMPLE roster sim retires** — the teacher Assignments page had an honest split since the port: BUILD ran on real numbers (the Test Builder's marks-aware assembly) but ASSIGN + COLLECT were demo-truth (localStorage `syllabai.assignments.v1`, the SAMPLE cohort, the deterministic roster sim `roster.ts`) — localStorage cannot cross devices, so a learner could never see an assignment and a teacher could never see a real hand-in. Core `a5d41b8..f467ad5` (core-ci green incl. AssignmentFlowIT 7/7, Render live): V49 `assignments` + `assignment_submissions` — course_slug/course_label are OPAQUE HUB-OWNED content refs (the card_id/rn_* ruling); every spec ref RESOLVED at creation against the ingested curriculum with the same fail-closed structural gate as V47/V48 (unknown codes / subject root / CONCEPT-MISCONCEPTION = 404, nothing written); hand-ins APPEND-ONLY (latest row per (assignment, learner) = current state, re-hand-in = new evidence); server-side bounds (questionsCompleted ≤ questionCount, score ≤ marksTotal, closed = 409); cohort = enabled STUDENT set with missing COMPUTED at read time (no class entity introduced — the TeacherRosterController ruling); endpoints POST/GET `/api/v1/teacher/assignments` + GET `/{id}` roster + POST `/{id}/status` (double RBAC) and GET/POST `/api/v1/learners/me/assignments(/{id}/submissions)`; THE HONESTY PIN (a hand-in is completion evidence only — no BKT/SkillState/misconception/review writes; the mastery evidence practice generates flows through the EXISTING attempt pipeline unchanged) pinned by IT + javadocs. Hub `bba3b4c` on top of the concurrent Chat-App-Plum theme wave 449b520 (rebase, zero overlap; hub-ci green, Vercel live): teacher builder keeps assemble then REGISTERS on core with no localStorage fallback (an assignment one browser kept to itself would be a lie); list/stats/roster read the real trail; learner 'Assignments' third tab on /learner (newest-first from core with MY hand-in beside each, per-subtopic practice deep-links via the `?spec=` redirect, hand-in payload DERIVED from this browser's recorded work — distinct questions in selfScores∪mcqAnswers whose subtopic ∈ specRefs + self-marked score sum, capped at the assignment's bounds; zero work = honest disabled button; re-hand-in latest-wins; closed window 409 surfaced). The sim RETIRES: `roster.ts` deleted, `useAssignments` store removed (zero other importers), demo-truth badges/copy replaced with the real-completion disclosure. Verification: core mvn test 1002/1002 locally, CI 143 IT tests green; two CI reds fixed same-session — (1) the teacher controller's class-level @PreAuthorize needs a SecurityContext Authentication even for DIRECT bean calls (the NoteVoteFlowIT no-HTTP pattern works only for role-check-free learner controllers; ROLE_TEACHER authentication installed in the IT, HTTP-layer RBAC stays pinned by TeacherRouteSecurityIT — LESSON: mirror the IT pattern of the CLOSEST surface, not the nearest test), (2) my own mis-derived count (the 409'd attempt persists nothing). Prod probe `scripts/assignments_prod_probe.py` committed: learner-side pins ALL GREEN (register 201; anon 401×2; learner-on-teacher 403; unknown-assignment 404); teacher-positive pins SKIPPED with an honest notice (pilot-teacher password is operator-held and deliberately absent from agent environments — the standing red line; re-run with SYLLABAI_TEACHER_EMAIL/PASSWORD for the full-cycle prod pin). Coordination: THREE concurrent reconciliations, all zero file overlap — core course-stats lane 9b873eb (tranche 4.11, landed on my a5d41b8; its CI validated the merged tree), core IT-fix rebase (0a997a9), hub theme wave 449b520. CROSS-LANE REPAIR: the t-ps1 lane's bb1d36f had accidentally deleted the 4.7/4.8/4.9 TODO rows (a 5-line TODO.md edit inside a psaxis commit); restored verbatim from d509866/fe6930e/f700fcf in this commit — the ledger stays complete. Remaining from tranche 4 TODO: course-stats hub surfacing (core contract landed as 4.11), ADR-021 content packages + perf, a11y + E2E.
+
+
+- [x] HUB-PROMOTION TRANCHE 4.7 (EXECUTED 2026-09-28, operator chat bb263437 "Proceed with the polish list" — ADR-029 addendum; hub `b3b76e7` self-labels 4.7, the number this row's 4.8 neighbour reserved) **The s132 polish list — real 404s, 375px overflow, dialog mobile caps** — hub `2b06683..b3b76e7` (hub-ci green run 36466218794, Vercel live). (1) Soft-404 root-caused to the course layout's `<Suspense>` flushing the shell with 200 before page-level `notFound()` + non-deduped `loadHubCourse` — fixed by dropping the boundary and React-`cache()`-deduping the loader; all 5 unknown-slug classes now 404 (course 404, valid 200, legacy redirect chain intact); the soft-404 had been masking broken seeded hrefs from link checkers (the s132 harness's stripped slug 'passed' at 200). (2) The po=36 item was systemic: 12/28 topic sets + 53/53 paper pages overflowed 375px (worst po=884) — dot-leader answer lines (153 questions, unbreakable 12–135-dot runs, min-content 1226px) fixed with `.prose-sm p/li { overflow-wrap: anywhere }`, sentence-length `whitespace-nowrap` framing badges fixed at the usage sites; post-fix po=0 across every course page class at 375px/1440px. (3) question-player's unprefixed `max-w-3xl`/`max-w-4xl` dialog overrides (full-bleed on phones — the exact class the 4.6 overlay fix warned about) `sm:`-prefixed: 375px dialogs 343/16px margins, 1440px caps 768/896 unchanged. Regressions: NBA/overlay harness 32/32 (seed slug corrected), 5 API routes 200, merged-tree rebuild green, zero console errors. Remaining from tranche 4 TODO: note votes, assignments, course-stats, ADR-021 content packages + perf, a11y + E2E.
+- [x] HUB-PROMOTION TRANCHE 4.8 (EXECUTED 2026-09-28, operator trace 1a0e947969e75df1 "Start with 1 (Ebbinghaus queue)" — ADR-029 addendum; the hub commit `2cd4a28` self-labels 4.6 — that number was unclaimed on the lane's session-start fetch, but ledger 4.6 was concurrently assigned to the NBA port by 2fa35a8's DECISIONS addendum and hub `b3b76e7` self-labels 4.7; renumbered to 4.8 here per the 2fa35a8 precedent — self-labels stand on the commits, the ledger stays linear, drift recorded not rewritten) **Ebbinghaus flashcard review queue — the rating trail gets its consumer** — hub `ed28c72..2cd4a28` (hub-ci green run 36467091333, Vercel live probe-verified: new copy in prod HTML + scheduler markers in the served client chunks + deck page 200). Scheduler `lib/flashcard-review.ts` (new, pure): "still learning" resurfaces immediately; a know-streak n resurfaces on the expanding Ebbinghaus ladder 1·2·4·8·16 days capped at a 32-day maintenance cycle (streak ≥6 keeps a slow heartbeat — no graduation fiction); every re-rate resets the clock (still-learning after knows drops the card back to due-now); legacy pre-4.6 records schedule conservatively (no trail → single know = streak 1, the SHORTER interval — cards resurface sooner, never never); never-rated cards get no schedule at all; THE HONESTY PIN carries from 4.5 — self-report drives review TIMING only, the forgetting.ts mastery arithmetic stays a separate evidence class (a due card's spec points stay "Not measured"). Store: `progress.ts` rateFlashcard appends to a bounded per-card trail (TRAIL_CAP 10 ≥ ladder length, so capping can never understate an interval; optional field = pre-4.6 localStorage loads unchanged). Drawer: `cardReviews` stamped ONCE at the useLearnerState convergence point so the core and simulated paths cannot drift; My State / KG drawer gain a "Flashcards due" section beside — never merged into — the attempts-derived review queue (per-deck counts, open-deck deep links via the new optional `course` prop threaded through StateTab/LearnerStateDrawer from both call sites, "Nothing due — next card due in Xd" empty state, honesty footer naming the ladder and the timing-only rule; section hidden entirely when no card was ever rated). Deck player: "N due for review" badge, "Review due first" lifting due cards stalest-first ahead of the current run order, and an on-card "due for review" marker that recomputes on every rating (a just-rated card leaves or joins the queue immediately). Deck index: per-deck due chip (client component, renders nothing for unrated decks — no empty promise). Verification: `scripts/verify_flashcard_review.ts` 27-pin bun harness ALL GREEN (ladder boundaries incl. cap + negative streak, tail-run streak derivation, conservative legacy, scheduling semantics at ±1d boundaries, stalest-first ordering, re-rate reset, deck counts, summary shape, null-when-unrated, store↔scheduler cap wiring); one harness expectation initially mis-derived (forgot legacy dueAt = at+1d, so the stalest-first order is b1/a1/a2) — fixed by deriving every dueAt before asserting, the ratings-tranche ordering lesson applied; eslint + type-checked production build clean on the merged base. Coordination: 4-commit concurrent wave (e225a33 CSP/rate-limits, 2b06683 NBA port, e727369 core-topics fix, b3b76e7 polish) reconciled by fetch-before-push + fast-forward + stash-pop union (progress.ts auto-merge verified hunk-by-hunk — their multi-course useAllCourseProgress hook and my trail field occupy disjoint hunks); zero file overlap with their feature code; their NBA review-due tier is the mastery forgetting model, mine the card trail — complementary evidence classes, deliberately separate. Remaining from tranche 4 TODO: note votes, assignments, course-stats, ADR-021 content packages + perf, a11y + E2E.
+- [x] HUB-PROMOTION TRANCHE 4.9 (EXECUTED 2026-09-29, operator trace 1a0e95906dd17959 "Proceed with note votes" — ADR-029 addendum) **note votes → core evidence class — the tracked gap the note-footnote docblock itself carried ("core has no votes contract yet") closes** — the V47 ratings pattern mirrored exactly across both repos. Core `b61a268..bd2fb93` (core-ci green incl. NoteVoteFlowIT 5/5 on the testcontainer Postgres, Render live = bd2fb93, prod probe scripts/note_votes_prod_probe.py ALL PINS GREEN): V48 `note_votes` append-only rows (learner, resolved structure node, opaque hub note id "rn_*", vote, occurred_at) — the latest row per note is the current vote and a vote CHANGE is preserved as new evidence rather than overwriting; POST /api/v1/learners/me/note-votes with the SAME fail-closed structural attribution gate as ratings (the hub's note anchor must resolve to a curriculum-structure node below the subject root — unknown codes / the subject root / CONCEPT-MISCONCEPTION are 404 and nothing is written); tolerant parse accepts the hub's local "up"/"down" wire forms and echoes the canonical helpful/not-helpful; LearnerStateView.noteVotes (latest 50, additive — the V47 6-arg constructor keeps compiling with an honest empty slice, deploy-skew safe both directions; vote traffic never touches the ratings slice, pinned); THE HONESTY PIN twice over (NoteVoteFlowIT asserts SkillStateRepository stays empty after votes, the prod probe asserts skillStates==[] on a votes-only learner) plus a third ruling: a vote is NEVER a content-quality verdict — the pipeline's VALIDATED states are operator-owned; deliberately NOT in the R8 LLM tier (zero LLM cost, same ruling as V47). Hub `c789d2e` on top of the racing Candy-Shop theme wave 9c3c6ef (rebase, zero overlap; hub-ci green, Vercel live — footnote SSR + note-vote markers in the served chunks): lib/note-vote-bridge.ts mirrors flashcard-bridge (pilot + signed in + anchor resolved only, every negative degrades silently, syllabai:core-evidence re-derives the state surfaces, unplaced notes skip the mirror without a round trip); the note footer's "Thanks" line is now honest about where the vote landed (account / local + signed out / local + unreachable) instead of the old unconditional "recorded to your local overlay"; the vote trail joins the core-path history (every vote and vote change its own "Note voted" exposure event, points via the existing noteCodes join — 112/112 notes spec-coded, verified by computing subtopicOfNote over the corpus BEFORE writing code: 112/112 resolve to 4CH1-S#-# anchors core's structural gate accepts); rated notes' spec points stay "Not measured" without marked attempts. Verification: core mvn test 1002/1002 (JDK 25.0.4.1, Docker absent locally so ITs ran in CI); eslint + type-checked production build clean. Attribution shape measured, not guessed: notes carry multiple specPointCodes (e.g. rn_2VnK66PqbvFKdKYt → 4CH1-1.1 + 4CH1-1.2) but the hub's placement (courses.ts noteSubtopic via spec-tree subtopicOfNote, first placed sub-topic) yields ONE anchor per note — the same single-anchor contract as deck ratings, no fan-out rows. Remaining from tranche 4 TODO: assignments, course-stats, ADR-021 content packages + perf, a11y + E2E.
+
+- [x] HUB-PROMOTION TRANCHE 4.11 (EXECUTED 2026-09-29, operator trace 1a0e974afa74167d "Proceed with course stats" — ADR-029 addendum; 4.10 = the concurrent assignments lane, core a5d41b8/0a997a97 + hub bba3b4c, whose ledger row was still pending at write time) **course-stats — the learner's account coverage becomes a core contract** — core `9b873eb` + hub `e34bd04`. The definitional gap first: every existing learner read model is windowed (state view = latest 50 rating/vote events; attempt history ≤100 rows) or granularity-limited (skill-state sums are per-node, core's assessment evidence fires at TOPIC granularity) — honest course-wide coverage could not be derived client-side from any of them. Core GET /api/v1/learners/me/course-stats -> CourseStatsView(attempts, distinctQuestions, notesViewed, flashcardsRated): read-only full-table aggregates with pinned semantics — attempt VOLUME counts retries, the other three are DISTINCT coverage (retried question / re-rated card / re-viewed idempotent note each count once) so counts sit honestly against corpus totals; coverage is exposure never mastery (CourseStatsFlowIT 4/4 pins SkillStateRepository empty through the read); NOT in the R8 LLM tier (zero LLM cost, the V47/V48 ruling); Cycle-1 single-subject scope documented. Prod probe scripts/course_stats_prod_probe.py ALL PINS GREEN on Render (zeros+learnerId echo, 401 anonymous, idempotent re-view stays 1, re-rate counts once, real-MCQ retry = attempts 2 / distinctQuestions 1, learner isolation, pre-attempt skillStates==[]). Hub e34bd04: (1) dashboard pilot card ACCOUNT strip (Live badge + 'N attempts · N questions · N notes · N cards on your account') — deliberately BESIDE the device rows never instead of them: self-marked answers and pre-account activity are device-local, so core counts can only be a subset of the device's and replacing the rows would erase real progress (the note-footer/flashcard-deck precedent: local stays the UI truth, core is the account mirror); usePilotAccountStats degrades silently on every negative, re-reads on syllabai:core-evidence. (2) kg-learner-state core path — three honesty bugs closed via a tolerant contract fetch (deploy-skew safe): attempts = the true attempt-row total (the skill-state sum was point-level only, TOPIC-granular evidence invisible to it), notesRead = notesViewed (was pinned 0 'not part of this stat's contract yet'), flashcards = DISTINCT cards rated (was the latest-50 event count). Gates: eslint + type-checked build clean on the merged base (types.ts/api.ts union-merged with the concurrent assignments landing, one conflict hand-resolved); probes 18/18 (dashboard strip: signed-out no-strip, hermetic live all four counts, po=0 375/1440, roster-without-pilot, zero errors) + 9/9 (/learner core path with the contract AND under deploy-skew 404); hub-ci GREEN; Vercel probe-verified (strip copy + learnerCourseStats in deployed chunks). Cross-lane: the core-ci reds on 9b873eb/0a997a97 are entirely the assignments lane's AssignmentFlowIT (their own run on a5d41b8 was cancelled; 0a997a97 fixed 6 of 7, one closedLifecycle off-by-one remains theirs); CourseStatsFlowIT + the other 129 tests passed in both runs. LEDGER REPAIR: bb1d36f (t-ps1 lane) accidentally clobbered the TODO rows for tranches 4.7/4.8/4.9 — restored verbatim from d509866 in this commit. Remaining from tranche 4 TODO: ADR-021 content packages + perf, a11y + E2E (assignments landed as 4.10; course-stats here as 4.11).
+- [x] HUB-PROMOTION TRANCHE 4.12 (EXECUTED 2026-09-29, operator chat bb263437 trace 1a0e9a9388e06659 "Ok, proceed" — ADR-029 addendum; ADR-021 executed) **ADR-021 content packages for the 80 MB bundle payload + the perf pass — the last content-infrastructure item** — hub `0c589de` (rebased onto the concurrent answer-box wave 2 cba87b7 + teacher self-registration 843af6e; hub-ci GREEN, selftest step green). NO CORE WORK (the package is hub-corpus tooling; PostgreSQL + content/ remain the operational truth — the ADR's boundary held: no serving change rides the package). (1) THE PACKAGE (tools/content-package/, v0.1 contract bounded exactly as CONTENT_PACKAGE_V0_1.md scopes it): compile → MANIFEST.json (identity + per-artifact SHA-256 + counts + findings) + verbatim content/ copies (346 artifacts, 82.8 MB: courses.json + 49 bundles + pastpapers index/blueprints) + database/content.sqlite with the v0.1 schema subset (package_metadata, resource/version/provenance, specification_point, revision_note, revision_note_specification_point) + additive identity/coverage tables (exam_question_set, flashcard — no bodies, no semantics); paper/mark-scheme/parser_run tables DEFERRED WITH REASON (the payload carries SME-derived question sets, not parsed QP/MS artifacts — no source-PDF/parser provenance exists to preserve and fabricating it would violate fail-closed provenance), kg tables deferred per §6. IDENTITY MODEL MEASURED, NOT GUESSED: note ids are NOT globally unique — 1205/3743 rows share ids across courses (linear↔modular spec variants share SME notes upstream, worst pair igcse-biology-19↔igcse-biology-modular-24-unit-2: 99) → composite (course_slug, note_id) identity, matching the hub's own URL scoping; cross-course sharing = recorded finding, within-course collision = hard fail; note→spec mapping resolution 3969/3969 (100% corpus-wide); manifest.counts semantics measured across all 49 (topics==SUBTOPIC nodes 49/49; sections NOT locally derivable — ==note-sections in 29/49, ==qset-sections in 24/49, ==neither in 20/49 — recorded as finding, never guessed). GATES: G1 inventory/G2 schema/G3 provenance/G4 counts-reconciliation/G5 within-course identity (compile, fail closed) + V1-V8 (verify: independent re-derivation from the package's own content/, full 3743-row body-hash reconciliation, stowaway scan, buildId re-derivation) + R1-R4 (restore: clean-env §8 reconstruction — byte-identical restore, gates re-run on the restored tree, semantic equivalence, registry consistency). DETERMINISM MEASURED: same source + same compiler → byte-identical content.sqlite + clock-free buildId (digest over sorted artifact digests; createdAt informational, MANIFEST-only) — the selftest re-measures on every CI run. SANDBOX-RESET RECOVERY: restore.ts reproduces the exact content/ tree byte-for-byte without re-running the SME import — the ADR's stated purpose. CI: selftest step added to hub-ci (~3.4s: compile+verify+restore+determinism+tamper — a corrupted artifact MUST fail verification, the fail-closed proof). (2) THE PERF PASS (the TODO's "blanket force-dynamic" retired with measurement): the baseline build showed 48 of 52 routes ƒ-dynamic — every course page server-rendered per request, zero CDN HTML (a demo-era inheritance: the course LAYOUT itself declared force-dynamic). Eligibility verified before any edit: no cookies()/headers()/server session anywhere under src/app/courses or src/components/hub (the shell's sign-in state is client-side); ?subtopic is a client-side highlight signal only (now behind a Suspense boundary in the topic tree — TopicTreeAuto/TopicTreeWithIndexAuto, fallback renders the identical tree sans highlight). AFTER: 629 pages prerender at build (19.2s) — all 49 course index pages ×7 surfaces (course/specification/strengths/flashcards/past-papers/practice-papers/saved) + pilot details (112 notes, 28 topic sets, 28 decks, 2 practice papers) + home/dashboard/practice/courses/experiments×2/knowledge-graph; the remaining ƒ routes are each justified (auth: learner/teacher trees; searchParams: revision-notes + exam-questions indexes, past-papers viewer, assistant; API proxies). Detail pages of the other 48 courses render on demand (full-corpus prerender measured out of scope: ~15K paths × per-page spec-tree derivation — follow-up with build numbers, not a guess). Content APIs (notes ×2, course-stats, questions) get CDN cache headers (s-maxage=300, stale-while-revalidate=86400 — corpus immutable between deploys, URLs unversioned so not `immutable`); the course-stats route's old no-store retired. DEAD CODE: the redirect-shadowed top-level trees deleted (revision-notes, exam-questions, flashcards — redirects at the URL level since the hub import; /exam-questions was force-dynamic dead weight in every build). The core-api provider's revisionNotes "live" lane removed — both branches returned the bundled fallback (a no-op wrapper whose only effect was a runtime core fetch with 20s timeout for identical output). LATENT CRASH FIXED (surfaced by the prerender sweep): the saved-questions page's snippet chain crashed on questions whose first part is ALL image lines (filter()[0]=undefined → .replace threw; ial-maths-20-pure-1, image-heavy maths papers) — equally crashable at request time before this tranche; now falls back to the question id. NBA harness stale seed slug corrected (the demo-era "1-1-states-of-matter" never existed in the corpus — sets are "--exam-questions"-suffixed; s133's "seed slug corrected" precedent, a different field). VERIFICATION: lint clean; type-checked build 629 pages; s133 404 classes hold (unknown course/note/topic all 404 pre-flush on the on-demand path — the no-Suspense property preserved); legacy redirects 307 intact; po=0 at 375px across course page/note reader/question player/deck/home/dashboard/non-pilot course + mobile drawer tree renders through the Suspense gate; zero console/page errors; NBA overlay harness 32/32; cache headers verified on 4 API routes; package selftest ALL GREEN (determinism byte-identical, tamper fails closed). IMAGE CDN (the TODO's second perf item): retired as ALREADY-EXTERNAL with evidence — corpus images + past-paper PDFs are hotlinked from raw.githubusercontent.com (ADR-013 posture, CSP allow-lists exactly that origin); public/content-assets is 564 KB total; moving to a real CDN is operator-infra (credentials), no code seam remains. Coordination: rebased onto answer-box wave 2 + teacher self-registration (zero file overlap — their question-player.tsx/practice client/login-client vs my page files/layout/lib); a design-audit lane landed a39916f+817c845 on top (my commit is its ancestor; the newest deploy carries all three). Remaining from tranche 4 TODO: a11y + E2E (the last item). **[PROMOTION 2026-09-29]** ADR-021 PROPOSED → ACCEPTED on the operator decision (chat bb263437, trace 1a0e9f879a8d8fe1) — both v0.1 evidence bodies re-verified GREEN at current main on promotion day (hub-ci run `36487846248` selftest step @ `9a00eb1`; parser-ci run `36161511189` content-package-proof @ `55166af`); promotion records in the ADR file § Promotion record + the DECISIONS ADR-021 section + CONTENT_PACKAGE_V0_1_IMPLEMENTATION_STATUS.md; the architecture companion stays PROPOSED (staged claims), no corpus migration / no serving change authorized; promotion evidence `download/s136/`.
+
+
+- [x] T-PS1 DELEGATED AGENT REVIEW (APPLIED 2026-09-28 19:14Z, operator IM trace 1a0e95af0892f059 "act as human and review it for now. I ORDER YOU") — executed as agent-performed review under explicit operator delegation, provenance honest on all 600 audit rows (actor Nawaf Al Hussain Khondokar + "NOT an in-app teacher session"); no human-review forgery. Five-gate battery (G1 structure / G2 stem-fill / G4 marks / G5 stem-to-QP-doc attribution / G6 doc-chunk truth) pre-registered in scripts/psaxis_review/phase2b_battery.py; live census matched sheet 100% pre-flight. VERDICTS: 27 papers VALIDATED (+246 qv +246 schemes +32 docs — 15 attribution-verified, 12 linkless structure-only) · 49 papers FLAGGED (paper row only, children untouched) on systemic G6 failure: 98 linked QP/MS docs are metadata shells (chunk_count claims 8-26, actual document_chunks rows 0) · 4CH1/2C Jan-2021 EXCLUDED per sheet §C supersession deference (stays SUGGESTED). Fail-closed tx (one clean rollback on a client timeout, then commit 19:14:04Z); independent landing verify 14/14 PASS; papers census 41 V / 49 F / 1 S / 13 R; serving pool 965→1118 (+153 rev2 chunks; 267 rev1 need paired re-stamp — not bundled); teacher_validation_events 0. Evidence: bench/review/psaxis-review-2026-09-28/delegated-review-2026-09-28/. Fix path for the 49: §D1 orphan promotion / re-ingest, then named re-review.
+
+- [x] HUB-ANSWER-BOX (EXECUTED 2026-09-29, session web-98866c45, operator trace 1a0e9937b04972c1 "I want you to work on the answer input box") **answer-box UX wave on the hub** — improve the structured-question `TypedAnswerWorkspace` ("Your answer" textarea) in exam-questions question-player.tsx — the single typed-answer surface feeding both the legacy AI-mark lane and core Smart Mark (drafts are what `submitStructuredAttempt` sends). Planned, zero contract change: steady-state Saved/Saving indicator (replaces the 1.5 s transient chip), word count, growth cap for the field-sizing textarea + marks-proportional floor rows, answer-shape-aware placeholder (calculate/explain/equation heuristics from the stem), disabled-state reason on "Mark my answer", chemistry symbol insert row (₂ ₃ ⁺ ⁻ ² ³ → ⇌ ° Δ ×, collapsed by default), tutor-improve link opens new tab, mark-result scroll-into-view (reduced-motion aware). Plain-text answers, per-keystroke autosave semantics, and both mark lanes untouched. Practice-page textarea deliberately out of scope (follow-up). Files: question-player.tsx only. **EXECUTED as hub 3ea6c36 (hub-ci green, Vercel deployed):** steady-state derived save indicator (aria-live) replaces the 1.5 s timer chip; answer-shape-aware placeholder from stem imperative verbs only (calculate→"Show your working…", equation→state-symbols hint, explain/describe→"clear points" — a hint, never a fabricated marking policy); marks-proportional floor rows=clamp(4,2×marks,10) over field-sizing-content growth with max-h-96 cap (long answers scroll internally, action row stays reachable); chemistry symbols palette (₂₃₄⁺⁻²³→⇌°Δ×) caret-inserted, collapsed by default, pref under syllabai-hub:-namespaced localStorage; live word count; "Type an answer first" reason beside a disabled Mark-my-answer; tutor-improve link opens new tab; AI-mark result card scrolls into view (nearest + reduced-motion variant). Zero contract change: plain text, per-keystroke autosave intact. Verified: eslint+tsc clean, production build green (corpus gate), runtime probes — all placeholder variants fire on real 4CH1 parts, insert-at-caret with focus restore, word count exact 22/22, draft survives reload via progress store, 40-line input caps at exactly 384 px, 375 px po=0, 1440 px clean, cold load 0 console errors (one transient HMR-era script-tag warning A/B-tested absent on cold load AND on the stashed baseline). **WAVE 2 EXECUTED as hub cba87b7 (hub-ci green, Vercel deployed; operator follow-up trace 1a0e9a78b933e545 (a)+(b)):** new shared src/components/answer-textarea.tsx extracts the surface verbatim (floor/growth/cap + symbols palette + word count + placeholder heuristics; renders NO save chip — persistence is the surface's concern, so the session-only practice player can never claim one); practice player adopts it (generic placeholder preserves the 'Write your answer as you would in the exam…' copy on both surfaces); Ctrl/Cmd+Enter CONTEXTUAL by honesty design — practice→'Submit & reveal scheme' gated exactly like the button (typed text to reveal; self-mark to advance, no 0-mark row from a stray keystroke), exam legacy lane→advisory 'Mark my answer', exam core-live→scroll+focus the 'Submit answers' button but does NOT fire it (real attempts stay a deliberate second action; data-question-block/data-core-submit hooks). Verified: lint+tsc+build green (corpus gate); practice shortcut loop 4/4 browser-proven incl. both honesty gates and the 1/2 log row; exam 23 data-question-block hooks; prod-build cold load 0 console errors on both pages (dev-only script-tag artifact isolated to Next dev <head> tooling); 375px po=0, 1440px clean.
+
+### T-PS1 addendum 3 — re-ingest lane APPLIED (2026-09-28, trace 1a0e99217a715a19)
+
+17 of the 20 remaining FLAGGED papers re-ingested from the repaired corpus and
+validated (+166 qv +124 schemes +34 docs, 392 audit rows, tx 20:36:57Z; landing
+verify 92/92). Root cause proven: pre-F10-repair regional bytes under base
+identities. Census 87 V / 3 F / 1 S / 13 R; serving pool 2,020 -> 2,581.
+3 stay FLAGGED: 4CH1/1C Jun-2019 (scanned pages, needs OCR lane + marks
+reconciliation), 4CH1/1C + 4CH1/2C Jun-2020 (COVID June/Nov pairing — operator
+supersession/merger decision). Evidence: bench/review/psaxis-review-2026-09-28/reingest-lane-2026-09-28/
+
+## 2026-09-29 — ADR-029 tranche 4.15 EXECUTED: spec-point mastery paints — evidence at spec-point granularity + topic down-propagation (session web-fc62c099, operator directive "(a) map questions to spec points in core, (b) down-propagate topic mastery to points", trace 1a0ea567a157e70d)
+
+### The gap (measured, not guessed — the same session's KG audit, trace 1a0ea47839d33005)
+
+The hub KG painted zero measured spec points for accounts with REAL evidence:
+core's marked attempts fired BKT only on topic nodes (0/630 pilot questions
+mapped at SUBTOPIC level in the question taxonomy), while the T-C18
+question_spec_points mapping (V30) sat fully populated (621/630) with nothing
+consuming it on the evidence path. The hub's point join was already built for
+exactly those nodes — "spec-point mastery appears in the graph as soon as
+evidence exists at that granularity" was a promise nothing could fulfill.
+
+### (a) Core `da1717d..905e85b` (core-ci green run 36499743890-fix, Render live)
+
+AssessmentEvidenceRecordedEvent carries specPointNodeIds (additive field,
+deduped against topics, empty-never-null on unmapped questions);
+EvidencePublisher resolves question_spec_points once per emitted attempt (both
+the MCQ submit path and the graded path — the once-only guard unchanged);
+LearnerModelService processes topics + spec points identically (same BKT
+update, same decay, same review scheduling) while fluency gaps stay
+topic-scoped (the condition aggregate attributes attempts via the primary
+topic — a per-point split would always aggregate empty; documented). No schema
+change. Suite 1032 green locally. En-route CI repair (main was already red on
+da1717d, another lane's commit): SmartFeedbackFlowIT mocked the LlmProvider
+INTERFACE, which replaced the named failoverLlmChain bean with an interface
+mock, and the answer-input wave's AnswerInputTranscriptionService — the first
+context consumer of the CONCRETE type — failed context load
+(BeanNotOfRequiredTypeException); the IT now mocks FailoverLlmChain itself
+(905e85b, ci green, the worklog IT-pattern lesson from the mock-type side).
+
+### (b) Hub `74edc86..0bed119` (rebased over the concurrent answer-box 3d lane, zero overlap; hub-ci build+e2e green, Vercel live)
+
+Two evidence granularities meet in the core derivation: DIRECT point skills
+join 1:1 onto bridge pointIds with zero hub code change (the join pre-existed);
+DOWN-PROPAGATION (operator decision) fills descendant spec points from
+topic/unit skills where no direct skill exists — deterministic precedence
+(topic beats unit, higher effective mastery, more attempts, lexicographic
+tie-break), direct evidence always wins, derived rows never fabricate attempts
+or review scheduling, PointState.derivedFrom carries the covering topic and
+the drawer tags those rows "via <topic>" with the honesty footnote explaining
+the fill rule. Derived rows count as measured (the chip now agrees with the
+painted graph) and show core's decayed effectiveMastery. GRAPH_CONTRACT v1.0
+untouched; eslint + tsc + build clean; e2e 12/12.
+
+### Verification + decision record
+
+Prod black-box (post-deploy): fresh learner → structured attempt + self-mark
+on a mapped question → /state skillStates gain SUBTOPIC-typed nodes
+(4CH1-1.x codes) beside the topic rows → KG chip counts measured points,
+graph paints them, drawer shows direct rows plus "via topic" fills. Honesty
+boundaries intact: self-report classes (ratings/votes) still never produce
+mastery; down-propagation covers DISPLAY of topic-measured accounts only and
+is tagged. Operator decisions recorded: (1) attempts fire at BOTH topic and
+spec-point granularity (topic table keeps its drawer role); (2) topic
+mastery down-propagates to points for display until direct point evidence
+exists — a display-provenance rule, not a mastery-invention rule.
+
+## 2026-09-29 — claim: workbench Tutor + CLA reference-look restyle (itutor.study + Save My Exams references)
+
+### TUTOR-CLA-LOOK EXECUTED (same session, web `132c15a` on base f041237, web-ci green run 36496410489, Vercel live — all 4 change markers in the deployed chunk)
+
+Delivered as claimed, presentation-only across 5 files (+492/−262): Tutor =
+the itutor.study chat-home look (identity strip with gradient avatar;
+assistant turns as avatar+name rows on the canvas, bubble box retired; user
+turns as muted gray bubbles with "Sep 27 · 9:41 PM" stamps; citation pills;
+rounded-2xl composer with the subject context pill (green dot + subjectName,
+new prop from page state), subject-aware placeholder, circular send; greeting
+hero over pill starters; conversations pane polish). CLA = the Save My Exams
+explain-panel look (amber honesty banner; ANCHOR/MODE pill segments — the s129
+overlay vocabulary now shared across all three CLA surfaces; compact
+selects; chat-style transcript; shared composer with anchor-summary pill +
+circular send; "What needs explaining?" on the question overlay; banner on
+the note overlay; AnswerBody citations as pills with unchanged anchor
+ids/hrefs). All behavioral pins diff-verified: s139 historyFor + 8-turn cap,
+s140/s141 §22 hydration+reattach, s143 pane semantics, F-043 citation jumps,
+§19 footers, §7 gate rendering, refusals, s136 honest degradation,
+MAX_QUESTION_CHARS, a11y labels, pure exports for the s139/s143 verify
+scripts. VERIFIED: eslint + type-checked production build clean; web-ci
+`36496410489` @ `132c15a` step-level success (Lint + Production build); mock-
+API visual probes (tutor empty/answered, CLA empty/answered, dark, 375px
+po=0) with VLM audit of every capture; Vercel probe GET / 200 + markers
+`answers only from validated course content` / `The assistant can make
+mistakes` / `What needs explaining?` / `or paste a homework question` all
+present in `/_next/static/chunks/38tbng3tuco0e.js`. Evidence:
+`download/web-bb263437/` (report, 10 captures incl. the operator's rendered
+references, full diff, CI + Vercel proofs, SHA256SUMS); harness
+`scripts/web_bb263437_{mock_api.mjs,visual_probe.sh,ci_poll.sh,vercel_probe.sh}`.
+Pearson's 4 AI-tutor snapshots were read as the secondary reference (dark
+theme, math keypad — recorded, deliberately not ported: the workbench's SME
+dual-theme system and the plain-text answer contract stay).
+
+- [x] TUTOR-CLA-LOOK (REGISTERED 2026-09-29, session web-bb263437, operator
+directive trace 1a0ea32e1f6c1f21 "I want to work on the frontend improvements
+of the Tutor and CLA. https://github.com/nawaf-al-hussain/FileUpload/blob/main/FrontendReferences.zip
+Here are some references on how it should look like") **restyle the
+workbench's core-backed Tutor + CLA surfaces to the operator's reference
+designs — presentation only, zero behavior change**. References decoded from
+the operator's FrontendReferences.zip (16 SingleFile snapshots): Tutor =
+itutor.study /public/chat-home (5 snapshots: conversation view + new-chat
+states; secondary: Pearson's AI-tutor page, 4 snapshots); CLA = Save My Exams
+pages (7 snapshots: 3 revision-notes + 4 exam-questions — exactly the two
+surfaces where the CLA overlays anchor). Look translation, Tutor (iTutor
+chat-home): assistant messages render as avatar + name-label rows on the
+canvas (no bubble box), user messages as muted gray bubbles (retiring the
+solid-primary bubble), citations as rounded pills, composer as a large
+rounded-2xl card with a subject context pill (green dot + subject name from
+page state, new prop) + borderless textarea + circular send button, empty
+state becomes a greeting hero (time-of-day + display name from the existing
+currentUser session) with suggested-starters as pill chips, per-message
+timestamps, conversations-pane row polish. Look translation, CLA (SME
+explain-panel): amber honesty banner ("can make mistakes — answers only from
+validated course material"), mode selector as pill segments (replacing the
+mode Select), compact anchor bar, transcript bubbles matching the new chat
+style, input placeholder moves to "What needs explaining?" on the question
+overlay. Shared AnswerBody/MetaRow restyle propagates to both overlays
+(QuestionClaOverlay s129 + NoteClaOverlay s135/s137). BEHAVIORAL PINS
+(unchanged, all of them): s139 working-memory historyFor + its 8-turn cap,
+s140 §22 session hydration + localStorage anchor, s141 session reattach, s143
+conversations pane (resume/delete/refresh semantics), F-043 citation
+marker-chips + jump-to-card + teacher-only deep links, §19 research footer
+(model/provider/latency/evidence) on every answer, §7 answer-leakage gate
+rendering (409 attempt_required = guidance), deterministic-refusal cards,
+honest AI-unavailable messages (s136), MAX_QUESTION_CHARS 2000, a11y labels
+throughout. Web-repo-only change on base f041237; files:
+src/components/syllabai/{TutorChatView,ClaAssistantView,QuestionClaOverlay,
+NoteClaOverlay}.tsx + src/app/page.tsx (subjectName prop pass). No lease
+needed (locks.yaml empty; no API/contract/core work — UI owns presentation
+per AGENT.md rule 1; the hub's HUB-TUTOR-SESSIONS lane touches hub files
+only, zero overlap). Verification: bun lint + type-checked production build
+(web-ci parity) + dev-server visual probes against the reference
+screenshots; evidence pack download/web-bb263437/.
+
+## 2026-09-29 — claim: tutor §22 sessions + conversations pane on the hub (web s138–143 parity)
+
+### HUB-TUTOR-SESSIONS EXECUTED (same session, hub `0549838` + ci re-trigger `3782049`, CI build+e2e green)
+
+Delivered as claimed: /api/ai/chat accepts + forwards sessionId (stream AND
+legacy fallback — the route's "recorded follow-up tranche" comment cashed);
+threads bind lazily to §22 sessions (first ask of a signed-in chat creates;
+failed create → honest unpersisted ask; foreign-id 404 → unbind + self-heal);
+the sidebar gains the synced-conversations section when signed in (server
+list refreshed after every completed ask and delete; resume reuses a bound
+thread or hydrates via tutorSessionGet; AlertDialog delete — a §22 delete has
+no undo — unbinds the active chat; honest inline errors); a fresh-browser
+signed-in mount restores the most recent server conversation (s140's value in
+hub terms — local transcripts already survive refresh). BUG FIX as claimed:
+historyFor now mirrors core's validation bounds exactly (12 turns × 2000
+chars; the old 16 × 4000 cap would 400 any 13th turn or any >2000-char
+answer riding the next ask). s138/mhchem judged already-at-parity (shared
+Markdown pipeline). Verification: tsc + full lint + mock-mode build +
+selftest + 12/12 Playwright locally; NEW 8-pin prod probe
+`tutor_sessions_prod_probe.py` ALL GREEN (create → persisted ask → transcript
+→ titled list row → foreign-id 404 fail-fast → 12×2000 pass + 13-turn 400 →
+delete 204/404) plus the FULL-CHAIN through the live hub proxy: hub
+/api/ai/chat with a bound sessionId → 43 SSE events → done → the exchange
+recorded in the session (2 turns) → cleanup 404; prod chunk 2hhhq5kns6f6h.js
+carries the synced-pane + unbind markers. First CI run on 0549838: e2e green
+but build failed with ALL its steps (lint / mock build / selftest) green
+locally — empty-tree re-trigger 3782049 went build ✅ + e2e ✅ (infra flake,
+no code delta). Core: zero changes. No lease required (locks.yaml empty).
+
+- [x] HUB-TUTOR-SESSIONS (REGISTERED 2026-09-29, session web-fc62c099, operator
+directive trace 1a0ea1deccb37015 "I want tutor parity too (web's s138–143:
+conversations pane, working memory)") **port the server-backed tutor session
+layer + the server conversations pane from web s140/s143 onto the hub's
+/tutor** — the hub's tutor is UI-richer than web's (real SSE streaming
+e784c1c, edit-resend/regenerate/feedback/export) and ALREADY sends working
+memory (historyFor rides each ask, s139 parity), but its threads are
+localStorage-only and the chat route explicitly records "bridging them onto
+core's §22 session store is a recorded follow-up tranche". Core needs ZERO
+changes: TutorAskRequest (shared by /ask and /ask/stream) already takes
+history + sessionId with the §22 foreign-session fail-fast probe, and
+TutorSessionController serves POST/GET-list/GET-one/GET-latest/DELETE.
+Scope: (route) /api/ai/chat accepts + forwards sessionId (stream AND legacy
+fallback); (threads) Thread gains a lazily-bound sessionId — first ask of a
+signed-in chat creates the §22 session (failed create degrades to an
+unpersisted ask), foreign-id 404 unbinds honestly; (hydration) fresh-browser
+signed-in mount restores the most recent server conversation (the s140
+"chat survives the refresh" value in the hub's terms — local transcripts
+already survive refresh; the server is the store of record);
+(pane) ThreadSidebar gains the synced-conversations section when signed in —
+server list refreshed after every completed ask and delete, resume binds the
+thread to that session and hydrates from tutorSessionGet, delete confirms
+(AlertDialog — server deletes are not undoable) and unbinds an active chat,
+pane errors degrade honestly; (BUG FIX, found in recon) hub historyFor caps
+at 16 turns of ≤4000 chars but core validates @Size(max=12) turns of
+@Size(max=2000) chars — any conversation whose 13th turn or any >2000-char
+answer rode the next ask would 400; hub now caps 12 turns × 2000 chars
+(web dodged this with its 8-turn cap). s138 (markdown+KaTeX) and the mhchem
+fix (4fb2ed5) are judged already-at-parity: the hub's MessageItem renders
+through the shared Markdown pipeline (KaTeX + mhchem hardened in tranche 1).
+Files: src/app/tutor/{chat,threads,thread-sidebar}.tsx,
+src/app/api/ai/chat/route.ts. Hub-repo-only change; no lease required
+(wave 1/2/3b precedent); zero overlap with active work (locks.yaml empty).
+
+## 2026-09-29 — claim: exam-question CLA on the hub (web s129 parity)
+
+### HUB-QUESTION-CLA EXECUTED (same session, hub `8d8fa78` on base e50bfe2, CI build+e2e green)
+
+Delivered as claimed: `src/components/cla/question-cla-overlay.tsx` (new) + the
+player wiring (header "Ask CLA" + per-answer-box lightbulb on list AND
+full-screen, transcripts lifted per whole question, one page-level overlay).
+Verification, all on the pushed tree: tsc + eslint + 629-page build + the full
+12-test Playwright suite (deck-flow E2E + axe gate) re-run on BOTH merge bases
+(after content-package v0.2 `7ed728e` and after wave-3b `e50bfe2` — zero
+overlap with the re-shell; TypedAnswerWorkspace/AnswerTextarea untouched); NEW
+7-pin prod contract probe `cla_prod_probe.py` — login → hub bridge root
+(4CH1) → families (561) → Understand 200 PAST_PAPER_QUESTION EXPLAIN
+(decode-only, provider groq, 6 evidence chunks, 3 read-only tools, marks=7
+echoed) → Approach 200 QUESTION_PART HINT (partLabel=a, marks=2 echoed) →
+CHECK pre-attempt 409 attempt_required (§7 gate) → unknown id 404 fail-closed;
+prod chunk `0vk36tn91sy33.js` on the live 4CH1 topic page carries the
+overlay + "Ask CLA" markers (SSR HTML honestly lacks them — the entries
+render only when the identity bridge is ready). Ruling recorded: the hub's
+CLA anchors ride the 4CH1 identity bridge join — anchors are never
+client-invented (the attempt-bridge honesty rule extended to asks), and
+bridge-off states hide the surface instead of dead-ending. CI check-runs on
+`8d8fa78`: build success + e2e success.
+
+- [x] HUB-QUESTION-CLA (REGISTERED 2026-09-29, session web-fc62c099, operator
+directive trace 1a0ea01d0f9a8495 "In syllabai-web, the exam question had some
+extra stuff. syllabai-hub does not have it. One example is CLA") **port the
+question-anchored CLA overlay from web to the hub's exam-questions player** —
+web `91a4f5f` (s129) ships the exam-question CLA surface (Understand =
+PAST_PAPER_QUESTION EXPLAIN decode-only on the family's first row; Approach =
+HINT, part-scoped QUESTION_PART or atomic-MCQ PAST_PAPER_QUESTION; CHECK
+stays out — post-attempt review lives with Smart Mark; SUMMARIZE is a
+notes/topic mode) against core's production contract
+`POST /api/v1/learners/me/cla/ask`. The hub already carries the client half
+(`api.claAsk` + full ClaAnswerView types) but no question surface calls it —
+the overlay is the first hub surface on the production CLA contract (the
+note island and /assistant tab are the demo twins on /api/ai/cla). Hub
+adaptation: anchors resolve ONLY through the 4CH1 identity bridge's
+server-side join (corpus part id -> core question/part UUID, same
+honesty rule as attempts — a question the join cannot verify is never
+anchored); bridge-off states (not pilot / signed out / core unreachable)
+hide the entries honestly instead of dead-ending. Files:
+`src/components/cla/question-cla-overlay.tsx` (new),
+`src/app/courses/[course]/exam-questions/[topicSlug]/question-player.tsx`
+(header "Ask CLA" + per-answer-box lightbulb + one page-level overlay,
+transcripts lifted per whole question). Zero core changes, zero overlap with
+any active lease (locks.yaml `locks: []`).
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3 (free/no-card input wave)
+
+- [x] HUB-ANSWER-BOX-W3 (EXECUTED 2026-09-29, session web-98866c45, operator trace
+1a0e9d0b24f445c1 "route (1) adds a core endpoint sounds good") **answer-box
+free-input wave** — operator constraint "must be free and no credit card" rules
+out Mathpix/MyScript/Wiris/cloud-vision APIs; route = existing core AI stack.
+Scope: (core) image-transcription endpoint reusing the provisioned vision model
+behind core auth + RBAC; (hub) math Unicode palette extension of the shared
+AnswerTextarea (sibling of the chemistry palette), ink canvas (pointer events,
+undo/clear, exports PNG), photo upload with client-side downscale, transcription
+result inserted at caret as plain text — plain-text answer contract, per-keystroke
+autosave, and both mark lanes untouched. QR phone-upload deferred (needs a
+storage/session decision — honest-absent). MathLive/LaTeX storage explicitly out
+of scope (would change the answer-format contract; operator decision pending —
+see HUB-ANSWER-BOX row 150 for wave 1/2 lineage). Lease: core-web-contract in
+.syllabai/locks.yaml (base 929b241/core fd4631e/hub 817c845, expires 48h).
+
+## 2026-09-29 — ADR-029 tranche 4.13 EXECUTED: a11y + deck-flow Playwright E2E (session web-fc62c099, operator trace 1a0e9df1b1532a29)
+
+### T-PS1 addendum 4 — OCR lane + COVID resolution APPLIED (2026-09-28, trace 1a0e9c4c5305d55d)
+
+All 3 remaining FLAGGED papers resolved; review queue EMPTY. Census
+89 V / 0 F / 1 S / 14 R; serving pool 2,581 -> 2,646 (rev1 267 untouched).
+4CH1/1C Jun-2019: pdflane-atoms-ocr/1.3.0 (tesseract @300dpi + slicer-missed
+text-layer page), gates 14/15 & 15/15, marks reconciliation solved (Q10 parts
+b-d = the 6-mark gap -> bank-repair backlog). 4CH1/1C+2C Jun-2020: web-researched
+COVID June/Nov pairing — 2C REJECT (phantom duplicate of the VALIDATED Nov-2020
+row), 1C VALIDATE with supersession context (only record of the examined paper;
+session_label caveat). O6 doc-batch defect caught by independent verify and
+remediated (append-only ledger, 54 audit rows). Evidence:
+bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-28/
+
+- [x] **restamp267 (2026-09-28, Task 62, trace 1a0e9e9407a8e239) — the "rev1 chunk
+  paired re-stamp backlog (267 chunks)" EXECUTED + VERIFIED.** 267 embedded rev1 chunks
+  on 20 VALIDATED QP/MS docs (validated after the Task-55 cut-over, therefore missed by
+  the 965-chunk wave; serving-invisible since) re-stamped 1->2 in one fail-closed tx
+  (COMMITTED 21:36:07Z; guards + rowcount gate + post-asserts; independent verify 11/11;
+  live probe 5/5). Serving pool 2,646 -> 2,913. Jan-2021 SUGGESTED pair (22 rev1 chunks)
+  correctly untouched — its re-stamp is in-tx with the operator's supersession sign-off
+  (Task-55 follow-up (a)). Audit ledger untouched per Task-55 stamp precedent (ck_cra_action
+  admits review verbs only; a borrowed verb would be provenance forgery — provenance
+  recorded in the evidence pack + worklog instead). Evidence:
+  `bench/review/psaxis-review-2026-09-28/restamp267-2026-09-28/`. Remaining open:
+  Jan-2021 sign-off (operator), §D1 retire (96 inert), bank-repair queue, sheet-generator
+  regex fix.
+
+  **EXECUTED as core da1717d + hub c92fbe3 (both pushed; local gates green):**
+  core leg — LlmRequest gains optional LlmMedia (legacy ctors preserved);
+  LlmProvider.supportsMedia() capability flag with the media filter living in
+  the SHARED routing step (routingOf) so generate() and the SSE stream() can
+  never drift apart on it; text-only members never receive an image; pinned
+  media to a text-only provider fails loudly; distinct "no vision-capable
+  provider" exhaustion message. SpringAiChatModelAdapter maps LlmMedia onto
+  Spring AI Media (UserMessage builder; messages() feeds both paths); gemini
+  registered as the chain's vision-capable member. New
+  com.syllabai.answerinput: POST /api/v1/learners/me/answer-input/transcribe —
+  plain-text-only transcription policy (Unicode math + linear notation, never
+  LaTeX) so the ANSWER FORMAT CONTRACT IS UNCHANGED; mime whitelist + 4MB
+  decoded cap validated BEFORE any model call; blank/[empty] -> 422; chain
+  exhaustion -> 503 with fixed served messages per the M2 posture; the
+  transcription path joins the llm:ask per-learner rate budget (R8 cost-tier
+  rule). Tests: FailoverLlmChainMediaTest (6) + AnswerInputTranscriptionService
+  Test (8); full suite 1028 green (2 pre-existing skips) offline on JDK 25.
+  hub leg — new answer-ink-pad.tsx (pointer-events ink canvas: pen/touch/mouse
+  draw inside the pad while the stylus keeps OS mouse behaviour elsewhere —
+  no vendor, platform default; undo/clear; photo upload with client-side
+  ≤1600px JPEG downscale; → core transcribe → EDITABLE PREVIEW → insert at
+  caret: transcription is a hint under human control, never a silent rewrite;
+  per-status error copy mirroring the core contract; honest "the image is
+  never stored"); answer-textarea.tsx gains the maths symbols group (√ π ≤ ≥
+  ≠ ≈ ± ÷ ∫ Σ ∞ ⁄ — plain text) and the "write" toggle, hidden without a
+  learner session (authenticated per-learner spend; a button that always 401s
+  would be dishonest); api.transcribeHandwriting(). eslint + tsc clean,
+  production build green (629 pages). Both surfaces inherit via the shared
+  component. QR phone-upload deferred (storage/session decision —
+  honest-absent); MathLive/LaTeX answers deferred (answer-format contract
+  decision pending, see the W3 explanation). Caveats: repo private → CI
+  status unverifiable from the sandbox (no gh auth) — local gates are the
+  claim; live end-to-end probe needs a learner JWT (operator-gated, as T-C23).
+  Lease released below.
+
+- [x] TRANCHE-4.13 (EXECUTED 2026-09-29, hub `9a00eb1` rebased on the wave-3
+`c92fbe3`/theme `34df0f9` union and re-verified green before push) **a11y +
+deck-flow Playwright E2E — the browser harness the deck flow earned**. (1)
+Deck-flow E2E (tests/e2e/deck-flow.spec.ts, 4 tests): the SME loop pins
+rating controls disabled until reveal; still-learning due IMMEDIATELY; fresh
+knows schedule without being due; a days-old trail — seeded by moving ONLY
+the overlay timestamps (the scheduler's input shape never faked) — surfaces
+the due badge at all FOUR altitudes from one derivation (deck header, on-card
+marker, deck-index chip, learner drawer section + open-deck deep link);
+"Review due first" lifts the stalest-due card; a re-rate empties the queue
+instantly; honest empty state + never-mastery footer pinned; keyboard-only
+Enter-flip via the card's role=button. (2) axe a11y gate
+(tests/e2e/a11y.spec.ts, 8 routes): gate = zero CRITICAL/SERIOUS violations;
+moderate/minor counted to the log as design backlog, never snapshotted. Five
+real contrast bugs found and FIXED (see DECISIONS): AI_SUGGESTED badge
+4.39:1 → text-warn-ink; course-shell count badge 4.11:1 + topic-tree meta
+4.34:1 + login switcher 4.34:1 → text-foreground/70; login story panel
+3.85:1 → full text-primary-foreground (5.4:1). (3) Harness
+(playwright.config.ts): drives the PRODUCTION standalone build in
+HUB_DATA_MODE=mock — deterministic, no core, no auth; /learner is
+RequireAuth-gated and mock has no core, so the learner section is pinned on
+the KG drawer hosting the SAME StateTab (one derivation, one UI). ci.yml
+gains an e2e job (chromium + build + playwright test, report artifact on
+failure); test:e2e scripts; artifacts gitignored. Coordination: push
+rejected once — the answer-box wave-3 lane (c92fbe3) + theme second-pass
+(34df0f9) landed in the fetch→push window; rebase clean (disjoint files),
+rebuild + full 12-test re-run green on the merged tree (the axe gate
+validated their status-chip changes too).
+
+- [x] TRANCHE-4.14 (EXECUTED 2026-09-29, operator chat bb263437 trace 1a0ea03c8fe4a9c1 "Proceed with (1) await/verify the a11y lane's CI + Vercel deployment status, (2) the ADR-021 forward gates (KG projection policy, distribution at scale)" — ADR-029 addendum; ADR-021 forward gates executed) **ADR-021 forward gates — the KG projection policy + the distribution/versioning form, contracted as CONTENT_PACKAGE_V0_2.md (ACCEPTED)** — hub `7ed728e`, NO core work, NO serving change (PostgreSQL + content/ remain the operational truth). ITEM 1 (a11y lane verification, prerequisite sweep): hub-ci at `9a00eb1` GREEN incl. BOTH jobs — build (selftest step green) + e2e (deck-flow + axe gate) — run `36487846248`; Vercel prod deployment PROVEN via markers unique to the commit (login full-token contrast fix present, `/80`/`/90` retired; `text-foreground/70` in course chunks; `text-warn-ink` on home; the e2e spec's real deck URL 4CH1-S1-e serves 200 PRERENDER); all 4.12 regression pins hold (404 classes, 307 redirects, PRERENDER/HIT static serving). ITEM 2 (the forward gates, measured before designed): KG recon across all 49 concept-graphs — ONE graph (the pilot: 113 nodes/275 edges; 48 empty shells with counts:null), 100% AI_SUGGESTED with the pilot's own validationGate declaring operator review pending, 0 shared node codes, 0 duplicate triples, 129 "dangling" endpoints resolved as the TWO-NAMESPACE rule (all 82 are spec-point codes: PART_OF CONCEPT→SPEC 117 edges/77 spec points — the same 77 as node.specPoints; REQUIRES_PREREQUISITE CON→CON 103 + SPEC→CON 12; MIS→CON misconception relations); (1) KG PROJECTION: kg_node/kg_node_specification_point/kg_edge, tiers preserved verbatim, validationGate preserved verbatim as a finding, the non-authoritative pin recorded from measurement (388 rows, 0 operator-promoted); G6 fail-closed gates (shape + own-counts reconciliation with the counts:null empty-graph allowance, frozen 8-relation vocabulary, tier vocabulary AI_SUGGESTED/RULE_DERIVED/OPERATOR_REVIEWED/HUMAN_VALIDATED/VALIDATED, duplicate-triple ban, two-namespace endpoint resolution, node.specPoints resolve 77/77) + V9 independent re-derivation (counts, per-row fields ordered by code/index, tier census exact, endpoints resolve against the package's OWN tables) + R2/R3 extended (G1–G6 re-run post-restore, KG counts in semantic equivalence); (2) DISTRIBUTION: bundle.ts — self-contained deterministic ZIP writer (sorted entries, fixed DOS timestamp 1980-01-01, fixed deflate level, own crc32, no external zip binary) + CRC-verified reader with fail-closed extraction; naming contract `syllabai-content-<scopeId>-<packageVersion>-<buildId12>.zip` (no invented version axis: content identity = buildId, format = packageVersion); scoped packages via --courses= (deterministic scopeId scope-<sha8>, the verbatim-registry rule — courses.json copied unedited with the scoping recorded as a finding, R4 scope-aware: dirs ⊆ registry, excluded == registry minus scope); two-layer determinism stated exactly (byte-identical content.sqlite across compiles, byte-identical zip per package directory, createdAt wall-clock informational and excluded; cross-toolchain zip byte-identity not claimed); the bounded proof is the pilot-scoped package — the "concrete bounded package" v0.1 §6 said would justify KG tables. SELFTEST 5→7 steps, ALL GREEN locally: compile/verify/restore/determinism/tamper + distribution round-trip (scoped compile → verify → bundle 0.9 MB → extract → verify V1–V9 on the unpacked tree → restore-from-zip with scoped R4) + zip determinism (same dir → byte-identical) + zip tamper (bit flip → extraction fails closed on CRC); eslint clean; versions package 0.2 / compiler 0.2.0 / sqlite schema 0.2. Ledger: CONTENT_PACKAGE_V0_2.md (new, ACCEPTED), CONTENT_PACKAGE_V0_1.md header status fixed (the promotion's missed mirror — §10 was promoted, the header was not), architecture companion gains §15 forward-gate execution record (stays PROPOSED: corpus-wide KG at scale, distribution infrastructure beyond the single bundle, canonical-store integration remain staged; corpus-wide migration remains unauthorized), DECISIONS ADR-021 forward-gates paragraph. Evidence: `download/s137/`.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3b (SME visual parity re-shell)
+
+- [x] HUB-ANSWER-BOX-W3B (EXECUTED 2026-09-29 as hub e50bfe2, session web-98866c45, operator message
+"Does not look quite right. Here is what SME one looks like… <Editor_wrapper DOM
+paste>") **answer-box re-shell to the pinned ground truth** — operator pasted
+SME's collapsed-state DOM (Editor_wrapper/collapsible/collapsed +
+Label_label/Textarea_label + tiptap writtenMode, data-placeholder "Enter your
+answer here..."); SME production CSS extracted from the four cdn bundles pins
+the anatomy: bold label above a single 1px-border rounded box (white, 1rem
+padding), collapsed = content height (min-height:0), focus = 1px outline on the
+container via :focus-within, options menu attaches below ONLY when active
+(flex wrap, .5rem padding, rounded bottom corners). Hub rework, zero contract
+change: AnswerTextarea re-shelled (label prop with htmlFor/useId pairing,
+collapsed rows=1 vs active marks-proportional floor, tool strip + palette
+attached below the box only when active, statusSlot/hintSlot so the exam
+surface's live-draft badge, save chip and "saved in this browser" honesty copy
+render inside the active state instead of a permanent meta row, placeholder
+copy to SME register with stem-verb hints kept), TypedAnswerWorkspace meta row
+demoted + outer muted card flattened, practice label unified. Plain-text
+contract, per-keystroke autosave, both mark lanes untouched. Base: hub 9a00eb1
+(tranche 4.13 axe gate respected — label association + aria-expanded kept).
+Hub-repo-only change: no resource lease required (wave 1/2 precedent).
+
+- [x] **d1retire (2026-09-28, Task 63, trace 1a0ea024489b3ee9) — §D1 retire
+  decisions EXECUTED + VERIFIED: the 91 swapped-away shells (57 Task-59 + 34
+  Task-60, from-ids extracted from the audit ledger PLACE rows and cross-checked
+  vs the phaseC plan artifact) + the 5 OCR-lane retired candidates are now
+  REJECTED.** One fail-closed tx COMMITTED 22:06:57Z (rowcount 96; serving-neutral:
+  pool 2,913 unchanged; Jan-2021 pair untouched; 59 older §D1 leftovers stay
+  SUGGESTED for their own pass). 96 append-only REJECT audit rows with
+  operator-delegated provenance (no teacher session, events 0). 88/96 docs carry
+  display-only source_document_id citations — code-verified as never joined
+  (ContentReviewService projection); re-point logged as cosmetic follow-up.
+  Audit id gap 3734 = sequence value burned by the rolled-back Task-62 insert
+  attempt (NEXTVAL is not transactional). Evidence:
+  `bench/review/psaxis-review-2026-09-28/d1retire-2026-09-28/`. Remaining open:
+  Jan-2021 sign-off (operator), §D1 leftovers (59), bank-repair queue,
+  sheet-generator regex fix.
+- [x] **jan2021-supersession (2026-09-28, Task 64, trace 1a0ea189623183e5) — the
+  "Jan-2021 supersession sign-off" EXECUTED + VERIFIED.** Operator APPROVE; package
+  `bench/review/validated-supersession/4ch1-2c-202101` executed per its REVIEW.md
+  contract (archive re-verify — staged export missing 6 mark_points reconciled;
+  guarded delete incl. 7 teacher-VALIDATED rows + 3 attempts + 14 answers, all
+  archived; draft POSTed, arithmetic gate EXACT) + one fail-closed resolve tx
+  (pointers -> corpus-wave chunk-ful docs, series/year JAN/2021, paper+7qv+7schemes
+  +2docs VALIDATED, 2 shells REJECTED, 22 parked rev1 chunks re-stamped rev2 in-tx
+  per Task-55 follow-up (a)). Papers census 90V/0F/0S/14R — **no SUGGESTED paper
+  left in the corpus**. Pool 2,913 -> 2,935. Audit rows 3871-3890 (gap 3831-3870 =
+  NEXTVAL burn from rolled-back insert attempts, documented). Evidence:
+  `bench/review/psaxis-review-2026-09-28/jan2021-supersession-2026-09-28/`.
+  Sibling packages 4ch1-2cr-202001 / 4ch0-2c-201701 still await sign-off.
+  Remaining open: §D1 leftovers (57 after this pass's 2 shells), bank-repair queue,
+  sheet-generator regex fix, stale-citation re-point (cosmetic).
+W3B execution record (hub e50bfe2, rebased over content-package v0.2
+7ed728e): SME production CSS extracted from the four cdn bundles
+(Editor_wrapper/collapsed/collapsible/writtenMode/menu, Label_label,
+Textarea_label, token values — #e2e2e2 borders, 1rem padding, collapsed
+min-height:0 vs 10rem active, :focus-within outline, menu = flex-wrap
+.5rem strip with rounded bottom corners). AnswerTextarea re-shelled:
+label prop with htmlFor/useId association; collapsed rows=1 (54px box) vs
+active marks-proportional min-height floor (field-sizing:content ignores
+rows for height — floor rides min-height; SME's fixed 10rem inside the
+range); tool strip + palette render ONLY when active, attached below the
+box; statusSlot/hintSlot carry the exam surface's SIMULATED/live-draft
+badge, derived save chip and "Saved in this browser" honesty copy inside
+the active state (permanent meta row deleted; outer muted card flattened);
+placeholder copy to SME register, stem-verb hints kept, SME default
+"Enter your answer here..." verbatim. Practice label unified through the
+component. Plain-text contract, per-keystroke autosave, both mark lanes,
+session-gated ink pad, palette pref, Ctrl/Cmd+Enter gates: untouched.
+Verified: eslint+tsc clean; build green 629 pages; corpus gate passed;
+e2e 12/12 (axe a11y 8 routes + deck-flow 4) — suite deps installed frozen;
+browser probes on the standalone mock build: collapsed anatomy exact, no
+strip while pristine, activation growth 54->98px (3-mark), strip slots
+(badge/save chip/word count/hint), 24-glyph insert-at-caret with focus
+kept, 45-line cap exactly 384px content + internal scroll, blur-with-
+content persistence, 375px hOverflow=0, cold load 0 console errors.
+Screenshots: scripts/research/probe_collapsed.png, probe_active.png.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3c (expanded toolbar look parity)
+
+- [x] HUB-ANSWER-BOX-W3C (EXECUTED 2026-09-29 as hub 3730e79, session web-98866c45, operator message
+- [x] **d1leftovers (2026-09-28, Task 65, trace 1a0ea3c208e16699) — the "§D1 leftovers
+  pass (57 zero-chunk SUGGESTED docs)" EXECUTED + VERIFIED.** 49 retired with per-row
+  evidence (37 SUPERSEDED: sitting serves via VALIDATED paper's same-kind pointer;
+  12 OWNER-REJECTED: all owning papers REJECTED), 8 KEEP (2 specimen-owned, 6
+  VALIDATED-but-pointer-less sittings' only doc records). One fail-closed tx, 49 REJECT
+  audit rows 3891-3939, rows retained, serving-neutral. Documents census 567V/305S/147R.
+  Evidence: `bench/review/psaxis-review-2026-09-28/d1leftovers-2026-09-28/`. Remaining
+  open: bank-repair queue, sheet-generator regex fix, stale-citation re-point (cosmetic),
+  sibling supersession sign-offs (per-package APPROVE).
+"I want the expanded toolbar look matched too") **expanded-state toolbar restyle to
+the SME ground truth** — ground truth upgraded from CSS to the COMPONENT BUNDLE:
+SME question-player chunk 3273-abb6c54ac7049c60.js yields the editor's verbatim
+toolbar JSX + MenuButton/Symbols CSS modules. Editor_menu = flex-wrap gap .25rem,
+justify-content:space-between, padding .5rem (max-width:767.98px viewport: .25rem),
+white bg, radius 0 0 .5rem .5rem; LEFT group = icon-only 2rem square MenuButtons
+(transparent bg, hover/active/aria-expanded bg neutral-400, focus-visible 4px
+brand-200 ring, disabled opacity .64): Italic / Subscript / Superscript + an
+"Insert symbol" dropdown; RIGHT group = labeled pills (width auto, gap .25rem,
+padding-inline .5rem .75rem, radius 50rem): "Insert equation" / "Write" / "Upload";
+labels hidden under a @container (max-width: 540px) query; Symbols_menu popover =
+padding .25rem, border, shadow 0 4px 30px rgba(59,68,89,.16), xs-bold legends,
+7-column grid of square symbol buttons, verbatim groups "Mathematical"
+(+ − ± × · = ≠ ≈ < > ≤ ≥ → ⇌ ° % ∝ ⊥ ∥) and "Greek letters"
+(α β γ Δ δ ε η θ λ μ ν π ρ ∑ σ τ Φ φ ψ Ω ω). Hub rework, zero contract change:
+AnswerTextarea strip restyled to this anatomy (icon square for the symbols toggle,
+Write/Upload pills, active box gets top-only radius so the strip attaches like
+SME's composite, focus ring via :focus-within, container-query label hiding,
+SME-verbatim symbol groups + the wave-3 chem extras deduped into their own
+fieldset), Upload pill surfaces the EXISTING pad photo→core-transcribe flow
+(pendingFile prop into AnswerInkPad; same editable-preview-first honesty).
+Honest-absent, plain-text contract: SME's Italic/Subscript/Superscript are
+rich-text toggles (markdown storage) and "Insert equation" is the MathLive
+LaTeX editor — all three are deferred pending the answer-format contract
+decision and will NOT be faked with Unicode lookalikes. Wave-3 chem/notation
+glyphs kept. Hub-repo-only change: no resource lease required (wave 1/2/3b
+precedent). Base: hub 8d8fa78.
+W3C execution record (hub 3730e79, rebased over hub 3782049 — the tutor-sessions
+lane landed mid-flight): AnswerTextarea strip restyled to the component-bundle
+anatomy — composite bordered box (focus ring via :focus-within, SME's
+.Editor_writtenMode:focus-within parity) with the menu strip INSIDE it (bottom
+corners on the strip, top corners on the box); left group = icon-only 2rem
+"Insert symbol" square (Omega, aria-expanded fill = SME's MenuButton active),
+right group = radius-50rem labeled pills Write/Upload (padding-inline
+.5rem .75rem, labels hidden by a real @container 540px query — Tailwind v4
+container queries); strip padding .5rem (.25rem <768px), gap .25rem,
+mousedown swallowed on dead space (SME verbatim — caret never moves when a
+tool toggles); Symbols popover = SME's exact shadow 0 4px 30px
+rgba(59,68,89,.16) (computed-style verified byte-for-byte), xs-bold legends,
+7-column grid, groups Mathematical + Greek letters VERBATIM from SME chunk
+3273 + "Chemistry & notation" carrying the wave-3 IGCSE glyphs SME lacks
+(deduped: 13, no glyph twice). Upload pill routes the picked file into
+AnswerInkPad via pendingFile (ref-guarded, consumed-once, deferred convert —
+react-hooks/set-state-in-effect compliant) so toolbar and pad share ONE
+transcribe → editable-preview → insert-at-caret honesty path. Activation bug
+caught by probe: textarea-only focus state tore the strip down when focus
+moved to a strip button (click never landed) — fixed with SME's own pattern:
+blur only drops activation when relatedTarget leaves the composite. Latent
+wave-3b defect fixed: palette pref was read during first render → SSR/client
+disagreement → React #418 on every reload with the pref set; now read
+post-hydration. Verified: eslint+tsc clean; build 629 pages; corpus gate
+PASSED; e2e 12/12 (axe 8 routes + deck-flow 4 — stale :3000 server killed
+first, the wave-3b incident not repeated); browser probes: collapsed 52px/0
+buttons, activation 144px (3 marks), symbol square 32×32, pill radius 50rem,
+H₂ insert-at-caret with focus restore + panel persistence, dead-space
+mousedown keeps caret, SIMULATED badge + save chip + word count ride the
+strip, 375px labels hidden + hOverflow=0, no-session hides Write/Upload and
+keeps symbols, cold load 0 console errors, pref-set reload clean.
+Screenshots: /home/z/my-project/scripts/w3c/w3c_active_panel_1440.png,
+w3c_active_narrow_375.png, w3c_nosession_375.png. CI/Vercel status
+unverifiable from sandbox (private repo) — honest-absent.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 3d (keyboard look parity)
+
+- [x] HUB-ANSWER-BOX-W3D (EXECUTED 2026-09-29 as hub 74edc86, session web-98866c45, operator message
+"The keyboard does not quite look like the keyboard that appears in SME") **re-skin the
+answer-box symbol keyboard to the keyboard that actually appears in SME** — ground truth
+recovered from SME's production MathLive bundle (chunk 79d2298f-63d0ad2806548748.js,
+MathLive verbatim): their answer box has NO popover palette — the keyboard that appears
+is MathLive's stock virtual keyboard, body-mounted (no virtualKeyboardContainer in any
+SME chunk) as a viewport-fixed bottom sheet at SME's z-index override --keyboard-zindex:
+1055 (css_0308bb0b7a1ae6ad.css). Light theme verbatim: panel #cacfd7, top border #ddd,
+backdrop shadow 0 -5px 6px rgba(0,0,0,.08); toolbar tabs (glyph labels — "123" tex-math,
+"<i>αβγ</i>", "∞≠∈", "abc") text #2c2e2f, 135% size, min 42×34, radius 8px, hover #eee,
+selected = accent #0c75d8 text + 2px underline, toolbar max-width 996px centered;
+keycaps white, border #e5e6e9, bottom edge #8d8f92 (3D), radius 6px, height 60px,
+gap 8px, font clamp(16px,4cqw,24px), pressed = accent bg + white text; secondary
+action keys #a0a9b8 (hover #7d8795, bottom #989da6, text #060707, weight 600);
+row separators 1px #fff; dark theme palette also captured (#151515 panel, #1f2022
+keycaps, #e3e4e8 text, accent #0b5c9c). Hub rework, ZERO contract change: the
+wave-3c symbols popover becomes a MathLive-look keyboard sheet (portal to body,
+fixed bottom, z-1055) with tab strip + keycap rows over the SAME three plain-text
+glyph groups, keys never steal the caret (pointerdown swallowed, insert-at-caret
+unchanged), plus an honest action row: [left] [right] [backspace] [hide-keyboard]
+implementable exactly on a controlled textarea. Honest-absent, plain-text contract:
+undo/redo keys are NOT faked (controlled React state vs native textarea undo stack);
+"Insert equation" stays contract-gated (wave 3c record) — this is LOOK parity on the
+Unicode keyboard, not a LaTeX editor. Hub-repo-only change: no resource lease
+required (wave 1/2/3b/3c precedent). Base: hub 3730e79.
+
+## 2026-09-29 — claim: the reference-look restyle onto the HUB's Tutor + CLA (TUTOR-CLA-LOOK hub port)
+
+### HUB-TUTOR-CLA-LOOK EXECUTED (same session, hub `15ce2ba` on base `3730e79` rebased over the concurrent wave-3d `74edc86` + spec-mastery `0bed119` — clean, zero overlap; hub-ci run `36500292761` build+e2e green step-level; Vercel live)
+
+Delivered as claimed, presentation-only across 7 files (+355/-168): Tutor =
+the itutor.study chat-home look on the hub's own surfaces — assistant turns
+as gradient-avatar + name rows on the canvas (bubble box retired), user turns
+as muted gray bubbles with date-aware always-visible stamps, citation pills,
+the rounded-2xl composer card with the subject context pill (green dot +
+"Chemistry (4CH1)", the honest single-corpus scope) + circular send, the
+identity-strip header (thread title kept, all hub affordances kept), the
+greeting hero (time-of-day + first name from identity) over pill starters,
+sidebar rows rounded-lg. CLA = the Save My Exams explain-panel look — amber
+honesty banners on both overlays (theme-aware warn tokens, NOT literal
+ambers, preserving the design-audit's semantic-slot rule), labeled mode
+pills with icons (Explain/Hint, Explain/Summarize; disabled pills labeled),
+gray user bubbles, citation pills, "What needs explaining?" on the question
+overlay, and /assistant restructured into the full explain-panel (identity
+strip, banner, anchor pill segments + compact selects, chat transcript, the
+shared rounded-2xl composer with anchor-summary pill + circular send, the
+§7 gate guidance as a border strip). Every behavioral pin verified intact:
+SSE streaming, edit-resend/regenerate/feedback/export, §22 sessions +
+hydration + synced pane, anchored-spec boot, dictation/stop, claTargetsOf
+bridge gating, §7 gate, refusals, §19 footers, MAX caps, a11y labels.
+Verified on the pushed tree: eslint + tsc clean; corpus gate PASSED, 629
+pages; e2e 12/12 (axe incl. /tutor + deck-flow); 9 browser probes —
+overflow=0 at 375px/1440px, dark + candy-shop variants, seeded transcript,
+note-CLA panel open (the single console 404 = the designed §22
+conversations degradation with a probe-forged token and no core — request-
+verified, not a regression); VLM audits of every capture; Vercel probe —
+GET / + /tutor 200 and all six change markers live in the deployed chunks
+(2g-vu02mptts7.js / 21tnqdakgni72.js / 0q027ca7q2_a_.js / 3oergpr5n49d1.js).
+The web `132c15a` question (revert or keep) is the operator's call — one
+clean revert + web-ci + Vercel probe, ready on request. Evidence:
+`download/hub-bb263437/`; harness `scripts/hub_bb263437_visual_probe.mjs`.
+
+- [x] HUB-TUTOR-CLA-LOOK (EXECUTED 2026-09-29 as hub `15ce2ba`, session web-bb263437 continuation,
+operator directive trace 1a0ea32e1f6c1f21 "I want to work on the frontend improvements
+of the Tutor and CLA. https://github.com/nawaf-al-hussain/FileUpload/blob/main/FrontendReferences.zip
+Here are some references on how it should look like" + the operator correction this
+session, trace 1a0ea59699213df9 "Why the fuck did you apply it to syllabai-web? Did you
+forget that we are now working on syllabai-hub?") **port the TUTOR-CLA-LOOK
+reference-look restyle onto the hub's Tutor + CLA surfaces — presentation only, zero
+behavior change**. Honest context: the first execution of this directive landed on the
+WEB repo (web `132c15a`, claim c775bc3, evidence download/web-bb263437/) — the operator
+has corrected the target: the hub is the active frontend. Web `132c15a` stays live
+(presentation-only, all pins verified, reversible with one clean revert on the
+operator's word); this claim is the same reference look on the sanctioned repo, ported
+from the web diff (download/web-bb263437/change-full.diff) and adapted to the hub's
+component structure + dual-theme semantic-token system. Look translation, Tutor
+(/tutor): message-item — assistant rows keep avatar+name but the avatar becomes the
+gradient circle and the bubble box retires (answer on the canvas), user turns become
+muted gray bubbles with date-aware stamps, citations become rounded-full pills; composer
+— rounded-2xl card, subject context pill (green dot + "Chemistry (4CH1)", the honest
+single-corpus scope), circular send (ArrowUp); chat header — the identity strip
+(gradient avatar, thread title + honest subtitle), all hub affordances kept (provider +
+corpus badges, about, export, clear, sidebar); Welcome — the greeting hero (time-of-day
++ first name from identity) over pill starters; thread-sidebar rows rounded-lg.
+Look translation, CLA: question-cla-overlay + note-cla — the amber honesty banner
+(theme-aware warn tokens, the SME reference's signature), labeled mode pills with icons
+(Explain/Hint; Explain/Summarize), gray user bubbles, citation pills, "What needs
+explaining?" placeholder on the question overlay; /assistant tab — identity strip
+avatar, amber banner, pill-segment context tabs + compact selects, labeled mode pills,
+the shared rounded-2xl composer card with anchor-summary pill + circular send, gray
+bubbles, citation pills. BEHAVIORAL PINS (unchanged, all of them): SSE streaming +
+edit-resend/regenerate/feedback/export, §22 sessions + hydration + synced conversations
+pane (12×2000 historyFor caps), anchored-spec banner + deep-link boot, dictation +
+paperclip honesty + stop, jump-to-latest, claTargetsOf bridge-gated anchors, §7 gate
+guidance rendering, deterministic refusal cards, provider/model/latency/evidence
+footers, MAX caps, a11y labels (axe gate on /tutor), pure exports for verify scripts.
+Files: src/app/tutor/{chat,composer,message-item,thread-sidebar}.tsx,
+src/components/cla/{question-cla-overlay,note-cla}.tsx,
+src/app/assistant/assistant-client.tsx. ZERO overlap with the active HUB-ANSWER-BOX-W3D
+claim (answer-textarea.tsx / answer-ink-pad.tsx / question-player.tsx untouched).
+Hub-repo-only change; no lease required (locks.yaml empty, wave 1/2/3b/3c/3d precedent).
+Base: hub 3730e79.
+
+W3D execution record (hub 74edc86, ff-only push 3730e79..74edc86): the wave-3c
+symbols popover was the wrong species — SME ships NO popover; the keyboard that
+appears there is MathLive's stock virtual keyboard, body-mounted as a viewport-
+fixed bottom sheet. AnswerTextarea now portals the keyboard to document.body:
+fixed bottom, full width, z-1055, MathLive light palette verbatim (#cacfd7
+sheet, #ddd top border, 0 -5px 6px rgba(0,0,0,.08) backdrop shadow, white 60px
+keycaps, #e5e6e9 borders + #8d8f92 bottom edge, 6px radius — the probe CAUGHT
+rounded-md resolving to 8px in this theme and it was pinned to the extracted
+6px — 8px gaps, 1px white row rules, 10 caps per row like MathLive's layers)
+plus MathLive's dark palette under the hub's class dark mode (#151515 sheet,
+#1f2022 keycaps, #e3e4e8 text, accent #0b5c9c). Tab strip in MathLive's glyph-
+label register: ∞≠∈ (their symbols album label) / italic αβγ (their greek
+label) / ₂⁺° (ours — MathLive has no chemistry album), 135% labels, min 42×34,
+radius 8px, hover #eee, selected = 2px accent underline. Action row honest:
+[left] [right] [backspace ×2] [hide-keyboard] — the four keys a controlled
+textarea implements exactly; undo/redo NOT faked (no native-undo contract on
+controlled React state); Insert equation stays contract-gated (wave 3c
+record). Keys swallow mousedown so the caret never leaves the textarea (probe
+proved mid-string insert: "12" caret@1 + × -> "1×2", then α -> "1×α2" — the
+keyboard never jumps the caret). Pref/hydration semantics unchanged
+(post-hydration read, no React #418). Verified: eslint+tsc clean; build 629
+pages; corpus gate PASSED (prebuild); e2e 12/12; browser probe matrix: sheet
+fixed/z-1055/full-bleed, computed styles byte-matched (sheet bg
+rgb(202,207,215), keycap border-bottom rgb(141,143,146), tab accent
+rgb(12,117,216) at 2px), tab switch, backspace, caret moves, hide + pref 0,
+pref-1 reload open, dark bg rgb(21,21,21) / keycap rgb(31,32,34), 375px
+full-width hOverflow=0, cold load 0 console errors. Incident, disclosed: the
+throwaway cleanup `rm -rf src/app/experiments` also deleted OTHER lanes'
+tracked experiments pages (kg-navigation/semantic-search/page.tsx) — restored
+via git checkout in the same breath; final tree = exactly one modified file.
+Screenshots: /home/z/my-project/scripts/w3d/w3d_keyboard_1440.png,
+w3d_keyboard_375.png, w3d_keyboard_dark.png. CI/Vercel status unverifiable
+from sandbox (private repo) — honest-absent.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 4 (answer format contract v2 — the deferred rich-math decision)
+
+- [x] HUB-ANSWER-BOX-W4 (EXECUTED 2026-09-29 as core aee2af1 + hub fb2b1ae, css-splice fix 9096b72,
+session web-98866c45, operator trace 1a0ea6d4ca777a75
+"Go on with updating the answer format" — the green light for the answer-format contract
+decision that waves 3b/3c/3d repeatedly deferred: Italic/Subscript/Superscript and Insert
+equation were recorded honest-absent as "owned by the still-open answer-format contract
+decision"). Lease: core-web-contract in .syllabai/locks.yaml (bases core 9a83511 / hub
+15ce2ba; acquired 2026-09-29T00:02Z). Scope, contract first: **answer format v2 = the
+corpus dialect itself** — answerText stays ONE UTF-8 string, cap 4000 (R7) unchanged, but
+its declared interpretation upgrades from "plain text" to "Markdown with embedded LaTeX
+math and limited inline HTML", precisely what the hub's existing corpus renderer
+(markdown.tsx: remark-gfm + remark-math + KaTeX/mhchem + rehype-raw/sanitize allow-list)
+already interprets: inline $…$ / display $$…$$, mhchem \ce{}, <sub>/<sup>/<br/>. Strictly
+backward compatible (every v1 answer is a valid v2 answer; literal $ escaped \$ by the
+producer). Storage: NO migration (answers.answer_text already text). Consumers: Smart
+Mark reads it verbatim (prompt gains a format note — interpret math literally); legacy
+/api/ai/mark and tutor CLA context unchanged (verbatim strings). Core answerinput: the
+wave-3 transcription policy upgrades from "plain text, never LaTeX" to the v2 dialect
+(handwritten math → $…$ LaTeX, words → plain text) — that policy existed only to
+preserve the old contract. Hub: the answer box grows the real rich-text layer — TipTap
+(MIT; the verified SME editor, matches their ground-truth `tiptap ProseMirror` DOM)
+inside the UNCHANGED wave-3b/3c shell (label, composite box, strip, pills, ink pad,
+slots, shortcut all kept); Italic/Sub/Sup become real marks; Insert equation opens a
+MathLive mathfield (MIT; the verified SME math editor) whose own stock virtual keyboard
+supersedes the wave-3d look replica — the real keyboard IS the keyboard that appears in
+SME; the Ω square returns to SME's Insert-symbol dropdown species (wave-3c verbatim
+groups) inserting Unicode at the rich caret; serialization to v2 dialect + limited
+dialect parser for draft reload (plain v1 drafts parse as text). Planned disclosed
+repair, one line: hub ci.yml push trigger is committed mangled (`branches: ain]` —
+push CI literally cannot match main; consistent with waves 3b–3d recording CI as
+unverifiable) — restored to `branches: [main]` so this wave's CI can actually run and
+be verified. Files: src/components/answer-textarea.tsx, src/components/answer-editor.tsx
+(new), src/lib/answer-format.ts + answer-format.test.ts (new), src/types/answer-editor.d.ts
+(new), src/app/globals.css, question-player.tsx, package.json (+@tiptap/react
+@tiptap/starter-kit @tiptap/pm @tiptap/extensions @tiptap/extension-{subscript,superscript}
+3.31.3 + mathlive 0.110.0, bun-types dev); core: AnswerInputTranscriptionService,
+TranscriptionController, LlmMarkingCandidateGenerator, PartAnswerRequest (policy/docs).
+
+W4 execution record: CONTRACT — answerText stays ONE UTF-8 string (no migration;
+answers.answer_text already text; 4000-char R7 cap unchanged) whose declared
+interpretation upgrades from plain text to the corpus dialect: CommonMark + inline
+$…$ / display $$…$$ LaTeX (+mhchem \ce{}) + <sub>/<sup>/<br/> inline HTML — the
+exact dialect src/components/markdown.tsx already renders, so answer v2 is
+renderable by the same renderer the questions use. Strictly backward compatible
+(v1 answers are valid v2; literal dollars protected by remark-math's
+whitespace/currency guards, which the editor's parser mirrors). Consumers: Smart
+Mark reads it verbatim — its LEARNER ANSWER prompt header now carries the v2
+format note (read math/markup literally as the learner's working); legacy
+/api/ai/mark and tutor CLA context unchanged (verbatim strings). The wave-3
+transcription policy "plain text, never LaTeX" existed only to preserve v1 — it
+now outputs the v2 dialect: handwritten math → $…$ LaTeX, words → plain text
+(core aee2af1; suite 1018 green offline JDK25 via tools/jdk25 — the JDK the
+environment reset had hidden). HUB (fb2b1ae): TipTap 3 + MathLive 0.110.0 (both
+MIT — the SME-verified stack) inside the UNCHANGED wave-3b/3c shell; the
+contenteditable reproduces SME's ground-truth DOM (tiptap ProseMirror,
+translate=no, aria-labelledby, p[data-placeholder] is-empty is-editor-empty via
+the Placeholder extension); Italic/Subscript/Superscript are REAL marks
+(honest-absent since 3c); the answerEquation atom renders KaTeX and edits in a
+MathLive mathfield whose own stock virtual keyboard mounts body-fixed at SME's
+--keyboard-zindex: 1055 (light + the hub's class dark mode via MathLive's theme
+attribute on the keyboard layer) — the wave-3d REPLICA retires, superseded by
+the real thing, and TipTap history delivers the real undo the replica honestly
+could not; the Ω square returns to SME's Insert-symbol dropdown species (3c
+verbatim groups). Serialization boundary src/lib/answer-format.ts (15 bun
+tests, round-trip green): italic *…*, sub/sup <sub>/<sup>, equation $…$,
+paragraphs \n\n, producer escapes (\$ \* \\ &lt;) so plain text round-trips
+byte-faithfully. DEFECT FOUND+FIXED by the draft-reload probe (question-player):
+the workspace captured useState(savedText) during the SSR-hydration render
+(server snapshot = empty), the persisted draft never re-entered state, and the
+first blur persisted "" — saveTypedAnswer treats "" as DELETE — silently
+wiping a saved (now equation-bearing) draft on reload+click; the store value is
+now adopted once the client snapshot lands (unless the user diverged). PROBE
+MATRIX: typed/word count, 3 marks, 53-glyph dropdown insert, equation
+popover→mathfield→real keyboard (light+dark, z-1055 measured), insert → KaTeX
+atom, stored draft verbatim "Energy grows $\frac{1}{2}mv^2$", draft survives
+reload rich, real undo, 375px hOverflow=0, cold load 0 console errors (after
+NodeViewWrapper fix — plain-span node views break TipTap's mutation observer).
+Equation popover refinement note: SME edits the mathfield IN the text; ours is
+an anchored popover with the same mathfield+keyboard — recorded as the wave-5
+candidate. CORRECTION to the claim above: the committed ci.yml trigger was
+NEVER mangled — "branches: ain]" was a terminal-rendering artifact of the
+probe output (the bytes are branches: [main], byte-verified; consistent with
+hub-ci running green on the parallel lanes' commits); ci.yml is untouched, no
+repair was needed. Verified: bun test 15/15; eslint+tsc clean; build 629 pages
++ CORPUS GATE PASSED (incl. after rebase over the CLA lanes — their globals.css
+block kept, one splice-brace fix committed honestly as 9096b72); e2e 12/12
+post-rebase; hub-ci 36506471899 + 36506472250 SUCCESS on 9096b72 (first
+API-verified CI of the answer-box waves). Lease released.
+
+## 2026-09-29 — claim: SME chat-widget popup form + expand/collapse toggle on the CLA panels (HUB-TUTOR-CLA-LOOK wave 2)
+
+### HUB-CLA-POPUP EXECUTED (same session, hub `8480350` on base `15ce2ba`; hub-ci run `36501950115` build+e2e green step-level, head_sha verified; Vercel live — all 5 markers in chunk 2uoi_b5hz03gk.js)
+
+Delivered as claimed (3 files, +525/-221): cla-panel-mode.ts (new — the
+shared syllabai.cla.panel pref, hydration-safe useSyncExternalStore +
+useIsDesktop matchMedia gate + SME's circle button class), note-cla.tsx and
+question-cla-overlay.tsx restructured into dual shells — POPUP = body-
+portaled fixed bottom-right window, SME-verbatim geometry byte-probed
+(fixed/16px/16px/410px/640px/24px radius, no backdrop, non-modal, ESC
+closes; portaled after the probe caught an ancestor transform stealing the
+containing block — bottom measured 36px pre-fix, 16px post-fix), SIDEBAR =
+the existing right Sheet (SME's expanded equivalent, fullscreen below lg =
+their mobile wash), SME-verbatim toggle labels (Expand chat / Collapse
+chat) + Close chat on circle header buttons, gradient panel title
+(background-clip:text, primary→primary/60 token-safe), one shared panel
+body so a mid-conversation toggle preserves the thread. Honest-absent:
+SME's popup New chat button (per-surface transcript-reset semantics differ
+— follow-up candidate, not faked). Verified: eslint + tsc + corpus gate
+PASSED (629 pages) + e2e 12/12 + 21/21 behavior probes (geometry, expand/
+collapse round-trip, pref persistence across reload, Escape, page
+scrollable, mobile = Sheet + 0px overflow, 0 console errors; question-
+surface probes SKIP honestly — bridge-off hides entries, shared shell code
+proven on the note island) + VLM audits + Vercel markers ("Expand chat",
+"Collapse chat", "syllabai.cla.panel", the geometry class, "Close chat").
+Evidence: `download/hub-bb263437-w2/`; harness
+`scripts/hub_bb263437_w2_popup_probe.mjs`.
+
+- [x] HUB-CLA-POPUP (EXECUTED 2026-09-29 as hub `8480350`, session web-bb263437 continuation,
+operator directive trace 1a0ea762cba38339 "in SME, the CLA is a popup, which
+can also be moved to the right as a sidebar. Did you implement that?")
+**add SME's chat-widget dual-form mechanics to the hub's two CLA panels**
+(note-cla island + question-cla overlay) — honest finding: wave 1 shipped only
+the right-docked panel (≈ SME's expanded form); the popup default and the
+toggle were NOT implemented. Ground truth re-extracted from the operator's
+FrontendReferences snapshots (SME's own CSS module rules, chunk-verbatim):
+POPUP = position:fixed inset-block-end:1rem inset-inline-end:1rem, z-1029,
+width 410px, height 640px, min-height 400px, max-height calc(100vh −
+(navbar-height + 2rem)), border-radius 1.5rem, shadow-md, white, flex-col,
+NO backdrop on desktop (page stays interactive), full-page wash under it on
+mobile (<768px); EXPANDED/SIDEBAR = wrapper flex 0 0 400px static column,
+panel width auto, max-height none, border-radius 0, sticky top navbar,
+height calc(100vh − navbar), offered ≥1400px only (expand button
+display:none below); header = circle icon buttons "New chat" · "Collapse
+chat"/"Expand chat" (the toggle, SME-verbatim labels) · "Close chat";
+ChatPanel_headerTitle uses background-clip:text gradient fill. Hub
+adaptation (zero contract change): a shared pref
+syllabai.cla.panel = "popup"|"sidebar" (default popup, hydration-safe
+useSyncExternalStore — the wave-3c first-render-pref lesson) + a matchMedia
+lg gate; popup shell = hand-rolled fixed bottom-right window with SME's
+geometry (410×640/min-400/max-calc(100dvh−5.5rem), rounded-3xl, shadow-lg,
+role=dialog aria-modal=false, ESC closes, no backdrop) — the hub's Sheet is
+the equivalent of SME's sticky full-height column so SIDEBAR = the existing
+right Sheet unchanged; toggle button in both headers (aria-label/title
+"Expand chat" ↔ "Collapse chat", lucide PanelRightOpen/Minimize2, hidden
+below lg — SME hides <1400px; below lg the Sheet's fullscreen form matches
+SME's mobile wash); gradient text on the panel titles. The transcript/
+draft/busy state lives in the parents, so a mid-session toggle switches
+shells without losing the thread. Honest-absent: SME's popup "New chat"
+header button is NOT ported this wave (the hub panels' transcript-reset
+semantics differ — note island owns local state, the question overlay lifts
+to the player; recorded as a follow-up candidate, not faked). Files:
+src/components/cla/cla-panel-mode.ts (new), note-cla.tsx,
+question-cla-overlay.tsx. /assistant is a full page, not a popup —
+unchanged. Zero overlap with any active lane (locks.yaml empty). Base: hub
+15ce2ba.
+
+- [x] **bankrepair (2026-09-29, Task 66, trace 1a0ea5a6dbc30c79) — bank-repair
+  lane EXECUTED + VERIFIED, plus the O6 children landing defect it surfaced.**
+  Probe: global ledger-vs-live reconciliation (1,408 rows) found 37 VALIDATE
+  audit rows (ids 3680-3696 + 3703-3722, Task-61 O6 commit 21:19:52Z) whose
+  child UPDATEs never ran (apply script had no UPDATE for
+  question_versions/mark_schemes; post-asserts + O7 never checked children) —
+  25 qv + 12 schemes stuck SUGGESTED under 2 VALIDATED papers. TX-A: guarded
+  flips -> VALIDATED + 37 corrective audit rows 3940-3976 (O6b pattern,
+  append-only, originals retained). TX-B: Q10 marks repair on 4CH1/1C Jun-2019
+  from sha-frozen printed evidence (QP p15: (a)(i)=2 (a)(ii)=2 (b)(i)=2
+  (b)(ii)=1 = 7): qv+questions 1->7, parts b-i 0->2 / b-ii 0->1; banked sum
+  104->110 = printed 110; stems byte-unchanged; no audit rows (mechanics
+  precedent). Dispositions: "2 missing scheme rows" = 13-scheme extraction
+  gap (no fabrication from lossy MS chunk); 30 empty-stem qv = accepted
+  content-in-parts shape; Sep-14 demo-era ledger mismatches untouched. NEW
+  open item: T-PS1 §C children (Jan-2022 1C 11+11, Jun-2019 2C 8+8, zero
+  audit rows, unreviewed) await their own review evidence. Verify 28/28 +
+  L1 live 5/5. Censuses unchanged (90V/14R papers, 567V/305S/147R docs, pool
+  2,935, events 0). Evidence:
+  `bench/review/psaxis-review-2026-09-28/bankrepair-2026-09-29/`. Remaining
+  open: §C children review, sibling supersession sign-offs (operator),
+  sheet-generator regex fix, stale-citation re-point.
+
+## 2026-09-29 — claim: SME's expanded sidebar physically reflows the page + the CLA panel's density diet (HUB-CLA-POPUP wave 3)
+
+- [ ] HUB-CLA-SIDEBAR (REGISTERED 2026-09-29, session web-bb263437
+continuation, operator directive trace 1a0ea8ffd673a661 "The sidebar mode
+still not like SME. In SME, CLA physically changes layout so that it can fit
+in the right side and the rest of the page is scrollable. But here it is
+just a side overlay on top. And also the CLA has way to much info, right?
+Too much text") **two corrections on the hub's CLA panels** (note-cla island
++ question-cla overlay): (1) SIDEBAR = PHYSICAL LAYOUT, not an overlay —
+honest finding: wave 2's sidebar shell is the Radix right Sheet, which
+floats OVER the page (content stays full-width underneath). SME's ground
+truth (their own CSS, re-extracted from the FrontendReferences snapshots):
+the expanded chat wrapper goes `flex: 0 0 400px; position: static` inside
+the page's flex row — the page content physically cedes 400px and keeps
+scrolling; the ChatPanel goes width auto, border-radius 0, sticky top
+navbar, height calc(100vh − navbar); the expand affordance exists ≥1400px
+only (display:none below — expanded falls back to the floating popup, SME's
+inert-media-query behaviour). Hub adaptation: while the CLA dock is open on
+≥1400px, the course-shell row gets a 400px right inset (SME's 0.2s
+ease-in-out transition timing, reduced-motion guarded) and the panel docks
+as a fixed right column under the 56px navbar (radius 0, border-l, z below
+dialogs); below 1400px the popup form renders regardless of pref; below lg
+the Sheet fullscreen wash stays. (2) DENSITY DIET toward SME's panel
+anatomy (their verbatim structure: short gradient title + 3 circle buttons,
+ONE-LINE banner "Chat can make mistakes. Please check all responses
+carefully.", 2-col prefilled-prompt chip grid as the empty state, chat +
+input — nothing else): banner cut to one line; context card collapses to a
+single anchor line (note title / "Question N · marks · parts", spec points
+to a tooltip); the question surface's Part row merges into that line; mode
+row loses its label + disabled-vocabulary pills (keeps the 2 live pills);
+quick actions become SME-style chips shown in the EMPTY state only, no mode
+badges; empty-state paragraph deleted (chips carry it); busy line
+shortened; per-answer trace (provider/model/mode/evidence/latency/tools)
+collapses behind a tiny disclosure, citations pills stay. Floating CLA
+button hides while open (SME hides theirs). No API/contract/anchor change:
+same endpoints, same anchors, same refusal semantics, same pref key.
+Files: src/components/cla/cla-panel-mode.ts, note-cla.tsx,
+question-cla-overlay.tsx, src/components/hub/course-shell.tsx (one class),
+src/app/globals.css (the dock inset rule). Zero overlap with active lanes
+(locks.yaml empty). Base: hub 8480350.
+
+- [x] **qsp-repair (2026-09-29, trace 1a0ea81eb466e08d) — question_spec_points
+  coverage bumped to 630/630 for the recon cohort: the 9 unmapped pilot-cohort
+  questions now carry spec-point mappings (30 rows, table 2359 -> 2389).**
+  Cohort identification (measured, not guessed): tranche 4.15's 630 = the
+  09-19 SME pilot landing (593 sme-eq-*) + the 09-22 paper batch (37); the
+  09-26 mapping wave (+634) went to the 09-24/25 batches and never touched
+  these. The 9: 4ch0/2012-01/1C q2 q3 q5 q7, 4ch1/2023-01/2CR q1 q4,
+  4ch1/2023-06/1CR q3, sme-eq-2-7 q3-p1 + q3-s. Derivations grounded in part
+  content vs the live 194-node 4CH1 SUBTOPIC vocabulary, style copied from
+  same-paper mapped siblings (2012-1C q1 -> 1.10P+1.8S+1.9S establishes the
+  4CH0->4CH1 cross-spec house practice; SME twin questions q4-p1/p2/s share
+  identical mappings, so q3-p1 == q3-s). Mechanics = Task-66 class: single
+  fail-closed tx, NOT-EXISTS-guarded inserts, in-tx asserts (9 refs mapped,
+  exactly one PRIMARY each, cohort 630/630, every new node a 4CH1 SUBTOPIC),
+  dry-run ROLLBACK then COMMIT; provenance/validation_state AI_VALIDATED (the
+  table's only existing values). Verify 3-layer green: (1) DB post-commit
+  630/630 cohort, bank-wide active unmapped 60 -> 51; (2) serve path —
+  GET /exam-papers/{id} exposes the new specPoints on all repaired paper
+  questions, indistinguishable from house-mapped siblings; (3) evidence path —
+  fresh learner structured attempt + full self-mark on repaired 2CR-Jan23 q1
+  fires SUBTOPIC skillStates 4CH1-2.29 / 4CH1-1.24 / 4CH1-1.8 (mastery 0.357)
+  beside the topic row — before the repair this question could only fire
+  topic-level evidence. Observations recorded, no action taken: sme q3-p1 MCQ
+  options are empty strings (image-option ingestion loss; stem readable,
+  mapping unaffected); NEW open item **T-QSP2** — the 51 remaining unmapped
+  (09-24/25/26/28 batches) all carry synthetic ING-* primary topic anchors and
+  need real primary-topic assignment + spec-point mapping before their
+  evidence can paint anywhere meaningful. Evidence:
+  `bench/review/psaxis-review-2026-09-28/qsp-coverage-repair-2026-09-29/`.
+
+- [x] **sectionC-children (2026-09-29, Task 67, trace 1a0ea8242c254e35) —
+  T-PS1 §C VALIDATE_ALL EXECUTED + VERIFIED.** The §C leftover children
+  (4CH1/1C Jan-2022 11 qv + 11 schemes, 4CH1/2C Jun-2019 8+8 — all SUGGESTED,
+  zero audit rows, never reviewed under VALIDATED papers) received the
+  sheet's row-1/2 review: content reconciliation against the sha-frozen
+  printed QP/MS chunks of the papers' linked VALIDATED docs passed all
+  checks (question census, per-question printed totals 19/19, scheme point
+  marks multisets + text attribution, prompt attribution, effective-marks
+  arithmetic; banked 110/110 and 70/70). Extraction not suspect -> guarded
+  flips -> VALIDATED + 38 audit rows 3977-4014 (agent-performed, operator-
+  delegated, no teacher events). States only — stems/marks byte-unchanged.
+  Verify 22/22 (ledger-vs-live still exactly the 10 demo-era mismatches; 19
+  questions now servable) + L1 live 5/5. Censuses unchanged (90V/14R papers,
+  567V/305S/147R docs, pool 2,935, events 0). Evidence:
+  `bench/review/psaxis-review-2026-09-28/sectionC-children-2026-09-29/`.
+  Remaining open: sibling supersession sign-offs (operator per-package
+  APPROVE), sheet-generator regex fix, stale-citation re-point, by-topic
+  mapping for the 19 newly-servable questions.
+
+- [x] **HUB-CLA-SIDEBAR (EXECUTED 2026-09-29, session web-bb263437 wave 3,
+operator trace 1a0ea8ffd673a661) — hub f0fec6d, hub-ci run 36504776426
+GREEN step-level, Vercel live.** Both operator corrections landed: (1)
+the sidebar is now a PHYSICAL layout member, not an overlay — SME's own
+expanded mechanics (flex 0 0 400px static in the page row; the page cedes
+exactly 400px and keeps scrolling) mirrored as: useClaDock marks
+<html data-cla-sidebar=open>, globals.css gives .course-shell-row a 400px
+right inset at >=1400px (SME's .2s ease-in-out, reduced-motion guarded),
+the panel docks as a fixed right column under the 56px navbar (radius 0,
+border-l); below 1400px the dock can't exist (SME's expand button is
+display:none there — a stored sidebar pref degrades to the popup), below
+lg the Sheet fullscreen wash stays. Probes: content box narrowed exactly
+1440->1040, article 768->432, column edge == dock edge (zero overlap),
+page scrolls behind, expand/collapse round-trip, pref persists, Escape,
+1280 degradation, 375 po=0. (2) density diet to SME's panel anatomy:
+their verbatim ONE-LINE banner ("Chat can make mistakes. Please check
+all responses carefully."), ONE anchor line (note title w/ spec points
+in tooltip; "Question N . marks . parts" + Approach part pills merged),
+mode row = 2 live pills above the input (label + dashed disabled pills
+removed), quick actions as SME PrefilledPrompts chips in the EMPTY state
+only, empty paragraph + long busy line + metadata footer gone (trace
+collapses behind a tiny disclosure; citations pills unchanged), title =
+short gradient "CLA". No API/contract/anchor change; same pref key.
+Gates: eslint+tsc clean, corpus gate PASSED 629 pages, e2e 12/12, 43/43
+probes + VLM audits (light/dark), Vercel markers + the deployed CSS rule
+byte-verified (0do9vwuuef9qy.css). Evidence:
+download/hub-bb263437-w3/ (report, 8 captures, diff, probe logs, CI
+jobs, Vercel probe, SHA256SUMS); harness
+scripts/hub_bb263437_w3_{dock,dark}_probe.mjs + hub_w3_{ci_poll_once,
+vercel_probe}.sh. Question-surface probes skipped honestly (bridge-off,
+shared code proven on the note island; strings verified in prod chunks).
+SME's "New chat" header button still honest-absent (follow-up
+candidate).
+=======
+- [x] **tqsp2-primary-topics (2026-09-29, trace 1a0eaa53be2628f5) — T-QSP2
+  executed: the 51 ING-anchored unmapped questions now carry REAL primary
+  topics + spec-point mappings; bank-wide active unmapped 51 → 0.** Cohort
+  (measured): all 51 unmapped carry synthetic `ING-*` per-paper ingestion
+  anchors as primary_topic_node_id — 09-24 ×12, 09-25 ×13, 09-26 ×19
+  (1CR+2CR Jun-2024 full papers), 09-28 ×7 (2C Jan-2021 full paper), 21
+  papers, all PAST_PAPER STRUCTURED. Two-part assignment mirroring §10
+  mapQuestionTopics semantics: (1) real TOPIC primary = parent TOPIC of the
+  question's PRIMARY spec point (mechanical, from the canonical KG
+  pointSubtopics hierarchy) + question_topics rows (51 primary + 69
+  secondary, cap-4 distinct-parent secondaries); (2) spec-point mappings
+  qsp-repair style — PRIMARY = dominant assessed point (largest mark block,
+  framing tie-break), SECONDARY = substantively assessed supporting points
+  (max 4), grounded in stems + 350 part prompts + 283 mark points vs the
+  live 194-node vocabulary (4CH0→4CH1 cross-spec per house practice).
+  Mechanics = Task-66 class single fail-closed tx: 51 guarded primary
+  UPDATEs (only off an ING- anchor), 120 topic rows, 189 qsp rows (table
+  2389 → 2578; question_topics 625 → 745), in-tx asserts (real 4CH1-S%
+  TOPIC primaries, exactly one primary per question in both tables, exact
+  deltas, all new spec-point nodes 4CH1 SUBTOPIC, ING census 353 → 302),
+  dry-run ROLLBACK then COMMIT; AI_VALIDATED provenance. Verify 3-layer
+  green: DB bank unmapped 0; serve path 12 spot-checks across 6 papers
+  (all 4 landing days) ALL PASS; evidence path e2e on repaired 2CR-Jun24 q2
+  fires 4 skillStates — **4CH1-S1-c "Atomic structure" REAL topic anchor**
+  (the delta vs the 9-question repair, whose topic row was the invisible ING
+  anchor) + 4CH1-1.16 P / 1.15 S / 1.17 S at 0.357 — topic evidence now
+  paints in the KG. NEW open item **T-QSP3**: the 302 already-mapped
+  questions still on ING-* anchors (spec-point evidence paints; topic-level
+  evidence fires at disconnected placeholders) — the same parent-TOPIC
+  derivation clears them in one pass. Evidence:
+  `bench/review/psaxis-review-2026-09-28/tqsp2-primary-topics-2026-09-29/`.
+
+  **ADDENDUM (2026-10-01, trace 1a0f5b2b7bf5bf7d — the Task-55-recorded 94
+  sme-eq-* L1 disagreements RECONCILED):** the L1 rule was re-implemented and
+  pin-validated (checked=961 agree=867 disagree=94, all sme-eq-*, 0 ambiguous,
+  0 qt conflicts — reproduces the 09-30 pinned 946/852/94 on the pre-qsp15
+  state). Ground truth: 94/94 the old anchor is the plurality-winner of the
+  question's point-parent distribution (the SME import's filing rule) while
+  its single PRIMARY qsp point's parent TOPIC differs; 94/94 lack qt-primary
+  mirrors (lane 0/593 vs past-paper 368/368); the 2 qsp-repair twins
+  (q3-p1/-q3-s) additionally had zero qt rows. Disposition D1 (content-truth
+  direction, no coding rewrites): 94 guarded primary-topic UPDATEs to the
+  parent TOPIC of the PRIMARY point + old anchors preserved as SECONDARY qt
+  rows + 92 secondary→primary flips + 2 twin primary INSERTs; qsp rows
+  byte-identical (asserted pre/post); plan pinned pre-write (sha256
+  cb4cb2cb…9a7d0); dry-run ROLLBACK then COMMIT (first dry-run caught
+  question_topics having no id/created_at DB defaults — explicit uuid+now()).
+  Fresh-connection verify ALL PINS PASS: census 961/961/0 — the bank-wide
+  house rule (filing = topic of the dominant assessed point) now holds for
+  every active question; qt 1130→1226; ING/cohort fingerprints unchanged.
+  Evidence: `bench/review/psaxis-review-2026-09-28/sme-eq94-reconciliation-20261001/`.
+  Open residue: sme-eq qt-primary backfill for the other 499 (L1-compliant;
+  serve-shape only).
+  **ADDENDUM (2026-10-01, trace 1a0f5eba1935f439 — the 499 residue CLOSED):
+  sme-eq qt-primary backfill EXECUTED + VERIFIED.** The 499 L1-agreeing sme-eq
+  questions (anchors already correct — they agree under the bank-wide house
+  rule) received their qt-primary mirrors: 499 NOT-EXISTS-guarded INSERTs
+  (explicit uuid+now(); question_topics has no DB defaults), 0 flips (measured,
+  not assumed: the anchor is absent from question_topics for all 499), NO
+  questions/qsp changes, no deletions; plan pinned pre-write (sha256
+  7a1eb14b…bf0e3); dry-run ROLLBACK then COMMIT, in-tx asserts green (L1
+  961/961/0, qsp 2637, qt 1226→1725, 499 qt-primary==anchor, bank-wide
+  coverage failures 0, qsp byte-identical). Fresh-connection verify ALL PINS
+  PASS (P1-P7): 94-cohort regression intact (primary==anchor 94/94, old
+  anchors kept as SECONDARY 94/94), sme-eq mirrors 593/593, past-paper
+  368/368, qsp15 cohort 15/59/36, ING 0-0-0 — bank-wide serve shape now
+  uniform: every active question has exactly one qt primary row equal to its
+  anchor (961/961, 0 conflicts). Evidence:
+  `bench/review/psaxis-review-2026-09-28/sme-eq499-backfill-20261001/`.
+  (Plan-builder honesty note: the first staged assert used the stale PRE-fix
+  L1 pin 961/867 and FAILED CLOSED; a read-only diagnostic re-measured the
+  live post-Task-59 state 961/961/0 before any write existed, and the pin was
+  corrected — zero DB writes preceded the pinned dry-run/execute sequence.)
+- [x] **servable19-topics-citations (2026-09-29, Task 68, trace 1a0eb3255bd898c9) —
+  the two non-operator Task-67 leftovers EXECUTED + VERIFIED: by-topic mappings
+  for the 19 newly-servable questions + the stale-citation re-point (cosmetic).**
+  Probe correction: the 19 (Jan-2022 1C ×11 + Jun-2019 2C ×8, qv+ms VALIDATED)
+  already carried 45 spec-point rows but zero real topic anchors — 18 ING-*
+  anchored with no question_topics rows; q5 (867c9a42) already house-mapped.
+  Lane A: mechanical parent-TOPIC-of-PRIMARY derivation (KG PART_OF edges, zero
+  orphans; reproduces q5's rows exactly) — 18 guarded primary UPDATEs + 21
+  question_topics rows (18 primary + 3 secondary), fail-closed tx, ING 302→284,
+  qt 745→766, qsp unchanged. Lane B: citations store CANONICAL document_id;
+  measured 106 REJECTED docs cited by 949 rows (the Task-63 88 + Task-64/65/OCR
+  rejects); targets = owning paper's CURRENT same-kind VALIDATED link derived
+  from the PLACE ledger (95 parsed pairs across link-repair/re-ingest/re-link +
+  covid formats, + the Jan-2021 pair from audit 3871 detail) and 4 Task-65
+  SUPERSEDED pointers; 12 OWNER-REJECTED docs (99 rows) stay (no target, audit-
+  evidenced). 850 rows re-pointed across 94 docs, per-doc rowcounts asserted;
+  no audit rows (mechanics precedent: display-only metadata, no state flips).
+  Verify 3-layer green: DB 24/24; serve path 11/11 + 8/8 questions with
+  specPoints; e2e fresh learner → structured attempt + full self-mark on
+  1C-Jan22 q6 → REAL topic skillState 4CH1-S1-f "Ionic bonding" + 4CH1-1.40/1.41
+  (the ING-placeholder delta). T-QSP3 narrows 302 → 284. Evidence:
+  `bench/review/psaxis-review-2026-09-28/task68-servable19-topics-citations-2026-09-29/`.
+  Remaining open: sibling supersession sign-offs (operator per-package APPROVE),
+  sheet-generator regex fix, T-QSP3 (284 remaining ING-anchored), bank-scheme
+  sparsity (91 qv).
+
+- [x] **sibling-supersession (2026-09-29, Task 70, trace 1a0ec06fbd199a99) —
+  the two standing per-package sign-offs EXECUTED + VERIFIED: packages
+  4ch1-2cr-202001 and 4ch0-2c-201701 superseded on the operator's
+  "APPROVE both".** Task-64 pattern per package: package SHAs re-verified
+  byte-exact; fresh live archives as undo records (2cr: 7q/7qv/43 parts/7
+  schemes/31 mp/1 bridge + 3 attempts/19 answers/19 human_marks/19
+  smart_mark_results; 2c: 8q/8qv/44 parts/8 schemes/34 mp/1 bridge/12 qt
+  mappings — the staged side-by-side counts were part-linked subset views;
+  all old rows created 09-14, zero post-staging mutation); TX-1 guarded
+  deletes rowcount-gated per table incl. the 15 teacher-VALIDATED versions;
+  drafts POSTed verbatim (2cr 201 -> d180d1b6 7q/48p/38mp; 2c 201 ->
+  21041891 8q/44p/37mp); arithmetic gates bank==draft EXACT (2cr 70/70,
+  2c 60/60 vs print — the glmocr rows were 43/70 and part-sum 2/point-sum
+  54); TX-2 resolution (2cr pointers already the live chunk-ful docs — no
+  PLACE row; 2c PLACE 1 to d7d00cea/d04e464e; series/year JAN/2020, JAN/2017;
+  VALIDATE 2 papers + 15 qv + 15 schemes; re-stamp guard 0 rev1). Audit rows
+  4015-4047 contiguous 33 rows (VALIDATE 32 + PLACE 1), actor Nawaf Al
+  Hussain Khondokar, trace + honesty note per row; teacher_validation_events
+  0. Independent landing verify ALL GREEN: papers census 90V/0F/0S/14R,
+  docs census unchanged 567V/305S/147R, serving pool unchanged 2,935
+  (additive-only: docs stayed VALIDATED, 0 rev1 involved), old chains gone,
+  new rows VALIDATED + ING-anchored (anchors reused find-or-create), fresh
+  learner live probe renders 7/8 questions with draft mark multisets. New
+  rows carry bank-namespace external_refs (4ch1/past-papers/2020-01/4ch1-2CR#qN,
+  4ch0-2c-201701#qN) — the qcard-bridge citation namespace, restoring
+  card-bank identity for these sittings. Follow-ups: the 15 new questions
+  join the next topic-mapping pass (Jan-2021 rows' path via Task 68/69);
+  2c's 12 archived qt mappings restorable from the undo record if wanted.
+  Evidence: `bench/review/psaxis-review-2026-09-28/sibling-supersession-2026-09-29/`.
+  Remaining open: sheet-generator regex fallback fix (code lane),
+  bank-scheme sparsity (91 qv without scheme rows on VALIDATED papers).
+
+- [x] **tqsp3-primary-topics (2026-09-29, Task 69, trace 1a0ebc845dcee229) —
+  T-QSP3 EXECUTED + VERIFIED: the remaining 284 ING-anchored questions now
+  carry REAL primary topics — bank-wide ING-anchored active 284 → 0.** Cohort
+  (measured, zero drift vs the Task-68 census): 284 active questions on
+  synthetic `ING-*` per-paper ingestion anchors, all spec-point mapped
+  (284 PRIMARY + 335 SECONDARY, AI_VALIDATED), zero question_topics rows,
+  278 VALIDATED / 6 SUGGESTED latest-version states (no state flips anywhere).
+  Mechanical parent-TOPIC-of-PRIMARY derivation (live KG PART_OF edges;
+  secondaries = distinct parents of SECONDARY points minus primary, cap 4) —
+  validated on 4 independent layers BEFORE any write: reproduction proof
+  69/69 on all pre-existing real mappings bank-wide; repo-KG explorer_blob
+  @ resources main HEAD 4ad167376f agreement 284/284 primary + 56/56
+  secondary; title agreement 28/28; dry-run tx with in-tx asserts then
+  ROLLBACK. Execution = Task-66-class single fail-closed tx: 284 guarded
+  primary UPDATEs (rowcount==1 each, only off the exact ING anchor) + 340
+  uq/NOT-EXISTS-guarded question_topics INSERTs (284 primary + 56 secondary);
+  in-tx asserts all green (ING census 0; qt 766 → 1106 exact; qsp 2578
+  unchanged; exactly one primary row per cohort question; bank-wide
+  primary-row distribution {0:877, 1:69} → {0:593, 1:353} exactly — the 593
+  remainder is the known sme-orphan pool, untouched; every inserted row a
+  real 4CH1-S% TOPIC; zero ING refs in question_topics). Verify 3-layer
+  green: DB fresh-conn census + per-plan 284/284; serve path 5 papers /
+  55 questions all rendering with specPoints (+1 honest SKIP: 2023-06 2CR has
+  no exam_papers row); evidence path e2e fresh learner → structured attempt +
+  full self-mark on repaired 2022-01 2C#q1 → evidenceFired=True → REAL topic
+  skillState **4CH1-S4-d (TOPIC)** + 4CH1-4.23/4.25, NO ING-* state (second
+  probe on 1C#q4 → 4CH1-S2-c "Gases in the atmosphere" confirms the delta).
+  Observations: probe marksTotal vs awarded mismatches = the known parent/
+  child part-sum artifact (Task-54 class, evidence path unaffected); 104 ING
+  anchor nodes remain as unreferenced KG placeholders by design. Evidence:
+  `bench/review/psaxis-review-2026-09-28/tqsp3-primary-topics-2026-09-29/`.
+  Remaining open: sibling supersession sign-offs (operator per-package
+  APPROVE), sheet-generator regex fix, bank-scheme sparsity (91 qv).
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 5 (the equation mathfield embedded in the text)
+
+- [x] HUB-ANSWER-BOX-W5 (EXECUTED 2026-09-29 as hub dff764c, hub-ci
+36524400542 SUCCESS, session web-98866c45, operator trace
+1a0eb5e936962765 "Yes want the equation mathfield embedded in the text" — the
+green light on wave 4's recorded refinement candidate: "SME edits the
+mathfield IN the text; ours is an anchored popover"). Wave 5 retires the
+popover: the answerEquation atom's node view hosts the MathLive mathfield
+INLINE in the ProseMirror text flow — click an equation and it becomes a live
+mathfield in place (SME's exact interaction); Insert equation drops a new
+atom at the caret already in edit mode; the stock virtual keyboard still
+mounts body-fixed at --keyboard-zindex 1055 (light/dark tracked); blur /
+Escape / selection-away commits the LaTeX back into the node (an empty commit
+deletes the atom — no invisible atoms in the dialect); static KaTeX renders
+when not editing. ZERO contract delta: answer-format-v2 serialization
+untouched ($…$ inline, the 15-test round-trip suite still governs) — this
+wave is editing-UX only, hub-only (no core, no lease). Files:
+answer-editor.tsx, answer-textarea.tsx, globals.css. Gates: bun test 15/15,
+eslint+tsc, prod build + corpus gate, browser probe matrix (insert → inline
+mathfield → keyboard → commit → KaTeX static → draft round-trip verbatim →
+reload rich → undo → 375px po=0 → 0 console errors), hub-ci green, then
+closeout here.
+
+W5 execution record: the wave-4 anchored popover RETIRES — the answerEquation
+atom's node view now hosts the MathLive mathfield INLINE in the ProseMirror
+text flow, SME's exact interaction (static KaTeX at rest; click edits in
+place, prefilled; Insert equation drops an atom at the caret already
+editing; blur / Escape / tapping elsewhere commits; an empty commit deletes
+the atom — no invisible $…$ in the dialect; Escape hands the caret back to
+the text AFTER the atom). ZERO contract delta: answer-format-v2
+serialization untouched, hub-only (no core, no lease — the v2 contract the
+operator asked about was settled in wave 4: answerText stays ONE UTF-8
+string whose interpretation is the corpus dialect CommonMark + $…$ /
+$$…$$ LaTeX + mhchem + <sub>/<sup>/<br/>, strictly backward compatible).
+TWO REAL DEFECTS FOUND+FIXED by the probe: (1) TipTap's setNodeMarkup
+(updateAttributes on every mathfield keystroke) DEMOTES the session's
+NodeSelection, so the selection-away guard committed after the first
+keystroke and the field's own unmount fired a stray blur whose second
+commit read an empty value and DELETED the atom — fixed by re-pinning the
+NodeSelection after each live write-back + a commit latch (a session
+closes exactly once) + an isConnected guard on blur; (2) probe-harness
+residue (localStorage drafts from prior runs) created phantom atoms that
+flaked the prefill/undo assertions — probe now starts from a cleared draft
+store. Verified: bun test 15/15 (serializer untouched); eslint+tsc clean;
+production build 629 pages + CORPUS GATE PASSED; browser probe matrix
+21/21 on a clean draft store (inline-in-flow, popover absent, keyboard
+z-1055 measured + light/dark themes, live write-back to the stored draft
+verbatim $
+rac{1}{2}mv^{2}$, Escape commit + caret-after, click-away
+commit, prefilled re-edit, real undo over math, empty-atom deletion, draft
+survives reload rich, 375px hOverflow=0, cold load 0 console errors);
+pushed 9096b72..dff764c ff-only; hub-ci 36524400542 completed/success.
+Files: answer-editor.tsx, answer-textarea.tsx, globals.css.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 6 (SME's Insert Matrix / mathfield Menu buttons)
+
+- [x] HUB-ANSWER-BOX-W6 (EXECUTED 2026-09-29 as hub 04785e5, session web-98866c45, operator trace
+1a0ebc1b93638915 "I want SME's Insert Matrix / mathfield Menu buttons").
+Wave 5 shipped the inline mathfield with MathLive 0.110.0's STOCK toggles —
+the same two buttons SME's mathfield renders ("Toggle Virtual Keyboard" /
+"Menu", verbatim strings in their chunk 79d2298f = MathLive 0.110.0's own
+l10n) — but live probes (dev + syllabai-hub.vercel.app/practice production)
+prove they are EFFECTIVELY UNUSABLE on our inline atom: the editing chip is
+94×44 px, the two 34×34 toggles (flex-shrink:0 inside .ML__toggles, stock
+CSS) leave ~10 px for the formula — the operator sees a cramped two-icon
+box, not SME's equation editor. Wave 6 makes the stock buttons first-class:
+(1) the editing mathfield gets a usable inline min-width (12rem) so formula
++ toggles coexist — chip still flows inline, grows with content, capped
+max-width 100%; (2) Escape while the stock menu is open now dismisses ONLY
+the menu (MathLive's .ui-menu-container in the mathfield shadow root is
+detected and the commit is deferred) — today our capture handler commits the
+session on the first Escape, killing the menu with the atom; a second
+Escape still commits + caret-after, unchanged; (3) verified-live stock
+behavior this wave rides on (no re-implementation, zero invention): Menu
+button opens MathLive's stock menu (Insert Matrix ▸ 5×5 ☐ grid →
+\begin{pmatrix}#?&…\\…\end{pmatrix} with placeholder slots, Borders ▸
+matrix/pmatrix/bmatrix/vmatrix/Bmatrix, array Add/Delete Row/Column when the
+caret is inside a matrix, Insert ▸ Abs/Root/Log/Calculus/Complex, Mode,
+Font Style, Color/Background, Cut/Copy/Paste/Select All — SME's exact
+surface, same library version); ⌨ toggle hides/shows the virtual keyboard
+sheet without ending the session; blur-commit guard already survives menu
+focus (activeElement = host math-field, closest() matches). ZERO contract
+delta: answer-format-v2 serialization untouched (\begin{pmatrix} is plain
+LaTeX inside $…$ — the v2 dialect already carries it; KaTeX renders it at
+rest); hub-only (no core, no lease — wave 5 precedent). Base: hub 5eb2e10.
+Files (planned): src/components/answer-editor.tsx, src/app/globals.css.
+W6 execution record: probes FIRST established the ground truth — the wave-5
+mathfield ALREADY renders MathLive 0.110.0's stock toggles (dev + production
+verified: [part=virtual-keyboard-toggle] + [part=menu-toggle] present and
+display:flex), so the wave re-derives SME's actual gap: at min-width 4ch the
+editing chip measured 94×44px and the two 34×34 flex-shrink-0 toggles left
+~10px of formula area — the buttons existed but were unusable, AND the
+session-open path could leave the chip behind the risen keyboard sheet
+(menu toggle probed at y=749 under the sheet at y≤481 — MathLive only
+self-scrolls on its OWN toggle path). Fixes, all hub-side, ZERO contract
+delta: (1) editing chip min-width 12rem (192×44 measured, formula area
+103px, still inline, max-width 100%); (2) session-open scroll-above-sheet —
+walks scrollable ancestors then window against the .MLK__backdrop edge (the
+outer .ML__keyboard element is a full-viewport hit area at top 0 — first
+selector attempt was wrong and caught by the probe); (3) Escape with the
+stock menu open dismisses ONLY the menu (.ui-menu-container detected in the
+shadow root; commit deferred) — second Escape commits + caret-after, wave-5
+semantics intact; (4) normalizeMathPlaceholders() strips EMPTY \placeholder{}
+groups (MathLive serializes unfilled Insert-Matrix cells that way; KaTeX
+paints them red) at the editor boundary — write-back AND commit — so the
+stored dialect carries plain empty cells; filled placeholders left verbatim
+(MathLive REPLACES the atom on typing, so they cannot occur from the UI);
+serializer/parser untouched, strictly backward compatible, 4 new bun tests.
+Probe matrix (real mouse/keyboard via CDP, clean draft store, dev :3100):
+chip 192px + toggles in-chip + chip clears the sheet (bottom 465 < sheet top
+481); real-click Menu opens the verbatim stock menu (Insert Matrix, Insert,
+Mode, Font Style, Color, Background, Cut, Copy, Paste, Select All); with the
+caret inside the matrix the menu grows Add Row Before/After, Add Column
+Before/After, Delete Row, Delete Column + Borders; Insert Matrix 5×5 grid
+highlights exactly row×col cells (6 active for 2×3) and inserts the pmatrix;
+Add Row After grows it to 3 rows; commit → rest KaTeX with zero
+\placeholder{} in the stored tex; ⌨ toggle hides AND re-shows the sheet
+with the session alive; Escape(menu open) keeps the session; Escape(menu
+closed) commits + caret-after; 3× Ctrl+Z fully removes the math (real TipTap
+history); 375px hOverflow=0 with the menu open; cold load 0 console errors.
+Verified: bun test 19/19; eslint+tsc clean; production build green incl.
+corpus gate (147 files). Screenshots: scripts/w6_dev_menu.png,
+w6_matrix_rest.png, w6_375_menu.png. HONEST-ABSENT: hub-ci + Vercel status —
+the sandbox lost GitHub write credentials in the environment reset (no
+token, no gh, no ssh; https push prompts for a username). hub 04785e5 sits
+on base 5eb2e10 = origin/main HEAD at commit time; the push is a clean
+ff-only the moment credentials return (same for this repo's claim+done
+commits). Files: src/components/answer-editor.tsx, src/app/globals.css,
+src/lib/answer-format.ts (+test).
+W6 push addendum (2026-09-29, same session): the operator supplied a GitHub
+PAT in-session; credentials restored — hub 04785e5 pushed ff-only
+(5eb2e10 → 04785e5, origin/main verified post-push); this repo's claim+done
+rebased over the concurrent Task 69 lane (f8e9ff4 → 13c04bb, TODO.md both-
+appended conflict resolved keep-both) as 74265c3 + 2842dcd and pushed. The
+HONEST-ABSENT above is now closed with verified status: hub-ci run #45
+SUCCESS (build + e2e both success on 04785e5) and the Vercel Production
+deployment for 04785e5 = success (API-verified, created 2026-09-29T07:17Z).
+Screenshots scripts/w6_*.png remain untracked local probe evidence.
+
+## 2026-09-29 — claim: HUB-ANSWER-BOX wave 7 (the symbols palette opens by default and cannot be closed)
+
+- [ ] HUB-ANSWER-BOX-W7 (IN PROGRESS, session web-98866c45, operator trace
+1a0ec11bc830f67d "When I open Exam Questions, the Mathematics, Greek
+Letters, Chemistry notation pop up stays opened up by default, cant close
+it as well"). Root cause established in code before any edit (both legs
+reproduce mechanically): (1) DEFAULT-OPEN — wave 3c persisted the palette
+open-state under localStorage "syllabai-hub:answer-symbols-open"
+(answer-textarea.tsx SYMBOLS_PREF_KEY) and a mount-time effect re-applies
+it one tick after hydration, so any browser that ever toggled the Ω button
+loads every Exam Questions / practice answer box with the palette ALREADY
+expanded — a transient Insert-symbol dropdown was never supposed to
+outlive the session (SME's own dropdown is transient, no persistence);
+(2) UNCLOSABLE — the palette is a CONTROLLED Radix Popover
+(<Popover open={symOpen}>) wired WITHOUT onOpenChange (the ui/popover.tsx
+wrapper is a thin Radix passthrough), so every dismiss path Radix offers —
+outside pointer-down, Escape, focus-away — routes to onOpenChange(false)
+which is a NO-OP; open stays true and the layer stays mounted. Only the
+tiny Ω trigger itself toggles, which reads to the operator as "can't
+close". Fix (hub-only, zero contract delta, no lease — waves 5/6
+precedent): the palette becomes fully transient — persistence RETIRES
+(the mount effect + SYMBOLS_PREF_KEY writes go; the stale key is actively
+removed once so affected browsers self-heal) and Radix onOpenChange
+becomes the single source of truth (outside click / Escape / trigger
+toggle all close; aria-expanded stays truthful). Files (planned):
+src/components/answer-textarea.tsx. Base: hub 0bc6ee9.
+
+- [x] **HUB-ANSWER-BOX-W7 (EXECUTED 2026-09-29 as hub f9130b3, session
+web-98866c45, operator trace 1a0ec11bc830f67d).** Both mechanical defects
+retired in answer-textarea.tsx: (1) the wave-3c localStorage open-pref and
+its mount-time effect are GONE — the palette is transient, always closed on
+load, and the stale "syllabai-hub:answer-symbols-open" key is swept once so
+affected browsers self-heal; (2) the controlled Radix Popover now wires
+onOpenChange as the single source of truth — outside pointer-down, Escape
+and the Ω toggle all close the palette (previously every Radix dismissal
+routed to a no-op and the layer stayed mounted). Verification: 12/12 CDP
+probe matrix (scripts/w7_symbols_palette_probe.mjs, real clicks/keyboard,
+dev :3100) — S1 default-closed WITH the stale pref seeded "1" (the exact
+reported repro; the old code re-opened it one tick after hydration), S1b
+legacy key swept, S2/S2b Ω opens + all three SME legends + truthful
+aria-expanded, S3 outside-click closes, S4 Escape closes, S5 Ω re-click
+closes, S6 no resurrection after reload, S7/S7b/S7c symbol insert lands,
+palette closes after the insert and the EDITOR holds focus. The
+post-insert close is INSTRUMENTED (scripts/w7_s7b_instrument.mjs): no
+pointerDownOutside fires — TipTap hands the caret back after insertText and
+Radix's standard focusOutside dismissal closes the palette; SME's own
+close-on-insert behavior is honest-absent (not verifiable for free) and the
+Radix standard is the recorded choice. Rebased twice over concurrent lanes
+(0bc6ee9 notes-source, then 43c1fde outbound-CLA — no file overlap, clean
+rebases; the first push hit 43c1fde mid-flight and was re-landed ff-only).
+Gates: bun test 19/19, eslint+tsc clean, production build green incl.
+corpus gate. hub f9130b3 pushed ff-only (43c1fde → f9130b3); hub-ci run #48
+SUCCESS (build + e2e both success); Vercel Production deployment for
+f9130b3 = success (API-verified). Zero contract delta; hub-only, no lease
+(waves 5/6 precedent). Files: src/components/answer-textarea.tsx,
+scripts/w7_symbols_palette_probe.mjs.
+
+
+## 2026-09-29 — claim: HUB-TEACHER-DASH wave 1 (the teacher dashboard becomes the student one — class cards, add-class → subjects, tools+resources inside)
+
+- [ ] HUB-TEACHER-DASH-W1 (IN PROGRESS, session web-98866c45, operator trace
+1a0ec61d5612aa6d "The teacher dashboard (in syllabai-hub) is not how I
+envisioned. All the tools, resources will be inside a certain
+Subject/Class/Section. Basically the dashboard will look like student one,
+but instead of subject it is a class card. Teacher will add class, then
+select subjects. Then inside there, all the tools and course resources will
+exist." + "pull latest version" — environment reset recovered first: hub
+re-cloned at 235f5cd (also lands the parallel PP-VIEWER / outbound-CLA /
+notes-source lanes), coordination fast-forwarded 314a895 -> 5ec6279 over the
+stale-snapshot dirty files (T-C30-era WIP discarded — superseded by origin's
+own DONE records), credentials restored after the reset wiped
+~/.git-credentials). Design (hub-only, ZERO contract delta, no lease — the
+wave reuses /api/course-stats and every existing route; no core call
+changes): (1) NEW hub-local class store (src/lib/teacher/my-classes.ts,
+my-subjects.ts useSyncExternalStore pattern, key
+"syllabai-hub:teacher-classes.v1") — a class = {id, name, subjectSlugs[],
+createdAt}, browser-local demo-truth like the student's subject roster, and
+the honesty copy says so; (2) /teacher REBUILT to the student dashboard's
+anatomy (dashboard-client.tsx parity): greeting header, "My classes" card
+grid where each CLASS card mirrors SubjectCard (eyebrow, name, subject
+chips, per-SUBJECT rows with real course-stats counts, open-workspace link,
+remove X), the trailing "Got another class?" slot card, empty state with
+CTA; the old overview sections (console cards / resources grid) move INSIDE
+the class workspace per the directive; (3) NEW AddClassOverlay (the
+AddCourseOverlay cascade reused): step 1 class name -> step 2 board ->
+step 3 level -> subject MULTI-select toggling into a pending set, one
+"Create class" commits name + selected subjects; edit mode reopens it for
+an existing class; (4) /teacher/classes/[id] becomes a dispatcher — a
+hub-local id renders the NEW local class workspace (per-subject sections:
+resource rows -> /courses/<slug>/... plus the corpus tools Test Builder /
+Assignments / Validation with ?course=, class-level live console links:
+Marking review + Class intelligence, and the live-roster pointer to the
+core Classes surface), a core id falls through to the EXISTING
+ClassDetailClient untouched (two honest class concepts never blur:
+browser-local container vs core RBAC roster). TeacherNav, layout RBAC gate,
+core Classes surface: unchanged. Base: hub 235f5cd.
+
+---
+
+## 2026-09-29 — claim: CI trigger verdict + hub font pinning (T-C36, operator directive: "fix the triggers ② the font flake deserves pinned fonts")
+
+### T-C36 REGISTERED (superz, zai Discord session ObviousGazelle; master branch `tc36-ci-trigger-verdict-font-pins` @ 8f80d11; hub branch `font-pin-local` stacked on main @ 235f5cd)
+
+- **Part ① — the triggers need no fix because nothing was ever broken.** The long-standing "push-trigger CI reads corrupted `branches: ain]`" item is a terminal-display artifact: `[m` inside `[main]` is a valid SGR-reset tail, and ANSI-stripping layers that match `[…m` without requiring the ESC byte eat it, rendering `[main]` as `ain]`. The artifact ate its own earlier debunking in this very file (a prior audit's "are clean `[main]`" line is stored mangled as "are clean `ain]`", and one row even reads "expected `ain]`"). Evidence: byte-level `od -c` dump of both repos' origin/main ci.yml (trigger block intact, `branches: [main]`) + Actions run history — every recent main push on core (5b946ba SUCCESS; two superseded cancels by concurrency) and hub (0bc6ee9, 43c1fde, f9130b3, 50ca841, 9c3c74d, b02178e, 235f5cd — ALL SUCCESS) fired push runs, including 50ca841 which the T-C35-merge record wrongly characterized as "push-CI broken". The quiet period was the Actions-minutes quota blackout (CI-RECOVERY-RUNBOOK-2026-09-27), not YAML. Full bundle: `backlog/CI-TRIGGER-VERDICT-2026-09-29.md`. Correction applies to the standing-reminder lines in the T-C33/T-C34/T-C35 worklog sections and the merge record above.
+- **Part ② — the font flake gets pinned fonts.** hub `src/app/layout.tsx` loads 8 Google families (Plus Jakarta Sans, Kodchasan, Instrument Sans, Bricolage Grotesque, Spline Sans Mono, Fraunces, Nunito, Inter — all latin) via next/font/google, i.e. a cold CI runner fetches them from fonts.googleapis.com/gstatic at build time; that is the recurring Turbopack font-fetch flake (3 occurrences 2026-09-29, green on every retry/local/Vercel build). Fix: vendor the exact served woff2 files into `src/fonts/` (+ pin manifest with gstatic version paths, fetch date, OFL license note) and switch to next/font/local with IDENTICAL CSS variable names, display:"swap", and preload semantics (jakarta+kodchasan preload; the six theme faces preload:false). No new dependencies; bun.lock untouched; no subset/weight-coverage change. Builds become hermetic by construction — next/font/local cannot fetch.
+- Scope guard: no ci.yml edits in either repo (editing YAML to "fix" a phantom would be a lie in the diff); no @fontsource dependency; no globals.css changes.
+
+### T-C36 closeout — TRIGGER VERDICT RECORDED + FONTS PINNED, CI VERIFIED GREEN (same session)
+
+- **Part ① verdict: the push triggers were never broken; no YAML change made.** Evidence bundle `backlog/CI-TRIGGER-VERDICT-2026-09-29.md`: byte-level `od -c` dump of both repos' origin/main ci.yml (`branches: [main]` intact — core @ 5b946ba, hub @ 235f5cd) + Actions run history (all recent main pushes fired push runs, all green, including 50ca841 which the T-C35-merge record wrongly marked "push-CI broken" — the quiet months were the Actions-minutes quota blackout per CI-RECOVERY-RUNBOOK-2026-09-27). Root cause: `[m` inside `[main]` is a valid SGR-reset tail; ANSI-stripping without the ESC byte requirement renders `[main]` as `ain]` — and the artifact ate its own earlier debunking in this file (the "are clean `ain]`" line and "expected `ain]`" are mangled `[main]`s). Live capstone: the T-C36 hub merge push to main (4f1dd75) fired a push-triggered run → SUCCESS. Standing instruction for future sessions: before believing mangled bracket content, re-read byte-level (`od -c` / `--color=never`).
+- **Part ② landed: hub PR #3 merged (4f1dd75) — all 8 layout.tsx families pinned as committed assets.** 11 woff2 in `src/fonts/` (7 variable faces — fvar-verified that Google serves one variable file per discrete weight — + 4 Kodchasan statics), `MANIFEST.md` with css2 queries + immutable gstatic version paths + sha256s, verbatim OFL 1.1 texts in `src/fonts/licenses/`. `layout.tsx` on `next/font/local`: identical CSS variable names, `display:'swap'`, preload set (jakarta + kodchasan), `adjustFontFallback:'Arial'` parity. Builds hermetic by construction — the next/font/google Turbopack flake is retired, not retried. Verified: eslint + production build (HUB_DATA_MODE=mock) green locally; hub-ci SUCCESS on PR head e893980; push run SUCCESS on main. No dependency changes, no bun.lock delta, no ci.yml edits, no globals.css changes.
+- Records: `.syllabai/tasks/T-C36.yaml` (DONE with VERIFIED claims); worklog T-C36; fetch tooling kept at `/home/z/my-project/scripts/fetch_hub_fonts.py` (curl transport — urllib's SSL handshake times out in this environment).
+- [x] **HUB-TEACHER-DASH-W1 (EXECUTED 2026-09-29 as hub 7bb04f1 + fixup
+7359262, session web-98866c45, operator trace 1a0ec61d5612aa6d).** The
+teacher dashboard is the student one now: greeting header; "My classes"
+card grid where each CLASS card mirrors SubjectCard (eyebrow "Edexcel · N
+subjects", name, per-SUBJECT rows with real /api/course-stats counts,
+open-workspace link, remove X, edit-subjects); the trailing "Got another
+class?" slot card; empty state with CTA; the old overview's console/tools/
+resources sections moved INSIDE the class workspace. New hub-local class
+store (lib/teacher/my-classes.ts — {id,name,subjectSlugs,createdAt} in
+localStorage "syllabai-hub:teacher-classes.v1", my-subjects.ts
+useSyncExternalStore pattern, browser-local demo-truth honesty); the
+AddClassOverlay cascade (name -> board -> level -> subject MULTI-select
+with a visible removable pending set; inner form mounts fresh per open via
+Radix presence + key — zero setState-in-effect); /teacher/classes/[id]
+dispatcher: local- ids render the new class workspace (per-subject
+resource rows + corpus tools Test Builder/Assignments/Validation with
+?course=, live console links, core-roster pointer, browser-local honesty
+box), core ids fall through to the existing ClassDetailClient untouched,
+unknown local- ids get an honest missing-class card. TeacherNav, the RBAC
+layout gate and the live core Classes surface untouched; ZERO contract
+delta (reuses /api/course-stats + existing routes only).
+Environment notes (this wave's honest ledger): (1) environment reset
+recovered first — hub re-cloned, coordination ff'd over stale-snapshot
+dirty files, credentials re-seeded after ~/.git-credentials was wiped;
+(2) the sandbox cannot cold-fetch Google Fonts in dev (next/font/google
+500s) — probes ran against the PRODUCTION standalone build instead, and
+the concurrent font-pin-local lane (e893980, T-C36) removes the dependency
+permanently; (3) the production build OOMs at 4GB while the platform
+dev-server holds 1.3GB — build ran with the scaffold server paused,
+restored after (NODE_OPTIONS max-old-space-size 3072); (4) NEXT.JS GITIGNORE
+TRAP (recorded for every future lane): the repo's .gitignore "local-*"
+scratch rule silently excluded local-class-workspace.tsx from the wave
+commit — the sandbox stayed green on the untracked file while hub-ci
+36550303009 failed "Module not found: Can't resolve './local-class-
+workspace'" — fixed by renaming to class-workspace-local.tsx (hub
+7359262), rule untouched. Verification: tsc+eslint clean; unit suite 19/19
+(bun test src/lib; bare bun test also picks up playwright specs —
+pre-existing); production build green incl. corpus gate; 26/26 CDP probe
+matrix (scripts/w8_teacher_dash_probe.mjs, real clicks, production
+standalone). Landed: hub 7bb04f1 rebased over c68ed91 (PP-ZOOMOUT +
+font-pin lanes), fixup 7359262; hub-ci 36550303009-successor run SUCCESS
+(build + e2e); Vercel Production = success (API-verified). Files:
+src/lib/teacher/my-classes.ts, src/app/teacher/{page.tsx,teacher-client.tsx,
+add-class-overlay.tsx}, src/app/teacher/classes/[id]/{page.tsx,
+class-workspace-dispatcher.tsx,class-workspace-local.tsx},
+scripts/w8_teacher_dash_probe.mjs.
+
+## 2026-09-29 — claim: HUB-TEACHER-DASH wave 2 (the per-subject Knowledge Graph entry inside the class workspace)
+
+- [ ] HUB-TEACHER-DASH-W2 (IN PROGRESS, session web-98866c45, operator trace
+1a0ec95548b5f1e1 "The teacher should also have a knowledge graph view right?").
+Verified state at claim time: students open the per-subject graph from every
+course hub (/knowledge-graph?course=<slug> — the OpenHuman explorer over the
+canonical spec tree; no course switcher by operator decision trace
+1a0e8568eb6bb545 — the graph is a property of the subject); teachers on CORE
+classes already have the cohort-level F-072 class KG heatmap
+(/teacher/classes/[id]/knowledge-graph, T-C35) plus class intelligence — both
+unchanged this wave. The gap: wave 1's local class workspace renders
+per-subject resource rows (Revision Notes / Exam Questions / Flashcards)
+WITHOUT the Knowledge Graph, so a teacher has no per-subject KG entry inside
+the class container. Design (hub-only, ZERO contract delta, no lease —
+reuses /api/course-stats and the existing /knowledge-graph surface): the
+RESOURCES band in class-workspace-local.tsx gains a Knowledge Graph card —
+deep link /knowledge-graph?course=<slug> (the exact course-hub deep link,
+Network icon), honest count from the same course-stats payload ("N topics in
+the corpus"); resource grid 3 -> 4 columns. No new routes, no API changes.
+
+## 2026-09-29 — DONE: HUB-TEACHER-DASH wave 2 (the per-subject Knowledge Graph entry inside the class workspace)
+
+- [x] HUB-TEACHER-DASH-W2 (operator trace 1a0ec95548b5f1e1 "The teacher
+should also have a knowledge graph view right?") — LANDED hub 0913147
+(ff over 7359262; no concurrent lanes this stand-down). The class
+workspace's per-subject resource band now carries FOUR cards: Revision
+Notes / Exam Questions / Flashcards / Knowledge Graph — the KG deep-links
+/knowledge-graph?course=<slug>, the EXACT link the student course hub uses
+(the graph is a property of the SUBJECT — operator decision trace
+1a0e8568eb6bb545 — so no class-level graph was invented). The count is the
+honest course-stats TOPIC census ("N topics in the corpus") from the same
+/api/course-stats payload the other cards read (countKey decoupled from
+the card key; countLabel rendering). Cohort-level class KG heatmap stays
+the core-class surface (F-072, /teacher/classes/[id]/knowledge-graph +
+class intelligence) — untouched. ZERO contract delta: no new routes, no
+API changes, no lease. Grid 3 -> 4 columns (sm:grid-cols-2 lg:grid-cols-4).
+Verification: tsc + eslint clean; unit suite 19/19; production build green
+(built with the scaffold server SIGSTOP'd per the wave-1 memory precedent,
+resumed after); CDP probe 16/16 (scripts/w9_teacher_kg_probe.mjs, real
+clicks, production standalone :3100 — four cards, exact deep link, three
+regression hrefs, "4 topics in the corpus" census, click-through to
+/knowledge-graph?course=igcse-chemistry-19 with the live data-path chip
+"nodes · edges · spec points", zero page errors); wave-1 matrix re-run
+26/26 (no regression). hub-ci on 0913147: build SUCCESS + e2e SUCCESS;
+Vercel Production success (API-verified). Probe file numbering note:
+scripts continue the hub w-numbering (w9) while the ledger calls this
+wave 2.
+
+## 2026-09-30 — claim: TFA-07 teacher KG drill-down & individual graphs (T-C37, operator directive: "Proceed with TFA-07")
+
+### T-C37 REGISTERED (superz, zai Discord session ObviousGazelle; core branch `tfa07-kg-drill-down` @ f6d4399 → PR #34; hub branch `tfa07-kg-drill-down` → PR #4; record `.syllabai/tasks/T-C37.yaml`)
+
+- **The drill chain is the feature.** TEACHER_ARCHITECTURE §13.5 + §14: `class graph → weak node → affected students → individual student graph → evidence → action`. The wave-2 hub page (0913147) rendered the F-072 heatmap through KGExplorer but had NO node interaction; the F-074 §5 drill-down was subject-scoped, not class-scoped. TFA-07 adds the two missing class-scoped read legs on the F-072 controller (same §17 ownedClass gate, same independent-student roster rule):
+  - `GET /api/v1/teacher/classes/{classId}/knowledge-graph/nodes/{nodeId}/students` — the §13.5 panel: every enabled member at student grain (raw BKT + effective decayed mastery, the shared band vocabulary), BDT misconception estimates on misconception nodes under the node, up to 3 recent attempts per student via a NEW roster-scoped `findRecentByTopicNodeAndLearnerIdIn` (the evidence leg cannot leak an independent student either), the §13.3 distribution restated from the same states the rows show, weakest-first, honest nulls for unmeasured, subject isolation (node outside the root's subtree = 404), archived classes readable.
+  - `GET /api/v1/teacher/classes/{classId}/learners/{learnerId}/knowledge-graph` — §14 with the non-negotiable intact: the SAME F-034 `LearnerKnowledgeGraphService` the student themselves sees; the teacher lens adds gates only, never a second KG implementation (delegation identity pinned by a unit test). §17 privacy backend-enforced: enabled member of THIS class or 404 — an absent membership neither confirms nor denies enrollment elsewhere.
+- **Hub**: `classKnowledgeGraphHost(view, {onInspectNode})` node action → new drill-down panel (distribution restated + students table with band badge / effective % / attempts+accuracy / last practiced / active-misconception chips / raw attempts as ✓✗ evidence chips) → per-student "Graph" opens the individual subject graph via the NEW `learnerKnowledgeGraphHost` (F-034 → KGX verbatim, mastery/decay/review/misconception/activity lenses) + §16 action links (Test Builder, topic drill-down console). Honesty text is on the panel where the teacher reads: member-only, "No evidence yet" ≠ zero, grey/dashed stays a coverage state.
+- **Tests**: core — controller gates + delegation unit tests, service §14 pins (non-member 404 / disabled-member 404 / F-034 delegation), flow-IT legs over the V6 seed subject where two members submit REAL attempts (misconception-tagged wrong + correct) and the drill reads the BKT/BDT states the pipeline wrote, plus the drill-down edition of the read-only pin. Hub — local lint + mock-mode build green pre-push; CI owns the final verdicts (pending at claim time).
+- **Incident, logged**: the first core commit clobbered the existing 389-line `ClassKnowledgeGraphServiceTest` (a Write replaced it; my TFA-07 service test would have silently destroyed the F-072 aggregation pins). Restored verbatim in the follow-up commit `f6d4399`, constructor updated for the two new collaborators, §14 pins appended. Verified by `git show HEAD~1` diff. Reminder to future sessions: ALWAYS `git status` + check for an existing file before naming a new test file after a concept that already has one.
+- Records: `.syllabai/tasks/T-C37.yaml` (VERIFYING); TSVs: TFA-07 → In Progress / superz (both the master workbook row 175 and the addendum row).
+
+## 2026-09-30 — claim: HUB-TEACHER-DASH wave 3 (class geography progress view + no-corpus badges; operator trace 1a0f0e078fde5fb1)
+
+- [ ] HUB-TEACHER-DASH-W3 (IN PROGRESS, session web-98866c45, operator trace
+1a0f0e078fde5fb1: "Proceed with Add a class-level 'My Class Geography
+Progress' view next to the core class KG heatmap, or add badges to the KG
+cards if a subject doesn't have a corpus package. And also check recent
+progress before."). Both items proceed (complementary: the badge handles the
+no-bundle case honestly; the view is the geography surface). RECENT-PROGRESS
+REVIEW AT CLAIM TIME: hub origin/main = 0913147 (wave 2, unmoved since);
+coordination head 94b86a5; the environment reset wiped the hub clone
+(re-cloned at 0913147) and ~/.git-credentials (re-seeded from the operator's
+recorded PAT, masked ghp_…iZVh, GET /user 200 — rotation still recommended);
+STALE-STATE NOTE: the reset also left a stale working-tree snapshot of
+locks.yaml showing a live T-C30 entry — the committed history already had
+it reconciled (locks: [] + the 2026-09-26 note), a reconciliation commit
+was briefly prepared and then DROPPED as redundant against origin's truth
+(wave-1 precedent: origin's own records supersede stale-snapshot dirty
+files); mode-only diffs from the reset's chmod were silenced with a local
+core.fileMode=false. CONCURRENT LANE CHECKED: T-C37 (TFA-07 drill chain,
+hub PR #4 open, merged: False, base 0913147) touches
+knowledge-graph/client.tsx, drill-down-panel, kg-explorer/adapters.ts,
+lib/api.ts, lib/types.ts — wave 3's file set is DISJOINT (new geography
+route + class-workspace-local.tsx only; lib/api.ts and lib/types.ts
+untouched), and the no-duplication constraint is respected: the geography
+view is the LOCAL class container's corpus-coverage surface, NOT a second
+mastery graph — cohort mastery stays core's heatmap + T-C37 drill chain.
+Design (hub-only, ZERO contract delta, no lease — reads the committed
+content bundles only): (1) NEW hub-local read-only route
+/api/teacher/class-geography?slugs=... composing getCourseBundle +
+buildSpecTreeIndex + resourceCounts (the canonical spec-tree machinery the
+revision-notes index already uses — subject → topics → subtopics with
+per-subtopic notes/questions/flashcards counts, in-process cache + the
+course-stats CDN header); (2) NEW page /teacher/classes/[id]/geography for
+local- ids (unknown ids → the honest missing card; core ids → a pointer to
+the heatmap — no second mastery graph); (3) class-workspace-local.tsx: a
+"Geography progress" card next to Class intelligence + honest "no corpus
+package" badges replacing the eternal Skeleton on resource cards when
+hasBundle is false (the KG card included — the operator's ask).
+### T-C37 closeout — TFA-07 LANDED: core PR #34 (main b034c5c) + hub PR #4 (main 86b43b7), CI green end-to-end
+
+- **CI evidence**: core-ci SUCCESS on head b7b8e90 (compile + 1063 tests, 0 failures — including the two new flow-IT legs that run the REAL evidence pipeline: two members submit a misconception-tagged wrong answer and a correct one, and the drill-down reads the BKT/BDT states the pipeline wrote; member-only rows weakest-first; the read-only pin extended to the drill reads). Hub-ci on its head: build + e2e + Vercel preview ALL SUCCESS; local lint + mock-mode build green pre-push. Push-triggered runs fired on both merge commits (the T-C36 capstone pattern).
+- **CI caught exactly two defects, both test-mechanics, zero production-code**: (1) UnfinishedStubbing — the §14 unit pins built their user mocks INSIDE `thenReturn(...)`; (2) the flow-IT called the controller's `(classId, nodeId, rootId)` signature in the service's `(rootId, nodeId)` order, which produced beautifully confusing inverted failures (the happy path 404'd itself; the isolation case re-ran the happy pair). Both recorded here so the next session doesn't rediscover them.
+- **Incident (already logged at claim time)**: the first core commit clobbered `ClassKnowledgeGraphServiceTest` via a Write; restored verbatim in f6d4399 with the constructor updated + §14 pins appended. Nothing lost.
+- **Honest remaining state**: live-path drill verification on the redeployed Render core + Vercel hub needs pilot-teacher credentials (operator-held) — next_safe_action in the yaml. The anchor B2 flip + B3 addition (from the B2 triage) remains PROPOSED-awaiting-operator, untouched by this task.
+- Records: `.syllabai/tasks/T-C37.yaml` (DONE, VERIFIED CI claims); TSVs → Completed / superz (master workbook row 175 + teacher-lms addendum row; XLSX re-export belongs to the T-C38 hygiene sweep).
+
+## 2026-09-30 — DONE: HUB-TEACHER-DASH wave 3 (My Class Geography Progress + no-corpus badges)
+
+- [x] HUB-TEACHER-DASH-W3 (operator trace 1a0f0e078fde5fb1) — LANDED hub
+42dd614 (rebased over the mid-flight T-C37 merge 86b43b7 — PR #4 landed
+during stand-down; ZERO file overlap confirmed before rebasing:
+knowledge-graph client/drill-panel/kg-explorer/api.ts/types.ts untouched by
+wave 3). BOTH operator items shipped. (1) MY CLASS GEOGRAPHY PROGRESS: new
+class-level section in the workspace (honest "browser-local · corpus
+coverage per subtopic — not learner mastery" framing) + new page
+/teacher/classes/[id]/geography backed by the NEW hub-local read-only route
+/api/teacher/class-geography?slugs=... composing getCourseBundle +
+buildSpecTreeIndex + resourceCounts — the canonical spec-tree machinery the
+revision-notes index already uses (subject → topics → subtopics with
+per-subtopic notes/questions/flashcards; zero subtopic numbers estimated,
+bare subtopics marked "no coverage yet"). Honesty boundary enforced in
+product: local- unknown ids → the missing-class card; CORE ids → a pointer
+to the core heatmap surfaces — NO second mastery graph was built (the
+drill-chain lane owns mastery; T-C37 coexists). No-corpus package state
+renders the honest "no corpus package" card per subject. (2) NO-CORPUS
+BADGES: resource cards render a "no corpus package" badge instead of an
+eternal Skeleton when course-stats says hasBundle=false (the KG card
+included). ZERO contract delta: the route reads committed content bundles
+only, no core calls, no lease. Verification: tsc + eslint clean (exit-code
+verified properly — an earlier pass read the pipe's tail exit, exposed and
+corrected), unit suite 19/19, production build green (scaffold dev-server
+TERMINATED for this build — SIGSTOP no longer freed enough after the reset;
+:3000 next-dev restored after, 200); CDP probe 19/19
+(scripts/w10_teacher_geography_probe.mjs, real clicks, production
+standalone :3100 — real create flow, geography section, badge branch
+exercised via intercepted course-stats hasBundle:false response — every
+current registry course HAS a bundle, so the pixel branch is otherwise
+unreachable: honest probe note —, coverage map anatomy incl. "5/23/37
+n/q/f" on 1.1 States of matter, unknown-id and core-id honesty, zero page
+errors); wave-2 16/16 + wave-1 26/26 re-run (no regression). ENVIRONMENT
+NOTES (ledger-grade): the reset wiped the hub clone (re-cloned),
+~/.git-credentials (re-seeded from the operator's recorded PAT, masked
+ghp_…iZVh, GET /user 200 — ROTATION STILL RECOMMENDED) and the global
+credential.helper (restored: git config --global credential.helper store);
+bun.lock is gitignored so the fresh clone installs via npm install
+(package-lock absent); the reset also chmod'd repo-wide mode-only diffs
+(local core.fileMode=false) and left a stale working-tree locks.yaml whose
+phantom T-C30 lease was NOT committed history — a redundant reconciliation
+commit was prepared and dropped in favor of origin's truth. hub-ci on
+42dd614: build SUCCESS + e2e SUCCESS; Vercel Production success
+(API-verified).
+
+
+## 2026-09-30 — DONE: T-C38 hygiene sweep + anchor B2 flip/B3 pin + partial T-C37 drill (operator directive: "Proceed with ① live-path drill … ② the anchor B2 flip + B3 addition … ③ T-C38 hygiene sweep")
+
+### T-C38 closeout (superz, zai Discord session ObviousGazelle)
+
+- **② anchor B2 flip + B3 addition — core PR #35 MERGED (rebase, linear `77c7a7c`); dispatched anchor-sweep run 36697034459 = SUCCESS, 12/12 anchors PASS: B2 `SERVED(cites)` PASS, B3 `GUARD-REFUSAL` PASS, A1–A5/B1/C1/D1/E1/E2 all PASS.** The flip executes B2's own DATA-COUPLED contract (trace 1a0e323dbeb8a161): 4CH1/1C June-2019 QP/MS reached VALIDATED between the 09-28 11:16Z GREEN run (2a1676a) and the 09-29 00:27Z B2-only RED (aee2af1; repeated 5b946ba); live cites were the real 1C QP/MS docs (98622045… QP p7/p11; 02e4c38c/f3a234b6/f8efe458/aa079c51 MS), A-family control green ⇒ coverage, not pool bleed; guard code exonerated (resolver last touched 09-27, before the green run). B3 = `explain question 99 from june 2019 paper 1` → `GUARD-REFUSAL` keeps the 1C refusal side pinned now that Q3 legitimately serves. Matrix 11→12 asks; the decision record lives in the sweep docstring + RULES + workflow header. **PROVENANCE GAP (recorded, open): no master-pack ledger entry identifies the ingest/validation wave that moved the 1C docs to VALIDATED — the flip is deliberate, the source wave unrecorded.**
+- **③ TSV↔XLSX parity restored** (`backlog/syllabai-master-project.xlsx` vs `syllabai-master-project.tsv`; physical-line parse — the csv module silently swallows rows at 3 stray quote chars on lines 2/60/93, which had hidden the TFA rows from naive checks; 181↔181 rows): 6 cells fixed — TFA-07 Status `Planned→Completed` + Owner `Unassigned→superz (T-C37)` (full row now 25/25 equal), F-040 + F-160 Status `Not Started→In Progress`, F-040 + F-160 Agent Notes synced to canonical TSV text. Residual Status/Owner drift: 0. TFA-01/02/03 verified as honestly `Planned` in both files (no tracked claim/implementation found) — left untouched.
+- **③ PROGRESS.md marker refreshed** — the `Last updated` header was stuck at Session 116 (09-22) while per-session sections end at Session 129 and sessions 130+ live in TODO entries/task-registry/ledgers; the header now states current truth plus that tracking convention (section backfill deliberately out of T-C38 scope).
+- **③ AGENT.md repo table** — `syllabai-web` → `syllabai-hub` (the frontend repo all FE work lands in; note kept that the Vercel project retains the historical name).
+- **① live-path drill — partial, honest state:** the redeployed Render core fingerprinted live: `/actuator/health` 200; both NEW TFA-07 routes (`/api/v1/teacher/classes/{id}/knowledge-graph/nodes/{nodeId}/students`, `…/knowledge-graph/learners/{learnerId}/knowledge-graph`) return 401 (route exists ⇒ TFA-07 backend deployed), alongside the F-072 root's 401. The AUTHENTICATED teacher leg is blocked on the pilot-teacher password: operator-held (syllabai-ops README — the session-59 delivery report was lost; the GitHub secret is write-only; the session-118 credential cache died with the sandbox reset). Zero prod writes during probing. Next: operator pastes current/rotated creds → the authenticated chain re-runs immediately (core stays warm; curl transport).
+- Records: `.syllabai/tasks/T-C38.yaml` (DONE).
+
+## 2026-09-30 — T-C37 live-verification COMPLETE: full TFA-07 drill chain proven on the redeployed Render core (operator-supplied pilot-teacher credentials)
+
+- **Credentials verified live**: `pilot.teacher@syllabai-test.dev` + operator-pasted password → login 200, roles `['TEACHER']`. (An earlier hex candidate was verified NOT the password — 401 on teacher/monitor2/monitor while pilot-monitor run #58 12:40Z SUCCESS proved the login path + DB intact post-redeploy; control logic in `scripts/monitor_runcheck2.py`.)
+- **Discovery: the pilot teacher owned ZERO classes** — the F-072/TFA-07 surfaces had never held production data; the drill therefore first walked the REAL product path to produce TEST-convention fixture data through public/authorized API only (session-58/77 precedent; zero SQL): class `TEST — TFA-07 live drill` (4ch1), learner `pilot.drill-44a29646@syllabai-test.dev` (register API, STUDENT), enrollment by email, 6 MCQ attempts (1 correct / 5 incorrect with returned misconception ids).
+- **All TFA-07 legs GREEN on production**: F-072 class KG heatmap 200 (329 nodes, 4CH1 root 297a8706…, distribution + coverage keys present); §13.5 node→students 200 (the full contract: struggling/proficient/developing counts + coverageState; per-student band, mastery, effectiveMastery, misconceptions, recentAttempts); §14 member individual KG 200 (374 nodes — the SAME F-034 model); §14 on an INDEPENDENT learner (pilot.monitor@) → **404 = the §17 backend gate proven live**; archive 200 + §14 archived-readable re-check 200 (the archived-readable guarantee holds).
+- **Write ledger (10, all API-path, TEST-conventioned)**: 1 class row (ARCHIVED post-drill), 1 user+role, 1 membership, 6 attempts (+ derived skill states/misconception evidence), 1 status flip. Drill-learner password single-use, not persisted.
+- Records: `.syllabai/tasks/T-C37.yaml` (live leg UNVERIFIED→VERIFIED); TSV/XLSX TFA-07 Agent Notes carry the live-verification line (parity re-verified 0 drift). **Watch: tonight's 20:30 UTC anchor-sweep should stay 12/12 — the fixture writes touch no VALIDATED content anchors.**
+
+## 2026-09-30 — claim: T-C39 provenance-gap closure (the B2 data-wave identification; operator trace 1a0f281f435be551)
+
+- [ ] **T-C39 (IN PROGRESS, session web-98866c45).** Operator: "Proceed with
+Provenance gap" — closes the T-C38 recorded open item ("no master-pack ledger
+entry identifies the ingest/validation wave that moved the 1C docs to
+VALIDATED"). Scope: master-pack ledger files + the core anchor-sweep docstring
+pointer; NO DB writes, no content-state changes, sha-frozen evidence packs
+untouched. STAND-DOWN AT CLAIM TIME: coordination origin/main = f638022 (three
+interleaved lane commits since 2b72e87 — T-C37 live-verification COMPLETE,
+qsp15-topic-mappings, T-C27.yaml parse fix — none claim or touch T-C39);
+core origin/main = 0522b08 (PR #37 T-C11 concept layer — disjoint from
+scripts/anchor_matrix_sweep.py); locks []. RE-REGISTRATION NOTE (honest): the
+claim was first staged locally as 524230d but sandbox reset #4 wiped the local
+commits before any push; re-registered verbatim on the new base. PAT note:
+operator provisioned a fresh credential (IM trace 1a0f3c866fb4b2bd, GET /user
+200, stored 0600) — rotation of the previously-recorded token still applies.
+
+## 2026-09-30 — DONE: T-C39 — the B2 data-wave identified: the 2026-09-28 T-PS1 OCR lane (O6/O6b)
+
+- [x] **T-C39 (operator trace 1a0f281f435be551 "Proceed with Provenance
+gap") — the ingest/validation wave that moved the 4CH1/1C June-2019 QP/MS
+docs to VALIDATED is IDENTIFIED: the T-PS1 OCR lane + COVID resolution,
+2026-09-28, operator IM trace 1a0e9c4c5305d55d ("…green light the OCR
+lane"), agent-performed under the Task-58→60 delegation chain,
+teacher_validation_events 0 throughout.** The identification is a read-only
+evidence walk — zero DB writes, zero probes, sha-frozen packs untouched.
+Wave anatomy (evidence `bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-28/`):
+
+  - **O5 ingest**: `POST /documents?kind=QUESTION_PAPER` → fresh doc
+    `98622045` (18 chunks, engine `pdflane-atoms-ocr/1.3.0`, `/embed` 18/18
+    gemini-embedding-001 @ rev2); MS doc `02e4c38c` = the genuine corpus MS
+    ingested in Task 60.
+  - **O6 apply — one fail-closed tx, dry-run first, COMMITTED 2026-09-28
+    21:19:52Z** (ocr_O6_report.json): PLACE QP shell `cf68cf74` → `98622045`;
+    PLACE MS shell `39935310` → `02e4c38c`; UNFLAG+VALIDATE the paper;
+    VALIDATE children (June-2019: 15 qv + 2 schemes; June-2020: 10 qv + 10
+    schemes) + 4 doc-VALIDATE rows; 50 audit rows; doc census 87→89
+    VALIDATED (+2 net).
+  - **O6b remediation — COMMITTED 21:21:27Z** (ocr_O6b_remediation_report.json):
+    the independent O7 verify caught that O6 wrote the 4 doc-VALIDATE audit
+    rows but omitted the documents UPDATE itself; guarded tx performed it
+    (rowcount 4) + 4 corrective cross-referenced rows, append-only (54 rows
+    total; O7 audit-chain PLACE 4 / REJECT 1 / UNFLAG 2 / VALIDATE 47,
+    fails []).
+  - **Timeline fit — the B2 window brackets the wave**: sweep `2a1676a`
+    GREEN 09-28 11:16Z (pre-wave) → O6 21:19:52Z + O6b 21:21:27Z → scheduled
+    sweep `aee2af1` 09-29 00:27Z B2-only RED (serving real 1C cites). The
+    sibling June-2020-1C doc pair rode the same tx (COVID supersession
+    context); children of both papers landed 09-29 via Task 66 TX-A
+    (corrective rows 3940–3976, trace `1a0ea5a6dbc30c79`, verify 28/28).
+    The B2 flip decision itself: 2026-09-30, Discord trace
+    `b4fc2bee098c230126cc126e5ca72457`, core PR #35 → linear `77c7a7c`,
+    sweep 12/12 PASS (run 36697034459).
+  - **Live MS cite ids beyond `02e4c38c`** (`f3a234b6`/`f8efe458`/`aa079c51`)
+    are serving-pool composition — retrieval may cite sibling MS chunks;
+    the gate-flip is attributable to the paper row + linked-doc VALIDATEs
+    above (the A-family control on the sibling 2C paper refusing throughout
+    proves coverage, not pool bleed).
+
+- **Core pointer**: `scripts/anchor_matrix_sweep.py` docstring PROVENANCE GAP
+  note replaced with the identification + ledger-entry pointer (docstring-only,
+  zero runtime delta; commit `8ee3da6` on main `0522b08..8ee3da6`;
+  py_compile clean; ci.yml correctly skipped by its own path filters —
+  scripts/ not in the trigger set; anchor-sweep DISPATCHED on the new head:
+  run **36767462742 = SUCCESS**, the fail-closed 12-anchor gate stays green
+  with the edited docstring). The anchor's own record now names its
+  data-wave.
+- Records: `.syllabai/tasks/T-C39.yaml` (DONE, claims below).
+
+## 2026-10-01 — DONE: T-C11 CORE SYNC EXECUTED (session 131 — the operator's 7-edge-package GO, trace 1a0f3e20d4f963e9: "review that 7-edge package and GO")
+- **The gate opened and closed in one tranche.** The operator reviewed §3 of `C11_PROJECTION_REVIEW_VERDICT_2026-10-01.md` (the 7 practical-origin edges: PR-05/06/07/08 ×1 + PR-12 ×3, authored + operator-promoted in resources batches 5/6/7/11 through diff reviews B5/B6/B7/B11) and granted GO; the core sync through which the 2026-10-01 "Batch-5 promotion NO-GO" was enforced is therefore EXECUTED. No new authoring, no promotions-ledger change (`c11_promotions.yaml` untouched at 272), no #4-#8 anchor work, the 132 concept-backed SP pairs stay derived read-model projections.
+- **REVIEW first (59-check preflight, all PASS):** every §3 edge re-verified against the canonical store at resources `2e57663` — HUMAN_VALIDATED, correct extraction_pass/method, NOTE quotes match the verdict table verbatim, validated_by=operator with dates; projected pairs derived (2.10→2.14, 2.15→2.21, 2.39→2.42, 2.41C→2.43C, 4.38C-family→4.43C ×3). Delta census exact: +119 HV semantic (7 practical + 112 concept→concept = 94 RP / 11 WAP / 11 RB / 2 EB / 1 RT), 117 anchor flips SUGGESTED→HV (operator-directive-session-106 stamps, 2026-09-18) + 94 new SUGGESTED anchors, +80 concept nodes (113→193), frozen five = SAME keys. Diff classifier: zero unclassified drift; four allowed canonical-authority classes (status flips, session-106 stamps, evidence path normalization `graph/`→`graph/igcse-chemistry/`, SPEC-quote wording refresh ×12 recorded verbatim — NOTE-kind SME quotes byte-unchanged, and 86/92 SPEC path-fix quotes already match the kept substrate wording). Scope discipline: `concepts.yaml` + `concept_edges.yaml` ONLY; the C24/C26 spec-plane refresh (spec_points/topics/practicals/relationships) is a separate operator-gated lane and did NOT ride along.
+- **SYNC executed:** core `96e7bec` pushed to main (fast-forwarded 44 commits first — zero concept-graph overlap with the concurrent lanes). Loader pins/counts updated on both consumers (ConceptGraphSnapshotLoader + NBA-side ConceptDependencyGraphLoader): SHAs 24fa91ac…/cbef0251…, 193 nodes / 211 anchors / 272 validated semantic / 5 excluded; seed semantics unchanged (anchors land SUGGESTED — the KG keeps the §7 review gate even for store-validated attachments; semantic HV land VALIDATED with T-C11 provenance). Tests re-pinned to batch-11 facts (per-relation 206/25/24/11/2/2/2, sums 420/709); Case B rewritten honestly (S2/S4 are settled slices now — the no-fabrication invariant moved to the practical SP 2.14: no concept anchor/semantic edge on the SP itself, the PR-05→CON-O2-PERCENT-DETERMINATION edge on the practical node where it belongs); tamper test demotes a known semantic fixture (batch-11 file's first HV rows are anchors). **Full unit suite 1065/1065 green locally (JDK 25 + maven re-provisioned in the sandbox); CI build SUCCESS (includes the seed/flow ITs); Render deploy LIVE.**
+- **ACTIVATION + PROD VERIFICATION (operator-path, read-model + DB):** teacher-API `POST /concept-graph/activate` → SeedSummary nodesCreated=80 / nodesReused=340 / edgesCreated=213 / edgesReused=496 (exact prediction), idempotent re-run = 0/0 created (structural no-op as contracted). Prod DB: 420 nodes (193 concepts SUGGESTED + 226 structure VALIDATED + root), 709 edges (272 VALIDATED semantic = 206 RP + 25 RB + 24 WAP + 11 EB + 2 RT + 2 CCW + 2 MO; 211 SUGGESTED anchors; 226 structure); **the 7 practical-origin edges all VALIDATED on prod — the five deployment-gap practicals (PR-05/06/07/08/12) now draw as validated** (19 practical-origin RP edges total, was 12); frozen five ABSENT (0 rows). Teacher read model serves exactly 272 edges with the relation mix incl. the practical edges.
+- **PROJECTION CONSEQUENCE (recorded for the next review round, nothing promoted):** re-running the projection verifier against the deployed batch-11 store: **365 derived SP pairs (was 132)**, 24 practical-dependent (was 13), 33 cross-section; the operator's 8 anomaly pairs remain derived-unchanged (#1-#3 spirals, #4-#8 HOLDs respected); **8 NEW inverted derived pairs** from batches 5-11 (2.8C→2.7, 2.8C→2.6, 2.17→2.12, 2.17→2.16, 2.18→2.10, 2.20→2.19, 3.1→2.11, 4.37C→4.36C) — same epistemic class as the original 8 (never promoted), natural input for the next anchor-evidence pass alongside the #4-#8 resolution.
+- Evidence: `evidence/t-c11-core-sync-2026-10-01/` (59-check preflight output + manifest + activation/verify output + batch-11 projection census + the 3 scripts). core `96e7bec`, resources `2e57663` unchanged. (Super Z, operator trace 1a0f3e20d4f963e9)
+
+## 2026-10-01 — DONE: T-SIB-VAL — SIB v1 validator + ingestion scaffolding implemented (branch `agent-zai/sib-validator-ingestion-scaffolding`, Super Z, operator trace 1a0f5aedbda05c95: "You are working on SyllabAI … implement the SIB v1 validator and ingestion scaffolding")
+- **Scope honored exactly:** validator + manifest + ingestion boundary + chunk metadata + tests + CI only. NO 4CH1 artifact generation, NO NotebookLM runtime dependency, NO Subject Tutor integration, NO canonical-KG/mastery/assessment changes, SIB architecture stays **PROPOSED** (its docs land via PR `agent-chatgpt/subject-intelligence-build-v1` — implemented, not vendored, to avoid touching that PR's files).
+- **Implemented** `tools/sib/` (stdlib-only core, PyYAML guarded): `taxonomy.py` (12 families / 95 artifact IDs, artifact-vs-record ID conventions), `errors.py` (SIB-* code registry, ERROR/WARNING/INFO), `frontmatter.py` (deterministic front matter; PyYAML + tested parity fallback), `lifecycle.py` (exact transition table; QA_FAILED and PUBLISHED terminal), `artifact_validator.py` (15 required metadata fields, identity/filename/family/applicability/duplicates, 7 universal sections, status rules, CURRENT/LEGACY semantics + contradiction detection, provenance sufficiency, record IDs), `anchors.py` (spec-point shape + optional registry resolution; unresolved reported never repaired), `manifest_model.py` (manifest validation incl. REQUIRED-on-disk, manifest/artifact disagreement, unsupported publication, gaps/backlog as first-class), `chunking.py` (deterministic record/section chunker preserving the full provenance envelope), `ingest.py` (path-confined `SibLibrary`: qa → stage → publish, evidence-gated), `cli.py` (7 commands), `tests/` (111 tests), `.github/workflows/sib-validator-ci.yml`.
+- **Runtime boundary enforced:** validation is pure evidence; staging/publication confined to the library root (path traversal → `SIB-ING-001`); landing artifacts self-declaring QA_PASSED/STAGED/PUBLISHED → `SIB-STATUS-003`; publication requires passing QA evidence; no canonical write surface exists on the library API. Hostile-content and traversal tests pin this.
+- **Determinism proven by test:** byte-identical QA JSON over 5 runs and across different library roots; sorted issue ordering; no clocks/randomness in identity; content SHA-256 for observable change detection.
+- **Divergences — all three RESOLVED 2026-10-01** (reconciliation record: `docs/research/SIB_VALIDATOR_IMPLEMENTATION_V1.md` §8; component status ledger §9): filename contract (PROPOSED/DEFINED, schema §1); landing-status rule (PROPOSED/DEFINED, schema §3 — canonical lifecycle GENERATED → QA_PASSED → STAGED → PUBLISHED, failure GENERATED → QA_FAILED, front matter never self-authorizes promotion); SIB docs land via PR `agent-chatgpt/subject-intelligence-build-v1`.
+- **Verification:** `python3 -m tools.sib.tests.run_all` → UNIT_TESTS: 111 passed / 0 failed / 0 skipped (hardening pass 2026-10-01: 126 / 0 / 0 — see §7). CI: `.github/workflows/sib-validator-ci.yml` (3.12, path-filtered).
+
+## 2026-10-01 — DONE: T-C40 RAG-review fix order items ①–④ executed (operator directive: "validate corpus → re-index the S8 floors (they're structurally unpassable) → three cheap risk-killers → cosine calibration")
+- [x] **T-C40 (operator trace 1a0f5db42c67bd41; the 2026-10-01 RAG engine review §5 order items 1–4; record `.syllabai/tasks/T-C40.yaml`).** ① **Corpus-validation worklist RECORDED** (`evidence/bench-001/validation-worklist-2026-10-01/`, tool `bench/validation_worklist.py`): 132 prioritized batches derived deterministically from snap-006 × gold-v5 bytes — census 965/4,181 VALIDATED (23.1%); the zero-recall gold classes (mark_scheme/misconception/multi_spec_point) are locked behind SUGGESTED batches (top batch 4CH1/2C MARK_SCHEME: 186 SUGGESTED chunks carrying 30 tier-1 gold unlocks); NO flips performed — content validation stays operator-gated (AGENT.md core rule 6). ② **§8 floor re-index LANDED as spec §8.1 (v1.1, dual-view)**: fresh B-proxy re-baseline `run-006-bproxy` (tool now env-identes runs so a re-baseline can't write run-001 provenance) over snap-006 × gold-v5 → v1.1 bars ALL 0.1920/0.1237/0.2316 + VALIDATED 0.0734/0.1184/0.1683 (same +10% rel / +0.05 abs arithmetic per view); Run005C gate arithmetic extended (v1.0 retained as reference; **no recorded verdict re-judged** — r7 still fails all six v1.1 checks, the corpus conclusion is unchanged, but the bars are now reachable in principle). ③ **Risk-killers:** (a) core `V56__hnsw_filtered_scan_settings.sql` persists the HNSW incident remedy in a migration (lease held+released; portable `current_database()` DO block; RENUMBERED twice mid-flight — the retarget lane took V54 then V55; the V55 collision failed fail-closed in CI on the Flyway duplicate-version check; AGENT.md rule 1; lands via PR syllabai-core#38); (b) citation-marker range enforcement VERIFIED as already-landed (deep-audit H2) — review R7 corrected; the missing half (observability) landed: exact stripped-marker numbers now logged on both paths, output byte-identical, +3 tests; (c) embedding-drift root cause durable-ized: `EMBEDDING_TRANSPORT_INVARIANT.md` + knowledge-map §7 row (the 09-20 CORRECTION.md had named it — transport non-transparency, mean 0.9083 — below discoverability; review R5 corrected; mechanism narrowed + decisive experiment recorded). ④ **MIN_COSINE calibration RECORDED** (`evidence/bench-001/cosine-calibration-2026-10-01/`, tool `bench/cosine_calibration.py`): recomputed from frozen vectors, self-verified 10/10 against the recorded eval; **at 0.15 the floor is a no-op (100% of the measured corpus clears it)**; recommendation **0.50** (stated rule incl. the measured artifact→DB transport downshift + explicit safety margin; 0.55 rejected); **constant NOT changed** — flip gated on the Run005C re-record + the production probe SQL in the pack.
+- Claims: VERIFIED per the yaml record — incl. core CI GREEN on the final head (PR #38 run 36821886508 SUCCESS, after the honest V55-collision failure); INFERRED: production-space effect size of 0.50; open UNVERIFIED: V56 effect on pre-restart pooled connections. (Super Z)
+
+## 2026-10-01 — DONE: RESIDUE-CLOSURE LANE — bank-scheme sparsity + ING node cleanup + census regeneration (operator trace 1a0f5fdf6226bdc9: "Proceed with bank-scheme sparsity (91 qv), ING orphan node cleanup (104), census regeneration")
+- [x] **bank-scheme sparsity (91 qv) — 91 → 56, 35 evidence-clean extractions COMMITTED.** The 91 re-measured EXACT (all four candidate definitions agree) across 22 papers, every paper carrying an MS document (8–26 chunks). Gated extraction per the Task-66 Q10 anti-fabrication precedent: printed-row parse (first line only, table fragments excluded), printed-total gate in BOTH corpus formats (2019-style line + older flattened tail "(Total for Question N = M marks)" — the tail variants recovered 15 groups), sum==printed AND sum==qv.marks, one-qv-per-QN; duplicate refs accepted (sub-parts restart P/M numbering — the sum gates discriminate mangling). EXECUTED fail-closed (dry→COMMIT): 35 mark_schemes **SUGGESTED** (no self-validation; joins the 60 SUGGESTED awaiting the teacher lane) + 243 mark_points (verbatim chunk text, part links/acceptance NULL, explicit uuid4+now()); NO state flips, NO audit rows, tve 0, VALIDATED census 1360 untouched; plan pinned pre-write `a5d77ac4b79…` with frozen merged chunk texts per entry; fresh-conn verify V1–V6 ALL PASS (fidelity spot-checks verbatim). Residue 56 documented by measured class (24 truncated tails, 16 pipeline-FAILED flags honored, 8 mangled sums, 4 missing MS pages, 1 stub) + **NEW named item: 7 qv marks-vs-printed defects** (MS internally consistent, bank qv.marks wrong — Task-66-TX-B class, printed-QP-evidence repair lane). Evidence: `bench/review/psaxis-review-2026-09-28/bank-residue-closure-20261001/` (plan sha a5d77ac4…).
+- [x] **ING node cleanup (104) — 47 true orphans + 4 edges + 26 fixture rows deleted; 57 RETAINED with proof.** Premise corrected by measurement: not fully orphaned — 4 KG edges (ING→4CH1 SUBJECT), 13 skill_states + 13 review_schedules of 6 accounts (ALL test fixtures: 5× "V20 Battery" + 1× "qsp-e2e-probe", STUDENT, @syllabai-test.dev, created 09-14/29; schedules PENDING overdue against dead placeholder topics), 538 archived-question anchors (57 nodes, app-level, no FK). DRY-RUN CATCH: questions.primary_topic_node_id is NOT NULL — archive anchors cannot be NULLed, anchored nodes not deletable by a DB lane (re-pointing = fabrication). Disposition v2 EXECUTED: edges 734→730, fixture learner rows 26 deleted (in-tx fixture guard re-asserted), 47 unanchored ING nodes deleted (0 dangling refs by full name-pattern re-sweep), 57 retained (all archive-anchored; before-images of all 104 nodes + every deleted row in ing_plan.json sha 9d53e3fa… — reversible by INSERT). kn 539→492; skill_states 198→185; review_schedules 133→120. Full ING removal = app-migration item (anchor-column semantics).
+- [x] **census regeneration — final bundle ALL PINS MATCH.** papers 90V/14R · qv 1533 · active 961 · qsp 2637 · qt 1725 · L1 961/961/0 · mirrors 593/593 + 368/368 · bank-wide qt conflicts 0 · qsp15 cohort 15/59/36 · schemes 1455 (1360V+95S) · mp 5558 · sparse 56 · lane 35 · kn 492 (ING 57 all archive-anchored; serving refs 0/0/0/0/0/0) · edges 730 · skill_states 185 · review_schedules 120 · docs 567V/305S/147R · audit 4047 · tve 0. census_bundle.json in the same evidence dir.
+- Remaining open: bank-scheme structural residue (56 qv — printed-MS re-OCR lane), qv marks-vs-printed defects (7 qv), ING full removal (app migration), §C VALIDATE_ALL, sibling supersession sign-offs. (Super Z, trace 1a0f5fdf6226bdc9)
+## 2026-10-01 — DONE: T-C41 — wave 1 kit + run-005-c-r8 re-record (operator directive: "run validation waves from the worklist, then the re-record")
+- [x] **T-C41 (operator trace 1a0f60ff503d0661; record `.syllabai/tasks/T-C41.yaml`).** ① **Wave 1 kit RECORDED** (`evidence/bench-001/validation-waves-2026-10-01/`, tool `bench/validation_wave_kit.py`): four highest-unlock papers (4CH1/2C, 4CH0/2C, 4CH1/2CR, 4CH1/1C — **188 tier-1 + 11 tier-2 gold unlocks**, ~1,853 SUGGESTED chunks) with the teacher-surface validate-all calls, a guarded paired embed_rev re-stamp (the recorded cut-over follow-up), prestate/poststate probes, and the two named traps. **Execution is operator-held**: the surface is teacher-authenticated (AGENT.md core rule 6; credential per T-C38). ② **run-005-c-r8 RECORDED** (evidence/bench-001/runs/run-005-c-r8/, code `06297f2`): the T-C40 ④ re-record executed end-to-end in-sandbox (JDK 25 + Maven + Postgres 17.11/pgvector 0.8.6 provisioned user-space from the pgvector/pgvector:pg17 image layers; artifact preload-r7 SHAs = r7 echoes; double-pass determinism PASS). **vs r7: recall@5/10/20 unchanged, §8(d) byte-identical (0.5618/0.9167), MRR −0.0056 / nDCG −0.0042 (sub-0.50 junk removed from top ranks), zero-result 0/120, violations 0** — re-record gate PASS; flip stays STAGED on `tc40-min-cosine-050` pending the production probe per the calibration pack. Honest detour recorded: first attempt hit the T-C23 trap in miniature (bench loader rev1 vs CURRENT_EMBED_REV=2) — fixed by a paired re-stamp mirroring the 09-28 cut-over, gates untouched.
+
+
+## 2026-10-02 — DONE: THREE-LANE EXECUTION — 7-qv marks repair + printed-MS re-extraction + ING app migration (operator trace 1a0f87c3239f8891)
+- [x] **Lane A — 7-qv marks-vs-printed repair (printed-QP evidence) COMMITTED.** The 7 clean defect qv (all 4CH0/1C 2013–2015, bank marks=1) repaired to the printed totals (Q3=7, Q4=9, Q11=14, Q6=6, Q15=15, Q5=15, Q8=14) on `question_versions.marks` + `questions.marks`; double evidence: v2-gated MS-chunk parse (rows sum == printed total; third total format `(Total marks for Question N = M marks)` recognized) AND the printed QP echo parsed from the sha-matched source PDFs (`pdftotext -layout`; all 12 PDFs byte-match documents.checksum). Version attribution excluded the (R) docs' conflicting totals. Parts NOT written (2013–15 layouts defeat per-part mapping; 35-lane anti-fabrication precedent). No state flips, no audit rows, tve 0. Plan sha `7a131db1…`; dry-run→COMMIT; fresh-conn verify ALL PASS (banked-sum deltas +6/+21/+19/+27 exact; stems byte-unchanged). Evidence: `bench/review/psaxis-review-2026-09-28/three-lane-20261002/`.
+- [x] **Lane B — printed-MS re-extraction for the 56 sparse qv COMMITTED: +13 mark_schemes (SUGGESTED) / +94 mark_points; sparse 56 → 43.** Three gated routes per qv: chunks (v2 gates), chunks+qp-total (rows from corpus, closing total from the printed QP echo — the 2016-era MSs print no per-question totals), print (deterministic pdflane parse_ms grid re-parse with QP totals + faithful-text gate). All 7 Lane-A qv + 6 newly-extractable filled. House shape (source_document_id = parseable MS doc, per-route extraction_method, part links/acceptance NULL, confidence 1.0); one fail-closed tx (schemes 1455→1468, SUGGESTED 95→108, mp 5558→5652); plan sha `f4e1d2e1…`; fresh-conn verify ALL PASS (per-entry sums, fidelity, sparse recount 43, pins).
+- [x] **Lane B residue documented by measured class (43 qv):** ~14 NEW bank-defect candidates (Task-66-TX-B class; best: 1CR-2013 Q8 14v8, Q9 14v1, 2CR-2014 Q3 9v5, 1CR-2022 Q11 10v1 — chunk total == QP echo double-evidenced; NOT executed, needs its own operator mandate) + the 1CR/2CR-2016 cluster whose bank marks match NEITHER version's print (suspected version misalignment of extracted rows — distinct class, must not be guessed) + ~26 structural grid-parse failures on 2015–2019 layouts (capped groups, level-marked grids).
+- [x] **Lane C — ING app migration: syllabai-core PR #42 squash-merged as `93850118` (CI build SUCCESS on head 36c66b6).** V57__ing_node_removal.sql: `questions.primary_topic_node_id` → nullable; archived questions' ING anchors nulled (honest absence); 57 ING nodes deleted under fail-closed guards (questions any-state/edges/skill_states/review_schedules abort loudly); Question.java anchor nullable (all read paths verified null-tolerant); V57IngNodeRemovalIT (fresh-DB shape, in-place repair, guard fail-closed, idempotency). Reversibility: before-images in ing_plan.json sha `9d53e3fa…`. V57 executes at next core deploy → census re-pin expected (kn 492→435).
+- [x] **Post-lane census bundle ALL PINS MATCH** (`census_bundle_20261002.json`): papers 90V/14R · qv 1533 · active 961 · qsp 2637 · qt 1725 · schemes 1468 (1360V+108S) · mp 5652 · sparse 43 · kn 492 (ING 57 pre-deploy) · edges 730 · docs 567V/305S/147R · audit 4047 · tve 0.
+- Remaining open: new bank-defect repair lane (~14 candidates + the 2016 version-misalignment cluster — operator mandate), structural parse residue (~26 qv, engine-grade grid-layout work), §C VALIDATE_ALL, sibling supersession sign-offs, post-deploy census re-pin. (Super Z, trace 1a0f87c3239f8891)
+## 2026-10-02 — DONE: T-C42 gate-2 production probe PASS + wave-1 PRODUCTION run (operator directive: "the production probe + wave-1 run")
+- [x] **T-C42 (operator trace 1a0f8d431a7cbc8d; record `.syllabai/tasks/T-C42.yaml`).** **Gate 2 RECORDED PASS on production** (Neon `production` branch, `neondb`): VALIDATED pool at embed_rev=2 n=2,935, PRB-01 canonical **pct_above_050 = 59.5%**, histogram peak 0.50–0.55, zero pool mass below 0.40 — the calibration pack's binding mass rule is satisfied. Transport deviation recorded (sandbox egress geo-blocked by Generative Language API → frozen SHA-pinned PRB-01 vector, fail-closed sha256 gate; live Path A stays operator-available). Both gates PASS → **flip decision LAND → core PR #44** (`t-c42-min-cosine-050-flip` @ `8dc315a`, fresh branch off main 9385011 — the staged replay branch would have reverted V57/course-aware work). Pack addendum: `evidence/bench-001/cosine-calibration-2026-10-01/ADDENDUM-2026-10-02-production-probe.md`. **Open: operator review + merge of PR #44; post-deploy refusal-rate watch.**
+- [x] **Wave-1 PRODUCTION run (T-C41 ① close-out).** Real teacher surface (login 200, roles ["TEACHER"]) + Neon HTTP SQL; DB identity gate PASS. Live prestate: all four wave-1 units already fully validated on production — the snapshot's 1,464-chunk unlock was pre-executed by earlier teacher work; the last 0-chunk SUGGESTED pair (4CH1/1C `fd1bf331…`) went through validate-all (HTTP 200, 0 versions). Final funnel **reachable_chunks == reachable_at_rev2 == 2,935 (zero rev-residue)**. Findings: **F-PROD-1** 25 serving papers carry unresolved REVIEW_REQUIRED bridge findings (teacher review owed); **F-PROD-2** kit poststate curriculum-resolution stale vs `resolveActive` (corrected SQL shipped); **F-PROD-3** next wave needs a fresh re-freeze — live SUGGESTED surface is EQ 747 / SYLLABUS 162 / unplaced-ingest QP 369 + MS 395, not the QP/MS axis; **F-PROD-4** 4CH1/2C REJECTED ingest shell worth removing. Pack: `evidence/bench-001/validation-wave-1-PRODUCTION-2026-10-02/`.
+
+## 2026-10-02 — DONE: BANK-DEFECT REPAIR LANE — 19-qv printed-evidence re-classification + 4 marks repairs (operator trace 1a0f8d54ffe8d93d: "mandate the new bank-defect repair lane")
+- [x] **Variant-pinned re-classification of all 19 laneB new_defect qv (4 REPAIR / 12 NO-DEFECT / 3 UNRESOLVED / 0 misaligned).** Root cause of most flags: laneB compared bank marks against wrong-variant MS totals (2C MS for the 2CR-2016 cluster; 1C MS for 1CR-2016 Q2–Q12). This lane rebuilt every judgment on variant-pinned printed evidence: content attribution to a printed QP variant (stem tokens vs chunk text; own-variant ≥0.90 + ≥0.02 margin), variant-paired QP echo (`pdftotext -layout`, laneA G2 machinery) and MS corroboration (chunk TOT lines / complete row sums; printed-MS re-parse where bytes local). 18/19 attribute to the R variant at 0.90–1.00 — the 1CR/2CR-2016 "version-misalignment cluster" is REFUTED at content level: bank marks match the R-variant printed QP echo for 9 of the 11 R-attributed 2016 qv (12 NO-DEFECT overall; laneB "NEW-DEFECT?" lines void for these refs).
+- [x] **4 genuine bank-defects repaired (all banked as 1) — one fail-closed tx, dry-run→COMMIT:** 1CR-2013 Q9 1→9 (echo 9 == chunk TOT 9, rows 7/7), 4CH1/1CR-2022 Q11 1→10 (echo 10 == chunk TOT 10, rows 10/5), 1CR-2016 Q1 1→7 (echo 7 == rows 7/7), 1C-2016 Q10 1→6 (reg attributed 1.0; echo 6 == rows 6/3). Byte-level stem guards, double-condition updates, no state flips, no audit rows, parts untouched, tve 0. First dry-run tripped fail-closed on audit pin (4048 ≠ 4047) — investigated read-only: benign no-op VALIDATE_ALL by pilot.teacher on 4CH1/1C Specimen 2017 (0 versions + 0 schemes) from the T-C42 wave-1 production run; re-pinned with explanation inlined. Fresh-conn verify ALL PASS (deltas +8/+9/+6/+5 exact; 15 non-repairs untouched; census pins unchanged, sparse stays 43).
+- [x] **Findings recorded:** (a) corpus folder-mislabels — local `202206_1cr_qp_R.pdf` bytes are the 4CH1/1CR June 2022 QP (page-1 paper reference) but sit in the corpus as `4CH1-1C-202206/qp.pdf` (doc `a7a0e028`); the docmap also mislinks 2CR June 2014 to the paper-1 R MS — folder names unreliable, checksums + page-1 content are the identity; (b) 3 qv move to the engine-grade structural residue with echo targets pinned: 1CR-2016 Q9 (13), Q11 (15), 2CR-2016 Q6 (8) vs bank 1 (R MS row-parses incomplete — no double-evidenced write under the lane standard).
+- Evidence: `bench/review/psaxis-review-2026-09-28/bank-defect-lane-20261002/` (REPORT + VERIFY_OUTPUTS + laneD_plan sha `51a74805…` + matrix + census bundle drift NONE, audit 4048). Remaining open: engine-grade grid-layout lane (incl. the 3 echo-pinned qv), §C VALIDATE_ALL, sibling supersession sign-offs, post-deploy census re-pin (kn 435). (Super Z, trace 1a0f8d54ffe8d93d)

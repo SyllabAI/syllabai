@@ -1,0 +1,137 @@
+{
+ "generated": "2026-10-01",
+ "trace": "1a0f5fdf6226bdc9",
+ "all_pass": true,
+ "checks": {
+  "V1.ing_remaining": {
+   "got": 57,
+   "want": 57,
+   "pass": true
+  },
+  "V1.kn_total": {
+   "got": 492,
+   "want": 492,
+   "pass": true
+  },
+  "V1.edges_total": {
+   "got": 730,
+   "want": 730,
+   "pass": true
+  },
+  "V1.skill_states": {
+   "got": 185,
+   "want": 185,
+   "pass": true
+  },
+  "V1.review_schedules": {
+   "got": 120,
+   "want": 120,
+   "pass": true
+  },
+  "V1.retained_but_unanchored": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V1.retained_subset_of_plan": {
+   "got": 57,
+   "want": 57,
+   "pass": true
+  },
+  "V2.dangling_refs": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V3.ss_ing_rows": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V3.rs_ing_rows": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V3.edge_ing_endpoints": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V3.active_ing_anchors": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V4.qsp": {
+   "got": 2637,
+   "want": 2637,
+   "pass": true
+  },
+  "V4.qt": {
+   "got": 1725,
+   "want": 1725,
+   "pass": true
+  },
+  "V4.active": {
+   "got": 961,
+   "want": 961,
+   "pass": true
+  },
+  "V4.L1": {
+   "got": "961/961/0",
+   "want": "961/961/0",
+   "pass": true
+  },
+  "V4.sme_mirrors": {
+   "got": 593,
+   "want": 593,
+   "pass": true
+  },
+  "V4.pp_mirrors": {
+   "got": 368,
+   "want": 368,
+   "pass": true
+  },
+  "V4.cohort_active": {
+   "got": 15,
+   "want": 15,
+   "pass": true
+  },
+  "V4.cohort_qsp": {
+   "got": 59,
+   "want": 59,
+   "pass": true
+  },
+  "V4.cohort_qt": {
+   "got": 36,
+   "want": 36,
+   "pass": true
+  },
+  "V5.lane_schemes": {
+   "got": 35,
+   "want": 35,
+   "pass": true
+  },
+  "V5.sparse": {
+   "got": 56,
+   "want": 56,
+   "pass": true
+  },
+  "V5.audit_max": {
+   "got": 4047,
+   "want": 4047,
+   "pass": true
+  },
+  "V5.tve": {
+   "got": 0,
+   "want": 0,
+   "pass": true
+  },
+  "V6.plan_sha": {
+   "got": "9d53e3fa063c1172bc078b422d7fbc333232fd6fb76a4c07645777d30901128a",
+   "want": "9d53e3fa063c1172bc078b422d7fbc333232fd6fb76a4c07645777d30901128a",
+   "pass": true
+  }
+ }
+}

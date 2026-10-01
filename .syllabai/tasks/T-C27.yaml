@@ -1,0 +1,320 @@
+version: 1
+task:
+  id: T-C27
+  title: "Question cards corpus + chunk→spec-code linkage (bank layer v2)"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  priority: P2
+  scope:
+    allowed:
+      - "deterministic card emission from bank questions (header + tags +
+        summaryHint, token-subset of print) — eval-gated ingest per plan §9"
+      - "controlled-taxonomy join paperDir#qN -> spec_codes (V33 GIN column)"
+  forbidden:
+    - "agent-asserted content validation"
+    - "textbook tier (P4 by design, licensing open)"
+    - "parser grammar changes (RC-C lane)"
+  dependencies:
+    - T-C26
+  evidence:
+    - "evidence/plan-cash-out-2026-09-25/ (substrate census + spec)"
+  execution:
+    started: "2026-09-26 (operator item-① directive; chat 54c94863)"
+    base:
+      repo: syllabai
+      commit: 59af112
+    landed:
+      - "spec-linkage: qsp 1,725 -> 2,359 (+634 AI_VALIDATED, sme-eq precedent; 295/298
+         cardable paperDir#qN questions mapped against the 182-code taxonomy, confidence
+         min 0.80/median 0.90, 144/182 codes used, 3 honest skips) + chunk.spec_codes
+         512 -> 923 (+411 QP/MS via the deterministic join); GIN containment verified"
+      - "cards: 298 deterministic per-bank-question canonical drafts (qcard-bridge-family,
+         token-subset of print, series JAN/JUN/NOV, specCodes in retrieval block 295/298)
+         ingested 201 x298 via the teacher-authed API (1 dedup hit); documents 701 -> 999,
+         chunks 4,045 -> 4,343; all SUGGESTED, retrieval identity stamped, GIN spec-filter
+         verified; T-C20 structurally excludes them from serving — no retrieval change shipped"
+    blocked:
+      - "recorded T-C13 bench (snap-003 re-freeze + gold-v2) — operator-held per the
+         snap-002 FREEZE_RECORD; owed at the serving flip (when cards enter the serving set)"
+    resolved_addendum_2026-09-26:
+      - "bench substrate COMPLETE (operator directive 'Proceed with retrieval bench'):
+         snap-003 re-freeze (evidence/bench-001/snapshots/snap-003/ — card axis IN via
+         SNAP3-F1; 3,831 chunks / 575 docs; 5/7 artifacts byte-identical to snap-002) +
+         gold-v2 (bench/gold-v2/ — 120 queries, label logic byte-identical to v1) +
+         bench/gold_check.py practical-code gate extension; load-check PASS; the
+         serving-flip recorded run itself remains owed at the flip"
+    resolved:
+      - "2026-09-26T13:30Z — embed blocker CLEARED: the operator supplied new keys; the
+         live key was the denied ...02sA (the 403 outage root cause); swapped to a working
+         key (env PUT flat-array shape + explicit deploy) — /documents/search RESTORED
+         (5/5 queries, 5 hits, 1.5-1.7s) and all 298 card chunks embedded
+         (gemini-embedding-001, 768-dim, ~30 RPM sustained, zero 429s). Spare key on file
+         (sandbox probes show Google geo-block 400 — client-side artifact, not a key fault).
+         See ADDENDUM.md + gemini_key_probe.json + key_swap_record.json + embed_state.jsonl"
+    pack: "bench/evidence/tc27-cards-speclinkage-2026-09-26/ (EVIDENCE.md + SHA256SUMS)"
+    continuation_2026-09-26T21:45Z:
+      agent: "superz (main agent, zai session web-98866c45) — coordinated continuation
+        per the registry rule (ownership does not prohibit coordinated fixes); operator
+        directed the bench-at-serving-flip item be picked up with a coordination check first"
+      coordination_check:
+        - "no conflict: owner session web-23eb7684 has no active lease (locks []),
+           active_work [] — the lane is free for a coordinated continuation; no
+           re-execution of landed items attempted"
+        - "the flip has NOT happened as of this probe: no validation-wave record in
+           coordination since snap-003; live serving posture probe recorded the teacher
+           search endpoint auth-gated (401 unauth / 403 learner-role — the sanctioned
+           TEST learner cannot observe card serving; honest limit, evidence
+           /download/tc27_flip_probe.json workspace copy)"
+      readiness_reverified:
+        - "snap-003 SHA256SUMS 7/7 OK + gold-v2 SHA256SUMS all OK (local re-verification)"
+        - "gold_check PASS reproduced: 120 records, quotas ok, all anchors resolve"
+        - "harness unit-green via core-ci (runs 36251591706 + 36272382294 on main)"
+      staged:
+        - "bench/AT_FLIP_RUNBOOK.md — the complete at-flip runbook (trigger A: operator
+           card-validation wave then run; trigger B: explicit operator commission of a
+           pre-flip ALL-denominator run; r4 generation steps mirroring r3 exactly: vector
+           freeze -> stage inputs -> workflows -> dispatch B->A->C -> record -> close T-C27)"
+      unchanged: "status stays EXECUTING; the recorded run remains operator-held and
+        un-executed — nothing was commissioned or self-started"
+
+    at_flip_directive_2026-09-27:
+      agent: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b) —
+        owner session executing the staged runbook (coordination check first per the
+        operator's directive)"
+      operator_directive: "\"T-C27 bench-at-serving-flip (other agent's lane — coordination
+        check first) proceed\" (trace 1a0e07674d2b1e19, 2026-09-27) — the explicit operator
+        commission required by AT_FLIP_RUNBOOK.md trigger B"
+      trigger: "B — operator-commissioned pre-flip recorded run: ALL-denominator measurement
+        on snap-003+gold-v2 as-is (compliant view reported honestly starved per the
+        dual-denominator semantics pinned in the runbook)"
+      coordination_check:
+        - "no commits on records main after 244827ebb (the staging commit) at execution
+           start; no r4 workflows, no r4 input dirs anywhere (bench/inputs holds only
+           snapshot-r3/gold-r3 and older); records Actions newest run is ops-g1-finish
+           09-22 — no r4 dispatch exists; the web-98866c45 staging is respected: its
+           runbook is executed verbatim, not re-derived"
+        - "flip re-probed live (read-only): all 298 T-C27 cards SUGGESTED — the single
+           VALIDATED EQ doc is a pre-existing 09-20-cohort document, not a T-C27 card;
+           the flip has NOT happened, the run proceeds pre-flip under trigger B"
+      substrate_reverified:
+        - "snap-003 SHA256SUMS 7/7 + gold-v2 14/14 re-verified byte-exact from main
+           (fetch-side writer newline bug found and fixed in the process — the artifacts
+           themselves were never wrong)"
+        - "gold_check PASS reproduced locally: 120 records, quotas ok, all anchors resolve"
+        - "production preload coverage 3,831/3,831 snapshot refs, every vector
+           gemini-embedding-001, chunk content_sha256 matches the snapshot 100%
+           (mixed-corpus guard) — preload-r4 built SELECT-only, 0 residual chunk API
+           calls expected; 120 gold queries embed fresh at backfill"
+      execution: "r4 generation per AT_FLIP_RUNBOOK.md steps 1-6 verbatim: vector freeze ->
+        stage inputs -> generate r4 workflows -> dispatch B -> A -> C -> record ->
+        close T-C27"
+    recorded_run_2026-09-27:
+      outcome: "DONE — the last §5 item (the recorded T-C13 bench) is cashed: the
+        operator-commissioned pre-flip trigger-B run was executed per AT_FLIP_RUNBOOK.md
+        steps 1-6 verbatim (directive trace 1a0e07674d2b1e19); run IDs as outcome evidence:
+        embed-backfill 36286617830 (frozen r4 artifact, 3831/3831 chunks preloaded + 120
+        queries fresh), arm B 36286954444, arm A 36287130564, arm C 36287897846 (first
+        dispatch 36287567921 superseded with the ordering slip disclosed); all runs SUCCESS,
+        determinism PASS, 0 validation-boundary violations — the gate held"
+      honest_result: "all served metrics 0.0: the T-C05/T-C20 VALIDATED-only gate on core
+        main serves nothing from a uniformly-SUGGESTED snapshot (FREEZE_RECORD finding 4);
+        vector space verified healthy (cos 0.54-0.69) — the zeros are the starved-snapshot
+        truth, not a defect; §8 verdict NOT PROMOTED recorded verbatim; interpretation in
+        evidence/bench-001/runs/R4-GENERATION-NOTES.md"
+      remaining: "the at-flip re-run (trigger A) stays operator-held: it becomes meaningful
+        when the operator/teacher validation wave promotes papers/cards — at that point the
+        298 T-C27 cards enter the serving set and the denominators separate"
+    trigger_a_directive_2026-09-27:
+      agent: "superz (main agent, zai session web-98866c45) — coordinated continuation on
+        the owner's lane per the registry rule; claim-first record, nothing executed"
+      operator_directive: "\"trigger-A re-run\" (trace 1a0e2220d22a90b1, chat
+        bfc203d2-f2bf-4dea-b928-d2a4c5cbd47f, 2026-09-27) — received as the operator call
+        AT_FLIP_RUNBOOK.md trigger A names for"
+      coordination_check:
+        - "locks []; no trigger-A/r5 commits on records main (HEAD 5a18253) and no r5
+           Actions dispatches (newest bench runs remain the r4 generation, 09-27
+           01:47-02:13Z) — no agent has started this lane"
+        - "the separately-issued 'runner label hygiene' directive was already cashed by
+           another agent (core PR #28, a92bd6d, manifest-dynamic bench labels) — no
+           duplicate work opened; tutor lane (s138-s140) disjoint"
+      readiness_verified:
+        - "flip NOT verifiable from this session: the sanctioned production read
+           (SYLLABAI_DATABASE_URL/USERNAME/PASSWORD — the snap-003 exporter's path) is
+           absent from the session env (environment reset since T-C28); the teacher HTTP
+           surface cannot enumerate document validation states (DocumentSummaryView
+           carries no validation_state) — flip confirmation stays with the operator
+           (a teacher-scoped /content/documents/search probe returning
+           kind=EXTERNAL_QUESTIONS hits is the ready serving-evidence check)"
+        - "mechanics census (why a plain r4 re-dispatch is NOT a trigger-A run):
+           snap-003 chunk rows carry no subject_id (3831/3831 rows verified) and uniform
+           SUGGESTED paper_state; the bench loader links per-doc exam_paper rows for
+           QP/MS kinds only and inserts no chunk subject_id — under both
+           searchServingEligible branches the card axis is structurally unservable in
+           the container, and both runners' paper-state maps read the frozen snapshot —
+           a re-dispatch would deterministically reproduce the r4 zeros"
+        - "production premise verified: ingestion is fail-closed on chunk subject_id
+           ('nothing without subject_id'), so post-flip cards serve in production via
+           the doc-state branch of the T-C20 gate — the runbook's trigger-A premise
+           holds; only the bench container cannot mirror it yet"
+      staged:
+        - "core bench enabler (this continuation): BenchSnapshot parses the optional
+           chunk subject_id field and the loader inserts it — backward-compatible
+           (snap-003 rows lack the field, so r4 behavior and recorded-run
+           reproducibility are byte-identical); with it, the at-flip generation (a
+           post-flip snap-004 freeze whose exporter projects subject_id + gold re-pair
+           + r5 workflows mirroring r3 exactly) can serve and measure the card axis"
+        - "ENABLER LANDED 2026-09-27: syllabai-core e728b7d (core-ci run 36310569728
+           SUCCESS, head e728b7de) — Run003B.loadSnapshot now carries documents.
+           validation_state from the same per-document paper_state and stamps every
+           chunk with the bench scope's subject, so BOTH searchServingEligible
+           branches work in the container exactly as production does (branch 1
+           paper-anchored QP/MS unchanged; branch 2 doc-VALIDATED cards live);
+           backward-compatible by construction (snap-001..003 uniformly SUGGESTED,
+           V29 default 'SUGGESTED' = value-identical insert, recorded r3/r4 runs
+           sha-pinned and untouched); BenchSnapshotSubjectIdTest pins the optional
+           projection fold (present / absent / JSON null); the snapshot rows'
+           subject_id is census/verification evidence, never a container gate input"
+      blocked:
+        - "the validation wave itself — operator-only (T-C27 forbidden list: no agent
+           may perform the validation)"
+        - "the snap-004 freeze + vector preload need the sanctioned production read
+           (env-gated) — a session holding SYLLABAI_DATABASE_* executes the
+           freeze -> stage -> dispatch chain per the runbook; the recorded run is NOT
+           executed from this session"
+      unchanged: "status stays DONE (the trigger-B outcome stands); the trigger-A re-run
+        remains operator-held pending the flip + a production-read session"
+
+    trigger_a_execution_2026-09-27:
+      agent: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b) —
+        the OWNER session executing the handoff this file records; this session holds
+        the sanctioned production read (SYLLABAI_DATABASE_*) the web-98866c45 closeout
+        named as the remaining precondition"
+      operator_directive: "\"re-run trigger A\" (trace 1a0e23212e7b3cf5, chat
+        54c94863-9377-41e2-923e-dd45fe835c1a, 2026-09-27) — same operator call the
+        web-98866c45 claim records (trace 1a0e2220d22a90b1); executed by the session
+        that can verify the flip first-hand"
+      coordination_check:
+        - "locks [] re-verified at execution start; the web-98866c45 claim
+           (db3573a6b, claim-first) + closeout (a61bdb008) are honored verbatim —
+           nothing they landed was re-derived or re-executed; their core enabler
+           (e728b7d) is CONSUMED as the pinned core sha for the r5 generation"
+        - "no r5 dispatches existed at execution start (records Actions newest bench
+           runs remain the r4 generation 01:47-02:13Z); no concurrent r5 commit race
+           (push guard verifies parent == origin/main head)"
+      flip_verified_first_hand:
+        - "the wave the claim could not verify from its env: 13 exam_papers rows
+           VALIDATED (11 glmocr-era + 4CH1/2C June-2019 + 4CH1/1C January-2022) with
+           their 13 QP + 13 MS documents VALIDATED at doc level (documents were
+           uniformly SUGGESTED at the snap-003 freeze); 317 chunks flip
+           SUGGESTED -> VALIDATED (145 QP + 161 MS + 11 EQ — the pre-existing
+           09-20-cohort 4CH1/1C card doc, promoted in the same window)"
+        - "the card validation wave has NOT landed: all 298 T-C27 cards (2026-09-26)
+           remain SUGGESTED — the r5 at-flip run is cashed on the PAPER axis and the
+           11-chunk promoted card doc; the card-flip run (r6) stays available"
+      executed:
+        - "snap-004 freeze (scripts/snap004_export.py, snap003-exporter lineage):
+           chunk_ref set, contents, kinds, spec_codes IDENTICAL to snap-003
+           (programmatic per-field diff); spec_points/graph_edges/misconceptions/
+           question_anchors/concept_attachments BYTE-IDENTICAL (5/7 fidelity anchors);
+           graph_code set-equal; named deltas SNAP4-F1 (validation wave) + SNAP4-F2
+           (246 paper_code stamps) + SNAP4-F3 (subject_id projection per the
+           enabler) + SNAP4-M1; gzip mtime=0"
+        - "gold-v3 re-pair (bench/gold-v3, staged as gold-r5): 12 class files
+           BYTE-IDENTICAL to gold-v2 (anti-tuning — no query re-selected/re-labeled);
+           only the manifest snapshot pins move to snap-004, the validator's own
+           designed mechanism (gold_check FAILed the v2 pins against snap-004 —
+           observed and honored, never bypassed); gold_check PASS 120 records +
+           selftest 6/6"
+        - "preload-r5 (bench/inputs/embeddings/preload-r5): production-derived
+           chunk-vector mirror SELECT-only (3,831/3,831 refs, gemini-embedding-001@768,
+           per-row content_sha256 verified — mixed-corpus guard); 120 gold queries
+           embed fresh at the backfill dispatch"
+        - "r5 workflows staged (ops-embed-backfill-r5 / ops-run003b-r5 /
+           ops-run004a-r5 / ops-run005c-r5), cloned from the -r4 siblings with the
+           runbook's three deltas (input paths -> r5, prior-run results paths -> r5
+           run dirs, pinned core sha -> e728b7d); dispatch chain B -> A -> C with the
+           commit-prior-runs discipline follows as separate commits"
+      boundary: "no agent-asserted content validation anywhere — the wave was performed
+        by the operator/teacher before the directive; this lane only freezes the
+        state it found (read-only, zero production writes)"
+      recorded_run_2026-09-27_atflip:
+        outcome: "DONE — the trigger-A at-flip re-run is recorded on all three arms per
+          AT_FLIP_RUNBOOK.md steps (directive trace 1a0e23212e7b3cf5): snap-004 freeze +
+          gold-v3 re-pair + preload-r5 staged @ f04451930; embed-backfill-r5 run
+          36311624648 SUCCESS (0 chunk API calls, 120 queries fresh) @ 5770133f2; arm B
+          36311973564 @ d003a45e0; arm A 36312145176 @ 7723d90d8; arm C 36312444139 @
+          61ec5120; runbook ordering held, no re-dispatches"
+        honest_result: "the r4->r5 differential IS the flip: the served view is non-empty
+          for the first time post-T-C20 (317 VALIDATED chunks = the wave's exact flip
+          count); B 0.0247/0.0449, A 0.0762/0.0543/0.1376, C compliant 0.0762/0.0674/
+          0.1473 (fusion lifts ranking at identical recall); 0 validation-boundary
+          violations x3 arms x120 queries (the gate held under real post-flip load);
+          determinism PASS x3; §8 NOT PROMOTED verbatim (a/b/c quality floors fail —
+          the paper-axis wave alone does not clear them; d NOT SCOREABLE; f PASS)"
+        scope_note: "cashed on the PAPER axis (13 papers + 1 card doc); the 298 T-C27
+          cards remain SUGGESTED — the card validation wave (operator/teacher) has NOT
+          landed; the r6 card-flip run stays available"
+        interpretation: "evidence/bench-001/runs/R5-GENERATION-NOTES.md (incl. the runner
+          template-text caveat and the r3/r4 comparability rules)"
+
+
+      r6_gate_recheck_2026-09-27:
+        outcome: "GATE UNCHANGED — the card validation wave has NOT landed (live probe
+          09-27 ~13:1xZ by session web-23eb7684, read-only: EXTERNAL_QUESTIONS 378
+          SUGGESTED + 1 VALIDATED; chunks 317 VALIDATED = snap-004 SNAP4-F1 exactly;
+          exam_papers 78/13/13). r6 stays available and operator-held. The §8(d)
+          substrate side is READY: the resources C13 HUMAN_VALIDATED chunk→SP store
+          (210 rows, session-102 apply) is bridged onto production notes chunks —
+          209/210 rows (205 CLEAN / 4 MULTI / 1 MISS) projecting onto
+          'checksum:chunk_index' snapshot-scheme refs, 58/58 gold spec points
+          covered (bench/evidence/chunk-sp-substrate-2026-09-27/); the snap-005
+          freeze at the r6 card-flip can carry the projection artifact and the
+          spec axis flips NOT SCOREABLE → scoreable-with-coverage."
+        evidence: "bench/evidence/chunk-sp-substrate-2026-09-27/EVIDENCE.md"
+      operator_directive_2026-09-28:
+        r6_dependency: "WAITING_FOR_GENUINE_TEACHER_VALIDATION — the 298 T-C27 cards
+          stay SUGGESTED and byte-untouched: no agent flip, no DB mutation, no
+          validation-endpoint build unless independently product-useful (operator
+          directive, trace 1a0e6753792f76fd). r6 fires only after a genuine teacher
+          validation wave; the staged unit (bench/r6-staging/) makes that moment
+          execution, not engineering."
+      flagged3_flip_decision_2026-09-28:
+        decision: "OPERATOR NAMED — flip #207/#278/#291 to VALIDATE. Verbatim instruction:
+          \"flip #207/#278/#291 to VALIDATE. And continue you to work autonomously. I dont
+          have time to do anything\" (IM trace 1a0e7865c3b35715, 2026-09-28). Basis: the
+          source-verification REPORT (3/3 faithful, sha 23ead2a7…); the operator, being
+          the reviewing teacher, adopted the flip on that basis. The disposition question
+          opened by the flagged-3 verification is CLOSED at the decision level."
+        execution_state: "PREPARED — NOT YET APPLIED. The preparing session holds no
+          sanctioned production connection material (per-session handoff; the
+          scripts/.render_env.json path was rollback-wiped; no SYLLABAI_DATABASE_URL in
+          env) and no core document-flip endpoint exists (bank axis only; building one is
+          excluded by the standing trace 1a0e6753792f76fd boundary). Execution kit:
+          bench/review/flagged3-flip-2026-09-28/ (SHEET.md + flip_decisions.json +
+          apply_flip.py + RUNBOOK.md) — fail-closed, single transaction, idempotent by
+          batch id, census-gated (306V/747S/3F -> 309V/747S/0F abort-on-drift), writes
+          exactly 3 documents.validation_state flips + 3 content_review_audit rows
+          (action VALIDATE, target_type 'question' — the proven wave-import vocabulary;
+          teacher_validation_events CHECK domain still excludes documents and stays 0),
+          audit detail carries the operator trace + both sha256 pins + the honest
+          applied-by note. One command for any session holding the sanctioned URL."
+      flagged3_flip_2026-09-28:
+        execution_state: "APPLIED — 2026-09-28T11:32:04Z, batch_run_id 0d5e4c4a-cacc-454c-9dfe-5983e1f11661
+          (this session holds the sanctioned scripts/.render_env.json). Dry-run DRY_RUN_OK first,
+          then one transaction: 3 documents.validation_state FLAGGED->VALIDATED (#207/#278/#291,
+          row uuids bf07304e/d84be99c/bccdacb2) + 3 content_review_audit rows (action VALIDATE,
+          target_type 'question', target_id = row uuid per the proven wave vocabulary, detail
+          carries the operator trace 1a0e7865c3b35715 + basis/sheet sha256 pins + the honest
+          applied-by note). Census 296V/80S/3F -> 299V/80S/0F exactly as recorded; idempotent
+          re-run returned ALREADY_APPLIED; independent 8-point landing verification (fresh
+          read-only connection): 3 docs VALIDATED, audit total 365 = 362+3, 80 neighbors
+          untouched, teacher_validation_events 0. TWO production-blocking kit defects were
+          fixed pre-apply, both caught fail-closed with zero writes lost: (1) the recorded
+          pre-census was derived not probed (306V/747S totals the snap-003 EQ chunk count
+          1,056 — commit db17167912 corrected the gate to the probed 296V/80S/3F); (2) the kit
+          keyed documents by documents.id while the decisions carry the document_id varchar,
+          assumed a flat render-env format (the sanctioned file is {\"env\":[{key,value},...]}),
+          and used document_id as audit target_id (the wave's proven semantics is row uuid
+          target / varchar in detail) — all fixed in the executed apply_flip.py.
+          Run report: evidence/bench-001/flagged3-flip-2026-09-28/ (run_report.json +
+          dry_run_report.json)."

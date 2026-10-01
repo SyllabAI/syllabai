@@ -1,0 +1,377 @@
+{
+ "generated": "2026-09-28T20:37:43.817864+00:00",
+ "checks": {
+  "census": {
+   "ok": true,
+   "detail": "{'SUGGESTED': 1, 'REJECTED': 13, 'VALIDATED': 87, 'FLAGGED': 3}"
+  },
+  "events_0": {
+   "ok": true,
+   "detail": ""
+  },
+  "audit_chain": {
+   "ok": true,
+   "detail": "392 rows at ~20:36 (expect 392)"
+  },
+  "links_4CH0-2C-201406": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_607dce44": {
+   "ok": true,
+   "detail": "state=VALIDATED a=13 e=13 rev=2 meta=13"
+  },
+  "docgate_f2ca088f": {
+   "ok": true,
+   "detail": "state=VALIDATED a=16 e=16 rev=2 meta=16"
+  },
+  "g5live_4CH0-2C-201406": {
+   "ok": true,
+   "detail": "7/8 = 0.88"
+  },
+  "children_4CH0-2C-201406": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-2C-201606": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_9ffc1634": {
+   "ok": true,
+   "detail": "state=VALIDATED a=10 e=10 rev=2 meta=10"
+  },
+  "docgate_b19da2dc": {
+   "ok": true,
+   "detail": "state=VALIDATED a=12 e=12 rev=2 meta=12"
+  },
+  "g5live_4CH0-2C-201606": {
+   "ok": true,
+   "detail": "8/8 = 1.00"
+  },
+  "children_4CH0-2C-201606": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "nonflip_4CH1-2C-202006": {
+   "ok": true,
+   "detail": "state=FLAGGED links unchanged"
+  },
+  "links_4CH0-1C-201306": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_d5b3dc75": {
+   "ok": true,
+   "detail": "state=VALIDATED a=26 e=26 rev=2 meta=26"
+  },
+  "docgate_af3f4f8d": {
+   "ok": true,
+   "detail": "state=VALIDATED a=26 e=26 rev=2 meta=26"
+  },
+  "g5live_4CH0-1C-201306": {
+   "ok": true,
+   "detail": "11/11 = 1.00"
+  },
+  "children_4CH0-1C-201306": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-1C-201406": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_b38046a7": {
+   "ok": true,
+   "detail": "state=VALIDATED a=19 e=19 rev=2 meta=19"
+  },
+  "docgate_fba61740": {
+   "ok": true,
+   "detail": "state=VALIDATED a=20 e=20 rev=2 meta=20"
+  },
+  "g5live_4CH0-1C-201406": {
+   "ok": true,
+   "detail": "15/15 = 1.00"
+  },
+  "children_4CH0-1C-201406": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-1C-201606": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_64b2795a": {
+   "ok": true,
+   "detail": "state=VALIDATED a=21 e=21 rev=2 meta=21"
+  },
+  "docgate_c224dfa3": {
+   "ok": true,
+   "detail": "state=VALIDATED a=25 e=25 rev=2 meta=25"
+  },
+  "g5live_4CH0-1C-201606": {
+   "ok": true,
+   "detail": "15/16 = 0.94"
+  },
+  "children_4CH0-1C-201606": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-1C-201706": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_c4a5619b": {
+   "ok": true,
+   "detail": "state=VALIDATED a=19 e=19 rev=2 meta=19"
+  },
+  "docgate_83e11e07": {
+   "ok": true,
+   "detail": "state=VALIDATED a=23 e=23 rev=2 meta=23"
+  },
+  "g5live_4CH0-1C-201706": {
+   "ok": true,
+   "detail": "11/11 = 1.00"
+  },
+  "children_4CH0-1C-201706": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-1CR-201306": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_2f52e30b": {
+   "ok": true,
+   "detail": "state=VALIDATED a=24 e=24 rev=2 meta=24"
+  },
+  "docgate_8936b097": {
+   "ok": true,
+   "detail": "state=VALIDATED a=21 e=21 rev=2 meta=21"
+  },
+  "g5live_4CH0-1CR-201306": {
+   "ok": true,
+   "detail": "11/11 = 1.00"
+  },
+  "children_4CH0-1CR-201306": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-1CR-201406": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_7762dfe6": {
+   "ok": true,
+   "detail": "state=VALIDATED a=20 e=20 rev=2 meta=20"
+  },
+  "docgate_712079d5": {
+   "ok": true,
+   "detail": "state=VALIDATED a=17 e=17 rev=2 meta=17"
+  },
+  "g5live_4CH0-1CR-201406": {
+   "ok": true,
+   "detail": "10/10 = 1.00"
+  },
+  "children_4CH0-1CR-201406": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-1CR-201606": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_78510d0f": {
+   "ok": true,
+   "detail": "state=VALIDATED a=20 e=20 rev=2 meta=20"
+  },
+  "docgate_b27f9358": {
+   "ok": true,
+   "detail": "state=VALIDATED a=21 e=21 rev=2 meta=21"
+  },
+  "g5live_4CH0-1CR-201606": {
+   "ok": true,
+   "detail": "12/12 = 1.00"
+  },
+  "children_4CH0-1CR-201606": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-1CR-201706": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_c6437e05": {
+   "ok": true,
+   "detail": "state=VALIDATED a=21 e=21 rev=2 meta=21"
+  },
+  "docgate_7195d701": {
+   "ok": true,
+   "detail": "state=VALIDATED a=24 e=24 rev=2 meta=24"
+  },
+  "g5live_4CH0-1CR-201706": {
+   "ok": true,
+   "detail": "15/15 = 1.00"
+  },
+  "children_4CH0-1CR-201706": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-2C-201306": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_ad481b80": {
+   "ok": true,
+   "detail": "state=VALIDATED a=12 e=12 rev=2 meta=12"
+  },
+  "docgate_5a4236c2": {
+   "ok": true,
+   "detail": "state=VALIDATED a=13 e=13 rev=2 meta=13"
+  },
+  "g5live_4CH0-2C-201306": {
+   "ok": true,
+   "detail": "7/7 = 1.00"
+  },
+  "children_4CH0-2C-201306": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-2C-201706": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_784055a9": {
+   "ok": true,
+   "detail": "state=VALIDATED a=8 e=8 rev=2 meta=8"
+  },
+  "docgate_90ca0ee7": {
+   "ok": true,
+   "detail": "state=VALIDATED a=10 e=10 rev=2 meta=10"
+  },
+  "g5live_4CH0-2C-201706": {
+   "ok": true,
+   "detail": "5/5 = 1.00"
+  },
+  "children_4CH0-2C-201706": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-2CR-201306": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_33ba399c": {
+   "ok": true,
+   "detail": "state=VALIDATED a=11 e=11 rev=2 meta=11"
+  },
+  "docgate_1d17abcc": {
+   "ok": true,
+   "detail": "state=VALIDATED a=10 e=10 rev=2 meta=10"
+  },
+  "g5live_4CH0-2CR-201306": {
+   "ok": true,
+   "detail": "6/6 = 1.00"
+  },
+  "children_4CH0-2CR-201306": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-2CR-201406": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_712f005c": {
+   "ok": true,
+   "detail": "state=VALIDATED a=12 e=12 rev=2 meta=12"
+  },
+  "docgate_e0a32b5b": {
+   "ok": true,
+   "detail": "state=VALIDATED a=9 e=9 rev=2 meta=9"
+  },
+  "g5live_4CH0-2CR-201406": {
+   "ok": true,
+   "detail": "6/6 = 1.00"
+  },
+  "children_4CH0-2CR-201406": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-2CR-201606": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_e075a114": {
+   "ok": true,
+   "detail": "state=VALIDATED a=10 e=10 rev=2 meta=10"
+  },
+  "docgate_9fcd9d72": {
+   "ok": true,
+   "detail": "state=VALIDATED a=12 e=12 rev=2 meta=12"
+  },
+  "g5live_4CH0-2CR-201606": {
+   "ok": true,
+   "detail": "7/7 = 1.00"
+  },
+  "children_4CH0-2CR-201606": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "links_4CH0-2CR-201706": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_e9ebba09": {
+   "ok": true,
+   "detail": "state=VALIDATED a=13 e=13 rev=2 meta=13"
+  },
+  "docgate_a03f9ddf": {
+   "ok": true,
+   "detail": "state=VALIDATED a=12 e=12 rev=2 meta=12"
+  },
+  "g5live_4CH0-2CR-201706": {
+   "ok": true,
+   "detail": "8/8 = 1.00"
+  },
+  "children_4CH0-2CR-201706": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "nonflip_4CH1-1C-201906": {
+   "ok": true,
+   "detail": "state=FLAGGED links unchanged"
+  },
+  "nonflip_4CH1-1C-202006": {
+   "ok": true,
+   "detail": "state=FLAGGED links unchanged"
+  },
+  "links_4CH1-1C-202206": {
+   "ok": true,
+   "detail": "state=VALIDATED"
+  },
+  "docgate_a2015ed4": {
+   "ok": true,
+   "detail": "state=VALIDATED a=12 e=12 rev=2 meta=12"
+  },
+  "docgate_a472ddd8": {
+   "ok": true,
+   "detail": "state=VALIDATED a=19 e=19 rev=2 meta=19"
+  },
+  "g5live_4CH1-1C-202206": {
+   "ok": true,
+   "detail": "10/10 = 1.00"
+  },
+  "children_4CH1-1C-202206": {
+   "ok": true,
+   "detail": "qv_bad=0 sch_bad=0"
+  },
+  "shells_inert": {
+   "ok": true,
+   "detail": "34/34 SUGGESTED+0c"
+  }
+ },
+ "serving_pool": {
+  "rev2": 2581,
+  "rev1": 267
+ }
+}

@@ -1,0 +1,101 @@
+version: 1
+task:
+  id: T-C32
+  title: "resolveActive N+1 — per-node KnowledgeNode reads on the serving-scope resolution path (T-C23 recorded ticket candidate 2)"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: DONE
+  priority: P3
+  base:
+    repo: syllabai-core
+    commit: d4e0f7a (main at claim)
+  basis: "T-C23 recorded ticket candidate 'resolveActive N+1 (~340 per-node reads
+    per search)' (TODO.md T-C23 record; source analysis evidence/serving-0hit-anomaly-2026-09-25/)
+    + operator directive trace 1a0e6cbc57b92505 ('T-C23 ticket 2 (resolveActive N+1,
+    ~340 reads/search)')"
+  scope:
+    allowed:
+      - "core: CurriculumScopeResolver.hasValidatedStructure — replace the per-node
+        findById loop (one read per subtree node, per subject, per ACTIVE version,
+        per serving request) with a batched repository predicate over the SAME
+        findSubtreeIds id set (single source of truth for the subtree definition —
+        no SQL duplication); update CurriculumScopeResolverTest + add a
+        no-per-node-reads regression pin"
+    forbidden:
+      - "no resolution-semantics change — policy stays: ACTIVE-only candidates,
+        ownership = VALIDATED structure under a subject root OR exam papers,
+        exactly-one-owner resolve / zero-or-two refuse (T-C07)"
+      - "no schema/migration change; no serving-path behavior change; the scope
+        object (CurriculumScope surface set) is built exactly as before"
+      - "no scope creep beyond the resolver read pattern — intentSurface's single
+        recursive query per subject is not the ticket; RoutingController /
+        KaRagService call sites unchanged"
+  discipline: "claim-first registered BEFORE any code (S145 lesson); branch off core
+    main d4e0f7a; local-verified (full unit suite, JDK 25 / Maven user-space) before
+    push; core-ci green to merge; merge = operator/owner lane per T-C31 precedent"
+  executed:
+    - "implemented on core branch perf/t-c32-resolve-active-n-plus-one (commit
+      42534db, +93/-32 across 3 files): hasValidatedStructure now answers the
+      VALIDATED-structure question with ONE batched
+      existsByIdInAndNodeTypeInAndValidationStatus over the SAME findSubtreeIds
+      id set (recursive CTE never duplicated — single source of truth; enums bind
+      through the entity's STRING mapping); resolution policy byte-identical
+      (ACTIVE-only candidates, VALIDATED-structure-or-papers ownership,
+      exactly-one-owner refusal matrix, empty-subtree fail-closed)"
+    - "verification: CurriculumScopeResolverTest re-stubbed to the batched predicate
+      + T-C32 regression pin (verify never findById — the N+1 is dead; predicate
+      runs exactly once per subject root carrying the FULL subtree id set, the
+      pinned UNIT/TOPIC/SUBTOPIC list, the VALIDATED literal); full unit suite
+      green locally 925 tests / 0 failures; PR #30 opened, core-ci build SUCCESS
+      on head 42534db"
+  boundaries_respected:
+    - "no resolution-semantics change (T-C07 matrix intact); no schema/migration;
+      no serving-path behavior change; intentSurface + RoutingController /
+      KaRagService call sites untouched"
+  merge: "landed 2026-10-01 via syllabai-core PR #41 (merge commit 69365ff, house
+    merge-commit convention, operator-directed flag-fix) — core-ci run 36835793706
+    SUCCESS on the integration ref; supersedes the 09-28 linear-tranche note — the
+    content had in fact never reached main (see closeout_2026-09-28 + errata_2026-10-01)"
+  follow_ups:
+    - "post-merge: the ~340 per-node reads per serving request drop to 2 queries
+      per subject root (subtree CTE + batched predicate)"
+  closeout_2026-09-28:
+    landing_path: "content reached core main WITHOUT a PR #30 merge event: the
+      deep-audit 09-28 tranche (1551c1a fix(boundary) M2-M5, df6ef7e test(it) M5
+      follow-up, 795a7ac fix(integrity) M6+M7, 05f2621 test(it) M6 cascade IT)
+      was pushed as a LINEAR stack whose base is 42534db (this task's commit);
+      no merge commit exists in 42534db..05f2621. PR #30 (head == 42534db,
+      verified via API, merged=False) closed 2026-09-28 as superseded — zero
+      diff remains between head and main; branch
+      perf/t-c32-resolve-active-n-plus-one left intact at 42534db."
+    verification: "42534db verified first-hand as an ancestor of origin/main
+      (git merge-base --is-ancestor); core main @ 05f2621690843123 (the r6
+      freeze pin) check-runs: build completed SUCCESS — the fix is
+      CI-validated on main and the no-per-node-reads regression pin travels
+      with the commit"
+    outcome: "~340 per-node findById reads per serving request → 2 queries per
+      subject root (subtree CTE + one batched predicate); resolution semantics
+      byte-identical (ACTIVE-only candidates, T-C07 ownership matrix, empty
+      subtree fail-closed); intentSurface / RoutingController / KaRagService
+      call sites untouched"
+    honest_note: "the house merge-commit convention was not used — the landing
+      came as the audit lane's linear push; recorded as found, no history
+      rewritten, no lane attribution asserted beyond the commit trail"
+
+  errata_2026-10-01:
+    correction: "The 2026-09-28 closeout's landing claims are corrected by first-hand
+      commit-graph evidence: 1551c1a (the deep-audit stack root) has parent d4e0f7a —
+      the pushed stack never contained 42534db, and pickaxe over pre-merge main
+      (b30e603) finds zero commits ever touching the batched-predicate string in
+      CurriculumScopeResolver.java. The closeout claims '42534db verified first-hand
+      as an ancestor of origin/main' and 'zero diff remains between head and main'
+      were recording errors — no history rewrite occurred (1551c1a's surviving parent
+      chain is dispositive). The M2-M7 audit fixes themselves DID land (1551c1a,
+      df6ef7e, 795a7ac, 05f2621 are all ancestors of main). Net: the ~340-reads/search
+      fix was silently absent from serving main for 3 days."
+    restoration: "PR #41 reopened the task's own branch (head 42534db, byte-unchanged)
+      onto current main; clean auto-merge with V53's resolveForCourse additions to the
+      same class verified locally before opening; core-ci run 36835793706 SUCCESS on
+      the integration ref; merged as 69365ff."
+    lesson: "task-ledger landing claims must be content-verified (pickaxe/tree), not
+      just SHA-claimed; the 2026-10-01 project-state audit caught this by grepping
+      main's resolver before trusting the DONE record."

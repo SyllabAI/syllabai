@@ -1,0 +1,85 @@
+{
+ "generated": "2026-09-25T08:14:07+00:00",
+ "auth": "10-min ADMIN/TEACHER JWT from live Render SYLLABAI_JWT_SECRET (e2e_search_test pattern)",
+ "parser": "bench/g13-r3-letter-review @ f4ec81f (suite 140/1 skip/0 failures verified locally)",
+ "converter": "tools/pdflane/atoms_to_draft.py (f4ec81f), doc ids null (doc-less NEW pattern)",
+ "papers": [
+  {
+   "slug": "4ch0-1c-201601",
+   "mode": "NEW",
+   "identity": {
+    "paperCode": "4CH0/1C",
+    "sessionLabel": "January 2016"
+   },
+   "post_status": 201,
+   "server_commit": "2026-09-25T07:58:49.895Z (exam_paper 1e935cfc-6ed2-424f-9c66-72d6d3532bd6)",
+   "note": "first POST outlived the killed client (Render cold start); concurrent re-POST failed CLOSED on uq_knowledge_node_code and rolled back; exactly one landed copy; idempotency-probe recovery per the g15 201801 precedent",
+   "landed": {
+    "questions": 15,
+    "parts": 93,
+    "mark_points": 80,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1"
+   },
+   "c_gates": {
+    "refs_match": true,
+    "marks_bank_eq_draft": true,
+    "marks_bank_eq_atoms": true,
+    "marks_sum": [
+     120,
+     120,
+     120
+    ],
+    "attempts_referencing": 0
+   }
+  },
+  {
+   "slug": "4ch1-2c-202506",
+   "mode": "NEW",
+   "identity": {
+    "paperCode": "4CH1/2C",
+    "sessionLabel": "June 2025"
+   },
+   "post_status": 201,
+   "response_head": {
+    "paperId": "3f72959a-6295-418c-89bb-0ec66b17b93f",
+    "questions": 6,
+    "parts": 46,
+    "markPoints": 38
+   },
+   "landed": {
+    "questions": 6,
+    "parts": 46,
+    "mark_points": 38,
+    "validation_state": "SUGGESTED",
+    "extraction_method": "pdflane-atoms-draft-v1"
+   },
+   "c_gates": {
+    "refs_match": true,
+    "marks_bank_eq_draft": true,
+    "marks_bank_eq_atoms": true,
+    "marks_sum": [
+     70,
+     70,
+     70
+    ],
+    "attempts_referencing": 0
+   }
+  }
+ ],
+ "bank_totals": {
+  "before": {
+   "questions": 1468,
+   "mark_points": 4796,
+   "exam_papers": 97,
+   "pdflane_versions": 194
+  },
+  "after": {
+   "questions": 1489,
+   "mark_points": 4914,
+   "exam_papers": 99,
+   "pdflane_versions": 215
+  }
+ },
+ "deleted_rows": 0
+}

@@ -1,0 +1,1621 @@
+{
+ "aborts": [],
+ "entries": [
+  {
+   "after": {
+    "parts": "unchanged",
+    "q_marks": 7,
+    "qv_marks": 7
+   },
+   "gates": {
+    "G1_ms_sum_eq_printed": true,
+    "G2_qp_total_eq_ms_total": true,
+    "G3_bank_differs": true,
+    "G4_qp_leaf_sum_eq_total": true
+   },
+   "ms_checksum": "5e73646769942e9cd5745673e2f1103233f2efd221e76ca89648187c8839ae9c",
+   "ms_doc": "5a00eeb3-bbf9-4d30-b8fe-9435e29de1eb",
+   "ms_printed_total": 7,
+   "ms_rows": [
+    [
+     "P1",
+     1
+    ],
+    [
+     "P2",
+     1
+    ],
+    [
+     "P3",
+     1
+    ],
+    [
+     "P4",
+     1
+    ],
+    [
+     "P5",
+     1
+    ],
+    [
+     "P6",
+     1
+    ],
+    [
+     "P7",
+     1
+    ]
+   ],
+   "ms_rows_sum": 7,
+   "ms_seg_sha256": "7252ba3fdec27564720e2c1beb484c56a50490542a89e7de172de102122335cd",
+   "paper": "4CH0/1C",
+   "part_mapping": [
+    {
+     "label": "a",
+     "mapped": true,
+     "part_id": "a1899ecf-d527-429a-88b9-a8efa9dbff9f",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "a-ii",
+     "mapped": true,
+     "part_id": "684d4fa3-d4ae-44d0-b48e-c851fe970ce9",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "b",
+     "mapped": false,
+     "part_id": "903674f3-75a5-4f40-9bdb-bb3e8ab55546",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "b-i",
+     "mapped": false,
+     "part_id": "b3b8cd4b-b01c-4ec9-b70b-a4abf0694796",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "b-ii",
+     "mapped": false,
+     "part_id": "c04a10f0-9759-481a-87a4-b9f50fc6ceeb",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "b-iii",
+     "mapped": false,
+     "part_id": "7a2637d8-4d11-4a65-8250-50a55a4ad49b",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "b-iv",
+     "mapped": false,
+     "part_id": "3d7134c2-8e2d-42be-907b-102d4d38268e",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "b-v",
+     "mapped": false,
+     "part_id": "c0390964-33b4-4da3-a3eb-6a1fcd3b38ed",
+     "printed": null,
+     "why": "sub-part not found on print"
+    }
+   ],
+   "parts_before": [
+    [
+     "a1899ecf-d527-429a-88b9-a8efa9dbff9f",
+     "a",
+     0,
+     0
+    ],
+    [
+     "684d4fa3-d4ae-44d0-b48e-c851fe970ce9",
+     "a-ii",
+     0,
+     1
+    ],
+    [
+     "903674f3-75a5-4f40-9bdb-bb3e8ab55546",
+     "b",
+     0,
+     2
+    ],
+    [
+     "b3b8cd4b-b01c-4ec9-b70b-a4abf0694796",
+     "b-i",
+     0,
+     3
+    ],
+    [
+     "c04a10f0-9759-481a-87a4-b9f50fc6ceeb",
+     "b-ii",
+     0,
+     4
+    ],
+    [
+     "7a2637d8-4d11-4a65-8250-50a55a4ad49b",
+     "b-iii",
+     0,
+     5
+    ],
+    [
+     "3d7134c2-8e2d-42be-907b-102d4d38268e",
+     "b-iv",
+     0,
+     6
+    ],
+    [
+     "c0390964-33b4-4da3-a3eb-6a1fcd3b38ed",
+     "b-v",
+     0,
+     7
+    ]
+   ],
+   "q": {
+    "active": false,
+    "id": "7e0f3917-47d1-48a0-bed2-e0abb62c2522",
+    "marks": 1,
+    "provenance": "PAST_PAPER",
+    "stem_sha": "649af043fad104644c1e8e664270e9bbd5fb63f3b1bb2fc0bc85d3c02ee366d5"
+   },
+   "qn": 3,
+   "qp_attribution": {
+    "67dd831b-0902-491a-bfc9-0ff3ecebf11d": 1.0,
+    "dd3cb429-2231-4319-ae07-5d5e6f3bf1e6": 0.7833333333333333
+   },
+   "qp_checksum": "d9e5ef81faaccb51026796af0f05b86bb5c4cef991e4ab8a11157512d45ff189",
+   "qp_doc": "67dd831b-0902-491a-bfc9-0ff3ecebf11d",
+   "qp_leaf_sum": 7,
+   "qp_pages": [
+    8,
+    9
+   ],
+   "qp_pages_sha256": [
+    "09d2483cde7b58315771d4f967a72886960a1bd1557394629159a026919aa341",
+    "cfea85b947977a4a3f2b3f4c8e0b5bb8e7e038011ad3da5a9b8665cabff1a88d"
+   ],
+   "qp_parents": {
+    "a": 1,
+    "b": null,
+    "i": 1,
+    "v": 1
+   },
+   "qp_pdf_key": "201306_qp",
+   "qp_subs": {
+    "a|ii": 1,
+    "i|ii": 1,
+    "i|iii": 1,
+    "i|iv": 1
+   },
+   "qp_total": 7,
+   "qv": {
+    "id": "c04d67b6-e90a-4509-bb30-ffbb0b9101de",
+    "marks": 1,
+    "state": "VALIDATED",
+    "stem_sha": "649af043fad104644c1e8e664270e9bbd5fb63f3b1bb2fc0bc85d3c02ee366d5",
+    "version": 1
+   },
+   "ref": "q03-6d968517",
+   "repair_scope": "qv.marks + q.marks only; parts NOT written (no honest per-part mapping on 2013-2015 print layouts)",
+   "session": "June 2013"
+  },
+  {
+   "after": {
+    "parts": "unchanged",
+    "q_marks": 9,
+    "qv_marks": 9
+   },
+   "gates": {
+    "G1_ms_sum_eq_printed": true,
+    "G2_qp_total_eq_ms_total": true,
+    "G3_bank_differs": true,
+    "G4_qp_leaf_sum_eq_total": false
+   },
+   "ms_checksum": "3f094f4eef8acf4d8e1d3f47a3088d39cddc79e4a70c979523db06d020244f8d",
+   "ms_doc": "295c2cc2-6757-4bed-b8ad-07decf4f2758",
+   "ms_printed_total": 9,
+   "ms_rows": [
+    [
+     "P1",
+     1
+    ],
+    [
+     "P2",
+     1
+    ],
+    [
+     "P3",
+     1
+    ],
+    [
+     "P4",
+     1
+    ],
+    [
+     "P5",
+     1
+    ],
+    [
+     "P6",
+     1
+    ],
+    [
+     "P7",
+     1
+    ],
+    [
+     "P8",
+     1
+    ],
+    [
+     "P9",
+     1
+    ]
+   ],
+   "ms_rows_sum": 9,
+   "ms_seg_sha256": "20bc5994bfcceddda7f0b815673d1739469e8f450316473e88809b733b97faad",
+   "paper": "4CH0/1C",
+   "part_mapping": [
+    {
+     "label": "a",
+     "mapped": false,
+     "part_id": "ea849314-20bf-4303-89ef-1d0cba626b9e",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "a-i",
+     "mapped": false,
+     "part_id": "9c1db431-c519-4456-b236-f6086512edd7",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "a-ii",
+     "mapped": false,
+     "part_id": "2c82122f-3db9-4724-94aa-1ad44d72aba1",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "a-iii",
+     "mapped": false,
+     "part_id": "253a0e67-b5e2-416c-a7e0-37dc2efb6ddc",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "b",
+     "mapped": true,
+     "part_id": "b11e7934-b3c4-4f01-8bae-e02d37708004",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "c",
+     "mapped": true,
+     "part_id": "5a8cefa0-904e-461c-a605-05cc3a639f93",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "d",
+     "mapped": true,
+     "part_id": "dba80596-a46b-4240-983c-25274a92d0f8",
+     "printed": 2,
+     "why": null
+    },
+    {
+     "label": "e",
+     "mapped": false,
+     "part_id": "1b108d94-4a45-490f-bd76-5c8e487b9c8b",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "e-i",
+     "mapped": false,
+     "part_id": "d691d196-b558-4f35-a6a2-37eca1839ed5",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "e-ii",
+     "mapped": false,
+     "part_id": "2aaf0747-ee78-4eb6-818e-73697e443e99",
+     "printed": null,
+     "why": "sub-part not found on print"
+    }
+   ],
+   "parts_before": [
+    [
+     "ea849314-20bf-4303-89ef-1d0cba626b9e",
+     "a",
+     0,
+     0
+    ],
+    [
+     "9c1db431-c519-4456-b236-f6086512edd7",
+     "a-i",
+     0,
+     1
+    ],
+    [
+     "2c82122f-3db9-4724-94aa-1ad44d72aba1",
+     "a-ii",
+     0,
+     2
+    ],
+    [
+     "253a0e67-b5e2-416c-a7e0-37dc2efb6ddc",
+     "a-iii",
+     0,
+     3
+    ],
+    [
+     "b11e7934-b3c4-4f01-8bae-e02d37708004",
+     "b",
+     0,
+     4
+    ],
+    [
+     "5a8cefa0-904e-461c-a605-05cc3a639f93",
+     "c",
+     0,
+     5
+    ],
+    [
+     "dba80596-a46b-4240-983c-25274a92d0f8",
+     "d",
+     0,
+     6
+    ],
+    [
+     "1b108d94-4a45-490f-bd76-5c8e487b9c8b",
+     "e",
+     0,
+     7
+    ],
+    [
+     "d691d196-b558-4f35-a6a2-37eca1839ed5",
+     "e-i",
+     0,
+     8
+    ],
+    [
+     "2aaf0747-ee78-4eb6-818e-73697e443e99",
+     "e-ii",
+     0,
+     9
+    ]
+   ],
+   "q": {
+    "active": false,
+    "id": "f4f63654-7a00-4fb0-a3fe-c3cc033612cf",
+    "marks": 1,
+    "provenance": "PAST_PAPER",
+    "stem_sha": "9026df56b5d64125db857ddd424194307626abd47333fe881681165e2c35a462"
+   },
+   "qn": 4,
+   "qp_attribution": {
+    "a08b239c-ad3e-4f5c-b080-b29d23c403e3": 0.9666666666666667
+   },
+   "qp_checksum": "2d6d5a5e9e747ed7ecdf3b458fea4fb5e9fd130792ad3efb4bc33b87685f7019",
+   "qp_doc": "a08b239c-ad3e-4f5c-b080-b29d23c403e3",
+   "qp_leaf_sum": 7,
+   "qp_pages": [
+    10,
+    11
+   ],
+   "qp_pages_sha256": [
+    "02f3eadb5ceb2cadb3d5dc896d5ddda5eddd22f296c80010a846120f396a4e3e",
+    "1a2fc13ee3a83e05140d9a5786c54a0f82d927db3e49531abe3be9c232f11aab"
+   ],
+   "qp_parents": {
+    "a": null,
+    "b": 1,
+    "c": 1,
+    "d": 2,
+    "e": null,
+    "i": 1
+   },
+   "qp_pdf_key": "201501_qp",
+   "qp_subs": {
+    "i|ii": 1,
+    "i|iii": 1
+   },
+   "qp_total": 9,
+   "qv": {
+    "id": "a91e105f-66c2-47f6-8ef2-4d68942f0348",
+    "marks": 1,
+    "state": "VALIDATED",
+    "stem_sha": "9026df56b5d64125db857ddd424194307626abd47333fe881681165e2c35a462",
+    "version": 1
+   },
+   "ref": "q04-8d584ee1",
+   "repair_scope": "qv.marks + q.marks only; parts NOT written (no honest per-part mapping on 2013-2015 print layouts)",
+   "session": "January 2015"
+  },
+  {
+   "after": {
+    "parts": "unchanged",
+    "q_marks": 14,
+    "qv_marks": 14
+   },
+   "gates": {
+    "G1_ms_sum_eq_printed": true,
+    "G2_qp_total_eq_ms_total": true,
+    "G3_bank_differs": true,
+    "G4_qp_leaf_sum_eq_total": false
+   },
+   "ms_checksum": "3f094f4eef8acf4d8e1d3f47a3088d39cddc79e4a70c979523db06d020244f8d",
+   "ms_doc": "295c2cc2-6757-4bed-b8ad-07decf4f2758",
+   "ms_printed_total": 14,
+   "ms_rows": [
+    [
+     "P1",
+     1
+    ],
+    [
+     "P2",
+     1
+    ],
+    [
+     "P3",
+     1
+    ],
+    [
+     "P4",
+     1
+    ],
+    [
+     "P5",
+     1
+    ],
+    [
+     "P6",
+     1
+    ],
+    [
+     "P7",
+     1
+    ],
+    [
+     "P8",
+     1
+    ],
+    [
+     "P9",
+     1
+    ],
+    [
+     "P10",
+     1
+    ],
+    [
+     "P11",
+     1
+    ],
+    [
+     "P12",
+     1
+    ],
+    [
+     "P13",
+     1
+    ],
+    [
+     "P14",
+     1
+    ]
+   ],
+   "ms_rows_sum": 14,
+   "ms_seg_sha256": "101f791a8f37e9ce90d522bf4d4118e036d07b248e93f3b7383ea0c7e5c821b0",
+   "paper": "4CH0/1C",
+   "part_mapping": [
+    {
+     "label": "a",
+     "mapped": false,
+     "part_id": "b94d7aee-0ff7-450b-ad51-c2cec2e0a109",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "a-i",
+     "mapped": false,
+     "part_id": "5ac27c2c-7eb0-46ad-aaf6-75baa4f0a517",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "a-ii",
+     "mapped": false,
+     "part_id": "7ec4d098-7627-4ccd-a013-97c2e92eddcb",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "b",
+     "mapped": true,
+     "part_id": "2ae14abc-09ab-4363-b23a-4bdbb456d58e",
+     "printed": 3,
+     "why": null
+    },
+    {
+     "label": "c",
+     "mapped": true,
+     "part_id": "cb2fefe8-7884-4335-bdb2-c69477a39076",
+     "printed": 9,
+     "why": null
+    },
+    {
+     "label": "c-i",
+     "mapped": false,
+     "part_id": "6d0f0d5a-e0a9-4e2a-be54-01c1ee9d4506",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "c-ii",
+     "mapped": false,
+     "part_id": "be403ad8-a835-4da0-bfaf-8fb1079b25a8",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "d",
+     "mapped": false,
+     "part_id": "b24defac-ae61-4b14-a3ce-806856509329",
+     "printed": null,
+     "why": "parent not found"
+    }
+   ],
+   "parts_before": [
+    [
+     "b94d7aee-0ff7-450b-ad51-c2cec2e0a109",
+     "a",
+     0,
+     0
+    ],
+    [
+     "5ac27c2c-7eb0-46ad-aaf6-75baa4f0a517",
+     "a-i",
+     0,
+     1
+    ],
+    [
+     "7ec4d098-7627-4ccd-a013-97c2e92eddcb",
+     "a-ii",
+     0,
+     2
+    ],
+    [
+     "2ae14abc-09ab-4363-b23a-4bdbb456d58e",
+     "b",
+     0,
+     3
+    ],
+    [
+     "cb2fefe8-7884-4335-bdb2-c69477a39076",
+     "c",
+     0,
+     4
+    ],
+    [
+     "6d0f0d5a-e0a9-4e2a-be54-01c1ee9d4506",
+     "c-i",
+     0,
+     5
+    ],
+    [
+     "be403ad8-a835-4da0-bfaf-8fb1079b25a8",
+     "c-ii",
+     0,
+     6
+    ],
+    [
+     "b24defac-ae61-4b14-a3ce-806856509329",
+     "d",
+     0,
+     7
+    ]
+   ],
+   "q": {
+    "active": false,
+    "id": "a2b7a678-4db0-42fe-a3d2-1221be5965bd",
+    "marks": 1,
+    "provenance": "PAST_PAPER",
+    "stem_sha": "f277e80e6f7a1d4a5d24f6bd9012d43e10b7c71c67234519b57b4cb4c58e3988"
+   },
+   "qn": 11,
+   "qp_attribution": {
+    "a08b239c-ad3e-4f5c-b080-b29d23c403e3": 0.9666666666666667
+   },
+   "qp_checksum": "2d6d5a5e9e747ed7ecdf3b458fea4fb5e9fd130792ad3efb4bc33b87685f7019",
+   "qp_doc": "a08b239c-ad3e-4f5c-b080-b29d23c403e3",
+   "qp_leaf_sum": 17,
+   "qp_pages": [
+    29,
+    31
+   ],
+   "qp_pages_sha256": [
+    "697018029f12b9cbd8a99e08ed4d3af8d6734c48260860360edd7128b371b845",
+    "b8cdb9724455bf4b8116cd3ed48dbb203cedc9d901c83d5cb65c13b76919e74d",
+    "c1f6e2a0ff4aa0e6f157ee989e2a2eda45a47703a90ab6ef4ac076ff7b3f4795"
+   ],
+   "qp_parents": {
+    "a": null,
+    "b": 3,
+    "c": 9,
+    "d": null,
+    "i": 1
+   },
+   "qp_pdf_key": "201501_qp",
+   "qp_subs": {
+    "i|ii": 2,
+    "i|iii": 2
+   },
+   "qp_total": 14,
+   "qv": {
+    "id": "9de0965f-95ae-432a-8380-3b90e4035feb",
+    "marks": 1,
+    "state": "VALIDATED",
+    "stem_sha": "f277e80e6f7a1d4a5d24f6bd9012d43e10b7c71c67234519b57b4cb4c58e3988",
+    "version": 1
+   },
+   "ref": "q11-8d584ee1",
+   "repair_scope": "qv.marks + q.marks only; parts NOT written (no honest per-part mapping on 2013-2015 print layouts)",
+   "session": "January 2015"
+  },
+  {
+   "after": {
+    "parts": "unchanged",
+    "q_marks": 6,
+    "qv_marks": 6
+   },
+   "gates": {
+    "G1_ms_sum_eq_printed": true,
+    "G2_qp_total_eq_ms_total": true,
+    "G3_bank_differs": true,
+    "G4_qp_leaf_sum_eq_total": true
+   },
+   "ms_checksum": "0dc992d25b4800b5bd3114dd545c3ef6bed2f92bcf665f3af7ed3999c78140ae",
+   "ms_doc": "95f3728f-874d-4387-a469-42dfa727709a",
+   "ms_printed_total": 6,
+   "ms_rows": [
+    [
+     "P1",
+     1
+    ],
+    [
+     "P2",
+     1
+    ],
+    [
+     "P3",
+     1
+    ],
+    [
+     "P4",
+     1
+    ],
+    [
+     "P5",
+     1
+    ],
+    [
+     "P6",
+     1
+    ]
+   ],
+   "ms_rows_sum": 6,
+   "ms_seg_sha256": "0d21f07bf10404b1f56501e3c600727e2bab0e8a088e757afc5344a9fa7359a7",
+   "paper": "4CH0/1C",
+   "part_mapping": [
+    {
+     "label": "a",
+     "mapped": false,
+     "part_id": "10a1ad20-0556-417b-8730-04019302269e",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "a-i",
+     "mapped": false,
+     "part_id": "469a1171-e10b-4274-975e-898f72d00cc6",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "a-ii",
+     "mapped": false,
+     "part_id": "c9660c41-f654-4573-baef-d264fc2e78fc",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "a-iii",
+     "mapped": false,
+     "part_id": "e7cedbe3-abaa-4ead-a0b8-ce08fff65c2d",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "b",
+     "mapped": true,
+     "part_id": "856aed94-beee-42df-ac95-8ea6dfcf534f",
+     "printed": 2,
+     "why": null
+    },
+    {
+     "label": "c",
+     "mapped": true,
+     "part_id": "fd056d83-f28d-480c-8b04-8f889b2254c3",
+     "printed": 1,
+     "why": null
+    }
+   ],
+   "parts_before": [
+    [
+     "10a1ad20-0556-417b-8730-04019302269e",
+     "a",
+     0,
+     0
+    ],
+    [
+     "469a1171-e10b-4274-975e-898f72d00cc6",
+     "a-i",
+     0,
+     1
+    ],
+    [
+     "c9660c41-f654-4573-baef-d264fc2e78fc",
+     "a-ii",
+     0,
+     2
+    ],
+    [
+     "e7cedbe3-abaa-4ead-a0b8-ce08fff65c2d",
+     "a-iii",
+     0,
+     3
+    ],
+    [
+     "856aed94-beee-42df-ac95-8ea6dfcf534f",
+     "b",
+     0,
+     4
+    ],
+    [
+     "fd056d83-f28d-480c-8b04-8f889b2254c3",
+     "c",
+     0,
+     5
+    ]
+   ],
+   "q": {
+    "active": false,
+    "id": "82072c96-d2f8-4e11-bacd-226063341ff8",
+    "marks": 1,
+    "provenance": "PAST_PAPER",
+    "stem_sha": "b7e58e6a51b2200cf0794a3946e12c5fa46413247d209a9e2530698ad2c0deb8"
+   },
+   "qn": 6,
+   "qp_attribution": {
+    "6eb3a67b-e95c-486c-99c9-5a9a1ee5d781": 0.7105263157894737,
+    "a85b9739-9a9c-4803-a0bf-9b8df6cac40c": 1.0
+   },
+   "qp_checksum": "ac7139507a476c9072118cd965fc83866c04afd5db0a2ece442db25b4535528d",
+   "qp_doc": "a85b9739-9a9c-4803-a0bf-9b8df6cac40c",
+   "qp_leaf_sum": 6,
+   "qp_pages": [
+    12,
+    13
+   ],
+   "qp_pages_sha256": [
+    "7e722b53f49d7198ec10d69c92fd56f1d98aa032bcb0fa2cbd5e19fb2d63b10b",
+    "974703c042bf2db3cb9dc8d96c6bd7dbac195bde73c92e2d57323f010c14147f"
+   ],
+   "qp_parents": {
+    "a": null,
+    "b": 2,
+    "c": 1,
+    "i": 1
+   },
+   "qp_pdf_key": "201406_qp",
+   "qp_subs": {
+    "i|ii": 1,
+    "i|iii": 1
+   },
+   "qp_total": 6,
+   "qv": {
+    "id": "b4ff7d80-a874-4249-bb41-d60ddc96bbde",
+    "marks": 1,
+    "state": "VALIDATED",
+    "stem_sha": "b7e58e6a51b2200cf0794a3946e12c5fa46413247d209a9e2530698ad2c0deb8",
+    "version": 1
+   },
+   "ref": "q06-1da77322",
+   "repair_scope": "qv.marks + q.marks only; parts NOT written (no honest per-part mapping on 2013-2015 print layouts)",
+   "session": "June 2014"
+  },
+  {
+   "after": {
+    "parts": "unchanged",
+    "q_marks": 15,
+    "qv_marks": 15
+   },
+   "gates": {
+    "G1_ms_sum_eq_printed": true,
+    "G2_qp_total_eq_ms_total": true,
+    "G3_bank_differs": true,
+    "G4_qp_leaf_sum_eq_total": false
+   },
+   "ms_checksum": "0dc992d25b4800b5bd3114dd545c3ef6bed2f92bcf665f3af7ed3999c78140ae",
+   "ms_doc": "95f3728f-874d-4387-a469-42dfa727709a",
+   "ms_printed_total": 15,
+   "ms_rows": [
+    [
+     "M1",
+     1
+    ],
+    [
+     "M2",
+     1
+    ],
+    [
+     "M3",
+     1
+    ],
+    [
+     "M1",
+     1
+    ],
+    [
+     "M2",
+     1
+    ],
+    [
+     "M1",
+     1
+    ],
+    [
+     "M2",
+     1
+    ],
+    [
+     "M3",
+     1
+    ],
+    [
+     "P1",
+     1
+    ],
+    [
+     "P2",
+     1
+    ],
+    [
+     "P3",
+     1
+    ],
+    [
+     "M1",
+     1
+    ],
+    [
+     "M2",
+     1
+    ],
+    [
+     "M1",
+     1
+    ],
+    [
+     "M2",
+     1
+    ]
+   ],
+   "ms_rows_sum": 15,
+   "ms_seg_sha256": "71ee49b75cb11b7adb3b7c200e646f9d7c740c60eebee6cfa74811d0f335be97",
+   "paper": "4CH0/1C",
+   "part_mapping": [
+    {
+     "label": "b",
+     "mapped": true,
+     "part_id": "5e582472-0ad0-4878-9143-eb939fb5995c",
+     "printed": 3,
+     "why": null
+    },
+    {
+     "label": "b-ii",
+     "mapped": true,
+     "part_id": "40899c24-b749-4d49-8b0a-2a82ed3483e8",
+     "printed": 2,
+     "why": null
+    },
+    {
+     "label": "b-iii",
+     "mapped": true,
+     "part_id": "0f0ae0c7-2dc2-423f-8779-a87ff0b8fac6",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "c",
+     "mapped": false,
+     "part_id": "8a05f57a-0cce-42e3-9f47-2ba8b94db12e",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "c-i",
+     "mapped": false,
+     "part_id": "a9d024b2-5ca7-4371-b092-f2a13dce11b6",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "c-ii",
+     "mapped": false,
+     "part_id": "c9972047-99d4-417c-87c8-bb2492dab0c7",
+     "printed": null,
+     "why": "sub-part not found on print"
+    }
+   ],
+   "parts_before": [
+    [
+     "5e582472-0ad0-4878-9143-eb939fb5995c",
+     "b",
+     0,
+     0
+    ],
+    [
+     "40899c24-b749-4d49-8b0a-2a82ed3483e8",
+     "b-ii",
+     0,
+     1
+    ],
+    [
+     "0f0ae0c7-2dc2-423f-8779-a87ff0b8fac6",
+     "b-iii",
+     0,
+     2
+    ],
+    [
+     "8a05f57a-0cce-42e3-9f47-2ba8b94db12e",
+     "c",
+     0,
+     3
+    ],
+    [
+     "a9d024b2-5ca7-4371-b092-f2a13dce11b6",
+     "c-i",
+     0,
+     4
+    ],
+    [
+     "c9972047-99d4-417c-87c8-bb2492dab0c7",
+     "c-ii",
+     0,
+     5
+    ]
+   ],
+   "q": {
+    "active": false,
+    "id": "eef7760d-7b08-428f-9f72-3b6370c8992c",
+    "marks": 1,
+    "provenance": "PAST_PAPER",
+    "stem_sha": "fc1c622efa9cd78ad9f99c2bad2665f47f38ec702da7cfb97d1607ffe5b63bd1"
+   },
+   "qn": 15,
+   "qp_attribution": {
+    "6eb3a67b-e95c-486c-99c9-5a9a1ee5d781": 0.6666666666666666,
+    "a85b9739-9a9c-4803-a0bf-9b8df6cac40c": 0.9833333333333333
+   },
+   "qp_checksum": "ac7139507a476c9072118cd965fc83866c04afd5db0a2ece442db25b4535528d",
+   "qp_doc": "a85b9739-9a9c-4803-a0bf-9b8df6cac40c",
+   "qp_leaf_sum": 11,
+   "qp_pages": [
+    30,
+    32
+   ],
+   "qp_pages_sha256": [
+    "373c851453e41976a08f58ca3356fc5f29485686ba80746739eda867bbaf57fb",
+    "5411d609369f4dba131eb83f613e1c0b24b62c140a7d7d0038a15555a5c51cea",
+    "98ad372a2bc4ee55cd41c0162bc90f3b64139e3a663e1b0d3177d08c2f75b923"
+   ],
+   "qp_parents": {
+    "b": 3,
+    "c": null,
+    "i": 3
+   },
+   "qp_pdf_key": "201406_qp",
+   "qp_subs": {
+    "b|ii": 2,
+    "b|iii": 1,
+    "i|ii": 2
+   },
+   "qp_total": 15,
+   "qv": {
+    "id": "c1c84cdc-d3df-47dc-a23a-25d2b7183d0a",
+    "marks": 1,
+    "state": "VALIDATED",
+    "stem_sha": "fc1c622efa9cd78ad9f99c2bad2665f47f38ec702da7cfb97d1607ffe5b63bd1",
+    "version": 1
+   },
+   "ref": "q15-1da77322",
+   "repair_scope": "qv.marks + q.marks only; parts NOT written (no honest per-part mapping on 2013-2015 print layouts)",
+   "session": "June 2014"
+  },
+  {
+   "after": {
+    "parts": "unchanged",
+    "q_marks": 15,
+    "qv_marks": 15
+   },
+   "gates": {
+    "G1_ms_sum_eq_printed": true,
+    "G2_qp_total_eq_ms_total": true,
+    "G3_bank_differs": true,
+    "G4_qp_leaf_sum_eq_total": false
+   },
+   "ms_checksum": "b0704e76048cb454a3e702a1612fae5f026e460a146ccad67d436157a563a3ba",
+   "ms_doc": "3cdd0c36-da74-420e-8903-1575a945c9e6",
+   "ms_printed_total": 15,
+   "ms_rows": [
+    [
+     "P1",
+     1
+    ],
+    [
+     "P2",
+     1
+    ],
+    [
+     "P3",
+     1
+    ],
+    [
+     "P4",
+     1
+    ],
+    [
+     "P5",
+     1
+    ],
+    [
+     "M1",
+     2
+    ],
+    [
+     "P6",
+     1
+    ],
+    [
+     "P7",
+     1
+    ],
+    [
+     "P8",
+     1
+    ],
+    [
+     "P9",
+     1
+    ],
+    [
+     "M1",
+     3
+    ],
+    [
+     "P10",
+     1
+    ]
+   ],
+   "ms_rows_sum": 15,
+   "ms_seg_sha256": "c5ba188813e090e5b8ba6ea0651dd01235a903e91be1685c468aa24868c80f05",
+   "paper": "4CH0/1C",
+   "part_mapping": [
+    {
+     "label": "a",
+     "mapped": true,
+     "part_id": "27844426-e555-41e1-a52c-41f0bbfb8ad3",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "a-ii",
+     "mapped": true,
+     "part_id": "4231cead-733e-4ffc-b841-64400fb573a5",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "b",
+     "mapped": true,
+     "part_id": "e321961c-e3b1-4735-a40a-162503d7087a",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "b-ii",
+     "mapped": true,
+     "part_id": "2a325297-eb97-4664-be62-9d7925e531c0",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "c",
+     "mapped": true,
+     "part_id": "3129f84a-9d34-4d25-9fb7-2c2ec33529f3",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "d",
+     "mapped": true,
+     "part_id": "0a02b950-e640-4397-9519-884c1360dcce",
+     "printed": 2,
+     "why": null
+    },
+    {
+     "label": "e",
+     "mapped": false,
+     "part_id": "b637e70b-f8a2-45ad-a2bf-7df03d716667",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "e-i",
+     "mapped": false,
+     "part_id": "0dbabb6a-a391-4dd0-a187-c038bd0514aa",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "e-ii",
+     "mapped": false,
+     "part_id": "950f7791-f0f0-4787-a1db-9acc6765035f",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "e-iii",
+     "mapped": false,
+     "part_id": "d39c0383-1364-4370-80b7-f2cb5f27cd7f",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "e-iv",
+     "mapped": false,
+     "part_id": "cb40e517-1df6-4147-8447-d7432b8d10f9",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "f",
+     "mapped": false,
+     "part_id": "7cae6eee-f68c-4c44-bf8f-d79ff1ed6f80",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "f-i",
+     "mapped": false,
+     "part_id": "7fb936f8-9473-4646-a52e-72a31d0317a6",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "f-ii",
+     "mapped": false,
+     "part_id": "cc2297ed-8003-4250-92da-a1f90375f8cf",
+     "printed": null,
+     "why": "sub-part not found on print"
+    }
+   ],
+   "parts_before": [
+    [
+     "27844426-e555-41e1-a52c-41f0bbfb8ad3",
+     "a",
+     1,
+     0
+    ],
+    [
+     "4231cead-733e-4ffc-b841-64400fb573a5",
+     "a-ii",
+     1,
+     1
+    ],
+    [
+     "e321961c-e3b1-4735-a40a-162503d7087a",
+     "b",
+     0,
+     2
+    ],
+    [
+     "2a325297-eb97-4664-be62-9d7925e531c0",
+     "b-ii",
+     1,
+     3
+    ],
+    [
+     "3129f84a-9d34-4d25-9fb7-2c2ec33529f3",
+     "c",
+     0,
+     4
+    ],
+    [
+     "0a02b950-e640-4397-9519-884c1360dcce",
+     "d",
+     0,
+     5
+    ],
+    [
+     "b637e70b-f8a2-45ad-a2bf-7df03d716667",
+     "e",
+     0,
+     6
+    ],
+    [
+     "0dbabb6a-a391-4dd0-a187-c038bd0514aa",
+     "e-i",
+     0,
+     7
+    ],
+    [
+     "950f7791-f0f0-4787-a1db-9acc6765035f",
+     "e-ii",
+     0,
+     8
+    ],
+    [
+     "d39c0383-1364-4370-80b7-f2cb5f27cd7f",
+     "e-iii",
+     0,
+     9
+    ],
+    [
+     "cb40e517-1df6-4147-8447-d7432b8d10f9",
+     "e-iv",
+     0,
+     10
+    ],
+    [
+     "7cae6eee-f68c-4c44-bf8f-d79ff1ed6f80",
+     "f",
+     0,
+     11
+    ],
+    [
+     "7fb936f8-9473-4646-a52e-72a31d0317a6",
+     "f-i",
+     0,
+     12
+    ],
+    [
+     "cc2297ed-8003-4250-92da-a1f90375f8cf",
+     "f-ii",
+     0,
+     13
+    ]
+   ],
+   "q": {
+    "active": false,
+    "id": "7410ca65-a5db-4aa4-b9a1-6cc46e54a13c",
+    "marks": 1,
+    "provenance": "PAST_PAPER",
+    "stem_sha": "992d3a5ebccc593a38905019b4246cc8b733e1c4a579ee5ed88005f92d47bcdf"
+   },
+   "qn": 5,
+   "qp_attribution": {
+    "657e5b3c-8065-46d7-bcdd-3308272c3d51": 0.9824561403508771
+   },
+   "qp_checksum": "4c844e4f7e5dbc7386b9845ca3dc455f760764e08605bb4f1b493b49ce22a8cb",
+   "qp_doc": "657e5b3c-8065-46d7-bcdd-3308272c3d51",
+   "qp_leaf_sum": 11,
+   "qp_pages": [
+    12,
+    15
+   ],
+   "qp_pages_sha256": [
+    "cb8689c202a646d38ff3e9619f9301f342e0d96be87a640002b0019865ec657b",
+    "5a737d13957cd610e898f1a024c9f0b3cae8e4bb79bdf95cad854dbdba1df605",
+    "6945868b7e89aaffe735db6592893abb36eef70c841e8c6432201bde8bdffb7d",
+    "67a92d54ef63d736038e4dd48371f8b15820d252d340ee245aba2e7b0ecf7555"
+   ],
+   "qp_parents": {
+    "a": 1,
+    "b": 1,
+    "c": 1,
+    "d": 2,
+    "e": null,
+    "i": 1
+   },
+   "qp_pdf_key": "201506_qp",
+   "qp_subs": {
+    "a|ii": 1,
+    "b|ii": 1,
+    "i|ii": 1,
+    "i|iii": 1,
+    "i|iv": 1
+   },
+   "qp_total": 15,
+   "qv": {
+    "id": "2967fa56-e3e4-4f3c-a757-f84b81ada60e",
+    "marks": 1,
+    "state": "VALIDATED",
+    "stem_sha": "992d3a5ebccc593a38905019b4246cc8b733e1c4a579ee5ed88005f92d47bcdf",
+    "version": 1
+   },
+   "ref": "q05-e280d9c6",
+   "repair_scope": "qv.marks + q.marks only; parts NOT written (no honest per-part mapping on 2013-2015 print layouts)",
+   "session": "June 2015"
+  },
+  {
+   "after": {
+    "parts": "unchanged",
+    "q_marks": 14,
+    "qv_marks": 14
+   },
+   "gates": {
+    "G1_ms_sum_eq_printed": true,
+    "G2_qp_total_eq_ms_total": true,
+    "G3_bank_differs": true,
+    "G4_qp_leaf_sum_eq_total": false
+   },
+   "ms_checksum": "b0704e76048cb454a3e702a1612fae5f026e460a146ccad67d436157a563a3ba",
+   "ms_doc": "3cdd0c36-da74-420e-8903-1575a945c9e6",
+   "ms_printed_total": 14,
+   "ms_rows": [
+    [
+     "P1",
+     1
+    ],
+    [
+     "P2",
+     1
+    ],
+    [
+     "P3",
+     1
+    ],
+    [
+     "M1",
+     3
+    ],
+    [
+     "P4",
+     1
+    ],
+    [
+     "M1",
+     2
+    ],
+    [
+     "M1",
+     2
+    ],
+    [
+     "P5",
+     1
+    ],
+    [
+     "M1",
+     2
+    ]
+   ],
+   "ms_rows_sum": 14,
+   "ms_seg_sha256": "ad221f65dccccdc0dd380ffcd51b239775dfbeb0bddbd99d0d5c2b826d0a7385",
+   "paper": "4CH0/1C",
+   "part_mapping": [
+    {
+     "label": "a",
+     "mapped": true,
+     "part_id": "8cd8b873-f356-41a4-89f9-e25de5365341",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "b",
+     "mapped": true,
+     "part_id": "fe3751a6-437f-43d7-946f-3e026862eafd",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "c",
+     "mapped": true,
+     "part_id": "074bb24d-1c4a-4936-bf48-2a0c8ff88691",
+     "printed": 1,
+     "why": null
+    },
+    {
+     "label": "d",
+     "mapped": true,
+     "part_id": "6dd12e15-6a2d-496e-a2f2-9bb7406ff62c",
+     "printed": 3,
+     "why": null
+    },
+    {
+     "label": "e",
+     "mapped": true,
+     "part_id": "e5c608d4-c32e-4fa4-8b4c-fc3da4430697",
+     "printed": 9,
+     "why": null
+    },
+    {
+     "label": "e-i",
+     "mapped": false,
+     "part_id": "298cc432-d473-42d8-a2ca-27f81c528d00",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "e-ii",
+     "mapped": false,
+     "part_id": "081e7b50-c6cb-4b08-985a-3f3e93dfbe7d",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "f",
+     "mapped": false,
+     "part_id": "a700cbd2-ecfc-42ab-8378-e2c6401c4c31",
+     "printed": null,
+     "why": "parent not found"
+    },
+    {
+     "label": "f-i",
+     "mapped": false,
+     "part_id": "1e50c2bf-bebc-4042-ae68-3264ce341c4b",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "f-ii",
+     "mapped": false,
+     "part_id": "ed716918-0475-4052-a636-eb6ccd57b41a",
+     "printed": null,
+     "why": "sub-part not found on print"
+    },
+    {
+     "label": "f-iii",
+     "mapped": false,
+     "part_id": "654c044c-3883-497b-af9f-a3c613716bb2",
+     "printed": null,
+     "why": "sub-part not found on print"
+    }
+   ],
+   "parts_before": [
+    [
+     "8cd8b873-f356-41a4-89f9-e25de5365341",
+     "a",
+     0,
+     0
+    ],
+    [
+     "fe3751a6-437f-43d7-946f-3e026862eafd",
+     "b",
+     0,
+     1
+    ],
+    [
+     "074bb24d-1c4a-4936-bf48-2a0c8ff88691",
+     "c",
+     0,
+     2
+    ],
+    [
+     "6dd12e15-6a2d-496e-a2f2-9bb7406ff62c",
+     "d",
+     0,
+     3
+    ],
+    [
+     "e5c608d4-c32e-4fa4-8b4c-fc3da4430697",
+     "e",
+     0,
+     4
+    ],
+    [
+     "298cc432-d473-42d8-a2ca-27f81c528d00",
+     "e-i",
+     0,
+     5
+    ],
+    [
+     "081e7b50-c6cb-4b08-985a-3f3e93dfbe7d",
+     "e-ii",
+     0,
+     6
+    ],
+    [
+     "a700cbd2-ecfc-42ab-8378-e2c6401c4c31",
+     "f",
+     0,
+     7
+    ],
+    [
+     "1e50c2bf-bebc-4042-ae68-3264ce341c4b",
+     "f-i",
+     0,
+     8
+    ],
+    [
+     "ed716918-0475-4052-a636-eb6ccd57b41a",
+     "f-ii",
+     0,
+     9
+    ],
+    [
+     "654c044c-3883-497b-af9f-a3c613716bb2",
+     "f-iii",
+     0,
+     10
+    ]
+   ],
+   "q": {
+    "active": false,
+    "id": "a82cacbe-8dd1-45d4-a870-0ae9aedd4c29",
+    "marks": 1,
+    "provenance": "PAST_PAPER",
+    "stem_sha": "1decb6c72c77ee40f0e5f5179f6bbc671e5f0f1b832db8717c17237de9fbb6b0"
+   },
+   "qn": 8,
+   "qp_attribution": {
+    "657e5b3c-8065-46d7-bcdd-3308272c3d51": 1.0
+   },
+   "qp_checksum": "4c844e4f7e5dbc7386b9845ca3dc455f760764e08605bb4f1b493b49ce22a8cb",
+   "qp_doc": "657e5b3c-8065-46d7-bcdd-3308272c3d51",
+   "qp_leaf_sum": 20,
+   "qp_pages": [
+    22,
+    25
+   ],
+   "qp_pages_sha256": [
+    "ef571d8fdc9be271603bff6456b7006b27122c51fd75210078d1f489e94a62ad",
+    "300a2a5548926e25d706c79150dab280bd480d141fba6109943f801206c4a42a",
+    "03af6376a426ca62c5301a131db4963dc3112bbee1b4d4ec2225a898e0360c04",
+    "21552892e3bb96240f24f48d740237016bc89c4fa56326ab794bc351559c941f"
+   ],
+   "qp_parents": {
+    "a": 1,
+    "b": 1,
+    "c": 1,
+    "d": 3,
+    "e": 9,
+    "i": 1
+   },
+   "qp_pdf_key": "201506_qp",
+   "qp_subs": {
+    "i|ii": 2,
+    "i|iii": 2
+   },
+   "qp_total": 14,
+   "qv": {
+    "id": "4bd6ca59-1bec-40d1-b614-ea2b7de991d0",
+    "marks": 1,
+    "state": "VALIDATED",
+    "stem_sha": "1decb6c72c77ee40f0e5f5179f6bbc671e5f0f1b832db8717c17237de9fbb6b0",
+    "version": 1
+   },
+   "ref": "q08-e280d9c6",
+   "repair_scope": "qv.marks + q.marks only; parts NOT written (no honest per-part mapping on 2013-2015 print layouts)",
+   "session": "June 2015"
+  }
+ ],
+ "entry_count": 7,
+ "gates": {},
+ "generated": "2026-10-02",
+ "lane": "A: 7-qv marks-vs-printed repair (printed-QP evidence)",
+ "trace": "1a0f87c3239f8891"
+}

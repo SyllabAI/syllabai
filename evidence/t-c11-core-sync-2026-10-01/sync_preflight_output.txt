@@ -1,0 +1,277 @@
+== A1. store identity ==
+core stage     : pilot+s16-batch-1+s16-batch-2+s16-batch-3+s16-batch-4
+canonical stage: pilot+s16-batch-1+s16-batch-2+s16-batch-3+s16-batch-4+s16-batch-5+s16-batch-6+s16-batch-7+s16-batch-8+s16-batch-9+s16-batch-10+s16-batch-11
+[PASS] canonical store is at batch-11
+[PASS] core store still batch-4 (gap intact)
+
+== A2. key-set discipline ==
+[PASS] every core edge key exists in canonical (core-only: [])
+added keys: 213 (HV: 119, non-HV: 94)
+
+== A3. field-level drift on common keys ==
+[PASS] zero drift on common keys beyond allowed classes (drift: [])
+[PASS] SPEC-quote refreshes confined to anchor rows
+anchor status flips: 117; SPEC-quote wording refreshes: 6 (recorded verbatim below)
+   4CH1-CON-MR@4CH1-1.26: 'calculate relative formula masses(including relative molecular masses)' -> 'calculate relative formula masses (including relative molecular masses) (Mr'
+   4CH1-CON-DIAMOND-GRAPHITE@4CH1-1.50: 'the structures of diamond, graphite and C60 fullerene influence their physi' -> 'structures of diamond, graphite and C 60 fullerene influence their physical'
+   4CH1-CON-ELEMENT@4CH1-1.8: 'an element,compound or mixture' -> 'element, compound or mixture'
+   4CH1-CON-MOLE@4CH1-1.27: 'know that the mole(mol) is the unit for the amount of a substance' -> 'know that the mole (mol) is the unit for the amount of a substance'
+   4CH1-CON-MOLAR-GAS-VOL@4CH1-1.35C: 'the molar volume of a gas(24dm3and24000cm3at room temperature and pressure(' -> 'gas volumes and the molar volume of a gas (24 dm 3 and 24 000 cm 3 at room '
+   4CH1-CON-EQ-WORD@4CH1-1.25: 'write word equations and balanced chemical equations(including state symbol' -> 'write word equations and balanced chemical equations (including state symbo'
+
+== A4. loader contract counts (canonical) ==
+anchors (PART_OF all statuses): core 117 -> canonical 211
+validated semantic           : core 153 -> canonical 272
+excluded (frozen) semantic   : core 5 -> canonical 5
+concept nodes                : core 113 -> canonical 193
+[PASS] canonical counts == (211 anchors, 272 validated semantic, 5 excluded); got 211/272/5
+[PASS] the frozen 5 are the SAME keys (new/exiting: set())
+
+== A5. anchor delta decomposition ==
+[PASS] core anchors are a strict subset of canonical anchors
+anchors preserved+flipped: 117; new anchors: 94 {'SUGGESTED': 94}
+[PASS] anchor delta == 117 flips + 94 new (operator-validated attachments from batches 5-11)
+
+== A6. concept node drift ==
+[PASS] node-row drift confined to spec_points evidence refresh classes (bad: [])
+new concept nodes: 80 (113 -> 193)
+
+== A7. referential integrity of the PARTIAL sync vs core substrate ==
+[PASS] every anchor resolves: concept in canonical nodes AND SP in core's 182 (bad: [])
+[PASS] every HV semantic endpoint resolves vs canonical concepts + core's 12 practicals (bad: [])
+
+== A7b. node-row drift detail (what exactly changed for pre-existing nodes)
+  4CH1-CON-ACTIVATION-ENERGY: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ANODE-CATHODE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-AQUEOUS-DISCHARGE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-AR: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ATOM: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ATOMIC-NUMBER: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-BOND-BREAKING-MAKING: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-BOND-ENERGY-CALC: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-CALORIMETRY: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-CATALYST: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-CHROMATOGRAM-INTERPRETATION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-CHROMATOGRAPHY: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-COLLISION-THEORY: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-COMPOUND: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-COVALENT-BOND: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-COVALENT-CONDUCTION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-CRYSTALLISATION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-DIAMOND-GRAPHITE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-DIFFUSION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-DILUTION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-DOT-CROSS-COVALENT: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-DOT-CROSS-IONIC: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-DYNAMIC-EQUILIBRIUM: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ELECTRODE-HALF-EQUATIONS: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ELECTROLYSIS: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ELECTRONIC-CONFIGURATION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ELEMENT: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-EMPIRICAL-FORMULA: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ENERGY-LEVEL-DIAGRAM: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-EQ-POSITION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-EQ-STATE-SYM: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-EQ-WORD: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-EXO-ENDO: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-FILTRATION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-FRACTIONAL-DISTILLATION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-GIANT-COVALENT: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-GROUP-SIMILARITY: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-HEAT-CALC: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ION-CHARGE-RULES: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-IONIC-BOND: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-IONIC-CONDUCTION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-IONIC-FORMULA: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-IONIC-LATTICE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-ISOTOPES: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-MASS-NUMBER: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-METAL-NONMETAL: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-METAL-PROPERTIES: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-METALLIC-BOND: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-MIXTURE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-MOLAR-ENTHALPY: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-MOLAR-GAS-VOL: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-MOLE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-MOLECULAR-FORMULA: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-MOLECULE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-MR: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-NOBLE-GAS-INERTNESS: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-PERCENT-YIELD: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-PERIODIC-TABLE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-PURE-SUBSTANCE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-RATE-EXPERIMENTS: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-RATE-FACTORS: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-REACTING-MASS: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-REACTION-PROFILE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-REDOX-ELECTRONS: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-REVERSIBLE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-REVERSIBLE-EXAMPLES: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-RF-VALUE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-SATURATED-SOLUTION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-SIMPLE-DISTILLATION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-SIMPLE-MOLECULAR: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-SOLUBILITY: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-SOLUBILITY-CURVE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-SOLUTION: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-STATE-CHANGES: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-STATE-PARTICLE-MODEL: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-STATES-THREE: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-SUBATOMIC-PARTICLES: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+  4CH1-CON-WATER-CRYST: fields changed: ['spec_points']
+    (code,role) added: []; removed: []; evidence-path-only changes not shown
+
+== B. the 7-edge package review (§3 verdict table) ==
+[PASS] 4CH1-PR-05 REQUIRES 4CH1-CON-O2-PERCENT-DETERMINATION: present exactly once in canonical
+[PASS]   4CH1-CON-O2-PERCENT-DETERMINATION: HUMAN_VALIDATED
+[PASS]   4CH1-CON-O2-PERCENT-DETERMINATION: extraction_pass == c11-s16-batch-5
+[PASS]   4CH1-CON-O2-PERCENT-DETERMINATION: derivation_method == USED_WITHOUT_RETEACHING
+[PASS]   4CH1-CON-O2-PERCENT-DETERMINATION: validated_by/date present (operator, 2026-09-22)
+[PASS]   4CH1-CON-O2-PERCENT-DETERMINATION: NOTE quote present: 'To determine the percentage of oxygen in air using the oxida...'
+[PASS]   4CH1-CON-O2-PERCENT-DETERMINATION: NOTE quote present: 'percentage of oxygen =...'
+  -> 4CH1-CON-O2-PERCENT-DETERMINATION: concept CORE anchors ['4CH1-2.10'], practical SP 4CH1-2.14, projected pair ['4CH1-2.10'] -> 4CH1-2.14
+[PASS] 4CH1-PR-06 REQUIRES 4CH1-CON-REACT-ARRANGE: present exactly once in canonical
+[PASS]   4CH1-CON-REACT-ARRANGE: HUMAN_VALIDATED
+[PASS]   4CH1-CON-REACT-ARRANGE: extraction_pass == c11-s16-batch-6
+[PASS]   4CH1-CON-REACT-ARRANGE: derivation_method == USED_WITHOUT_RETEACHING
+[PASS]   4CH1-CON-REACT-ARRANGE: validated_by/date present (operator, 2026-09-22)
+[PASS]   4CH1-CON-REACT-ARRANGE: NOTE quote present: 'The metals can be ranked in reactivity order Mg > Zn > Fe...'
+  -> 4CH1-CON-REACT-ARRANGE: concept CORE anchors ['4CH1-2.15'], practical SP 4CH1-2.21, projected pair ['4CH1-2.15'] -> 4CH1-2.21
+[PASS] 4CH1-PR-07 REQUIRES 4CH1-CON-SALT-INSOLUBLE-REACTANT: present exactly once in canonical
+[PASS]   4CH1-CON-SALT-INSOLUBLE-REACTANT: HUMAN_VALIDATED
+[PASS]   4CH1-CON-SALT-INSOLUBLE-REACTANT: extraction_pass == c11-s16-batch-7
+[PASS]   4CH1-CON-SALT-INSOLUBLE-REACTANT: derivation_method == USED_WITHOUT_RETEACHING
+[PASS]   4CH1-CON-SALT-INSOLUBLE-REACTANT: validated_by/date present (operator, 2026-09-23)
+[PASS]   4CH1-CON-SALT-INSOLUBLE-REACTANT: NOTE quote present: 'Add the copper(II) oxide slowly to the hot dilute acid and s...'
+  -> 4CH1-CON-SALT-INSOLUBLE-REACTANT: concept CORE anchors ['4CH1-2.39'], practical SP 4CH1-2.42, projected pair ['4CH1-2.39'] -> 4CH1-2.42
+[PASS] 4CH1-PR-08 REQUIRES 4CH1-CON-SALT-PRECIPITATION: present exactly once in canonical
+[PASS]   4CH1-CON-SALT-PRECIPITATION: HUMAN_VALIDATED
+[PASS]   4CH1-CON-SALT-PRECIPITATION: extraction_pass == c11-s16-batch-7
+[PASS]   4CH1-CON-SALT-PRECIPITATION: derivation_method == USED_WITHOUT_RETEACHING
+[PASS]   4CH1-CON-SALT-PRECIPITATION: validated_by/date present (operator, 2026-09-23)
+[PASS]   4CH1-CON-SALT-PRECIPITATION: NOTE quote present: 'The solid salt obtained is the precipitate...'
+[PASS]   4CH1-CON-SALT-PRECIPITATION: NOTE quote present: 'Filter to remove precipitate from mixture...'
+  -> 4CH1-CON-SALT-PRECIPITATION: concept CORE anchors ['4CH1-2.41C'], practical SP 4CH1-2.43C, projected pair ['4CH1-2.41C'] -> 4CH1-2.43C
+[PASS] 4CH1-PR-12 REQUIRES 4CH1-CON-ESTERS: present exactly once in canonical
+[PASS]   4CH1-CON-ESTERS: HUMAN_VALIDATED
+[PASS]   4CH1-CON-ESTERS: extraction_pass == c11-s16-batch-11
+[PASS]   4CH1-CON-ESTERS: derivation_method == EXPLICIT_TEACH_SEQUENCE
+[PASS]   4CH1-CON-ESTERS: validated_by/date present (operator, 2026-09-25)
+[PASS]   4CH1-CON-ESTERS: NOTE quote present: 'To prepare a small sample of ethyl ethanoate...'
+  -> 4CH1-CON-ESTERS: concept CORE anchors ['4CH1-4.38C', '4CH1-4.39C', '4CH1-4.40C', '4CH1-4.41C', '4CH1-4.42C'], practical SP 4CH1-4.43C, projected pair ['4CH1-4.38C'] -> 4CH1-4.43C
+[PASS] 4CH1-PR-12 REQUIRES 4CH1-CON-SIMPLE-DISTILLATION: present exactly once in canonical
+[PASS]   4CH1-CON-SIMPLE-DISTILLATION: HUMAN_VALIDATED
+[PASS]   4CH1-CON-SIMPLE-DISTILLATION: extraction_pass == c11-s16-batch-11
+[PASS]   4CH1-CON-SIMPLE-DISTILLATION: derivation_method == USED_WITHOUT_RETEACHING
+[PASS]   4CH1-CON-SIMPLE-DISTILLATION: validated_by/date present (operator, 2026-09-25)
+[PASS]   4CH1-CON-SIMPLE-DISTILLATION: NOTE quote present: 'The ester is then distilled off as soon as it is formed...'
+  -> 4CH1-CON-SIMPLE-DISTILLATION: concept CORE anchors ['4CH1-1.10'], practical SP 4CH1-4.43C, projected pair ['4CH1-1.10'] -> 4CH1-4.43C
+[PASS] 4CH1-PR-12 REQUIRES 4CH1-CON-ACID-REACTIONS: present exactly once in canonical
+[PASS]   4CH1-CON-ACID-REACTIONS: HUMAN_VALIDATED
+[PASS]   4CH1-CON-ACID-REACTIONS: extraction_pass == c11-s16-batch-11
+[PASS]   4CH1-CON-ACID-REACTIONS: derivation_method == USED_WITHOUT_RETEACHING
+[PASS]   4CH1-CON-ACID-REACTIONS: validated_by/date present (operator, 2026-09-25)
+[PASS]   4CH1-CON-ACID-REACTIONS: NOTE quote present: 'sodium carbonate solution can be added...'
+  -> 4CH1-CON-ACID-REACTIONS: concept CORE anchors ['4CH1-2.37'], practical SP 4CH1-4.43C, projected pair ['4CH1-2.37'] -> 4CH1-4.43C
+
+== B2. practical-origin delta census ==
+[PASS] exactly 7 new practical-origin HV edges (got 7)
+[PASS] exactly 112 new concept->concept HV edges (got 112)
+added HV by relation: {'REQUIRES_PREREQUISITE': 94, 'WRONG_ANSWER_PATTERN': 11, 'REMEDIATED_BY': 11, 'RELATED_TO': 1, 'EXPLAINED_BY': 2}
+
+== D. sync manifest ==
+{
+ "loader_constants": {
+  "CONCEPT_NODE_COUNT": 193,
+  "ANCHOR_EDGE_COUNT": 211,
+  "VALIDATED_SEMANTIC_EDGE_COUNT": 272,
+  "EXCLUDED_SEMANTIC_EDGE_COUNT": 5,
+  "CONCEPTS_SHA256": "24fa91ac7149682b1083ff47112362a11180bcfb7899c1343c6f536682447e3f",
+  "CONCEPT_EDGES_SHA256": "cbef02513ddbb0121a7ba139512c128185311ae3ebf0ef5121e1ed792522aa10"
+ },
+ "test_sums": {
+  "nodes": 420,
+  "edges_ever_saved": 709
+ }
+}
+
+ALL CHECKS PASSED

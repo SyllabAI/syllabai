@@ -1,0 +1,36 @@
+{
+ "L2_register": {
+  "ok": true,
+  "detail": "task68-probe-74d4adca@probe.syllabai.test"
+ },
+ "L2_serve_1C-Jan2022": {
+  "ok": true,
+  "detail": "questions=11 withSpecPoints=11"
+ },
+ "L2_serve_q6_specPoints": {
+  "ok": true,
+  "detail": "['4CH1-1.40', '4CH1-1.41']"
+ },
+ "L2_serve_2C-Jun2019": {
+  "ok": true,
+  "detail": "questions=8 withSpecPoints=8"
+ },
+ "L3_attempt_created": {
+  "ok": true,
+  "detail": "b548c43d-703f-4b16-b190-cd949038416e"
+ },
+ "L3_selfmark_evidence_fired": {
+  "ok": true,
+  "detail": "{'evidenceFired': True, 'marksAwarded': 9, 'marksTotal': 9}"
+ },
+ "L3_topic_4CH1-S1-f_fires": {
+  "ok": true,
+  "detail": "{'nodeIds': ['afeade83-542e-4403-a845-fa4aefc35e89', 'db9602a5-0e96-485a-aa34-1a3b4cf174a9', 'dcc1c814-b133-4d01-a28e-fe0a3be934b4'], 'names': ['Ionic bonding', 'draw dot-and-cross diagrams to show the formation of ionic compounds by electron transfer\uff0climited to combinations of elements from Groups1\uff0c2\uff0c3\u548c5\uff0c6\uff0c7only outer electrons need be shown', 'understand ionic bonding in terms of electrostatic a"
+ },
+ "L3_specs_fire": {
+  "ok": true,
+  "detail": "['afeade83-542e-4403-a845-fa4aefc35e89', 'db9602a5-0e96-485a-aa34-1a3b4cf174a9', 'dcc1c814-b133-4d01-a28e-fe0a3be934b4']"
+ },
+ "verdict": "VERIFIED",
+ "probe_learner": "task68-probe-74d4adca@probe.syllabai.test"
+}

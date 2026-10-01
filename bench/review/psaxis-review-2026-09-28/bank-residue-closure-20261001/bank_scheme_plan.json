@@ -1,0 +1,5134 @@
+{
+ "generated": "2026-10-01",
+ "trace": "1a0f5fdf6226bdc9",
+ "item": "bank-scheme sparsity (91 qv on VALIDATED papers without scheme rows)",
+ "disposition": "evidence-clean gated extraction only; SUGGESTED state; no self-validation; residue documented (Task-66 Q10 anti-fabrication precedent)",
+ "extraction_method": "ms-chunk-gated-extraction-v1",
+ "pre_state": {
+  "qsp": 2637,
+  "qt": 1725,
+  "active": 961,
+  "qv_pool": 1533,
+  "sparse": 91,
+  "papers_validated": 90,
+  "schemes_total": 1420
+ },
+ "totals": {
+  "entries": 35,
+  "mark_points": 243,
+  "sparse_after": 56,
+  "residue_qv": 56
+ },
+ "entries": [
+  {
+   "paper_id": "0494f765-5f3f-41c7-9173-241ee7ee0d16",
+   "paper_code": "4CH0/1C",
+   "session": "June 2014",
+   "question_id": "1ff91b40-0532-4f9c-a113-994bd7cf1dca",
+   "qv_ref": "q03-1da77322",
+   "qv_id": "b41846f4-c42e-428d-88fc-deea4e3c9294",
+   "qv_marks": 7,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "fba61740-0d3b-5603-9637-71934939b517",
+   "ms_doc_row": "95f3728f-874d-4387-a469-42dfa727709a",
+   "qn": 3,
+   "printed_total": 7,
+   "chunk_indices": [
+    2
+   ],
+   "merged_text_sha256": "6cdc5f81d24415fbd90c1876ea1c34d64838b11b7e6fee5388e2c3e33c162eaa",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/1C | Paper 1C | Q3 | p.6\nMark scheme for Question 3\nQ3 P1 (1 mark): 12\nQ3 M1 (1 mark): \u2013 2\nnote: roman numeral\nQ3 M2 (1 mark): \u2013 two electrons in outer/valence shell\nignore: references to magnesium and 2.8.2\nnote: Award M2 if M1 missing but not if incorrect\nQ3 P2 (1 mark): X2+\nnote: Mg2+\nQ3 M1 (1 mark): \u2013 (79 x 24) + (10 x 25) + (11 x 26)\nnote: (0.79 x 24) + (0.10 x 25) + (0.11\nnote: x 26) for 2 marks\nQ3 M2 (1 mark): \u2013 divide by 100\nQ3 M3 (1 mark): \u2013 24.3\nnote: 24.32 with no working scores 2\nnote: Mark M2 and M3 csq on M1 if one minor\nnote: slip in numbers in M1 (eg 97 instead of 79\nnote: or 25 instead of 24)\nnote: M3 (no printed marks cell): dep on M2 | Correct answer with no working scores 3 | IGNORE units | (Total marks for Question 3 = 7 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "fba61740-0d3b-5603-9637-71934939b517",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "12",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 1,
+     "marks": 1,
+     "text": "\u2013 2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 2,
+     "marks": 1,
+     "text": "\u2013 two electrons in outer/valence shell",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 3,
+     "marks": 1,
+     "text": "X2+",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 4,
+     "marks": 1,
+     "text": "\u2013 (79 x 24) + (10 x 25) + (11 x 26)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 5,
+     "marks": 1,
+     "text": "\u2013 divide by 100",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M3",
+     "ordering": 6,
+     "marks": 1,
+     "text": "\u2013 24.3",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "0494f765-5f3f-41c7-9173-241ee7ee0d16",
+   "paper_code": "4CH0/1C",
+   "session": "June 2014",
+   "question_id": "b18718e9-1826-4f2e-9745-f7494a666575",
+   "qv_ref": "q09-1da77322",
+   "qv_id": "ce320109-0a47-4c92-9bbb-11cbc04298ac",
+   "qv_marks": 11,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "fba61740-0d3b-5603-9637-71934939b517",
+   "ms_doc_row": "95f3728f-874d-4387-a469-42dfa727709a",
+   "qn": 9,
+   "printed_total": 11,
+   "chunk_indices": [
+    9
+   ],
+   "merged_text_sha256": "951cdd2c21abefddfff47b5d6e5f9616e940d0eb4433e411f78c5d973089313b",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/1C | Paper 1C | Q9 | pp.15\u201316\nMark scheme for Question 9\nQ9 P1 (1 mark): C\nnote: Ethene\nQ9 P2 (1 mark): C\nnote: Ethene\nQ9 M1 (1 mark): \u2013 (molecular) C4H10\nnote: H10C4\nnote: CH3CH2CH2CH3\nQ9 M2 (1 mark): \u2013 (empirical) C2H5\nnote: H5C2\nnote: ECF from molecular formula\nQ9 M1 (1 mark): \u2013 (name) alkane(s)\nQ9 M2 (1 mark): \u2013 (general formula) CnH2n+2\nnote: (ii)\nQ9 P3 (1 mark): missing Hs and bonds\nignore: bond angles\nQ9 M1 (1 mark): \u2013 incomplete combustion/insufficient oxygen\nnote: lack of oxygen\nnote: /less oxygen\nnote: / only 1\u00bd oxygen (in\nnote: equation)\nQ9 M2 (1 mark): \u2013 toxic/poisonous/causes death IGNORE dangerous/harmful\nQ9 M3 (1 mark): \u2013 reduces the capacity of the blood to carry haemoglobin\nignore: references to suffocation/cannot breathe; blood carries no oxygen                    oxygen/blood does not\nnote: correct references to\nnote: oxygen\nnote: /blood carries less\nQ9 P4 (1 mark): easily\nnote: release oxygen as\nnote: (Total marks for Question 9 = 11 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "fba61740-0d3b-5603-9637-71934939b517",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "C",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "C",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 2,
+     "marks": 1,
+     "text": "\u2013 (molecular) C4H10",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 3,
+     "marks": 1,
+     "text": "\u2013 (empirical) C2H5",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 4,
+     "marks": 1,
+     "text": "\u2013 (name) alkane(s)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 5,
+     "marks": 1,
+     "text": "\u2013 (general formula) CnH2n+2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 6,
+     "marks": 1,
+     "text": "missing Hs and bonds",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 7,
+     "marks": 1,
+     "text": "\u2013 incomplete combustion/insufficient oxygen",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 8,
+     "marks": 1,
+     "text": "\u2013 toxic/poisonous/causes death IGNORE dangerous/harmful",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M3",
+     "ordering": 9,
+     "marks": 1,
+     "text": "\u2013 reduces the capacity of the blood to carry haemoglobin",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 10,
+     "marks": 1,
+     "text": "easily",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "paper_code": "4CH1/1C",
+   "session": "June 2019",
+   "question_id": "30a8905a-7b43-4bc3-b268-5dd970557ed3",
+   "qv_ref": "q02-cf68cf74",
+   "qv_id": "27379362-6f0f-4b18-ae11-fa233b68a72f",
+   "qv_marks": 4,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_doc_row": "ab0820fe-a5bc-4607-a36f-8fdf14bdfa32",
+   "qn": 2,
+   "printed_total": 4,
+   "chunk_indices": [
+    1
+   ],
+   "merged_text_sha256": "9ab849c1e1d728d6ff58d00fc40b7bd348d3325ca547ecaaad11b9f2ca935700",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q2 | p.5\nMark scheme for Question 2\nQuestion 2 printed total: 4 marks\nQ2 P1 (1 mark): T\nQ2 P2 (1 mark): they have the same number of electrons in their\nallow: they have the; outer energy; they need to\nnote: outer shell                                        same number of\nnote: valence electrons/\nnote: OR                                                 they have one valence\nnote: they have one electron in the outer shell          electron\nnote: level\nnote: lose 1 electron from\nnote: the outer shell/ to gain\nnote: a full outer shell\nQ2 P3 (2 marks): An explanation linking the following two points:\nallow: they are in the\nignore: reference to\nnote: M1 33                                              ALLOW R has two\nnote: more protons than Q\nnote: M2 because the atomic number of R is two           ACCEPT for each\nnote: more (than Q)                                      successive element (in\nnote: the period) there is\nnote: OR because R is two places to the right / two      one more (proton)\nnote: places further on/along (in the period)            /the atomic number\nnote: increases by one\nnote: same period but Q is\nnote: in group 3 and R is in\nnote: group 5\nnote: electrons",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "T",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "they have the same number of electrons in their",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 2,
+     "text": "An explanation linking the following two points:",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "paper_code": "4CH1/1C",
+   "session": "June 2019",
+   "question_id": "aca89514-73e8-4e2c-ba2f-1a50fc52abd3",
+   "qv_ref": "q03-cf68cf74",
+   "qv_id": "402c39e1-02ab-4820-99df-99405a138d66",
+   "qv_marks": 6,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_doc_row": "ab0820fe-a5bc-4607-a36f-8fdf14bdfa32",
+   "qn": 3,
+   "printed_total": 6,
+   "chunk_indices": [
+    2
+   ],
+   "merged_text_sha256": "6567afc7021442bf6f93fd7b1e5e4012dee5825acd18fc9b456770f88ec20637",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q3 | p.6\nMark scheme for Question 3\nQuestion 3 printed total: 6 marks\nQ3 P1 (1 mark): Li+\nallow: Sr2+\nQ3 P2 (1 mark): silver bromide / AgBr\nignore: incorrect\nnote: If correct name given\nnote: formula\nQ3 P3 (1 mark): lithium bromide / LiBr\nnote: Mark CSQ on (a) and\nnote: (b)\nnote: If both name and\nnote: formula given both\nnote: must be correct\nQ3 P4 (1 mark): Impurities/ other ions/ other substances could\nallow: \nnote: alter/interfere with the colour of the flame /with   impurities/other\nnote: the results of the test OWTTE                        ions/ other\nnote: substances\nnote: contaminate the\nnote: flame/the test /the\nnote: wire /it\nQ3 P5 (2 marks): 2",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "Li+",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "silver bromide / AgBr",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "lithium bromide / LiBr",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "Impurities/ other ions/ other substances could",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 2,
+     "text": "2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "paper_code": "4CH1/1C",
+   "session": "June 2019",
+   "question_id": "3cc8e5f7-1188-476f-b3bd-eb84f2f6e791",
+   "qv_ref": "q05-cf68cf74",
+   "qv_id": "67708b87-0c76-4bde-91e3-ccfb693e4d40",
+   "qv_marks": 5,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_doc_row": "ab0820fe-a5bc-4607-a36f-8fdf14bdfa32",
+   "qn": 5,
+   "printed_total": 5,
+   "chunk_indices": [
+    4
+   ],
+   "merged_text_sha256": "35dfb4ebde9551a88cc70db4ed17f88e16798f7be18523b32c8344ddc99a4d9d",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q5 | p.8\nMark scheme for Question 5\nQuestion 5 printed total: 5 marks\nQ5 P1 (1 mark): C (it has a low density)\nnote: irrelevant\nnote: B is not correct as the solubility of the gas is\nnote: irrelevant\nnote: D is not correct as the smell of the gas is irrelevant\nQ5 M1 (2 marks): helium is inert / helium does not react (with\nallow: helium is; helium is not\nnote: air/oxygen)                                              unreactive\nnote: flammable/ not\nnote: explosive\nnote: M2 hydrogen is flammable/explosive (in\nnote: air/oxygen)\nQ5 P2 (1 mark): N2 + 3H2 \uf022 2NH3\nallow: reversible\nignore: Fe if added\nnote: arrow\nnote: to both sides of the\nnote: equation\nQ5 P3 (1 mark): to increase the rate of reaction / to speed up the\nallow: to lower the\nnote: reaction / to produce a reaction pathway that has        activation energy / to\nnote: a lower activation energy                                make it easier to\nnote: break the (covalent)\nnote: bonds (in the\nnote: molecules)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "C (it has a low density)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 1,
+     "marks": 2,
+     "text": "helium is inert / helium does not react (with",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 2,
+     "marks": 1,
+     "text": "N2 + 3H2 \uf022 2NH3",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 3,
+     "marks": 1,
+     "text": "to increase the rate of reaction / to speed up the",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "paper_code": "4CH1/1C",
+   "session": "June 2019",
+   "question_id": "8957d826-fc1c-4ef9-aea1-9d15f4187685",
+   "qv_ref": "q06-cf68cf74",
+   "qv_id": "d80c0eed-0a86-4af7-b268-9bb0c4923523",
+   "qv_marks": 5,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_doc_row": "ab0820fe-a5bc-4607-a36f-8fdf14bdfa32",
+   "qn": 6,
+   "printed_total": 5,
+   "chunk_indices": [
+    5
+   ],
+   "merged_text_sha256": "254076041b68bcf54e75a07f47177c63acfb0ba677883493d6beb2341f65f965",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q6 | p.9\nMark scheme for Question 6\nQuestion 6 printed total: 5 marks\nQ6 P1 (1 mark): B (Z X Y W)\nnote: C is not correct as Z is the most reactive metal\nnote: D is not correct as X is more reactive than Y\nQ6 P2 (1 mark): W\nQ6 P3 (1 mark): X\nQ6 M1 (2 marks): brown/pink/pink-brown solid forms\nallow: red-brown; precipitate\nignore: red or; clear; incorrect; references; references\nnote: /orange-brown\nnote: orange alone\nnote: for solid\nnote: M2 solution turns colourless                       ALLOW solution\nnote: becomes paler\nnote: initial colour of\nnote: solution\nnote: to magnesium\nnote: disappearing\nnote: to heat",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "B (Z X Y W)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "W",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "X",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 3,
+     "marks": 2,
+     "text": "brown/pink/pink-brown solid forms",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "paper_code": "4CH1/1C",
+   "session": "June 2019",
+   "question_id": "ccbd1fa2-1ba0-41e7-9b8e-910a2a22ae55",
+   "qv_ref": "q08-cf68cf74",
+   "qv_id": "20da972a-faca-42d1-869f-eb5bc2b3d607",
+   "qv_marks": 6,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_doc_row": "ab0820fe-a5bc-4607-a36f-8fdf14bdfa32",
+   "qn": 8,
+   "printed_total": 6,
+   "chunk_indices": [
+    8
+   ],
+   "merged_text_sha256": "51aff438844b3e35df9ddab365f284b00dcb4722adbe124fe7b0b8a93e04616c",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q8 | p.12\nMark scheme for Question 8\nQuestion 8 printed total: 6 marks\nQ8 P1 (1 mark): 2 C2H4 + 4 HCl + (1) O2 \uf022 2C2H4Cl2 + 2H2O\nallow: multiples and\nnote: fractions\nQ8 P2 (1 mark): breaking down by heating OWTTE\nQ8 P3 (1 mark): (it) contains a (carbon to carbon) double bond\nQ8 M1 (2 marks): add bromine water/solution\nallow: Br2(aq) as; any; \nreject: discoloured; any other\nnote: long as the state\nnote: symbol is present\nnote: M2 (bromine water/solution) is decolourised/     IGNORE clear\nnote: turns (from orange to) colourless\nnote: If initial colour of\nnote: bromine water given it\nnote: must be correct-\nnote: combination of\nnote: orange/yellow/brown\nnote: M2 dep on M1 or near\nnote: miss\nnote: M1 add acidified\nnote: potassium\nnote: manganate(VII)\nnote: M2 potassium\nnote: manganate(VII) is\nnote: decolourised/turns\nnote: (from purple) to\nnote: colourless\nnote: initial colour\nQ8 P4 (1 mark): poly(chloroethene) /polychloroethene\nallow: polyvinyl; PVC\nnote: chloride",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "2 C2H4 + 4 HCl + (1) O2 \uf022 2C2H4Cl2 + 2H2O",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "breaking down by heating OWTTE",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "(it) contains a (carbon to carbon) double bond",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 3,
+     "marks": 2,
+     "text": "add bromine water/solution",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 4,
+     "marks": 1,
+     "text": "poly(chloroethene) /polychloroethene",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "paper_code": "4CH1/1C",
+   "session": "June 2019",
+   "question_id": "c672fba2-cbda-494e-8527-4194863fe53e",
+   "qv_ref": "q09-cf68cf74",
+   "qv_id": "6d51dcf2-881c-4b07-ab35-327636a80a3f",
+   "qv_marks": 6,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_doc_row": "ab0820fe-a5bc-4607-a36f-8fdf14bdfa32",
+   "qn": 9,
+   "printed_total": 6,
+   "chunk_indices": [
+    9,
+    10
+   ],
+   "merged_text_sha256": "a83a737e332eac7340501cd07781b2b6957f802491068535c7d54e38595ae2f6",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q9 | pp.13\u201314\nMark scheme for Question 9\nQuestion 9 printed total: 6 marks\nQ9 M1 (2 marks): C 8.05 \u00f7 12\nallow: any combination of        2\nnote: OR 0.671\nnote: and Br 53.69 \u00f7 80    OR 0.671\nnote: and F 38.26 \u00f7 19     OR 2.01\nnote: M2 divide all numbers by 0.671      ALLOW ECF from M1\nnote: (to obtain ratio 1 : 1 : 3)\nnote: If division by atomic numbers\nnote: or numerators and\nnote: denominators reversed 0\nnote: marks\nnote: Alternative method\nnote: M1 Mr (of CBrF3) = 149\nnote: M2 12 x 100 = 8.05 (%)\nnote: 149\nnote: and 80 x 100 = 53.69 (%)\nnote: 149\nnote: and 57 x 100 = 38.26 (%)\nnote: 149\nnote: b\nnote: dots and crosses\nnote: M1 all four bonding pairs correct\nnote: M2 rest of electrons correct        IGNORE inner shell electrons\nnote: even if incorrect\nnote: M2 DEP on M1\nQ9 P1 (2 marks): An explanation that links together the following\nnote: two points:\nInternational GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1C | Paper 1C | Q9 | p.14\nQ9 M1 (2 marks): the intermolecular forces (of attraction) are\nallow: London; ; little energy is\nignore: less energy\nnote: weak                                               forces/dispersion\nnote: forces/dipole-dipole\nnote: forces\nnote: intermolecular bonds\nnote: M2 therefore little energy is required to          ALLOW little energy is\nnote: overcome the forces                                required to separate\nnote: the molecules\nnote: required to break the\nnote: bonds as long as it is\nnote: clear that the bonds\nnote: are between\nnote: molecules\nnote: Any mention of\nnote: covalent bonds/ionic\nnote: bonds/metallic bonds\nnote: breaking scores 0 out\nnote: of 2",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "M1",
+     "ordering": 0,
+     "marks": 2,
+     "text": "C 8.05 \u00f7 12",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P1",
+     "ordering": 1,
+     "marks": 2,
+     "text": "An explanation that links together the following",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 2,
+     "marks": 2,
+     "text": "the intermolecular forces (of attraction) are",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+   "paper_code": "4CH0/2CR",
+   "session": "June 2014",
+   "question_id": "00f19dc8-207a-4d08-b65d-e30169e269ac",
+   "qv_ref": "q01-d5815b70",
+   "qv_id": "2a09d7f7-ea86-4da6-9336-118e3d20c990",
+   "qv_marks": 10,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+   "ms_doc_row": "cd1607f7-6c6b-401a-9051-19d97f6760d8",
+   "qn": 1,
+   "printed_total": 10,
+   "chunk_indices": [
+    0
+   ],
+   "merged_text_sha256": "3582a23150c578a5c7804865e1fedef73256fa52b149dc6df2234d440c48f407",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/2C | Paper 2C | Q1 | p.4\nMark scheme for Question 1\nQ1 P1 (1 mark): cross in box D (neutrons and\nnote: protons)\nQ1 P2 (1 mark): electrons\nQ1 P3 (1 mark): protons AND electrons\nallow: in either order\nQ1 P4 (1 mark): electrons\nQ1 P5 (1 mark): cross in box A (2.8)\nQ1 P6 (1 mark): same number of protons\nnote: Reference to atoms or\nnote: elements not essential\nQ1 P7 (1 mark): different numbers of neutrons\nnote: Do not award M2 if incorrect\nnote: statement about electrons\nnote: Max 1 if reference to\nnote: molecules/compounds/ions\nQ1 P8 (1 mark): 20.2/Ar closer to 20 (than 22)\nnote: OWTTE\nQ1 P9 (1 mark): unreactive\nallow: does not react\nnote: OWTTE\nQ1 P10 (1 mark): (atoms) do not (readily)\nallow: outer shell complete; orbit\nignore: stable\nnote: lose/gain electrons\nnote: contain 8 electrons in outer\nnote: shell/energy level               Ignore references to Group\nnote: (Total for Question 1 = 10 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "cross in box D (neutrons and",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "electrons",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "protons AND electrons",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "electrons",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "cross in box A (2.8)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "same number of protons",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "different numbers of neutrons",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "20.2/Ar closer to 20 (than 22)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P9",
+     "ordering": 8,
+     "marks": 1,
+     "text": "unreactive",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P10",
+     "ordering": 9,
+     "marks": 1,
+     "text": "(atoms) do not (readily)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+   "paper_code": "4CH0/2CR",
+   "session": "June 2014",
+   "question_id": "36d31473-ac99-453c-9783-2d94fdfabac6",
+   "qv_ref": "q02-d5815b70",
+   "qv_id": "18175ee6-42c7-48d0-8e6d-89d92d5dd415",
+   "qv_marks": 7,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+   "ms_doc_row": "cd1607f7-6c6b-401a-9051-19d97f6760d8",
+   "qn": 2,
+   "printed_total": 7,
+   "chunk_indices": [
+    1
+   ],
+   "merged_text_sha256": "cc68f5a27e2c9beaf145bed379c56a932b39eb811e22908e331df767fa6f5858",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/2C | Paper 2C | Q2 | p.5\nMark scheme for Question 2\nQ2 P1 (1 mark): amount (in moles)\nallow: mass/weight\nQ2 P2 (1 mark): state of (sub)division / (total)\nallow: temperature in place\nignore: references to water\nnote: OWTTE\nnote: surface area / particle size\nnote: of either of above\nnote: or acid\nQ2 P3 (1 mark): cross in box C (metal T)\nQ2 P4 (1 mark): cross in box B (hydrogen)\nQ2 P5 (1 mark): solution of barium chloride\nQ2 P6 (1 mark): white precipitate\nQ2 P7 (1 mark): cross in box C (potassium)\nnote: (Total for Question 2 = 7 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "amount (in moles)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "state of (sub)division / (total)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "cross in box C (metal T)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "cross in box B (hydrogen)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "solution of barium chloride",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "white precipitate",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "cross in box C (potassium)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+   "paper_code": "4CH0/2CR",
+   "session": "June 2014",
+   "question_id": "74923488-ddb5-4db4-a346-1150f2e36f09",
+   "qv_ref": "q04-d5815b70",
+   "qv_id": "25482260-6860-47b7-904d-113cfe253884",
+   "qv_marks": 14,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+   "ms_doc_row": "cd1607f7-6c6b-401a-9051-19d97f6760d8",
+   "qn": 4,
+   "printed_total": 14,
+   "chunk_indices": [
+    3,
+    4
+   ],
+   "merged_text_sha256": "fbbf5b0c6e0bfc45343c7f8a29fc0c380f2c9b4064e416043fb12ec071e74674",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/2C | Paper 2C | Q4 | pp.7\u20138\nMark scheme for Question 4\nQ4 P1 (1 mark): sugar(s)\nallow: carbohydrate(s)\nQ4 P2 (1 mark): fermentation\nQ4 P3 (1 mark): zymase\nallow: enzyme(s) / yeast\nQ4 P4 (1 mark): hydration\nallow: addition\nQ4 P5 (1 mark): Accept O\u2212H in any\nnote: position\nnote: All atoms and bonds must\nnote: be shown\nQ4 P6 (1 mark): propanol/propan-2-ol/2-propanol\nreject: propan-1-ol /\nnote: 1-propanol\nQ4 P7 (1 mark): phosphoric acid / phosphoric(V)\nallow: sulfuric acid /\nreject: phosphoric(III)\nignore: references to dilute\nnote: acid / H3PO4                      H2SO4\nnote: acid/phosphorous acid\nnote: If both name and formula\nnote: given, both must be\nnote: correct\nQ4 P8 (1 mark): 300 (\u00b0C)\nallow: a value, or any; equivalent value in\nnote: range, within the range\nnote: 250-350 (\u00b0C)\nnote: other units, but unit must\nnote: be given\nQ4 P9 (1 mark): needs more oxygen (to react)\nallow: needs 3 instead; reverse\nignore: references to\nnote: of 2.5 O2\nnote: argument\nnote: flammability\nQ4 M1 (1 mark): carbon monoxide / CO\nnote: If both name and\nnote: formula given, both\nnote: must be correct\nQ4 M2 (1 mark): poisonous / toxic / causes death\nignore: dangerous/harmful\nInternational GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/2C | Paper 2C | Q4 | p.8\nQ4 M3 (1 mark): reduces capacity of blood to\nallow: correct\nignore: references to; blood carries\nnote: carry oxygen                         reference to\nnote: haemoglobin\nnote: suffocation/cannot\nnote: breathe\nnote: no oxygen\nnote: M2 & M3 can be\nnote: awarded if M1 is\nnote: missing or is a near\nnote: miss (eg carbon\nnote: dioxide)\nQ4 P10 (1 mark): may explode / gas may leak /\nnote: cylinder might break / pipe might\nnote: burst / may catch fire (if gas\nnote: leaks)\nQ4 P11 (1 mark): C2H5OH \u2192 C2H4 + H2O\nallow: CH3CH2OH or\nreject: C2H6O\nignore: state symbols\nnote: displayed formula\nnote: (Total for Question 4 = 14 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "sugar(s)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "fermentation",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "zymase",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "hydration",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "Accept O\u2212H in any",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "propanol/propan-2-ol/2-propanol",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "phosphoric acid / phosphoric(V)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "300 (\u00b0C)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P9",
+     "ordering": 8,
+     "marks": 1,
+     "text": "needs more oxygen (to react)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 9,
+     "marks": 1,
+     "text": "carbon monoxide / CO",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 10,
+     "marks": 1,
+     "text": "poisonous / toxic / causes death",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M3",
+     "ordering": 11,
+     "marks": 1,
+     "text": "reduces capacity of blood to",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P10",
+     "ordering": 12,
+     "marks": 1,
+     "text": "may explode / gas may leak /",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P11",
+     "ordering": 13,
+     "marks": 1,
+     "text": "C2H5OH \u2192 C2H4 + H2O",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+   "paper_code": "4CH0/2CR",
+   "session": "June 2014",
+   "question_id": "94e8347d-51a5-41b2-8945-bf6bf1c0ddaf",
+   "qv_ref": "q05-d5815b70",
+   "qv_id": "1a422fd2-42b7-4765-a919-f62e7141dc23",
+   "qv_marks": 9,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+   "ms_doc_row": "cd1607f7-6c6b-401a-9051-19d97f6760d8",
+   "qn": 5,
+   "printed_total": 9,
+   "chunk_indices": [
+    5,
+    6
+   ],
+   "merged_text_sha256": "f16861e43723139954089c99569fe8d1d18150d2985fde6c2c27c72dadf82167",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/2C | Paper 2C | Q5 | p.9\nMark scheme for Question 5\nQ5 P1 (1 mark): no more precipitate forms\nallow: usual\nignore: references to\nnote: alternatives for\nnote: precipitate\nnote: no more lead(II) sulfate forms\nnote: fizzing / temperature/\nnote: change in colour\nQ5 P2 (1 mark): cross in box D (sulfuric acid)\nQ5 P3 (1 mark): they would obtain sodium nitrate\nallow: the soluble salt\nnote: instead                                     in place of sodium\nnote: OR                                          nitrate\nnote: the filtrate does not contain lead(II)\nnote: sulfate/the insoluble salt\nnote: the lead(II) sulfate/insoluble salt has\nnote: already been obtained in step 3\nnote: they should have used the residue\nnote: (not the filtrate)\nQ5 P4 (1 mark): wash/pour water over the\nnote: solid/residue\nQ5 P5 (1 mark): warm / heat / place in oven / leave\nallow: on filter\nnote: (to dry)                                    paper/kitchen\nnote: towel/tissue\nnote: paper/desiccator\nQ5 P6 (1 mark): cross in box C (is insoluble in water)\nQ5 P7 (1 mark): 0.15(0) mol for BOTH substances\nQ5 P8 (1 mark): 0.15(0) \u00f7 0.5(00)\nInternational GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/2C | Paper 2C | Q5 | p.9\nQ5 P9 (1 mark): 0.3(00) dm3 / 300 cm3\nnote: Unit needed for mark\nnote: Correct final answer\nnote: with no working scores\nnote: 2\nnote: (Total for Question 5 = 9 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "no more precipitate forms",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "cross in box D (sulfuric acid)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "they would obtain sodium nitrate",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "wash/pour water over the",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "warm / heat / place in oven / leave",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "cross in box C (is insoluble in water)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "0.15(0) mol for BOTH substances",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "0.15(0) \u00f7 0.5(00)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P9",
+     "ordering": 8,
+     "marks": 1,
+     "text": "0.3(00) dm3 / 300 cm3",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+   "paper_code": "4CH0/2CR",
+   "session": "June 2014",
+   "question_id": "34b0f16a-e841-4bcb-8c12-f950d2864f87",
+   "qv_ref": "q06-d5815b70",
+   "qv_id": "9bc33855-de6a-45ba-8b95-f4f749f63e0e",
+   "qv_marks": 15,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+   "ms_doc_row": "cd1607f7-6c6b-401a-9051-19d97f6760d8",
+   "qn": 6,
+   "printed_total": 15,
+   "chunk_indices": [
+    7,
+    8
+   ],
+   "merged_text_sha256": "a4ac6764bfd462624ff9785d20ccdbb34185ef4db7cbe46764c3c659e7892794",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/2C | Paper 2C | Q6 | pp.10\u201311\nMark scheme for Question 6\nQ6 P1 (1 mark): 18.7\nnote: Give 1 mark for 18.7\nnote: and 27.2 wrong way\nnote: around\nQ6 P2 (1 mark): 27.2\nQ6 P3 (1 mark): M2\u2212M1 / (+)8.5\nQ6 P4 (1 mark): 1450 \u00f7 24000\nQ6 P5 (1 mark): 0.0604(16)\nallow: minimum of 2\nnote: dp\nnote: Award 1 mark for a\nnote: correct answer using a\nnote: volume from either\nnote: experiment 2 or 3\nQ6 P6 (1 mark): 29.2 \u00f7 M2 from (b)(i) / 29.2 \u00f7\nallow: 29200 \u00f7\nnote: 0.0604(16)                            0.0604\nQ6 P7 (1 mark): (\u2212)483(.315678)\nnote: Final answer in joules\nnote: scores 1/2\nQ6 P8 (1 mark): 200 \u00d7 4.2 \u00d7 41.2\nQ6 P9 (1 mark): (\u2212)34608\nallow: minimum of 2\nnote: sf\nnote: Award 1 mark for a\nnote: correct calculation\nnote: using 1875 for the\nnote: volume of water.\nQ6 P10 (1 mark): cross in box B (not all of the heat\nnote: energy is transferred to the water)\nQ6 P11 (1 mark): (4 \u00d7 C-H) + (2 \u00d7 O=O)\nallow: (4 \u00d7 412) +\nnote: (2 \u00d7 496) / 1648 +\nnote: 992\nQ6 P12 (1 mark): 2640\nignore: sign\nnote: Deduct 1 mark for\nnote: each mistake\nQ6 P13 (1 mark): (2 \u00d7 C=O) + (4 \u00d7 H\u2013O)\nallow: (2 \u00d7 743) +\nnote: (4 \u00d7 463) / 1486 +\nnote: 1852\nQ6 P14 (1 mark): 3338\nignore: sign\nnote: Deduct 1 mark for\nnote: each mistake\nInternational GCSE Chemistry 4CH1 | Jun 2014 | 4CH0/2C | Paper 2C | Q6 | p.11\nQ6 P15 (1 mark): \u2013 698 (kJ/mol)\nnote: CSQ on answers given\nnote: to (c)(i) and (c)(ii)\nnote: (Total for Question 6 = 15 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "e0a32b5b-dcd1-5eea-bdf8-604c6dc36ef4",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "18.7",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "27.2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "M2\u2212M1 / (+)8.5",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "1450 \u00f7 24000",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "0.0604(16)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "29.2 \u00f7 M2 from (b)(i) / 29.2 \u00f7",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "(\u2212)483(.315678)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "200 \u00d7 4.2 \u00d7 41.2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P9",
+     "ordering": 8,
+     "marks": 1,
+     "text": "(\u2212)34608",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P10",
+     "ordering": 9,
+     "marks": 1,
+     "text": "cross in box B (not all of the heat",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P11",
+     "ordering": 10,
+     "marks": 1,
+     "text": "(4 \u00d7 C-H) + (2 \u00d7 O=O)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P12",
+     "ordering": 11,
+     "marks": 1,
+     "text": "2640",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P13",
+     "ordering": 12,
+     "marks": 1,
+     "text": "(2 \u00d7 C=O) + (4 \u00d7 H\u2013O)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P14",
+     "ordering": 13,
+     "marks": 1,
+     "text": "3338",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P15",
+     "ordering": 14,
+     "marks": 1,
+     "text": "\u2013 698 (kJ/mol)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "2b234bde-3d89-458e-9a43-b0288437dd5c",
+   "paper_code": "4CH0/1C",
+   "session": "June 2015",
+   "question_id": "665a6698-be96-4fe6-bec3-8e8dc123157f",
+   "qv_ref": "q01-e280d9c6",
+   "qv_id": "e150ff12-22e0-49ce-b08c-1a009e5ea6e2",
+   "qv_marks": 5,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+   "ms_doc_row": "3cdd0c36-da74-420e-8903-1575a945c9e6",
+   "qn": 1,
+   "printed_total": 5,
+   "chunk_indices": [
+    0
+   ],
+   "merged_text_sha256": "9394cc45899830b99debf48eea1398f981259b46815947eeb05e00d1a5cb0f00",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2015 | 4CH0/1C | Paper 1C | Q1 | p.4\nMark scheme for Question 1\nQuestion 1 printed total: 5 marks\nQ1 P1 (1 mark): six circles separated from each other\nallow: minimum of 4 complete circles\nreject: any touching circles; circles joined by bonds\nignore: size and shape of circles; arrows and other symbols implying; a pattern\nnote: movement\nnote: No penalty for half-circles at edges of\nnote: square\nQ1 P2 (1 mark): B\nnote: (They move randomly in the liquid state)\nQ1 P3 (1 mark): D\nnote: (melting)\nnote: i\nQ1 P4 (1 mark): B\nnote: (condensing and evaporating)\nQ1 P5 (1 mark): D\nnote: (N2(l))",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "six circles separated from each other",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "B",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "D",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "B",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "D",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "2b234bde-3d89-458e-9a43-b0288437dd5c",
+   "paper_code": "4CH0/1C",
+   "session": "June 2015",
+   "question_id": "86b51860-875a-45ef-84d4-1b838dc5f157",
+   "qv_ref": "q02-e280d9c6",
+   "qv_id": "9d6f0ce4-193f-4530-a5e7-01c579357013",
+   "qv_marks": 5,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+   "ms_doc_row": "3cdd0c36-da74-420e-8903-1575a945c9e6",
+   "qn": 2,
+   "printed_total": 5,
+   "chunk_indices": [
+    1
+   ],
+   "merged_text_sha256": "338a202a095cbeb73780a1cf7bf37f90b29bd50df98b834f111a0fe796b752d1",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2015 | 4CH0/1C | Paper 1C | Q2 | p.5\nMark scheme for Question 2\nQuestion 2 printed total: 5 marks\nQ2 M1 (2 marks): C\nnote: (Bromine has a darker colour than air)\nQ2 P1 (1 mark): C\nQ2 M1 (2 marks): ammonia (particles/molecules)\nnote: Do not penalise ammonia atoms /\nnote: travels/diffuses faster / further in same time   ammonium (ions) / ammonia solution in\nnote: (than hydrogen      chloride)                          place of ammonia\nnote: If incorrect choice in (i), then no marks in\nnote: (ii)\nnote: If no answer in (i), mark on\nnote: M2 (no printed marks cell): D | (Bromine vapour diffuses upwards)\nnote: M2 (no printed marks cell): (because of) lower Mr | If C appears in (ii), mark can be awarded in | (i) | Accept smaller/lighter / ammonia less | dense | Reject ammonia molecules etc less dense | Ignore references to kinetic energy | Accept reverse argument for hydrogen | chloride / hydrochloric acid for both M1 and\nnote: M2 (no printed marks cell): M2",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "M1",
+     "ordering": 0,
+     "marks": 2,
+     "text": "C",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P1",
+     "ordering": 1,
+     "marks": 1,
+     "text": "C",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 2,
+     "marks": 2,
+     "text": "ammonia (particles/molecules)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "2b234bde-3d89-458e-9a43-b0288437dd5c",
+   "paper_code": "4CH0/1C",
+   "session": "June 2015",
+   "question_id": "9798eed0-7e77-4b3f-a865-ed5f6f7ad98f",
+   "qv_ref": "q04-e280d9c6",
+   "qv_id": "438d8011-275d-4945-9f93-79722da5722c",
+   "qv_marks": 10,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+   "ms_doc_row": "3cdd0c36-da74-420e-8903-1575a945c9e6",
+   "qn": 4,
+   "printed_total": 10,
+   "chunk_indices": [
+    3,
+    4
+   ],
+   "merged_text_sha256": "611e9cca54b7084ad601a7c80dd80d8fc15524a0d247c48f81af42824d34bb12",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2015 | 4CH0/1C | Paper 1C | Q4 | pp.7\u20138\nMark scheme for Question 4\nQuestion 4 printed total: 10 marks\nQ4 P1 (1 mark): CaCl2(aq) + H2SO4(aq) \u2192 CaSO4(s) + 2HCl(aq)\nnote: All four must be correct to score\nnote: Do not penalise upper case letters\nQ4 M1 (2 marks): filter paper in filter funnel\nnote: Do not penalise inappropriate size\nQ4 P2 (1 mark): Ca2+ / calcium (ion)\nreject: Ca with incorrect or missing charge\nnote: Mark (i) and (ii) independently\nQ4 P3 (1 mark): calcium sulfate/CaSO4 is partially/slightly soluble\nnote: contains unreacted/excess calcium chloride/CaCl2      Accept unreacted/excess calcium ions\nnote: (solution)\nQ4 P4 (1 mark): white precipitate\nallow: solid / ppt / ppte / suspension in place\nreject: other colours; other observations eg fizzing\nignore: cloudy/milky/grey\nnote: of precipitate\nQ4 P5 (1 mark): ii\nallow: correct formula\nignore: incorrect formula\nnote: silver chloride\nnote: Award both marks if both answers in either (i)\nnote: or (ii)\nInternational GCSE Chemistry 4CH1 | Jun 2015 | 4CH0/1C | Paper 1C | Q4 | p.8\nQ4 P6 (1 mark): (hydrochloric/sulfuric) acid / H+ there\nallow: because there are no other ions that\nreject: methods that refer to filtrate /solution\nnote: OR                                                   could form a precipitate\nnote: solution acidic                                      Accept no carbonate/hydroxide (ions)\nnote: /crystallisation\nQ4 M1 (2 marks): wash/rinse (with water)\nignore: other named solvents\nnote: M2 (no printed marks cell): everything else correct | Not essential that funnel touches flask | Reject beaker/tube for M2 | Ignore labels | Ignore relative sizes\nnote: M2 (no printed marks cell): leave it (to dry) / leave in a warm place / | Accept leave on a window ledge | place in an oven / place in desiccator / heat it /   Ignore evaporate it / boil it | dry with absorbent          paper (eg | kitchen/filter/blotting) | Award 1 mark for both M1 and M2 correct but | in wrong order",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "CaCl2(aq) + H2SO4(aq) \u2192 CaSO4(s) + 2HCl(aq)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 1,
+     "marks": 2,
+     "text": "filter paper in filter funnel",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 2,
+     "marks": 1,
+     "text": "Ca2+ / calcium (ion)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 3,
+     "marks": 1,
+     "text": "calcium sulfate/CaSO4 is partially/slightly soluble",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 4,
+     "marks": 1,
+     "text": "white precipitate",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 5,
+     "marks": 1,
+     "text": "ii",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 6,
+     "marks": 1,
+     "text": "(hydrochloric/sulfuric) acid / H+ there",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 7,
+     "marks": 2,
+     "text": "wash/rinse (with water)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "2b234bde-3d89-458e-9a43-b0288437dd5c",
+   "paper_code": "4CH0/1C",
+   "session": "June 2015",
+   "question_id": "aaec2a79-a5e3-418a-b180-d00b4cecd976",
+   "qv_ref": "q10-e280d9c6",
+   "qv_id": "2875d450-f298-491a-ab2c-ff57cd220e33",
+   "qv_marks": 12,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+   "ms_doc_row": "3cdd0c36-da74-420e-8903-1575a945c9e6",
+   "qn": 10,
+   "printed_total": 12,
+   "chunk_indices": [
+    16,
+    17
+   ],
+   "merged_text_sha256": "7bfe8e0aca76f24ab46243e0dc6abdef76a5b43b4073563d1bb9f5c63c744c79",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2015 | 4CH0/1C | Paper 1C | Q10 | pp.26\u201327\nMark scheme for Question 10\nQuestion 10 printed total: 12 marks\nQ10 M1 (2 marks): volume\nallow: mass of solution\nreject: volume of gases\nignore: amount of solution for both, but accept amount in\nnote: cm3 for M1\nQ10 P1 (1 mark): B\nQ10 P2 (1 mark): ii\nnote: D\nQ10 P3 (2 marks): Mark M1 and M2 independently\nQ10 M1 (3 marks): + M2\nnote: all five points plotted to nearest gridline\nnote: Points at zero and 120 are not essential but must be\nnote: correct if plotted\nnote: Deduct 1 mark for each error up to max 2\nQ10 M1 (2 marks): some indication on graph\nnote: eg vertical line up from 70s\nnote: horizontal line to where line from 70s would meet\nnote: curve\nnote: cross on graph\nInternational GCSE Chemistry 4CH1 | Jun 2015 | 4CH0/1C | Paper 1C | Q10 | p.27\nQ10 M2 (1 mark): volume CQ on candidate curve OR Accept graph is steeper\nallow: answers that do not depend on graph but can\nnote: Must be an integer (cm3)\nnote: No marks if original curve used\nnote: iii   curve steeper /gradient steeper/greater    Accept line for curve\nnote: curve levels off earlier / curve reaches\nnote: 100cm3 in shorter time / OWTTE\nnote: be obtained from the table of results, eg bigger volume\nnote: in a shorter time, reaction stopped earlier\nnote: M2 (no printed marks cell): concentration | Ignore strength | Ignore temperature / pressure | Accept in either order\nnote: M1 (no printed marks cell): filter (and dry) and weigh | Accept separate/remove solid/A/it from reaction mixture | solid/A/it                          and weigh it\nnote: M2 (no printed marks cell): mass is (still) 1g / mass is | Accept reverse argument, eg if it was a reactant, the mass | unchanged                           would decrease\nnote: M3 (no printed marks cell): curve of best fit | Curve does not need to be labelled | If curve correct but points not visible under curve, | award M1 and M2 | Curve CQ on points plotted | Penalise repeated straight line(s) joining points | / more than one curve visible",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "M1",
+     "ordering": 0,
+     "marks": 2,
+     "text": "volume",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P1",
+     "ordering": 1,
+     "marks": 1,
+     "text": "B",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 2,
+     "marks": 1,
+     "text": "ii",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 3,
+     "marks": 2,
+     "text": "Mark M1 and M2 independently",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 4,
+     "marks": 3,
+     "text": "+ M2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 5,
+     "marks": 2,
+     "text": "some indication on graph",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 6,
+     "marks": 1,
+     "text": "volume CQ on candidate curve OR Accept graph is steeper",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "31236989-60fe-4dd9-b7c8-b86160f8a14e",
+   "paper_code": "4CH0/1C",
+   "session": "January 2017",
+   "question_id": "26b0733d-f630-4468-bfa0-dfd9380d5ec4",
+   "qv_ref": "q03-ffd06551",
+   "qv_id": "7f13bbdc-af25-4c66-b730-3ee9391e3837",
+   "qv_marks": 9,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "93e4fee2-3a67-5477-9359-89a0c562999b",
+   "ms_doc_row": "be0ed330-edac-44c2-b16e-c3b445ef55ba",
+   "qn": 3,
+   "printed_total": 9,
+   "chunk_indices": [
+    3
+   ],
+   "merged_text_sha256": "466688d4db5c8c18146fcdc03061bcd47ad9ff1c3b0c19d1e67e7ad938f77374",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jan 2017 | 4CH0/1C | Paper 1C | Q3 | p.7\nMark scheme for Question 3\nQ3 P1 (1 mark): V\nQ3 P2 (1 mark): U AND X\nQ3 P3 (1 mark): V\nQ3 M1 (2 marks): CH4 + 2O2 \u2192 CO2 + 2H2O\nallow: multiples and fractions\nQ3 P4 (1 mark): it decreases the capacity of blood to transport\nallow: correct references to haemoglobin\nnote: oxygen OWTTE                                      and/or carboxyhaemoglobin\nQ3 P5 (1 mark): nitrogen\nallow: answers in either order\nnote: AND\nnote: oxygen\nQ3 P6 (1 mark): HNO3\nQ3 P7 (1 mark): iron / steel / limestone / marble\nignore: chalk; formula even if incorrect\nnote: (Total for Question 3 = 9 marks)\nnote: M2 (no printed marks cell): C2H4 + 2O2 \u2192 2CO + 2H2O | Accept multiples and fractions",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "93e4fee2-3a67-5477-9359-89a0c562999b",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "V",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "U AND X",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "V",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 3,
+     "marks": 2,
+     "text": "CH4 + 2O2 \u2192 CO2 + 2H2O",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 4,
+     "marks": 1,
+     "text": "it decreases the capacity of blood to transport",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 5,
+     "marks": 1,
+     "text": "nitrogen",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 6,
+     "marks": 1,
+     "text": "HNO3",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 7,
+     "marks": 1,
+     "text": "iron / steel / limestone / marble",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "31ad242a-43c6-4246-a158-bd79f586994a",
+   "paper_code": "4CH0/1C",
+   "session": "June 2013",
+   "question_id": "49fc026a-1bde-4e35-b6d5-0ce1c16dd90e",
+   "qv_ref": "q04-6d968517",
+   "qv_id": "7840fe67-64fb-4c8f-b8d0-89e9f824f2d2",
+   "qv_marks": 6,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "af3f4f8d-01b8-5036-bbc5-1f6b464a5c22",
+   "ms_doc_row": "5a00eeb3-bbf9-4d30-b8fe-9435e29de1eb",
+   "qn": 4,
+   "printed_total": 6,
+   "chunk_indices": [
+    4,
+    5
+   ],
+   "merged_text_sha256": "4788141a2f155b8609cad6311b454f9ea3d08d8eb840ef3bf09e997abc237f26",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2013 | 4CH0/1C | Paper 1C | Q4 | p.7\nMark scheme for Question 4\nQuestion 4 printed total: 6 marks\nQ4 P1 (1 mark): 4 electrons shared between 2 (carbon)\nignore: inner electrons\nnote: atoms                                      even if wrong Ignore\nnote: number of hydrogen\nnote: atoms\nQ4 P2 (1 mark): 4 electron pairs between 2C and 4H atoms\nallow: all permutations of; H atoms at all\nignore: intersecting circles\nnote: dots and crosses\nnote: angles\nnote: At least one C or one H\nnote: atom must be labelled \u2013\nnote: max 1 if not\nnote: Max 1 if more than 2 C\nnote: atoms\nnote: Max 1 if wrong number of\nnote: electrons in outer shell of\nnote: any atom\nInternational GCSE Chemistry 4CH1 | Jun 2013 | 4CH0/1C | Paper 1C | Q4 | p.8\nQ4 P3 (1 mark): setting out correct division of each %\nnote: Award 0/3 if division by any atomic numbers /\nnote: by Ar                                      wrong way up / multiplication used\nnote: OR                                         Do not penalise roundings and minor misreads\nnote: 3.2, 9.7 and 3.2                           of % values, eg 38 or 39 for carbon\nnote: If molecular masses used for H and/or O, no\nnote: M1, but can award M2 and M3\nnote: but no CQ in ii\nnote: Using 2 and 32 gives C2H3O\nnote: Using 1 and 32 gives C2H6O\nnote: Using 2 and 16 gives C2H3O2\nnote: Working required for these answers\nQ4 P4 (1 mark): division by smallest /ratio of 1 : 3 : 1\nnote: M2 subsumes M1\nQ4 P5 (1 mark): CH3O\nallow: elements in any order; use of 62 from ii,\nnote: Award 3 for correct final answer with no\nnote: working\nnote: No ECF from M2\nnote: i.e. 62 \u00d7 0.387 = 24 etc scores M1\nnote: ratio scores M2, answer scores M3\nQ4 P6 (1 mark): C2H6O2\nallow: elements in any order\nnote: No other answer acceptable",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "af3f4f8d-01b8-5036-bbc5-1f6b464a5c22",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "4 electrons shared between 2 (carbon)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "4 electron pairs between 2C and 4H atoms",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "setting out correct division of each %",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "division by smallest /ratio of 1 : 3 : 1",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "CH3O",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "C2H6O2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "31ad242a-43c6-4246-a158-bd79f586994a",
+   "paper_code": "4CH0/1C",
+   "session": "June 2013",
+   "question_id": "66c379cc-706a-436a-9751-6e601a9146ad",
+   "qv_ref": "q07-6d968517",
+   "qv_id": "946999c3-e7f0-4f92-b095-15d7d0c32e1d",
+   "qv_marks": 10,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "af3f4f8d-01b8-5036-bbc5-1f6b464a5c22",
+   "ms_doc_row": "5a00eeb3-bbf9-4d30-b8fe-9435e29de1eb",
+   "qn": 7,
+   "printed_total": 10,
+   "chunk_indices": [
+    12,
+    13,
+    14
+   ],
+   "merged_text_sha256": "300a426a3471d6659bfb06d3baefb420d623e42602fc7b2da99981db2ab97d0c",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2013 | 4CH0/1C | Paper 1C | Q7 | p.18\nMark scheme for Question 7\nQuestion 7 printed total: 10 marks\nQ7 P1 (1 mark): reference to line/curve/temperature\nignore: reference to correlation\nnote: /graph/it                                  Ignore has not reached zero / x-axis\nnote: AND                                        Ignore does not become\nnote: not reached minimum / not constant / not\nnote: level\nnote: /not horizontal /still falling\nnote: /decreasing/changing\nQ7 P2 (1 mark): (better) insulator (than glass)\nallow: equivalents such as prevents heat from\nreject: references to keeping temperature constant\nignore: references to breaking glass\nnote: OR                                         entering / keeps out heat better\nnote: poor conductor (of heat)                   Allow stops heat escaping / traps heat\nQ7 P3 (1 mark): effervescence / fizzing / bubbles\nallow: carbon dioxide gas; solid disappears/dissolves\nignore: hissing and other sounds\nnote: OR                                         Accept gas given off/evolved/formed\nnote: colourless solution/liquid formed          Ignore identity of gas\nQ7 P4 (1 mark): ii\nallow: acid-base / acid-alkali\nnote: Neutralisation\nInternational GCSE Chemistry 4CH1 | Jun 2013 | 4CH0/1C | Paper 1C | Q7 | pp.18\u201320\nQ7 P5 (1 mark): endothermic\nallow: answers in either order\nnote: M1 and M2 independent\nnote: Do not penalise contradictions such as exothermic\nnote: and endothermic \u2013 this answer is worth 1 mark\nQ7 P6 (1 mark): product formulae or names /\nignore: curves and intermediates\nnote: Horizontal line not needed\nnote: products (word) above           Ignore formula errors and one or\nnote: reactants                       two missing product(s)\nQ7 P7 (1 mark): (approximately) vertical line\nignore: arrowheads on vertical line\nnote: between reactants and           Ignore sign of \u2206H\nnote: products / between two levels   Mark can be awarded for\nnote: AND                             exothermic reaction\nnote: labelled \u2206H / energy change /   Accept 2310 or any other number\nnote: heat change / enthalpy change   in place of \u2206H\nQ7 P8 (1 mark): i\nnote: temperature change = (\u2013)5.5\nnote: Award M1 for 5.5 anywhere\nnote: (\u00b0C)\nQ7 P9 (1 mark): heat change (= 100 \u00d7 4.2 \u00d7\nallow: answer in kJ\nignore: signs\nnote: CQ on candidate temperature\nnote: 5.5) = 2310/2300 (J)          change, provided other values\nnote: correct\nnote: Correct final answer scores 2\nnote: 2.31 (J) scores 1 mark if M1 not\nnote: awarded\nInternational GCSE Chemistry 4CH1 | Jun 2013 | 4CH0/1C | Paper 1C | Q7 | p.20\nQ7 P10 (1 mark): concentration (of vinegar /\nallow: concentration even if in an\nignore: strength\nnote: (ethanoic) acid / CH3COOH)    Ignore reference to Mr\nnote: incorrect expression",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "af3f4f8d-01b8-5036-bbc5-1f6b464a5c22",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "reference to line/curve/temperature",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "(better) insulator (than glass)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "effervescence / fizzing / bubbles",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "ii",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "endothermic",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "product formulae or names /",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "(approximately) vertical line",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "i",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P9",
+     "ordering": 8,
+     "marks": 1,
+     "text": "heat change (= 100 \u00d7 4.2 \u00d7",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P10",
+     "ordering": 9,
+     "marks": 1,
+     "text": "concentration (of vinegar /",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "31ad242a-43c6-4246-a158-bd79f586994a",
+   "paper_code": "4CH0/1C",
+   "session": "June 2013",
+   "question_id": "7e5d6939-3aa0-47ed-bcf1-4a3178245901",
+   "qv_ref": "q11-6d968517",
+   "qv_id": "f55c8cc0-aa40-430f-a42c-bb0cf34ba441",
+   "qv_marks": 9,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "af3f4f8d-01b8-5036-bbc5-1f6b464a5c22",
+   "ms_doc_row": "5a00eeb3-bbf9-4d30-b8fe-9435e29de1eb",
+   "qn": 11,
+   "printed_total": 9,
+   "chunk_indices": [
+    24,
+    25
+   ],
+   "merged_text_sha256": "3d0a9f895e1f155d0c049e7e18a6503ac8d438569f9ed1423073976cee292e46",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2013 | 4CH0/1C | Paper 1C | Q11 | pp.30\u201331\nMark scheme for Question 11\nQuestion 11 printed total: 9 marks\nQ11 P1 (1 mark): delocalised electrons / sea of\nignore: free electrons\nnote: electrons\nnote: move / flow (through             M2 needs mention of electrons,\nnote: structure) / mobile (when        e.g. \"electrons move/flow\" scores\nnote: voltage/potential difference     M2 but not M1\nnote: applied)                         Ignore references to carrying\nnote: charge/current\nnote: No penalty for references to\nnote: aluminium atoms or ions / nuclei /\nnote: protons, but any mention of these\nnote: moving = 0/2\nQ11 P2 (1 mark): layers/sheets/planes/rows\nnote: AND\nnote: (positive)                       Reject\nnote: ions/atoms/particles             molecules/protons/electrons/nuclei\nQ11 P3 (1 mark): slide (over each other)\nallow: \nnote: slip/flow/shift/roll/move/OWTTE in\nnote: place of slide\nnote: Do not award M2 if no mention of\nnote: layers or equivalent\nnote: Do not award M2 if\nnote: protons/electrons/nuclei\nQ11 P4 (1 mark): NITROGEN (simple) molecular structure Accept (nitrogen/N2/small/discrete) molecules\nInternational GCSE Chemistry 4CH1 | Jun 2013 | 4CH0/1C | Paper 1C | Q11 | p.31\nQ11 P5 (1 mark): intermolecular forces (of\nallow: intermolecular bonds\nnote: attraction)                      Reference to intermolecular also scores M1\nnote: / forces between molecules\nQ11 P6 (1 mark): weak / easily overcome\nnote: /need little energy to\nnote: overcome\nnote: If any reference to breaking covalent bonds or\nnote: any other type of bonding, only M1 can be\nnote: awarded\nnote: SILICA\nQ11 P7 (1 mark): giant (structure)\nallow: macromolecular\nignore: lattice\nQ11 P8 (1 mark): covalent (bonds)\nnote: Covalent can be anywhere in answer\nQ11 P9 (1 mark): bonds strong / hard to break\nnote: /need a lot of energy to break\nnote: If any reference to breaking intermolecular\nnote: forces or any other type of bonding, only M4\nnote: can be awarded\nnote: Any five for 1 mark each",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "af3f4f8d-01b8-5036-bbc5-1f6b464a5c22",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "delocalised electrons / sea of",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "layers/sheets/planes/rows",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "slide (over each other)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "NITROGEN (simple) molecular structure Accept (nitrogen/N2/small/discrete) molecules",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "intermolecular forces (of",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "weak / easily overcome",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "giant (structure)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "covalent (bonds)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P9",
+     "ordering": 8,
+     "marks": 1,
+     "text": "bonds strong / hard to break",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "7041ab60-1e67-4b7a-917e-7896ea0a0edf",
+   "paper_code": "4CH0/2C",
+   "session": "June 2011",
+   "question_id": "f3a06643-07e8-45ad-9b5e-b7037d9cce0c",
+   "qv_ref": "q07-e1a96fcc",
+   "qv_id": "eabfecba-a0ec-4960-b262-fc852f0a0e83",
+   "qv_marks": 9,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "f8efe458-8438-5f33-85cf-68cfa1a60ab0",
+   "ms_doc_row": "a318c31b-09c8-4832-9429-8d704128d9bb",
+   "qn": 7,
+   "printed_total": 9,
+   "chunk_indices": [
+    8
+   ],
+   "merged_text_sha256": "0f878b83fd6cead56608454ce3bfefbe6042d74a8b3a31e72123811179a510df",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2011 | 4CH0/2C | Paper 2C | Q7 | p.12\nMark scheme for Question 7\nQuestion 7 printed total: 9 marks\nQ7 P1 (1 mark): 108/24\nnote: 1 mark for answer of\nnote: 4.8(2) (molar volume\nQ7 P2 (1 mark): = 4.5\nnote: = 22.4dm3)\nQ7 P3 (1 mark): Mr of NaN3 = 65\nnote: 23 + (14 x3)\nQ7 P4 (1 mark): Moles of NaN3 = 3 OR two thirds of (a)(i)\nQ7 P5 (1 mark): Mass of NaN3 = 195 (g) OR moles of NaN3 x Mr\nnote: Correct answer with no\nnote: working scores 3\nnote: [Mark consequentially at each stage]\nQ7 P6 (1 mark): Removes (harmful) sodium\nnote: Produces more\nnote: nitrogen / gas OR bag\nnote: inflates more quickly\nQ7 P7 (1 mark): K2O(s) + SiO2(s) \u2192 K2SiO3(s)\nignore: same numbers of Na2O on both sides of\nnote: K2O(s) + SiO2(s) \u2192 K2SiO3(l)\nnote: equation\nQ7 P8 (1 mark): Precipitation\nnote: Double decomposition\nnote: Double displacement\nnote: 1\nQ7 P9 (1 mark): Filtration / filter\nignore: refs to adding water                      liquid                   / distillation /\nnote: Decanting / pour off\nnote: Sieving / evaporation\nnote: crystallisation / heat",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "f8efe458-8438-5f33-85cf-68cfa1a60ab0",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "108/24",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "= 4.5",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "Mr of NaN3 = 65",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "Moles of NaN3 = 3 OR two thirds of (a)(i)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "Mass of NaN3 = 195 (g) OR moles of NaN3 x Mr",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "Removes (harmful) sodium",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "K2O(s) + SiO2(s) \u2192 K2SiO3(s)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "Precipitation",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P9",
+     "ordering": 8,
+     "marks": 1,
+     "text": "Filtration / filter",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "a29dfbd8-54c4-41b0-97ec-8fa8fe94b966",
+   "paper_code": "4CH0/1CR",
+   "session": "June 2017",
+   "question_id": "70f99810-b5dd-4cce-8701-78e2136709ff",
+   "qv_ref": "q10-b4e24b82",
+   "qv_id": "0cbe548c-da79-45fa-bac8-6acc1b4b7bfb",
+   "qv_marks": 7,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "7195d701-ad3b-5667-8d4c-1dd743021e27",
+   "ms_doc_row": "7122d0b5-eebe-4e67-b9ca-6ea81b949d6d",
+   "qn": 10,
+   "printed_total": 7,
+   "chunk_indices": [
+    16
+   ],
+   "merged_text_sha256": "e1dce3e0e7fcda2b4740d6986a18992e0df8bc6ade7ce3d5efc0f87e8aa84c91",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2017 | 4CH0/1C | Paper 1C | Q10 | p.21\nMark scheme for Question 10\nQuestion 10 printed total: 7 marks\nQ10 M1 (2 marks): (magnesium ribbon) shiny / silvery\nignore: grey\nnote: M2 (magnesium oxide)        white (powder/solid/smoke/ash)        IGNORE grey\nQ10 P1 (2 marks): (lift the lid) to allow oxygen into the crucible\nallow: air; to allow magnesium; prevent the loss of\nnote: to react with oxygen\nnote: (replaces the lid) minimise the loss of magnesium oxide/product   ACCEPT smoke for\nnote: magnesium oxide\nnote: magnesium oxide, etc\nnote: (b)          M1 n[Mg] = 0.6 \u00f7 24 OR 0.025 (mol)\nnote: M2 mass of O2 = 0.4 (g)\nnote: OR (M1 \u00f7 2) \u00d7 32 evaluated correctly\nnote: Alternative method\nQ10 M1 (2 marks): 48 (g) require 32 (g)\nQ10 P2 (1 mark): 3Mg + N2 \u2192 Mg3N2\nallow: multiples and halves\nnote: M2 (no printed marks cell): 0.6 (g) require 0.4 (g)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "7195d701-ad3b-5667-8d4c-1dd743021e27",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "M1",
+     "ordering": 0,
+     "marks": 2,
+     "text": "(magnesium ribbon) shiny / silvery",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P1",
+     "ordering": 1,
+     "marks": 2,
+     "text": "(lift the lid) to allow oxygen into the crucible",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 2,
+     "marks": 2,
+     "text": "48 (g) require 32 (g)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 3,
+     "marks": 1,
+     "text": "3Mg + N2 \u2192 Mg3N2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+   "paper_code": "4CH0/1C",
+   "session": "January 2015",
+   "question_id": "7ed935e1-afe5-4bb3-a804-27a5a3408a65",
+   "qv_ref": "q02-8d584ee1",
+   "qv_id": "c510116f-dd09-4605-a987-f23232dd55e7",
+   "qv_marks": 7,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+   "ms_doc_row": "295c2cc2-6757-4bed-b8ad-07decf4f2758",
+   "qn": 2,
+   "printed_total": 7,
+   "chunk_indices": [
+    1
+   ],
+   "merged_text_sha256": "40720c0457c3ea68938a61271ccea994ac80d155679abea227c9f23ca5c99cd6",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q2 | p.5\nMark scheme for Question 2\nQuestion 2 printed total: 7 marks\nQ2 P1 (1 mark): tick for P = chromatography\nQ2 P2 (1 mark): tick for Q = fractional distillation\nQ2 P3 (1 mark): tick for R = filtration\nQ2 P4 (1 mark): tick for S = simple distillation\nQ2 P5 (1 mark): R\nallow: (sand from a mixture of) sand and water\nQ2 M1 (1 mark): for B in first box AND D in last box\nnote: M2 for A in box 3 AND C in box 4\nQ2 M2 (1 mark): dependent on M1 correct",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "tick for P = chromatography",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "tick for Q = fractional distillation",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "tick for R = filtration",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "tick for S = simple distillation",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "R",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 5,
+     "marks": 1,
+     "text": "for B in first box AND D in last box",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 6,
+     "marks": 1,
+     "text": "dependent on M1 correct",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+   "paper_code": "4CH0/1C",
+   "session": "January 2015",
+   "question_id": "22769243-f056-4511-9aae-d64a15d50c82",
+   "qv_ref": "q03-8d584ee1",
+   "qv_id": "ba7544dd-863b-462c-bbc6-e9938025152d",
+   "qv_marks": 7,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+   "ms_doc_row": "295c2cc2-6757-4bed-b8ad-07decf4f2758",
+   "qn": 3,
+   "printed_total": 7,
+   "chunk_indices": [
+    2,
+    3
+   ],
+   "merged_text_sha256": "6fb6c31a7888816d4f46d5b262e277a58ffe15535e7dc3a5ea946b232c1fc899",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q3 | p.6\nMark scheme for Question 3\nQuestion 3 printed total: 7 marks\nQ3 P1 (1 mark): burns with a pop/squeak\nreject: reference to glowing splint\nignore: flame extinguished\nnote: Must be reference to test and result\nnote: OR                                                  Reference to splint/match with no indication of flame\nnote: use burning/lit splint/flame to see if pop/squeak   is not enough\nnote: Squeaky pop test on its own is not enough\nQ3 P2 (2 marks): anhydrous/white copper sulfate\nallow: correct formula\nignore: colourless\nnote: Incorrect formula (eg CuSO) counts as near miss\nnote: turns blue\nnote: anhydrous/blue cobalt chloride                  Accept correct formula\nnote: Incorrect formula (eg CoCl) counts as near miss\nnote: turns pink\nnote: M2 DEP on M1 or near miss\nQ3 P3 (2 marks): measure boiling point / freezing point\nallow: boil it / freeze it\nignore: heat; units\nnote: 100 (\u00b0C)             / O (\u00b0C)                   Value must match property\nnote: Answers such as boils/distils at 100 \u00b0C\nnote: / freezes at 0 \u00b0C score M2 only\nInternational GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q3 | p.7\nQ3 P4 (2 marks): cross by\nnote: carbon dioxide from the air reacts to cause the\nnote: cloudiness\nnote: cross by\nnote: the cloudiness is caused by the formation of a\nnote: white precipitate\nnote: If 3 boxes crossed then max 1\nnote: If 4 or more boxes crossed then 0",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "burns with a pop/squeak",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 2,
+     "text": "anhydrous/white copper sulfate",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 2,
+     "text": "measure boiling point / freezing point",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 2,
+     "text": "cross by",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+   "paper_code": "4CH0/1C",
+   "session": "January 2015",
+   "question_id": "8413f06c-c631-485b-bfef-0440a389e14a",
+   "qv_ref": "q05-8d584ee1",
+   "qv_id": "c69b5057-2760-4580-966e-54c9830e4722",
+   "qv_marks": 8,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+   "ms_doc_row": "295c2cc2-6757-4bed-b8ad-07decf4f2758",
+   "qn": 5,
+   "printed_total": 8,
+   "chunk_indices": [
+    6
+   ],
+   "merged_text_sha256": "15194d88ccc1704e34c4cfc5acaa8f77c3b2cb959dfae18ba58b2982900c8e80",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q5 | p.10\nMark scheme for Question 5\nQuestion 5 printed total: 8 marks\nQ5 P1 (1 mark): 4\nQ5 P2 (1 mark): B (hydrated)\nQ5 P3 (1 mark): aluminium hydroxide AND sodium sulfate\nallow: in either order\nignore: formulae / oxidation numbers\nQ5 P4 (1 mark): smothers/blankets the fuel/fire\nallow: high density / higher density than\nignore: heavier than air/oxygen\nnote: / sinks onto to fuel/fire                             air/oxygen\nQ5 P5 (1 mark): (therefore) prevents oxygen/air from reaching\nallow: does not support combustion\nnote: the fuel/fire                                         Ignore carbon dioxide does not burn\nQ5 P6 (1 mark): Al(OH)3 has (s) / is solid /is insoluble / its ions\nnote: not free / its ions not released\nQ5 P7 (1 mark): H2SO4 has (aq) / is a solution\nnote: AND (H+) ions are released\nQ5 P8 (1 mark): B (5.5)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "4",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "B (hydrated)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "aluminium hydroxide AND sodium sulfate",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "smothers/blankets the fuel/fire",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "(therefore) prevents oxygen/air from reaching",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "Al(OH)3 has (s) / is solid /is insoluble / its ions",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "H2SO4 has (aq) / is a solution",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "B (5.5)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+   "paper_code": "4CH0/1C",
+   "session": "January 2015",
+   "question_id": "ff1c9304-dbae-44eb-9ce8-fd721cd8af08",
+   "qv_ref": "q06-8d584ee1",
+   "qv_id": "27df23ed-fc3a-4d3e-b3b9-20f363866da0",
+   "qv_marks": 8,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+   "ms_doc_row": "295c2cc2-6757-4bed-b8ad-07decf4f2758",
+   "qn": 6,
+   "printed_total": 8,
+   "chunk_indices": [
+    7
+   ],
+   "merged_text_sha256": "8313d6a4e34e643ed3938effcbf665563244e7fc1f4fec03f32f418f7cec4b2f",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q6 | p.11\nMark scheme for Question 6\nQuestion 6 printed total: 8 marks\nQ6 P1 (1 mark): C (diffusion)\nQ6 P2 (1 mark): ammonia (moves more quickly)\nignore: reference to solution\nnote: AND                                                  Ignore reverse argument for HCl\nnote: it travels further /white solid is close(r) to the   Ignore references to reacting more quickly\nnote: HCl end / further from the NH3 end\nQ6 P3 (1 mark): sodium hydroxide / NaOH\nallow: other suitable alkalis\nQ6 P4 (1 mark): ammonia / NH3\nreject: ammonium\nQ6 P5 (1 mark): blue\nreject: all other colours\nnote: M3 DEP on M2 or near miss\nQ6 P6 (1 mark): to remove carbonate (ions)/sulfite (ions)\nallow: to prevent other ions interfering / to\nignore: to make sure other reactions do not\nnote: prevent other precipitates from forming\nnote: occur\nQ6 P7 (1 mark): silver nitrate / AgNO3\nQ6 P8 (1 mark): silver chloride / AgCl\nnote: If both name and formula given, both must\nnote: be correct",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "C (diffusion)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "ammonia (moves more quickly)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "sodium hydroxide / NaOH",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "ammonia / NH3",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "blue",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "to remove carbonate (ions)/sulfite (ions)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "silver nitrate / AgNO3",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "silver chloride / AgCl",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+   "paper_code": "4CH0/1C",
+   "session": "January 2015",
+   "question_id": "aca0c19e-d688-4e9a-90b7-d97268f1abc9",
+   "qv_ref": "q10-8d584ee1",
+   "qv_id": "5995e837-02ff-4ede-a12f-b4b715c6ea6a",
+   "qv_marks": 9,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+   "ms_doc_row": "295c2cc2-6757-4bed-b8ad-07decf4f2758",
+   "qn": 10,
+   "printed_total": 9,
+   "chunk_indices": [
+    15,
+    16
+   ],
+   "merged_text_sha256": "2f1d5869663a02d3f1ba693249c72c1884ec54bf0826a5ac5384930eec2e60d6",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q10 | pp.19\u201320\nMark scheme for Question 10\nQuestion 10 printed total: 9 marks\nQ10 P1 (4 marks): mix / add / react (the two) solutions / salts stir Accept swirl\nignore: references to volumes\nnote: together\nnote: filter                                          Accept description of filtration\nnote: wash (with water)\nnote: suitable method of drying                       eg warm / heat / place in oven / leave on\nnote: window ledge / leave to dry / dry with filter\nnote: paper or kitchen towel\nnote: Not just dry\nnote: Any four above for 1 mark each\nnote: If M3 not scored then M4 and M5 cannot be\nnote: awarded\nnote: If description of evaporation of solution, then\nnote: M4 and M5 cannot be awarded\nQ10 P2 (1 mark): identifying two suitable pieces of apparatus\nnote: Any two of\nnote: \uf0b7 beaker / flask / test tube (for mixing)\nnote: \uf0b7 (glass) rod (for stirring)\nnote: \uf0b7 (filter) funnel/paper (for separation)\nnote: Reference to filter paper or filter funnel scores\nnote: M3 and counts as one of M6\nnote: If any other substance added, then MAX 4\nQ10 P3 (1 mark): B (the products are both elements)\nInternational GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q10 | p.20\nQ10 P4 (1 mark): electrons on wrong side / should be on right Accept + in front of electrons (should be \u2014)\nnote: /should be \u2013 2e\u2013\nQ10 P5 (1 mark): 2Br should be Br2\nallow: product is shown as a bromine atom\nnote: / should be shown as a bromine molecule\nnote: Equation correctly rewritten scores both marks\nQ10 P6 (1 mark): iii ions stop moving / ions not free to move\nreject: implication that electrons stop flowing\nignore: liquid becomes solid / no free ions\nnote: electrons stop moving (through wires)         Accept electric current in place of electrons\nnote: through liquid",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 4,
+     "text": "mix / add / react (the two) solutions / salts stir Accept swirl",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "identifying two suitable pieces of apparatus",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "B (the products are both elements)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "electrons on wrong side / should be on right Accept + in front of electrons (should be \u2014)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "2Br should be Br2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "iii ions stop moving / ions not free to move",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+   "paper_code": "4CH0/1C",
+   "session": "January 2015",
+   "question_id": "f7c88074-5d41-46b3-9247-ac16047dd826",
+   "qv_ref": "q12-8d584ee1",
+   "qv_id": "391b0113-3847-4520-8646-72fcc8963868",
+   "qv_marks": 15,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+   "ms_doc_row": "295c2cc2-6757-4bed-b8ad-07decf4f2758",
+   "qn": 12,
+   "printed_total": 15,
+   "chunk_indices": [
+    19,
+    20
+   ],
+   "merged_text_sha256": "7fe0fa0396d67940ce43843a2d5bf4335088ef906ec627bcb9b715c2379b85b6",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q12 | pp.23\u201324\nMark scheme for Question 12\nQuestion 12 printed total: 15 marks\nQ12 P1 (1 mark): mass / amount\nallow: weight\nignore: number of marble chips\nQ12 P2 (1 mark): surface area / size / volume\nignore: length / width / height / thickness /; temperature / purity / density\nnote: shape / type\nQ12 P3 (1 mark): gas/carbon dioxide escapes / OWTTE\nignore: references to solid dissolving; references to acid spray / vapour\nnote: Do not penalise incorrectly named gas (eg\nnote: hydrogen)\nQ12 P4 (1 mark): prevents loss of acid (spray)/liquid\nreject: references to stopping gases/marble\nignore: references to evaporation / water vapour\nnote: / spilling of liquid\nnote: chips escaping\nQ12 P5 (1 mark): 210 (s)\nQ12 P6 (1 mark): some indication of mark on curve\nnote: Mark M1 and M2 independently\nnote: vertical line from 50% / horizontal line\nnote: from 210 s\nQ12 P7 (1 mark): B (the loss of mass was greater than 1.0g\nQ12 P8 (1 mark): 1 \u00f7 210\nallow: any time value in range 200 - 210\nQ12 P9 (1 mark): evaluation of M1 / 0.00476\nallow: answer in range 0.004- 0.005; any number of sig fig\nnote: Deduct 1 mark for each error up to max\nQ12 P10 (2 marks): all five points plotted to nearest gridline\nnote: 2\nInternational GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/1C | Paper 1C | Q12 | pp.24\u201325\nQ12 P11 (1 mark): straight line of best fit\nnote: Line need not be extrapolated to origin\nnote: If line not extrapolated, it should go to\nnote: the origin if extrapolated\nnote: Must be drawn with a ruler\nnote: CQ on candidate\u2019s plotted points\nQ12 P12 (1 mark): more particles (in a given volume)\nallow: ions; quantitative answer such as twice as\nreject: atoms / molecules\nnote: many particles when concentration doubles\nQ12 P13 (1 mark): more collisions (between particles) /\nnote: OWTTE\nQ12 P14 (1 mark): per unit time / OWTTE\nallow: reverse argument if clear that decreasing\nignore: greater chance/likelihood of collisions\nnote: more frequent collisions scores M2 and M3\nnote: concentration is being considered\nnote: MAX 1 if any reference to particles moving faster\nnote: / having more energy",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "36be3c10-413e-5add-bcc6-921b6edf85af",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "mass / amount",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "surface area / size / volume",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "gas/carbon dioxide escapes / OWTTE",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 3,
+     "marks": 1,
+     "text": "prevents loss of acid (spray)/liquid",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 4,
+     "marks": 1,
+     "text": "210 (s)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P6",
+     "ordering": 5,
+     "marks": 1,
+     "text": "some indication of mark on curve",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P7",
+     "ordering": 6,
+     "marks": 1,
+     "text": "B (the loss of mass was greater than 1.0g",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P8",
+     "ordering": 7,
+     "marks": 1,
+     "text": "1 \u00f7 210",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P9",
+     "ordering": 8,
+     "marks": 1,
+     "text": "evaluation of M1 / 0.00476",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P10",
+     "ordering": 9,
+     "marks": 2,
+     "text": "all five points plotted to nearest gridline",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P11",
+     "ordering": 10,
+     "marks": 1,
+     "text": "straight line of best fit",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P12",
+     "ordering": 11,
+     "marks": 1,
+     "text": "more particles (in a given volume)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P13",
+     "ordering": 12,
+     "marks": 1,
+     "text": "more collisions (between particles) /",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P14",
+     "ordering": 13,
+     "marks": 1,
+     "text": "per unit time / OWTTE",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "c2dab965-b9e9-4ca9-a37c-74a557e9b3b5",
+   "paper_code": "4CH0/2CR",
+   "session": "June 2017",
+   "question_id": "5c187ddb-b3ab-4d84-bae4-9b7bc7934c4d",
+   "qv_ref": "q05-c8e045a4",
+   "qv_id": "f7d4fb64-24cf-47bb-b8e7-da8a1cf55d0f",
+   "qv_marks": 6,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "a03f9ddf-8f22-54ea-aa64-68e8304bca9a",
+   "ms_doc_row": "676bde63-f57a-4707-b239-335d78022704",
+   "qn": 5,
+   "printed_total": 6,
+   "chunk_indices": [
+    5
+   ],
+   "merged_text_sha256": "98875b9d3105781b0bdcd05dd212fc9d89ca54e3af63d86d624360cdf71d2016",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2017 | 4CH0/2C | Paper 2C | Q5 | p.11\nMark scheme for Question 5\nQuestion 5 printed total: 6 marks\nQ5 P1 (1 mark): 46.6 (g)\nignore: trailing zeros e.g. accept 46.60\nQ5 P2 (1 mark): as temperature increases, solubility decreases\nallow: reverse argument; references to negative\nreject: reference to (direct)\nignore: any reference to inverse\nnote: proportionality\nnote: proportionality\nnote: correlation\nQ5 M1 (2 marks): use a fume cupboard\nallow: carry out in a well-ventilated\nignore: reference to lab; do not inhale fumes\nnote: area\nnote: coats/goggles/(gas) masks/gloves\nnote: M2 (because) ammonia is toxic/poisonous           IGNORE dangerous/harmful/irritant\nQ5 P3 (1 mark): water evaporates (more quickly) / ammonia\nallow: (ammonia) solution evaporates\nignore: ammonia evaporates\nnote: escapes (as it is less soluble in hot water)\nQ5 P4 (1 mark): measure the pH (of the solution using\nnote: universal indicator or pH meter)\nnote: titrate with acid",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "a03f9ddf-8f22-54ea-aa64-68e8304bca9a",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "46.6 (g)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "as temperature increases, solubility decreases",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 2,
+     "marks": 2,
+     "text": "use a fume cupboard",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 3,
+     "marks": 1,
+     "text": "water evaporates (more quickly) / ammonia",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 4,
+     "marks": 1,
+     "text": "measure the pH (of the solution using",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "cdbbe3ea-60fa-48ef-b870-bb9ef345f545",
+   "paper_code": "4CH1/1CR",
+   "session": "June 2019",
+   "question_id": "79db303c-bfdd-4d79-be6e-4bac5f0e1141",
+   "qv_ref": "q01-be73fe41",
+   "qv_id": "eafffbf7-3bf8-4095-9424-f7154adc0c2d",
+   "qv_marks": 6,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "aa079c51-874e-5fe8-a44c-2a8feb9b07b5",
+   "ms_doc_row": "1fe41975-467b-49d6-a2b2-2575c19fdae5",
+   "qn": 1,
+   "printed_total": 6,
+   "chunk_indices": [
+    0
+   ],
+   "merged_text_sha256": "efdca4a54a6574a256fe6744a3e139a8a35d2efe869313e34fbf00fb71801c7d",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/1CR | Paper 1CR | Q1 | p.4\nMark scheme for Question 1\nQuestion 1 printed total: 6 marks\nQ1 P1 (1 mark): (i)\nnote: melting\nQ1 P2 (1 mark): evaporation\nQ1 P3 (1 mark): sublimation\nnote: the following points\nnote: M1 (particles) close together           ALLOW tightly\nnote: packed/ touching\nnote: M2 (particles) regularly arranged       ALLOW\nnote: arranged in a\nnote: lattice\nQ1 M1 (3 marks): and M2 can\nignore: \nnote: be scored from a\nnote: diagram\nnote: M3 (particles) do not move around       ALLOW do not\nnote: move freely\nnote: M4 (particles) vibrate (about a fixed\nnote: position)\nnote: references to\nnote: fixed shape and\nnote: volume",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "aa079c51-874e-5fe8-a44c-2a8feb9b07b5",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "(i)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "evaporation",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 2,
+     "marks": 1,
+     "text": "sublimation",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 3,
+     "marks": 3,
+     "text": "and M2 can",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "ddaec35a-48d4-49f2-9b8c-259f6f94bb14",
+   "paper_code": "4CH0/2C",
+   "session": "January 2015",
+   "question_id": "0c27cfb9-7047-4967-8167-d88d969a5bb5",
+   "qv_ref": "q02-79ab2439",
+   "qv_id": "90282f85-ea00-4a4c-a02e-5b6f8d6abc97",
+   "qv_marks": 4,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "8c54ec1c-6a0e-5b72-b3e2-7fd4f497dbb5",
+   "ms_doc_row": "30eeaffc-4a5e-43ad-9691-ff86845a12e8",
+   "qn": 2,
+   "printed_total": 4,
+   "chunk_indices": [
+    2
+   ],
+   "merged_text_sha256": "3afef6dc4a25127559edf88017ebbdc2632ddc3719da8278341951b32edf7f65",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jan 2015 | 4CH0/2C | Paper 2C | Q2 | p.5\nMark scheme for Question 2\nQuestion 2 printed total: 4 marks\nQ2 guidance: Expected Answer Accept Reject Marks\nQ2 P1 (1 mark): (solubility/it) increases as temperature\nnote: positive correlation\nnote: references to\nnote: increases                                                              proportionality\nQ2 P2 (1 mark): 1\nnote: (solid) B\nQ2 M1 (1 mark): \u2013 solid/crystals would form\nnote: precipitate for solid\nnote: goes cloudy\nQ2 M2 (1 mark): \u2013 (solid A) becomes less soluble (as the\nnote: reverse argument\nnote: solution cools) / solubility (of solid A)\nnote: decreases (as temperature decreases)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "8c54ec1c-6a0e-5b72-b3e2-7fd4f497dbb5",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "(solubility/it) increases as temperature",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "1",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 2,
+     "marks": 1,
+     "text": "\u2013 solid/crystals would form",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 3,
+     "marks": 1,
+     "text": "\u2013 (solid A) becomes less soluble (as the",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "e7e03906-1a3f-4d2f-b98b-16fa2397d874",
+   "paper_code": "4CH0/2C",
+   "session": "June 2013",
+   "question_id": "cdeb5b1b-b12d-47a1-9630-0965134fd27e",
+   "qv_ref": "q05-a404cc12",
+   "qv_id": "f134eee8-a3fe-43c0-be2b-8ac959cb7e57",
+   "qv_marks": 7,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "5a4236c2-618a-554b-ae3b-6d48a5435ad0",
+   "ms_doc_row": "c5b59172-185c-45d6-b172-453aaf514a32",
+   "qn": 5,
+   "printed_total": 7,
+   "chunk_indices": [
+    6
+   ],
+   "merged_text_sha256": "008be7f3f3d0309aabd8e0524554e35788b6accb493d321cce60127b973f648e",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2013 | 4CH0/2C | Paper 2C | Q5 | p.9\nMark scheme for Question 5\nQuestion 5 printed total: 7 marks\nQ5 P1 (1 mark): unsaturated\nQ5 M1 (1 mark): - (unsaturated) colourless\nignore: clear/transparent/looks like water\nnote: no colour\nnote: discoloured\nQ5 M2 (1 mark): - (saturated) orange\nallow: ed colour\nnote: yellow / brown and\nnote: any other colour either\nnote: any combination      on its own or in\nnote: combination with an\nQ5 P2 (1 mark): addition\nQ5 P3 (1 mark): A\nQ5 P4 (1 mark): C and D\nnote: C,D\nnote: C or D\nQ5 P5 (1 mark): each colouring has a different\nignore: references to different heights /\nnote: Spots / dots for\nnote: mixture/combination/patterns of dyes          dyes\nnote: distances and solubilities.",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "5a4236c2-618a-554b-ae3b-6d48a5435ad0",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "unsaturated",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 1,
+     "marks": 1,
+     "text": "- (unsaturated) colourless",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M2",
+     "ordering": 2,
+     "marks": 1,
+     "text": "- (saturated) orange",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 3,
+     "marks": 1,
+     "text": "addition",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 4,
+     "marks": 1,
+     "text": "A",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P4",
+     "ordering": 5,
+     "marks": 1,
+     "text": "C and D",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P5",
+     "ordering": 6,
+     "marks": 1,
+     "text": "each colouring has a different",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "e97797b8-6c19-4380-8f67-ee39a703b76e",
+   "paper_code": "4CH0/1C",
+   "session": "June 2017",
+   "question_id": "5aa4c0ef-f1d5-448d-a8d3-7e089644f7cf",
+   "qv_ref": "q05-8b9f4957",
+   "qv_id": "6907504a-c1b0-4578-9213-abec4cf8c618",
+   "qv_marks": 6,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "83e11e07-ea10-5bef-8dec-28890d603b14",
+   "ms_doc_row": "272f505b-70d0-4379-890d-9ae476568541",
+   "qn": 5,
+   "printed_total": 6,
+   "chunk_indices": [
+    8
+   ],
+   "merged_text_sha256": "4797d3b3b55a508deb254698ef10b576af533c33a70b87f336df91cb40982ae3",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2017 | 4CH0/1C | Paper 1C | Q5 | pp.13\u201314\nMark scheme for Question 5\nQ5 P1 (1 mark): to (produce) heat (energy)\nallow: to reach/maintain a high temperature; to make the furnace/it hot\nignore: exothermic reaction; to increase the temperature; for energy alone; to make carbon dioxide\nQ5 P2 (1 mark): to produce the reducing agent\nallow: to produce substance needed to reduce; to make carbon monoxide/CO/substance\nignore: to make carbon monoxide\nnote: iron ore/iron oxide/haematite\nnote: which reacts with iron ore to produce iron\nQ5 M1 (2 marks): CaCO3 \u2192 CaO + CO2\nnote: Award 1 mark for two correct equations in\nnote: wrong order\nQ5 M1 (2 marks): iron/iron oxide is reduced AND carbon is\nnote: In M1 and M2 Accept Fe/Fe2O3/Fe3+ and C\nnote: oxidised\nnote: M2 (no printed marks cell): CaO + SiO2 \u2192 CaSiO3 | Ignore state symbols\nnote: M2 (no printed marks cell): (because) iron/iron oxide loses oxygen AND | Allow use of O | carbon gains oxygen | Ignore references to electrons | Allow reference to oxidation number of iron has | decreased and oxidation number of carbon has | increased (if oxidation numbers stated must be | correct) | (Total for Question 5 = 6 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "83e11e07-ea10-5bef-8dec-28890d603b14",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "to (produce) heat (energy)",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 1,
+     "marks": 1,
+     "text": "to produce the reducing agent",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 2,
+     "marks": 2,
+     "text": "CaCO3 \u2192 CaO + CO2",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 3,
+     "marks": 2,
+     "text": "iron/iron oxide is reduced AND carbon is",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  },
+  {
+   "paper_id": "e97797b8-6c19-4380-8f67-ee39a703b76e",
+   "paper_code": "4CH0/1C",
+   "session": "June 2017",
+   "question_id": "59430105-16fb-43ce-8e54-5edd3c46e0c6",
+   "qv_ref": "q08-8b9f4957",
+   "qv_id": "f08da7d0-7c01-4ec8-99fc-4b15218b7107",
+   "qv_marks": 9,
+   "qv_state": "VALIDATED",
+   "ms_document_id": "83e11e07-ea10-5bef-8dec-28890d603b14",
+   "ms_doc_row": "272f505b-70d0-4379-890d-9ae476568541",
+   "qn": 8,
+   "printed_total": 9,
+   "chunk_indices": [
+    14,
+    15
+   ],
+   "merged_text_sha256": "0365bfeb0128813fa9876701d753584a18c9014dd217ec7f74a3a0a2c43bff5e",
+   "merged_text": "International GCSE Chemistry 4CH1 | Jun 2017 | 4CH0/1C | Paper 1C | Q8 | pp.21\u201322\nMark scheme for Question 8\nQ8 P1 (1 mark): curve from reactant level to product level with\nnote: peak below that of original (1)\nnote: (ii)\nQ8 M1 (2 marks): for approximately vertical line/arrow\nnote: between reactant level and product level\nnote: labelled \u2206H/enthalpy change/-9 kJ/mol\nQ8 P2 (1 mark): rate decreases / OWTTE\nallow: (reaction is) slower; reaction takes longer\nignore: references to yield / position of\nnote: equilibrium\nQ8 M1 (2 marks): (at lower temperature equilibrium position\nnote: shifts to right so yield of hydrogen iodide)\nnote: increases\nQ8 P3 (1 mark): (rate) decreases / OWTTE\nallow: (reaction is) slower; reaction takes longer (to reach\nignore: references to yield / position of\nnote: equilibrium)\nnote: equilibrium\nInternational GCSE Chemistry 4CH1 | Jun 2017 | 4CH0/1C | Paper 1C | Q8 | p.22\nQ8 M1 (2 marks): (decrease in pressure has) no effect (on\nallow: no change\nignore: references to rate\nnote: yield of hydrogen iodide)                         Ignore has no effect on other factors e.g.\nnote: equilibrium (position)\nnote: M2 (no printed marks cell): for approximately vertical line/arrow | between reactant level and peak of candidate | curve labelled Ecat /activation energy\nnote: M1 (no printed marks cell): and M2 CQ candidate curve\nnote: M2 (no printed marks cell): because (forward) reaction is exothermic | Ignore \u2206H is negative | Accept backward reaction is endothermic | Ignore because reaction moves in exothermic | direction | Ignore references to Le Chatelier\u2019s principle | e.g. decrease in temperature favours | exothermic reaction\nnote: M2 (no printed marks cell): DEP M1\nnote: M2 (no printed marks cell): because equal numbers of (gas) | Allow (gas) particles for moles/molecules | moles/molecules on both sides\nnote: M2 (no printed marks cell): DEP M1 | (Total for Question 8 = 9 marks)",
+   "scheme": {
+    "version_label": "1",
+    "source_document_id": "83e11e07-ea10-5bef-8dec-28890d603b14",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "ms-chunk-gated-extraction-v1",
+    "general_guidance": null
+   },
+   "mark_points": [
+    {
+     "ref": "P1",
+     "ordering": 0,
+     "marks": 1,
+     "text": "curve from reactant level to product level with",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 1,
+     "marks": 2,
+     "text": "for approximately vertical line/arrow",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P2",
+     "ordering": 2,
+     "marks": 1,
+     "text": "rate decreases / OWTTE",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 3,
+     "marks": 2,
+     "text": "(at lower temperature equilibrium position",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "P3",
+     "ordering": 4,
+     "marks": 1,
+     "text": "(rate) decreases / OWTTE",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    },
+    {
+     "ref": "M1",
+     "ordering": 5,
+     "marks": 2,
+     "text": "(decrease in pressure has) no effect (on",
+     "question_part_id": null,
+     "acceptance_criteria": null,
+     "extraction_confidence": 1.0
+    }
+   ]
+  }
+ ],
+ "skipped": [
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 6,
+   "qv_ref": "q06-1da77322",
+   "reasons": [
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 10,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 11,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 12,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 13,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 14,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2014",
+   "qn": 15,
+   "qv_ref": "q15-1da77322",
+   "reasons": [
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 4,
+   "qv_ref": "q04-cf68cf74",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 7,
+   "qv_ref": "q07-cf68cf74",
+   "reasons": [
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 10,
+   "qv_ref": "q10-cf68cf74",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 11,
+   "qv_ref": "q11-cf68cf74",
+   "reasons": [
+    "no-ms-chunk"
+   ]
+  },
+  {
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 12,
+   "qv_ref": "q12-cf68cf74",
+   "reasons": [
+    "no-ms-chunk"
+   ]
+  },
+  {
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 14,
+   "qv_ref": "q14-cf68cf74",
+   "reasons": [
+    "no-ms-chunk"
+   ]
+  },
+  {
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 15,
+   "qv_ref": "q15-cf68cf74",
+   "reasons": [
+    "no-ms-chunk"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2014",
+   "qn": 3,
+   "qv_ref": "q03-d5815b70",
+   "reasons": [
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 1,
+   "qv_ref": "q01-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 2,
+   "qv_ref": "q02-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 3,
+   "qv_ref": "q03-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 4,
+   "qv_ref": "q04-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 5,
+   "qv_ref": "q05-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 6,
+   "qv_ref": "q06-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 7,
+   "qv_ref": "q07-5273dfa3",
+   "reasons": [
+    "no-printed-total"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 8,
+   "qv_ref": "q08-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 9,
+   "qv_ref": "q09-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 10,
+   "qv_ref": "q10-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 11,
+   "qv_ref": "q11-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 12,
+   "qv_ref": "q12-5273dfa3",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 9,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 10,
+   "qv_ref": "q10-2701ad3c",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 11,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 12,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 13,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 14,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 15,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2016",
+   "qn": 16,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 5,
+   "qv_ref": "q05-e280d9c6",
+   "reasons": [
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 6,
+   "qv_ref": "q06-e280d9c6",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 7,
+   "qv_ref": "q07-e280d9c6",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 8,
+   "qv_ref": "q08-e280d9c6",
+   "reasons": [
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 9,
+   "qv_ref": "q09-e280d9c6",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 11,
+   "qv_ref": "q11-e280d9c6",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 1,
+   "qv_ref": "q01-ffd06551",
+   "reasons": [
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 4,
+   "qv_ref": "q04-ffd06551",
+   "reasons": [
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 9,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 10,
+   "qv_ref": null,
+   "reasons": [
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 11,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2013",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2013",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2013",
+   "qn": 3,
+   "qv_ref": "q03-6d968517",
+   "reasons": [
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2013",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2013",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2013",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2013",
+   "qn": 9,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2013",
+   "qn": 10,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 2,
+   "qv_ref": "q02-51fea326",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 3,
+   "qv_ref": "q03-51fea326",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "no-rows",
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "no-rows",
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 2,
+   "qv_ref": "q02-e6ec2168",
+   "reasons": [
+    "no-printed-total"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "no-rows",
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 8,
+   "qv_ref": "q08-e6ec2168",
+   "reasons": [
+    "no-printed-total"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 9,
+   "qv_ref": "q09-e6ec2168",
+   "reasons": [
+    "no-printed-total"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2019",
+   "qn": 10,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2011",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "no-rows",
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2011",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2011",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "no-rows",
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2011",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2011",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2011",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2011",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/2CR",
+   "session": "January 2021",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/2CR",
+   "session": "January 2021",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/2CR",
+   "session": "January 2021",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/2CR",
+   "session": "January 2021",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/2CR",
+   "session": "January 2021",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/2CR",
+   "session": "January 2021",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/2CR",
+   "session": "January 2021",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/2CR",
+   "session": "January 2021",
+   "qn": 8,
+   "qv_ref": "q08-0ee12447",
+   "reasons": [
+    "no-printed-total"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 9,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 11,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 12,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 13,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 14,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2017",
+   "qn": 15,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 4,
+   "qv_ref": "q04-8d584ee1",
+   "reasons": [
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 7,
+   "qv_ref": "q07-8d584ee1",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 8,
+   "qv_ref": "q08-8d584ee1",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 9,
+   "qv_ref": "q09-8d584ee1",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 11,
+   "qv_ref": "q11-8d584ee1",
+   "reasons": [
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 6,
+   "qv_ref": "q06-57202de4",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 8,
+   "qv_ref": "q08-57202de4",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 9,
+   "qv_ref": "q09-57202de4",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 10,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 11,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2017",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2017",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2017",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2017",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2017",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2017",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2017",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 1,
+   "qv_ref": "q01-6ab313e4",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 2,
+   "qv_ref": "q02-6ab313e4",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 3,
+   "qv_ref": "q03-6ab313e4",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 4,
+   "qv_ref": "q04-6ab313e4",
+   "reasons": [
+    "no-rows",
+    "no-printed-total"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 5,
+   "qv_ref": "q05-6ab313e4",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 6,
+   "qv_ref": "q06-6ab313e4",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 7,
+   "qv_ref": "q07-6ab313e4",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 2,
+   "qv_ref": "q02-be73fe41",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 4,
+   "qv_ref": "q04-be73fe41",
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 9,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 10,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2015",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2015",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2015",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2015",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2015",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2015",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2015",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "January 2015",
+   "qn": 9,
+   "qv_ref": null,
+   "reasons": [
+    "no-rows",
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 5,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 8,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 9,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 10,
+   "qv_ref": null,
+   "reasons": [
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH1/1CR",
+   "session": "June 2022",
+   "qn": 11,
+   "qv_ref": "q11-22184324",
+   "reasons": [
+    "no-printed-total",
+    "sum!=qv-marks"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2013",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2013",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "no-rows",
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2013",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2013",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "pipeline-FAILED-flag",
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2013",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/2C",
+   "session": "June 2013",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 1,
+   "qv_ref": null,
+   "reasons": [
+    "no-rows",
+    "no-printed-total",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 2,
+   "qv_ref": null,
+   "reasons": [
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 3,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 4,
+   "qv_ref": null,
+   "reasons": [
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 6,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 7,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 9,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 10,
+   "qv_ref": null,
+   "reasons": [
+    "sum!=printed",
+    "qv-count=0"
+   ]
+  },
+  {
+   "paper": "4CH0/1C",
+   "session": "June 2017",
+   "qn": 11,
+   "qv_ref": null,
+   "reasons": [
+    "qv-count=0"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+version: 1
+task:
+  id: T-C42
+  title: "Production probe for the MIN_COSINE 0.50 flip gate (calibration pack
+    gate 2) — operator-run probe kit, evidence recording, then the flip
+    decision"
+  owner: "superz (main agent, zai session discord:1548651031783673867)"
+  status: ACTIVE  # gates both PASS + flip decision recorded; ACTIVE until PR #44 merges
+  priority: P1
+  execution_record: >
+    2026-10-02 (Session 136, operator directive trace 1a0f8d431a7cbc8d: "the
+    production probe + wave-1 run" — operator provided Neon API key,
+    pilot-teacher password, Gemini key). Gate 2 PRODUCTION probe RECORDED:
+    Neon branch `production` (billowing-cherry-15418366/neondb), VALIDATED pool
+    at embed_rev=2 n=2,935, PRB-01 canonical pct_above_050 = **59.5%**
+    (1,745/2,935), histogram peak 0.50–0.55, zero pool mass below 0.40 → the
+    pack's binding mass rule is satisfied. Transport deviation recorded: the
+    executing sandbox's egress IP is geo-blocked by the Generative Language API,
+    so the frozen SHA-pinned PRB-01 vector (embed-bridge-v2/frozen,
+    sha256-verified, drift 3.4e-05) was bound into the byte-identical gate-2
+    SQL; live Path A remains operator-available. Both gates now PASS → flip
+    decision **LAND**, executed as core PR #44 (branch
+    `t-c42-min-cosine-050-flip` @ 8dc315a off main 9385011 — a fresh one-line
+    change; the stale replay branch would have reverted V57/course-aware main
+    work). Same session also executed the wave-1 PRODUCTION run (T-C41 ①):
+    all four units already fully validated on production (the 1,464-chunk
+    snapshot unlock was pre-executed by earlier teacher work); the last
+    0-chunk SUGGESTED pair was validate-all'ed (HTTP 200, 0 versions); final
+    funnel reachable_chunks == reachable_at_rev2 == 2,935 (zero rev-residue).
+    Findings F-PROD-1..4 recorded in
+    evidence/bench-001/validation-wave-1-PRODUCTION-2026-10-02/REPORT.md —
+    notably F-PROD-1: 25 papers serve while carrying unresolved
+    REVIEW_REQUIRED bridge findings (teacher review owed), and F-PROD-2: the
+    kit's poststate curriculum-resolution was stale vs resolveActive (corrected
+    SQL shipped in the pack).
+  base:
+    repo: syllabai (master pack) @ d73ce9e; syllabai-core @ b30e603 (main);
+      staged flip on tc40-min-cosine-050 @ 06297f2 (NO PR by design)
+  basis: >
+    Operator directive (2026-10-01 11:53Z, trace 88fbac083105ef21ef2b94bde752aafe):
+    "Ready proceed" on the retrieval-quality mainline — the flip-gate step of
+    the T-C40/T-C41 next_safe_actions. Re-record gate already PASS
+    (run-005-c-r8: recall unchanged, §8(d) byte-identical, MRR/nDCG slightly
+    improved, zero-result 0/120, violations 0); the production-space probe is
+    the second and final binding gate before the one-line constant landing.
+  scope:
+    allowed:
+      - "master-pack: probe kit (PROBE_KIT.md + run_production_probe.sh) in
+        evidence/bench-001/cosine-calibration-2026-10-01/, task/coordination
+        records, the recorded probe output + flip-decision addendum"
+      - "syllabai-core (only after BOTH gates recorded PASS): land the staged
+        MIN_COSINE 0.15->0.50 as a one-line constant change on a fresh branch
+        off main with the calibration pack as its evidence"
+    forbidden:
+      - "NO agent-asserted content validation (AGENT.md core rule 6 — the
+        validation waves stay the teacher surface, operator-held credentials)"
+      - "NO production writes of any kind — the probe is read-only SQL; no
+        restamp, no migration, no data changes from this lane"
+      - "NO flip landing before the probe output is recorded in the pack"
+  acceptance:
+    - "the operator-run probe output (bucket histogram + above-0.50 fraction,
+      with the query identity and transport params) is RECORDED in the pack
+      dir with a dated addendum"
+    - "the flip decision (land / hold) is evidence-backed per the pack's
+      binding rule and recorded in the same addendum"
+  next_safe_actions:
+    - "core lane FIRST: T-C43 proposal — recalibrate KaRagFlowIT's
+      HashingEmbeddingProvider double to production-like geometry (CI on
+      PR #44: unit layer green after 85329e1; KaRagFlowIT.hybridAsk red —
+      the sparse bag-of-hashes double structurally caps relevant-pair
+      cosines at ~0.15–0.4, below the calibrated floor; common-component
+      lifting would also lift refusalAsk past 0.50 and is ruled out).
+      Full analysis: PR #44 comment 5939122074. The flip must not merge
+      with its serving-path IT red."
+    - "operator: then review + merge core PR #44 (the one-line MIN_COSINE
+      0.50 flip with the pack as evidence); watch the tutor retrieval
+      refusal rate at the 0.50 floor post-deploy (baseline 27–31% under
+      the no-op 0.15 floor is expected to rise — designed behavior)"
+    - "teacher (operator-held): item-by-item review of the 25 serving papers
+      carrying REVIEW_REQUIRED bridge findings (F-PROD-1)"
+    - "next lane: compose wave 2 from a FRESH snapshot re-freeze — the live
+      SUGGESTED surface is EQ 747 / SYLLABUS 162 / unplaced-ingest QP 369 +
+      MS 395, not the QP/MS paper axis (F-PROD-3); patch the committed kit
+      poststate to the resolveActive-mirroring version first (F-PROD-2)"

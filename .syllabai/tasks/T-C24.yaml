@@ -1,0 +1,62 @@
+version: 1
+task:
+  id: T-C24
+  title: "Phase 2 step 1 — official-spec applicability reaches the core serving layer"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: DONE
+  priority: P1
+  base:
+    repo: syllabai-core
+    commit: d523f57d7b0343a9b75fb7149ad16307cc9d2981
+  scope:
+    allowed:
+      - "new migration V39 (knowledge_nodes.applicability jsonb, additive/nullable)"
+      - "KnowledgeNode entity: applicability JSONB field (house StruggleInference pattern)"
+      - "ConceptGraphSnapshotLoader: parse applicability verbatim from the pinned 4CH1 YAML (SHA unchanged)"
+      - "ConceptGraphSeedService: persist applicability on spec-point nodes; idempotent backfill on reuse (logged)"
+      - "SmeQuestionSpecPointRepository + ServableQuestionService + StudentQuestionView: additive specPoints (code, role, applicability) on the learner question view; specPointCodes kept"
+      - "NodeView: additive applicability field (knowledge/teacher tree consumers updated mechanically)"
+      - "unit tests: loader parse, seed create/backfill/idempotency, servable view shape"
+    forbidden:
+      - "editing any applied migration (V1..V38)"
+      - "touching syllabai-web / syllabai-resources / past-papers lanes"
+      - "changing the pinned snapshot SHA or the seed status/provenance contract"
+      - "extending SeedSummary record (contract ripple) — backfill count is log-only"
+  dependencies: []
+  shared_resources:
+    - flyway-version   # V39 claimed via locks.yaml lease — FULFILLED on merge 3c1600c
+    - database-schema
+  acceptance:
+    - "mvn verify green in CI on the PR (JDK 25)"          # MET: core-ci build success on a4de5e8
+    - "182/182 spec-point applicability parsed from the pinned YAML, deep-equal to the resources canonical"  # MET: loader test
+    - "seed: create + one-time backfill paths covered by tests; re-run stays a structural no-op"  # MET: seed tests
+    - "learner question view carries specPoints (code, role, applicability); specPointCodes unchanged for existing consumers"  # MET: ServableQuestionSpecPointsTest
+  tests:
+    - "ConceptGraphSnapshotLoaderTest (applicability parse)"
+    - "ConceptGraphSeedServiceTest (create / backfill / idempotency)"
+    - "ServableQuestionSpecPointsTest (view shape, ordering, derived codes)"
+  evidence_required:
+    - "CI run URL: core-ci build -> completed success on a4de5e8 (PR SyllabAI/syllabai-core#24)"
+    - "PR: https://github.com/SyllabAI/syllabai-core/pull/24 (merged as 3c1600c9f002ea8849298659d9ea5aa0ad676571)"
+    - "local mvn test output for the touched test classes + full suite (JDK 25 + Maven 3.9.9): 788/788 green, 1 pre-existing environmental skip"
+  claims:
+    VERIFIED:
+      - "core pinned concept-graph/specification_points.yaml byte-identical to syllabai-resources graph/specification_points.yaml @ bb51b88 (SHA b1fea699...), 182/182 applicability present, uniform keyset papers/double_award_shared/rule, 0 nulls"
+      - "core @ d523f57 had ZERO applicability adoption; spec points are persisted as NodeType.SUBTOPIC (V2/V16 CHECK has no SPEC_POINT)"
+      - "local full unit suite 788/788 green on the branch (JDK 25, Maven 3.9.9)"
+      - "CI core-ci build SUCCESS on PR #24 head a4de5e8 (mvn verify incl. Testcontainers ITs — validates the JPQL jsonb projection against real Postgres)"
+      - "PR #24 merged into main as 3c1600c; local main synced, 0 behind"
+      - "Case A/E contract preserved: create path single-save (saved-id count 340 asserted); re-run zero saves"
+    INFERRED:
+      - "the seed is the only writer of 4CH1 spec-point nodes, so the seed-side idempotent backfill covers the already-seeded serving DB on its next operator-gated activation"
+    REPORTED:
+      - "serving state: 4CH1-2017 is the sole ACTIVE curriculum (coordination session 128, operator decision)"
+    UNVERIFIED: []
+  next_safe_actions:
+    - "backfill executes automatically at the next seed activation (operator-gated) — expect log line 'applicability present on 182 spec-point node(s)' exactly once"
+    - "Phase 2 step 2 (web lane, coordinated): api.ts mirror of specPoints + ExamQuestionsView paper/unit/tier scoping — demo repo client.tsx is the reference pattern (>=2 values interactive select, ==1 locked fact row, 0 omitted)"
+    - "NodeView.applicability is already available to the Mastery Map substrate payload"
+  migration:
+    version: V39
+    file: src/main/resources/db/migration/V39__knowledge_node_applicability.sql
+    lease_fulfilled: "merge 3c1600c (lock released from locks.yaml)"

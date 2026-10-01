@@ -1,0 +1,2927 @@
+{
+ "generated": "2026-09-29T00:24:00.815454+00:00",
+ "census_papers": {
+  "REJECTED": 14,
+  "VALIDATED": 90
+ },
+ "census_documents": {
+  "SUGGESTED": 305,
+  "REJECTED": 147,
+  "VALIDATED": 567
+ },
+ "pool": 2935,
+ "rev1_total": 0,
+ "audit_tail": 3976,
+ "events": 0,
+ "identity_scan": [
+  {
+   "want": "4CH1/1C JAN 2022",
+   "hits": [
+    {
+     "id": "566c24ca-1049-4c64-9419-b52ae3ed2213",
+     "validation_state": "VALIDATED",
+     "series": "JAN",
+     "year": "2022",
+     "session_label": "January 2022",
+     "title": "4CH1 Chemistry 4CH1/1C January 2022",
+     "qualification": "4CH1",
+     "extraction_method": "pdflane-atoms-draft-v1",
+     "unit": "1C",
+     "paper_code": "4CH1/1C",
+     "question_paper_document_id": "f2dab00f-82c9-5328-b2b9-7804e1c888da",
+     "mark_scheme_document_id": "8b2094ab-5937-5d66-b443-46a087d1d79c",
+     "subject_name": "Chemistry (4CH1)",
+     "subject_code": "4CH1",
+     "n_q": "11",
+     "n_qv": "11",
+     "n_sch": "11"
+    }
+   ]
+  },
+  {
+   "want": "4CH1/2C JUN 2019",
+   "hits": [
+    {
+     "id": "37f7f180-6643-4635-9921-88ee8bc6aad1",
+     "validation_state": "VALIDATED",
+     "series": "JUN",
+     "year": "2019",
+     "session_label": "June 2019",
+     "title": "4CH1 Chemistry 4CH1/2C June 2019",
+     "qualification": "4CH1",
+     "extraction_method": "pdflane-atoms-draft-v1",
+     "unit": "2C",
+     "paper_code": "4CH1/2C",
+     "question_paper_document_id": "f11e2595-cf07-5e1b-a97e-1f690077f2bf",
+     "mark_scheme_document_id": "24a393b2-84ad-56eb-9aef-0eed5d7f7e84",
+     "subject_name": "Chemistry (4CH1)",
+     "subject_code": "4CH1",
+     "n_q": "8",
+     "n_qv": "8",
+     "n_sch": "8"
+    }
+   ]
+  }
+ ],
+ "paper_ids": {
+  "4CH1/1C JAN 2022": "566c24ca-1049-4c64-9419-b52ae3ed2213",
+  "4CH1/2C JUN 2019": "37f7f180-6643-4635-9921-88ee8bc6aad1"
+ },
+ "trees": {
+  "4CH1/1C JAN 2022": {
+   "qv": [],
+   "questions_mirror": [],
+   "questions": [
+    {
+     "id": "adf31584-c389-4b60-9336-c4e1cf78c0fe",
+     "marks": "7",
+     "stem": "Answer ALL questions.\nSome questions must be answered with a cross in a box . If you change your mind about an\nand then mark your new answer with a cross .\nanswer, put a line through the box\n1 This question is about mixtures and compounds.",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q1",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "e8545953-51af-4612-86a2-d310ec50a204",
+       "version": "1",
+       "stem": "Answer ALL questions.\nSome questions must be answered with a cross in a box . If you change your mind about an\nand then mark your new answer with a cross .\nanswer, put a line through the box\n1 This question is about mixtures and compounds.",
+       "marks": "7",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.423518+00:00",
+       "parts": [
+        {
+         "id": "e39d2dfa-8bcb-40ec-a900-024315730dfb",
+         "label": "a",
+         "prompt": "The box gives some methods used to separate mixtures.\nchromatography crystallisation\nfractional distillation simple distillation\nChoose methods from the box to answer the following questions.\nEach method may be used once, more than once or not at all.",
+         "marks": "3",
+         "ordering": "0"
+        },
+        {
+         "id": "1802b4d5-2e1d-49c4-a851-ffdf6a751443",
+         "label": "a-i",
+         "prompt": "Identify a method to separate a single food dye from a mixture of food dyes.",
+         "marks": "1",
+         "ordering": "1"
+        },
+        {
+         "id": "5182353e-0c4d-48c7-a699-f5d5811c12c9",
+         "label": "a-ii",
+         "prompt": "Identify a method to separate gasoline from crude oil.",
+         "marks": "1",
+         "ordering": "2"
+        },
+        {
+         "id": "e3b2e75d-0278-4581-ae7c-fe34fe8ea517",
+         "label": "a-iii",
+         "prompt": "Identify a method to separate water from copper(II) sulfate solution.",
+         "marks": "1",
+         "ordering": "3"
+        },
+        {
+         "id": "1421efaf-595f-49e9-9c66-67ac60eb483a",
+         "label": "b",
+         "prompt": "The diagram represents a molecule.\nExplain why this molecule is a compound.",
+         "marks": "2",
+         "ordering": "4"
+        },
+        {
+         "id": "8fe52c3c-524c-4885-91ec-af0b951e511a",
+         "label": "c",
+         "prompt": "The molecular formula of another compound is C3H5N3O9",
+         "marks": "2",
+         "ordering": "5"
+        },
+        {
+         "id": "20bb0a4b-3ed2-4356-b63d-d6c5318e71b3",
+         "label": "c-i",
+         "prompt": "State the number of different elements in C3H5N3O9",
+         "marks": "1",
+         "ordering": "6"
+        },
+        {
+         "id": "a01c99f2-f945-47c5-a6f6-b0e020a6c5c4",
+         "label": "c-ii",
+         "prompt": "Determine the number of atoms in a molecule of C3H5N3O9",
+         "marks": "1",
+         "ordering": "7"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "201af8b6-31a9-4a10-a6a7-f1078ab88555",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425216+00:00",
+         "points": [
+          {
+           "id": "20e7416a-9137-45c3-b285-224ecee826a6",
+           "marks": 1,
+           "text": "chromatography",
+           "ordering": 0
+          },
+          {
+           "id": "76560b72-2315-479c-9b4b-2ab9c7680fe3",
+           "marks": 1,
+           "text": "fractional distillation",
+           "ordering": 1
+          },
+          {
+           "id": "3815c53a-b448-4bef-b279-6a4939f2e843",
+           "marks": 1,
+           "text": "simple distillation",
+           "ordering": 2
+          },
+          {
+           "id": "346e9dcb-93e6-4e99-909a-391ba58d7668",
+           "marks": 2,
+           "text": "two / different elements",
+           "ordering": 3
+          },
+          {
+           "id": "c6ed1be6-51b7-422f-8eae-2efd5471bf6d",
+           "marks": 1,
+           "text": "4",
+           "ordering": 4
+          },
+          {
+           "id": "4032397c-87e9-4211-8587-1f2858bd3e08",
+           "marks": 1,
+           "text": "20",
+           "ordering": 5
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2195cef2-81e6-41cf-87f4-5a5a6e829461",
+     "marks": "9",
+     "stem": "This question is about substances with covalent bonds.",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q10",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "415d5fb9-efef-43b3-9c3b-684dcea7fcc1",
+       "version": "1",
+       "stem": "This question is about substances with covalent bonds.",
+       "marks": "9",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.424809+00:00",
+       "parts": [
+        {
+         "id": "99011461-0278-4252-b510-d052c5070a9e",
+         "label": "a-i",
+         "prompt": "Draw a dot and cross diagram to show the outer shell electrons in a molecule\nof nitrogen, N2",
+         "marks": "2",
+         "ordering": "0"
+        },
+        {
+         "id": "bc26dbb5-c9fd-40da-bc08-fd9ee681b3be",
+         "label": "a-ii",
+         "prompt": "Describe the forces of attraction in a covalent bond.",
+         "marks": "2",
+         "ordering": "1"
+        },
+        {
+         "id": "95164c03-fa42-4e51-82c1-ffae5e1f548d",
+         "label": "b",
+         "prompt": "The diagram shows three different structures of carbon.\nStructure A\nGraphite\nC60 fullerene",
+         "marks": "5",
+         "ordering": "2"
+        },
+        {
+         "id": "34a8db04-3243-41c3-8ecb-d29fb76d8e88",
+         "label": "b-i",
+         "prompt": "Name structure A.",
+         "marks": "1",
+         "ordering": "3"
+        },
+        {
+         "id": "0b8b4ee8-dff7-43cb-88ca-7b61feb0d7a5",
+         "label": "b-ii",
+         "prompt": "Graphite and C60 fullerene contain covalent bonds, but have\ndifferent structures.\nExplain why C60 fullerene has a much lower melting point than graphite.\nRefer to structure and bonding in your answer.",
+         "marks": "4",
+         "ordering": "4"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "8ad0932f-e2f5-4da6-92a0-b87462ce747c",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.426228+00:00",
+         "points": [
+          {
+           "id": "35e86a17-540c-4157-a670-55ed0d865685",
+           "marks": 2,
+           "text": "any combination.; M1 6 bonding electrons; M2 2 non-bonding electrons on each atom             M2 dep on M1",
+           "ordering": 0
+          },
+          {
+           "id": "313949a9-538c-4909-83e9-f9b8abf56572",
+           "marks": 2,
+           "text": "shared pair(s) of electrons",
+           "ordering": 1
+          },
+          {
+           "id": "39028aa2-a34b-4d15-b72b-f3ac4c545391",
+           "marks": 1,
+           "text": "diamond",
+           "ordering": 2
+          },
+          {
+           "id": "d90220b9-451d-4ea5-bf8e-6b5eddf41ef7",
+           "marks": 4,
+           "text": "Any four from:",
+           "ordering": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fe5f720a-8ae2-4e52-b654-504179e3d9e8",
+     "marks": "12",
+     "stem": "A student uses this apparatus to heat crystals of hydrated zinc sulfate and collect the\nliquid produced.\nhydrated zinc sulfate\nheat\ncolourless liquid",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q11",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "a5e416a6-e1fe-4a1c-a036-ed2799c23430",
+       "version": "1",
+       "stem": "A student uses this apparatus to heat crystals of hydrated zinc sulfate and collect the\nliquid produced.\nhydrated zinc sulfate\nheat\ncolourless liquid",
+       "marks": "12",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.424930+00:00",
+       "parts": [
+        {
+         "id": "eac6e452-0f23-448b-8643-a995482d89b7",
+         "label": "a-i",
+         "prompt": "Describe a chemical test to show that the colourless liquid contains water.",
+         "marks": "2",
+         "ordering": "0"
+        },
+        {
+         "id": "f725142c-ead1-41f5-bd70-ac8e513c5606",
+         "label": "a-ii",
+         "prompt": "Describe a physical test to show the colourless liquid is pure water.",
+         "marks": "2",
+         "ordering": "1"
+        },
+        {
+         "id": "c9c0ae40-7b94-460c-9c04-1447675daad5",
+         "label": "b",
+         "prompt": "The equation for the decomposition of hydrated zinc sulfate is\nZnSO4·7H2O(s) → ZnSO4(s) + 7H2O(l)\nThe student records these masses.\nmass of boiling tube\n= 41.64 g\nmass of boiling tube + ZnSO4·7H2O\t= 54.46 g\nCalculate the maximum volume, in cm3, of pure water that could be produced.\nGive your answer to 1 decimal place.\n[1.00 cm3 of pure water has a mass of 1.00 g]\n[Mr of ZnSO4·7H2O = 287 Mr of H2O = 18]\nmaximum volume of pure water = .............................................................. cm3",
+         "marks": "5",
+         "ordering": "2"
+        },
+        {
+         "id": "64288af6-d4eb-47d3-941c-5a64c1a79786",
+         "label": "c",
+         "prompt": "In an experiment using a different mass of ZnSO4·7H2O the maximum volume of\npure water that could be produced is 8.5 cm3.\nThe student collected the pure water and calculated the percentage yield to\nbe 20.3 %.",
+         "marks": "3",
+         "ordering": "3"
+        },
+        {
+         "id": "ac57668f-b8a8-41e7-b796-62e0b2685f56",
+         "label": "c-i",
+         "prompt": "Calculate the volume, in cm3, of pure water collected.\nvolume of pure water = .............................................................. cm3",
+         "marks": "1",
+         "ordering": "4"
+        },
+        {
+         "id": "9a93c7ae-187c-4de4-a12f-e5d1450f0647",
+         "label": "c-ii",
+         "prompt": "Explain an improvement to the apparatus that would increase the percentage\nyield of pure water.",
+         "marks": "2",
+         "ordering": "5"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "63cdfc41-4f6f-446e-80de-95aa4e15f457",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425087+00:00",
+         "points": [
+          {
+           "id": "538e6f75-a4fb-4b0f-8ded-4fae2e02897e",
+           "marks": 2,
+           "text": "add anhydrous copper sulfate",
+           "ordering": 0
+          },
+          {
+           "id": "50293b62-a804-4a92-9c70-f1c68c41cb7c",
+           "marks": 2,
+           "text": "measure the boiling point / freezing point",
+           "ordering": 1
+          },
+          {
+           "id": "74e3294d-5030-41bb-85ca-66d1cb837ff8",
+           "marks": 5,
+           "text": "mass of hydrated zinc sulfate = 54.46-41.64 OR",
+           "ordering": 2
+          },
+          {
+           "id": "0d52d3f7-9e20-475d-8331-9fb682d81b79",
+           "marks": 1,
+           "text": "1.7",
+           "ordering": 3
+          },
+          {
+           "id": "652ed44c-5bd2-4e7a-8ff2-16e5361ed5a4",
+           "marks": 2,
+           "text": "stand the measuring cylinder in a beaker of ice",
+           "ordering": 4
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "b9a94476-0fc2-47e6-be6e-e310ae089caf",
+     "marks": "9",
+     "stem": "This question is about rusting.",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q2",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "fea7381b-29be-449a-9d21-d45f7e290b28",
+       "version": "1",
+       "stem": "This question is about rusting.",
+       "marks": "9",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.423711+00:00",
+       "parts": [
+        {
+         "id": "7ff926ef-7217-46ee-adce-bb9e93287f15",
+         "label": "a",
+         "prompt": "A simplified formula for rust is Fe2O3",
+         "marks": "4",
+         "ordering": "0"
+        },
+        {
+         "id": "01433cc1-4190-4dd1-ae56-855f59174b9f",
+         "label": "a-i",
+         "prompt": "Name the two substances needed for iron to rust.\n1.................................................................................................................................................................................................................................................................................\n2.................................................................................................................................................................................................................................................................................",
+         "marks": "2",
+         "ordering": "1"
+        },
+        {
+         "id": "05ea2702-a669-48e7-9efa-45c13858e4d4",
+         "label": "a-ii",
+         "prompt": "Give the chemical name for rust.",
+         "marks": "1",
+         "ordering": "2"
+        },
+        {
+         "id": "6286dbba-639c-4d3d-863f-2d91b71f10e5",
+         "label": "a-iii",
+         "prompt": "What type of reaction occurs in the rusting of iron?\nA combustion\nB neutralisation\nC oxidation\nD thermal decomposition",
+         "marks": "1",
+         "ordering": "3"
+        },
+        {
+         "id": "7a3b4d54-b84b-4a1a-ad7a-3729a4476c76",
+         "label": "b",
+         "prompt": "Some iron objects are coated with a layer of zinc to prevent rusting.",
+         "marks": "5",
+         "ordering": "4"
+        },
+        {
+         "id": "faaf05d6-2781-4dbc-b8fc-dae17b91260d",
+         "label": "b-i",
+         "prompt": "Name this type of rust prevention.",
+         "marks": "1",
+         "ordering": "5"
+        },
+        {
+         "id": "d828fcae-f268-46ce-92e9-684929661771",
+         "label": "b-ii",
+         "prompt": "Explain how this type of rust prevention continues to protect iron when the\nlayer of zinc is damaged.",
+         "marks": "2",
+         "ordering": "6"
+        },
+        {
+         "id": "6bbc1980-c616-4582-85b0-181f099f52a3",
+         "label": "b-iii",
+         "prompt": "Give two other methods used to prevent iron from rusting.\n1.................................................................................................................................................................................................................................................................................\n2.................................................................................................................................................................................................................................................................................",
+         "marks": "2",
+         "ordering": "7"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "b0b75e39-e58a-4cf3-92df-4ce476ea392d",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425306+00:00",
+         "points": [
+          {
+           "id": "4e7533bc-ace5-457d-b197-3d9d1de93d98",
+           "marks": 2,
+           "text": "oxygen / air",
+           "ordering": 0
+          },
+          {
+           "id": "7dc26c07-aaa4-4177-9963-d8ad3e3fa480",
+           "marks": 1,
+           "text": "(hydrated) iron(III) oxide",
+           "ordering": 1
+          },
+          {
+           "id": "72fe97d4-4624-4fc1-bcf7-d464e596d45d",
+           "marks": 1,
+           "text": "C",
+           "ordering": 2
+          },
+          {
+           "id": "60af150f-10e8-47c0-baf5-b65c89b24c35",
+           "marks": 1,
+           "text": "galvanising",
+           "ordering": 3
+          },
+          {
+           "id": "9befb73a-5b25-4144-a9e9-919cab920354",
+           "marks": 2,
+           "text": "zinc is more reactive (than iron)",
+           "ordering": 4
+          },
+          {
+           "id": "e869364e-93e1-4627-91d0-02127b319681",
+           "marks": 2,
+           "text": "Any two from:",
+           "ordering": 5
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "420c0a19-a714-4da6-8169-2cf3b13acce5",
+     "marks": "7",
+     "stem": "This question is about states of matter.",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q3",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "5eb6a690-ac23-41ae-8db5-e1bf95e4aba9",
+       "version": "1",
+       "stem": "This question is about states of matter.",
+       "marks": "7",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.423849+00:00",
+       "parts": [
+        {
+         "id": "4aedaea6-3b59-4779-a56a-155ef68bd66d",
+         "label": "a",
+         "prompt": "The box gives words relating to changes of state.\ncondensation cooling evaporation\nfreezing melting sublimation\nComplete the table by giving the correct word from the box for each\nchange of state.",
+         "marks": "3",
+         "ordering": "0"
+        },
+        {
+         "id": "6019bccb-c6c9-402a-a813-d640fe46aca2",
+         "label": "b",
+         "prompt": "When ammonia gas and hydrogen chloride gas mix, they react together to form a\nwhite solid called ammonium chloride.\nThe equation for the reaction is\nNH3(g) + HCl(g) → NH4Cl(s)\nA teacher soaks a piece of cotton wool in concentrated ammonia solution and\nanother piece of cotton wool in concentrated hydrochloric acid.\nThe teacher places the two pieces of cotton wool at opposite ends of a glass tube\nat the same time.\nAfter several minutes, a white ring of solid ammonium chloride forms.\ncotton wool soaked\ncotton wool soaked\nwhite ring of\nin concentrated\nin concentrated\nammonium chloride\nammonia solution\nhydrochloric acid",
+         "marks": "4",
+         "ordering": "1"
+        },
+        {
+         "id": "6e8fc1d8-6a4f-4b80-b4fd-44f946cfbc75",
+         "label": "b-i",
+         "prompt": "State the name given to the spreading out of gas particles.",
+         "marks": "1",
+         "ordering": "2"
+        },
+        {
+         "id": "c00265b5-e0ed-4253-9ce8-637c7aed844d",
+         "label": "b-ii",
+         "prompt": "State how the diagram shows that the particles of ammonia gas are travelling\nat higher speeds than the particles of hydrogen chloride gas.",
+         "marks": "1",
+         "ordering": "3"
+        },
+        {
+         "id": "5fe9f0aa-e8f4-4925-ae23-5bf3a23d249f",
+         "label": "b-iii",
+         "prompt": "Gas particles travel at high speeds.\nGive a reason why the white ring of ammonium chloride takes several minutes\nto form.",
+         "marks": "1",
+         "ordering": "4"
+        },
+        {
+         "id": "a54789cc-2784-47c4-aa27-1147aa1b07c1",
+         "label": "b-iv",
+         "prompt": "Concentrated ammonia solution and concentrated hydrochloric acid\nare corrosive.\nGive one safety precaution the teacher should take.",
+         "marks": "1",
+         "ordering": "5"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "a987c89d-14fb-46da-8d2a-bf618a60644d",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425390+00:00",
+         "points": [
+          {
+           "id": "11caaec4-0ca6-4a46-b067-cf0273dd8481",
+           "marks": 3,
+           "text": "solid to liquid melting",
+           "ordering": 0
+          },
+          {
+           "id": "43346a6e-d65f-42e0-bd17-413d90e152c6",
+           "marks": 1,
+           "text": "diffusion",
+           "ordering": 1
+          },
+          {
+           "id": "45215c69-a406-4207-9922-6a232d37bb0e",
+           "marks": 1,
+           "text": "Any one from:",
+           "ordering": 2
+          },
+          {
+           "id": "f88c57c6-a990-4ae5-a4c5-a1bfefe93109",
+           "marks": 1,
+           "text": "Any one from:",
+           "ordering": 3
+          },
+          {
+           "id": "00372feb-cda2-46b0-b672-eb57d9ecb28b",
+           "marks": 1,
+           "text": "eye protection / wear safety glasses / goggles",
+           "ordering": 4
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "eb91a9e2-1654-45ba-beff-c4297f847d37",
+     "marks": "8",
+     "stem": "A teacher uses this apparatus to find the percentage of oxygen in a gaseous mixture\nof oxygen and argon.\nmixture of oxygen and argon\nglass tube\ncopper powder\nsyringe A\nsyringe B\nheat\nThis is the teacher’s method.\nStep 1 \u0007heat the copper powder\nStep 2 \u0007push the plunger on syringe A to pass the mixture of oxygen and argon over\nthe hot copper so that the mixture moves into syringe B\nStep 3 \u0007push the plunger on syringe B to pass the mixture of oxygen and argon over\nthe hot copper so that the mixture moves into syringe A\nStep 4 \u0007record the reading on syringe A\nStep 5 \u0007repeat Steps 2, 3 and 4 a number of times\nThe volume of gas decreases as the oxygen reacts with the copper.\nArgon is unreactive so does not react with the copper.\nThe copper powder turns black.",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q4",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "15574f42-2c1e-462e-8544-8efbf51a8555",
+       "version": "1",
+       "stem": "A teacher uses this apparatus to find the percentage of oxygen in a gaseous mixture\nof oxygen and argon.\nmixture of oxygen and argon\nglass tube\ncopper powder\nsyringe A\nsyringe B\nheat\nThis is the teacher’s method.\nStep 1 \u0007heat the copper powder\nStep 2 \u0007push the plunger on syringe A to pass the mixture of oxygen and argon over\nthe hot copper so that the mixture moves into syringe B\nStep 3 \u0007push the plunger on syringe B to pass the mixture of oxygen and argon over\nthe hot copper so that the mixture moves into syringe A\nStep 4 \u0007record the reading on syringe A\nStep 5 \u0007repeat Steps 2, 3 and 4 a number of times\nThe volume of gas decreases as the oxygen reacts with the copper.\nArgon is unreactive so does not react with the copper.\nThe copper powder turns black.",
+       "marks": "8",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.423974+00:00",
+       "parts": [
+        {
+         "id": "4b22b99c-ca10-4d81-9797-f39c9b1a1c98",
+         "label": "a-i",
+         "prompt": "Give a reason why the copper powder is heated.",
+         "marks": "1",
+         "ordering": "0"
+        },
+        {
+         "id": "52964efd-f067-4113-b292-cf78625c7610",
+         "label": "a-ii",
+         "prompt": "State why argon is unreactive.",
+         "marks": "1",
+         "ordering": "1"
+        },
+        {
+         "id": "ca08971c-7a1b-4e74-990c-310d69cdf58d",
+         "label": "a-iii",
+         "prompt": "Give the name of the black powder that forms when the oxygen reacts with\nthe copper.",
+         "marks": "1",
+         "ordering": "2"
+        },
+        {
+         "id": "1e3ed385-19c7-46b3-828b-b702a6401393",
+         "label": "b",
+         "prompt": "The table shows the teacher’s results.",
+         "marks": "5",
+         "ordering": "3"
+        },
+        {
+         "id": "f67ad6e2-e524-48a2-84a9-210afd040c01",
+         "label": "b-i",
+         "prompt": "State how the results show that all the oxygen has reacted.",
+         "marks": "1",
+         "ordering": "4"
+        },
+        {
+         "id": "7ddac979-d1f2-4141-9bf2-287cfcb57721",
+         "label": "b-ii",
+         "prompt": "The volume of gas in the glass tube and connecting tubes is 175 cm3.\nUse this value and the results table to calculate the percentage of oxygen in\nthe mixture of oxygen and argon.\npercentage of oxygen = .............................................................. %",
+         "marks": "3",
+         "ordering": "5"
+        },
+        {
+         "id": "e82ec4dd-b571-45b9-b2fd-81dc3c388ec1",
+         "label": "b-iii",
+         "prompt": "Suggest one reason why the calculated percentage of oxygen in the mixture\nmay not be accurate.",
+         "marks": "1",
+         "ordering": "6"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "b953e1c0-c44f-4bdf-a7e1-86000f24b8a8",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425470+00:00",
+         "points": [
+          {
+           "id": "89063353-8282-4c67-8179-a6724622dca0",
+           "marks": 1,
+           "text": "Any one from:",
+           "ordering": 0
+          },
+          {
+           "id": "f9e093fc-8aa6-4b7d-9512-730247b93f1b",
+           "marks": 1,
+           "text": "because Ar does not (readily) gain / lose / share",
+           "ordering": 1
+          },
+          {
+           "id": "0de9f013-dd74-43d1-8c9b-b32df7a35cb8",
+           "marks": 1,
+           "text": "copper(II) oxide",
+           "ordering": 2
+          },
+          {
+           "id": "18aa73bb-d2a9-4d12-ae8d-a3c82ff31f95",
+           "marks": 1,
+           "text": "results are the same (at the end)",
+           "ordering": 3
+          },
+          {
+           "id": "71e964d4-0f6e-466e-89d7-bb31a4ff176a",
+           "marks": 3,
+           "text": "volume oxygen = 20 cm 3",
+           "ordering": 4
+          },
+          {
+           "id": "c98a1619-f83e-4959-b1fb-a57be270be25",
+           "marks": 1,
+           "text": "Any one from:",
+           "ordering": 5
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "867c9a42-bda2-4637-83dc-9fd98a0ca386",
+     "marks": "11",
+     "stem": "",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q5",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "7266a643-3e0a-411a-9f5f-f21213765111",
+       "version": "1",
+       "stem": "",
+       "marks": "11",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.424152+00:00",
+       "parts": [
+        {
+         "id": "f2646653-4f67-4a8c-a29c-ff73e8627f25",
+         "label": "a",
+         "prompt": "Complete the table to show the relative mass and relative charge of a\nproton and a neutron.",
+         "marks": "2",
+         "ordering": "0"
+        },
+        {
+         "id": "5366b2c1-9b11-4773-a424-9fec8f956651",
+         "label": "b",
+         "prompt": "Magnesium has three isotopes.",
+         "marks": "8",
+         "ordering": "1"
+        },
+        {
+         "id": "73668194-7d5b-4e14-b448-d233d1156c92",
+         "label": "b-i",
+         "prompt": "State the meaning of the term isotopes.",
+         "marks": "2",
+         "ordering": "2"
+        },
+        {
+         "id": "e1f15ad9-d05a-4b87-b4e9-192fc9ff4d76",
+         "label": "b-ii",
+         "prompt": "The symbol for an atom of one isotope of magnesium is\n26\n12Mg\nGive the number of protons, neutrons and electrons in one atom of\nthis isotope.\nnumber of protons\nnumber of neutrons\nnumber of electrons",
+         "marks": "2",
+         "ordering": "3"
+        },
+        {
+         "id": "21722154-90b5-4a4e-8d3f-f785588435ca",
+         "label": "b-iii",
+         "prompt": "A sample of magnesium contains these percentages of the three isotopes.\nMg‑24 = 79.00 % Mg‑25 = 10.00 % Mg‑26 = 11.00 %\nUse this information to show that the relative atomic mass of\nmagnesium is 24.32",
+         "marks": "2",
+         "ordering": "4"
+        },
+        {
+         "id": "6aa319ab-ed1f-4bdf-b428-143d7d8c2662",
+         "label": "b-iv",
+         "prompt": "One mole of magnesium has a mass of 24.32 g.\nThere are 6.022 × 1023 atoms in one mole.\nCalculate the mass, in grams, of one atom of magnesium.\nGive your answer to 4 significant figures.\nmass = .............................................................. g",
+         "marks": "2",
+         "ordering": "5"
+        },
+        {
+         "id": "95189bea-8bce-4b66-bb4f-01c6a634963c",
+         "label": "c",
+         "prompt": "The equation for the reaction between magnesium and oxygen is\n2Mg + O2 → 2MgO\nDetermine the maximum amount, in moles, of magnesium oxide that can be\nproduced from 0.50 mol of magnesium and 0.20 mol of oxygen.\namount = .............................................................. mol",
+         "marks": "1",
+         "ordering": "6"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "c3a5650a-2964-4351-ac09-6b801b631969",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425577+00:00",
+         "points": [
+          {
+           "id": "3d084e47-9e73-49f5-8e35-2822cec8f57d",
+           "marks": 2,
+           "text": "relative mass proton 1",
+           "ordering": 0
+          },
+          {
+           "id": "3fb08d59-e279-4a66-9cbc-7a952e5cd4ce",
+           "marks": 2,
+           "text": "atoms (of the same element) with the same",
+           "ordering": 1
+          },
+          {
+           "id": "269b2d28-d306-45f9-b0d4-abe91961506d",
+           "marks": 2,
+           "text": "number of protons and electrons = 12",
+           "ordering": 2
+          },
+          {
+           "id": "5a60c318-9a60-41b3-bb3f-6d9e6982f274",
+           "marks": 2,
+           "text": "scores 2 marks",
+           "ordering": 3
+          },
+          {
+           "id": "06cba965-c26e-4063-a9aa-abbb2c41afd2",
+           "marks": 2,
+           "text": "24.32÷(6.022×1023)",
+           "ordering": 4
+          },
+          {
+           "id": "d7c4e102-780e-489f-a7fa-6c7844245254",
+           "marks": 1,
+           "text": "(moles of MgO) = 0.40",
+           "ordering": 5
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "01aee482-afab-4272-9d7e-0e25c27ab47e",
+     "marks": "9",
+     "stem": "This question is about sodium oxide, Na2O",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q6",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "c9e29652-398e-4578-ab5e-25a2b9725a41",
+       "version": "1",
+       "stem": "This question is about sodium oxide, Na2O",
+       "marks": "9",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.424281+00:00",
+       "parts": [
+        {
+         "id": "58d4e0b1-9c05-4708-8e4f-720abecc5443",
+         "label": "a",
+         "prompt": "The diagram shows the electronic configuration of atoms of sodium and oxygen.\nSodium\nOxygen\nDescribe the changes in the electronic configuration of the atoms of sodium and\noxygen to form the ions in sodium oxide.",
+         "marks": "3",
+         "ordering": "0"
+        },
+        {
+         "id": "7ac4150b-03cd-41ae-a99e-55dc71534af1",
+         "label": "b",
+         "prompt": "Calculate the relative formula mass (Mr) of sodium oxide, Na2O, using information\nfrom the Periodic Table.\nMr = ..............................................................",
+         "marks": "1",
+         "ordering": "1"
+        },
+        {
+         "id": "4c95974b-da02-4879-8b54-c7f06a2bba15",
+         "label": "c",
+         "prompt": "Explain why solid sodium oxide does not conduct electricity.",
+         "marks": "2",
+         "ordering": "2"
+        },
+        {
+         "id": "09a76096-2b21-44a5-8023-dd3eae25f110",
+         "label": "d",
+         "prompt": "Give a test to show that sodium oxide contains sodium ions.",
+         "marks": "2",
+         "ordering": "3"
+        },
+        {
+         "id": "c8ea2255-1886-487d-a838-2d14cea3a577",
+         "label": "e",
+         "prompt": "When sodium oxide is heated it reacts to form sodium metal and\nsodium peroxide, Na2O2\nComplete the equation for this reaction.\nNa2O →",
+         "marks": "1",
+         "ordering": "4"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "6066e2fc-85bf-41cc-9868-0bf64c9566c6",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425681+00:00",
+         "points": [
+          {
+           "id": "fe203354-bcfc-48f2-9642-a9b43eb8f694",
+           "marks": 3,
+           "text": "Any three from:",
+           "ordering": 0
+          },
+          {
+           "id": "c98de7ba-7281-432d-80a1-d59d60645f1d",
+           "marks": 1,
+           "text": "62",
+           "ordering": 1
+          },
+          {
+           "id": "2dd6b2ad-2ca8-428d-8fcf-45b9416640bb",
+           "marks": 2,
+           "text": "Any two from:",
+           "ordering": 2
+          },
+          {
+           "id": "8867d3e0-3c2a-4c13-87b3-206ca859b5ff",
+           "marks": 2,
+           "text": "flame test",
+           "ordering": 3
+          },
+          {
+           "id": "75650df1-d3a6-49ad-9a6f-e2d4a7474fe5",
+           "marks": 1,
+           "text": "2Na2O → 2Na + Na2O2",
+           "ordering": 4
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "b6f69d0b-2743-4dfd-a994-40564ac4889b",
+     "marks": "8",
+     "stem": "This question is about soluble and insoluble compounds.\nA precipitate is an insoluble compound formed when solutions of soluble\ncompounds react after mixing.",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q7",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "7e07b31f-c2f2-4014-a58c-0d8f52dad43c",
+       "version": "1",
+       "stem": "This question is about soluble and insoluble compounds.\nA precipitate is an insoluble compound formed when solutions of soluble\ncompounds react after mixing.",
+       "marks": "8",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.424407+00:00",
+       "parts": [
+        {
+         "id": "20b09f9e-0021-4c06-ac67-dcc7bd1cce30",
+         "label": "a",
+         "prompt": "Different solutions are mixed in separate test tubes.\nTube 1 copper(II) sulfate solution and calcium chloride solution\nTube 2 magnesium nitrate solution and potassium sulfate solution\nTube 3 sodium carbonate solution and copper(II) sulfate solution\nIn which of the tubes will a precipitate form?\nA 1 and 2 only\nB 2 and 3 only\nC 1 and 3 only\nD 1, 2 and 3",
+         "marks": "1",
+         "ordering": "0"
+        },
+        {
+         "id": "b14868fd-ba2b-4389-89c9-d03dbcf90b70",
+         "label": "b",
+         "prompt": "A student mixes solutions, containing equal amounts in moles, of silver nitrate\nand sodium chloride.\nThe equation for the reaction between silver nitrate solution and sodium chloride\nsolution is\nAgNO3(aq) + NaCl(aq) → AgCl(s) + NaNO3(aq)",
+         "marks": "7",
+         "ordering": "1"
+        },
+        {
+         "id": "a87fb5ea-b591-414a-90e7-9998fdcc2ec7",
+         "label": "b-i",
+         "prompt": "State the colour of the precipitate of silver chloride.",
+         "marks": "1",
+         "ordering": "2"
+        },
+        {
+         "id": "9eb774b6-b293-4093-8601-a3ba6c1543cb",
+         "label": "b-ii",
+         "prompt": "The student wants to obtain pure, dry crystals of sodium nitrate.\nCrystals of sodium nitrate decompose at temperatures above 300 °C.\nDescribe a method the student could use to obtain pure, dry crystals of\nsodium nitrate.",
+         "marks": "5",
+         "ordering": "3"
+        },
+        {
+         "id": "906d3c5d-0855-45fc-bcad-7f98eda95c97",
+         "label": "b-iii",
+         "prompt": "Give an advantage of mixing solutions containing equal amounts, in moles,\nof silver nitrate and sodium chloride.",
+         "marks": "1",
+         "ordering": "4"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "ea6c77c0-77c4-47eb-836f-faa18772b69b",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425791+00:00",
+         "points": [
+          {
+           "id": "6e426d87-db82-4d48-8184-75a930559992",
+           "marks": 1,
+           "text": "C",
+           "ordering": 0
+          },
+          {
+           "id": "893abecd-c64d-4247-bff8-3b575b667214",
+           "marks": 1,
+           "text": "white",
+           "ordering": 1
+          },
+          {
+           "id": "a25a23d0-3354-45be-a6cf-cc68a091a22d",
+           "marks": 5,
+           "text": "Any five from:",
+           "ordering": 2
+          },
+          {
+           "id": "a8a59a63-1fc5-4026-941b-0579545aabfb",
+           "marks": 1,
+           "text": "any one from:",
+           "ordering": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5b238f0e-ce91-44b1-8632-34f89bec1b79",
+     "marks": "15",
+     "stem": "The table shows the structures of six organic compounds.",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q8",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "bec72ad0-22ea-47bb-8b4d-e824f243c159",
+       "version": "1",
+       "stem": "The table shows the structures of six organic compounds.",
+       "marks": "15",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.424542+00:00",
+       "parts": [
+        {
+         "id": "374f2f35-f518-479d-bfb2-5908002f7d11",
+         "label": "a-i",
+         "prompt": "Give the letter of a compound not shown as a displayed formula.",
+         "marks": "1",
+         "ordering": "0"
+        },
+        {
+         "id": "26dc4650-c8d8-4f34-8b08-0837d08da68b",
+         "label": "a-ii",
+         "prompt": "Give the letter of a saturated compound with the general formula CnH2n",
+         "marks": "1",
+         "ordering": "1"
+        },
+        {
+         "id": "04754911-5dde-48e4-b4d6-2acc1b45c57b",
+         "label": "a-iii",
+         "prompt": "Name compound E.",
+         "marks": "1",
+         "ordering": "2"
+        },
+        {
+         "id": "05adc527-fada-4221-9485-d8d77c4abf22",
+         "label": "a-iv",
+         "prompt": "Explain why compound A and compound D are isomers.",
+         "marks": "2",
+         "ordering": "3"
+        },
+        {
+         "id": "ace07034-3251-499b-82d4-26117c292139",
+         "label": "b",
+         "prompt": "Compound F reacts with bromine in the presence of ultraviolet radiation.",
+         "marks": "2",
+         "ordering": "4"
+        },
+        {
+         "id": "eada81c5-c70f-4951-9976-9a3b1257186a",
+         "label": "b-i",
+         "prompt": "Complete the equation for the reaction.\nCH4 + Br2 →",
+         "marks": "1",
+         "ordering": "5"
+        },
+        {
+         "id": "22acae88-b5ce-438a-9845-4cda32ed33dd",
+         "label": "b-ii",
+         "prompt": "Give the name of this type of reaction.",
+         "marks": "1",
+         "ordering": "6"
+        },
+        {
+         "id": "1292fd36-4dba-47a3-9e95-0766af6de85b",
+         "label": "c-i",
+         "prompt": "Another compound, G, has this percentage composition by mass.\nC = 37.8 % H = 6.3 % Cl = 55.9 %\nShow by calculation that the empirical formula of compound G is C2H4Cl",
+         "marks": "3",
+         "ordering": "7"
+        },
+        {
+         "id": "673f6787-0469-4584-891a-7b502d283233",
+         "label": "c-ii",
+         "prompt": "The relative formula mass (Mr) of G is 127\nDetermine the molecular formula of G.\nmolecular formula = .............................................................................................",
+         "marks": "2",
+         "ordering": "8"
+        },
+        {
+         "id": "9e921eac-72fa-4236-99eb-43c8a5709ee1",
+         "label": "d",
+         "prompt": "Compound E is used to make an addition polymer.",
+         "marks": "3",
+         "ordering": "9"
+        },
+        {
+         "id": "76a4d701-cba2-42b3-bec9-1a7f61486d00",
+         "label": "d-i",
+         "prompt": "Complete the equation to show part of the polymer formed from two\nmolecules of compound E.\nH\nH\nH\n2\nC\nC\nH\nC\nC\nC\nC\nC\nH\nH",
+         "marks": "2",
+         "ordering": "10"
+        },
+        {
+         "id": "a04347e5-9d3f-4a4b-8a6f-26b0dec2d4c1",
+         "label": "d-ii",
+         "prompt": "Give one problem caused by the disposal of addition polymers.",
+         "marks": "1",
+         "ordering": "11"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "419270f5-fbf3-43de-a225-ee84c6835de3",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.425901+00:00",
+         "points": [
+          {
+           "id": "e50431ac-64d4-49d0-a94b-3604883ae5ab",
+           "marks": 1,
+           "text": "A",
+           "ordering": 0
+          },
+          {
+           "id": "c3f99d4d-9ebd-4725-bd76-300a669286bd",
+           "marks": 1,
+           "text": "C",
+           "ordering": 1
+          },
+          {
+           "id": "51b40315-9985-4940-84ea-b8257584079f",
+           "marks": 1,
+           "text": "propene",
+           "ordering": 2
+          },
+          {
+           "id": "25d6ce9a-529a-4aa9-9773-2d31db61457a",
+           "marks": 2,
+           "text": "same molecular formula",
+           "ordering": 3
+          },
+          {
+           "id": "1658c5a1-b948-4db2-93d4-15b3c2fa0662",
+           "marks": 1,
+           "text": "CH3Br + HBr",
+           "ordering": 4
+          },
+          {
+           "id": "851d2ee1-fa95-4938-a20f-ce5fc683cf2e",
+           "marks": 1,
+           "text": "substitution",
+           "ordering": 5
+          },
+          {
+           "id": "a52fd4a5-9f4a-4513-9768-8e50b3578acc",
+           "marks": 3,
+           "text": "37.8÷12, 6.3÷1, 55.9÷35.5",
+           "ordering": 6
+          },
+          {
+           "id": "43005bd5-fee0-45e6-8157-daf34bb7ee53",
+           "marks": 2,
+           "text": "127÷63.5=2",
+           "ordering": 7
+          },
+          {
+           "id": "d6dd819f-745b-4668-a057-eb52e71d830f",
+           "marks": 2,
+           "text": "M1 two carbon atoms both with 2 H atoms",
+           "ordering": 8
+          },
+          {
+           "id": "6373eda0-9203-4675-a7ce-15bd1f875740",
+           "marks": 1,
+           "text": "Any one from:",
+           "ordering": 9
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "79b8fb0f-01cd-4d31-9f40-4df87c6d30e2",
+     "marks": "15",
+     "stem": "A student uses this apparatus to investigate the rate of reaction between calcium\ncarbonate chips and dilute hydrochloric acid.\ncotton wool plug\ncalcium carbonate\ndilute hydrochloric acid\nchips\nbalance\n124.05 g\nEvery 20 seconds the student records the reading on the balance.",
+     "external_ref": "4ch1/past-papers/2022-01/4CH1-1C#q9",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "9b13292f-ea0b-4904-9398-0966e782e621",
+       "version": "1",
+       "stem": "A student uses this apparatus to investigate the rate of reaction between calcium\ncarbonate chips and dilute hydrochloric acid.\ncotton wool plug\ncalcium carbonate\ndilute hydrochloric acid\nchips\nbalance\n124.05 g\nEvery 20 seconds the student records the reading on the balance.",
+       "marks": "15",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:59:00.424677+00:00",
+       "parts": [
+        {
+         "id": "1cd3a5a4-4e3d-43b1-aaaf-221b53d188fa",
+         "label": "a",
+         "prompt": "Explain why using a cotton wool plug increases the accuracy of the\nstudent’s results.",
+         "marks": "2",
+         "ordering": "0"
+        },
+        {
+         "id": "a198a5c3-cf0b-460d-b7cc-f7906af7139f",
+         "label": "b",
+         "prompt": "Complete the equation for the reaction by adding the state symbols.\nCaCO3(................) + 2HCl(................) → CaCl2(aq) + H2O(................) + CO2(................)",
+         "marks": "2",
+         "ordering": "1"
+        },
+        {
+         "id": "ae3a606e-664d-4b20-ad0c-0c39d23cd876",
+         "label": "c",
+         "prompt": "The student uses the balance readings to find the decrease in mass of the flask\nand contents.\nThe graph shows the student’s results.\n1.00\n0.90\n0.80\n0.70\nDecrease\n0.60\nin mass / g\n0.50\n0.40\n0.30\n0.20\n0.10\n0.00\n0\n20\n40\n60\n80\n100\n120\n140\nTime / seconds",
+         "marks": "7",
+         "ordering": "2"
+        },
+        {
+         "id": "64f67cb9-5e72-4f4b-a6ad-a175a1232d3d",
+         "label": "c-i",
+         "prompt": "Give a reason why there are some calcium carbonate chips remaining in the\nflask when the reaction stops.",
+         "marks": "1",
+         "ordering": "3"
+        },
+        {
+         "id": "0da50174-f264-4991-8be7-429b8eb2a7a6",
+         "label": "c-ii",
+         "prompt": "State how the student would know when the reaction has stopped.",
+         "marks": "1",
+         "ordering": "4"
+        },
+        {
+         "id": "ef4a6290-6536-43f3-953d-25b60f9061be",
+         "label": "c-iii",
+         "prompt": "Use the graph to determine the amount, in moles, of carbon dioxide produced\nduring the reaction.\n[Mr of CO2 = 44]\namount = .............................................................. mol",
+         "marks": "2",
+         "ordering": "5"
+        },
+        {
+         "id": "b90ce14a-5f26-4a57-a82c-939503b76254",
+         "label": "c-iv",
+         "prompt": "Use the graph to calculate the rate of reaction, in grams per second, at time\n60 seconds.\nShow your working on the graph.\nrate of reaction = .............................................................. g / s",
+         "marks": "3",
+         "ordering": "6"
+        },
+        {
+         "id": "e1462bab-ffd7-4dbe-b3df-159a21800349",
+         "label": "d",
+         "prompt": "The student repeats the investigation by diluting the original hydrochloric acid.\nThe student then determines the initial rate of reaction at different percentage\nconcentrations of the original hydrochloric acid.\nThe graph shows the student’s results.\n0.025\n0.020\nInitial rate\n0.015\nof reaction\nin g / s\n0.010\n0.005\n0\n0\n20\n40\n60\n80\n100\nPercentage concentration of\noriginal hydrochloric acid",
+         "marks": "4",
+         "ordering": "7"
+        },
+        {
+         "id": "717d0e9b-6200-4a3a-ba5b-f7e30bb5b805",
+         "label": "d-i",
+         "prompt": "Describe the relationship between the initial rate of reaction and percentage\nconcentration of the original hydrochloric acid.",
+         "marks": "2",
+         "ordering": "8"
+        },
+        {
+         "id": "bf0416e5-84c6-440e-8904-16711fc6f5b4",
+         "label": "d-ii",
+         "prompt": "Explain why changing the concentration of hydrochloric acid has an effect on\nthe initial rate of reaction.",
+         "marks": "2",
+         "ordering": "9"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "7ed65cb7-0fab-4318-8835-861124ab4871",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:59:00.426085+00:00",
+         "points": [
+          {
+           "id": "af91033c-5fd2-42df-82cd-26703196aaf4",
+           "marks": 2,
+           "text": "to prevent acid splashing out OR",
+           "ordering": 0
+          },
+          {
+           "id": "86ade6f4-798a-4e16-95f4-753073eba64b",
+           "marks": 2,
+           "text": "CaCO3(s) + 2HCl(aq)",
+           "ordering": 1
+          },
+          {
+           "id": "7ad39cdb-65e2-4e7b-8cbb-e2c1de1a9a7b",
+           "marks": 1,
+           "text": "the hydrochloric acid has all reacted",
+           "ordering": 2
+          },
+          {
+           "id": "7b3cb9e5-9975-4e75-a941-ff507b56bd48",
+           "marks": 1,
+           "text": "mass stays the same / stops decreasing",
+           "ordering": 3
+          },
+          {
+           "id": "50d3e678-1580-48f6-9f3a-42896e19653e",
+           "marks": 2,
+           "text": "0.98",
+           "ordering": 4
+          },
+          {
+           "id": "40ca0e72-ecbd-40c5-9e8d-79aef28bb6c8",
+           "marks": 3,
+           "text": "tangent shown on graph",
+           "ordering": 5
+          },
+          {
+           "id": "100dce28-1c48-48bc-8383-cf3dee9b18aa",
+           "marks": 2,
+           "text": "the rate of reaction increases as the percentage",
+           "ordering": 6
+          },
+          {
+           "id": "f6efef9f-0803-4ccb-af35-beed76ddcb9f",
+           "marks": 2,
+           "text": "change in number of particles (per unit volume)",
+           "ordering": 7
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "mirror": [
+    {
+     "q": "adf31584",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "2195cef2",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "fe5f720a",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "b9a94476",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "420c0a19",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "eb91a9e2",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "867c9a42",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "01aee482",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "b6f69d0b",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "5b238f0e",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "79b8fb0f",
+     "stem_eq": true,
+     "marks_eq": true
+    }
+   ],
+   "banked_sum": 110,
+   "n_qv": 11,
+   "n_sch": 11
+  },
+  "4CH1/2C JUN 2019": {
+   "qv": [],
+   "questions_mirror": [],
+   "questions": [
+    {
+     "id": "75fec6cb-a651-41b3-8961-c27f3df5c17c",
+     "marks": "6",
+     "stem": "The diagram shows the particles in an atom of an element.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+     "external_ref": "4ch1/past-papers/2019-06/4CH1-2C#q1",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "46ebd8f7-7168-40aa-943e-11d7f2a9b8b8",
+       "version": "1",
+       "stem": "The diagram shows the particles in an atom of an element.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+       "marks": "6",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:57:13.349778+00:00",
+       "parts": [
+        {
+         "id": "12fe0cee-eef6-49d4-a539-6dfa8d163f6f",
+         "label": "a",
+         "prompt": "The box gives the names of some particles.\nelectron ion molecule neutron proton\nUse words from the box to label the diagram.",
+         "marks": "3",
+         "ordering": "0"
+        },
+        {
+         "id": "9dc0960f-2860-4b51-ac5f-7eb0534464a8",
+         "label": "b",
+         "prompt": "Give the mass number of this atom.",
+         "marks": "1",
+         "ordering": "1"
+        },
+        {
+         "id": "ec7a9cfb-5b58-473c-8ded-9596669fcbca",
+         "label": "c",
+         "prompt": "Complete the sentence about isotopes.\nIsotopes are atoms that have the same number of ..............................................................\nbut have a different number of .............................................................. .\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "2",
+         "ordering": "2"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "77127c37-fe9a-46d5-9b46-45594fa5e61a",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:57:13.351667+00:00",
+         "points": [
+          {
+           "id": "68749f1d-fa24-49b0-9b36-076ee84d0bd0",
+           "marks": 3,
+           "text": "1 mark for each correct",
+           "ordering": 0
+          },
+          {
+           "id": "877f7581-8484-447d-ae70-e4b69d55b036",
+           "marks": 1,
+           "text": "13",
+           "ordering": 1
+          },
+          {
+           "id": "e36b7d22-2eb7-4d94-8652-8cea1be25757",
+           "marks": 2,
+           "text": "protons",
+           "ordering": 2
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5e5dbfc7-eb87-4993-8b34-24250355e59f",
+     "marks": "9",
+     "stem": "The table gives some information about the halogens, chlorine, bromine and iodine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+     "external_ref": "4ch1/past-papers/2019-06/4CH1-2C#q2",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "833472a6-bbf3-4db4-92ae-4353d59a9e8a",
+       "version": "1",
+       "stem": "The table gives some information about the halogens, chlorine, bromine and iodine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+       "marks": "9",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:57:13.350161+00:00",
+       "parts": [
+        {
+         "id": "14b2ce33-bc7b-4d45-8e57-230ac712b74b",
+         "label": "a",
+         "prompt": "Complete the table.",
+         "marks": "2",
+         "ordering": "0"
+        },
+        {
+         "id": "87616543-1dc6-4227-9be8-67a946f1758d",
+         "label": "b",
+         "prompt": "Chlorine has two isotopes of mass numbers 35 and 37\nThe relative percentage of each isotope in a sample of chlorine is\nchlorine-35 77.78% chlorine-37 22.22%\nCalculate the relative atomic mass of this sample of chlorine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nGive your answer to one decimal place.\nrelative atomic mass = ..........................................................",
+         "marks": "3",
+         "ordering": "1"
+        },
+        {
+         "id": "075c68dd-64ae-460d-becb-5e1896a1f785",
+         "label": "c",
+         "prompt": "A student is given an aqueous solution of chlorine and an aqueous solution of\npotassium bromide.\nExplain how he can use these two solutions to compare the reactivity of chlorine\nwith the reactivity of bromine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "4",
+         "ordering": "2"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "ed3f3d85-3bbb-449b-9c39-03fd70fb1596",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:57:13.351832+00:00",
+         "points": [
+          {
+           "id": "52203596-34af-4444-acbc-7a6531d1bff3",
+           "marks": 2,
+           "text": "grey and black eg grey-black",
+           "ordering": 0
+          },
+          {
+           "id": "ef3aa212-43ca-4cde-98b0-72dfa264c3c9",
+           "marks": 3,
+           "text": "(35 × 77.78) + (37 × 22.22)",
+           "ordering": 1
+          },
+          {
+           "id": "8ee7af0b-d27c-45f8-baf5-c0a8fd6a9f27",
+           "marks": 4,
+           "text": "add chlorine (solution) to potassium bromide",
+           "ordering": 2
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "547c03a3-19c7-4c53-8250-e80538bc5fb8",
+     "marks": "9",
+     "stem": "Methanol, ethanol, propanol and butanol are alcohols. They are all liquids that\nevaporate easily when warmed.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nA student uses this apparatus to compare the time taken for the four liquids to evaporate.\nalcohol\nhot water\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nShe uses this method.\n•\npour some methanol into an evaporating basin\n•\nplace the evaporating basin on top of a beaker containing hot water\n•\nmeasure the time taken for the methanol to evaporate completely\n•\nrepeat the experiment with each of the other alcohols, using the same apparatus",
+     "external_ref": "4ch1/past-papers/2019-06/4CH1-2C#q3",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "54588e6b-d49a-4c32-a6d9-8b5e8d943c9b",
+       "version": "1",
+       "stem": "Methanol, ethanol, propanol and butanol are alcohols. They are all liquids that\nevaporate easily when warmed.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nA student uses this apparatus to compare the time taken for the four liquids to evaporate.\nalcohol\nhot water\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nShe uses this method.\n•\npour some methanol into an evaporating basin\n•\nplace the evaporating basin on top of a beaker containing hot water\n•\nmeasure the time taken for the methanol to evaporate completely\n•\nrepeat the experiment with each of the other alcohols, using the same apparatus",
+       "marks": "9",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:57:13.350366+00:00",
+       "parts": [
+        {
+         "id": "0e848564-721e-4ea9-9319-00cd115039ae",
+         "label": "a",
+         "prompt": "State two variables the student should control to make sure her results are valid.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "2",
+         "ordering": "0"
+        },
+        {
+         "id": "4c1723cf-b067-4457-af77-9da9f2178185",
+         "label": "b",
+         "prompt": "State why it is not safe to heat the evaporating basin directly with a Bunsen flame.",
+         "marks": "1",
+         "ordering": "1"
+        },
+        {
+         "id": "f8056d63-2e52-4273-9ced-8a0fbe6c53b6",
+         "label": "c",
+         "prompt": "The table shows the results of experiments done by four students, A, B, C and D.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "6",
+         "ordering": "2"
+        },
+        {
+         "id": "fe8eae92-660a-47a4-b6ba-d9115dd1efda",
+         "label": "c-i",
+         "prompt": "Calculate the mean (average) time for butanol to evaporate.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nmean time = ..............................................................s",
+         "marks": "2",
+         "ordering": "3"
+        },
+        {
+         "id": "52c93f8b-c773-4ffa-928f-3bb31c2b68c5",
+         "label": "c-ii",
+         "prompt": "Explain how the results show which alcohol evaporates most easily.",
+         "marks": "2",
+         "ordering": "4"
+        },
+        {
+         "id": "276a9d87-3bdf-4a30-88b4-d6d056bbbdb8",
+         "label": "c-iii",
+         "prompt": "State the relationship between the number of carbon atoms in the molecule\nand how easily the alcohol evaporates.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "2",
+         "ordering": "5"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "59e8da4a-6328-4c2c-975a-39f538b50042",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:57:13.351964+00:00",
+         "points": [
+          {
+           "id": "f5d048b0-f106-4600-bd6f-ea69216e4985",
+           "marks": 2,
+           "text": "the volume of liquid/alcohol",
+           "ordering": 0
+          },
+          {
+           "id": "b655c46b-2d3f-4a64-bb8a-8d39fe1ba5c1",
+           "marks": 1,
+           "text": "alcohols/the liquids are flammable/catch fire",
+           "ordering": 1
+          },
+          {
+           "id": "1c386768-91cc-4141-879f-3592bd54c6db",
+           "marks": 2,
+           "text": "(64 + 63 + 60) ÷3",
+           "ordering": 2
+          },
+          {
+           "id": "aaf4186c-1c22-491a-84b8-1da84d173f59",
+           "marks": 2,
+           "text": "methanol/CH3OH (evaporates most easily)",
+           "ordering": 3
+          },
+          {
+           "id": "a87f1e55-433d-4823-b8a3-5211e3c116ec",
+           "marks": 2,
+           "text": "as the number of carbon atoms increases",
+           "ordering": 4
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "09bc3b1f-3d33-4e5b-a253-c3ae80a4b7bc",
+     "marks": "7",
+     "stem": "This question is about metals.",
+     "external_ref": "4ch1/past-papers/2019-06/4CH1-2C#q4",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "df7135a4-46ab-4aca-9cbb-fd1c5e2b87d8",
+       "version": "1",
+       "stem": "This question is about metals.",
+       "marks": "7",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:57:13.350585+00:00",
+       "parts": [
+        {
+         "id": "0cc6b4ee-0a77-4b62-b527-0e6f6558fdbe",
+         "label": "a",
+         "prompt": "Which statement describes metallic bonding?\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nA electrostatic attraction between oppositely charged ions\nB electrostatic attraction between the nuclei of two atoms and a pair of\nelectrons shared between them\nC electrostatic attraction between positively charged particles and delocalised electrons\nD electrostatic attraction between atoms",
+         "marks": "1",
+         "ordering": "0"
+        },
+        {
+         "id": "259fb270-3dfe-4944-bb90-b5534919e30b",
+         "label": "b",
+         "prompt": "Aluminium is malleable and can be easily shaped to make saucepans used for\ncooking food.\nState two other properties of aluminium that make it suitable for saucepans used\nfor cooking food.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "2",
+         "ordering": "1"
+        },
+        {
+         "id": "ad0e5ae3-4111-4c04-865d-0d87423a343d",
+         "label": "c",
+         "prompt": "Magnalium is an alloy of aluminium and magnesium.\nThe diagram shows how the atoms are arranged in this alloy.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nmagnesium atom\naluminium atom",
+         "marks": "4",
+         "ordering": "2"
+        },
+        {
+         "id": "b1571c87-cb66-4f70-a31e-4b8fdf47dac9",
+         "label": "c-i",
+         "prompt": "State what is meant by the term alloy.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "1",
+         "ordering": "3"
+        },
+        {
+         "id": "fc71b656-02dd-4233-840a-4e9f743bee4f",
+         "label": "c-ii",
+         "prompt": "Explain why magnalium is harder than aluminium.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "3",
+         "ordering": "4"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "104de4e8-c499-47e6-b639-bcced5ee8328",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:57:13.352172+00:00",
+         "points": [
+          {
+           "id": "f896522f-b0c2-47f1-8bde-e46514a8273f",
+           "marks": 1,
+           "text": "C (electrostatic attraction between positively charged",
+           "ordering": 0
+          },
+          {
+           "id": "6d24ca71-b4da-4f56-b3a0-651d26bdcc39",
+           "marks": 2,
+           "text": "good conductor of heat/thermal energy",
+           "ordering": 1
+          },
+          {
+           "id": "fa570515-2a1e-40de-adb1-edb11362ad25",
+           "marks": 1,
+           "text": "a mixture of (two or more) elements, one of which is",
+           "ordering": 2
+          },
+          {
+           "id": "8fe30b5b-84af-4cc7-92b4-7964a37a9087",
+           "marks": 3,
+           "text": "the regular arrangement of atoms is",
+           "ordering": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "593c1a82-837a-400a-aa35-f454d223a911",
+     "marks": "10",
+     "stem": "During the Second World War, engineers developed a rocket-powered aircraft.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\ncombustion chamber\nhydrogen peroxide tank\nhydrazine tank\nThe aircraft carried these two liquids\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\n•\nhydrazine, N2H4\n•\nhydrogen peroxide, H2O2\nWhen these two liquids mix in the combustion chamber, they evaporate and then\nreact rapidly to form nitrogen gas, N2, and steam, H2O\nThe reaction is exothermic.\nThe equation for the reaction is\nN2H4 + 2H2O2 → N2 + 4H2O\nThe displayed formulae for the reactants and products are\nH\nH\nO\nH\nH\nH\nH\nO\nH\nH\nH\nH\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nO\nO\nN\nN\nO\nH\nH\nH\nH\nO\nN=N\nH\nH\nO\nO",
+     "external_ref": "4ch1/past-papers/2019-06/4CH1-2C#q5",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "488dfb03-e940-4fe4-b329-7a3d57646ae9",
+       "version": "1",
+       "stem": "During the Second World War, engineers developed a rocket-powered aircraft.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\ncombustion chamber\nhydrogen peroxide tank\nhydrazine tank\nThe aircraft carried these two liquids\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\n•\nhydrazine, N2H4\n•\nhydrogen peroxide, H2O2\nWhen these two liquids mix in the combustion chamber, they evaporate and then\nreact rapidly to form nitrogen gas, N2, and steam, H2O\nThe reaction is exothermic.\nThe equation for the reaction is\nN2H4 + 2H2O2 → N2 + 4H2O\nThe displayed formulae for the reactants and products are\nH\nH\nO\nH\nH\nH\nH\nO\nH\nH\nH\nH\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nO\nO\nN\nN\nO\nH\nH\nH\nH\nO\nN=N\nH\nH\nO\nO",
+       "marks": "10",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:57:13.350845+00:00",
+       "parts": [
+        {
+         "id": "ce123c84-21c9-4520-9aa8-d31b17e3b4dc",
+         "label": "a",
+         "prompt": "The tables give the bond energies for the bonds broken in the reactants and the\nbonds made in the products.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "5",
+         "ordering": "0"
+        },
+        {
+         "id": "8b5e1ef4-0e67-4a35-bb73-1d136d2f6fbb",
+         "label": "a-i",
+         "prompt": "Use the data in the tables to calculate the total amount of energy required to\nbreak all of the bonds in the reactants.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nenergy required = .............................................................. kJ",
+         "marks": "1",
+         "ordering": "1"
+        },
+        {
+         "id": "1c25fe26-e578-436f-90bb-8e5d055d2e2c",
+         "label": "a-ii",
+         "prompt": "Use the data in the tables to calculate the total amount of energy released\nwhen all of the bonds in the products are made.\nenergy released = .............................................................. kJ",
+         "marks": "1",
+         "ordering": "2"
+        },
+        {
+         "id": "dd558286-6ef8-4eab-bd58-fa0980c9eb2c",
+         "label": "a-iii",
+         "prompt": "Calculate the enthalpy change, ∆H, in kJ/mol, for the reaction.\nInclude a sign in your answer.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "3",
+         "ordering": "3"
+        },
+        {
+         "id": "3da52580-1368-4d2e-8f54-896680905eb0",
+         "label": "b",
+         "prompt": "Explain, in terms of bonds broken and bonds made, why this reaction is exothermic.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "2",
+         "ordering": "4"
+        },
+        {
+         "id": "ed338bb0-55ad-4006-8dfb-7a77877b1ca3",
+         "label": "c",
+         "prompt": "Draw an energy level diagram for the reaction between N2H4 and H2O2\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nenergy",
+         "marks": "3",
+         "ordering": "5"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "9981064e-0cc5-4400-97cb-af25bc730829",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:57:13.352290+00:00",
+         "points": [
+          {
+           "id": "50456fe8-a922-41ba-9533-05aa4c9ade07",
+           "marks": 1,
+           "text": "(bonds broken)",
+           "ordering": 0
+          },
+          {
+           "id": "4860fe3a-895e-496a-a381-4f8391b9c967",
+           "marks": 1,
+           "text": "(bonds made)",
+           "ordering": 1
+          },
+          {
+           "id": "a350cce2-46c9-4e78-b11e-7cb4183b18f5",
+           "marks": 3,
+           "text": "subtraction of Σ(bonds made) made and",
+           "ordering": 2
+          },
+          {
+           "id": "96883966-903c-4a91-a2de-723594c5db98",
+           "marks": 2,
+           "text": "more energy is given out when the bonds are made",
+           "ordering": 3
+          },
+          {
+           "id": "641cff6c-1a03-458e-b1a0-e4036ef6c35e",
+           "marks": 3,
+           "text": "drawn; shown; energy shown; M2 (no printed marks cell): correct evaluation of the calculation shown in M1 | IGNORE sign; M3 (no printed marks cell): If Σ(bonds made) > Σ(bonds broken) final answer must | be negative | If Σ(bonds made) < Σ(bonds broken) final answer must   Expected final answer is | be positive (and + sign given)                         ‒788 (kJ/mol) | -788 with no working | scores 3 | (+) 788 scores 2; P3 (no printed marks cell): An explanation that links together the following two points:; M2 (no printed marks cell): than is taken in when the bonds are broken | ACCEPT correct reverse | argument | Answer                Additional guidance       Marks; M1 (no printed marks cell): right hand line below left hand line; M2 (no printed marks cell): correct names/formulae of both reactants | If only use words | reactants (on left) and; M3 (no printed marks cell): correct names/formulae of both products | products (on right) award | 1 mark from M2 and M3",
+           "ordering": 4
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7c6ad4cd-ee34-44b5-83f9-a2d817e1a9ff",
+     "marks": "14",
+     "stem": "Some cars in Brazil use ethanol, C2H5OH, as a fuel instead of petrol.\nThe ethanol is made by the fermentation of glucose which is obtained from sugar cane.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe sugar is extracted from the sugar cane and then dissolved in water to make\na sugar solution.",
+     "external_ref": "4ch1/past-papers/2019-06/4CH1-2C#q6",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "43f6aa74-f954-468d-84d1-999cd859dd6f",
+       "version": "1",
+       "stem": "Some cars in Brazil use ethanol, C2H5OH, as a fuel instead of petrol.\nThe ethanol is made by the fermentation of glucose which is obtained from sugar cane.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe sugar is extracted from the sugar cane and then dissolved in water to make\na sugar solution.",
+       "marks": "14",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:57:13.351072+00:00",
+       "parts": [
+        {
+         "id": "5be62fe3-c920-4e3e-bce0-af77d141a61f",
+         "label": "a-i",
+         "prompt": "Name the substance that is added to the sugar solution that causes glucose to ferment.",
+         "marks": "1",
+         "ordering": "0"
+        },
+        {
+         "id": "4fd5d70d-9a96-49b1-8d9b-0e63a6388ee9",
+         "label": "a-ii",
+         "prompt": "Which temperature is the most suitable for fermentation?\nA 0°C\nB 10°C\nC 30°C\nD 80°C\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "1",
+         "ordering": "1"
+        },
+        {
+         "id": "eb5d0469-7589-4bbc-a4ca-31015879dbfd",
+         "label": "a-iii",
+         "prompt": "Explain why fermentation is done in the absence of air.",
+         "marks": "2",
+         "ordering": "2"
+        },
+        {
+         "id": "a67f4c71-de74-4a95-a161-caba3c352513",
+         "label": "b-i",
+         "prompt": "State what is meant by the term fuel.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "1",
+         "ordering": "3"
+        },
+        {
+         "id": "15c59f8c-f3eb-4d73-a63e-230c79ea1068",
+         "label": "b-ii",
+         "prompt": "Write a chemical equation for the complete combustion of ethanol in air.",
+         "marks": "2",
+         "ordering": "4"
+        },
+        {
+         "id": "373ab540-fda2-4743-b3a4-7a5b096b6d95",
+         "label": "c",
+         "prompt": "Ethanol is also manufactured by reacting steam with ethene, C2H4\nThe equation for this reaction is\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nC2H4(g) + H2O(g) → C2H5OH(g)\nState the conditions of temperature and pressure used in this process.\ntemperature . ...............................................................................................................................................................................................................................................\npressure . ..........................................................................................................................................................................................................................................................",
+         "marks": "2",
+         "ordering": "5"
+        },
+        {
+         "id": "82a358c7-52e7-42ff-b901-1e55abe10d35",
+         "label": "d",
+         "prompt": "When ethanol is heated with acidified potassium dichromate(VI), it is oxidised to\nethanoic acid.",
+         "marks": "5",
+         "ordering": "6"
+        },
+        {
+         "id": "eb4fb58a-a35a-453e-b8f9-727bd7a301f9",
+         "label": "d-i",
+         "prompt": "State the colour change that occurs in the potassium dichromate(VI) during\nthis reaction.\nfrom ................................................................................................................ to ................................................................................................................\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "1",
+         "ordering": "7"
+        },
+        {
+         "id": "78f55723-86b2-4c42-83b7-54896b0d30fa",
+         "label": "d-ii",
+         "prompt": "The structural formula of ethanoic acid is CH3COOH\nDraw the displayed formula of ethanoic acid.",
+         "marks": "2",
+         "ordering": "8"
+        },
+        {
+         "id": "acbceecb-255e-4c21-86a6-c5d7241da46e",
+         "label": "d-iii",
+         "prompt": "Complete the equation for the reaction of ethanoic acid with sodium.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\n.......................CH3COOH(aq) + .......................Na(s) → ..............................................................(aq) + ....................................(g)",
+         "marks": "2",
+         "ordering": "9"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "531997a6-7f50-49a8-a7d2-56810b538c9e",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:57:13.352423+00:00",
+         "points": [
+          {
+           "id": "ef72f70e-2e20-43cb-b5e2-57a066f5b35b",
+           "marks": 1,
+           "text": "yeast",
+           "ordering": 0
+          },
+          {
+           "id": "b54c935e-eaf8-46c3-a861-f73e7f20e834",
+           "marks": 1,
+           "text": "C (30 °C) is correct as it is the most",
+           "ordering": 1
+          },
+          {
+           "id": "21ab6c1a-456f-4583-9bbb-e27de440aefc",
+           "marks": 2,
+           "text": "oxygen in the air would react with",
+           "ordering": 2
+          },
+          {
+           "id": "06dc3a81-8fd5-4b52-b850-e40b47f91f88",
+           "marks": 1,
+           "text": "a substance that releases thermal",
+           "ordering": 3
+          },
+          {
+           "id": "3ae0f058-81eb-4317-9e96-f5870616d109",
+           "marks": 2,
+           "text": "C2H5OH + 3 O2  2 CO2 + 3 H2O",
+           "ordering": 4
+          },
+          {
+           "id": "3a9cc408-48e9-4054-a920-1ba75099487b",
+           "marks": 2,
+           "text": "(temperature) 300 °C",
+           "ordering": 5
+          },
+          {
+           "id": "e2f5690d-506b-4331-baf5-7c0cf6a9b0c4",
+           "marks": 1,
+           "text": "(from) orange (to) green",
+           "ordering": 6
+          },
+          {
+           "id": "2395b4a2-ca30-4db6-9e06-2fe2ab396aec",
+           "marks": 2,
+           "text": "scores 1 mark",
+           "ordering": 7
+          },
+          {
+           "id": "3a462603-d986-4f53-be23-1f38ae62b521",
+           "marks": 2,
+           "text": "CH3COONa + ½ H2",
+           "ordering": 8
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5c4bc821-748d-4935-af56-da9fb6a188e3",
+     "marks": "8",
+     "stem": "Dinitrogen tetraoxide, N2O4, is a colourless gas.\nNitrogen dioxide, NO2, is a brown gas.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe two gases can exist together in dynamic equilibrium according to the equation\nN2O4(g)  2NO2(g)",
+     "external_ref": "4ch1/past-papers/2019-06/4CH1-2C#q7",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "fa9827b6-22a0-454c-80c0-ed5143b45aa3",
+       "version": "1",
+       "stem": "Dinitrogen tetraoxide, N2O4, is a colourless gas.\nNitrogen dioxide, NO2, is a brown gas.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe two gases can exist together in dynamic equilibrium according to the equation\nN2O4(g)  2NO2(g)",
+       "marks": "8",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:57:13.351290+00:00",
+       "parts": [
+        {
+         "id": "93b2bc58-1057-49f6-9ccb-a8f5a8643d85",
+         "label": "a",
+         "prompt": "Explain what is meant by the term dynamic equilibrium.",
+         "marks": "2",
+         "ordering": "0"
+        },
+        {
+         "id": "85680cdc-8c7c-47ee-8509-92efd71cbb41",
+         "label": "b",
+         "prompt": "Some N2O4 and some NO2 are put into a sealed gas syringe and allowed to form\nan equilibrium mixture.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nequilibrium mixture\npiston\ngas syringe\nThis equilibrium mixture is brown.",
+         "marks": "3",
+         "ordering": "1"
+        },
+        {
+         "id": "e629e134-a8b7-4e92-90b1-ab180a2f002d",
+         "label": "b-i",
+         "prompt": "The pressure of the gas in the syringe is increased by pushing in the piston.\nThe mixture is then allowed to reach a new equilibrium at the same\ntemperature as before.\nExplain why the new equilibrium mixture contains less NO2 than the original\nequilibrium mixture.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "2",
+         "ordering": "2"
+        },
+        {
+         "id": "1156e15f-9666-49a1-920e-3af224932fc3",
+         "label": "b-ii",
+         "prompt": "A student suggests that the new equilibrium mixture would be lighter in\ncolour than the original equilibrium mixture, as there is now less NO2 present.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nSuggest why the new equilibrium mixture is actually darker than the original.",
+         "marks": "1",
+         "ordering": "3"
+        },
+        {
+         "id": "080b039f-c7e1-455b-9d64-c57fa4bfdb8f",
+         "label": "c",
+         "prompt": "Carbon monoxide, CO, and oxides of nitrogen are produced in a car engine when\npetrol is burned.\nThese oxides can be partly removed by using a catalytic converter fitted to the\ncar’s exhaust system.",
+         "marks": "3",
+         "ordering": "4"
+        },
+        {
+         "id": "a96150e9-74f4-4f3c-91a6-b410d0edfcc2",
+         "label": "c-i",
+         "prompt": "State how oxides of nitrogen are produced in the car engine.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "1",
+         "ordering": "5"
+        },
+        {
+         "id": "38cca7e9-2fe8-4b78-8d10-365409fe2450",
+         "label": "c-ii",
+         "prompt": "Give a disadvantage of allowing oxides of nitrogen to escape into the atmosphere.",
+         "marks": "1",
+         "ordering": "6"
+        },
+        {
+         "id": "b1ad4160-4656-4f32-902b-dcd71cea0a41",
+         "label": "c-iii",
+         "prompt": "Write a chemical equation for the reaction between nitrogen monoxide, NO,\nand carbon monoxide to form carbon dioxide and nitrogen.",
+         "marks": "1",
+         "ordering": "7"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "bdf0ef95-bff1-4074-af4c-b456305b9777",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:57:13.352589+00:00",
+         "points": [
+          {
+           "id": "b02ed5b1-6de3-4908-bbcc-6fb1552ee9e1",
+           "marks": 2,
+           "text": "reaction is taking place in both directions (at",
+           "ordering": 0
+          },
+          {
+           "id": "ae8bcff6-ba16-4bd0-b678-4ebd8d30bf18",
+           "marks": 2,
+           "text": "(the position of) equilibrium has",
+           "ordering": 1
+          },
+          {
+           "id": "d2fbcb70-8c8a-49c1-8373-1895d1f2cda8",
+           "marks": 1,
+           "text": "the concentration of NO2 has increased",
+           "ordering": 2
+          },
+          {
+           "id": "35e3e855-9fa0-485c-8957-dab7606e3d72",
+           "marks": 1,
+           "text": "nitrogen/N2 reacts with oxygen/O2 (both from the",
+           "ordering": 3
+          },
+          {
+           "id": "8358feda-e7c5-41b8-b8a6-9b109ed06d17",
+           "marks": 1,
+           "text": "(they form) acid rain",
+           "ordering": 4
+          },
+          {
+           "id": "a85f4837-6aa8-4daf-b5ad-b9c86c3a86d6",
+           "marks": 1,
+           "text": "2 NO + 2 CO  N2 + 2 CO2",
+           "ordering": 5
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1f41769b-826a-4d50-a993-200f4294b680",
+     "marks": "7",
+     "stem": "The concentration of NaClO(aq) in a solution of bleach is found by reacting it with\nhydrochloric acid.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe equation for the reaction is\nNaClO(aq) + 2HCl(aq) → NaCl(aq) + H2O(l) + Cl2(g)\nAn excess of dilute hydrochloric acid is added to 4.00 cm3 of bleach solution.\n60.0 cm3 of chlorine gas is produced.",
+     "external_ref": "4ch1/past-papers/2019-06/4CH1-2C#q8",
+     "question_type": "STRUCTURED",
+     "active": "True",
+     "versions": [
+      {
+       "id": "dcd64a2b-ca23-4ecc-b4a4-c712447b7ab5",
+       "version": "1",
+       "stem": "The concentration of NaClO(aq) in a solution of bleach is found by reacting it with\nhydrochloric acid.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA\nThe equation for the reaction is\nNaClO(aq) + 2HCl(aq) → NaCl(aq) + H2O(l) + Cl2(g)\nAn excess of dilute hydrochloric acid is added to 4.00 cm3 of bleach solution.\n60.0 cm3 of chlorine gas is produced.",
+       "marks": "7",
+       "validation_state": "SUGGESTED",
+       "extraction_confidence": "1.0",
+       "created_at": "2026-09-25 16:57:13.351498+00:00",
+       "parts": [
+        {
+         "id": "5db5edfb-223e-40c9-8887-20ceb1e102d8",
+         "label": "a",
+         "prompt": "Explain a safety precaution that should be taken when doing this experiment.\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "2",
+         "ordering": "0"
+        },
+        {
+         "id": "5ba70fca-2d84-4ffa-8f0c-aeb194ab5ca7",
+         "label": "b-i",
+         "prompt": "Calculate the amount, in moles, of chlorine gas produced.\nAssume one mole of chlorine gas occupies 24 000 cm3.\namount of chlorine = .............................................................. mol",
+         "marks": "2",
+         "ordering": "1"
+        },
+        {
+         "id": "3c14f71a-bab6-4faf-8693-647456f50202",
+         "label": "b-ii",
+         "prompt": "Determine the amount, in moles, of NaClO in 4.00 cm3 of bleach.\namount of NaClO = .............................................................. mol\nDO NOT WRITE IN THIS AREA\nDO NOT WRITE IN THIS AREA",
+         "marks": "1",
+         "ordering": "2"
+        },
+        {
+         "id": "bea771da-459c-45c6-9d08-cf04e9a09a3d",
+         "label": "b-iii",
+         "prompt": "Calculate the concentration, in mol/dm3, of the bleach solution.\nconcentration = .............................................................. mol/dm3",
+         "marks": "2",
+         "ordering": "3"
+        }
+       ],
+       "schemes": [
+        {
+         "id": "814f4337-1216-4ea6-a3c4-e702ebd629c1",
+         "validation_state": "SUGGESTED",
+         "created_at": "2026-09-25 16:57:13.352711+00:00",
+         "points": [
+          {
+           "id": "c776cedf-7f3b-4797-9f8f-bb5e0bf39181",
+           "marks": 2,
+           "text": "use a fume cupboard",
+           "ordering": 0
+          },
+          {
+           "id": "feaae8ad-aed8-44db-a1a1-2cedfc3e24c6",
+           "marks": 2,
+           "text": "60 ÷ 24 000",
+           "ordering": 1
+          },
+          {
+           "id": "dde4acdd-913b-4964-a1d9-cecb80cc3dba",
+           "marks": 1,
+           "text": "0.0025 OR answer to M2 from (i)",
+           "ordering": 2
+          },
+          {
+           "id": "a9b81662-0876-4682-b4a2-8e4be305a59f",
+           "marks": 2,
+           "text": "(0.0025 ÷ 4.00) × 1000",
+           "ordering": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "mirror": [
+    {
+     "q": "75fec6cb",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "5e5dbfc7",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "547c03a3",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "09bc3b1f",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "593c1a82",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "7c6ad4cd",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "5c4bc821",
+     "stem_eq": true,
+     "marks_eq": true
+    },
+    {
+     "q": "1f41769b",
+     "stem_eq": true,
+     "marks_eq": true
+    }
+   ],
+   "banked_sum": 70,
+   "n_qv": 8,
+   "n_sch": 8
+  }
+ },
+ "audit_rows_on_children": [],
+ "audit_rows_on_children_n": 0,
+ "audit_rows_on_papers": [],
+ "doc_links": {
+  "4CH1/1C JAN 2022": {
+   "qp_doc": "f2dab00f-82c9-5328-b2b9-7804e1c888da",
+   "ms_doc": "8b2094ab-5937-5d66-b443-46a087d1d79c",
+   "paper_title": "4CH1 Chemistry 4CH1/1C January 2022",
+   "qp_doc_row_id": "125b1f13-8ccb-4e3e-9c5d-e91065f31830",
+   "ms_doc_row_id": "9c965f1e-da42-43ee-9c3a-64f4b56d9836"
+  },
+  "4CH1/2C JUN 2019": {
+   "qp_doc": "f11e2595-cf07-5e1b-a97e-1f690077f2bf",
+   "ms_doc": "24a393b2-84ad-56eb-9aef-0eed5d7f7e84",
+   "paper_title": "4CH1 Chemistry 4CH1/2C June 2019",
+   "qp_doc_row_id": "e73c6d44-fcff-465d-8d37-67efd8d3424c",
+   "ms_doc_row_id": "1e615bf0-1a52-466a-b50b-44cf939e1889"
+  }
+ },
+ "doc_census": {
+  "4CH1/1C JAN 2022_qp_doc": {
+   "id": "125b1f13-8ccb-4e3e-9c5d-e91065f31830",
+   "document_id": "f2dab00f-82c9-5328-b2b9-7804e1c888da",
+   "validation_state": "VALIDATED",
+   "source_uri": "4ch1-1c-202201/qp.pdf",
+   "mime_type": "application/pdf",
+   "chunks": "16",
+   "chunks_rev2": "16"
+  },
+  "4CH1/1C JAN 2022_ms_doc": {
+   "id": "9c965f1e-da42-43ee-9c3a-64f4b56d9836",
+   "document_id": "8b2094ab-5937-5d66-b443-46a087d1d79c",
+   "validation_state": "VALIDATED",
+   "source_uri": "4ch1-1c-202201/ms.pdf",
+   "mime_type": "application/pdf",
+   "chunks": "18",
+   "chunks_rev2": "18"
+  },
+  "4CH1/2C JUN 2019_qp_doc": {
+   "id": "e73c6d44-fcff-465d-8d37-67efd8d3424c",
+   "document_id": "f11e2595-cf07-5e1b-a97e-1f690077f2bf",
+   "validation_state": "VALIDATED",
+   "source_uri": "4ch1-2c-201906/qp.pdf",
+   "mime_type": "application/pdf",
+   "chunks": "11",
+   "chunks_rev2": "11"
+  },
+  "4CH1/2C JUN 2019_ms_doc": {
+   "id": "1e615bf0-1a52-466a-b50b-44cf939e1889",
+   "document_id": "24a393b2-84ad-56eb-9aef-0eed5d7f7e84",
+   "validation_state": "VALIDATED",
+   "source_uri": "4ch1-2c-201906/ms.pdf",
+   "mime_type": "application/pdf",
+   "chunks": "15",
+   "chunks_rev2": "15"
+  }
+ },
+ "chunks": {
+  "4CH1/1C JAN 2022_qp_doc": [
+   {
+    "id": "9284e712",
+    "chunk_index": 0,
+    "embed_rev": 2,
+    "len": 899,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q1 | pp.4–5\nand then mark your new answer with a cross .\nanswer, put a line through the box\n1 This question is about mixtures and compounds.\nThe box gives some methods used to separate mixtures.\nchromatography crystallisation\nfractional distillation simple distillation\nChoose methods from the box to answer the following questions.\nEach method may be used once, more than once or not at all.\nIdentify a method to separate a single food dye from a mixture of food dyes.\nIdentify a method to separate gasoline from crude oil.\nIdentify a method to separate water from copper(II) sulfate solution.\nThe diagram represents a molecule.\nExplain why this molecule is a compound.\nThe molecular formula of another compound is C3H5N3O9\nState the number of different elements in C3H5N3O9\nDetermine the number of atoms in a molecule of C3H5N3O9"
+   },
+   {
+    "id": "0ca5bbc5",
+    "chunk_index": 1,
+    "embed_rev": 2,
+    "len": 1166,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q2 | pp.6–7\nThis question is about rusting.\nA simplified formula for rust is Fe2O3\nName the two substances needed for iron to rust.\n1.................................................................................................................................................................................................................................................................................\n2.................................................................................................................................................................................................................................................................................\nGive the chemical name for rust.\nWhat type of reaction occurs in the rusting of iron?\nA combustion\nB neutralisation\nC oxidation\nD thermal decomposition\nSome iron objects are coated with a layer of zinc to prevent rusting.\nName this type of rust prevention.\nExplain how this type of rust prevention continues to protect iron when the\nlayer of zinc is damaged.\nGive two other methods used to prevent iron from rusting."
+   },
+   {
+    "id": "dafeb588",
+    "chunk_index": 2,
+    "embed_rev": 2,
+    "len": 626,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q2 | p.7\n1.................................................................................................................................................................................................................................................................................\n2................................................................................................................................................................................................................................................................................."
+   },
+   {
+    "id": "7ec1973c",
+    "chunk_index": 3,
+    "embed_rev": 2,
+    "len": 1261,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q3 | pp.8–9\nThis question is about states of matter.\nThe box gives words relating to changes of state.\ncondensation cooling evaporation\nfreezing melting sublimation\nComplete the table by giving the correct word from the box for each\nchange of state.\nWhen ammonia gas and hydrogen chloride gas mix, they react together to form a\nwhite solid called ammonium chloride.\nThe equation for the reaction is\nNH3(g) + HCl(g) → NH4Cl(s)\nA teacher soaks a piece of cotton wool in concentrated ammonia solution and\nanother piece of cotton wool in concentrated hydrochloric acid.\nThe teacher places the two pieces of cotton wool at opposite ends of a glass tube\nat the same time.\nAfter several minutes, a white ring of solid ammonium chloride forms.\ncotton wool soaked\ncotton wool soaked\nwhite ring of\nin concentrated\nin concentrated\nammonium chloride\nammonia solution\nhydrochloric acid\nState the name given to the spreading out of gas particles.\nState how the diagram shows that the particles of ammonia gas are travelling\nat higher speeds than the particles of hydrogen chloride gas.\nGas particles travel at high speeds.\nGive a reason why the white ring of ammonium chloride takes several minutes\nto form."
+   },
+   {
+    "id": "93c7c08b",
+    "chunk_index": 4,
+    "embed_rev": 2,
+    "len": 208,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q3 | p.9\nConcentrated ammonia solution and concentrated hydrochloric acid\nare corrosive.\nGive one safety precaution the teacher should take."
+   },
+   {
+    "id": "3c6c145f",
+    "chunk_index": 5,
+    "embed_rev": 2,
+    "len": 1254,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q4 | pp.10–11\nA teacher uses this apparatus to find the percentage of oxygen in a gaseous mixture\nof oxygen and argon.\nmixture of oxygen and argon\nglass tube\ncopper powder\nsyringe A\nsyringe B\nheat\nThis is the teacher’s method.\nStep 1 \u0007heat the copper powder\nStep 2 \u0007push the plunger on syringe A to pass the mixture of oxygen and argon over\nthe hot copper so that the mixture moves into syringe B\nStep 3 \u0007push the plunger on syringe B to pass the mixture of oxygen and argon over\nthe hot copper so that the mixture moves into syringe A\nStep 4 \u0007record the reading on syringe A\nStep 5 \u0007repeat Steps 2, 3 and 4 a number of times\nThe volume of gas decreases as the oxygen reacts with the copper.\nArgon is unreactive so does not react with the copper.\nThe copper powder turns black.\nGive a reason why the copper powder is heated.\nState why argon is unreactive.\nGive the name of the black powder that forms when the oxygen reacts with\nthe copper.\nThe table shows the teacher’s results.\nState how the results show that all the oxygen has reacted.\nThe volume of gas in the glass tube and connecting tubes is 175 cm3.\nUse this value and the results table to calculate the percentage of oxygen in"
+   },
+   {
+    "id": "a9454ebd",
+    "chunk_index": 6,
+    "embed_rev": 2,
+    "len": 297,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q4 | pp.11–12\nthe mixture of oxygen and argon.\npercentage of oxygen = .............................................................. %\nSuggest one reason why the calculated percentage of oxygen in the mixture\nmay not be accurate."
+   },
+   {
+    "id": "a286fc86",
+    "chunk_index": 7,
+    "embed_rev": 2,
+    "len": 1186,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q5 | pp.14–15\nComplete the table to show the relative mass and relative charge of a\nproton and a neutron.\nMagnesium has three isotopes.\nState the meaning of the term isotopes.\nThe symbol for an atom of one isotope of magnesium is\n26\n12Mg\nGive the number of protons, neutrons and electrons in one atom of\nthis isotope.\nnumber of protons\nnumber of neutrons\nnumber of electrons\nA sample of magnesium contains these percentages of the three isotopes.\nMg‑24 = 79.00 % Mg‑25 = 10.00 % Mg‑26 = 11.00 %\nUse this information to show that the relative atomic mass of\nmagnesium is 24.32\nOne mole of magnesium has a mass of 24.32 g.\nThere are 6.022 × 1023 atoms in one mole.\nCalculate the mass, in grams, of one atom of magnesium.\nGive your answer to 4 significant figures.\nmass = .............................................................. g\nThe equation for the reaction between magnesium and oxygen is\n2Mg + O2 → 2MgO\nDetermine the maximum amount, in moles, of magnesium oxide that can be\nproduced from 0.50 mol of magnesium and 0.20 mol of oxygen.\namount = .............................................................. mol"
+   },
+   {
+    "id": "6def71af",
+    "chunk_index": 8,
+    "embed_rev": 2,
+    "len": 766,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q6 | pp.16–17\nThis question is about sodium oxide, Na2O\nThe diagram shows the electronic configuration of atoms of sodium and oxygen.\nSodium\nOxygen\nDescribe the changes in the electronic configuration of the atoms of sodium and\noxygen to form the ions in sodium oxide.\nCalculate the relative formula mass (Mr) of sodium oxide, Na2O, using information\nfrom the Periodic Table.\nMr = ..............................................................\nExplain why solid sodium oxide does not conduct electricity.\nGive a test to show that sodium oxide contains sodium ions.\nWhen sodium oxide is heated it reacts to form sodium metal and\nsodium peroxide, Na2O2\nComplete the equation for this reaction.\nNa2O →"
+   },
+   {
+    "id": "ad66cc8b",
+    "chunk_index": 9,
+    "embed_rev": 2,
+    "len": 1221,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q7 | pp.18–19\nThis question is about soluble and insoluble compounds.\nA precipitate is an insoluble compound formed when solutions of soluble\ncompounds react after mixing.\nDifferent solutions are mixed in separate test tubes.\nTube 1 copper(II) sulfate solution and calcium chloride solution\nTube 2 magnesium nitrate solution and potassium sulfate solution\nTube 3 sodium carbonate solution and copper(II) sulfate solution\nIn which of the tubes will a precipitate form?\nA 1 and 2 only\nB 2 and 3 only\nC 1 and 3 only\nD 1, 2 and 3\nA student mixes solutions, containing equal amounts in moles, of silver nitrate\nand sodium chloride.\nThe equation for the reaction between silver nitrate solution and sodium chloride\nsolution is\nAgNO3(aq) + NaCl(aq) → AgCl(s) + NaNO3(aq)\nState the colour of the precipitate of silver chloride.\nThe student wants to obtain pure, dry crystals of sodium nitrate.\nCrystals of sodium nitrate decompose at temperatures above 300 °C.\nDescribe a method the student could use to obtain pure, dry crystals of\nsodium nitrate.\nGive an advantage of mixing solutions containing equal amounts, in moles,\nof silver nitrate and sodium chloride."
+   },
+   {
+    "id": "bf8d174a",
+    "chunk_index": 10,
+    "embed_rev": 2,
+    "len": 1096,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q8 | pp.20–22\nThe table shows the structures of six organic compounds.\nGive the letter of a compound not shown as a displayed formula.\nGive the letter of a saturated compound with the general formula CnH2n\nName compound E.\nExplain why compound A and compound D are isomers.\nCompound F reacts with bromine in the presence of ultraviolet radiation.\nComplete the equation for the reaction.\nCH4 + Br2 →\nGive the name of this type of reaction.\nAnother compound, G, has this percentage composition by mass.\nC = 37.8 % H = 6.3 % Cl = 55.9 %\nShow by calculation that the empirical formula of compound G is C2H4Cl\nThe relative formula mass (Mr) of G is 127\nDetermine the molecular formula of G.\nmolecular formula = .............................................................................................\nCompound E is used to make an addition polymer.\nComplete the equation to show part of the polymer formed from two\nmolecules of compound E.\nH\nH\nH\n2\nC\nC\nH\nC\nC\nC\nC\nC\nH\nH\nGive one problem caused by the disposal of addition polymers."
+   },
+   {
+    "id": "6e18093e",
+    "chunk_index": 11,
+    "embed_rev": 2,
+    "len": 1229,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q9 | pp.23–25\nA student uses this apparatus to investigate the rate of reaction between calcium\ncarbonate chips and dilute hydrochloric acid.\ncotton wool plug\ncalcium carbonate\ndilute hydrochloric acid\nchips\nbalance\n124.05 g\nEvery 20 seconds the student records the reading on the balance.\nExplain why using a cotton wool plug increases the accuracy of the\nstudent’s results.\nComplete the equation for the reaction by adding the state symbols.\nCaCO3(................) + 2HCl(................) → CaCl2(aq) + H2O(................) + CO2(................)\nThe student uses the balance readings to find the decrease in mass of the flask\nand contents.\nThe graph shows the student’s results.\n1.00\n0.90\n0.80\n0.70\nDecrease\n0.60\nin mass / g\n0.50\n0.40\n0.30\n0.20\n0.10\n0.00\n0\n20\n40\n60\n80\n100\n120\n140\nTime / seconds\nGive a reason why there are some calcium carbonate chips remaining in the\nflask when the reaction stops.\nState how the student would know when the reaction has stopped.\nUse the graph to determine the amount, in moles, of carbon dioxide produced\nduring the reaction.\n[Mr of CO2 = 44]\namount = .............................................................. mol"
+   },
+   {
+    "id": "474feb6a",
+    "chunk_index": 12,
+    "embed_rev": 2,
+    "len": 916,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q9 | pp.25–26\nUse the graph to calculate the rate of reaction, in grams per second, at time\n60 seconds.\nShow your working on the graph.\nrate of reaction = .............................................................. g / s\nThe student repeats the investigation by diluting the original hydrochloric acid.\nThe student then determines the initial rate of reaction at different percentage\nconcentrations of the original hydrochloric acid.\nThe graph shows the student’s results.\n0.025\n0.020\nInitial rate\n0.015\nof reaction\nin g / s\n0.010\n0.005\n0\n0\n20\n40\n60\n80\n100\nPercentage concentration of\noriginal hydrochloric acid\nDescribe the relationship between the initial rate of reaction and percentage\nconcentration of the original hydrochloric acid.\nExplain why changing the concentration of hydrochloric acid has an effect on\nthe initial rate of reaction."
+   },
+   {
+    "id": "9eaf0017",
+    "chunk_index": 13,
+    "embed_rev": 2,
+    "len": 594,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q10 | pp.28–29\nThis question is about substances with covalent bonds.\nDraw a dot and cross diagram to show the outer shell electrons in a molecule\nof nitrogen, N2\nDescribe the forces of attraction in a covalent bond.\nThe diagram shows three different structures of carbon.\nStructure A\nGraphite\nC60 fullerene\nName structure A.\nGraphite and C60 fullerene contain covalent bonds, but have\ndifferent structures.\nExplain why C60 fullerene has a much lower melting point than graphite.\nRefer to structure and bonding in your answer."
+   },
+   {
+    "id": "43b184b0",
+    "chunk_index": 14,
+    "embed_rev": 2,
+    "len": 1236,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q11 | pp.30–31\nA student uses this apparatus to heat crystals of hydrated zinc sulfate and collect the\nliquid produced.\nhydrated zinc sulfate\nheat\ncolourless liquid\nDescribe a chemical test to show that the colourless liquid contains water.\nDescribe a physical test to show the colourless liquid is pure water.\nThe equation for the decomposition of hydrated zinc sulfate is\nZnSO4·7H2O(s) → ZnSO4(s) + 7H2O(l)\nThe student records these masses.\nmass of boiling tube\n= 41.64 g\nmass of boiling tube + ZnSO4·7H2O\t= 54.46 g\nCalculate the maximum volume, in cm3, of pure water that could be produced.\nGive your answer to 1 decimal place.\n[1.00 cm3 of pure water has a mass of 1.00 g]\n[Mr of ZnSO4·7H2O = 287 Mr of H2O = 18]\nmaximum volume of pure water = .............................................................. cm3\nIn an experiment using a different mass of ZnSO4·7H2O the maximum volume of\npure water that could be produced is 8.5 cm3.\nThe student collected the pure water and calculated the percentage yield to\nbe 20.3 %.\nCalculate the volume, in cm3, of pure water collected.\nvolume of pure water = .............................................................. cm3"
+   },
+   {
+    "id": "f3544396",
+    "chunk_index": 15,
+    "embed_rev": 2,
+    "len": 174,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q11 | p.32\nExplain an improvement to the apparatus that would increase the percentage\nyield of pure water."
+   }
+  ],
+  "4CH1/1C JAN 2022_ms_doc": [
+   {
+    "id": "48984284",
+    "chunk_index": 0,
+    "embed_rev": 2,
+    "len": 465,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q1 | p.4\nMark scheme for Question 1\nQuestion 1 printed total: 7 marks\nQ1 P1 (1 mark): chromatography\nQ1 P2 (1 mark): fractional distillation\nQ1 P3 (1 mark): simple distillation\nQ1 M1 (2 marks): two / different elements\nallow: (two) different\nnote: atoms\nQ1 P4 (1 mark): 4\nQ1 P5 (1 mark): 20\nnote: M2 (no printed marks cell): (chemically) joined / bonded together | ALLOW a description of | bonding"
+   },
+   {
+    "id": "c8f82c25",
+    "chunk_index": 1,
+    "embed_rev": 2,
+    "len": 837,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q2 | p.5\nMark scheme for Question 2\nQuestion 2 printed total: 9 marks\nQ2 M1 (2 marks): oxygen / air\nQ2 P1 (1 mark): (hydrated) iron(III) oxide\nreject: (hydrated) iron\nnote: (II) oxide\nQ2 P2 (1 mark): C\nnote: C is the correct answer because rusting involves the\nnote: oxidation of iron.\nnote: A is not the correct answer because the rusting of\nnote: iron is not combustion.\nnote: B is not the correct answer because the rusting of\nnote: iron is not neutralisation.\nnote: D is not the correct answer because the rusting of\nnote: iron is not thermal decomposition.\nQ2 P3 (1 mark): galvanising\nallow: galvanisation\nignore: sacrificial\nnote: protection\nQ2 M1 (2 marks): zinc is more reactive (than iron)\nallow: zinc is higher in\nnote: the reactivity series\nnote: (than iron)"
+   },
+   {
+    "id": "f0fed61f",
+    "chunk_index": 2,
+    "embed_rev": 2,
+    "len": 514,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q2 | p.5\nQ2 P4 (2 marks): Any two from:\nnote: painting                                               ALLOW powder coating\nnote: plastic coating\nnote: oiling / greasing\nnote: chromium plating\nnote: sacrificial protection\nnote: cathodic protection\nnote: M2 (no printed marks cell): water\nnote: M2 (no printed marks cell): zinc reacts / oxidises / corrodes | REJECT references to | before / instead of iron                               zinc rusting"
+   },
+   {
+    "id": "4861a11b",
+    "chunk_index": 3,
+    "embed_rev": 2,
+    "len": 908,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q3 | p.6\nMark scheme for Question 3\nQuestion 3 printed total: 7 marks\nQ3 P1 (3 marks): solid to liquid melting\nnote: solid to gas sublimation\nnote: liquid to solid freezing\nQ3 P2 (1 mark): diffusion\nallow: diffusing\nQ3 P3 (1 mark): Any one from:\nnote: ammonia travels further (in the same time)\nnote: the ammonium chloride / (white) ring / solid forms\nnote: further away from the ammonia\nnote: the ammonium chloride / (white) ring / solid forms\nnote: closer to the hydrochloric acid\nQ3 P4 (1 mark): Any one from:\nnote: gas particles move in random directions\nnote: gas particles collide with air particles / each other\nnote: gas particles collide with the wall of the tube\nnote: Any one from:\nQ3 P5 (1 mark): eye protection / wear safety glasses / goggles\nallow: put a bung /\nnote: wear gloves\nnote: apron / lab coat\nnote: cork in both ends"
+   },
+   {
+    "id": "2c99bb64",
+    "chunk_index": 4,
+    "embed_rev": 2,
+    "len": 801,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q4 | p.7\nMark scheme for Question 4\nQuestion 4 printed total: 8 marks\nQ4 P1 (1 mark): Any one from:\nallow: so that copper\nnote: to increase the rate of reaction\nnote: to give the particles enough energy to react        ALLOW because copper\nnote: does not react with\nnote: oxygen when copper is\nnote: cold\nnote: will react with oxygen\nQ4 P2 (1 mark): because Ar does not (readily) gain / lose / share\nallow: argon has a full\nnote: electrons                                           outer shell / valence\nnote: shell of electrons\nQ4 P3 (1 mark): copper(II) oxide\nallow: copper oxide\nreject: copper(I) oxide\nQ4 P4 (1 mark): results are the same (at the end)\nallow: results stop\nnote: decreasing\nQ4 M1 (3 marks): volume oxygen = 20 cm 3"
+   },
+   {
+    "id": "bc261005",
+    "chunk_index": 5,
+    "embed_rev": 2,
+    "len": 623,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q4 | p.7\nQ4 P5 (1 mark): Any one from:\nignore: not all oxygen\nnote: there is a leak in the apparatus\nnote: temperature was not the same for all readings\nnote: the apparatus was not left to cool (to room\nnote: temperature)\nnote: reacted\nnote: M2 (no printed marks cell): total volume = 253 cm3\nnote: M3 (no printed marks cell): (20÷253)×100 = 7.9% | ALLOW correct | evaluation from M1 and\nnote: M2 (no printed marks cell): ALLOW any number of | significant figures | REJECT incorrect | rounding | Correct answer of 7.9% | with or without working | scores 3"
+   },
+   {
+    "id": "377f568d",
+    "chunk_index": 6,
+    "embed_rev": 2,
+    "len": 1251,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q5 | p.8\nMark scheme for Question 5\nQuestion 5 printed total: 11 marks\nQ5 P1 (2 marks): relative mass proton 1\nnote: All 4 correct scores 2\nnote: 2 or 3 correct scores 1\nnote: relative mass neutron 1\nnote: relative charge proton +1\nnote: relative charge neutron 0\nQ5 M1 (2 marks): atoms (of the same element) with the same\nallow: atoms with the; atoms with the\nnote: number of protons                                   same atomic number\nnote: same number of\nnote: electrons\nQ5 M1 (2 marks): number of protons and electrons = 12\nQ5 P2 (2 marks): scores 2 marks\nnote: M1 multiplies each mass number by the percentages\nnote: M2 adds multiples together and divides by 100\nnote: (24 x 0.79) + (25 x 0.10)\nnote: + (26 x 0.11) scores\nnote: both marks\nQ5 M1 (2 marks): 24.32÷(6.022×1023)\nQ5 P3 (1 mark): (moles of MgO) = 0.40\nnote: M2 (no printed marks cell): but different numbers of neutrons | ALLOW but different | mass numbers\nnote: M2 (no printed marks cell): number of neutrons = 14\nnote: M2 (no printed marks cell): 4.039 × 10-23 | ALLOW ecf from M1 as | long as answer is given | to 4 sig figs | Correct answer of 4.039 | × 10-23 g to 4 sig sigs | scores 2 with or without | working"
+   },
+   {
+    "id": "6783223a",
+    "chunk_index": 7,
+    "embed_rev": 2,
+    "len": 1042,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q6 | p.9\nMark scheme for Question 6\nQuestion 6 printed total: 9 marks\nQ6 P1 (3 marks): Any three from:\nQ6 P2 (1 mark): 62\nQ6 P3 (2 marks): Any two from:\nQ6 M1 (2 marks): flame test\nallow: any description\nnote: of a flame test\nQ6 P4 (1 mark): 2Na2O → 2Na + Na2O2\nnote: M1 (no printed marks cell): sodium (atom) loses electron(s)\nnote: M2 (no printed marks cell): oxygen (atom) gains electron(s)\nnote: M3 (no printed marks cell): sodium loses 1 electron AND oxygen gains 2 | electrons\nnote: M3 (no printed marks cell): (both atoms become ions with configuration) 2.8 | any mention of sharing | of electrons scores 0\nnote: M1 (no printed marks cell): (sodium oxide has) ions / (giant) ionic structure\nnote: M2 (no printed marks cell): ions / electrons cannot flow / move\nnote: M3 (no printed marks cell): no delocalised electrons\nnote: M2 (no printed marks cell): yellow colour | ALLOW orange or | yellow-orange\nnote: M2 (no printed marks cell): dep on M1 or | mention of flame"
+   },
+   {
+    "id": "8f3977c6",
+    "chunk_index": 8,
+    "embed_rev": 2,
+    "len": 552,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q7 | p.10\nMark scheme for Question 7\nQuestion 7 printed total: 8 marks\nQ7 P1 (1 mark): C\nnote: C is the correct answer because a precipitate of\nnote: calcium sulfate will form in tube 1, no precipitate\nnote: will form in tube 2 as both products are soluble in\nnote: water and a precipitate of copper(II) carbonate will\nnote: form in tube 3.\nnote: A, B and D are not the correct answers as no\nnote: precipitate will form in tube 2.\nQ7 P2 (1 mark): white\nQ7 P3 (5 marks): Any five from:"
+   },
+   {
+    "id": "e8fd7e99",
+    "chunk_index": 9,
+    "embed_rev": 2,
+    "len": 1376,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q7 | p.10\nQ7 P4 (1 mark): any one from:\nallow: to make sure; If either solution\nnote: nothing left unreacted\nnote: OR so neither reagent is\nnote: in excess\nnote: the sodium nitrate\nnote: (crystals) would be pure\nnote: were in excess, it would\nnote: contaminate the sodium\nnote: nitrate OWTTE\nnote: M1 (no printed marks cell): filter\nnote: M2 (no printed marks cell): heat/boil (the solution)\nnote: M3 (no printed marks cell): to evaporate some of the water | ALLOW until crystals | form on the end of a | glass rod | ALLOW until crystals | first start to form | ALLOW until the | solution is saturated\nnote: M4 (no printed marks cell): leave / cool (to crystallise) | M4 dep on M2\nnote: M5 (no printed marks cell): pour off excess liquid OR filter (to obtain | M5 dep on crystals | crystals)                                              having been formed | IGNORE references to | washing\nnote: M6 (no printed marks cell): suitable method of drying the | e.g. place in (warm) | crystals                                               oven / leave to | dry (in warm place) / | use filter | paper / kitchen towel / | / desiccator | If solution heated to | dryness or | left to evaporate all of | the water | only M1 and M2 can be | awarded. | If method produces | silver chloride only M1 | and M6 can be awarded"
+   },
+   {
+    "id": "1a303938",
+    "chunk_index": 10,
+    "embed_rev": 2,
+    "len": 627,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q8 | p.12\nMark scheme for Question 8\nQuestion 8 printed total: 15 marks\nQ8 P1 (1 mark): A\nQ8 P2 (1 mark): C\nQ8 P3 (1 mark): propene\nQ8 M1 (2 marks): same molecular formula\nQ8 P4 (1 mark): CH3Br + HBr\nallow: balanced\nnote: equations for multiple\nnote: substitutions\nQ8 P5 (1 mark): substitution\nQ8 M1 (3 marks): 37.8÷12, 6.3÷1, 55.9÷35.5\nQ8 M1 (2 marks): 127÷63.5=2\nQ8 P6 (2 marks): M1 two carbon atoms both with 2 H atoms\nnote: M2 two carbon atoms both with 1 H atom and 1 CH 3\nnote: group and nothing attached to the joining bonds\nnote: Marks are independent"
+   },
+   {
+    "id": "ec220c28",
+    "chunk_index": 11,
+    "embed_rev": 2,
+    "len": 744,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q8 | p.12\nQ8 P7 (1 mark): Any one from:\nnote: landfill sites are getting full\nnote: toxic / greenhouse gases are produced when burned\nnote: M2 (no printed marks cell): different structural / displayed formulae\nnote: M2 (no printed marks cell): 3.15, 6.3, 1.57 | M2 subsumes M1\nnote: M3 (no printed marks cell): divide by smallest to get 2:4:1\nnote: M1 (no printed marks cell): Mr of C2H4Cl = 63.5\nnote: M2 (no printed marks cell): 24/63.5 x 100 and 4/63.5 x 100 and 35.5/63.5 | x100\nnote: M3 (no printed marks cell): 37.8% and 6.3% and 55.9% | M3 must be calculated\nnote: M2 (no printed marks cell): Molecular formula = C4H8Cl2 | Answer of C4H8Cl2 | without working scores | 2"
+   },
+   {
+    "id": "5e96fc51",
+    "chunk_index": 12,
+    "embed_rev": 2,
+    "len": 697,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q9 | pp.13–14\nMark scheme for Question 9\nQuestion 9 printed total: 15 marks\nQ9 M1 (2 marks): to prevent acid splashing out OR\nreject: prevents gas\nignore: solid leaving\nnote: so only (carbon dioxide) gas leaves the flask          the flask\nnote: escaping\nQ9 M1 (2 marks): CaCO3(s) + 2HCl(aq)\nQ9 P1 (1 mark): the hydrochloric acid has all reacted\nQ9 P2 (1 mark): mass stays the same / stops decreasing\nallow: effervescence /; the curve levels\nnote: fizzing stops\nnote: off\nQ9 M1 (2 marks): 0.98\nQ9 M1 (3 marks): tangent shown on graph\nQ9 M1 (2 marks): the rate of reaction increases as the percentage\nnote: concentration increases"
+   },
+   {
+    "id": "aab287cf",
+    "chunk_index": 13,
+    "embed_rev": 2,
+    "len": 1277,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q9 | p.14\nQ9 M1 (2 marks): change in number of particles (per unit volume)\nallow: particles are\nnote: closer together or\nnote: further apart\nnote: M2 (no printed marks cell): so the decrease in mass is close to the actual | value OR so that the decrease in mass is only due to | the gas\nnote: M2 (no printed marks cell): H2O(l) + CO2(g)\nnote: M2 (no printed marks cell): (0.98÷44) = 0.022 | ALLOW any number of | significant figures | REJECT incorrect | rounding | ALLOW M1÷44 | Correct answer of 0.022 | moles with or without | working scores 2 marks\nnote: M2 (no printed marks cell): method of calculating gradient | (change in y ÷ change in x)\nnote: M3 (no printed marks cell): rate of reaction in g/s | ALLOW ECF from M2 | Answer of 0.005 – 0.006 | with a tangent shown | on the graph scores 3 | with or without other | working. | Answer of 0.015g/s (the | average rate of reaction | for the first 60s scores | 1)\nnote: M2 (no printed marks cell): the rate of reaction is (directly) proportional to | M2 subsumes M1 | the percentage concentration\nnote: M2 (no printed marks cell): change in collisions per unit time | ALLOW change in | frequency of collisions | REJECT increased / | changed energy / speed"
+   },
+   {
+    "id": "ad673a90",
+    "chunk_index": 14,
+    "embed_rev": 2,
+    "len": 378,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q10 | p.15\nMark scheme for Question 10\nQuestion 10 printed total: 9 marks\nQ10 P1 (2 marks): \nallow: dots, crosses or\nnote: any combination.\nnote: M1 6 bonding electrons\nnote: M2 2 non-bonding electrons on each atom             M2 dep on M1\nQ10 M1 (2 marks): shared pair(s) of electrons\nQ10 P2 (1 mark): diamond"
+   },
+   {
+    "id": "e676ec91",
+    "chunk_index": 15,
+    "embed_rev": 2,
+    "len": 1133,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q10 | p.15\nQ10 P3 (4 marks): Any four from:\nreject: molecules of\nnote: M1 graphite is giant covalent                       ALLOW giant structure\nnote: if M2 is scored\nnote: graphite\nnote: M2 (in melting graphite) covalent bonds are         ALLOW description of\nnote: broken                                              covalent bonds\nnote: M3 (C60) (simple) molecular structure               ALLOW molecules of C60\nnote: M4 (in melting C60) intermolecular forces (of       ALLOW breaking bonds\nnote: attraction) are overcome                            in C60 if intermolecular\nnote: forces clearly\nnote: mentioned\nnote: M4 subsumes M3\nnote: M5 more energy is needed to break covalent bonds\nnote: (in graphite) than intermolecular forces (in C60)\nnote: Mention of\nnote: intermolecular forces in\nnote: graphite no M2 or M5\nnote: Mention of breaking\nnote: covalent bonds in C60 no\nnote: M4 or M5\nnote: M2 (no printed marks cell): attracted to (two) nuclei | REJECT nucleus. Must | be plural for M2.\nnote: M2 (no printed marks cell): dep on mention of | electrons in M1"
+   },
+   {
+    "id": "9211b018",
+    "chunk_index": 16,
+    "embed_rev": 2,
+    "len": 498,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q11 | p.16\nMark scheme for Question 11\nQuestion 11 printed total: 12 marks\nQ11 M1 (2 marks): add anhydrous copper sulfate\nallow: add white\nnote: copper sulfate\nQ11 M1 (2 marks): measure the boiling point / freezing point\nallow: boil it or freeze\nnote: it\nQ11 M1 (5 marks): mass of hydrated zinc sulfate = 54.46-41.64 OR\nnote: 12.82 g\nQ11 P1 (1 mark): 1.7\nallow: 2 or more\nreject: incorrect\nnote: significant figures\nnote: rounding"
+   },
+   {
+    "id": "85fc4afe",
+    "chunk_index": 17,
+    "embed_rev": 2,
+    "len": 1284,
+    "text": "International GCSE Chemistry 4CH1 | Jan 2022 | 4CH1/1C | Paper 1C | Q11 | p.16\nQ11 M1 (2 marks): stand the measuring cylinder in a beaker of ice\nallow: any way of\nnote: cooling the measuring\nnote: cylinder or delivery\nnote: tube\nnote: M2 (no printed marks cell): turns (from white) to blue | M2 dep on copper | sulfate in M1 | ALLOW\nnote: M1 (no printed marks cell): add anhydrous / | blue cobalt chloride\nnote: M2 (no printed marks cell): turns (from blue) to | pink\nnote: M2 (no printed marks cell): dep on cobalt | chloride in M1\nnote: M2 (no printed marks cell): 100 °C / 0°C | Value must match | property\nnote: M2 (no printed marks cell): Moles of hydrated zinc sulfate = 12.82÷287 OR | ALLOW M1÷287 | 0.0447\nnote: M3 (no printed marks cell): Moles H2O = 0.0447×7 OR 0.313 | ALLOW M2×7\nnote: M4 (no printed marks cell): Mass H2O = 5.63 g | ALLOW M3×18\nnote: M5 (no printed marks cell): Volume H2O 5.6 cm3 | Must be 1dp | ALLOW M4 to 1dp | Correct answer of 5.6 | cm3 to 1dp with or | without working scores | 5 marks\nnote: M1 (no printed marks cell): replace the delivery tube with a (Liebig) | IGNORE add a stopper / | bung\nnote: M2 (no printed marks cell): less water / water vapour / steam lost | ALLOW more water | (vapour) / steam | condenses | ALLOW less water | evaporates"
+   }
+  ],
+  "4CH1/2C JUN 2019_qp_doc": [
+   {
+    "id": "da239eee",
+    "chunk_index": 0,
+    "embed_rev": 2,
+    "len": 542,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q1 | pp.1–3\nThe diagram shows the particles in an atom of an element.\nThe box gives the names of some particles.\nelectron ion molecule neutron proton\nUse words from the box to label the diagram.\nGive the mass number of this atom.\nComplete the sentence about isotopes.\nIsotopes are atoms that have the same number of ..............................................................\nbut have a different number of .............................................................. ."
+   },
+   {
+    "id": "d9210e91",
+    "chunk_index": 1,
+    "embed_rev": 2,
+    "len": 730,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q2 | p.4\nThe table gives some information about the halogens, chlorine, bromine and iodine.\nComplete the table.\nChlorine has two isotopes of mass numbers 35 and 37\nThe relative percentage of each isotope in a sample of chlorine is\nchlorine-35 77.78% chlorine-37 22.22%\nCalculate the relative atomic mass of this sample of chlorine.\nGive your answer to one decimal place.\nrelative atomic mass = ..........................................................\nA student is given an aqueous solution of chlorine and an aqueous solution of\npotassium bromide.\nExplain how he can use these two solutions to compare the reactivity of chlorine\nwith the reactivity of bromine."
+   },
+   {
+    "id": "94ed3237",
+    "chunk_index": 2,
+    "embed_rev": 2,
+    "len": 1150,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q3 | pp.6–7\nMethanol, ethanol, propanol and butanol are alcohols. They are all liquids that\nevaporate easily when warmed.\nA student uses this apparatus to compare the time taken for the four liquids to evaporate.\nalcohol\nhot water\nShe uses this method.\n•\npour some methanol into an evaporating basin\n•\nplace the evaporating basin on top of a beaker containing hot water\n•\nmeasure the time taken for the methanol to evaporate completely\n•\nrepeat the experiment with each of the other alcohols, using the same apparatus\nState two variables the student should control to make sure her results are valid.\nState why it is not safe to heat the evaporating basin directly with a Bunsen flame.\nThe table shows the results of experiments done by four students, A, B, C and D.\nCalculate the mean (average) time for butanol to evaporate.\nmean time = ..............................................................s\nExplain how the results show which alcohol evaporates most easily.\nState the relationship between the number of carbon atoms in the molecule\nand how easily the alcohol evaporates."
+   },
+   {
+    "id": "dfdc8b8f",
+    "chunk_index": 3,
+    "embed_rev": 2,
+    "len": 862,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q4 | pp.8–9\nThis question is about metals.\nWhich statement describes metallic bonding?\nA electrostatic attraction between oppositely charged ions\nB electrostatic attraction between the nuclei of two atoms and a pair of\nelectrons shared between them\nC electrostatic attraction between positively charged particles and delocalised electrons\nD electrostatic attraction between atoms\nAluminium is malleable and can be easily shaped to make saucepans used for\ncooking food.\nState two other properties of aluminium that make it suitable for saucepans used\nfor cooking food.\nMagnalium is an alloy of aluminium and magnesium.\nThe diagram shows how the atoms are arranged in this alloy.\nmagnesium atom\naluminium atom\nState what is meant by the term alloy.\nExplain why magnalium is harder than aluminium."
+   },
+   {
+    "id": "18f3b935",
+    "chunk_index": 4,
+    "embed_rev": 2,
+    "len": 1214,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q5 | pp.10–11\nDuring the Second World War, engineers developed a rocket-powered aircraft.\ncombustion chamber\nhydrogen peroxide tank\nhydrazine tank\nThe aircraft carried these two liquids\n•\nhydrazine, N2H4\n•\nhydrogen peroxide, H2O2\nWhen these two liquids mix in the combustion chamber, they evaporate and then\nreact rapidly to form nitrogen gas, N2, and steam, H2O\nThe reaction is exothermic.\nThe equation for the reaction is\nN2H4 + 2H2O2 → N2 + 4H2O\nThe displayed formulae for the reactants and products are\nH\nH\nO\nH\nH\nH\nH\nO\nH\nH\nH\nH\nO\nO\nN\nN\nO\nH\nH\nH\nH\nO\nN=N\nH\nH\nO\nO\nThe tables give the bond energies for the bonds broken in the reactants and the\nbonds made in the products.\nUse the data in the tables to calculate the total amount of energy required to\nbreak all of the bonds in the reactants.\nenergy required = .............................................................. kJ\nUse the data in the tables to calculate the total amount of energy released\nwhen all of the bonds in the products are made.\nenergy released = .............................................................. kJ\nCalculate the enthalpy change, ∆H, in kJ/mol, for the reaction."
+   },
+   {
+    "id": "f4159a60",
+    "chunk_index": 5,
+    "embed_rev": 2,
+    "len": 270,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q5 | pp.11–12\nInclude a sign in your answer.\nExplain, in terms of bonds broken and bonds made, why this reaction is exothermic.\nDraw an energy level diagram for the reaction between N2H4 and H2O2\nenergy"
+   },
+   {
+    "id": "99f6d1f0",
+    "chunk_index": 6,
+    "embed_rev": 2,
+    "len": 1125,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q6 | pp.14–15\nSome cars in Brazil use ethanol, C2H5OH, as a fuel instead of petrol.\nThe ethanol is made by the fermentation of glucose which is obtained from sugar cane.\nThe sugar is extracted from the sugar cane and then dissolved in water to make\na sugar solution.\nName the substance that is added to the sugar solution that causes glucose to ferment.\nWhich temperature is the most suitable for fermentation?\nA 0°C\nB 10°C\nC 30°C\nD 80°C\nExplain why fermentation is done in the absence of air.\nState what is meant by the term fuel.\nWrite a chemical equation for the complete combustion of ethanol in air.\nEthanol is also manufactured by reacting steam with ethene, C2H4\nThe equation for this reaction is\nC2H4(g) + H2O(g) → C2H5OH(g)\nState the conditions of temperature and pressure used in this process.\ntemperature . ..............................................................................................................................................................................................................................................."
+   },
+   {
+    "id": "b99fb541",
+    "chunk_index": 7,
+    "embed_rev": 2,
+    "len": 1102,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q6 | p.15\npressure . ..........................................................................................................................................................................................................................................................\nWhen ethanol is heated with acidified potassium dichromate(VI), it is oxidised to\nethanoic acid.\nState the colour change that occurs in the potassium dichromate(VI) during\nthis reaction.\nfrom ................................................................................................................ to ................................................................................................................\nThe structural formula of ethanoic acid is CH3COOH\nDraw the displayed formula of ethanoic acid.\nComplete the equation for the reaction of ethanoic acid with sodium.\n.......................CH3COOH(aq) + .......................Na(s) → ..............................................................(aq) + ....................................(g)"
+   },
+   {
+    "id": "556e6282",
+    "chunk_index": 8,
+    "embed_rev": 2,
+    "len": 1254,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q7 | pp.16–17\nDinitrogen tetraoxide, N2O4, is a colourless gas.\nNitrogen dioxide, NO2, is a brown gas.\nThe two gases can exist together in dynamic equilibrium according to the equation\nN2O4(g)  2NO2(g)\nExplain what is meant by the term dynamic equilibrium.\nSome N2O4 and some NO2 are put into a sealed gas syringe and allowed to form\nan equilibrium mixture.\nequilibrium mixture\npiston\ngas syringe\nThis equilibrium mixture is brown.\nThe pressure of the gas in the syringe is increased by pushing in the piston.\nThe mixture is then allowed to reach a new equilibrium at the same\ntemperature as before.\nExplain why the new equilibrium mixture contains less NO2 than the original\nequilibrium mixture.\nA student suggests that the new equilibrium mixture would be lighter in\ncolour than the original equilibrium mixture, as there is now less NO2 present.\nSuggest why the new equilibrium mixture is actually darker than the original.\nCarbon monoxide, CO, and oxides of nitrogen are produced in a car engine when\npetrol is burned.\nThese oxides can be partly removed by using a catalytic converter fitted to the\ncar’s exhaust system.\nState how oxides of nitrogen are produced in the car engine."
+   },
+   {
+    "id": "9cfa09b8",
+    "chunk_index": 9,
+    "embed_rev": 2,
+    "len": 290,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q7 | p.17\nGive a disadvantage of allowing oxides of nitrogen to escape into the atmosphere.\nWrite a chemical equation for the reaction between nitrogen monoxide, NO,\nand carbon monoxide to form carbon dioxide and nitrogen."
+   },
+   {
+    "id": "a73949f1",
+    "chunk_index": 10,
+    "embed_rev": 2,
+    "len": 957,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q8 | p.18\nThe concentration of NaClO(aq) in a solution of bleach is found by reacting it with\nhydrochloric acid.\nThe equation for the reaction is\nNaClO(aq) + 2HCl(aq) → NaCl(aq) + H2O(l) + Cl2(g)\nAn excess of dilute hydrochloric acid is added to 4.00 cm3 of bleach solution.\n60.0 cm3 of chlorine gas is produced.\nExplain a safety precaution that should be taken when doing this experiment.\nCalculate the amount, in moles, of chlorine gas produced.\nAssume one mole of chlorine gas occupies 24 000 cm3.\namount of chlorine = .............................................................. mol\nDetermine the amount, in moles, of NaClO in 4.00 cm3 of bleach.\namount of NaClO = .............................................................. mol\nCalculate the concentration, in mol/dm3, of the bleach solution.\nconcentration = .............................................................. mol/dm3"
+   }
+  ],
+  "4CH1/2C JUN 2019_ms_doc": [
+   {
+    "id": "6fe638a8",
+    "chunk_index": 0,
+    "embed_rev": 2,
+    "len": 296,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q1 | p.4\nMark scheme for Question 1\nQuestion 1 printed total: 6 marks\nQ1 P1 (3 marks): 1 mark for each correct\nnote: answer\nQ1 P2 (1 mark): 13\nQ1 M1 (2 marks): protons\nignore: electrons\nnote: M2 (no printed marks cell): neutrons"
+   },
+   {
+    "id": "aa4e817a",
+    "chunk_index": 1,
+    "embed_rev": 2,
+    "len": 285,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q2 | p.5\nMark scheme for Question 2\nQuestion 2 printed total: 9 marks\nQ2 P1 (2 marks): \nallow: black; any combination of\nnote: grey and black eg grey-black\nQ2 M1 (3 marks): (35 × 77.78) + (37 × 22.22)\nnote: OR 3544.44"
+   },
+   {
+    "id": "bbadcc2f",
+    "chunk_index": 2,
+    "embed_rev": 2,
+    "len": 1246,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q2 | p.6\nQ2 M1 (4 marks): add chlorine (solution) to potassium bromide\nallow: mix the two\nnote: (solution)                                                   solutions\nnote: M2 (no printed marks cell): 3544.44 ÷ 100 | OR | 35.4444 | OR M1 ÷ 100 | (35 × 0.7778) + (37 | × 0.2222) | 35.4444/35.444/35.44 with | no working scores 2\nnote: M3 (no printed marks cell): 35.4 | 35.4 with no working scores | 3\nnote: M3 (no printed marks cell): can be ECF from an | incorrect M2\nnote: P2 (no printed marks cell): An explanation that links together the following four points:\nnote: M2 (no printed marks cell): (solution) turns orange | ALLOW any combination of | orange/yellow/brown | IGNORE other observations | eg bubbles\nnote: M3 (no printed marks cell): bromine/Br2 is displaced | ALLOW bromine/Br2 is | produced/formed | IGNORE state of bromine | REJECT bromide | IGNORE a displacement | reaction occurs\nnote: M3 (no printed marks cell): can be scored by Br2 as | a product in an equation\nnote: M4 (no printed marks cell): (therefore) chlorine is more reactive (than bromine) | ACCEPT reverse argument | “If a reaction occurs then | chlorine is more reactive | than bromine” scores M4"
+   },
+   {
+    "id": "7f2cadeb",
+    "chunk_index": 3,
+    "embed_rev": 2,
+    "len": 543,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q3 | p.7\nMark scheme for Question 3\nQuestion 3 printed total: 9 marks\nQ3 M1 (2 marks): the volume of liquid/alcohol\nallow: amount of liquid/alcohol\nignore: mass; volume of water\nQ3 P1 (1 mark): alcohols/the liquids are flammable/catch fire\nallow: alcohols/the liquids can be; any named alcohol from the\nnote: easily                                          easily ignited\nnote: table\nQ3 M1 (2 marks): (64 + 63 + 60) ÷3\nQ3 M1 (2 marks): methanol/CH3OH (evaporates most easily)"
+   },
+   {
+    "id": "1f9a5fa6",
+    "chunk_index": 4,
+    "embed_rev": 2,
+    "len": 902,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q3 | p.8\nQ3 M1 (2 marks): as the number of carbon atoms increases\nnote: M2 (no printed marks cell): the temperature of the water | ALLOW temperature of surroundings | IGNORE references to temperature of | the alcohol\nnote: P2 (no printed marks cell): P2\nnote: M2 (no printed marks cell): = 62 | ALLOW 62.3 | 62/62.3 with no working scores 2 | ALLOW 69/69.25/69.3 for 1 mark\nnote: P3 (no printed marks cell): An explanation including the following two | points:\nnote: M2 (no printed marks cell): because the time taken is the shortest | ACCEPT because has lowest (mean) | time\nnote: M2 (no printed marks cell): the ease of evaporation decreases/the less | ALLOW the less volatile the alcohol | easily the alcohol evaporates | IGNORE the slower the alcohol | evaporates | IGNORE references to time taken | ALLOW correct reverse argument"
+   },
+   {
+    "id": "2094a1a3",
+    "chunk_index": 5,
+    "embed_rev": 2,
+    "len": 885,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q4 | pp.9–10\nMark scheme for Question 4\nQuestion 4 printed total: 7 marks\nQ4 P1 (1 mark): C (electrostatic attraction between positively charged\nnote: particles and delocalised electrons) is correct as it\nnote: describes metallic bonding\nnote: A is incorrect since it describes ionic bonding not metallic\nnote: bonding\nnote: B is incorrect since it describes covalent bonding not\nnote: metallic bonding\nnote: D is incorrect since it describes interatomic or\nnote: intermolecular forces not metallic bonding\nQ4 M1 (2 marks): good conductor of heat/thermal energy\nQ4 P3 (1 mark): a mixture of (two or more) elements, one of which is\nallow: a mixture of (two or; combination for mixture\nreject: compound or references to\nnote: a metal                                                   more) metals\nnote: chemical bonding"
+   },
+   {
+    "id": "4cbed7c7",
+    "chunk_index": 6,
+    "embed_rev": 2,
+    "len": 1369,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q4 | p.10\nQ4 M1 (3 marks): the regular arrangement of atoms is\nallow: lattice/layers/rows of; lattice/layers/rows of\nnote: distorted/disrupted OWTTE                              atoms are disrupted/distorted\nnote: atoms less regular\nnote: P2 (no printed marks cell): Any two from the following:\nnote: M2 (no printed marks cell): does not react with food/affect flavour of food | IGNORE non-toxic\nnote: M3 (no printed marks cell): resistant to corrosion | ALLOW does not corrode/rust | IGNORE unreactive/inert\nnote: M4 (no printed marks cell): high melting point | IGNORE references to recycling\nnote: M5 (no printed marks cell): low density/lightweight/strong | IGNORE light | Answer                                   Additional guidance               Marks\nnote: P4 (no printed marks cell): An explanation that links together the following three | points:\nnote: M2 (no printed marks cell): because magnesium atoms are larger than | ALLOW magnesium and aluminium | aluminium atoms                                        atoms are of different sizes\nnote: M3 (no printed marks cell): and therefore it is more difficult for the layers to | ALLOW layers cannot (as easily) | slide over one another                                 slide over one another | IGNORE references to strength of | metallic bonds"
+   },
+   {
+    "id": "ee45eed6",
+    "chunk_index": 7,
+    "embed_rev": 2,
+    "len": 663,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q5 | pp.11–12\nMark scheme for Question 5\nQuestion 5 printed total: 10 marks\nQ5 P1 (1 mark): (bonds broken)\nnote: 3861 (kJ)\nQ5 P2 (1 mark): (bonds made)\nnote: 4649 (kJ)\nQ5 M1 (3 marks): subtraction of Σ(bonds made) made and\nnote: In (iii) ECF from (i) and\nnote: Σ(bonds broken)                                        (ii) must be applied\nnote: Subtraction can be in any\nnote: order\nQ5 M1 (2 marks): more energy is given out when the bonds are made\nnote: If state/imply that energy\nnote: required to make bonds\nnote: If state/imply that energy\nnote: released when bonds are\nnote: broken scores 0/2"
+   },
+   {
+    "id": "a5827409",
+    "chunk_index": 8,
+    "embed_rev": 2,
+    "len": 1178,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q5 | p.13\nQ5 P4 (3 marks): \nignore: horizontal axis; enthalpy change; activation\nnote: drawn\nnote: shown\nnote: energy shown\nnote: M2 (no printed marks cell): correct evaluation of the calculation shown in M1 | IGNORE sign\nnote: M3 (no printed marks cell): If Σ(bonds made) > Σ(bonds broken) final answer must | be negative | If Σ(bonds made) < Σ(bonds broken) final answer must   Expected final answer is | be positive (and + sign given)                         ‒788 (kJ/mol) | -788 with no working | scores 3 | (+) 788 scores 2\nnote: P3 (no printed marks cell): An explanation that links together the following two points:\nnote: M2 (no printed marks cell): than is taken in when the bonds are broken | ACCEPT correct reverse | argument | Answer                Additional guidance       Marks\nnote: M1 (no printed marks cell): right hand line below left hand line\nnote: M2 (no printed marks cell): correct names/formulae of both reactants | If only use words | reactants (on left) and\nnote: M3 (no printed marks cell): correct names/formulae of both products | products (on right) award | 1 mark from M2 and M3"
+   },
+   {
+    "id": "aa72fd0d",
+    "chunk_index": 9,
+    "embed_rev": 2,
+    "len": 1227,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q6 | pp.14–16\nMark scheme for Question 6\nQuestion 6 printed total: 14 marks\nQ6 P1 (1 mark): yeast\nignore: zymase\nQ6 P2 (1 mark): C (30 °C) is correct as it is the most\nnote: suitable temperature for fermentation\nnote: A is incorrect as at 0°C the enzymes\nnote: would not be active so not the most\nnote: suitable temperature for fermentation\nnote: B is incorrect as at 10°C the enzymes\nnote: would not be very active so not the most\nnote: suitable temperature for fermentation\nnote: D is incorrect as at 80°C the enzymes\nnote: would be denatured so not the most\nnote: suitable temperature for fermentation\nQ6 M1 (2 marks): oxygen in the air would react with\nallow: ethanol would be oxidised\nnote: ethanol\nQ6 P4 (1 mark): a substance that releases thermal\nignore: energy on its own\nnote: energy/heat (energy) when\nnote: burned/combusted\nQ6 P5 (2 marks): C2H5OH + 3 O2  2 CO2 + 3 H2O\nallow: multiples\nQ6 M1 (2 marks): (temperature) 300 °C\nallow: any value or range of values; equivalent temperatures in other\nnote: between 250 and 350 °C\nnote: If no unit given assume it is Celsius\nnote: units provided the unit is given\nQ6 P6 (1 mark): (from) orange (to) green"
+   },
+   {
+    "id": "00c118f5",
+    "chunk_index": 10,
+    "embed_rev": 2,
+    "len": 1157,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q6 | p.16\nQ6 P7 (2 marks): \nignore: bond angles\nnote: scores 1 mark\nQ6 P8 (2 marks): CH3COONa + ½ H2\nallow: NaCH3COO\nnote: P3 (no printed marks cell): An explanation using either of the | following linked pairs:\nnote: M2 (no printed marks cell): to form ethanoic acid | ALLOW to form carboxylic acid | ALLOW to form vinegar\nnote: M1 (no printed marks cell): the fermentation/reaction/respiration | needs to be anaerobic\nnote: M2 (no printed marks cell): ethanol would not be formed /CO2 | and H2O would form\nnote: M1 (no printed marks cell): all formulae correct\nnote: M2 (no printed marks cell): correctly balanced | M2 DEP M1 | Answer                   Additional guidance               Marks\nnote: M2 (no printed marks cell): 60 ‒ 70 atm | ACCEPT any value or range of values | between 60 and 70 atm | If no unit given assume it is atm | ACCEPT equivalent pressures in other units | provided the unit is given\nnote: M1 (no printed marks cell): for both products correct\nnote: M2 (no printed marks cell): for correctly balanced | ACCEPT multiples\nnote: M2 (no printed marks cell): DEP M1"
+   },
+   {
+    "id": "cb4ccb1d",
+    "chunk_index": 11,
+    "embed_rev": 2,
+    "len": 1230,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q7 | pp.17–18\nMark scheme for Question 7\nQuestion 7 printed total: 8 marks\nQ7 M1 (2 marks): reaction is taking place in both directions (at\nallow: both forward and\nignore: it is a reversible reaction\nnote: same time)                                           backward reactions are taking place\nnote: (at same time)\nQ7 M1 (2 marks): (the position of) equilibrium has\nallow: (position of) equilibrium; (position of) equilibrium; increasing pressure shifts\nignore: references to Le\nnote: moved to the left                               has shifted in backwards direction\nnote: has shifted towards the N2O4\nnote: /reactants (side)\nnote: (position of) equilibrium in direction\nnote: that produces fewer moles (of gas)\nnote: Chatelier’s Principle eg increasing\nnote: pressure favours the side that has\nnote: fewer moles of gas / increasing\nnote: pressure favours the backwards\nnote: reaction\nQ7 P3 (1 mark): the concentration of NO2 has increased\nallow: molecules/particles of NO2; molecules/particles of NO2\nreject: more NO2 produced\nnote: are closer together\nnote: are in a smaller volume\nnote: Answer                           Additional guidance             Marks"
+   },
+   {
+    "id": "966453db",
+    "chunk_index": 12,
+    "embed_rev": 2,
+    "len": 490,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q7 | p.19\nQ7 P4 (1 mark): nitrogen/N2 reacts with oxygen/O2 (both from the\nignore: nitrogen burns/combusts; nitrogen is oxidised\nnote: air)                                               in oxygen\nQ7 P5 (1 mark): (they form) acid rain\nallow: references to respiratory; a specified harmful effect of; references to smog; references to greenhouse\nnote: problems\nnote: acid rain\nnote: gases/global warming/climate\nnote: change"
+   },
+   {
+    "id": "8f5d18bc",
+    "chunk_index": 13,
+    "embed_rev": 2,
+    "len": 1113,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q7 | p.19\nQ7 P6 (1 mark): 2 NO + 2 CO  N2 + 2 CO2\nallow: multiples and fractions\nnote: P1 (no printed marks cell): An explanation that links together the following | two points:\nnote: M2 (no printed marks cell): at equal rate | M2 DEP M1 | rate of the forward reaction is equal | to the rate of the backward reaction | scores 2 marks | REJECT both forward and backward | reactions occur at constant rate for\nnote: M2 (no printed marks cell): ALLOW the concentrations of the | reactants and products remains | constant scores 1 mark | independently of M1 | but | REJECT concentrations of the | reactants and products are | equal/the same\nnote: P2 (no printed marks cell): An explanation that links together the following | two points:\nnote: M2 (no printed marks cell): because there are fewer moles/molecules (of | ALLOW particles | gas) on the left                                REJECT atoms | ALLOW because there are fewer | moles of N2O4 (than NO2) | ALLOW because there are fewer | moles of reactant (than product) | ACCEPT reverse argument"
+   },
+   {
+    "id": "f2f6a462",
+    "chunk_index": 14,
+    "embed_rev": 2,
+    "len": 1018,
+    "text": "International GCSE Chemistry 4CH1 | Jun 2019 | 4CH1/2C | Paper 2C | Q8 | p.20\nMark scheme for Question 8\nQuestion 8 printed total: 7 marks\nQ8 M1 (2 marks): use a fume cupboard\nQ8 M1 (2 marks): 60 ÷ 24 000\nQ8 P2 (1 mark): 0.0025 OR answer to M2 from (i)\nQ8 M1 (2 marks): (0.0025 ÷ 4.00) × 1000\nnote: Mark CSQ on (b)(ii)\nnote: P1 (no printed marks cell): An explanation using either of the following | linked pairs:\nnote: M2 (no printed marks cell): because chlorine is toxic/poisonous | IGNORE chlorine is | dangerous/harmful/irritant\nnote: M1 (no printed marks cell): wear goggles/safety glasses/gloves\nnote: M2 (no printed marks cell): because acid/bleach (may be) | irritant/corrosive | IGNORE laboratory coats\nnote: M2 (no printed marks cell): 0.0025 (mol) | 0.0025 with no working scores 2 marks | REJECT 0.003 for M2\nnote: M2 (no printed marks cell): 0.625 (mol/dm3) | ACCEPT any number of sig fig except 1 | (unless ECF answer is exactly 1 sig fig | correct answer with no working | throughout (b) scores 2 marks"
+   }
+  ]
+ },
+ "arithmetic": {
+  "4CH1/1C JAN 2022": {
+   "per_qv": [
+    {
+     "qv": "e8545953",
+     "marks": "7",
+     "part_sum": 12,
+     "n_parts": 8,
+     "scheme_pt_sum": [
+      7
+     ]
+    },
+    {
+     "qv": "415d5fb9",
+     "marks": "9",
+     "part_sum": 14,
+     "n_parts": 5,
+     "scheme_pt_sum": [
+      9
+     ]
+    },
+    {
+     "qv": "a5e416a6",
+     "marks": "12",
+     "part_sum": 15,
+     "n_parts": 6,
+     "scheme_pt_sum": [
+      12
+     ]
+    },
+    {
+     "qv": "fea7381b",
+     "marks": "9",
+     "part_sum": 18,
+     "n_parts": 8,
+     "scheme_pt_sum": [
+      9
+     ]
+    },
+    {
+     "qv": "5eb6a690",
+     "marks": "7",
+     "part_sum": 11,
+     "n_parts": 6,
+     "scheme_pt_sum": [
+      7
+     ]
+    },
+    {
+     "qv": "15574f42",
+     "marks": "8",
+     "part_sum": 13,
+     "n_parts": 7,
+     "scheme_pt_sum": [
+      8
+     ]
+    },
+    {
+     "qv": "7266a643",
+     "marks": "11",
+     "part_sum": 19,
+     "n_parts": 7,
+     "scheme_pt_sum": [
+      11
+     ]
+    },
+    {
+     "qv": "c9e29652",
+     "marks": "9",
+     "part_sum": 9,
+     "n_parts": 5,
+     "scheme_pt_sum": [
+      9
+     ]
+    },
+    {
+     "qv": "7e07b31f",
+     "marks": "8",
+     "part_sum": 15,
+     "n_parts": 5,
+     "scheme_pt_sum": [
+      8
+     ]
+    },
+    {
+     "qv": "bec72ad0",
+     "marks": "15",
+     "part_sum": 20,
+     "n_parts": 12,
+     "scheme_pt_sum": [
+      15
+     ]
+    },
+    {
+     "qv": "9b13292f",
+     "marks": "15",
+     "part_sum": 26,
+     "n_parts": 10,
+     "scheme_pt_sum": [
+      15
+     ]
+    }
+   ],
+   "banked_sum": 110,
+   "paper_title": "4CH1 Chemistry 4CH1/1C January 2022",
+   "mirror_all_ok": true,
+   "mirror_n": 11
+  },
+  "4CH1/2C JUN 2019": {
+   "per_qv": [
+    {
+     "qv": "46ebd8f7",
+     "marks": "6",
+     "part_sum": 6,
+     "n_parts": 3,
+     "scheme_pt_sum": [
+      6
+     ]
+    },
+    {
+     "qv": "833472a6",
+     "marks": "9",
+     "part_sum": 9,
+     "n_parts": 3,
+     "scheme_pt_sum": [
+      9
+     ]
+    },
+    {
+     "qv": "54588e6b",
+     "marks": "9",
+     "part_sum": 15,
+     "n_parts": 6,
+     "scheme_pt_sum": [
+      9
+     ]
+    },
+    {
+     "qv": "df7135a4",
+     "marks": "7",
+     "part_sum": 11,
+     "n_parts": 5,
+     "scheme_pt_sum": [
+      7
+     ]
+    },
+    {
+     "qv": "488dfb03",
+     "marks": "10",
+     "part_sum": 15,
+     "n_parts": 6,
+     "scheme_pt_sum": [
+      10
+     ]
+    },
+    {
+     "qv": "43f6aa74",
+     "marks": "14",
+     "part_sum": 19,
+     "n_parts": 10,
+     "scheme_pt_sum": [
+      14
+     ]
+    },
+    {
+     "qv": "fa9827b6",
+     "marks": "8",
+     "part_sum": 14,
+     "n_parts": 8,
+     "scheme_pt_sum": [
+      8
+     ]
+    },
+    {
+     "qv": "dcd64a2b",
+     "marks": "7",
+     "part_sum": 7,
+     "n_parts": 4,
+     "scheme_pt_sum": [
+      7
+     ]
+    }
+   ],
+   "banked_sum": 70,
+   "paper_title": "4CH1 Chemistry 4CH1/2C June 2019",
+   "mirror_all_ok": true,
+   "mirror_n": 8
+  }
+ }
+}

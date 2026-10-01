@@ -1,0 +1,69 @@
+{
+ "SNAP5-F1_validation_flips": {
+  "finding": "validation-state flips since the snap-004 freeze, captured at freeze time as-is. The r6 gate is the operator/teacher card validation wave (298 T-C27 cards); this exporter is staged pre-flip and captures whatever the live state holds when it actually runs at the flip.",
+  "chunks_flipped_suggested_to_validated": 295,
+  "flips_by_kind_paper_code": {
+   "EXTERNAL_QUESTIONS|4CH1/1C": 81,
+   "EXTERNAL_QUESTIONS|4CH1/1CR": 38,
+   "EXTERNAL_QUESTIONS|4CH0/1C": 47,
+   "EXTERNAL_QUESTIONS|4CH1/2C": 80,
+   "EXTERNAL_QUESTIONS|4CH0/2C": 26,
+   "EXTERNAL_QUESTIONS|4CH1/2CR": 23
+  },
+  "documents_with_promoted_chunks": 295,
+  "paper_state_by_kind": {
+   "EXTERNAL_NOTES": {
+    "SUGGESTED": 350
+   },
+   "MARK_SCHEME": {
+    "SUGGESTED": 1333,
+    "VALIDATED": 161
+   },
+   "QUESTION_PAPER": {
+    "SUGGESTED": 1136,
+    "VALIDATED": 145
+   },
+   "EXTERNAL_QUESTIONS": {
+    "SUGGESTED": 747,
+    "VALIDATED": 306,
+    "FLAGGED": 3
+   }
+  },
+  "no_regressions": true,
+  "flag_decisions_snapped_to_flagged": 3,
+  "row_set_identity": "snap-004's 3,831 chunk_refs carried with IDENTICAL contents, kinds and spec_codes; paper_state (and metadata-only paper_code stamps, if any) are the only permitted value deltas on the carried set, verified programmatically"
+ },
+ "SNAP5-F2_chunk_paper_code_stamps": {
+  "finding": "metadata-only paper_code stamps since snap-004 (snap-004 recorded 246 stamps in SNAP4-F2; any further stamps are recorded here).",
+  "rows_stamped": 0,
+  "by_kind": {}
+ },
+ "SNAP5-M1_method_note": {
+  "finding": "unchanged read path: sanctioned production connection from the session env, READ-ONLY (set_session(readonly=True)), SELECT-only, rolled back; zero writes to any production table"
+ },
+ "SNAP5-F4_notes_axis_inclusion": {
+  "finding": "the 350 EXTERNAL_NOTES chunks (112 notes documents) JOIN the snapshot corpus additively \u2014 snap-001..004 excluded them (predicate QP/MS/EQ only) because no serving or scoring path could reach them; snap-005 includes them because (a) the \u00a78(d) chunk_spec_hv projection is keyed by their chunk_refs (the join needs the rows) and (b) the ALL-denominator resolution view scores over the full corpus (run-001 B-proxy ALL convention). paper_state stays SUGGESTED = production truth, so the harness VALIDATED-only serving gate keeps them out of served views exactly as the production T-C07 predicates do; the a/b/c chunk-axis SERVED views change only via SNAP5-F1 flips, never via this inclusion. SYLLABUS chunks (162) stay excluded.",
+  "added_chunks": [
+   [
+    "EXTERNAL_NOTES",
+    350
+   ]
+  ],
+  "added_refs_first_last": [
+   "0089e07b47bbcde7114c7acb20adefec57ae6480b2fd71e0e2ae8f6e2b354433:0",
+   "fddc3ecda41ab5af77a5b679d8e978b376b02f8b1575bc47af4871bc7c76cf83:1"
+  ]
+ },
+ "SNAP5-H1_chunk_spec_hv_substrate": {
+  "finding": "additive \u00a78(d) substrate: chunk_spec_hv.json = the chunk-sp-substrate-2026-09-27 projection (records 94d0d405c), copied BYTE-IDENTICAL and manifest-pinned so BenchSnapshot's fail-closed loader verifies it (present-but-unpinned aborts; the \u00a75 counting rule \u2014 validation_status, never tier \u2014 is enforced in the loader). \u00a78(d) flips NOT SCOREABLE -> scoreable-with-coverage at this freeze. Drift gate: every mapping's quote containment re-verified over the FROZEN chunk bytes against the pinned resources store (1245df009712216b309f163aacdd1c6d8ef39f1b, store sha256_16 e8b58a7109104bb7); anchor kinds recomputed {\"CLEAN\": 205, \"MULTI\": 4, \"SPAN\": 0, \"MISS\": 1}; census rows=210 refs=164.",
+  "projection_sha256": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+  "drift_gate_failures": 0
+ },
+ "SNAP5-F6_question_anchor_growth": {
+  "finding": "the VALIDATED question_versions anchor set grew after the snap-004 freeze via the app-side teacher wave on the papers/schemes axis (content_review_audit 2026-09-28, pilot.teacher@syllabai-test.dev: 11 question_version VALIDATE + 1 exam_paper VALIDATE_ALL). Fidelity is multiset superset \u2014 zero removal, zero mutation.",
+  "rows_added": 11,
+  "rows_snap004": 720,
+  "rows_snap005": 731,
+  "added_distinct_rows": 11
+ }
+}

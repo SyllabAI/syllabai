@@ -1,7 +1,7 @@
 # ADR-021: Content Compiler and Portable Content Package
 
-**Status:** Proposed  
-**Date:** 2026-09-15
+**Status:** Accepted  
+**Date:** 2026-09-15 (proposed) · 2026-09-29 (accepted)
 
 ## Context
 
@@ -65,3 +65,12 @@ Do not perform a broad corpus migration or replace PostgreSQL until this proof i
 ## Scope
 
 This ADR does not change Cycle-1 product scope and does not authorize bulk ingestion, learner-serving changes, or a production database migration.
+
+## Promotion record
+
+**2026-09-29 — PROPOSED → ACCEPTED** (operator decision, chat bb263437, trace 1a0e9f879a8d8fe1). The ADR's own gate — "Promotion from `PROPOSED` requires implementation evidence and bounded reproducibility tests" — is satisfied by two executed, CI-verified evidence bodies, both re-verified GREEN at current main on promotion day:
+
+1. **Bounded real-corpus v0.1 reconstruction proof** (`SyllabAI/syllabai-parser` `tools/content-package-v0.1/`, recorded in `CONTENT_PACKAGE_V0_1_IMPLEMENTATION_STATUS.md`): one real Revision Note (operator-`HUMAN_VALIDATED` spec mappings) + one real learner-servable VALIDATED QP/MS pair (complete marking contract), compile → package (Markdown + SQLite + MANIFEST with SHA-256) → clean-room semantic reconstruction (`R3.1`–`R3.9` all equal), negative gates fail closed with no package created (`N1`–`N5`), deterministic provenance binding. parser-ci `content-package-proof` job GREEN — re-verified run `36161511189` at parser main `55166af`.
+2. **Hub-corpus v0.1 tooling — the full production corpus** (ADR-029 tranche 4.12, hub `0c589de`, evidence `download/s135/`): `tools/content-package/` compiles all 49 courses / 346 artifacts / 82.8 MB → `MANIFEST.json` (identity + per-artifact SHA-256 + counts + findings) + verbatim content copies + SQLite v0.1 projection; gates `G1`–`G5`/`V1`–`V8`/`R1`–`R4` fail closed; byte-deterministic SQLite + clock-free buildId enforced in CI (selftest: compile + verify + restore + determinism + tamper); NO serving change — PostgreSQL + `content/` remain the operational truth. Selftest step re-verified GREEN at hub main `9a00eb1` (hub-ci run `36487846248`). Evidence: `download/s136/`.
+
+**Scope of acceptance:** the six decision points above and the bounded v0.1 package contract as implemented. **Not authorized by this promotion:** bulk corpus migration, replacement of PostgreSQL, package-driven learner serving, or the broader architecture claims (KG projection policy, distribution/versioning at scale, canonical-store integration) — those remain staged in `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` (which stays PROPOSED) until separately proven. Any future scope growth re-opens the record, not this promotion.

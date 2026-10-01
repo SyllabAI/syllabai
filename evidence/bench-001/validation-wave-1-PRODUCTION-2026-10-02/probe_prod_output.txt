@@ -1,0 +1,18 @@
+frozen file sha256 = 74c78cde90009a358fbd47302edf61840f934238a485cccd2e9b05cfff2b5e7d
+manifest pin       = 74c78cde90009a358fbd47302edf61840f934238a485cccd2e9b05cfff2b5e7d
+SHA pin verified (fail-closed gate)
+PRB-01: model=gemini-embedding-001, dims=768
+
+== pack gate-2 histogram (production, embed_rev=2 pool) ==
+  bucket  9 (cos [0.40-0.45))    46  #
+  bucket 10 (cos [0.45-0.50))  1144  ###################
+  bucket 11 (cos [0.50-0.55))  1361  #######################
+  bucket 12 (cos [0.55-0.60))   266  ####
+  bucket 13 (cos [0.60-0.65))    80  #
+  bucket 14 (cos [0.65-0.70))    27  #
+  bucket 15 (cos [0.70-0.75))    10  #
+  bucket 16 (cos [0.75-0.80))     1  #
+
+== summary ==
+  total=2935  above_050=1745  pct_above_050=59.5
+== gate-2 reading (pack binding rule, PRB-01 canonical): PASS ==

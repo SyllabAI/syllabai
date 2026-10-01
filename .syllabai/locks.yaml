@@ -1,7 +1,49 @@
 # Shared-resource leases. This file is a coordination ledger, not an educational data store.
 # A lock must identify owner + task + base commit + expiry. Expired locks are stale and must be reclaimed.
+# (T-C40's flyway-version lease for V56 was fulfilled — V56__hnsw_filtered_
+# scan_settings.sql lands in this same session's core tranche (branch
+# tc40-rag-review-fixes, PR syllabai-core#38; renumbered twice mid-flight —
+# the concurrent retarget lane took V54 then V55; the V55 collision was
+# caught fail-closed in CI by Flyway's duplicate-version check); released
+# per the reclaim rule. Allocation window honoured: V53 stood at branch
+# time; V54/V55 were claimed by the retarget lane and are respected —
+# this lease reserved V56 only.)
+# (T-KG-B's resources-kg-golden-gate lease was fulfilled — reconciliation
+# closed (PR syllabai-resources#14, gate step CI-GREEN) and the operator
+# ratification "① ratify the 35 edges as point_edges.yaml (golden → 257/257),
+# accept asymmetry" (2026-10-01) executed as commit 0197d84: point_edges.yaml
+# (35 rows, OPERATOR_RATIFIED, sha-pinned dfb1fcb0…), exporter pre/rel
+# emission, ledger v2 (golden-only exception retired), gate 257/257
+# FULL-SET MATCH (sandbox + CI run 36822660100 step 5 SUCCESS); task DONE,
+# released per the reclaim rule. Merge of PR #14 stays HELD on the
+# pre-existing c12 C3 main red — owning lane to repair.)
 version: 1
 locks: []
+
+# (HUB-ANSWER-BOX wave 4's core-web-contract lease was fulfilled — core aee2af1
+#  (rebased over 905e85b) + hub fb2b1ae/9096b72 pushed on bases core 9a83511 /
+#  hub 15ce2ba (rebased over the CLA lanes mid-flight); released per the
+#  reclaim rule. CI verified this wave: hub-ci 36506471899 + 36506472250 both
+#  SUCCESS on 9096b72; core suite 1018 green offline JDK25.)
+# (HUB-ANSWER-BOX wave 3's core-web-contract lease was fulfilled — core da1717d
+# + hub c92fbe3 pushed on bases core fd4631e / hub 817c845; released per the
+# reclaim rule. CI status unverifiable from the sandbox (private repo) — the
+# local gates (core 1028 green, hub build 629 pages) are the recorded claim.)
+# (T-C30's authoritative-kg-promotion lease was fulfilled — the operator-directed
+#  activation ran under the recorded directive, twice, idempotently (runs
+#  36253537636 + 36253728888 SUCCESS, 0 -> 182 applicability nodes); web PR #11
+#  merged as 6a3971a; released per the reclaim rule. Leftover active entry
+#  reconciled 2026-09-26T21:05Z — the closeout record had marked it released.)
+# (T-C29's core-web-contract consumer lease was fulfilled — web PR #9 merged
+#  as 9c9ab6b with web-ci + Vercel success — and released per the reclaim rule.)
+# (T-C28's core-web-contract producer lease was fulfilled — learner payloads
+#  serve applicability/specPoints, core PR #25 merged as 7063e61 with core-ci
+#  success — and released per the reclaim rule. The web residue is a follow-up
+#  consumer task, T-C29 in T-C28 next_safe_actions.)
+# (T-C24's flyway-version lease for V39 was fulfilled — migration merged as
+#  syllabai-core 3c1600c — and released per the reclaim rule.)
+# (T-C25's core-web-contract consumer lease was fulfilled — web main pushed as
+#  390feaa with web-ci success — and released per the reclaim rule.)
 
 resource_classes:
   flyway-version:

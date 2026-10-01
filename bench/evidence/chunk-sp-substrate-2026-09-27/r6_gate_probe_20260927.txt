@@ -1,0 +1,71 @@
+
+=== 1a. EQ docs by validation_state ===
+  ('SUGGESTED', 378)
+  ('VALIDATED', 1)
+
+=== 1b. EQ docs by paper_state ===
+  ERR: column "paper_state" does not exist
+LINE 1: SELECT paper_state, count(*) FROM documents WHERE kind='EXTE...
+               ^
+
+
+=== 1c. EQ docs updated recently (top 8) ===
+  ERR: column "paper_state" does not exist
+LINE 1: SELECT validation_state, paper_state, min(created_at)::date,...
+                                 ^
+
+
+=== 2. all docs by kind+validation_state ===
+  ('EXTERNAL_NOTES', 'SUGGESTED', 112)
+  ('EXTERNAL_QUESTIONS', 'SUGGESTED', 378)
+  ('EXTERNAL_QUESTIONS', 'VALIDATED', 1)
+  ('MARK_SCHEME', 'SUGGESTED', 156)
+  ('MARK_SCHEME', 'VALIDATED', 13)
+  ('QUESTION_PAPER', 'SUGGESTED', 164)
+  ('QUESTION_PAPER', 'VALIDATED', 13)
+  ('SYLLABUS', 'SUGGESTED', 162)
+
+=== 3. exam_papers by validation_state ===
+  ('SUGGESTED', 78)
+  ('REJECTED', 13)
+  ('VALIDATED', 13)
+
+=== 3b. exam_papers VALIDATED updated recently ===
+  ERR: column "updated_at" does not exist
+LINE 1: ...LECT paper_code, session_label, validation_state, updated_at...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "exam_papers.created_at".
+
+
+=== 4. chunks by doc validation_state ===
+  ('SUGGESTED', 4026)
+  ('VALIDATED', 317)
+
+=== 4b. chunks by kind+validation_state ===
+  ('MARK_SCHEME', 'SUGGESTED', 1333)
+  ('QUESTION_PAPER', 'SUGGESTED', 1136)
+  ('EXTERNAL_QUESTIONS', 'SUGGESTED', 1045)
+  ('EXTERNAL_NOTES', 'SUGGESTED', 350)
+  ('SYLLABUS', 'SUGGESTED', 162)
+  ('MARK_SCHEME', 'VALIDATED', 161)
+  ('QUESTION_PAPER', 'VALIDATED', 145)
+  ('EXTERNAL_QUESTIONS', 'VALIDATED', 11)
+
+=== 5a. docs max updated_at overall ===
+  ERR: column "updated_at" does not exist
+LINE 1: SELECT max(updated_at), max(created_at) FROM documents
+                   ^
+HINT:  Perhaps you meant to reference the column "documents.created_at".
+
+
+=== 5b. exam_papers max updated_at ===
+  ERR: column "updated_at" does not exist
+LINE 1: SELECT max(updated_at) FROM exam_papers
+                   ^
+HINT:  Perhaps you meant to reference the column "exam_papers.created_at".
+
+
+=== 6. chunk spec_codes coverage (text search fallback) ===
+  (1218,)
+
+probe done (read-only, rolled back)

@@ -1,0 +1,76 @@
+{
+ "gates": [
+  {
+   "gate": "zero-teacher-validated-rows-destroyed",
+   "validated_rows_in_archives": 0,
+   "pass": true
+  },
+  {
+   "gate": "untouched-validated-4ch1-2c-202101",
+   "pass": true,
+   "detail": {
+    "slug": "4ch1-2c-202101",
+    "state": "VALIDATED",
+    "extraction_methods": {
+     "glm-ocr-qp-v1+glm-ocr-ms-v1": 7
+    }
+   }
+  },
+  {
+   "gate": "untouched-validated-4ch1-2cr-202001",
+   "pass": true,
+   "detail": {
+    "slug": "4ch1-2cr-202001",
+    "state": "VALIDATED",
+    "extraction_methods": {
+     "glm-ocr-qp-v1+glm-ocr-ms-v1": 7
+    }
+   }
+  }
+ ],
+ "papers": [
+  {
+   "slug": "4ch0-1c-201901",
+   "bank_vs_draft_vs_atoms": true,
+   "bank_questions": 10,
+   "draft_questions": 10,
+   "atoms_questions": 10,
+   "draft_sum": 120,
+   "bank_sum": 120,
+   "atoms_sum": 120
+  },
+  {
+   "slug": "4ch0-2c-201206",
+   "bank_vs_draft_vs_atoms": true,
+   "bank_questions": 5,
+   "draft_questions": 5,
+   "atoms_questions": 5,
+   "draft_sum": 60,
+   "bank_sum": 60,
+   "atoms_sum": 60
+  },
+  {
+   "slug": "4ch0-2c-201406",
+   "bank_vs_draft_vs_atoms": true,
+   "bank_questions": 8,
+   "draft_questions": 8,
+   "atoms_questions": 8,
+   "draft_sum": 60,
+   "bank_sum": 60,
+   "atoms_sum": 60
+  }
+ ],
+ "bank_after": {
+  "questions": 1468,
+  "mark_points": 4743,
+  "exam_papers": 97,
+  "version_extraction_methods": {
+   "v3-flat-backfill": 8,
+   "sme-corpus-import-v1 (ADR-026)": 593,
+   "pdflane-atoms-draft-v1": 149,
+   "sprint-acceptance": 3,
+   "glm-ocr-qp-v1+glm-ocr-ms-v1": 715
+  }
+ },
+ "all_gates_pass": true
+}

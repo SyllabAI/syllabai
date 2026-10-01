@@ -289,3 +289,12 @@ The first implementation should optimize for **reproducibility and provenance**,
 ## 14. Status
 
 **PROPOSED.** This document records the accepted direction for further design work only. It does not by itself authorize production migration, replacement of PostgreSQL, or bulk corpus reprocessing.
+
+## 15. Forward-gate execution record (2026-09-29)
+
+ADR-021 was promoted PROPOSED → ACCEPTED on 2026-09-29 (operator decision, chat bb263437, trace 1a0e9f879a8d8fe1), and the operator then directed execution of this document's forward gates (trace 1a0ea03c8fe4a9c1, ADR-029 tranche 4.14: hub `7ed728e`). What is now PROVEN (bounded, contract `CONTENT_PACKAGE_V0_2.md`, CI-verified in hub-ci's selftest step):
+
+- **KG projection policy (§6 realized):** kg_node / kg_node_specification_point / kg_edge projected NON-AUTHORITATIVELY with every provenance tier preserved verbatim; fail-closed G6 gates (shape, frozen relation vocabulary, tier vocabulary, duplicate-triple ban, two-namespace endpoint resolution, node anchoring) + V9 independent re-derivation + tier census verification. Measured corpus reality projected honestly: one graph (the pilot: 113 nodes / 275 edges), 100% AI_SUGGESTED, operator-review-pending — the pilot's own validationGate text is preserved verbatim.
+- **Distribution/versioning (§7 realized, bounded):** the named bundle `syllabai-content-<scopeId>-<packageVersion>-<buildId12>.zip`; scoped packages (`--courses=…`, the verbatim-registry rule, scope-aware R4); a self-contained deterministic zip writer with CRC-verified round-trip and fail-closed extraction; two-layer determinism stated exactly (byte-identical sqlite across compiles; byte-identical zip per package directory; createdAt explicitly excluded).
+
+What REMAINS STAGED here (this document stays PROPOSED until separately proven): corpus-wide KG compilation at scale (the 48 empty graphs project as empty — generating graphs is not authorized), distribution infrastructure beyond the single-bundle form (mirrors, registries, delta upgrades between package versions), and canonical-store integration (package ↔ PostgreSQL round-trip tooling). A corpus-wide migration remains unauthorized — PostgreSQL stays canonical.

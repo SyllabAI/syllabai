@@ -1,0 +1,197 @@
+{
+  "v1_PENDING": {
+    "http": 200,
+    "total": 84,
+    "bank_rows": 7,
+    "paper_rows": 77,
+    "learners": {
+      "CLA Eval Bundle": 16,
+      "CLA Part Live": 18,
+      "Probe 500": 3,
+      "Inspect Part": 3,
+      "Nawaf Al Hussain": 3,
+      "Pilot Learner 01": 28,
+      "HNA 269a": 13
+    },
+    "states": {
+      "PENDING": 84
+    },
+    "bank_sample": [
+      {
+        "ref": "sme-eq-2-5-extraction-and-uses-of-metals-q3-s",
+        "part": "a",
+        "state": "PENDING"
+      },
+      {
+        "ref": "sme-eq-2-5-extraction-and-uses-of-metals-q3-s",
+        "part": "c",
+        "state": "PENDING"
+      },
+      {
+        "ref": "sme-eq-2-5-extraction-and-uses-of-metals-q3-s",
+        "part": "d",
+        "state": "PENDING"
+      },
+      {
+        "ref": "sme-eq-2-1-group-1-alkali-metals-q4",
+        "part": "a",
+        "state": "PENDING"
+      }
+    ],
+    "paper_sample": [
+      {
+        "ref": "q01-0ebc841c",
+        "part": "a",
+        "state": "PENDING"
+      },
+      {
+        "ref": "q01-0ebc841c",
+        "part": "b",
+        "state": "PENDING"
+      },
+      {
+        "ref": "q01-0ebc841c",
+        "part": "b-ii",
+        "state": "PENDING"
+      },
+      {
+        "ref": "q01-0ebc841c",
+        "part": "c",
+        "state": "PENDING"
+      }
+    ]
+  },
+  "v1_SMART_MARKED": {
+    "http": 200,
+    "total": 29,
+    "bank_rows": 29,
+    "paper_rows": 0,
+    "learners": {
+      "HNA 269a": 13,
+      "probe s113 (smart-mark partial-marks verification)": 6,
+      "G4 Probe": 10
+    },
+    "states": {
+      "SMART_MARKED": 29
+    },
+    "bank_sample": [
+      {
+        "ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q4",
+        "part": "a",
+        "state": "SMART_MARKED"
+      },
+      {
+        "ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q4",
+        "part": "b",
+        "state": "SMART_MARKED"
+      },
+      {
+        "ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q4",
+        "part": "c",
+        "state": "SMART_MARKED"
+      },
+      {
+        "ref": "sme-eq-1-5-chemical-formulae-equations-calculations-q4",
+        "part": "d",
+        "state": "SMART_MARKED"
+      }
+    ],
+    "paper_sample": []
+  },
+  "v2_pending": {
+    "http": 200,
+    "items": 84,
+    "outer_paperId_census": {
+      "7f3ecd08": 26,
+      "23ef5e6e": 4,
+      "2852f64f": 38,
+      "fdccde9f": 9,
+      "unfiled(null)": 7
+    },
+    "groups": [
+      {
+        "paperId": "7f3ecd08",
+        "title": "4CH0/2C January 2014",
+        "count": 26
+      },
+      {
+        "paperId": "23ef5e6e",
+        "title": "4CH1/2C Specimen 2017",
+        "count": 4
+      },
+      {
+        "paperId": "2852f64f",
+        "title": "4CH0/2C January 2018",
+        "count": 38
+      },
+      {
+        "paperId": "fdccde9f",
+        "title": "4CH0/1C June 2011",
+        "count": 9
+      },
+      {
+        "paperId": null,
+        "title": null,
+        "count": 7
+      }
+    ]
+  },
+  "v2_smart_marked": {
+    "http": 200,
+    "rows": 29
+  },
+  "throughput": {
+    "http": 200,
+    "leaders": [
+      {
+        "paperId": "2852f64f-29ff-427d-aa0e-55a612a66cd3",
+        "paperTitle": "4CH0/2C January 2018",
+        "paperCode": "4CH0/2C",
+        "pending": 38
+      },
+      {
+        "paperId": "7f3ecd08-5682-419e-9d68-e2acfcaf202e",
+        "paperTitle": "4CH0/2C January 2014",
+        "paperCode": "4CH0/2C",
+        "pending": 26
+      },
+      {
+        "paperId": "fdccde9f-e87b-4412-b28a-1e64c3f92eeb",
+        "paperTitle": "4CH0/1C June 2011",
+        "paperCode": "4CH0/1C",
+        "pending": 9
+      },
+      {
+        "paperId": null,
+        "paperTitle": null,
+        "paperCode": null,
+        "pending": 7
+      },
+      {
+        "paperId": "23ef5e6e-7cd2-4180-94d5-f180af2cca22",
+        "paperTitle": "4CH1/2C Specimen 2017",
+        "paperCode": "4CH1/2C",
+        "pending": 4
+      }
+    ],
+    "oldestPendingHours": 219,
+    "byState": {
+      "HUMAN_MARKED": 72,
+      "SMART_MARKED": 29,
+      "PENDING": 84,
+      "SELF_MARKED": 5,
+      "OVERRIDDEN": 243
+    }
+  },
+  "build_info": {
+    "/api/v1/actuator/info": "no (HTTPError)",
+    "/actuator/info": "{}",
+    "/api/v1/actuator/health": "no (HTTPError)"
+  },
+  "decision_matrix": {
+    "v1_pending_has_bank_rows": null,
+    "v2_pending_200": true,
+    "throughput_200": true
+  },
+  "probed_at": "2026-09-24T15:55:21.735167+00:00"
+}

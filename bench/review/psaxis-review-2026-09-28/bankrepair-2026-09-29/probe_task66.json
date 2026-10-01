@@ -1,0 +1,947 @@
+{
+ "generated": "2026-09-28T23:38:06.911973+00:00",
+ "census_papers": {
+  "REJECTED": 14,
+  "VALIDATED": 90
+ },
+ "census_documents": {
+  "SUGGESTED": 305,
+  "REJECTED": 147,
+  "VALIDATED": 567
+ },
+ "pool": 2935,
+ "rev1_total": 0,
+ "audit_tail": 3939,
+ "events": 0,
+ "jun19_paper_id": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+ "jun19_paper": {
+  "validation_state": "VALIDATED",
+  "series": "JUN",
+  "year": "2019",
+  "session_label": "June 2019",
+  "question_paper_document_id": "98622045-ab65-5c94-a571-e7a7cb76e593",
+  "mark_scheme_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59"
+ },
+ "jun19_qv": [
+  {
+   "id": "964b9b54-efbb-42b0-9480-b9f8bd7d6015",
+   "marks": 4,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 167,
+   "stem": "Potassium permanganate is a purple solid that is soluble in water. start after a short time A crystal of potassium permanganate is placed in a beaker containing water."
+  },
+  {
+   "id": "27379362-6f0f-4b18-ae11-fa233b68a72f",
+   "marks": 4,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 186,
+   "stem": "The diagram shows part of the Periodic Table, with elements represented by the letters L, M, Q, R and T. The letters in the diagram represent elements but are not their chemical symbols."
+  },
+  {
+   "id": "402c39e1-02ab-4820-99df-99405a138d66",
+   "marks": 6,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 147,
+   "stem": "A student does these two tests on a solution made from a white solid. flame test add acidified silver nitrate solution The table shows his results."
+  },
+  {
+   "id": "6b7fbbdb-a270-442d-acc3-07036888608b",
+   "marks": 8,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 95,
+   "stem": "A student uses this apparatus to investigate the colours in four different inks, A, B, C and D."
+  },
+  {
+   "id": "67708b87-0c76-4bde-91e3-ccfb693e4d40",
+   "marks": 5,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 69,
+   "stem": "In 1937 an airship full of hydrogen gas flew from Germany to America."
+  },
+  {
+   "id": "d80c0eed-0a86-4af7-b268-9bb0c4923523",
+   "marks": 5,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 231,
+   "stem": "The reactions of metals with water and with dilute sulfuric acid can be used to determine the order of reactivity of the metals. The table shows the reactions of four metals, W, X, Y and Z, with water and with dilute sulfuric acid."
+  },
+  {
+   "id": "f9537fc2-fba7-4a1c-820b-1b0d4e3ae98b",
+   "marks": 6,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 166,
+   "stem": "Diamond, graphite and silicon dioxide all have giant covalent structures. The diagram shows the structures of these three substances. diamond graphite silicon dioxide"
+  },
+  {
+   "id": "20da972a-faca-42d1-869f-eb5bc2b3d607",
+   "marks": 6,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 175,
+   "stem": "Ethene $ \\left( \\mathrm{C}_{2} \\mathrm{H}_{4} \\right) $ can be converted into chloroethene $ \\left( \\mathrm{C}_{2} \\mathrm{H}_{3} \\mathrm{Cl} \\right) $ in a two-stage process."
+  },
+  {
+   "id": "6d51dcf2-881c-4b07-ab35-327636a80a3f",
+   "marks": 6,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 137,
+   "stem": "Halon 1301 is a compound used in some fire extinguishers. Halon 1301 has the percentage composition by mass of C 8.05% Br 53.69% F 38.26%"
+  },
+  {
+   "id": "aa7692ec-07b3-409c-bcab-a183ab0e3cf7",
+   "marks": 1,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 277,
+   "stem": "(a) There are three isomers with the molecular formula $ \\mathrm{C_{5} H_{1 2}} $ One of these isomers is pentane. The displayed formula for pentane is (i) State what is meant by the term isomers. (ii) Draw the displayed formula for another isomer of $ \\mathrm{C_{5} H_{1 2}} $"
+  },
+  {
+   "id": "401bbd83-1897-4b98-a54c-bf392545fd5b",
+   "marks": 9,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 266,
+   "stem": "The gas burned in a Bunsen burner is methane. The equation for the complete combustion of methane is $\\mathrm {C H} _ {4} (\\mathrm {g}) + 2 \\mathrm {O} _ {2} (\\mathrm {g}) \\rightarrow \\mathrm {C O} _ {2} (\\mathrm {g}) + 2 \\mathrm {H} _ {2} \\mathrm {O} (\\mathrm {g})$"
+  },
+  {
+   "id": "b4a2b62d-bcaa-4ef4-a334-c0460405f57c",
+   "marks": 9,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 507,
+   "stem": "A student uses this apparatus to investigate the temperature change that occurs when ammonium nitrate is dissolved in water. She uses this method. put $ 1 0 0 \\mathrm{c m}^{3} $ of water into the polystyrene cup and measure the initial temperature of the water add 8.00 g of ammonium nitrate and stir record the lowest temperature reached by the solution The table shows her results. Initial temperat"
+  },
+  {
+   "id": "34157e0b-52e5-4e92-975a-b9dc9bcea4bb",
+   "marks": 12,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 520,
+   "stem": "A student uses this apparatus to investigate the rate of reaction between magnesium and an excess of dilute hydrochloric acid. She uses this method. use a graduated beaker to pour $ 50 \\mathrm{c m}^{3} $ of dilute hydrochloric acid of concentration 2.00 mol/dm $ ^{3} $ into the conical flask add a piece of magnesium ribbon of mass 0.086 g to the acid and put the bung into the neck of the flask mea"
+  },
+  {
+   "id": "1d1a881b-5d73-4d6c-8502-f2324060fa57",
+   "marks": 14,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 494,
+   "stem": "A salt can be made by reacting an acid with an insoluble base. The student uses this method. Stage 1 pour $ 5 0 \\mathrm{c m}^{3} $ of dilute sulfuric acid into a beaker Stage 2 warm the acid using a Bunsen burner Stage 3 add a small amount of copper(II) oxide to the warm acid and stir the mixture Stage 4 add further amounts of copper(II) oxide until copper(II) oxide is in excess Stage 5 filter the"
+  },
+  {
+   "id": "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8",
+   "marks": 9,
+   "state": "SUGGESTED",
+   "qnum": null,
+   "stem_len": 214,
+   "stem": "Hydrated ammonium iron(III) sulfate is a violet solid that has the formula $ \\mathrm{(N H_{4})_{2} S O_{4}. F e_{2}(S O_{4})_{3}. x H_{2} O} $ The table shows some tests done on three separate samples of the solid."
+  }
+ ],
+ "jun19_tree": [
+  {
+   "qv": "964b9b54-efbb-42b0-9480-b9f8bd7d6015",
+   "qnum": null,
+   "marks": 4,
+   "parts": 5,
+   "schemes": [
+    {
+     "id": "3170412a-4a0d-453b-9726-2a342b08eea3",
+     "state": "SUGGESTED",
+     "points": 5
+    }
+   ],
+   "point_marks": [
+    1,
+    1,
+    1,
+    3,
+    1
+   ]
+  },
+  {
+   "qv": "27379362-6f0f-4b18-ae11-fa233b68a72f",
+   "qnum": null,
+   "marks": 4,
+   "parts": 3,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "402c39e1-02ab-4820-99df-99405a138d66",
+   "qnum": null,
+   "marks": 6,
+   "parts": 6,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "6b7fbbdb-a270-442d-acc3-07036888608b",
+   "qnum": null,
+   "marks": 8,
+   "parts": 5,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "67708b87-0c76-4bde-91e3-ccfb693e4d40",
+   "qnum": null,
+   "marks": 5,
+   "parts": 5,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "d80c0eed-0a86-4af7-b268-9bb0c4923523",
+   "qnum": null,
+   "marks": 5,
+   "parts": 4,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "f9537fc2-fba7-4a1c-820b-1b0d4e3ae98b",
+   "qnum": null,
+   "marks": 6,
+   "parts": 3,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "20da972a-faca-42d1-869f-eb5bc2b3d607",
+   "qnum": null,
+   "marks": 6,
+   "parts": 6,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "6d51dcf2-881c-4b07-ab35-327636a80a3f",
+   "qnum": null,
+   "marks": 6,
+   "parts": 3,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "aa7692ec-07b3-409c-bcab-a183ab0e3cf7",
+   "qnum": null,
+   "marks": 1,
+   "parts": 3,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "401bbd83-1897-4b98-a54c-bf392545fd5b",
+   "qnum": null,
+   "marks": 9,
+   "parts": 5,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "b4a2b62d-bcaa-4ef4-a334-c0460405f57c",
+   "qnum": null,
+   "marks": 9,
+   "parts": 3,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "34157e0b-52e5-4e92-975a-b9dc9bcea4bb",
+   "qnum": null,
+   "marks": 12,
+   "parts": 7,
+   "schemes": [
+    {
+     "id": "b3a034c2-f8d9-48eb-8001-c202ee1948ea",
+     "state": "SUGGESTED",
+     "points": 1
+    }
+   ],
+   "point_marks": [
+    2
+   ]
+  },
+  {
+   "qv": "1d1a881b-5d73-4d6c-8502-f2324060fa57",
+   "qnum": null,
+   "marks": 14,
+   "parts": 8,
+   "schemes": [],
+   "point_marks": []
+  },
+  {
+   "qv": "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8",
+   "qnum": null,
+   "marks": 9,
+   "parts": 5,
+   "schemes": [],
+   "point_marks": []
+  }
+ ],
+ "jun19_marks_sum": 104,
+ "jun19_n_scheme_rows": 2,
+ "jun19_q10_full_stem": "(a) There are three isomers with the molecular formula $ \\mathrm{C_{5} H_{1 2}} $ One of these isomers is pentane. The displayed formula for pentane is (i) State what is meant by the term isomers. (ii) Draw the displayed formula for another isomer of $ \\mathrm{C_{5} H_{1 2}} $",
+ "questions_cols_sample": [
+  [
+   "id",
+   "uuid",
+   "NO"
+  ],
+  [
+   "external_ref",
+   "character varying",
+   "YES"
+  ],
+  [
+   "question_type",
+   "character varying",
+   "NO"
+  ],
+  [
+   "stem",
+   "text",
+   "NO"
+  ],
+  [
+   "marks",
+   "integer",
+   "NO"
+  ],
+  [
+   "difficulty",
+   "integer",
+   "NO"
+  ],
+  [
+   "expected_time_seconds",
+   "integer",
+   "NO"
+  ],
+  [
+   "command_word",
+   "character varying",
+   "YES"
+  ],
+  [
+   "primary_topic_node_id",
+   "uuid",
+   "NO"
+  ],
+  [
+   "provenance",
+   "character varying",
+   "NO"
+  ],
+  [
+   "active",
+   "boolean",
+   "NO"
+  ],
+  [
+   "version",
+   "integer",
+   "NO"
+  ],
+  [
+   "created_at",
+   "timestamp with time zone",
+   "NO"
+  ],
+  [
+   "exam_paper_id",
+   "uuid",
+   "YES"
+  ],
+  [
+   "difficulty_source",
+   "character varying",
+   "YES"
+  ]
+ ],
+ "cols_question_versions": [
+  [
+   "id",
+   "uuid",
+   "NO",
+   null
+  ],
+  [
+   "question_id",
+   "uuid",
+   "NO",
+   null
+  ],
+  [
+   "version",
+   "integer",
+   "NO",
+   null
+  ],
+  [
+   "stem",
+   "text",
+   "NO",
+   null
+  ],
+  [
+   "marks",
+   "integer",
+   "NO",
+   null
+  ],
+  [
+   "difficulty",
+   "integer",
+   "NO",
+   null
+  ],
+  [
+   "expected_time_seconds",
+   "integer",
+   "NO",
+   null
+  ],
+  [
+   "command_word",
+   "character varying",
+   "YES",
+   null
+  ],
+  [
+   "validation_state",
+   "character varying",
+   "NO",
+   "'SUGGESTED'::character varying"
+  ],
+  [
+   "source_document_id",
+   "character varying",
+   "YES",
+   null
+  ],
+  [
+   "extraction_confidence",
+   "double precision",
+   "YES",
+   null
+  ],
+  [
+   "extraction_method",
+   "character varying",
+   "YES",
+   null
+  ],
+  [
+   "created_at",
+   "timestamp with time zone",
+   "NO",
+   null
+  ]
+ ],
+ "cols_question_parts": [
+  [
+   "id",
+   "uuid",
+   "NO",
+   null
+  ],
+  [
+   "question_version_id",
+   "uuid",
+   "NO",
+   null
+  ],
+  [
+   "label",
+   "character varying",
+   "NO",
+   null
+  ],
+  [
+   "prompt",
+   "text",
+   "NO",
+   null
+  ],
+  [
+   "command_word",
+   "character varying",
+   "YES",
+   null
+  ],
+  [
+   "marks",
+   "integer",
+   "NO",
+   null
+  ],
+  [
+   "ordering",
+   "integer",
+   "NO",
+   null
+  ],
+  [
+   "created_at",
+   "timestamp with time zone",
+   "NO",
+   null
+  ]
+ ],
+ "cols_mark_schemes": [
+  [
+   "id",
+   "uuid",
+   "NO",
+   null
+  ],
+  [
+   "question_version_id",
+   "uuid",
+   "NO",
+   null
+  ],
+  [
+   "version_label",
+   "character varying",
+   "NO",
+   "'1'::character varying"
+  ],
+  [
+   "source_document_id",
+   "character varying",
+   "YES",
+   null
+  ],
+  [
+   "validation_state",
+   "character varying",
+   "NO",
+   "'SUGGESTED'::character varying"
+  ],
+  [
+   "extraction_method",
+   "character varying",
+   "YES",
+   null
+  ],
+  [
+   "created_at",
+   "timestamp with time zone",
+   "NO",
+   null
+  ],
+  [
+   "general_guidance",
+   "text",
+   "YES",
+   null
+  ]
+ ],
+ "cols_mark_points": [
+  [
+   "id",
+   "uuid",
+   "NO",
+   null
+  ],
+  [
+   "mark_scheme_id",
+   "uuid",
+   "NO",
+   null
+  ],
+  [
+   "question_part_id",
+   "uuid",
+   "YES",
+   null
+  ],
+  [
+   "ref",
+   "character varying",
+   "YES",
+   null
+  ],
+  [
+   "ordering",
+   "integer",
+   "NO",
+   null
+  ],
+  [
+   "text",
+   "text",
+   "NO",
+   null
+  ],
+  [
+   "marks",
+   "integer",
+   "NO",
+   null
+  ],
+  [
+   "acceptance_criteria",
+   "jsonb",
+   "YES",
+   null
+  ],
+  [
+   "extraction_confidence",
+   "double precision",
+   "YES",
+   null
+  ],
+  [
+   "created_at",
+   "timestamp with time zone",
+   "NO",
+   null
+  ]
+ ],
+ "empty_stem_validated": [
+  [
+   "a69a4e80-ff69-4894-b495-6c76f10a7373",
+   "JAN",
+   2012,
+   "January 2012",
+   "882dfd22-9aa5-466b-9fc1-3c588c449dec",
+   13,
+   "VALIDATED",
+   8
+  ],
+  [
+   "a69a4e80-ff69-4894-b495-6c76f10a7373",
+   "JAN",
+   2012,
+   "January 2012",
+   "237b327d-e41e-4ae4-a959-59b351955acf",
+   9,
+   "VALIDATED",
+   6
+  ],
+  [
+   "cd45e3ed-3d8c-4eb4-9259-51313adb0962",
+   "JAN",
+   2012,
+   "January 2012",
+   "a00dc573-6121-432a-8012-3dd0170ada18",
+   6,
+   "VALIDATED",
+   8
+  ],
+  [
+   "a69a4e80-ff69-4894-b495-6c76f10a7373",
+   "JAN",
+   2012,
+   "January 2012",
+   "416bb7ab-7a65-4c39-9ff6-bcaef6d1fb12",
+   8,
+   "VALIDATED",
+   7
+  ],
+  [
+   "cd45e3ed-3d8c-4eb4-9259-51313adb0962",
+   "JAN",
+   2012,
+   "January 2012",
+   "5e64db1f-3cae-4611-bea3-10e64eaaf215",
+   10,
+   "VALIDATED",
+   5
+  ],
+  [
+   "a69a4e80-ff69-4894-b495-6c76f10a7373",
+   "JAN",
+   2012,
+   "January 2012",
+   "8c2512c6-1a74-48ef-8e0c-3ada1a87ebdf",
+   11,
+   "VALIDATED",
+   10
+  ],
+  [
+   "980095b5-f109-4249-9810-33b8994c7f56",
+   "JUN",
+   2014,
+   "June 2014",
+   "15c35cb8-ef7d-4b53-bda4-21e420c891dc",
+   11,
+   "VALIDATED",
+   8
+  ],
+  [
+   "8197117d-6236-4992-a32e-487358de7295",
+   "JAN",
+   2019,
+   "January 2019",
+   "690da26a-3ad9-441e-86e4-dda9fb4aa595",
+   11,
+   "VALIDATED",
+   7
+  ],
+  [
+   "216d1073-756d-4753-af0e-81de951cf24c",
+   "JAN",
+   2020,
+   "January 2020",
+   "d3bddbc3-9479-432b-9aec-f07201a0ef8c",
+   14,
+   "VALIDATED",
+   7
+  ],
+  [
+   "be73332c-bf0f-463f-bbe6-72a1d4bf9b80",
+   "JAN",
+   2020,
+   "January 2020",
+   "8df94cf1-336b-4bd9-a6d3-b18546419cda",
+   11,
+   "VALIDATED",
+   5
+  ],
+  [
+   "d3d7e0f2-fd08-48c6-a02f-e94da725d441",
+   "JUN",
+   2020,
+   "June 2020",
+   "ff5c20fe-d2f1-4368-a840-fbf3b457217b",
+   16,
+   "VALIDATED",
+   12
+  ],
+  [
+   "d3d7e0f2-fd08-48c6-a02f-e94da725d441",
+   "JUN",
+   2020,
+   "June 2020",
+   "e9e57f47-3070-49b6-bd52-8dfb30acc063",
+   8,
+   "VALIDATED",
+   6
+  ],
+  [
+   "e6c96a2e-1d1d-4310-aa4f-a46a98b99470",
+   "NOV",
+   2020,
+   "November 2020",
+   "cf838fdf-1866-4ff5-8fe0-8402b6abb1f4",
+   10,
+   "VALIDATED",
+   5
+  ],
+  [
+   "66085c4d-36f5-4c80-a1a3-c91f096a9419",
+   "JAN",
+   2021,
+   "January 2021",
+   "6f7e7a08-66e1-4913-ae5b-902d3c41232c",
+   15,
+   "VALIDATED",
+   9
+  ],
+  [
+   "566c24ca-1049-4c64-9419-b52ae3ed2213",
+   "JAN",
+   2022,
+   "January 2022",
+   "7266a643-3e0a-411a-9f5f-f21213765111",
+   11,
+   "SUGGESTED",
+   7
+  ],
+  [
+   "47b57ed2-769a-49ab-8b08-459a11b74d6f",
+   "JUN",
+   2022,
+   "June 2022",
+   "edcc269b-78ec-4ae1-a639-584b507f3013",
+   12,
+   "VALIDATED",
+   13
+  ],
+  [
+   "47b57ed2-769a-49ab-8b08-459a11b74d6f",
+   "JUN",
+   2022,
+   "June 2022",
+   "b39fb19d-37fe-404f-8140-3693a0034888",
+   9,
+   "VALIDATED",
+   8
+  ],
+  [
+   "f57ed5c2-fc23-43fe-adbc-50401539661d",
+   "JUN",
+   2022,
+   "June 2022",
+   "8c89128e-00a7-4b3b-8110-88fe6f20820a",
+   11,
+   "VALIDATED",
+   7
+  ],
+  [
+   "59e53b62-1d85-452a-aea7-bddc62cf2703",
+   "JAN",
+   2023,
+   "January 2023",
+   "0c146ae1-b9e8-42d6-9bc7-2b2fe1951dc3",
+   9,
+   "VALIDATED",
+   8
+  ],
+  [
+   "30cb3c9d-a77e-4441-80fe-bd0e0161cdfd",
+   "JAN",
+   2023,
+   "January 2023",
+   "37c26be9-e1af-42e8-a3ef-98d8cf7c3bd4",
+   7,
+   "VALIDATED",
+   5
+  ],
+  [
+   "71fafec0-1b2f-432f-b459-a000cc35aed8",
+   "JAN",
+   2023,
+   "January 2023",
+   "478b405a-b37a-4763-b978-7c135ac3faa2",
+   10,
+   "VALIDATED",
+   8
+  ],
+  [
+   "2ae885c9-d3ba-4cf7-8434-aca830976ba1",
+   "JUN",
+   2023,
+   "June 2023",
+   "509fa574-5ce5-4044-a482-c33326d9ffa6",
+   8,
+   "VALIDATED",
+   8
+  ],
+  [
+   "255ba065-b683-4c58-8b6c-3e948cdf5102",
+   "NOV",
+   2023,
+   "November 2023",
+   "b700a9db-22ee-420f-91da-053049c78dc4",
+   11,
+   "VALIDATED",
+   6
+  ],
+  [
+   "255ba065-b683-4c58-8b6c-3e948cdf5102",
+   "NOV",
+   2023,
+   "November 2023",
+   "8cdd4346-6c6e-4c93-804f-b94e818e8dfc",
+   14,
+   "VALIDATED",
+   10
+  ],
+  [
+   "546d03ec-4de6-4e85-9fe3-4a0dc229f2ba",
+   "NOV",
+   2023,
+   "November 2023",
+   "e5915f46-2d9b-4a68-b86c-0d886a9def5b",
+   11,
+   "VALIDATED",
+   5
+  ],
+  [
+   "546d03ec-4de6-4e85-9fe3-4a0dc229f2ba",
+   "NOV",
+   2023,
+   "November 2023",
+   "a0b1f4a1-b16d-4fdf-af08-e030bc525057",
+   10,
+   "VALIDATED",
+   8
+  ],
+  [
+   "29bba2da-3235-4cb5-81d6-c0968d87ddac",
+   "JUN",
+   2024,
+   "June 2024",
+   "0fc6d8dd-0f0b-43df-9c58-d77f35048f25",
+   14,
+   "VALIDATED",
+   7
+  ],
+  [
+   "0f903acf-6024-4c22-a577-34dfee6e18e4",
+   "JUN",
+   2024,
+   "June 2024",
+   "9c6a38a6-5d21-4bbc-9d0c-6c459ce0ba26",
+   6,
+   "VALIDATED",
+   6
+  ],
+  [
+   "31749450-eeb8-4c56-b944-39368b967cdd",
+   "NOV",
+   2025,
+   "November 2025",
+   "817828db-6864-4ac4-8c43-dd130097faed",
+   15,
+   "VALIDATED",
+   9
+  ],
+  [
+   "31749450-eeb8-4c56-b944-39368b967cdd",
+   "NOV",
+   2025,
+   "November 2025",
+   "ec48f75f-0ec5-47f7-b1d7-c8f42ac60440",
+   14,
+   "VALIDATED",
+   13
+  ]
+ ],
+ "empty_stem_validated_count": 30,
+ "empty_stem_other_states": [
+  [
+   "REJECTED",
+   1
+  ]
+ ],
+ "covid_2c_empty10": [
+  [
+   "7d40476f-13b3-436b-9e0d-f2877fe2ba0e",
+   "REJECTED",
+   "a200ce7b-c0eb-4f0b-af30-3b3bc2bd19df",
+   10,
+   "SUGGESTED"
+  ]
+ ],
+ "scheme_coverage_validated": [
+  [
+   837,
+   746
+  ]
+ ],
+ "jun19_scheme_owners": [
+  [
+   "964b9b54-efbb-42b0-9480-b9f8bd7d6015",
+   "3170412a-4a0d-453b-9726-2a342b08eea3",
+   "SUGGESTED"
+  ],
+  [
+   "34157e0b-52e5-4e92-975a-b9dc9bcea4bb",
+   "b3a034c2-f8d9-48eb-8001-c202ee1948ea",
+   "SUGGESTED"
+  ]
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "mode": "EXECUTE",
+ "started": "2026-09-28T20:35:01.496252+00:00",
+ "plan_papers": [
+  "4CH0/2C \u00b7 June 2014",
+  "4CH0/2C \u00b7 June 2016",
+  "4CH0/1C \u00b7 June 2013",
+  "4CH0/1C \u00b7 June 2014",
+  "4CH0/1C \u00b7 June 2016",
+  "4CH0/1C \u00b7 June 2017",
+  "4CH0/1CR \u00b7 June 2013",
+  "4CH0/1CR \u00b7 June 2014",
+  "4CH0/1CR \u00b7 June 2016",
+  "4CH0/1CR \u00b7 June 2017",
+  "4CH0/2C \u00b7 June 2013",
+  "4CH0/2C \u00b7 June 2017",
+  "4CH0/2CR \u00b7 June 2013",
+  "4CH0/2CR \u00b7 June 2014",
+  "4CH0/2CR \u00b7 June 2016",
+  "4CH0/2CR \u00b7 June 2017",
+  "4CH1/1C \u00b7 June 2022"
+ ],
+ "pre_census": {
+  "SUGGESTED": 1,
+  "REJECTED": 13,
+  "VALIDATED": 70,
+  "FLAGGED": 20
+ },
+ "audit_rows": 392,
+ "qv": 166,
+ "sch": 124,
+ "docs": 34,
+ "post_census": {
+  "SUGGESTED": 1,
+  "REJECTED": 13,
+  "VALIDATED": 87,
+  "FLAGGED": 3
+ },
+ "committed": "2026-09-28T20:36:57.721255+00:00",
+ "ok": true
+}

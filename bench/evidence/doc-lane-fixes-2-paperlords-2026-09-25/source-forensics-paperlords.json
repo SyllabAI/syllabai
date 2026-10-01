@@ -1,0 +1,79 @@
+{
+ "generated": "2026-09-25T08:37:25+00:00",
+ "source": {
+  "site": "paperlords.org (operator-supplied tip)",
+  "archive_pattern": "https://archive.paperlords.org/library/IGCSE/Chemistry/<session>/IGCSE_CHEMISTRY_<y>_Nov_P<n>_{QP,MS}.pdf",
+  "note": "open archive CDN behind the JS UI; discovered by clicking the Chemistry \u2192 Nov 2023 \u2192 P1 QP button and reading the network log (agent-browser); Nov-2024 P2 files carry upload-dedup timestamp suffixes (_1781196095966 / _1777793506071); the site has NO Nov 2020 session"
+ },
+ "files": {
+  "202311-p1-ms.pdf": {
+   "bytes": 276422,
+   "sha256": "08caaccc01f8e42a3f066685916e2fac75cf5263a690ae1e0eaba104c3f072ed"
+  },
+  "202311-p1-qp.pdf": {
+   "bytes": 678343,
+   "sha256": "180909048496d940c72e0e669173a52d0a3fa2f6e69c43c453d1ddcc20e06048"
+  },
+  "202311-p2-ms.pdf": {
+   "bytes": 288515,
+   "sha256": "07baeebd0ffcc6eb5b792e2433d8bb6aa67e9b456bca4eab6b48211d5164ae78"
+  },
+  "202311-p2-qp.pdf": {
+   "bytes": 664516,
+   "sha256": "240272b2a0e8b434c99b19434a629a01eabfa25788fd8ce48f8465675f61841a"
+  },
+  "202411-p1-ms.pdf": {
+   "bytes": 397960,
+   "sha256": "297a4aa6badfa7eba21dde5fd6cfab84d848f92949c614a4e8ed3de475f0933e"
+  },
+  "202411-p1-qp.pdf": {
+   "bytes": 640030,
+   "sha256": "81f416f2c32d849ec99796c546aa21b76bbab50b2131c29f623f1298fdaed7a0"
+  },
+  "202411-p2-ms.pdf": {
+   "bytes": 240976,
+   "sha256": "4474a87ae2117b5154fcbbb7049fd98b7675f4c117e1794644c4ef3f42554276"
+  },
+  "202411-p2-qp.pdf": {
+   "bytes": 463178,
+   "sha256": "ab746dd318eecaafeeaa9adac917360a6f4159b0f84d54f4328a0ac6b61542e6"
+  },
+  "202511-p1-ms.pdf": {
+   "bytes": 386895,
+   "sha256": "c8962567547f6f72b0d1edff2e0f56084b0e6ec44f5390497f58e22239c2e0da"
+  },
+  "202511-p1-qp.pdf": {
+   "bytes": 640828,
+   "sha256": "7076dc7916f2515197f71d09d2e5685b305cc0a58ba1eed9166a2646b0969883"
+  },
+  "202511-p2-ms.pdf": {
+   "bytes": 276912,
+   "sha256": "54f77a4de78c9f67c2419ddf56d191ccc76247c187b71eb0696dd657b59a9054"
+  },
+  "202511-p2-qp.pdf": {
+   "bytes": 656366,
+   "sha256": "1963af3aa5a42b5ab0ed8da4231dd615d9efd47098f22a057dcfcaaf6632a95b"
+  }
+ },
+ "covers": {
+  "202311": {
+   "p1_qp": "Tuesday 14 November 2023 / 4CH1/1C 4SD0/1C",
+   "p1_ms": "November 2023 \u2014 Chemistry (4CH1) Paper 1C",
+   "p2_qp": "Monday 20 November 2023 / 4CH1/2C",
+   "p2_ms": "November 2023 \u2014 Chemistry (4CH1) Paper 2C"
+  },
+  "202411": {
+   "p1_qp": "Tuesday 12 November 2024 / 4CH1/1C 4SD0/1C",
+   "p1_ms": "November 2024 \u2014 Chemistry (4CH1) Paper 1C",
+   "p2_qp": "Monday 18 November 2024 / 4CH1/2C",
+   "p2_ms": "November 2024 \u2014 Chemistry (4CH1) Paper 2C"
+  },
+  "202511": {
+   "p1_qp": "Tuesday 11 November 2025 / 4CH1/1C 4SD0/1C",
+   "p1_ms": "November 2025 \u2014 4CH1/1C",
+   "p2_qp": "Monday 17 November 2025 / 4CH1/2C",
+   "p2_ms": "November 2025 \u2014 4CH1/2C"
+  }
+ },
+ "past_papers_commit": "d422e19af3"
+}

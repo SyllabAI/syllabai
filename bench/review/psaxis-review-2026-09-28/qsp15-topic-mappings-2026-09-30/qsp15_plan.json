@@ -1,0 +1,994 @@
+{
+ "census": {
+  "cohort": 15,
+  "qsp_rows_to_insert": 59,
+  "qt_rows_to_insert": 36,
+  "primary_updates": 15,
+  "qsp_total_before": 2578,
+  "qt_before": 1094,
+  "ing_anchored_before": 15,
+  "ing_anchored_after_expected": 0
+ },
+ "repro_L1": {
+  "checked": 946,
+  "agree": 852,
+  "disagreements": 94,
+  "qt_anchor_conflicts": 0
+ },
+ "blob_L2": {
+  "pin": "8430547fcfd6b174a8c4902d707e599e16769468",
+  "ok": 59,
+  "bad": 0
+ },
+ "archive_L3": {
+  "rows": [
+   {
+    "ref": "4ch0-2c-201701#q1",
+    "archived": "4CH1-S1-b",
+    "primary": true,
+    "mine_primary": "4CH1-S1-b",
+    "mine_secondary_hit": null
+   },
+   {
+    "ref": "4ch0-2c-201701#q2",
+    "archived": "4CH1-S2-g",
+    "primary": true,
+    "mine_primary": "4CH1-S1-d",
+    "mine_secondary_hit": null
+   },
+   {
+    "ref": "4ch0-2c-201701#q3",
+    "archived": "4CH1-S2-d",
+    "primary": true,
+    "mine_primary": "4CH1-S2-d",
+    "mine_secondary_hit": null
+   },
+   {
+    "ref": "4ch0-2c-201701#q3",
+    "archived": "4CH1-S2-e",
+    "primary": false,
+    "mine_primary": null,
+    "mine_secondary_hit": false
+   },
+   {
+    "ref": "4ch0-2c-201701#q4",
+    "archived": "4CH1-S2-h",
+    "primary": true,
+    "mine_primary": "4CH1-S2-h",
+    "mine_secondary_hit": null
+   },
+   {
+    "ref": "4ch0-2c-201701#q5",
+    "archived": "4CH1-S1-f",
+    "primary": true,
+    "mine_primary": "4CH1-S1-f",
+    "mine_secondary_hit": null
+   },
+   {
+    "ref": "4ch0-2c-201701#q5",
+    "archived": "4CH1-S1-g",
+    "primary": false,
+    "mine_primary": null,
+    "mine_secondary_hit": true
+   },
+   {
+    "ref": "4ch0-2c-201701#q6",
+    "archived": "4CH1-S4-e",
+    "primary": true,
+    "mine_primary": "4CH1-S3-a",
+    "mine_secondary_hit": null
+   },
+   {
+    "ref": "4ch0-2c-201701#q6",
+    "archived": "4CH1-S2-h",
+    "primary": false,
+    "mine_primary": null,
+    "mine_secondary_hit": true
+   },
+   {
+    "ref": "4ch0-2c-201701#q7",
+    "archived": "4CH1-S1-e",
+    "primary": true,
+    "mine_primary": "4CH1-S1-e",
+    "mine_secondary_hit": null
+   },
+   {
+    "ref": "4ch0-2c-201701#q7",
+    "archived": "4CH1-S2-g",
+    "primary": false,
+    "mine_primary": null,
+    "mine_secondary_hit": false
+   },
+   {
+    "ref": "4ch0-2c-201701#q8",
+    "archived": "4CH1-S3-c",
+    "primary": true,
+    "mine_primary": "4CH1-S3-c",
+    "mine_secondary_hit": null
+   }
+  ],
+  "primary_agree": 6,
+  "secondary_hit": 2
+ },
+ "entries": [
+  {
+   "qid": "92817c46-8103-4d2c-9f32-bd61636320a1",
+   "ref": "4ch0-2c-201701#q1",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary_point": "4CH1-1.8",
+   "secondary_points": [
+    "4CH1-2.44",
+    "4CH1-2.5",
+    "4CH1-2.23C"
+   ],
+   "primary_topic_code": "4CH1-S1-b",
+   "secondary_topics": [
+    "4CH1-S2-h",
+    "4CH1-S2-b",
+    "4CH1-S2-e"
+   ],
+   "grounding": "5x1m box (air/hydrogen/chlorine/iron): a mixture classification=1.8 (framing, archived topic S1-b agrees); b hydrogen squeaky-pop test=2.44; c chlorine green gas=2.5; d sterilise water: no direct 4CH1 statement (honest skip, chlorine-use fact); e iron from oxide+carbon=2.23C."
+  },
+  {
+   "qid": "446d4493-a93e-46e0-a6ad-188cddadf50c",
+   "ref": "4ch0-2c-201701#q2",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary_point": "4CH1-1.20",
+   "secondary_points": [
+    "4CH1-2.38",
+    "4CH1-2.11"
+   ],
+   "primary_topic_code": "4CH1-S1-d",
+   "secondary_topics": [
+    "4CH1-S2-g",
+    "4CH1-S2-c"
+   ],
+   "grounding": "Oxides of Ca/Mg vs C/S + phosphorus oxide evidence: b-i/b-ii (2m) classify P as (non-)metal from oxide character + c (2m) lamp/conductivity -> 1.20 is literally the assessed statement (4 of 6m, dominant); a-i/ii oxide observations support 2.38 (metal oxides as bases) + 2.11 (combustion of elements in O2, P burns). Archived topic-level pick was S2-g; point-grounded rule supersedes, divergence recorded."
+  },
+  {
+   "qid": "09572e94-7566-4fa7-b212-838006fff268",
+   "ref": "4ch0-2c-201701#q3",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary_point": "4CH1-2.16",
+   "secondary_points": [
+    "4CH1-2.17",
+    "4CH1-2.20",
+    "4CH1-1.25",
+    "4CH1-3.10"
+   ],
+   "primary_topic_code": "4CH1-S2-d",
+   "secondary_topics": [
+    "4CH1-S1-e",
+    "4CH1-S3-b"
+   ],
+   "grounding": "Reactivity of metals: a (3m) competition/displacement heating metal+oxide -> 2.16 (framing 'reactivity of metals', archived primary S2-d agrees); b-i chemical equation=1.25; b-ii which is oxidised=2.20; b-iii powders/surface area=3.10; 2.17 (order) substantively in MP a."
+  },
+  {
+   "qid": "e6e072de-39b7-4cf2-bc41-9a5c6d8e4142",
+   "ref": "4ch0-2c-201701#q4",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary_point": "4CH1-2.48",
+   "secondary_points": [
+    "4CH1-2.47"
+   ],
+   "primary_topic_code": "4CH1-S2-h",
+   "secondary_topics": [],
+   "grounding": "Chemical tests 5x1m MCQ: b halide AgNO3 (yellow ppt I-), c carbonate+HCl, e barium chloride dissolving (carbonate) -> 2.48 (3m dominant); a+d NaOH cation tests -> 2.47. Archived primary S2-h agrees."
+  },
+  {
+   "qid": "15b149e1-1083-45e5-87c4-51d20540312c",
+   "ref": "4ch0-2c-201701#q5",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary_point": "4CH1-1.42",
+   "secondary_points": [
+    "4CH1-1.40",
+    "4CH1-1.46",
+    "4CH1-1.47"
+   ],
+   "primary_topic_code": "4CH1-S1-f",
+   "secondary_topics": [
+    "4CH1-S1-g"
+   ],
+   "grounding": "LiF (ionic) vs CF4 (covalent): c (4m dominant) explain properties -> LiF high mp giant ionic lattice=1.42 (MP leads '(high melting point of LiF)'), CF4 low mp simple molecular=1.47; a LiF dot-and-cross=1.40; b CF4 dot-and-cross=1.46. Archived primary S1-f / secondary S1-g agree."
+  },
+  {
+   "qid": "18bfc2aa-8863-4c14-8930-1259e9fe4884",
+   "ref": "4ch0-2c-201701#q6",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary_point": "4CH1-3.2",
+   "secondary_points": [
+    "4CH1-3.7C",
+    "4CH1-4.33C",
+    "4CH1-3.3",
+    "4CH1-2.44"
+   ],
+   "primary_topic_code": "4CH1-S3-a",
+   "secondary_topics": [
+    "4CH1-S4-e",
+    "4CH1-S2-h"
+   ],
+   "grounding": "Ethanol fermentation + energetics: b (4m, draft verbatim 'Use this information to calculate the enthalpy change... average bond energies')=3.7C; c (6m block) calorimetry: c-ii fair-test + c-iii heat-loss reasons=3.2 (4m, ties 3.7C -> tie-break by the 6m block's weight), c-i Q=mcDT=3.3; a fermentation yeast/temp=4.33C, a-ii limewater=2.44. Archived topic pick S4-e (alcohol); point-grounded dominance falls on the energetics blocks; divergence recorded."
+  },
+  {
+   "qid": "243ff061-dccd-405d-8ded-9abda03c29fe",
+   "ref": "4ch0-2c-201701#q7",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary_point": "4CH1-1.30",
+   "secondary_points": [
+    "4CH1-1.29",
+    "4CH1-1.35C",
+    "4CH1-1.31"
+   ],
+   "primary_topic_code": "4CH1-S1-e",
+   "secondary_topics": [],
+   "grounding": "MgCO3+HCl calculations: b-i %yield (2m) + b-ii why <100% (1m)=1.30 (3m dominant, archived primary S1-e agrees); a-i excess/limiting=1.29; a-ii gas volume rtp=1.35C; b-i hydrate Mr(MgCl2.6H2O)=1.31."
+  },
+  {
+   "qid": "3b8d77a1-13c1-4c1f-9e69-0ace6a2c6e9d",
+   "ref": "4ch0-2c-201701#q8",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary_point": "4CH1-3.20C",
+   "secondary_points": [
+    "4CH1-3.19C",
+    "4CH1-3.22C"
+   ],
+   "primary_topic_code": "4CH1-S3-c",
+   "secondary_topics": [],
+   "grounding": "NO2/N2O4 sealed flask: a (2m) features of dynamic equilibrium + b-i mark equilibrium point=3.20C (3m, framing 'dynamic equilibrium', archived primary S3-c agrees); b-ii N2O4 curve (3m)=3.19C; c temperature shift=3.22C."
+  },
+  {
+   "qid": "3964d161-3a1b-4686-be7b-440a669fe69d",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q1",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary_point": "4CH1-1.8",
+   "secondary_points": [
+    "4CH1-1.18",
+    "4CH1-1.22"
+   ],
+   "primary_topic_code": "4CH1-S1-b",
+   "secondary_topics": [
+    "4CH1-S1-d"
+   ],
+   "grounding": "Classification boxes + PT: a-i/a-ii/a-iii (4m) element/mixture/compound boxes=1.8 (dominant; DB stem 'Substances can be classified as elements, mixtures or compounds'); b-i PT arrangement by atomic number=1.18; b-ii same group outer electrons=1.22."
+  },
+  {
+   "qid": "9c405867-5244-474b-9dbe-fe8f084e093d",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q2",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary_point": "4CH1-1.11",
+   "secondary_points": [
+    "4CH1-1.12",
+    "4CH1-1.13"
+   ],
+   "primary_topic_code": "4CH1-S1-b",
+   "secondary_topics": [],
+   "grounding": "Chromatography of green colouring: b-i interpret chromatogram (3m) + b-iii insoluble dye (1m)=1.11 (4m dominant); b-ii Rf calculation (3m)=1.12; a apparatus setup (2m)=1.13."
+  },
+  {
+   "qid": "693beb81-61fd-4ca2-abc6-0b4b7ebd3c6c",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q3",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary_point": "4CH1-2.41C",
+   "secondary_points": [
+    "4CH1-1.28",
+    "4CH1-1.34C",
+    "4CH1-2.48"
+   ],
+   "primary_topic_code": "4CH1-S2-g",
+   "secondary_topics": [
+    "4CH1-S1-e",
+    "4CH1-S2-h"
+   ],
+   "grounding": "AgCl precipitation prep: a term=precipitation + b wash/dry steps (3m)=2.41C (prepare insoluble salt from two soluble reactants, dominant); d mole/mass calc from conc+volume=1.34C/1.28; c acidified AgNO3 chloride-test reason=2.48."
+  },
+  {
+   "qid": "5605232d-bc69-42a6-8f0c-cc8999ecaa58",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q4",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary_point": "4CH1-1.54C",
+   "secondary_points": [
+    "4CH1-1.58C",
+    "4CH1-1.59C",
+    "4CH1-1.56C"
+   ],
+   "primary_topic_code": "4CH1-S1-h",
+   "secondary_topics": [
+    "4CH1-S1-i"
+   ],
+   "grounding": "Lead: malleability + PbBr2 electrolysis: a (2m) malleable layers + b-iv lamp stays alight (molten->solid, lead metal completes circuit) = 1.54C (3m dominant single point, 'physical properties incl. conductivity and malleability'); b-iii Pb2+ discharged at cathode (2m)=1.58C; b-ii half-equation=1.59C; b-i solid ionic non-conduction=1.56C (C-variant, electrolysis context). Electrolysis cluster = 4m as secondaries."
+  },
+  {
+   "qid": "70f2533c-1cb4-4f3d-ac74-9ae89ca97bf6",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q5",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary_point": "4CH1-2.1",
+   "secondary_points": [
+    "4CH1-2.4C",
+    "4CH1-1.35C",
+    "4CH1-1.34C",
+    "4CH1-2.44"
+   ],
+   "primary_topic_code": "4CH1-S2-a",
+   "secondary_topics": [
+    "4CH1-S1-e",
+    "4CH1-S2-h"
+   ],
+   "grounding": "Group 1 metals: a-i observations Li+water (2m) + b-i K more vigorous (1m)=2.1 (3m); b-ii why K more reactive (3m)=2.4C; c-i gas volume rtp (3m)=1.35C; c-ii neutralisation conc calc (3m)=1.34C; a-ii hydrogen test=2.44. Four 3m blocks tie -> framing tie-break: stem 'This question is about Group 1 metals and their reactions' -> 2.1."
+  },
+  {
+   "qid": "e64d9eee-10d9-4b04-8a30-70bddc59bc31",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q6",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary_point": "4CH1-4.8",
+   "secondary_points": [
+    "4CH1-3.14C",
+    "4CH1-3.7C",
+    "4CH1-3.11",
+    "4CH1-3.13"
+   ],
+   "primary_topic_code": "4CH1-S4-b",
+   "secondary_topics": [
+    "4CH1-S3-b",
+    "4CH1-S3-a"
+   ],
+   "grounding": "Ethane and ethene: a (4m) fractional distillation of crude oil=4.8 (largest single mark block); b-i pressure/rate explain=3.11, b-iii other way=3.10-family; b-ii catalyst=3.13; b-iv reaction profile=3.14C; c bond energies=3.7C. Secondaries cap 4 by first-code determinism among the remaining substantively assessed points (3.7C 3m, 3.14C 3m, 3.11 2m, 3.13 2m; 3.10's 1m dropped as same-family lower block)."
+  },
+  {
+   "qid": "4c0290b3-160c-4d5f-a475-cae47d44f50b",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q7",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary_point": "4CH1-4.33C",
+   "secondary_points": [
+    "4CH1-1.30",
+    "4CH1-3.20C",
+    "4CH1-3.22C",
+    "4CH1-4.36C"
+   ],
+   "primary_topic_code": "4CH1-S4-e",
+   "secondary_topics": [
+    "4CH1-S1-e",
+    "4CH1-S3-c",
+    "4CH1-S4-f"
+   ],
+   "grounding": "Fermentation + hydration equilibrium + esters: a-i/ii/iii (4m)=4.33C (fermentation conditions, dominant); a-iv %yield=1.30; b-i equilibrium features=3.20C; b-ii heated yield shift=3.22C; c-ii carboxylic acid test=4.36C; c-i ester formulae=4.41C (2m, dropped by first-code determinism among five 2m secondaries). Note: draft stem empty (known stem-chrome family); parts+MPs ground the mapping."
+  }
+ ],
+ "rows": [
+  {
+   "qid": "92817c46-8103-4d2c-9f32-bd61636320a1",
+   "ref": "4ch0-2c-201701#q1",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary": {
+    "code": "4CH1-S1-b",
+    "node_id": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "title": "Elements, compounds and mixtures"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S2-h",
+     "node_id": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+     "via_point": "2.44"
+    },
+    {
+     "code": "4CH1-S2-b",
+     "node_id": "f0abc392-9772-4209-ab50-a5aa543c2113",
+     "via_point": "2.5"
+    },
+    {
+     "code": "4CH1-S2-e",
+     "node_id": "d1ce73ed-1fec-4ad7-a15b-e55b05296c6c",
+     "via_point": "2.23C"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-1.8",
+     "node_id": "af7ab033-e4c9-46a3-83f6-85f3132e63fd",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-2.44",
+     "node_id": "4fc3fe2b-1a41-4f46-bbda-d33dede40a85",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-2.5",
+     "node_id": "d7537df6-77c8-4bb7-a5fc-f6797670c6cb",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-2.23C",
+     "node_id": "12b3e69f-4a46-4e13-999f-58e1cda95742",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "446d4493-a93e-46e0-a6ad-188cddadf50c",
+   "ref": "4ch0-2c-201701#q2",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary": {
+    "code": "4CH1-S1-d",
+    "node_id": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+    "title": "The Periodic Table"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S2-g",
+     "node_id": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+     "via_point": "2.38"
+    },
+    {
+     "code": "4CH1-S2-c",
+     "node_id": "496e5679-bd4c-4a07-aa47-42696b850d63",
+     "via_point": "2.11"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-1.20",
+     "node_id": "025e6120-7179-45ae-a4c0-9b9d988735ad",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-2.38",
+     "node_id": "c7cdd580-3785-4f02-8d79-a08094f3ccd8",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-2.11",
+     "node_id": "34fd50c9-1b72-4bdb-93a9-1c69643ae0a9",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "09572e94-7566-4fa7-b212-838006fff268",
+   "ref": "4ch0-2c-201701#q3",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary": {
+    "code": "4CH1-S2-d",
+    "node_id": "b42b8847-3d7e-4273-b8b2-d584e46824c9",
+    "title": "Reactivity series"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S1-e",
+     "node_id": "23751488-285f-47af-8013-8c0901b842cd",
+     "via_point": "1.25"
+    },
+    {
+     "code": "4CH1-S3-b",
+     "node_id": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+     "via_point": "3.10"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-2.16",
+     "node_id": "04cd45ef-71ef-49b3-9067-a47a8b20ed2a",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-2.17",
+     "node_id": "74d7dda8-cee3-4fea-8eb2-f66822eec960",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-2.20",
+     "node_id": "b005e815-090f-4b63-bc58-ebd99a08edd3",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.25",
+     "node_id": "d2fd8349-37e8-46a8-ba45-fc865ad75a83",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-3.10",
+     "node_id": "6cfa689d-2618-46bd-a905-427f96bc98ea",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "e6e072de-39b7-4cf2-bc41-9a5c6d8e4142",
+   "ref": "4ch0-2c-201701#q4",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary": {
+    "code": "4CH1-S2-h",
+    "node_id": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+    "title": "Chemical tests"
+   },
+   "secondaries": [],
+   "qsp_points": [
+    {
+     "code": "4CH1-2.48",
+     "node_id": "3fd984a3-10a4-4e75-9746-92a9c6918564",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-2.47",
+     "node_id": "89e4e005-5831-437d-a271-3004462f00f1",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "15b149e1-1083-45e5-87c4-51d20540312c",
+   "ref": "4ch0-2c-201701#q5",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary": {
+    "code": "4CH1-S1-f",
+    "node_id": "dcc1c814-b133-4d01-a28e-fe0a3be934b4",
+    "title": "Ionic bonding"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S1-g",
+     "node_id": "843338a7-8c02-4adf-bfe2-e0aa753416b7",
+     "via_point": "1.46"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-1.42",
+     "node_id": "83a40e5f-6fa2-4c95-8d0f-86c2092b12a8",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-1.40",
+     "node_id": "db9602a5-0e96-485a-aa34-1a3b4cf174a9",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.46",
+     "node_id": "04d8ba70-8132-43b3-86ce-bf4c04f34bbf",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.47",
+     "node_id": "a309f51b-2b8b-4faf-a7c8-325daa224718",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "18bfc2aa-8863-4c14-8930-1259e9fe4884",
+   "ref": "4ch0-2c-201701#q6",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary": {
+    "code": "4CH1-S3-a",
+    "node_id": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+    "title": "Energetics"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S4-e",
+     "node_id": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+     "via_point": "4.33C"
+    },
+    {
+     "code": "4CH1-S2-h",
+     "node_id": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+     "via_point": "2.44"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-3.2",
+     "node_id": "41017198-687c-4395-a080-d289367fe34b",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-3.7C",
+     "node_id": "6b98e809-034e-471e-8f78-5ea6bcc142c0",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-4.33C",
+     "node_id": "952f6194-e2e7-42cf-877e-aecc09f0b747",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-3.3",
+     "node_id": "6a61d88f-b8a6-40f1-8ac4-abf99eb5f84a",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-2.44",
+     "node_id": "4fc3fe2b-1a41-4f46-bbda-d33dede40a85",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "243ff061-dccd-405d-8ded-9abda03c29fe",
+   "ref": "4ch0-2c-201701#q7",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary": {
+    "code": "4CH1-S1-e",
+    "node_id": "23751488-285f-47af-8013-8c0901b842cd",
+    "title": "Chemical formulae, equations and calculations"
+   },
+   "secondaries": [],
+   "qsp_points": [
+    {
+     "code": "4CH1-1.30",
+     "node_id": "67108e9f-e714-4317-8284-51a848788103",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-1.29",
+     "node_id": "ce1fcaa8-f82c-4028-9bea-17165f1143e7",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.35C",
+     "node_id": "982b6030-d642-4dea-9a88-090b49bcc347",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.31",
+     "node_id": "a5819120-7c66-48f7-93d4-b027d3eb5ccc",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "3b8d77a1-13c1-4c1f-9e69-0ace6a2c6e9d",
+   "ref": "4ch0-2c-201701#q8",
+   "ing_code": "ING-4CH02CJANUARY2017",
+   "ing_node_id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "primary": {
+    "code": "4CH1-S3-c",
+    "node_id": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+    "title": "Reversible reactions and equilibria"
+   },
+   "secondaries": [],
+   "qsp_points": [
+    {
+     "code": "4CH1-3.20C",
+     "node_id": "7c922c66-9a1b-43bf-9897-e53cce5d3d8a",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-3.19C",
+     "node_id": "a3d4429b-d3d6-4479-8b2e-89e320709e06",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-3.22C",
+     "node_id": "af6c7b1a-f95d-4f9a-9832-22c17af08854",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "3964d161-3a1b-4686-be7b-440a669fe69d",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q1",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary": {
+    "code": "4CH1-S1-b",
+    "node_id": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "title": "Elements, compounds and mixtures"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S1-d",
+     "node_id": "5d968157-ff9c-448d-ad56-807c02e3f96b",
+     "via_point": "1.18"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-1.8",
+     "node_id": "af7ab033-e4c9-46a3-83f6-85f3132e63fd",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-1.18",
+     "node_id": "5af86f1c-3be9-4f98-88be-403cbe7cb932",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.22",
+     "node_id": "cf625ef1-6fd8-4e46-b6b9-ca52237f71ca",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "9c405867-5244-474b-9dbe-fe8f084e093d",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q2",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary": {
+    "code": "4CH1-S1-b",
+    "node_id": "92e3fa7c-971d-4a76-a6e3-31513551ce2f",
+    "title": "Elements, compounds and mixtures"
+   },
+   "secondaries": [],
+   "qsp_points": [
+    {
+     "code": "4CH1-1.11",
+     "node_id": "2d894f21-30c1-4965-908d-58bdd6241e35",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-1.12",
+     "node_id": "563cda4c-e7f0-4f56-b3e3-66a787dd00e3",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.13",
+     "node_id": "a56da376-dd56-41fb-be44-93b58e4259be",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "693beb81-61fd-4ca2-abc6-0b4b7ebd3c6c",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q3",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary": {
+    "code": "4CH1-S2-g",
+    "node_id": "554a8835-3d71-4c35-9cc7-44ab9aaea8c6",
+    "title": "Acids, bases and salt preparations"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S1-e",
+     "node_id": "23751488-285f-47af-8013-8c0901b842cd",
+     "via_point": "1.28"
+    },
+    {
+     "code": "4CH1-S2-h",
+     "node_id": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+     "via_point": "2.48"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-2.41C",
+     "node_id": "90fb4c7d-163f-4472-9e80-ac4f1a4d01f1",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-1.28",
+     "node_id": "656385a4-6ca8-4378-bc13-d2c476de1085",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.34C",
+     "node_id": "1781c3c9-e8d1-4e93-921b-210ff6030fae",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-2.48",
+     "node_id": "3fd984a3-10a4-4e75-9746-92a9c6918564",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "5605232d-bc69-42a6-8f0c-cc8999ecaa58",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q4",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary": {
+    "code": "4CH1-S1-h",
+    "node_id": "176a69ea-c780-4110-8e6a-43c3f54b148a",
+    "title": "Metallic bonding"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S1-i",
+     "node_id": "3ee18ff8-7c92-4019-8b6d-3dd2f4c92cdf",
+     "via_point": "1.58C"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-1.54C",
+     "node_id": "aa79bee5-71cd-444a-9047-f90ef4144a85",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-1.58C",
+     "node_id": "a53e30be-04e9-4f77-bb85-d87c295fe85a",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.59C",
+     "node_id": "35d12a6c-3373-4b92-aea6-e278c54a409d",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.56C",
+     "node_id": "fe1f8d28-3bf5-481a-a3d3-e2496ce4064e",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "70f2533c-1cb4-4f3d-ac74-9ae89ca97bf6",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q5",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary": {
+    "code": "4CH1-S2-a",
+    "node_id": "a2c82ad0-1d81-4a1e-9e98-1f59fb0b9567",
+    "title": "Group 1 (alkali metals) \u2013 lithium, sodium and potassium"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S1-e",
+     "node_id": "23751488-285f-47af-8013-8c0901b842cd",
+     "via_point": "1.35C"
+    },
+    {
+     "code": "4CH1-S2-h",
+     "node_id": "352dec69-2785-4a03-a00f-eb8e6f644b47",
+     "via_point": "2.44"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-2.1",
+     "node_id": "ebd7685f-e52c-4e29-a951-6df03a98026d",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-2.4C",
+     "node_id": "283baaa6-7f00-4d83-b8f8-43ed4cee0b78",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.35C",
+     "node_id": "982b6030-d642-4dea-9a88-090b49bcc347",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-1.34C",
+     "node_id": "1781c3c9-e8d1-4e93-921b-210ff6030fae",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-2.44",
+     "node_id": "4fc3fe2b-1a41-4f46-bbda-d33dede40a85",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "e64d9eee-10d9-4b04-8a30-70bddc59bc31",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q6",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary": {
+    "code": "4CH1-S4-b",
+    "node_id": "b970a094-cc2f-4b90-8add-e5f0029a0d48",
+    "title": "Crude oil"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S3-b",
+     "node_id": "a9ea76ff-9326-4121-8b4b-d4144d4b901f",
+     "via_point": "3.14C"
+    },
+    {
+     "code": "4CH1-S3-a",
+     "node_id": "3226cc1a-feff-4f2c-b7b4-4a5b786442de",
+     "via_point": "3.7C"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-4.8",
+     "node_id": "cb159456-5236-4893-b8fc-59ec8864edd7",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-3.14C",
+     "node_id": "8b33a9d8-90d4-4474-9136-a2643fbd0527",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-3.7C",
+     "node_id": "6b98e809-034e-471e-8f78-5ea6bcc142c0",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-3.11",
+     "node_id": "09598df0-8d10-4cd7-ac21-4afed0847977",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-3.13",
+     "node_id": "76e4df7a-c030-49f2-8c47-293c9deeeb6d",
+     "role": "SECONDARY"
+    }
+   ]
+  },
+  {
+   "qid": "4c0290b3-160c-4d5f-a475-cae47d44f50b",
+   "ref": "4ch1/past-papers/2020-01/4ch1-2CR#q7",
+   "ing_code": "ING-4CH12CRJANUARY2020",
+   "ing_node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "primary": {
+    "code": "4CH1-S4-e",
+    "node_id": "80f733e8-4c6b-478e-ad5a-8622f92be9d0",
+    "title": "Alcohols"
+   },
+   "secondaries": [
+    {
+     "code": "4CH1-S1-e",
+     "node_id": "23751488-285f-47af-8013-8c0901b842cd",
+     "via_point": "1.30"
+    },
+    {
+     "code": "4CH1-S3-c",
+     "node_id": "a0e51768-6645-4ddd-9b76-b163c0b68f8e",
+     "via_point": "3.20C"
+    },
+    {
+     "code": "4CH1-S4-f",
+     "node_id": "1ad8a619-151b-4995-b83b-64832a963c95",
+     "via_point": "4.36C"
+    }
+   ],
+   "qsp_points": [
+    {
+     "code": "4CH1-4.33C",
+     "node_id": "952f6194-e2e7-42cf-877e-aecc09f0b747",
+     "role": "PRIMARY"
+    },
+    {
+     "code": "4CH1-1.30",
+     "node_id": "67108e9f-e714-4317-8284-51a848788103",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-3.20C",
+     "node_id": "7c922c66-9a1b-43bf-9897-e53cce5d3d8a",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-3.22C",
+     "node_id": "af6c7b1a-f95d-4f9a-9832-22c17af08854",
+     "role": "SECONDARY"
+    },
+    {
+     "code": "4CH1-4.36C",
+     "node_id": "569f1d21-a048-4bf7-b3b0-e9e5b42e37a9",
+     "role": "SECONDARY"
+    }
+   ]
+  }
+ ]
+}

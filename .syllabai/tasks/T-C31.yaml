@@ -1,0 +1,75 @@
+version: 1
+task:
+  id: T-C31
+  title: "Serving-emptiness observability — distinguish the three empty-causes on the teacher content search path (T-C23 recorded ticket candidate)"
+  owner: "superz (main agent, zai session web-98866c45-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  priority: P3
+  base:
+    repo: syllabai-core
+    commit: fc07389 (main at claim)
+  basis: "T-C23 recorded ticket candidate 'serving-emptiness observability (all three
+    empty-causes return identical 200+[])' + operator directive trace 1a0e680dc0ac32a9
+    ('Proceed with (1)')"
+  scope:
+    allowed:
+      - "core: on the EMPTY path of the teacher content search only — diagnostic
+        stage-funnel counts (docs in scope / at current embed_rev / VALIDATED) +
+        a machine-readable empty-cause classification (SCOPE_UNRESOLVED /
+        EMBED_REV_EMPTY / VALIDATION_GATE_EMPTY / INTERSECTION_EMPTY / UNEXPECTED),
+        logged structured + returned as an ADDITIVE optional response field"
+      - "unit tests for the cause classification matrix (one test per cause, plus
+        the non-empty path emits nothing extra)"
+    forbidden:
+      - "no serving-semantics change — empty stays empty; the T-C20
+        unvalidated_content_must_not_serve boundary is untouched (this labels WHY
+        a result is empty, never changes WHAT is empty)"
+      - "no non-empty-path cost — happy path runs exactly the queries it runs today"
+      - "no web/contract breaking change — additive optional field only; web UI
+        surfacing is a follow-up, not this task"
+      - "no production writes; no learner KA-RAG arm changes (registered follow-up)"
+  discipline: "claim-first registered BEFORE any code (S145 lesson); PR branch
+    observability/t-c31-empty-cause off main; local-verified (JDK 25 + Maven
+    user-space rebuild after sandbox rollback) before push; core-ci green to merge"
+  executed:
+    - "implemented on core branch observability/t-c31-empty-cause (commit 0cdba4b):
+      SearchEmptyCause (6 labels) + SearchEmptyDiagnostics 4-stage funnel
+      (chunksInScope -> embeddedInScope -> inScopeAtRev -> servingEligible,
+      empty-path-only, happy path unchanged test-asserted) +
+      ChunkVectorRepository.diagnoseEmpty with the servingEligible count running
+      the EXACT searchServingEligible WHERE via shared SCOPE_EXISTS_VALIDATED
+      fragment (drift-guarded by test) + ContentDocumentController.search emitting
+      the additive X-Search-Empty-Cause header + structured log on empty only;
+      JSON body stays a bare array (wire-compatible, no web caller today)"
+    - "verification: 15 new unit tests (matrix 7 / SQL drift-guard + bind order 5 /
+      controller header-path behavior 3); full unit suite green locally (JDK
+      25.0.4.1 / Maven 3.9.11 user-space rebuild — the sandbox rollback had wiped
+      ~/.m2 and the 09-17 toolchain); PR #29 opened, core-ci run 36383641469
+      SUCCESS on the branch"
+  boundaries_respected:
+    - "T-C20 untouched: an empty result stays empty on every cause — the gate is
+      only NAMED, never changed; no serving-semantics change of any kind"
+    - "T-C07: diagnostics never run unscoped; null scope hard-rejected"
+    - "no production writes; learner KA-RAG arm instrumentation = registered
+      follow-up, not this task"
+  merge: "operator/owner lane — PR #29 is ready on a green CI; merge and deploy
+    per the normal lane"
+  closeout:
+    merged: "PR #29 MERGED per operator directive 'merge PR #29' (trace
+      1a0e6aa4c3efe9d5) — merge commit d4e0f7a on core main (2026-09-28T06:23:59Z),
+      house-style title 'merge: T-C31 serving-emptiness observability — empty-cause
+      label for the teacher documents search (PR #29)'"
+    pre_merge_gates: "trust-but-verify before the merge: CI re-verified live on head
+      0cdba4b (build SUCCESS, check-run 108804367098); local git merge-tree CLEAN
+      vs the advanced main 2f11707 (identity rate-limit + card-boundary test lanes
+      landed after PR open — no content conflict); locks.yaml empty, no conflicting
+      claim; 8-file scope audit: no migrations, no validation endpoint, no card
+      surface (operator red lines 1a0e6753792f76fd held)"
+    outcome: "T-C23's three-identical-200+[] gap closed on main — every empty teacher
+      documents search now names WHY via the additive X-Search-Empty-Cause header
+      + structured 4-stage funnel log; serving semantics and the happy path are
+      byte-identical; T-C20 gate named-not-changed"
+    follow_ups:
+      - "web UI surfacing of the empty-cause label (additive, when a web caller exists)"
+      - "learner KA-RAG arm instrumentation (registered follow-up)"
+      - "resolveActive N+1 (~340 per-node reads per search) — T-C23 ticket 2"

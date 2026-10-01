@@ -1,0 +1,100 @@
+name: ops-embed-backfill-r6
+
+# R6 AT-FLIP embed artifact (the r6 card-flip generation, 2026-09-28): the same
+# production-shaped EmbedBackfill runner, pinned core sha = main at the freeze
+# (05f262169 — carries the §8(d) substrate wiring c91372c+64c71ff+670423a+b45b5d6),
+# pointed at the R6 staged inputs snapshot-r6 (= snap-005, the r6 card-flip freeze:
+# 295 card-wave up-flips + 3 FLAG decisions, 350 notes chunks join, records
+# ab600e18f1) + gold-r6 (= gold-v4, class files byte-identical to gold-v3,
+# re-paired to snap-005, records c8ae9e6c1c). The staged preload-r6 is
+# production-derived (4,181/4,181 chunk vectors mirrored SELECT-only incl. the
+# notes-axis chunks — all gemini-embedding-001@768, float4 identity) — expected:
+# 0 chunk API calls, 120 gold query embeddings fresh. Benchmark-only; manual
+# dispatch only. Operator-directed at-flip recorded run (AT_FLIP_RUNBOOK.md
+# trigger A; the operator's own review sheet sha256 89c07146… applied verbatim
+# via content_review_audit run a5d13c0a…, trace 1a0e702ed9960375).
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Embedding model (dimension-compatible with vector(768))"
+        default: "gemini-embedding-001"
+      min_interval_ms:
+        description: "Min interval between embedding calls (ms)"
+        default: "600"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: bench
+          POSTGRES_PASSWORD: bench
+          POSTGRES_DB: postgres
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U bench"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - name: Checkout records repo (frozen inputs)
+        uses: actions/checkout@v4
+        with:
+          path: records
+
+      - name: Checkout core (runner code, pinned sha)
+        uses: actions/checkout@v4
+        with:
+          repository: SyllabAI/syllabai-core
+          ref: 05f2621690843123758fe271bdfcacae9b4ed220
+          path: core
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Cache Maven repo
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: embed-backfill-m2-r6-${{ hashFiles('core/pom.xml') }}
+          restore-keys: embed-backfill-m2-r6-
+
+      - name: Build classpath
+        working-directory: core
+        run: mvn -B -ntp -q test-compile dependency:build-classpath -Dmdep.outputFile=../cp.txt
+
+      - name: Run embedding backfill (production provider path)
+        working-directory: core
+        env:
+          BENCH_JDBC_URL: jdbc:postgresql://localhost:5433/postgres
+          BENCH_JDBC_USER: bench
+          BENCH_JDBC_PASSWORD: bench
+          BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot-r6
+          BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold-r6
+          BENCH_PRELOAD_ARTIFACT: ${{ github.workspace }}/records/bench/inputs/embeddings/preload-r6
+          BENCH_RUN_OUT: ${{ github.workspace }}/embed-out-r6
+          BENCH_CORE_COMMIT: 05f2621690843123758fe271bdfcacae9b4ed220
+          BENCH_RUN_DATE: "2026-09-28"
+          SYLLABAI_EMBEDDING_GEMINI_API_KEY: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEY }}
+          SYLLABAI_EMBEDDING_GEMINI_API_KEYS: ${{ secrets.SYLLABAI_EMBEDDING_GEMINI_API_KEYS }}
+          EMBED_MODEL: ${{ inputs.model }}
+          EMBED_MIN_INTERVAL_MS: ${{ inputs.min_interval_ms }}
+        run: java -Xmx2g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.EmbedBackfill
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: embed-backfill-snap-005-r6
+          path: embed-out-r6/
+          retention-days: 90
+

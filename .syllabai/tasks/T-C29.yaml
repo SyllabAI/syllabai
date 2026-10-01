@@ -1,0 +1,96 @@
+version: 1
+task:
+  id: T-C29
+  title: "Phase 2 step 3 residue — MasteryMap learner chips + PapersView detail scoping consume the T-C28 contract"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: DONE
+  priority: P1
+  base:
+    repo: syllabai-web
+    commit: 390feaa9e272ddfabde39e46d283e0f9120eea3c
+  scope:
+    allowed:
+      - "src/lib/types.ts: additive mirrors of the T-C28 core contract —
+        LearnerNodeWithStateView.applicability? (SpecPointApplicability | null,
+        verbatim passthrough of NodeWithStateView.applicability) and
+        ExamPaperQuestionMeta.specPoints? (SpecPointRef[], shared projection
+        shape)"
+      - "MasteryMap.tsx NodeDetailCard: 'Official assessment scope' section for
+        nodes whose payload carries applicability (demo honest pattern — chips
+        via scopeChips + printed rule note; absent -> no section); MasteryBar /
+        graph / explorer modes untouched (other agent's fresh v75 lane)"
+      - "PapersView.tsx PaperRow: paper-level 'Official assessment scope'
+        summary (union of chips across the detail payload's question refs +
+        honest mapped-question count) and per-question code+chip rows;
+        refCount > 0 with zero applicability-bearing refs -> the T-C25 honest
+        footnote; no refs at all -> render nothing"
+      - "src/lib/applicability.ts stays the ONE owner — consumers import
+        scopeChips; no new presentation logic in the views"
+    forbidden:
+      - "touching syllabai-core / syllabai-demo / syllabai-resources (the
+        contract is CONSUMED as merged in T-C28, core 7063e61)"
+      - "inventing or deriving applicability client-side — render only what
+        the payload carries, honest absence everywhere"
+      - "editing the v75 kg-explorer engine/layout or MasteryMap's
+        tree/graph/explorer modes (adapter + view-file additions only)"
+      - "changing ExamQuestionsView / ConceptGraphView (T-C25 landed them) or
+        the papers list columns / filter semantics"
+  dependencies:
+    - T-C28 # learner payloads serve applicability + specPoints (core 7063e61)
+    - T-C25 # applicability.ts + honest-controls pattern established
+  shared_resources:
+    - core-web-contract   # consumer lease (coordinated policy)
+  notes:
+    - "until the operator-gated seed activation backfills the 182 4CH1
+      applicability maps, both fields arrive empty/null — every new surface
+      honestly omits (the T-C25 footnote path)"
+    - "forensic note for the next agent: MasteryMap.tsx displays as
+      'const ode, setMode]' in shell tool output because the display layer
+      swallows the '[m' substring (ANSI artifact) — the bytes are
+      'const [mode, setMode]'; do NOT 'fix' it"
+  outcome:
+    commit: c49fefa
+    merge: 9c9ab6b
+    ci: "web-ci build SUCCESS + Vercel preview SUCCESS on c49fefa (PR #9)"
+    scope: "types.ts additive mirrors (LearnerNodeWithStateView.applicability?,
+      ExamPaperQuestionMeta.specPoints?); MasteryMap NodeDetailCard scope
+      section; PapersView PaperRow summary + per-question chips; scopeChips
+      stays the one owner; 3 files +104/-1; zero core/demo/resources edits"
+  evidence:
+    - "PR SyllabAI/syllabai-web#9 -> web-ci build SUCCESS + Vercel preview
+      SUCCESS on c49fefa; merged as 9c9ab6b; local main synced; branch deleted;
+      Vercel production picks it up on the main push"
+    - "coordination claim-first commit e69f57c (web base 390feaa); no
+      concurrent coordination pushes to reconcile"
+  claims:
+    VERIFIED:
+      - "both new surfaces render ONLY from the payload (scopeChips is the
+        single presentation owner; zero client-side derivation)"
+      - "honest absence enforced: no applicability on a node -> no section;
+        no refs on a paper -> nothing; refs without applicability -> the
+        T-C25 backfill footnote (all three paths compile-checked; runtime
+        rendering verified post-backfill by the joint sweep)"
+      - "local gates: eslint clean, next build green (Turbopack + TypeScript)"
+      - "v75 kg-explorer engine/layout and MasteryMap tree/graph/explorer
+        modes untouched; ExamQuestionsView/ConceptGraphView untouched"
+    INFERRED:
+      - "production learner KG / papers payloads come from the core deploy of
+        7063e61; until the operator-gated seed activation backfills the 182
+        4CH1 applicability maps, the surfaces render their honest-absent
+        paths in production"
+    REPORTED:
+      - "Vercel production deployment triggered by the main push"
+    UNVERIFIED:
+      - "production rendering against live core payloads (post-deploy sweep —
+        auth-gated learner endpoints need a session token; same
+        next_safe_action as T-C25/T-C28)"
+  next_safe_actions:
+    - "operator-gated seed activation on core (the 'applicability present on
+      182 spec-point node(s)' backfill log line) — activates every Phase 2
+      surface at once"
+    - "joint post-deploy read-only prod sweep (auth-gated): learner KG
+      applicability probe + papers-detail specPoints probe on a 4CH1 surface"
+  closeout:
+    commit: c49fefa
+    merge: 9c9ab6bce4c642c22c97f9e5d2aaa3faae20c66c
+    ci: "https://github.com/SyllabAI/syllabai-web/pull/9"

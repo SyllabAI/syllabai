@@ -37,6 +37,9 @@ SyllabAI is a syllabus-grounded adaptive learning platform for IGCSE/IAL exam pr
 - `backlog/learning-evidence-feature-addendum.tsv`: committed feature-tracker addendum for F-055/F-056/F-057/F-058/F-059 and their integrations; folded into the master workbook in session 17 (2026-09-07) as decision notes and priority updates — it remains the detailed supplement, not a competing inventory.
 - `backlog/recommendation-system-feature-addendum.tsv`: committed feature-tracker addendum for the learning-first recommendation architecture; folded into the master workbook in session 17 (2026-09-07) as decision notes and priority updates — it remains the detailed supplement, not a competing inventory.
 - `backlog/mock-exam-generator-feature-addendum.tsv`: committed feature-tracker addendum extending F-051 with F-171…F-176; folded into the master workbook in session 18 (2026-09-08: F-051 updated in place, six rows appended, TSV/XLSX parity 181=181) — it remains the detailed supplement, not a competing inventory.
+- `docs/research/SUBJECT_INTELLIGENCE_BUILD_V1.md`: proposed cross-subject Subject Intelligence Build (SIB-1.0) protocol; one notebook per subject/qualification context; standardized research families and generation order.
+- `docs/research/SIB_ARTIFACT_SCHEMA_V1.md`: proposed research-artifact metadata, provenance, temporal-scope, chunking and runtime-eligibility contract.
+- `docs/research/SIB_NOTEBOOKLM_PROMPTS_V1.md`: proposed reusable NotebookLM master, family, QA and final-audit prompts; prompts are standardized across subjects and applicability is manifest-driven.
 
 ## Repositories
 
@@ -46,12 +49,15 @@ The current repository set is:
 |---|---|
 | `syllabai` | this pack — spec, ADRs, backlog, research, papers |
 | `syllabai-core` | Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith (all domain modules) |
-| `syllabai-web` | Next.js 16 / React 19 / TypeScript frontend (Vercel) |
-| `syllabai-parser` | polyglot offline content pipeline (opendataloader-pdf in-process; MinerU/Surya offline) |
+| `syllabai-hub` | **Product frontend** (ADR-029, promoted from syllabai-demo 2026-09-28): per-subject Learning Hubs, grounded tutor + CLA through core proxies, 4CH1 real learner-model bridge, teacher workspace; live at `syllabai-hub.vercel.app` (Next.js 16 / React 19 / TypeScript / Vercel) |
+| `syllabai-web` | Internal teacher/ops console (demoted per ADR-029; Smart Mark / marking queue home; product-surface development frozen; Next.js 16 / React 19 / TypeScript / Vercel) |
+| `syllabai-demo` | Frozen prototype playground (per ADR-029); its pre-promotion corpus/UX waves were ported to the hub by tranche 4.3 |
+| `syllabai-parser` | polyglot offline content pipeline (opendataloader-pdf in-process; GLM-OCR Markdown/QP-MS tooling; MinerU/Surya/anydoc/pdf-inspector adapters **deferred** behind the DocumentParser port — corrected 2026-10-01 per the parser README, audit F-10) |
 | `Past-Papers` | public official-content corpus repo for IAL/IGCSE Edexcel QP/MS PDFs + GLM-OCR markdown corpora (`paper 1` / `paper 2` = 4CH1 papers 1C/2C × 41 sessions, QP+MS pairs, MANIFEST.json provenance); raw staging feeding `syllabai-pastpapers`; no application code |
 | `syllabai-resources` | public content-ops corpus repo: 112 SME IGCSE Chemistry revision notes with spec-point mappings (T-C09 graph-as-code + T-C10, 209/209 HUMAN_VALIDATED), 4CH1 specification md/PDF, PMT Edexcel IGCSE Chemistry resources, Student-Book OCR runbook + pilot, KG build scripts |
 | `syllabai-pastpapers` | public canonical past-papers corpus, charter-governed (README = charter): normalized Edexcel IGCSE/IAL/GCE QP/MS under `past-papers/pearson-edexcel/` with per-paper `manifest.yaml` (identity, SHA-256, provenance) + `_quarantine/`; **data layer for the Past Papers feature — students/teachers access official QPs and mark schemes**; ingestion reports + acquisition plans at root |
 | `syllabai-teacher-workbench` | public teacher validation workbench: staged decision importer, evidence packs, release/verification tooling; Vercel readonly mirror mode |
+| `syllabai-ops` | public automation & ops repo: dashboard refresh + Discord pulse via GitHub Actions (public account: Actions minutes are free here); Drive mirror + monitor tooling *(row added 2026-10-01 — documentation accuracy audit F-8; it was the only repo missing from this table)* |
 
 Domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live **inside `syllabai-core`** as strongly-separated packages and graduate to repositories only when a genuine runtime/lifecycle boundary appears.
 

@@ -1,0 +1,4309 @@
+{
+ "archived_at": "2026-09-25T16:58:30Z",
+ "paper_code": "4CH1/1C",
+ "session_label": "January 2021",
+ "ep_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+ "counts": {
+  "exam_papers": 1,
+  "questions": 11,
+  "question_versions": 11,
+  "question_parts": 60,
+  "mark_schemes": 10,
+  "mark_points": 37,
+  "question_topics": 0,
+  "question_spec_points": 0,
+  "question_options": 0,
+  "glm_ocr_bridge_records": 1,
+  "content_review_audit_refs": 0,
+  "teacher_validation_event_refs": 0
+ },
+ "rows": {
+  "exam_papers": [
+   {
+    "id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "subject_id": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+    "title": "4CH1/1C January 2021",
+    "board": "Edexcel",
+    "qualification": "unknown",
+    "unit": null,
+    "session_label": "January 2021",
+    "paper_code": "4CH1/1C",
+    "question_paper_document_id": "54b5290d-b775-5306-9e06-b9b14b1e47ff",
+    "mark_scheme_document_id": "d6a975b2-c1eb-5359-bd77-f0ccbd6e950d",
+    "validation_state": "SUGGESTED",
+    "provenance": "PAST_PAPER",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_by": null,
+    "created_at": "2026-09-14 11:39:39.861704+00:00",
+    "series": "JAN",
+    "year": 2021
+   }
+  ],
+  "questions": [
+   {
+    "id": "7d7bcc48-0999-4d86-9e46-0218552d7ce0",
+    "external_ref": "q01-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about states of matter.",
+    "marks": 6,
+    "difficulty": 3,
+    "expected_time_seconds": 540,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.862140+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "6dfe9b7f-6535-4ee5-a8ff-8a8caa96f8b4",
+    "external_ref": "q02-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "The table gives the melting and boiling points of four pure substances, W, X, Y and Z.",
+    "marks": 5,
+    "difficulty": 3,
+    "expected_time_seconds": 450,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.863210+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "4839af83-a813-4141-acfb-27030e274cd9",
+    "external_ref": "q03-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "Lead nitrate and potassium iodide react to form the insoluble solid lead iodide. Crystals of lead nitrate and potassium iodide are placed at opposite ends of a container of water. Solid lead iodide forms after several minutes. The diagram shows the container at the start and after several minutes. After several minutes",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.864163+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "632ce8d5-449a-4c14-996a-97b677922a1f",
+    "external_ref": "q04-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about rusting.",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.865100+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "4153fea6-6cf7-454b-b779-9c058258414a",
+    "external_ref": "q05-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about the separation of mixtures.",
+    "marks": 10,
+    "difficulty": 3,
+    "expected_time_seconds": 900,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.865973+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "5ef7f86b-59bc-4a0f-9254-aa27e5b14e2a",
+    "external_ref": "q06-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about salts.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.866751+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "4d03167c-7b3e-4546-987c-a1b846db9b95",
+    "external_ref": "q07-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about lithium oxide.",
+    "marks": 13,
+    "difficulty": 3,
+    "expected_time_seconds": 1170,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.867510+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "47d88d66-e222-4d2a-a1d1-256d4aba2a54",
+    "external_ref": "q08-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about the halogens.",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.868049+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "aba4bd1a-60f2-4a1b-9310-3d21544f2036",
+    "external_ref": "q09-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "Propane is a hydrocarbon with the formula $ \\mathrm{C_{3} H_{8}} $ (a) State why propane is a hydrocarbon.",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.868754+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "6eaf6dd6-e565-4653-9c46-a812e374fff1",
+    "external_ref": "q10-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about alkanes.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.869298+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   },
+   {
+    "id": "0ba73e47-5ddd-4a2d-a20d-6fbe9bb996fd",
+    "external_ref": "q11-d805de1c",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about reactions that form gases.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "primary_topic_node_id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 11:39:39.869794+00:00",
+    "exam_paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "difficulty_source": null
+   }
+  ],
+  "question_versions": [
+   {
+    "id": "4809a405-7414-44ce-b80f-249d3376ebb3",
+    "question_id": "7d7bcc48-0999-4d86-9e46-0218552d7ce0",
+    "version": 1,
+    "stem": "This question is about states of matter.",
+    "marks": 6,
+    "difficulty": 3,
+    "expected_time_seconds": 540,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.862712+00:00"
+   },
+   {
+    "id": "9193ee44-0fc7-4dc3-a5e8-d2707304fae9",
+    "question_id": "6dfe9b7f-6535-4ee5-a8ff-8a8caa96f8b4",
+    "version": 1,
+    "stem": "The table gives the melting and boiling points of four pure substances, W, X, Y and Z.",
+    "marks": 5,
+    "difficulty": 3,
+    "expected_time_seconds": 450,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.863715+00:00"
+   },
+   {
+    "id": "810439ff-9447-455e-98a8-3e2455186bbe",
+    "question_id": "4839af83-a813-4141-acfb-27030e274cd9",
+    "version": 1,
+    "stem": "Lead nitrate and potassium iodide react to form the insoluble solid lead iodide. Crystals of lead nitrate and potassium iodide are placed at opposite ends of a container of water. Solid lead iodide forms after several minutes. The diagram shows the container at the start and after several minutes. After several minutes",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.864693+00:00"
+   },
+   {
+    "id": "ca59f6a5-8d55-432f-895a-f6c15562560d",
+    "question_id": "632ce8d5-449a-4c14-996a-97b677922a1f",
+    "version": 1,
+    "stem": "This question is about rusting.",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.865505+00:00"
+   },
+   {
+    "id": "97f9c8e6-17ef-4eb0-9546-04a4316ab0f3",
+    "question_id": "4153fea6-6cf7-454b-b779-9c058258414a",
+    "version": 1,
+    "stem": "This question is about the separation of mixtures.",
+    "marks": 10,
+    "difficulty": 3,
+    "expected_time_seconds": 900,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.866332+00:00"
+   },
+   {
+    "id": "814e23e6-1db7-44b2-9c34-42dfa0b6de26",
+    "question_id": "5ef7f86b-59bc-4a0f-9254-aa27e5b14e2a",
+    "version": 1,
+    "stem": "This question is about salts.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.45,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.867180+00:00"
+   },
+   {
+    "id": "9076973f-ec33-44b9-9613-d5717f6553e5",
+    "question_id": "4d03167c-7b3e-4546-987c-a1b846db9b95",
+    "version": 1,
+    "stem": "This question is about lithium oxide.",
+    "marks": 13,
+    "difficulty": 3,
+    "expected_time_seconds": 1170,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.867746+00:00"
+   },
+   {
+    "id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "question_id": "47d88d66-e222-4d2a-a1d1-256d4aba2a54",
+    "version": 1,
+    "stem": "This question is about the halogens.",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.868330+00:00"
+   },
+   {
+    "id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "question_id": "aba4bd1a-60f2-4a1b-9310-3d21544f2036",
+    "version": 1,
+    "stem": "Propane is a hydrocarbon with the formula $ \\mathrm{C_{3} H_{8}} $ (a) State why propane is a hydrocarbon.",
+    "marks": 12,
+    "difficulty": 3,
+    "expected_time_seconds": 1080,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.869055+00:00"
+   },
+   {
+    "id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "question_id": "6eaf6dd6-e565-4653-9c46-a812e374fff1",
+    "version": 1,
+    "stem": "This question is about alkanes.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.45,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.869552+00:00"
+   },
+   {
+    "id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "question_id": "0ba73e47-5ddd-4a2d-a20d-6fbe9bb996fd",
+    "version": 1,
+    "stem": "This question is about reactions that form gases.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "extraction_confidence": 0.45,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.870026+00:00"
+   }
+  ],
+  "question_parts": [
+   {
+    "id": "43be733e-12b4-484e-8733-36dbc3825743",
+    "question_version_id": "4809a405-7414-44ce-b80f-249d3376ebb3",
+    "label": "a",
+    "prompt": "Use the words solid, liquid or gas to give the initial and final state of matter for each of the changes listed in the table. The first one has been done for you.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.884522+00:00"
+   },
+   {
+    "id": "97cea9a0-53fc-4e87-8e93-bd7445d7c3fc",
+    "question_version_id": "4809a405-7414-44ce-b80f-249d3376ebb3",
+    "label": "b",
+    "prompt": "Particles in a solid are closely packed, arranged in a regular pattern and vibrate about fixed positions. Describe the arrangement and movement of the particles in a gas.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.884598+00:00"
+   },
+   {
+    "id": "f47f5ce5-a30b-4867-9d67-d44b57258ad4",
+    "question_version_id": "9193ee44-0fc7-4dc3-a5e8-d2707304fae9",
+    "label": "a",
+    "prompt": "Which substance is a gas at 100 $ ^{\\circ} \\mathrm{C} $? A W B X C Y D Z",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.884634+00:00"
+   },
+   {
+    "id": "4a2611cc-0237-4d51-a29f-5845a3ff585c",
+    "question_version_id": "9193ee44-0fc7-4dc3-a5e8-d2707304fae9",
+    "label": "a-ii",
+    "prompt": "Which substance is a liquid for the largest range of temperature? A W B X C Y D Z",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.884653+00:00"
+   },
+   {
+    "id": "dea121b2-11d3-4fca-98d6-c1af3cac6eeb",
+    "question_version_id": "9193ee44-0fc7-4dc3-a5e8-d2707304fae9",
+    "label": "a-iii",
+    "prompt": "Which substance is a liquid at 1000 $ ^{\\circ} \\mathrm{C} $ and a gas at 2000 $ ^{\\circ} \\mathrm{C} $? A W B X C Y D Z",
+    "command_word": null,
+    "marks": 1,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.884668+00:00"
+   },
+   {
+    "id": "fbe7ab8a-8caa-4988-ae67-feb7a8a000f3",
+    "question_version_id": "9193ee44-0fc7-4dc3-a5e8-d2707304fae9",
+    "label": "b",
+    "prompt": "Substance Y does not conduct electricity when solid but does conduct electricity when molten. Give the type of bonding in substance Y.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 11:39:39.884684+00:00"
+   },
+   {
+    "id": "ccc89da3-d3d5-4cca-9dc5-3e040bbc96bc",
+    "question_version_id": "9193ee44-0fc7-4dc3-a5e8-d2707304fae9",
+    "label": "c",
+    "prompt": "Suggest how the melting point of a pure substance changes when an impurity is added.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 11:39:39.884696+00:00"
+   },
+   {
+    "id": "d8e0a32f-32f9-49e5-8f55-476bd8cd1eda",
+    "question_version_id": "810439ff-9447-455e-98a8-3e2455186bbe",
+    "label": "a",
+    "prompt": "Name the two processes that occur before the solid lead iodide forms.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.884711+00:00"
+   },
+   {
+    "id": "a99f2ec2-30ed-407c-a674-28f073eb1d80",
+    "question_version_id": "810439ff-9447-455e-98a8-3e2455186bbe",
+    "label": "b",
+    "prompt": "Explain why solid lead iodide takes less time to form when the reaction is repeated using water at a higher temperature.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.884722+00:00"
+   },
+   {
+    "id": "d9223487-3fb2-432d-842d-9b199e808ffb",
+    "question_version_id": "810439ff-9447-455e-98a8-3e2455186bbe",
+    "label": "c",
+    "prompt": "The formula for lead nitrate is $ \\mathrm{P b ( N O_{3} )_{2}} $ (i) Give the number of different elements in lead nitrate.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.884736+00:00"
+   },
+   {
+    "id": "5d024a51-d1ee-4a14-b2a4-4f0b33138751",
+    "question_version_id": "810439ff-9447-455e-98a8-3e2455186bbe",
+    "label": "c-ii",
+    "prompt": "Give the charge on the lead ion in $ \\mathrm{P b ( N O_{3} )_{2}} $",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 11:39:39.884745+00:00"
+   },
+   {
+    "id": "e43c8362-1340-4fc5-8aa2-ea4fe28dfbc7",
+    "question_version_id": "810439ff-9447-455e-98a8-3e2455186bbe",
+    "label": "d",
+    "prompt": "Complete the chemical equation for the reaction between lead nitrate and potassium iodide. $\\mathrm {P b} \\left(\\mathrm {N O} _ {3}\\right) _ {2} (\\mathrm {a q}) + \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\mathrm {K I} (\\mathrm {a q}) \\rightarrow \\mathrm {P b I} _ {2} (\\mathrm {s}) + \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\mathrm {K N O} _ {3} (\\mathrm {a q})$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 11:39:39.884754+00:00"
+   },
+   {
+    "id": "d105581f-a9a3-4e42-9609-f328b5ba91a4",
+    "question_version_id": "ca59f6a5-8d55-432f-895a-f6c15562560d",
+    "label": "a",
+    "prompt": "When iron rusts, it reacts with oxygen in the air. A student uses the rusting of iron to find the percentage of oxygen in a sample of air. The diagram shows the apparatus. These are the student's results. volume of air in conical flask and connecting tube $ = 2 6 5 \\mathrm{c m}^{3} $ volume of air in gas syringe at start = 100 $ cm^{3} $ volume of air in gas syringe at end = 25 $ cm^{3} $ Calculate the percentage of oxygen in the sample of air using the student's results.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.884781+00:00"
+   },
+   {
+    "id": "5ed3bca1-35da-4856-82aa-339d0b9fe1ab",
+    "question_version_id": "ca59f6a5-8d55-432f-895a-f6c15562560d",
+    "label": "b",
+    "prompt": "Cars are painted to prevent the iron in car bodies from rusting. Explain how painting prevents the iron in car bodies from rusting.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.884809+00:00"
+   },
+   {
+    "id": "4824ec7e-be10-413c-b27c-1304678e2fcf",
+    "question_version_id": "ca59f6a5-8d55-432f-895a-f6c15562560d",
+    "label": "b-ii",
+    "prompt": "Some car manufacturers use paint containing tiny particles of zinc. Explain how particles of zinc prevent iron in car bodies from rusting even when this paint is scratched.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.884821+00:00"
+   },
+   {
+    "id": "0b7dbcb1-aaa4-495c-a174-d46298e335d1",
+    "question_version_id": "97f9c8e6-17ef-4eb0-9546-04a4316ab0f3",
+    "label": "a",
+    "prompt": "The box gives some methods used to separate mixtures. Complete the table by giving the correct method from the box for each separation. Each method can be used once, more than once or not at all.",
+    "command_word": null,
+    "marks": 4,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.884835+00:00"
+   },
+   {
+    "id": "964bfc45-61a0-4d85-8d66-596a26ffc5f4",
+    "question_version_id": "97f9c8e6-17ef-4eb0-9546-04a4316ab0f3",
+    "label": "b",
+    "prompt": "A student uses chromatography to analyse the composition of purple ink. The diagram shows the student's chromatogram at the end of the experiment.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.884856+00:00"
+   },
+   {
+    "id": "7a83fa74-2b4c-4f3b-860d-40a63e7b24a6",
+    "question_version_id": "97f9c8e6-17ef-4eb0-9546-04a4316ab0f3",
+    "label": "b-i",
+    "prompt": "Explain which dyes are contained in the purple ink.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.884869+00:00"
+   },
+   {
+    "id": "faf6d3b9-d85b-44c7-aebc-17bb19daa47e",
+    "question_version_id": "97f9c8e6-17ef-4eb0-9546-04a4316ab0f3",
+    "label": "b-ii",
+    "prompt": "Explain which dye is least soluble in the solvent.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 11:39:39.884884+00:00"
+   },
+   {
+    "id": "ca802636-7c4c-4f92-bd16-d1fd8bd7df32",
+    "question_version_id": "97f9c8e6-17ef-4eb0-9546-04a4316ab0f3",
+    "label": "c",
+    "prompt": "A different chromatography experiment is set up. A spot of food colouring is placed on the start line. A food dye in the colouring has an $ R_{f} $ value of 0.72 The distance between the start line and the solvent front is 120mm. Calculate the distance the food dye moves from the start line.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 11:39:39.884899+00:00"
+   },
+   {
+    "id": "b12a0691-6c91-4d2d-99c4-02158145356c",
+    "question_version_id": "814e23e6-1db7-44b2-9c34-42dfa0b6de26",
+    "label": "a",
+    "prompt": "When solutions of salts are mixed together, precipitates sometimes form. The insoluble salt barium carbonate forms as a precipitate when solutions of the soluble salts ammonium carbonate and barium chloride react together. When solutions of the soluble salts potassium chloride and magnesium sulfate are mixed, no precipitate forms. Complete the table to show the results of mixing solutions of some soluble salts.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.884918+00:00"
+   },
+   {
+    "id": "b0dedae8-a12a-4167-9ccd-998d73131b97",
+    "question_version_id": "814e23e6-1db7-44b2-9c34-42dfa0b6de26",
+    "label": "b",
+    "prompt": "A student has four unlabelled beakers, each containing a colourless solution of a different salt. The four solutions are potassium chloride potassium carbonate potassium iodide sodium chloride Describe a method to identify each solution. Do not refer to safety in your answer.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.884933+00:00"
+   },
+   {
+    "id": "cbf0245b-a8bb-4cae-84da-9723dda03021",
+    "question_version_id": "9076973f-ec33-44b9-9613-d5717f6553e5",
+    "label": "a",
+    "prompt": "The diagram shows the electron configurations of an atom of lithium and an atom of oxygen. oxygen Describe the changes in electronic configuration when lithium and oxygen react to form lithium oxide, $ \\mathrm{L i_{2} O} $",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.884947+00:00"
+   },
+   {
+    "id": "b2bf9cb7-e446-401d-8615-6f2c003e0769",
+    "question_version_id": "9076973f-ec33-44b9-9613-d5717f6553e5",
+    "label": "b",
+    "prompt": "Lithium oxide reacts with water to form lithium hydroxide as the only product. A scientist uses this apparatus to measure the temperature change of the reaction. This is the scientist's method. pour 100g of water into a polystyrene cup record the temperature of the water add the lithium oxide and stir the mixture record the maximum temperature reached The diagram shows the thermometer readings before and after adding the lithium oxide.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.884960+00:00"
+   },
+   {
+    "id": "b053ae27-1f09-4793-a79b-81f6150618db",
+    "question_version_id": "9076973f-ec33-44b9-9613-d5717f6553e5",
+    "label": "b-i",
+    "prompt": "Complete the table, giving all values to the nearest 0.1 $ ^{\\circ} \\mathrm{C}. $",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.884970+00:00"
+   },
+   {
+    "id": "2765a6c6-78d6-4db7-a79d-c6fe2ee60346",
+    "question_version_id": "9076973f-ec33-44b9-9613-d5717f6553e5",
+    "label": "b-ii",
+    "prompt": "Calculate the heat energy change in the reaction. Give your answer to two significant figures. $[ \\mathrm {c} = 4. 2 \\mathrm {J} / \\mathrm {g} / ^ {\\circ} \\mathrm {C} ]$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 11:39:39.884978+00:00"
+   },
+   {
+    "id": "c80b0440-288d-43cb-a1b5-a0ab2d9c47d4",
+    "question_version_id": "9076973f-ec33-44b9-9613-d5717f6553e5",
+    "label": "b-iii",
+    "prompt": "In another experiment the scientist obtains these results. Calculate the molar enthalpy change $ (\\Delta H) $ in kJ/mol. Include a sign in your answer.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 11:39:39.884989+00:00"
+   },
+   {
+    "id": "87e80ee0-2a9d-4917-b691-3313dddf9da8",
+    "question_version_id": "9076973f-ec33-44b9-9613-d5717f6553e5",
+    "label": "b-iv",
+    "prompt": "Give a reason why the scientist does the experiment in a polystyrene cup.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 11:39:39.884997+00:00"
+   },
+   {
+    "id": "8d81a41d-a98b-47c8-be0a-b7e1e581eb0f",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "label": "a",
+    "prompt": "The table gives some information about the halogens. Complete the table by predicting the physical state of astatine at room temperature and the colour of astatine.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.885010+00:00"
+   },
+   {
+    "id": "9cc5e60a-8280-45c8-a93b-391a5db9c3fb",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "label": "b",
+    "prompt": "Bromine has two isotopes with mass numbers 79 and 81",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.885027+00:00"
+   },
+   {
+    "id": "a737ad50-944a-4e0f-ae43-36540c31e8a0",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "label": "b-i",
+    "prompt": "The relative percentages of each isotope in a sample of bromine are $\\mathrm {bromine} - 7 9 = 5 1. 0 \\%$ bromine-81=49.0% Calculate the relative atomic mass of this sample of bromine. Give your answer to one decimal place.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.885035+00:00"
+   },
+   {
+    "id": "031ed7e1-7053-48b6-9ffb-d3b484819fca",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "label": "b-ii",
+    "prompt": "Give a reason why both isotopes of bromine have the same chemical properties.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 11:39:39.885044+00:00"
+   },
+   {
+    "id": "0dd55843-80c0-4bd3-b764-469a20357c1d",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "label": "c",
+    "prompt": "A student investigates the reactivity of some halogens. She uses these solutions of halogens and their halides. bromine, chlorine and iodine sodium bromide, sodium chloride and sodium iodide She adds each halogen solution to each halide solution. The table shows her results.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 11:39:39.885058+00:00"
+   },
+   {
+    "id": "d5a0cfd7-bc26-4676-9f57-39b2a1f94117",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "label": "c-i",
+    "prompt": "Explain how these results show the order of reactivity of bromine, chlorine and iodine.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 11:39:39.885072+00:00"
+   },
+   {
+    "id": "de0434d6-0f0c-4307-afa1-3cb02b11a19b",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "label": "c-ii",
+    "prompt": "Suggest why the student does not need to add bromine solution to sodium bromide solution.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 11:39:39.885082+00:00"
+   },
+   {
+    "id": "66ab8351-9e1a-47ee-9fc7-1d0846bdaff9",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "label": "c-iii",
+    "prompt": "The ionic equation for the reaction between bromine and sodium iodide is $\\mathrm {B r} _ {2} (\\mathrm {a q}) + 2 \\mathrm {I} ^ {-} (\\mathrm {a q}) \\rightarrow \\mathrm {I} _ {2} (\\mathrm {a q}) + 2 \\mathrm {B r} ^ {-} (\\mathrm {a q})$ Explain why this is a redox reaction.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 11:39:39.885092+00:00"
+   },
+   {
+    "id": "7f8e2982-cff6-406d-8dfc-7b7717ad66d1",
+    "question_version_id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "label": "b",
+    "prompt": "Name the poisonous gas that forms when propane is burned in a limited supply of air.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.885109+00:00"
+   },
+   {
+    "id": "0f88e6a0-be0b-4351-b42e-99760c8e20ab",
+    "question_version_id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "label": "b-ii",
+    "prompt": "State why this gas is poisonous to humans.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.885120+00:00"
+   },
+   {
+    "id": "3ab73e08-4a2b-456e-9c27-ce154c85e433",
+    "question_version_id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "label": "c",
+    "prompt": "The diagram represents a molecule of propane. Describe the forces of attraction between the atoms in a molecule of propane.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.885133+00:00"
+   },
+   {
+    "id": "3365a8de-3b24-4992-826f-94839bef10ff",
+    "question_version_id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "label": "d",
+    "prompt": "Propane can be produced by cracking. An equation for cracking is $\\mathrm {C} _ {1 3} \\mathrm {H} _ {2 8} \\rightarrow \\mathrm {C} _ {3} \\mathrm {H} _ {8} + 2 \\mathrm {C} _ {3} \\mathrm {H} _ {6} + 2 \\mathrm {C} _ {2} \\mathrm {H} _ {4}$ Explain why cracking is an important process in the oil industry.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 11:39:39.885143+00:00"
+   },
+   {
+    "id": "3aa6bed0-dea4-4653-b756-a4ad669139df",
+    "question_version_id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "label": "e",
+    "prompt": "Propane reacts with bromine in the presence of ultraviolet radiation.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 11:39:39.885151+00:00"
+   },
+   {
+    "id": "8e0ef727-6eb4-4f41-aa49-1c0c5f818fe3",
+    "question_version_id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "label": "e-i",
+    "prompt": "Complete the equation for this reaction. $\\mathrm {C} _ {3} \\mathrm {H} _ {8} + \\mathrm {B r} _ {2} \\rightarrow$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 11:39:39.885171+00:00"
+   },
+   {
+    "id": "a20e7ece-9c90-4d0a-a8da-67c5a09410b6",
+    "question_version_id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "label": "e-ii",
+    "prompt": "Give the name of this type of reaction.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 11:39:39.885184+00:00"
+   },
+   {
+    "id": "9e552421-d1c8-449c-b5e1-f6e4a1d1f1d8",
+    "question_version_id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "label": "a",
+    "prompt": "The graph shows the boiling points of several unbranched alkanes. $\\mathrm {i n} ^ {\\circ} \\mathrm {C}$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.885198+00:00"
+   },
+   {
+    "id": "29ae504e-ecf1-458e-a324-0a062d137ee7",
+    "question_version_id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "label": "a-i",
+    "prompt": "Draw a curve of best fit.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.885209+00:00"
+   },
+   {
+    "id": "a87a9cdb-c94c-4ada-9d34-20a18f3a8d7d",
+    "question_version_id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "label": "a-ii",
+    "prompt": "Use the graph to find the boiling point of the alkane with 7 carbon atoms in its molecule. Show on the graph how you obtain your answer.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.885220+00:00"
+   },
+   {
+    "id": "cbff4325-2b90-4dfe-8d25-00c3f78fd897",
+    "question_version_id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "label": "a-iii",
+    "prompt": "Explain the trend shown by the graph.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 11:39:39.885231+00:00"
+   },
+   {
+    "id": "a2c9fe1a-5c15-4b15-b95e-bff9aba8d73d",
+    "question_version_id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "label": "b",
+    "prompt": "The diagram represents two isomers with the formula $ \\mathrm{C}_{5} \\mathrm{H}_{1 2} $ H Explain why these compounds are isomers.",
+    "command_word": null,
+    "marks": 2,
+    "ordering": 4,
+    "created_at": "2026-09-14 11:39:39.885244+00:00"
+   },
+   {
+    "id": "7fa1231d-08c1-4310-b3b7-bc7dea8de3bc",
+    "question_version_id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "label": "c",
+    "prompt": "An alkane contains 82.8% carbon and 17.2% hydrogen by mass. Show by calculation that the empirical formula of this alkane is $ C_{2} H_{5} $",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 11:39:39.885256+00:00"
+   },
+   {
+    "id": "ca1db398-8b02-4194-b5be-acbcd635a45e",
+    "question_version_id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "label": "c-ii",
+    "prompt": "Deduce the molecular formula of this alkane.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 11:39:39.885267+00:00"
+   },
+   {
+    "id": "e5f68db1-dd8b-4186-8fb8-7041e6e3e261",
+    "question_version_id": "384984ba-a2ae-437d-962a-fc5e16f98f3f",
+    "label": "d",
+    "prompt": "The equation for the complete combustion of one mole of an alkane can be represented by $\\mathrm {a l k a n e} + \\mathrm {Z O} _ {2} \\rightarrow \\mathrm {X C O} _ {2} + \\mathrm {Y H} _ {2} \\mathrm {O}$ Complete combustion of one mole of the alkane produces 308 g of carbon dioxide and 144 g of water. X, Y and Z are the numbers used to balance the equation. Calculate the values of X, Y and Z. [M $ _{r} $ of $ CO_{2}=4 4 $ , M $ _{r} $ of $ H_{2}O=1 8 $ ]",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 11:39:39.885277+00:00"
+   },
+   {
+    "id": "3d2a7a94-b450-422c-9616-7f89f957e094",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "a",
+    "prompt": "Hydrogen peroxide decomposes to form water and oxygen. The equation for the reaction is $2 \\mathrm {H} _ {2} \\mathrm {O} _ {2} \\rightarrow 2 \\mathrm {H} _ {2} \\mathrm {O} + \\mathrm {O} _ {2}$ 25. 0 $ cm^{3} $ of hydrogen peroxide solution are poured into a conical flask and 1.00 g of solid manganese(IV) oxide is added. Bubbles of oxygen gas are formed.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 11:39:39.885290+00:00"
+   },
+   {
+    "id": "294d437f-1dd5-4ba6-905a-33d13573ea42",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "a-i",
+    "prompt": "Give the test for oxygen gas.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 11:39:39.885304+00:00"
+   },
+   {
+    "id": "95d12bb4-559d-4119-ae6b-203c0b82aa03",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "a-ii",
+    "prompt": "Describe a method to show that solid manganese(IV) oxide is a catalyst in this reaction and not a reactant.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 11:39:39.885313+00:00"
+   },
+   {
+    "id": "156a43d2-0296-4574-b76a-3cfe69831c5e",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "b",
+    "prompt": "A student uses this apparatus to investigate the rate of the reaction between zinc and an excess of dilute hydrochloric acid. This is the student's method. pour $ 5 0 \\mathrm{c m}^{3} $ of dilute hydrochloric acid into a conical flask add about 1.2g of zinc lumps record the volume of hydrogen gas collected every 30s until no more hydrogen is collected The graph shows the student's results.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 11:39:39.885322+00:00"
+   },
+   {
+    "id": "fb031044-6dbe-496c-9cf3-8cdffc0f6090",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "b-i",
+    "prompt": "Calculate the mean (average) rate of reaction, in $ cm^{3}/s $ , in the first 120 s. $\\mathrm {c m} ^ {3} / \\mathrm {s}$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 11:39:39.885330+00:00"
+   },
+   {
+    "id": "2a4ba181-1824-402f-be31-d6ee82a85747",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "b-ii",
+    "prompt": "The equation for the reaction between zinc and hydrochloric acid is $\\mathrm {Z n} (\\mathrm {s}) + 2 \\mathrm {H C l} (\\mathrm {a q}) \\rightarrow \\mathrm {Z n C l} _ {2} (\\mathrm {a q}) + \\mathrm {H} _ {2} (\\mathrm {g})$ Use this equation and the particle collision theory to explain why the rate of reaction is greatest at the start of the reaction.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 11:39:39.885339+00:00"
+   },
+   {
+    "id": "1a58dfe7-d2e1-4514-9c56-8a8f5e591ab1",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "b-iii",
+    "prompt": "The student repeats the experiment at a higher temperature but keeps all other conditions the same. On the grid, draw the curve you would expect to see in this experiment. Question continues on next page",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 11:39:39.885347+00:00"
+   },
+   {
+    "id": "5a54d1aa-556c-4270-ba6f-afe6ad118330",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "b-iv",
+    "prompt": "Explain why the rate of reaction is greater if the same mass of zinc powder is used instead of zinc lumps. All other conditions are kept the same.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 7,
+    "created_at": "2026-09-14 11:39:39.885378+00:00"
+   },
+   {
+    "id": "a0317ca7-d5e3-48e5-93f4-2d988c9b9a0c",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "label": "c",
+    "prompt": "In another experiment, the student adds 0.55 g of zinc to a solution containing $ 2. 5 0 \\times1 0^{-2} $ moles of hydrochloric acid. Use the equation to show that hydrochloric acid is in excess. $\\mathrm {Z n} (\\mathrm {s}) + 2 \\mathrm {H C l} (\\mathrm {a q}) \\rightarrow \\mathrm {Z n C l} _ {2} (\\mathrm {a q}) + \\mathrm {H} _ {2} (\\mathrm {g})$ [ $ A_{\\mathrm{r}} $ of Zn=65] $(\\mathrm {T o t a l f o r Q u e s t i o n 1 1 = 1 5 m a r k s})$ $\\mathrm {T O T A L F O R P A P E R} = 1 1 0 \\mathrm {M A R K S}$",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 8,
+    "created_at": "2026-09-14 11:39:39.885390+00:00"
+   }
+  ],
+  "mark_schemes": [
+   {
+    "id": "f96a632c-3ae1-48c5-8b3e-29d98d551af5",
+    "question_version_id": "4809a405-7414-44ce-b80f-249d3376ebb3",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.870987+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "798c1754-1492-4134-830a-d6de2c67a9fc",
+    "question_version_id": "9193ee44-0fc7-4dc3-a5e8-d2707304fae9",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.871444+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "886ac060-4e92-4b7a-9b39-ac2b395454fc",
+    "question_version_id": "810439ff-9447-455e-98a8-3e2455186bbe",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.871846+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "f79c1e7e-8bea-48ff-a902-5505af9df755",
+    "question_version_id": "ca59f6a5-8d55-432f-895a-f6c15562560d",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.872284+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "08397bdb-ca90-4c7f-85d7-6efb96d811e8",
+    "question_version_id": "97f9c8e6-17ef-4eb0-9546-04a4316ab0f3",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.872732+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "6dbc2037-a81a-4a26-993b-f8cc54cfd92b",
+    "question_version_id": "814e23e6-1db7-44b2-9c34-42dfa0b6de26",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.873115+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "b667997b-af7f-47a0-85a9-419b05a6dd7f",
+    "question_version_id": "9076973f-ec33-44b9-9613-d5717f6553e5",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.873545+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "a3eda9e9-1700-4fd5-b3d7-988b4f8b3df3",
+    "question_version_id": "e54c0d0d-f2f0-4bab-8ecb-39f05435e214",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.873933+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_version_id": "81e027f2-f8da-422f-beb5-7a61cc41b72b",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.874227+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "09fa8089-f0aa-458e-b352-791182e32c9d",
+    "question_version_id": "111b0204-7e92-42b0-95df-d5aba18a7ec4",
+    "version_label": "1",
+    "source_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 11:39:39.870452+00:00",
+    "general_guidance": null
+   }
+  ],
+  "mark_points": [
+   {
+    "id": "0c193a2f-18ff-4e78-9c76-12334886aa8e",
+    "mark_scheme_id": "f96a632c-3ae1-48c5-8b3e-29d98d551af5",
+    "question_part_id": "43be733e-12b4-484e-8733-36dbc3825743",
+    "ref": "1-a",
+    "ordering": 0,
+    "text": "Start\nsolid\nsolid\ngas\nliquid",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.885930+00:00"
+   },
+   {
+    "id": "acec0ce3-fd2d-4110-9053-c987f3891c54",
+    "mark_scheme_id": "f96a632c-3ae1-48c5-8b3e-29d98d551af5",
+    "question_part_id": "97cea9a0-53fc-4e87-8e93-bd7445d7c3fc",
+    "ref": "1-b",
+    "ordering": 1,
+    "text": "A description that refers to any three of the following pointsM1 irregular/random arrangement(of particles)M2 large gaps between them/far apart/widely spacedM3 random movement/move freelyM4 move(very) quickly\n6 marks",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.885980+00:00"
+   },
+   {
+    "id": "aeed078d-d32e-44b7-a7ed-b5e3c12b1a5a",
+    "mark_scheme_id": "798c1754-1492-4134-830a-d6de2c67a9fc",
+    "question_part_id": null,
+    "ref": "2-a-i",
+    "ordering": 0,
+    "text": "A",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886053+00:00"
+   },
+   {
+    "id": "2ba8c8ba-3416-4311-9336-7bb531b948c7",
+    "mark_scheme_id": "798c1754-1492-4134-830a-d6de2c67a9fc",
+    "question_part_id": "4a2611cc-0237-4d51-a29f-5845a3ff585c",
+    "ref": "2-a-ii",
+    "ordering": 1,
+    "text": "B",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886147+00:00"
+   },
+   {
+    "id": "49b94d74-c1ba-405a-bfec-3de731267ce9",
+    "mark_scheme_id": "798c1754-1492-4134-830a-d6de2c67a9fc",
+    "question_part_id": "dea121b2-11d3-4fca-98d6-c1af3cac6eeb",
+    "ref": "2-a-iii",
+    "ordering": 2,
+    "text": "C",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886250+00:00"
+   },
+   {
+    "id": "b05398b0-f2d3-4982-9c52-fd2a782dd60d",
+    "mark_scheme_id": "798c1754-1492-4134-830a-d6de2c67a9fc",
+    "question_part_id": "fbe7ab8a-8caa-4988-ae67-feb7a8a000f3",
+    "ref": "2-b",
+    "ordering": 3,
+    "text": "ionic",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886295+00:00"
+   },
+   {
+    "id": "42ec6d50-3942-4ea4-8c2d-7b6d3536bada",
+    "mark_scheme_id": "798c1754-1492-4134-830a-d6de2c67a9fc",
+    "question_part_id": "ccc89da3-d3d5-4cca-9dc5-3e040bbc96bc",
+    "ref": "2-c",
+    "ordering": 4,
+    "text": "the (impure) substance will melt over a range of temperatures\n5 marks",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886343+00:00"
+   },
+   {
+    "id": "db22c34b-6bec-4e3c-bd05-18d863ea093b",
+    "mark_scheme_id": "886ac060-4e92-4b7a-9b39-ac2b395454fc",
+    "question_part_id": null,
+    "ref": "3-a-i",
+    "ordering": 0,
+    "text": "M1 dissolvingM2 diffusion",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886418+00:00"
+   },
+   {
+    "id": "c10af0ab-baf3-4a1c-8536-f9a61bc259f0",
+    "mark_scheme_id": "886ac060-4e92-4b7a-9b39-ac2b395454fc",
+    "question_part_id": null,
+    "ref": "3-b-i",
+    "ordering": 1,
+    "text": "An explanation that links any two of the following pointsM1 crystals dissolve fasterM2(potassium iodide/lead nitrate/water) particles move faster/(lead/iodide) ions move faster/rate of diffusion increasesM3 therefore(lead and iodide) ions/particles meet/collide after a shorter period of time/sooner",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886464+00:00"
+   },
+   {
+    "id": "2eddebb5-f05a-4429-af2d-9e865ae80fd1",
+    "mark_scheme_id": "886ac060-4e92-4b7a-9b39-ac2b395454fc",
+    "question_part_id": "e43c8362-1340-4fc5-8aa2-ea4fe28dfbc7",
+    "ref": "3-d",
+    "ordering": 2,
+    "text": "Pb(NO3)2(aq)+2KI(aq)\u2192PbI2(s)+2KNO3(aq)\n7 marks",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886543+00:00"
+   },
+   {
+    "id": "9d80fff5-f748-43d4-a42f-d65e59a719d6",
+    "mark_scheme_id": "f79c1e7e-8bea-48ff-a902-5505af9df755",
+    "question_part_id": "d105581f-a9a3-4e42-9609-f328b5ba91a4",
+    "ref": "4-a",
+    "ordering": 0,
+    "text": "Example calculation",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886601+00:00"
+   },
+   {
+    "id": "00fc9073-29a1-491d-b070-aebe8b1c36e0",
+    "mark_scheme_id": "f79c1e7e-8bea-48ff-a902-5505af9df755",
+    "question_part_id": null,
+    "ref": "4-b-i",
+    "ordering": 1,
+    "text": "M1 paint provides a barrier\n7 marks",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886648+00:00"
+   },
+   {
+    "id": "72f9b32f-a5c1-4089-b2e2-fa347eadf2b3",
+    "mark_scheme_id": "08397bdb-ca90-4c7f-85d7-6efb96d811e8",
+    "question_part_id": "0b7dbcb1-aaa4-495c-a174-d46298e335d1",
+    "ref": "5-a",
+    "ordering": 0,
+    "text": "Method\nfiltration\nsimple distillationor fractional distillation\nfractional distillation\ncrystallisation",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886707+00:00"
+   },
+   {
+    "id": "36056184-b8ba-4db9-abcd-53c7a5c2fb94",
+    "mark_scheme_id": "08397bdb-ca90-4c7f-85d7-6efb96d811e8",
+    "question_part_id": "7a83fa74-2b4c-4f3b-860d-40a63e7b24a6",
+    "ref": "5-b-i",
+    "ordering": 1,
+    "text": "M1A and B\nM2 because they are the same height/moved the same distance up the paper/have the sameRfvalues as the spots in the purple ink\nM1D",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886757+00:00"
+   },
+   {
+    "id": "bfa9908b-6281-4a83-8955-97fec68b8577",
+    "mark_scheme_id": "08397bdb-ca90-4c7f-85d7-6efb96d811e8",
+    "question_part_id": "faf6d3b9-d85b-44c7-aebc-17bb19daa47e",
+    "ref": "5-b-ii",
+    "ordering": 2,
+    "text": "M2 because the spot is closest to the start line/travelled the least distance(from the start line)/has the lowestRfvalue\n10 marks",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886815+00:00"
+   },
+   {
+    "id": "40c5416d-6681-4281-b22e-194a6978356c",
+    "mark_scheme_id": "6dbc2037-a81a-4a26-993b-f8cc54cfd92b",
+    "question_part_id": "b12a0691-6c91-4d2d-99c4-02158145356c",
+    "ref": "6-a",
+    "ordering": 0,
+    "text": "precipitate of barium carbonate",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886859+00:00"
+   },
+   {
+    "id": "ce894ee7-3b93-4783-b3fb-272221349405",
+    "mark_scheme_id": "b667997b-af7f-47a0-85a9-419b05a6dd7f",
+    "question_part_id": "cbf0245b-a8bb-4cae-84da-9723dda03021",
+    "ref": "7-a",
+    "ordering": 0,
+    "text": "M1 two lithium atoms each lose one electron/give one electron to oxygen",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886907+00:00"
+   },
+   {
+    "id": "9f126e34-f73f-4521-a066-5ce0af180a57",
+    "mark_scheme_id": "b667997b-af7f-47a0-85a9-419b05a6dd7f",
+    "question_part_id": "b053ae27-1f09-4793-a79b-81f6150618db",
+    "ref": "7-b-i",
+    "ordering": 1,
+    "text": "M1(temperature after)=27.7\u2103",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.886956+00:00"
+   },
+   {
+    "id": "1a73992d-0852-4d23-a14c-a0ecfc63d0b4",
+    "mark_scheme_id": "b667997b-af7f-47a0-85a9-419b05a6dd7f",
+    "question_part_id": "c80b0440-288d-43cb-a1b5-a0ab2d9c47d4",
+    "ref": "7-b-iii",
+    "ordering": 2,
+    "text": "Example calculation",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887012+00:00"
+   },
+   {
+    "id": "51fc6073-53e5-48ce-8eb5-047e0a994432",
+    "mark_scheme_id": "b667997b-af7f-47a0-85a9-419b05a6dd7f",
+    "question_part_id": "87e80ee0-2a9d-4917-b691-3313dddf9da8",
+    "ref": "7-b-iv",
+    "ordering": 3,
+    "text": "M3-89.8(kJ/mol)\n13 marks",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887059+00:00"
+   },
+   {
+    "id": "f04be0ce-a921-4f82-b1da-5e6736921ae1",
+    "mark_scheme_id": "a3eda9e9-1700-4fd5-b3d7-988b4f8b3df3",
+    "question_part_id": "8d81a41d-a98b-47c8-be0a-b7e1e581eb0f",
+    "ref": "8-a",
+    "ordering": 0,
+    "text": "M1 solidM2 dark grey/black",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887114+00:00"
+   },
+   {
+    "id": "25e412ff-5f9d-4e58-afcb-820da72676c0",
+    "mark_scheme_id": "a3eda9e9-1700-4fd5-b3d7-988b4f8b3df3",
+    "question_part_id": "a737ad50-944a-4e0f-ae43-36540c31e8a0",
+    "ref": "8-b-i",
+    "ordering": 1,
+    "text": "Example calculationM1(51\u00d779)+(49\u00d781)OR7998M27998\u00f7100M380.0",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887162+00:00"
+   },
+   {
+    "id": "b6d8c781-3885-42fa-8f91-dbd79b232bd2",
+    "mark_scheme_id": "a3eda9e9-1700-4fd5-b3d7-988b4f8b3df3",
+    "question_part_id": "031ed7e1-7053-48b6-9ffb-d3b484819fca",
+    "ref": "8-b-ii",
+    "ordering": 2,
+    "text": "same electron configuration",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887211+00:00"
+   },
+   {
+    "id": "a956d9f5-c16f-4ac4-ae9a-3ed2eeb8ec97",
+    "mark_scheme_id": "a3eda9e9-1700-4fd5-b3d7-988b4f8b3df3",
+    "question_part_id": "d5a0cfd7-bc26-4676-9f57-39b2a1f94117",
+    "ref": "8-c-i",
+    "ordering": 3,
+    "text": "An explanation that links the following three pointsM1 the order of reactivity is chlorine(most), bromine and iodine(least)M2 chlorine(is most reactive because it) displaces bromine and iodine/oxidises bromide and iodide(ions)/reacts with sodium bromide and sodium iodideM3 bromine(is less reactive than chlorine since it) only displaces iodine/only oxidises iodide(ions)/only reacts with sodium iodide",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887252+00:00"
+   },
+   {
+    "id": "bfbd1e5e-98dd-40a2-839e-0c012734ea77",
+    "mark_scheme_id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_part_id": null,
+    "ref": "9-a",
+    "ordering": 0,
+    "text": "M1(propane/it) contains hydrogen and carbon(atoms)",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887323+00:00"
+   },
+   {
+    "id": "55d98539-3ab6-43aa-9fa9-9c2f389e3f7d",
+    "mark_scheme_id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_part_id": null,
+    "ref": "9-b-i",
+    "ordering": 1,
+    "text": "carbon monoxide",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887384+00:00"
+   },
+   {
+    "id": "edc587ed-c7e5-4daf-b1ac-1e9e262c91fc",
+    "mark_scheme_id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_part_id": "3ab73e08-4a2b-456e-9c27-ce154c85e433",
+    "ref": "9-c",
+    "ordering": 2,
+    "text": "M1(strong electrostatic) attraction between(bonding) pair of electrons",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887677+00:00"
+   },
+   {
+    "id": "5854462c-156b-4741-932e-5751274363d1",
+    "mark_scheme_id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_part_id": "3365a8de-3b24-4992-826f-94839bef10ff",
+    "ref": "9-d",
+    "ordering": 3,
+    "text": "An explanation that links the following three points",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887807+00:00"
+   },
+   {
+    "id": "829e72db-ce07-4bd9-b751-49ca73f085c5",
+    "mark_scheme_id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_part_id": "8e0ef727-6eb4-4f41-aa49-1c0c5f818fe3",
+    "ref": "9-e-i",
+    "ordering": 4,
+    "text": "M1C3H7Br",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887871+00:00"
+   },
+   {
+    "id": "ad4bb893-3d97-4484-a0c4-f86612e819ec",
+    "mark_scheme_id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_part_id": "a20e7ece-9c90-4d0a-a8da-67c5a09410b6",
+    "ref": "9-e-ii",
+    "ordering": 5,
+    "text": "substitution",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887919+00:00"
+   },
+   {
+    "id": "fb9b53a4-f6e3-4724-88a0-947037a45bd1",
+    "mark_scheme_id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_part_id": "7f8e2982-cff6-406d-8dfc-7b7717ad66d1",
+    "ref": "9-b",
+    "ordering": 6,
+    "text": "M1 same molecular formula",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.887961+00:00"
+   },
+   {
+    "id": "3b5aa89e-bdf7-43ff-8c6a-77f40c07135c",
+    "mark_scheme_id": "06b5cd48-bb9f-4ad4-a581-6249c0ee9516",
+    "question_part_id": "3365a8de-3b24-4992-826f-94839bef10ff",
+    "ref": "9-d",
+    "ordering": 7,
+    "text": "M1 moles of CO2=7 or X=7\nM2 moles of H2O=8 or Y=8\nM3 balancing number=11 or Z=11",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.888007+00:00"
+   },
+   {
+    "id": "6b9a741e-4cc7-4410-9989-0a3da36cba5b",
+    "mark_scheme_id": "09fa8089-f0aa-458e-b352-791182e32c9d",
+    "question_part_id": "3d2a7a94-b450-422c-9616-7f89f957e094",
+    "ref": "11-a",
+    "ordering": 0,
+    "text": "(i)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.885413+00:00"
+   },
+   {
+    "id": "490ad932-87fb-4720-9653-69d296d3ebfe",
+    "mark_scheme_id": "09fa8089-f0aa-458e-b352-791182e32c9d",
+    "question_part_id": null,
+    "ref": "11-a-iii",
+    "ordering": 1,
+    "text": "",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.5,
+    "created_at": "2026-09-14 11:39:39.885688+00:00"
+   },
+   {
+    "id": "e687a618-7a2a-4150-8a47-25d72e4e5857",
+    "mark_scheme_id": "09fa8089-f0aa-458e-b352-791182e32c9d",
+    "question_part_id": null,
+    "ref": "11-a-iv",
+    "ordering": 2,
+    "text": "M1 greater surface area\nM2 more collisions per unit time/more frequent collisions",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.885770+00:00"
+   },
+   {
+    "id": "c71a292e-0b90-475e-a75d-12a7462ecdf7",
+    "mark_scheme_id": "09fa8089-f0aa-458e-b352-791182e32c9d",
+    "question_part_id": "a0317ca7-d5e3-48e5-93f4-2d988c9b9a0c",
+    "ref": "11-c",
+    "ordering": 3,
+    "text": "M1 $8.46\\times10^{-3}$ mol of zinc\nM2 therefore $1.69\\times10^{-2}$ mol hydrochloric acid needed(which is less than $2.50\\times10^{-2}$ mol)",
+    "marks": 13,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.885830+00:00"
+   },
+   {
+    "id": "ad5677f6-9ab9-451e-9996-b92fbb237888",
+    "mark_scheme_id": "09fa8089-f0aa-458e-b352-791182e32c9d",
+    "question_part_id": "a0317ca7-d5e3-48e5-93f4-2d988c9b9a0c",
+    "ref": "11-c",
+    "ordering": 4,
+    "text": "g of zinc is needed(and there is only 0.55g)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 11:39:39.885878+00:00"
+   }
+  ],
+  "question_topics": [],
+  "question_spec_points": [],
+  "question_options": [],
+  "glm_ocr_bridge_records": [
+   {
+    "id": "1008f17c-54aa-4c89-aefc-f28935e8b4d9",
+    "paper_id": "dbce6727-b3c0-4e3c-8d5b-521593d1512a",
+    "bridge": "glm-ocr-v1",
+    "qp_document_id": "d805de1c-8737-52c5-bc1d-32caedd73004",
+    "ms_document_id": "db3058e7-0c44-56b5-a170-4f5ee9987aad",
+    "qp_document_row_id": "e554c1bc-108e-4160-9f30-d92f1854b000",
+    "ms_document_row_id": "1b6e6ba9-c3a5-4525-b8c0-9614b1123d28",
+    "qp_checksum": "512af760e518e78109995e96666717d92517d3cce8cd23585f0222403453e82b",
+    "ms_checksum": "eaf8b78560e286ca493bb049a3383dae77c22471199ca46156b6d38aa9331b64",
+    "extraction_methods": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "reconciliation_status": "OK",
+    "review_findings": [
+     {
+      "detail": "Q1: QP total 6 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 6,
+      "severity": "qp-only",
+      "questionNumber": "1"
+     },
+     {
+      "detail": "Q2: QP total 5 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 5,
+      "severity": "qp-only",
+      "questionNumber": "2"
+     },
+     {
+      "detail": "Q3: QP total 7 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 7,
+      "severity": "qp-only",
+      "questionNumber": "3"
+     },
+     {
+      "detail": "Q4: QP total 7 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 7,
+      "severity": "qp-only",
+      "questionNumber": "4"
+     },
+     {
+      "detail": "Q5: QP total 10 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 10,
+      "severity": "qp-only",
+      "questionNumber": "5"
+     },
+     {
+      "detail": "Q7: QP total 13 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 13,
+      "severity": "qp-only",
+      "questionNumber": "7"
+     },
+     {
+      "detail": "Q8: QP total 12 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 12,
+      "severity": "qp-only",
+      "questionNumber": "8"
+     },
+     {
+      "detail": "Q9: QP total 12 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 12,
+      "severity": "qp-only",
+      "questionNumber": "9"
+     },
+     {
+      "detail": "Q10: QP total unknown vs MS total unknown (gap)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "gap",
+      "questionNumber": "10"
+     },
+     {
+      "detail": "question numbering gap: expected Q12, got Q25 (content merges into Q11)",
+      "source": "QP_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "3(b)(i): bare integer cell \"11\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "4(b)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "5(b)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "6(a): bare integer cell \"6\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M8 solution turns brown with potassium iodide\nIf this alternative given no M5",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: 9 marks",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "7(b)(i): bare integer cell \"4\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: (ii)(iii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: bromine cannot displace itself / bromine does not react with sodium bromide OWTTE",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M1 bromine is reduced and iodide (ions)/I- is oxidised",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M2 bromine gains electrons and iodide (ions)/I- loses electrons",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: ORM1 bromine gains electrons so is reducedM2 iodide (ions)/I- loses electrons so is oxidised",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "9(b)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: 10(a)(i)(ii)(iii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M1 lines shown on graph",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M2 value correctly read from graph (expected value between 97 and 103\u2103)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: An explanation that links the following three points",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M1 the boiling point increases as the number of carbons/the chain length increases",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M2 because the intermolecular forces (of attraction) get strongerM3 and therefore take more energy to overcome / break",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "9(b): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "9(b): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "11(a): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "11(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "11(a): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "11(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     }
+    ],
+    "qp_draft": {
+     "paper": {
+      "board": "Edexcel",
+      "session": "January 2021",
+      "subject": null,
+      "duration": null,
+      "examDate": "Monday 11 January 2021",
+      "logNumber": null,
+      "qualification": null,
+      "paperReference": "4CH1/1C",
+      "publicationCode": null,
+      "canonicalDocumentId": "d805de1c-8737-52c5-bc1d-32caedd73004"
+     },
+     "warnings": [
+      "question numbering gap: expected Q12, got Q25 (content merges into Q11)"
+     ],
+     "questions": [
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about states of matter.",
+       "marks": 6,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Use the words solid, liquid or gas to give the initial and final state of matter for each of the changes listed in the table. The first one has been done for you.",
+         "label": "a",
+         "marks": null,
+         "partId": "q01-d805de1c-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Particles in a solid are closely packed, arranged in a regular pattern and vibrate about fixed positions. Describe the arrangement and movement of the particles in a gas.",
+         "label": "b",
+         "marks": null,
+         "partId": "q01-d805de1c-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 1,
+       "figures": [],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q01-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000026"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "The table gives the melting and boiling points of four pure substances, W, X, Y and Z.",
+       "marks": 5,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Which substance is a gas at 100 $ ^{\\circ} \\mathrm{C} $? A W B X C Y D Z",
+         "label": "a",
+         "marks": 1,
+         "partId": "q02-d805de1c-pa",
+         "figures": [],
+         "confidence": 0.8,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Which substance is a liquid for the largest range of temperature? A W B X C Y D Z",
+         "label": "a-ii",
+         "marks": 1,
+         "partId": "q02-d805de1c-pa-ii",
+         "figures": [],
+         "confidence": 0.8,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Which substance is a liquid at 1000 $ ^{\\circ} \\mathrm{C} $ and a gas at 2000 $ ^{\\circ} \\mathrm{C} $? A W B X C Y D Z",
+         "label": "a-iii",
+         "marks": 1,
+         "partId": "q02-d805de1c-pa-iii",
+         "figures": [],
+         "confidence": 0.8,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Substance Y does not conduct electricity when solid but does conduct electricity when molten. Give the type of bonding in substance Y.",
+         "label": "b",
+         "marks": null,
+         "partId": "q02-d805de1c-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Suggest how the melting point of a pure substance changes when an impurity is added.",
+         "label": "c",
+         "marks": null,
+         "partId": "q02-d805de1c-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 2,
+       "figures": [],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q02-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000031"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "Lead nitrate and potassium iodide react to form the insoluble solid lead iodide. Crystals of lead nitrate and potassium iodide are placed at opposite ends of a container of water. Solid lead iodide forms after several minutes. The diagram shows the container at the start and after several minutes. After several minutes",
+       "marks": 7,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Name the two processes that occur before the solid lead iodide forms.",
+         "label": "a",
+         "marks": null,
+         "partId": "q03-d805de1c-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain why solid lead iodide takes less time to form when the reaction is repeated using water at a higher temperature.",
+         "label": "b",
+         "marks": null,
+         "partId": "q03-d805de1c-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The formula for lead nitrate is $ \\mathrm{P b ( N O_{3} )_{2}} $ (i) Give the number of different elements in lead nitrate.",
+         "label": "c",
+         "marks": null,
+         "partId": "q03-d805de1c-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the charge on the lead ion in $ \\mathrm{P b ( N O_{3} )_{2}} $",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q03-d805de1c-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Complete the chemical equation for the reaction between lead nitrate and potassium iodide. $\\mathrm {P b} \\left(\\mathrm {N O} _ {3}\\right) _ {2} (\\mathrm {a q}) + \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\mathrm {K I} (\\mathrm {a q}) \\rightarrow \\mathrm {P b I} _ {2} (\\mathrm {s}) + \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\mathrm {K N O} _ {3} (\\mathrm {a q})$",
+         "label": "d",
+         "marks": null,
+         "partId": "q03-d805de1c-pd",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 3,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789045490347.png",
+         "width": 691,
+         "format": "png",
+         "height": 350,
+         "sha256": "21f145cd4b7afe7d60e7d610d136e038a95b237e0c4dd9a47e8c2f49d05f95fc",
+         "assetId": "img:21f145cd4b7afe7d60e7d610d136e038a95b237e0c4dd9a47e8c2f49d05f95fc",
+         "mimeType": "image/jpeg",
+         "elementId": "e000058",
+         "sourceName": "assets/crop_1_1789045490347.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789045490382.png",
+         "width": 539,
+         "format": "png",
+         "height": 221,
+         "sha256": "4158abf39f5ee7385af15d420a873da78eb934ee5da866cee976675c10976752",
+         "assetId": "img:4158abf39f5ee7385af15d420a873da78eb934ee5da866cee976675c10976752",
+         "mimeType": "image/jpeg",
+         "elementId": "e000059",
+         "sourceName": "assets/crop_2_1789045490382.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q03-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about rusting.",
+       "marks": 7,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "When iron rusts, it reacts with oxygen in the air. A student uses the rusting of iron to find the percentage of oxygen in a sample of air. The diagram shows the apparatus. These are the student's results. volume of air in conical flask and connecting tube $ = 2 6 5 \\mathrm{c m}^{3} $ volume of air in gas syringe at start = 100 $ cm^{3} $ volume of air in gas syringe at end = 25 $ cm^{3} $ Calculate the percentage of oxygen in the sample of air using the student's results.",
+         "label": "a",
+         "marks": null,
+         "partId": "q04-d805de1c-pa",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789045490395.png",
+           "width": 1464,
+           "format": "png",
+           "height": 557,
+           "sha256": "ba2a6e3dc296e1f1a3a068ef4968473458c43157e621006dceb7ad63b6ba5164",
+           "assetId": "img:ba2a6e3dc296e1f1a3a068ef4968473458c43157e621006dceb7ad63b6ba5164",
+           "mimeType": "image/jpeg",
+           "elementId": "e000072",
+           "sourceName": "assets/crop_1_1789045490395.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Cars are painted to prevent the iron in car bodies from rusting. Explain how painting prevents the iron in car bodies from rusting.",
+         "label": "b",
+         "marks": null,
+         "partId": "q04-d805de1c-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Some car manufacturers use paint containing tiny particles of zinc. Explain how particles of zinc prevent iron in car bodies from rusting even when this paint is scratched.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q04-d805de1c-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 4,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789045490395.png",
+         "width": 1464,
+         "format": "png",
+         "height": 557,
+         "sha256": "ba2a6e3dc296e1f1a3a068ef4968473458c43157e621006dceb7ad63b6ba5164",
+         "assetId": "img:ba2a6e3dc296e1f1a3a068ef4968473458c43157e621006dceb7ad63b6ba5164",
+         "mimeType": "image/jpeg",
+         "elementId": "e000072",
+         "sourceName": "assets/crop_1_1789045490395.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q04-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about the separation of mixtures.",
+       "marks": 10,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The box gives some methods used to separate mixtures. Complete the table by giving the correct method from the box for each separation. Each method can be used once, more than once or not at all.",
+         "label": "a",
+         "marks": 4,
+         "partId": "q05-d805de1c-pa",
+         "figures": [],
+         "confidence": 0.8,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A student uses chromatography to analyse the composition of purple ink. The diagram shows the student's chromatogram at the end of the experiment.",
+         "label": "b",
+         "marks": null,
+         "partId": "q05-d805de1c-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789045490410.png",
+           "width": 724,
+           "format": "png",
+           "height": 832,
+           "sha256": "eb901ac8c1c372f7fa9dbc178b03ffbc371b1d8427a80163cac85193cb1be6e9",
+           "assetId": "img:eb901ac8c1c372f7fa9dbc178b03ffbc371b1d8427a80163cac85193cb1be6e9",
+           "mimeType": "image/jpeg",
+           "elementId": "e000092",
+           "sourceName": "assets/crop_1_1789045490410.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain which dyes are contained in the purple ink.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q05-d805de1c-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain which dye is least soluble in the solvent.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q05-d805de1c-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A different chromatography experiment is set up. A spot of food colouring is placed on the start line. A food dye in the colouring has an $ R_{f} $ value of 0.72 The distance between the start line and the solvent front is 120mm. Calculate the distance the food dye moves from the start line.",
+         "label": "c",
+         "marks": null,
+         "partId": "q05-d805de1c-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 5,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789045490410.png",
+         "width": 724,
+         "format": "png",
+         "height": 832,
+         "sha256": "eb901ac8c1c372f7fa9dbc178b03ffbc371b1d8427a80163cac85193cb1be6e9",
+         "assetId": "img:eb901ac8c1c372f7fa9dbc178b03ffbc371b1d8427a80163cac85193cb1be6e9",
+         "mimeType": "image/jpeg",
+         "elementId": "e000092",
+         "sourceName": "assets/crop_1_1789045490410.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q05-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000085",
+        "e000089"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about salts.",
+       "marks": 0,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "When solutions of salts are mixed together, precipitates sometimes form. The insoluble salt barium carbonate forms as a precipitate when solutions of the soluble salts ammonium carbonate and barium chloride react together. When solutions of the soluble salts potassium chloride and magnesium sulfate are mixed, no precipitate forms. Complete the table to show the results of mixing solutions of some soluble salts.",
+         "label": "a",
+         "marks": null,
+         "partId": "q06-d805de1c-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A student has four unlabelled beakers, each containing a colourless solution of a different salt. The four solutions are potassium chloride potassium carbonate potassium iodide sodium chloride Describe a method to identify each solution. Do not refer to safety in your answer.",
+         "label": "b",
+         "marks": null,
+         "partId": "q06-d805de1c-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 6,
+       "figures": [],
+       "options": [],
+       "section": null,
+       "confidence": 0.45,
+       "marksKnown": false,
+       "questionId": "q06-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000107"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about lithium oxide.",
+       "marks": 13,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The diagram shows the electron configurations of an atom of lithium and an atom of oxygen. oxygen Describe the changes in electronic configuration when lithium and oxygen react to form lithium oxide, $ \\mathrm{L i_{2} O} $",
+         "label": "a",
+         "marks": null,
+         "partId": "q07-d805de1c-pa",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789045490447.png",
+           "width": 341,
+           "format": "png",
+           "height": 416,
+           "sha256": "b8678925b5934b93cbddf1e8f8ebd22724b61ba8a83b400ddf1d601b2e489771",
+           "assetId": "img:b8678925b5934b93cbddf1e8f8ebd22724b61ba8a83b400ddf1d601b2e489771",
+           "mimeType": "image/jpeg",
+           "elementId": "e000119",
+           "sourceName": "assets/crop_1_1789045490447.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789045490450.png",
+           "width": 340,
+           "format": "png",
+           "height": 351,
+           "sha256": "48e5b4db5c4dff8ee8e9128ebbd8aadcbb8ee04f462d8509ce0d69c1776626e2",
+           "assetId": "img:48e5b4db5c4dff8ee8e9128ebbd8aadcbb8ee04f462d8509ce0d69c1776626e2",
+           "mimeType": "image/jpeg",
+           "elementId": "e000120",
+           "sourceName": "assets/crop_2_1789045490450.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Lithium oxide reacts with water to form lithium hydroxide as the only product. A scientist uses this apparatus to measure the temperature change of the reaction. This is the scientist's method. pour 100g of water into a polystyrene cup record the temperature of the water add the lithium oxide and stir the mixture record the maximum temperature reached The diagram shows the thermometer readings before and after adding the lithium oxide.",
+         "label": "b",
+         "marks": null,
+         "partId": "q07-d805de1c-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789045490458.png",
+           "width": 530,
+           "format": "png",
+           "height": 359,
+           "sha256": "0875664ea6973c5343d3986c26c3c53f8cef59366dba419344febc441f733d9b",
+           "assetId": "img:0875664ea6973c5343d3986c26c3c53f8cef59366dba419344febc441f733d9b",
+           "mimeType": "image/jpeg",
+           "elementId": "e000124",
+           "sourceName": "assets/crop_1_1789045490458.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789045490490.png",
+           "width": 240,
+           "format": "png",
+           "height": 913,
+           "sha256": "026b59c726ed249bb0e07512522076f6b1081ba54752bb3bb2fa36079f9bd4c4",
+           "assetId": "img:026b59c726ed249bb0e07512522076f6b1081ba54752bb3bb2fa36079f9bd4c4",
+           "mimeType": "image/jpeg",
+           "elementId": "e000131",
+           "sourceName": "assets/crop_2_1789045490490.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_3_1789045490494.png",
+           "width": 241,
+           "format": "png",
+           "height": 906,
+           "sha256": "df3594a6fd8f360a14fc0fe541aac29f99c24fec557890d80983817ef74ca8d7",
+           "assetId": "img:df3594a6fd8f360a14fc0fe541aac29f99c24fec557890d80983817ef74ca8d7",
+           "mimeType": "image/jpeg",
+           "elementId": "e000132",
+           "sourceName": "assets/crop_3_1789045490494.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Complete the table, giving all values to the nearest 0.1 $ ^{\\circ} \\mathrm{C}. $",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q07-d805de1c-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Calculate the heat energy change in the reaction. Give your answer to two significant figures. $[ \\mathrm {c} = 4. 2 \\mathrm {J} / \\mathrm {g} / ^ {\\circ} \\mathrm {C} ]$",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q07-d805de1c-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": [
+          "heat energy change"
+         ]
+        },
+        {
+         "qwc": false,
+         "text": "In another experiment the scientist obtains these results. Calculate the molar enthalpy change $ (\\Delta H) $ in kJ/mol. Include a sign in your answer.",
+         "label": "b-iii",
+         "marks": null,
+         "partId": "q07-d805de1c-pb-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give a reason why the scientist does the experiment in a polystyrene cup.",
+         "label": "b-iv",
+         "marks": null,
+         "partId": "q07-d805de1c-pb-iv",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 7,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789045490447.png",
+         "width": 341,
+         "format": "png",
+         "height": 416,
+         "sha256": "b8678925b5934b93cbddf1e8f8ebd22724b61ba8a83b400ddf1d601b2e489771",
+         "assetId": "img:b8678925b5934b93cbddf1e8f8ebd22724b61ba8a83b400ddf1d601b2e489771",
+         "mimeType": "image/jpeg",
+         "elementId": "e000119",
+         "sourceName": "assets/crop_1_1789045490447.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789045490450.png",
+         "width": 340,
+         "format": "png",
+         "height": 351,
+         "sha256": "48e5b4db5c4dff8ee8e9128ebbd8aadcbb8ee04f462d8509ce0d69c1776626e2",
+         "assetId": "img:48e5b4db5c4dff8ee8e9128ebbd8aadcbb8ee04f462d8509ce0d69c1776626e2",
+         "mimeType": "image/jpeg",
+         "elementId": "e000120",
+         "sourceName": "assets/crop_2_1789045490450.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789045490458.png",
+         "width": 530,
+         "format": "png",
+         "height": 359,
+         "sha256": "0875664ea6973c5343d3986c26c3c53f8cef59366dba419344febc441f733d9b",
+         "assetId": "img:0875664ea6973c5343d3986c26c3c53f8cef59366dba419344febc441f733d9b",
+         "mimeType": "image/jpeg",
+         "elementId": "e000124",
+         "sourceName": "assets/crop_1_1789045490458.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789045490490.png",
+         "width": 240,
+         "format": "png",
+         "height": 913,
+         "sha256": "026b59c726ed249bb0e07512522076f6b1081ba54752bb3bb2fa36079f9bd4c4",
+         "assetId": "img:026b59c726ed249bb0e07512522076f6b1081ba54752bb3bb2fa36079f9bd4c4",
+         "mimeType": "image/jpeg",
+         "elementId": "e000131",
+         "sourceName": "assets/crop_2_1789045490490.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_3_1789045490494.png",
+         "width": 241,
+         "format": "png",
+         "height": 906,
+         "sha256": "df3594a6fd8f360a14fc0fe541aac29f99c24fec557890d80983817ef74ca8d7",
+         "assetId": "img:df3594a6fd8f360a14fc0fe541aac29f99c24fec557890d80983817ef74ca8d7",
+         "mimeType": "image/jpeg",
+         "elementId": "e000132",
+         "sourceName": "assets/crop_3_1789045490494.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q07-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000134",
+        "e000140"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about the halogens.",
+       "marks": 12,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The table gives some information about the halogens. Complete the table by predicting the physical state of astatine at room temperature and the colour of astatine.",
+         "label": "a",
+         "marks": null,
+         "partId": "q08-d805de1c-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Bromine has two isotopes with mass numbers 79 and 81",
+         "label": "b",
+         "marks": null,
+         "partId": "q08-d805de1c-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The relative percentages of each isotope in a sample of bromine are $\\mathrm {bromine} - 7 9 = 5 1. 0 \\%$ bromine-81=49.0% Calculate the relative atomic mass of this sample of bromine. Give your answer to one decimal place.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q08-d805de1c-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": [
+          "relative atomic mass"
+         ]
+        },
+        {
+         "qwc": false,
+         "text": "Give a reason why both isotopes of bromine have the same chemical properties.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q08-d805de1c-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A student investigates the reactivity of some halogens. She uses these solutions of halogens and their halides. bromine, chlorine and iodine sodium bromide, sodium chloride and sodium iodide She adds each halogen solution to each halide solution. The table shows her results.",
+         "label": "c",
+         "marks": null,
+         "partId": "q08-d805de1c-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain how these results show the order of reactivity of bromine, chlorine and iodine.",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q08-d805de1c-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Suggest why the student does not need to add bromine solution to sodium bromide solution.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q08-d805de1c-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The ionic equation for the reaction between bromine and sodium iodide is $\\mathrm {B r} _ {2} (\\mathrm {a q}) + 2 \\mathrm {I} ^ {-} (\\mathrm {a q}) \\rightarrow \\mathrm {I} _ {2} (\\mathrm {a q}) + 2 \\mathrm {B r} ^ {-} (\\mathrm {a q})$ Explain why this is a redox reaction.",
+         "label": "c-iii",
+         "marks": null,
+         "partId": "q08-d805de1c-pc-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 8,
+       "figures": [],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q08-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000148",
+        "e000163"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "Propane is a hydrocarbon with the formula $ \\mathrm{C_{3} H_{8}} $ (a) State why propane is a hydrocarbon.",
+       "marks": 12,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Name the poisonous gas that forms when propane is burned in a limited supply of air.",
+         "label": "b",
+         "marks": null,
+         "partId": "q09-d805de1c-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "State why this gas is poisonous to humans.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q09-d805de1c-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The diagram represents a molecule of propane. Describe the forces of attraction between the atoms in a molecule of propane.",
+         "label": "c",
+         "marks": null,
+         "partId": "q09-d805de1c-pc",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789045490546.png",
+           "width": 1053,
+           "format": "png",
+           "height": 525,
+           "sha256": "378acbf98454ec94dbc04086abf52f3826896477c3d09e69a5abfcfce0182a69",
+           "assetId": "img:378acbf98454ec94dbc04086abf52f3826896477c3d09e69a5abfcfce0182a69",
+           "mimeType": "image/jpeg",
+           "elementId": "e000174",
+           "sourceName": "assets/crop_1_1789045490546.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Propane can be produced by cracking. An equation for cracking is $\\mathrm {C} _ {1 3} \\mathrm {H} _ {2 8} \\rightarrow \\mathrm {C} _ {3} \\mathrm {H} _ {8} + 2 \\mathrm {C} _ {3} \\mathrm {H} _ {6} + 2 \\mathrm {C} _ {2} \\mathrm {H} _ {4}$ Explain why cracking is an important process in the oil industry.",
+         "label": "d",
+         "marks": null,
+         "partId": "q09-d805de1c-pd",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Propane reacts with bromine in the presence of ultraviolet radiation.",
+         "label": "e",
+         "marks": null,
+         "partId": "q09-d805de1c-pe",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Complete the equation for this reaction. $\\mathrm {C} _ {3} \\mathrm {H} _ {8} + \\mathrm {B r} _ {2} \\rightarrow$",
+         "label": "e-i",
+         "marks": null,
+         "partId": "q09-d805de1c-pe-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the name of this type of reaction.",
+         "label": "e-ii",
+         "marks": null,
+         "partId": "q09-d805de1c-pe-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 9,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789045490546.png",
+         "width": 1053,
+         "format": "png",
+         "height": 525,
+         "sha256": "378acbf98454ec94dbc04086abf52f3826896477c3d09e69a5abfcfce0182a69",
+         "assetId": "img:378acbf98454ec94dbc04086abf52f3826896477c3d09e69a5abfcfce0182a69",
+         "mimeType": "image/jpeg",
+         "elementId": "e000174",
+         "sourceName": "assets/crop_1_1789045490546.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q09-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about alkanes.",
+       "marks": 0,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The graph shows the boiling points of several unbranched alkanes. $\\mathrm {i n} ^ {\\circ} \\mathrm {C}$",
+         "label": "a",
+         "marks": null,
+         "partId": "q10-d805de1c-pa",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789045490580.png",
+           "width": 1056,
+           "format": "png",
+           "height": 1671,
+           "sha256": "281694ec75a6ab203d2cf9fb73e7417f290e1c03c2276d7c34aac303bb79a8bb",
+           "assetId": "img:281694ec75a6ab203d2cf9fb73e7417f290e1c03c2276d7c34aac303bb79a8bb",
+           "mimeType": "image/jpeg",
+           "elementId": "e000189",
+           "sourceName": "assets/crop_1_1789045490580.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Draw a curve of best fit.",
+         "label": "a-i",
+         "marks": null,
+         "partId": "q10-d805de1c-pa-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Use the graph to find the boiling point of the alkane with 7 carbon atoms in its molecule. Show on the graph how you obtain your answer.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q10-d805de1c-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain the trend shown by the graph.",
+         "label": "a-iii",
+         "marks": null,
+         "partId": "q10-d805de1c-pa-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The diagram represents two isomers with the formula $ \\mathrm{C}_{5} \\mathrm{H}_{1 2} $ H Explain why these compounds are isomers.",
+         "label": "b",
+         "marks": 2,
+         "partId": "q10-d805de1c-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789045490606.png",
+           "width": 418,
+           "format": "png",
+           "height": 223,
+           "sha256": "caf3a43f6fc44f8a7355bd44fa2d0273c95f77d4ec5dd37899adf06dc8a06e85",
+           "assetId": "img:caf3a43f6fc44f8a7355bd44fa2d0273c95f77d4ec5dd37899adf06dc8a06e85",
+           "mimeType": "image/jpeg",
+           "elementId": "e000195",
+           "sourceName": "assets/crop_1_1789045490606.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789045490903.png",
+           "width": 353,
+           "format": "png",
+           "height": 354,
+           "sha256": "ff729b24d6a2619a7bcfaeb141698e4c00674131aaa09e5ef34e9e544207daa7",
+           "assetId": "img:ff729b24d6a2619a7bcfaeb141698e4c00674131aaa09e5ef34e9e544207daa7",
+           "mimeType": "image/jpeg",
+           "elementId": "e000196",
+           "sourceName": "assets/crop_2_1789045490903.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.8,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "An alkane contains 82.8% carbon and 17.2% hydrogen by mass. Show by calculation that the empirical formula of this alkane is $ C_{2} H_{5} $",
+         "label": "c",
+         "marks": null,
+         "partId": "q10-d805de1c-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Deduce the molecular formula of this alkane.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q10-d805de1c-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The equation for the complete combustion of one mole of an alkane can be represented by $\\mathrm {a l k a n e} + \\mathrm {Z O} _ {2} \\rightarrow \\mathrm {X C O} _ {2} + \\mathrm {Y H} _ {2} \\mathrm {O}$ Complete combustion of one mole of the alkane produces 308 g of carbon dioxide and 144 g of water. X, Y and Z are the numbers used to balance the equation. Calculate the values of X, Y and Z. [M $ _{r} $ of $ CO_{2}=4 4 $ , M $ _{r} $ of $ H_{2}O=1 8 $ ]",
+         "label": "d",
+         "marks": null,
+         "partId": "q10-d805de1c-pd",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 10,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789045490580.png",
+         "width": 1056,
+         "format": "png",
+         "height": 1671,
+         "sha256": "281694ec75a6ab203d2cf9fb73e7417f290e1c03c2276d7c34aac303bb79a8bb",
+         "assetId": "img:281694ec75a6ab203d2cf9fb73e7417f290e1c03c2276d7c34aac303bb79a8bb",
+         "mimeType": "image/jpeg",
+         "elementId": "e000189",
+         "sourceName": "assets/crop_1_1789045490580.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789045490606.png",
+         "width": 418,
+         "format": "png",
+         "height": 223,
+         "sha256": "caf3a43f6fc44f8a7355bd44fa2d0273c95f77d4ec5dd37899adf06dc8a06e85",
+         "assetId": "img:caf3a43f6fc44f8a7355bd44fa2d0273c95f77d4ec5dd37899adf06dc8a06e85",
+         "mimeType": "image/jpeg",
+         "elementId": "e000195",
+         "sourceName": "assets/crop_1_1789045490606.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789045490903.png",
+         "width": 353,
+         "format": "png",
+         "height": 354,
+         "sha256": "ff729b24d6a2619a7bcfaeb141698e4c00674131aaa09e5ef34e9e544207daa7",
+         "assetId": "img:ff729b24d6a2619a7bcfaeb141698e4c00674131aaa09e5ef34e9e544207daa7",
+         "mimeType": "image/jpeg",
+         "elementId": "e000196",
+         "sourceName": "assets/crop_2_1789045490903.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.45,
+       "marksKnown": false,
+       "questionId": "q10-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about reactions that form gases.",
+       "marks": 0,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Hydrogen peroxide decomposes to form water and oxygen. The equation for the reaction is $2 \\mathrm {H} _ {2} \\mathrm {O} _ {2} \\rightarrow 2 \\mathrm {H} _ {2} \\mathrm {O} + \\mathrm {O} _ {2}$ 25. 0 $ cm^{3} $ of hydrogen peroxide solution are poured into a conical flask and 1.00 g of solid manganese(IV) oxide is added. Bubbles of oxygen gas are formed.",
+         "label": "a",
+         "marks": null,
+         "partId": "q11-d805de1c-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the test for oxygen gas.",
+         "label": "a-i",
+         "marks": null,
+         "partId": "q11-d805de1c-pa-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Describe a method to show that solid manganese(IV) oxide is a catalyst in this reaction and not a reactant.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q11-d805de1c-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A student uses this apparatus to investigate the rate of the reaction between zinc and an excess of dilute hydrochloric acid. This is the student's method. pour $ 5 0 \\mathrm{c m}^{3} $ of dilute hydrochloric acid into a conical flask add about 1.2g of zinc lumps record the volume of hydrogen gas collected every 30s until no more hydrogen is collected The graph shows the student's results.",
+         "label": "b",
+         "marks": null,
+         "partId": "q11-d805de1c-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789045490951.png",
+           "width": 774,
+           "format": "png",
+           "height": 285,
+           "sha256": "11fa2fdc836473277991fbee125b5fd23f4c08c23544e4bbe98b181e3103d25c",
+           "assetId": "img:11fa2fdc836473277991fbee125b5fd23f4c08c23544e4bbe98b181e3103d25c",
+           "mimeType": "image/jpeg",
+           "elementId": "e000218",
+           "sourceName": "assets/crop_1_1789045490951.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789045490955.png",
+           "width": 1269,
+           "format": "png",
+           "height": 1101,
+           "sha256": "ef490f4be2de3259cd0fbf17287df359d2365f46e61932216fa995be8a6b1030",
+           "assetId": "img:ef490f4be2de3259cd0fbf17287df359d2365f46e61932216fa995be8a6b1030",
+           "mimeType": "image/jpeg",
+           "elementId": "e000224",
+           "sourceName": "assets/crop_2_1789045490955.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Calculate the mean (average) rate of reaction, in $ cm^{3}/s $ , in the first 120 s. $\\mathrm {c m} ^ {3} / \\mathrm {s}$",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q11-d805de1c-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The equation for the reaction between zinc and hydrochloric acid is $\\mathrm {Z n} (\\mathrm {s}) + 2 \\mathrm {H C l} (\\mathrm {a q}) \\rightarrow \\mathrm {Z n C l} _ {2} (\\mathrm {a q}) + \\mathrm {H} _ {2} (\\mathrm {g})$ Use this equation and the particle collision theory to explain why the rate of reaction is greatest at the start of the reaction.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q11-d805de1c-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The student repeats the experiment at a higher temperature but keeps all other conditions the same. On the grid, draw the curve you would expect to see in this experiment. Question continues on next page",
+         "label": "b-iii",
+         "marks": null,
+         "partId": "q11-d805de1c-pb-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain why the rate of reaction is greater if the same mass of zinc powder is used instead of zinc lumps. All other conditions are kept the same.",
+         "label": "b-iv",
+         "marks": null,
+         "partId": "q11-d805de1c-pb-iv",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "In another experiment, the student adds 0.55 g of zinc to a solution containing $ 2. 5 0 \\times1 0^{-2} $ moles of hydrochloric acid. Use the equation to show that hydrochloric acid is in excess. $\\mathrm {Z n} (\\mathrm {s}) + 2 \\mathrm {H C l} (\\mathrm {a q}) \\rightarrow \\mathrm {Z n C l} _ {2} (\\mathrm {a q}) + \\mathrm {H} _ {2} (\\mathrm {g})$ [ $ A_{\\mathrm{r}} $ of Zn=65] $(\\mathrm {T o t a l f o r Q u e s t i o n 1 1 = 1 5 m a r k s})$ $\\mathrm {T O T A L F O R P A P E R} = 1 1 0 \\mathrm {M A R K S}$",
+         "label": "c",
+         "marks": null,
+         "partId": "q11-d805de1c-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 11,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789045490951.png",
+         "width": 774,
+         "format": "png",
+         "height": 285,
+         "sha256": "11fa2fdc836473277991fbee125b5fd23f4c08c23544e4bbe98b181e3103d25c",
+         "assetId": "img:11fa2fdc836473277991fbee125b5fd23f4c08c23544e4bbe98b181e3103d25c",
+         "mimeType": "image/jpeg",
+         "elementId": "e000218",
+         "sourceName": "assets/crop_1_1789045490951.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789045490955.png",
+         "width": 1269,
+         "format": "png",
+         "height": 1101,
+         "sha256": "ef490f4be2de3259cd0fbf17287df359d2365f46e61932216fa995be8a6b1030",
+         "assetId": "img:ef490f4be2de3259cd0fbf17287df359d2365f46e61932216fa995be8a6b1030",
+         "mimeType": "image/jpeg",
+         "elementId": "e000224",
+         "sourceName": "assets/crop_2_1789045490955.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.45,
+       "marksKnown": false,
+       "questionId": "q11-d805de1c",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      }
+     ],
+     "paperTotal": 110,
+     "schemaVersion": "1.0",
+     "sectionTotals": {},
+     "questionTotals": {
+      "1": 6,
+      "2": 5,
+      "3": 7,
+      "4": 7,
+      "5": 10,
+      "7": 13,
+      "8": 12,
+      "9": 12
+     },
+     "reviewRequired": true,
+     "extractionMethod": "glm-ocr-qp-v1",
+     "frontMatterFigures": []
+    },
+    "ms_draft": {
+     "paper": {
+      "board": "Edexcel",
+      "session": "January 2021",
+      "subject": null,
+      "duration": null,
+      "examDate": null,
+      "logNumber": null,
+      "qualification": null,
+      "paperReference": null,
+      "publicationCode": "4CH1_1C_2101_MS",
+      "canonicalDocumentId": "db3058e7-0c44-56b5-a170-4f5ee9987aad"
+     },
+     "entries": [
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(a)",
+       "marks": 3,
+       "number": 1,
+       "entryId": "ms-db3058e7-q1a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "Award 1 mark for each correct rowALLOW gas to solid for sublimation"
+        },
+        {
+         "kind": "note",
+         "text": "End"
+        },
+        {
+         "kind": "note",
+         "text": "liquid"
+        },
+        {
+         "kind": "note",
+         "text": "gas"
+        },
+        {
+         "kind": "note",
+         "text": "liquid"
+        },
+        {
+         "kind": "note",
+         "text": "gas"
+        }
+       ],
+       "answerText": "Start\nsolid\nsolid\ngas\nliquid",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(b)",
+       "marks": 3,
+       "number": 1,
+       "entryId": "ms-db3058e7-q1b",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW spread outIGNORE references to kinetic energy"
+        }
+       ],
+       "answerText": "A description that refers to any three of the following pointsM1 irregular/random arrangement(of particles)M2 large gaps between them/far apart/widely spacedM3 random movement/move freelyM4 move(very) quickly\n6 marks",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(a)(i)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-db3058e7-q2ai",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "A is the correct answer because 100\u2103 is above the boiling point of W"
+        },
+        {
+         "kind": "note",
+         "text": "B is not the correct answer because X is a solid at 100\u2103"
+        },
+        {
+         "kind": "note",
+         "text": "C is not the correct answer because Y is a solid at 100\u2103"
+        },
+        {
+         "kind": "note",
+         "text": "D is not the correct answer because Z is a solid at 100\u2103"
+        }
+       ],
+       "answerText": "A",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(a)(ii)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-db3058e7-q2aii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "B is the correct answer because X is a liquid for 1840\u2103"
+        },
+        {
+         "kind": "note",
+         "text": "A is not the correct answer because W is a liquid for 67\u2103"
+        },
+        {
+         "kind": "note",
+         "text": "C is not the correct answer because Y is a liquid for 1150\u2103"
+        },
+        {
+         "kind": "note",
+         "text": "D is not the correct answer because Z is a liquid for 330\u2103"
+        }
+       ],
+       "answerText": "B",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(a)(iii)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-db3058e7-q2aiii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "C is the correct answer because Y is a liquid at 1000\u2103 and a gas at 2000\u2103"
+        },
+        {
+         "kind": "note",
+         "text": "A is not the correct answer because W is a gas at 1000\u2103 and at 2000\u2103"
+        },
+        {
+         "kind": "note",
+         "text": "B is not the correct answer because X is a liquid at 1000\u2103 and 2000\u2103"
+        },
+        {
+         "kind": "note",
+         "text": "D is not the correct answer because Z is a gas at 1000\u2103 and at 2000\u2103"
+        }
+       ],
+       "answerText": "C",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(b)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-db3058e7-q2b",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW electrovalent"
+        }
+       ],
+       "answerText": "ionic",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(c)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-db3058e7-q2c",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW the (impure) substance will have a lower melting point"
+        }
+       ],
+       "answerText": "the (impure) substance will melt over a range of temperatures\n5 marks",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(a)(i)",
+       "marks": 2,
+       "number": 3,
+       "entryId": "ms-db3058e7-q3ai",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "Answers can be in either order"
+        }
+       ],
+       "answerText": "M1 dissolvingM2 diffusion",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(b)(i)",
+       "marks": 2,
+       "number": 3,
+       "entryId": "ms-db3058e7-q3bi",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW(potassium iodide/lead nitrate/water) particles have more energyALLOWmolecules in place of particles if referring to waterIGNOREreferences to more collisions or more energetic collisions"
+        },
+        {
+         "kind": "note",
+         "text": "(c)(i)(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "3/three2+/+2"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWPb2+"
+        }
+       ],
+       "answerText": "An explanation that links any two of the following pointsM1 crystals dissolve fasterM2(potassium iodide/lead nitrate/water) particles move faster/(lead/iodide) ions move faster/rate of diffusion increasesM3 therefore(lead and iodide) ions/particles meet/collide after a shorter period of time/sooner",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(d)",
+       "marks": 1,
+       "number": 3,
+       "entryId": "ms-db3058e7-q3d",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "ALOWmultiples and fractions"
+        }
+       ],
+       "answerText": "Pb(NO3)2(aq)+2KI(aq)\u2192PbI2(s)+2KNO3(aq)\n7 marks",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(a)",
+       "marks": 3,
+       "number": 4,
+       "entryId": "ms-db3058e7-q4a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "Correct answer of 20.5% with or without working scores 3"
+        },
+        {
+         "kind": "note",
+         "text": "M1(volume of oxygen=)100-25OR75(cm3)"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWecf from M1"
+        },
+        {
+         "kind": "note",
+         "text": "M275\u00f7365\u00d7100"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWecf from M2"
+        },
+        {
+         "kind": "note",
+         "text": "M320.5(%)"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW2or more significant figures"
+        },
+        {
+         "kind": "note",
+         "text": "REJECTincorrect roundingUse of265 instead of365gives an answer of28.3and scores2"
+        },
+        {
+         "kind": "note",
+         "text": "Alternative method"
+        },
+        {
+         "kind": "note",
+         "text": "M1(volume of air left=)265+25OR290(cm3)"
+        },
+        {
+         "kind": "note",
+         "text": "M2290\u00f7365\u00d7100OR79.5(%)"
+        }
+       ],
+       "answerText": "Example calculation",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(b)(i)",
+       "marks": 2,
+       "number": 4,
+       "entryId": "ms-db3058e7-q4bi",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOWpaint forms a coating(on the iron)/paint is non-permeable"
+        },
+        {
+         "kind": "note",
+         "text": "M2which prevents oxygen/water getting to/reacting with the iron"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWair"
+        },
+        {
+         "kind": "note",
+         "text": "M1zinc is more reactive/higher in the reactivity series(than iron)"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWzinc is a sacrificial metal"
+        },
+        {
+         "kind": "note",
+         "text": "M2zinc will oxidise/react/corrode instead of/before iron"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNOREreferences to zinc rusting"
+        }
+       ],
+       "answerText": "M1 paint provides a barrier\n7 marks",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(a)",
+       "marks": 4,
+       "number": 5,
+       "entryId": "ms-db3058e7-q5a",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW filteringALLOW distillationREJECT simple distillation or distillation"
+        }
+       ],
+       "answerText": "Method\nfiltration\nsimple distillationor fractional distillation\nfractional distillation\ncrystallisation",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)(i)",
+       "marks": 2,
+       "number": 5,
+       "entryId": "ms-db3058e7-q5bi",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2 dep on M1 correct or missing"
+        }
+       ],
+       "answerText": "M1A and B\nM2 because they are the same height/moved the same distance up the paper/have the sameRfvalues as the spots in the purple ink\nM1D",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)(ii)",
+       "marks": 2,
+       "number": 5,
+       "entryId": "ms-db3058e7-q5bii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2 dep on M1 correct or missing"
+        },
+        {
+         "kind": "example-calculation",
+         "text": "Example calculation"
+        },
+        {
+         "kind": "note",
+         "text": "Correct answer of86 or86.4(mm) with or without working scores2"
+        }
+       ],
+       "answerText": "M2 because the spot is closest to the start line/travelled the least distance(from the start line)/has the lowestRfvalue\n10 marks",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "rowspan continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "6(a)",
+       "marks": 3,
+       "number": 6,
+       "entryId": "ms-db3058e7-q6a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "precipitate of barium sulfate"
+        },
+        {
+         "kind": "note",
+         "text": "if barium sulfate and calcium carbonate correct but without including\u2018precipitate of\u2019 scores 1 out of 2"
+        },
+        {
+         "kind": "note",
+         "text": "no precipitate"
+        },
+        {
+         "kind": "note",
+         "text": "no precipitate"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW correct formulae"
+        },
+        {
+         "kind": "note",
+         "text": "precipitate of calcium carbonate"
+        },
+        {
+         "kind": "note",
+         "text": "precipitate of calcium sulfate"
+        },
+        {
+         "kind": "note",
+         "text": "A description that refers to any six of the following pointsM1 do a flame testM2 sodium chloride produces a yellow flameM3 add acidM4 potassium carbonate effervesces / bubblesM5 add dilute nitric acidM6 add silver nitrate (solution)M7 potassium chloride gives a white precipitateM8 potassium iodide gives a yellow precipitate"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT any description of a flame testACCEPT yellow-orange or orangeIGNORE any flame colour given for the potassium compoundsALLOW any named acidACCEPT carbon dioxide/gas given off which turns limewater cloudy for M4M4 is dep on M3M7 and M8 are dep on M6ALLOW addition of chlorine/bromine solution as an alternative to M6M7 no colour change with potassium chloride"
+        }
+       ],
+       "answerText": "precipitate of barium carbonate",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(a)",
+       "marks": 3,
+       "number": 7,
+       "entryId": "ms-db3058e7-q7a",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW lithium loses one electron/gives one electron to oxygen"
+        },
+        {
+         "kind": "note",
+         "text": "M2 oxygen gains two electrons"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW oxygen becomes 2,8"
+        },
+        {
+         "kind": "note",
+         "text": "M3 lithium(ion) has an electron configuration of 2 and oxide(ion) is 2,8"
+        },
+        {
+         "kind": "note",
+         "text": "All 3 marks can be scored from diagrams showing the electron configurations of the ions"
+        },
+        {
+         "kind": "note",
+         "text": "0 marks if reference to sharing electrons"
+        }
+       ],
+       "answerText": "M1 two lithium atoms each lose one electron/give one electron to oxygen",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(b)(i)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-db3058e7-q7bi",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2temperature rise=10.4\u2103"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW ecf from M1"
+        },
+        {
+         "kind": "example-calculation",
+         "text": "Example calculation"
+        },
+        {
+         "kind": "note",
+         "text": "Correct answer of 4400J with or without working scores 4"
+        },
+        {
+         "kind": "note",
+         "text": "M1Use of 100 inQ=mxc(x\u0394T)"
+        },
+        {
+         "kind": "note",
+         "text": "M2Use of 10.4 inQ=(mxc)cx\u0394T"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW ecf from(b)(i)"
+        },
+        {
+         "kind": "note",
+         "text": "100x4.2x10.4 scores M1 and M2"
+        },
+        {
+         "kind": "note",
+         "text": "M34368J"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW ecf from M1 and M2"
+        },
+        {
+         "kind": "note",
+         "text": "M44400J"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW ecf from M3"
+        }
+       ],
+       "answerText": "M1(temperature after)=27.7\u2103",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(b)(iii)",
+       "marks": 3,
+       "number": 7,
+       "entryId": "ms-db3058e7-q7biii",
+       "guidance": [
+        {
+         "kind": "ignore",
+         "text": "IGNORE+or-sign in front of answer"
+        },
+        {
+         "kind": "note",
+         "text": "M15210\u00f71000or5.21"
+        },
+        {
+         "kind": "note",
+         "text": "Correct answer of-89.8(kJ/mol) scores 3"
+        },
+        {
+         "kind": "note",
+         "text": "M25.21\u00f70.0580"
+        }
+       ],
+       "answerText": "Example calculation",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(b)(iv)",
+       "marks": 1,
+       "number": 7,
+       "entryId": "ms-db3058e7-q7biv",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW-90(kJ/mol) or any number of sig figs as long as correctly rounded."
+        },
+        {
+         "kind": "note",
+         "text": "polystyrene is a good insulator/poor conductor(of heat)OR to minimise/reduce heat loss"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW prevent heat loss"
+        }
+       ],
+       "answerText": "M3-89.8(kJ/mol)\n13 marks",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "rowspan continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "8(a)",
+       "marks": 2,
+       "number": 8,
+       "entryId": "ms-db3058e7-q8a",
+       "guidance": [],
+       "answerText": "M1 solidM2 dark grey/black",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "8(b)(i)",
+       "marks": 3,
+       "number": 8,
+       "entryId": "ms-db3058e7-q8bi",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "80.0 with no working scores379.9 with no working scores179.98 or 80 with no working scores2"
+        }
+       ],
+       "answerText": "Example calculationM1(51\u00d779)+(49\u00d781)OR7998M27998\u00f7100M380.0",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "8(b)(ii)",
+       "marks": 1,
+       "number": 8,
+       "entryId": "ms-db3058e7-q8bii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW same(total)number of electronsIGNORE same number of electrons in the outer shellIGNORE references to same number of protons"
+        }
+       ],
+       "answerText": "same electron configuration",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "8(c)(i)",
+       "marks": 3,
+       "number": 8,
+       "entryId": "ms-db3058e7-q8ci",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "ACCEPT bromine is only displaced by chlorine and iodine is displaced by chlorine and bromine scoresM2 and M3ALLOW chlorine has two reactions,bromine has one reaction and iodine no reactions for1 mark out of M2 and M3Deduct1 mark forincorrect use of ine"
+        }
+       ],
+       "answerText": "An explanation that links the following three pointsM1 the order of reactivity is chlorine(most), bromine and iodine(least)M2 chlorine(is most reactive because it) displaces bromine and iodine/oxidises bromide and iodide(ions)/reacts with sodium bromide and sodium iodideM3 bromine(is less reactive than chlorine since it) only displaces iodine/only oxidises iodide(ions)/only reacts with sodium iodide",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "9(a)",
+       "marks": 2,
+       "number": 9,
+       "entryId": "ms-db3058e7-q9a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "REJECT carbon and hydrogen molecules"
+        },
+        {
+         "kind": "note",
+         "text": "M2 only"
+        },
+        {
+         "kind": "note",
+         "text": "M2 is dependent on mention of just carbon and hydrogen in M1"
+        }
+       ],
+       "answerText": "M1(propane/it) contains hydrogen and carbon(atoms)",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "9(b)(i)",
+       "marks": 1,
+       "number": 9,
+       "entryId": "ms-db3058e7-q9bi",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW CO"
+        },
+        {
+         "kind": "note",
+         "text": "it decreases the capacity of the blood to transport oxygen OWTTE"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW carbon monoxide binds to haemoglobin"
+        }
+       ],
+       "answerText": "carbon monoxide",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "9(c)",
+       "marks": 2,
+       "number": 9,
+       "entryId": "ms-db3058e7-q9c",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2(and) nuclei(of both atoms)"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT nucleus"
+        },
+        {
+         "kind": "note",
+         "text": "OR"
+        },
+        {
+         "kind": "note",
+         "text": "M1(bonding) pair of electrons"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT nucleus"
+        },
+        {
+         "kind": "note",
+         "text": "M2 attracted to nuclei"
+        },
+        {
+         "kind": "note",
+         "text": "0 marks if reference to intermolecular forces between atoms"
+        }
+       ],
+       "answerText": "M1(strong electrostatic) attraction between(bonding) pair of electrons",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "9(d)",
+       "marks": 3,
+       "number": 9,
+       "entryId": "ms-db3058e7-q9d",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M1(crude oil) produces more long chain hydrocarbons than can be used directly OWTTE"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW less demand for long chain hydrocarbons"
+        },
+        {
+         "kind": "note",
+         "text": "M2 shorter chain alkanes are more flammable/more useful as fuels"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW shorter chain alkanes/hydrocarbons are more useful"
+        },
+        {
+         "kind": "note",
+         "text": "M3 alkenes are used to make polymers/plastics"
+        }
+       ],
+       "answerText": "An explanation that links the following three points",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "9(e)(i)",
+       "marks": 2,
+       "number": 9,
+       "entryId": "ms-db3058e7-q9ei",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2HBr"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW polysubstituted product if correct balancing number in front of Br2and HBr"
+        }
+       ],
+       "answerText": "M1C3H7Br",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "9(e)(ii)",
+       "marks": 1,
+       "number": 9,
+       "entryId": "ms-db3058e7-q9eii",
+       "guidance": [],
+       "answerText": "substitution",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "9(b)",
+       "marks": 2,
+       "number": 9,
+       "entryId": "ms-db3058e7-q9b",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2 different displayed / structural formulae"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW different structures/different arrangement of atoms"
+        },
+        {
+         "kind": "note",
+         "text": "(c)(i)(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "M1 82.8\u00f712or6.917.2\u00f71or17.2"
+        },
+        {
+         "kind": "note",
+         "text": "0 marks if upside down calculation or use of atomic numbers"
+        },
+        {
+         "kind": "note",
+         "text": "M2 (divide by smallest to give) 1:2.5 which is 2:5"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT alternative methods"
+        },
+        {
+         "kind": "note",
+         "text": "$C_{4}H_{10}$"
+        }
+       ],
+       "answerText": "M1 same molecular formula",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "9(d)",
+       "marks": 3,
+       "number": 9,
+       "entryId": "ms-db3058e7-q9d",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW ecf from incorrect values of X and Y"
+        }
+       ],
+       "answerText": "M1 moles of CO2=7 or X=7\nM2 moles of H2O=8 or Y=8\nM3 balancing number=11 or Z=11",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "11(a)",
+       "marks": 1,
+       "number": 11,
+       "entryId": "ms-db3058e7-q11a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "glowing splint relights"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT burning splint"
+        },
+        {
+         "kind": "note",
+         "text": "A description that refers to the following three points"
+        },
+        {
+         "kind": "note",
+         "text": "M1 filter out manganese(IV) oxide/solid"
+        },
+        {
+         "kind": "note",
+         "text": "M2 leave to dry"
+        },
+        {
+         "kind": "note",
+         "text": "(b)"
+        },
+        {
+         "kind": "note",
+         "text": "(i)"
+        },
+        {
+         "kind": "note",
+         "text": "M1 280\u00f7120"
+        },
+        {
+         "kind": "note",
+         "text": "M2 2.33"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW ecf from M1"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW any number of significant figures except 1"
+        },
+        {
+         "kind": "note",
+         "text": "An explanation that links the following three points"
+        },
+        {
+         "kind": "note",
+         "text": "M1 the concentration of hydrochloric acid is greatest"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW the surface area of zinc is greatest"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW greatest number of/more particles(of hydrochloric acid/zinc)"
+        },
+        {
+         "kind": "note",
+         "text": "M2 therefore there are more collisions"
+        }
+       ],
+       "answerText": "(i)",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "two-level label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "11(a)(iii)",
+       "marks": null,
+       "number": 11,
+       "entryId": "ms-db3058e7-q11aiii",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M3 per unit time"
+        },
+        {
+         "kind": "note",
+         "text": "More frequent collisions scores M2 and M3"
+        },
+        {
+         "kind": "note",
+         "text": "Max 1 if incorrect reference to energy"
+        },
+        {
+         "kind": "note",
+         "text": "M1 curve above original and starts at 0"
+        },
+        {
+         "kind": "note",
+         "text": "M2 curve goes flat at same volume(410cm3)"
+        }
+       ],
+       "answerText": "",
+       "confidence": 0.5,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": null
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "11(a)(iv)",
+       "marks": 2,
+       "number": 11,
+       "entryId": "ms-db3058e7-q11aiv",
+       "guidance": [],
+       "answerText": "M1 greater surface area\nM2 more collisions per unit time/more frequent collisions",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "11(c)",
+       "marks": 2,
+       "number": 11,
+       "entryId": "ms-db3058e7-q11c",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW any number of sig figs including one e.g.0.008 moles of zinc,therefore 0.016 moles of acid needed scores M1 and M2"
+        }
+       ],
+       "answerText": "M1 $8.46\\times10^{-3}$ mol of zinc\nM2 therefore $1.69\\times10^{-2}$ mol hydrochloric acid needed(which is less than $2.50\\times10^{-2}$ mol)\nOR\nM1 $1.25\\times10^{-2}$ mol of zinc are needed\nM2 therefore 0.8(13)g of zinc is needed(and there is only 0.55g)\n15 marks",
+       "confidence": 0.75,
+       "markPoints": [
+        {
+         "ecf": false,
+         "text": "M1 $8.46\\times10^{-3}$ mol of zinc\nM2 therefore $1.69\\times10^{-2}$ mol hydrochloric acid needed(which is less than $2.50\\times10^{-2}$ mol)",
+         "marks": 13,
+         "reject": false,
+         "ordinal": 1,
+         "rawText": "M1 $8.46\\times10^{-3}$ mol of zinc\nM2 therefore $1.69\\times10^{-2}$ mol hydrochloric acid needed(which is less than $2.50\\times10^{-2}$ mol)\nOR\nM1 $1.25\\times10^{-2}$ mol of zinc are needed\nM2 therefore 0.8",
+         "anyTwoFrom": false,
+         "dependentOn": [],
+         "alternatives": [
+          "M1 $1.25\\times10^{-2}$ mol of zinc are needed\nM2 therefore 0.8"
+         ]
+        },
+        {
+         "ecf": false,
+         "text": "g of zinc is needed(and there is only 0.55g)",
+         "marks": null,
+         "reject": false,
+         "ordinal": 2,
+         "rawText": "g of zinc is needed(and there is only 0.55g)",
+         "anyTwoFrom": false,
+         "dependentOn": [],
+         "alternatives": []
+        }
+       ],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      }
+     ],
+     "icTable": null,
+     "warnings": [
+      "3(b)(i): bare integer cell \"11\" skipped (rubric/rowspan ambiguity)",
+      "4(b)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "5(b)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "6(a): bare integer cell \"6\" skipped (rubric/rowspan ambiguity)",
+      "orphan row before first entry: M8 solution turns brown with potassium iodide\nIf this alternative given no M5",
+      "orphan row before first entry: 9 marks",
+      "7(b)(i): bare integer cell \"4\" skipped (rubric/rowspan ambiguity)",
+      "orphan row before first entry: (ii)(iii)",
+      "orphan row before first entry: bromine cannot displace itself / bromine does not react with sodium bromide OWTTE",
+      "orphan row before first entry: M1 bromine is reduced and iodide (ions)/I- is oxidised",
+      "orphan row before first entry: M2 bromine gains electrons and iodide (ions)/I- loses electrons",
+      "orphan row before first entry: ORM1 bromine gains electrons so is reducedM2 iodide (ions)/I- loses electrons so is oxidised",
+      "9(b)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "orphan row before first entry: 10(a)(i)(ii)(iii)",
+      "orphan row before first entry: M1 lines shown on graph",
+      "orphan row before first entry: M2 value correctly read from graph (expected value between 97 and 103\u2103)",
+      "orphan row before first entry: An explanation that links the following three points",
+      "orphan row before first entry: M1 the boiling point increases as the number of carbons/the chain length increases",
+      "orphan row before first entry: M2 because the intermolecular forces (of attraction) get strongerM3 and therefore take more energy to overcome / break",
+      "9(b): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "9(b): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "11(a): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "11(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "11(a): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "11(a): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)"
+     ],
+     "paperTotal": null,
+     "schemaVersion": "1.0",
+     "questionTotals": {},
+     "reviewRequired": true,
+     "extractionMethod": "glm-ocr-ms-v1"
+    },
+    "reconciliation": {
+     "findings": [
+      {
+       "msMarks": null,
+       "qpMarks": 6,
+       "severity": "qp-only",
+       "questionNumber": "1"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 5,
+       "severity": "qp-only",
+       "questionNumber": "2"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 7,
+       "severity": "qp-only",
+       "questionNumber": "3"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 7,
+       "severity": "qp-only",
+       "questionNumber": "4"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 10,
+       "severity": "qp-only",
+       "questionNumber": "5"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 13,
+       "severity": "qp-only",
+       "questionNumber": "7"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 12,
+       "severity": "qp-only",
+       "questionNumber": "8"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 12,
+       "severity": "qp-only",
+       "questionNumber": "9"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": null,
+       "severity": "gap",
+       "questionNumber": "10"
+      }
+     ],
+     "msPaperTotal": null,
+     "qpPaperTotal": 110,
+     "mismatchCount": 0,
+     "paperTotalConflict": false
+    },
+    "created_by": null,
+    "created_at": "2026-09-14 11:39:39.880935+00:00"
+   }
+  ],
+  "content_review_audit_refs": [],
+  "teacher_validation_event_refs": []
+ }
+}

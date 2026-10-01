@@ -2,7 +2,7 @@
 
 **Status:** Canonical navigation/index document  
 **Purpose:** Locate durable project knowledge without relying on conversation memory.  
-**Last reviewed:** 2026-09-15
+**Last reviewed:** 2026-09-25
 
 ## 1. Purpose
 
@@ -47,6 +47,8 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Platform/provider research | `PLATFORM_RESEARCH.md`, current AI runtime/provider report | Provider and platform evidence |
 | Content representation/package | `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md`, `CONTENT_PACKAGE_V0_1.md`, ADR-021 | Markdown artifacts, PostgreSQL boundary and portable SQLite package direction |
 | Source-backed architecture diagrams | `ARCHIFY_INTEGRATION.md`, `docs/archify/` | Archify tooling workflow (dev/documentation only, never a runtime dependency); derived diagrams, not canonical architecture truth |
+| Subject Intelligence Build (SIB) v1 protocol | `docs/research/SUBJECT_INTELLIGENCE_BUILD_V1.md`, `docs/research/SIB_ARTIFACT_SCHEMA_V1.md`, `docs/research/SIB_NOTEBOOKLM_PROMPTS_V1.md` (landed via PR #13) | PROPOSED — standardized cross-subject research-generation protocol (publication lifecycle + filename contract DEFINED, schema §3/§1); NotebookLM is offline research/authoring, SyllabAI owns durable corpus and runtime serving boundary |
+| SIB validator / ingestion tooling | `tools/sib/`, implementation record `docs/research/SIB_VALIDATOR_IMPLEMENTATION_V1.md` (landed via PR #14) | Deterministic artifact/manifest validation, provenance + anchor boundary, evidence-gated GENERATED → QA_PASSED → STAGED → PUBLISHED governance, SIB chunk metadata; implements the PROPOSED protocol without promoting it |
 
 ## 4. Curriculum, subject and knowledge graph
 
@@ -54,6 +56,7 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 |---|---|
 | Subject-first product architecture | `SUBJECT_ARCHITECTURE.md` |
 | SpecificationPoint model | `SUBJECT_ARCHITECTURE.md`, `MASTER_SPEC.md`, ADR-014 |
+| Spec-point applicability (official paper/unit/tier scope on KG nodes) | source data: `syllabai-resources` `graph/specification_points.yaml` (byte-pinned classpath copy in core); persistence/serving: core `V39__knowledge_node_applicability.sql` + `ConceptGraphSnapshotLoader`/`ConceptGraphSeedService` + `StudentQuestionView.specPoints`/`NodeView`; task packet `T-C24` |
 | Teacher/classroom lens over shared graph | `TEACHER_ARCHITECTURE.md`, ADR-015 |
 | Knowledge graph build/context | `KNOWLEDGE_GRAPH_BUILD_PLAN.md`, `KNOWLEDGE_GRAPH_CONTEXT.md`, relevant KG evidence/releases |
 | Current corpus/resource mappings | `syllabai-resources` canonical corpus and its QA/graph artifacts |
@@ -88,7 +91,8 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Area | Canonical artifact(s) | Status/role |
 |---|---|---|
 | RAG/retrieval research | `RAG_RETRIEVAL_RESEARCH.md` | Accepted research/architecture guidance; promotion requires benchmark evidence |
-| Retrieval benchmark harness | `RETRIEVAL_BENCHMARK_HARNESS_SPEC.md` + `bench/` + `evidence/bench-001/` | T-C13 gate spec (RATIFIED v1.0, 2026-09-17); frozen gold-v1 set, snapshot snap-001, run records |
+| Retrieval benchmark harness | `RETRIEVAL_BENCHMARK_HARNESS_SPEC.md` + `bench/` + `evidence/bench-001/` | T-C13 gate spec (RATIFIED v1.0, 2026-09-17; **§8.1 v1.1 dual-view threshold re-index 2026-10-01, T-C40 ②** — ALL + VALIDATED bars from the run-006-bproxy re-baseline, no recorded verdict re-judged); frozen gold sets (v1 + v5 lineage), snapshots snap-001..006, run records |
+| Embedding transport invariant | `EMBEDDING_TRANSPORT_INVARIANT.md` + `evidence/bench-001/embed-bridge-v2/CORRECTION.md` | **Binding (T-C40 ③c, 2026-10-01):** same-text embeddings differ materially by API transport (artifact↔DB mean pairwise cosine 0.9083) — frozen vector artifacts must name their transport; only production-provider-path artifacts feed gate arithmetic; transport/parameter changes on the embedding axis require a paired re-verify. Mechanism narrowed, decisive experiment recorded in the invariant |
 | Retrieval frontier prepared contracts | `RETRIEVAL_FRONTIER_PREPARED_PACKAGE_2026-09-17.md` | T-C07 **IMPLEMENTED** (core `0d7dfaa`); T-C14 lexical **IMPLEMENTED** (core `99be333`, LOCAL VERIFIED 2026-09-17: RetrievalProvider fabric + Bm25Retriever + V28 tsvector/GIN — renumbered from the V27 draft, V27 taken by revision_notes; serving untouched, benchmark-gated; arm-B run needs V28 applied via CI/production flyway; ITs on CI route); **session 86: arm-B run RECORDED** (`evidence/bench-001/runs/run-003-b` — production provider over flyway-migrated PG + snap-001, gold-v1: recall@10 0.074, mrr 0.1224, ndcg@10 0.1224, ZERO validation-boundary violations, determinism double-pass; T-C05 serving-eligible guard landed (`searchServingEligible` + `LexicalBoundaryIT` 2/2 GREEN in Docker CI run `35162299609`); query-form finding routed to dev-subset/gold-v2 per the anti-tuning rule; STILL NOT a production serving default); remaining PREPARED (UNVERIFIED) contracts: embedding runbook (operator-gated), T-C06 converter (V29+; draft numbering consumed); audit findings AF-1..AF-3 |
 | Gemini File Search / Gemini Notebook architecture research | `GEMINI_FILE_SEARCH_AND_NOTEBOOK_ARCHITECTURE_RESEARCH.md` | Accepted research investigation; benchmark required; no production default yet |
 | Educational Retrieval Engine | `ADR-020-EDUCATIONAL_RETRIEVAL_ENGINE.md` | Accepted architecture direction |

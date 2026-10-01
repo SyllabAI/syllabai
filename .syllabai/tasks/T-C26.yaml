@@ -1,0 +1,19 @@
+version: 1
+task:
+  id: T-C26
+  title: "Plan cash-out — §7 per-kind RRF weights reach the serving fusion"
+  owner: "superz (main agent, zai session web-fc62c099)"
+  status: DONE
+  priority: P1
+  base:
+    repo: syllabai-core
+    commit: 3c1600c9f002ea8849298659d9ea5aa0ad676571
+  outcome:
+    commit: 7803102
+    ci: "core-ci SUCCESS run 36160128846"
+    tests: "ServingPlanWeightsTest 7/7; KaRagServiceTest 7/7; ClaServiceTest 20/20"
+    scope: "ReciprocalRankFusion (canonical weights home + fuseWithPlanWeights),
+      RetrievalFabric alias, KaRagService + ClaService serving call sites,
+      ServingPlanWeightsTest; no migrations; no gate changes"
+  evidence:
+    - "evidence/plan-cash-out-2026-09-25/"

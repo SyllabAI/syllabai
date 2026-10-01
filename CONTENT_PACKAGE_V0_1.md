@@ -1,8 +1,8 @@
 # SyllabAI Content Package v0.1 Specification
 
-**Status:** PROPOSED  
-**Date:** 2026-09-15  
-**Related architecture:** `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md`
+**Status:** Accepted  
+**Date:** 2026-09-15 (proposed) · 2026-09-29 (accepted, with ADR-021)  
+**Related architecture:** `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` · **Successor:** `CONTENT_PACKAGE_V0_2.md` (KG projection + distribution, accepted 2026-09-29)
 
 ## 1. Purpose
 
@@ -157,4 +157,4 @@ Acceptance requires semantic equivalence of the packaged corpus to the source sn
 
 ## 10. Status
 
-**PROPOSED.** This specification authorizes design/prototype work only. Production adoption requires implementation evidence and explicit promotion to `ACCEPTED`/`VERIFIED`.
+**ACCEPTED** (2026-09-29 — promoted with ADR-021 on the operator decision; see the ADR's Promotion record). The v0.1 contract is implemented and CI-verified on the real corpus at two scopes: the bounded real-corpus reconstruction proof (parser `tools/content-package-v0.1/`, `content-package-proof` job GREEN — clean-room reconstruction `R3.1`–`R3.9`, negative gates `N1`–`N5`), and the hub-corpus tooling over all 49 courses / 346 artifacts / 82.8 MB (ADR-029 tranche 4.12, hub `tools/content-package/`, selftest in hub-ci: compile + verify + restore + determinism + tamper, with byte-deterministic SQLite and clock-free buildId). Acceptance covers the v0.1 compiler/package/verification contract as implemented; package-driven learner serving remains OUT OF SCOPE — serving continues through the existing validation gates, and PostgreSQL remains the canonical operational store (the ADR-021 boundary). The broader architecture (KG projection policy, distribution/versioning at scale, canonical-store integration) remains staged in `CONTENT_COMPILER_AND_PACKAGE_ARCHITECTURE.md` (PROPOSED) until separately proven.

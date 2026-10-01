@@ -1,0 +1,49 @@
+{
+  "task": "T-C30",
+  "kind": "ui-spot-check",
+  "executed_at_utc": "2026-09-26T21:03Z",
+  "agent": "superz (main agent, zai session web-98866c45)",
+  "purpose": "Upgrade the T-C30 INFERRED claim (the T-C29 learner surfaces render populated scope data — bundle + payload verified, UI not screenshot-verified) to VERIFIED. Listed as next_safe_actions[0] in the T-C30 closeout.",
+  "surface": "https://syllabai-web.vercel.app (production, Vercel main 6a3971a serving)",
+  "account": "sweep.tc28@syllabai-test.dev (STUDENT role badge 'T-C28 Sweep Probe') — the DEPLOYMENT.md-sanctioned TEST self-registration account, reused read-only",
+  "method": "headless Chromium via agent-browser: sign-in, tab navigation, accessibility snapshots + innerText probes + PNG screenshots. Zero code changes; read-only session (no practice submissions, no content mutations).",
+  "probes": {
+    "papersView_paper_level_chips": {
+      "result": "PASS 4/4 probed papers",
+      "location": "Papers tab -> expanded paper row -> 'Official assessment scope' block (PapersView PaperRow summary, T-C29)",
+      "papers": [
+        { "paper": "4CH1/2CR January 2023", "chips": ["Paper 1C", "Paper 2C", "Also in Double Award"], "count": "6 of 8 questions carry official spec mappings." },
+        { "paper": "4CH1/1CR June 2023", "chips": ["Paper 1C", "Paper 2C", "Also in Double Award"], "count": "10 of 11 questions carry official spec mappings." },
+        { "paper": "4CH0/1C January 2012", "chips": ["Paper 1C", "Paper 2C", "Also in Double Award"], "count": "7 of 11 questions carry official spec mappings." },
+        { "paper": "4CH1/2CR June 2025", "chips": ["Paper 1C", "Paper 2C", "Also in Double Award"], "count": "7 of 7 questions carry official spec mappings." }
+      ],
+      "honest_gates_observed": "Per-question chip rows are gated on teacher VALIDATED state (PapersView: versionValidationState === 'VALIDATED'); all probed questions are 'suggested', so no per-question chip rows rendered — expected behavior, separate content lane from the applicability backfill."
+    },
+    "masteryMap_scope_section": {
+      "result": "PASS 2/2 probed spec-point nodes (Mastery map tab -> Graph view -> NodeDetailCard)",
+      "nodes": [
+        {
+          "node": "4CH1-1.1 (non-C, shared)",
+          "chips": ["Paper 1C", "Paper 2C", "Also in Double Award"],
+          "rule": "C-suffixed points are Chemistry-only content (not in Science Double Award) and are assessed in Paper 2C only; non-C points are shared with 4SD0 and assessed in both papers (PDF pages 7, 13, 14)"
+        },
+        {
+          "node": "4CH1-1.5C (C-suffixed)",
+          "chips": ["Paper 2C"],
+          "rule": "same verbatim rule text",
+          "note": "chip set correctly narrows to Paper 2C only for C-suffixed points; node description carries '[C point: Chemistry-only content, not in Science (Double Award)]'"
+        }
+      ],
+      "derived_data_check": "chips and rule render from node.applicability served by the learner KG endpoint (T-C28) — no client-side derivation; values match the T-C30 activation data (182/182) and the SHA-pinned snapshot wording"
+    },
+    "console": "0 page errors, 0 console errors/warnings across the whole signed-in session"
+  },
+  "screenshots": [
+    "evidence/t-c30/ui/01_papers_scope_summary.png (4CH1/2CR Jan 2023 expanded: scope block + chips + 6-of-8 count)",
+    "evidence/t-c30/ui/02_papers_2023-06_scope.png (4CH1/1CR Jun 2023 expanded)",
+    "evidence/t-c30/ui/03_masterymap_scope_1-1_shared.png (NodeDetailCard 4CH1-1.1: 3 chips + rule)",
+    "evidence/t-c30/ui/04_masterymap_scope_1-5C_Conly.png (NodeDetailCard 4CH1-1.5C: Paper 2C chip + rule)"
+  ],
+  "workspace_copy": "syllabai workspace /download/tc30-ui-spotcheck/ (same four PNGs)",
+  "claim_upgrade": "T-C30 claims.INFERRED[0] -> claims.VERIFIED"
+}

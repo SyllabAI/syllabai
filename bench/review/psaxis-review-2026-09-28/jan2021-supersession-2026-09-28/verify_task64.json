@@ -1,0 +1,174 @@
+{
+ "trace": "1a0ea189623183e5",
+ "checks": {
+  "V1_old_chain_gone": {
+   "pass": true,
+   "detail": "{'paper': 0, 'questions': 0, 'qv': 0, 'parts': 0, 'schemes': 0, 'mps': 0, 'bridge': 0, 'attempts': 0, 'answers': 0}"
+  },
+  "V2_new_paper_validated_pointers": {
+   "pass": true,
+   "detail": "('VALIDATED', 'a4a8a5e1-dbf6-5e9d-8e02-54d39eca315d', 'd74802bc-d832-5896-ba58-9122bd0cc6dd')"
+  },
+  "V2_new_paper_series_year": {
+   "pass": true,
+   "detail": "('JAN', 2021)"
+  },
+  "V3_qv_marks_70": {
+   "pass": true,
+   "detail": "[5, 5, 8, 9, 14, 14, 15]"
+  },
+  "V3_qv_all_VALIDATED": {
+   "pass": true,
+   "detail": "{'VALIDATED': 7}"
+  },
+  "V3_schemes_all_VALIDATED": {
+   "pass": true,
+   "detail": "{'VALIDATED': 7}"
+  },
+  "V3_parts_48_mps_39": {
+   "pass": true,
+   "detail": "(48, 39)"
+  },
+  "V3_mp_texts_multiset_equal_draft": {
+   "pass": true,
+   "detail": "EXACT"
+  },
+  "V3_mp_sum_70": {
+   "pass": true,
+   "detail": "70"
+  },
+  "V3_no_bridge_row": {
+   "pass": true,
+   "detail": ""
+  },
+  "V4_chunkful_QUESTION_PAPER_VALIDATED_11rev2": {
+   "pass": true,
+   "detail": "('VALIDATED', 11, 11, 2, 'gemini-embedding-001', 11, 1)"
+  },
+  "V4_chunkful_MARK_SCHEME_VALIDATED_11rev2": {
+   "pass": true,
+   "detail": "('VALIDATED', 11, 11, 2, 'gemini-embedding-001', 11, 1)"
+  },
+  "V4_shell_QUESTION_PAPER_REJECTED_inert": {
+   "pass": true,
+   "detail": "('REJECTED', 0, 0)"
+  },
+  "V4_shell_MARK_SCHEME_REJECTED_inert": {
+   "pass": true,
+   "detail": "('REJECTED', 0, 0)"
+  },
+  "V5_rev1_zero": {
+   "pass": true,
+   "detail": "0"
+  },
+  "V5_pool_2935": {
+   "pass": true,
+   "detail": "2935"
+  },
+  "V5_delta_is_the_22": {
+   "pass": true,
+   "detail": "22"
+  },
+  "V6_census_ep_90V_0S_14R": {
+   "pass": true,
+   "detail": "{'VALIDATED': 90, 'SUGGESTED': 0, 'REJECTED': 14}"
+  },
+  "V6_census_doc_567V_354S_98R": {
+   "pass": true,
+   "detail": "{'VALIDATED': 567, 'SUGGESTED': 354, 'REJECTED': 98}"
+  },
+  "V7_audit_20_rows_ids_3871_3890": {
+   "pass": true,
+   "detail": "[3871, 3890]"
+  },
+  "V7_audit_action_mix": {
+   "pass": true,
+   "detail": "{'PLACE': 1, 'VALIDATE': 17, 'REJECT': 2}"
+  },
+  "V7_audit_trace_in_every_detail": {
+   "pass": true,
+   "detail": "1a0ea189623183e5"
+  },
+  "V7_audit_actor": {
+   "pass": true,
+   "detail": "all rows"
+  },
+  "V7_events_zero": {
+   "pass": true,
+   "detail": ""
+  },
+  "V7_gap_3831_3870_documented": {
+   "pass": true,
+   "detail": "40 sequence values burned by the two rolled-back INSERT attempts (NEXTVAL not transactional; Task 62 id-3734 precedent) \u2014 zero live rows in the gap"
+  },
+  "L1_all_queries_hit": {
+   "pass": true,
+   "detail": "[{'query': 'electrolysis of molten lead bromide', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'why does the rate of reaction increase with temperature', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'covalent bonding in hydrogen chloride', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'titration calculation with sodium hydroxide', 'hits': 10, 'models': ['ge"
+  }
+ },
+ "detail": {
+  "new_paper_id": "890f8634-700a-4e16-a02f-f67b1bf1f625",
+  "pool_delta_ids": [
+   "05324dee-9374-4f03-975e-1dff601f5f92",
+   "059897a5-f675-4322-b6fb-3d6455116080",
+   "13d878dc-0211-4b3a-9793-25788bcd890d",
+   "1dba9b38-b4bb-4a6a-ae44-2476c25f3ce9",
+   "23224ae2-7dc9-46e6-bb4f-8138fe2b152e",
+   "27a3befc-bf37-4c33-857b-39e2767f83be",
+   "4563523b-0111-49ab-a3dd-451ff17b1a81",
+   "4e0cbc79-81ad-49ae-bb6e-d39aa8416079",
+   "5d887ba1-a298-4420-839b-c036ed16f3cc",
+   "7bcf531f-11c8-496c-8877-cacd3a61e219",
+   "949aed48-928c-44e2-a819-814d069f1891",
+   "98115d7b-f55c-4e42-a8f9-5aa3579016df",
+   "9c226aec-c4fb-4c1e-b03b-b81e784ba0bd",
+   "9c7d50ed-3466-45ca-9fd0-ff3e23a1ff71",
+   "9d290589-4398-405c-8bd6-74d3247d54a9",
+   "af85230c-cdbe-4ae5-86c4-1b5ebb75d38f",
+   "bd8d47b2-be0e-4060-b8ce-278dcfafeeec",
+   "d0450e10-1c2a-48b9-a03d-a791f5d6ea50",
+   "e3759268-b2b8-4ccc-ab48-568437b792f2",
+   "ea2cfa7e-db5d-4695-9971-f038b41ea796",
+   "ea605329-c6f0-4b24-abaf-003c10985eee",
+   "edd40f81-28ee-4ac7-807c-36dd6ba9ff86"
+  ]
+ },
+ "L1_live_probe": [
+  {
+   "query": "electrolysis of molten lead bromide",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "why does the rate of reaction increase with temperature",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "covalent bonding in hydrogen chloride",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "titration calculation with sodium hydroxide",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "halogen displacement reactions",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  }
+ ],
+ "verdict": "VERIFIED"
+}

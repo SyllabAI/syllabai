@@ -1,0 +1,5036 @@
+{
+ "audit_actions": {
+  "VALIDATE": 2125,
+  "REJECT": 152,
+  "PLACE": 97,
+  "FLAG": 57,
+  "UNFLAG": 53,
+  "VALIDATE_ALL": 3,
+  "MAP_TOPICS": 2
+ },
+ "audit_actors": {
+  "Nawaf Al Hussain Khondokar": 2012,
+  "Nawaf Al Hussain Khondokar / [EMAIL REQUIRED]": 298,
+  "operator \u2014 Nawaf Al Hussain Khondokar (notes-axis promotion (a) named in IM)": 112,
+  "pilot.teacher@syllabai-test.dev": 54,
+  "teacher.e2e.1789406059@syllabai.dev": 10,
+  "operator \u2014 Nawaf Al Hussain Khondokar (the teacher who completed the 298-card review sheet)": 3
+ },
+ "ms_mp_nullability": [
+  "mark_points.id null=NO default=None",
+  "mark_points.mark_scheme_id null=NO default=None",
+  "mark_points.question_part_id null=YES default=None",
+  "mark_points.ref null=YES default=None",
+  "mark_points.ordering null=NO default=None",
+  "mark_points.text null=NO default=None",
+  "mark_points.marks null=NO default=None",
+  "mark_points.acceptance_criteria null=YES default=None",
+  "mark_points.extraction_confidence null=YES default=None",
+  "mark_points.created_at null=NO default=None",
+  "mark_schemes.id null=NO default=None",
+  "mark_schemes.question_version_id null=NO default=None",
+  "mark_schemes.version_label null=NO default='1'::character varying",
+  "mark_schemes.source_document_id null=YES default=None",
+  "mark_schemes.validation_state null=NO default='SUGGESTED'::character varying",
+  "mark_schemes.extraction_method null=YES default=None",
+  "mark_schemes.created_at null=NO default=None",
+  "mark_schemes.general_guidance null=YES default=None"
+ ],
+ "mp_part_links": {
+  "total": 5315,
+  "with_part": 4725
+ },
+ "ms_source_key": [
+  "('78563784-74e8-5b60-b0af-f5c111e17ac2', 1)",
+  "('78563784-74e8-5b60-b0af-f5c111e17ac2', 1)",
+  "('7f5e53ea-d388-5ec3-8766-a9145a7ac19d', 1)",
+  "('7f5e53ea-d388-5ec3-8766-a9145a7ac19d', 1)"
+ ],
+ "q03_parts": [
+  "('a', 0, 0)",
+  "('b', 0, 1)",
+  "('c', 0, 2)",
+  "('d', 0, 3)",
+  "('d-i', 0, 4)",
+  "('d-ii', 0, 5)"
+ ],
+ "sweep": [
+  {
+   "paper": "0494f765-5f3f-41c7-9173-241ee7ee0d16",
+   "code": "4CH0/1C",
+   "session": "June 2014",
+   "sparse_qv": 4,
+   "extractable": 2,
+   "skipped": 2,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 6,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 2,
+     "sum": 3,
+     "printed": 3,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 7,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 7,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "P2",
+      "M1",
+      "M2",
+      "M3"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 6,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 11,
+     "sum": 11,
+     "printed": 11,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "M2",
+      "M1",
+      "M2",
+      "M3",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 6,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 4,
+     "sum": 4,
+     "printed": 4,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 6,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "M2",
+      "P4"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 11,
+     "sum": 11,
+     "printed": 11,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 11,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "M2",
+      "M1",
+      "M2",
+      "P3",
+      "M1",
+      "M2",
+      "M3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 11,
+     "sum": 12,
+     "printed": 12,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "M2",
+      "M1",
+      "M2",
+      "P5"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 5,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 12,
+     "rows": 6,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M2",
+      "M3",
+      "M1",
+      "M2",
+      "P1"
+     ]
+    },
+    {
+     "qn": 13,
+     "rows": 9,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M1",
+      "M2",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 14,
+     "rows": 8,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M3",
+      "P2",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 15,
+     "rows": 15,
+     "sum": 15,
+     "printed": 15,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1",
+      "M2",
+      "M3",
+      "M1",
+      "M2",
+      "M1",
+      "M2",
+      "M3",
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "M2",
+      "M1",
+      "M2"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "0924a1fe-8672-413d-9b37-25c2e6f303de",
+   "code": "4CH1/1C",
+   "session": "June 2019",
+   "sparse_qv": 13,
+   "extractable": 6,
+   "skipped": 7,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 2,
+     "sum": 2,
+     "printed": 4,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 3,
+     "sum": 4,
+     "printed": 4,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 4,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 5,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 3,
+     "sum": 7,
+     "printed": 8,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 8,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 4,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 5,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 4,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 5,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 4,
+     "sum": 14,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 5,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "P4"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 3,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "M1",
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 3,
+     "sum": 5,
+     "printed": 7,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 7,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 11,
+     "extractable": false,
+     "reasons": [
+      "no-ms-chunk"
+     ],
+     "sparse_qv": 1
+    },
+    {
+     "qn": 12,
+     "extractable": false,
+     "reasons": [
+      "no-ms-chunk"
+     ],
+     "sparse_qv": 1
+    },
+    {
+     "qn": 14,
+     "extractable": false,
+     "reasons": [
+      "no-ms-chunk"
+     ],
+     "sparse_qv": 1
+    },
+    {
+     "qn": 15,
+     "extractable": false,
+     "reasons": [
+      "no-ms-chunk"
+     ],
+     "sparse_qv": 1
+    }
+   ]
+  },
+  {
+   "paper": "118e7ed4-5448-4fc9-93e8-0c06a6886a07",
+   "code": "4CH0/2CR",
+   "session": "June 2014",
+   "sparse_qv": 6,
+   "extractable": 5,
+   "skipped": 1,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 10,
+     "sum": 10,
+     "printed": 10,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 10,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 7,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 7,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 3,
+     "sum": 3,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 5,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 14,
+     "sum": 14,
+     "printed": 14,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 14,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "M1",
+      "M2",
+      "M3",
+      "P10",
+      "P11"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 9,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 15,
+     "sum": 15,
+     "printed": 15,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 15,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14",
+      "P15"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "1995f447-d824-4ae7-bf9a-590ff2cff5b3",
+   "code": "4CH0/1CR",
+   "session": "June 2016",
+   "sparse_qv": 12,
+   "extractable": 0,
+   "skipped": 12,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 7,
+     "sum": 7,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 2,
+     "sum": 4,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1",
+      "P1"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 3,
+     "sum": 3,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 4,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 3,
+     "sum": 5,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 8,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 1,
+     "sum": 3,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 2,
+     "sum": 5,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 10,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M2",
+      "M3"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 5,
+     "sum": 12,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 12,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total"
+     ],
+     "refs": [
+      "M1",
+      "M2",
+      "M3",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 4,
+     "sum": 7,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 8,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M2"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 2,
+     "sum": 6,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M2",
+      "M3"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 1,
+     "sum": 3,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 15,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 6,
+     "sum": 11,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M2",
+      "M2",
+      "P2",
+      "M2",
+      "M2"
+     ]
+    },
+    {
+     "qn": 12,
+     "rows": 4,
+     "sum": 6,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 13,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M2"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "1db58ecb-d735-40de-8062-bc031fd37d5b",
+   "code": "4CH0/1C",
+   "session": "June 2016",
+   "sparse_qv": 1,
+   "extractable": 0,
+   "skipped": 1,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 2,
+     "sum": 4,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 6,
+     "sum": 8,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "P4",
+      "M1"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 3,
+     "sum": 5,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 3,
+     "sum": 9,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P7"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 4,
+     "sum": 7,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 8,
+     "sum": 15,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 3,
+     "sum": 7,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 3,
+     "sum": 5,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 5,
+     "sum": 9,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "P4"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 3,
+     "sum": 6,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 7,
+     "sum": 9,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "P5",
+      "P6"
+     ]
+    },
+    {
+     "qn": 12,
+     "rows": 7,
+     "sum": 12,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "P1",
+      "M2",
+      "P3",
+      "M1",
+      "P4"
+     ]
+    },
+    {
+     "qn": 13,
+     "rows": 3,
+     "sum": 5,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 14,
+     "rows": 2,
+     "sum": 4,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 15,
+     "rows": 6,
+     "sum": 8,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+     ]
+    },
+    {
+     "qn": 16,
+     "rows": 4,
+     "sum": 7,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "2b234bde-3d89-458e-9a43-b0288437dd5c",
+   "code": "4CH0/1C",
+   "session": "June 2015",
+   "sparse_qv": 10,
+   "extractable": 4,
+   "skipped": 6,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 5,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 5,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 3,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 5,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "M1",
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 4,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 8,
+     "sum": 10,
+     "printed": 10,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 10,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "M1"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 12,
+     "sum": 15,
+     "printed": 15,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "M1",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "M1",
+      "P10"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 9,
+     "sum": 16,
+     "printed": 17,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 17,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "M1",
+      "P3",
+      "P4",
+      "P5",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 5,
+     "sum": 7,
+     "printed": 9,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "M1",
+      "P3"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 9,
+     "sum": 14,
+     "printed": 14,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "P4",
+      "M1",
+      "M1",
+      "P5",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 5,
+     "sum": 13,
+     "printed": 17,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 17,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "M1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 7,
+     "sum": 12,
+     "printed": 12,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 12,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 7,
+     "sum": 10,
+     "printed": 11,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 11,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P6",
+      "P7",
+      "P8"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "31236989-60fe-4dd9-b7c8-b86160f8a14e",
+   "code": "4CH0/1C",
+   "session": "January 2017",
+   "sparse_qv": 3,
+   "extractable": 1,
+   "skipped": 2,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 8,
+     "sum": 10,
+     "printed": 11,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 11,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "P4",
+      "M1",
+      "P5",
+      "P6"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 5,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "M1"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 8,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "P4",
+      "P5",
+      "P6",
+      "P7"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 4,
+     "sum": 9,
+     "printed": 12,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 12,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "M1",
+      "P1"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 10,
+     "sum": 15,
+     "printed": 17,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 2,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 7,
+     "sum": 12,
+     "printed": 12,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "P4"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 2,
+     "sum": 8,
+     "printed": 13,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 5,
+     "sum": 8,
+     "printed": 8,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "P1",
+      "P2",
+      "M1"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 5,
+     "sum": 7,
+     "printed": 10,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "M1"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 9,
+     "sum": 16,
+     "printed": 16,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "M1",
+      "M1",
+      "M1",
+      "P3",
+      "P4",
+      "M1"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "31ad242a-43c6-4246-a158-bd79f586994a",
+   "code": "4CH0/1C",
+   "session": "June 2013",
+   "sparse_qv": 4,
+   "extractable": 3,
+   "skipped": 1,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 9,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 7,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 7,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 6,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 17,
+     "sum": 17,
+     "printed": 17,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14",
+      "M2",
+      "P15",
+      "P16"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 12,
+     "sum": 13,
+     "printed": 14,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 10,
+     "sum": 10,
+     "printed": 10,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 10,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 12,
+     "sum": 14,
+     "printed": 14,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 14,
+     "sum": 14,
+     "printed": 14,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 13,
+     "sum": 13,
+     "printed": 13,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 9,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "38aeec70-d6e1-4bd6-9eb3-173c4dd5eff8",
+   "code": "4CH0/2C",
+   "session": "January 2013",
+   "sparse_qv": 2,
+   "extractable": 0,
+   "skipped": 2,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 3,
+     "sum": 4,
+     "printed": 4,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 3,
+     "sum": 3,
+     "printed": 4,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 4,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 7,
+     "sum": 7,
+     "printed": 8,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "M1",
+      "M2",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 12,
+     "sum": 13,
+     "printed": 11,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "M1",
+      "M2",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "M1",
+      "M2",
+      "P7"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 7,
+     "sum": 12,
+     "printed": 12,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M3",
+      "M4",
+      "M5",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": []
+    },
+    {
+     "qn": 7,
+     "rows": 7,
+     "sum": 8,
+     "printed": 10,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "M1",
+      "M1",
+      "M2",
+      "M3",
+      "P2"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "59fc6548-9896-4acd-8624-21c6e01cde08",
+   "code": "4CH0/2C",
+   "session": "January 2019",
+   "sparse_qv": 3,
+   "extractable": 0,
+   "skipped": 3,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": []
+    },
+    {
+     "qn": 2,
+     "rows": 3,
+     "sum": 5,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 5,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 4,
+     "sum": 5,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 2,
+     "sum": 5,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 3,
+     "sum": 6,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": []
+    },
+    {
+     "qn": 7,
+     "rows": 3,
+     "sum": 4,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 3,
+     "sum": 6,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 4,
+     "sum": 9,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "M1"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 3,
+     "sum": 7,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "M1"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "7041ab60-1e67-4b7a-917e-7896ea0a0edf",
+   "code": "4CH0/2C",
+   "session": "June 2011",
+   "sparse_qv": 1,
+   "extractable": 1,
+   "skipped": 0,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": []
+    },
+    {
+     "qn": 2,
+     "rows": 8,
+     "sum": 8,
+     "printed": 5,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": []
+    },
+    {
+     "qn": 4,
+     "rows": 3,
+     "sum": 4,
+     "printed": 7,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 3,
+     "sum": 3,
+     "printed": 8,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 1,
+     "sum": 2,
+     "printed": 10,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 9,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 6,
+     "sum": 11,
+     "printed": 11,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "73b3c496-6190-4ad9-9a54-9cd62b4fc01c",
+   "code": "4CH1/2CR",
+   "session": "January 2021",
+   "sparse_qv": 1,
+   "extractable": 0,
+   "skipped": 1,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 2,
+     "sum": 2,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P3"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 6,
+     "sum": 9,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 8,
+     "sum": 12,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P8",
+      "P9"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 5,
+     "sum": 37,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 6,
+     "sum": 13,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "P4",
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 7,
+     "sum": 13,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 2,
+     "sum": 3,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 4,
+     "sum": 7,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 7,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "P3"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "a29dfbd8-54c4-41b0-97ec-8fa8fe94b966",
+   "code": "4CH0/1CR",
+   "session": "June 2017",
+   "sparse_qv": 1,
+   "extractable": 1,
+   "skipped": 0,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 4,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 3,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 4,
+     "sum": 8,
+     "printed": 8,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 3,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 5,
+     "sum": 8,
+     "printed": 12,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 8,
+     "sum": 15,
+     "printed": 15,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "M1",
+      "P2",
+      "P3",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 5,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "P4"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 3,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 6,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 4,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 7,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "M1",
+      "P1",
+      "M1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 7,
+     "sum": 8,
+     "printed": 9,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7"
+     ]
+    },
+    {
+     "qn": 12,
+     "rows": 5,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "P1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 13,
+     "rows": 4,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 14,
+     "rows": 5,
+     "sum": 8,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 15,
+     "rows": 3,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "M1"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "ad069fa9-3eb4-47b7-891c-784365aa1c45",
+   "code": "4CH0/1C",
+   "session": "January 2015",
+   "sparse_qv": 11,
+   "extractable": 6,
+   "skipped": 5,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 4,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 7,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 7,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 4,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 7,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 9,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 8,
+     "sum": 8,
+     "printed": 8,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 8,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 8,
+     "sum": 8,
+     "printed": 8,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 8,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 10,
+     "sum": 11,
+     "printed": 17,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 17,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P9",
+      "P10",
+      "P11",
+      "P12"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 8,
+     "sum": 9,
+     "printed": 10,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 10,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "P5",
+      "P6",
+      "P7"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 8,
+     "sum": 8,
+     "printed": 9,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 6,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 14,
+     "sum": 14,
+     "printed": 14,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14"
+     ]
+    },
+    {
+     "qn": 12,
+     "rows": 14,
+     "sum": 15,
+     "printed": 15,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 15,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "b2c9ec49-9e47-4ec5-83be-3b5d787322c4",
+   "code": "4CH0/1CR",
+   "session": "June 2013",
+   "sparse_qv": 3,
+   "extractable": 0,
+   "skipped": 3,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 5,
+     "sum": 5,
+     "printed": 8,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P6"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 7,
+     "sum": 7,
+     "printed": 6,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "M2",
+      "M1",
+      "M2",
+      "P2"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 3,
+     "sum": 3,
+     "printed": 12,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M3",
+      "M1"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 8,
+     "sum": 10,
+     "printed": 10,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "M1",
+      "M2",
+      "M1",
+      "M2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 8,
+     "sum": 8,
+     "printed": 11,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "M1",
+      "M1",
+      "M1",
+      "M2",
+      "M3",
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 12,
+     "sum": 12,
+     "printed": 16,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 16,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "M1",
+      "M2",
+      "M1",
+      "P2",
+      "P3",
+      "P4",
+      "P7",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 11,
+     "sum": 12,
+     "printed": 16,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M2",
+      "P1",
+      "P2",
+      "M1",
+      "M2",
+      "M1",
+      "M1",
+      "P3",
+      "P4",
+      "M2"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 6,
+     "sum": 6,
+     "printed": 8,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 8,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 7,
+     "sum": 7,
+     "printed": 9,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "M1",
+      "M2",
+      "P4",
+      "P5"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 10,
+     "sum": 11,
+     "printed": 15,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "M1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 5,
+     "sum": 6,
+     "printed": 9,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "P5"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "c2dab965-b9e9-4ca9-a37c-74a557e9b3b5",
+   "code": "4CH0/2CR",
+   "session": "June 2017",
+   "sparse_qv": 1,
+   "extractable": 1,
+   "skipped": 0,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 4,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 3,
+     "sum": 4,
+     "printed": 4,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 4,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "M1"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 7,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 5,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 3,
+     "sum": 8,
+     "printed": 10,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 5,
+     "sum": 12,
+     "printed": 12,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "P1",
+      "M1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 3,
+     "sum": 8,
+     "printed": 8,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "M1"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "c41dad58-957f-4254-94ed-f26cf1d7b5ed",
+   "code": "4CH0/2CR",
+   "session": "June 2016",
+   "sparse_qv": 7,
+   "extractable": 0,
+   "skipped": 7,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 2,
+     "sum": 2,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 4,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 1,
+     "sum": 3,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 8,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M2"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 5,
+     "sum": 7,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "M3"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total"
+     ],
+     "refs": []
+    },
+    {
+     "qn": 5,
+     "rows": 1,
+     "sum": 20,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 11,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 2,
+     "sum": 6,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M3",
+      "M3"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 2,
+     "sum": 4,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 14,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M2",
+      "M1"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "cdbbe3ea-60fa-48ef-b870-bb9ef345f545",
+   "code": "4CH1/1CR",
+   "session": "June 2019",
+   "sparse_qv": 3,
+   "extractable": 1,
+   "skipped": 2,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 4,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 3,
+     "sum": 8,
+     "printed": 6,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 3,
+     "sum": 6,
+     "printed": 15,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M3"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 2,
+     "sum": 3,
+     "printed": 13,
+     "failed": true,
+     "sparse_qv": 1,
+     "qv_marks": 13,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 3,
+     "sum": 6,
+     "printed": 13,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 6,
+     "sum": 11,
+     "printed": 13,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 4,
+     "sum": 13,
+     "printed": 14,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 5,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 4,
+     "sum": 11,
+     "printed": 11,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 3,
+     "sum": 6,
+     "printed": 10,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P2"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "ddaec35a-48d4-49f2-9b8c-259f6f94bb14",
+   "code": "4CH0/2C",
+   "session": "January 2015",
+   "sparse_qv": 1,
+   "extractable": 1,
+   "skipped": 0,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 2,
+     "sum": 2,
+     "printed": 3,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 4,
+     "sum": 4,
+     "printed": 4,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 4,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 6,
+     "sum": 15,
+     "printed": 10,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P2",
+      "M1",
+      "P3",
+      "M1",
+      "P4"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 2,
+     "sum": 15,
+     "printed": 15,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M4"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 2,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 3,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 4,
+     "sum": 8,
+     "printed": 6,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M3",
+      "M2"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 4,
+     "sum": 13,
+     "printed": 5,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": []
+    }
+   ]
+  },
+  {
+   "paper": "e0dfa4c1-79eb-4bde-b22b-e19ca6f1a94a",
+   "code": "4CH1/1CR",
+   "session": "June 2022",
+   "sparse_qv": 1,
+   "extractable": 0,
+   "skipped": 1,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 2,
+     "sum": 6,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 4,
+     "sum": 8,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 4,
+     "sum": 9,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 7,
+     "sum": 12,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "M1",
+      "P4",
+      "P5"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 7,
+     "sum": 13,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "M2",
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 5,
+     "sum": 9,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "M1",
+      "P3"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 3,
+     "sum": 10,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 6,
+     "sum": 10,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 4,
+     "sum": 10,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "P1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 7,
+     "sum": 10,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "P3",
+      "P4",
+      "M1",
+      "P5"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 5,
+     "sum": 10,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 1,
+     "extractable": false,
+     "reasons": [
+      "no-printed-total",
+      "sum!=qv-marks"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "M1",
+      "P2",
+      "P3"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "e7e03906-1a3f-4d2f-b98b-16fa2397d874",
+   "code": "4CH0/2C",
+   "session": "June 2013",
+   "sparse_qv": 1,
+   "extractable": 1,
+   "skipped": 0,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 5,
+     "sum": 5,
+     "printed": 5,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+     ]
+    },
+    {
+     "qn": 2,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": []
+    },
+    {
+     "qn": 3,
+     "rows": 7,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M3",
+      "P2",
+      "P3",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 9,
+     "sum": 9,
+     "printed": 7,
+     "failed": true,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "pipeline-FAILED-flag",
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "M2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 7,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 7,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 19,
+     "sum": 19,
+     "printed": 19,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M2",
+      "P2",
+      "M3",
+      "M4",
+      "M1",
+      "M2",
+      "M3",
+      "M1",
+      "M2",
+      "M3",
+      "P4",
+      "P5",
+      "M1",
+      "M2",
+      "M3",
+      "M1",
+      "M2"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 8,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8"
+     ]
+    }
+   ]
+  },
+  {
+   "paper": "e97797b8-6c19-4380-8f67-ee39a703b76e",
+   "code": "4CH0/1C",
+   "session": "June 2017",
+   "sparse_qv": 2,
+   "extractable": 2,
+   "skipped": 0,
+   "per_qn": [
+    {
+     "qn": 1,
+     "rows": 0,
+     "sum": 0,
+     "printed": null,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "no-rows",
+      "no-printed-total",
+      "qv-count=0"
+     ],
+     "refs": []
+    },
+    {
+     "qn": 2,
+     "rows": 6,
+     "sum": 10,
+     "printed": 11,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "M1",
+      "P4"
+     ]
+    },
+    {
+     "qn": 3,
+     "rows": 4,
+     "sum": 7,
+     "printed": 7,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 4,
+     "rows": 7,
+     "sum": 12,
+     "printed": 13,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "P4",
+      "M1"
+     ]
+    },
+    {
+     "qn": 5,
+     "rows": 4,
+     "sum": 6,
+     "printed": 6,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 6,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "M1"
+     ]
+    },
+    {
+     "qn": 6,
+     "rows": 7,
+     "sum": 16,
+     "printed": 16,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "P4",
+      "M2"
+     ]
+    },
+    {
+     "qn": 7,
+     "rows": 6,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "M1",
+      "P3",
+      "P4",
+      "M1"
+     ]
+    },
+    {
+     "qn": 8,
+     "rows": 6,
+     "sum": 9,
+     "printed": 9,
+     "failed": false,
+     "sparse_qv": 1,
+     "qv_marks": 9,
+     "extractable": true,
+     "reasons": [],
+     "refs": [
+      "P1",
+      "M1",
+      "P2",
+      "M1",
+      "P3",
+      "M1"
+     ]
+    },
+    {
+     "qn": 9,
+     "rows": 8,
+     "sum": 15,
+     "printed": 15,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "P2",
+      "P3",
+      "M1",
+      "M1",
+      "P4",
+      "P5",
+      "M1"
+     ]
+    },
+    {
+     "qn": 10,
+     "rows": 7,
+     "sum": 17,
+     "printed": 18,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "sum!=printed",
+      "qv-count=0"
+     ],
+     "refs": [
+      "M1",
+      "M1",
+      "M1",
+      "P2",
+      "M1",
+      "M2",
+      "M1"
+     ]
+    },
+    {
+     "qn": 11,
+     "rows": 4,
+     "sum": 11,
+     "printed": 11,
+     "failed": false,
+     "sparse_qv": 0,
+     "qv_marks": null,
+     "extractable": false,
+     "reasons": [
+      "qv-count=0"
+     ],
+     "refs": [
+      "P1",
+      "M1",
+      "M1",
+      "M1"
+     ]
+    }
+   ]
+  }
+ ],
+ "totals": {
+  "papers": 22,
+  "sparse_qv": 91,
+  "extractable_qn_groups": 35,
+  "skipped": 195,
+  "extractable_qv": 35
+ }
+}

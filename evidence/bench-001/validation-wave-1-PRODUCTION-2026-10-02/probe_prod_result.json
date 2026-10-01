@@ -1,0 +1,43 @@
+{
+ "pid": "PRB-01",
+ "transport": "frozen-vector (geo-blocked sandbox; live Path A unavailable)",
+ "frozen_sha256": "74c78cde90009a358fbd47302edf61840f934238a485cccd2e9b05cfff2b5e7d",
+ "histogram": [
+  [
+   9,
+   46
+  ],
+  [
+   10,
+   1144
+  ],
+  [
+   11,
+   1361
+  ],
+  [
+   12,
+   266
+  ],
+  [
+   13,
+   80
+  ],
+  [
+   14,
+   27
+  ],
+  [
+   15,
+   10
+  ],
+  [
+   16,
+   1
+  ]
+ ],
+ "total": 2935,
+ "above_050": 1745,
+ "pct_above_050": 59.5,
+ "verdict": "PASS"
+}

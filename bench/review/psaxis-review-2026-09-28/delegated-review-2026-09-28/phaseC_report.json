@@ -1,0 +1,448 @@
+{
+ "mode": "EXECUTE",
+ "started": "2026-09-28T19:33:33.029783+00:00",
+ "plan": {
+  "8197117d-6236-4992-a32e-487358de7295": {
+   "paper": "4CH0/1C \u00b7 January 2019",
+   "swaps": {
+    "QP": {
+     "from": "1068811f-9755-55cf-bac7-af80c6d2f3d2",
+     "to": "023f2a91-2fdd-5425-9b6a-0b84e80204fb",
+     "evidence": "attribution 9/9 (1.0) map_ym=201901"
+    },
+    "MS": {
+     "from": "e17d67ae-d8e6-5a78-a181-90c63ef99689",
+     "to": "4ada6665-d282-54bf-9f42-e1f055cb4a87",
+     "evidence": "map_ym=201901 chunks=17"
+    }
+   }
+  },
+  "71fafec0-1b2f-432f-b459-a000cc35aed8": {
+   "paper": "4CH1/1CR \u00b7 January 2023",
+   "swaps": {
+    "QP": {
+     "from": "f3439d3f-417c-5e2f-be28-c8d21e32a314",
+     "to": "da6282b1-9bc0-5475-8be3-335a20d561f1",
+     "evidence": "attribution 9/9 (1.0) map_ym=202301"
+    },
+    "MS": {
+     "from": "d622448d-f4d9-5937-9f18-7e323b841974",
+     "to": "2dbcaba6-dc11-5697-90c2-731a17673665",
+     "evidence": "map_ym=202301 chunks=18"
+    }
+   }
+  },
+  "cd45e3ed-3d8c-4eb4-9259-51313adb0962": {
+   "paper": "4CH0/2C \u00b7 January 2012",
+   "swaps": {
+    "QP": {
+     "from": "a4dddf18-3fa6-502f-8b1a-a00a589950cb",
+     "to": "e59017d6-4d29-5232-a7a8-89afbe35c8f1",
+     "evidence": "attribution 6/6 (1.0) map_ym=201201"
+    },
+    "MS": {
+     "from": "8b08e623-0f67-5f53-9e8f-ba4b19ff5f77",
+     "to": "b0d196af-6210-5bef-99b6-ea4e456ac462",
+     "evidence": "map_ym=201201 chunks=11"
+    }
+   }
+  },
+  "fd511922-2cb3-4701-8d23-564d8141d6fd": {
+   "paper": "4CH0/2C \u00b7 June 2012",
+   "swaps": {
+    "QP": {
+     "from": "8f5ded06-37a7-5eae-9096-d13bccb52712",
+     "to": "bd7f508a-e78a-5703-9aa0-1da4afb427c8",
+     "evidence": "attribution 5/5 (1.0) map_ym=201206"
+    },
+    "MS": {
+     "from": "551e68e8-5405-5723-b83e-47fc7d89d91b",
+     "to": "2502fbe0-40b8-5b7a-8b5a-61cacc219d35",
+     "evidence": "map_ym=201206 chunks=11"
+    }
+   }
+  },
+  "9a462279-3c3d-442c-ade4-f8daec1fa304": {
+   "paper": "4CH1/2C \u00b7 June 2024",
+   "swaps": {
+    "QP": {
+     "from": "9ab00b14-acd3-5e58-b31b-9f949bdb3aae",
+     "to": "de0ebeac-bbb0-5a95-9c31-7b5258604133",
+     "evidence": "attribution 6/7 (0.857) \u00a7D3 content-identified"
+    },
+    "MS": {
+     "from": "1beecbbf-c16e-56f9-923e-37b8b1bf25ad",
+     "to": "c28718b3-8bce-5109-b944-25e6556ae01a",
+     "evidence": "map_ym=202406 chunks=12"
+    }
+   }
+  },
+  "d3d7e0f2-fd08-48c6-a02f-e94da725d441": {
+   "paper": "4CH1/2CR \u00b7 June 2020",
+   "swaps": {
+    "QP": {
+     "from": "2ad68057-c1ea-5bd2-b0cd-4a433f7f90ae",
+     "to": "eeb567d6-b884-5262-ad33-5f3f0db2204b",
+     "evidence": "attribution 5/5 (1.0) map_ym=202006"
+    },
+    "MS": {
+     "from": "d110adef-fdae-5bee-a5cf-c9a0e27f33a7",
+     "to": "4a61e78f-ec27-52b5-8cc7-e54d76d8899c",
+     "evidence": "map_ym=202006 chunks=16"
+    }
+   }
+  },
+  "a69a4e80-ff69-4894-b495-6c76f10a7373": {
+   "paper": "4CH0/1C \u00b7 January 2012",
+   "swaps": {
+    "QP": {
+     "from": "f75a1349-b385-5dfe-8c84-9b844e42180b",
+     "to": "4e469ae8-dd34-51f9-ba98-8ad1ea9c6696",
+     "evidence": "attribution 7/7 (1.0) \u00a7D3 content-identified"
+    }
+   }
+  },
+  "4ff41810-8e47-42ed-849e-47d6ee92e627": {
+   "paper": "4CH0/1C \u00b7 June 2012",
+   "swaps": {
+    "QP": {
+     "from": "4c329905-ae5a-5045-bd72-9cf1febb8e93",
+     "to": "efd57f65-11ac-58b4-a622-f1c9f4960761",
+     "evidence": "attribution 13/13 (1.0) \u00a7D3 content-identified"
+    },
+    "MS": {
+     "from": "38f9a8cb-c8f4-5477-8e4b-2053556452ed",
+     "to": "fe95d682-4bf4-5cd1-bcef-ff3961d2131e",
+     "evidence": "map_ym=201206 chunks=25"
+    }
+   }
+  },
+  "a81bc1e8-74d9-4ffb-ad82-11cad0c0737e": {
+   "paper": "4CH0/1C \u00b7 January 2013",
+   "swaps": {
+    "QP": {
+     "from": "9c872006-0780-5005-879c-1693bdd5290c",
+     "to": "09421ab5-a34f-58e3-b939-7cc6491b2912",
+     "evidence": "attribution 10/10 (1.0) map_ym=201301"
+    },
+    "MS": {
+     "from": "14a3e90f-7356-50d2-9607-55e9471707e2",
+     "to": "29236884-f0d3-5b76-b7fe-d8945862fa63",
+     "evidence": "map_ym=201301 chunks=23"
+    }
+   }
+  },
+  "f550479a-0c0d-4aed-8ec0-e9d2694cbc81": {
+   "paper": "4CH0/1C \u00b7 January 2014",
+   "swaps": {
+    "QP": {
+     "from": "678e6847-84ac-5a79-8d5d-ed72861ea6f2",
+     "to": "f632cee0-fe71-55f5-80a0-1a6d72a01db9",
+     "evidence": "attribution 14/14 (1.0) map_ym=201401"
+    },
+    "MS": {
+     "from": "f8df80f5-a606-5cdd-8869-4c6f8a47461d",
+     "to": "6ddc0e67-523a-5d35-bfef-79874c9a675b",
+     "evidence": "map_ym=201401 chunks=22"
+    }
+   }
+  },
+  "ad069fa9-3eb4-47b7-891c-784365aa1c45": {
+   "paper": "4CH0/1C \u00b7 January 2015",
+   "swaps": {
+    "QP": {
+     "from": "8d584ee1-2e79-5aa8-b53e-0ecc12c23c95",
+     "to": "4b865d6f-f4eb-55c2-bd08-7ec828ed5ed6",
+     "evidence": "attribution 12/12 (1.0) map_ym=201501"
+    },
+    "MS": {
+     "from": "168ce790-2d94-51c8-9494-3bb8761e37ce",
+     "to": "36be3c10-413e-5add-bcc6-921b6edf85af",
+     "evidence": "map_ym=201501 chunks=21"
+    }
+   }
+  },
+  "2b234bde-3d89-458e-9a43-b0288437dd5c": {
+   "paper": "4CH0/1C \u00b7 June 2015",
+   "swaps": {
+    "QP": {
+     "from": "e280d9c6-e72f-5f7a-8db8-4492ec8a18e6",
+     "to": "0dd68349-c590-51f9-bd2c-4112f254c621",
+     "evidence": "attribution 11/11 (1.0) map_ym=201506"
+    },
+    "MS": {
+     "from": "8b2735ca-cf09-54ce-8fa2-dd0545c45d2e",
+     "to": "2e30c99e-b95e-548b-a07b-2249af354375",
+     "evidence": "map_ym=201506 chunks=21"
+    }
+   }
+  },
+  "31236989-60fe-4dd9-b7c8-b86160f8a14e": {
+   "paper": "4CH0/1C \u00b7 January 2017",
+   "swaps": {
+    "QP": {
+     "from": "ffd06551-63fb-598e-9d16-97a98eaed2bd",
+     "to": "55a0b9cb-468b-5716-ba52-228cb2263bde",
+     "evidence": "attribution 11/11 (1.0) map_ym=201701"
+    },
+    "MS": {
+     "from": "1cf62b1b-25ed-5eae-bf79-2c2263c66cd4",
+     "to": "93e4fee2-3a67-5477-9359-89a0c562999b",
+     "evidence": "map_ym=201701 chunks=18"
+    }
+   }
+  },
+  "90975a33-63b4-4d32-bbe0-eed99a60ab26": {
+   "paper": "4CH0/1C \u00b7 June 2018",
+   "swaps": {
+    "QP": {
+     "from": "23323bab-b73d-55fd-957c-db54532773b6",
+     "to": "55445f5f-bb7f-5d74-929e-f56b830e4990",
+     "evidence": "attribution 15/15 (1.0) map_ym=201806"
+    },
+    "MS": {
+     "from": "96b27275-b5ef-5b5a-a02f-6d9e8440a02e",
+     "to": "1e2fa40b-1aea-5ddf-ac79-c1533fa2d132",
+     "evidence": "map_ym=201806 chunks=31"
+    }
+   }
+  },
+  "7041ab60-1e67-4b7a-917e-7896ea0a0edf": {
+   "paper": "4CH0/2C \u00b7 June 2011",
+   "swaps": {
+    "QP": {
+     "from": "e1a96fcc-a201-5490-bec9-78d160c8b327",
+     "to": "e931e6e0-4cda-54b6-9926-cd18a7c48115",
+     "evidence": "attribution 8/8 (1.0) map_ym=201106"
+    },
+    "MS": {
+     "from": "f81325dd-6950-5232-bb89-f85efff34ec1",
+     "to": "f8efe458-8438-5f33-85cf-68cfa1a60ab0",
+     "evidence": "map_ym=201106 chunks=10"
+    }
+   }
+  },
+  "38aeec70-d6e1-4bd6-9eb3-173c4dd5eff8": {
+   "paper": "4CH0/2C \u00b7 January 2013",
+   "swaps": {
+    "QP": {
+     "from": "51fea326-2aca-522c-a134-2c43604b0ea9",
+     "to": "ba3b57e8-0dd1-5939-a2f2-ae06a583f880",
+     "evidence": "attribution 6/7 (0.857) map_ym=201301"
+    },
+    "MS": {
+     "from": "2c568fdb-1720-5516-a830-0bf747013d43",
+     "to": "2b53b180-78d6-5ca8-bbf5-46e3e86033a5",
+     "evidence": "map_ym=201301 chunks=8"
+    }
+   }
+  },
+  "ddaec35a-48d4-49f2-9b8c-259f6f94bb14": {
+   "paper": "4CH0/2C \u00b7 January 2015",
+   "swaps": {
+    "QP": {
+     "from": "79ab2439-c522-5dc5-93e1-2e0b5f511191",
+     "to": "0ce4195d-b2d5-567f-afcd-f436f0848593",
+     "evidence": "attribution 9/9 (1.0) map_ym=201501"
+    },
+    "MS": {
+     "from": "a568b0a8-06b6-5f57-af9c-4b887d0b6a30",
+     "to": "8c54ec1c-6a0e-5b72-b3e2-7fd4f497dbb5",
+     "evidence": "map_ym=201501 chunks=12"
+    }
+   }
+  },
+  "2a21ff3d-7769-4747-a7e6-abb857822cdc": {
+   "paper": "4CH0/2C \u00b7 June 2015",
+   "swaps": {
+    "QP": {
+     "from": "6be44572-b417-580d-88d0-56898f39e246",
+     "to": "a59bb364-d5c1-586f-b598-b7b9d292413a",
+     "evidence": "attribution 6/6 (1.0) map_ym=201506"
+    },
+    "MS": {
+     "from": "05fb2570-0387-5bc6-b872-3d5088a8e7b7",
+     "to": "832bab10-2db0-529a-a707-1332ab9ec743",
+     "evidence": "map_ym=201506 chunks=10"
+    }
+   }
+  },
+  "73990d4b-8751-4fd3-ac37-2d65144cda44": {
+   "paper": "4CH0/2C \u00b7 June 2018",
+   "swaps": {
+    "QP": {
+     "from": "3f97fec5-b250-5389-8525-c117e88414ef",
+     "to": "fe569e8f-8eb2-503c-b581-626c0158b1dc",
+     "evidence": "attribution 8/9 (0.889) map_ym=201806"
+    },
+    "MS": {
+     "from": "10613f5f-dc83-5a55-acbf-302f10a78b3a",
+     "to": "54914a8f-d318-5f6f-b8bd-3ffbe75d2f6c",
+     "evidence": "map_ym=201806 chunks=14"
+    }
+   }
+  },
+  "59fc6548-9896-4acd-8624-21c6e01cde08": {
+   "paper": "4CH0/2C \u00b7 January 2019",
+   "swaps": {
+    "QP": {
+     "from": "e6ec2168-ea5e-5bba-91b9-098eb6bacaa9",
+     "to": "fdb0ca9a-b41c-5a72-a8c5-4aaff2c6cf17",
+     "evidence": "attribution 10/10 (1.0) map_ym=201901"
+    },
+    "MS": {
+     "from": "17257cb8-6491-5bd5-9fa0-8655a189f7c5",
+     "to": "f3a234b6-791b-5301-9d65-305820f78190",
+     "evidence": "map_ym=201901 chunks=13"
+    }
+   }
+  },
+  "84dbb606-faf4-47fb-a09b-506e4ee8c161": {
+   "paper": "4CH1/1C \u00b7 November 2021",
+   "swaps": {
+    "QP": {
+     "from": "02cf7562-c928-52e4-81a2-397445e20be8",
+     "to": "5621b137-ea9d-5f8b-9d2b-b0e033089626",
+     "evidence": "attribution 11/11 (1.0) map_ym=202111"
+    },
+    "MS": {
+     "from": "5ec4dfb7-7e3a-5860-a774-0d339b48a69a",
+     "to": "2fc376a0-cdc0-5af9-b92c-a9a806f3c8e1",
+     "evidence": "map_ym=202111 chunks=17"
+    }
+   }
+  },
+  "a7aa6a5f-30c4-4eb9-ac1c-45c4898b8a5d": {
+   "paper": "4CH1/1C \u00b7 June 2024",
+   "swaps": {
+    "QP": {
+     "from": "17d29010-c3bf-5329-8a79-f9e4f83073bb",
+     "to": "1e6a27f5-5c2f-502f-b36f-d03e3a6414ce",
+     "evidence": "attribution 10/10 (1.0) \u00a7D3 content-identified"
+    },
+    "MS": {
+     "from": "4e66847b-cacc-599e-a397-916a92e4d1ae",
+     "to": "1483c404-c30d-511e-a90e-49190bafb442",
+     "evidence": "map_ym=202406 chunks=17"
+    }
+   }
+  },
+  "cdbbe3ea-60fa-48ef-b870-bb9ef345f545": {
+   "paper": "4CH1/1CR \u00b7 June 2019",
+   "swaps": {
+    "QP": {
+     "from": "be73fe41-9e66-513e-b49e-0b96ad0e0b36",
+     "to": "f29edeea-3156-5273-a970-9bea7f431541",
+     "evidence": "attribution 10/10 (1.0) \u00a7D3 content-identified"
+    },
+    "MS": {
+     "from": "0566a426-4729-5f34-a145-fbe687784106",
+     "to": "aa079c51-874e-5fe8-a44c-2a8feb9b07b5",
+     "evidence": "map_ym=201906 chunks=23"
+    }
+   }
+  },
+  "364e20fe-9441-4428-bfd4-e09e494d37ee": {
+   "paper": "4CH1/1CR \u00b7 June 2020",
+   "swaps": {
+    "QP": {
+     "from": "373fe651-97e0-5a09-8958-b83745f38d5b",
+     "to": "9579c4e9-c2c0-5d92-accd-4c8eb13d4ce2",
+     "evidence": "attribution 10/10 (1.0) map_ym=202006"
+    },
+    "MS": {
+     "from": "0991194d-8747-57a1-a698-4382ce535424",
+     "to": "67a9e55a-452a-566d-b424-ae31e8db3358",
+     "evidence": "map_ym=202006 chunks=17"
+    }
+   }
+  },
+  "f70cb051-2c0f-4755-8aa7-3ab6979fca00": {
+   "paper": "4CH1/1CR \u00b7 January 2022",
+   "swaps": {
+    "QP": {
+     "from": "8f519f1a-d500-5d4a-8e4e-be2809b434f8",
+     "to": "3aa7b7e7-4457-5ecb-9c20-01531cd27a90",
+     "evidence": "attribution 11/11 (1.0) map_ym=202201"
+    },
+    "MS": {
+     "from": "6b572a50-7958-5667-a61f-76d35e4767c8",
+     "to": "ea7e8256-71f7-538c-882d-1919c2f6fade",
+     "evidence": "map_ym=202201 chunks=19"
+    }
+   }
+  },
+  "e0dfa4c1-79eb-4bde-b22b-e19ca6f1a94a": {
+   "paper": "4CH1/1CR \u00b7 June 2022",
+   "swaps": {
+    "QP": {
+     "from": "22184324-28f8-503e-b1d0-7a69510fa5c3",
+     "to": "c99490ff-a69c-5acd-b746-13eeb76a68f9",
+     "evidence": "attribution 10/11 (0.909) map_ym=202206"
+    },
+    "MS": {
+     "from": "85882b01-2221-5133-b912-8e2f76aa2b40",
+     "to": "3dca39e5-3458-549b-b902-7ac35e0dc0a1",
+     "evidence": "map_ym=202206 chunks=20"
+    }
+   }
+  },
+  "61c9976a-ee3a-48e2-8079-1f55d87e2dc6": {
+   "paper": "4CH1/2CR \u00b7 June 2019",
+   "swaps": {
+    "QP": {
+     "from": "0741c311-4b48-51d7-97d0-edf5c39b4adf",
+     "to": "439cb001-043a-5778-999e-bd82c53da448",
+     "evidence": "attribution 7/7 (1.0) map_ym=201906"
+    },
+    "MS": {
+     "from": "43f78226-f08c-5a76-a828-ff9b5a753151",
+     "to": "998310e7-bf30-53bc-b3fb-4a879a9f2813",
+     "evidence": "map_ym=201906 chunks=13"
+    }
+   }
+  },
+  "73b3c496-6190-4ad9-9a54-9cd62b4fc01c": {
+   "paper": "4CH1/2CR \u00b7 January 2021",
+   "swaps": {
+    "QP": {
+     "from": "0ee12447-2eb1-55fd-88ff-9f81191b9683",
+     "to": "da1f341d-75d8-55de-89ce-eca5c475e583",
+     "evidence": "attribution 7/8 (0.875) map_ym=202101"
+    },
+    "MS": {
+     "from": "807ded42-ec15-5ce6-82dc-893d5f5d4172",
+     "to": "60bdfdb6-a243-5f51-a1ab-d9de9f81b90a",
+     "evidence": "map_ym=202101 chunks=14"
+    }
+   }
+  },
+  "55d9f002-73e1-4072-b73a-0147a78025d6": {
+   "paper": "4CH1/2CR \u00b7 June 2023",
+   "swaps": {
+    "QP": {
+     "from": "803a654f-618d-53f9-82fc-0e03c7ac2fe5",
+     "to": "84aeccb8-fc46-578b-bedd-48c213630c19",
+     "evidence": "attribution 7/7 (1.0) map_ym=202306"
+    },
+    "MS": {
+     "from": "bd7c93de-d19d-5dce-812d-a9446bc36657",
+     "to": "b97a019a-6c5a-562c-bb1c-650d2dad6d58",
+     "evidence": "map_ym=202306 chunks=14"
+    }
+   }
+  }
+ },
+ "papers_post": {
+  "SUGGESTED": 1,
+  "REJECTED": 13,
+  "VALIDATED": 70,
+  "FLAGGED": 20
+ },
+ "audit_rows": 693,
+ "qv": 278,
+ "sch": 242,
+ "docs": 58,
+ "committed": "2026-09-28T19:39:03.026407+00:00",
+ "ok": true
+}

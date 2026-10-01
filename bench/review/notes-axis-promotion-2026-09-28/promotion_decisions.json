@@ -1,0 +1,93 @@
+{
+  "batch": "notes-axis-promotion-2026-09-28",
+  "decision_authority": {
+    "operator": "Nawaf Al Hussain Khondokar",
+    "operator_trace_id": "1a0e88af08e12df5",
+    "decision_text": "named IM instruction (verbatim): \"pursue (a). And check current state, and other agents' work. Check if they completed these or not\"",
+    "option_a_definition_presented": "IM trace 1a0e88d81372240d answer: flip the 112 EXTERNAL_NOTES documents SUGGESTED -> VALIDATED so the 210 human-validated chunk->spec-point mappings enter the served denominator and quality floor SS8(d) (SpecificationPoint resolution) can move off its r6 0.0 baseline; named outcome: '350 notes chunks enter the pool'",
+    "agent_asserts_no_validation_of_its_own": true
+  },
+  "mechanism_evidence": {
+    "serving_gate": "ChunkVectorRepository.searchServingEligible SCOPE_EXISTS_VALIDATED (core main, fetched 2026-09-28): embed_rev = CURRENT_EMBED_REV AND (paper-VALIDATED branch OR subject branch: subjects.curriculum_version_id = :cv AND subjects.id = document_chunks.subject_id AND documents.validation_state = 'VALIDATED')",
+    "current_embed_rev": "CURRENT_EMBED_REV = 1 (core main verbatim; d523f57 rolled 2->1 on 2026-09-25; 1->2 flip-back REFUTED same day, evidence/serving-rev2-flipback-refutation-2026-09-28/)",
+    "preflight_exact_gate_replica": {
+      "serving_now_rev1": 615,
+      "flip_only_would_add": 0,
+      "flip_plus_restamp_adds": 350,
+      "serving_after": 965,
+      "why_restamp_needed": "all 350 notes chunks are embed_rev=2-stamped (09-20 ingest, pre-rollback); the gate reads embed_rev=1; flip-only leaves them excluded and SS8(d) at 0.0 — the re-stamp is the minimal instrumental step that delivers the named outcome '350 notes chunks enter the pool'",
+      "additivity": "constant stays 1; the 615 currently-served chunks are untouched; the notes serving set is empty today so nothing loses visibility; same embedding model both revs (gemini-embedding-001, 768-d, 100% embedded) so no vector/model mixing",
+      "reversibility": "cohort is deterministic by kind: re-stamp back = UPDATE document_chunks SET embed_rev=2 WHERE document_row_id IN (SELECT id FROM documents WHERE kind='EXTERNAL_NOTES')"
+    },
+    "scope_resolution": "all 350 notes chunks carry subject_id e56dc9ee-aa74-426f-94a6-4b72d3dc346b (code 4CH1) resolving into the sole ACTIVE curriculum version 356840e6-81e2-49df-8182-93ab6504d591 (4CH1-2017) — the gate's subject branch catches them once VALIDATED + rev1",
+    "hv_projection_pin": "bench/evidence/chunk-sp-substrate-2026-09-27/chunk_spec_hv_projection.json git blob 47fa2cd6415b (byte-identical to bench/inputs/snapshot-r6/chunk_spec_hv.json and snap-005/chunk_spec_hv.json); 210 HV rows: 205 CLEAN / 4 MULTI-flagged / 1 MISS; the 4 MULTI mappings stay flagged bench-side (mapping-level, untouched by this flip)",
+    "constraint_widening": "content_review_audit.ck_cra_target_type widened additively to allow target_type 'document' (no honest value among the 4 existing; existing rows unaffected; app never writes 'document'; core team to codify in the next Flyway migration — recorded in detail JSON and evidence)"
+  },
+  "cohort": {
+    "documents": {
+      "kind": "EXTERNAL_NOTES",
+      "count": 112,
+      "pre_state": "SUGGESTED",
+      "post_state": "VALIDATED"
+    },
+    "chunks": {
+      "of_kind": "EXTERNAL_NOTES",
+      "count": 350,
+      "pre_embed_rev": 2,
+      "post_embed_rev": 1
+    }
+  },
+  "expected_census_delta": {
+    "documents_kind_EXTERNAL_NOTES": {
+      "before": {
+        "VALIDATED": 0,
+        "SUGGESTED": 112,
+        "FLAGGED": 0,
+        "REJECTED": 0
+      },
+      "after": {
+        "VALIDATED": 112,
+        "SUGGESTED": 0,
+        "FLAGGED": 0,
+        "REJECTED": 0
+      }
+    },
+    "notes_chunks_embed_rev": {
+      "before": {
+        "rev1": 0,
+        "rev2": 350
+      },
+      "after": {
+        "rev1": 350,
+        "rev2": 0
+      }
+    },
+    "serving_supply": {
+      "before": 615,
+      "after": 965
+    },
+    "content_review_audit": {
+      "delta": 112
+    },
+    "teacher_validation_events": {
+      "delta": 0
+    }
+  },
+  "non_interference_census_before": {
+    "EXTERNAL_QUESTIONS": {
+      "VALIDATED": 299,
+      "SUGGESTED": 80
+    },
+    "QUESTION_PAPER": {
+      "VALIDATED": 13,
+      "SUGGESTED": 164
+    },
+    "MARK_SCHEME": {
+      "VALIDATED": 13,
+      "SUGGESTED": 156
+    },
+    "SYLLABUS": {
+      "SUGGESTED": 162
+    }
+  }
+}

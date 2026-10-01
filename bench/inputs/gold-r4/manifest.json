@@ -1,0 +1,77 @@
+{
+  "anti_leakage": "queries authored without executing any retrieval arm; set frozen + hashed before any recorded run; regenerated deterministically from the snap-003 freeze per spec \u00a73/\u00a74 set+snapshot pair discipline",
+  "audit_findings": {
+    "non_spec_question_anchors": "717/720 VALIDATED question anchors carry primary_topic_node_id pointing at non-spec nodes (623 at 4CH1-S* bank/session nodes + 94 at ING-* paper-scrape nodes); such anchors are quarantined OUT of gold_spec_points and recorded per-record as provenance.anchor_code_non_spec (v1 finding updated for the snap-003 anchor census)"
+  },
+  "counts": {
+    "calculation": 10,
+    "conceptual": 15,
+    "diagram_dependent": 5,
+    "exam_question": 10,
+    "factual": 15,
+    "mark_scheme": 8,
+    "misconception": 10,
+    "multi_spec_point": 7,
+    "prerequisite": 12,
+    "revision_note": 10,
+    "vague_learner": 8,
+    "why_wrong": 10
+  },
+  "files_sha256": {
+    "class_calculation.json": "6e92e1ad2f2fc6d101e39c25b970abd4b190f77962869ffe879eaa8da9596561",
+    "class_conceptual.json": "b8fbffcdbd98424f4df846bee98458eace2b41db637be1f4a7e867ce9fbe5836",
+    "class_diagram_dependent.json": "1b42d6ba0e0ae21d469b8bf1fe02b4cb58cfcc89ffe4fd694a7d3a195b1518b8",
+    "class_exam_question.json": "1d1fdeed5d4d2cd626bf073cf44d1a843ebe6bbeef1328aab0a16d3d7fab650c",
+    "class_factual.json": "46c76030dfb428056690d5b64a26017293cd8cfc70410fdb913c5a563e167ab0",
+    "class_mark_scheme.json": "87ff1a214faf07513eeb5eea9127d80cfcab6ed0cc686a89f900d3c05017ee5a",
+    "class_misconception.json": "8e1eb3d05f30c9892fbe8f20af80979c4fd9eff60b2b59b13183acee2d2800ad",
+    "class_multi_spec_point.json": "a4e11972a4b66c558989abe2dbe4e0de1af3c8a585c1ee0b15d35a7012238a0f",
+    "class_prerequisite.json": "aac30ffa1962a0850edfc90d7cf5308d184f5fbd86406ed70b6e1644dd1561ca",
+    "class_revision_note.json": "e3491e18e94b8d9159ec95a021e3de1e9ef04cdabbfe0597880e72a4124d64ec",
+    "class_vague_learner.json": "41ff7f4df6fe103969dbbb36305bda9c3381c52f42a55757261b634b6cdd65b7",
+    "class_why_wrong.json": "0ff6384f90a104463caccdfac2a537dac28ab594083fc4a246db7b840642f3ea"
+  },
+  "frozen": "2026-09-26",
+  "label_rules": {
+    "R1-stem-verbatim": "normalized stem prefix (>=40 chars) contained verbatim in chunk content -> tier 2",
+    "R2-term-cooccurrence": "gte 2 of 3 distinctive title terms (df-filtered 2..300) co-occur in chunk -> tier 1, cap 5",
+    "R3-paper-cohort": "same-paper same-kind chunks -> tier 1, cap 5",
+    "none-substrate-absent": "no chunk substrate (notes_mirror / figures); gold = spec anchors only"
+  },
+  "pairing": {
+    "card_axis": "R2 evidence labels may anchor to EXTERNAL_QUESTIONS card chunks (kind-unfiltered R2 path); honest at freeze time \u2014 cards are snapshot members (SNAP3-F1), serving-inert until the flip; the ALL vs VALIDATED-only denominators score this honestly",
+    "generated_from": "evidence/bench-001/snapshots/snap-003 (FREEZE_RECORD 2026-09-26)",
+    "validator": "bench/gold_check.py spec-code format gate EXTENDED in this freeze to accept the 12 practicals (4CH1-PR-01..12, VALIDATED SUBTOPICs in the registry since snap-002; the t0 regex predated them). Backward-compatible: gold-v1 carries no PR codes and re-validates green under the extended gate; selftest 6/6 corruption classes detected post-change. Two g2 prerequisite records legitimately anchor 4CH1-PR-08 via the settled concept attachments."
+  },
+  "quota": {
+    "calculation": 10,
+    "conceptual": 15,
+    "diagram_dependent": 5,
+    "exam_question": 10,
+    "factual": 15,
+    "mark_scheme": 8,
+    "misconception": 10,
+    "multi_spec_point": 7,
+    "prerequisite": 12,
+    "revision_note": 10,
+    "vague_learner": 8,
+    "why_wrong": 10
+  },
+  "quota_amendments": {
+    "calculation": "command_word was unpopulated at t0 (119/119 NULL) and is now populated on 237/720 VALIDATED versions (bank wave); the v1 cue-word-stem selector is RETAINED UNCHANGED for v2 (anti-tuning rule \u2014 no re-selection on the newly populated column); v1's numeric-stem fill selector remains as fallback fill"
+  },
+  "set_version": "gold-v2",
+  "snapshot": {
+    "files_sha256": {
+      "chunks.jsonl.gz": "671a4d8cbc6596c10a50b04a6f952f216b182f475f7879180d86f154875a3a92",
+      "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
+      "graph_code.json": "2f0ed04bb60d7a664f124a4af61e4c6b27b1a85cc752d18036459b97a5debca3",
+      "graph_edges.json": "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
+      "misconceptions.json": "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
+      "question_anchors.json": "11a53c11e6e35cec6f7bc436a0765a63a321a671f5c9e54be92a41e8571fc78f",
+      "spec_points.json": "b95361eff3ac5a70040e0bc79af7b5f5666704db350505830ca409ead607d6fb"
+    },
+    "version": "snap-003"
+  },
+  "total": 120
+}

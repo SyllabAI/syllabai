@@ -1,0 +1,5546 @@
+{
+ "generated": "2026-10-01",
+ "trace": "1a0f5fdf6226bdc9",
+ "item": "ING anchor node cleanup (104 orphaned nodes)",
+ "premise_correction": "not fully orphaned as recorded: 4 KG edges + 26 test-fixture learner rows + 538 archived-question anchors; serving bank clean (0 refs). Cleanup = full removal with before-images.",
+ "fixture_guard": {
+  "cutoff": "2026-09-30",
+  "profiles": [
+   {
+    "learner_id": "059f5a0d-e949-432b-9302-249f02b8ce13",
+    "email_masked": "qsp\u2026syllabai-test.dev",
+    "display_name": "qsp-e2e-probe",
+    "enabled": true,
+    "created": "2026-09-29",
+    "roles": [
+     "STUDENT"
+    ],
+    "fixture_guard_ok": true
+   },
+   {
+    "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+    "email_masked": "v20\u2026syllabai-test.dev",
+    "display_name": "V20 Battery",
+    "enabled": true,
+    "created": "2026-09-14",
+    "roles": [
+     "STUDENT"
+    ],
+    "fixture_guard_ok": true
+   },
+   {
+    "learner_id": "37c1758f-6e5c-49ab-90bb-1b6be08889e7",
+    "email_masked": "v20\u2026syllabai-test.dev",
+    "display_name": "V20 Battery",
+    "enabled": true,
+    "created": "2026-09-14",
+    "roles": [
+     "STUDENT"
+    ],
+    "fixture_guard_ok": true
+   },
+   {
+    "learner_id": "80977fdd-20a8-460f-a398-7518a9cf9bca",
+    "email_masked": "v20\u2026syllabai-test.dev",
+    "display_name": "V20 Battery",
+    "enabled": true,
+    "created": "2026-09-14",
+    "roles": [
+     "STUDENT"
+    ],
+    "fixture_guard_ok": true
+   },
+   {
+    "learner_id": "d623bfa9-4fd4-47b2-b60b-59bd6bdeab3a",
+    "email_masked": "v20\u2026syllabai-test.dev",
+    "display_name": "V20 Battery",
+    "enabled": true,
+    "created": "2026-09-14",
+    "roles": [
+     "STUDENT"
+    ],
+    "fixture_guard_ok": true
+   },
+   {
+    "learner_id": "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+    "email_masked": "v20\u2026syllabai-test.dev",
+    "display_name": "V20 Battery",
+    "enabled": true,
+    "created": "2026-09-14",
+    "roles": [
+     "STUDENT"
+    ],
+    "fixture_guard_ok": true
+   }
+  ]
+ },
+ "pre_state": {
+  "qsp": 2637,
+  "qt": 1725,
+  "active": 961,
+  "kn_total": 539,
+  "edges_total": 734,
+  "skill_states_total": 198,
+  "review_schedules_total": 133,
+  "lane_schemes": 35
+ },
+ "nodes": [
+  {
+   "id": "7611490c-7ede-4869-b66b-e98bdb33d261",
+   "code": "ING-4CH01CJANUARY2012",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T09:47:57.620639+00:00",
+   "applicability": null
+  },
+  {
+   "id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "code": "ING-4CH01CJANUARY2013",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:26:56.627974+00:00",
+   "applicability": null
+  },
+  {
+   "id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "code": "ING-4CH01CJANUARY2014",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:27:10.889223+00:00",
+   "applicability": null
+  },
+  {
+   "id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "code": "ING-4CH01CJANUARY2015",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:30:24.638443+00:00",
+   "applicability": null
+  },
+  {
+   "id": "bfbb3671-24f4-4320-9a55-52c2e7bf47a8",
+   "code": "ING-4CH01CJANUARY2016",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T07:58:49.810828+00:00",
+   "applicability": null
+  },
+  {
+   "id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "code": "ING-4CH01CJANUARY2017",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:33:12.899940+00:00",
+   "applicability": null
+  },
+  {
+   "id": "1ab7d8ee-9897-4b4a-9f2a-64f75415e43a",
+   "code": "ING-4CH01CJANUARY2018",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:33:27.425637+00:00",
+   "applicability": null
+  },
+  {
+   "id": "d17b3fed-c0f3-4a06-a9cd-4080e506a9da",
+   "code": "ING-4CH01CJANUARY2019",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:36:36.459923+00:00",
+   "applicability": null
+  },
+  {
+   "id": "46b4b7e5-74a5-4be5-a867-417eb1fec8eb",
+   "code": "ING-4CH01CJUNE2011",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T09:47:52.234034+00:00",
+   "applicability": null
+  },
+  {
+   "id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "code": "ING-4CH01CJUNE2012",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T09:48:02.640456+00:00",
+   "applicability": null
+  },
+  {
+   "id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "code": "ING-4CH01CJUNE2013",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:27:01.876055+00:00",
+   "applicability": null
+  },
+  {
+   "id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "code": "ING-4CH01CJUNE2014",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:27:15.390106+00:00",
+   "applicability": null
+  },
+  {
+   "id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "code": "ING-4CH01CJUNE2015",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:30:29.491243+00:00",
+   "applicability": null
+  },
+  {
+   "id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "code": "ING-4CH01CJUNE2016",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:30:34.242948+00:00",
+   "applicability": null
+  },
+  {
+   "id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "code": "ING-4CH01CJUNE2017",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:33:17.727339+00:00",
+   "applicability": null
+  },
+  {
+   "id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "code": "ING-4CH01CJUNE2018",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:33:32.141065+00:00",
+   "applicability": null
+  },
+  {
+   "id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "code": "ING-4CH01CRJUNE2013",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:27:06.385431+00:00",
+   "applicability": null
+  },
+  {
+   "id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "code": "ING-4CH01CRJUNE2014",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:30:19.464390+00:00",
+   "applicability": null
+  },
+  {
+   "id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "code": "ING-4CH01CRJUNE2016",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:30:39.297097+00:00",
+   "applicability": null
+  },
+  {
+   "id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "code": "ING-4CH01CRJUNE2017",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:33:22.448791+00:00",
+   "applicability": null
+  },
+  {
+   "id": "de8580b9-0d8d-4ecf-9708-41b694744712",
+   "code": "ING-4CH02CJANUARY2012",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:48:57.737440+00:00",
+   "applicability": null
+  },
+  {
+   "id": "aad8475a-febc-40f9-831c-ccb67da94bb8",
+   "code": "ING-4CH02CJANUARY2013",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:51:32.140658+00:00",
+   "applicability": null
+  },
+  {
+   "id": "6f122d31-970f-421c-81a5-174ced70f27b",
+   "code": "ING-4CH02CJANUARY2014",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:51:46.182524+00:00",
+   "applicability": null
+  },
+  {
+   "id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "code": "ING-4CH02CJANUARY2015",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:54:25.434245+00:00",
+   "applicability": null
+  },
+  {
+   "id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "code": "ING-4CH02CJANUARY2016",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:54:34.040067+00:00",
+   "applicability": null
+  },
+  {
+   "id": "5627e31c-3914-4649-94ce-a5eb1a735b88",
+   "code": "ING-4CH02CJANUARY2017",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:57:05.712403+00:00",
+   "applicability": null
+  },
+  {
+   "id": "c666f395-8a24-4edc-949e-7cc619a299bb",
+   "code": "ING-4CH02CJANUARY2018",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:57:18.365689+00:00",
+   "applicability": null
+  },
+  {
+   "id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "code": "ING-4CH02CJANUARY2019",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:00:04.693621+00:00",
+   "applicability": null
+  },
+  {
+   "id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "code": "ING-4CH02CJUNE2011",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:48:53.455759+00:00",
+   "applicability": null
+  },
+  {
+   "id": "31ffeb6c-a71f-4b60-9705-1ee732b5299e",
+   "code": "ING-4CH02CJUNE2012",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:49:02.012275+00:00",
+   "applicability": null
+  },
+  {
+   "id": "a9161bd4-c1d9-48d3-8123-aa7fd73421cf",
+   "code": "ING-4CH02CJUNE2013",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:51:36.931282+00:00",
+   "applicability": null
+  },
+  {
+   "id": "297573cd-6b8f-4793-aca3-867fbee87cd2",
+   "code": "ING-4CH02CJUNE2014",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:51:50.620680+00:00",
+   "applicability": null
+  },
+  {
+   "id": "38c79609-7f5c-434c-946e-ddf9e6452c77",
+   "code": "ING-4CH02CJUNE2015",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:54:29.732327+00:00",
+   "applicability": null
+  },
+  {
+   "id": "71d49d88-832d-4ad2-a886-57158b18cea0",
+   "code": "ING-4CH02CJUNE2016",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:54:38.299000+00:00",
+   "applicability": null
+  },
+  {
+   "id": "7936951a-1bf7-4b23-a4c4-63c7489553e9",
+   "code": "ING-4CH02CJUNE2017",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:57:09.920318+00:00",
+   "applicability": null
+  },
+  {
+   "id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "code": "ING-4CH02CJUNE2018",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:59:59.815021+00:00",
+   "applicability": null
+  },
+  {
+   "id": "fd08ea01-b30a-4c39-8ae9-5a1e485c5820",
+   "code": "ING-4CH02CRJUNE2013",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:51:41.711368+00:00",
+   "applicability": null
+  },
+  {
+   "id": "1c3c762a-40d5-478e-99fd-d9515c4de923",
+   "code": "ING-4CH02CRJUNE2014",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:54:21.483412+00:00",
+   "applicability": null
+  },
+  {
+   "id": "7944830f-ea58-4470-abce-2c62aaf924c1",
+   "code": "ING-4CH02CRJUNE2016",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:57:01.818781+00:00",
+   "applicability": null
+  },
+  {
+   "id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "code": "ING-4CH02CRJUNE2017",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH0/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH0/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:57:14.115308+00:00",
+   "applicability": null
+  },
+  {
+   "id": "bec87aa1-ba64-4507-a407-48a9eef6e154",
+   "code": "ING-4CH11CJANUARY2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:36:50.770869+00:00",
+   "applicability": null
+  },
+  {
+   "id": "21e56fca-a367-4896-8ff8-89d7020b57e6",
+   "code": "ING-4CH11CJANUARY2021",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:39:39.861051+00:00",
+   "applicability": null
+  },
+  {
+   "id": "cd22aab3-c8f6-4f9d-ae88-c2222b2aca0e",
+   "code": "ING-4CH11CJANUARY2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:42:39.898010+00:00",
+   "applicability": null
+  },
+  {
+   "id": "4af56df4-374b-4056-9a95-84f4fceeeb61",
+   "code": "ING-4CH11CJANUARY2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:45:37.737799+00:00",
+   "applicability": null
+  },
+  {
+   "id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "code": "ING-4CH11CJUNE2019",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:36:41.357632+00:00",
+   "applicability": null
+  },
+  {
+   "id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "code": "ING-4CH11CJUNE2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:39:30.631755+00:00",
+   "applicability": null
+  },
+  {
+   "id": "c6e9e8eb-23ae-4173-a2f5-2bb1c519d34d",
+   "code": "ING-4CH11CJUNE2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:45:47.401136+00:00",
+   "applicability": null
+  },
+  {
+   "id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "code": "ING-4CH11CJUNE2024",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:45:56.843768+00:00",
+   "applicability": null
+  },
+  {
+   "id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "code": "ING-4CH11CNOVEMBER2021",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:42:34.992136+00:00",
+   "applicability": null
+  },
+  {
+   "id": "53abc0ef-7496-4ca4-b540-756ccc14a1a0",
+   "code": "ING-4CH11CNOVEMBER2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T08:33:41.591129+00:00",
+   "applicability": null
+  },
+  {
+   "id": "0f097713-ced4-40b4-8d81-567ce5bb95f4",
+   "code": "ING-4CH11CNOVEMBER2024",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T08:34:20.165166+00:00",
+   "applicability": null
+  },
+  {
+   "id": "c3674314-3fbe-4d33-b3fd-66bb3e9f0e91",
+   "code": "ING-4CH11CNOVEMBER2025",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T08:34:54.268396+00:00",
+   "applicability": null
+  },
+  {
+   "id": "81ebced5-17d1-4097-94dc-6c85195ed796",
+   "code": "ING-4CH11CRJANUARY2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:36:55.428292+00:00",
+   "applicability": null
+  },
+  {
+   "id": "5987803e-40b1-4c8c-af4a-70019efab482",
+   "code": "ING-4CH11CRJANUARY2021",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:39:44.113637+00:00",
+   "applicability": null
+  },
+  {
+   "id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "code": "ING-4CH11CRJANUARY2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:42:44.478806+00:00",
+   "applicability": null
+  },
+  {
+   "id": "9858d9f9-5bb7-4c81-b879-5700fdc17099",
+   "code": "ING-4CH11CRJANUARY2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:45:42.643432+00:00",
+   "applicability": null
+  },
+  {
+   "id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "code": "ING-4CH11CRJUNE2019",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:36:46.075573+00:00",
+   "applicability": null
+  },
+  {
+   "id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "code": "ING-4CH11CRJUNE2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:39:35.442306+00:00",
+   "applicability": null
+  },
+  {
+   "id": "8e9c22cc-44d1-42a0-8df6-1b681e2ed4cb",
+   "code": "ING-4CH11CRJUNE2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:45:52.133588+00:00",
+   "applicability": null
+  },
+  {
+   "id": "c6a86e5b-8f78-4ffe-89b2-c8bbcd0e9ca1",
+   "code": "ING-4CH11CRJUNE2024",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:48:43.869347+00:00",
+   "applicability": null
+  },
+  {
+   "id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "code": "ING-4CH11CRSUMMER2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:42:53.369528+00:00",
+   "applicability": null
+  },
+  {
+   "id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "code": "ING-4CH11CSPECIMEN2017",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:48:48.717513+00:00",
+   "applicability": null
+  },
+  {
+   "id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "code": "ING-4CH11CSUMMER2021",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:39:48.516971+00:00",
+   "applicability": null
+  },
+  {
+   "id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "code": "ING-4CH11CSUMMER2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/1C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/1C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T11:42:48.821332+00:00",
+   "applicability": null
+  },
+  {
+   "id": "5f09f4b6-4111-4403-ace7-ea71220f98cf",
+   "code": "ING-4CH12CJANUARY2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:00:18.338005+00:00",
+   "applicability": null
+  },
+  {
+   "id": "1f486c71-fc57-479b-a753-342188e6ddb8",
+   "code": "ING-4CH12CJANUARY2021",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:03:04.866083+00:00",
+   "applicability": null
+  },
+  {
+   "id": "1c62d442-7e46-46f0-a6a3-38f8f6e85762",
+   "code": "ING-4CH12CJANUARY2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:05:56.748206+00:00",
+   "applicability": null
+  },
+  {
+   "id": "378465b8-a53a-47c7-b3b1-d1f4e9b26849",
+   "code": "ING-4CH12CJANUARY2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:08:36.372605+00:00",
+   "applicability": null
+  },
+  {
+   "id": "173948f9-a699-45af-91dd-096480499409",
+   "code": "ING-4CH12CJUNE2019",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:00:09.235949+00:00",
+   "applicability": null
+  },
+  {
+   "id": "e771f2bc-932d-4b46-bb6d-77c0e8a8bd33",
+   "code": "ING-4CH12CJUNE2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:02:55.955194+00:00",
+   "applicability": null
+  },
+  {
+   "id": "ce521c2d-9a73-462e-b791-47832a4daff7",
+   "code": "ING-4CH12CJUNE2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-24T16:32:29.359880+00:00",
+   "applicability": null
+  },
+  {
+   "id": "ff40b3e3-d5ac-4cea-8f6f-d913e5b41686",
+   "code": "ING-4CH12CJUNE2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:08:45.140342+00:00",
+   "applicability": null
+  },
+  {
+   "id": "e3879a8f-a5ab-4251-9eb2-e5db9d47883e",
+   "code": "ING-4CH12CJUNE2024",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:11:27.068986+00:00",
+   "applicability": null
+  },
+  {
+   "id": "e560779c-8897-4a1d-b787-19268293872e",
+   "code": "ING-4CH12CJUNE2025",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T08:01:24.967749+00:00",
+   "applicability": null
+  },
+  {
+   "id": "af5f84c8-e8d4-4228-bb6b-dbac9639e608",
+   "code": "ING-4CH12CNOVEMBER2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T17:01:29.990484+00:00",
+   "applicability": null
+  },
+  {
+   "id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "code": "ING-4CH12CNOVEMBER2021",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:05:52.245480+00:00",
+   "applicability": null
+  },
+  {
+   "id": "23e50d89-6e11-4005-a637-05a7596c7218",
+   "code": "ING-4CH12CNOVEMBER2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T08:34:06.285952+00:00",
+   "applicability": null
+  },
+  {
+   "id": "e6b08221-8281-42a6-ba60-094ba8eb63ef",
+   "code": "ING-4CH12CNOVEMBER2024",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T08:34:41.351411+00:00",
+   "applicability": null
+  },
+  {
+   "id": "0edc2298-3a11-45e3-8f5c-b6c402897e72",
+   "code": "ING-4CH12CNOVEMBER2025",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-25T08:35:14.794344+00:00",
+   "applicability": null
+  },
+  {
+   "id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "code": "ING-4CH12CRJANUARY2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:02:51.391834+00:00",
+   "applicability": null
+  },
+  {
+   "id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "code": "ING-4CH12CRJANUARY2021",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:03:09.298009+00:00",
+   "applicability": null
+  },
+  {
+   "id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "code": "ING-4CH12CRJANUARY2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:06:01.275983+00:00",
+   "applicability": null
+  },
+  {
+   "id": "3fc1b4a1-c1dd-44d7-8ef7-85dd8f0baa80",
+   "code": "ING-4CH12CRJANUARY2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:08:40.785605+00:00",
+   "applicability": null
+  },
+  {
+   "id": "ce32d7f9-f59a-485b-92ab-e4db06d2c4cb",
+   "code": "ING-4CH12CRJUNE2019",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:00:13.774350+00:00",
+   "applicability": null
+  },
+  {
+   "id": "9475e779-4a9f-481b-8122-ce66914f5738",
+   "code": "ING-4CH12CRJUNE2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:03:00.392506+00:00",
+   "applicability": null
+  },
+  {
+   "id": "42759907-60ef-48bd-ae15-523f33d16825",
+   "code": "ING-4CH12CRJUNE2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-24T16:32:44.347221+00:00",
+   "applicability": null
+  },
+  {
+   "id": "710108e5-6424-4dfe-9d7b-260ec0aa3b34",
+   "code": "ING-4CH12CRJUNE2023",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:08:49.488094+00:00",
+   "applicability": null
+  },
+  {
+   "id": "10055734-b507-49bd-892d-9b6a4946acaa",
+   "code": "ING-4CH12CRJUNE2024",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:11:31.919902+00:00",
+   "applicability": null
+  },
+  {
+   "id": "836d0a89-0e44-4f83-98ef-6176e9f9742e",
+   "code": "ING-4CH12CRJUNE2025",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-22T18:39:51.297724+00:00",
+   "applicability": null
+  },
+  {
+   "id": "70632f43-290c-424a-a505-20874110f86c",
+   "code": "ING-4CH12CRSUMMER2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2CR",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2CR",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:08:31.893263+00:00",
+   "applicability": null
+  },
+  {
+   "id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "code": "ING-4CH12CSPECIMEN2017",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:11:36.430099+00:00",
+   "applicability": null
+  },
+  {
+   "id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "code": "ING-4CH12CSUMMER2021",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:05:47.591547+00:00",
+   "applicability": null
+  },
+  {
+   "id": "b334695a-f64a-4162-90fc-a4492bd2c157",
+   "code": "ING-4CH12CSUMMER2022",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: 4CH1/2C",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft 4CH1/2C",
+   "created_by": "ingestion-v1",
+   "version": 1,
+   "created_at": "2026-09-14T12:06:05.801124+00:00",
+   "applicability": null
+  },
+  {
+   "id": "6a6c3a84-c982-46c4-9bf1-a5fea8fd5ff5",
+   "code": "ING-AUDIT653449eeAUDITE2E653449EE",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: AUDIT-653449ee",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft AUDIT-653449ee",
+   "created_by": "78d04585-19ca-4fca-a205-e4e0327f1b6e",
+   "version": 1,
+   "created_at": "2026-09-14T22:31:04.787722+00:00",
+   "applicability": null
+  },
+  {
+   "id": "066e8327-0818-410a-8bdf-3826f42feed8",
+   "code": "ING-AUDITa16552b2AUDITE2EA16552B2",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: AUDIT-a16552b2",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft AUDIT-a16552b2",
+   "created_by": "78d04585-19ca-4fca-a205-e4e0327f1b6e",
+   "version": 1,
+   "created_at": "2026-09-14T22:17:42.100760+00:00",
+   "applicability": null
+  },
+  {
+   "id": "b997386c-9c2d-4f29-94fa-3f254ca64158",
+   "code": "ING-AUDITede466a4AUDITE2EEDE466A4",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: AUDIT-ede466a4",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft AUDIT-ede466a4",
+   "created_by": "78d04585-19ca-4fca-a205-e4e0327f1b6e",
+   "version": 1,
+   "created_at": "2026-09-14T22:16:42.677963+00:00",
+   "applicability": null
+  },
+  {
+   "id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "code": "ING-JANUARY2015",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: null",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft unknown",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-14T12:31:18.522988+00:00",
+   "applicability": null
+  },
+  {
+   "id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "code": "ING-JANUARY2020",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: null",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft unknown",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-14T12:29:17.953730+00:00",
+   "applicability": null
+  },
+  {
+   "id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "code": "ING-JUNE2014",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: null",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft unknown",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-14T12:27:35.487791+00:00",
+   "applicability": null
+  },
+  {
+   "id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "code": "ING-SUMMER2013",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: null",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft unknown",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-14T13:06:55.984414+00:00",
+   "applicability": null
+  },
+  {
+   "id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "code": "ING-SUMMER2015",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: null",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft unknown",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-14T12:31:28.890154+00:00",
+   "applicability": null
+  },
+  {
+   "id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "code": "ING-SUMMER2016",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: null",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft unknown",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-14T13:07:14.628509+00:00",
+   "applicability": null
+  },
+  {
+   "id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "code": "ING-SUMMER2019",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: null",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft unknown",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-14T12:28:57.392746+00:00",
+   "applicability": null
+  },
+  {
+   "id": "e20d1ff1-e0bf-4629-acab-db798ed36f44",
+   "code": "ING-SUMMER2024",
+   "node_type": "TOPIC",
+   "title": "Ingestion anchor: null",
+   "description": "Auto-created topic for past-paper ingestion \u2014 remap during review (Master Spec \u00a77: pipeline never guesses curriculum placement).",
+   "validation_status": "UNVALIDATED",
+   "provenance": "past-paper draft unknown",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "version": 1,
+   "created_at": "2026-09-14T13:07:38.491675+00:00",
+   "applicability": null
+  }
+ ],
+ "edges": [
+  {
+   "id": "5b369d13-6c86-4ed1-880b-7876f53f2f62",
+   "rel": "PART_OF",
+   "source": "836d0a89-0e44-4f83-98ef-6176e9f9742e",
+   "target": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+   "source_code": "ING-4CH12CRJUNE2025",
+   "target_code": "4CH1"
+  },
+  {
+   "id": "034bb63d-0c86-406c-8bcb-3fdb36251076",
+   "rel": "PART_OF",
+   "source": "7611490c-7ede-4869-b66b-e98bdb33d261",
+   "target": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+   "source_code": "ING-4CH01CJANUARY2012",
+   "target_code": "4CH1"
+  },
+  {
+   "id": "c5d1b8bc-d675-4872-80ca-48c76525dfb4",
+   "rel": "PART_OF",
+   "source": "8e9c22cc-44d1-42a0-8df6-1b681e2ed4cb",
+   "target": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+   "source_code": "ING-4CH11CRJUNE2023",
+   "target_code": "4CH1"
+  },
+  {
+   "id": "e777a271-7662-4d6d-84db-bddd36d19831",
+   "rel": "PART_OF",
+   "source": "3fc1b4a1-c1dd-44d7-8ef7-85dd8f0baa80",
+   "target": "297a8706-b957-40cb-8bb6-0bfed66980b7",
+   "source_code": "ING-4CH12CRJANUARY2023",
+   "target_code": "4CH1"
+  }
+ ],
+ "review_schedules_rows": [
+  {
+   "id": "01fac66b-6dfc-4fb0-bec0-652f85136601",
+   "learner_id": "37c1758f-6e5c-49ab-90bb-1b6be08889e7",
+   "node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:49.382017+00:00"
+  },
+  {
+   "id": "0f7717a9-ec7b-4dfb-807d-0653049680ac",
+   "learner_id": "80977fdd-20a8-460f-a398-7518a9cf9bca",
+   "node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:00:59.572609+00:00"
+  },
+  {
+   "id": "0f9f69bb-2212-41e2-9236-df8d72bb610f",
+   "learner_id": "d623bfa9-4fd4-47b2-b60b-59bd6bdeab3a",
+   "node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:40.213699+00:00"
+  },
+  {
+   "id": "231888f2-f79e-445f-af74-430b0d482157",
+   "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+   "node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:31.256742+00:00"
+  },
+  {
+   "id": "2cd96272-5a72-4719-b163-0168576b330b",
+   "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+   "node_id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:18.851052+00:00"
+  },
+  {
+   "id": "57bd8121-bb8c-42e1-95b4-83cbf20f7cd8",
+   "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+   "node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:22.891448+00:00"
+  },
+  {
+   "id": "7e084ced-030b-46db-8ffe-648341b8f843",
+   "learner_id": "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+   "node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:11.063590+00:00"
+  },
+  {
+   "id": "9f225996-830d-4377-86b6-10de7eb0a132",
+   "learner_id": "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+   "node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:03.140172+00:00"
+  },
+  {
+   "id": "a6d1c582-64e7-42c9-a554-2d9afef4282b",
+   "learner_id": "059f5a0d-e949-432b-9302-249f02b8ce13",
+   "node_id": "3fc1b4a1-c1dd-44d7-8ef7-85dd8f0baa80",
+   "due_at": "2026-10-01T04:00:00.147922+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.33253571472436916,
+   "status": "PENDING",
+   "created_at": "2026-10-01T04:01:41.604646+00:00"
+  },
+  {
+   "id": "b4e2b5c8-0602-40c0-aff6-88aa3353a781",
+   "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+   "node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:27.025820+00:00"
+  },
+  {
+   "id": "be6fbca5-d8ec-41eb-b31a-09965384b0eb",
+   "learner_id": "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+   "node_id": "1f486c71-fc57-479b-a753-342188e6ddb8",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:01:07.098223+00:00"
+  },
+  {
+   "id": "e2495342-1115-43fb-a768-234db2b26f5c",
+   "learner_id": "80977fdd-20a8-460f-a398-7518a9cf9bca",
+   "node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:00:52.762169+00:00"
+  },
+  {
+   "id": "f89c5cbd-3e4f-49fc-a1d3-c5e2146e59b2",
+   "learner_id": "80977fdd-20a8-460f-a398-7518a9cf9bca",
+   "node_id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "due_at": "2026-09-21T14:00:00.189812+00:00",
+   "reason": "DECAY_CROSSED_THRESHOLD",
+   "mastery_at_trigger": 0.1,
+   "status": "PENDING",
+   "created_at": "2026-09-21T14:00:56.120754+00:00"
+  }
+ ],
+ "skill_states_rows": [
+  {
+   "id": "04053eea-0473-4d5b-8a19-eac7936f609d",
+   "learner_id": "80977fdd-20a8-460f-a398-7518a9cf9bca",
+   "node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:28:20.142424+00:00",
+   "created_at": "2026-09-15T12:27:48.902610+00:00",
+   "updated_at": "2026-09-21T14:00:49.512993+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  },
+  {
+   "id": "0acabdf5-eddf-41d4-8c53-8b548f95eafd",
+   "learner_id": "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+   "node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:30:44.831056+00:00",
+   "created_at": "2026-09-15T12:30:29.501592+00:00",
+   "updated_at": "2026-09-21T14:01:07.099890+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  },
+  {
+   "id": "22c2beeb-e20e-4beb-80f3-b8a6221277ff",
+   "learner_id": "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+   "node_id": "6648a89d-7cca-4650-a464-eb112fb98820",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:29:51.648666+00:00",
+   "created_at": "2026-09-15T12:29:26.838502+00:00",
+   "updated_at": "2026-09-21T14:00:59.574183+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  },
+  {
+   "id": "378678b7-7503-4e2a-92fd-d2b8e89349f0",
+   "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+   "node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:32:22.951405+00:00",
+   "created_at": "2026-09-15T12:32:00.385950+00:00",
+   "updated_at": "2026-09-21T14:01:22.893012+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  },
+  {
+   "id": "3d21ea63-8c6d-4f9a-9555-45417605e7aa",
+   "learner_id": "d623bfa9-4fd4-47b2-b60b-59bd6bdeab3a",
+   "node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "mastery": 0.1,
+   "attempts": 1,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:33:18.487878+00:00",
+   "created_at": "2026-09-15T12:33:18.588611+00:00",
+   "updated_at": "2026-09-21T14:01:35.718022+00:00",
+   "procedural_fluency_gap": null,
+   "version": 1
+  },
+  {
+   "id": "5043a995-d3cd-4540-ac14-60d75ca4af48",
+   "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+   "node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:31:54.078881+00:00",
+   "created_at": "2026-09-15T12:31:32.565915+00:00",
+   "updated_at": "2026-09-21T14:01:18.855854+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  },
+  {
+   "id": "5663b6b5-1396-4bdd-95e3-06ddf3bbdbd6",
+   "learner_id": "37c1758f-6e5c-49ab-90bb-1b6be08889e7",
+   "node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "mastery": 0.1,
+   "attempts": 1,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:33:34.390360+00:00",
+   "created_at": "2026-09-15T12:33:34.490923+00:00",
+   "updated_at": "2026-09-21T14:01:44.754298+00:00",
+   "procedural_fluency_gap": null,
+   "version": 1
+  },
+  {
+   "id": "5f0466ea-54a5-4c14-9d1e-56d1077fa55b",
+   "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+   "node_id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "mastery": 0.1,
+   "attempts": 1,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:31:16.816379+00:00",
+   "created_at": "2026-09-15T12:31:16.914285+00:00",
+   "updated_at": "2026-09-21T14:01:14.917744+00:00",
+   "procedural_fluency_gap": null,
+   "version": 1
+  },
+  {
+   "id": "6ad20db9-51f4-45c3-8461-4d02fc2978ff",
+   "learner_id": "80977fdd-20a8-460f-a398-7518a9cf9bca",
+   "node_id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:29:00.417772+00:00",
+   "created_at": "2026-09-15T12:28:31.301256+00:00",
+   "updated_at": "2026-09-21T14:00:52.763741+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  },
+  {
+   "id": "938cfb70-d5dc-45eb-9193-96a00246b0ea",
+   "learner_id": "0aaa6de2-c8c3-43b0-a453-1daac091f35f",
+   "node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:32:56.773998+00:00",
+   "created_at": "2026-09-15T12:32:30.802035+00:00",
+   "updated_at": "2026-09-21T14:01:27.027048+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  },
+  {
+   "id": "ca858500-8fd5-47c8-9b39-fbb2baec7065",
+   "learner_id": "e176b40e-e7b0-4b21-8fa8-caba121774ae",
+   "node_id": "1f486c71-fc57-479b-a753-342188e6ddb8",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:30:18.341500+00:00",
+   "created_at": "2026-09-15T12:30:02.117054+00:00",
+   "updated_at": "2026-09-21T14:01:03.141702+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  },
+  {
+   "id": "da09691b-fe09-415e-a14f-35b5ef78b127",
+   "learner_id": "059f5a0d-e949-432b-9302-249f02b8ce13",
+   "node_id": "3fc1b4a1-c1dd-44d7-8ef7-85dd8f0baa80",
+   "mastery": 0.33253571472436916,
+   "attempts": 1,
+   "correct_count": 1,
+   "last_practiced_at": "2026-09-29T00:36:00.910282+00:00",
+   "created_at": "2026-09-29T00:36:01.324053+00:00",
+   "updated_at": "2026-10-01T04:01:37.196330+00:00",
+   "procedural_fluency_gap": null,
+   "version": 1
+  },
+  {
+   "id": "e0a0b24a-d457-439d-ae5f-1e013762f2dc",
+   "learner_id": "80977fdd-20a8-460f-a398-7518a9cf9bca",
+   "node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "mastery": 0.1,
+   "attempts": 3,
+   "correct_count": 0,
+   "last_practiced_at": "2026-09-15T12:29:20.677611+00:00",
+   "created_at": "2026-09-15T12:29:11.425212+00:00",
+   "updated_at": "2026-09-21T14:00:56.122565+00:00",
+   "procedural_fluency_gap": null,
+   "version": 3
+  }
+ ],
+ "question_anchors": [
+  {
+   "question_id": "540b80bf-ed01-4ecd-abc7-6dbbb601a5c2",
+   "external_ref": "q01-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "123ceca1-e701-48c0-b57c-4ad7e6291f18",
+   "external_ref": "q01-0741c311",
+   "active": false,
+   "anchor_node_id": "ce32d7f9-f59a-485b-92ab-e4db06d2c4cb",
+   "anchor_code": "ING-4CH12CRJUNE2019"
+  },
+  {
+   "question_id": "375cd4bc-ab1b-432a-ba6b-2d2e597e6248",
+   "external_ref": "q01-0ee12447",
+   "active": false,
+   "anchor_node_id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "anchor_code": "ING-4CH12CRJANUARY2021"
+  },
+  {
+   "question_id": "248193b9-02e1-4d26-b3d8-b4c5c1ce7aa6",
+   "external_ref": "q01-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "c84d7b9d-a502-43bf-9df0-2159a6031935",
+   "external_ref": "q01-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "128ae678-081d-465a-a853-33f055e61d6c",
+   "external_ref": "q01-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "6eb21f0f-fb3b-4be1-bd53-ff041abd2106",
+   "external_ref": "q01-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "bf618af4-ebc4-4815-b55d-4f5370c75449",
+   "external_ref": "q01-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "a888d197-9662-4b1a-969f-dc7022957bdb",
+   "external_ref": "q01-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "58fb0809-d918-4ddd-a8a0-643b226d7bba",
+   "external_ref": "q01-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "45c0ce94-cb75-4ecf-bfa6-ce1e72578e14",
+   "external_ref": "q01-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "b30c5c76-edb6-4e78-8159-a6802f0271f9",
+   "external_ref": "q01-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "64e31e79-429a-48ac-8fd1-23288cc387fe",
+   "external_ref": "q01-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "f43df257-8342-4eed-b877-660273d0b3e2",
+   "external_ref": "q01-51fea326",
+   "active": false,
+   "anchor_node_id": "aad8475a-febc-40f9-831c-ccb67da94bb8",
+   "anchor_code": "ING-4CH02CJANUARY2013"
+  },
+  {
+   "question_id": "476a1b62-f3a2-44e8-be66-fed92236a103",
+   "external_ref": "q01-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "6b98be38-e56d-4dfe-8cf9-48b3284259f5",
+   "external_ref": "q01-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "da0df8d4-ea18-4c7a-9580-abaa243ff5d0",
+   "external_ref": "q01-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "417e62dd-0d18-4198-867f-ba1e97bd523e",
+   "external_ref": "q01-61161ea1",
+   "active": false,
+   "anchor_node_id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "anchor_code": "ING-SUMMER2015"
+  },
+  {
+   "question_id": "75503fc5-7dd5-451d-9e1e-dd9853c43505",
+   "external_ref": "q01-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "ff465788-c506-4fb4-a37b-d3fb2815e2c1",
+   "external_ref": "q01-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "2d232c5f-b217-4884-b5b8-6ca4b1667b67",
+   "external_ref": "q01-6ab313e4",
+   "active": false,
+   "anchor_node_id": "7944830f-ea58-4470-abce-2c62aaf924c1",
+   "anchor_code": "ING-4CH02CRJUNE2016"
+  },
+  {
+   "question_id": "ed3c00b1-700d-414c-b2f1-746fdc3d2655",
+   "external_ref": "q01-6be44572",
+   "active": false,
+   "anchor_node_id": "38c79609-7f5c-434c-946e-ddf9e6452c77",
+   "anchor_code": "ING-4CH02CJUNE2015"
+  },
+  {
+   "question_id": "b112eb35-ed01-4728-b20b-a77d313e3261",
+   "external_ref": "q01-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "68251b28-1683-4676-bac6-4326da95043e",
+   "external_ref": "q01-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "ba28b249-7a28-4b51-b1c1-5babd7fb3826",
+   "external_ref": "q01-803a654f",
+   "active": false,
+   "anchor_node_id": "710108e5-6424-4dfe-9d7b-260ec0aa3b34",
+   "anchor_code": "ING-4CH12CRJUNE2023"
+  },
+  {
+   "question_id": "a5671423-487f-4c63-a294-2b254f5824f0",
+   "external_ref": "q01-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "100de627-7d39-4003-8094-13b2083a7819",
+   "external_ref": "q01-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "5fee647d-a790-490f-a46c-032c321f777f",
+   "external_ref": "q01-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "6575b381-a8da-4b65-b079-e08c797f738a",
+   "external_ref": "q01-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "6b9f89e2-b0f9-4b48-bd1f-51896f388085",
+   "external_ref": "q01-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "48bbd60c-494f-4ab8-bfa0-b6e1eec910ce",
+   "external_ref": "q01-9065f515",
+   "active": false,
+   "anchor_node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "anchor_code": "ING-SUMMER2016"
+  },
+  {
+   "question_id": "4412246d-27bc-4f7b-aa32-7f2315bdec0f",
+   "external_ref": "q01-97798258",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "102ed261-6be1-4647-8bff-0675106b81b4",
+   "external_ref": "q01-989e743c",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "6917181e-660b-42e6-8b66-42a0f23d001c",
+   "external_ref": "q01-9a9616e0",
+   "active": false,
+   "anchor_node_id": "e20d1ff1-e0bf-4629-acab-db798ed36f44",
+   "anchor_code": "ING-SUMMER2024"
+  },
+  {
+   "question_id": "52b0b5b2-dfcc-48e4-9d9b-959f42bfc60c",
+   "external_ref": "q01-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "95cdfbf6-36e5-4ec9-b087-2357c7a9a5e2",
+   "external_ref": "q01-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "7cab3024-b41b-4e04-b56c-ac0039708570",
+   "external_ref": "q01-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "02b0f7e6-6623-4b08-85b1-f58127d67ec0",
+   "external_ref": "q01-a404cc12",
+   "active": false,
+   "anchor_node_id": "a9161bd4-c1d9-48d3-8123-aa7fd73421cf",
+   "anchor_code": "ING-4CH02CJUNE2013"
+  },
+  {
+   "question_id": "bfc6f9e7-c5bd-4cce-8bb0-cadfa248ed0b",
+   "external_ref": "q01-a9193bcb",
+   "active": false,
+   "anchor_node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "anchor_code": "ING-4CH02CJANUARY2016"
+  },
+  {
+   "question_id": "94f57966-05ef-4598-bdfc-a810d404cc36",
+   "external_ref": "q01-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "704a1d77-e1ec-49b4-a220-c8a98a4fb552",
+   "external_ref": "q01-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "79db303c-bfdd-4d79-be6e-4bac5f0e1141",
+   "external_ref": "q01-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "7ca2b927-652b-4751-986d-0b2be380246e",
+   "external_ref": "q01-c8e045a4",
+   "active": false,
+   "anchor_node_id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "anchor_code": "ING-4CH02CRJUNE2017"
+  },
+  {
+   "question_id": "9781309c-0341-4088-8e4a-d76c57262b85",
+   "external_ref": "q01-cb680191",
+   "active": false,
+   "anchor_node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "anchor_code": "ING-4CH12CRJANUARY2022"
+  },
+  {
+   "question_id": "046c9101-ce6e-4c62-8ede-7b3f9e9092b0",
+   "external_ref": "q01-cd4c28e3",
+   "active": false,
+   "anchor_node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "anchor_code": "ING-4CH12CSUMMER2021"
+  },
+  {
+   "question_id": "8ceadb87-d3b1-4afb-aafb-f3974e0829d1",
+   "external_ref": "q01-cdfcbae1",
+   "active": false,
+   "anchor_node_id": "fd08ea01-b30a-4c39-8ae9-5a1e485c5820",
+   "anchor_code": "ING-4CH02CRJUNE2013"
+  },
+  {
+   "question_id": "98c5d3ea-d261-4187-a3e1-c9f6348d5ab9",
+   "external_ref": "q01-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "00f19dc8-207a-4d08-b65d-e30169e269ac",
+   "external_ref": "q01-d5815b70",
+   "active": false,
+   "anchor_node_id": "1c3c762a-40d5-478e-99fd-d9515c4de923",
+   "anchor_code": "ING-4CH02CRJUNE2014"
+  },
+  {
+   "question_id": "bf316990-b4e3-4b92-a27e-f5b3565443ec",
+   "external_ref": "q01-dbac910c",
+   "active": false,
+   "anchor_node_id": "7936951a-1bf7-4b23-a4c4-63c7489553e9",
+   "anchor_code": "ING-4CH02CJUNE2017"
+  },
+  {
+   "question_id": "7aa1476b-645b-4a0f-b29a-081ff979e1c9",
+   "external_ref": "q01-e1a96fcc",
+   "active": false,
+   "anchor_node_id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "anchor_code": "ING-4CH02CJUNE2011"
+  },
+  {
+   "question_id": "665a6698-be96-4fe6-bec3-8e8dc123157f",
+   "external_ref": "q01-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "c7caca96-88a4-4922-b001-d3ae776315bd",
+   "external_ref": "q01-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "a6296f66-468c-4afd-b697-fa908fb63def",
+   "external_ref": "q01-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "0c4ac9b2-0f01-4141-94ac-6b8f738b875e",
+   "external_ref": "q02-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "0dbae2db-33d9-4ead-bab6-8b2739fe0d1c",
+   "external_ref": "q02-0741c311",
+   "active": false,
+   "anchor_node_id": "ce32d7f9-f59a-485b-92ab-e4db06d2c4cb",
+   "anchor_code": "ING-4CH12CRJUNE2019"
+  },
+  {
+   "question_id": "02611e65-6ddd-458a-917b-f2d12cbac685",
+   "external_ref": "q02-0ee12447",
+   "active": false,
+   "anchor_node_id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "anchor_code": "ING-4CH12CRJANUARY2021"
+  },
+  {
+   "question_id": "0e32b2a3-602e-4b30-adcd-49b6c932ccd8",
+   "external_ref": "q02-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "99f35ae1-84a3-41e2-a0f9-3cf308d30231",
+   "external_ref": "q02-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "6777e910-1a45-4a15-94c7-b5f4e839e785",
+   "external_ref": "q02-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "23112d10-358b-45ea-ac24-f1d08036b77a",
+   "external_ref": "q02-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "3bf12cc2-774e-4c7b-8fdd-9c9dfac01e20",
+   "external_ref": "q02-1dc68349",
+   "active": false,
+   "anchor_node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "anchor_code": "ING-4CH12CSPECIMEN2017"
+  },
+  {
+   "question_id": "12a21a58-3d7f-4949-81e3-4d63f3ef1094",
+   "external_ref": "q02-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "b37c8ed2-a2dd-42bb-a5a5-93637ed91b68",
+   "external_ref": "q02-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "e3b7f6f6-7baa-4b9b-a07e-a55aa685c40a",
+   "external_ref": "q02-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "e72bf88c-1406-4f3e-8d6e-055b7329d03d",
+   "external_ref": "q02-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "611b8704-2109-4cfd-98f1-c3ca1b675562",
+   "external_ref": "q02-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "b8e46b7e-05b3-456b-8cbb-7c56efb7216a",
+   "external_ref": "q02-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "a65143de-6b9a-4918-a062-836e7fa94f42",
+   "external_ref": "q02-51fea326",
+   "active": false,
+   "anchor_node_id": "aad8475a-febc-40f9-831c-ccb67da94bb8",
+   "anchor_code": "ING-4CH02CJANUARY2013"
+  },
+  {
+   "question_id": "b09ba286-77d4-46eb-97ec-5fb03a8048d3",
+   "external_ref": "q02-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "c0a78e91-6376-47b5-9e3f-ede2027a0397",
+   "external_ref": "q02-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "17c91052-c537-4f67-adb3-cfbf1c30328e",
+   "external_ref": "q02-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "134cbd74-aa72-4908-99ba-cdde52b3560c",
+   "external_ref": "q02-61161ea1",
+   "active": false,
+   "anchor_node_id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "anchor_code": "ING-SUMMER2015"
+  },
+  {
+   "question_id": "e9716167-793f-4c6f-b0b9-19726b524f0f",
+   "external_ref": "q02-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "e720a1a2-ccc7-48b9-b0ca-622193a76087",
+   "external_ref": "q02-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "8195ccd0-6196-483b-924f-9d52e6cc2514",
+   "external_ref": "q02-6ab313e4",
+   "active": false,
+   "anchor_node_id": "7944830f-ea58-4470-abce-2c62aaf924c1",
+   "anchor_code": "ING-4CH02CRJUNE2016"
+  },
+  {
+   "question_id": "9bd552ae-083e-4845-929b-ccd665ca6f7c",
+   "external_ref": "q02-6be44572",
+   "active": false,
+   "anchor_node_id": "38c79609-7f5c-434c-946e-ddf9e6452c77",
+   "anchor_code": "ING-4CH02CJUNE2015"
+  },
+  {
+   "question_id": "3514a278-bdb2-403b-a504-cad4f2a2e88d",
+   "external_ref": "q02-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "443c130b-d439-4a09-b4d1-42dd2ae3ae7d",
+   "external_ref": "q02-6dc728c5",
+   "active": false,
+   "anchor_node_id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "anchor_code": "ING-4CH12CNOVEMBER2021"
+  },
+  {
+   "question_id": "0c27cfb9-7047-4967-8167-d88d969a5bb5",
+   "external_ref": "q02-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "ddbcb7c6-a57f-43d7-9674-f730a8c31572",
+   "external_ref": "q02-803a654f",
+   "active": false,
+   "anchor_node_id": "710108e5-6424-4dfe-9d7b-260ec0aa3b34",
+   "anchor_code": "ING-4CH12CRJUNE2023"
+  },
+  {
+   "question_id": "3c347380-bf83-447d-93b9-bb9dd097ddf1",
+   "external_ref": "q02-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "d62c2242-94ef-46ec-8f72-cf3649ad4e43",
+   "external_ref": "q02-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "d7f09ab4-5f53-4b91-9132-e4c3b5704a63",
+   "external_ref": "q02-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "7ed935e1-afe5-4bb3-a804-27a5a3408a65",
+   "external_ref": "q02-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "17ba7611-7ec9-4f8c-8249-d62605c29923",
+   "external_ref": "q02-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "702d465f-f0c8-4f5e-bb07-fde673d03bc7",
+   "external_ref": "q02-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "b5203ace-c796-42d5-9f1a-11feffada32d",
+   "external_ref": "q02-9065f515",
+   "active": false,
+   "anchor_node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "anchor_code": "ING-SUMMER2016"
+  },
+  {
+   "question_id": "68459eda-92b1-40aa-9abc-213287291888",
+   "external_ref": "q02-97798258",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "bf27d6df-19be-4053-9fb7-7c2fe91edbed",
+   "external_ref": "q02-989e743c",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "9f41ef42-6665-4f85-a9de-27d60ef3b743",
+   "external_ref": "q02-9a9616e0",
+   "active": false,
+   "anchor_node_id": "e20d1ff1-e0bf-4629-acab-db798ed36f44",
+   "anchor_code": "ING-SUMMER2024"
+  },
+  {
+   "question_id": "6b64df41-d631-43b2-b5ac-7689236c8e03",
+   "external_ref": "q02-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "e320cbb7-1ad4-458b-99fb-10cc0fa15f6a",
+   "external_ref": "q02-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "c57edad5-3a7b-4c3b-af28-b67913a32065",
+   "external_ref": "q02-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "95c84996-8b34-4ae5-9f53-8b7752299d6a",
+   "external_ref": "q02-a404cc12",
+   "active": false,
+   "anchor_node_id": "a9161bd4-c1d9-48d3-8123-aa7fd73421cf",
+   "anchor_code": "ING-4CH02CJUNE2013"
+  },
+  {
+   "question_id": "ea1a573c-a0fb-441d-b46c-fa4ca7564212",
+   "external_ref": "q02-a9193bcb",
+   "active": false,
+   "anchor_node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "anchor_code": "ING-4CH02CJANUARY2016"
+  },
+  {
+   "question_id": "47575d93-1377-492c-bf92-da045dbc3fc3",
+   "external_ref": "q02-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "dc8cc214-04bb-47d9-be5d-ca6e0c5d0d2b",
+   "external_ref": "q02-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "fce6d2a4-c9fa-48d5-b31e-0b8a12d7ed76",
+   "external_ref": "q02-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "97b90209-254c-47a4-9327-2f2ada5d0b19",
+   "external_ref": "q02-c8e045a4",
+   "active": false,
+   "anchor_node_id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "anchor_code": "ING-4CH02CRJUNE2017"
+  },
+  {
+   "question_id": "67a80f54-93f6-4bc3-87a6-98d1900f6a0b",
+   "external_ref": "q02-cb680191",
+   "active": false,
+   "anchor_node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "anchor_code": "ING-4CH12CRJANUARY2022"
+  },
+  {
+   "question_id": "da970ae7-6c4a-40f2-a114-6d9c61728ed9",
+   "external_ref": "q02-cd4c28e3",
+   "active": false,
+   "anchor_node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "anchor_code": "ING-4CH12CSUMMER2021"
+  },
+  {
+   "question_id": "959658fa-214f-45fc-a114-2b7f487b7bd7",
+   "external_ref": "q02-cdfcbae1",
+   "active": false,
+   "anchor_node_id": "fd08ea01-b30a-4c39-8ae9-5a1e485c5820",
+   "anchor_code": "ING-4CH02CRJUNE2013"
+  },
+  {
+   "question_id": "30a8905a-7b43-4bc3-b268-5dd970557ed3",
+   "external_ref": "q02-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "36d31473-ac99-453c-9783-2d94fdfabac6",
+   "external_ref": "q02-d5815b70",
+   "active": false,
+   "anchor_node_id": "1c3c762a-40d5-478e-99fd-d9515c4de923",
+   "anchor_code": "ING-4CH02CRJUNE2014"
+  },
+  {
+   "question_id": "eb1642fa-4e43-4fe6-a4c6-b6d2cc930c20",
+   "external_ref": "q02-dbac910c",
+   "active": false,
+   "anchor_node_id": "7936951a-1bf7-4b23-a4c4-63c7489553e9",
+   "anchor_code": "ING-4CH02CJUNE2017"
+  },
+  {
+   "question_id": "f6a34863-00be-4d17-8f5a-ff6701627e19",
+   "external_ref": "q02-e1a96fcc",
+   "active": false,
+   "anchor_node_id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "anchor_code": "ING-4CH02CJUNE2011"
+  },
+  {
+   "question_id": "86b51860-875a-45ef-84d4-1b838dc5f157",
+   "external_ref": "q02-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "5ae472d9-b301-409a-ab47-bedd34330172",
+   "external_ref": "q02-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "0ebfea63-8391-4169-8f86-b9ced4104993",
+   "external_ref": "q02-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "c82817a5-bea0-47cd-acbb-6e7591174185",
+   "external_ref": "q03-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "b4f06520-0b1b-4a64-a00c-0984a76ee23b",
+   "external_ref": "q03-0741c311",
+   "active": false,
+   "anchor_node_id": "ce32d7f9-f59a-485b-92ab-e4db06d2c4cb",
+   "anchor_code": "ING-4CH12CRJUNE2019"
+  },
+  {
+   "question_id": "536c9b07-b725-4373-8069-e94b70cc656f",
+   "external_ref": "q03-0ee12447",
+   "active": false,
+   "anchor_node_id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "anchor_code": "ING-4CH12CRJANUARY2021"
+  },
+  {
+   "question_id": "95aa7417-ad0a-406c-930c-5ec8d629a1c5",
+   "external_ref": "q03-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "a4f8ef19-6521-4a4d-a674-55f824f3109b",
+   "external_ref": "q03-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "30cb55cb-74fd-457d-8144-daf8d7f5fd54",
+   "external_ref": "q03-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "1ff91b40-0532-4f9c-a113-994bd7cf1dca",
+   "external_ref": "q03-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "8ebdb122-8c47-4188-82c2-aa3df09ca8f7",
+   "external_ref": "q03-1dc68349",
+   "active": false,
+   "anchor_node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "anchor_code": "ING-4CH12CSPECIMEN2017"
+  },
+  {
+   "question_id": "989d3037-e7c6-435f-8224-590010ea27ce",
+   "external_ref": "q03-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "f1967c17-cea2-4bf5-84b7-58bbeb84f789",
+   "external_ref": "q03-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "c8a90f23-a594-48cb-a7f1-087883d8246a",
+   "external_ref": "q03-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "4f7266f1-7ce2-42ad-98a0-55b166e1f864",
+   "external_ref": "q03-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "2c70f11b-03ff-4cd4-a2bf-f2f2fc15b1eb",
+   "external_ref": "q03-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "f7f185ec-c804-4a90-a36e-7ae5d8d9aa85",
+   "external_ref": "q03-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "edf71550-ddb7-4521-9c20-053d3048ee16",
+   "external_ref": "q03-51fea326",
+   "active": false,
+   "anchor_node_id": "aad8475a-febc-40f9-831c-ccb67da94bb8",
+   "anchor_code": "ING-4CH02CJANUARY2013"
+  },
+  {
+   "question_id": "aaade022-00ab-4028-9e5c-94e5b6395ac2",
+   "external_ref": "q03-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "6bad651a-bc0b-482d-a81a-41a92d85e42c",
+   "external_ref": "q03-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "eec0cbd6-d70c-4e63-9774-e15222838e6c",
+   "external_ref": "q03-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "5edbddd0-2de5-439f-9265-f872292522a8",
+   "external_ref": "q03-61161ea1",
+   "active": false,
+   "anchor_node_id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "anchor_code": "ING-SUMMER2015"
+  },
+  {
+   "question_id": "2ff49f83-e6ca-4294-aaba-0b94da386639",
+   "external_ref": "q03-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "55c007c3-55ed-4b22-adb5-e21baca86bf6",
+   "external_ref": "q03-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "7002c958-5be1-43cd-ae36-e177ad4c87ff",
+   "external_ref": "q03-6ab313e4",
+   "active": false,
+   "anchor_node_id": "7944830f-ea58-4470-abce-2c62aaf924c1",
+   "anchor_code": "ING-4CH02CRJUNE2016"
+  },
+  {
+   "question_id": "d16a1e1c-0646-4bd0-bae9-35c1de034e78",
+   "external_ref": "q03-6be44572",
+   "active": false,
+   "anchor_node_id": "38c79609-7f5c-434c-946e-ddf9e6452c77",
+   "anchor_code": "ING-4CH02CJUNE2015"
+  },
+  {
+   "question_id": "7e0f3917-47d1-48a0-bed2-e0abb62c2522",
+   "external_ref": "q03-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "f058b448-ffc6-43bb-9be2-870194fd307c",
+   "external_ref": "q03-6dc728c5",
+   "active": false,
+   "anchor_node_id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "anchor_code": "ING-4CH12CNOVEMBER2021"
+  },
+  {
+   "question_id": "1bc19358-4cf4-439f-a765-a18935fa8174",
+   "external_ref": "q03-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "2c694fd7-ef25-4f9d-be76-5dd91a0fee4d",
+   "external_ref": "q03-803a654f",
+   "active": false,
+   "anchor_node_id": "710108e5-6424-4dfe-9d7b-260ec0aa3b34",
+   "anchor_code": "ING-4CH12CRJUNE2023"
+  },
+  {
+   "question_id": "d6ad9556-2061-4ada-88b5-51ba5cf988cc",
+   "external_ref": "q03-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "228f7395-674d-4aa9-9c2e-8c9242edda71",
+   "external_ref": "q03-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "d16ea7cb-ed52-4ac8-b568-3dbab3ce5f8a",
+   "external_ref": "q03-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "22769243-f056-4511-9aae-d64a15d50c82",
+   "external_ref": "q03-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "3a65fca1-5769-4219-abdc-a0092f022d75",
+   "external_ref": "q03-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "43d7b081-a4ef-4310-91e7-23722ba23b9d",
+   "external_ref": "q03-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "400dc866-42e2-422b-af97-53bda93a8f40",
+   "external_ref": "q03-9065f515",
+   "active": false,
+   "anchor_node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "anchor_code": "ING-SUMMER2016"
+  },
+  {
+   "question_id": "d85f598d-7f8b-4751-a7eb-783193aad594",
+   "external_ref": "q03-97798258",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "775f98bc-2e1d-4c03-af76-6630e8d7a1a0",
+   "external_ref": "q03-989e743c",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "f28aa48b-7ec1-4c8a-9c8d-f694d091d7de",
+   "external_ref": "q03-9a9616e0",
+   "active": false,
+   "anchor_node_id": "e20d1ff1-e0bf-4629-acab-db798ed36f44",
+   "anchor_code": "ING-SUMMER2024"
+  },
+  {
+   "question_id": "9c17e677-3732-4ea7-a6ec-9ae502a3f38b",
+   "external_ref": "q03-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "55e8cbc4-cf69-483b-b717-0b4c4a1d0e51",
+   "external_ref": "q03-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "b2650c54-79ea-4084-b0a4-fce7be00028c",
+   "external_ref": "q03-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "0ee144c5-baf1-47df-a89d-d1e531034b67",
+   "external_ref": "q03-a404cc12",
+   "active": false,
+   "anchor_node_id": "a9161bd4-c1d9-48d3-8123-aa7fd73421cf",
+   "anchor_code": "ING-4CH02CJUNE2013"
+  },
+  {
+   "question_id": "935acefb-6d35-438d-938f-f187a1a1d273",
+   "external_ref": "q03-a9193bcb",
+   "active": false,
+   "anchor_node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "anchor_code": "ING-4CH02CJANUARY2016"
+  },
+  {
+   "question_id": "f69e6c24-ff26-4e9b-81ea-e90099dc3c67",
+   "external_ref": "q03-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "7ddec25e-c352-47a1-bfaf-956045f90c83",
+   "external_ref": "q03-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "663cdf5e-e874-4b3f-a8ed-5cef72676e14",
+   "external_ref": "q03-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "dc42ebf2-8109-4a3e-9aee-549b51d020d4",
+   "external_ref": "q03-c8e045a4",
+   "active": false,
+   "anchor_node_id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "anchor_code": "ING-4CH02CRJUNE2017"
+  },
+  {
+   "question_id": "f2915d6f-fed8-4c4a-bfa2-f6e9563282f1",
+   "external_ref": "q03-cb680191",
+   "active": false,
+   "anchor_node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "anchor_code": "ING-4CH12CRJANUARY2022"
+  },
+  {
+   "question_id": "90c1de6a-028c-4eae-9435-c52485235601",
+   "external_ref": "q03-cd4c28e3",
+   "active": false,
+   "anchor_node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "anchor_code": "ING-4CH12CSUMMER2021"
+  },
+  {
+   "question_id": "7924e2bc-a3b3-43ac-a048-6211263ab7be",
+   "external_ref": "q03-cdfcbae1",
+   "active": false,
+   "anchor_node_id": "fd08ea01-b30a-4c39-8ae9-5a1e485c5820",
+   "anchor_code": "ING-4CH02CRJUNE2013"
+  },
+  {
+   "question_id": "aca89514-73e8-4e2c-ba2f-1a50fc52abd3",
+   "external_ref": "q03-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "4eefd338-1f26-49c1-a2cb-ebaf1aacae32",
+   "external_ref": "q03-d5815b70",
+   "active": false,
+   "anchor_node_id": "1c3c762a-40d5-478e-99fd-d9515c4de923",
+   "anchor_code": "ING-4CH02CRJUNE2014"
+  },
+  {
+   "question_id": "63c70757-7d04-4284-a0c7-bd3d4113dd27",
+   "external_ref": "q03-dbac910c",
+   "active": false,
+   "anchor_node_id": "7936951a-1bf7-4b23-a4c4-63c7489553e9",
+   "anchor_code": "ING-4CH02CJUNE2017"
+  },
+  {
+   "question_id": "43163217-693a-466f-b8d0-6f4fde633b6f",
+   "external_ref": "q03-e1a96fcc",
+   "active": false,
+   "anchor_node_id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "anchor_code": "ING-4CH02CJUNE2011"
+  },
+  {
+   "question_id": "325ec40c-1760-4073-9926-8e052e0fffda",
+   "external_ref": "q03-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "a915ee33-198a-4129-860f-df7a8fe41e18",
+   "external_ref": "q03-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "26b0733d-f630-4468-bfa0-dfd9380d5ec4",
+   "external_ref": "q03-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "41af6bda-f232-4dcf-a9a7-20d99893ee8c",
+   "external_ref": "q04-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "6fca2f7e-8073-4efa-8903-f759c250521f",
+   "external_ref": "q04-0741c311",
+   "active": false,
+   "anchor_node_id": "ce32d7f9-f59a-485b-92ab-e4db06d2c4cb",
+   "anchor_code": "ING-4CH12CRJUNE2019"
+  },
+  {
+   "question_id": "55cee76a-155a-4e64-b350-83b153a7edb6",
+   "external_ref": "q04-0ee12447",
+   "active": false,
+   "anchor_node_id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "anchor_code": "ING-4CH12CRJANUARY2021"
+  },
+  {
+   "question_id": "189f4cdf-1ad0-4ce4-8bae-5308124d2239",
+   "external_ref": "q04-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "a53c84d9-f531-4ce7-8e26-c5ff382cf0a7",
+   "external_ref": "q04-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "afc921a6-b1d9-4125-b345-d85dbbf010b7",
+   "external_ref": "q04-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "2a0862a9-b07c-437b-8830-a6c75fad7ebb",
+   "external_ref": "q04-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "1065bce8-f740-4c46-a62a-01abdcf37823",
+   "external_ref": "q04-1dc68349",
+   "active": false,
+   "anchor_node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "anchor_code": "ING-4CH12CSPECIMEN2017"
+  },
+  {
+   "question_id": "014fa2a8-90bf-4c20-9485-f469cc82db95",
+   "external_ref": "q04-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "75e232e5-c686-403a-a241-cc1e119590fb",
+   "external_ref": "q04-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "4cd7087b-9b00-4bb8-b177-e5b8dbd5b970",
+   "external_ref": "q04-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "3ee090f8-3a1f-4a6f-8276-21c70b7510dd",
+   "external_ref": "q04-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "f7cc58ba-c18d-46f4-b4d6-36ebdf60f968",
+   "external_ref": "q04-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "7d20d8a6-c95d-4536-a38f-47880ee7c635",
+   "external_ref": "q04-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "6544d290-e7fb-407d-b46d-5ef3c8ce4fd9",
+   "external_ref": "q04-51fea326",
+   "active": false,
+   "anchor_node_id": "aad8475a-febc-40f9-831c-ccb67da94bb8",
+   "anchor_code": "ING-4CH02CJANUARY2013"
+  },
+  {
+   "question_id": "3c49d2d9-92f9-4d79-a8d6-90ebadbd5831",
+   "external_ref": "q04-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "4e7bcaac-498b-4023-aefe-e62bb69b5806",
+   "external_ref": "q04-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "24b7d504-afd4-4979-984f-e04c3d59ebfa",
+   "external_ref": "q04-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "16c5bfa3-8133-48fc-80d7-5fe4f3b60e12",
+   "external_ref": "q04-61161ea1",
+   "active": false,
+   "anchor_node_id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "anchor_code": "ING-SUMMER2015"
+  },
+  {
+   "question_id": "b61db876-1ebb-4a3f-b530-b2403b2e21d6",
+   "external_ref": "q04-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "f7b5dd76-cc1c-4e94-9cb3-89908c6553c1",
+   "external_ref": "q04-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "7732c9ae-1d25-4ab5-8fd1-4fbc3088adc2",
+   "external_ref": "q04-6ab313e4",
+   "active": false,
+   "anchor_node_id": "7944830f-ea58-4470-abce-2c62aaf924c1",
+   "anchor_code": "ING-4CH02CRJUNE2016"
+  },
+  {
+   "question_id": "b452eb13-daed-4fe2-a904-b2fde9755892",
+   "external_ref": "q04-6be44572",
+   "active": false,
+   "anchor_node_id": "38c79609-7f5c-434c-946e-ddf9e6452c77",
+   "anchor_code": "ING-4CH02CJUNE2015"
+  },
+  {
+   "question_id": "49fc026a-1bde-4e35-b6d5-0ce1c16dd90e",
+   "external_ref": "q04-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "0db5bcac-cc31-4d8a-8c8e-d4d45996e485",
+   "external_ref": "q04-6dc728c5",
+   "active": false,
+   "anchor_node_id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "anchor_code": "ING-4CH12CNOVEMBER2021"
+  },
+  {
+   "question_id": "ed2fafdc-a7b0-470d-886a-e13e59766ab7",
+   "external_ref": "q04-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "d7b2ecad-0554-41eb-8730-5ad9d9810483",
+   "external_ref": "q04-803a654f",
+   "active": false,
+   "anchor_node_id": "710108e5-6424-4dfe-9d7b-260ec0aa3b34",
+   "anchor_code": "ING-4CH12CRJUNE2023"
+  },
+  {
+   "question_id": "cafc2944-d61a-4999-9a02-b6764221ad49",
+   "external_ref": "q04-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "7f260b27-f020-4010-a454-9c40b47c88a2",
+   "external_ref": "q04-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "7773d2f5-f2fc-48d8-9aaf-517454237b29",
+   "external_ref": "q04-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "f4f63654-7a00-4fb0-a3fe-c3cc033612cf",
+   "external_ref": "q04-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "9d0de924-8a63-4f41-a6ee-5a28ef936e87",
+   "external_ref": "q04-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "fd6b3a20-7931-467d-886d-a6cb5f347ecf",
+   "external_ref": "q04-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "9b228043-5c2a-41f6-bc79-90785fc1f486",
+   "external_ref": "q04-9065f515",
+   "active": false,
+   "anchor_node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "anchor_code": "ING-SUMMER2016"
+  },
+  {
+   "question_id": "7f818348-1023-46fc-848e-bc5348abe0eb",
+   "external_ref": "q04-97798258",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "146edca9-d62d-422c-978f-3af77049da38",
+   "external_ref": "q04-989e743c",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "d297e90d-b00a-4844-847f-8432e9320742",
+   "external_ref": "q04-9a9616e0",
+   "active": false,
+   "anchor_node_id": "e20d1ff1-e0bf-4629-acab-db798ed36f44",
+   "anchor_code": "ING-SUMMER2024"
+  },
+  {
+   "question_id": "1b66a277-c122-4d89-a0af-b98bc642bab8",
+   "external_ref": "q04-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "f95a42f6-2b7f-485d-9a38-2c55971c496b",
+   "external_ref": "q04-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "4aaa2190-f498-4e91-b407-c0838187ef31",
+   "external_ref": "q04-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "7beb1e2d-0699-47d4-b427-3e656e3a47ef",
+   "external_ref": "q04-a404cc12",
+   "active": false,
+   "anchor_node_id": "a9161bd4-c1d9-48d3-8123-aa7fd73421cf",
+   "anchor_code": "ING-4CH02CJUNE2013"
+  },
+  {
+   "question_id": "fbfcf824-11c6-4255-b1bb-907d6f23466f",
+   "external_ref": "q04-a9193bcb",
+   "active": false,
+   "anchor_node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "anchor_code": "ING-4CH02CJANUARY2016"
+  },
+  {
+   "question_id": "e28c7d1e-5f3d-4d8f-8963-1458c2fd6a7e",
+   "external_ref": "q04-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "4af99e94-cd99-4f1f-bc12-24db88e89ba9",
+   "external_ref": "q04-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "26ea49d3-ce89-441d-b9aa-6a1f4b8219c6",
+   "external_ref": "q04-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "e39a048d-c6f2-4414-a2ec-73fc8b563520",
+   "external_ref": "q04-c8e045a4",
+   "active": false,
+   "anchor_node_id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "anchor_code": "ING-4CH02CRJUNE2017"
+  },
+  {
+   "question_id": "182af8a2-842f-4643-bd7a-77b307011a01",
+   "external_ref": "q04-cb680191",
+   "active": false,
+   "anchor_node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "anchor_code": "ING-4CH12CRJANUARY2022"
+  },
+  {
+   "question_id": "c80fb8ef-d5dd-412d-a2d8-0538d8bb117b",
+   "external_ref": "q04-cd4c28e3",
+   "active": false,
+   "anchor_node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "anchor_code": "ING-4CH12CSUMMER2021"
+  },
+  {
+   "question_id": "afbb570f-71eb-42fd-bdbe-67a01c56d76a",
+   "external_ref": "q04-cdfcbae1",
+   "active": false,
+   "anchor_node_id": "fd08ea01-b30a-4c39-8ae9-5a1e485c5820",
+   "anchor_code": "ING-4CH02CRJUNE2013"
+  },
+  {
+   "question_id": "ce19114e-3eec-42da-8216-f0ba18ee8434",
+   "external_ref": "q04-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "74923488-ddb5-4db4-a346-1150f2e36f09",
+   "external_ref": "q04-d5815b70",
+   "active": false,
+   "anchor_node_id": "1c3c762a-40d5-478e-99fd-d9515c4de923",
+   "anchor_code": "ING-4CH02CRJUNE2014"
+  },
+  {
+   "question_id": "4998ec7a-5d74-4d5a-aafa-f8fe22c636eb",
+   "external_ref": "q04-dbac910c",
+   "active": false,
+   "anchor_node_id": "7936951a-1bf7-4b23-a4c4-63c7489553e9",
+   "anchor_code": "ING-4CH02CJUNE2017"
+  },
+  {
+   "question_id": "b75d9229-a886-4bb3-8f78-1006c8fd3470",
+   "external_ref": "q04-e1a96fcc",
+   "active": false,
+   "anchor_node_id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "anchor_code": "ING-4CH02CJUNE2011"
+  },
+  {
+   "question_id": "9798eed0-7e77-4b3f-a865-ed5f6f7ad98f",
+   "external_ref": "q04-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "c864f068-8751-45c0-b1c2-be8a53a89532",
+   "external_ref": "q04-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "7dc3e1f4-1135-477a-9cd9-cb9f26ae6009",
+   "external_ref": "q04-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "4a94ef63-5e89-4612-89cd-e67c8f7c6fd4",
+   "external_ref": "q05-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "901df750-3b5f-421f-bc9a-48050d04ec65",
+   "external_ref": "q05-0741c311",
+   "active": false,
+   "anchor_node_id": "ce32d7f9-f59a-485b-92ab-e4db06d2c4cb",
+   "anchor_code": "ING-4CH12CRJUNE2019"
+  },
+  {
+   "question_id": "acb48bd9-46d5-43e9-8953-8256ae098d5d",
+   "external_ref": "q05-0ee12447",
+   "active": false,
+   "anchor_node_id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "anchor_code": "ING-4CH12CRJANUARY2021"
+  },
+  {
+   "question_id": "9488ed8b-37a6-4854-8d95-70d5f9a22f90",
+   "external_ref": "q05-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "5c818cdc-ead7-4f09-9f3e-bbc777df7efc",
+   "external_ref": "q05-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "191df87c-b6f0-4bdd-978a-fc8c279f5eef",
+   "external_ref": "q05-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "ea6598bd-af16-4332-a7a7-5640daab5fe7",
+   "external_ref": "q05-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "81b3cb01-c2f5-4066-ab43-3daa46557177",
+   "external_ref": "q05-1dc68349",
+   "active": false,
+   "anchor_node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "anchor_code": "ING-4CH12CSPECIMEN2017"
+  },
+  {
+   "question_id": "1a2cec8c-2407-4bad-b3ac-47c953df0392",
+   "external_ref": "q05-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "196bad8c-f7f8-4ee9-9ce6-2c3f8de4bb27",
+   "external_ref": "q05-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "1fc66c67-f92d-4c83-8b72-b34c3c172436",
+   "external_ref": "q05-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "91612594-dd3a-4890-b348-de7dc86dc957",
+   "external_ref": "q05-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "e6871f3d-9c04-4cc1-aba3-c9b35737520d",
+   "external_ref": "q05-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "c53126ed-c38b-4edf-ab36-08271a56e8a5",
+   "external_ref": "q05-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "b5267133-af7f-49e1-83c7-eb68efc210fe",
+   "external_ref": "q05-51fea326",
+   "active": false,
+   "anchor_node_id": "aad8475a-febc-40f9-831c-ccb67da94bb8",
+   "anchor_code": "ING-4CH02CJANUARY2013"
+  },
+  {
+   "question_id": "1e2495d4-b68a-40c3-8124-f632f9bb3997",
+   "external_ref": "q05-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "08947ff3-2cc2-4875-81a8-5cd3538824c6",
+   "external_ref": "q05-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "1ae1bf67-4b4b-4a77-8814-aeaf722308d8",
+   "external_ref": "q05-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "d25b822d-c216-4a59-9f6a-03cc954262ea",
+   "external_ref": "q05-61161ea1",
+   "active": false,
+   "anchor_node_id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "anchor_code": "ING-SUMMER2015"
+  },
+  {
+   "question_id": "536fbae3-7e2c-4573-aeab-7fcbd29b8b8b",
+   "external_ref": "q05-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "24be05e1-a624-46eb-9999-27a5a243b0a1",
+   "external_ref": "q05-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "459e2cdb-3d65-4f8e-9097-1a20c2e1c8bd",
+   "external_ref": "q05-6ab313e4",
+   "active": false,
+   "anchor_node_id": "7944830f-ea58-4470-abce-2c62aaf924c1",
+   "anchor_code": "ING-4CH02CRJUNE2016"
+  },
+  {
+   "question_id": "de67d03d-a407-4c43-ac3d-edff93254365",
+   "external_ref": "q05-6be44572",
+   "active": false,
+   "anchor_node_id": "38c79609-7f5c-434c-946e-ddf9e6452c77",
+   "anchor_code": "ING-4CH02CJUNE2015"
+  },
+  {
+   "question_id": "b8dc61c4-8725-4c4c-8a05-d13c4db1bad0",
+   "external_ref": "q05-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "b2f4c2ce-3200-44cd-bb98-6a591c2627b5",
+   "external_ref": "q05-6dc728c5",
+   "active": false,
+   "anchor_node_id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "anchor_code": "ING-4CH12CNOVEMBER2021"
+  },
+  {
+   "question_id": "83bbe6eb-deba-4b01-bb41-a455b40ef30c",
+   "external_ref": "q05-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "1626b51f-1c54-4270-a284-187598baaa5d",
+   "external_ref": "q05-803a654f",
+   "active": false,
+   "anchor_node_id": "710108e5-6424-4dfe-9d7b-260ec0aa3b34",
+   "anchor_code": "ING-4CH12CRJUNE2023"
+  },
+  {
+   "question_id": "f9f2482c-6dad-4d67-a320-1f1b3af46d8c",
+   "external_ref": "q05-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "0ee836b3-9397-425a-9ffb-e7d129b2e4dd",
+   "external_ref": "q05-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "5aa4c0ef-f1d5-448d-a8d3-7e089644f7cf",
+   "external_ref": "q05-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "8413f06c-c631-485b-bfef-0440a389e14a",
+   "external_ref": "q05-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "73a64fed-2897-41d2-9396-0f57caefeee9",
+   "external_ref": "q05-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "ad3482fe-1757-4a55-8f08-6365398981e0",
+   "external_ref": "q05-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "b5277751-8383-4755-b67a-8c5038a497ed",
+   "external_ref": "q05-9065f515",
+   "active": false,
+   "anchor_node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "anchor_code": "ING-SUMMER2016"
+  },
+  {
+   "question_id": "d996a132-4144-4b68-b23f-702e0a9614db",
+   "external_ref": "q05-97798258",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "3a731a49-2ccf-466d-858c-0fff725e975d",
+   "external_ref": "q05-989e743c",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "d5c62390-e9f3-486e-ae07-4a0dc4e5fd21",
+   "external_ref": "q05-9a9616e0",
+   "active": false,
+   "anchor_node_id": "e20d1ff1-e0bf-4629-acab-db798ed36f44",
+   "anchor_code": "ING-SUMMER2024"
+  },
+  {
+   "question_id": "1b2dfda6-5606-481c-9205-d4feacca2fd6",
+   "external_ref": "q05-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "18d39ea7-261f-445f-8602-1107b788656b",
+   "external_ref": "q05-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "05215e6a-4890-4bc1-a638-c27dc891aba9",
+   "external_ref": "q05-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "cdeb5b1b-b12d-47a1-9630-0965134fd27e",
+   "external_ref": "q05-a404cc12",
+   "active": false,
+   "anchor_node_id": "a9161bd4-c1d9-48d3-8123-aa7fd73421cf",
+   "anchor_code": "ING-4CH02CJUNE2013"
+  },
+  {
+   "question_id": "20ed84d2-2210-4dbf-b6b8-589d18e35888",
+   "external_ref": "q05-a9193bcb",
+   "active": false,
+   "anchor_node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "anchor_code": "ING-4CH02CJANUARY2016"
+  },
+  {
+   "question_id": "dfeb9135-df6c-405c-a9ec-24c97989fdd9",
+   "external_ref": "q05-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "3da795aa-a55c-4747-9dc6-3a6905453a3e",
+   "external_ref": "q05-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "d69cc30c-9463-45a3-b667-7e58208c59f7",
+   "external_ref": "q05-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "5c187ddb-b3ab-4d84-bae4-9b7bc7934c4d",
+   "external_ref": "q05-c8e045a4",
+   "active": false,
+   "anchor_node_id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "anchor_code": "ING-4CH02CRJUNE2017"
+  },
+  {
+   "question_id": "bd2f41d6-45f3-4560-bd4e-7218d014b764",
+   "external_ref": "q05-cb680191",
+   "active": false,
+   "anchor_node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "anchor_code": "ING-4CH12CRJANUARY2022"
+  },
+  {
+   "question_id": "b0f4974b-8dd5-4e08-b197-f06958a85075",
+   "external_ref": "q05-cd4c28e3",
+   "active": false,
+   "anchor_node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "anchor_code": "ING-4CH12CSUMMER2021"
+  },
+  {
+   "question_id": "bdecbf85-249e-49c0-9ed5-b648597fb47f",
+   "external_ref": "q05-cdfcbae1",
+   "active": false,
+   "anchor_node_id": "fd08ea01-b30a-4c39-8ae9-5a1e485c5820",
+   "anchor_code": "ING-4CH02CRJUNE2013"
+  },
+  {
+   "question_id": "3cc8e5f7-1188-476f-b3bd-eb84f2f6e791",
+   "external_ref": "q05-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "94e8347d-51a5-41b2-8945-bf6bf1c0ddaf",
+   "external_ref": "q05-d5815b70",
+   "active": false,
+   "anchor_node_id": "1c3c762a-40d5-478e-99fd-d9515c4de923",
+   "anchor_code": "ING-4CH02CRJUNE2014"
+  },
+  {
+   "question_id": "6edc3f68-54e6-4eb8-8270-00dce81f6a1e",
+   "external_ref": "q05-dbac910c",
+   "active": false,
+   "anchor_node_id": "7936951a-1bf7-4b23-a4c4-63c7489553e9",
+   "anchor_code": "ING-4CH02CJUNE2017"
+  },
+  {
+   "question_id": "68c58ae6-3cd5-4c93-8594-7e0f00c6c039",
+   "external_ref": "q05-e1a96fcc",
+   "active": false,
+   "anchor_node_id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "anchor_code": "ING-4CH02CJUNE2011"
+  },
+  {
+   "question_id": "7410ca65-a5db-4aa4-b9a1-6cc46e54a13c",
+   "external_ref": "q05-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "e12b026c-7c66-4e8d-84bb-915e68bfc18b",
+   "external_ref": "q05-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "755e696f-3166-4261-85b6-f3eaec98feaf",
+   "external_ref": "q05-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "fe8fd5ce-8e4e-4cd5-b796-623f667a4273",
+   "external_ref": "q06-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "e354744a-06f5-42cb-bbe9-728a21c0e5de",
+   "external_ref": "q06-0741c311",
+   "active": false,
+   "anchor_node_id": "ce32d7f9-f59a-485b-92ab-e4db06d2c4cb",
+   "anchor_code": "ING-4CH12CRJUNE2019"
+  },
+  {
+   "question_id": "d4630111-c0ac-4ca3-978c-615731a855fc",
+   "external_ref": "q06-0ee12447",
+   "active": false,
+   "anchor_node_id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "anchor_code": "ING-4CH12CRJANUARY2021"
+  },
+  {
+   "question_id": "1afc70cf-441f-474a-8f85-e48655481336",
+   "external_ref": "q06-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "955a64c0-1f4d-4047-9d4a-c56992802903",
+   "external_ref": "q06-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "d34cdc58-92c7-47ba-ad04-b5119c0d1785",
+   "external_ref": "q06-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "82072c96-d2f8-4e11-bacd-226063341ff8",
+   "external_ref": "q06-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "2b1f8d9c-e7b4-4726-8cd2-fb94a214fa8c",
+   "external_ref": "q06-1dc68349",
+   "active": false,
+   "anchor_node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "anchor_code": "ING-4CH12CSPECIMEN2017"
+  },
+  {
+   "question_id": "87ac3835-e714-4905-b34c-d293e01ea04c",
+   "external_ref": "q06-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "996f248d-8d1a-4cc6-99cc-0cc8963125ce",
+   "external_ref": "q06-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "11f20655-1188-4670-8469-b6c095ac42cc",
+   "external_ref": "q06-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "81ce30f4-f99b-4ce6-97e1-3543b8119e8e",
+   "external_ref": "q06-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "d67fd804-c153-4613-8ce9-2ff8a3b52546",
+   "external_ref": "q06-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "0d5d78eb-9605-403f-acbc-361083b8321f",
+   "external_ref": "q06-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "44dea13d-cef6-45fd-a29e-a820040f98d5",
+   "external_ref": "q06-51fea326",
+   "active": false,
+   "anchor_node_id": "aad8475a-febc-40f9-831c-ccb67da94bb8",
+   "anchor_code": "ING-4CH02CJANUARY2013"
+  },
+  {
+   "question_id": "228e6928-d35e-4cbe-a132-0ba71d80b7f9",
+   "external_ref": "q06-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "097ea78e-db9a-4aa9-a569-8ed59603d87b",
+   "external_ref": "q06-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "f26ee1bc-78ef-4086-b263-936f155a194b",
+   "external_ref": "q06-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "a6695be1-0f7e-49ff-921e-23be074246da",
+   "external_ref": "q06-61161ea1",
+   "active": false,
+   "anchor_node_id": "2d195fbb-5ec9-4a88-8225-e5886308eaa2",
+   "anchor_code": "ING-SUMMER2015"
+  },
+  {
+   "question_id": "33867e85-c2ac-4732-9155-06c27f1ed674",
+   "external_ref": "q06-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "b08f9877-96ad-40ed-85d8-ae9fd4727c97",
+   "external_ref": "q06-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "4ab56c43-d586-48c3-8758-bce669fd781d",
+   "external_ref": "q06-6ab313e4",
+   "active": false,
+   "anchor_node_id": "7944830f-ea58-4470-abce-2c62aaf924c1",
+   "anchor_code": "ING-4CH02CRJUNE2016"
+  },
+  {
+   "question_id": "b3df6bcc-d125-43b3-9453-1026072b31e9",
+   "external_ref": "q06-6be44572",
+   "active": false,
+   "anchor_node_id": "38c79609-7f5c-434c-946e-ddf9e6452c77",
+   "anchor_code": "ING-4CH02CJUNE2015"
+  },
+  {
+   "question_id": "ecd30978-f48e-4913-952b-c2947ed158c6",
+   "external_ref": "q06-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "8f5d00b8-cded-43eb-9a8d-8c25b9f4708f",
+   "external_ref": "q06-6dc728c5",
+   "active": false,
+   "anchor_node_id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "anchor_code": "ING-4CH12CNOVEMBER2021"
+  },
+  {
+   "question_id": "725190ab-ad96-4ac4-97ef-8f49deaac913",
+   "external_ref": "q06-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "3733d28f-a7cf-4162-9b7d-f3c4ed3c3fb4",
+   "external_ref": "q06-803a654f",
+   "active": false,
+   "anchor_node_id": "710108e5-6424-4dfe-9d7b-260ec0aa3b34",
+   "anchor_code": "ING-4CH12CRJUNE2023"
+  },
+  {
+   "question_id": "7e1f8e3e-73ae-4936-b88c-f232794121a3",
+   "external_ref": "q06-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "b7c9e260-7e3f-4121-8480-463ac472fce3",
+   "external_ref": "q06-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "e2316936-a5b8-43a9-a1c3-2c3e60f96f77",
+   "external_ref": "q06-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "ff1c9304-dbae-44eb-9ce8-fd721cd8af08",
+   "external_ref": "q06-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "6884fdbf-75d2-44c3-b478-d4695c5435db",
+   "external_ref": "q06-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "18b844b4-5dd6-4741-85e2-2f6ed8a29341",
+   "external_ref": "q06-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "3cff010c-8d4e-4dfb-bee5-265912cd5157",
+   "external_ref": "q06-9065f515",
+   "active": false,
+   "anchor_node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "anchor_code": "ING-SUMMER2016"
+  },
+  {
+   "question_id": "0f2c1b42-8bcb-431b-a89e-84b7d4aa0715",
+   "external_ref": "q06-97798258",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "0bac640f-ab17-4f5e-9746-a059fdae2650",
+   "external_ref": "q06-989e743c",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "4f2bd837-ce01-4231-ad79-298789e3675a",
+   "external_ref": "q06-9a9616e0",
+   "active": false,
+   "anchor_node_id": "e20d1ff1-e0bf-4629-acab-db798ed36f44",
+   "anchor_code": "ING-SUMMER2024"
+  },
+  {
+   "question_id": "72b03879-12d7-4024-aa1d-553178f352a8",
+   "external_ref": "q06-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "e853bbd3-b526-4078-a898-5931c216c69e",
+   "external_ref": "q06-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "71f8bd16-3238-4777-bafe-b63a2201300f",
+   "external_ref": "q06-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "8e27ecab-944c-42e5-89a6-3513b9699ccb",
+   "external_ref": "q06-a404cc12",
+   "active": false,
+   "anchor_node_id": "a9161bd4-c1d9-48d3-8123-aa7fd73421cf",
+   "anchor_code": "ING-4CH02CJUNE2013"
+  },
+  {
+   "question_id": "c2a6d0df-b3f7-40f8-99b8-938e66253000",
+   "external_ref": "q06-a9193bcb",
+   "active": false,
+   "anchor_node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "anchor_code": "ING-4CH02CJANUARY2016"
+  },
+  {
+   "question_id": "20a0f35e-b3d4-47de-973b-73fdc188400e",
+   "external_ref": "q06-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "700cef1b-3cb9-4017-b7cf-efded9625028",
+   "external_ref": "q06-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "aed9f35a-dfeb-49bd-bb37-08d25aa8f120",
+   "external_ref": "q06-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "9dd12ba4-bea1-488b-a61a-71b2fda1185b",
+   "external_ref": "q06-c8e045a4",
+   "active": false,
+   "anchor_node_id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "anchor_code": "ING-4CH02CRJUNE2017"
+  },
+  {
+   "question_id": "84dc055a-b769-434f-aa6d-2e148755652e",
+   "external_ref": "q06-cb680191",
+   "active": false,
+   "anchor_node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "anchor_code": "ING-4CH12CRJANUARY2022"
+  },
+  {
+   "question_id": "a32e7a9c-0786-43c3-9c43-377dd0e1ce0b",
+   "external_ref": "q06-cd4c28e3",
+   "active": false,
+   "anchor_node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "anchor_code": "ING-4CH12CSUMMER2021"
+  },
+  {
+   "question_id": "cfe0f700-257d-48c1-9616-639d67657727",
+   "external_ref": "q06-cdfcbae1",
+   "active": false,
+   "anchor_node_id": "fd08ea01-b30a-4c39-8ae9-5a1e485c5820",
+   "anchor_code": "ING-4CH02CRJUNE2013"
+  },
+  {
+   "question_id": "8957d826-fc1c-4ef9-aea1-9d15f4187685",
+   "external_ref": "q06-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "34b0f16a-e841-4bcb-8c12-f950d2864f87",
+   "external_ref": "q06-d5815b70",
+   "active": false,
+   "anchor_node_id": "1c3c762a-40d5-478e-99fd-d9515c4de923",
+   "anchor_code": "ING-4CH02CRJUNE2014"
+  },
+  {
+   "question_id": "e473923e-7ebb-4d88-a97b-00713c211d35",
+   "external_ref": "q06-e1a96fcc",
+   "active": false,
+   "anchor_node_id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "anchor_code": "ING-4CH02CJUNE2011"
+  },
+  {
+   "question_id": "be4152d8-2030-4ab1-a5b2-1b9339ea96a5",
+   "external_ref": "q06-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "1cbf6d9e-780d-43e0-92bb-38e5ef4d512e",
+   "external_ref": "q06-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "844e6d64-db71-4964-8e5e-86d8aa1a319e",
+   "external_ref": "q06-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "40ee8fc3-3518-404f-8bb8-820e2262c7cd",
+   "external_ref": "q07-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "73fb9169-1dc9-4c2e-9d22-b7d5bde49770",
+   "external_ref": "q07-0741c311",
+   "active": false,
+   "anchor_node_id": "ce32d7f9-f59a-485b-92ab-e4db06d2c4cb",
+   "anchor_code": "ING-4CH12CRJUNE2019"
+  },
+  {
+   "question_id": "9ba87eec-5d22-4160-8d7f-3d25c7f41c61",
+   "external_ref": "q07-0ee12447",
+   "active": false,
+   "anchor_node_id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "anchor_code": "ING-4CH12CRJANUARY2021"
+  },
+  {
+   "question_id": "cd504a78-6e9a-4426-8e00-bf19e3d59555",
+   "external_ref": "q07-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "efc3038d-4f18-43f1-8914-4e20b1b8d411",
+   "external_ref": "q07-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "d742d623-a0fd-4f0f-b43f-299780378df0",
+   "external_ref": "q07-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "b4140c29-8d35-4eb4-af67-73fdbe4801c7",
+   "external_ref": "q07-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "5b5c6cca-21cf-4626-bd34-a1a4b1b055a9",
+   "external_ref": "q07-1dc68349",
+   "active": false,
+   "anchor_node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "anchor_code": "ING-4CH12CSPECIMEN2017"
+  },
+  {
+   "question_id": "d9b8db89-7343-480c-9489-4bb441423f3a",
+   "external_ref": "q07-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "5463a61c-aac8-4ff5-ad97-0484920a4dde",
+   "external_ref": "q07-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "2bfbe98f-4504-451b-84e2-b3e4a837153f",
+   "external_ref": "q07-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "0c88a380-b713-474b-9911-1b9d26a5b3e1",
+   "external_ref": "q07-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "8ae9972c-b37e-4483-912f-cacb56d72e21",
+   "external_ref": "q07-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "52c60b8a-7970-46be-861a-8aa4945d8181",
+   "external_ref": "q07-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "f7974df0-f536-4e9c-b00e-47ad6a2a4ba1",
+   "external_ref": "q07-51fea326",
+   "active": false,
+   "anchor_node_id": "aad8475a-febc-40f9-831c-ccb67da94bb8",
+   "anchor_code": "ING-4CH02CJANUARY2013"
+  },
+  {
+   "question_id": "681cdd3f-7e51-4d4e-8281-201bec3a9d7e",
+   "external_ref": "q07-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "3f3c983b-7a42-4a72-90c7-1ed30fec4962",
+   "external_ref": "q07-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "4e0e05f3-972a-4660-9dd4-e1b2d14abf9f",
+   "external_ref": "q07-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "141496a3-8e2a-4036-a309-caab629dd5b5",
+   "external_ref": "q07-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "d7727348-fc26-49cd-95a1-9203d5ad04eb",
+   "external_ref": "q07-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "14a9e910-f213-4265-9d96-c0d7ddb1f954",
+   "external_ref": "q07-6ab313e4",
+   "active": false,
+   "anchor_node_id": "7944830f-ea58-4470-abce-2c62aaf924c1",
+   "anchor_code": "ING-4CH02CRJUNE2016"
+  },
+  {
+   "question_id": "66c379cc-706a-436a-9751-6e601a9146ad",
+   "external_ref": "q07-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "1228936a-33ed-45c7-bbf5-ae6e2f9e4975",
+   "external_ref": "q07-6dc728c5",
+   "active": false,
+   "anchor_node_id": "fb3fd754-6621-4208-a52c-b7f123c91d13",
+   "anchor_code": "ING-4CH12CNOVEMBER2021"
+  },
+  {
+   "question_id": "bbb4e68a-9d4c-45c3-bcbb-e28fd6cdf468",
+   "external_ref": "q07-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "bdd34b14-f8b2-4b9b-ab30-78923a6abbb8",
+   "external_ref": "q07-803a654f",
+   "active": false,
+   "anchor_node_id": "710108e5-6424-4dfe-9d7b-260ec0aa3b34",
+   "anchor_code": "ING-4CH12CRJUNE2023"
+  },
+  {
+   "question_id": "c2974573-437f-4c60-a729-4a4faee34d25",
+   "external_ref": "q07-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "514d1396-8cd0-4765-a259-4b955f4eec40",
+   "external_ref": "q07-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "a93ca8e4-abfb-4148-9e4b-d1cc9db70abf",
+   "external_ref": "q07-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "baf4999d-af94-4998-a4b2-973a9bbc7adc",
+   "external_ref": "q07-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "3c0cde14-cfe5-444c-a852-346f706b5291",
+   "external_ref": "q07-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "4c288a38-ea1c-4c40-a611-4fb1597eb487",
+   "external_ref": "q07-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "558d4003-31c0-492b-854e-d5b66d6aaeff",
+   "external_ref": "q07-9065f515",
+   "active": false,
+   "anchor_node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "anchor_code": "ING-SUMMER2016"
+  },
+  {
+   "question_id": "de25ce3d-dff1-465a-b9d4-411c1837e232",
+   "external_ref": "q07-97798258",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "2d859788-dcef-4396-a2f2-751738acf031",
+   "external_ref": "q07-9a9616e0",
+   "active": false,
+   "anchor_node_id": "e20d1ff1-e0bf-4629-acab-db798ed36f44",
+   "anchor_code": "ING-SUMMER2024"
+  },
+  {
+   "question_id": "6a9d4768-8341-4115-8ec2-db6e617a1bff",
+   "external_ref": "q07-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "535e67dd-bc5e-4a8d-8805-86711bdb9810",
+   "external_ref": "q07-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "4c98c335-9dec-46a7-be48-5986ce307ae5",
+   "external_ref": "q07-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "e62a9f8e-1c74-4da0-abdb-41bb387cbac6",
+   "external_ref": "q07-a404cc12",
+   "active": false,
+   "anchor_node_id": "a9161bd4-c1d9-48d3-8123-aa7fd73421cf",
+   "anchor_code": "ING-4CH02CJUNE2013"
+  },
+  {
+   "question_id": "bb230b9a-6548-4460-a0a3-66c7a51ae7c4",
+   "external_ref": "q07-a9193bcb",
+   "active": false,
+   "anchor_node_id": "04694cf6-1965-454c-9358-8f989a4123bf",
+   "anchor_code": "ING-4CH02CJANUARY2016"
+  },
+  {
+   "question_id": "8fb77fab-1022-4513-87b0-69a4de3e6fd4",
+   "external_ref": "q07-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "21612db7-4d1d-4906-bf41-80ad7a00dafa",
+   "external_ref": "q07-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "ad67d415-0d3d-4673-9c06-065521ef0e46",
+   "external_ref": "q07-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "3cf1b7c8-fdc2-46af-b996-1f9242137b9a",
+   "external_ref": "q07-c8e045a4",
+   "active": false,
+   "anchor_node_id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "anchor_code": "ING-4CH02CRJUNE2017"
+  },
+  {
+   "question_id": "8f999ca2-071e-4acd-a83b-f36e8d95ba24",
+   "external_ref": "q07-cb680191",
+   "active": false,
+   "anchor_node_id": "c1f469e4-db33-4e0c-97e4-0d16e0a259a6",
+   "anchor_code": "ING-4CH12CRJANUARY2022"
+  },
+  {
+   "question_id": "9ec0369f-cb38-41b7-97d6-e6ad974358e5",
+   "external_ref": "q07-cd4c28e3",
+   "active": false,
+   "anchor_node_id": "b42b72a2-429c-442f-9c36-bebce46367fc",
+   "anchor_code": "ING-4CH12CSUMMER2021"
+  },
+  {
+   "question_id": "4697e711-5ad4-491e-8076-0cf6c5378229",
+   "external_ref": "q07-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "f3a06643-07e8-45ad-9b5e-b7037d9cce0c",
+   "external_ref": "q07-e1a96fcc",
+   "active": false,
+   "anchor_node_id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "anchor_code": "ING-4CH02CJUNE2011"
+  },
+  {
+   "question_id": "872f0716-31d1-4537-b6de-e28a539b8db2",
+   "external_ref": "q07-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "e3a08a5b-3c04-4194-9674-1d4cc290ed6f",
+   "external_ref": "q07-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "36f20dad-6317-41c8-bf61-4a5b73478752",
+   "external_ref": "q07-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "5cafdd7c-1ea1-44fe-ac1a-1bdc3e93394a",
+   "external_ref": "q08-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "5d349e4e-3f9e-424b-80b0-95318a687398",
+   "external_ref": "q08-0ee12447",
+   "active": false,
+   "anchor_node_id": "bc362ab5-0f19-49af-9a5a-4b15326b5d76",
+   "anchor_code": "ING-4CH12CRJANUARY2021"
+  },
+  {
+   "question_id": "14d04b13-e597-4f89-aad2-a25286b56476",
+   "external_ref": "q08-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "48660fd6-e588-4ce2-bc8b-53d199ae3768",
+   "external_ref": "q08-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "33162ed1-e78a-4ff5-a8ac-310d81706aa1",
+   "external_ref": "q08-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "958b7351-2d01-4ba2-a4b0-077d1eedc532",
+   "external_ref": "q08-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "ee7476fc-9170-439e-9bdd-6efd1c79e946",
+   "external_ref": "q08-1dc68349",
+   "active": false,
+   "anchor_node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "anchor_code": "ING-4CH12CSPECIMEN2017"
+  },
+  {
+   "question_id": "63fc7bcd-47d0-4818-a856-25d76b12da6d",
+   "external_ref": "q08-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "be57b52d-bd2c-409f-bd2d-271145c83fc9",
+   "external_ref": "q08-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "e89960f5-2c66-4d31-8616-aba816cc71d6",
+   "external_ref": "q08-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "22b0512c-7754-4243-9747-f53fef71fcf6",
+   "external_ref": "q08-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "081e3600-9632-42cf-999f-d3fc76dee4ba",
+   "external_ref": "q08-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "74ea1524-6308-4430-8f4e-01190da16840",
+   "external_ref": "q08-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "42edbbdc-6d18-45cc-b6c8-f9941cad0bb9",
+   "external_ref": "q08-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "6fa25e11-f605-4f5a-849a-0faa5852ecd4",
+   "external_ref": "q08-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "4e1b5989-cbe6-4e31-97fd-f391be69cc74",
+   "external_ref": "q08-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "e7813b0c-e44f-4012-a52d-1af9d0e42f31",
+   "external_ref": "q08-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "05417a31-e1f2-4544-a350-6a14365e756e",
+   "external_ref": "q08-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "63d5ded8-5172-48b9-ba9d-91057bf5cced",
+   "external_ref": "q08-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "0ac9a90f-703b-4a5d-936d-99a309c65385",
+   "external_ref": "q08-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "08310810-a4a9-4c40-9b5d-f16d08257a1b",
+   "external_ref": "q08-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "f6409edc-e876-42a9-88f6-7c97a4471178",
+   "external_ref": "q08-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "59430105-16fb-43ce-8e54-5edd3c46e0c6",
+   "external_ref": "q08-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "da3343f8-0471-4659-af22-132825e3f4ce",
+   "external_ref": "q08-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "fd8cf0c4-b6cf-443d-8170-8da0fcbc6b55",
+   "external_ref": "q08-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "3a00ae0e-b36a-4b99-b02f-e4f5f132deb6",
+   "external_ref": "q08-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "a2b1fc1d-9144-44c9-b66c-6a6fd6212440",
+   "external_ref": "q08-9065f515",
+   "active": false,
+   "anchor_node_id": "5265b937-7c5f-45a8-a1c8-f1cab356b577",
+   "anchor_code": "ING-SUMMER2016"
+  },
+  {
+   "question_id": "9c160763-553d-4e13-bfca-3b894dd38909",
+   "external_ref": "q08-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "c1ed074b-9dc7-4c6c-80f6-f1c70ae56548",
+   "external_ref": "q08-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "0554fd54-7da3-4bf1-932d-22d506052dd7",
+   "external_ref": "q08-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "29738645-7743-4d97-8d68-7f970ea8b6eb",
+   "external_ref": "q08-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "68a00eb0-dfff-4466-91fa-708b4a4ed192",
+   "external_ref": "q08-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "7a2c0653-f9d7-4a9d-a23c-905aa7059ad2",
+   "external_ref": "q08-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "f1a16be1-7733-48d0-96e9-a2039ad3c8a2",
+   "external_ref": "q08-c8e045a4",
+   "active": false,
+   "anchor_node_id": "22ee8f39-d9c4-4a4f-b964-4927bbca2402",
+   "anchor_code": "ING-4CH02CRJUNE2017"
+  },
+  {
+   "question_id": "ccbd1fa2-1ba0-41e7-9b8e-910a2a22ae55",
+   "external_ref": "q08-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "bea83889-8759-4bca-a80a-a60dd47eb308",
+   "external_ref": "q08-e1a96fcc",
+   "active": false,
+   "anchor_node_id": "4226a80f-8f05-4ef3-9a54-e0d9458a31c5",
+   "anchor_code": "ING-4CH02CJUNE2011"
+  },
+  {
+   "question_id": "a82cacbe-8dd1-45d4-a870-0ae9aedd4c29",
+   "external_ref": "q08-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "28485098-24c1-4080-bfc3-1a487146f1c4",
+   "external_ref": "q08-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "c5c2af41-1058-47b3-9c20-92b6a92927cb",
+   "external_ref": "q08-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "1715bb39-7bec-467a-ad1f-fe00e66e131b",
+   "external_ref": "q09-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "1b6695ee-5a01-480e-b611-86c105747738",
+   "external_ref": "q09-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "9368e155-e158-47b9-8215-56eb87892444",
+   "external_ref": "q09-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "5ad71a2c-4702-495a-986c-b119cbc84dc7",
+   "external_ref": "q09-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "b18718e9-1826-4f2e-9745-f7494a666575",
+   "external_ref": "q09-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "4e3ae9ab-b8bb-4278-94c7-502a6b672ae0",
+   "external_ref": "q09-1dc68349",
+   "active": false,
+   "anchor_node_id": "bb498e57-ae92-4e8f-b669-b9d6684c9258",
+   "anchor_code": "ING-4CH12CSPECIMEN2017"
+  },
+  {
+   "question_id": "c98ee87f-4f9c-431b-8e33-9a917b81ac53",
+   "external_ref": "q09-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "2b9ece3b-4ed2-453b-a63a-618f158f5bd5",
+   "external_ref": "q09-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "ab5d7775-2e7b-4327-be26-7f96e2a37629",
+   "external_ref": "q09-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "70611235-30fc-4dff-b6a0-d267479f1905",
+   "external_ref": "q09-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "333ef81e-7e9c-42cd-b7b1-f14595669959",
+   "external_ref": "q09-3f97fec5",
+   "active": false,
+   "anchor_node_id": "1cea3706-0684-4952-ab93-7c409e4f14f6",
+   "anchor_code": "ING-4CH02CJUNE2018"
+  },
+  {
+   "question_id": "0c2a9367-abfb-41f8-b53b-f542bea9f39b",
+   "external_ref": "q09-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "ed870080-1082-470b-8b59-1b5ae650fde0",
+   "external_ref": "q09-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "ad1e70d5-6cbe-4105-b5bb-634f89706e00",
+   "external_ref": "q09-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "093a2bf2-0920-438f-adc7-ae6ec8a9ce6a",
+   "external_ref": "q09-5b5611b9",
+   "active": false,
+   "anchor_node_id": "10a5fd09-c0d8-486b-a268-e0573518af8e",
+   "anchor_code": "ING-JANUARY2015"
+  },
+  {
+   "question_id": "2b231542-453d-4292-b512-0b5c715b1df7",
+   "external_ref": "q09-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "e947ff92-2128-442e-85c8-a1625a75c2e2",
+   "external_ref": "q09-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "46185c92-bf6e-4f43-8751-cabef8c4eb62",
+   "external_ref": "q09-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "fed48825-f762-4ddd-b27f-a5786609c595",
+   "external_ref": "q09-79ab2439",
+   "active": false,
+   "anchor_node_id": "87697a18-beb0-436c-8eae-b21e8d877da1",
+   "anchor_code": "ING-4CH02CJANUARY2015"
+  },
+  {
+   "question_id": "7070eb94-4344-4ebd-9507-3b3852028bde",
+   "external_ref": "q09-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "1840e2ed-dde2-4d8e-a7c4-3008ff93f4f8",
+   "external_ref": "q09-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "bbf66da2-7bda-4450-83b1-651fd24ff8a3",
+   "external_ref": "q09-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "409063c5-f0bf-4a43-9bbe-4c9094fdd4c5",
+   "external_ref": "q09-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "08628c7a-a7bc-4872-ac5a-26e165d66ff4",
+   "external_ref": "q09-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "448ae276-c9ec-4cf2-8bed-df3820a81ce2",
+   "external_ref": "q09-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "5b76d901-8303-4bc4-bf59-269baf6c6d4a",
+   "external_ref": "q09-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "7fbf6388-4ad1-4077-a999-023a2779cbb4",
+   "external_ref": "q09-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "9e562aac-7c46-4770-92d3-a046958fc5f3",
+   "external_ref": "q09-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "41a05044-7bc5-485a-a4d9-c3eb4f53275e",
+   "external_ref": "q09-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "e5bc0619-1a69-4c74-b629-165fa39bf27e",
+   "external_ref": "q09-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "3dc605ff-94ff-4ce8-8f43-891102cbff44",
+   "external_ref": "q09-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "c672fba2-cbda-494e-8527-4194863fe53e",
+   "external_ref": "q09-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "b6699d12-c39f-4a73-847a-f7b4ec764b09",
+   "external_ref": "q09-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "9407aa7b-ca89-4704-b773-dbd4e04db87e",
+   "external_ref": "q09-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "d2a1009d-52cf-497f-b725-38cd22b4da8c",
+   "external_ref": "q09-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "163695c9-b9f4-4cbc-ac34-5eecfc98a363",
+   "external_ref": "q1",
+   "active": false,
+   "anchor_node_id": "b997386c-9c2d-4f29-94fa-3f254ca64158",
+   "anchor_code": "ING-AUDITede466a4AUDITE2EEDE466A4"
+  },
+  {
+   "question_id": "8bae8782-f9dd-4c1b-9da5-be76c0d0772a",
+   "external_ref": "q1",
+   "active": false,
+   "anchor_node_id": "6a6c3a84-c982-46c4-9bf1-a5fea8fd5ff5",
+   "anchor_code": "ING-AUDIT653449eeAUDITE2E653449EE"
+  },
+  {
+   "question_id": "4fc3243f-8fe5-43de-8a25-a75e5f3bedfc",
+   "external_ref": "q1",
+   "active": false,
+   "anchor_node_id": "066e8327-0818-410a-8bdf-3826f42feed8",
+   "anchor_code": "ING-AUDITa16552b2AUDITE2EA16552B2"
+  },
+  {
+   "question_id": "0be1c5a7-1878-4a21-82e8-629e800a12a9",
+   "external_ref": "q10-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "b50faf2e-bd6c-4bc7-a465-a0e5bf0b9150",
+   "external_ref": "q10-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "e5b1c147-96e1-4fda-ba41-7d999594f16f",
+   "external_ref": "q10-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "040ebbfe-b589-4bcf-85af-8a503596e7ad",
+   "external_ref": "q10-17d29010",
+   "active": false,
+   "anchor_node_id": "5e735dc7-ca54-4381-a303-07c679dfb4c8",
+   "anchor_code": "ING-4CH11CJUNE2024"
+  },
+  {
+   "question_id": "6f6dc6f3-fb9f-4206-a123-ccb9f955fc3f",
+   "external_ref": "q10-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "5d309ed4-8149-4999-a747-8c4f3b002337",
+   "external_ref": "q10-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "a6d9003b-adc4-41ae-aab4-197c480991e7",
+   "external_ref": "q10-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "a0f73f13-9148-4eaf-8a7c-f9cdab572248",
+   "external_ref": "q10-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "ba9c574c-2b5e-4666-820f-e5db77a6f0be",
+   "external_ref": "q10-373fe651",
+   "active": false,
+   "anchor_node_id": "90fff43d-e0ef-44f6-a958-49401ec340d1",
+   "anchor_code": "ING-4CH11CRJUNE2020"
+  },
+  {
+   "question_id": "5feb4066-0a1a-429a-a281-e6a751b0d722",
+   "external_ref": "q10-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "36a8c9cd-c0cb-40e7-8934-9d1d634559b7",
+   "external_ref": "q10-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "119ed6d4-23af-4961-8691-bf3c7c53853a",
+   "external_ref": "q10-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "46635ca3-976c-40ee-8e7e-89cec6500824",
+   "external_ref": "q10-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "dbe8898a-eee7-4d6a-816d-b2a67d6ad6de",
+   "external_ref": "q10-6999149e",
+   "active": false,
+   "anchor_node_id": "b19b8ab6-1273-4c08-9d23-aa70ddaca2b1",
+   "anchor_code": "ING-SUMMER2019"
+  },
+  {
+   "question_id": "a7b97aad-1934-4c5f-8fc7-ae262dc41b26",
+   "external_ref": "q10-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "f41ccbc6-0684-4bc9-a38d-1b93bd8c3d64",
+   "external_ref": "q10-8451369b",
+   "active": false,
+   "anchor_node_id": "d74293db-8306-4a23-8213-fe83c35c951a",
+   "anchor_code": "ING-4CH11CJUNE2020"
+  },
+  {
+   "question_id": "7e52cfc7-eca6-4af0-a465-e30c2a94bf33",
+   "external_ref": "q10-8536e68c",
+   "active": false,
+   "anchor_node_id": "b42252f2-08d8-464c-aeca-49509ddbf68f",
+   "anchor_code": "ING-4CH11CSUMMER2021"
+  },
+  {
+   "question_id": "5e11ebfa-5e5e-40ea-b3c0-172f1f7542da",
+   "external_ref": "q10-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "aca0c19e-d688-4e9a-90b7-d97268f1abc9",
+   "external_ref": "q10-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "0e9ef6d7-d7b1-43c6-b283-9f5119829c81",
+   "external_ref": "q10-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "020b9c8d-493a-4716-b5f5-c0999dc732d4",
+   "external_ref": "q10-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "10da0201-72f3-48bc-83d3-682120a35d43",
+   "external_ref": "q10-9b60c673",
+   "active": false,
+   "anchor_node_id": "1816c2c6-7401-4ab5-8d8c-14016d10218b",
+   "anchor_code": "ING-4CH01CRJUNE2014"
+  },
+  {
+   "question_id": "2df4e1eb-c011-4b85-86c3-17bcdcd44b8f",
+   "external_ref": "q10-9c872006",
+   "active": false,
+   "anchor_node_id": "aea1893f-4d14-49bf-8567-09499e3d111e",
+   "anchor_code": "ING-4CH01CJANUARY2013"
+  },
+  {
+   "question_id": "6d093927-b4f2-4eba-be1e-0fe68b8197e0",
+   "external_ref": "q10-9fb5b712",
+   "active": false,
+   "anchor_node_id": "2706a40b-e319-42be-89e5-f5d0c0742a22",
+   "anchor_code": "ING-4CH11CSUMMER2022"
+  },
+  {
+   "question_id": "70f99810-b5dd-4cce-8701-78e2136709ff",
+   "external_ref": "q10-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "70d06549-ac16-4e2f-aa22-7673b9604f5c",
+   "external_ref": "q10-b6eb517d",
+   "active": false,
+   "anchor_node_id": "f4ed418e-6c61-4dc6-8573-fa5b280ebade",
+   "anchor_code": "ING-JUNE2014"
+  },
+  {
+   "question_id": "96ceed6e-9b27-4bb9-a953-7ced84644bb7",
+   "external_ref": "q10-be73fe41",
+   "active": false,
+   "anchor_node_id": "a8d1e1cb-d50e-4c0d-a725-9466e61463ad",
+   "anchor_code": "ING-4CH11CRJUNE2019"
+  },
+  {
+   "question_id": "9226e373-b602-4383-b0bc-c3012cdba118",
+   "external_ref": "q10-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "aaec2a79-a5e3-418a-b180-d00b4cecd976",
+   "external_ref": "q10-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "30d15021-ed25-4fd3-a771-12398200c612",
+   "external_ref": "q10-e6ec2168",
+   "active": false,
+   "anchor_node_id": "5c5b4005-0dfb-418a-b6e5-6a7a661da013",
+   "anchor_code": "ING-4CH02CJANUARY2019"
+  },
+  {
+   "question_id": "c658c03d-bae9-4538-a625-7e605544f7cd",
+   "external_ref": "q10-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "20f72f92-172e-48a5-bddb-6346265636a3",
+   "external_ref": "q11-02cf7562",
+   "active": false,
+   "anchor_node_id": "57295bc1-7cac-481a-a682-a41f24c32b5f",
+   "anchor_code": "ING-4CH11CNOVEMBER2021"
+  },
+  {
+   "question_id": "a132a9d8-dcfa-4830-9a07-74c0f67c3fc1",
+   "external_ref": "q11-1477fa77",
+   "active": false,
+   "anchor_node_id": "177a1fd9-baee-4893-9870-2ba91616818f",
+   "anchor_code": "ING-4CH11CSPECIMEN2017"
+  },
+  {
+   "question_id": "f2190e35-50e0-4874-b0b0-c6bfb725eea4",
+   "external_ref": "q11-14fd4903",
+   "active": false,
+   "anchor_node_id": "e5427bcf-ff42-408c-af9f-7d3f6ed7b8ca",
+   "anchor_code": "ING-JANUARY2020"
+  },
+  {
+   "question_id": "69e1eb24-ead9-4422-8820-cc6e714a6cac",
+   "external_ref": "q11-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "df21bea4-0e35-45af-a7b4-aa367ad5b71c",
+   "external_ref": "q11-22184324",
+   "active": false,
+   "anchor_node_id": "9ccbd6a9-9a1e-47c1-a65f-b0e3b02a6065",
+   "anchor_code": "ING-4CH11CRSUMMER2022"
+  },
+  {
+   "question_id": "7ff91fc3-69e5-4c65-9942-ee4eb3df69a3",
+   "external_ref": "q11-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "a6c36826-43fc-4d9a-b045-9e67ab79bf7a",
+   "external_ref": "q11-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "fea56fb0-aa88-472f-9bf3-9664cc29b190",
+   "external_ref": "q11-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "37c36cba-7a51-4aab-ada6-a9a6f8992eba",
+   "external_ref": "q11-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "749f1a75-a2a1-45fe-961e-48951d302388",
+   "external_ref": "q11-57202de4",
+   "active": false,
+   "anchor_node_id": "16eb5c78-abb3-4470-873e-fe32d11aa0c6",
+   "anchor_code": "ING-4CH01CRJUNE2013"
+  },
+  {
+   "question_id": "27faa477-aa9c-4e6c-a26c-c31be31d82e4",
+   "external_ref": "q11-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "7e5d6939-3aa0-47ed-bcf1-4a3178245901",
+   "external_ref": "q11-6d968517",
+   "active": false,
+   "anchor_node_id": "0671baea-af43-4321-8e77-0adb62a7eb14",
+   "anchor_code": "ING-4CH01CJUNE2013"
+  },
+  {
+   "question_id": "78a997c3-181d-4045-97f0-fc9a6cc40086",
+   "external_ref": "q11-8b9f4957",
+   "active": false,
+   "anchor_node_id": "2f868a29-f2bd-4134-b644-ca1361b18462",
+   "anchor_code": "ING-4CH01CJUNE2017"
+  },
+  {
+   "question_id": "a2b7a678-4db0-42fe-a3d2-1221be5965bd",
+   "external_ref": "q11-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "7d44d5ed-25f3-4654-9789-3d7e76ccadd0",
+   "external_ref": "q11-8e22069f",
+   "active": false,
+   "anchor_node_id": "34690f72-bf07-4cd1-ad89-e0bc65fc9c2e",
+   "anchor_code": "ING-SUMMER2013"
+  },
+  {
+   "question_id": "91e9efd4-ee16-4dcb-81e3-76a2e0b1e387",
+   "external_ref": "q11-8f519f1a",
+   "active": false,
+   "anchor_node_id": "cd1e6f58-ff4b-48c7-94b3-9a2f184b7c33",
+   "anchor_code": "ING-4CH11CRJANUARY2022"
+  },
+  {
+   "question_id": "f970bb4c-16ac-4e12-9db8-4d8a1820b4b5",
+   "external_ref": "q11-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "97f1c4e0-f583-49d1-aebb-642e8e438a87",
+   "external_ref": "q11-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "293f6d1e-b558-42bc-9e49-b10f77a5cd44",
+   "external_ref": "q11-e280d9c6",
+   "active": false,
+   "anchor_node_id": "a22b306c-2f5b-428c-a478-7d397bc59904",
+   "anchor_code": "ING-4CH01CJUNE2015"
+  },
+  {
+   "question_id": "3969d93c-1103-44af-8715-7a0ad7e4e767",
+   "external_ref": "q11-ffd06551",
+   "active": false,
+   "anchor_node_id": "bc1a1827-623b-4722-a512-b33b10ce68e4",
+   "anchor_code": "ING-4CH01CJANUARY2017"
+  },
+  {
+   "question_id": "c0efd986-d354-4c0c-8598-e5a5bfd92839",
+   "external_ref": "q12-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "51b434af-7735-47f0-bef1-d6142871dfb6",
+   "external_ref": "q12-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "f2933f0a-2d45-4dda-9e16-8cd9b516fc47",
+   "external_ref": "q12-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "fe9d3176-009d-4bf5-ab95-41dfe3239433",
+   "external_ref": "q12-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "1565b810-0e33-4c0f-bbaf-68b8efbda730",
+   "external_ref": "q12-5273dfa3",
+   "active": false,
+   "anchor_node_id": "6159f2e3-dfb5-4bc6-8f86-a376a4a61a67",
+   "anchor_code": "ING-4CH01CRJUNE2016"
+  },
+  {
+   "question_id": "9f41d5ed-2453-4f87-88f2-b283adfc704f",
+   "external_ref": "q12-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "f7c88074-5d41-46b3-9247-ac16047dd826",
+   "external_ref": "q12-8d584ee1",
+   "active": false,
+   "anchor_node_id": "97ce5bf7-fdbb-4270-8d00-97029f0afa6b",
+   "anchor_code": "ING-4CH01CJANUARY2015"
+  },
+  {
+   "question_id": "af2119f2-aee1-4e04-b78f-3c9ddd160d43",
+   "external_ref": "q12-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "092262d0-67a3-42b5-b620-6434d19cf659",
+   "external_ref": "q12-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "1678d6c1-d9dd-4da2-9998-2a6407fa0271",
+   "external_ref": "q13-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "73564e75-36cb-40bd-a7a1-bb178f44635d",
+   "external_ref": "q13-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "dcbf0f8d-8d98-44ab-90c2-bd253d758922",
+   "external_ref": "q13-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "8d34cddc-5944-4a34-ab6a-228d5cc1a5e7",
+   "external_ref": "q13-4c329905",
+   "active": false,
+   "anchor_node_id": "6102e65b-8308-4db4-9bca-16763fe4e6e8",
+   "anchor_code": "ING-4CH01CJUNE2012"
+  },
+  {
+   "question_id": "025848f1-a755-454a-ab2a-e20afd519d78",
+   "external_ref": "q13-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "bd631063-5417-4083-9621-2f10b8b30758",
+   "external_ref": "q13-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "4cc9e88c-e78c-4ce9-add1-7de35b2c1ceb",
+   "external_ref": "q13-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "99a6f5c5-922e-4ca4-8289-0c6ef9992d14",
+   "external_ref": "q14-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "0d41f2af-32ea-47b8-9cb3-a4152a372254",
+   "external_ref": "q14-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "a43af047-181a-4346-84d6-c936a739c551",
+   "external_ref": "q14-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "383389ab-8127-42ce-9691-824d8f09d874",
+   "external_ref": "q14-678e6847",
+   "active": false,
+   "anchor_node_id": "48a701fd-5a0c-4893-8412-b0b09c500d82",
+   "anchor_code": "ING-4CH01CJANUARY2014"
+  },
+  {
+   "question_id": "cf97e5cd-0c63-4f62-a73d-9788c075b5ab",
+   "external_ref": "q14-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "5623d3cd-0fbe-422a-b8d8-44fedc806fc1",
+   "external_ref": "q14-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "eef7760d-7b08-428f-9f72-3b6370c8992c",
+   "external_ref": "q15-1da77322",
+   "active": false,
+   "anchor_node_id": "cc4f5abd-79ee-403d-8eb6-8fa516321f5c",
+   "anchor_code": "ING-4CH01CJUNE2014"
+  },
+  {
+   "question_id": "b75c7034-6a71-424d-9167-9e793c1b0f66",
+   "external_ref": "q15-23323bab",
+   "active": false,
+   "anchor_node_id": "50e2f777-1927-4a36-815f-ede30ab69817",
+   "anchor_code": "ING-4CH01CJUNE2018"
+  },
+  {
+   "question_id": "67cfe5fe-c0d2-4351-9ea9-a447aaabe894",
+   "external_ref": "q15-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  },
+  {
+   "question_id": "990a5e6a-7fc3-4a11-a50c-7e924e0e0d30",
+   "external_ref": "q15-b4e24b82",
+   "active": false,
+   "anchor_node_id": "e4708d4b-c772-4ec2-857f-e9067dc9e783",
+   "anchor_code": "ING-4CH01CRJUNE2017"
+  },
+  {
+   "question_id": "7e005f11-e246-4b77-b0ab-1504d5a029f9",
+   "external_ref": "q15-cf68cf74",
+   "active": false,
+   "anchor_node_id": "657575ed-d6d4-4d67-9808-1ff27d1d45ff",
+   "anchor_code": "ING-4CH11CJUNE2019"
+  },
+  {
+   "question_id": "b136c0a6-399f-4ad9-b6e1-9b71706a56e8",
+   "external_ref": "q16-2701ad3c",
+   "active": false,
+   "anchor_node_id": "80d36ab0-d302-4314-9873-67a624fe6286",
+   "anchor_code": "ING-4CH01CJUNE2016"
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+  "wave_cards_chunks": [
+    {
+      "card_pk": "bccdacb2-0c2b-43b4-951e-8f66ccd8008f",
+      "chunks": 1,
+      "max_embed_rev": "1"
+    },
+    {
+      "card_pk": "bf07304e-6de7-4ea5-8a90-091843a58802",
+      "chunks": 1,
+      "max_embed_rev": "1"
+    },
+    {
+      "card_pk": "d84be99c-6022-485e-92b7-c1770128ee2c",
+      "chunks": 1,
+      "max_embed_rev": "1"
+    }
+  ],
+  "validated_docs_by_kind_created": [
+    {
+      "kind": "EXTERNAL_QUESTIONS",
+      "created": "2026-09-20",
+      "docs": 1
+    },
+    {
+      "kind": "EXTERNAL_QUESTIONS",
+      "created": "2026-09-26",
+      "docs": 298
+    },
+    {
+      "kind": "MARK_SCHEME",
+      "created": "2026-09-25",
+      "docs": 13
+    },
+    {
+      "kind": "QUESTION_PAPER",
+      "created": "2026-09-25",
+      "docs": 13
+    }
+  ],
+  "eq_chunks_by_parent_created": [
+    {
+      "parent_state": "SUGGESTED",
+      "embed_rev": 2,
+      "parent_created": "2026-09-20",
+      "chunks": 747,
+      "distinct_docs": 80
+    },
+    {
+      "parent_state": "VALIDATED",
+      "embed_rev": 1,
+      "parent_created": "2026-09-20",
+      "chunks": 11,
+      "distinct_docs": 1
+    },
+    {
+      "parent_state": "VALIDATED",
+      "embed_rev": 1,
+      "parent_created": "2026-09-26",
+      "chunks": 298,
+      "distinct_docs": 298
+    }
+  ],
+  "validated_paper_chunks_detail": [
+    {
+      "kind": "MARK_SCHEME",
+      "doc_created": "2026-09-25",
+      "embed_rev": 1,
+      "chunks": 161,
+      "sample_source_uri": "4ch1-1c-202201/ms.pdf"
+    },
+    {
+      "kind": "QUESTION_PAPER",
+      "doc_created": "2026-09-25",
+      "embed_rev": 1,
+      "chunks": 145,
+      "sample_source_uri": "4ch1-1c-202201/qp.pdf"
+    }
+  ],
+  "suggested_eq_docs_cohorts": [
+    {
+      "created": "2026-09-20",
+      "docs": 747,
+      "chunks": 747
+    }
+  ]
+}

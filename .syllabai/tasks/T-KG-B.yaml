@@ -1,0 +1,186 @@
+version: 1
+task:
+  id: T-KG-B
+  title: "Resources-side kg_export reconciliation vs the v75 golden sample —
+    corpus-derived exporter + golden-sample regression gate (the standing
+    task-B thread from the T-KG-2 closeout)"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: DONE
+  scope_amendments:
+    - date: 2026-10-01
+      authority: "operator directive, verbatim: '① ratify the 35 edges as
+        point_edges.yaml (golden → 257/257), accept asymmetry' (zai-web,
+        trace 1a0f5ff176e55281)"
+      change: "adds graph/igcse-chemistry/point_edges.yaml (NEW ratified
+        point-edge store) + exporter pre/rel emission + ledger v2; the
+        original forbidden item 'no synthesized pre/rel edges' anticipated
+        exactly this — the edges are NOT synthesized and NOT corpus-derived,
+        they are the operator-ratified v75 import, sha256-pinned in the
+        ledger (edit-repels-drift)"
+  priority: P2
+  base:
+    repo: syllabai-resources
+    commit: feb0e1c9caceb527661d5683b997edb612349164
+  scope:
+    allowed:
+      - "scripts/kg_export.py: NEW corpus-derived exporter —
+        graph/igcse-chemistry/{topics,specification_points}.yaml ->
+        GRAPH_CONTRACT v1.0 canonicalKG payload; --check-only validates and
+        writes nothing; --verify-golden runs the regression gate; fail-closed
+        structural gates (unique ids, referential integrity, exactly one
+        subtopic parent per point, strict orderings, paper census vs pinned
+        PAPER_META)"
+      - "graph/igcse-chemistry/_golden/: NEW vendored golden fixture
+        (byte-copy of the demo repo's canonicalKG.edexcel-chemistry-4ch1.json,
+        sha256-pinned, re-hashed by the gate every run) + provenance README"
+      - "graph/reports/KG_TASKB_GOLDEN_GATE.json: NEW pinned acceptance
+        ledger generated from the reconciliation evidence (variant pairs,
+        curated triples, counts)"
+      - "graph/reports/KG_TASKB_RECONCILIATION_2026-10-01.md: NEW full
+        reconciliation report"
+      - ".github/workflows/scripts-tests.yml: +1 gate step
+        (python3 scripts/kg_export.py --verify-golden), ordered first in the
+        job so the pre-existing c12 red cannot skip it"
+    forbidden:
+      - "no edits to ratified store data files (graph/igcse-chemistry/*.yaml)
+        — reconciliation is read-only on the corpus"
+      - "no synthesized pre/rel edges — the 35 v75-curated point-level edges
+        have no resources-side source; they are pinned as expected-golden-only
+        and stay golden-side until the operator ratifies a point-edge store"
+      - "no changes to the demo repo's golden artifact (the vendored fixture
+        must remain a byte-copy)"
+      - "no exporter output committed as serving truth — resources export is
+        a regression projection, demo public/kg/data remains the serving path"
+  dependencies:
+    - T-KG-1 # golden sample extraction (demo repo, 2026-09-21) + Phase-2 plan
+    - T-KG-2 # per-course KG export (demo-side counterpart) that opened task B
+    - T-C11 # concept web / relationships lineage (lane awareness; no overlap)
+  shared_resources:
+    - resources-kg-golden-gate # lease on the new gate + fixture paths in
+      # syllabai-resources; ratified corpus data untouched
+  acceptance:
+    - "exporter reproduces the golden sample within the pinned ledger:
+      node id sets identical (0 resources-only), hier 214/214 + assess 8/8
+      exact set match, 173/182 statements byte-exact, all 19 text variants
+      pinned verbatim, 35 golden-only curated edges pinned (30 pre + 5 rel)"
+    - "gate fails closed: negative tests prove RED on unaccepted field diff,
+      pinned-pair drift, fixture sha drift, and resources-only node/edge"
+    - "PR to syllabai-resources: kg golden-gate step GREEN in CI (job-level
+      red is the pre-existing c12 negative-control failure on main — see
+      outcome; not attributable to this PR)"
+    - "coordination record: report + ledger committed in-repo; closeout
+      appends outcome + evidence"
+  tests:
+    - "python3 scripts/kg_export.py --check-only (structural gates)"
+    - "python3 scripts/kg_export.py --verify-golden (GREEN in sandbox; RED
+      under three mutation classes: unaccepted statement diff, accepted
+      variant pair drift, fixture sha drift; restored state GREEN)"
+    - "CI scripts-tests run on the PR executes the gate step (run
+      36818514304 step 5 SUCCESS)"
+  evidence_required:
+    - "PR URL + CI run (build success incl. kg golden-gate step)"
+    - "reconciliation report (in-repo) + evidence JSON retained in session
+      worklog artifacts"
+  outcome:
+    reconciliation:
+      verdict: "GREEN within the pinned ledger — the resources ratified store
+        regenerates the v75 golden canonicalKG for 4CH1 exactly on every
+        corpus-provable dimension"
+      nodes: "217/217 ids identical, 0 resources-only; statements 173/182
+        byte-exact; 19 variants = 9 PDF formula-spacing (R f/Rf, dm 3/dm3,
+        Δ H/ΔH) + 2 en-dash subtopic titles + 8 cascaded point.subtopic"
+      edges: "hier 214/214 + assess 8/8 exact set match; 0 resources-only;
+        35 golden-only curated edges (30 pre + 5 rel) have NO resources-side
+        source (relationships.yaml is hierarchy-only; concept web is
+        concept-level) — pinned as expected-gap, operator decision open
+        (report §7: ratify point_edges.yaml / accept asymmetry / fold into
+        T-C11 next wave)"
+      triangulation: "demo serving lane matches golden only 119 exact + 6
+        normalized of 182 — the ratified resources store (173 exact) is the
+        closest textual source to v75"
+    delivery:
+      pr: "SyllabAI/syllabai-resources#14 (branch codex/kg-task-b-golden-recon,
+        head 65ad1d0)"
+      gate_ci: "run 36818514304 job 110228775754 step 5 SUCCESS — GOLDEN GATE
+        GREEN (217 nodes / 222 edges; 173/182 exact; 19 variants; 35 pinned)"
+      ci_red_not_ours: "corpus-gates job RED at the c12 negative test (check
+        C3 4.15-style control, [('4CH1-4.16',0.4894),('4CH1-2.11',0.3306)]) —
+        identical red on main since 2026-09-30 09:27Z (runs 36696231248 ...
+        36815671928); T-C11 batch-10/11 store-growth territory, flagged for
+        the owning lane; gate reordered first so it reports regardless"
+    ratification:
+      decision: "operator chose §7 option 1 + accepted asymmetry (directive
+        '① ratify the 35 edges as point_edges.yaml (golden → 257/257),
+        accept asymmetry', 2026-10-01)"
+      head: "0197d8484cad (branch codex/kg-task-b-golden-recon, on 65ad1d0)"
+      gate: "GOLDEN GATE GREEN — 217 nodes / 257 edges vs golden 257
+        FULL-SET MATCH; 173/182 statements exact, 19 accepted variants,
+        35 point edges ratified; CI run 36822660100 step 5 SUCCESS (job
+        still RED at the pre-existing c12 C3 failure — unchanged, not
+        this lane)"
+      store: "point_edges.yaml schema syllabai.point-edges/1.0: 35 rows =
+        30 REQUIRES_PREREQUISITE + 5 RELATED_TO, V2-native direction
+        (from REQUIRES to), provenance tier OPERATOR_RATIFIED, lineage
+        v75 build 65cc973e… (extracted 2026-09-21), corpus_source: none
+        — the only graph/ store with no corpus upstream (asymmetry
+        accepted, sha256 dfb1fcb0… pinned)"
+      direction_note: "golden 'pre' reads [prerequisite, dependent]
+        (verified against v75 incomingPrereqs()); exporter flips
+        REQUIRES_PREREQUISITE rows to the golden reading, RELATED_TO
+        verbatim; round-trip store↔golden exact"
+      negatives: "direction flip → RED with 4 independent catches; store
+        removed → fail-closed ExportError; statement tamper → RED;
+        restore GREEN"
+      report_correction: "§7 prose edge-list tail was a transcription slip
+        (19 pre pairs; rel 2.27↔2.28 / 2.8↔2.9 not in the golden set —
+        actual 4.27→4.28, 4.8→4.9); inert (no gate reads prose), corrected
+        in dated addendum §11.3, original left unedited"
+      epistemic_note: "v75 tagged these edges 'INFERRED PROTOTYPE — not yet
+        validated as authoritative educational truth'; ratification
+        upgrades governance to authoritative-by-operator-decision, content
+        byte-unchanged; T-C11 next wave (119 HV) is a separate substrate,
+        unaffected"
+    claims:
+      VERIFIED:
+        - "every parity figure mechanically diffed (analysis evidence JSON
+          retained; ledger generated FROM the evidence, never hand-typed)"
+        - "negative tests: unaccepted field diff RED; accepted-variant pair
+          drift RED; fixture-sha drift wired; resources-only invention RED;
+          restore GREEN"
+        - "gate step CI-GREEN on the PR (step 5 of run 36818514304; re-
+          confirmed step 5 SUCCESS on run 36822660100 after ratification)"
+        - "pre-existing main red diagnosed to check C3 with run history —
+          unrelated to this PR's files"
+        - "ratification: gate 257/257 FULL-SET MATCH in sandbox + CI step
+          SUCCESS; round-trip + negatives re-verified on the ratified state"
+        - "MERGED: PR #14 merged @ d092b9b (merge commit, repo convention
+          'Merge PR #N') under operator directive 'Merge PR #14' (zai-web,
+          2026-10-01, trace 1a0f61ab68a04589) — the operator-override path
+          the hold anticipated; main verified to carry graph/igcse-chemistry/
+          point_edges.yaml byte-exact (50,724 bytes, sha256 dfb1fcb0…
+          re-hashed on main); merge commit message records the acknowledged
+          pre-existing c12 red"
+      REPORTED:
+        - "PDF-lane DIFF_VS_RATIFIED.json (in-repo, other lane) corroborates
+          ratified-vs-PDF-direct wording equality; not re-derived here"
+      UNVERIFIED: []
+    next_safe_actions:
+      - "c12/T-C11 lane: repair the negative-control check C3 on main (it
+        blocks every scripts-tests PR in resources since 09-30)"
+      - "DONE 2026-10-01: PR #14 merged @ d092b9b (operator override); the
+        pre-existing c12 red persists on main and still blocks every
+        scripts-tests PR — repair remains the T-C11 lane's item"
+      - "optional: normalize the two en-dash subtopic titles; capture the
+        assessment table into the parsed corpus (report §5/§6)"
+  evidence:
+    - "syllabai-resources#14 + CI run 36818514304 (gate step SUCCESS)"
+    - "ratification commit 0197d84 on codex/kg-task-b-golden-recon + CI run
+      36822660100 (kg gate step 5 SUCCESS; job red = pre-existing c12 C3)"
+    - "in-repo: graph/reports/KG_TASKB_RECONCILIATION_2026-10-01.md (incl.
+      §11 addendum) + graph/reports/KG_TASKB_GOLDEN_GATE.json (v2) +
+      graph/igcse-chemistry/point_edges.yaml (sha-pinned)"
+    - "session artifacts: kg-analysis/out/taskB_recon_evidence.json (analysis
+      diff), worklog entry T-KG-B"
+    - "merge commit d092b9b on syllabai-resources main; post-merge drift
+      check: point_edges.yaml re-hashed from main == ratified pin
+      dfb1fcb0… (50,724 bytes)"

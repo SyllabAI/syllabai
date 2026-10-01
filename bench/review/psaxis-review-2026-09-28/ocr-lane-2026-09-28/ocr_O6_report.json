@@ -1,0 +1,28 @@
+{
+ "mode": "EXECUTE",
+ "started": "2026-09-28T21:19:36.272370+00:00",
+ "pre_census": {
+  "SUGGESTED": 1,
+  "REJECTED": 13,
+  "VALIDATED": 87,
+  "FLAGGED": 3
+ },
+ "children": {
+  "4CH1/1C June 2019": {
+   "qv": 15,
+   "schemes": 2
+  },
+  "4CH1/1C June 2020": {
+   "qv": 10,
+   "schemes": 10
+  }
+ },
+ "audit_rows": 50,
+ "post_census": {
+  "SUGGESTED": 1,
+  "REJECTED": 14,
+  "VALIDATED": 89
+ },
+ "ok": true,
+ "committed": "2026-09-28T21:19:52.853460+00:00"
+}

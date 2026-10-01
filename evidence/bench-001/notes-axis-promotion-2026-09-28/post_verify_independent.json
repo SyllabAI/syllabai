@@ -1,0 +1,61 @@
+{
+  "documents_census": [
+    [
+      "EXTERNAL_NOTES",
+      "VALIDATED",
+      112
+    ],
+    [
+      "EXTERNAL_QUESTIONS",
+      "SUGGESTED",
+      80
+    ],
+    [
+      "EXTERNAL_QUESTIONS",
+      "VALIDATED",
+      299
+    ],
+    [
+      "MARK_SCHEME",
+      "SUGGESTED",
+      156
+    ],
+    [
+      "MARK_SCHEME",
+      "VALIDATED",
+      13
+    ],
+    [
+      "QUESTION_PAPER",
+      "SUGGESTED",
+      164
+    ],
+    [
+      "QUESTION_PAPER",
+      "VALIDATED",
+      13
+    ],
+    [
+      "SYLLABUS",
+      "SUGGESTED",
+      162
+    ]
+  ],
+  "notes_chunk_rev": [
+    [
+      1,
+      350
+    ]
+  ],
+  "audit_total": 477,
+  "audit_document_rows": 112,
+  "teacher_validation_events": 0,
+  "gate_eligible_now": 965,
+  "notes_serving_chunks": 350,
+  "constraint_after": [
+    [
+      "ck_cra_target_type",
+      "CHECK (((target_type)::text = ANY (ARRAY[('exam_paper'::character varying)::text, ('question_version'::character varying)::text, ('mark_scheme'::character varying)::text, ('question'::character varying)::text, ('document'::character varying)::text])))"
+    ]
+  ]
+}

@@ -1,0 +1,94 @@
+version: 1
+task:
+  id: T-C28
+  title: "Phase 2 step 3 residue unblock — learner payloads carry the applicability contract"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: DONE
+  priority: P1
+  base:
+    repo: syllabai-core
+    commit: 78031028233fa2fa69def150092b8ebd124a400c
+  scope:
+    allowed:
+      - "LearnerKnowledgeGraphView.NodeWithStateView: additive applicability
+        (Map<String,Object>) — verbatim passthrough of NodeView.applicability,
+        which the walked tree (KnowledgeGraphService.treeWithMisconceptions)
+        has carried since T-C24; no new persistence, no new traversal"
+      - "ExamPaperController.PaperQuestionView: additive specPoints
+        [{code, role, applicability}] reusing the T-C24 spec-point projection
+        (SmeQuestionSpecPointRepository join + SpecPointRef shape) so the
+        papers detail payload supports the same honest scoping the question
+        topic pane has — same package, shared projection, no duplicated SQL"
+      - "honesty semantics identical to T-C24: nodes/questions without a
+        mapping arrive with null applicability / empty specPoints; nothing
+        invented at the serving layer"
+      - "unit tests for both passthroughs (learner KG view + paper detail
+        projection), including the honest-absent case"
+    forbidden:
+      - "any migration (applicability already persists via V39 + seed; no
+        flyway lease needed for this task)"
+      - "touching statement text or applicability content (golden gate —
+        serving layers pass through verbatim)"
+      - "editing syllabai-web / syllabai-demo / syllabai-resources (the web
+        residue UI — MasteryMap chips + PapersView scoping — is a follow-up
+        web-lane task that CONSUMES this contract)"
+      - "changing existing field order/semantics of either view beyond the
+        additive component (constructor-site ripple kept minimal)"
+  dependencies:
+    - T-C24 # applicability persisted + served on NodeView/StudentQuestionView (3c1600c)
+    - T-C25 # web consumer that identified this gap (next_safe_actions)
+  shared_resources:
+    - core-web-contract   # producer-side contract extension (coordinated policy)
+  notes:
+    - "T-C27 (bank layer v2) is a different lane — no overlap with this task"
+    - "no data backfill dependency beyond the existing T-C24 operator-gated
+      seed activation; until then both fields arrive empty/null and the web
+      residue must render honest absence"
+  outcome:
+    commit: bdc378d
+    merge: 7063e61
+    ci: "core-ci build SUCCESS on bdc378d (PR #25)"
+    tests: "local full unit suite 798/798 green (1 pre-existing environmental skip);
+      LearnerKnowledgeGraphServiceTest 8/8 (new specPointApplicabilityPassesThrough);
+      ExamPaperControllerTest 2/2 (rich refs PRIMARY-first via the shared projection;
+      honest-empty paper)"
+    scope: "NodeWithStateView.applicability (verbatim passthrough, last record component);
+      PaperQuestionView.specPoints (shared ServableQuestionService.specPointRefs,
+      private -> public); LearnerKnowledgeGraphService.walk passthrough;
+      ExamPaperController injects the service; no migrations; no seed change;
+      no statement/applicability content touched (golden gate)"
+  evidence:
+    - "PR SyllabAI/syllabai-core#25 -> core-ci build SUCCESS on bdc378d; merged as
+      7063e61; local main synced; branch deleted"
+    - "coordination claim-first commit 8dc9064 (base 7803102); zero file overlap with
+      the concurrent T-C23 closeout (33e8acd) — verified before this closeout"
+  claims:
+    VERIFIED:
+      - "learner KG payload now carries applicability on spec-point nodes
+        (NodeWithStateView walks the same NodeView tree T-C24 equipped)"
+      - "papers detail payload carries specPoints refs from the SAME projection
+        as StudentQuestionView — one SQL contract, one ordering rule"
+      - "honest absence: no mapping -> null applicability / empty specPoints
+        (asserted in both new test classes)"
+      - "CI core-ci SUCCESS on bdc378d (Testcontainers ITs + JPQL jsonb
+        projection validated where local offline run could not)"
+    INFERRED:
+      - "until the operator-gated seed activation backfills the 182 4CH1
+        applicability maps, both fields arrive empty/null in serving —
+        web residue must render honest absence (same as T-C25)"
+    REPORTED:
+      - "deploy lands with the next core deployment (Render)"
+    UNVERIFIED:
+      - "production payloads against live core (post-deploy probe — same
+        next_safe_action as T-C25)"
+  next_safe_actions:
+    - "Phase 2 step 3 residue (web lane, T-C29): MasteryMap learner-panel chips
+      (NodeWithStateView.applicability) + PapersView detail scoping
+      (PaperQuestionView.specPoints) via src/lib/applicability.ts — claim the
+      core-web-contract consumer lease"
+    - "post-deploy read-only prod sweep: specPoints probe on a 4CH1 topic list +
+      applicability probe on a learner KG payload (auth-gated)"
+  closeout:
+    commit: bdc378de73dd167fcbffacd181697bb6ef3cc213
+    merge: 7063e616936636eec18345ab837173e5536cc116
+    ci: "https://github.com/SyllabAI/syllabai-core/pull/25"

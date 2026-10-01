@@ -1,0 +1,84 @@
+name: ops-run003-b-r7
+
+# Run 003B — arm B lexical (T-C13), r7 serving-set eval generation (snap-006 +
+# gold-v5 staged as snapshot-r7/gold-r7; the flagged3 flip + the notes-axis
+# promotion are IN via SNAP6-F1, 2026-09-28 — the VALIDATED serving pool this
+# generation scores is 965 chunks: 615 + 350 notes). Benchmark-only; never on
+# push/PR. SS8(d) is scoreable-with-coverage (the 210 HV chunk->spec mappings
+# anchor on now-VALIDATED notes chunks). Core pin d9cb3ddcf2 = main at the r7
+# staging commit (the 05f262169..d9cb3dd delta touches ChunkVectorRepository via
+# the c37582d hygiene tranche — verified SQL-emission-identical for every
+# Document.Kind; serving semantics unchanged). Output: results.json +
+# RUN_REPORT.md + SHA256SUMS (uploaded artifact).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run003b:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: bench
+          POSTGRES_PASSWORD: bench
+          POSTGRES_DB: postgres
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U bench"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - name: Checkout records repo (frozen inputs)
+        uses: actions/checkout@v4
+        with:
+          path: records
+
+      - name: Checkout core (harness, pinned sha)
+        uses: actions/checkout@v4
+        with:
+          repository: SyllabAI/syllabai-core
+          ref: d9cb3ddcf2b241411fe74e575fac8194c7ca9f8a
+          path: core
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Cache Maven repo
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: run003b-r7-m2-${{ hashFiles('core/pom.xml') }}
+          restore-keys: run003b-r7-m2-
+
+      - name: Build classpath
+        working-directory: core
+        run: mvn -B -ntp -q test-compile dependency:build-classpath -Dmdep.outputFile=../cp.txt
+
+      - name: Run arm B lexical replay (zero API calls)
+        working-directory: core
+        env:
+          BENCH_JDBC_URL: jdbc:postgresql://localhost:5433/postgres
+          BENCH_JDBC_USER: bench
+          BENCH_JDBC_PASSWORD: bench
+          BENCH_SNAPSHOT: ${{ github.workspace }}/records/bench/inputs/snapshot-r7
+          BENCH_GOLD: ${{ github.workspace }}/records/bench/inputs/gold-r7
+          BENCH_RUN_OUT: ${{ github.workspace }}/run003b-out
+          BENCH_CORE_COMMIT: d9cb3ddcf2b241411fe74e575fac8194c7ca9f8a
+          BENCH_RUN_DATE: "2026-09-28"
+        run: java -Xmx3g -cp "target/test-classes:target/classes:$(cat ../cp.txt)" com.syllabai.bench.Run003B
+
+      - name: Upload run record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-003-b-r7
+          path: run003b-out/
+          retention-days: 90

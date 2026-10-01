@@ -1,0 +1,146 @@
+{
+ "bytes": {
+  "chunks.jsonl.gz": 4307323,
+  "concept_attachments.json": 10947,
+  "graph_code.json": 31525,
+  "graph_edges.json": 15686,
+  "misconceptions.json": 2264,
+  "question_anchors.json": 154953,
+  "spec_points.json": 39379
+ },
+ "chunk_identity": "(documents.checksum, chunk_index, content sha256) \u2014 environment-portable (t0 convention unchanged)",
+ "counts": {
+  "chunks": 3831,
+  "chunks_by_kind": {
+   "EXTERNAL_QUESTIONS": 1056,
+   "MARK_SCHEME": 1494,
+   "QUESTION_PAPER": 1281
+  },
+  "chunks_by_paper_state": {
+   "EXTERNAL_QUESTIONS": {
+    "SUGGESTED": 1045,
+    "VALIDATED": 11
+   },
+   "MARK_SCHEME": {
+    "SUGGESTED": 1333,
+    "VALIDATED": 161
+   },
+   "QUESTION_PAPER": {
+    "SUGGESTED": 1136,
+    "VALIDATED": 145
+   }
+  },
+  "chunks_flipped_suggested_to_validated_vs_snap003": 317,
+  "concept_attachments": 117,
+  "documents_with_chunks": 575,
+  "edges": 152,
+  "excluded_chunks_by_kind": {
+   "EXTERNAL_NOTES": 350,
+   "SYLLABUS": 162
+  },
+  "misconceptions": 19,
+  "question_anchors": 720,
+  "spec_points": 194
+ },
+ "deltas_vs_snap-003": {
+  "SNAP4-F1_validation_wave": {
+   "card_axis": "the T-C27 cards ingested 2026-09-26 (298 chunks) are ALL still SUGGESTED \u2014 the card validation wave has NOT landed. The 11 VALIDATED EQ chunks are the single pre-existing 2026-09-20-cohort 4CH1/1C card document, which was SUGGESTED at the snap-003 freeze and is promoted in this window (part of the same wave). The card-flip run (r6) stays available when the operator/teacher card wave lands \u2014 trigger A is cashed here on the paper axis, honestly scoped.",
+   "chunks_flipped_suggested_to_validated": 317,
+   "documents_with_promoted_chunks": 27,
+   "finding": "the operator/teacher validation wave promoted the PAPER axis after the snap-003 freeze and after the paper-axis repairs (f96b0d57): 13 exam_papers rows VALIDATED (11 glmocr-era + 4CH1/2C June-2019 + 4CH1/1C January-2022) with their 13 QP + 13 MS documents VALIDATED at doc level (docs were uniformly SUGGESTED at snap-003 freeze; core 02664958a then recorded paper-VALIDATED + doc-SUGGESTED as production reality). The harness VALIDATED-only gate reads snapshot paper_state, so the promoted chunks now ENTER the served view \u2014 this freeze is the at-flip substrate.",
+   "flips_by_kind_paper_code": {
+    "EXTERNAL_QUESTIONS|4CH1/1C": 11,
+    "MARK_SCHEME|4CH0/1C": 16,
+    "MARK_SCHEME|4CH0/2C": 42,
+    "MARK_SCHEME|4CH1/1C": 33,
+    "MARK_SCHEME|4CH1/2C": 46,
+    "MARK_SCHEME|4CH1/2CR": 24,
+    "QUESTION_PAPER|4CH0/1C": 14,
+    "QUESTION_PAPER|4CH0/2C": 40,
+    "QUESTION_PAPER|4CH1/1C": 28,
+    "QUESTION_PAPER|4CH1/2C": 43,
+    "QUESTION_PAPER|4CH1/2CR": 20
+   },
+   "no_regressions": true,
+   "paper_state_by_kind": {
+    "EXTERNAL_QUESTIONS": {
+     "SUGGESTED": 1045,
+     "VALIDATED": 11
+    },
+    "MARK_SCHEME": {
+     "SUGGESTED": 1333,
+     "VALIDATED": 161
+    },
+    "QUESTION_PAPER": {
+     "SUGGESTED": 1136,
+     "VALIDATED": 145
+    }
+   },
+   "row_set_identity": "chunk_ref set, contents, kinds and spec_codes are IDENTICAL to snap-003 \u2014 the only field deltas are paper_state (this delta) and the metadata-only paper_code stamps (SNAP4-F2), both verified programmatically"
+  },
+  "SNAP4-F2_chunk_paper_code_backfill": {
+   "by_kind": {
+    "MARK_SCHEME": 128,
+    "QUESTION_PAPER": 118
+   },
+   "finding": "246 chunk rows gained a paper_code value (snap-003: null) \u2014 the mirror stamping that accompanied the post-freeze repair/validation lane (the paper-axis repairs f96b0d57 backfilled series/year on the bank-wave exam_papers rows and stamped the mirrors; embed mirrors now carry paper_code on the promoted docs' chunks). Metadata-only: chunk_ref, content, kind and spec_codes are unchanged; retrieval identity is content-addressed and unaffected. Recorded so the field diff is never silent.",
+   "note": "field-level diff vs snap-003 verified programmatically: paper_state (317 flips, SNAP4-F1) and paper_code (246 stamps, SNAP4-F2) are the only VALUE deltas; subject_id (SNAP4-F3) is an additive projection snap-003 does not carry.",
+   "rows_stamped": 246
+  },
+  "SNAP4-F3_chunk_subject_id_projection": {
+   "finding": "chunk rows project the document_chunks.subject_id column (the at-flip generation enabler, syllabai-core e728b7d: the optional subject_id projection is parsed as verification/census evidence for the at-flip generation, never a gate input \u2014 the bench container stamps chunks with the bench scope's own subject, single-subject topology). snap-001..003 carry no such field; missing and JSON null fold to null in the loader (BenchSnapshotSubjectIdTest pins the fold).",
+   "rows_by_kind_present_total": {
+    "EXTERNAL_QUESTIONS": {
+     "rows": 1056,
+     "with_subject_id": 1056
+    },
+    "MARK_SCHEME": {
+     "rows": 1494,
+     "with_subject_id": 1494
+    },
+    "QUESTION_PAPER": {
+     "rows": 1281,
+     "with_subject_id": 1281
+    }
+   },
+   "rows_without_subject_id": 0
+  },
+  "SNAP4-M1_method_note": {
+   "finding": "unchanged SNAP3-M1 read path: sanctioned production connection from the session env, READ-ONLY (set_session(readonly=True)), SELECT-only, rolled back; zero writes to any production table"
+  }
+ },
+ "files_sha256": {
+  "chunks.jsonl.gz": "f1dfaaa5696070cdc1be0d212aecca40ca07600bde8abc97b64a24a32d67fcfc",
+  "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
+  "graph_code.json": "d2a6c4e547331da4a7f2033a0dec9ba488779c4db451182e6db7f6fd41ad5f07",
+  "graph_edges.json": "f4dc1ddd10df2fa8fe87d5f57e52fc7c3abc2cf44951ad22cd7b7854aadffa5a",
+  "misconceptions.json": "c659dbdc685a03a2c7ed4ac3cb6c00dc3d695a18046044a100219c661ba830c1",
+  "question_anchors.json": "11a53c11e6e35cec6f7bc436a0765a63a321a671f5c9e54be92a41e8571fc78f",
+  "spec_points.json": "b95361eff3ac5a70040e0bc79af7b5f5666704db350505830ca409ead607d6fb"
+ },
+ "generated": "2026-09-27",
+ "graph_as_code_source": "SyllabAI/syllabai-resources@1245df009712216b309f163aacdd1c6d8ef39f1b (pin unchanged since snap-002)",
+ "pairing": {
+  "gold-v1": "unchanged, byte-untouched, SHA-paired with snap-001 (recorded-run history semantics preserved)",
+  "r3_lineage": "the separate R3 lineage (bench/inputs/snapshot-r3 + gold-r3) is untouched by this freeze",
+  "r4_record": "the r4 generation (snapshot-r4 = snap-003 + gold-r4; runs run-00{3b,4a,5c}-r4, trigger B pre-flip) is CLOSED and untouched; its artifacts are never rewritten",
+  "snap-004": "pairs with gold-v2 staged verbatim as gold-r5 for the r5 generation: the gold CONTENT is unchanged (120 queries, label logic byte-identical) and its chunk-ref/anchor id space is identical to snap-003's (row-set identity verified) \u2014 the staged gold_r5 manifest therefore still carries snap-003's files_sha256 as its label-basis provenance, and this manifest records the pairing basis: the only snap-003 -> snap-004 deltas are paper_state (317 flips, SNAP4-F1) and paper_code stamps (246, SNAP4-F2), neither of which affects chunk identity, gold labels, or anchor resolution; bench/gold_check.py PASS on the (snap-004, gold-v2) pair is the enforced gate",
+  "trigger_A": "the operator directive 're-run trigger A' (trace 1a0e23212e7b3cf5, 2026-09-27) lifts the at-flip hold recorded at the T-C27 close (5a18253d9); the wave verified first-hand: 13 exam_papers rows VALIDATED + their 13 QP + 13 MS documents promoted at doc level (317 chunks flip serving-eligible); the 298 T-C27 cards remain SUGGESTED \u2014 the card-flip run (r6) stays available"
+ },
+ "predicates": {
+  "chunks.jsonl.gz": "documents.kind IN ('QUESTION_PAPER','MARK_SCHEME','EXTERNAL_QUESTIONS') \u2014 t0/snap-003 predicate unchanged; ORDER BY d.checksum, c.chunk_index unchanged",
+  "concept_attachments.json": "the T-C19 HUMAN_VALIDATED concept->SP rows from the ratified store @1245df0, cross-checked 1:1 against scripts/c19_promotions.yaml and against the serving DB SUGGESTED PART_OF pair set (all CONCEPT->SUBTOPIC)",
+  "graph_code.json": "serving-DB node set (98 CONCEPT + 19 MISCONCEPTION) enriched from the pinned ratified concepts.yaml @1245df0 (aliases/spec_points/title); counts recomputed",
+  "graph_edges.json": "knowledge_edges validation_status='VALIDATED' AND relation_type IN (CCW, EB, MOF, RB, RP, WAP), ORDER BY relation, source, target (RELATED_TO excluded \u2014 t0-consistent)",
+  "question_anchors.json": "question_versions validation_state='VALIDATED' joined via questions.primary_topic_node_id, ORDER BY anchor_code, stem (t0 predicate unchanged)",
+  "spec_points.json": "knowledge_nodes node_type='SUBTOPIC' AND validation_status='VALIDATED' AND code LIKE '4CH1-%', ORDER BY code (t0 predicate unchanged)"
+ },
+ "serialization_notes": {
+  "anchor_order": "deterministic ORDER BY anchor_code, stem (unchanged)",
+  "exporter": "snap004_export.py (carried in this directory as export provenance); adapted from the frozen snap003_export.py; verification: spec_points, graph_edges, misconceptions, question_anchors, concept_attachments all BYTE-IDENTICAL to snap-003; graph_code rows set-equal (source.date differs by construction); chunk field-level diff programmatically verified as paper_state-only (SNAP4-F1) + paper_code stamps (SNAP4-F2)",
+  "gzip": "mtime=0 (deterministic, t0-consistent)",
+  "spec_points_projection": "unchanged t0 row contract (plain code strings on graph_code attachments)"
+ },
+ "snapshot_version": "snap-004",
+ "source": "production Neon, sanctioned session-env read path (the ops lanes' state-probe connection), opened READ-ONLY: psycopg2 set_session(readonly=True), SELECT-only statements, transaction rolled back and connection closed at export end. Method unchanged (SNAP4-M1 = SNAP3-M1). Zero writes to any production table; zero roles created."
+}

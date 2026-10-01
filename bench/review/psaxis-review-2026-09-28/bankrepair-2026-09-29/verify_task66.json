@@ -1,0 +1,155 @@
+{
+ "generated": "2026-09-29T00:04:09Z",
+ "checks": {
+  "V1_census_papers": {
+   "ok": true,
+   "detail": "{'REJECTED': 14, 'VALIDATED': 90}"
+  },
+  "V1_census_documents": {
+   "ok": true,
+   "detail": "{'SUGGESTED': 305, 'REJECTED': 147, 'VALIDATED': 567}"
+  },
+  "V1_pool_2935": {
+   "ok": true,
+   "detail": "2935"
+  },
+  "V1_rev1_zero": {
+   "ok": true,
+   "detail": "0"
+  },
+  "V1_events_zero": {
+   "ok": true,
+   "detail": "0"
+  },
+  "V1_tail_3976": {
+   "ok": true,
+   "detail": "3976"
+  },
+  "V2_qv_25_validated": {
+   "ok": true,
+   "detail": "[]"
+  },
+  "V2_ms_12_validated": {
+   "ok": true,
+   "detail": "[]"
+  },
+  "V2_jun19_1c_children_clean": {
+   "ok": true,
+   "detail": "({'VALIDATED': 15}, {'VALIDATED': 2})"
+  },
+  "V2_jun20_1c_children_clean": {
+   "ok": true,
+   "detail": "({'VALIDATED': 10}, {'VALIDATED': 10})"
+  },
+  "V3_37_corrective_rows": {
+   "ok": true,
+   "detail": "37"
+  },
+  "V3_ids_3940_3976": {
+   "ok": true,
+   "detail": "([3940, 3941, 3942], [3974, 3975, 3976])"
+  },
+  "V3_all_traced": {
+   "ok": true,
+   "detail": "trace + corrective note on every row"
+  },
+  "V3_actor_label": {
+   "ok": true,
+   "detail": "n/a"
+  },
+  "V3_lane_window_clean": {
+   "ok": true,
+   "detail": "10 mismatches, all pre-2026-09-15: 10"
+  },
+  "V3_sep14_rows_untouched": {
+   "ok": true,
+   "detail": "10"
+  },
+  "V4_jan2022_1c_untouched": {
+   "ok": true,
+   "detail": "({'SUGGESTED': 11}, 0)"
+  },
+  "V4_jun2019_2c_untouched": {
+   "ok": true,
+   "detail": "({'SUGGESTED': 8}, 0)"
+  },
+  "V5_q10_marks_7": {
+   "ok": true,
+   "detail": "(7, 'VALIDATED')"
+  },
+  "V5_mirror_marks_7": {
+   "ok": true,
+   "detail": "7"
+  },
+  "V5_stems_equal_live": {
+   "ok": true,
+   "detail": "stems byte-equal"
+  },
+  "V5_stems_unchanged_vs_archive": {
+   "ok": true,
+   "detail": "no content mutation"
+  },
+  "V5_parts_marks": {
+   "ok": true,
+   "detail": "[('b', 0), ('b-i', 2), ('b-ii', 1)]"
+  },
+  "V5_banked_sum_110": {
+   "ok": true,
+   "detail": "110"
+  },
+  "V6_mirror_invariant": {
+   "ok": true,
+   "detail": "(0, 0)"
+  },
+  "V7_archive_qv_25": {
+   "ok": true,
+   "detail": "before-images intact"
+  },
+  "V7_archive_ms_12": {
+   "ok": true,
+   "detail": "before-images intact"
+  },
+  "L1_all_queries_hit": {
+   "ok": true,
+   "detail": "[{'query': 'electrolysis of molten lead bromide', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'why does the rate of reaction increase with temperature', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'covalent bonding in hydrogen chloride', 'hits': 10, 'models': ['gemini-e"
+  }
+ },
+ "L1_live_probe": [
+  {
+   "query": "electrolysis of molten lead bromide",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "why does the rate of reaction increase with temperature",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "covalent bonding in hydrogen chloride",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "isomers of pentane bromine substitution",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "halogen displacement reactions",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  }
+ ],
+ "verdict": "VERIFIED"
+}

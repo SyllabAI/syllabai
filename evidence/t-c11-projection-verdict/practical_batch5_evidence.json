@@ -1,0 +1,218 @@
+[
+  {
+    "batch": 5,
+    "file": "c11_batch5_decisions.yaml",
+    "source": "4CH1-PR-05",
+    "relation": "REQUIRES_PREREQUISITE",
+    "target": "4CH1-CON-O2-PERCENT-DETERMINATION",
+    "evidence": [
+      {
+        "kind": "NOTE",
+        "file": "Chemistry IGCSE Revision Notes/2. Inorganic Chemistry/c. Gases in the Atmosphere/Oxygen percentage in air - IGCSE Chemistry Revision Notes.md",
+        "quote": "To determine the percentage of oxygen in air using the oxidation of iron"
+      },
+      {
+        "kind": "NOTE",
+        "file": "Chemistry IGCSE Revision Notes/2. Inorganic Chemistry/c. Gases in the Atmosphere/Oxygen percentage in air - IGCSE Chemistry Revision Notes.md",
+        "quote": "percentage of oxygen ="
+      }
+    ],
+    "provenance": {
+      "tier": "AI_SUGGESTED",
+      "model_version": "GLM (Super Z agent, z.ai)",
+      "extraction_pass": "c11-s16-batch-5",
+      "derivation_method": "USED_WITHOUT_RETEACHING",
+      "derivation_notes": "Practical -> conceptual (the pilot test #5 requirement, the PR-09 -> CON-CALORIMETRY batch-4 shape): the 2.14 practical IS the iron-route INSTANCE of the 2.10 determination \u2014 its aim, method, results, calculation and conclusion sections run the determination procedure (aim \"To determine the percentage of oxygen in air using the oxidation of iron\"; the percentage calculation \"percentage of oxygen = volume of oxygen / initial volume of air x 100\"); the practical presupposes the determination concept the 2.10 node owns.",
+      "upstream": "T-C10 HUMAN_VALIDATED 4CH1-2.14/2.10 @ Oxygen percentage in air (2026-09-11); practicals.yaml 4CH1-PR-05 (spec_point 4CH1-2.14)",
+      "generated_date": "2026-09-22"
+    },
+    "confidence": "high",
+    "validation_status": "SUGGESTED",
+    "ambiguity_note": null,
+    "version": 1,
+    "created_at": "2026-09-22"
+  },
+  {
+    "batch": 6,
+    "file": "c11_batch6_decisions.yaml",
+    "source": "4CH1-PR-06",
+    "relation": "REQUIRES_PREREQUISITE",
+    "target": "4CH1-CON-REACT-ARRANGE",
+    "evidence": [
+      {
+        "kind": "NOTE",
+        "file": "Chemistry IGCSE Revision Notes/2. Inorganic Chemistry/d. Reactivity Series/Metals reacting with acids - IGCSE Chemistry Revision Notes.md",
+        "quote": "To investigate the reactions between dilute hydrochloric and sulfuric acids with the metals magnesium, iron and zinc"
+      },
+      {
+        "kind": "NOTE",
+        "file": "Chemistry IGCSE Revision Notes/2. Inorganic Chemistry/d. Reactivity Series/Metals reacting with acids - IGCSE Chemistry Revision Notes.md",
+        "quote": "The metals can be ranked in reactivity order Mg > Zn > Fe"
+      }
+    ],
+    "provenance": {
+      "tier": "AI_SUGGESTED",
+      "model_version": "GLM (Super Z agent, z.ai)",
+      "extraction_pass": "c11-s16-batch-6",
+      "derivation_method": "USED_WITHOUT_RETEACHING",
+      "derivation_notes": "Practical->conceptual (the pilot test #5 requirement, the PR-05->CON-O2-PERCENT-DETERMINATION shape): the 2.21 practical RUNS the acid-metal comparison its concept owns \u2014 the investigation's conclusion (\"The metals can be ranked in reactivity order Mg > Zn > Fe\") is the arrangement method in action. 2.21 attaches NO concept node (the 1.13/1.60C/2.14/3.8/3.15/3.16 precedent; 4CH1-PR-06 owns it).",
+      "upstream": "T-C10 HUMAN_VALIDATED 4CH1-2.21/2.15 @ Metals reacting with acids (2026-09-11); the practical record 4CH1-PR-06 (practicals.yaml, RULE_DERIVED)",
+      "generated_date": "2026-09-22"
+    },
+    "confidence": "high",
+    "validation_status": "SUGGESTED",
+    "ambiguity_note": null,
+    "version": 1,
+    "created_at": "2026-09-22"
+  },
+  {
+    "batch": 7,
+    "file": "c11_batch7_decisions.yaml",
+    "source": "4CH1-PR-07",
+    "target": "4CH1-CON-SALT-INSOLUBLE-REACTANT",
+    "relation": "REQUIRES_PREREQUISITE",
+    "confidence": "high",
+    "created_at": "2026-09-23",
+    "ambiguity_note": null,
+    "evidence": [
+      {
+        "file": "Chemistry IGCSE Revision Notes/2. Inorganic Chemistry/g. Acids, Bases & Salt Preparations/Preparing copper sulfate - IGCSE Chemistry Revision Notes.md",
+        "kind": "NOTE",
+        "quote": "To prepare a pure, dry sample of hydrated copper(II) sulfate crystals"
+      },
+      {
+        "file": "Chemistry IGCSE Revision Notes/2. Inorganic Chemistry/g. Acids, Bases & Salt Preparations/Preparing copper sulfate - IGCSE Chemistry Revision Notes.md",
+        "kind": "NOTE",
+        "quote": "Add the copper(II) oxide slowly to the hot dilute acid and stir until the base is in excess (i.e. until the base stops dissolving and a suspension of the base forms in the acid)"
+      }
+    ],
+    "provenance": {
+      "tier": "AI_SUGGESTED",
+      "model_version": "GLM (Super Z agent, z.ai)",
+      "extraction_pass": "c11-s16-batch-7",
+      "generated_date": "2026-09-23",
+      "derivation_method": "USED_WITHOUT_RETEACHING",
+      "derivation_notes": "Practical->conceptual (the PR-05/PR-06 shape): the 2.42 practical RUNS the method its concept owns \u2014 the named practical IS the insoluble-reactant route with copper(II) oxide (\"the base stops dissolving\" = the excess-endpoint observation). 2.42 attaches NO concept node (the 1.13/1.60C/2.14/2.21 precedent; 4CH1-PR-07 owns it).",
+      "upstream": "T-C10 HUMAN_VALIDATED 4CH1-2.42/2.39 @ Preparing copper sulfate (2026-09-11); the practical record 4CH1-PR-07 (practicals.yaml, RULE_DERIVED)"
+    },
+    "validation_status": "SUGGESTED",
+    "version": 1
+  },
+  {
+    "batch": 7,
+    "file": "c11_batch7_decisions.yaml",
+    "source": "4CH1-PR-08",
+    "target": "4CH1-CON-SALT-PRECIPITATION",
+    "relation": "REQUIRES_PREREQUISITE",
+    "confidence": "high",
+    "created_at": "2026-09-23",
+    "ambiguity_note": null,
+    "evidence": [
+      {
+        "file": "Chemistry IGCSE Revision Notes/2. Inorganic Chemistry/g. Acids, Bases & Salt Preparations/Preparing lead sulfate - IGCSE Chemistry Revision Notes.md",
+        "kind": "NOTE",
+        "quote": "The solid salt obtained is the precipitate, thus in order to successfully use this method the solid salt being formed must be insoluble in water, and the reactants must be soluble"
+      },
+      {
+        "file": "Chemistry IGCSE Revision Notes/2. Inorganic Chemistry/g. Acids, Bases & Salt Preparations/Preparing lead sulfate - IGCSE Chemistry Revision Notes.md",
+        "kind": "NOTE",
+        "quote": "Filter to remove precipitate from mixture"
+      }
+    ],
+    "provenance": {
+      "tier": "AI_SUGGESTED",
+      "model_version": "GLM (Super Z agent, z.ai)",
+      "extraction_pass": "c11-s16-batch-7",
+      "generated_date": "2026-09-23",
+      "derivation_method": "USED_WITHOUT_RETEACHING",
+      "derivation_notes": "Practical->conceptual (the PR-05/PR-06 shape): the 2.43C practical RUNS the precipitation route its concept owns \u2014 lead(II) nitrate + potassium sulfate IS the two-soluble-reactants precipitation (the practical's own aim sentence restates the concept's feasibility condition). 2.43C attaches NO concept node (4CH1-PR-08 owns it).",
+      "upstream": "T-C10 HUMAN_VALIDATED 4CH1-2.43C/2.41C @ Preparing lead sulfate (2026-09-11); the practical record 4CH1-PR-08 (practicals.yaml, RULE_DERIVED)"
+    },
+    "validation_status": "SUGGESTED",
+    "version": 1
+  },
+  {
+    "batch": 11,
+    "file": "c11_batch11_decisions.yaml",
+    "source": "4CH1-PR-12",
+    "target": "4CH1-CON-ESTERS",
+    "relation": "REQUIRES_PREREQUISITE",
+    "confidence": "high",
+    "created_at": "2026-09-25",
+    "ambiguity_note": null,
+    "evidence": [
+      {
+        "file": "Chemistry IGCSE Revision Notes/4. Organic Chemistry/g. Esters/Preparation of ethyl ethanoate - IGCSE Chemistry.md",
+        "kind": "NOTE",
+        "quote": "To prepare a small sample of ethyl ethanoate"
+      }
+    ],
+    "provenance": {
+      "tier": "AI_SUGGESTED",
+      "model_version": "GLM (Super Z agent, z.ai)",
+      "extraction_pass": "c11-s16-batch-11",
+      "generated_date": "2026-09-25",
+      "derivation_method": "EXPLICIT_TEACH_SEQUENCE",
+      "derivation_notes": "IN-SLICE (the batch-3 PR-04 -> ELECTROLYSIS pattern) \u2014 the practical's Aim instantiates the esterification the esters family teaches (the 4.43C preparation IS the ethyl-ethanoate formation with the acid catalyst)",
+      "upstream": "T-C10 HUMAN_VALIDATED 4CH1-4.43C/4.39C @ Preparation of ethyl ethanoate (2026-09-11); practical node 4CH1-PR-12 (T-C09 RULE_DERIVED)"
+    },
+    "validation_status": "SUGGESTED",
+    "version": 1
+  },
+  {
+    "batch": 11,
+    "file": "c11_batch11_decisions.yaml",
+    "source": "4CH1-PR-12",
+    "target": "4CH1-CON-SIMPLE-DISTILLATION",
+    "relation": "REQUIRES_PREREQUISITE",
+    "confidence": "high",
+    "created_at": "2026-09-25",
+    "ambiguity_note": null,
+    "evidence": [
+      {
+        "file": "Chemistry IGCSE Revision Notes/4. Organic Chemistry/g. Esters/Preparation of ethyl ethanoate - IGCSE Chemistry.md",
+        "kind": "NOTE",
+        "quote": "The ester is then distilled off as soon as it is formed and collected in a separate beaker by condensation"
+      }
+    ],
+    "provenance": {
+      "tier": "AI_SUGGESTED",
+      "model_version": "GLM (Super Z agent, z.ai)",
+      "extraction_pass": "c11-s16-batch-11",
+      "generated_date": "2026-09-25",
+      "derivation_method": "USED_WITHOUT_RETEACHING",
+      "derivation_notes": "SANCTIONED BOUNDARY EDGE (session-66 ruling TARGET-5, the batch-1 owner) \u2014 the distil-off-early collection step IS the batch-1 simple-distillation technique applied (single volatile product, condensation collection; no column \u2014 the FRACTIONAL-DISTILLATION owner stays un-sanctioned)",
+      "upstream": "T-C10 HUMAN_VALIDATED 4CH1-4.43C @ Preparation of ethyl ethanoate (2026-09-11); practical node 4CH1-PR-12 (T-C09 RULE_DERIVED)"
+    },
+    "validation_status": "SUGGESTED",
+    "version": 1
+  },
+  {
+    "batch": 11,
+    "file": "c11_batch11_decisions.yaml",
+    "source": "4CH1-PR-12",
+    "target": "4CH1-CON-ACID-REACTIONS",
+    "relation": "REQUIRES_PREREQUISITE",
+    "confidence": "high",
+    "created_at": "2026-09-25",
+    "ambiguity_note": null,
+    "evidence": [
+      {
+        "file": "Chemistry IGCSE Revision Notes/4. Organic Chemistry/g. Esters/Preparation of ethyl ethanoate - IGCSE Chemistry.md",
+        "kind": "NOTE",
+        "quote": "To remove acidic impurities, sodium carbonate solution can be added, until the mixture stops fizzing (no more carbon dioxide is evolved)"
+      }
+    ],
+    "provenance": {
+      "tier": "AI_SUGGESTED",
+      "model_version": "GLM (Super Z agent, z.ai)",
+      "extraction_pass": "c11-s16-batch-11",
+      "generated_date": "2026-09-25",
+      "derivation_method": "USED_WITHOUT_RETEACHING",
+      "derivation_notes": "SANCTIONED BOUNDARY EDGE (session-66 ruling TARGET-6, the batch-7 owner) \u2014 the purification step runs the batch-7 acid+carbonate reaction set as given (sodium carbonate + the acid impurities -> salt + water + carbon dioxide fizzing; the CO2-FROM-CARBONATES owner stays un-sanctioned (BOUNDARY-TARGETS-ONCE))",
+      "upstream": "T-C10 HUMAN_VALIDATED 4CH1-4.43C @ Preparation of ethyl ethanoate (2026-09-11); practical node 4CH1-PR-12 (T-C09 RULE_DERIVED)"
+    },
+    "validation_status": "SUGGESTED",
+    "version": 1
+  }
+]

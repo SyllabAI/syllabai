@@ -1,0 +1,2985 @@
+{
+ "archived_at": "2026-09-25T17:00:20Z",
+ "paper_code": "4CH1/2C",
+ "session_label": "January 2023",
+ "ep_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+ "counts": {
+  "exam_papers": 1,
+  "questions": 7,
+  "question_versions": 7,
+  "question_parts": 44,
+  "mark_schemes": 6,
+  "mark_points": 28,
+  "question_topics": 0,
+  "question_spec_points": 0,
+  "question_options": 0,
+  "glm_ocr_bridge_records": 1,
+  "content_review_audit_refs": 0,
+  "teacher_validation_event_refs": 0
+ },
+ "rows": {
+  "exam_papers": [
+   {
+    "id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "subject_id": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+    "title": "4CH1/2C January 2023",
+    "board": "Edexcel",
+    "qualification": "unknown",
+    "unit": null,
+    "session_label": "January 2023",
+    "paper_code": "4CH1/2C",
+    "question_paper_document_id": "e709ebdb-0241-5b51-8e98-0eb2923b2928",
+    "mark_scheme_document_id": "e132f5de-647a-578a-a45f-86746a759dd5",
+    "validation_state": "SUGGESTED",
+    "provenance": "PAST_PAPER",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_by": null,
+    "created_at": "2026-09-14 12:08:36.373054+00:00",
+    "series": "JAN",
+    "year": 2023
+   }
+  ],
+  "questions": [
+   {
+    "id": "a4bfff27-1998-475c-8905-c499b4027174",
+    "external_ref": "q01-a414eddc",
+    "question_type": "STRUCTURED",
+    "stem": "(a) The diagram shows the electronic configuration of an atom of an element. Complete the table by giving the missing information.",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "primary_topic_node_id": "378465b8-a53a-47c7-b3b1-d1f4e9b26849",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:08:36.373277+00:00",
+    "exam_paper_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "difficulty_source": null
+   },
+   {
+    "id": "a085b972-925c-4b71-bab5-db6e4c4fac77",
+    "external_ref": "q02-a414eddc",
+    "question_type": "STRUCTURED",
+    "stem": "The table shows properties of four substances, A, B, C and D. A 800 1465 no yes B 327 1749 yes yes C 232 573 no no D 3550 4830 no no",
+    "marks": 5,
+    "difficulty": 3,
+    "expected_time_seconds": 450,
+    "command_word": null,
+    "primary_topic_node_id": "378465b8-a53a-47c7-b3b1-d1f4e9b26849",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:08:36.373854+00:00",
+    "exam_paper_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "difficulty_source": null
+   },
+   {
+    "id": "32b9203f-3feb-47c0-b315-ebd90fb7c672",
+    "external_ref": "q03-a414eddc",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about soluble salts and insoluble salts.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "primary_topic_node_id": "378465b8-a53a-47c7-b3b1-d1f4e9b26849",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:08:36.374511+00:00",
+    "exam_paper_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "difficulty_source": null
+   },
+   {
+    "id": "6dd4bdd2-77a1-4f84-9c59-9ad4c6097b24",
+    "external_ref": "q05-a414eddc",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about metals.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "primary_topic_node_id": "378465b8-a53a-47c7-b3b1-d1f4e9b26849",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:08:36.376023+00:00",
+    "exam_paper_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "difficulty_source": null
+   },
+   {
+    "id": "03e2be84-28c3-4140-8c27-c44ea2540d19",
+    "external_ref": "q04-a414eddc",
+    "question_type": "STRUCTURED",
+    "stem": "Fractional distillation is used to separate crude oil into fractions. The diagram shows a fractionating column and the fractions obtained from crude oil.",
+    "marks": 13,
+    "difficulty": 3,
+    "expected_time_seconds": 1170,
+    "command_word": null,
+    "primary_topic_node_id": "378465b8-a53a-47c7-b3b1-d1f4e9b26849",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:08:36.375574+00:00",
+    "exam_paper_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "difficulty_source": null
+   },
+   {
+    "id": "34ac398c-8300-4270-823b-30bd0e99315b",
+    "external_ref": "q06-a414eddc",
+    "question_type": "STRUCTURED",
+    "stem": "When ethanoic acid reacts with ethanol in the presence of concentrated sulfuric acid, one of the products is ester A. This is the equation for the reaction.",
+    "marks": 13,
+    "difficulty": 3,
+    "expected_time_seconds": 1170,
+    "command_word": null,
+    "primary_topic_node_id": "378465b8-a53a-47c7-b3b1-d1f4e9b26849",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:08:36.376323+00:00",
+    "exam_paper_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "difficulty_source": null
+   },
+   {
+    "id": "30a5b6ea-b96c-4f42-9ea7-614bf3fc344a",
+    "external_ref": "q07-a414eddc",
+    "question_type": "STRUCTURED",
+    "stem": "This question is about hydrazine, $ \\mathrm{N}_{2} \\mathrm{H}_{4} $",
+    "marks": 13,
+    "difficulty": 3,
+    "expected_time_seconds": 1170,
+    "command_word": null,
+    "primary_topic_node_id": "378465b8-a53a-47c7-b3b1-d1f4e9b26849",
+    "provenance": "PAST_PAPER",
+    "active": false,
+    "version": 1,
+    "created_at": "2026-09-14 12:08:36.376679+00:00",
+    "exam_paper_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "difficulty_source": null
+   }
+  ],
+  "question_versions": [
+   {
+    "id": "753c1978-2aa3-4789-89ed-12404ad7cb96",
+    "question_id": "a4bfff27-1998-475c-8905-c499b4027174",
+    "version": 1,
+    "stem": "(a) The diagram shows the electronic configuration of an atom of an element. Complete the table by giving the missing information.",
+    "marks": 7,
+    "difficulty": 3,
+    "expected_time_seconds": 630,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.373617+00:00"
+   },
+   {
+    "id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "question_id": "a085b972-925c-4b71-bab5-db6e4c4fac77",
+    "version": 1,
+    "stem": "The table shows properties of four substances, A, B, C and D. A 800 1465 no yes B 327 1749 yes yes C 232 573 no no D 3550 4830 no no",
+    "marks": 5,
+    "difficulty": 3,
+    "expected_time_seconds": 450,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.374245+00:00"
+   },
+   {
+    "id": "b60d89ff-d40e-401c-8dc2-abb3b36578c6",
+    "question_id": "32b9203f-3feb-47c0-b315-ebd90fb7c672",
+    "version": 1,
+    "stem": "This question is about soluble salts and insoluble salts.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+    "extraction_confidence": 0.45,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.374707+00:00"
+   },
+   {
+    "id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "question_id": "6dd4bdd2-77a1-4f84-9c59-9ad4c6097b24",
+    "version": 1,
+    "stem": "This question is about metals.",
+    "marks": 1,
+    "difficulty": 3,
+    "expected_time_seconds": 90,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+    "extraction_confidence": 0.45,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.376158+00:00"
+   },
+   {
+    "id": "ac7315c7-9a09-485c-b0c6-14a896282e16",
+    "question_id": "03e2be84-28c3-4140-8c27-c44ea2540d19",
+    "version": 1,
+    "stem": "Fractional distillation is used to separate crude oil into fractions. The diagram shows a fractionating column and the fractions obtained from crude oil.",
+    "marks": 13,
+    "difficulty": 3,
+    "expected_time_seconds": 1170,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.375838+00:00"
+   },
+   {
+    "id": "7511813e-dd6a-4879-9966-4da9843b063b",
+    "question_id": "34ac398c-8300-4270-823b-30bd0e99315b",
+    "version": 1,
+    "stem": "When ethanoic acid reacts with ethanol in the presence of concentrated sulfuric acid, one of the products is ester A. This is the equation for the reaction.",
+    "marks": 13,
+    "difficulty": 3,
+    "expected_time_seconds": 1170,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.376521+00:00"
+   },
+   {
+    "id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "question_id": "30a5b6ea-b96c-4f42-9ea7-614bf3fc344a",
+    "version": 1,
+    "stem": "This question is about hydrazine, $ \\mathrm{N}_{2} \\mathrm{H}_{4} $",
+    "marks": 13,
+    "difficulty": 3,
+    "expected_time_seconds": 1170,
+    "command_word": null,
+    "validation_state": "SUGGESTED",
+    "source_document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+    "extraction_confidence": 0.6,
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.376847+00:00"
+   }
+  ],
+  "question_parts": [
+   {
+    "id": "46bc8bf1-f437-4b35-8cff-dd1ed3d7117c",
+    "question_version_id": "753c1978-2aa3-4789-89ed-12404ad7cb96",
+    "label": "b",
+    "prompt": "The table gives information about four different species, W, X, Y and Z.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:08:36.383114+00:00"
+   },
+   {
+    "id": "46e328b9-9fb9-4d76-b8ad-c83d93dc043e",
+    "question_version_id": "753c1978-2aa3-4789-89ed-12404ad7cb96",
+    "label": "b-i",
+    "prompt": "Give the mass number of W.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:08:36.383218+00:00"
+   },
+   {
+    "id": "a377a9db-d491-490f-bcd6-4c999babe7f1",
+    "question_version_id": "753c1978-2aa3-4789-89ed-12404ad7cb96",
+    "label": "b-ii",
+    "prompt": "Give a reason why X has a 3+ charge.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:08:36.383251+00:00"
+   },
+   {
+    "id": "a25ce209-31b4-40a2-9131-877c63719422",
+    "question_version_id": "753c1978-2aa3-4789-89ed-12404ad7cb96",
+    "label": "b-iii",
+    "prompt": "Explain why Y and Z are isotopes of the same element.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:08:36.383283+00:00"
+   },
+   {
+    "id": "dbb9c9ca-4b76-48b5-9bd6-369eb9727b4d",
+    "question_version_id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "label": "a",
+    "prompt": "Use information from the table to identify these substances.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:08:36.383325+00:00"
+   },
+   {
+    "id": "444bfbd3-62fa-4248-a530-ea62733c7417",
+    "question_version_id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "label": "a-i",
+    "prompt": "Which substance could be a metal? A B C D",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:08:36.383405+00:00"
+   },
+   {
+    "id": "0623314e-0a91-4502-bacd-903ecd7894c5",
+    "question_version_id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "label": "a-ii",
+    "prompt": "Which substance could be diamond? A B C D",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:08:36.383438+00:00"
+   },
+   {
+    "id": "397ad18d-b8ba-43a6-b952-4a886fd8f275",
+    "question_version_id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "label": "a-iii",
+    "prompt": "Which substance is a gas at 600 $ ^{\\circ} \\mathrm{C}? $ A B C D",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:08:36.383467+00:00"
+   },
+   {
+    "id": "b5b00357-5913-4593-8f16-dd73adfc5f0d",
+    "question_version_id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "label": "b",
+    "prompt": "One of the substances in the table is a compound with the formula $ \\mathrm{C_{10}H_{16}N_{2}O_{3}S} $",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:08:36.383499+00:00"
+   },
+   {
+    "id": "bdfd18b7-e2ba-4882-9a38-88f32e6f6b2a",
+    "question_version_id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "label": "b-i",
+    "prompt": "Give the number of different elements in $ C_{1 0} H_{1 6} N_{2} O_{3} S $",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:08:36.383535+00:00"
+   },
+   {
+    "id": "94e45eed-1e62-4fd4-9ec2-f76ee4209d30",
+    "question_version_id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "label": "b-ii",
+    "prompt": "Determine the number of atoms in a molecule of $ C_{1 0} H_{1 6} N_{2} O_{3} S $",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:08:36.383566+00:00"
+   },
+   {
+    "id": "7999dbb5-2097-44f1-843c-cb9af23947fa",
+    "question_version_id": "b60d89ff-d40e-401c-8dc2-abb3b36578c6",
+    "label": "a",
+    "prompt": "Which pair of solutions produces an insoluble salt when mixed? A sodium sulfate and potassium nitrate B potassium carbonate and calcium nitrate C sodium chloride and ammonium nitrate D sodium hydroxide and potassium sulfate",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:08:36.383607+00:00"
+   },
+   {
+    "id": "09b6a31f-1e52-4074-98d9-670451251cd6",
+    "question_version_id": "b60d89ff-d40e-401c-8dc2-abb3b36578c6",
+    "label": "b",
+    "prompt": "When solutions of lead nitrate and sodium sulfate are mixed, one product is solid lead sulfate. This is the equation for the reaction. $\\mathrm {P b} \\left(\\mathrm {N O} _ {3}\\right) _ {2} (\\mathrm {a q}) + \\mathrm {N a} _ {2} \\mathrm {S O} _ {4} (\\mathrm {a q}) \\rightarrow \\mathrm {P b S O} _ {4} (\\mathrm {s}) + 2 \\mathrm {N a N O} _ {3} (\\mathrm {a q})$ Describe how a pure, dry sample of solid lead sulfate can be obtained from the mixture.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:08:36.383637+00:00"
+   },
+   {
+    "id": "13ca615d-e0fa-4f8d-be31-5984c6352cc7",
+    "question_version_id": "b60d89ff-d40e-401c-8dc2-abb3b36578c6",
+    "label": "c",
+    "prompt": "The table gives the solubility of a salt in water at six different temperatures.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:08:36.383677+00:00"
+   },
+   {
+    "id": "d284b0c6-11f2-41d6-890c-156575c18070",
+    "question_version_id": "b60d89ff-d40e-401c-8dc2-abb3b36578c6",
+    "label": "c-i",
+    "prompt": "Plot the points on the grid.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:08:36.383706+00:00"
+   },
+   {
+    "id": "76c5e41b-8288-4cc8-b2bb-5767ebeef612",
+    "question_version_id": "b60d89ff-d40e-401c-8dc2-abb3b36578c6",
+    "label": "c-ii",
+    "prompt": "Draw a curve of best fit.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:08:36.383738+00:00"
+   },
+   {
+    "id": "5fb4f0f2-22a9-43e6-91ef-460cb7dd2927",
+    "question_version_id": "b60d89ff-d40e-401c-8dc2-abb3b36578c6",
+    "label": "c-iii",
+    "prompt": "A saturated solution of the salt in 100g of water is cooled from $ 9 0^{\\circ} \\mathrm{C} $ to $ 3 0^{\\circ} \\mathrm{C} $ Use your graph to determine the mass of salt that will crystallise. Show your working on the graph.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:08:36.383789+00:00"
+   },
+   {
+    "id": "4634e12e-cd22-4772-9cee-4a9946fb6392",
+    "question_version_id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "label": "a",
+    "prompt": "Explain why metals are malleable.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:08:36.384043+00:00"
+   },
+   {
+    "id": "64d313ed-49ae-4c7a-bbe4-8a0541311181",
+    "question_version_id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "label": "b",
+    "prompt": "Sodium metal is extracted by the electrolysis of molten sodium chloride. Sodium metal forms at the negative electrode and chlorine gas forms at the positive electrode. The diagram represents this electrolysis.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:08:36.384076+00:00"
+   },
+   {
+    "id": "5ddeb5be-049c-4bc9-875f-67983b7ef5cc",
+    "question_version_id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "label": "b-i",
+    "prompt": "Explain why molten sodium chloride conducts electricity.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:08:36.384111+00:00"
+   },
+   {
+    "id": "597e8c24-b4ac-4910-8c42-cb749bb06f1e",
+    "question_version_id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "label": "b-ii",
+    "prompt": "Explain how sodium metal forms at the negative electrode.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:08:36.384139+00:00"
+   },
+   {
+    "id": "44f24b17-fd22-4dc5-bcd4-ef0104245397",
+    "question_version_id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "label": "b-iii",
+    "prompt": "Write an ionic half-equation for the formation of chlorine gas at the positive electrode.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:08:36.384185+00:00"
+   },
+   {
+    "id": "2d1719c0-22b0-4e32-84cf-8f1e3b4b697f",
+    "question_version_id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "label": "b-iv",
+    "prompt": "Give a reason why sodium metal does not form in the electrolysis of an aqueous solution of sodium chloride.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:08:36.384212+00:00"
+   },
+   {
+    "id": "0781e104-e419-484f-a6be-e897d9fe3cbb",
+    "question_version_id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "label": "c",
+    "prompt": "Copper can be produced by reacting an oxide of copper with methane. The diagram shows the apparatus used. The oxide of copper is heated until the reaction is complete. The table shows the results. Use the results to show that this oxide has the empirical formula CuO [for Cu, $ A_{\\mathrm{r}}=6 3. 5 $ for O, $ A_{\\mathrm{r}}=1 6 $]",
+    "command_word": null,
+    "marks": 3,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:08:36.384243+00:00"
+   },
+   {
+    "id": "7701e69e-dae1-4bf5-b6a8-880f59457725",
+    "question_version_id": "ac7315c7-9a09-485c-b0c6-14a896282e16",
+    "label": "a",
+    "prompt": "Describe how crude oil is separated into fractions in the fractionating column.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:08:36.383852+00:00"
+   },
+   {
+    "id": "0f7e01eb-1c86-4d7c-ac92-2f65f49090b9",
+    "question_version_id": "ac7315c7-9a09-485c-b0c6-14a896282e16",
+    "label": "a-ii",
+    "prompt": "Give a use for kerosene and a use for bitumen. kerosene bitumen",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:08:36.383886+00:00"
+   },
+   {
+    "id": "cf259a27-d94c-4431-b2a2-010f6251bb95",
+    "question_version_id": "ac7315c7-9a09-485c-b0c6-14a896282e16",
+    "label": "b",
+    "prompt": "Some fractions obtained from crude oil are cracked to form alkenes.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:08:36.383917+00:00"
+   },
+   {
+    "id": "c56f89b8-4892-4704-b42d-a6eb78bb289a",
+    "question_version_id": "ac7315c7-9a09-485c-b0c6-14a896282e16",
+    "label": "b-i",
+    "prompt": "Describe what is meant by cracking.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:08:36.383947+00:00"
+   },
+   {
+    "id": "2089bdc7-1329-439d-99d1-53ee6a43f74c",
+    "question_version_id": "ac7315c7-9a09-485c-b0c6-14a896282e16",
+    "label": "b-ii",
+    "prompt": "Ethene is obtained by cracking. This is the displayed formula of ethene. Explain why ethene is described as an unsaturated hydrocarbon.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:08:36.383975+00:00"
+   },
+   {
+    "id": "6757f331-c57f-458f-b524-3f58fa34746d",
+    "question_version_id": "ac7315c7-9a09-485c-b0c6-14a896282e16",
+    "label": "b-iii",
+    "prompt": "Describe a test to show that ethene is unsaturated.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:08:36.384006+00:00"
+   },
+   {
+    "id": "d32b8046-e124-4835-9252-86aad53d9964",
+    "question_version_id": "7511813e-dd6a-4879-9966-4da9843b063b",
+    "label": "a",
+    "prompt": "Draw a circle around the functional group in ethanoic acid.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:08:36.384283+00:00"
+   },
+   {
+    "id": "fa759b16-4308-42bf-a1fd-794830c909e1",
+    "question_version_id": "7511813e-dd6a-4879-9966-4da9843b063b",
+    "label": "a-ii",
+    "prompt": "Give the displayed formula of ester A.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:08:36.384313+00:00"
+   },
+   {
+    "id": "b74e0710-ddd6-4571-a36d-5cf4fa6f138a",
+    "question_version_id": "7511813e-dd6a-4879-9966-4da9843b063b",
+    "label": "a-iii",
+    "prompt": "Name ester A.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:08:36.384343+00:00"
+   },
+   {
+    "id": "112d64ce-b940-4dbc-8ed4-22eb85662243",
+    "question_version_id": "7511813e-dd6a-4879-9966-4da9843b063b",
+    "label": "b",
+    "prompt": "The reaction mixture is kept in a sealed container until dynamic equilibrium is reached. State what is meant by the term dynamic equilibrium.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:08:36.384389+00:00"
+   },
+   {
+    "id": "eee5e0d6-10a5-489b-84fa-f018b83f9e8b",
+    "question_version_id": "7511813e-dd6a-4879-9966-4da9843b063b",
+    "label": "c",
+    "prompt": "During the reaction, the number of moles of ethanoic acid in the reaction mixture decreases, but the number of moles of concentrated sulfuric acid does not change.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:08:36.384418+00:00"
+   },
+   {
+    "id": "2529954a-0892-47fe-9162-48e476dc4e7a",
+    "question_version_id": "7511813e-dd6a-4879-9966-4da9843b063b",
+    "label": "c-i",
+    "prompt": "Give a reason why the number of moles of concentrated sulfuric acid does not change.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:08:36.384449+00:00"
+   },
+   {
+    "id": "953ba3bc-ccd8-4a25-970b-feb56ceb6a31",
+    "question_version_id": "7511813e-dd6a-4879-9966-4da9843b063b",
+    "label": "c-ii",
+    "prompt": "A student does a titration to find the accurate volume of sodium hydroxide solution needed for complete neutralisation. The student starts by using a pipette to transfer $ 2 5. 0 \\mathrm{c m}^{3} $ of the reaction mixture to a conical flask. Describe how the student should complete the titration.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:08:36.384476+00:00"
+   },
+   {
+    "id": "6a640492-29de-449a-94a1-c3bfeb76137e",
+    "question_version_id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "label": "a",
+    "prompt": "This is the displayed formula for a molecule of hydrazine. Complete the dot-and-cross diagram for hydrazine.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 0,
+    "created_at": "2026-09-14 12:08:36.384521+00:00"
+   },
+   {
+    "id": "584df09d-3869-43dd-8c6c-052738b06504",
+    "question_version_id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "label": "b",
+    "prompt": "This is the equation for the decomposition of hydrazine. $3 \\mathrm {N} _ {2} \\mathrm {H} _ {4} (\\mathrm {g}) \\rightarrow 4 \\mathrm {N H} _ {3} (\\mathrm {g}) + \\mathrm {N} _ {2} (\\mathrm {g})$ The equation can be shown using displayed formulae. The table gives the relevant bond energies.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 1,
+    "created_at": "2026-09-14 12:08:36.384554+00:00"
+   },
+   {
+    "id": "bb539ba3-27ce-449c-9a93-147d46ff19f8",
+    "question_version_id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "label": "b-i",
+    "prompt": "Use the data in the table to calculate the total energy needed to break all the bonds in the reactants.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 2,
+    "created_at": "2026-09-14 12:08:36.384591+00:00"
+   },
+   {
+    "id": "ddba889d-88d7-4da9-b8df-1c7f8db008b5",
+    "question_version_id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "label": "b-ii",
+    "prompt": "Use the data in the table to calculate the total energy released when all the bonds in the products are made.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 3,
+    "created_at": "2026-09-14 12:08:36.384629+00:00"
+   },
+   {
+    "id": "ac076d48-61b7-4357-98c9-db0cf4d17750",
+    "question_version_id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "label": "b-iii",
+    "prompt": "Calculate the enthalpy change, $ \\Delta H $ , in kJ/mol, for the reaction.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 4,
+    "created_at": "2026-09-14 12:08:36.384670+00:00"
+   },
+   {
+    "id": "e2960578-1c0f-4918-85b6-612481f578cf",
+    "question_version_id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "label": "b-iv",
+    "prompt": "Explain, in terms of bonds broken and bonds made, why this reaction is exothermic.",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 5,
+    "created_at": "2026-09-14 12:08:36.384699+00:00"
+   },
+   {
+    "id": "3ad6c4db-562d-485b-97f4-f1eda74e01b8",
+    "question_version_id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "label": "c",
+    "prompt": "A sample of hydrazine is completely decomposed. This is the equation for the decomposition of hydrazine. $3 \\mathrm {N} _ {2} \\mathrm {H} _ {4} (\\mathrm {g}) \\rightarrow 4 \\mathrm {N H} _ {3} (\\mathrm {g}) + \\mathrm {N} _ {2} (\\mathrm {g})$ The products of the decomposition are bubbled through $ 1 1 0 0 \\mathrm{c m}^{3} $ of water. The ammonia completely dissolves in the water, but nitrogen is insoluble in water. The nitrogen has a volume of $ 1 5 7 0 \\mathrm{c m}^{3} $ at room temperature and pressure (rtp). Calculate the concentration, in mol/dm $ ^{3} $ , of the ammonia solution. Give your answer to 3 significant figures. [for a gas at rtp,molar volume = 24000 $ cm^{3} $]",
+    "command_word": null,
+    "marks": 0,
+    "ordering": 6,
+    "created_at": "2026-09-14 12:08:36.384727+00:00"
+   }
+  ],
+  "mark_schemes": [
+   {
+    "id": "8a5f7929-65c9-4336-a4c9-2973fa23e6c7",
+    "question_version_id": "753c1978-2aa3-4789-89ed-12404ad7cb96",
+    "version_label": "1",
+    "source_document_id": "41191e53-9272-5a9d-b044-3086f010a5f3",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.377081+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "66b52919-43dd-48fd-9f53-2143d0243411",
+    "question_version_id": "0722dd3d-a009-4cc6-85f6-cc98b498b400",
+    "version_label": "1",
+    "source_document_id": "41191e53-9272-5a9d-b044-3086f010a5f3",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.377271+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "37ea8b39-17e3-4460-a744-81e18faba65e",
+    "question_version_id": "b60d89ff-d40e-401c-8dc2-abb3b36578c6",
+    "version_label": "1",
+    "source_document_id": "41191e53-9272-5a9d-b044-3086f010a5f3",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.377445+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "4109dfb2-f566-4521-88ca-d9fe1b47765a",
+    "question_version_id": "d3dab804-efa9-4bac-a11b-680fa5dd98a9",
+    "version_label": "1",
+    "source_document_id": "41191e53-9272-5a9d-b044-3086f010a5f3",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.377756+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "3bd8222c-48e5-4bd8-9e39-3468fe0117a4",
+    "question_version_id": "ac7315c7-9a09-485c-b0c6-14a896282e16",
+    "version_label": "1",
+    "source_document_id": "41191e53-9272-5a9d-b044-3086f010a5f3",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.377613+00:00",
+    "general_guidance": null
+   },
+   {
+    "id": "2952e4b2-5605-46b1-a4a1-5e5316264af0",
+    "question_version_id": "a21955e4-eedd-4c4f-b31f-63b5c33dd299",
+    "version_label": "1",
+    "source_document_id": "41191e53-9272-5a9d-b044-3086f010a5f3",
+    "validation_state": "SUGGESTED",
+    "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "created_at": "2026-09-14 12:08:36.377932+00:00",
+    "general_guidance": null
+   }
+  ],
+  "mark_points": [
+   {
+    "id": "d9a30f0c-8afa-4ca4-9875-5dfaa2bc2208",
+    "mark_scheme_id": "8a5f7929-65c9-4336-a4c9-2973fa23e6c7",
+    "question_part_id": null,
+    "ref": "1-a",
+    "ordering": 0,
+    "text": "name of the part of this atom labelled A nucleus\nnumber of the group that contains this element2\nnumber of the period that contains this element3",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.384784+00:00"
+   },
+   {
+    "id": "1b3639ce-a895-4170-9114-e822dd14a565",
+    "mark_scheme_id": "8a5f7929-65c9-4336-a4c9-2973fa23e6c7",
+    "question_part_id": null,
+    "ref": "1-a-ii",
+    "ordering": 1,
+    "text": "(species X has) three more protons than electrons/three fewer electrons than protons",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.385078+00:00"
+   },
+   {
+    "id": "03ddc9ca-fe62-42bb-89a2-4864e29f17b8",
+    "mark_scheme_id": "8a5f7929-65c9-4336-a4c9-2973fa23e6c7",
+    "question_part_id": null,
+    "ref": "1-a-iii",
+    "ordering": 2,
+    "text": "M1 same number of protons/both have 17 protons\nM2 different number of neutrons/one has two neutrons more/one has 18 neutrons and the other has 20 neutrons\nTotal for question=7",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.385155+00:00"
+   },
+   {
+    "id": "25b8895b-fee4-4cf2-bee5-65f2605189a8",
+    "mark_scheme_id": "66b52919-43dd-48fd-9f53-2143d0243411",
+    "question_part_id": "444bfbd3-62fa-4248-a530-ea62733c7417",
+    "ref": "2-a-i",
+    "ordering": 0,
+    "text": "B",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.385647+00:00"
+   },
+   {
+    "id": "dae3b1b1-0ce8-4e13-9473-772e07bbe86b",
+    "mark_scheme_id": "66b52919-43dd-48fd-9f53-2143d0243411",
+    "question_part_id": "0623314e-0a91-4502-bacd-903ecd7894c5",
+    "ref": "2-a-ii",
+    "ordering": 1,
+    "text": "A, C and D are not the correct answers as metals conduct electricity when solid",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.385831+00:00"
+   },
+   {
+    "id": "61760f7d-4b77-42d9-bf99-9d907331e030",
+    "mark_scheme_id": "66b52919-43dd-48fd-9f53-2143d0243411",
+    "question_part_id": "397ad18d-b8ba-43a6-b952-4a886fd8f275",
+    "ref": "2-a-iii",
+    "ordering": 2,
+    "text": "A is not the correct answer because diamond will not conduct electricity when moltenB is not the correct answer because diamond will not conduct electricity when solid or moltenC is not the correct answer because diamond has a much higher melting and boiling point",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.385921+00:00"
+   },
+   {
+    "id": "4613ed40-d0e8-4e41-a738-82a5c41b844f",
+    "mark_scheme_id": "66b52919-43dd-48fd-9f53-2143d0243411",
+    "question_part_id": "bdfd18b7-e2ba-4882-9a38-88f32e6f6b2a",
+    "ref": "2-b-i",
+    "ordering": 3,
+    "text": "A is not the correct answer as A is a solid at 600\u2103B is not the correct answer as B is a liquid at 600\u2103D is not the correct answer as D is a solid at 600\u2103",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.385999+00:00"
+   },
+   {
+    "id": "6a9a222c-b5ed-4d7e-a558-a355160d6e70",
+    "mark_scheme_id": "66b52919-43dd-48fd-9f53-2143d0243411",
+    "question_part_id": "94e45eed-1e62-4fd4-9ec2-f76ee4209d30",
+    "ref": "2-b-ii",
+    "ordering": 4,
+    "text": "32/thirty two\nTotal for question=5",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386074+00:00"
+   },
+   {
+    "id": "2743fcbd-522e-4821-88ce-e77eae73aa60",
+    "mark_scheme_id": "37ea8b39-17e3-4460-a744-81e18faba65e",
+    "question_part_id": "7999dbb5-2097-44f1-843c-cb9af23947fa",
+    "ref": "3-a",
+    "ordering": 0,
+    "text": "B\nA is not correct because mixing sodium sulfate and potassium nitrate does not produce an insoluble salt.\nC is not correct because mixing sodium chloride and ammonium nitrate does not produce an insoluble salt.\nD is not correct because mixing sodium hydroxide and potassium sulfate does not produce an insoluble salt.",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386174+00:00"
+   },
+   {
+    "id": "4291c460-5c5e-435e-bc30-fa7ad8b9daed",
+    "mark_scheme_id": "37ea8b39-17e3-4460-a744-81e18faba65e",
+    "question_part_id": "09b6a31f-1e52-4074-98d9-670451251cd6",
+    "ref": "3-b",
+    "ordering": 1,
+    "text": "M1 filter (the solid lead sulfate)\nM2 wash / rinse (with deionised / distilled water)\nM3 leave (in a warm place) to dry",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386258+00:00"
+   },
+   {
+    "id": "0aee5262-8e4c-403d-9c93-96c55ecdc56f",
+    "mark_scheme_id": "37ea8b39-17e3-4460-a744-81e18faba65e",
+    "question_part_id": "d284b0c6-11f2-41d6-890c-156575c18070",
+    "ref": "3-c-i",
+    "ordering": 2,
+    "text": "6 points plotted \u00b1 half a square",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386331+00:00"
+   },
+   {
+    "id": "ae8baf06-7776-4e88-9f7e-de7fa97e12f7",
+    "mark_scheme_id": "37ea8b39-17e3-4460-a744-81e18faba65e",
+    "question_part_id": "76c5e41b-8288-4cc8-b2bb-5767ebeef612",
+    "ref": "3-c-ii",
+    "ordering": 3,
+    "text": "smooth curve of best fit through, or within a square, of all points",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386434+00:00"
+   },
+   {
+    "id": "05f91c5b-bf34-41dc-8f1b-dffa18ecafbf",
+    "mark_scheme_id": "37ea8b39-17e3-4460-a744-81e18faba65e",
+    "question_part_id": "5fb4f0f2-22a9-43e6-91ef-460cb7dd2927",
+    "ref": "3-c-iii",
+    "ordering": 4,
+    "text": "M1 working shown on graph\nM2 solubility at 90\u2103-solubility at 30\u2103\nTotal for question = 8",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386510+00:00"
+   },
+   {
+    "id": "1a166388-a3cf-4a51-9295-e21a7166f1a0",
+    "mark_scheme_id": "4109dfb2-f566-4521-88ca-d9fe1b47765a",
+    "question_part_id": "4634e12e-cd22-4772-9cee-4a9946fb6392",
+    "ref": "5-a",
+    "ordering": 0,
+    "text": "M1 layers/rows of atoms/(positive) ionsM2 can slide over one another",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386849+00:00"
+   },
+   {
+    "id": "47e40d0d-2f3c-4afd-bbe8-74773ba0ca68",
+    "mark_scheme_id": "4109dfb2-f566-4521-88ca-d9fe1b47765a",
+    "question_part_id": "5ddeb5be-049c-4bc9-875f-67983b7ef5cc",
+    "ref": "5-b-i",
+    "ordering": 1,
+    "text": "M1 ionsM2 can move",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386924+00:00"
+   },
+   {
+    "id": "616137ad-8745-4730-96e3-8eb5867ff60e",
+    "mark_scheme_id": "4109dfb2-f566-4521-88ca-d9fe1b47765a",
+    "question_part_id": "597e8c24-b4ac-4910-8c42-cb749bb06f1e",
+    "ref": "5-b-ii",
+    "ordering": 2,
+    "text": "M1 positive sodium ions/cations/Na+ (ions) are attracted(to the negative electrode)M2 where they gain electrons OR where they are reduced",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386997+00:00"
+   },
+   {
+    "id": "7f396582-6162-4382-a608-2ff093aa35d3",
+    "mark_scheme_id": "4109dfb2-f566-4521-88ca-d9fe1b47765a",
+    "question_part_id": "44f24b17-fd22-4dc5-bcd4-ef0104245397",
+    "ref": "5-b-iii",
+    "ordering": 3,
+    "text": "2Cl-\u2192Cl2+2e-",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387066+00:00"
+   },
+   {
+    "id": "0ce28067-6446-405a-85be-ec2b063cc6ee",
+    "mark_scheme_id": "4109dfb2-f566-4521-88ca-d9fe1b47765a",
+    "question_part_id": "2d1719c0-22b0-4e32-84cf-8f1e3b4b697f",
+    "ref": "5-b-iv",
+    "ordering": 4,
+    "text": "sodium is more reactive(than hydrogen)/higher in the reactivity series(than hydrogen)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387142+00:00"
+   },
+   {
+    "id": "7a892352-5ec5-4304-9fb3-c9f5c52e21e1",
+    "mark_scheme_id": "4109dfb2-f566-4521-88ca-d9fe1b47765a",
+    "question_part_id": "0781e104-e419-484f-a6be-e897d9fe3cbb",
+    "ref": "5-c",
+    "ordering": 5,
+    "text": "M1 mass of copper=3.81g and mass of oxygen=0.96gM2 moles of copper=0.06 and moles of oxygen=0.06M3 ratio=1:1\nTotal for question=11",
+    "marks": 3,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387215+00:00"
+   },
+   {
+    "id": "471768e4-73f4-4746-a0ae-cb7809113eb1",
+    "mark_scheme_id": "4109dfb2-f566-4521-88ca-d9fe1b47765a",
+    "question_part_id": "64d313ed-49ae-4c7a-bbe4-8a0541311181",
+    "ref": "5-b",
+    "ordering": 6,
+    "text": "M1 the forwards and the reverse reactions occur at the same rate\nTotal for question=13",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387288+00:00"
+   },
+   {
+    "id": "4d640ce6-d50c-4451-9cd5-88811d4e1df2",
+    "mark_scheme_id": "3bd8222c-48e5-4bd8-9e39-3468fe0117a4",
+    "question_part_id": null,
+    "ref": "4-a-i",
+    "ordering": 0,
+    "text": "M1 crude oil is heated/vapourised",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386607+00:00"
+   },
+   {
+    "id": "478f83b1-b2aa-4b54-929d-d3b77fd2bd7f",
+    "mark_scheme_id": "3bd8222c-48e5-4bd8-9e39-3468fe0117a4",
+    "question_part_id": "c56f89b8-4892-4704-b42d-a6eb78bb289a",
+    "ref": "4-b-i",
+    "ordering": 1,
+    "text": "M1 breaking down long-chain hydrocarbons/long-chain molecules/long-chain alkanes",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386679+00:00"
+   },
+   {
+    "id": "50d3948a-bcbb-4fd9-a780-2ecbc87cb25d",
+    "mark_scheme_id": "3bd8222c-48e5-4bd8-9e39-3468fe0117a4",
+    "question_part_id": "6757f331-c57f-458f-b524-3f58fa34746d",
+    "ref": "4-b-iii",
+    "ordering": 2,
+    "text": "M1 add bromine water\nM2 which decolourises/turns colourless\nTotal for question=13",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.386753+00:00"
+   },
+   {
+    "id": "dde0b038-b1c7-475d-8732-c6d3e6bfc2c8",
+    "mark_scheme_id": "2952e4b2-5605-46b1-a4a1-5e5316264af0",
+    "question_part_id": "6a640492-29de-449a-94a1-c3bfeb76137e",
+    "ref": "7-a",
+    "ordering": 0,
+    "text": "M1 two electrons between nitrogen and each of the four hydrogen atoms",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387383+00:00"
+   },
+   {
+    "id": "165efc70-e4e8-4dbe-ab96-7f7014c9ae23",
+    "mark_scheme_id": "2952e4b2-5605-46b1-a4a1-5e5316264af0",
+    "question_part_id": "bb539ba3-27ce-449c-9a93-147d46ff19f8",
+    "ref": "7-b-i",
+    "ordering": 1,
+    "text": "M1(3\u00d7158)+(12\u00d7391)",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387462+00:00"
+   },
+   {
+    "id": "2bea7f61-9414-4cff-92e0-6862f3a162fa",
+    "mark_scheme_id": "2952e4b2-5605-46b1-a4a1-5e5316264af0",
+    "question_part_id": "ac076d48-61b7-4357-98c9-db0cf4d17750",
+    "ref": "7-b-iii",
+    "ordering": 2,
+    "text": "-471(kJ/mol)",
+    "marks": 1,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387537+00:00"
+   },
+   {
+    "id": "6f42915f-f40c-4801-9467-4ba913f402b7",
+    "mark_scheme_id": "2952e4b2-5605-46b1-a4a1-5e5316264af0",
+    "question_part_id": "e2960578-1c0f-4918-85b6-612481f578cf",
+    "ref": "7-b-iv",
+    "ordering": 3,
+    "text": "An explanation that links together the following two points:M1 bond breaking requires energy/is endothermic,bond formation releases energy/is exothermicM2 more energy released than taken in/making bonds involves more energy than breaking bonds",
+    "marks": 2,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387609+00:00"
+   },
+   {
+    "id": "bf34b781-29e2-4bcf-9f20-341ea65b4360",
+    "mark_scheme_id": "2952e4b2-5605-46b1-a4a1-5e5316264af0",
+    "question_part_id": "3ad6c4db-562d-485b-97f4-f1eda74e01b8",
+    "ref": "7-c",
+    "ordering": 4,
+    "text": "M1amount of nitrogen gas=1570\u00f724000OR0.06542(mol)\nTotal for question=13",
+    "marks": 4,
+    "acceptance_criteria": [],
+    "extraction_confidence": 0.75,
+    "created_at": "2026-09-14 12:08:36.387682+00:00"
+   }
+  ],
+  "question_topics": [],
+  "question_spec_points": [],
+  "question_options": [],
+  "glm_ocr_bridge_records": [
+   {
+    "id": "50ac58e9-503c-45dc-8d6e-d7cb76ed190d",
+    "paper_id": "4f8ab80f-f435-4747-9511-6f30bf91d1fa",
+    "bridge": "glm-ocr-v1",
+    "qp_document_id": "a414eddc-3912-599a-85b7-3cc4458a3102",
+    "ms_document_id": "41191e53-9272-5a9d-b044-3086f010a5f3",
+    "qp_document_row_id": "f00c40ac-8bf3-421a-95f7-5c29932a092f",
+    "ms_document_row_id": "1f71a0e0-1e64-432d-9c29-904a409261dc",
+    "qp_checksum": "914d583101f8909911651f8f07571ed489f1cec67d62c328dc0eb37aa9becc65",
+    "ms_checksum": "2f480d71ce7d62d19789db0ab6a08fe3c7cadf0fc71584729f99b1fb6749bc77",
+    "extraction_methods": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+    "reconciliation_status": "OK",
+    "review_findings": [
+     {
+      "detail": "Q1: QP total 7 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 7,
+      "severity": "qp-only",
+      "questionNumber": "1"
+     },
+     {
+      "detail": "Q2: QP total 5 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 5,
+      "severity": "qp-only",
+      "questionNumber": "2"
+     },
+     {
+      "detail": "Q4: QP total 13 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 13,
+      "severity": "qp-only",
+      "questionNumber": "4"
+     },
+     {
+      "detail": "Q6: QP total 13 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 13,
+      "severity": "qp-only",
+      "questionNumber": "6"
+     },
+     {
+      "detail": "Q7: QP total 13 vs MS total unknown (qp-only)",
+      "source": "RECONCILIATION",
+      "msMarks": null,
+      "qpMarks": 13,
+      "severity": "qp-only",
+      "questionNumber": "7"
+     },
+     {
+      "detail": "Q2: incomplete MCQ option set folded into stem",
+      "source": "QP_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "1(a): bare integer cell \"4\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "1(a): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "2(b)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "4(a)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "4(b)(i): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: 6(a)(i)(ii)(iii)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: M2 rest of the molecule correct",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "orphan row before first entry: ethyl ethanoate",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "5(b): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "5(b): bare integer cell \"6\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     },
+     {
+      "detail": "7(b)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "source": "MS_WARNING",
+      "msMarks": null,
+      "qpMarks": null,
+      "severity": "warning",
+      "questionNumber": null
+     }
+    ],
+    "qp_draft": {
+     "paper": {
+      "board": "Edexcel",
+      "session": null,
+      "subject": null,
+      "duration": null,
+      "examDate": null,
+      "logNumber": null,
+      "qualification": null,
+      "paperReference": "4CH1/2C",
+      "publicationCode": null,
+      "canonicalDocumentId": "a414eddc-3912-599a-85b7-3cc4458a3102"
+     },
+     "warnings": [
+      "Q2: incomplete MCQ option set folded into stem"
+     ],
+     "questions": [
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "(a) The diagram shows the electronic configuration of an atom of an element. Complete the table by giving the missing information.",
+       "marks": 7,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "The table gives information about four different species, W, X, Y and Z.",
+         "label": "b",
+         "marks": null,
+         "partId": "q01-a414eddc-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the mass number of W.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q01-a414eddc-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give a reason why X has a 3+ charge.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q01-a414eddc-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain why Y and Z are isotopes of the same element.",
+         "label": "b-iii",
+         "marks": null,
+         "partId": "q01-a414eddc-pb-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 1,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064303708.png",
+         "width": 620,
+         "format": "png",
+         "height": 506,
+         "sha256": "ec452701ab2c352513c03c12e5106da6a4cd4e8fb55a609ea460a4741ba4a463",
+         "assetId": "img:ec452701ab2c352513c03c12e5106da6a4cd4e8fb55a609ea460a4741ba4a463",
+         "mimeType": "image/jpeg",
+         "elementId": "e000025",
+         "sourceName": "assets/crop_1_1789064303708.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q01-a414eddc",
+       "answerPrompts": [
+        "(3)"
+       ],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000028",
+        "e000030"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "The table shows properties of four substances, A, B, C and D. A 800 1465 no yes B 327 1749 yes yes C 232 573 no no D 3550 4830 no no",
+       "marks": 5,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Use information from the table to identify these substances.",
+         "label": "a",
+         "marks": null,
+         "partId": "q02-a414eddc-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Which substance could be a metal? A B C D",
+         "label": "a-i",
+         "marks": null,
+         "partId": "q02-a414eddc-pa-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Which substance could be diamond? A B C D",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q02-a414eddc-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Which substance is a gas at 600 $ ^{\\circ} \\mathrm{C}? $ A B C D",
+         "label": "a-iii",
+         "marks": null,
+         "partId": "q02-a414eddc-pa-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "One of the substances in the table is a compound with the formula $ \\mathrm{C_{10}H_{16}N_{2}O_{3}S} $",
+         "label": "b",
+         "marks": null,
+         "partId": "q02-a414eddc-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the number of different elements in $ C_{1 0} H_{1 6} N_{2} O_{3} S $",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q02-a414eddc-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Determine the number of atoms in a molecule of $ C_{1 0} H_{1 6} N_{2} O_{3} S $",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q02-a414eddc-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 2,
+       "figures": [],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q02-a414eddc",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000036"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about soluble salts and insoluble salts.",
+       "marks": 0,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Which pair of solutions produces an insoluble salt when mixed? A sodium sulfate and potassium nitrate B potassium carbonate and calcium nitrate C sodium chloride and ammonium nitrate D sodium hydroxide and potassium sulfate",
+         "label": "a",
+         "marks": null,
+         "partId": "q03-a414eddc-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "When solutions of lead nitrate and sodium sulfate are mixed, one product is solid lead sulfate. This is the equation for the reaction. $\\mathrm {P b} \\left(\\mathrm {N O} _ {3}\\right) _ {2} (\\mathrm {a q}) + \\mathrm {N a} _ {2} \\mathrm {S O} _ {4} (\\mathrm {a q}) \\rightarrow \\mathrm {P b S O} _ {4} (\\mathrm {s}) + 2 \\mathrm {N a N O} _ {3} (\\mathrm {a q})$ Describe how a pure, dry sample of solid lead sulfate can be obtained from the mixture.",
+         "label": "b",
+         "marks": null,
+         "partId": "q03-a414eddc-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The table gives the solubility of a salt in water at six different temperatures.",
+         "label": "c",
+         "marks": null,
+         "partId": "q03-a414eddc-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Plot the points on the grid.",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q03-a414eddc-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Draw a curve of best fit.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q03-a414eddc-pc-ii",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064303788.png",
+           "width": 1093,
+           "format": "png",
+           "height": 1674,
+           "sha256": "160c160734df3248428acb4f6ad0c399d5949f38a440c8fa9c9c7012a52091a8",
+           "assetId": "img:160c160734df3248428acb4f6ad0c399d5949f38a440c8fa9c9c7012a52091a8",
+           "mimeType": "image/jpeg",
+           "elementId": "e000072",
+           "sourceName": "assets/crop_1_1789064303788.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A saturated solution of the salt in 100g of water is cooled from $ 9 0^{\\circ} \\mathrm{C} $ to $ 3 0^{\\circ} \\mathrm{C} $ Use your graph to determine the mass of salt that will crystallise. Show your working on the graph.",
+         "label": "c-iii",
+         "marks": null,
+         "partId": "q03-a414eddc-pc-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 3,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064303788.png",
+         "width": 1093,
+         "format": "png",
+         "height": 1674,
+         "sha256": "160c160734df3248428acb4f6ad0c399d5949f38a440c8fa9c9c7012a52091a8",
+         "assetId": "img:160c160734df3248428acb4f6ad0c399d5949f38a440c8fa9c9c7012a52091a8",
+         "mimeType": "image/jpeg",
+         "elementId": "e000072",
+         "sourceName": "assets/crop_1_1789064303788.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.45,
+       "marksKnown": false,
+       "questionId": "q03-a414eddc",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000069"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "Fractional distillation is used to separate crude oil into fractions. The diagram shows a fractionating column and the fractions obtained from crude oil.",
+       "marks": 13,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Describe how crude oil is separated into fractions in the fractionating column.",
+         "label": "a",
+         "marks": null,
+         "partId": "q04-a414eddc-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give a use for kerosene and a use for bitumen. kerosene bitumen",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q04-a414eddc-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Some fractions obtained from crude oil are cracked to form alkenes.",
+         "label": "b",
+         "marks": null,
+         "partId": "q04-a414eddc-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Describe what is meant by cracking.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q04-a414eddc-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Ethene is obtained by cracking. This is the displayed formula of ethene. Explain why ethene is described as an unsaturated hydrocarbon.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q04-a414eddc-pb-ii",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064303823.png",
+           "width": 222,
+           "format": "png",
+           "height": 199,
+           "sha256": "f05ebf2e9f0ec6deacfd36938325252f77a8a8fd0c73c764235f811b6d0caf6e",
+           "assetId": "img:f05ebf2e9f0ec6deacfd36938325252f77a8a8fd0c73c764235f811b6d0caf6e",
+           "mimeType": "image/jpeg",
+           "elementId": "e000084",
+           "sourceName": "assets/crop_1_1789064303823.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Describe a test to show that ethene is unsaturated.",
+         "label": "b-iii",
+         "marks": null,
+         "partId": "q04-a414eddc-pb-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 4,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064303811.png",
+         "width": 1080,
+         "format": "png",
+         "height": 593,
+         "sha256": "52c2e0b50229bc0d328a65757e7dc3291ea635a3d7d4a3197d0ddc59ba66322d",
+         "assetId": "img:52c2e0b50229bc0d328a65757e7dc3291ea635a3d7d4a3197d0ddc59ba66322d",
+         "mimeType": "image/jpeg",
+         "elementId": "e000076",
+         "sourceName": "assets/crop_1_1789064303811.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064303823.png",
+         "width": 222,
+         "format": "png",
+         "height": 199,
+         "sha256": "f05ebf2e9f0ec6deacfd36938325252f77a8a8fd0c73c764235f811b6d0caf6e",
+         "assetId": "img:f05ebf2e9f0ec6deacfd36938325252f77a8a8fd0c73c764235f811b6d0caf6e",
+         "mimeType": "image/jpeg",
+         "elementId": "e000084",
+         "sourceName": "assets/crop_1_1789064303823.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q04-a414eddc",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about metals.",
+       "marks": 0,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Explain why metals are malleable.",
+         "label": "a",
+         "marks": null,
+         "partId": "q05-a414eddc-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Sodium metal is extracted by the electrolysis of molten sodium chloride. Sodium metal forms at the negative electrode and chlorine gas forms at the positive electrode. The diagram represents this electrolysis.",
+         "label": "b",
+         "marks": null,
+         "partId": "q05-a414eddc-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064303841.png",
+           "width": 1368,
+           "format": "png",
+           "height": 516,
+           "sha256": "48579ebec0637b813b964c0ee5143af96ba28269a345dff35047d93650fd3f3e",
+           "assetId": "img:48579ebec0637b813b964c0ee5143af96ba28269a345dff35047d93650fd3f3e",
+           "mimeType": "image/jpeg",
+           "elementId": "e000094",
+           "sourceName": "assets/crop_1_1789064303841.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain why molten sodium chloride conducts electricity.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q05-a414eddc-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain how sodium metal forms at the negative electrode.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q05-a414eddc-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Write an ionic half-equation for the formation of chlorine gas at the positive electrode.",
+         "label": "b-iii",
+         "marks": null,
+         "partId": "q05-a414eddc-pb-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give a reason why sodium metal does not form in the electrolysis of an aqueous solution of sodium chloride.",
+         "label": "b-iv",
+         "marks": null,
+         "partId": "q05-a414eddc-pb-iv",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Copper can be produced by reacting an oxide of copper with methane. The diagram shows the apparatus used. The oxide of copper is heated until the reaction is complete. The table shows the results. Use the results to show that this oxide has the empirical formula CuO [for Cu, $ A_{\\mathrm{r}}=6 3. 5 $ for O, $ A_{\\mathrm{r}}=1 6 $]",
+         "label": "c",
+         "marks": 3,
+         "partId": "q05-a414eddc-pc",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064303862.png",
+           "width": 1416,
+           "format": "png",
+           "height": 494,
+           "sha256": "00528650f3853cfa3e78b159f7f4ab938c4da895739909790871f9f6aff2d0fe",
+           "assetId": "img:00528650f3853cfa3e78b159f7f4ab938c4da895739909790871f9f6aff2d0fe",
+           "mimeType": "image/jpeg",
+           "elementId": "e000101",
+           "sourceName": "assets/crop_1_1789064303862.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_3_1789064303873.png",
+           "width": 121,
+           "format": "png",
+           "height": 38,
+           "sha256": "4f1e1e85433518934038e99941b67cc4411f4f65c7a2eb69ff647eafe753b712",
+           "assetId": "img:4f1e1e85433518934038e99941b67cc4411f4f65c7a2eb69ff647eafe753b712",
+           "mimeType": "image/jpeg",
+           "elementId": "e000107",
+           "sourceName": "assets/crop_3_1789064303873.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.8,
+         "answerPrompts": []
+        }
+       ],
+       "number": 5,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064303841.png",
+         "width": 1368,
+         "format": "png",
+         "height": 516,
+         "sha256": "48579ebec0637b813b964c0ee5143af96ba28269a345dff35047d93650fd3f3e",
+         "assetId": "img:48579ebec0637b813b964c0ee5143af96ba28269a345dff35047d93650fd3f3e",
+         "mimeType": "image/jpeg",
+         "elementId": "e000094",
+         "sourceName": "assets/crop_1_1789064303841.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064303862.png",
+         "width": 1416,
+         "format": "png",
+         "height": 494,
+         "sha256": "00528650f3853cfa3e78b159f7f4ab938c4da895739909790871f9f6aff2d0fe",
+         "assetId": "img:00528650f3853cfa3e78b159f7f4ab938c4da895739909790871f9f6aff2d0fe",
+         "mimeType": "image/jpeg",
+         "elementId": "e000101",
+         "sourceName": "assets/crop_1_1789064303862.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_3_1789064303873.png",
+         "width": 121,
+         "format": "png",
+         "height": 38,
+         "sha256": "4f1e1e85433518934038e99941b67cc4411f4f65c7a2eb69ff647eafe753b712",
+         "assetId": "img:4f1e1e85433518934038e99941b67cc4411f4f65c7a2eb69ff647eafe753b712",
+         "mimeType": "image/jpeg",
+         "elementId": "e000107",
+         "sourceName": "assets/crop_3_1789064303873.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.45,
+       "marksKnown": false,
+       "questionId": "q05-a414eddc",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000104"
+       ]
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "When ethanoic acid reacts with ethanol in the presence of concentrated sulfuric acid, one of the products is ester A. This is the equation for the reaction.",
+       "marks": 13,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "Draw a circle around the functional group in ethanoic acid.",
+         "label": "a",
+         "marks": null,
+         "partId": "q06-a414eddc-pa",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give the displayed formula of ester A.",
+         "label": "a-ii",
+         "marks": null,
+         "partId": "q06-a414eddc-pa-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Name ester A.",
+         "label": "a-iii",
+         "marks": null,
+         "partId": "q06-a414eddc-pa-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "The reaction mixture is kept in a sealed container until dynamic equilibrium is reached. State what is meant by the term dynamic equilibrium.",
+         "label": "b",
+         "marks": null,
+         "partId": "q06-a414eddc-pb",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "During the reaction, the number of moles of ethanoic acid in the reaction mixture decreases, but the number of moles of concentrated sulfuric acid does not change.",
+         "label": "c",
+         "marks": null,
+         "partId": "q06-a414eddc-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Give a reason why the number of moles of concentrated sulfuric acid does not change.",
+         "label": "c-i",
+         "marks": null,
+         "partId": "q06-a414eddc-pc-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A student does a titration to find the accurate volume of sodium hydroxide solution needed for complete neutralisation. The student starts by using a pipette to transfer $ 2 5. 0 \\mathrm{c m}^{3} $ of the reaction mixture to a conical flask. Describe how the student should complete the titration.",
+         "label": "c-ii",
+         "marks": null,
+         "partId": "q06-a414eddc-pc-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 6,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064303892.png",
+         "width": 1182,
+         "format": "png",
+         "height": 318,
+         "sha256": "4d45522a4c583e1a4e0dc1e4b0e2ab38f4b9ebee6a7178db7eb87070adf0aae1",
+         "assetId": "img:4d45522a4c583e1a4e0dc1e4b0e2ab38f4b9ebee6a7178db7eb87070adf0aae1",
+         "mimeType": "image/jpeg",
+         "elementId": "e000111",
+         "sourceName": "assets/crop_1_1789064303892.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q06-a414eddc",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": []
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "stem": "This question is about hydrazine, $ \\mathrm{N}_{2} \\mathrm{H}_{4} $",
+       "marks": 13,
+       "parts": [
+        {
+         "qwc": false,
+         "text": "This is the displayed formula for a molecule of hydrazine. Complete the dot-and-cross diagram for hydrazine.",
+         "label": "a",
+         "marks": null,
+         "partId": "q07-a414eddc-pa",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064303915.png",
+           "width": 223,
+           "format": "png",
+           "height": 195,
+           "sha256": "d9fc485176365538eb631d2368fa873cf1b6bd36ef8ad746ec4ee8027e1c2f4e",
+           "assetId": "img:d9fc485176365538eb631d2368fa873cf1b6bd36ef8ad746ec4ee8027e1c2f4e",
+           "mimeType": "image/jpeg",
+           "elementId": "e000126",
+           "sourceName": "assets/crop_1_1789064303915.png",
+           "availability": "available",
+           "formatMismatch": true
+          },
+          {
+           "url": "assets/crop_2_1789064303919.png",
+           "width": 895,
+           "format": "png",
+           "height": 647,
+           "sha256": "d92d09a08f358711be03a230f4cf9cde6570b402b0dd37f487d1716d97ed333a",
+           "assetId": "img:d92d09a08f358711be03a230f4cf9cde6570b402b0dd37f487d1716d97ed333a",
+           "mimeType": "image/jpeg",
+           "elementId": "e000128",
+           "sourceName": "assets/crop_2_1789064303919.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "This is the equation for the decomposition of hydrazine. $3 \\mathrm {N} _ {2} \\mathrm {H} _ {4} (\\mathrm {g}) \\rightarrow 4 \\mathrm {N H} _ {3} (\\mathrm {g}) + \\mathrm {N} _ {2} (\\mathrm {g})$ The equation can be shown using displayed formulae. The table gives the relevant bond energies.",
+         "label": "b",
+         "marks": null,
+         "partId": "q07-a414eddc-pb",
+         "figures": [
+          {
+           "url": "assets/crop_1_1789064303943.png",
+           "width": 1023,
+           "format": "png",
+           "height": 718,
+           "sha256": "9a9d674bd31ce9fe753b0fea55a17abe47c50fab0e93f0ab50bbe13b88de0dad",
+           "assetId": "img:9a9d674bd31ce9fe753b0fea55a17abe47c50fab0e93f0ab50bbe13b88de0dad",
+           "mimeType": "image/jpeg",
+           "elementId": "e000132",
+           "sourceName": "assets/crop_1_1789064303943.png",
+           "availability": "available",
+           "formatMismatch": true
+          }
+         ],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Use the data in the table to calculate the total energy needed to break all the bonds in the reactants.",
+         "label": "b-i",
+         "marks": null,
+         "partId": "q07-a414eddc-pb-i",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Use the data in the table to calculate the total energy released when all the bonds in the products are made.",
+         "label": "b-ii",
+         "marks": null,
+         "partId": "q07-a414eddc-pb-ii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Calculate the enthalpy change, $ \\Delta H $ , in kJ/mol, for the reaction.",
+         "label": "b-iii",
+         "marks": null,
+         "partId": "q07-a414eddc-pb-iii",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "Explain, in terms of bonds broken and bonds made, why this reaction is exothermic.",
+         "label": "b-iv",
+         "marks": null,
+         "partId": "q07-a414eddc-pb-iv",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        },
+        {
+         "qwc": false,
+         "text": "A sample of hydrazine is completely decomposed. This is the equation for the decomposition of hydrazine. $3 \\mathrm {N} _ {2} \\mathrm {H} _ {4} (\\mathrm {g}) \\rightarrow 4 \\mathrm {N H} _ {3} (\\mathrm {g}) + \\mathrm {N} _ {2} (\\mathrm {g})$ The products of the decomposition are bubbled through $ 1 1 0 0 \\mathrm{c m}^{3} $ of water. The ammonia completely dissolves in the water, but nitrogen is insoluble in water. The nitrogen has a volume of $ 1 5 7 0 \\mathrm{c m}^{3} $ at room temperature and pressure (rtp). Calculate the concentration, in mol/dm $ ^{3} $ , of the ammonia solution. Give your answer to 3 significant figures. [for a gas at rtp,molar volume = 24000 $ cm^{3} $]",
+         "label": "c",
+         "marks": null,
+         "partId": "q07-a414eddc-pc",
+         "figures": [],
+         "confidence": 0.55,
+         "answerPrompts": []
+        }
+       ],
+       "number": 7,
+       "figures": [
+        {
+         "url": "assets/crop_1_1789064303915.png",
+         "width": 223,
+         "format": "png",
+         "height": 195,
+         "sha256": "d9fc485176365538eb631d2368fa873cf1b6bd36ef8ad746ec4ee8027e1c2f4e",
+         "assetId": "img:d9fc485176365538eb631d2368fa873cf1b6bd36ef8ad746ec4ee8027e1c2f4e",
+         "mimeType": "image/jpeg",
+         "elementId": "e000126",
+         "sourceName": "assets/crop_1_1789064303915.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_2_1789064303919.png",
+         "width": 895,
+         "format": "png",
+         "height": 647,
+         "sha256": "d92d09a08f358711be03a230f4cf9cde6570b402b0dd37f487d1716d97ed333a",
+         "assetId": "img:d92d09a08f358711be03a230f4cf9cde6570b402b0dd37f487d1716d97ed333a",
+         "mimeType": "image/jpeg",
+         "elementId": "e000128",
+         "sourceName": "assets/crop_2_1789064303919.png",
+         "availability": "available",
+         "formatMismatch": true
+        },
+        {
+         "url": "assets/crop_1_1789064303943.png",
+         "width": 1023,
+         "format": "png",
+         "height": 718,
+         "sha256": "9a9d674bd31ce9fe753b0fea55a17abe47c50fab0e93f0ab50bbe13b88de0dad",
+         "assetId": "img:9a9d674bd31ce9fe753b0fea55a17abe47c50fab0e93f0ab50bbe13b88de0dad",
+         "mimeType": "image/jpeg",
+         "elementId": "e000132",
+         "sourceName": "assets/crop_1_1789064303943.png",
+         "availability": "available",
+         "formatMismatch": true
+        }
+       ],
+       "options": [],
+       "section": null,
+       "confidence": 0.6,
+       "marksKnown": true,
+       "questionId": "q07-a414eddc",
+       "answerPrompts": [],
+       "numberingStyle": "space",
+       "tableElementIds": [
+        "e000134"
+       ]
+      }
+     ],
+     "paperTotal": 70,
+     "schemaVersion": "1.0",
+     "sectionTotals": {},
+     "questionTotals": {
+      "1": 7,
+      "2": 5,
+      "4": 13,
+      "6": 13,
+      "7": 13
+     },
+     "reviewRequired": true,
+     "extractionMethod": "glm-ocr-qp-v1",
+     "frontMatterFigures": []
+    },
+    "ms_draft": {
+     "paper": {
+      "board": "Edexcel",
+      "session": "January 2023",
+      "subject": null,
+      "duration": null,
+      "examDate": null,
+      "logNumber": "P71894A",
+      "qualification": null,
+      "paperReference": null,
+      "publicationCode": "4CH1_2C_MS_2301",
+      "canonicalDocumentId": "41191e53-9272-5a9d-b044-3086f010a5f3"
+     },
+     "entries": [
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(a)",
+       "marks": 3,
+       "number": 1,
+       "entryId": "ms-41191e53-q1a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "(b)(i)"
+        }
+       ],
+       "answerText": "name of the part of this atom labelled A nucleus\nnumber of the group that contains this element2\nnumber of the period that contains this element3",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "two-level label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(a)(ii)",
+       "marks": 1,
+       "number": 1,
+       "entryId": "ms-41191e53-q1aii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW (the atom which formed species X has) lost three electrons"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE refs to Group 3"
+        }
+       ],
+       "answerText": "(species X has) three more protons than electrons/three fewer electrons than protons",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "1(a)(iii)",
+       "marks": 2,
+       "number": 1,
+       "entryId": "ms-41191e53-q1aiii",
+       "guidance": [
+        {
+         "kind": "ignore",
+         "text": "IGNORE all refs to electrons"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW \u201csame atomic number,different mass number\u201d for(1)mark"
+        }
+       ],
+       "answerText": "M1 same number of protons/both have 17 protons\nM2 different number of neutrons/one has two neutrons more/one has 18 neutrons and the other has 20 neutrons\nTotal for question=7",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(a)(i)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-41191e53-q2ai",
+       "guidance": [],
+       "answerText": "B",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "two-level label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(a)(ii)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-41191e53-q2aii",
+       "guidance": [],
+       "answerText": "A, C and D are not the correct answers as metals conduct electricity when solid",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(a)(iii)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-41191e53-q2aiii",
+       "guidance": [],
+       "answerText": "A is not the correct answer because diamond will not conduct electricity when moltenB is not the correct answer because diamond will not conduct electricity when solid or moltenC is not the correct answer because diamond has a much higher melting and boiling point",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(b)(i)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-41191e53-q2bi",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "(b)(i)"
+        },
+        {
+         "kind": "note",
+         "text": "(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "5/five"
+        }
+       ],
+       "answerText": "A is not the correct answer as A is a solid at 600\u2103B is not the correct answer as B is a liquid at 600\u2103D is not the correct answer as D is a solid at 600\u2103",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "2(b)(ii)",
+       "marks": 1,
+       "number": 2,
+       "entryId": "ms-41191e53-q2bii",
+       "guidance": [],
+       "answerText": "32/thirty two\nTotal for question=5",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(a)",
+       "marks": 1,
+       "number": 3,
+       "entryId": "ms-41191e53-q3a",
+       "guidance": [],
+       "answerText": "B\nA is not correct because mixing sodium sulfate and potassium nitrate does not produce an insoluble salt.\nC is not correct because mixing sodium chloride and ammonium nitrate does not produce an insoluble salt.\nD is not correct because mixing sodium hydroxide and potassium sulfate does not produce an insoluble salt.",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(b)",
+       "marks": 3,
+       "number": 3,
+       "entryId": "ms-41191e53-q3b",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "If the method starts with crystallisation then, max (2)"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW leave on a windowsill / dry using filter paper / dry in a (warm / drying) oven"
+        },
+        {
+         "kind": "note",
+         "text": "If the reaction mixture is just heated to dryness, score M3 only"
+        }
+       ],
+       "answerText": "M1 filter (the solid lead sulfate)\nM2 wash / rinse (with deionised / distilled water)\nM3 leave (in a warm place) to dry",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(c)(i)",
+       "marks": 1,
+       "number": 3,
+       "entryId": "ms-41191e53-q3ci",
+       "guidance": [],
+       "answerText": "6 points plotted \u00b1 half a square",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(c)(ii)",
+       "marks": 1,
+       "number": 3,
+       "entryId": "ms-41191e53-q3cii",
+       "guidance": [],
+       "answerText": "smooth curve of best fit through, or within a square, of all points",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "3(c)(iii)",
+       "marks": 2,
+       "number": 3,
+       "entryId": "ms-41191e53-q3ciii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW any evidence of temperatures marked on graph eg dots / lines"
+        },
+        {
+         "kind": "note",
+         "text": "Expected answer of 74-82 scores 2 provided some working is shown on graph"
+        },
+        {
+         "kind": "note",
+         "text": "If no working shown, score M2 only"
+        },
+        {
+         "kind": "note",
+         "text": "Mark ECF on (ii), even if a straight line is drawn"
+        }
+       ],
+       "answerText": "M1 working shown on graph\nM2 solubility at 90\u2103-solubility at 30\u2103\nTotal for question = 8",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(a)(i)",
+       "marks": 4,
+       "number": 4,
+       "entryId": "ms-41191e53-q4ai",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW boiled"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT burned"
+        },
+        {
+         "kind": "note",
+         "text": "M2 vapours/gases/compounds/hydrocarbons rise up the column"
+        },
+        {
+         "kind": "note",
+         "text": "M3 the column is hotter at the bottom than the top"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW temperature gradient of the column"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW different temperatures at each level"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW fractions with lowest boiling point rise to the top"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE refs to gradient in density of molecules"
+        },
+        {
+         "kind": "note",
+         "text": "M4 vapours/compounds/hydrocarbons condense at their boiling point"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW vapours/compounds/hydrocarbons/condense at different heights"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW the vapours/compounds/hydrocarbons/fractions have different boiling points"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE melting point"
+        },
+        {
+         "kind": "note",
+         "text": "kerosene=aeroplane fuel/fuel for heating"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW fuel for lamps/fuel for cooking"
+        },
+        {
+         "kind": "note",
+         "text": "bitumen=road tar/tarmac/(waterproofing) roofs"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW road surfacing/road making"
+        }
+       ],
+       "answerText": "M1 crude oil is heated/vapourised",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(b)(i)",
+       "marks": 2,
+       "number": 4,
+       "entryId": "ms-41191e53-q4bi",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "REJECT polymers"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE refs to separation"
+        },
+        {
+         "kind": "note",
+         "text": "M2 to form shorter chains(of alkanes/alkenes/hydrocarbons)"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW to break(C-C) bonds"
+        },
+        {
+         "kind": "note",
+         "text": "M1(ethene is unsaturated because it has a) double(C=C) bond"
+        },
+        {
+         "kind": "note",
+         "text": "M2(ethene is a hydrocarbon as it contains) hydrogen and carbon(atoms)"
+        },
+        {
+         "kind": "note",
+         "text": "M3 only"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT carbon and hydrogen molecules"
+        },
+        {
+         "kind": "note",
+         "text": "M3 dep on mention of carbon and hydrogen in M2"
+        }
+       ],
+       "answerText": "M1 breaking down long-chain hydrocarbons/long-chain molecules/long-chain alkanes",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "4(b)(iii)",
+       "marks": 2,
+       "number": 4,
+       "entryId": "ms-41191e53-q4biii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW bromine solution"
+        },
+        {
+         "kind": "note",
+         "text": "NOT just\u2018bromine\u2019"
+        },
+        {
+         "kind": "note",
+         "text": "M2 dep on mention of bromine in M1"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE starting colour of bromine"
+        },
+        {
+         "kind": "ignore",
+         "text": "IGNORE clear"
+        },
+        {
+         "kind": "note",
+         "text": "NOT just\u2018changes colour\u2019"
+        },
+        {
+         "kind": "note",
+         "text": "If reaction takes place in presence of uv, then score M1 only"
+        }
+       ],
+       "answerText": "M1 add bromine water\nM2 which decolourises/turns colourless\nTotal for question=13",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(a)",
+       "marks": 2,
+       "number": 5,
+       "entryId": "ms-41191e53-q5a",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "REJECT moleculesIGNORE refs to electrons"
+        }
+       ],
+       "answerText": "M1 layers/rows of atoms/(positive) ionsM2 can slide over one another",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)(i)",
+       "marks": 2,
+       "number": 5,
+       "entryId": "ms-41191e53-q5bi",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "REJECT electronsM2 dep on ions in M1"
+        }
+       ],
+       "answerText": "M1 ionsM2 can move",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)(ii)",
+       "marks": 2,
+       "number": 5,
+       "entryId": "ms-41191e53-q5bii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW moveREJECT atoms/metalALLOW balanced ionic equation(Na++e\\rightarrow Na)"
+        }
+       ],
+       "answerText": "M1 positive sodium ions/cations/Na+ (ions) are attracted(to the negative electrode)M2 where they gain electrons OR where they are reduced",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)(iii)",
+       "marks": 1,
+       "number": 5,
+       "entryId": "ms-41191e53-q5biii",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW2Cl--2e-\u2192Cl2"
+        }
+       ],
+       "answerText": "2Cl-\u2192Cl2+2e-",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)(iv)",
+       "marks": 1,
+       "number": 5,
+       "entryId": "ms-41191e53-q5biv",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW(in aqueous solution) hydrogen ions are discharged/hydrogen is produced"
+        }
+       ],
+       "answerText": "sodium is more reactive(than hydrogen)/higher in the reactivity series(than hydrogen)",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(c)",
+       "marks": 3,
+       "number": 5,
+       "entryId": "ms-41191e53-q5c",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2 allow ECF from M1but only ifArfor copper and oxygen are usedM3 dep on M1 and M2but must be1:1 ratioIFAris divided by mass,then M1 only scores"
+        }
+       ],
+       "answerText": "M1 mass of copper=3.81g and mass of oxygen=0.96gM2 moles of copper=0.06 and moles of oxygen=0.06M3 ratio=1:1\nTotal for question=11",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "5(b)",
+       "marks": 2,
+       "number": 5,
+       "entryId": "ms-41191e53-q5b",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2 the concentrations of reactants and products remain constant"
+        },
+        {
+         "kind": "note",
+         "text": "REJECT concentrations of reactants and products are the same ALLOW amounts"
+        },
+        {
+         "kind": "note",
+         "text": "(c)(i)(ii)"
+        },
+        {
+         "kind": "note",
+         "text": "(concentrated)sulfuric acid/it is a catalyst"
+        },
+        {
+         "kind": "note",
+         "text": "Any 6 of the following:"
+        },
+        {
+         "kind": "note",
+         "text": "M1 rinse the burette with sodium hydroxide"
+        },
+        {
+         "kind": "note",
+         "text": "M2 fill the burette with sodium hydroxide"
+        },
+        {
+         "kind": "note",
+         "text": "M3 make sure that the jet/space between tap and tip contains liquid"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW no bubbles in the burette"
+        },
+        {
+         "kind": "note",
+         "text": "M4 add(a few drops) of indicator(to the conical flask)"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW any named indicator except universal indicator"
+        },
+        {
+         "kind": "note",
+         "text": "M5 add(sodium hydroxide)from the burette until the indicator changes colour(permanently)"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPTany stated colour change"
+        },
+        {
+         "kind": "note",
+         "text": "M6 swirl the conical flask"
+        },
+        {
+         "kind": "note",
+         "text": "ACCEPT shake"
+        },
+        {
+         "kind": "note",
+         "text": "M7 add(sodium hydroxide)dropwise close to the endpoint"
+        },
+        {
+         "kind": "note",
+         "text": "M8 record initial and final volume on burette"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW record volume of solution added"
+        },
+        {
+         "kind": "note",
+         "text": "M9 repeat until concordant results"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW repeat until two results are $\\pm$0.2cm3"
+        }
+       ],
+       "answerText": "M1 the forwards and the reverse reactions occur at the same rate\nTotal for question=13",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "table-start continuation row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(a)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-41191e53-q7a",
+       "guidance": [
+        {
+         "kind": "allow",
+         "text": "ALLOW any symbols used for electrons"
+        },
+        {
+         "kind": "note",
+         "text": "M2 two electrons between the two nitrogen atoms, and a non-bonding pair on each nitrogen"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOW each non-bonding pair shown as two separate electrons"
+        }
+       ],
+       "answerText": "M1 two electrons between nitrogen and each of the four hydrogen atoms",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(b)(i)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-41191e53-q7bi",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M25166kJ"
+        },
+        {
+         "kind": "note",
+         "text": "5166kJ without working scores2IGNORE sign of final answer"
+        },
+        {
+         "kind": "note",
+         "text": "M1(12\u00d7391)+945"
+        },
+        {
+         "kind": "note",
+         "text": "M25637kJ"
+        },
+        {
+         "kind": "note",
+         "text": "5637kJ without working scores2IGNORE sign of final answer"
+        }
+       ],
+       "answerText": "M1(3\u00d7158)+(12\u00d7391)",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(b)(iii)",
+       "marks": 1,
+       "number": 7,
+       "entryId": "ms-41191e53-q7biii",
+       "guidance": [
+        {
+         "kind": "ecf",
+         "text": "ECF onb(i)&b(ii)If final answer is+ve do not penalise lack of sign"
+        }
+       ],
+       "answerText": "-471(kJ/mol)",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(b)(iv)",
+       "marks": 2,
+       "number": 7,
+       "entryId": "ms-41191e53-q7biv",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "\u201cbonds\u201d only needs mentioning once\u201cmore energy is given out when bonds are made than is taken in when bonds are broken\u201d scores(2)"
+        }
+       ],
+       "answerText": "An explanation that links together the following two points:M1 bond breaking requires energy/is endothermic,bond formation releases energy/is exothermicM2 more energy released than taken in/making bonds involves more energy than breaking bonds",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      },
+      {
+       "mcq": false,
+       "qwc": false,
+       "label": "7(c)",
+       "marks": 4,
+       "number": 7,
+       "entryId": "ms-41191e53-q7c",
+       "guidance": [
+        {
+         "kind": "note",
+         "text": "M2amount of ammonia=0.0654\u00d74OR0.2617(mol)"
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWM1\u00d74"
+        },
+        {
+         "kind": "note",
+         "text": "M3 concentration of ammonia=0.2617\u00f71100x1000=0.237878..."
+        },
+        {
+         "kind": "allow",
+         "text": "ALLOWM3\u00f71.1"
+        },
+        {
+         "kind": "note",
+         "text": "M40.238(mol/dm3)*"
+        },
+        {
+         "kind": "note",
+         "text": "Must be 3 sig figs to scoreM4answer of0.238(mol/dm3) scores4marks with or without working"
+        }
+       ],
+       "answerText": "M1amount of nitrogen gas=1570\u00f724000OR0.06542(mol)\nTotal for question=13",
+       "confidence": 0.75,
+       "markPoints": [],
+       "correctOption": null,
+       "marksCellSource": "continuation label row"
+      }
+     ],
+     "icTable": null,
+     "warnings": [
+      "1(a): bare integer cell \"4\" skipped (rubric/rowspan ambiguity)",
+      "1(a): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "2(b)(i): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "4(a)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)",
+      "4(b)(i): bare integer cell \"3\" skipped (rubric/rowspan ambiguity)",
+      "orphan row before first entry: 6(a)(i)(ii)(iii)",
+      "orphan row before first entry: M2 rest of the molecule correct",
+      "orphan row before first entry: ethyl ethanoate",
+      "5(b): bare integer cell \"1\" skipped (rubric/rowspan ambiguity)",
+      "5(b): bare integer cell \"6\" skipped (rubric/rowspan ambiguity)",
+      "7(b)(i): bare integer cell \"2\" skipped (rubric/rowspan ambiguity)"
+     ],
+     "paperTotal": null,
+     "schemaVersion": "1.0",
+     "questionTotals": {},
+     "reviewRequired": true,
+     "extractionMethod": "glm-ocr-ms-v1"
+    },
+    "reconciliation": {
+     "findings": [
+      {
+       "msMarks": null,
+       "qpMarks": 7,
+       "severity": "qp-only",
+       "questionNumber": "1"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 5,
+       "severity": "qp-only",
+       "questionNumber": "2"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 13,
+       "severity": "qp-only",
+       "questionNumber": "4"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 13,
+       "severity": "qp-only",
+       "questionNumber": "6"
+      },
+      {
+       "msMarks": null,
+       "qpMarks": 13,
+       "severity": "qp-only",
+       "questionNumber": "7"
+      }
+     ],
+     "msPaperTotal": null,
+     "qpPaperTotal": 70,
+     "mismatchCount": 0,
+     "paperTotalConflict": false
+    },
+    "created_by": null,
+    "created_at": "2026-09-14 12:08:36.381173+00:00"
+   }
+  ],
+  "content_review_audit_refs": [],
+  "teacher_validation_event_refs": []
+ }
+}

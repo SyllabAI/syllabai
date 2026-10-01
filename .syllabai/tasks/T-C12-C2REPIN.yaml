@@ -1,0 +1,32 @@
+version: 1
+task:
+  id: T-C12-C2REPIN
+  title: "Clear the C2 physics-control headroom watch-item — comparative
+    re-pin of the c12 negative-test C2 absolute pin before T-C35/T-C11
+    registry growth consumes the remaining 19%"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: ACTIVE
+  priority: P1
+  authority: "operator directive 'C2 physics control headroom' (zai-web,
+    2026-10-02, trace 1a0f8f83eef96001) — direct continuation of the merged
+    T-C12-C3REPAIR (PR #15, merge commit 6c15f652098a)"
+  base:
+    repo: syllabai-resources
+    commit: 6c15f65
+  scope:
+    allowed:
+      - "scripts/c12_negative_test.py — C2 pin re-expression only"
+    forbidden:
+      - "no production semantic changes (WEAK_SCORE=0.3 untouched)"
+      - "no edits to registry/store data (spec_command_kinds.yaml etc.)"
+      - "no edits to the pinned smoke fixtures"
+      - "no weakening of C2's corruption-class catching power (its
+        negative-control must stay RED-as-designed)"
+  acceptance:
+    - "C2 invariant machine-derived at run time from fixture+registry (no
+      new absolute constants); holds on BOTH pre-T-C11 and current registries"
+    - "all other checks unchanged and green (37/37 total on main state)"
+    - "local CI simulation green before push; PR corpus-gates fully green"
+    - "repair-negative: violating the new invariant is still caught"
+  evidence: []
+  merge_status: "no PR yet — diagnosis/implementation in progress"

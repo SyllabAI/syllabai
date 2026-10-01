@@ -1,0 +1,107 @@
+{
+ "started": "2026-09-24T14:11:03Z",
+ "papers": [
+  {
+   "slug": "4ch1-2c-202406",
+   "class": "VERIFIED",
+   "resumed": true,
+   "archived_doc_ids": {
+    "qp": "9ab00b14-acd3-5e58-b31b-9f949bdb3aae",
+    "ms": "1beecbbf-c16e-56f9-923e-37b8b1bf25ad"
+   },
+   "draft": {
+    "questions": 7,
+    "markSchemePoints": 37,
+    "sumMarks": 70,
+    "draftPath": "/home/z/my-project/workspace/g12_bank_archive/4ch1-2c-202406/past-paper-draft.json"
+   },
+   "post_status": 201,
+   "post_body_head": "{'paperId': '9a462279-3c3d-442c-ade4-f8daec1fa304', 'questions': 7, 'parts': 45, 'markPoints': 37, 'validationState': 'SUGGESTED'}",
+   "new_paper": {
+    "id": "9a462279-3c3d-442c-ade4-f8daec1fa304",
+    "state": "SUGGESTED",
+    "questions": 7,
+    "mark_points": 37,
+    "counts_match_draft": true,
+    "extraction_methods": {
+     "pdflane-atoms-draft-v1": 7
+    },
+    "version_states": {
+     "SUGGESTED": 7
+    },
+    "qp_doc": "9ab00b14-acd3-5e58-b31b-9f949bdb3aae",
+    "ms_doc": "1beecbbf-c16e-56f9-923e-37b8b1bf25ad"
+   }
+  },
+  {
+   "slug": "4ch1-2cr-202006",
+   "class": "VERIFIED",
+   "exam_paper_id": "a09c8a70-1581-42a4-97e3-54171c319ee5",
+   "old_state": "SUGGESTED",
+   "prestate": {
+    "attempts": 0,
+    "smart_mark_results": 0,
+    "smart_mark_agreement_evaluations": 0,
+    "validated_versions": 0
+   },
+   "prestate_counts": {
+    "exam_papers": 1,
+    "questions": 7,
+    "question_versions": 7,
+    "question_parts": 29,
+    "mark_schemes": 7,
+    "mark_points": 15,
+    "question_options": 0,
+    "question_spec_points": 0,
+    "question_topics": 0,
+    "glm_ocr_bridge_records": 1
+   },
+   "poststate_counts": {
+    "exam_papers": 0,
+    "questions": 0,
+    "question_versions": 0,
+    "question_parts": 0,
+    "mark_schemes": 0,
+    "mark_points": 0,
+    "question_options": 0,
+    "question_spec_points": 0,
+    "question_topics": 0,
+    "glm_ocr_bridge_records": 0
+   },
+   "draft": {
+    "questions": 7,
+    "markSchemePoints": 36,
+    "sumMarks": 70,
+    "draftPath": "/home/z/my-project/workspace/g12_bank_archive/4ch1-2cr-202006/past-paper-draft.json"
+   },
+   "post_status": 201,
+   "post_body_head": "{'paperId': 'd3d7e0f2-fd08-48c6-a02f-e94da725d441', 'questions': 7, 'parts': 45, 'markPoints': 36, 'validationState': 'SUGGESTED'}",
+   "new_paper": {
+    "id": "d3d7e0f2-fd08-48c6-a02f-e94da725d441",
+    "state": "SUGGESTED",
+    "questions": 7,
+    "mark_points": 35,
+    "counts_match_draft": true,
+    "extraction_methods": {
+     "pdflane-atoms-draft-v1": 7
+    },
+    "version_states": {
+     "SUGGESTED": 7
+    },
+    "qp_doc": "2ad68057-c1ea-5bd2-b0cd-4a433f7f90ae",
+    "ms_doc": "d110adef-fdae-5bee-a5cf-c9a0e27f33a7"
+   }
+  }
+ ],
+ "bank_before": {
+  "questions": 1447,
+  "mark_points": 4418,
+  "exam_papers": 94
+ },
+ "bank_after": {
+  "questions": 1454,
+  "mark_points": 4466,
+  "exam_papers": 95
+ },
+ "finished": "2026-09-24T14:11:49Z"
+}

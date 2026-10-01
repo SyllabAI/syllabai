@@ -296,6 +296,8 @@ A subject must not accidentally leak:
 
 The API should therefore prefer explicit subject/curriculum identifiers over free-form topic names.
 
+Course identity on the tutor surface follows the same rule from the hub side (ADR-030): core has no course registry, the hub's `content/courses.json` registry maps each course slug to core's syllabus-era `curriculum_versions.code` through an explicit, hub-maintained, nullable `curriculumCode` field (the two code namespaces — Edexcel official `4CH1`/`YCH11` vs syllabus-era `4CH1-2017`/`IAL-CHEM-2018` — have no derivable rule between them, so the mapping is data, never inference). The ask carries the resolved code as an opaque `courseRef`; core fail-closes any code that does not resolve to exactly one surface-owning ACTIVE curriculum, so a course without a mapping is gated honestly rather than served from the wrong corpus.
+
 ## 12. Teacher subject workspaces use the same subject boundary
 
 Teachers are also subject-scoped. A teacher may teach multiple subjects and multiple specifications, but each teacher workspace is entered through an explicit:

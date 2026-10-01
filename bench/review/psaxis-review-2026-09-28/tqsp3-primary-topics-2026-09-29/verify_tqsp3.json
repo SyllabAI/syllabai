@@ -1,0 +1,68 @@
+{
+ "l1_db": {
+  "ing_census": 0,
+  "qt_total": 1106,
+  "qsp_total": 2578,
+  "qt_ing_refs": 0,
+  "primary_row_distribution": {
+   "0": 593,
+   "1": 353
+  },
+  "primary_vs_plan_mismatches": 0,
+  "rowcount_vs_plan_mismatches": 0,
+  "active_bank": 946
+ },
+ "l2_serve": [
+  {
+   "paper": "4ch0/past-papers/2012-01/4CH0-1C",
+   "result": "OK",
+   "questions_rendered": 11,
+   "with_specPoints": 11
+  },
+  {
+   "paper": "4ch0-1c-201801",
+   "result": "OK",
+   "questions_rendered": 16,
+   "with_specPoints": 16
+  },
+  {
+   "paper": "4ch1-1c-202311",
+   "result": "OK",
+   "questions_rendered": 10,
+   "with_specPoints": 10
+  },
+  {
+   "paper": "4ch1/past-papers/2021-01/4CH1-1C",
+   "result": "OK",
+   "questions_rendered": 11,
+   "with_specPoints": 11
+  },
+  {
+   "paper": "4ch1/past-papers/2023-06/4CH1-2CR",
+   "result": "SKIP (no exam_papers row)"
+  },
+  {
+   "paper": "4ch1/past-papers/2025-06/4CH1-2CR",
+   "result": "OK",
+   "questions_rendered": 7,
+   "with_specPoints": 7
+  }
+ ],
+ "l2_ok": true,
+ "l3": {
+  "question": "4ch1/past-papers/2022-01/4CH1-2C#q1",
+  "topic_code": "4CH1-S4-d",
+  "attempt": "5eaa3266-92df-42fa-bfb2-09258f132d39",
+  "marks": "10/7",
+  "evidenceFired": true,
+  "state_has_real_topic": true,
+  "state_has_ing": false,
+  "state_codes": [
+   "4CH1-4.23 (SUBTOPIC)",
+   "4CH1-4.25 (SUBTOPIC)",
+   "4CH1-S4-d (TOPIC)"
+  ],
+  "probe_learner": "tqsp3.probe.vi8bxk4c@example.com"
+ },
+ "l3_ok": true
+}

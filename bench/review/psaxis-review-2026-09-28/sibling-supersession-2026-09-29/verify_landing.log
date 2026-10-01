@@ -1,0 +1,39 @@
+[PASS] papers census == 90V/0F/0S/14R {'REJECTED': 14, 'VALIDATED': 90}
+[PASS] 4ch1-2cr-202001: old paper row gone 
+[PASS] 4ch1-2cr-202001: old questions gone 
+[PASS] 4ch1-2cr-202001: old bridge gone 
+[PASS] 4ch0-2c-201701: old paper row gone 
+[PASS] 4ch0-2c-201701: old questions gone 
+[PASS] 4ch0-2c-201701: old bridge gone 
+[PASS] 4ch1-2cr-202001: exactly 1 paper row 1
+[PASS] 4ch1-2cr-202001: series/year = JAN/2020 ('JAN', 2020)
+[PASS] 4ch1-2cr-202001: VALIDATED + pdflane provenance VALIDATED/pdflane-atoms-draft-v1
+[PASS] 4ch1-2cr-202001: doc pointers = live chunk-ful docs 
+[PASS] 4ch1-2cr-202001: 7 VALIDATED versions 
+[PASS] 4ch1-2cr-202001: 7 VALIDATED schemes 
+[PASS] 4ch1-2cr-202001: questions anchor on ING-4CH12CRJANUARY2020 
+        sample refs: ['4ch1/past-papers/2020-01/4ch1-2CR#q1', '4ch1/past-papers/2020-01/4ch1-2CR#q2']
+[PASS] 4ch1-2cr-202001: 0 attempts on new chain 
+        new paper id: d180d1b6-eafe-4468-af94-f88125da4569
+[PASS] 4ch0-2c-201701: exactly 1 paper row 1
+[PASS] 4ch0-2c-201701: series/year = JAN/2017 ('JAN', 2017)
+[PASS] 4ch0-2c-201701: VALIDATED + pdflane provenance VALIDATED/pdflane-atoms-draft-v1
+[PASS] 4ch0-2c-201701: doc pointers = live chunk-ful docs 
+[PASS] 4ch0-2c-201701: 8 VALIDATED versions 
+[PASS] 4ch0-2c-201701: 8 VALIDATED schemes 
+[PASS] 4ch0-2c-201701: questions anchor on ING-4CH02CJANUARY2017 
+        sample refs: ['4ch0-2c-201701#q1', '4ch0-2c-201701#q2']
+[PASS] 4ch0-2c-201701: 0 attempts on new chain 
+        new paper id: 21041891-11f6-4168-9136-771e666cd8fa
+[PASS] audit rows for trace == 33 (15 + 1 PLACE + 17) 33
+        audit census: {('VALIDATE', 'exam_paper'): 2, ('VALIDATE', 'question_version'): 15, ('VALIDATE', 'mark_scheme'): 15, ('PLACE', 'exam_paper'): 1}
+[PASS] actor label on every row 
+        audit ids 4015..4047 (contiguous: True)
+[PASS] teacher_validation_events == 0 
+        docs census: {'REJECTED': 147, 'SUGGESTED': 305, 'VALIDATED': 567}
+[PASS] serving pool unchanged at 2,935 2935
+        new papers' subjects: [('4CH0CHEMISTRY', 1), ('4CH1CHEMISTRY', 1)]
+[PASS] 4ch1-2cr-202001: live paper view renders 7 questions marks=[6, 6, 7, 9, 13, 14, 15]
+[PASS] 4ch0-2c-201701: live paper view renders 8 questions marks=[5, 5, 6, 7, 8, 8, 8, 13]
+
+VERDICT: ALL GREEN

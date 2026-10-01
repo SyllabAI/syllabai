@@ -1,0 +1,105 @@
+{
+ "trace": "1a0ea3c208e16699",
+ "checks": {
+  "V1_49_REJECTED_rows_retained": {
+   "pass": true,
+   "detail": "[]"
+  },
+  "V2_8_KEEP_untouched_SUGGESTED": {
+   "pass": true,
+   "detail": "[]"
+  },
+  "V3_zero_chunk_S_universe_is_KEEP": {
+   "pass": true,
+   "detail": "8"
+  },
+  "V4_census_doc_567V_305S_147R": {
+   "pass": true,
+   "detail": "{'VALIDATED': 567, 'SUGGESTED': 305, 'REJECTED': 147}"
+  },
+  "V4_census_ep_90V_0S_14R": {
+   "pass": true,
+   "detail": "{'VALIDATED': 90, 'SUGGESTED': 0, 'REJECTED': 14}"
+  },
+  "V4_pool_2935_unchanged": {
+   "pass": true,
+   "detail": "2935"
+  },
+  "V4_events_0": {
+   "pass": true,
+   "detail": ""
+  },
+  "V4_rev1_0": {
+   "pass": true,
+   "detail": ""
+  },
+  "V5_audit_49_ids_3891_3939": {
+   "pass": true,
+   "detail": "[3891, 3939]"
+  },
+  "V5_all_REJECT": {
+   "pass": true,
+   "detail": "verbs"
+  },
+  "V5_actor_label": {
+   "pass": true,
+   "detail": "all"
+  },
+  "V5_trace_on_every_row": {
+   "pass": true,
+   "detail": "trace"
+  },
+  "V5_targets_exactly_retire_set": {
+   "pass": true,
+   "detail": "49"
+  },
+  "L1_all_queries_hit": {
+   "pass": true,
+   "detail": "[{'query': 'electrolysis of molten lead bromide', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'why does the rate of reaction increase with temperature', 'hits': 10, 'models': ['gemini-embedding-001']}, {'query': 'covalent bonding in hydrogen chloride', 'hits': 10, 'models': ['gemini-e"
+  }
+ },
+ "detail": {
+  "rule_mix": {
+   "SUPERSEDED": 37,
+   "OWNER-REJECTED": 12
+  }
+ },
+ "L1_live_probe": [
+  {
+   "query": "electrolysis of molten lead bromide",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "why does the rate of reaction increase with temperature",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "covalent bonding in hydrogen chloride",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "titration calculation with sodium hydroxide",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  },
+  {
+   "query": "halogen displacement reactions",
+   "hits": 10,
+   "models": [
+    "gemini-embedding-001"
+   ]
+  }
+ ],
+ "verdict": "VERIFIED"
+}

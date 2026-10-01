@@ -3,7 +3,7 @@
 Usage: python3 gold_check.py <snapshot_dir> <gold_dir> [--selftest]"""
 import hashlib, json, re, sys
 
-SPEC_RE = re.compile(r"^4CH1-[0-9]+\.[0-9]+[A-Z]?$")
+SPEC_RE = re.compile(r"^4CH1-(PR-[0-9]+|[0-9]+\.[0-9]+[A-Z]?)$")  # v2: + the 12 practicals 4CH1-PR-01..12 (VALIDATED SUBTOPICs in the registry since snap-002; t0 regex predated them — backward-compatible, gold-v1 has no PR codes)
 ALLOWED_SUBSTRATE = {"chunks", "kg", "chunks+kg", "kg+chunks", "notes_mirror", "figures"}
 KNOWN_RULES = {"R1-stem-verbatim", "R2-term-cooccurrence", "R3-paper-cohort", "none-substrate-absent"}
 

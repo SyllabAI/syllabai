@@ -1,0 +1,389 @@
+{
+ "date": "2026-10-01",
+ "floor_sweep": [
+  {
+   "corpus_fraction_above_floor": 1.0,
+   "floor": 0.15,
+   "mean_noise_above_floor": 297.0,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 1.0,
+   "floor": 0.2,
+   "mean_noise_above_floor": 297.0,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 1.0,
+   "floor": 0.25,
+   "mean_noise_above_floor": 297.0,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 1.0,
+   "floor": 0.3,
+   "mean_noise_above_floor": 297.0,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 1.0,
+   "floor": 0.35,
+   "mean_noise_above_floor": 297.0,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 1.0,
+   "floor": 0.4,
+   "mean_noise_above_floor": 297.0,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 0.9997,
+   "floor": 0.45,
+   "mean_noise_above_floor": 296.9,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 0.8987,
+   "floor": 0.5,
+   "mean_noise_above_floor": 266.6,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 0.4293,
+   "floor": 0.55,
+   "mean_noise_above_floor": 125.8,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 0.085,
+   "floor": 0.6,
+   "mean_noise_above_floor": 22.5,
+   "top3_hits_retained": "30/30"
+  },
+  {
+   "corpus_fraction_above_floor": 0.0143,
+   "floor": 0.65,
+   "mean_noise_above_floor": 2.3,
+   "top3_hits_retained": "20/30"
+  },
+  {
+   "corpus_fraction_above_floor": 0.0017,
+   "floor": 0.7,
+   "mean_noise_above_floor": 0.0,
+   "top3_hits_retained": "5/30"
+  }
+ ],
+ "honesty": {
+  "flip_policy": "no constant changed here \u2014 the MIN_COSINE flip is gated on the Run005C re-record (new floors mean re-verified serving)",
+  "space": "frozen CI-transport vectors (single embedContent calls) \u2014 production serves Spring AI batched-transport vectors (CORRECTION.md)",
+  "transfer_caveat": "separation structure transfers; exact cutoffs must be confirmed in production space before any serving change"
+ },
+ "inputs": {
+  "chunks": 300,
+  "evidence": "evidence/bench-001/embed-bridge-v2",
+  "probes": 10,
+  "self_verification": [
+   {
+    "match": true,
+    "probe": "PRB-01",
+    "recomputed_top3": [
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|10",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|11",
+     "bridge|4ch1_past-papers_2021-11_4CH1-2C|QUESTION_PAPER|7"
+    ],
+    "recorded_top3": [
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|10",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|11",
+     "bridge|4ch1_past-papers_2021-11_4CH1-2C|QUESTION_PAPER|7"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-02",
+    "recomputed_top3": [
+     "bridge|4ch1_past-papers_2019-06_4CH1-1CR|QUESTION_PAPER|5",
+     "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|8",
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|10"
+    ],
+    "recorded_top3": [
+     "bridge|4ch1_past-papers_2019-06_4CH1-1CR|QUESTION_PAPER|5",
+     "bridge|4ch1_past-papers_2019-06_4CH1-1CR|MARK_SCHEME|8",
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|10"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-03",
+    "recomputed_top3": [
+     "bridge|4ch0_past-papers_2012-01_4CH0-1C|MARK_SCHEME|2",
+     "bridge|4ch0_past-papers_2014-01_4CH0-2C|QUESTION_PAPER|2",
+     "bridge|4ch0_past-papers_2012-01_4CH0-1C|QUESTION_PAPER|2"
+    ],
+    "recorded_top3": [
+     "bridge|4ch0_past-papers_2012-01_4CH0-1C|MARK_SCHEME|2",
+     "bridge|4ch0_past-papers_2014-01_4CH0-2C|QUESTION_PAPER|2",
+     "bridge|4ch0_past-papers_2012-01_4CH0-1C|QUESTION_PAPER|2"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-04",
+    "recomputed_top3": [
+     "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|1",
+     "bridge|4ch1_past-papers_2024-06_4CH1-2C|QUESTION_PAPER|7",
+     "bridge|4ch0_past-papers_2012-01_4CH0-1C|MARK_SCHEME|7"
+    ],
+    "recorded_top3": [
+     "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|1",
+     "bridge|4ch1_past-papers_2024-06_4CH1-2C|QUESTION_PAPER|7",
+     "bridge|4ch0_past-papers_2012-01_4CH0-1C|MARK_SCHEME|7"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-05",
+    "recomputed_top3": [
+     "bridge|4ch1_past-papers_2024-06_4CH1-1C|QUESTION_PAPER|1",
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|1",
+     "bridge|4ch1_past-papers_2024-06_4CH1-1C|MARK_SCHEME|1"
+    ],
+    "recorded_top3": [
+     "bridge|4ch1_past-papers_2024-06_4CH1-1C|QUESTION_PAPER|1",
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|1",
+     "bridge|4ch1_past-papers_2024-06_4CH1-1C|MARK_SCHEME|1"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-06",
+    "recomputed_top3": [
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|13",
+     "bridge|4ch1_past-papers_2021-11_4CH1-2C|QUESTION_PAPER|9",
+     "bridge|4ch0_past-papers_2012-01_4CH0-1C|QUESTION_PAPER|16"
+    ],
+    "recorded_top3": [
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|13",
+     "bridge|4ch1_past-papers_2021-11_4CH1-2C|QUESTION_PAPER|9",
+     "bridge|4ch0_past-papers_2012-01_4CH0-1C|QUESTION_PAPER|16"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-07",
+    "recomputed_top3": [
+     "bridge|4ch1_past-papers_2024-06_4CH1-2C|MARK_SCHEME|7",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|4",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|11"
+    ],
+    "recorded_top3": [
+     "bridge|4ch1_past-papers_2024-06_4CH1-2C|MARK_SCHEME|7",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|4",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|11"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-08",
+    "recomputed_top3": [
+     "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|2",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|1",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|1"
+    ],
+    "recorded_top3": [
+     "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|2",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|QUESTION_PAPER|1",
+     "bridge|4ch0_past-papers_2011-06_4CH0-1C|MARK_SCHEME|1"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-09",
+    "recomputed_top3": [
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|2",
+     "bridge|4ch1_past-papers_2024-06_4CH1-2CR|QUESTION_PAPER|9",
+     "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|5"
+    ],
+    "recorded_top3": [
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|2",
+     "bridge|4ch1_past-papers_2024-06_4CH1-2CR|QUESTION_PAPER|9",
+     "bridge|4ch1_past-papers_2024-06_4CH1-1CR|QUESTION_PAPER|5"
+    ]
+   },
+   {
+    "match": true,
+    "probe": "PRB-10",
+    "recomputed_top3": [
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|13",
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|MARK_SCHEME|16",
+     "bridge|4ch1_past-papers_2024-06_4CH1-1C|QUESTION_PAPER|5"
+    ],
+    "recorded_top3": [
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|QUESTION_PAPER|13",
+     "bridge|4ch0_past-papers_2012-06_4CH0-1C|MARK_SCHEME|16",
+     "bridge|4ch1_past-papers_2024-06_4CH1-1C|QUESTION_PAPER|5"
+    ]
+   }
+  ]
+ },
+ "per_probe": {
+  "PRB-01": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.69,
+    0.6824,
+    0.6475
+   ],
+   "hit_cos_min": 0.6475,
+   "max_recorded_minus_recomputed": 3.4e-05,
+   "nonhit_max": 0.6322,
+   "nonhit_mean": 0.5309,
+   "nonhit_p95": 0.5919,
+   "query": "explain what happens during the electrolysis of aluminium oxide"
+  },
+  "PRB-02": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.6517,
+    0.6452,
+    0.6194
+   ],
+   "hit_cos_min": 0.6194,
+   "max_recorded_minus_recomputed": 3.9e-05,
+   "nonhit_max": 0.6189,
+   "nonhit_mean": 0.5222,
+   "nonhit_p95": 0.5904,
+   "query": "why does the rate of reaction increase when the temperature is higher"
+  },
+  "PRB-03": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.7307,
+    0.7143,
+    0.7043
+   ],
+   "hit_cos_min": 0.7043,
+   "max_recorded_minus_recomputed": 5e-06,
+   "nonhit_max": 0.6978,
+   "nonhit_mean": 0.5796,
+   "nonhit_p95": 0.6412,
+   "query": "how do you test for chloride ions in a solution"
+  },
+  "PRB-04": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.6549,
+    0.6404,
+    0.6369
+   ],
+   "hit_cos_min": 0.6369,
+   "max_recorded_minus_recomputed": 2.7e-05,
+   "nonhit_max": 0.6311,
+   "nonhit_mean": 0.5475,
+   "nonhit_p95": 0.6047,
+   "query": "describe the covalent bonding in a methane molecule"
+  },
+  "PRB-05": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.6742,
+    0.6644,
+    0.661
+   ],
+   "hit_cos_min": 0.661,
+   "max_recorded_minus_recomputed": 3.4e-05,
+   "nonhit_max": 0.6575,
+   "nonhit_mean": 0.5201,
+   "nonhit_p95": 0.5777,
+   "query": "what is the order of the reactivity series of metals"
+  },
+  "PRB-06": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.6592,
+    0.6386,
+    0.6371
+   ],
+   "hit_cos_min": 0.6371,
+   "max_recorded_minus_recomputed": 3.8e-05,
+   "nonhit_max": 0.6366,
+   "nonhit_mean": 0.5505,
+   "nonhit_p95": 0.6054,
+   "query": "how do you calculate the concentration of a solution in a titration"
+  },
+  "PRB-07": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.6829,
+    0.6818,
+    0.677
+   ],
+   "hit_cos_min": 0.677,
+   "max_recorded_minus_recomputed": 5e-05,
+   "nonhit_max": 0.6751,
+   "nonhit_mean": 0.5699,
+   "nonhit_p95": 0.6246,
+   "query": "what is produced at the negative electrode during electrolysis of a molten ionic compound"
+  },
+  "PRB-08": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.668,
+    0.6653,
+    0.6561
+   ],
+   "hit_cos_min": 0.6561,
+   "max_recorded_minus_recomputed": 3.9e-05,
+   "nonhit_max": 0.6104,
+   "nonhit_mean": 0.5411,
+   "nonhit_p95": 0.5802,
+   "query": "explain the difference between a mixture and a compound"
+  },
+  "PRB-09": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.6151,
+    0.614,
+    0.6069
+   ],
+   "hit_cos_min": 0.6069,
+   "max_recorded_minus_recomputed": 4.6e-05,
+   "nonhit_max": 0.6051,
+   "nonhit_mean": 0.5201,
+   "nonhit_p95": 0.5796,
+   "query": "what is an exothermic reaction and what happens to the energy"
+  },
+  "PRB-10": {
+   "above_0.15": 1.0,
+   "hit_cos_all": [
+    0.7153,
+    0.705,
+    0.6809
+   ],
+   "hit_cos_min": 0.6809,
+   "max_recorded_minus_recomputed": 4.2e-05,
+   "nonhit_max": 0.6795,
+   "nonhit_mean": 0.5697,
+   "nonhit_p95": 0.6205,
+   "query": "describe a flame test for identifying metal ions"
+  }
+ },
+ "recommendation": {
+  "alt_aggressive": 0.55,
+  "alt_note": "0.55 still retains 30/30 probe hits in artifact space but sits ~0.0002 above the worst production-transferred hit \u2014 reject unless the re-record and production probe both agree",
+  "flip_gate": "MIN_COSINE constant change lands ONLY together with the Run005C re-record (new floors mean re-verified serving) + the production probe SQL below",
+  "floor": 0.5,
+  "rule": "min hit cosine (0.6069) minus observed artifact\u2192DB downshift (-0.024) = 0.5829, rounded DOWN to the 0.05 grid, minus one grid step (0.05) as explicit transfer-safety margin"
+ },
+ "summary": {
+  "artifact_vs_db_mean_cosine": 0.9083359837532043,
+  "current_floor": 0.15,
+  "paired_fetch_min_cos_artifact": 0.6875,
+  "paired_fetch_min_cos_db": 0.6309,
+  "probe_hit_min_cos_artifact": 0.6069,
+  "probe_nonhit_max": 0.6978,
+  "probe_nonhit_p95_max": 0.6412
+ },
+ "task": "T-C40 \u2463",
+ "tool": "bench/cosine_calibration.py"
+}

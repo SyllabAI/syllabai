@@ -1,0 +1,55 @@
+{
+  "SMART_MARKED": {
+    "http": 500
+  },
+  "PENDING": {
+    "http": 200,
+    "total_rows": 84,
+    "groups": {
+      "<null (bank/unfiled)>": 84
+    },
+    "states": {
+      "PENDING": 84
+    },
+    "unfiled_sample": [
+      {
+        "answerId": "93bf3d59-a2aa-4e85-ba4c-4b91375d1fac",
+        "attemptId": "d57bdd56-0331-441f-988b-3a3da0cb7a1d",
+        "q": "q01-0ebc841c",
+        "part": "a",
+        "state": "PENDING"
+      },
+      {
+        "answerId": "6a497486-0f3b-4e37-b8d5-662a43d214f5",
+        "attemptId": "d57bdd56-0331-441f-988b-3a3da0cb7a1d",
+        "q": "q01-0ebc841c",
+        "part": "b",
+        "state": "PENDING"
+      },
+      {
+        "answerId": "3cb2017d-175d-4e51-b5df-0d0896c63144",
+        "attemptId": "d57bdd56-0331-441f-988b-3a3da0cb7a1d",
+        "q": "q01-0ebc841c",
+        "part": "b-ii",
+        "state": "PENDING"
+      },
+      {
+        "answerId": "b9293bc0-1a02-4f48-8df5-38537073a4ce",
+        "attemptId": "d57bdd56-0331-441f-988b-3a3da0cb7a1d",
+        "q": "q01-0ebc841c",
+        "part": "c",
+        "state": "PENDING"
+      },
+      {
+        "answerId": "ec037939-9e0d-47fc-82bd-5fe9be2f0224",
+        "attemptId": "d57bdd56-0331-441f-988b-3a3da0cb7a1d",
+        "q": "q01-0ebc841c",
+        "part": "d",
+        "state": "PENDING"
+      }
+    ]
+  },
+  "v1_smart_marked_rows": 29,
+  "verdict": "FAIL",
+  "probed_at": "2026-09-24T13:41:40.410106Z"
+}

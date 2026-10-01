@@ -1,0 +1,86 @@
+version: 1
+task:
+  id: T-C12-C3REPAIR
+  title: "Repair the standing corpus-gates red on resources main — c12 check-C3
+    comparative re-pin + the review-gate sandbox path repair it exposed"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: DONE
+  priority: P1
+  authority: "operator directive 'c12 check-C3 repair' (zai-web, 2026-10-01,
+    trace 1a0f88cdd363c0f1) — executed directly rather than via the T-C11 lane;
+    the standing red had blocked every scripts-tests PR in resources since
+    2026-09-30, and the review-gate defect had been latent/unreachable since
+    the C28 stage-2 store move (b3bca02, 2026-09-21)"
+  base:
+    repo: syllabai-resources
+    commit: 10593fc
+  scope:
+    allowed:
+      - "scripts/c12_negative_test.py — C3 control re-pin only"
+      - "scripts/c12_review_test.py — sandbox store-path resolution only"
+    forbidden:
+      - "no production semantic changes (WEAK_SCORE=0.3 untouched; C2's
+        absolute assertion untouched)"
+      - "no edits to ratified store data (spec_command_kinds.yaml
+        demanded_substance is T-C11 phase-2 operator-gated output)"
+      - "no edits to the pinned smoke fixtures"
+  acceptance:
+    - "scripts-tests corpus-gates fully GREEN on the PR (all steps)"
+    - "C3 still rejects an aggregation that outscores an anchored positive
+      (negative-control of the repair)"
+    - "C3 expectation holds on both the pre-T-C11 and current registries"
+  evidence:
+    - "PR SyllabAI/syllabai-resources#15 (codex/c12-c3-aggregation-repin,
+      commits 31170d6 + b36250f); CI run 36904742109 — corpus-gates ALL GREEN
+      (first fully-green scripts-tests since 2026-09-30)"
+    - "local CI simulation 6/6 steps green before push; repair-negative: x3
+      inflation of the control -> exactly one failure (C3); pre-T-C11 registry
+      (bb51b88 state) PASS — invariant backward-stable"
+  outcome:
+    root_cause: "C3 smoke control is a documented premise+consequence
+      aggregation (fixture source field: '4CH1-4.15-style premise+consequence
+      aggregation — the documented negative control'), pinned absolutely as
+      top < WEAK_SCORE=0.3 against the pre-T-C11 registry. T-C11 phase-2
+      batches 5-11 (ae6a5e4..ee0524d) authored demanded_substance into
+      spec_command_kinds.yaml; 4CH1-4.16's substance now carries the full
+      SO2->acid-rain chain the control aggregates, so the control's top moved
+      0.2212 -> 0.4894 (x2.21) while anchored positives moved x1.00-1.45
+      (0.8732/0.9947/1.3287). The absolute pin was scale-bound to registry
+      sparsity, not semantics."
+    fix_1_c3: "comparative re-pin: the aggregation must rank below EVERY
+      anchored positive (machine-derived from fixture+registry at run time, no
+      new constants; holds on both registries). Production WEAK_SCORE
+      semantics unchanged."
+    fix_2_review_gate: "exposed by fix_1 (the job first ran past step 3 since
+      the C28 move): c12_review_test make_sandbox copied stores from the
+      pre-migration flat graph/ (FileNotFoundError) and did not ship
+      graph_paths into the sandbox. Now registry-driven both ways:
+      SCRIPTS_TO_COPY += graph_paths.py+yaml; store names resolved via
+      GP.store()/GP.store_rel(); sandbox mirrors graph/<qual>/ (S0
+      check_no_hardcode-safe)."
+    claims:
+      VERIFIED:
+        - "PR CI run 36904742109: every corpus-gates step SUCCESS (kg golden
+          gate / graph_check / c12 negative 37/37 / c12 review 23/23 /
+          promotions integrity / demo-decisions positive control)"
+        - "C1/C2/D/E/F controls unchanged and green"
+        - "repair-negative (inflation) RED-as-designed; old-registry PASS"
+        - "POST-MERGE MAIN: run 36912298393 on 6c15f65 — every scripts-tests
+          step SUCCESS (incl. c12 negative + review); pre-merge sim vs the
+          T-C35 B03 drift (9240aa3): sparse partial clone, --no-ff merge
+          4ad5717, c12 negative 37/37 + review 23/23 green in the exact
+          merged tree; file sets of 9240aa3 vs PR #15 disjoint"
+      REPORTED:
+        - "C2 watch-item: physics out-of-curriculum control 0.1306 -> 0.2437
+          (x1.87, 81% of WEAK_SCORE) — further registry growth may break it;
+          if so, apply the same comparative treatment or escalate to the
+          T-C11 lane as a data-side question"
+      UNVERIFIED: []
+  merge_status: "PR #15 MERGED by operator directive 'PR #15 merge' (zai-web,
+    2026-10-02, trace 1a0f8d13cd27d3e9): merge commit 6c15f652098a (parents
+    9240aa3 = pre-merge main incl. T-C35 B03, b36250f = PR head), title
+    'Merge PR #15: test(c12): re-pin the C3 aggregation control to the
+    comparative invariant — repairs the standing main red'. Post-merge main
+    scripts-tests run 36912298393: EVERY step SUCCESS — main's first
+    fully-green scripts-tests since 2026-09-30; the standing red and the
+    scripts-tests merge-blocker for all resources PRs are both cleared."

@@ -1,0 +1,80 @@
+version: 1
+task:
+  id: T-C41
+  title: "Execute the follow-on order: validation waves from the worklist +
+    the Run005C re-record (run-005-c-r8) with the calibrated MIN_COSINE 0.50
+    and the §8.1 v1.1 gate"
+  owner: "superz (main agent, zai-web session, operator trace 1a0f60ff503d0661)"
+  status: DONE
+  priority: P1
+  base:
+    repo: syllabai (master pack); syllabai-core @ 4481469 (PR #38)
+  basis: >
+    Operator directive (2026-10-01): "run validation waves from the worklist,
+    then the re-record" — items 1–2 of the T-C40 next_safe_actions.
+  scope:
+    allowed:
+      - "master-pack: wave kit + r8 run evidence + calibration addendum +
+        tracker/worklog/task records"
+      - "syllabai-core (replay branch only): staged MIN_COSINE 0.50 flip +
+        paired embed_rev stamp in the bench replay flow (Run005C)"
+    forbidden:
+      - "NO agent-asserted content validation (AGENT.md core rule 6 — wave
+        execution is the teacher surface, operator-held credentials)"
+      - "NO merge of the MIN_COSINE flip (production probe pending per the
+        calibration pack's gate)"
+  acceptance:
+    - "wave 1 is composed, instrumented (prestate/restamp/poststate), and
+      executable by the operator without further design work"
+    - "the re-record is RECORDED with fail-closed artifact verification and
+      byte-identical double-pass determinism, on a real Flyway-migrated
+      Postgres with pgvector"
+    - "the flip gate decision is evidence-backed and the flip stays staged
+      until the pack's second gate clears"
+  claims:
+    VERIFIED:
+      - "① wave kit RECORDED: evidence/bench-001/validation-waves-2026-10-01/
+        (WAVES.md + prestate.sql + validate_calls.sh + restamp.sql +
+        poststate.sql + SHA256SUMS; tool bench/validation_wave_kit.py) — wave 1
+        = 4CH1/2C, 4CH0/2C, 4CH1/2CR, 4CH1/1C (188 tier-1 + 11 tier-2 gold
+        unlocks, ~1,853 SUGGESTED chunks). Execution NOT performed here: the
+        validate-all surface is teacher-authenticated (ContentController POST
+        /api/v1/teacher/content/exam-papers/{id}/validate-all) and the
+        pilot-teacher credential is operator-held (T-C38 record); the kit
+        carries the recorded traps (REVIEW_REQUIRED force decision; the
+        embed_rev re-stamp pairing without which a validated paper serves
+        nothing at CURRENT_EMBED_REV=2)"
+      - "② re-record RECORDED: run-005-c-r8 (results.json + RUN_REPORT.md +
+        SHA256SUMS) — production fabric over Flyway-migrated Postgres 17.11 +
+        pgvector 0.8.6 (sandbox-provisioned user-space from the pgvector/pgvector:pg17
+        image layers + JDK 25.0.4.1 + Maven 3.9.9), frozen artifact preload-r7
+        (= embed-backfill-snap-006-preload-copy; SHAs match run-005-c-r7 echoes
+        byte-for-byte), gold-v5 × snap-006, double-pass determinism PASS.
+        RESULT vs r7 (only serving delta = MIN_COSINE 0.50): recall@5/10/20
+        unchanged (0.0386/0.0515/0.0717); §8(d) full/micro BYTE-IDENTICAL
+        (0.5618/0.9167, 77/84 points); MRR 0.0615→0.0559, nDCG 0.0913→0.0871
+        (sub-0.50 junk that held top ranks removed); zero-result 0/120;
+        boundary violations 0; §8.1 v1.1 verdict NOT PROMOTED (the corpus wall,
+        not the floor)"
+      - "the re-record initially returned 120/120 zero-result — root cause: the
+        bench loader's inserts land at the V33 default embed_rev=1 while both
+        serving arms gate at CURRENT_EMBED_REV=2; fixed by a paired re-stamp
+        mirroring the 09-28 production cut-over (fail-closed census assert),
+        commit 06297f2 — the T-C23 trap reproduced and documented in the run
+        report addendum path"
+      - "MIN_COSINE 0.50 flip STAGED on syllabai-core branch tc40-min-cosine-050
+        (pushed, NO PR): re-record gate PASS, production probe gate PENDING —
+        the calibration pack's flip rule holds; merge only after the probe"
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED:
+      - "live effect of the flip on production serving (needs the probe SQL +
+        one production-space embedding call, operator-run)"
+  next_safe_actions:
+    - "operator: execute wave 1 per WAVES.md (teacher credential), then waves
+      2+ from the regenerated worklist"
+    - "operator: run the production probe SQL (calibration pack) and, if the
+      relevance mass sits above 0.50, merge tc40-min-cosine-050 into PR #38's
+      line or land it directly with the pack as evidence"
+    - "after wave 1 + re-freeze: re-run the worklist and the next §8.1-governed
+      run to measure the reachable-pool delta"
