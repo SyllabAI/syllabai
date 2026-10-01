@@ -2,7 +2,8 @@
 
 **Prepared:** 2026-09-14  
 **Purpose:** authoritative visual data-model review for the current SyllabAI architecture  
-**Source baseline:** `SyllabAI/syllabai` main + `SyllabAI/syllabai-core` main as inspected on 2026-09-14.
+**Source baseline:** `SyllabAI/syllabai` main + `SyllabAI/syllabai-core` main as inspected on 2026-09-14.  
+**Addendum (2026-09-30):** §8 records the V53 per-course tutor scoping delta per ADR-030. The §2 snapshot and the `erd_current.dot` diagrams still reflect the 2026-09-14 V18-era baseline; a full V18→V53 re-survey (including the tutor/CLA/classroom/teaching-coverage areas in the diagrams) remains a separate ERD-owner lane — until it runs, this file must not be quoted as a complete inventory of the current migration chain.
 
 ## 1. Important interpretation
 
@@ -136,3 +137,23 @@ This keeps the student's Chemistry experience coherent: the same SpecificationPo
 - `SyllabAI_EERD_Target.png` — raster preview.
 - `erd_current.dot` — Graphviz source for the current ERD.
 - `eerd_target.dot` — Graphviz source for the target EERD.
+
+## 8. Addendum — V53 per-course tutor scoping (2026-09-30, ADR-030)
+
+This addendum closes the tutor-session gap in the §2 snapshot and records the V53 delta. Full decision record: `ADR-030-PER_COURSE_TUTOR_SCOPING.md` (repo root) + the `DECISIONS.md` entry; the staging delta with the mermaid source this addendum summarizes is `V53_TUTOR_COURSE_ERD.md` as delivered 2026-09-30.
+
+### 8.1 Tutor session area (implemented V42, missing from the V18-era snapshot)
+
+The 2026-09-14 baseline predates the tutor surface entirely. As implemented since V42 and served by `LEARNER_INTERACTION_MEMORY_ARCHITECTURE.md` §22:
+
+- `tutor_sessions` — `{id, learner_id, created_at, last_active_at}`; `learner_id` is an application-level reference (no DB FK), rendered as a dashed relationship consistent with the §2 note.
+- `tutor_session_turns` — per-session append-only turns `{id, session_id, seq, role, content, evidence_count, refused, created_at}`; content is citations-stripped and 4000-capped.
+- V53 adds `tutor_sessions.course_ref VARCHAR(64) NULL` — the opaque hub-supplied course reference (no FK, no lookup table), written once at the first ref-carrying append; a later ask naming a different course is a 409, never a silent scope switch. NULL is legitimate history (pre-V53 rows and legacy/anonymous asks).
+
+### 8.2 Course identity remains hub-side data
+
+Core still has no course registry. The hub's file-based `content/courses.json` registry carries Edexcel official codes (`4CH1`, `YCH11`, …); core's `curriculum_versions.code` carries syllabus-era codes (`4CH1-2017`, `IAL-CHEM-2018`); no derivable rule connects the two namespaces. V53 makes the bridge an explicit, hub-maintained, nullable `curriculumCode` field per course in that registry — hub data, not a core entity, not a DB table. The tutor resolution path is: hub slug → registry `curriculumCode` → wire `courseRef` → `CurriculumScopeResolver.resolveForCourse()` exact-matching `curriculum_versions.code` (ACTIVE + owns surface), fail-closed on zero or ambiguous matches.
+
+### 8.3 Outstanding diagram work (explicitly deferred)
+
+`erd_current.dot` still lacks the tutor session area, the CLA tables, classroom foundation (V51), and teaching coverage (V52). Regenerating the diagram set is deferred to the dedicated ERD re-survey lane; §2's area list and the diagrams must be read together with this addendum until then.
