@@ -1,0 +1,45 @@
+version: 1
+task:
+  id: T-C42
+  title: "Production probe for the MIN_COSINE 0.50 flip gate (calibration pack
+    gate 2) — operator-run probe kit, evidence recording, then the flip
+    decision"
+  owner: "superz (main agent, zai session discord:1548651031783673867)"
+  status: ACTIVE
+  priority: P1
+  base:
+    repo: syllabai (master pack) @ d73ce9e; syllabai-core @ b30e603 (main);
+      staged flip on tc40-min-cosine-050 @ 06297f2 (NO PR by design)
+  basis: >
+    Operator directive (2026-10-01 11:53Z, trace 88fbac083105ef21ef2b94bde752aafe):
+    "Ready proceed" on the retrieval-quality mainline — the flip-gate step of
+    the T-C40/T-C41 next_safe_actions. Re-record gate already PASS
+    (run-005-c-r8: recall unchanged, §8(d) byte-identical, MRR/nDCG slightly
+    improved, zero-result 0/120, violations 0); the production-space probe is
+    the second and final binding gate before the one-line constant landing.
+  scope:
+    allowed:
+      - "master-pack: probe kit (PROBE_KIT.md + run_production_probe.sh) in
+        evidence/bench-001/cosine-calibration-2026-10-01/, task/coordination
+        records, the recorded probe output + flip-decision addendum"
+      - "syllabai-core (only after BOTH gates recorded PASS): land the staged
+        MIN_COSINE 0.15->0.50 as a one-line constant change on a fresh branch
+        off main with the calibration pack as its evidence"
+    forbidden:
+      - "NO agent-asserted content validation (AGENT.md core rule 6 — the
+        validation waves stay the teacher surface, operator-held credentials)"
+      - "NO production writes of any kind — the probe is read-only SQL; no
+        restamp, no migration, no data changes from this lane"
+      - "NO flip landing before the probe output is recorded in the pack"
+  acceptance:
+    - "the operator-run probe output (bucket histogram + above-0.50 fraction,
+      with the query identity and transport params) is RECORDED in the pack
+      dir with a dated addendum"
+    - "the flip decision (land / hold) is evidence-backed per the pack's
+      binding rule and recorded in the same addendum"
+  next_safe_actions:
+    - "operator: run the kit (one env var, one command, or the two manual
+      paste blocks) and paste the bucket table back"
+    - "core lane (this session): on PASS, land the flip as the one-line
+      change with the pack as evidence; on HOLD, record why and return to
+      the worklist"
