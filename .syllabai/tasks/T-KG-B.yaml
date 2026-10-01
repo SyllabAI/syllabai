@@ -153,16 +153,23 @@ task:
           unrelated to this PR's files"
         - "ratification: gate 257/257 FULL-SET MATCH in sandbox + CI step
           SUCCESS; round-trip + negatives re-verified on the ratified state"
+        - "MERGED: PR #14 merged @ d092b9b (merge commit, repo convention
+          'Merge PR #N') under operator directive 'Merge PR #14' (zai-web,
+          2026-10-01, trace 1a0f61ab68a04589) — the operator-override path
+          the hold anticipated; main verified to carry graph/igcse-chemistry/
+          point_edges.yaml byte-exact (50,724 bytes, sha256 dfb1fcb0…
+          re-hashed on main); merge commit message records the acknowledged
+          pre-existing c12 red"
       REPORTED:
         - "PDF-lane DIFF_VS_RATIFIED.json (in-repo, other lane) corroborates
           ratified-vs-PDF-direct wording equality; not re-derived here"
-        - "merge is HELD pending the c12-lane repair or operator override —
-          the PR adds one green step and removes none"
       UNVERIFIED: []
     next_safe_actions:
       - "c12/T-C11 lane: repair the negative-control check C3 on main (it
         blocks every scripts-tests PR in resources since 09-30)"
-      - "merge PR #14 after the lane repair (or operator override)"
+      - "DONE 2026-10-01: PR #14 merged @ d092b9b (operator override); the
+        pre-existing c12 red persists on main and still blocks every
+        scripts-tests PR — repair remains the T-C11 lane's item"
       - "optional: normalize the two en-dash subtopic titles; capture the
         assessment table into the parsed corpus (report §5/§6)"
   evidence:
@@ -174,3 +181,6 @@ task:
       graph/igcse-chemistry/point_edges.yaml (sha-pinned)"
     - "session artifacts: kg-analysis/out/taskB_recon_evidence.json (analysis
       diff), worklog entry T-KG-B"
+    - "merge commit d092b9b on syllabai-resources main; post-merge drift
+      check: point_edges.yaml re-hashed from main == ratified pin
+      dfb1fcb0… (50,724 bytes)"
