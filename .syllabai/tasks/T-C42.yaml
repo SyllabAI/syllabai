@@ -64,10 +64,18 @@ task:
     - "the flip decision (land / hold) is evidence-backed per the pack's
       binding rule and recorded in the same addendum"
   next_safe_actions:
-    - "operator: review + merge core PR #44 (the one-line MIN_COSINE 0.50
-      flip with the pack as evidence); watch the tutor retrieval refusal rate
-      at the 0.50 floor post-deploy (baseline 27–31% under the no-op 0.15
-      floor is expected to rise — designed behavior)"
+    - "core lane FIRST: T-C43 proposal — recalibrate KaRagFlowIT's
+      HashingEmbeddingProvider double to production-like geometry (CI on
+      PR #44: unit layer green after 85329e1; KaRagFlowIT.hybridAsk red —
+      the sparse bag-of-hashes double structurally caps relevant-pair
+      cosines at ~0.15–0.4, below the calibrated floor; common-component
+      lifting would also lift refusalAsk past 0.50 and is ruled out).
+      Full analysis: PR #44 comment 5939122074. The flip must not merge
+      with its serving-path IT red."
+    - "operator: then review + merge core PR #44 (the one-line MIN_COSINE
+      0.50 flip with the pack as evidence); watch the tutor retrieval
+      refusal rate at the 0.50 floor post-deploy (baseline 27–31% under
+      the no-op 0.15 floor is expected to rise — designed behavior)"
     - "teacher (operator-held): item-by-item review of the 25 serving papers
       carrying REVIEW_REQUIRED bridge findings (F-PROD-1)"
     - "next lane: compose wave 2 from a FRESH snapshot re-freeze — the live
