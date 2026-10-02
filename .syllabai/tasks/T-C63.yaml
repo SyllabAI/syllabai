@@ -6,7 +6,7 @@ task:
     scoped; the recorded lever from run-005-c-r9's reading (binding constraint
     moved from pool coverage to rank quality)"
   owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
-  status: VERIFYING # arm-D instrument PR syllabai-core#64 CI; merge on green
+  status: DONE # arm-D instrument MERGED as core 60bdd64 (PR #64 merge-commit, CI build SUCCESS on d1d56cd); run-005-d-r1 recorded
   priority: P1
   authority: "operator IM trace 1a0fc8c1e8b73939 ('commission the rank-quality
     lane') — executes the lever recorded in run-005-c-r9's RUN_REPORT Reading
@@ -93,7 +93,7 @@ task:
     INFERRED: []
     REPORTED: []
     UNVERIFIED:
-      - "PR syllabai-core#64 CI verdict (dispatched; merge on green)"
+      - "(resolved) PR #64 CI build SUCCESS on d1d56cd; MERGED as core 60bdd64 — VERIFIED"
   next_safe_actions:
     - "merge PR syllabai-core#64 on CI green (merge-commit per precedent)"
     - "tranche 3 (fusion-weights lever): weighted-fusion replay via the
