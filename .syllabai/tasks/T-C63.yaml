@@ -1,0 +1,94 @@
+version: 1
+task:
+  id: T-C63
+  title: "Rank-quality lane — commissioning tranche: arm D (C + reranker behind the
+    EvidenceReranker port) instrumented in the bench, fusion-weights lever
+    scoped; the recorded lever from run-005-c-r9's reading (binding constraint
+    moved from pool coverage to rank quality)"
+  owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
+  status: EXECUTING
+  priority: P1
+  authority: "operator IM trace 1a0fc8c1e8b73939 ('commission the rank-quality
+    lane') — executes the lever recorded in run-005-c-r9's RUN_REPORT Reading
+    ('the next levers are rank-side (arm D's reranker port; the fusion weights
+    lane), not more validation volume alone') and TODO's wave-2 closeout"
+  base:
+    repo: "syllabai master pack; syllabai-core main 5a8d57f (T-C61 raw-trail PR #63 merged)"
+  scope:
+    allowed:
+      - "bench-scope arm D instrument (syllabai-core src/test only):
+        LexicalPrecisionReranker (deterministic, offline, implements the main
+        EvidenceReranker port) + RerankedRetrieval fabric wrapper + Run005C
+        env-gated arm-D injection (BENCH_ARM_D_RERANKER / BENCH_RUN_ID) with
+        the default path byte-identical (S8D absent-path precedent) + unit
+        tests; no main-code change, no migration, no production wiring"
+      - "lane charter + pre-registrations under
+        evidence/bench-001/rank-quality-lane-2026-10-02/ (records repo)"
+      - "this task record + TODO/WORKLOG entries"
+    forbidden:
+      - "no production serving change (nothing constructs a RetrievalFabric
+        with a reranker in production; arm promotion stays in the owning lane
+        after a §8-passing verdict — harness spec §9)"
+      - "no frozen artifact mutation (snap-007, gold-r9, preload-r9 untouched;
+        §4 snapshot discipline)"
+      - "no tuning against the frozen set (spec §9 non-goal; r3 anti-gaming
+        doctrine): reranker parameters are pre-registered in the charter
+        BEFORE any recorded run; post-hoc parameter changes require a dated
+        new pre-registration and a new run"
+      - "no recorded verdict re-judged; §8.1 v1.1 dual-view bars govern the
+        arm-D run; the (d) 1pp rule applies with the spec-owner ruling still
+        pending (the S8D-RULING-REVIEW pack is the ruling input)"
+  dependencies:
+    - "T-C59 (run-005-c-r9 recorded — the r8→r9 delta and the rank-quality
+      diagnosis this lane attacks)"
+    - "T-C42 (MIN_COSINE 0.50 floor — unchanged premise)"
+  shared_resources:
+    - "syllabai-core bench (test scope) — coordinated via git; Run005C is the
+      single orchestrator being extended, no concurrent lane holds a lease on
+      it (locks.yaml empty at claim time)"
+  acceptance:
+    - "arm D instrument CI-green on syllabai-core (unit tests + determinism
+      contract); default (NoReranker) path byte-identical — proven by the
+      existing suite plus the new tests"
+    - "charter records: the two levers, the pre-registered reranker design
+      (algorithm + parameters + tokenizer), the expected movement directions,
+      and the §8.1 evaluation protocol for the upcoming run-005-d"
+    - "recorded run-005-d (tranche 2, separate execution): full §8.1 v1.1
+      dual-view gate + (f)/(g) + (d) scored on the RERANKED served lists;
+      verdict recorded honestly (PASS/FAIL is a finding, not an argument)"
+  tests:
+    - "LexicalPrecisionRerankerTest (determinism, term weighting, tie
+      stability, never drops/invents candidates)"
+    - "RerankedRetrievalTest (boundary non-circumvention: only reorders what
+      fusion produced; provenance preserved; empty pass-through)"
+    - "existing bench suite green (default path unchanged)"
+  evidence_required:
+    - "records repo: charter + this yaml + TODO/WORKLOG entries"
+    - "syllabai-core: branch CI green; merge per the merge-commit precedent"
+    - "tranche 2 (recorded run-005-d): results.json + RUN_REPORT.md +
+      SHA256SUMS under evidence/bench-001/runs/run-005-d-r*/ + the rebuilt
+      execution environment recipe"
+  claims:
+    VERIFIED:
+      - "the rank-quality diagnosis: MRR 0.0700 at recall@20 0.1612 (r9) —
+        gold found at median depth ~14; the (d) recompute ledger shows the
+        carriers at r8 ranks 7-20 displaced past the top-20 horizon by QP/MS/EQ
+        paper mass (S8D-RULING-REVIEW)"
+    INFERRED:
+      - "a deterministic lexical-precision rerank of the fused pool should
+        lift MRR/nDCG@10 (the bars' rank-quality targets) and partially
+        recover (d) compositionality; recall@20 is set-invariant when the
+        reranked top-20 is a permutation of the fused top-20"
+    REPORTED: []
+    UNVERIFIED:
+      - "the actual run-005-d numbers — tranche 2, not yet executed"
+  next_safe_actions:
+    - "tranche 2: rebuild the user-space execution environment (JDK 25.0.4.1,
+      Maven 3.9.9, PostgreSQL 17.11 + pgvector 0.8.0 Debian-native debs per
+      the T-C59 recipe), execute run-005-d (BENCH_RUN_ID=run-005-d
+      BENCH_ARM_D_RERANKER=lexical_precision), record vs §8.1 v1.1"
+    - "tranche 3 (fusion-weights lever): weighted-fusion replay via the
+      shipped 4-arg RetrievalFabric ctor / PLAN_V2_WEIGHTS — separately
+      pre-registered, only after arm D's verdict is recorded"
+    - "if §8.1 passes: promotion belongs to the owning lane (production
+      wiring behind the same port, its own verification discipline)"
