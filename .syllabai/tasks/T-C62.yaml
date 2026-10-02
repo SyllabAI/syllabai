@@ -1,0 +1,71 @@
+version: 1
+task:
+  id: T-C62
+  title: "F-A2 fix wave + F-A1 orphan retirement — replace the 43 confirmed
+    mis-filed '(R)' files with official plain papers (authenticated/
+    URL-resolved content-dam route; the 09-28 precedent), governed retire
+    of the 18 orphaned pre-repair document generations (F-PROD-4
+    precedent), census re-pin"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: "operator IM trace 1a0fc4b91fc4c965: '① F-A2 fix mandate
+    (replace the 43 with official plain papers — needs the authenticated
+    content-dam route), ② F-A1 orphan retirement' — exactly the two
+    remaining opens registered by T-C58 (Session 151). ID T-C62 chosen
+    because locks.yaml already carries a T-C61 lease (core-web-contract
+    lane) — the T-C49/T-C55 collision-avoidance protocol."
+  base:
+    repo: "syllabai records @ main at claim time; corpus
+      syllabai-pastpapers @ 029c6ec92 (T-C56/T-C58 pin, re-verified at
+      claim); F-A2 scope = T-C58 verdicts.json 43 CONFIRMED-MISFILED-R;
+      F-A1 scope = T-C56 findings register 18 (16x4CH0 bytes->4CH0-1CR/
+      2CR dirs + 2x4CH1 QP quarantined bytes; the d4 pack's two 4CH1 ms
+      rows reconciled as BENIGN SDA byte-twins 4SD0-1C/1CR-202011,
+      excluded); DB state re-derived live at execution (fail-closed)."
+  scope:
+    allowed:
+      - "corpus syllabai-pastpapers: replace the 43 mis-filed PDFs with
+        official plain documents (content-dam URLs recorded per material),
+        manifest material blocks + identification.notes correction notes
+        per the 09-28 format, docs/ wave record, single fix commit to
+        main; benign 2013-06/6PH05-01 ms.pdf byte-untouched"
+      - "post-fix verification: T-C56 L1/L2 re-run on the touched specs
+        (C1/C2b/C3/C4 + sha-vs-pin + cover-print identity)"
+      - "live-DB governed retire: documents.validation_state VALIDATED ->
+        REJECTED for exactly the 17 VALIDATED members of the pinned 18
+        (the 1 already-REJECTED member documented, no flip) under the
+        T-C54 wave-2 instrument pattern: single transaction, identity
+        gate, idempotence, per-row reference guards (0 exam_papers
+        refs in-tx), per-doc fidelity, census + chunks non-interference
+        asserts, one content_review_audit row per flipped document with
+        batch_run_id + operator trace verbatim"
+      - "census re-pin after the DB write (census-last; T-C60's pending
+        DB writes will owe a further re-pin when they land)"
+    forbidden:
+      - "no corpus writes beyond the 43 replacements + their manifests +
+        the wave doc"
+      - "no DB writes beyond the governed retire + audit rows"
+      - "no ingestion of the 8 never-ingested specs (still gated until
+        this wave's post-fix verification lands)"
+      - "no secrets on disk in any git-tracked path or in any commit
+        (env-only, never echoed)"
+  acceptance:
+    - "43/43 replaced files are official plain documents whose covers
+      print the dir's plain reference and session, sha-recorded, with
+      DAM URLs + new sha256/size per material; benign 6PH05-2013 MS
+      byte-identical"
+    - "T-C56 L1/L2 re-run on the 9 touched specs: 0 C3 findings, 0
+      sha-vs-pin mismatches, C1/C4 clean on touched dirs"
+    - "F-A1: exactly the pinned 18 rows retired/document (17 flips +
+      1 already-terminal), 0 ep refs at flip time, audit +17, chunks
+      snapshot unchanged, census delta exactly V-17/R+17"
+    - "census bundle re-pinned and recorded"
+    - "full evidence pack + YAML closure + WORKLOG session entry"
+  notes:
+    - "claim-first at registration (this commit). The DAM interstitial
+      constraint means per-material URL resolution through the Pearson
+      qualifications portal listing (the URL-resolved route the 09-28
+      and 4SD0 waves used); any material whose official plain document
+      cannot be resolved gets a documented unresolvable verdict — no
+      fabrication, fail-closed."
