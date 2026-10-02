@@ -65,3 +65,11 @@ task:
     - "claim-first; same session owns T-C44 (PR hub#6 merged ec6bd5e
       with this session's operator merge word). Closes to DONE only
       with the PR merged and the gate extended."
+  merge_status: "PR syllabai-hub#7 OPEN (fix/math-normalize-residuals,
+    head fb43c76e, base ec6bd5e) — awaiting explicit merge word per lane
+    convention. CI run 36974873663: build job fully GREEN with the
+    verify gate extended to 26/26 (17 T-C44 + 9 T-C47 checks); e2e
+    failure at the Deck-flow step is the known pre-existing main red
+    (same locator.click timeout on main a61b0d3 run 110539038918,
+    disjoint surface). Evidence comment on the PR; Vercel preview
+    success. T-C44 card updated to MERGED in the same push."
