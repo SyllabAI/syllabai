@@ -1,0 +1,108 @@
+version: 1
+task:
+  id: T-C56
+  title: "Corpus folder-mislabel audit — folder/source_uri naming vs byte
+    identity across syllabai-pastpapers + the live-DB document layer
+    (the non-urgent open item from laneD Finding 4 / T-C45 remaining-open)"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  priority: P2
+  authority: "operator IM trace 1a0fbb6c9d6f14f1: 'continue the audit of the
+    corpus folder-mislabel in the queue'"
+  scope: "READ-ONLY lane end to end — zero DB writes, zero corpus writes,
+    zero state flips; secrets env-only (GH_PAT + RENDER_KEY, never on disk
+    or in any commit)"
+execution_record:
+  protocol_1_2_recon:
+    - "worklog tail re-read first (standing rule); lane scope taken from
+      laneD REPORT Finding 4 + the 'Remaining open' hygiene line"
+    - "corpus = SyllabAI/syllabai-pastpapers @ HEAD 029c6ec92 (09-28); two
+      repair waves already landed in the corpus: REPAIR-2026-09-25
+      (chemistry F10 cure: 14 4CH1 C-dir QPs replaced from quarantine,
+      8 4CH0 dirs re-paired, phantom 2020-06 merged into 2020-11) and
+      CORPUS-FIX-2026-09-28 (23 mis-filed 4PH0 R PDFs replaced, June
+      2013-2018) — so the audit targeted the DB generation layer + the
+      never-repaired specs, not the already-cured dirs"
+    - "a 09-28T20:18-20:24Z re-ingest created correct document generations
+      for the repaired chemistry files (root-caused from created_at
+      generation pairs; matches T-C54's records)"
+  method:
+    - "L1 whole-repo manifest scan (5,239 paper dirs): C1 dir-vs-ref, C2b
+      printed-ref consistency (alias + remainder-R rule), C3 '(R)' filename
+      under plain dir, C4 material/sha coverage"
+    - "L1b git-blob duplicate scan over all 10,808 PDF blobs
+      (content-addressed free byte-identity evidence)"
+    - "L2 byte audit of all 420 PDFs on disk (4ch0/4ch1/4ph0/4sd0): sha256
+      vs manifest pin, page-1..3 printed identity (slash / (CODE) Paper N /
+      space forms) vs dir identity, session windows, plus repair-block
+      verification of both waves' promoted shas"
+    - "L3 live-DB cross-check (SELECT-only, rolled back): documents census,
+      checksum join vs every current corpus manifest pin, stale/pre-repair
+      sha detection, URI-vs-bytes identity, exam_papers link audit,
+      seeded-mislabel resolution"
+  results:
+    corpus: "C1 0 defects; C2b-hard 0 (no cover-is-other-paper anywhere);
+      C2b-soft 162 benign compilation covers; L1b 73 duplicate groups = 50
+      benign SDA byte-twins + 23 quarantine, 0 hostile; L2 sha-vs-pin 0
+      mismatches; repair blocks 30/30 PASS; L2 verdicts 359 OK / 53 benign
+      cover furniture (own ref printed) / 5 documented broken-text / 2
+      rank-3 image-only / 1 reclassified repair-verified"
+    db: "docs census 864V/8S/145R = 1017 (total matches T-C55 pin; the
+      ~297 V-flips = T-C54's wave-2 batch, root-caused); 364 QP/MS docs:
+      182 checksum-match the current corpus, 182 unmatched (170 md-era
+      legacy corpus/*.md + 12 orphan PDF/OCR generations);
+      18 documents still hold pre-repair mis-filed R bytes under plain-C
+      identities (17 VALIDATED + 1 REJECTED, 10 QP + 8 MS) — 0/18
+      referenced by any exam_papers row; no ep row references ANY
+      unmatched document (0/182); all ep-linked docs pin at
+      identity-consistent corpus dirs"
+  seeds:
+    seed_a: "CONFIRMED + cured in corpus, DB orphan remains — laneD doc
+      a7a0e028-ea16 (4CH1-1C-202206/qp.pdf, sha f21e970f) is the orphaned
+      09-21 generation holding the mis-filed 1CR bytes; corpus repaired
+      09-25 (F10 cure -> 22201906), DB re-ingested 09-28T20:23Z, ep rows
+      link the correct generation; the VALIDATED 0-ref orphan remains"
+    seed_b: "NOT REPRODUCIBLE against canonical stores — the corpus has no
+      4ch1 2013/2014 dirs; 4CH0-2CR June 2014 links correctly; no
+      4CH1/2CR June 2014 ep row exists. Assessed as a laneD-local artifact
+      of its resources-store-era downloaded PDF set and lane docmap"
+  findings:
+    - "F-A1 (needs mandate): 18 orphaned pre-repair document generations in
+      the live DB holding mis-filed R bytes under plain-C identities;
+      serving-contained (0 ep refs; core 02664958a excludes the chunks
+      structurally) but data un-repaired — governed retire per the
+      F-PROD-4 precedent, then census re-pin"
+    - "F-A2 (needs mandate before any future ingestion wave): 44 '(R)'-named
+      files under plain-paper dirs in never-ingested specs — 4ph1 1P/2P MS
+      x18 sessions 2019-2024 (current physics spec, highest relevance),
+      4EB0/4EB1 x11, 6PH0x x6, 4MA0/4MA1 x6, 4MB0/4MB1 x3; PMT-naming
+      class; needs the 09-28 three-class verification before ingest"
+    - "F-A3 (observation): documents-state drift vs the T-C55 census = the
+      T-C54 wave-2 batch (297 flips, serving pool 2,935 -> 4,608)"
+    - "F-A4 (observation): 170 md-era legacy documents (140 REJECTED /
+      22 VALIDATED / 8 SUGGESTED), 0 ep references"
+    - "F-A5 (residual risk): 7 byte-scope files not print-verified (scan /
+      broken-ToUnicode classes) — identity rests on manifest pins + repair
+      or official-listing evidence"
+  registry_incident: "T-C55.yaml clobbered: the hub Deck-flow lane's
+    claim-first push (7f3028c -> bcbf365) replaced this session's T-C55
+    chemistry yaml. Restored verbatim from 2d74f1c per the T-C49 precedent;
+    the hub lane's yaml bytes preserved verbatim at
+    .syllabai/tasks/T-C55-hub-deckflow.yaml (non-ID name, no ID claimed on
+    their behalf); both streams byte-identical to their originals —
+    operator may canonicalize the hub lane's ID later"
+evidence:
+  pack: "bench/review/corpus-folder-mislabel-audit-20261002/ (REPORT.md +
+    verdicts.json + l1_findings.json + l1b_duplicates.json + l2_bytes.json +
+    l3_db.json + l3b_refstate.json + SHA256SUMS)"
+  scripts: "session workspace only (SELECT-only): caudit_l1_manifests.py,
+    caudit_l1b_duplicates.py, caudit_l2_bytes.py, caudit_l3_db.py,
+    caudit_l3b_refstate.py"
+  sources: "corpus HEAD 029c6ec92 partial clone (manifests + 4-subject
+    PDFs); docs/REPAIR-2026-09-25.md; docs/CORPUS-FIX-2026-09-28.md;
+    production documents/exam_papers read-only probes"
+remaining_open:
+  - "F-A1 DB orphan-retirement lane (operator mandate; census-last applies)"
+  - "F-A2 three-class verification wave for never-ingested specs before any
+     future ingestion trusts their folder names"
+  - "secrets revocation (GH_PAT + RENDER_KEY — env-only again this session)"

@@ -1,0 +1,75 @@
+{
+  "lane": "T-C56 corpus folder-mislabel audit",
+  "date": "2026-10-02",
+  "corpus_base_commit": "029c6ec920ada225a8c1964e393f11871449d4e9",
+  "db_probe": "read-only (all SELECT, rolled back)",
+  "seeds": {
+    "seed_a": {
+      "claim": "4CH1-1C-202206/qp.pdf bytes are 4CH1/1CR June 2022 (laneD Finding 4, doc a7a0e028)",
+      "verdict": "CONFIRMED + ALREADY CURED IN CORPUS; DB ORPHAN REMAINS",
+      "detail": "Corpus repaired 2026-09-25 (REPAIR-2026-09-25.md F10 cure: qp-replaced, previous f21e970f... -> promoted 22201906..., repair-block sha verified by this audit). DB re-ingest 2026-09-28T20:23Z created the correct generation; ep rows link it. The orphaned 09-21 generation a7a0e028-ea16-4a31-a279-2a401a74142f still holds the mis-filed 1CR bytes (f21e970f...) with state VALIDATED and 0 ep references."
+    },
+    "seed_b": {
+      "claim": "docmap mislinks 2CR June 2014 to the paper-1 R MS (laneD Finding 4)",
+      "verdict": "NOT REPRODUCIBLE AGAINST CANONICAL STORES",
+      "detail": "The canonical corpus has NO 4ch1 2013/2014 dirs (4ch1 starts 2019-06); 4CH0-2CR June 2014 exists and its ep row links 4CH0-2CR qp+ms (correct); no 4CH1/2CR June 2014 ep row exists. Assessed as a laneD-local artifact of the resources-store-era downloaded PDF set and its lane docmap, not a defect in the canonical corpus or the live DB."
+    }
+  },
+  "layers": {
+    "L1_manifest_scan": {
+      "dirs_scanned": 5239,
+      "c1_dirname_vs_official_ref": 0,
+      "c2b_hard_cover_is_other_paper": 0,
+      "c2b_soft_extra_refs_beside_own": 162,
+      "c3_R_filename_in_plain_dir": 44,
+      "c5_missing_manifest": 0
+    },
+    "L1b_duplicate_blobs": {
+      "distinct_pdf_blobs": 10735,
+      "duplicate_groups": 73,
+      "benign_sda_twins": 50,
+      "quarantine_involved": 23,
+      "hostile": 0
+    },
+    "L2_byte_audit": {
+      "scope": "all 420 PDFs on disk in 4ch0/4ch1/4ph0/4sd0",
+      "verdicts": {"OK": 359, "SUSPECT_CONTRA_benign_furniture": 53,
+                    "IDENTITY_UNPARSEABLE_documented": 5,
+                    "SCAN_NO_TEXT_LAYER_documented_rank3": 2,
+                    "MISFILED_reclassified_repair_verified": 1},
+      "manifest_sha_vs_bytes": "mismatches: 0",
+      "repair_block_verification": "30/30 promoted shas == current bytes (09-25 chemistry + 09-28 physics waves)"
+    },
+    "L3_db_crosscheck": {
+      "documents_census": {"VALIDATED": 864, "SUGGESTED": 8, "REJECTED": 145},
+      "qp_ms_docs": 364,
+      "checksum_matched_to_current_corpus": 182,
+      "unmatched": 182,
+      "unmatched_breakdown": {"md_era_legacy_corpus_md": 170,
+                               "orphan_pdf_or_ocr_generations": 12},
+      "stale_pre_repair_bytes_still_referenced_by_documents": 18,
+      "stale_states": {"VALIDATED": 17, "REJECTED": 1},
+      "stale_ep_references": "0 of 18",
+      "ep_rows_referencing_any_unmatched_doc": 0,
+      "identity_mismatches_uri_vs_bytes_dir": 18
+    }
+  },
+  "findings_register": [
+    {"id": "F-A1", "severity": "data-hygiene (serving-contained)", "needs_mandate": true,
+     "title": "18 orphaned pre-repair document generations in live DB",
+     "detail": "17 VALIDATED + 1 REJECTED (10 QP + 8 MS) hold the mis-filed regional (R) bytes under plain-C identities (4CH0 1C/2C June 2013/2014/2016/2017 x QP+MS, 4CH1-1C-201906 qp, 4CH1-1C-202206 qp). Superseded by the 2026-09-28T20:18-20:24Z re-ingest generations; 0/18 referenced by any exam_papers row; their chunk layers are the 'wrong-paper front-matter chunks' that core PR 02664958a excludes structurally in serving rather than repairing as data. Disposition owed: governed retire (REJECTED/archive) with reference guards, then census re-pin."},
+    {"id": "F-A2", "severity": "future-wave hazard (no live impact)", "needs_mandate": true,
+     "title": "44 '(R)'-named files under plain-paper dirs in never-ingested specs",
+     "detail": "Same disease signature the 09-28 wave cured in 4ph0, still live in: 4ph1 current-physics 1P/2P MS x18 sessions 2019-2024 (highest future relevance), english-language-b 4EB0/4EB1 x11, gce-a-level physics-2008 6PH0x x6, mathematics-a 4MA0/4MA1 x6, mathematics-b 4MB0/4MB1 x3. PMT-naming evidence class only; needs the three-class verification (sha/pixel) before any of these specs is ingested."},
+    {"id": "F-A3", "severity": "observation (concurrent-lane drift)", "needs_mandate": false,
+     "title": "documents validation-state drift vs T-C55 census",
+     "detail": "864V/8S/145R now vs 567V/305S/145R at T-C55 census (same total 1017). ~297 SUGGESTED->VALIDATED flips landed with the 09-28 evening re-ingest/validation activity. Recorded, not interpreted; census re-pin is the census-last lane's duty after any further DB change."},
+    {"id": "F-A4", "severity": "observation (legacy generation)", "needs_mandate": false,
+     "title": "170 md-era legacy paper documents unmatched to the canonical corpus",
+     "detail": "source_uri corpus/igcse-chemistry-*/QP.md|MS.md, states 140 REJECTED / 22 VALIDATED / 8 SUGGESTED, 0 ep references. The original G1-era generation predating the PDF corpus; no serving path via exam_papers."},
+    {"id": "F-A5", "severity": "residual risk (documented classes)", "needs_mandate": false,
+     "title": "7 byte-scope files whose identity is not print-verified",
+     "detail": "4ch1/4sd0 2019-06 scan-promoted QPs (4CH1-1C, 4SD0-1C) + 2013/2015-era broken-ToUnicode covers (4PH0 1P 2015-06 qp, 1PR/2PR 2013-06 qp) + 2 image-only 4SD0 2019-06 QPs (manifest confidence_rank 3, official-listing identification). Identity rests on manifest sha pins + repair-block/wave evidence; print/pixel verification possible in a future wave."}
+  ],
+  "bottom_line": "Folder names are NOW trustworthy for the ingested subjects (4ch0/4ch1) and the wave-active 4ph0/4sd0 at corpus HEAD: zero hostile identity contradictions, both repair waves byte-verified. The live defect that remains is DB-side only: 18 orphaned pre-repair generations (F-A1) that nothing serves but that still carry the mis-filed bytes and their chunk layers. The next ingestion wave must NOT trust folder names for the never-ingested specs listed in F-A2 without the three-class verification."
+}

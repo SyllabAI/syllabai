@@ -1,0 +1,59 @@
+version: 1
+task:
+  id: T-C55
+  title: "Hub Deck-flow e2e red — openLearnerDrawer times out waiting for
+    button[aria-haspopup=dialog] on the learner page (2 of 29 tests
+    fail; pre-existing on main, disjoint from the math lane)"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: "operator message (zai-web, 2026-10-02, trace
+    1a0fbb36c18b5465) naming 'hub's Deck-flow e2e red (e2e lane)' as
+    the residual to work — the operator assigns the e2e lane"
+  base:
+    repo: syllabai-hub
+    commit: fca83c8
+  scope:
+    allowed:
+      - "tests/e2e/deck-flow.spec.ts — diagnose and repair; any locator/
+        helper changes must keep the spec's assertions intact (no
+        weakening: the honest-empty-state and deep-link guarantees stay)"
+      - "the learner-surface components the spec drives (learner page,
+        drawer trigger) IF the root cause is an app-side regression —
+        fix the cause, never delete or skip the failing tests"
+    forbidden:
+      - "no changes to the T-C44/T-C47/T-C50/T-C51 math-lane files
+        (mathNormalize.ts, rehypeKatexMhchem, verify gates, their CI
+        steps) — that family is closed and its green gates are untouchable"
+      - "no corpus content changes; no prompt/core changes"
+  acceptance:
+    - "deck-flow e2e suite green on hub (29/29 incl. both currently-red
+      tests at spec lines 125 and 153)"
+    - "all existing gates stay green: math normalize verify 26/26,
+      eslint, production build, CI build job"
+    - "root cause documented in the PR: stale locator vs app regression,
+      with the fix on the causally-correct side"
+  evidence:
+    - "failure signature (CI run 110743463610, e2e job 110743463918, hub
+      main fca83c8dae88): 2 failed / 27 passed; both failures time out
+      in openLearnerDrawer (spec line 51) waiting for
+      locator('button[aria-haspopup=dialog]').first() — 60s test timeout
+      — then 2 retries exhausted; failing tests: spec:125 'the Flashcards
+      due section shows the deck, its due count, and deep-links to it'
+      and spec:153 'rated-but-nothing-due shows the honest empty state,
+      never a fabricated queue'"
+    - "pre-existing: the same 2-test red is on main a61b0d3 (run
+      110539038918, identical step, same signature) — NOT introduced by
+      the T-C44..T-C51 math lane (its diffs are disjoint from the learner
+      surface)"
+  merge_status: "MERGED — operator merge word given 2026-10-02 (trace
+    1a0fbdbf32a310c5). PR syllabai-hub#8 (fix/kg-deep-link-self-destruct)
+    merge commit c2345d9ce7a2 (parents base fca83c8dae, head 6d6438149 —
+    verified), main ref updated. Pre-merge guards: open, head/base pinned
+    to the ledger, mergeable, mergeable_state=clean; head checks build +
+    e2e + Vercel preview comments all SUCCESS. Post-merge main CI: hub-ci
+    run 36987830837 SUCCESS — build AND e2e both green on main c2345d9ce;
+    the e2e lane is green for the first time since 429e4ad, and the new
+    deck-flow regression pin (guarding both sides of the 429e4ad deep-
+    link contract) is now permanent in the suite (30 specs). PR closed
+    with evidence comment. The hub Deck-flow e2e lane is closed."

@@ -1,59 +1,64 @@
 version: 1
 task:
   id: T-C55
-  title: "Hub Deck-flow e2e red — openLearnerDrawer times out waiting for
-    button[aria-haspopup=dialog] on the learner page (2 of 29 tests
-    fail; pre-existing on main, disjoint from the math lane)"
-  owner: "superz (main agent, zai session web-98866c45)"
-  status: IN_PROGRESS
+  title: "G3 grammar — col-0 scored leads with below-printed lone cells +
+    cell-less block residual recovery (1CR-2016 Q10 a(ii) 2-mark operator
+    ruling) + scheme fills for the 2 sparse qv (q03-51fea326, q10-5273dfa3)
+    + census re-pin on the post-F-PROD-4 baseline"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
   priority: P1
-  authority: "operator message (zai-web, 2026-10-02, trace
-    1a0fbb36c18b5465) naming 'hub's Deck-flow e2e red (e2e lane)' as
-    the residual to work — the operator assigns the e2e lane"
+  authority: "operator IM trace 1a0fb848d5b29681: 'Proceed with Remaining
+    opens: 1CR-2016 Q10 a(ii) (2 marks), scheme-fill mandates for the 2
+    sparse qv' — the last two named Remaining-open items of the grid-layout
+    lane (T-C45) / ruling-v57 closeout (T-C49)"
   base:
-    repo: syllabai-hub
-    commit: fca83c8
-  scope:
-    allowed:
-      - "tests/e2e/deck-flow.spec.ts — diagnose and repair; any locator/
-        helper changes must keep the spec's assertions intact (no
-        weakening: the honest-empty-state and deep-link guarantees stay)"
-      - "the learner-surface components the spec drives (learner page,
-        drawer trigger) IF the root cause is an app-side regression —
-        fix the cause, never delete or skip the failing tests"
-    forbidden:
-      - "no changes to the T-C44/T-C47/T-C50/T-C51 math-lane files
-        (mathNormalize.ts, rehypeKatexMhchem, verify gates, their CI
-        steps) — that family is closed and its green gates are untouchable"
-      - "no corpus content changes; no prompt/core changes"
-  acceptance:
-    - "deck-flow e2e suite green on hub (29/29 incl. both currently-red
-      tests at spec lines 125 and 153)"
-    - "all existing gates stay green: math normalize verify 26/26,
-      eslint, production build, CI build job"
-    - "root cause documented in the PR: stale locator vs app regression,
-      with the fix on the causally-correct side"
-  evidence:
-    - "failure signature (CI run 110743463610, e2e job 110743463918, hub
-      main fca83c8dae88): 2 failed / 27 passed; both failures time out
-      in openLearnerDrawer (spec line 51) waiting for
-      locator('button[aria-haspopup=dialog]').first() — 60s test timeout
-      — then 2 retries exhausted; failing tests: spec:125 'the Flashcards
-      due section shows the deck, its due count, and deep-links to it'
-      and spec:153 'rated-but-nothing-due shows the honest empty state,
-      never a fabricated queue'"
-    - "pre-existing: the same 2-test red is on main a61b0d3 (run
-      110539038918, identical step, same signature) — NOT introduced by
-      the T-C44..T-C51 math lane (its diffs are disjoint from the learner
-      surface)"
-  merge_status: "MERGED — operator merge word given 2026-10-02 (trace
-    1a0fbdbf32a310c5). PR syllabai-hub#8 (fix/kg-deep-link-self-destruct)
-    merge commit c2345d9ce7a2 (parents base fca83c8dae, head 6d6438149 —
-    verified), main ref updated. Pre-merge guards: open, head/base pinned
-    to the ledger, mergeable, mergeable_state=clean; head checks build +
-    e2e + Vercel preview comments all SUCCESS. Post-merge main CI: hub-ci
-    run 36987830837 SUCCESS — build AND e2e both green on main c2345d9ce;
-    the e2e lane is green for the first time since 429e4ad, and the new
-    deck-flow regression pin (guarding both sides of the 429e4ad deep-
-    link contract) is now permanent in the suite (30 specs). PR closed
-    with evidence comment. The hub Deck-flow e2e lane is closed."
+    repo: "syllabai (records) main 3313b1e0f-era; syllabai-parser main
+      5643689 -> 0fc5c32; live-DB re-based to the post-F-PROD-4 baseline
+      (qsp 2620, qt 1717, schemes 1502, mp 5867, audit 4049, qv_pool 1526,
+      questions_active 954, papers 90V/13R)"
+  items:
+    - id: "1"
+      what: "defect root-caused first-hand: the printed 1CR Jun 2016 MS never
+        prints the a(ii) marks cells (pymupdf coordinate scan of the marks
+        column: only a(i)'s '3'); 2 marks fully determined by printed
+        evidence (QP echo 15 minus sibling cells 13 == main-route M1+M2
+        count 2), matching the operator's '(2 marks)' ruling. Engine fix
+        syllabai-parser main 0fc5c32: G3.1 col-0 scored leads (lone-cell-
+        below scan cures the banner-branch mark-steal + the (a,ii)
+        deferred-point mislabel cascade) + G3.3 cell-less block residual
+        recovery (one cell-less block, diff == main-route count, M/A label
+        restart = OR-route alternative). Suite 196 OK incl. 6 new fixtures;
+        CI 3/3 green; 12-paper corpus regression 13 diff sites ALL
+        justified (1CR-2016 Q10 13->15; 1C Jan 2017 Q5 16->17 with QP echo
+        17 confirming G3; two sum-invariant attribution improvements)"
+    - id: "2"
+      what: "scheme fills, one fail-closed tx: 2 mark_schemes (SUGGESTED,
+        version_label '1', method ms-print-gated-extraction-v4, source doc
+        sha-pinned 1e9c53b5 / cfe40a1b) + 16 mark_points / 23 marks. Plan
+        g3_fill_plan.json file sha
+        2b7f433f39254934ad91b32d5611a8723d6d3c580b1a793702a0ff0effadb4ea
+        pinned pre-write; per-entry gates engine sum == QP echo == qv.marks
+        (q03: 8/8/8; q10: 15/15/15), 0 containment artifacts (16/16 strict
+        verbatim); pre-asserts + in-tx post-asserts all green; fresh-conn
+        verify 2/2 schemes, 16/16 points byte-match + verbatim; lane
+        sparse universe 2 -> 0"
+    - id: "3"
+      what: "census re-pin (census-last) on the post-F-PROD-4 baseline:
+        census_bundle_g3_20261002.json, 18 pins, drift NONE (qsp 2620, qt
+        1717, schemes 1504 = 1360V/144S, mp 5883, audit 4049, tve 0,
+        qv_pool 1526, questions_active 954, papers 90V/13R, docs
+        567V/305S/145R, kn 435, edges 730, ING 0)"
+  evidence: "bench/review/psaxis-review-2026-09-28/grid-layout-lane-20261002/
+    g3-sparse-fill-20261002/ (REPORT + VERIFY_OUTPUTS + g3_fill_plan.json +
+    census bundle + SHA256SUMS)"
+  notes: "Protocol-2 caught the F-PROD-4 governed removal (audit 4049,
+    wave2-prep-agent 2026-10-02T07:34:18Z: 1 paper + 2 REJECTED docs +
+    7-question SUGGESTED shell) — pins re-based, nothing re-executed or
+    undone; both targets were untouched. q03's parse is G2-equivalent (no
+    G3 code path exercised; noted honestly). The a(ii) point carries the
+    main-route text; OR alternative + step rows live in demoted-notes
+    (house shape). The 1CR-2016 Q5 / 1CR-2019 Q4 attribution improvements
+    are recorded for future re-parses; no applied row was mutated.
+    Secrets revocation (GH_PAT + RENDER_KEY) still open — env-only this
+    session; corpus folder-mislabel audit still open (non-urgent)."

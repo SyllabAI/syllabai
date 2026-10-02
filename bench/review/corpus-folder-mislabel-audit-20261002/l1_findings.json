@@ -1,0 +1,3612 @@
+{
+  "stats": {
+    "dirs_scanned": 5239,
+    "C2b-soft-extra-refs-beside-own": 162,
+    "c3": 44
+  },
+  "findings": [
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/cambridge-international/ial/mathematics/9709/past-papers/2023-11/9709-W23-QP-23",
+      "session": "2023-11",
+      "dir_name": "9709-W23-QP-23",
+      "official_reference": "9709/23",
+      "printed_refs": [
+        "9709/23",
+        "9709/21"
+      ],
+      "session_printed": "October/November 2023",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "9709/21"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/cambridge-international/ial/mathematics/9709/past-papers/2023-11/9709-W23-QP-61",
+      "session": "2023-11",
+      "dir_name": "9709-W23-QP-61",
+      "official_reference": "9709/61",
+      "printed_refs": [
+        "9709/61",
+        "9709/63"
+      ],
+      "session_printed": "October/November 2023",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "9709/63"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-01/6663-01",
+      "session": "2005-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-01/6664-01",
+      "session": "2005-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2005; January 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-01/6677-01",
+      "session": "2005-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2005; January 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-06/6663-01",
+      "session": "2005-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-06/6664-01",
+      "session": "2005-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-06/6666-01",
+      "session": "2005-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-06/6677-01",
+      "session": "2005-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-06/6678-01",
+      "session": "2005-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-06/6683-01",
+      "session": "2005-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2005-06/6684-01",
+      "session": "2005-06",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "June 2005",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-01/6663-01",
+      "session": "2006-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2006; January 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-01/6664-01",
+      "session": "2006-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2006; January 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-01/6665-01",
+      "session": "2006-01",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "January 2006; January 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-01/6666-01",
+      "session": "2006-01",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "January 2006; January 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-01/6677-01",
+      "session": "2006-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2006; January 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-06/6663-01",
+      "session": "2006-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2006; June 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-06/6664-01",
+      "session": "2006-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2006; June 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-06/6665-01",
+      "session": "2006-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2006; June 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-06/6666-01",
+      "session": "2006-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2006; June 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-06/6677-01",
+      "session": "2006-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-06/6678-01",
+      "session": "2006-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2006; June 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-06/6683-01",
+      "session": "2006-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2006; June 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2006-06/6684-01",
+      "session": "2006-06",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "June 2006; June 2006",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-01/6663-01",
+      "session": "2007-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2007; January 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-01/6664-01",
+      "session": "2007-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2007; January 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-01/6665-01",
+      "session": "2007-01",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "January 2007; January 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-01/6666-01",
+      "session": "2007-01",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "January 2007; January 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-01/6677-01",
+      "session": "2007-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2007; January 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-01/6678-01",
+      "session": "2007-01",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "January 2007; January 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-01/6683-01",
+      "session": "2007-01",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "January 2007; January 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-01/6684-01",
+      "session": "2007-01",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "January 2007; January 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-06/6663-01",
+      "session": "2007-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-06/6664-01",
+      "session": "2007-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-06/6665-01",
+      "session": "2007-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-06/6666-01",
+      "session": "2007-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-06/6677-01",
+      "session": "2007-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2007; June 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-06/6678-01",
+      "session": "2007-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2007-06/6683-01",
+      "session": "2007-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6681",
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2007",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-01/6663-01",
+      "session": "2008-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2008; January 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-01/6664-01",
+      "session": "2008-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2008; January 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-01/6665-01",
+      "session": "2008-01",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "January 2008; January 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-01/6666-01",
+      "session": "2008-01",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "January 2008; January 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-01/6677-01",
+      "session": "2008-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2008; January 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-01/6678-01",
+      "session": "2008-01",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "January 2008; January 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-01/6683-01",
+      "session": "2008-01",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "January 2008; January 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-01/6684-01",
+      "session": "2008-01",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "January 2008; January 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-06/6663-01",
+      "session": "2008-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-06/6664-01",
+      "session": "2008-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-06/6665-01",
+      "session": "2008-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-06/6666-01",
+      "session": "2008-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-06/6677-01",
+      "session": "2008-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-06/6678-01",
+      "session": "2008-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2008; June 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2008-06/6683-01",
+      "session": "2008-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2008; June 2008",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-01/6663-01",
+      "session": "2009-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2009; January 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-01/6664-01",
+      "session": "2009-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2009; January 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-01/6665-01",
+      "session": "2009-01",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "January 2009; January 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-01/6666-01",
+      "session": "2009-01",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "January 2009; January 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-01/6677-01",
+      "session": "2009-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2009; January 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-01/6678-01",
+      "session": "2009-01",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "January 2009; January 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-01/6683-01",
+      "session": "2009-01",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "January 2009; January 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-01/6684-01",
+      "session": "2009-01",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "January 2009; January 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-06/6663-01",
+      "session": "2009-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-06/6664-01",
+      "session": "2009-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2009; June 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-06/6665-01",
+      "session": "2009-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-06/6666-01",
+      "session": "2009-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-06/6677-01",
+      "session": "2009-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-06/6678-01",
+      "session": "2009-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2009-06/6683-01",
+      "session": "2009-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2009",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-01/6663-01",
+      "session": "2010-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2010; January 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-01/6664-01",
+      "session": "2010-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2010; January 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-01/6665-01",
+      "session": "2010-01",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "January 2010; January 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-01/6666-01",
+      "session": "2010-01",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "January 2010; January 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-01/6677-01",
+      "session": "2010-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2010; January 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-01/6683-01",
+      "session": "2010-01",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "January 2010; January 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-01/6684-01",
+      "session": "2010-01",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "January 2010; January 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-06/6663-01",
+      "session": "2010-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-06/6664-01",
+      "session": "2010-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-06/6665-01",
+      "session": "2010-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-06/6666-01",
+      "session": "2010-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-06/6677-01",
+      "session": "2010-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-06/6678-01",
+      "session": "2010-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-06/6683-01",
+      "session": "2010-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2010-06/6684-01",
+      "session": "2010-06",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "June 2010",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-01/6663-01",
+      "session": "2011-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2011; January 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-01/6664-01",
+      "session": "2011-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2011; January 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-01/6665-01",
+      "session": "2011-01",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "January 2011; January 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-01/6666-01",
+      "session": "2011-01",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "January 2011; January 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-01/6677-01",
+      "session": "2011-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2011; January 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-01/6678-01",
+      "session": "2011-01",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "January 2011; January 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-01/6683-01",
+      "session": "2011-01",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "January 2011; January 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-01/6684-01",
+      "session": "2011-01",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "January 2011; January 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-06/6663-01",
+      "session": "2011-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2011; June 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-06/6664-01",
+      "session": "2011-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2011; June 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-06/6665-01",
+      "session": "2011-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2011; June 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-06/6666-01",
+      "session": "2011-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2011; June 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-06/6677-01",
+      "session": "2011-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2011; June 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-06/6678-01",
+      "session": "2011-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2011; June 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-06/6683-01",
+      "session": "2011-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2011; June 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2011-06/6684-01",
+      "session": "2011-06",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "June 2011; June 2011",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-01/6663-01",
+      "session": "2012-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2012; January 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-01/6664-01",
+      "session": "2012-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2012; January 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-01/6665-01",
+      "session": "2012-01",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "January 2012; January 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-01/6666-01",
+      "session": "2012-01",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6665/57",
+        "6666",
+        "6666/01"
+      ],
+      "session_printed": "January 2012; January 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-01/6677-01",
+      "session": "2012-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2012; January 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-01/6678-01",
+      "session": "2012-01",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "January 2012; January 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-01/6683-01",
+      "session": "2012-01",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "January 2012; January 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-01/6684-01",
+      "session": "2012-01",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "January 2012; January 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-06/6663-01",
+      "session": "2012-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-06/6664-01",
+      "session": "2012-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-06/6665-01",
+      "session": "2012-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-06/6666-01",
+      "session": "2012-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-06/6677-01",
+      "session": "2012-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-06/6678-01",
+      "session": "2012-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2012-06/6683-01",
+      "session": "2012-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6638/57",
+        "6683",
+        "6683/01"
+      ],
+      "session_printed": "June 2012",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6638/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-01/6663-01",
+      "session": "2013-01",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "January 2013; January 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-01/6664-01",
+      "session": "2013-01",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "January 2013; January 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-01/6665-01",
+      "session": "2013-01",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "January 2013; January 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-01/6666-01",
+      "session": "2013-01",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "January 2013; January 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-01/6677-01",
+      "session": "2013-01",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "January 2013; January 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-01/6678-01",
+      "session": "2013-01",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "January 2013; January 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-01/6683-01",
+      "session": "2013-01",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "January 2013; January 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-01/6684-01",
+      "session": "2013-01",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "January 2013; January 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6663-01",
+      "session": "2013-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6664-01",
+      "session": "2013-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6664-01R",
+      "session": "2013-06",
+      "dir_name": "6664-01R",
+      "official_reference": "6664/01R",
+      "printed_refs": [
+        "6664",
+        "6664/01R",
+        "6664/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6665-01",
+      "session": "2013-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2013; June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6666-01",
+      "session": "2013-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6677-01",
+      "session": "2013-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6677-01R",
+      "session": "2013-06",
+      "dir_name": "6677-01R",
+      "official_reference": "6677/01R",
+      "printed_refs": [
+        "6677",
+        "6677/01R",
+        "6677/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6678-01",
+      "session": "2013-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6678-01R",
+      "session": "2013-06",
+      "dir_name": "6678-01R",
+      "official_reference": "6678/01R",
+      "printed_refs": [
+        "6678",
+        "6678/01R",
+        "6678/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6683-01",
+      "session": "2013-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6683-01R",
+      "session": "2013-06",
+      "dir_name": "6683-01R",
+      "official_reference": "6683/01R",
+      "printed_refs": [
+        "6638/57",
+        "6683",
+        "6683/01R"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6638/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6684-01",
+      "session": "2013-06",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2013-06/6684-01R",
+      "session": "2013-06",
+      "dir_name": "6684-01R",
+      "official_reference": "6684/01R",
+      "printed_refs": [
+        "6684",
+        "6684/01R",
+        "6684/57"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6663-01",
+      "session": "2014-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6663-01R",
+      "session": "2014-06",
+      "dir_name": "6663-01R",
+      "official_reference": "6663/01R",
+      "printed_refs": [
+        "6663",
+        "6663/01R",
+        "6663/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6664-01",
+      "session": "2014-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6664-01R",
+      "session": "2014-06",
+      "dir_name": "6664-01R",
+      "official_reference": "6664/01R",
+      "printed_refs": [
+        "6664",
+        "6664/01R",
+        "6664/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6665-01",
+      "session": "2014-06",
+      "dir_name": "6665-01",
+      "official_reference": "6665/01",
+      "printed_refs": [
+        "6665",
+        "6665/01",
+        "6665/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6665-01R",
+      "session": "2014-06",
+      "dir_name": "6665-01R",
+      "official_reference": "6665/01R",
+      "printed_refs": [
+        "6665",
+        "6665/01R",
+        "6665/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6665/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6666-01",
+      "session": "2014-06",
+      "dir_name": "6666-01",
+      "official_reference": "6666/01",
+      "printed_refs": [
+        "6666",
+        "6666/01",
+        "6666/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6666-01R",
+      "session": "2014-06",
+      "dir_name": "6666-01R",
+      "official_reference": "6666/01R",
+      "printed_refs": [
+        "6666",
+        "6666/01R",
+        "6666/57"
+      ],
+      "session_printed": "June 2014; June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6666/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6677-01",
+      "session": "2014-06",
+      "dir_name": "6677-01",
+      "official_reference": "6677/01",
+      "printed_refs": [
+        "6677",
+        "6677/01",
+        "6677/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6677-01R",
+      "session": "2014-06",
+      "dir_name": "6677-01R",
+      "official_reference": "6677/01R",
+      "printed_refs": [
+        "6677",
+        "6677/01R",
+        "6677/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6677/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6678-01",
+      "session": "2014-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6678-01R",
+      "session": "2014-06",
+      "dir_name": "6678-01R",
+      "official_reference": "6678/01R",
+      "printed_refs": [
+        "6678",
+        "6678/01R",
+        "6678/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6683-01",
+      "session": "2014-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6683-01R",
+      "session": "2014-06",
+      "dir_name": "6683-01R",
+      "official_reference": "6683/01R",
+      "printed_refs": [
+        "6638/57",
+        "6683",
+        "6683/01R"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6638/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6684-01",
+      "session": "2014-06",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-06/6684-01R",
+      "session": "2014-06",
+      "dir_name": "6684-01R",
+      "official_reference": "6684/01R",
+      "printed_refs": [
+        "6684",
+        "6684/01R",
+        "6684/57"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2015-06/6663-01",
+      "session": "2015-06",
+      "dir_name": "6663-01",
+      "official_reference": "6663/01",
+      "printed_refs": [
+        "6663",
+        "6663/01",
+        "6663/57"
+      ],
+      "session_printed": "June 2015",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6663/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2015-06/6664-01",
+      "session": "2015-06",
+      "dir_name": "6664-01",
+      "official_reference": "6664/01",
+      "printed_refs": [
+        "6664",
+        "6664/01",
+        "6664/57"
+      ],
+      "session_printed": "June 2015",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6664/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2015-06/6678-01",
+      "session": "2015-06",
+      "dir_name": "6678-01",
+      "official_reference": "6678/01",
+      "printed_refs": [
+        "6678",
+        "6678/01",
+        "6678/57"
+      ],
+      "session_printed": "June 2015",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6678/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2015-06/6683-01",
+      "session": "2015-06",
+      "dir_name": "6683-01",
+      "official_reference": "6683/01",
+      "printed_refs": [
+        "6683",
+        "6683/01",
+        "6683/57"
+      ],
+      "session_printed": "June 2015",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6683/57"
+      ]
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2015-06/6684-01",
+      "session": "2015-06",
+      "dir_name": "6684-01",
+      "official_reference": "6684/01",
+      "printed_refs": [
+        "6684",
+        "6684/01",
+        "6684/57"
+      ],
+      "session_printed": "June 2015",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "6684/57"
+      ]
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2013-06/6PH02-01",
+      "session": "2013-06",
+      "dir_name": "6PH02-01",
+      "official_reference": "6PH02/01",
+      "printed_refs": [
+        "6PH02",
+        "6PH02/01"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2013 (R) MS - Unit 2 Edexcel Physics A-level.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2013-06/6PH05-01",
+      "session": "2013-06",
+      "dir_name": "6PH05-01",
+      "official_reference": "6PH05/01",
+      "printed_refs": [
+        "6PH05",
+        "6PH05/01"
+      ],
+      "session_printed": "June 2013",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2013 (R) MS - Unit 5 Edexcel Physics A-level.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2014-06/6PH01-01",
+      "session": "2014-06",
+      "dir_name": "6PH01-01",
+      "official_reference": "6PH01/01",
+      "printed_refs": [
+        "6PH01",
+        "6PH01/01"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2014 (R) MS - Unit 1 Edexcel Physics A-level.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2014-06/6PH02-01",
+      "session": "2014-06",
+      "dir_name": "6PH02-01",
+      "official_reference": "6PH02/01",
+      "printed_refs": [
+        "6PH02",
+        "6PH02/01"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2014 (R) MS - Unit 2 Edexcel Physics A-level.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2014-06/6PH04-01",
+      "session": "2014-06",
+      "dir_name": "6PH04-01",
+      "official_reference": "6PH04/01",
+      "printed_refs": [
+        "6PH04",
+        "6PH04/01"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2014 (R) MS - Unit 4 Edexcel Physics A-level.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2014-06/6PH05-01",
+      "session": "2014-06",
+      "dir_name": "6PH05-01",
+      "official_reference": "6PH05/01",
+      "printed_refs": [
+        "6PH05",
+        "6PH05/01"
+      ],
+      "session_printed": "June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2014 (R) MS - Unit 5 Edexcel Physics A-level.pdf"
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/international-a-level/biology/wbi04/past-papers/2016-01/WBI04-01",
+      "session": "2016-01",
+      "dir_name": "WBI04-01",
+      "official_reference": "WBI04/01",
+      "printed_refs": [
+        "WBI04/01",
+        "WBI04/4"
+      ],
+      "session_printed": "January 2016",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "WBI04/4"
+      ]
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2014-06/4EB0-01",
+      "session": "2014-06",
+      "dir_name": "4EB0-01",
+      "official_reference": "4EB0/01",
+      "printed_refs": [
+        "4EB0",
+        "4EB0/01"
+      ],
+      "session_printed": "May 2014; June 2014",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2014 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2015-06/4EB0-01",
+      "session": "2015-06",
+      "dir_name": "4EB0-01",
+      "official_reference": "4EB0/01",
+      "printed_refs": [
+        "4EB0"
+      ],
+      "session_printed": "June 2015",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2015 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2016-06/4EB0-01",
+      "session": "2016-06",
+      "dir_name": "4EB0-01",
+      "official_reference": "4EB0/01",
+      "printed_refs": [
+        "4EB0",
+        "4EB0/01"
+      ],
+      "session_printed": "June 2016; June 2016",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2016 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2017-06/4EB0-01",
+      "session": "2017-06",
+      "dir_name": "4EB0-01",
+      "official_reference": "4EB0/01",
+      "printed_refs": [
+        "4EB0",
+        "4EB0/01"
+      ],
+      "session_printed": "June 2017; June 2017",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2017 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2018-06/4EB1-01",
+      "session": "2018-06",
+      "dir_name": "4EB1-01",
+      "official_reference": "4EB1/01",
+      "printed_refs": [
+        "4EB1"
+      ],
+      "session_printed": "June 2018",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2018 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2019-01/4EB1-01",
+      "session": "2019-01",
+      "dir_name": "4EB1-01",
+      "official_reference": "4EB1/01",
+      "printed_refs": [
+        "4EB1",
+        "4EB1/01"
+      ],
+      "session_printed": "January 2019; January 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "January 2019 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2019-06/4EB1-01",
+      "session": "2019-06",
+      "dir_name": "4EB1-01",
+      "official_reference": "4EB1/01",
+      "printed_refs": [
+        "4EB1",
+        "4EB1/01"
+      ],
+      "session_printed": "June 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2019 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2020-01/4EB1-01",
+      "session": "2020-01",
+      "dir_name": "4EB1-01",
+      "official_reference": "4EB1/01",
+      "printed_refs": [
+        "4EB1",
+        "4EB1/01"
+      ],
+      "session_printed": "January 2020; January 2020",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "January 2020 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2020-01/4EB1-01R",
+      "session": "2020-01",
+      "dir_name": "4EB1-01R",
+      "official_reference": "4EB1/01R",
+      "printed_refs": [
+        "4EB1/01R",
+        "4EB1/1R"
+      ],
+      "session_printed": "January 2020; January 2020",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "4EB1/1R"
+      ]
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2022-01/4EB1-01",
+      "session": "2022-01",
+      "dir_name": "4EB1-01",
+      "official_reference": "4EB1/01",
+      "printed_refs": [
+        "4EB1",
+        "4EB1/01"
+      ],
+      "session_printed": "January 2022; January 2022",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "January 2022 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2023-06/4EB1-01",
+      "session": "2023-06",
+      "dir_name": "4EB1-01",
+      "official_reference": "4EB1/01",
+      "printed_refs": [
+        "4EB1",
+        "4EB1/01"
+      ],
+      "session_printed": "June 2023",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2023 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2024-06/4EB1-01",
+      "session": "2024-06",
+      "dir_name": "4EB1-01",
+      "official_reference": "4EB1/01",
+      "printed_refs": [
+        "4EB1"
+      ],
+      "session_printed": "June 2024; June 2024",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "ms.pdf",
+      "original_filename": "June 2024 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf"
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/international-gcse/further-pure-mathematics/4pm1/past-papers/2022-01/4PM1-02R",
+      "session": "2022-01",
+      "dir_name": "4PM1-02R",
+      "official_reference": "4PM1/02R",
+      "printed_refs": [
+        "4PM1/02R",
+        "4PM1/2R"
+      ],
+      "session_printed": "January 2022",
+      "verification_status": "OPERATOR-RATIFIED",
+      "repaired": false,
+      "contradictions": [
+        "4PM1/2R"
+      ]
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma0/past-papers/2015-06/4MA0-1F",
+      "session": "2015-06",
+      "dir_name": "4MA0-1F",
+      "official_reference": "4MA0/1F",
+      "printed_refs": [
+        "4MA0"
+      ],
+      "session_printed": "June 2015",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2015 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-1F",
+      "session": "2019-01",
+      "dir_name": "4MA1-1F",
+      "official_reference": "4MA1/1F",
+      "printed_refs": [
+        "4MA1"
+      ],
+      "session_printed": "January 2019; January 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2019 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-1H",
+      "session": "2019-01",
+      "dir_name": "4MA1-1H",
+      "official_reference": "4MA1/1H",
+      "printed_refs": [
+        "4MA1"
+      ],
+      "session_printed": "January 2019; January 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2019 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-2F",
+      "session": "2019-01",
+      "dir_name": "4MA1-2F",
+      "official_reference": "4MA1/2F",
+      "printed_refs": [
+        "4MA1"
+      ],
+      "session_printed": "January 2019; January 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2019 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-2H",
+      "session": "2019-01",
+      "dir_name": "4MA1-2H",
+      "official_reference": "4MA1/2H",
+      "printed_refs": [
+        "4MA1"
+      ],
+      "session_printed": "January 2019; January 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2019 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-06/4MA1-2F",
+      "session": "2019-06",
+      "dir_name": "4MA1-2F",
+      "official_reference": "4MA1/2F",
+      "printed_refs": [
+        "4MA1"
+      ],
+      "session_printed": "June 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2019 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb0/past-papers/2015-01/4MB0-02",
+      "session": "2015-01",
+      "dir_name": "4MB0-02",
+      "official_reference": "4MB0/02",
+      "printed_refs": [
+        "4MB0"
+      ],
+      "session_printed": "January 2015; January 2015",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2015 (R) QP_2.pdf"
+    },
+    {
+      "check": "C2b-soft-extra-refs-beside-own",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb0/past-papers/2016-01/4MB0-01R",
+      "session": "2016-01",
+      "dir_name": "4MB0-01R",
+      "official_reference": "4MB0/01R",
+      "printed_refs": [
+        "4MB0/01R",
+        "4MB0/1R"
+      ],
+      "session_printed": "January 2016; January 2016",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "contradictions": [
+        "4MB0/1R"
+      ]
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb1/past-papers/2019-01/4MB1-01",
+      "session": "2019-01",
+      "dir_name": "4MB1-01",
+      "official_reference": "4MB1/01",
+      "printed_refs": [
+        "4MB1"
+      ],
+      "session_printed": "January 2019; January 2019",
+      "verification_status": "OPERATOR-RATIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2019 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb1/past-papers/2019-01/4MB1-02",
+      "session": "2019-01",
+      "dir_name": "4MB1-02",
+      "official_reference": "4MB1/02",
+      "printed_refs": [
+        "4MB1"
+      ],
+      "session_printed": "January 2019; January 2019",
+      "verification_status": "OPERATOR-RATIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2019 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2019-06/4PH1-1P",
+      "session": "2019-06",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "June 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2019 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2019-06/4PH1-2P",
+      "session": "2019-06",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "June 2019",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2019 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-01/4PH1-1P",
+      "session": "2020-01",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "January 2020; January 2020",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2020 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-01/4PH1-2P",
+      "session": "2020-01",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "January 2020; January 2020",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2020 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-1P",
+      "session": "2020-06",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "May 2020; June 2020",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2020 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-2P",
+      "session": "2020-06",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "June 2020; June 2020",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2020 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2021-01/4PH1-1P",
+      "session": "2021-01",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "January 2021; January 2021",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2021 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2021-01/4PH1-2P",
+      "session": "2021-01",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "January 2021; January 2021",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2021 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-01/4PH1-1P",
+      "session": "2022-01",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "January 2022; January 2022",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2022 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-01/4PH1-2P",
+      "session": "2022-01",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "January 2022; January 2022",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2022 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-06/4PH1-1P",
+      "session": "2022-06",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "June 2022",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2022 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-06/4PH1-2P",
+      "session": "2022-06",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "June 2022",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2022 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-01/4PH1-1P",
+      "session": "2023-01",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "January 2023; January 2023",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2023 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-01/4PH1-2P",
+      "session": "2023-01",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "January 2023; January 2023",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "January 2023 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-06/4PH1-1P",
+      "session": "2023-06",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "June 2023",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2023 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-06/4PH1-2P",
+      "session": "2023-06",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "June 2023",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2023 (R) QP_2.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2024-06/4PH1-1P",
+      "session": "2024-06",
+      "dir_name": "4PH1-1P",
+      "official_reference": "4PH1/1P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/1P"
+      ],
+      "session_printed": "June 2024",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2024 (R) QP.pdf"
+    },
+    {
+      "check": "C3-R-file-in-plain-dir",
+      "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2024-06/4PH1-2P",
+      "session": "2024-06",
+      "dir_name": "4PH1-2P",
+      "official_reference": "4PH1/2P",
+      "printed_refs": [
+        "4PH1",
+        "4PH1/2P"
+      ],
+      "session_printed": "June 2024",
+      "verification_status": "AI-IDENTIFIED",
+      "repaired": false,
+      "file": "qp.pdf",
+      "original_filename": "June 2024 (R) QP_2.pdf"
+    }
+  ]
+}

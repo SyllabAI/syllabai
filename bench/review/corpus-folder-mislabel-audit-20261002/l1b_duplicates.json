@@ -1,0 +1,1860 @@
+{
+  "stats": {
+    "same-spec-different-identities": 50,
+    "quarantine-or-external": 23
+  },
+  "groups": [
+    {
+      "blob_sha": "06a5ee31f2c34ecbafb81c73b73b442b443af6fa",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2024-06/4CH1-1C/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2024-06/4SD0-1C/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2024-06",
+          "dir": "4CH1-1C"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2024-06",
+          "dir": "4SD0-1C"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "0962316e4af8d18745293c8ddefadccc4e168b43",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-01/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2022-01/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2022-01",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2022-01",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "0f39bad95985b6321a74379fd40fa53e40de9173",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-1PR/ms.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-11/4SD0-1PR/ms.pdf"
+      ],
+      "roles": [
+        "ms.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2020-06",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-11",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "179555de65dd22801d42d57cc9aa733bc532ebb3",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-11/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2020-06",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-11",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "197d44c4c526ffddf88edeb06e71e7e35023d527",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2025-06/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2025-06/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2025-06",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2025-06",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "1e1c7e54b1ea1cb864e1fb8298c2f1227ec16d9c",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2022-01/4BI1-1BR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2022-01/4SD0-1BR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2022-01",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2022-01",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "24105819d219fadb27f8531ad7ff146e7290b223",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2022-06/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2022-06/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2022-06",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2022-06",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "24342903aa151355e43e4fef3c97c3306c1196e8",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2022-01/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2022-01/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2022-01",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2022-01",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "25c5fc057c14cd7919d11afe2ce95f92d6705fd2",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-01/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-01/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2023-01",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-01",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "2a94905bb7759b4087e04d5854393e94e0b8a288",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2019-06/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2019-06/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2019-06",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2019-06",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "2c1dd9c2b331036970336b666ca7fa69087490ee",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2019-06/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2019-06/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2019-06",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2019-06",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "30a08ce6e9b1b8ea90230ca17a46cbd3719508b5",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Physics__Paper 1__June 2017 QP - Paper 1P Edexcel Physics IGCSE.pdf",
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph0/past-papers/2017-06/4PH0-1P/qp.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Physics__Paper 1__June 2017 QP - Paper 1P Edexcel Physics IGCSE.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4ph0",
+          "session": "2017-06",
+          "dir": "4PH0-1P"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "311d94b4f31f8794c0786fc1ee1309cc22c3e5a4",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Maths B__Paper 2__June 2015 (R) QP_2.pdf",
+        "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb0/past-papers/2015-06/4MB0-02R/qp.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Maths B__Paper 2__June 2015 (R) QP_2.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4mb0",
+          "session": "2015-06",
+          "dir": "4MB0-02R"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "32ccba8e15c701239d8678a0891cdec174d128e0",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2020-06/4BI1-1B/ms.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-11/4SD0-1B/ms.pdf"
+      ],
+      "roles": [
+        "ms.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2020-06",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-11",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "3817641308d3e564771d8f1958b619cc3e407d55",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__S2__June 2018 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2018-06/WST02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__S2__June 2018 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2018-06",
+          "dir": "WST02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "3888db4a64a613c1a9e2be8ac225bd4a5e4b1da9",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2024-06/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2024-06/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2024-06",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2024-06",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "488fcb0f952018cc45f2123b8e62c377d7b0b378",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2021-01/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2021-01/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2021-01",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2021-01",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "576a5c2b50c69697a7b3fac5fafa8e112c67efe1",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-11/4PH1-1P/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-11/4SD0-1P/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2023-11",
+          "dir": "4PH1-1P"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-11",
+          "dir": "4SD0-1P"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "5816d374116cae991cb5717adae4295c05c213bf",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2020-01/4BI1-1BR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-01/4SD0-1BR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2020-01",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-01",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "599b130474e542164d939a163372c9a30735dc5c",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2022-06/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2022-06/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2022-06",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2022-06",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "5a9171b2d209b3d3333ed9bf0686e229f21a3832",
+      "paths": [
+        "_quarantine/nonstandard-artifact/IAL__Edexcel__Pure Maths__C1__Questions from P1-P3_2.pdf",
+        "_quarantine/nonstandard-artifact/IAL__Edexcel__Pure Maths__M2__Questions from P1-P3.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__C1__Questions from P1-P3_2.pdf",
+        "IAL__Edexcel__Pure Maths__M2__Questions from P1-P3.pdf"
+      ],
+      "identities": [
+        null,
+        null
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "5d6aafb02c1f4526c4dfa67083774b72be258925",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2023-11/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-11/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2023-11",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-11",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "5f4bc9acc1e58302d2e70a9c454ed395be731ef2",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__M2__June 2014 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2014-06/WME02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__M2__June 2014 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2014-06",
+          "dir": "WME02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "6517c96a68c5ffd273e448c6cd5d7655828f5e63",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Physics__Paper 1__June 2018 MS - Paper 1P Edexcel Physics IGCSE.pdf",
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph0/past-papers/2018-06/4PH0-1P/ms.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Physics__Paper 1__June 2018 MS - Paper 1P Edexcel Physics IGCSE.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4ph0",
+          "session": "2018-06",
+          "dir": "4PH0-1P"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "65bf4f85b18724f54fa466fad0197309d202c1c5",
+      "paths": [
+        "_quarantine/nonstandard-artifact/IAL__Edexcel__Pure Maths__C1__Questions from P1-P3 MS_2.pdf",
+        "_quarantine/nonstandard-artifact/IAL__Edexcel__Pure Maths__M2__Questions from P1-P3 MS.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__C1__Questions from P1-P3 MS_2.pdf",
+        "IAL__Edexcel__Pure Maths__M2__Questions from P1-P3 MS.pdf"
+      ],
+      "identities": [
+        null,
+        null
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "65c24bee69576dd9835bf46d46f43a6d01a860d3",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2020-06/4BI1-1BR/ms.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-11/4SD0-1BR/ms.pdf"
+      ],
+      "roles": [
+        "ms.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2020-06",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-11",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "6996f371bec2cf5eb4666f26257010e335301a58",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2023-06/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-06/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2023-06",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-06",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "6c0788b44de6b6138ab1b5e2d36516df10ff79a6",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__S2__June 2014 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2014-06/WST02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__S2__June 2014 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2014-06",
+          "dir": "WST02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "6e83a0d9e3c598a4af80d0325268fa7bb279ff4b",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2025-06/4CH1-1C/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2025-06/4SD0-1C/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2025-06",
+          "dir": "4CH1-1C"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2025-06",
+          "dir": "4SD0-1C"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "7453ca4e7c067214267bc58d25581866399b2ece",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__M2__June 2018 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2018-06/WME02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__M2__June 2018 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2018-06",
+          "dir": "WME02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "74edcda690860dcf84b399d0682747870edfd4aa",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2022-06/4BI1-1BR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2022-06/4SD0-1BR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2022-06",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2022-06",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "7781a5844a12ed6ea399c0be407fe24355af3cb3",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-06/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2022-06/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2022-06",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2022-06",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "77bb715da0917c902627760922c036e74381ba55",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2025-06/4BI1-1BR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2025-06/4SD0-1BR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2025-06",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2025-06",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "79e4f8a16e36b4f94c47e6d49751e9c71f1c5aba",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__S2__June 2017 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2017-06/WST02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__S2__June 2017 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2017-06",
+          "dir": "WST02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "7e777557f71b8091d9ab893f0c48544124cec124",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2020-06/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-11/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2020-06",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-11",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "85ecdd6d125afc53cf4ef045d7ae94115345f6c2",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__M2__June 2017 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2017-06/WME02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__M2__June 2017 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2017-06",
+          "dir": "WME02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "8bae6c86964fa4ebff71a3cab8073100e742e045",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2020-01/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-01/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2020-01",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-01",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "95efcb3cf31042910527f0a7e8c23babfc3c73e7",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-06/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-06/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2023-06",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-06",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "9b053bd285769de593b95510eb52471662023ff2",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Maths A__Paper 2F__June 2015 (R) QP.pdf",
+        "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma0/past-papers/2015-06/4MA0-2FR/qp.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Maths A__Paper 2F__June 2015 (R) QP.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4ma0",
+          "session": "2015-06",
+          "dir": "4MA0-2FR"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "a1074043ff0333073898de8135ed91540d85812e",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Physics__Paper 1__June 2018 QP - Paper 1P Edexcel Physics IGCSE.pdf",
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph0/past-papers/2018-06/4PH0-1P/qp.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Physics__Paper 1__June 2018 QP - Paper 1P Edexcel Physics IGCSE.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4ph0",
+          "session": "2018-06",
+          "dir": "4PH0-1P"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "a2e7fd9d3057d4a922b3e8a546c3ba2786f4265e",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__S2__June 2016 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2016-06/WST02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__S2__June 2016 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2016-06",
+          "dir": "WST02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "a5c77501a59f8a76d76d1c61a3c35f7f0993badb",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2021-01/4BI1-1BR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2021-01/4SD0-1BR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2021-01",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2021-01",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "a622218ec73fb4e35054259a217ddad321d30b4c",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2020-01/4BI1-1BR/ms.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-01/4SD0-1BR/ms.pdf"
+      ],
+      "roles": [
+        "ms.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2020-01",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-01",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "a863f0d97104d854d2fe6e7913e597343d750036",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2022-01/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2022-01/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2022-01",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2022-01",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "b6ea01bdb89cd85ad27ed3a526634077009e7099",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2021-11/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2021-11/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2021-11",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2021-11",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "c0a2d02b9a8435e8d0279782cdd2be7d39713ac0",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__S2__June 2015 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2015-06/WST02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__S2__June 2015 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2015-06",
+          "dir": "WST02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "c0f40550f2d5fa9cc667c114c87792615a49da44",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2020-06/4BI1-1BR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-11/4SD0-1BR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2020-06",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-11",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "c1b08a5dadaf3c2d493496ac65ac57fd6d09797c",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__M2__January 2014 (IAL) MS.pdf",
+        "past-papers/pearson-edexcel/gce-a-level/mathematics/mathematics-modular/past-papers/2014-01/6663A-01/ms.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__M2__January 2014 (IAL) MS.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "mathematics-modular",
+          "session": "2014-01",
+          "dir": "6663A-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "c302415bd37e421d0632cf72c2061ec82f297ff9",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2020-01/4BI1-1B/ms.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-01/4SD0-1B/ms.pdf"
+      ],
+      "roles": [
+        "ms.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2020-01",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-01",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "c6905e31dc5f8917a901175b880db5ab3f671958",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2020-11/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-11/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2020-11",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-11",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "c74067aa9ac17d9872f67e67a6b23a4d7f50969b",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2025-06/4PH1-1P/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2025-06/4SD0-1P/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2025-06",
+          "dir": "4PH1-1P"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2025-06",
+          "dir": "4SD0-1P"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "c8026cdb32041118d8b86660a3687fc138dbab1a",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2025-06/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2025-06/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2025-06",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2025-06",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "cc6655fb4ad0be8b88cf6b1ddd8c4f95a1f5b0ac",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2020-01/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-01/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2020-01",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-01",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "cd6bd3475c03363765e7367a64d2142dade41f5b",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2019-06/4BI1-1BR/ms.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2019-06/4SD0-1BR/ms.pdf"
+      ],
+      "roles": [
+        "ms.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2019-06",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2019-06",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "cfd2ebb90615e76b2b85f816bbaef5a754146092",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2021-01/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2021-01/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2021-01",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2021-01",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "d265b612dd3cf2ba1c26a3d1308ac0beabcb1f31",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2023-06/4BI1-1BR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-06/4SD0-1BR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2023-06",
+          "dir": "4BI1-1BR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-06",
+          "dir": "4SD0-1BR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "d38565a584e5a1e52ae2aa9768246b97b8b10222",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2023-11/4CH1-1C/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-11/4SD0-1C/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2023-11",
+          "dir": "4CH1-1C"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-11",
+          "dir": "4SD0-1C"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "d89753e136bfb63fb001492ba7d9071739db50e2",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__M2__June 2016 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2016-06/WME02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__M2__June 2016 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2016-06",
+          "dir": "WME02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "da1d5379996af9fe76f79df69e1adbeca0bcb2d3",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2023-06/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-06/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2023-06",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-06",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "dc82074e557ad721ecde7740a3aeaed55f35d059",
+      "paths": [
+        "_quarantine/unresolved-identity/IAL__Edexcel__Pure Maths__M2__June 2015 QP_3.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2015-06/WME02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__M2__June 2015 QP_3.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2015-06",
+          "dir": "WME02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "e2a5f1b79b9369cfdf1aa96384384bb8315292f5",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2025-06/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2025-06/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2025-06",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2025-06",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "e35ae5774a4022717cb1c07e2b06598669bf6535",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-1P/ms.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-11/4SD0-1P/ms.pdf"
+      ],
+      "roles": [
+        "ms.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2020-06",
+          "dir": "4PH1-1P"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-11",
+          "dir": "4SD0-1P"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "e3e2eec1df9eda20244c47863c6d2f76f51c600c",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2024-06/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2024-06/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2024-06",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2024-06",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "e5123df3e38655f16e68282492366e021b84c4f0",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-01/4PH1-1PR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2020-01/4SD0-1PR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ph1",
+          "session": "2020-01",
+          "dir": "4PH1-1PR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2020-01",
+          "dir": "4SD0-1PR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "e90255bd62c52c352808bc5243ca7feb56a299a0",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Maths A__Paper 2F__January 2015 (R) QP.pdf",
+        "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma0/past-papers/2015-01/4MA0-2FR/qp.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Maths A__Paper 2F__January 2015 (R) QP.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4ma0",
+          "session": "2015-01",
+          "dir": "4MA0-2FR"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "ea071f1603606ac217eccecbf0ac12ea2c12205a",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2023-01/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2023-01/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2023-01",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2023-01",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "ea824cc07fba561c4aef40d455844e33f18a417a",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2021-01/4CH1-1CR/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2021-01/4SD0-1CR/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4ch1",
+          "session": "2021-01",
+          "dir": "4CH1-1CR"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2021-01",
+          "dir": "4SD0-1CR"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": true,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "ec24e12d7ccff96163f92928382353c8090f3136",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Maths B__Paper 2__June 2019 (R) QP_2.pdf",
+        "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb1/past-papers/2019-06/4MB1-02R/qp.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Maths B__Paper 2__June 2019 (R) QP_2.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4mb1",
+          "session": "2019-06",
+          "dir": "4MB1-02R"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "ec57695839a9ad1329f90142b5c08ee9de9015f9",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2024-11/4BI1-1B/qp.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2024-11/4SD0-1B/qp.pdf"
+      ],
+      "roles": [
+        "qp.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2024-11",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2024-11",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "ee94371be7fd4dd62f47bad401efa87782fc72e8",
+      "paths": [
+        "_quarantine/duplicate-artifact/IAL__Edexcel__Pure Maths__M2__January 2014 QP_2_2.pdf",
+        "past-papers/pearson-edexcel/international-a-level/mathematics/wma01/past-papers/2014-01/WME02-01/qp.pdf"
+      ],
+      "roles": [
+        "IAL__Edexcel__Pure Maths__M2__January 2014 QP_2_2.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "wma01",
+          "session": "2014-01",
+          "dir": "WME02-01"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "eee77c2be5a1853c13797a3aaf13757ccb5d5e75",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Maths B__Paper 2__January 2016 (R) QP_2.pdf",
+        "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb0/past-papers/2016-01/4MB0-02R/qp.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Maths B__Paper 2__January 2016 (R) QP_2.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4mb0",
+          "session": "2016-01",
+          "dir": "4MB0-02R"
+        }
+      ],
+      "class": "quarantine-or-external"
+    },
+    {
+      "blob_sha": "f5e33489fca6ef6adab0035299c6886373686fbb",
+      "paths": [
+        "past-papers/pearson-edexcel/international-gcse/biology/4bi1/past-papers/2019-06/4BI1-1B/ms.pdf",
+        "past-papers/pearson-edexcel/international-gcse/science-double-award/4sd0/past-papers/2019-06/4SD0-1B/ms.pdf"
+      ],
+      "roles": [
+        "ms.pdf",
+        "ms.pdf"
+      ],
+      "identities": [
+        {
+          "spec": "4bi1",
+          "session": "2019-06",
+          "dir": "4BI1-1B"
+        },
+        {
+          "spec": "4sd0",
+          "session": "2019-06",
+          "dir": "4SD0-1B"
+        }
+      ],
+      "same_dir": false,
+      "cross_spec": true,
+      "alias_only": false,
+      "same_spec_diff_dirs": true,
+      "class": "same-spec-different-identities"
+    },
+    {
+      "blob_sha": "fbdfdeaf4541fecc0bf0339648966c152264e84b",
+      "paths": [
+        "_quarantine/duplicate-artifact/IGCSE__Edexcel__Maths B__Paper 1__January 2015 (R) QP_2.pdf",
+        "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb0/past-papers/2015-01/4MB0-01R/qp.pdf"
+      ],
+      "roles": [
+        "IGCSE__Edexcel__Maths B__Paper 1__January 2015 (R) QP_2.pdf",
+        "qp.pdf"
+      ],
+      "identities": [
+        null,
+        {
+          "spec": "4mb0",
+          "session": "2015-01",
+          "dir": "4MB0-01R"
+        }
+      ],
+      "class": "quarantine-or-external"
+    }
+  ]
+}
