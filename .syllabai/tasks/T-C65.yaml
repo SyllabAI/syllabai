@@ -1,0 +1,77 @@
+version: 1
+task:
+  id: T-C65
+  title: "Rank-quality lane — tranche 3: fusion-weights replay (the shipped
+    PLAN_V2_WEIGHTS lever) — pre-registered BEFORE the run, then one measured
+    datapoint vs §8.1 v1.1 on the r9 frozen basis"
+  owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
+  status: IN_PROGRESS # claim-first; DONE at closeout with the recorded verdict
+  priority: P1
+  authority: "operator IM trace 1a0fc8c1e8b73939 ('commission the rank-quality
+    lane') — tranche 3 per the T-C63 charter ('Fusion weights (tranche 3,
+    separately pre-registered)') and the T-C63 yaml next_safe_actions; arm D's
+    verdict is recorded (run-005-d-r1), the charter's precondition is met.
+    ID note: T-C64 was taken by the concurrent bridge-reconciliation lane
+    (trace 1a0fcb9aef3bc611, first-pushed owns the ID — T-C49/T-C55/T-C59
+    protocol); this tranche renumbers T-C64→T-C65."
+  base:
+    repo: "syllabai master pack; syllabai-core main 422ed7e (PR #66 merged)"
+  scope:
+    allowed:
+      - "bench-scope weighted-posture seam (syllabai-core src/test only):
+        Run005C env-gated BENCH_FUSION_WEIGHTS=plan_v2 -> the shipped 4-arg
+        RetrievalFabric ctor with ReciprocalRankFusion.PLAN_V2_WEIGHTS (both
+        views identically); default path byte-identical (3-arg ctor); unknown
+        spec fail-closed; BENCH_FUSION_WEIGHTS x BENCH_ARM_D_RERANKER mutually
+        exclusive (fail-closed, one lever at a time) + unit tests; no
+        main-code change, no migration, no production wiring"
+      - "this pre-registration: evidence/bench-001/rank-quality-lane-2026-10-02/
+        FUSION-WEIGHTS-PREREGISTRATION.md (committed BEFORE any run)"
+      - "one recorded run: evidence/bench-001/runs/run-005-e-r1/ (results.json
+        + authored RUN_REPORT.md + SHA256SUMS)"
+      - "this task record + TODO/WORKLOG entries"
+    forbidden:
+      - "no weight tuning or parameter search against the frozen set (spec §9;
+        the weights are the SHIPPED plan §7 constants — any change = dated new
+        pre-registration + new run)"
+      - "no production serving change (nothing constructs a weighted bench
+        fabric in production; the serving fuseWithPlanWeights posture question
+        stays with the owning lane + owner acceptance after a §8-passing
+        verdict)"
+      - "no frozen artifact mutation (snap-007, gold-r9, preload-r9 untouched)"
+      - "no recorded verdict re-judged (d-r1's and r9's verdicts stand; this
+        run's own bars are evaluated fresh)"
+      - "no stacking with the arm-D reranker (one lever at a time — enforced
+        fail-closed in code)"
+  dependencies:
+    - "T-C63 (arm D instrument merged core 60bdd64; run-005-d-r1 recorded with
+      the pool-side (d) mechanism finding this tranche independently tests)"
+    - "T-C59 (the r9 basis: snap-007 x gold-r9 x preload-r9; execution recipe)"
+  shared_resources:
+    - "syllabai-core bench (test scope) — coordinated via git; Run005C is the
+      single orchestrator being extended; locks.yaml empty at claim time"
+  acceptance:
+    - "pre-registration committed and pushed to the records repo BEFORE the
+      weighted run executes (spec §9 anti-gaming)"
+    - "weighted seam CI-green on syllabai-core; default path byte-identical"
+    - "recorded run-005-e-r1: full §8.1 v1.1 dual-view gate + (d)(e)(f)(g);
+      pre-registered invariants verified from recorded bytes (pool set
+      identity 89/89; (d) exact invariance); verdict recorded honestly"
+  tests:
+    - "Run005CFusionWeightsTest (spec parsing: absent -> null, plan_v2 ->
+      PLAN_V2_WEIGHTS, unknown -> fail-closed; one-lever mutual exclusion)"
+    - "existing bench suite green (default path unchanged)"
+  evidence_required:
+    - "records repo: pre-registration + this yaml + run pack + TODO/WORKLOG"
+    - "syllabai-core: branch CI green; merge per the merge-commit precedent"
+  claims:
+    VERIFIED: []
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED:
+      - "run-005-e-r1 not yet executed (pre-registration first)"
+  next_safe_actions:
+    - "execute run-005-e-r1 per the protocol; verify the two pre-registered
+      invariants from recorded bytes; record the verdict honestly"
+    - "tranche 4 (pool-side (d) recovery design): per-arm depth / pool
+      composition — pre-register before measuring"
