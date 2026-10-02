@@ -1,0 +1,75 @@
+{
+ "batch_run_id": "bf3485f8-e504-47bc-b1ce-a29fbbdb725d",
+ "checks": {
+  "rows16_at_new_uri_state_sha_chunks_intact": {
+   "pass": true,
+   "detail": "16/16 at target"
+  },
+  "old_uris_released_by_targets": {
+   "pass": true,
+   "detail": "4CH0-1C-201306/ms.pdf: 1 holder(s); 4CH0-1C-201306/qp.pdf: 1 holder(s); 4CH0-1C-201406/ms.pdf: 1 holder(s); 4CH0-1C-201406/qp.pdf: 1 holder(s) \u2026"
+  },
+  "target_uris_unique_holders": {
+   "pass": true,
+   "detail": "{'4ch0-2cr-201406/ms.pdf': 1, '4ch0-1cr-201706/qp.pdf': 1, '4ch0-2cr-201306/qp.pdf': 1, '4ch0-2cr-201606/ms.pdf': 1, '4ch0-1cr-201606/ms.pdf': 1, '4ch0-2cr-201406/qp.pdf': 1, '4ch0-1cr-201306/ms.pdf': 1, '4ch0-2cr-201706/qp.pdf': 1, '4ch0-1cr-201406/qp.pdf': 1, '4ch0-2cr-201606/qp.pdf': 1, '4ch0-1cr-201606/qp.pdf': 1, '4ch0-1cr-201706/ms.pdf': 1, '4ch0-1cr-201306/qp.pdf': 1, '4ch0-2cr-201706/ms.pdf': 1, '4ch0-1cr-201406/ms.pdf': 1, '4ch0-2cr-201306/ms.pdf': 1}"
+  },
+  "audit_16_place_rows_verbatim": {
+   "pass": true,
+   "detail": "16 rows, 16 fully conforming"
+  },
+  "ep_topology_intact_8_rows_both_slots": {
+   "pass": true,
+   "detail": "8 ep rows, 16 refs"
+  },
+  "target_code_matches_corpus_official_reference": {
+   "pass": true,
+   "detail": "0 mismatches"
+  },
+  "census_unchanged_vs_fa1_baseline": {
+   "pass": true,
+   "detail": "{\"docs_total\": 1017, \"ep_rows\": 104, \"audit_rows\": 2814}"
+  }
+ },
+ "census_bundle": {
+  "name": "census_bundle_fa1_relabel_20261002.json",
+  "base": "post fa1-relabel-2026-10-02 (run bf3485f8-e504-47bc-b1ce-a29fbbdb725d) \u2014 census-last",
+  "pins": {
+   "docs_state_x_kind": {
+    "REJECTED|MARK_SCHEME": 67,
+    "REJECTED|QUESTION_PAPER": 79,
+    "VALIDATED|EXTERNAL_NOTES": 112,
+    "VALIDATED|EXTERNAL_QUESTIONS": 379,
+    "VALIDATED|MARK_SCHEME": 109,
+    "VALIDATED|QUESTION_PAPER": 109,
+    "VALIDATED|SYLLABUS": 162
+   },
+   "docs_total": 1017,
+   "chunks_by_rev": {
+    "2": {
+     "chunks": 4672,
+     "embedded": 4672
+    }
+   },
+   "ep_rows": 104,
+   "ep_states": {
+    "REJECTED": 13,
+    "VALIDATED": 91
+   },
+   "audit_rows": 2814,
+   "teacher_validation_events": 0,
+   "mark_schemes_total": 1504,
+   "mark_points": 5883,
+   "question_spec_points": 2620,
+   "knowledge_nodes": 435,
+   "active_cv": {
+    "id": "356840e6-81e2-49df-8182-93ab6504d591",
+    "code": "4CH1-2017"
+   },
+   "search_serving_eligible_gate": 4593,
+   "mark_schemes_states": {
+    "SUGGESTED": 144,
+    "VALIDATED": 1360
+   }
+  }
+ }
+}
