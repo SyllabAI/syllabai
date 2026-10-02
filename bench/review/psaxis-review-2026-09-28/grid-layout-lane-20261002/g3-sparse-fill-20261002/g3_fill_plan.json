@@ -1,0 +1,197 @@
+{
+ "lane": "g3-sparse-fill-20261002",
+ "authorization": "operator IM trace 1a0fb848d5b29681: 'Proceed with Remaining opens: 1CR-2016 Q10 a(ii) (2 marks), scheme-fill mandates for the 2 sparse qv'",
+ "targets": 2,
+ "entries": [
+  {
+   "ref": "q03-51fea326",
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 3,
+   "qv_id": "e6a160c7-cb91-46dc-bc3d-cbe15c3df826",
+   "ms_document_id": "2b53b180-78d6-5ca8-bbf5-46e3e86033a5",
+   "ms_print_file": "pdf/201301_2c_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v4",
+   "engine": "pdflane parse_ms G3 grammar (parser main 0fc5c32)",
+   "v3_sum": 8,
+   "qp_echo": 8,
+   "bank_marks": 8,
+   "residual_recovery": false,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "- at least two layers of circles drawn with the",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "- no regular pattern overall",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "(particles/they are) more closely packed",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "- bright/brilliant/blinding/white flame",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "- white powder / solid / smoke / ash",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "MgO",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "base/alkali",
+     "part": "c",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "OH\u23af / hydroxide",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q10-5273dfa3",
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 10,
+   "qv_id": "65aff0a8-bbfd-49f7-957b-63d0dddf169c",
+   "ms_document_id": "b27f9358-bd57-5545-8c69-aeeb5cdbd476",
+   "ms_print_file": "pdf/201606_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v4",
+   "engine": "pdflane parse_ms G3 grammar (parser main 0fc5c32)",
+   "v3_sum": 15,
+   "qp_echo": 15,
+   "bank_marks": 15,
+   "residual_recovery": true,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 3,
+     "text": "n(Na2S2O3) = 0.300 \u00d7 20",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 2,
+     "text": "mass of SO2 in 1 dm3 = 0.38(4) \u00d7 1000",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "as the (hydrochloric) acid/HCl is added",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "timer started too late / stopped too early",
+     "part": "c",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "19.5 (s)",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 2,
+     "text": "times are (very) short",
+     "part": "d",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 2,
+     "text": "more collisions/particles have energy",
+     "part": "d",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 3,
+     "text": "temperature",
+     "part": "e",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  }
+ ],
+ "excluded": [],
+ "totals": {
+  "fill_qv": 2,
+  "fill_points": 16,
+  "fill_marks": 23
+ },
+ "context": {
+  "engine_commit": "0fc5c32 (syllabai-parser main, CI green)",
+  "q03_note": "marks repaired 1->8 by T-C49 (plan sha 5fa4222f...); v3-equivalent parse, no G3 code path exercised",
+  "q10_note": "a(ii) block cell unprinted in source (coordinate-verified marks column: only a(i)'s '3'); G3.3 residual recovery 2 == main-route M1+M2; b/c(i) rows captured by G3.1"
+ },
+ "plan_sha256": "6ea2e1c6747ff212f5da6b0e50ff703ba1a358a2448dc7f9888b64e354d7e3fe"
+}
