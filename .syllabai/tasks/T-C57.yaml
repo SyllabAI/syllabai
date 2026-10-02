@@ -1,0 +1,97 @@
+version: 1
+task:
+  id: T-C57
+  title: "Hub consumption lane — the flashcard review queue unified over the
+    core feed ∪ the device-local trail (the T-C53 next_safe_action; the
+    consumer half of the core-side scheduling feed)"
+  owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
+  status: EXECUTING
+  priority: P1
+  authority: "operator IM trace 1a0fbe89edf0ff15 ('hub consumption lane (core
+    queue ∪ device-local)') — GO on T-C53 next_safe_actions[0]: 'merge the
+    core feed into lib/flashcard-review.ts (core queue for the pilot course
+    unioned with the device-local queue — the trail asymmetry is honest:
+    local holds every rating this browser made, core holds every rating the
+    account made)'."
+  base:
+    repo: "syllabai (master pack) @ 4ae1732; syllabai-hub main @ c2345d9"
+  basis: >
+    T-C53 landed GET /api/v1/learners/me/flashcard-review-schedule (core
+    PR #58, ce0d7eb): the Ebbinghaus queue derived at READ from the
+    account-level V47 trail, ladder mirrored bit-for-bit from the hub's
+    lib/flashcard-review.ts (1·2·4·8·16, capped 32d), computed never
+    persisted (ADR-031). The hub's queues (deck due badges, deck player
+    "Review due first", the My State / KG drawer "Flashcards due" section)
+    still derive from the browser-local overlay alone: every rating this
+    browser made, blind to what the account did elsewhere. This lane
+    unifies them: per card, the record whose LATEST rating event is newer
+    wins (ties → device); device side derives through the frozen
+    lib/flashcard-review.ts, account side takes the core feed verbatim;
+    `due` is recomputed against the hub's now. No trail cross-merge is
+    attempted (core serves derived schedules, not raw events — merging
+    schedules would invent history; newest-evidence-wins never does).
+  scope:
+    allowed:
+      - "syllabai-hub: src/lib/flashcard-unified.ts (NEW — pure union merge
+        + useCoreReviewSchedule hook), src/lib/api.ts + src/lib/types.ts
+        (flashcardReviewSchedule GET client + FlashcardReviewScheduleView
+        DTO types mirroring core ce0d7eb), consumer rewiring (deck-due-
+        badge.tsx, deck-player.tsx, kg-learner-state.ts cardReviews),
+        state-drawer.tsx footnote honesty copy, scripts/verify_flashcard_
+        unified.ts (NEW deterministic pins)"
+      - "syllabai (master): this task record, locks.yaml lease, TODO
+        section, WORKLOG Session 150"
+    forbidden:
+      - "NO change to lib/flashcard-review.ts arithmetic — the core parity
+        reference (T-C53 mirrored it bit-for-bit; registry
+        learner.flashcard-review v1-hub-parity) stays byte-frozen"
+      - "NO core changes (the feed already serves; no new endpoint, no DTO
+        change, no raw-trail widening — that is a separate contract lane)"
+      - "NO mastery writes from ratings — the honesty pin (V47 /
+        FlashcardRatingFlowIT) is untouched: self-report drives review
+        TIMING only, never BKT/SkillState/misconceptions; the KG exposure
+        and evidence-event paths in kg-learner-state.ts are not modified"
+      - "NO schedule persistence anywhere (ADR-031: computed at read, never
+        persisted; no review_schedules writes from the hub either)"
+      - "NO flashcard-bridge gate widening (the 44-pack sync widening stays
+        a separate next_safe_action; the feed hook gates on
+        PILOT_COURSE_SLUG exactly as the bridge does)"
+      - "NO localStorage schema change, NO server-route/proxy additions
+        (the hub client reads the feed with the learner's own token,
+        mirroring recordFlashcardRating)"
+      - "NO hub merge without the operator's explicit word (T-C55
+        precedent: hub PRs merge on operator instruction only)"
+  dependencies: ["T-C53 (core feed) — DONE, merged core ce0d7eb"]
+  shared_resources:
+    - "hub main (branch t-c57-flashcard-queue-union off c2345d9; PR merge
+       awaits operator word)"
+  acceptance:
+    - "union with no core feed is byte-equivalent to scheduleCards behavior
+       (off-pilot courses and signed-out sessions cannot drift)"
+    - "core-only cards surface with origin 'account'; newest-evidence-wins
+       per card; ties resolve device; due recomputed against hub now"
+    - "the three queue surfaces (deck badge, deck player, drawer section)
+       all read the unified queue; badge texts keep their e2e-pinned
+       formats; drawer footnote states the true coverage"
+    - "scripts/verify_flashcard_unified.ts all green; next build green;
+       existing e2e suite green in mock mode (core absent → device-only)"
+  tests:
+    - "scripts/verify_flashcard_unified.ts (deterministic, no network)"
+    - "tests/e2e/deck-flow.spec.ts (mock mode — regression guard for the
+       signed-out/off-pilot path)"
+    - "bun run build (includes prebuild corpus verify)"
+  evidence_required:
+    - "verify script output; build log; CI run on the PR head; diff stat
+       proving flashcard-review.ts untouched"
+  claims:
+    VERIFIED: []
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: []
+  next_safe_actions:
+    - "operator merge word for the hub PR"
+    - "widen the flashcard-bridge gate beyond the pilot course so the
+       account feed covers all 44 deck-bearing packs (core + hub lane)"
+    - "optional core contract lane: serve raw trail events (bounded) so the
+       hub can true-merge trails across devices instead of
+       newest-evidence-wins"
