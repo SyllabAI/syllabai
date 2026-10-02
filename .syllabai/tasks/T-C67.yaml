@@ -1,0 +1,77 @@
+version: 1
+task:
+  id: T-C67
+  title: "Rank-quality lane — tranche 4: pool-side (d) recovery (per-arm depth
+    20→40) — pre-registered BEFORE the run, then one measured datapoint vs
+    §8.1 v1.1 + (d) recovery ledger on the r9 frozen basis"
+  owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
+  status: IN_PROGRESS # claim-first: pre-registration committed BEFORE any run (spec §9); run-005-f execution next; renumbered T-C66→T-C67 (first-pushed protocol)
+  priority: P1
+  authority: "operator IM trace 1a0fcfde05f2ff95 ('tranche 4 — pool-side (d)
+    recovery design'); the T-C63 charter lever family ('per-arm depth / pool
+    composition') + the T-C65 closeout next_safe_action. ID note: T-C66 was
+    taken by the concurrent flashcard bridge-gate lane (trace
+    1a0fcf454aacec35, first-pushed owns the ID — T-C49/T-C55/T-C59/T-C64
+    protocol); this tranche renumbers T-C66→T-C67."
+  base:
+    repo: "syllabai master pack; syllabai-core main e657b9a (PR #67 merged) — ZERO core diff in this tranche (the BENCH_PER_ARM_LIMIT seam pre-exists in Run005C, default '20', manifest-recorded every run)"
+  scope:
+    allowed:
+      - "this pre-registration: evidence/bench-001/rank-quality-lane-2026-10-02/
+        POOL-RECOVERY-PREREGISTRATION.md (committed BEFORE any run)"
+      - "one recorded run: evidence/bench-001/runs/run-005-f-r1/ (results.json
+        + authored RUN_REPORT.md + run005f_verify.py + SHA256SUMS) at
+        BENCH_RUN_ID=run-005-f BENCH_PER_ARM_LIMIT=40, reranker/weights env
+        ABSENT, the r9 frozen basis (snap-007 x gold-r9 x preload-r9, no
+        re-freeze)"
+      - "this task record + TODO/WORKLOG entries"
+    forbidden:
+      - "no syllabai-core diff of any kind (the seam pre-exists; no branch, no
+        PR — any core change found necessary becomes a new pre-registered
+        tranche)"
+      - "no depth sweep or parameter search against the frozen set (spec §9):
+        40 is declared in the pre-registration; any other value = dated new
+        pre-registration + new run"
+      - "no stacking with the arm-D reranker or fusion weights (one lever at a
+        time; both env gates stay ABSENT)"
+      - "no pool-composition lever (kind quotas, MIN_COSINE moves, re-ingest
+        dedup, arm composition) — each is its own future pre-registration"
+      - "no production serving change (nothing in production reads
+        BENCH_PER_ARM_LIMIT; serving's candidate bound is untouched)"
+      - "no frozen artifact mutation (snap-007, gold-r9, preload-r9 untouched)"
+      - "no recorded verdict re-judged (r9/d-r1/e-r1 verdicts stand; this
+        run's bars are evaluated fresh)"
+  dependencies:
+    - "T-C65 (fusion-weights replay recorded; the pool-side mechanism finding
+      two-lever-confirmed — this tranche is the recorded next_safe_action)"
+    - "T-C63 (charter + the (d) displacement ledger: S8D-RULING-REVIEW)"
+    - "T-C59 (the r9 basis + execution recipe)"
+  shared_resources:
+    - "records repo bench inputs (frozen, read-only); run output dir
+      run-005-f-r1 — coordinated via git; locks.yaml empty at claim time"
+  acceptance:
+    - "pre-registration committed and pushed to the records repo BEFORE the
+      run executes (spec §9 anti-gaming)"
+    - "recorded run-005-f-r1: full §8.1 v1.1 dual-view gate + (d)(e)(f)(g);
+      manifest per_arm_limit=40; determinism double-pass PASS; (f) 0/0"
+    - "verify script ships in the pack: per-query superset check vs r9 (89/89
+      expected; violations recorded as findings), (d) recompute cross-checked
+      against the recorded aggregate, per-flip recovery ledger (mechanically
+      derived), monotonicity over the invariant-held subset"
+    - "verdict recorded honestly — NOT PROMOTED is a finding; the (d) recovery
+      number is the tranche's headline regardless of the promotion verdict"
+  tests:
+    - "no new unit tests (zero core diff); the existing bench suite guards the
+      default path (per_arm_limit=20 byte-identical)"
+  evidence_required:
+    - "records repo: pre-registration + this yaml + run pack + TODO/WORKLOG"
+  claims:
+    VERIFIED: []
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED: []
+  next_safe_actions:
+    - "execute run-005-f per the pre-registration; record the pack + verdict +
+      (d) recovery ledger honestly"
+    - "if depth 40 misses the carriers (per-flip ledger), the recorded next
+      lever family is pool COMPOSITION (own pre-registration each)"
