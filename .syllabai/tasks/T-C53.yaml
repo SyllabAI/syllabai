@@ -1,0 +1,65 @@
+version: 1
+task:
+  id: T-C53
+  title: "Core-side flashcard review-schedule feed — the Ebbinghaus queue
+    derived at READ from the append-only flashcard_ratings trail (V47's
+    'future review scheduler' tranche); computed never persisted per
+    ADR-031 doctrine; honesty pin preserved (timing only, never mastery)"
+  owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: "operator IM trace 1a0fb9ceb36d36d1 ('core-side scheduling feed
+    from the rating trail') — GO on the follow-up flagged at the flashcard
+    integration recon (trace 1a0fb8cb77b4199d). The consumer the V47 contract
+    explicitly reserved: FlashcardRatingRepository 'the trail preserves the
+    re-rating history the future Ebbinghaus review-scheduler will consume';
+    FlashcardRating.java 'NOT a review-schedule write: the Ebbinghaus queue
+    consumes rating trails in a later tranche'; hub lib/flashcard-review.ts
+    'core serves the latest 50 events for the learner model, not a scheduling
+    feed'."
+  base:
+    repo: "syllabai (master pack) @ e0fba66; syllabai-core main @ 1b6503a"
+  basis: >
+    ADR-029 tranche 4.4 landed the append-only rating trail (V47) with the
+    scheduler deliberately deferred; hub tranche 4.8 built the queue
+    device-local (lib/flashcard-review.ts, Ebbinghaus ladder
+    1/2/4/8/16/32d over the browser-local trail). The core account holds the
+    cross-device trail but serves no schedule — the hub's queue dies with
+    the browser profile and is invisible to any core-side surface. This
+    tranche derives the schedule core-side at READ time from the same trail
+    the hub already feeds, with the ladder mirrored bit-for-bit from the
+    hub's shipped arithmetic.
+  scope:
+    allowed:
+      - "syllabai-core: learner/flashcard package (FlashcardReviewParams,
+        FlashcardReviewScheduler — pure), FlashcardReviewScheduleController
+        (GET /api/v1/learners/me/flashcard-review-schedule), DTOs,
+        FlashcardRatingRepository trail query, LearnerProperties 5th
+        component + 4-arg compatibility constructor, application.yml
+        flashcard-review defaults"
+      - "syllabai-core: V59 migration — model_versions registry seed ONLY
+        (learner.flashcard-review v1 ladder, data-only, no schema change;
+        flyway-version lease claimed in locks.yaml before write)"
+      - "tests: FlashcardReviewSchedulerTest (pure), LearnerPropertiesTest
+        additions, FlashcardReviewScheduleFlowIT (Testcontainers, mirrors
+        FlashcardRatingFlowIT)"
+      - "records: this task record, TODO/WORKLOG entries"
+    forbidden:
+      - "NO schedule persistence (no review_schedules writes, no schedule
+        table, no state flip — ADR-031 doctrine: computed at read, never
+        persisted), NO BKT/SkillState/misconception writes from ratings
+        (honesty pin untouched — the feed is a pure read model over the
+        existing evidence class), NO schema change in V59 (registry seed
+        only), NO hub changes (hub consumption is a separate follow-up
+        lane), NO migration renumbering of V1–V58 (core rule 1)"
+  execution_record: >
+    2026-10-02 claim-first: this IN_PROGRESS record + the flyway-version
+    lease (V59) commit to master BEFORE any core content, per the
+    Session-144 race discipline. Content commit follows.
+  next_safe_actions:
+    - "hub consumption lane: merge the core feed into lib/flashcard-review.ts
+      (core queue for the pilot course unioned with the device-local queue —
+      the trail asymmetry is honest: local holds every rating this browser
+      made, core holds every rating the account made)"
+    - "widen core sync beyond the pilot course (flashcard-bridge gate) so the
+      feed covers all 44 deck-bearing packs"

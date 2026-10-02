@@ -64,3 +64,7 @@ lease_schema:
 
 # (T-C44's hub tutor-math-render lease: owner superz, base a61b0d3, expiry
 # 2026-10-04T00:00Z or until the fix PR merges — whichever first.)
+
+# (T-C53's flyway-version lease for V59: owner superz, base core 1b6503a,
+#  expiry 2026-10-04T00:00Z or until the registry-seed migration merges —
+#  whichever first. Data-only migration, no schema change.)
