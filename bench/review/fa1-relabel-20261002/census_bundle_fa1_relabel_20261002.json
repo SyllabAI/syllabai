@@ -1,0 +1,42 @@
+{
+ "name": "census_bundle_fa1_relabel_20261002.json",
+ "base": "post fa1-relabel-2026-10-02 (run bf3485f8-e504-47bc-b1ce-a29fbbdb725d) \u2014 census-last",
+ "pins": {
+  "docs_state_x_kind": {
+   "REJECTED|MARK_SCHEME": 67,
+   "REJECTED|QUESTION_PAPER": 79,
+   "VALIDATED|EXTERNAL_NOTES": 112,
+   "VALIDATED|EXTERNAL_QUESTIONS": 379,
+   "VALIDATED|MARK_SCHEME": 109,
+   "VALIDATED|QUESTION_PAPER": 109,
+   "VALIDATED|SYLLABUS": 162
+  },
+  "docs_total": 1017,
+  "chunks_by_rev": {
+   "2": {
+    "chunks": 4672,
+    "embedded": 4672
+   }
+  },
+  "ep_rows": 104,
+  "ep_states": {
+   "REJECTED": 13,
+   "VALIDATED": 91
+  },
+  "audit_rows": 2814,
+  "teacher_validation_events": 0,
+  "mark_schemes_total": 1504,
+  "mark_points": 5883,
+  "question_spec_points": 2620,
+  "knowledge_nodes": 435,
+  "active_cv": {
+   "id": "356840e6-81e2-49df-8182-93ab6504d591",
+   "code": "4CH1-2017"
+  },
+  "search_serving_eligible_gate": 4593,
+  "mark_schemes_states": {
+   "SUGGESTED": 144,
+   "VALIDATED": 1360
+  }
+ }
+}
