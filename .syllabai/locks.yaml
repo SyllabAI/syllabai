@@ -68,3 +68,6 @@ lease_schema:
 # (T-C53's flyway-version lease for V59: owner superz, base core 1b6503a,
 #  expiry 2026-10-04T00:00Z or until the registry-seed migration merges —
 #  whichever first. Data-only migration, no schema change.)
+
+# (T-C55's hub Deck-flow e2e lease: owner superz, base fca83c8, expiry
+# 2026-10-04T00:00Z or until the fix PR merges — whichever first.)
