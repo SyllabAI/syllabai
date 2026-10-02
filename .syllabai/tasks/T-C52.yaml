@@ -1,0 +1,22 @@
+version: 1
+task:
+  id: T-C52
+  title: "Refusal-rate watch at the MIN_COSINE 0.50 floor — claim-first ledger
+    (content commit follows immediately; two ID races lost this session)"
+  owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
+  status: IN_PROGRESS
+  priority: P2
+  authority: "operator IM trace 1a0fb7a95cefc455 ('refusal-rate watch') — the
+    watch item carried by T-C42/T-C43/T-C48 next_safe_actions"
+  base:
+    repo: "syllabai (master pack) @ a2f6145"
+  note: >
+    Claim-first ledger per the house discipline this lane watched the
+    ruling-v57-census and web-backport lanes use under today's ID-allocation
+    races (T-C48/T-C49/T-C50/T-C51). The full lane content — deploy boundary
+    pinned (0.50 floor live 2026-10-02T07:14:19Z migrations / 07:16:30Z
+    serving), class-split instrument bench/refusal_watch.py, refreshed
+    pre-flip baseline 32.5% with 100% paper-guard class split, post-flip cell
+    empty (zero asks), pack evidence/bench-001/refusal-watch-2026-10-02/ —
+    lands in the immediately following commit renumbered from its two prior
+    local registrations (T-C49, then T-C50).
