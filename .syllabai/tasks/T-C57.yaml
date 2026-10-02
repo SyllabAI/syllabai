@@ -5,11 +5,21 @@ task:
     core feed ∪ the device-local trail (the T-C53 next_safe_action; the
     consumer half of the core-side scheduling feed)"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
-  status: IN_PROGRESS
-  merge_status: "OPEN — hub PR #10 (head 72221e7, base c2345d9), CI build +
-    e2e both SUCCESS, Vercel preview success; merge awaits the operator's
-    explicit word (T-C55 precedent: hub PRs merge on operator instruction
-    only)"
+  status: DONE
+  merge_status: "MERGED — hub PR #10 merged as 529c737 (merge commit 'Merge
+    pull request #10 from SyllabAI/t-c57-flashcard-queue-union') onto main
+    f4c45f6, on the operator's explicit word (IM trace 1a0fc3d1f723c349
+    'merge hub#10'). Pre-merge verification: main had moved +3 PRs during
+    review (#9 sme-flashcard-anchoring, #11 citation-surface-bridge, #12
+    teacher class-graph) — zero file overlap vs the PR's 8 files verified
+    from the merge-base diff, GitHub mergeable True/state clean re-computed
+    against the moved base, CI on head 72221e7 build + e2e + Vercel all
+    SUCCESS, and a LOCAL MERGE SIMULATION (origin/main merged into the PR
+    head) type-checked clean (tsc --noEmit exit 0) before the API merge;
+    #9's flashcards page change (subtopic URL-decode fix) leaves the
+    DeckCard prop contract untouched — no semantic break. Post-merge CI on
+    529c737 recorded below in the execution record. PR branch kept per hub
+    precedent (merged branches are not auto-deleted in this repo)."
   priority: P1
   authority: "operator IM trace 1a0fbe89edf0ff15 ('hub consumption lane (core
     queue ∪ device-local)') — GO on T-C53 next_safe_actions[0]: 'merge the
@@ -144,8 +154,23 @@ task:
     with the deck-player syncMode deferral dance.
     Records: this yaml (merge_status + claims + this record), TODO dated
     section, WORKLOG Session 150, agent worklog.
+    MERGE (2026-10-02, later): operator word 'merge hub#10' (IM trace
+    1a0fc3d1f723c349). Verified BEFORE merging: origin/main moved
+    c2345d9 → f4c45f6 (+3 merges: PR #9 at 1965ba4, #11 at 5afbe77, #12 at
+    f4c45f6); the 10 files main moved do not intersect the PR's 8 (comm
+    -12 empty); #9's flashcards/[subtopic]/page.tsx diff is a
+    subtopic-param decodeURIComponent fix only — DeckPlayer props
+    untouched. Fresh PR state: mergeable True / mergeable_state clean; CI
+    on head 72221e7 build SUCCESS + e2e SUCCESS + Vercel success. Local
+    merge simulation branch (PR head × origin/main → 363afc5) merged with
+    zero conflicts and tsc --noEmit exit 0. Merged via API PUT
+    /pulls/10/merge, merge_method=merge (repo precedent: PRs #8/#9/#11 all
+    merge commits) → merge commit 529c737; origin/main tip verified
+    529c737 with 72221e7 an ancestor; PR state closed/merged via API.
+    Post-merge CI on 529c737 completed GREEN (build SUCCESS + e2e
+    SUCCESS, both check-runs completed). Lease released in locks.yaml;
+    TODO checkbox closed; WORKLOG Session 153.
   next_safe_actions:
-    - "operator merge word for the hub PR"
     - "widen the flashcard-bridge gate beyond the pilot course so the
        account feed covers all 44 deck-bearing packs (core + hub lane)"
     - "optional core contract lane: serve raw trail events (bounded) so the

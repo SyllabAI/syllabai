@@ -72,10 +72,11 @@ lease_schema:
 # (T-C55's hub Deck-flow e2e lease: owner superz, base fca83c8, expiry
 # 2026-10-04T00:00Z or until the fix PR merges — whichever first.)
 
-# (T-C57's hub flashcard-queue lease: owner superz, base hub c2345d9,
-#  expiry 2026-10-04T00:00Z or until the union PR merges — whichever
-#  first. Scope: hub lib/flashcard-unified.ts + the three queue-surface
-#  consumers; lib/flashcard-review.ts arithmetic stays byte-frozen as the
-#  T-C53 core parity reference. No core-side lease needed — the lane
-#  consumes the already-merged feed and touches no core file.)
+# (T-C57's hub flashcard-queue lease was fulfilled — the union PR (hub #10,
+#  head 72221e7 off c2345d9) merged as 529c737 2026-10-02 on the operator's
+#  explicit word (trace 1a0fc3d1f723c349), within the lease window; released
+#  per the reclaim rule. Scope honoured: lib/flashcard-review.ts
+#  byte-untouched (the T-C53 parity reference), no core file touched;
+#  lib/flashcard-unified.ts + the three queue-surface consumers landed in
+#  the PR. Owner superz, base hub c2345d9.)
 
