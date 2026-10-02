@@ -59,8 +59,14 @@ task:
       rules 3/4 (bare \\ce wrap) run only BETWEEN \\$…\\$ display spans
       (wrapping \\ce inside a display corrupts the real \\boxed{\\ce{…}}
       shape)"
-  merge_status: "PR syllabai-hub#6 OPEN (fix/tutor-math-normalize, head
-    0f88609, base a61b0d3) — awaiting explicit merge word. Scope note: the
+  merge_status: "MERGED — operator merge word given 2026-10-02 (trace
+    1a0fb4b888cb507d, same message asked 'are there more issues like
+    this?' -> T-C47). PR syllabai-hub#6 merge commit ec6bd5e15fed
+    (parents [main a61b0d3, head 0f88609] verified), main ref updated;
+    merged-tree gates: verify gate 17/17, eslint clean, CI build GREEN
+    (head run 110723194904; post-merge main build run 110733325450
+    SUCCESS; e2e failure pre-exists on main — Deck-flow, disjoint).
+    PR closed with evidence comment. Scope note: the
     render-boundary wrap covers the four model-content surfaces (tutor
     message-item x2 sites, note-cla, question-cla-overlay,
     assistant-client) — the s142 web precedent ('Tutor + every CLA
