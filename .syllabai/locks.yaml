@@ -92,3 +92,14 @@ lease_schema:
 # (T-C61 lease FULFILLED + RELEASED 2026-10-02: core PR #63 merged as 5a8d57f
 #  and hub PR #14 merged as 2030ef6 on the operator's explicit word trace
 #  1a0fccf62d9db3d1 — both within the window expiring 2026-10-04T00:00Z.)
+
+# (T-C66's hub flashcard-sync-gate lease: owner superz, base hub 6fde7c9 /
+#  core e657b9a, expiry 2026-10-04T00:00Z or until both lane PRs merge —
+#  whichever first. Scope: src/lib/flashcard-sync-eligibility.ts (NEW) +
+#  the two gates (flashcard-bridge.ts, flashcard-unified.ts) + the sync
+#  verifier wired into prebuild; core side is tests+javadoc only. The
+#  ladder (lib/flashcard-review.ts) stays byte-frozen; attempt-bridge and
+#  note-vote-bridge pilot gates are OUT of scope. Widening rides the
+#  registry-derived eligibility predicate — the T-C61/ADR-034 receipts
+#  keep the widened sync merge-safe per the operator's word, trace
+#  1a0fcf454aacec35.)

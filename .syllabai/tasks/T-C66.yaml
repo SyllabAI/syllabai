@@ -1,0 +1,157 @@
+version: 1
+task:
+  id: T-C66
+  title: "Flashcard bridge-gate widening — the pilot-only sync/feed gate becomes
+    a registry-derived core-sync eligibility predicate (the T-C57
+    next_safe_action '44-pack bridge-gate widening', corrected: 44 was a
+    ledger miscount — registry-derived truth is 49 registered / 37
+    deck-bearing / 1 core-anchor-eligible today)"
+  owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
+  status: IN_PROGRESS # claim-first; DONE at closeout with receipts
+  priority: P1
+  authority: "operator IM trace 1a0fcf454aacec35 ('① the 44-pack bridge-gate
+    widening (now merge-safe with receipts)') — GO on T-C57
+    next_safe_actions[0] ('widen the flashcard-bridge gate beyond the pilot
+    course so the account feed covers all 44 deck-bearing packs (core + hub
+    lane)'), sequenced after the T-C61 closeout (merge hub#14, trace
+    1a0fccf62d9db3d1, executed first this session as promised)."
+  base:
+    repo: "syllabai (master pack) @ f906b73; syllabai-hub main @ 6fde7c9;
+      syllabai-core main @ e657b9a"
+  basis: >
+    The flashcard sync (lib/flashcard-bridge.ts) and the account queue gate
+    (lib/flashcard-unified.ts useCoreReviewSchedule) both hard-code
+    course === PILOT_COURSE_SLUG. The widening must make the account feed
+    cover every deck-bearing pack WITHOUT inventing a hardcoded slug list —
+    and without shipping gates that fire against anchors core cannot
+    resolve. Scoping receipts (first-hand, this session):
+    (1) core's ingest is ALREADY course-agnostic and fail-closed
+    (FlashcardRatingController resolves subtopicCode against the ingested
+    knowledge graph; unknown = 404, nothing written) — the constraint is
+    ANCHOR AVAILABILITY, not a core-side gate;
+    (2) the feed (T-C53) and trail (T-C61) read paths are course-agnostic
+    full-trail reads — no single-course assumption found;
+    (3) HAZARD FOUND: non-pilot corpus anchors are NOT core-safe today —
+    bare numeric spec codes ("1.1", "3.5") collide across courses
+    (ial-biology-18, ial-chemistry-17, igcse-physics-19 …all carry "1.1";
+    knowledge_nodes has uq_knowledge_node_code, so a second bare-coded
+    ingestion fails at the DB — but a hub gate that SENDS bare codes would
+    attribute to whichever course's node claimed the code first), and
+    several courses carry charset-unsafe anchors (":" / "_" / "." —
+    "IGCSE_ACCOUNTING:S4.173", "ial-physics-T4.4:SUB_") that core's ingest
+    pattern ^[A-Za-z0-9-]+$ would 400. A naive widen-to-all-deck-bearing
+    gate is therefore WRONG (guaranteed 400 noise + a latent
+    cross-course misattribution path);
+    (4) the "44 deck-bearing packs" count in the T-C53/T-C57 ledger phrase
+    could not be reproduced from any registry state (34 deck-bearing at the
+    39-course era, 37 since the 49-course import; pilot subtopic decks =
+    28) — recorded as a ledger miscount; the widening is PREDICATE-defined,
+    not count-defined.
+  design: >
+    One registry-derived predicate, two consumers (the structural "widen
+    BOTH or neither" guarantee T-C57's doc block asked for):
+    src/lib/flashcard-sync-eligibility.ts (NEW, client-safe,
+    generated-from-registry, committed) exports FLASHCARD_SYNC_COURSES +
+    isFlashcardSyncCourse(); scripts/verify_flashcard_sync_courses.ts (NEW)
+    re-derives the set from content/ and FAILS the prebuild on drift.
+    Eligibility (all four must hold): registered in courses.json;
+    deck-bearing (non-empty flashcards.json); curriculumCode present (the
+    V53/ADR-030 core-registry bridge — the exact precedent the tutor gate
+    uses; absent = core cannot anchor this course yet); CORE-SAFE ANCHORS —
+    every TOPIC/SUBTOPIC-family code in the course bundle matches core's
+    ingest charset ^[A-Za-z0-9-]+$ AND is course-prefixed
+    (startsWith(boardCode + "-"), boardCode = curriculumCode minus a
+    trailing -<4-digit-year>), which makes cross-course ambiguity
+    impossible by construction. Both gates (bridge write + unified feed
+    read) switch from the slug equality to isFlashcardSyncCourse —
+    behavior today is byte-identical (the eligible set is exactly
+    {igcse-chemistry-19}); when the ingestion lanes commission the next
+    curriculum (curriculumCode + anchors land), the verifier forces the
+    manifest regeneration and that course's sync flips on with ZERO code
+    change. Core lane: tests + javadoc only — pin the multi-course
+    contract (disjoint attribution across two courses' anchors; duplicate
+    node code fail-closed at the graph; feed derives one queue across
+    both courses; honesty pin extends to multi-course) and document the
+    anchor contract where the next ingestion lane will read it.
+  scope:
+    allowed:
+      - "syllabai-hub: src/lib/flashcard-sync-eligibility.ts (NEW),
+        scripts/verify_flashcard_sync_courses.ts (NEW), gate rewiring in
+        src/lib/flashcard-bridge.ts + src/lib/flashcard-unified.ts (the two
+        gates + their doc blocks only), package.json prebuild wiring,
+        scripts/verify_flashcard_unified.ts eligibility pins"
+      - "syllabai-core: src/test only (multi-course anchor-safety pins in
+        FlashcardRatingFlowIT + FlashcardReviewScheduleFlowIT) +
+        FlashcardRatingController javadoc contract paragraph — NO
+        production-code change, NO migration, NO DTO change"
+      - "syllabai (master): this task record, locks.yaml lease, TODO
+        section, WORKLOG Session 157"
+    forbidden:
+      - "NO change to lib/flashcard-review.ts arithmetic — the core parity
+        reference (learner.flashcard-review v1-hub-parity) stays
+        byte-frozen"
+      - "NO mastery writes from ratings — the honesty pin (V47 /
+        FlashcardRatingFlowIT) untouched: timing only, never BKT/SkillState/
+        misconceptions; kg-learner-state.ts untouched"
+      - "NO core production-code change: the ingest/feed/trail contracts are
+        already course-agnostic and fail-closed; widening a core gate that
+        does not exist would be fiction"
+      - "NO hardcoded course-slug list beyond the generated manifest (the
+        whole point is registry-derivation); NO charset loosening of
+        core's ingest pattern (dots/colons/underscores are exactly the
+        ambiguity this lane keeps out)"
+      - "NO schedule persistence (ADR-031), NO localStorage schema change,
+        NO attempt-bridge or note-vote-bridge changes (their pilot gates
+        are separate contracts, explicitly out of scope)"
+      - "NO hub merge without the operator's explicit word (T-C55/T-C57/
+        T-C61 precedent)"
+  dependencies: ["T-C53 (core feed) DONE", "T-C61 (receipts + raw trail)
+    DONE — ADR-034 is why the widened sync stays merge-safe"]
+  shared_resources:
+    - "hub main (branch t-c66-flashcard-sync-widening off 6fde7c9)"
+    - "core main (branch t-c66-multi-course-anchor-pins off e657b9a)"
+  acceptance:
+    - "eligible set today == {igcse-chemistry-19} (registry-derived, proven
+       by the verifier output recorded in receipts) — signed-out/off-pilot
+       behavior byte-identical"
+    - "both gates consume the ONE predicate (no second copy of the rule);
+       the prebuild fails on manifest↔registry drift"
+    - "core pins prove: two courses' anchors attribute disjointly; a
+       duplicate node code is rejected by the graph; the feed derives one
+       queue across both courses with SkillState empty"
+    - "verify_flashcard_unified.ts all green incl. new eligibility pins;
+       build green; e2e green in mock mode; core offline suite green"
+  tests:
+    - "scripts/verify_flashcard_sync_courses.ts (NEW, prebuild-wired)"
+    - "scripts/verify_flashcard_unified.ts (+ eligibility section)"
+    - "core FlashcardRatingFlowIT + FlashcardReviewScheduleFlowIT
+       (multi-course additions; Testcontainers — CI-executed, offline
+       compile-gated in the sandbox)"
+    - "bun run build (prebuild corpus verify + sync-manifest verify)"
+  evidence_required:
+    - "verifier outputs; build log; core offline suite count; CI runs on
+       both PR heads; diff stat proving flashcard-review.ts byte-untouched"
+  claims:
+    VERIFIED:
+      - "core ingest/feed/trail read first-hand: course-agnostic,
+         fail-closed anchor resolution (FlashcardRatingController.java),
+         full-trail reads (FlashcardReviewScheduleController.java,
+         FlashcardRatingTrailController.java)"
+      - "uq_knowledge_node_code exists (V2__curriculum_knowledge.sql:44) —
+         duplicate node codes are DB-impossible"
+      - "registry derivation: 49 registered / 37 deck-bearing / 12 empty
+         flashcards.json / 1 curriculumCode; pilot anchors 32/32
+         charset-safe + course-prefixed; '44' not reproducible at any
+         registry state (34 → 37)"
+    INFERRED:
+      - "boardCode rule (curriculumCode minus trailing -<year>) from the
+         single observed pair (4CH1-2017 → 4CH1 anchors); generalized for
+         future courses, unverifiable until a second curriculum lands"
+    REPORTED:
+      - "core ITs compile offline; they EXECUTE in CI (Testcontainers —
+         no Docker in the sandbox)"
+    UNVERIFIED:
+      - "the widened gate against a LIVE signed-in account (inherits
+         T-C57/T-C61's live-probe gap; the eligible set is unchanged today
+         so no new live surface is exposed)"
+  next_safe_actions: []
