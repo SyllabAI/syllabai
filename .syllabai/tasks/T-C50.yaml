@@ -46,12 +46,15 @@ task:
   notes:
     - "claim-first per the T-C47 precedent. Closes to DONE only with
       the PR merged and the gate wired."
-  merge_status: "PR syllabai-web#13 OPEN (fix/normalizer-evolution-backport,
-    head 50710a5, base b17f6ff) — awaiting explicit merge word per lane
-    convention. web-ci build job fully GREEN at step level (lint +
-    production build + the NEW CLA math normalize verify step) on head
-    50710a5; gate 30 passed / 0 failed locally (20 prior + 10
-    backport checks); normalizer diff-identical to hub main
-    fca83c8dae88; Vercel preview success. First push d99221e recorded
-    a workflow-parse failure (multi-line step name broke YAML — fixed,
-    no code impact). Evidence comment 5947670801 on the PR."
+  merge_status: "MERGED — operator merge word given 2026-10-02 (trace
+    1a0fb9e37b530c15). PR syllabai-web#13 merge commit 651928ce1926
+    (parents base b17f6ffe3, head 50710a573 — verified), main ref
+    updated. Pre-merge guards: open, head/base pinned to the ledger,
+    mergeable, mergeable_state=clean; head checks build + Vercel
+    preview comments both SUCCESS. Post-merge main CI: web-ci run
+    36981572646 SUCCESS — build job green incl. the NEW 'CLA math
+    normalize verify (T-C50 — hub-parity gate through the shipped
+    ChatMarkdown)' step; the gate is now permanent on main. PR closed
+    with evidence comment. The web backport lane is closed: web's
+    normalizer is diff-identical to hub main fca83c8dae88 (2 T-C44
+    deltas + 4 T-C47 residual fixes), gate 30/30 wired into web-ci."

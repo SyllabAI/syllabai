@@ -63,10 +63,15 @@ task:
   notes:
     - "claim-first per the T-C47 precedent. Closes to DONE only with
       the PR merged (operator word)."
-  merge_status: "PR syllabai-demo#1 OPEN (fix/tutor-math-mhchem, head
-    c995d3e, base 648e2ae) — awaiting explicit merge word per lane
-    convention. Local gates (demo has no PR CI): verify gate 26/26 on
-    first run, eslint clean on all touched files, production build
-    green. Renderer swap + normalizer + 4 surface wraps + gate; deps
-    added. Evidence in the PR body. The s144 sanitize hardening stays
-    operator-gated on the T-C44 card (out of this lane)."
+  merge_status: "MERGED — operator merge word given 2026-10-02 (trace
+    1a0fb9e37b530c15). PR syllabai-demo#1 (the repo's first PR) merge
+    commit e5491877ed99 (parents base 648e2ae62, head c995d3ecb —
+    verified), main ref updated. Pre-merge guards: open, head/base
+    pinned to the ledger, mergeable, mergeable_state=clean; head check
+    Vercel preview comments SUCCESS (demo has no PR CI — local gates
+    were the evidence: verify gate 26/26, eslint clean, production
+    build green). PR closed with evidence comment. Demo now renders
+    model math as math: mhchem-guaranteed renderer (rehypeKatexMhchem)
+    + the hub-verified normalizer + 4 wrapped model-content surfaces
+    + the 26-check gate shipped in scripts/. The s144 sanitize
+    hardening stays operator-gated on the T-C44 card (unchanged)."
