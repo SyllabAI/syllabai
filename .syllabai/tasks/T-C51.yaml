@@ -63,6 +63,15 @@ task:
   notes:
     - "claim-first per the T-C47 precedent. Closes to DONE only with
       the PR merged (operator word)."
+    - "2026-10-02 (operator, zai-web, trace 1a0fbeb9dcfff209):
+      syllabai-demo is RETIRED — 'syllabai-demo is retired, remember?
+      We are working on syllabai-hub repo.' The s144 sanitize
+      hardening residual (referenced in scope.forbidden and the
+      merge_status tail above as operator-gated on the T-C44 card) is
+      MOOT: no hardening work is owed on a retired surface. PR#1
+      merge e5491877 stands as the repo's final state; hub remains
+      the production surface (ADR-029). All lane work continues on
+      syllabai-hub."
   merge_status: "MERGED — operator merge word given 2026-10-02 (trace
     1a0fb9e37b530c15). PR syllabai-demo#1 (the repo's first PR) merge
     commit e5491877ed99 (parents base 648e2ae62, head c995d3ecb —
