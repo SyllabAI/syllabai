@@ -1,0 +1,1896 @@
+{
+ "lane": "grid-layout-20261002",
+ "authorization": "operator IM trace 1a0f8fb15fc9ea49: 'engine-grade grid-layout lane'",
+ "targets": 24,
+ "entries": [
+  {
+   "ref": "q01-6ab313e4",
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 1,
+   "qv_id": "740a6142-bbe9-4328-8571-3e0fcfdc9c26",
+   "ms_document_id": "9fcd9d72-6811-5985-b3c2-af93a25f97ca",
+   "ms_print_file": "pdf/201606_2c_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 4,
+   "qp_echo": 4,
+   "bank_marks": 4,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "(the crystal dissolves)",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "(it is all blue)",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "4",
+     "part": "c",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "21",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q02-51fea326",
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 2,
+   "qv_id": "64c5db8c-3498-4efe-b82c-a28000428eae",
+   "ms_document_id": "2b53b180",
+   "ms_print_file": "pdf/201301_2c_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 4,
+   "qp_echo": 4,
+   "bank_marks": 4,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "D",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "a",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "- B",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "- the spots do not line up (with any of the",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q02-5273dfa3",
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 2,
+   "qv_id": "8618bcdb-ee1a-4ec3-896d-880e2314a379",
+   "ms_document_id": "b27f9358-bd57-5545-8c69-aeeb5cdbd476",
+   "ms_print_file": "pdf/201606_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 6,
+   "qp_echo": 6,
+   "bank_marks": 6,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 3,
+     "text": "l AND g in first row",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 2,
+     "text": "Award 1 mark for s and g correct",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "s / solid",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q03-5273dfa3",
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 3,
+   "qv_id": "0ccf7961-49cc-4fda-a5fb-29e355b3c786",
+   "ms_document_id": "b27f9358-bd57-5545-8c69-aeeb5cdbd476",
+   "ms_print_file": "pdf/201606_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 4,
+   "qp_echo": 4,
+   "bank_marks": 4,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "D / simple distillation",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "C / fractional distillation",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "B / filtration",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "A / crystallisation",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q03-6ab313e4",
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 3,
+   "qv_id": "5aa7bf13-22eb-4846-bac7-b65f60f74eb2",
+   "ms_document_id": "9fcd9d72-6811-5985-b3c2-af93a25f97ca",
+   "ms_print_file": "pdf/201606_2c_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 9,
+   "qp_echo": 9,
+   "bank_marks": 9,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "C",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "(argon)",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 2,
+     "text": "(formula) CuO",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "C",
+     "part": "d",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "(calcium carbonate)",
+     "part": "d",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "in a (gas) syringe / downward delivery in air",
+     "part": "d",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "CO2(g) + Ca(OH)2(aq) \u2192 CaCO3(s) + H2O(l)",
+     "part": "e",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "white precipitate forms / liquid goes milky/cloudy",
+     "part": "e",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q03-d5815b70",
+   "paper": "4CH0/2CR",
+   "session": "June 2014",
+   "qn": 3,
+   "qv_id": "19399d62-f028-4c9b-80b7-e7ab5eb7a91e",
+   "ms_document_id": "e0a32b5b",
+   "ms_print_file": "pdf/201406_2c_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 5,
+   "qp_echo": 5,
+   "bank_marks": 5,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "(it/iron is) less reactive (than",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "aluminium replaces iron (from a",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 2,
+     "text": "gain/addition of oxygen / forms aluminium oxide",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "ARTIFACT"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "burning magnesium / magnesium",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q04-5273dfa3",
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 4,
+   "qv_id": "45735ade-dc18-4579-84f5-a6fb4b302714",
+   "ms_document_id": "b27f9358-bd57-5545-8c69-aeeb5cdbd476",
+   "ms_print_file": "pdf/201606_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 8,
+   "qp_echo": 8,
+   "bank_marks": 8,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "C",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "value in range 120 - 250 120 - 250",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "ARTIFACT"
+    },
+    {
+     "ordering": 3,
+     "marks": 2,
+     "text": "(colour)",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "C",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 3,
+     "text": "one mark for each correct row potassium                  sodium",
+     "part": "e",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "ARTIFACT"
+    }
+   ]
+  },
+  {
+   "ref": "q04-be73fe41",
+   "paper": "4CH1/1CR",
+   "session": "June 2019",
+   "qn": 4,
+   "qv_id": "23750881-4d99-42a2-b4af-665409c5f78c",
+   "ms_document_id": "aa079c51-874e-5fe8-a44c-2a8feb9b07b5",
+   "ms_print_file": "pdf/201906_1cr_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 13,
+   "qp_echo": 13,
+   "bank_marks": 13,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 2,
+     "text": "(a compound containing the REJECT ions/molecules",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "ARTIFACT"
+    },
+    {
+     "ordering": 2,
+     "marks": 2,
+     "text": "all formulae correct",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 2,
+     "text": "carbon",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "water transport oxygen OWTTE                    ACCEPT prevents blood",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "ARTIFACT"
+    },
+    {
+     "ordering": 5,
+     "marks": 2,
+     "text": "b(iv)",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "in either order",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "(contains a carbon to carbon) double",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 2,
+     "text": "A description linking the following two",
+     "part": "c",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q04-cf68cf74",
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 4,
+   "qv_id": "6b7fbbdb-a270-442d-acc3-07036888608b",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_print_file": "pdf/201906_1c_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 8,
+   "qp_echo": 8,
+   "bank_marks": 8,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 4,
+     "text": "Explanations that link together the following two",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "(i)",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "A AND B",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 2,
+     "text": "An explanation that links together the following",
+     "part": "b",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q04-ffd06551",
+   "paper": "4CH0/1C",
+   "session": "January 2017",
+   "qn": 4,
+   "qv_id": "23e54467-bc64-4358-a852-a19292456356",
+   "ms_document_id": "93e4fee2-3a67-5477-9359-89a0c562999b",
+   "ms_print_file": "pdf/201701_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 12,
+   "qp_echo": 12,
+   "bank_marks": 12,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 3,
+     "text": "A and B",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 3,
+     "text": "G and H",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 2,
+     "text": "A",
+     "part": "a",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "2.5",
+     "part": "a",
+     "sub": "iv",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 3,
+     "text": "answer to 1 dp",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q05-5273dfa3",
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 5,
+   "qv_id": "d433c97d-d936-4479-bb8f-fa7490270381",
+   "ms_document_id": "b27f9358-bd57-5545-8c69-aeeb5cdbd476",
+   "ms_print_file": "pdf/201606_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 9,
+   "qp_echo": 9,
+   "bank_marks": 9,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "to prevent spots/them dissolving/mixing (in the solvent) / OWTTE",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 2,
+     "text": "risk of fire",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 3,
+     "text": "cross in box A (chlorophyll is not present in carrots, sweet",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 2,
+     "text": "correct evaluation of Rf value",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "CQ on M1",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q06-57202de4",
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 6,
+   "qv_id": "dfe8610d-3582-44e7-b30f-4cda30e80be2",
+   "ms_document_id": "8936b097",
+   "ms_print_file": "pdf/201306_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 16,
+   "qp_echo": 16,
+   "bank_marks": 16,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "7",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "solid",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "black",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "(formula) \u2013 HAt",
+     "part": "a",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "(name) \u2013 hydrogen astatide",
+     "part": "a",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "\u2013 (astatine/it/At) is less reactive (than",
+     "part": "a",
+     "sub": "iv",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "\u2013 elements get less reactive with increasing",
+     "part": "a",
+     "sub": "iv",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "4 (1) (1) 2 (1)",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 9,
+     "marks": 1,
+     "text": "(paper) turns white/bleaches",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 10,
+     "marks": 1,
+     "text": "acid",
+     "part": "c",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 11,
+     "marks": 1,
+     "text": "to displace (all of) the bromine / to react all of",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 12,
+     "marks": 2,
+     "text": "Br2 + SO2 + 2H2O J 2HBr + H2SO4                      multiples and halves",
+     "part": "c",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 13,
+     "marks": 1,
+     "text": "2HBr + Cl2 J Br2 + 2HCl",
+     "part": "c",
+     "sub": "iv",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 14,
+     "marks": 1,
+     "text": "colourless",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 15,
+     "marks": 1,
+     "text": "brown (solution) / (dark) grey/black",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q06-e280d9c6",
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 6,
+   "qv_id": "d00184ad-3606-4e24-b7a0-4d7d28831f46",
+   "ms_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+   "ms_print_file": "pdf/201506_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 17,
+   "qp_echo": 17,
+   "bank_marks": 17,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 2,
+     "text": "(A)",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 2,
+     "text": "(compound/molecule/substance",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 3,
+     "text": "(fuel oil molecules/it/they)",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "silica / silicon dioxide / SiO2",
+     "part": "d",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 2,
+     "text": "C2H4",
+     "part": "d",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "insufficient/lack of air / oxygen OWTTE",
+     "part": "e",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "carbon monoxide / CO",
+     "part": "e",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "decreases capacity of blood (cells) to",
+     "part": "e",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 9,
+     "marks": 2,
+     "text": "sulfur dioxide AND sulfur trioxide",
+     "part": "f",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 10,
+     "marks": 2,
+     "text": "acid rain",
+     "part": "f",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q07-6ab313e4",
+   "paper": "4CH0/2CR",
+   "session": "June 2016",
+   "qn": 7,
+   "qv_id": "9dc37157-7a46-4fa1-ac83-88f67127aa11",
+   "ms_document_id": "9fcd9d72-6811-5985-b3c2-af93a25f97ca",
+   "ms_print_file": "pdf/201606_2c_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 14,
+   "qp_echo": 14,
+   "bank_marks": 14,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 3,
+     "text": "(step 1) nitric acid",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 3,
+     "text": "(before)",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 2,
+     "text": "because it includes the air (contained in the tip of the",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "26.45 + 26.25",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 2,
+     "text": "M2    26.35 (cm3)          CQ on results averaged",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 3,
+     "text": "filter (to obtain crystals)",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q07-8d584ee1",
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 7,
+   "qv_id": "8f5a2214-c76b-4d97-95ae-3d534a195d80",
+   "ms_document_id": "36be3c10",
+   "ms_print_file": "pdf/201501_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 17,
+   "qp_echo": 17,
+   "bank_marks": 17,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 4,
+     "text": "fractional distillation/fractionating",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "- M4 can be scored from suitably",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "CnH2n+2",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 2,
+     "text": "same/similar chemical",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "(1)",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "carbon monoxide / CO",
+     "part": "d",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "reduces capacity of blood to carry oxygen /",
+     "part": "d",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "nitrogen/N2 AND oxygen/O2",
+     "part": "d",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 9,
+     "marks": 1,
+     "text": "1",
+     "part": "e",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 10,
+     "marks": 1,
+     "text": "setting out correct division of each % by Ar",
+     "part": "f",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 11,
+     "marks": 1,
+     "text": "division by smallest /ratio of 4 : 10 : 1",
+     "part": "f",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 12,
+     "marks": 1,
+     "text": "C4H10S(1)",
+     "part": "f",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 13,
+     "marks": 1,
+     "text": "C4H10S(1)",
+     "part": "f",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q07-e280d9c6",
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 7,
+   "qv_id": "f8908de5-4fd9-47f2-b000-5951cb2b9fab",
+   "ms_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+   "ms_print_file": "pdf/201506_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 9,
+   "qp_echo": 9,
+   "bank_marks": 9,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "(addition)",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "(a molecule used to make a polymer)",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "propene",
+     "part": "c",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 2,
+     "text": "chain of two carbons joined by single bond",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "Accept Cl in any position",
+     "part": "d",
+     "sub": null,
+     "text_source": "guidance-row (empty answer column)",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 2,
+     "text": "(polymer) breaks down / decomposes /",
+     "part": "e",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "inert(ness) / unreactive / OWTTE",
+     "part": "e",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q08-57202de4",
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 8,
+   "qv_id": "f6d12c47-503f-4ff3-839d-d80b9eb10a4b",
+   "ms_document_id": "8936b097",
+   "ms_print_file": "pdf/201306_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 8,
+   "qp_echo": 8,
+   "bank_marks": 8,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "Impurities/chemicals/substances may affect the",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "a luminous flame may mask",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "any combination of the",
+     "part": "a",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "Li+ and Ca2+",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "\u2212 ammonia/NH3",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "\u2013 (water is needed) to form hydroxide",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "\u2013 iron(III)/Fe",
+     "part": "b",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "M2 \u2013 ammonium/NH4+",
+     "part": "b",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q08-8d584ee1",
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 8,
+   "qv_id": "484305a0-50b2-413e-8245-9bcdb4b0d988",
+   "ms_document_id": "36be3c10",
+   "ms_print_file": "pdf/201501_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 10,
+   "qp_echo": 10,
+   "bank_marks": 10,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "hydrogen / H2",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "only single bonds (between carbon atoms)",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "Accept Br atoms in any position provided one",
+     "part": "c",
+     "sub": "i",
+     "text_source": "guidance-row (empty answer column)",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "C (the product of the reaction is colourless)",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 2,
+     "text": "for 4 \u00d7 C AND 6 \u00d7 H and 2 \u00d7 CH3",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "Reject any extension bonds",
+     "part": "e",
+     "sub": null,
+     "text_source": "guidance-row (empty answer column)",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "(polymer) breaks down / decomposes /",
+     "part": "f",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "by bacteria / microbes / microorganisms",
+     "part": "f",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 9,
+     "marks": 1,
+     "text": "inert / unreactive / OWTTE",
+     "part": "f",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q09-57202de4",
+   "paper": "4CH0/1CR",
+   "session": "June 2013",
+   "qn": 9,
+   "qv_id": "3acfe951-a751-4b00-874b-3d1a193df6b0",
+   "ms_document_id": "8936b097",
+   "ms_print_file": "pdf/201306_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 9,
+   "qp_echo": 9,
+   "bank_marks": 9,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "measuring cylinder",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "44",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "cm3",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "M2   0.00044(0)",
+     "part": "a",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "0.0004",
+     "part": "a",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "1 mol zinc reacts with 2 mol HCl",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "only 0.005 mol of zinc are needed",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "(rate) increases/faster reaction",
+     "part": "c",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 9,
+     "marks": 1,
+     "text": "no effect/same volume (of hydrogen) produced",
+     "part": "c",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q09-8d584ee1",
+   "paper": "4CH0/1C",
+   "session": "January 2015",
+   "qn": 9,
+   "qv_id": "e46f141c-0c18-419a-a06c-49ea241b00db",
+   "ms_document_id": "36be3c10",
+   "ms_print_file": "pdf/201501_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 9,
+   "qp_echo": 9,
+   "bank_marks": 9,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "C (lithium reacts with water to form an alkali)",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "A (have the same number of outer shell electrons)",
+     "part": "b",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "(similar)",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "potassium shows a flame / sparks / explodes",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "K 2O",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "KCl",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 1,
+     "text": "s",
+     "part": "e",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 1,
+     "text": "85 AND 87 calculated (even if not identified)",
+     "part": "f",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 9,
+     "marks": 1,
+     "text": "(85 \u00d7 0.72) + (87 \u00d7 0.28) = 85.6",
+     "part": "f",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q11-cf68cf74",
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 11,
+   "qv_id": "401bbd83-1897-4b98-a54c-bf392545fd5b",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_print_file": "pdf/201906_1c_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 9,
+   "qp_echo": 9,
+   "bank_marks": 9,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 2,
+     "text": "\uf0b7",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 2,
+     "text": "the water vapour/steam condenses",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 2,
+     "text": "A description that links together the following two",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 3,
+     "text": "An explanation that links together the following",
+     "part": "b",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q11-e280d9c6",
+   "paper": "4CH0/1C",
+   "session": "June 2015",
+   "qn": 11,
+   "qv_id": "63079464-e23e-4de5-be12-ea9c77627832",
+   "ms_document_id": "2e30c99e-b95e-548b-a07b-2249af354375",
+   "ms_print_file": "pdf/201506_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 11,
+   "qp_echo": 11,
+   "bank_marks": 11,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "(pressure) low",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "fewer (gas) moles/molecules/particles on left",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "(temperature) high",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "(forward) reaction is endothermic / has positive",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 1,
+     "text": "\u2206H (value)/enthalpy change is small / smaller",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 1,
+     "text": "(rate) increases",
+     "part": "d",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 7,
+     "marks": 2,
+     "text": "Mark M1 and M2 independently",
+     "part": "d",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 3,
+     "text": "Accept working by mass ratio OR moles routes Mass ratios:",
+     "part": "e",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q12-5273dfa3",
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 12,
+   "qv_id": "29ae8f0c-aeb4-4c13-ba12-1c84b1d0995a",
+   "ms_document_id": "b27f9358-bd57-5545-8c69-aeeb5cdbd476",
+   "ms_print_file": "pdf/201606_ms_R.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 13,
+   "qp_echo": 13,
+   "bank_marks": 13,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 1,
+     "text": "fuel oil",
+     "part": "a",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "fuel oil",
+     "part": "a",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "gasoline",
+     "part": "a",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 1,
+     "text": "alumina / silica",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 5,
+     "marks": 2,
+     "text": "for correct coefficient - 2",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 6,
+     "marks": 3,
+     "text": "high demand/more use for short- fractions / OWTTE",
+     "part": "b",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "ARTIFACT"
+    },
+    {
+     "ordering": 7,
+     "marks": 2,
+     "text": "which causes specified problem for",
+     "part": "c",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 8,
+     "marks": 2,
+     "text": "for (the other) two carbon atoms each with one H",
+     "part": "d",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  },
+  {
+   "ref": "q15-cf68cf74",
+   "paper": "4CH1/1C",
+   "session": "June 2019",
+   "qn": 15,
+   "qv_id": "5fb4726f-d9ba-49e2-bfd0-45d1c9cf3aa8",
+   "ms_document_id": "02e4c38c-d477-52f9-b97c-32a173a04d59",
+   "ms_print_file": "pdf/201906_1c_ms.pdf",
+   "extraction_method": "ms-print-gated-extraction-v3",
+   "engine": "pdflane parse_ms G2 grammar (grid-layout lane 2026-10-02)",
+   "v2_sum": 9,
+   "qp_echo": 9,
+   "bank_marks": 9,
+   "points": [
+    {
+     "ordering": 1,
+     "marks": 3,
+     "text": "Test addition of acidified                                     1 mark for each",
+     "part": "a",
+     "sub": null,
+     "text_source": "answer-cell",
+     "containment": "ARTIFACT"
+    },
+    {
+     "ordering": 2,
+     "marks": 1,
+     "text": "6.65 (g)",
+     "part": "b",
+     "sub": "i",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 3,
+     "marks": 1,
+     "text": "5.4(0) (g)",
+     "part": "b",
+     "sub": "ii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    },
+    {
+     "ordering": 4,
+     "marks": 4,
+     "text": "n[(NH4)2SO4.Fe2(SO4)3] = 6.65 \u00f7 532 OR 0.0125",
+     "part": "b",
+     "sub": "iii",
+     "text_source": "answer-cell",
+     "containment": "OK"
+    }
+   ]
+  }
+ ],
+ "excluded": [],
+ "totals": {
+  "fill_qv": 24,
+  "fill_points": 164,
+  "fill_marks": 233
+ },
+ "new_defect_candidates": [
+  {
+   "ref": "q03-51fea326",
+   "paper": "4CH0/2C",
+   "session": "January 2013",
+   "qn": 3,
+   "bank_marks": 1,
+   "printed_total": 8,
+   "evidence": "v3 engine rows sum 8 == QP echo 8 (201301_2c_ms/qp double); bank 1 \u2014 Task-66-TX-B class; NOT repaired (no operator mandate for new-defect class in this lane)"
+  }
+ ],
+ "residue": [
+  {
+   "ref": "q10-5273dfa3",
+   "paper": "4CH0/1CR",
+   "session": "June 2016",
+   "qn": 10,
+   "bank_marks": 15,
+   "v3_sum": 13,
+   "evidence": "a(ii) OR-route fraction block ('0.38(4) x 1000 / 50' stacked lines, M1/M2 marks cells displaced) \u2014 2 marks unrecovered; p20 lone-cell page recovered by G2.5 (+3)"
+  }
+ ],
+ "plan_sha256": "5bb1b6d709ab3e7f8d53db9484a0ca987e227db360a521b33a3452a8a5379c7c"
+}
