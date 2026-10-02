@@ -6,7 +6,7 @@ task:
     scoped; the recorded lever from run-005-c-r9's reading (binding constraint
     moved from pool coverage to rank quality)"
   owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
-  status: EXECUTING
+  status: VERIFYING # arm-D instrument PR syllabai-core#64 CI; merge on green
   priority: P1
   authority: "operator IM trace 1a0fc8c1e8b73939 ('commission the rank-quality
     lane') — executes the lever recorded in run-005-c-r9's RUN_REPORT Reading
@@ -74,21 +74,33 @@ task:
         gold found at median depth ~14; the (d) recompute ledger shows the
         carriers at r8 ranks 7-20 displaced past the top-20 horizon by QP/MS/EQ
         paper mass (S8D-RULING-REVIEW)"
-    INFERRED:
-      - "a deterministic lexical-precision rerank of the fused pool should
-        lift MRR/nDCG@10 (the bars' rank-quality targets) and partially
-        recover (d) compositionality; recall@20 is set-invariant when the
-        reranked top-20 is a permutation of the fused top-20"
+      - "run-005-d-r1 RECORDED (snap-007 x gold-r9 x preload-r9, the r9 basis;
+        determinism double-pass PASS; boundary 0/0): recall@5 0.0616->0.1279
+        (+107.6%), recall@10 0.1043->0.1463 (+40.3%), MRR 0.0700->0.0936
+        (+33.7%), nDCG@10 0.1113->0.1816 (+63.2%); recall@20 EXACTLY invariant
+        and the reranked top-20 proven a PERMUTATION of r9's fused top-20 on
+        89/89 queries (set-identity from recorded bytes)"
+      - "(c2) VALIDATED nDCG@10 0.1816 >= 0.1683 PASS — the SECOND §8.1 bar
+        PASS in the series (r9's (a2) held); (a)(b)(c) FAIL 0.1463/0.0936/
+        0.1816 vs 0.1920/0.1237/0.2316; (b2) FAIL 0.0936 vs 0.1184 (gap
+        closed by 42% of its width); (f) 0/0 PASS; (g) ZERO per-class
+        regressions vs r9 (vague_learner 0->0.25 recovered, why_wrong MRR
+        0.1091->0.2833); VERDICT: NOT PROMOTED"
+      - "(d) 0.4607/0.7857 UNCHANGED from r9, exactly — mechanism finding:
+        the displaced carriers sit BEYOND the per-arm-20 pools, so a
+        post-fusion reranker structurally cannot reach them; (d) recovery
+        is POOL-side (per-arm depth / pool composition), not rerank-side"
+    INFERRED: []
     REPORTED: []
     UNVERIFIED:
-      - "the actual run-005-d numbers — tranche 2, not yet executed"
+      - "PR syllabai-core#64 CI verdict (dispatched; merge on green)"
   next_safe_actions:
-    - "tranche 2: rebuild the user-space execution environment (JDK 25.0.4.1,
-      Maven 3.9.9, PostgreSQL 17.11 + pgvector 0.8.0 Debian-native debs per
-      the T-C59 recipe), execute run-005-d (BENCH_RUN_ID=run-005-d
-      BENCH_ARM_D_RERANKER=lexical_precision), record vs §8.1 v1.1"
+    - "merge PR syllabai-core#64 on CI green (merge-commit per precedent)"
     - "tranche 3 (fusion-weights lever): weighted-fusion replay via the
       shipped 4-arg RetrievalFabric ctor / PLAN_V2_WEIGHTS — separately
-      pre-registered, only after arm D's verdict is recorded"
-    - "if §8.1 passes: promotion belongs to the owning lane (production
-      wiring behind the same port, its own verification discipline)"
+      pre-registered BEFORE the run"
+    - "tranche 4 (pool-side (d) recovery design): the run-005-d mechanism
+      finding redefines the design space — per-arm depth, pool composition,
+      and the fusion-weights lever interact; pre-register before measuring"
+    - "promotion stays with the owning lane only after a §8-passing verdict
+      AND the owner's acceptance"
