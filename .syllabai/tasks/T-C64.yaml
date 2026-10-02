@@ -1,0 +1,61 @@
+version: 1
+task:
+  id: T-C64
+  title: "Notes-bridge number reconciliation — pin the basis of '180 bridged
+    spec points' (C13 HV projection census, 2026-09-27) vs the live tag
+    census (155 notes / 175 union, T-DB-VERIFY 2026-10-02); re-scope the
+    pack number before any bridge work builds on it"
+  owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
+  status: IN_PROGRESS
+  priority: P2
+  authority: "operator IM trace 1a0fcb9aef3bc611 ('Okay, proceed') — go for the
+    only unclaimed actionable item left after T-C60-EXEC (trace
+    1a0fc9695d27fdb5): the bridge-number reconciliation that T-DB-VERIFY
+    (trace 1a0fc7bc5af92cd5) marked PACK NOT REPRODUCIBLE (its scoping
+    suggestion 4). The papers ingest wave stays blocked on its recorded
+    prerequisites and is NOT part of this lane."
+  base:
+    repo: "syllabai (records) at the claim commit's parent; artifact pin
+      bench/evidence/chunk-sp-substrate-2026-09-27/ (SHA256SUMS-verified;
+      snap-007 copy byte-identical, sha256 b5b20ffa...); live DB state =
+      T-C60-EXEC post-verify (ep 91V/13R, docs 872V/0S/145R, chunks
+      4,672/4,672 rev2, gate 4,608)"
+  scope:
+    allowed:
+      - "read-only recomputation of the pinned artifact census from bytes
+        (substrate pack + snap-007 chunk_spec_hv.json byte-identity)"
+      - "live-DB SELECT probes on the sanctioned t0_readonly path
+        (documents / document_chunks.spec_codes jsonb / spec_points axis)"
+      - "evidence pack bench/review/bridge-reconciliation-20261002/
+        (REPORT + machine JSON + SHA256SUMS) + this task record +
+        TODO/WORKLOG entries"
+      - "best-effort gold-spec-coverage cross-check from frozen gold
+        inputs (read-only)"
+    forbidden:
+      - "zero DB writes, zero corpus writes, zero frozen-artifact mutation
+        (snap-007 / gold-r9 / preload-r9 untouched, section-4 snapshot
+        discipline); no bridge re-projection, no store mutation, no
+        re-embedding"
+      - "no serving-semantics change of any kind"
+      - "no secrets on disk or in any commit (env-only, never echoed);
+        SELECT-only guard enforced per statement"
+  acceptance:
+    - "artifact census re-pinned from bytes (210/209/164/181, bridged 180)
+      with SHA256SUMS + snap-007 byte-identity asserted"
+    - "live tag census re-pinned (notes distinct codes, tag-pair rows,
+      chunk/doc counts, all-kinds union) on the post-T-C60-EXEC state"
+    - "per-code delta composition artifact-set-minus-live and
+      live-set-minus-artifact, normalization variants tested (C-suffix,
+      case, dash forms), every residual code dispositioned"
+    - "verdict: which basis each number measures + the mechanism of the
+      pack's non-reproducibility, machine-pinned (bridge-time census vs
+      production tag instrument vs genuine drift)"
+    - "downstream guidance recorded: frozen artifact governs bench §8(d);
+      live spec_codes tags govern serving-side claims; the pack's '180
+      bridged spec points' sentence re-scoped or corrected"
+  evidence: []
+  notes:
+    - "claim-first at registration (this commit); ID re-asked after the
+      push per the T-C55 lesson. T-C61/T-C62/T-C63 taken by concurrent
+      lanes — T-C64 verified free at the claim parent."
+    - "read-only lane end to end; no credential-gated write phase exists."
