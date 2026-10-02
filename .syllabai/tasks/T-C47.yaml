@@ -1,0 +1,67 @@
+version: 1
+task:
+  id: T-C47
+  title: "mathNormalize residual drift shapes — the T-C44 post-merge audit
+    found 4 more raw-render shapes (2 RED, 2 degraded); harden
+    src/lib/mathNormalize.ts + extend the verify gate"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: "operator question (zai-web, 2026-10-02, trace
+    1a0fb4b888cb507d): 'And are there more issues like this?' — asked
+    right after giving the merge word for hub PR #6 (T-C44). Answered by
+    a residual-shape audit of the merged normalizer; the fix is the
+    natural continuation of the same lane (same file, same gate)."
+  base:
+    repo: syllabai-hub
+    commit: ec6bd5e
+  scope:
+    allowed:
+      - "src/lib/mathNormalize.ts — residual-shape hardening only"
+      - "scripts/tutor_math_normalize_verify.ts — new gate cases for
+        every residual shape (RED class must render without KaTeX error)"
+    forbidden:
+      - "no corpus Markdown renderer behavior change for corpus content"
+      - "no demo repo changes (legacy surface — the T-C44 card's filed
+        follow-up stands: demo needs its own mhchem + hardening decision)"
+      - "no web repo changes in this lane (web backporting the two T-C44
+        deltas + these residuals stays a web-lane task)"
+  acceptance:
+    - "R1 multi-line $$…$$ display blocks (proper delimiters, no drift)
+      render without KaTeX 'Can't use function $' red error — rule 6
+      must never wrap lines inside a display block"
+    - "R2 bare \\ce{…}/\\pu{…} with nested braces (the ion shapes
+      \\ce{SO4^{2-}}, \\ce{Fe^{3+}}) render without 'Unexpected end of
+      input in a macro argument' red error and without a stray brace"
+    - "R3 multi-line \\(…\\) bodies collapse to one math span (no
+      fragmenting, no raw \\frac visible)"
+    - "R4 bold/italic-wrapped partial formula runs keep emphasis outside
+      the math (no asterisk noise inside KaTeX output)"
+    - "all prior gate cases stay green (no regression on the reported
+      T-C44 shapes); eslint + production build green; CI green"
+  evidence:
+    - "audit probe (bun, real katex+mhchem render classification):
+       R1 $$\\nE = mc^2 + \\\\frac{1}{2}mv^2\\n\\\\text{kinetic
+      energy}\\n$$ -> rule 6 nested-wraps inner lines -> KaTeX RED
+      'Can't use function $ in math mode' — the exact defect class the
+      T-C44 rule-2 line-collapse fixed for \\\\[…\\\\] bodies, still open
+      for PROPER multi-line $$ blocks (a very common model emission)"
+    - "R2 \\\\ce{Fe^{3+}} -> \\\\$\\\\ce{Fe^{3+}$} (rule 3 cuts at the
+      first }) -> unbalanced math RED 'Unexpected end of input in a
+      macro argument' + stray } literal — the highest-frequency ion
+      shape in chemistry content"
+    - "R3 multi-line \\\\(…\\\\) body -> split fragments, raw
+      \\\\frac{a}{b} visible in prose (no red, but raw LaTeX leaks)"
+    - "R4 **\\\\frac{V}{24} = 0.5 mol** -> \\\\$**\\\\frac{V}{24} = 0.5$
+      mol** -> literal asterisks inside math, emphasis lost (degraded)"
+    - "hub surfaces audited: the 5 model-content surfaces are wrapped
+      (tutor message-item x2, note-cla, question-cla-overlay,
+      assistant-client); corpus surfaces (notes page, question player,
+      practice, part-problem, help panel, deck-player, test-builder)
+      are corpus-verified content — out of scope by design; the
+      answer-editor is a structured MathLive/KaTeX editor, not a
+      markdown passthrough"
+  notes:
+    - "claim-first; same session owns T-C44 (PR hub#6 merged ec6bd5e
+      with this session's operator merge word). Closes to DONE only
+      with the PR merged and the gate extended."
