@@ -1,0 +1,31 @@
+{
+ "lane": "g3-sparse-fill (T-C50, trace 1a0fb848d5b29681)",
+ "generated_at": "2026-10-02T08:14:34.076964+00:00",
+ "expectation": {
+  "qsp_total": 2620,
+  "qt_total": 1717,
+  "schemes_total": 1504,
+  "schemes_suggested": 144,
+  "schemes_validated": 1360,
+  "mark_points_total": 5883,
+  "audit_max_id": 4049,
+  "tve": 0,
+  "qv_pool": 1526,
+  "questions_active": 954,
+  "kn": 435,
+  "edges": 730,
+  "ing_nodes": 0,
+  "papers_validated": 90,
+  "papers_rejected": 13,
+  "documents_validated": 567,
+  "documents_suggested": 305,
+  "documents_rejected": 145
+ },
+ "drift": {},
+ "notes": {
+  "baseline": "post-F-PROD-4 governed removal (audit 4049, wave2-prep-agent 2026-10-02T07:34:18Z) + T-C49 ruling fix + V57 deploy; re-probed first-hand this lane",
+  "fill": "2 schemes / 16 points / 23 marks (plan sha 2b7f433f\u2026)",
+  "sparse_universe": "2 -> 0 (q03-51fea326 + q10-5273dfa3 both filled)",
+  "secrets": "GH_PAT + RENDER_KEY used env-only; revoke after reading records"
+ }
+}
