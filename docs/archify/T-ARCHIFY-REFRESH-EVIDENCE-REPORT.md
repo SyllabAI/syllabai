@@ -168,3 +168,35 @@ cap overflow, and a sublabel width violation.
 - Tracker note: the concurrent lane had consumed session numbers through 136;
   this lane's record is **Session 137** in WORKLOG.md (PROGRESS.md per-session
   sections end at 129 by its own header note).
+## 10. Post-pin update — 2026-10-02: the scheduled T-C42 floor sublabel (check + flip)
+
+- Core PR #44 (`t-c42-min-cosine-050-flip` @ `8dc315a`) MERGED as `5ef132b`
+  (merge-commit method after the concurrent PR #43 lane; PR-head full-suite
+  CI green `36919822481`, merge-commit CI green `36921164632`) — the flip
+  deferred at §9 is on core main, so the scheduled change is applied here.
+- Applied change, exactly as scoped at §9: the Semantic-vector-leg sublabel
+  `pgvector · cosine floor 0.15` → `pgvector · cosine floor 0.50` in
+  `syllabai-retrieval-architecture.archify.json` (`/components[3]`) and its 4
+  mirrored strings in the rendered HTML (aria-label, `data-node-sublabel`,
+  `<title>`, context text). No other diagram content moved. Byte-count
+  asserted (1 + 4), JSON re-parsed, zero `0.15` floor residuals.
+- State note: the content pin stays `9385011`
+  (`meta.repository.revision`) and the node's source line-refs stay
+  9385011-accurate; the floor TEXT alone reflects core main @ `5ef132b`,
+  where `MIN_COSINE = 0.50` sits at `ContentVectorRetriever.java:52`
+  (candidacy filter at `:68`) after the T-C42 javadoc expansion — reconcile
+  line-refs at the next re-pin.
+- Flip gates re-verified from the committed records during this check (not
+  re-run): gate 1 `run-005-c-r8` — recall r7→r8 byte-identical
+  (0.0386/0.0515/0.0717), MRR −0.0056 (0.0615→0.0559), nDCG@10 −0.0042
+  (0.0913→0.0871), §8(d) 0.5618/0.9167 unchanged, zero-result 0/120, floor
+  0.50 declared in the r8 header; gate 2 production probe — 1,745/2,935 =
+  59.5% above 0.50 (binding mass rule PASS), peak bucket 0.50–0.55 (1,361),
+  zero pool mass below 0.40, buckets sum exactly to 2,935, frozen-vector
+  transport deviation recorded + SHA-pinned
+  (`ADDENDUM-2026-10-02-production-probe.md`). Post-deploy watch item
+  unchanged: tutor retrieval refusal rate at the 0.50 floor.
+- Browser receipt: this round the rendered-DOM check RAN (the §9
+  environmental failure does not recur here) —
+  `tools/t42-flip-manual-browser-evidence.json` PASS (needle 0.50 ×8,
+  0.15 ×0, 24 SVG nodes).

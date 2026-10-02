@@ -98,7 +98,7 @@
       "id": "semantic",
       "type": "backend",
       "label": "Semantic vector leg",
-      "sublabel": "pgvector · cosine floor 0.15",
+      "sublabel": "pgvector · cosine floor 0.50",
       "tag": "IMPLEMENTED · degrades to KG-only",
       "sources": [
         { "path": "src/main/java/com/syllabai/tutor/ContentVectorRetriever.java", "line": 45, "label": "vector retrieve" },

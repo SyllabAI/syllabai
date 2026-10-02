@@ -1,0 +1,15 @@
+{
+  "generated": "2026-10-02",
+  "tool": "agent-browser (headless Chromium, file:// load of the committed artifact)",
+  "note": "T-C42 sublabel-flip receipt: the scheduled cosine-floor text change (0.15 -> 0.50) verified in the RENDERED DOM, not just in bytes. Upgrades the refresh round's 'environmentally unavailable' packaged browser gate for this one artifact.",
+  "artifact": "syllabai-retrieval-architecture.html",
+  "assertions": {
+    "page_title": "SyllabAI — Retrieval & Grounded AI (source-backed) Diagram",
+    "needles": {
+      "cosine floor 0.50": 8,
+      "cosine floor 0.15": 0
+    },
+    "svg_nodes_rendered": 24
+  },
+  "status": "PASS"
+}
