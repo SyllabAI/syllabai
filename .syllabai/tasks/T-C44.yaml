@@ -1,0 +1,56 @@
+version: 1
+task:
+  id: T-C44
+  title: "Tutor math rendering on the hub — port the s142 model-drift
+    normalizer so \\[…\\] / \\ce{} / \\(\) tutor answers render as math,
+    not raw LaTeX"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: "operator report (zai-web, 2026-10-02, trace
+    1a0fb115064e11f5): a live tutor reply (2020 January GCSE Chemistry
+    Paper 1 Q10) rendered raw LaTeX/mhchem — 'It has rendering text
+    issues'; the reply's three \\[…\\] display blocks and \\ce{} bodies
+    showed literally, inline \\(_r\\) fragments rendered"
+  base:
+    repo: syllabai-hub
+    commit: a61b0d3
+  scope:
+    allowed:
+      - "src/lib/mathNormalize.ts — verbatim port from syllabai-web main
+        (s142, the already-reviewed model-drift normalizer)"
+      - "src/app/tutor/message-item.tsx — wrap assistant message.content
+        with normalizeMathDelimiters at its two render sites (streaming
+        partial + final); user bubble untouched"
+      - "scripts/tutor_math_normalize_verify.ts — runtime gate against the
+        shipped Markdown+normalizer composition"
+      - ".github/workflows/ci.yml — one step running the verify gate"
+    forbidden:
+      - "no corpus Markdown renderer behavior change for corpus content"
+      - "no core/prompt changes (s142 decision: model drift is a
+        render-side concern; prompt v3 markdown_math stays)"
+      - "no demo repo changes (legacy surface; needs its own mhchem +
+        hardening decision — filed as the card's follow-up)"
+  acceptance:
+    - "the exact reported shapes render: \\[…\\] display blocks (boxed
+      mhchem equation, CuO+HNO3 equation, n_theor fraction), \\(\ce{…}\\)
+      inline, M\\(_r\\), and the truncated unterminated \\[ tail never
+      renders raw LaTeX commands"
+    - "well-formed corpus content sails through untouched (verified by the
+      gate's prose/display/dollar/fence controls)"
+    - "hub CI green (lint + build + selftest + verify gate + e2e)"
+  evidence:
+    - "root cause: hub tutor renders assistant content through the corpus
+      Markdown component; normalizeCorpusMath handles $…$/$$…$$ and
+      parseable \\(\) only — NO \\[…\\] rule, NO bare-\\ce rule, and its
+      parses() gate imports plain katex (no mhchem) so \\(\ce{…}\\) fails
+      the gate and stays raw; hub's renderer-side rehypeKatexMhchem never
+      receives the content"
+    - "web solved this exact drift family in s142 (mathNormalize.ts +
+      ChatMarkdown); hub imported rehypeKatexMhchem (s142 renderer piece)
+      but not the drift normalizer — the hub tutor surface predates it"
+    - "surface attribution: ADR-029 — hub is the production product
+      frontend (promoted from demo 2026-09-28); web is the internal
+      teacher/ops console and already renders these shapes correctly"
+  merge_status: "PR OPEN (awaiting explicit merge word per lane
+    convention)"

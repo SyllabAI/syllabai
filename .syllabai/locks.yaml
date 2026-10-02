@@ -61,3 +61,6 @@ resource_classes:
 lease_schema:
   required: [resource, owner, task, base_commit, acquired_at, expires_at]
   rule: "Do not edit another active lease. Reconcile stale/expired leases explicitly."
+
+# (T-C44's hub tutor-math-render lease: owner superz, base a61b0d3, expiry
+# 2026-10-04T00:00Z or until the fix PR merges — whichever first.)
