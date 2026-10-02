@@ -5,7 +5,7 @@ task:
     SUGGESTED->VALIDATED (1,673 subject-branch chunks enter the serving pool,
     gate 2935->4608), closing F-PROD-3's actionable surface"
   owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
-  status: IN_PROGRESS
+  status: DONE
   priority: P1
   authority: >
     Operator IM trace 1a0fb9dd09110041, verbatim: "Proceed. Here is neon api
@@ -22,7 +22,9 @@ task:
     applies the operator's named instruction, audit rows record the
     operator as the deciding actor.
   base:
-    repo: "syllabai (master pack) @ e0fba66"
+    repo: "syllabai (master pack) @ e0fba66 (claim re-based over the
+      concurrent T-C53 flashcard-scheduling + flyway-lease lane — honest
+      renumber T-C53 -> T-C54, zero clobber: their yaml landed intact)"
   scope:
     allowed:
       - "bench/review/wave2-validation-2026-10-02/ (decisions JSON, fail-closed
@@ -39,4 +41,71 @@ task:
       - "NO core-code change, NO migration, NO DDL (ck_cra_target_type already
         widened by the 09-28 batch — if absent on production, abort for manual
         review instead of re-widening)"
-  execution_record: "PENDING (claim-first; content follows immediately)"
+  execution_record: >
+    2026-10-02. DB path: the in-session Neon API key (0600 at
+    /home/z/my-project/scripts/.neon_api_key.txt, outside every git tree)
+    resolved via the Neon API (org-scoped listing /users/me/organizations —
+    plain /projects now 400s requiring org_id; project-level /endpoints
+    carries the hosts the branch listing omits; connection_uri lives at
+    GET /projects/{id}/connection_uri?branch_id=...&database_name=...&role_name=...
+    with the URI under response key `uri`) to the pooled production endpoint
+    ep-ancient-cake-a52e4kfd-pooler / neondb / neondb_owner — URI stored
+    0600 outside git, never printed in full.
+    ID RACE: T-C53 was claimed mid-push by the flashcard-scheduling lane
+    (session web-9d2144ad) — this claim renumbered T-C53 -> T-C54 and was
+    pushed re-based on top of their tip (939d0b8), zero clobber.
+    DRY-RUN DISCIPLINE HELD: first dry-run ABORTED fail-closed on a real
+    runner bug (post-loop audit-rowcount assert reading the last single
+    INSERT's rowcount 1 instead of the loop total 297); second on a second
+    real bug (documents-census compare keeping zero-valued phantom keys
+    after subtraction — semantically equal, syntactically unequal); both
+    fixed, both rollbacks touched zero rows; the third dry-run = DRY_RUN_OK
+    with every gate green: identity (neondb / T-C04-CAMPAIGN), scope
+    (exactly 1 ACTIVE = pinned 4CH1-2017), live drift (297/1673 exactly —
+    nothing moved since the 07:38Z census), per-doc fidelity 297/297
+    (kind, state, chunk count, embedded, subject-resolution), non-interference
+    (EXTERNAL_NOTES 112V/0S; full state x kind census snapshot; chunks
+    snapshot; audit/events deltas), serving-gate replica pre 2935 == pinned.
+    APPLIED 08:31:44Z, single transaction, batch_run_id
+    14cb8ae4-beca-4b25-8568-2e99249e7fb4: 297 documents SUGGESTED->VALIDATED
+    (flip rowcount assert 297) + 297 content_review_audit rows (action
+    VALIDATE, target_type 'document', actor_label names the operator,
+    decision_text verbatim, detail carries batch/batch_run_id/decisions+worklist
+    sha256s); gate replica 2935 -> 4608 (+1673 exactly — NO re-stamp needed,
+    all 1,673 chunks already embedded and rev2: chunks snapshot 4,672/4,672/rev2
+    byte-equal pre/post); content_review_audit 2491 -> 2788 (+297);
+    teacher_validation_events 0 -> 0; ck_cra_target_type pre-verified to
+    include 'document' (no DDL performed, runner aborts if absent).
+    INDEPENDENT POST-VERIFY (fresh READONLY connection, driver-enforced):
+    census re-read (EQ 379V/0S, SYLLABUS 162V/0S, QP 106V/4S/78R,
+    MS 105V/4S/67R, NOTES 112V/0S); gate 4608; the wave-2 delta re-derived
+    FROM THE AUDIT TRAIL (batch_run_id -> documents -> embedded rev2 chunks
+    subject-resolved): EQ 747 + SYLLABUS 162 + QP 369 + MS 395 = 1,673;
+    297 batch audit rows; sample row's decision_text verbatim match;
+    teacher_validation_events 0; chunks 4,672/4,672/rev2. Idempotence
+    re-run: ALREADY_APPLIED (exit 0 no-op).
+    DISCLOSURE: the post census keeps SUGGESTED|QP = 4 and SUGGESTED|MS = 4
+    — eight ingest-era CHUNKLESS documents, never in the worklist (its
+    census counts chunks), invisible to the serving gate either way;
+    untouched, listed for honest post-state reading.
+    Evidence labels: VERIFIED — census, gate replica, audit trail + delta
+    derivation, idempotence, chunks snapshot, identity/scope guards;
+    UNVERIFIED — learner-visible retrieval quality (the Run005C re-record
+    against the §8.1 VALIDATED bars is the next lane and needs a snap-007
+    freeze + maven, neither available here); REPORTED — none.
+  next_safe_actions:
+    - "Run005C re-record against the §8.1 VALIDATED bars — first bars a
+      validated-corpus generation can legitimately clear; needs snap-007
+      freeze from post-wave production + maven-capable environment (none in
+      this sandbox); document validation moved the REACHABLE pool
+      (2935->4608), it does not move vector quality — measure, don't assume"
+    - "refusal-rate watch continues (T-C52 gates: >=50 post-flip asks or 72h)
+      — the pool the tutor draws from just grew 2935->4608; the grounding-gate
+      class remains the floor's decision metric, paper-guard feeds F-PROD-1"
+    - "F-PROD-1 teacher review of the 25 REVIEW_REQUIRED papers — unchanged"
+    - "durable instrument: the teacher document-validate endpoint
+      (POST /teacher/content/documents/{id}/validate + audit row) remains
+      the follow-up product work if more corpus axes are coming"
+    - "credential rotation remains operator-held (fresh in-session Neon API
+      key does not change the discipline: the key is DB-credential-equivalent
+      — the API reveals the pooled DB URI by design)"

@@ -1,0 +1,68 @@
+{
+  "batch": "wave2-validation-2026-10-02",
+  "date": "2026-10-02",
+  "task": "T-C54 (wave-2 execution — the 297 document-validate acts composed by F-PROD-3 / T-C41 ②)",
+  "instrument": {
+    "chosen": "governed SQL batch (notes-axis precedent 9ea54e1, batch notes-axis-promotion-2026-09-28)",
+    "why_not_endpoint": "the operator's in-session provision of a Neon API key sanctions the DB-level instrument; the teacher-endpoint route (REPORT option 2) is product work on core and was not named; the endpoint remains the durable follow-up if more corpus axes are coming",
+    "what_the_batch_does": "documents.validation_state SUGGESTED->VALIDATED for exactly the 297 worklist documents + one content_review_audit row per document; NOTHING else",
+    "what_it_never_does": "no chunk writes of any kind (no re-stamp required — dry-run must prove the 1,673 chunks already serve at the current rev), no teacher_validation_events, no DDL, no core change"
+  },
+  "decision_authority": {
+    "operator": "Nawaf Al Hussain Khondokar",
+    "operator_trace_id": "1a0fb9dd09110041",
+    "decision_text": "Proceed. Here is neon api if you need it.",
+    "decision_note": "verbatim IM directive answering the wave-2 prep REPORT 'Remaining for the operator' instrument decision; the API key material itself is stripped from this record (secret hygiene) and was never persisted in any git-tracked path; the wave-2 prep REPORT (evidence/bench-001/wave2-prep-2026-10-02/REPORT.md) had left exactly one open decision: the execution instrument",
+    "agent_role": "the agent asserts no validation of its own — it applies the operator's named instruction; audit rows record the operator as the deciding actor (notes-axis discipline)"
+  },
+  "worklist": {
+    "path": "evidence/bench-001/wave2-prep-2026-10-02/worklist2.json",
+    "sha256": "74f0291662566319a21f9f970e8a02e4906b862420b824f65ddbdf18e031dbef",
+    "actionable_filter": "rows with SUGGESTED > 0",
+    "expected_actionable_documents": 297,
+    "expected_actionable_chunks": 1673,
+    "expected_by_kind": {
+      "EXTERNAL_QUESTIONS": {"docs": 80, "chunks": 747},
+      "SYLLABUS": {"docs": 162, "chunks": 162},
+      "QUESTION_PAPER": {"docs": 28, "chunks": 369},
+      "MARK_SCHEME": {"docs": 27, "chunks": 395}
+    }
+  },
+  "scope_guards": {
+    "active_curriculum_version_id": "356840e6-81e2-49df-8182-93ab6504d591",
+    "active_curriculum_version_code": "4CH1-2017",
+    "active_census_rule": "exactly one curriculum_versions row with status='ACTIVE' (resolveActive / F-PROD-2 doctrine) — zero or ambiguous scope aborts",
+    "live_drift_rule": "the live SUGGESTED surface across the four kinds must equal the worklist exactly (297 docs / 1,673 chunks) — any production movement since the 07:38Z census aborts for re-composition",
+    "per_doc_fidelity": "every worklist document must exist, match kind, be SUGGESTED, and carry exactly its recorded chunk count with every chunk embedded and subject-resolved into the ACTIVE curriculum version",
+    "expected_database": "neondb",
+    "expected_campaign_label": "T-C04-CAMPAIGN"
+  },
+  "serving_gate": {
+    "replica_of": "ChunkVectorRepository.searchServingEligible (SCOPE_EXISTS_VALIDATED) at core HEAD",
+    "current_embed_rev": 2,
+    "rev_source": "core src/main/java/com/syllabai/content/ChunkVectorRepository.java:64 CURRENT_EMBED_REV = 2 (2026-10-02); consistent with wave-1 PRODUCTION reachable_at_rev2 == reachable == 2935",
+    "expected_pre": 2935,
+    "expected_post": 4608,
+    "note": "all 1,673 actionable chunks are embedded (worklist: embedded == SUGGESTED per doc); if the post gate reads below pre+1673 the transaction rolls back (some chunk not at the serving rev — would require a disclosed instrumental re-stamp, notes-axis discipline)"
+  },
+  "non_interference": {
+    "EXTERNAL_NOTES_census": {"VALIDATED": 112, "SUGGESTED": 0, "FLAGGED": 0, "REJECTED": 0},
+    "documents_census": "full state x kind snapshot taken pre and post; post must equal pre shifted by exactly the 297 flips",
+    "chunks_table": "zero writes; count + embedded count + embed_rev histogram asserted unchanged",
+    "teacher_validation_events": "delta 0 enforced",
+    "audit_delta": "exactly +297 (one VALIDATE row per document)"
+  },
+  "audit_row_shape": {
+    "action": "VALIDATE",
+    "target_type": "document",
+    "from_state": "SUGGESTED",
+    "to_state": "VALIDATED",
+    "actor_user_id": null,
+    "actor_label": "operator — Nawaf Al Hussain Khondokar (wave-2 document validation named in IM, trace 1a0fb9dd09110041)",
+    "constraint": "ck_cra_target_type must already include 'document' (widened additively by the 09-28 notes-axis batch); if absent the runner ABORTS for manual review instead of re-widening (no DDL in this batch)"
+  },
+  "reversibility": {
+    "revert": "single transaction: flip the 297 documents VALIDATED->SUGGESTED (by the batch_run_id audit detail), delete the 297 audit rows by batch_run_id; requires a fresh operator naming (this batch's authority does not extend to a revert)",
+    "idempotence": "a prior application of THIS batch (batch id in audit detail) no-ops with ALREADY_APPLIED if the census matches; audit rows from any OTHER prior VALIDATE on these targets abort for manual review"
+  }
+}

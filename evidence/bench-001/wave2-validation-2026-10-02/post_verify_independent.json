@@ -1,0 +1,74 @@
+{
+ "batch": "wave2-validation-2026-10-02",
+ "batch_run_id": "14cb8ae4-beca-4b25-8568-2e99249e7fb4",
+ "verified_at_utc": "2026-10-02T08:33:12.335464+00:00",
+ "connection": {
+  "readonly": true,
+  "autocommit": true,
+  "source": "neon_api_key:.syllabai_db_url.json"
+ },
+ "identity": {
+  "database": "neondb",
+  "label": "T-C04-CAMPAIGN"
+ },
+ "documents_census": {
+  "EXTERNAL_QUESTIONS": {
+   "VALIDATED": 379,
+   "SUGGESTED": 0,
+   "FLAGGED": 0,
+   "REJECTED": 0
+  },
+  "SYLLABUS": {
+   "VALIDATED": 162,
+   "SUGGESTED": 0,
+   "FLAGGED": 0,
+   "REJECTED": 0
+  },
+  "QUESTION_PAPER": {
+   "VALIDATED": 106,
+   "SUGGESTED": 4,
+   "FLAGGED": 0,
+   "REJECTED": 78
+  },
+  "MARK_SCHEME": {
+   "VALIDATED": 105,
+   "SUGGESTED": 4,
+   "FLAGGED": 0,
+   "REJECTED": 67
+  },
+  "EXTERNAL_NOTES": {
+   "VALIDATED": 112,
+   "SUGGESTED": 0,
+   "FLAGGED": 0,
+   "REJECTED": 0
+  }
+ },
+ "gate_eligible": 4608,
+ "subject_branch_serving_by_kind": {
+  "EXTERNAL_QUESTIONS": 747,
+  "MARK_SCHEME": 395,
+  "QUESTION_PAPER": 369,
+  "SYLLABUS": 162
+ },
+ "audit_batch_rows": {
+  "count": 297,
+  "window_utc": [
+   "2026-10-02 08:30:33.011041+00",
+   "2026-10-02 08:30:33.011041+00"
+  ]
+ },
+ "audit_sample": {
+  "actor_label": "operator \u2014 Nawaf Al Hussain Khondokar (wave-2 document validation named in IM, trace 1a0fb9dd09110041)",
+  "from": "SUGGESTED",
+  "to": "VALIDATED",
+  "decision_text": "Proceed. Here is neon api if you need it."
+ },
+ "audit_total": 2788,
+ "teacher_validation_events": 0,
+ "chunks": {
+  "2": {
+   "chunks": 4672,
+   "embedded": 4672
+  }
+ }
+}

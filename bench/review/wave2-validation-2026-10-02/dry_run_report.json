@@ -1,0 +1,46 @@
+{
+  "batch": "wave2-validation-2026-10-02",
+  "batch_run_id": "7e3401b9-97b4-40f3-adc0-7c7643107d14",
+  "started_at_utc": "2026-10-02T08:28:59.861744+00:00",
+  "operator_trace_id": "1a0fb9dd09110041",
+  "dry_run": true,
+  "worklist_sha256": "74f0291662566319a21f9f970e8a02e4906b862420b824f65ddbdf18e031dbef",
+  "decisions_sha256": "024e2a84eafdcdefb90a53ebaae4af37e19d422a46e870a26d02e4bff13684ae",
+  "target_documents": 297,
+  "target_chunks": 1673,
+  "credential_source": "neon_api_key:.syllabai_db_url.json",
+  "identity": {
+    "database": "neondb",
+    "label": "T-C04-CAMPAIGN"
+  },
+  "active_cv": {
+    "id": "356840e6-81e2-49df-8182-93ab6504d591",
+    "code": "4CH1-2017"
+  },
+  "per_doc_fidelity": "297/297 PASS (kind, state, chunks, embedded, subject-scope)",
+  "pre_non_interference": {
+    "EXTERNAL_NOTES": {
+      "VALIDATED": 112,
+      "SUGGESTED": 0,
+      "FLAGGED": 0,
+      "REJECTED": 0
+    }
+  },
+  "pre_audit_rows": 2491,
+  "pre_teacher_validation_events": 0,
+  "pre_gate_eligible": 2935,
+  "ck_cra_target_type": "includes 'document' (pre-verified, no DDL)",
+  "docs_flipped": 297,
+  "audit_rows_written": 297,
+  "post_gate_eligible": 4608,
+  "chunks_snapshot": {
+    "2": {
+      "chunks": 4672,
+      "embedded": 4672
+    }
+  },
+  "audit_rows_total": 2788,
+  "teacher_validation_events": 0,
+  "status": "DRY_RUN_OK",
+  "note": "all asserts passed; transaction rolled back (dry run)"
+}
