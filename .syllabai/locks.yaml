@@ -80,3 +80,11 @@ lease_schema:
 #  lib/flashcard-unified.ts + the three queue-surface consumers landed in
 #  the PR. Owner superz, base hub c2345d9.)
 
+
+# (T-C61's core-web-contract lease: owner superz, base core c4b67e8 / hub
+#  529c737, expiry 2026-10-04T00:00Z or until both lane PRs merge — whichever
+#  first. Scope: core learner trail-read endpoint (new sibling of
+#  /flashcard-ratings + /flashcard-review-schedule) + the hub queue surfaces
+#  flashcard-unified.ts and its three consumers. The ladder arithmetic stays
+#  byte-frozen both sides (learner.flashcard-review v1-hub-parity); no core
+#  migration; ADR-034 records the contract.)

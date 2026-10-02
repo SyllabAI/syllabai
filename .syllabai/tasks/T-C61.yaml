@@ -1,0 +1,165 @@
+version: 1
+task:
+  id: T-C61
+  title: "Bounded raw-trail contract — core serves the learner's raw
+    flashcard-rating events (keyset-paged, newest first) so the hub can
+    TRUE-MERGE cross-device trails instead of newest-evidence-wins (the
+    T-C57 next_safe_action[1])"
+  owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
+  status: EXECUTING
+  merge_status: "IN FLIGHT — claim-first record; core PR and hub PR to be
+    opened in this lane; hub PR merge HELD for the operator's explicit word
+    (T-C55/T-C57 precedent); core PR merge per the T-C53 in-lane precedent
+    once CI is green"
+  priority: P1
+  authority: "operator IM trace 1a0fc4a929cdfed1 ('bounded raw-trail
+    contract for true cross-device merges') — GO on T-C57
+    next_safe_actions[1]: 'optional core contract lane: serve raw trail
+    events (bounded) so the hub can true-merge trails across devices
+    instead of newest-evidence-wins'."
+  base:
+    repo: "syllabai (master pack) @ 801844c; syllabai-hub main @ 529c737;
+      syllabai-core main @ c4b67e8"
+  basis: >
+    T-C57 unified the hub's queue over the derived feed ∪ the device
+    trail with newest-evidence-wins per card, and deliberately did NOT
+    cross-merge trails: core served derived schedules, not raw events, and
+    merging two DERIVED schedules would invent history. This lane widens
+    the contract the honest way — core serves the RAW append-only V47
+    trail (bounded, keyset-paged, newest first), so both sides are event
+    streams and a true chronological merge per card invents nothing: the
+    merged trail is exactly the events that exist, each represented once.
+    The Ebbinghaus derivation stays bit-for-bit the frozen
+    lib/flashcard-review.ts ladder (registry learner.flashcard-review
+    v1-hub-parity, ADR-031 computed-at-read) — the derivation input
+    changes from "one side's trail" to "the union of both sides' events",
+    the arithmetic does not.
+    DEDUP IS THE LOAD-BEARING DESIGN POINT (recorded because it shaped the
+    contract): V47 stamps occurred_at SERVER-side (the hub POST carries no
+    timestamp — FlashcardRatingController uses Instant.now()), so the same
+    physical flip has a device-clock timestamp in localStorage and a
+    server-clock timestamp in core — (cardId, rating, occurredAt) cannot
+    dedup across sides, and a heuristic window would corrupt legitimate
+    re-rates. Duplicates are not cosmetic: the ladder's interval is driven
+    by the trailing KNOW streak, so a double-counted "know" would inflate
+    the streak and push a card's due date OUT (under-practice). The honest
+    fix is receipts at the only moment the truth is knowable: the bridge
+    ALREADY learns the sync outcome per flip (submitFlashcardRating
+    resolves synced / local-only), it just never persisted it. This lane
+    records the outcome on the device trail entry (additive optional
+    `sync: "core" | "local"` — no schema break: absent = recorded before
+    this lane). Merge rule per card: account events + device entries
+    marked "local" + device unmarked entries ONLY when the account has no
+    events for that card (historical unmarked events might BE the account
+    copy — dropping them errs due-EARLIER, the conservative direction:
+    over-practice, never under). Synced device entries are dropped (core
+    is append-only; a 2xx POST means the row exists and nothing deletes
+    it).
+  scope:
+    allowed:
+      - "syllabai-core: FlashcardRatingRepository keyset read (newest
+        first, (occurred_at, id) cursor), FlashcardRatingTrailController
+        (GET /api/v1/learners/me/flashcard-rating-trail, limit clamped
+        server-side), dto/FlashcardRatingTrailView (+ event view), learner
+        TrailCursor codec (opaque, fail-closed), ADR-034 in the master
+        pack, unit + FlowIT tests"
+      - "syllabai-hub: src/lib/types.ts + api.ts (trail DTO + GET client),
+        progress.ts additive `sync` receipt field + rateFlashcard returns
+        the event `at` + markFlashcardTrailSync, flashcard-bridge.ts
+        persists the outcome it already receives, flashcard-unified.ts
+        true-merge rung (mergeTrailCards + unifiedQueue discriminator +
+        source hook extension), state-drawer footnote coverage word,
+        scripts/verify_flashcard_unified.ts new pins"
+      - "syllabai (master): this task record, locks.yaml lease, ADR-034,
+        TODO section, WORKLOG Session 154"
+    forbidden:
+      - "NO change to lib/flashcard-review.ts or FlashcardReviewScheduler
+        — the ladder arithmetic stays byte-frozen on BOTH sides (the
+        v1-hub-parity registry entry is untouched; no V-migration, no
+        registry seed — the trail endpoint adds no tunable arithmetic)"
+      - "NO new table, NO column on flashcard_ratings, NO write path of
+        any kind on core for this endpoint (append-only trail read;
+        ADR-031 doctrine extends trivially: a raw read persists nothing)"
+      - "NO mastery writes from ratings — the honesty pin (V47 /
+        FlashcardRatingFlowIT / the feed-edition pin in
+        FlashcardReviewScheduleFlowIT) is untouched; the trail endpoint
+        serves TIMING evidence only"
+      - "NO deletion or rewriting of trail rows anywhere; NO heuristic
+        timestamp-window dedup (a same-rating-nearby-time heuristic would
+        corrupt legitimate fast re-rates)"
+      - "NO localStorage schema BREAK (the receipt field is additive and
+        optional; pre-lane records load unchanged)"
+      - "NO bridge gate widening (the pilot-course + signed-in gate is
+        mirrored exactly, read side as write side; the 44-pack widening
+        stays the other recorded next_safe_action)"
+      - "NO hub merge without the operator's explicit word (T-C55/T-C57
+        precedent: hub PRs merge on operator instruction only)"
+  dependencies: ["T-C53 (derived feed, core ce0d7eb) — DONE; T-C57 (feed ∪
+    device union, hub 529c737) — DONE, merged on operator word trace
+    1a0fc3d1f723c349"]
+  shared_resources:
+    - "core learner contract surface (new sibling endpoint to
+      /flashcard-ratings and /flashcard-review-schedule — the
+      core-web-contract lease covers it)"
+    - "hub flashcard queue surfaces (flashcard-unified.ts + the three
+      consumers T-C57 wired)"
+  acceptance:
+    - "core: GET trail serves the learner's own rows newest-first in
+       bounded pages; keyset walk is gap-free and duplicate-free across
+       pages INCLUDING occurred_at ties (id tiebreak); limit is clamped
+       server-side; a malformed cursor fails 400, never guesses; nodes
+       resolve to codes with honest nulls; auth required"
+    - "hub: a card rated on device A (synced) and offline on device B
+       (marked local) shows the TRUE merged history — the offline event
+       is in the derivation, the synced event is NOT double-counted (the
+       streak cannot inflate); a card whose only events are unmarked
+       historical device entries and whose account trail is empty derives
+       from the device trail exactly as T-C57 did; the feed rung (T-C57
+       union) and device-only rung are preserved verbatim as degradation
+       rungs, chosen when the trail walk cannot complete"
+    - "the drawer footnote states the coverage truth for every rung"
+    - "all existing gates stay green (core suite incl. both flashcard
+       FlowITs; hub verify pins + tsc + eslint + build + e2e)"
+  tests:
+    - "core: TrailCursorTest (unit, offline); FlashcardRatingTrailFlowIT
+       (real Postgres: keyset walk incl. tie pair, clamp, bad cursor 400,
+       honest-null code, honesty pin edition — SkillState stays empty)"
+    - "hub: scripts/verify_flashcard_unified.ts new trail-rung pins
+       (receipt states, dedup-by-receipt, conservative unmarked rule,
+       tie determinism, TRAIL_CAP parity, malformed-ISO drop, rung
+       discriminator, coverage words)"
+    - "hub: bun run build + existing e2e suite (mock mode regression)"
+  evidence_required:
+    - "core CI run on the PR head (incl. both flashcard FlowITs) — IT logs
+       quoted; local unit gates; hub verify script output + build + e2e +
+       CI on the hub PR head"
+    - "diff stat proving flashcard-review.ts (hub) and
+       FlashcardReviewScheduler.java (core) byte-untouched"
+  claims:
+    VERIFIED:
+      - "recon from source first-hand (core c4b67e8, hub 529c737): V47
+         schema (UUID PK random non-ordered; occurred_at client-absent,
+         server-stamped; (learner_id, occurred_at DESC) index);
+         FlashcardRatingController stamps Instant.now() server-side;
+         FlashcardReviewScheduler streak/interval derivation; hub
+         flashcard-review.ts exports (scheduleCards/trailOf/knowStreak/
+         intervalDaysFor/TRAIL_CAP) and its trailOf legacy fallback;
+         progress.ts trail shape {rating, at} capped 10 with NO sync
+         state; bridge learns but does not persist the outcome; exactly
+         ONE submitFlashcardRating call site (deck-player)"
+    UNVERIFIED:
+      - "everything not yet executed: core/hub builds, CI runs, the live
+         signed-in cross-device probe (two browsers, one account) — the
+         field semantics of receipts on real devices stay UNVERIFIED
+         until such a probe"
+    REPORTED: []
+    INFERRED:
+      - "realistic trail size per learner (V47 scale note: a deck count,
+         not a firehose — grounds the 200/page walk with a 25-page safety
+         cap and the feed-fallback on incompleteness)"
+  next_safe_actions:
+    - "hub PR merge word (after hub CI is green)"
+    - "the 44-pack bridge-gate widening (core + hub) — with receipts in
+       place the widened sync stays merge-safe"
+    - "optional: core-side raw-trail compaction/summary read if real
+       trails outgrow the bounded walk (not indicated at pilot scale)"
