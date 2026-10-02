@@ -1,0 +1,152 @@
+version: 1
+task:
+  id: T-C72
+  title: "Rank-quality lane — tranche 6: arm composition, per-kind arm in KIND-ARM
+    form (a dedicated EXTERNAL_NOTES fusion arm, K=15, at the recorded depth-40
+    posture) — pre-registered BEFORE the run with the reach census that resolves
+    T-C69's declared unknown; one measured datapoint vs §8.1 v1.1 + the
+    admission ledger on the run-005-f frozen basis"
+  owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
+  status: CLAIMED # claim phase complete: prereg + grounding census recorded BEFORE any run; seam and run phases await the operator's words (the T-C69 two-word pattern)
+  priority: P1
+  authority: "operator IM trace 1a0fde1b4d9cdb69 ('arm-composition / MIN_COSINE
+    claim it'); the T-C69 prereg's own next-lever rule (arm-composition /
+    MIN_COSINE, NOT a bigger floor — the recorded 4 MISS-AT-FLOOR signal);
+    the T-C63 charter lever family. ID note: originally drafted as T-C70;
+    the first-pushed protocol assigns T-C70 to the Past Paper Run P0 lane
+    (records 7494c64, pushed before this claim) and T-C71 to the F-A2 slot
+    lane (063ba41) — renumbered T-C72, next free at push time (T-C68 relabel
+    lane, T-C69 pool-composition)."
+  base:
+    repo: "records main at the T-C69 closeout (7e527e3); syllabai-core main
+      8d7880b (PR #69 merged) — the seam is a NEW bench-scoped env gate (the
+      T-C65/T-C69 shape), PR merge operator-gated"
+  scope:
+    allowed:
+      - "this pre-registration: evidence/bench-001/rank-quality-lane-2026-10-02/
+        ARM-COMPOSITION-PREREGISTRATION.md + its grounding census script
+        tc72_prereg_grounding.py (committed BEFORE any run)"
+      - "one bench-scoped seam on core: BENCH_NOTES_KIND_ARM env gate in
+        Run005C — NotesArmRetrieval kind-scoped delegate + third-provider
+        wiring in both fabrics (absent path byte-identical, unknown spec
+        fail-closed, one-lever guard extended to FOUR mutually exclusive
+        gates) + unit tests — branch + PR, CI green, MERGE OPERATOR-GATED"
+      - "one recorded run: evidence/bench-001/runs/run-005-h-r1/ (results.json
+        + authored RUN_REPORT.md + run005h_verify.py + SHA256SUMS) at
+        BENCH_RUN_ID=run-005-h BENCH_PER_ARM_LIMIT=40
+        BENCH_NOTES_KIND_ARM=15, floor/reranker/weights env ABSENT, the f
+        frozen basis (snap-007 x gold-r9 x preload-r9, no re-freeze),
+        executed on MERGED main code only"
+      - "this task record + TODO/WORKLOG entries"
+    forbidden:
+      - "no production serving change (nothing in production reads
+        BENCH_NOTES_KIND_ARM; serving's candidate selection untouched)"
+      - "no MIN_COSINE lever (mechanically incapable as a reach lever — the
+        census quantifies it; a precision-side tranche would need its own
+        dated prereg), no bigger floor, no cap form, no other K, no
+        multi-kind arm, no notes-bm25 arm (each = dated new pre-registration)"
+      - "no stacking with the arm-D reranker, fusion weights, or the
+        BENCH_NOTES_FLOOR floor (one lever at a time; the guard is
+        fail-closed FOUR-way)"
+      - "no frozen artifact mutation (snap-007, gold-r9, preload-r9 untouched;
+        the census READS the frozen embeddings, SHA-verified, and mutates
+        nothing)"
+      - "no recorded verdict re-judged (r9/d-r1/e-r1/f/g verdicts stand; h's
+        bars are evaluated fresh)"
+      - "no gold knowledge, no query-kind awareness, no per-query parameters
+        in the mechanism (the same K=15 for every query; the KIND is a
+        corpus-side chunk attribute)"
+      - "run execution on anything but merged main code (the T-C65/T-C67/T-C69
+        convention)"
+  dependencies:
+    - "T-C69 (run-005-g recorded: the floor's 4 MISS-AT-FLOOR flips are this
+      tranche's target signal; the depth-40 floor-ABSENT posture is the
+      comparison basis; the two-word operator pattern is the phase protocol)"
+    - "T-C67 (run-005-f recorded: the depth-40 posture + the (d) displacement
+      ledger)"
+    - "T-C63 (charter + the (d) mechanism ledger), T-C59 (the frozen basis +
+      execution recipe)"
+  shared_resources:
+    - "records repo bench inputs (frozen, read-only; the census reads
+      preload-r9 and the recorded packs); run output dir run-005-h-r1 —
+      coordinated via git; locks.yaml empty at claim time"
+  acceptance:
+    - "pre-registration committed and pushed to the records repo BEFORE the
+      run executes (spec §9 anti-gaming); the reach census shipped beside it"
+    - "core seam PR: CI green + full offline suite green locally; absent-path
+      byte-identity preserved; FOUR-way one-lever guard tested"
+    - "recorded run-005-h-r1: full §8.1 v1.1 dual-view gate + (d)(e)(f)(g);
+      manifest per_arm_limit=40 + notes_kind_arm=15; determinism double-pass
+      PASS; (f) 0/0"
+    - "verify script ships in the pack: per-query superset check vs f (89/89
+      expected; violations = findings per the g2-024 precedent), (d) recompute
+      with r8/r9/f/g self-checks, the per-flip admission ledger with the
+      census-vs-run notes-rank comparison, non-regression watch, notes-share
+      ledger, rank-slice movement ledgers (no byte-stability pin this tranche —
+      declared at-risk BY DESIGN)"
+    - "verdict recorded honestly — NOT PROMOTED is a finding; the admission
+      ledger + the census-fidelity reading are the headline regardless of
+      promotion"
+  tests:
+    - "bench unit tests for the kind-arm selection (deterministic order +
+      tiebreak, absent-path identity, fail-closed spec parsing, FOUR-way
+      one-lever guard, under-fill at exhaustion, kind exclusivity,
+      delegation); the existing suite guards everything else"
+  evidence_required:
+    - "records repo: pre-registration + grounding census + this yaml + run
+      pack + TODO/WORKLOG"
+  claims:
+    VERIFIED:
+      - "the 5 f-lost flips each miss exactly 1 point; all covering refs are
+        EXTERNAL_NOTES (6 distinct fresh carriers; g2-056/g2-112 share
+        c439b2b0…:0 via point 4CH1-1.3) — tc72_prereg_grounding.py on the
+        frozen HV projection + gold-r9 + recorded pools"
+      - "REACH CENSUS (exact cosine on the SHA-verified frozen preload-r9
+        artifact): fresh-carrier NOTES-cosine ranks 4/6/8/8/11/13 of 350 vs
+        GLOBAL ranks 56–219 of 4510 — the carriers are buried only in the
+        arms' cross-kind ordering, not in any absolute sense"
+      - "every fresh carrier sits BELOW its f-pool's minimum cosine (e.g.
+        g2-059: 0.6061 vs 0.6497) — MIN_COSINE cannot extend count-cut reach;
+        a trimming threshold is the rejected CAP-form subtraction"
+      - "K=15 is the smallest census value with complete reach (5/5 flips);
+        K=10 leaves g2-112 MISS-AT-ARM at notes-rank 11; K≥20 adds pool
+        growth for zero (d) gain"
+      - "ceiling arithmetic byte-exact both framings: 45+5 and 46+4 = 50/89 =
+        0.5618 full · 72+5 and 73+4 = 77/84 = 0.9167 micro; (d) machinery
+        self-checks byte-exact on r8/r9/f/g"
+      - "r8 is a DIFFERENT basis (snap-006 + chunk vectors 1e22a202… vs
+        snap-007 + 1fd6a617…, both SHA-echoed in the packs) — the ceiling,
+        not a target"
+    INFERRED:
+      - "predicted SET effects at K=15 (exact-cosine assumptions): +797 notes
+        refs over 89 queries, notes share 15.3% -> ~30.6% (above the r9-era
+        20.4% — the declared overshoot); predicted (d) = the ceiling if all
+        5 flips revert"
+    REPORTED: []
+    UNVERIFIED:
+      - "the production kind-arm's fidelity to the exact-cosine census
+        (kind-scoped HNSW/ANN approximation, SQL scope, tie behavior) — the
+        run's test; a MISS-AT-ARM falsifies the census reach prediction for
+        that flip"
+      - "the superset invariant 89/89 (the existing arms' HNSW/tie
+        re-execution risk persists; the g2-024 precedent was additive-only)"
+      - "rank-slice movements (recall@5/10/20, MRR, nDCG@10) — no
+        byte-stability pin this tranche; the recall@20 0.1612 5-run pin is
+        declared at-risk BY DESIGN"
+      - "compliant-view pool stasis (prediction: the central VALIDATED gate
+        excludes every kind-arm ref; observed deltas = existing-arm
+        re-execution only)"
+      - "latency shape at K=15 (expected >= g's 1080.0 ms p50)"
+  next_safe_actions:
+    - "AWAITING OPERATOR WORD 1: 'start the seam' — branch
+      feat/t-c70-kind-arm off core main 8d7880b, NotesArmRetrieval +
+      Run005C third-provider wiring + four-way guard + unit tests, full
+      offline suite green, PR (merge OPERATOR-GATED)"
+    - "AWAITING OPERATOR WORD 2 (post-merge): the run phase — run-005-h on
+      merged main (BENCH_RUN_ID=run-005-h BENCH_PER_ARM_LIMIT=40
+      BENCH_NOTES_KIND_ARM=15, floor/reranker/weights ABSENT, frozen basis,
+      no re-freeze) + run005h_verify.py + honest verdict"
+    - "promotion question stays with the owning lane + owner acceptance per
+      harness spec §9; the (d) mechanism ledger shape this tranche tests:
+      a population-changing lever vs the count-based levers' recorded
+      paper-domination"
