@@ -1,0 +1,50 @@
+# T-C70 — Past Paper Run P0 (one curated 4CH1 paper, Track A end-to-end)
+version: 1
+task:
+  id: T-C70
+  title: "Past Paper Run P0 — ONE curated 4CH1 paper end-to-end (Track A):
+    PaperInteractivityManifest v2 (curated, integrity=practice) + ExamRunner
+    shell (timer/palette/flags/resume + time-up-pending-submission recovery) +
+    answer overlay over the corpus QP + grading console (attested-key MCQ
+    auto-mark, structured self-mark, ai-suggested tier) + PaperRunResult v3 +
+    attempt-bridge submissions at grading time (4CH1 pilot, verified joins)"
+  owner: "superz (main agent, zai session — discord DM trace 1a0fdd7bf6392825)"
+  status: EXECUTING
+  priority: P1
+  authority: "operator IM trace 1a0fdd7bf6392825 ('open the tranche'); design
+    of record PAST_PAPER_RUN_MODE_DESIGN.md v2 (merged b206985 via PR #18);
+    operator scoping 'We will focus on 4CH1 for now' (trace
+    1a0fdbdc4cbb32cd); design §8 defaults active at open (pilot paper = max
+    playable-set overlap; curation lane = agent lane + CI parse-gates +
+    registry provenance, flip operator-gated on any contamination event)."
+  base:
+    repo: "syllabai records main b206985 (PR #18 merge); syllabai-hub main
+      d57f6ca (PR #23). Feature work branches in syllabai-hub off d57f6ca;
+      CI build+e2e is the merge gate."
+  scope:
+    allowed:
+      - "syllabai-hub paper-run slice: src/lib/paper-run/* (manifest v2 +
+        result v3 types + loader), src/lib/paper-run-store.ts (IndexedDB run
+        store with durable time-up-pending-submission recovery), src/
+        components/pastpapers/exam-runner/* (shell + answer overlay + grading
+        console), run route page, index-page Run chip on manifest-confirmed
+        rows, mock-results additive optional fields, src/data/
+        paper-run-manifests.json — branch + PR, CI green"
+      - "manifest curation for exactly ONE pilot 4CH1 paper (build-time
+        extractor script + curated confirmation; provenance curatedBy:
+        agent:T-C70; incremental probe first per design §6)"
+      - "this task record + worklog entries"
+    forbidden:
+      - "no core schema/migration and no new core endpoints (N-2 — the bridge
+        contract is byte-identical to Mode 2's)"
+      - "no auto-mark without keyAttested + named keyProvenance"
+      - "no learner-model evidence re-weighting by mark provenance (N-5)"
+      - "no archive-wide manifest generation or curation queue (P2 stays out)"
+      - "no fillable-PDF generation (N-1/P3); no non-4CH1 wiring"
+  exit_evidence:
+    - "a full Paper Run of one real 4CH1 paper on desktop + mobile viewport
+      (timer, palette, capture, grading) without honesty regressions"
+    - "per-question marks land via core for verified joins; local SIMULATED
+      surfaces otherwise; result v3 record carries how-marked counts,
+      integrity, durationPolicy"
+    - "CI build + e2e green on the PR head"
