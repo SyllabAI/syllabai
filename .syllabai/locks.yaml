@@ -88,3 +88,7 @@ lease_schema:
 #  flashcard-unified.ts and its three consumers. The ladder arithmetic stays
 #  byte-frozen both sides (learner.flashcard-review v1-hub-parity); no core
 #  migration; ADR-034 records the contract.)
+
+# (T-C61 lease FULFILLED + RELEASED 2026-10-02: core PR #63 merged as 5a8d57f
+#  and hub PR #14 merged as 2030ef6 on the operator's explicit word trace
+#  1a0fccf62d9db3d1 — both within the window expiring 2026-10-04T00:00Z.)

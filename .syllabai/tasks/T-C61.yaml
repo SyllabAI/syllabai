@@ -6,11 +6,35 @@ task:
     TRUE-MERGE cross-device trails instead of newest-evidence-wins (the
     T-C57 next_safe_action[1])"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
-  status: EXECUTING
-  merge_status: "IN FLIGHT — claim-first record; core PR and hub PR to be
-    opened in this lane; hub PR merge HELD for the operator's explicit word
-    (T-C55/T-C57 precedent); core PR merge per the T-C53 in-lane precedent
-    once CI is green"
+  status: DONE
+  merge_status: "MERGED — core PR #63 merged as 5a8d57f (2026-10-02T12:06:47Z,
+    head CI SUCCESS, check-run 110827781941); hub PR #14 merged as 2030ef6 on
+    the operator's explicit word (trace 1a0fccf62d9db3d1) onto main 198f34d"
+  execution_record:
+    - "pre-merge (merge on a moved base done honestly): the TRUE merge-base of
+      head 89c2ff1 and main was 529c737 (the lease base — GitHub's recorded
+      base 0cf74bb postdates the branch and produced spurious reversal hunks
+      on types.ts); main had moved 529c737 → 198f34d during the lane (PR #13
+      source reader, #15 bun.lock, #16 SSE polish, #17 paper PDF); the REAL
+      overlap vs the PR's 10 files = src/lib/types.ts (PR hunks @L376 vs main
+      @L1503+ — disjoint) and src/lib/api.ts (PR @L34/L535 vs main @L32/L799
+      — adjacent import insertions on distinct lines)"
+    - "gates: head CI on 89c2ff1 build + e2e + Vercel all SUCCESS; local merge
+      simulation (sim branch at origin/main × 89c2ff1 → dcfb358) merged
+      ZERO-conflict; tsc --noEmit exit 0 on the merged tree;
+      scripts/verify_flashcard_unified.ts ALL GREEN on the merged tree
+      (receipt dedup, true chronological interleave [account@-9d, local@-3d],
+      device-rung + feed-rung preservation, TRAIL_CAP parity, malformed-ISO
+      drop, coverage words)"
+    - "merge mechanics: API PUT /pulls/14/merge merge_method=merge with the
+      head-sha guard (89c2ff12a550a5c14a4a2b8ecceece95bf5b7f73) → merge
+      commit 2030ef6; origin/main tip verified 2030ef6 with 89c2ff1 an
+      ancestor"
+    - "byte-freeze proof: hub diff 198f34d..2030ef6 contains no
+      flashcard-review.ts; core PR #63's 6 files include no
+      FlashcardReviewScheduler and no migration"
+    - "post-merge CI on 2030ef6: build SUCCESS + e2e SUCCESS (both completed
+       on the merge commit)"
   priority: P1
   authority: "operator IM trace 1a0fc4a929cdfed1 ('bounded raw-trail
     contract for true cross-device merges') — GO on T-C57
@@ -147,18 +171,24 @@ task:
          progress.ts trail shape {rating, at} capped 10 with NO sync
          state; bridge learns but does not persist the outcome; exactly
          ONE submitFlashcardRating call site (deck-player)"
+      - "executed: core endpoint merged (PR #63 → 5a8d57f, CI SUCCESS incl.
+        FlashcardRatingTrailFlowIT + TrailCursorTest); hub true-merge merged
+        (PR #14 → 2030ef6) after the pre-merge protocol (true merge-base
+        529c737, overlap analysis, zero-conflict simulation, tsc exit 0,
+        verify pins ALL GREEN); ADR-034 recorded as ACCEPTED in the master
+        pack; ladder byte-frozen both sides; no migration"
     UNVERIFIED:
-      - "everything not yet executed: core/hub builds, CI runs, the live
-         signed-in cross-device probe (two browsers, one account) — the
-         field semantics of receipts on real devices stay UNVERIFIED
-         until such a probe"
+      - "the live signed-in cross-device probe (two browsers, one account) —
+         the field semantics of receipts on real devices stay UNVERIFIED
+         until such a probe; the pin suite covers the logic, not the devices"
     REPORTED: []
     INFERRED:
       - "realistic trail size per learner (V47 scale note: a deck count,
          not a firehose — grounds the 200/page walk with a 25-page safety
          cap and the feed-fallback on incompleteness)"
   next_safe_actions:
-    - "hub PR merge word (after hub CI is green)"
+    - "[consumed 2026-10-02] hub PR merge word — executed as 2030ef6 on the
+       operator's trace 1a0fccf62d9db3d1"
     - "the 44-pack bridge-gate widening (core + hub) — with receipts in
        place the widened sync stays merge-safe"
     - "optional: core-side raw-trail compaction/summary read if real
