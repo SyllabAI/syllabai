@@ -2,7 +2,7 @@ version: 1
 task:
   id: T-C44
   title: "Tutor math rendering on the hub — port the s142 model-drift
-    normalizer so \\[…\\] / \\ce{} / \\(\) tutor answers render as math,
+    normalizer so \\[…\\] / \\ce{} / \\(\\) tutor answers render as math,
     not raw LaTeX"
   owner: "superz (main agent, zai session web-98866c45)"
   status: IN_PROGRESS
@@ -33,7 +33,7 @@ task:
         hardening decision — filed as the card's follow-up)"
   acceptance:
     - "the exact reported shapes render: \\[…\\] display blocks (boxed
-      mhchem equation, CuO+HNO3 equation, n_theor fraction), \\(\ce{…}\\)
+      mhchem equation, CuO+HNO3 equation, n_theor fraction), \\(\\ce{…}\\)
       inline, M\\(_r\\), and the truncated unterminated \\[ tail never
       renders raw LaTeX commands"
     - "well-formed corpus content sails through untouched (verified by the
@@ -42,8 +42,8 @@ task:
   evidence:
     - "root cause: hub tutor renders assistant content through the corpus
       Markdown component; normalizeCorpusMath handles $…$/$$…$$ and
-      parseable \\(\) only — NO \\[…\\] rule, NO bare-\\ce rule, and its
-      parses() gate imports plain katex (no mhchem) so \\(\ce{…}\\) fails
+      parseable \\(\\) only — NO \\[…\\] rule, NO bare-\\ce rule, and its
+      parses() gate imports plain katex (no mhchem) so \\(\\ce{…}\\) fails
       the gate and stays raw; hub's renderer-side rehypeKatexMhchem never
       receives the content"
     - "web solved this exact drift family in s142 (mathNormalize.ts +
