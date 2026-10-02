@@ -5,7 +5,7 @@ task:
     PLAN_V2_WEIGHTS lever) — pre-registered BEFORE the run, then one measured
     datapoint vs §8.1 v1.1 on the r9 frozen basis"
   owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
-  status: IN_PROGRESS # claim-first; DONE at closeout with the recorded verdict
+  status: DONE # run-005-e-r1 recorded (NOT PROMOTED, honest); PR #67 merged as core e657b9a
   priority: P1
   authority: "operator IM trace 1a0fc8c1e8b73939 ('commission the rank-quality
     lane') — tranche 3 per the T-C63 charter ('Fusion weights (tranche 3,
@@ -65,13 +65,51 @@ task:
     - "records repo: pre-registration + this yaml + run pack + TODO/WORKLOG"
     - "syllabai-core: branch CI green; merge per the merge-commit precedent"
   claims:
-    VERIFIED: []
+    VERIFIED:
+      - "pre-registration committed and pushed BEFORE any weighted run (records
+        3880dd5, spec §9 anti-gaming); the weights are the SHIPPED plan §7
+        constants — no parameter search, no tuning"
+      - "PR syllabai-core#67 CI build SUCCESS on 3d69a293; MERGED as core
+        e657b9a (merge-commit per precedent); suite 1212 green offline JDK25
+        (5 new tests: Run005CFusionWeightsTest)"
+      - "run-005-e-r1 RECORDED (snap-007 x gold-r9 x preload-r9 — the r9 basis,
+        no re-freeze; determinism double-pass PASS; boundary 0/0): BOTH
+        pre-registered invariants HOLD from recorded bytes — pool set identity
+        89/89 (weights reorder a FIXED union pool, never re-pool) and (d)
+        0.4607/0.7857 EXACT invariance with three-way agreement (r9 recorded ==
+        e1 recorded == recompute 41/89 full, 66/84 points) — the pool-side
+        mechanism finding is now TWO-LEVER-CONFIRMED"
+      - "the pre-registered DIRECTION expectation is REFUTED by the data (the
+        honest finding): recall@5 0.0616->0.0346 (-43.8%), recall@10
+        0.1043->0.0927 (-11.1%), MRR 0.0700->0.0563 (-19.6%), nDCG@10
+        0.1113->0.0953 (-14.4%); recall@20 0.1612 EXACTLY unchanged (third
+        consecutive run; 16/16 tier-2-in-first-20; first-20 SET changed on
+        3/89, order moved on 88/89)"
+      - "mechanism (recorded ledger): the bench's tier-2 gold is heavily
+        paper-kind (exam_question was r9's best class, recall@10 1.00) —
+        demoting QP->0.8/MS->0.6/EQ->0.3 demoted the gold itself (first tier-2
+        hit worsened on 6 of 11 pool-hit queries, improved on 0; conditional
+        median first-hit depth 2->6) while the notes carriers the posture
+        protects are OUT-OF-POOL (invariant 2) — the posture's benefit side
+        had nothing to lift"
+      - "§8.1 v1.1 dual-view: NOT PROMOTED — (a)(b)(c) FAIL 0.0927/0.0563/
+        0.0953 vs 0.1920/0.1237/0.2316; (a2) PASS 0.0927 vs 0.0734 (holds);
+        (b2) FAIL 0.0563 vs 0.1184; (c2) FAIL 0.0953 vs 0.1683 (d-r1's PASS
+        flips back under the weighted posture; d-r1's recorded verdict stands);
+        (f) 0/0 PASS; (g) five >15% relative regressions with recorded
+        tradeoff notes (exam_question recall@5 -50%, why_wrong MRR -40.8%,
+        factual, calculation, conceptual)"
     INFERRED: []
-    REPORTED: []
-    UNVERIFIED:
-      - "run-005-e-r1 not yet executed (pre-registration first)"
+    REPORTED:
+      - "owning-lane decision input (recorded, not decided): enabling the
+        serving-side fuseWithPlanWeights posture on this corpus shape would
+        regress the §8.1 bars — the posture question stays with the owning
+        lane + owner acceptance per harness spec §9"
+    UNVERIFIED: []
   next_safe_actions:
-    - "execute run-005-e-r1 per the protocol; verify the two pre-registered
-      invariants from recorded bytes; record the verdict honestly"
-    - "tranche 4 (pool-side (d) recovery design): per-arm depth / pool
-      composition — pre-register before measuring"
+    - "tranche 4 (pool-side (d) recovery design): the ONLY recorded remaining
+      lever family — per-arm depth / pool composition, where the 9 displaced
+      carriers actually live; pre-register before measuring"
+    - "fusion-weights lever is MEASURED and REFUTED on this basis as shipped;
+      any new weights = dated new pre-registration + new run (no post-hoc
+      tuning licensed)"
