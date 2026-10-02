@@ -1,4 +1,4 @@
-# REPORT — T-C48: ruling defect fix (2C-2013 Q3) + V57 deployment + post-V57 census re-pin (2026-10-02)
+# REPORT — T-C49: ruling defect fix (2C-2013 Q3) + V57 deployment + post-V57 census re-pin (2026-10-02)
 
 **Authorization:** operator IM trace `1a0fb59f90143ad1` — "② Authorize the new defect fix
 for the ruling (2C-2013 Q3, bank 1 vs. dual evidence 8); ③ Repin census after V57
