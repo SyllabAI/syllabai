@@ -1,0 +1,65 @@
+version: 1
+task:
+  id: T-C51
+  title: "Demo tutor math rendering — port the mhchem-guaranteed renderer
+    (rehypeKatexMhchem) + the s142/T-C44/T-C47 normalizer, wrap the
+    model-content surfaces, add a verify gate (the T-C44 card's demo
+    follow-up)"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: IN_PROGRESS
+  priority: P2
+  authority: "operator message (zai-web, 2026-10-02, trace
+    1a0fb8042f7d9045) naming the T-C44 card's two filed follow-ups as
+    the work to open; this card covers the demo half. T-C44 evidence:
+    'Demo (legacy) is worse: no mhchem at all'. ADR-029: demo is the
+    legacy surface (superseded by hub 2026-09-28) — fix keeps it
+    rendering correctly while it stays live. Card IDs re-asked after an
+    ID-allocation race (T-C48/T-C49 taken concurrently by the ruling
+    lane, trace 1a0fb59f90143ad1 — session 143)"
+  base:
+    repo: syllabai-demo
+    commit: 648e2ae
+  scope:
+    allowed:
+      - "src/lib/mathNormalize.ts — new file, verbatim port of the
+        hub-verified evolved normalizer (pure, no imports)"
+      - "src/lib/rehypeKatexMhchem.ts — new file, verbatim port of the
+        hub s142 mhchem-guaranteed rehype plugin + the 4 deps it needs
+        added to package.json (hast-util-from-html-isomorphic,
+        hast-util-to-text, unist-util-visit-parents, @types/hast)"
+      - "src/components/markdown.tsx — swap upstream rehype-katex for
+        the local rehypeKatexMhchem (same options; one katex instance
+        for renderer + mhchem macros)"
+      - "wrap the 4 model-content render sites with
+        normalizeMathDelimiters: tutor message-item (2 sites), assistant
+        client (1), note-cla (1) — mirrors the hub T-C44 surface family
+        (demo has no question-cla-overlay)"
+      - "scripts/demo_math_normalize_verify.ts — new gate against the
+        shipped composition (hub's 26-check suite adapted, minus
+        hub-only specifics)"
+    forbidden:
+      - "no rehype-sanitize hardening in this lane (the s144 hardening
+        decision for demo stays operator-gated on the T-C44 card —
+        separate concern)"
+      - "no corpus content changes, no decommission changes"
+  acceptance:
+    - "the reported T-C44 reply shapes render as math on demo: \\[…\\]
+      boxed mhchem display, \\(\\ce{…}\\) inline, braceless \\ceO2,
+      leaked formula runs; \\ce renders through the shared katex
+      instance (no red errors)"
+    - "corpus surfaces untouched at their call sites (corpus math still
+      repairs through math-fix inside the Markdown component)"
+    - "verify gate green (26 checks), eslint clean, production build
+      green locally; demo has no PR CI (only the scheduled reindex
+      workflow) — local gates + the PR diff are the evidence; merge
+      awaits explicit operator word"
+  evidence:
+    - "recon: demo markdown.tsx renders through upstream rehype-katex
+      with no mhchem import anywhere (\\ce = red error text at best);
+      no mathNormalize.ts exists; model-content sites found: tutor
+      message-item.tsx lines 176/198, assistant-client.tsx line 553,
+      note-cla.tsx line 328; node_modules lacks every dep the mhchem
+      plugin needs (all 4 must be added)"
+  notes:
+    - "claim-first per the T-C47 precedent. Closes to DONE only with
+      the PR merged (operator word)."

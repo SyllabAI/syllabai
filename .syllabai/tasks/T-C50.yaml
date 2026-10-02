@@ -1,0 +1,48 @@
+version: 1
+task:
+  id: T-C50
+  title: "Web backport of the T-C44/T-C47 normalizer evolution — bring
+    syllabai-web's s142 mathNormalize.ts to the hub-verified version
+    (2 T-C44 deltas + 4 T-C47 residual fixes), extend the s142 gate
+    with the new shapes, wire the gate into web-ci"
+  owner: "superz (main agent, zai session web-98866c45)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: "operator message (zai-web, 2026-10-02, trace
+    1a0fb8042f7d9045) naming the T-C44 card's two filed follow-ups —
+    demo (no mhchem) and web backport (2 deltas + 4 residuals) — as
+    the work to open; this card covers the web half. Card IDs re-asked
+    after an ID-allocation race (T-C48/T-C49 were taken concurrently by
+    the ruling lane, trace 1a0fb59f90143ad1 — session 143)"
+  base:
+    repo: syllabai-web
+    commit: b17f6ff
+  scope:
+    allowed:
+      - "src/lib/mathNormalize.ts — replace with the hub-verified
+        evolved version (hub main fca83c8dae88, gate-proven 26/26);
+        the file is pure (no imports), verbatim copy"
+      - "scripts/s142_cla_math_normalize_verify.ts — extend with the
+        T-C44 delta shapes (\\[…\\] display) + T-C47 residuals
+        (multi-line $$, nested-brace bare \\ce, multi-line \\(…\\),
+        emphasis-wrapped runs); all 14 existing checks stay green"
+      - ".github/workflows/ci.yml — one step running the s142 gate
+        (mirrors the hub T-C44 wiring)"
+    forbidden:
+      - "no render-boundary changes (ChatMarkdown/QuestionMarkdown
+        already apply normalizeMathDelimiters — the T-C44 audit
+        confirmed web's boundaries are correctly wrapped)"
+      - "no corpus Markdown renderer behavior change for corpus content"
+      - "no demo repo changes (T-C51 owns that lane)"
+  acceptance:
+    - "web's normalizer carries the 2 T-C44 deltas (\\[…\\] body
+      collapsed to one line; bare-\\ce rules only between $$ spans) and
+      the 4 T-C47 residuals (R1 display-block barrier in rule 6, R2
+      nested-brace bare-\\ce matcher, R3 \\(…\\) line collapse, R4
+      one-sided emphasis markers) — the two repos' files are identical"
+    - "s142 gate extended (14 → 21 checks) and green; gate wired into
+      web-ci after build; eslint + production build green; CI green"
+  evidence: []
+  notes:
+    - "claim-first per the T-C47 precedent. Closes to DONE only with
+      the PR merged and the gate wired."
