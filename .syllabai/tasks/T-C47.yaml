@@ -65,11 +65,15 @@ task:
     - "claim-first; same session owns T-C44 (PR hub#6 merged ec6bd5e
       with this session's operator merge word). Closes to DONE only
       with the PR merged and the gate extended."
-  merge_status: "PR syllabai-hub#7 OPEN (fix/math-normalize-residuals,
-    head fb43c76e, base ec6bd5e) — awaiting explicit merge word per lane
-    convention. CI run 36974873663: build job fully GREEN with the
-    verify gate extended to 26/26 (17 T-C44 + 9 T-C47 checks); e2e
+  merge_status: "MERGED — operator merge word given 2026-10-02 (trace
+    1a0fb724516710fd). PR syllabai-hub#7 merge commit fca83c8dae88
+    (parents [main ec6bd5e, head fb43c76e] verified), main ref updated;
+    merged-tree gates: verify gate 26/26 (17 T-C44 + 9 T-C47), eslint
+    clean, head CI build GREEN run 36974873663 (log: '26 passed,
+    0 failed'), post-merge main build SUCCESS (run 110743463610); e2e
     failure at the Deck-flow step is the known pre-existing main red
-    (same locator.click timeout on main a61b0d3 run 110539038918,
-    disjoint surface). Evidence comment on the PR; Vercel preview
-    success. T-C44 card updated to MERGED in the same push."
+    (job 110743463918, same locator.click timeout as main a61b0d3 run
+    110539038918 — disjoint surface). PR closed with evidence comment.
+    hub main now carries the s142 normalizer + all 4 residual-shape
+    fixes; demo-mhchem and web-backport follow-ups remain filed on the
+    T-C44 card."
