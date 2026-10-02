@@ -71,10 +71,16 @@ task:
           4ad5717, c12 negative 37/37 + review 23/23 green in the exact
           merged tree; file sets of 9240aa3 vs PR #15 disjoint"
       REPORTED:
-        - "C2 watch-item: physics out-of-curriculum control 0.1306 -> 0.2437
-          (x1.87, 81% of WEAK_SCORE) — further registry growth may break it;
-          if so, apply the same comparative treatment or escalate to the
-          T-C11 lane as a data-side question"
+        - "C2 watch-item DISCHARGED 2026-10-02 by T-C12-C2REPIN / PR #16
+          (merge commit 6c12ecf63678, post-merge main scripts-tests run
+          36967924036 every step SUCCESS): the physics out-of-curriculum
+          control had drifted 0.1306 -> 0.2437 (x1.87, 81% of WEAK_SCORE);
+          resolution = C2 absolute assertion KEPT as the designed data-side
+          escalation signal (failure detail now carries the mechanism) +
+          new C2b comparative discrimination invariant (control ranks below
+          EVERY anchored positive; machine-derived from fixture+registry;
+          PASS on all ten registry states incl. post-T-C37-B05). Original
+          prescription 'apply the same comparative treatment' — applied."
       UNVERIFIED: []
   merge_status: "PR #15 MERGED by operator directive 'PR #15 merge' (zai-web,
     2026-10-02, trace 1a0f8d13cd27d3e9): merge commit 6c15f652098a (parents

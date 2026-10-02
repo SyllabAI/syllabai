@@ -48,7 +48,21 @@ task:
       36917452274 all steps SUCCESS"
     - "no production semantics touched (WEAK_SCORE, tagger, fixtures,
       registry data all unchanged; one file: scripts/c12_negative_test.py)"
-  merge_status: "PR #16 OPEN (codex/c12-c2-comparative-backstop, commit
-    621202a, base e4d4557 incl. T-C36 B04 — file blob drift-guarded 2feb4a4):
-    CI run 36917452274 every corpus-gates step SUCCESS. Merge awaiting
-    operator word per resources lane convention (explicit merge words)."
+  merge_status: "PR #16 MERGED by operator directive 'PR #16 merge'
+    (zai-web, 2026-10-02, trace 1a0fb00d94b8d811): merge commit 6c12ecf63678
+    (parents 303cac270f48 = pre-merge main incl. T-C37 B05, 621202a = PR
+    head), title 'Merge PR #16: test(c12): pin the C2 out-of-curriculum
+    control with the comparative discrimination invariant — clears the
+    headroom watch-item'. Pre-merge evidence: PR CI run 36917452274 every
+    corpus-gates step SUCCESS; drift 303cac270f48 +1 vs base e4d4557 proven
+    file-set-disjoint (C37_* batch artifacts only); local sim merge d0b5c1c3f3da
+    on the exact merged tree — SIX of six scripts-tests steps green incl.
+    graph_check ALL PASS with the notes corpus inside the sparse cone (this
+    upgrades the earlier five-of-six sandbox caveat), c12 negative 38/38
+    against the post-B05 registry (C2 absolute tripwire + new C2b
+    comparative invariant both green), review 23/23, promotions 5/0, demo
+    positive control OK. Post-merge main scripts-tests run 36967924036:
+    EVERY step SUCCESS. The C2 headroom watch-item is CLEARED on main —
+    the absolute assertion stays as the designed data-side escalation
+    signal, and the growth-robust C2b discrimination invariant (control
+    ranks below EVERY anchored positive) now guards registry growth."
