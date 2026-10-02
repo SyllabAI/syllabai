@@ -5,7 +5,11 @@ task:
     core feed ∪ the device-local trail (the T-C53 next_safe_action; the
     consumer half of the core-side scheduling feed)"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
-  status: EXECUTING
+  status: IN_PROGRESS
+  merge_status: "OPEN — hub PR #10 (head 72221e7, base c2345d9), CI build +
+    e2e both SUCCESS, Vercel preview success; merge awaits the operator's
+    explicit word (T-C55 precedent: hub PRs merge on operator instruction
+    only)"
   priority: P1
   authority: "operator IM trace 1a0fbe89edf0ff15 ('hub consumption lane (core
     queue ∪ device-local)') — GO on T-C53 next_safe_actions[0]: 'merge the
@@ -84,10 +88,62 @@ task:
     - "verify script output; build log; CI run on the PR head; diff stat
        proving flashcard-review.ts untouched"
   claims:
-    VERIFIED: []
-    INFERRED: []
-    REPORTED: []
-    UNVERIFIED: []
+    VERIFIED:
+      - "all local gates: verify_flashcard_unified.ts 20 pins ALL GREEN;
+        verify_flashcard_review.ts (4.8 pins) untouched-green; tsc clean;
+        eslint clean; bun run build 629 pages; e2e 30/30 (deck-flow 5/5)"
+      - "PR #10 CI on head 72221e7: build SUCCESS + e2e SUCCESS + Vercel
+         preview success"
+      - "lib/flashcard-review.ts byte-untouched (git diff empty) — the
+         T-C53 parity reference stays frozen"
+      - "feed contract mirrored from core ce0d7eb source first-hand
+         (FlashcardReviewScheduleView.java + controller read)"
+    UNVERIFIED:
+      - "the unioned queue against a LIVE signed-in account (production
+         core serves the feed since the T-C53 deploy, but no signed-in
+         learner-session probe was in scope for this lane)"
+      - "multi-device edge semantics in the wild (newest-evidence-wins is
+         unit-pinned, not field-observed)"
+    REPORTED:
+      - "mock-mode e2e equivalence (signed-out → device-only): the suite
+         exercises the degraded path, not the union itself"
+    INFERRED:
+      - "hub-side feed-read scale (one GET per mounted queue surface + one
+         per rating-sync event; the endpoint is a full-trail read per
+         T-C53's scale note — a deck count, not a firehose)"
+  execution_record: >
+    2026-10-02. Claim-first ledger b59f94f pushed (IN_PROGRESS record + hub
+    flashcard-queue lease) before any hub content; rebased once over the
+    concurrent demo-retirement ledger (72c5b9f, zero conflict).
+    HUB: branch t-c57-flashcard-queue-union off c2345d9, pushed 72221e7,
+    PR #10 open. New src/lib/flashcard-unified.ts (pure union merge +
+    useCoreReviewSchedule hook — fetches the feed only on the pilot course
+    + signed in, the exact gate the write side uses; refetches on the
+    bridge's syllabai:core-evidence event; every core negative degrades to
+    the device queue; feed held in hook state only, nothing persisted).
+    api.ts + types.ts: flashcardReviewSchedule() GET client +
+    FlashcardReviewScheduleView DTO mirroring core ce0d7eb. Consumers
+    rewired to the union: deck-due-badge.tsx (per-deck due chips, tooltip
+    names the union when the feed is live), deck-player.tsx (due-first
+    lift, due marker, still-learning/know counts now deck-scoped to the
+    unified queue — a card rated from another device can come due here),
+    kg-learner-state.ts (drawer cardReviews stamped at the same convergence
+    point as before). Drawer footnote states the true coverage ("this
+    browser and on your account (the newest record wins per card)") via a
+    new coverage word on the summary. lib/flashcard-review.ts
+    BYTE-UNTOUCHED (git diff empty).
+    UNION RULE: per card the record whose LATEST rating event is newer
+    wins, ties to device; device side derives through the frozen lib,
+    account side takes the feed verbatim; due recomputed against the
+    hub's now; malformed feed timestamps can never win. No trail
+    cross-merge (core serves derived schedules, not raw events — merging
+    schedules would invent history).
+    GATES: see VERIFIED. Two honest fixes en route: the drawer summary
+    typing needed the coverage word (tsc-caught), and the React compiler
+    lint flagged synchronous setState in the hook effect body — fixed
+    with the deck-player syncMode deferral dance.
+    Records: this yaml (merge_status + claims + this record), TODO dated
+    section, WORKLOG Session 150, agent worklog.
   next_safe_actions:
     - "operator merge word for the hub PR"
     - "widen the flashcard-bridge gate beyond the pilot course so the
