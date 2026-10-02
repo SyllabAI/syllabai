@@ -1,0 +1,374 @@
+{
+ "identity": {
+  "database": "neondb",
+  "label": "T-C04-CAMPAIGN",
+  "claimed_at": "2026-09-13 16:11:22.166939+00:00",
+  "last_seen_at": "2026-10-02 07:16:02.774046+00:00"
+ },
+ "scope": {
+  "versions": [
+   {
+    "id": "10000000-0000-0000-0000-000000000001",
+    "code": "IAL-CHEM-2018",
+    "title": "Edexcel International A Level Chemistry (2018 specification)",
+    "status": "ARCHIVED",
+    "created_at": "2026-09-09 19:23:01.58787+00"
+   },
+   {
+    "id": "356840e6-81e2-49df-8182-93ab6504d591",
+    "code": "4CH1-2017",
+    "title": "Pearson Edexcel International GCSE (9-1) Chemistry (4CH1, Issue 3)",
+    "status": "ACTIVE",
+    "created_at": "2026-09-13 16:13:25.417674+00"
+   },
+   {
+    "id": "04ea4750-a8be-4364-84a6-f61eb7b54b1f",
+    "code": "GEN-INGEST",
+    "title": "  (ingested, pending review)",
+    "status": "DRAFT",
+    "created_at": "2026-09-14 09:47:52.001791+00"
+   },
+   {
+    "id": "07ab0595-d7e4-4883-821a-3a1d1dad0dfa",
+    "code": "IGCSECHEMISTRY-INGEST",
+    "title": "IGCSE Chemistry (ingested, pending review)",
+    "status": "DRAFT",
+    "created_at": "2026-09-14 22:16:42.574423+00"
+   },
+   {
+    "id": "62a73141-ba4e-4ad9-9847-1d53e6f4ab2e",
+    "code": "4CH1CHEMISTRY-INGEST",
+    "title": "4CH1 Chemistry (ingested, pending review)",
+    "status": "DRAFT",
+    "created_at": "2026-09-24 14:11:07.51228+00"
+   },
+   {
+    "id": "9cf15786-dbb9-4dda-9ff3-e88ef241795f",
+    "code": "4CH0CHEMISTRY-INGEST",
+    "title": "4CH0 Chemistry (ingested, pending review)",
+    "status": "DRAFT",
+    "created_at": "2026-09-24 16:28:03.786357+00"
+   }
+  ],
+  "active_id": "356840e6-81e2-49df-8182-93ab6504d591",
+  "active_code": "4CH1-2017",
+  "old_predicate_resolves_to": {
+   "id": "10000000-0000-0000-0000-000000000001",
+   "code": "IAL-CHEM-2018",
+   "status": "ARCHIVED"
+  }
+ },
+ "serving_funnel": {
+  "reachable_chunks": 2935,
+  "reachable_at_rev2": 2935
+ },
+ "serving_funnel_old_predicate": {
+  "reachable_chunks": 0,
+  "reachable_at_rev2": 0
+ },
+ "corpus_suggested_by_kind": [
+  {
+   "kind": "EXTERNAL_QUESTIONS",
+   "docs_in_scope": 80,
+   "docs_out_of_scope": 0,
+   "chunks_in_scope": 747,
+   "chunks_out_of_scope": 0,
+   "chunks_in_scope_embedded": 747
+  },
+  {
+   "kind": "SYLLABUS",
+   "docs_in_scope": 162,
+   "docs_out_of_scope": 0,
+   "chunks_in_scope": 162,
+   "chunks_out_of_scope": 0,
+   "chunks_in_scope_embedded": 162
+  }
+ ],
+ "paper_axis_suggested_by_scope": [
+  {
+   "cv": "NO_SUBJECT",
+   "subject_code": "-",
+   "in_active_scope": true,
+   "paper_state": null,
+   "kind": "MARK_SCHEME",
+   "papers": 0,
+   "docs": 27,
+   "chunks": 395,
+   "embedded": 395
+  },
+  {
+   "cv": "NO_SUBJECT",
+   "subject_code": "-",
+   "in_active_scope": true,
+   "paper_state": null,
+   "kind": "QUESTION_PAPER",
+   "papers": 0,
+   "docs": 28,
+   "chunks": 369,
+   "embedded": 369
+  }
+ ],
+ "paper_axis_suggested_total": {
+  "suggested_chunks": 764,
+  "docs": 55
+ },
+ "orphan_paper_chunks_by_subject": [
+  {
+   "cv": "356840e6-81e2-49df-8182-93ab6504d591",
+   "kind": "MARK_SCHEME",
+   "chunks": 395
+  },
+  {
+   "cv": "356840e6-81e2-49df-8182-93ab6504d591",
+   "kind": "QUESTION_PAPER",
+   "chunks": 369
+  }
+ ],
+ "shell": {
+  "present": true,
+  "paper": {
+   "id": "7d40476f-13b3-436b-9e0d-f2877fe2ba0e",
+   "subject_id": "0f3cc8ba-d8b6-464c-b915-77b29abd64af",
+   "title": "4CH1 Chemistry 4CH1/2C June 2020",
+   "board": "Edexcel",
+   "qualification": "4CH1",
+   "unit": "2C",
+   "session_label": "June 2020",
+   "paper_code": "4CH1/2C",
+   "question_paper_document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8",
+   "mark_scheme_document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+   "validation_state": "REJECTED",
+   "provenance": "PAST_PAPER",
+   "extraction_method": "pdflane-atoms-draft-v1",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "created_at": "2026-09-24 16:31:47.315018+00:00",
+   "series": "JUN",
+   "year": "2020"
+  },
+  "documents": [
+   {
+    "id": "072911e9-715f-4fd5-b7ad-5fca2d452be8",
+    "document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+    "kind": "MARK_SCHEME",
+    "validation_state": "REJECTED",
+    "chunks": 0
+   },
+   {
+    "id": "89c93a69-c08e-4b24-af7e-fdd76246124c",
+    "document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8",
+    "kind": "QUESTION_PAPER",
+    "validation_state": "REJECTED",
+    "chunks": 0
+   }
+  ],
+  "fk_sweep": {
+   "exam_papers.self_or_other_doc_refs": 0,
+   "mark_schemes.source_document_id": 7,
+   "question_versions.source_document_id": 7,
+   "questions.exam_paper_id": 7
+  },
+  "skeleton_questions": [
+   {
+    "id": "61b7feb7-018f-4d63-ab50-ccdf59f744e7",
+    "external_ref": "4ch1/past-papers/2020-06/4ch1-2C#q4",
+    "active": true,
+    "version_id": "82e31fc6-56c5-49fe-a587-565cbbcd2c64",
+    "version": 1,
+    "v_state": "SUGGESTED",
+    "source_document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8"
+   },
+   {
+    "id": "78f5eeb8-a263-4ad0-81ad-6c6b560135d3",
+    "external_ref": "4ch1/past-papers/2020-06/4ch1-2C#q3",
+    "active": true,
+    "version_id": "a200ce7b-c0eb-4f0b-af30-3b3bc2bd19df",
+    "version": 1,
+    "v_state": "SUGGESTED",
+    "source_document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8"
+   },
+   {
+    "id": "274d7232-21a4-486b-ba74-eb76f6908bdf",
+    "external_ref": "4ch1/past-papers/2020-06/4ch1-2C#q1",
+    "active": true,
+    "version_id": "fceab265-6810-4e52-9faf-3eba0d5f40ea",
+    "version": 1,
+    "v_state": "SUGGESTED",
+    "source_document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8"
+   },
+   {
+    "id": "7649f6ab-f982-45a3-bbb0-cfbe3a586a6c",
+    "external_ref": "4ch1/past-papers/2020-06/4ch1-2C#q2",
+    "active": true,
+    "version_id": "e44caa5a-71e2-43a2-a3b0-bc3af51d5c0b",
+    "version": 1,
+    "v_state": "SUGGESTED",
+    "source_document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8"
+   },
+   {
+    "id": "441f3c52-71a4-47ae-8d50-a2ac7d2b453d",
+    "external_ref": "4ch1/past-papers/2020-06/4ch1-2C#q5",
+    "active": true,
+    "version_id": "6302db2c-9cee-4233-a71a-fe7a35e59ff8",
+    "version": 1,
+    "v_state": "SUGGESTED",
+    "source_document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8"
+   },
+   {
+    "id": "eb8d096a-84b4-4f09-80e6-be99a7a16937",
+    "external_ref": "4ch1/past-papers/2020-06/4ch1-2C#q6",
+    "active": true,
+    "version_id": "cf58a45d-c561-4f3b-9e5f-b7e4386b949f",
+    "version": 1,
+    "v_state": "SUGGESTED",
+    "source_document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8"
+   },
+   {
+    "id": "b73ffdb4-f85d-4f65-a4c3-913b70b00749",
+    "external_ref": "4ch1/past-papers/2020-06/4ch1-2C#q7",
+    "active": true,
+    "version_id": "471bbefb-d4de-4a0b-8c4e-f82558b0bb85",
+    "version": 1,
+    "v_state": "SUGGESTED",
+    "source_document_id": "41bc5a1a-63e6-5668-9245-6176567cc3a8"
+   }
+  ],
+  "skeleton_mark_schemes": [
+   {
+    "id": "63a50b20-120e-4bb6-910b-c5821bf4eab7",
+    "source_document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+    "validation_state": "SUGGESTED",
+    "version_label": "1",
+    "question_version_id": "fceab265-6810-4e52-9faf-3eba0d5f40ea",
+    "created_at": "2026-09-24 16:31:47.317377+00"
+   },
+   {
+    "id": "c83a94b3-eb68-497e-911e-4f3eba445975",
+    "source_document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+    "validation_state": "SUGGESTED",
+    "version_label": "1",
+    "question_version_id": "e44caa5a-71e2-43a2-a3b0-bc3af51d5c0b",
+    "created_at": "2026-09-24 16:31:47.317539+00"
+   },
+   {
+    "id": "90e7a8d0-0735-44a2-a30a-2febd52299eb",
+    "source_document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+    "validation_state": "SUGGESTED",
+    "version_label": "1",
+    "question_version_id": "a200ce7b-c0eb-4f0b-af30-3b3bc2bd19df",
+    "created_at": "2026-09-24 16:31:47.31769+00"
+   },
+   {
+    "id": "7b9fe7ef-0ac0-4bb8-ad27-9a9f56467ec0",
+    "source_document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+    "validation_state": "SUGGESTED",
+    "version_label": "1",
+    "question_version_id": "82e31fc6-56c5-49fe-a587-565cbbcd2c64",
+    "created_at": "2026-09-24 16:31:47.317863+00"
+   },
+   {
+    "id": "1a8ad933-28e2-4df1-b0ad-5e2f74a544f2",
+    "source_document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+    "validation_state": "SUGGESTED",
+    "version_label": "1",
+    "question_version_id": "6302db2c-9cee-4233-a71a-fe7a35e59ff8",
+    "created_at": "2026-09-24 16:31:47.318035+00"
+   },
+   {
+    "id": "bcd019f9-f1e0-4402-94aa-67f0ebd22693",
+    "source_document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+    "validation_state": "SUGGESTED",
+    "version_label": "1",
+    "question_version_id": "cf58a45d-c561-4f3b-9e5f-b7e4386b949f",
+    "created_at": "2026-09-24 16:31:47.318158+00"
+   },
+   {
+    "id": "d0a6a8ea-e5cd-473c-a138-c36646d922a4",
+    "source_document_id": "1cf11a41-f60f-51ba-90e3-b34c7ceefd74",
+    "validation_state": "SUGGESTED",
+    "version_label": "1",
+    "question_version_id": "471bbefb-d4de-4a0b-8c4e-f82558b0bb85",
+    "created_at": "2026-09-24 16:31:47.318289+00"
+   }
+  ],
+  "audit_rows": [
+   {
+    "target_type": "exam_paper",
+    "action": "FLAG",
+    "from_state": "SUGGESTED",
+    "to_state": "FLAGGED",
+    "occurred_at": "2026-09-28 19:09:37.863976+00",
+    "actor_label": "Nawaf Al Hussain Khondokar"
+   },
+   {
+    "target_type": "exam_paper",
+    "action": "REJECT",
+    "from_state": "FLAGGED",
+    "to_state": "REJECTED",
+    "occurred_at": "2026-09-28 21:19:36.373742+00",
+    "actor_label": "Nawaf Al Hussain Khondokar"
+   }
+  ]
+ },
+ "documents_census": [
+  {
+   "validation_state": "REJECTED",
+   "kind": "MARK_SCHEME",
+   "docs": 68,
+   "chunks": 30
+  },
+  {
+   "validation_state": "REJECTED",
+   "kind": "QUESTION_PAPER",
+   "docs": 79,
+   "chunks": 34
+  },
+  {
+   "validation_state": "SUGGESTED",
+   "kind": "EXTERNAL_QUESTIONS",
+   "docs": 80,
+   "chunks": 747
+  },
+  {
+   "validation_state": "SUGGESTED",
+   "kind": "MARK_SCHEME",
+   "docs": 31,
+   "chunks": 395
+  },
+  {
+   "validation_state": "SUGGESTED",
+   "kind": "QUESTION_PAPER",
+   "docs": 32,
+   "chunks": 369
+  },
+  {
+   "validation_state": "SUGGESTED",
+   "kind": "SYLLABUS",
+   "docs": 162,
+   "chunks": 162
+  },
+  {
+   "validation_state": "VALIDATED",
+   "kind": "EXTERNAL_NOTES",
+   "docs": 112,
+   "chunks": 350
+  },
+  {
+   "validation_state": "VALIDATED",
+   "kind": "EXTERNAL_QUESTIONS",
+   "docs": 299,
+   "chunks": 309
+  },
+  {
+   "validation_state": "VALIDATED",
+   "kind": "MARK_SCHEME",
+   "docs": 78,
+   "chunks": 1214
+  },
+  {
+   "validation_state": "VALIDATED",
+   "kind": "QUESTION_PAPER",
+   "docs": 78,
+   "chunks": 1062
+  }
+ ]
+}

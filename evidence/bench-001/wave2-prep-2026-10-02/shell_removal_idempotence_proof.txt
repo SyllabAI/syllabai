@@ -1,0 +1,12 @@
+[identity gate PASS] db=neondb label=T-C04-CAMPAIGN
+Traceback (most recent call last):
+  File "/home/z/my-project/scripts/wave2_shell_removal.py", line 312, in <module>
+    dry_run()
+    ~~~~~~~^^
+  File "/home/z/my-project/scripts/wave2_shell_removal.py", line 171, in dry_run
+    state, blockers = collect()
+                      ~~~~~~~^^
+  File "/home/z/my-project/scripts/wave2_shell_removal.py", line 91, in collect
+    assert len(papers) == 1, f"paper rows = {len(papers)} (expect exactly 1)"
+           ^^^^^^^^^^^^^^^^
+AssertionError: paper rows = 0 (expect exactly 1)

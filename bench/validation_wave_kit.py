@@ -64,10 +64,10 @@ select p.id as paper_id, p.paper_code, p.validation_state as paper_state,
        coalesce((select reconciliation_status from glm_ocr_bridge_records b
                  where b.paper_id = p.id limit 1), 'NO_BRIDGE') as bridge_status
 from exam_papers p
-join documents d on d.id = p.question_paper_document_id
-              or d.id = p.mark_scheme_document_id
+join documents d on d.document_id = p.question_paper_document_id
+              or d.document_id = p.mark_scheme_document_id
 left join document_chunks c on c.document_row_id = d.id
-where p.paper_code = :paper_code
+where p.paper_code = :'paper_code'
 group by 1, 2, 3, 4, 5 order by 4;
 """
 
@@ -93,8 +93,9 @@ BEGIN;
 update document_chunks c
 set embed_rev = 2, embedded_at = now()
 from documents d, exam_papers p
-where (d.id = p.question_paper_document_id or d.id = p.mark_scheme_document_id)
-  and p.paper_code = :paper_code
+where (d.document_id = p.question_paper_document_id
+    or d.document_id = p.mark_scheme_document_id)
+  and p.paper_code = :'paper_code'
   and c.document_row_id = d.id
   and c.embedding is not null
   and c.embed_rev = 1

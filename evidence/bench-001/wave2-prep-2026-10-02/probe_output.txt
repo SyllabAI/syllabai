@@ -1,0 +1,67 @@
+== wave-2 prep probe — READ-ONLY (F-PROD-2/3/4 reconnaissance) ==
+host: ep-ancient-cake-a52e4kfd-pooler.us-east-2.aws.neon.tech  db-path: /neondb
+[PASS] identity: db=neondb label=T-C04-CAMPAIGN claimed_at=2026-09-13 16:11:22.166939+00:00 last_seen=2026-10-02 07:16:02.774046+00:00
+
+-- B. curriculum_versions: 6 rows, ACTIVE=1 --
+   IAL-CHEM-2018          ARCHIVED   10000000-0000-0000-0000-000000000001
+   4CH1-2017              ACTIVE     356840e6-81e2-49df-8182-93ab6504d591  <== ACTIVE
+   GEN-INGEST             DRAFT      04ea4750-a8be-4364-84a6-f61eb7b54b1f
+   IGCSECHEMISTRY-INGEST  DRAFT      07ab0595-d7e4-4883-821a-3a1d1dad0dfa
+   4CH1CHEMISTRY-INGEST   DRAFT      62a73141-ba4e-4ad9-9847-1d53e6f4ab2e
+   4CH0CHEMISTRY-INGEST   DRAFT      9cf15786-dbb9-4dda-9ff3-e88ef241795f
+   old kit predicate (order by created_at limit 1) resolves: IAL-CHEM-2018 [ARCHIVED]  <- F-PROD-2 defect demo
+
+-- C. serving funnel (CORRECTED predicate) --
+   {'reachable_chunks': 2935, 'reachable_at_rev2': 2935}
+   (old-predicate funnel for the record: {'reachable_chunks': 0, 'reachable_at_rev2': 0})
+
+-- D1. corpus SUGGESTED surface (non-paper axis, by kind) --
+   EXTERNAL_QUESTIONS   docs_in=  80 docs_out=   0 chunks_in=  747 (emb   747) chunks_out=0
+   SYLLABUS             docs_in= 162 docs_out=   0 chunks_in=  162 (emb   162) chunks_out=0
+
+-- D2. SUGGESTED QP/MS chunk mass by owning paper's scope/state --
+   cv=NO_SUBJECT subject=-          paper=NO_PAPER   MARK_SCHEME     papers=  0 docs= 27 chunks=  395 (emb 395)
+   cv=NO_SUBJECT subject=-          paper=NO_PAPER   QUESTION_PAPER  papers=  0 docs= 28 chunks=  369 (emb 369)
+
+-- D3. paper-axis SUGGESTED documents overall (any scope): {'suggested_chunks': 764, 'docs': 55}
+
+-- D4. orphaned paper-axis chunks: denormalized subject identity --
+   356840e6-81e2-49df-8182-93ab6504d591  MARK_SCHEME     chunks=395
+   356840e6-81e2-49df-8182-93ab6504d591  QUESTION_PAPER  chunks=369
+
+-- E. F-PROD-4 shell sweep: exam_papers.id = 7d40476f-13b3-436b-9e0d-f2877fe2ba0e --
+   paper: 4CH1/2C June 2020 state=REJECTED
+   doc: 072911e9-715f-4fd5-b7ad-5fca2d452be8 MARK_SCHEME     REJECTED chunks=0
+   doc: 89c93a69-c08e-4b24-af7e-fdd76246124c QUESTION_PAPER  REJECTED chunks=0
+   non-empty references (generic sweep): {"exam_papers.self_or_other_doc_refs": 0, "mark_schemes.source_document_id": 7, "question_versions.source_document_id": 7, "questions.exam_paper_id": 7}
+   question skeleton (7 rows):
+     q=61b7feb7-018f-4d63-ab50-ccdf59f744e7 ext=4ch1/past-papers/2020-06/4ch1-2C#q4 active=True v=1 v_state=SUGGESTED src=41bc5a1a-63e6-5668-9245-6176567cc3a8
+     q=78f5eeb8-a263-4ad0-81ad-6c6b560135d3 ext=4ch1/past-papers/2020-06/4ch1-2C#q3 active=True v=1 v_state=SUGGESTED src=41bc5a1a-63e6-5668-9245-6176567cc3a8
+     q=274d7232-21a4-486b-ba74-eb76f6908bdf ext=4ch1/past-papers/2020-06/4ch1-2C#q1 active=True v=1 v_state=SUGGESTED src=41bc5a1a-63e6-5668-9245-6176567cc3a8
+     q=7649f6ab-f982-45a3-bbb0-cfbe3a586a6c ext=4ch1/past-papers/2020-06/4ch1-2C#q2 active=True v=1 v_state=SUGGESTED src=41bc5a1a-63e6-5668-9245-6176567cc3a8
+     q=441f3c52-71a4-47ae-8d50-a2ac7d2b453d ext=4ch1/past-papers/2020-06/4ch1-2C#q5 active=True v=1 v_state=SUGGESTED src=41bc5a1a-63e6-5668-9245-6176567cc3a8
+     q=eb8d096a-84b4-4f09-80e6-be99a7a16937 ext=4ch1/past-papers/2020-06/4ch1-2C#q6 active=True v=1 v_state=SUGGESTED src=41bc5a1a-63e6-5668-9245-6176567cc3a8
+     q=b73ffdb4-f85d-4f65-a4c3-913b70b00749 ext=4ch1/past-papers/2020-06/4ch1-2C#q7 active=True v=1 v_state=SUGGESTED src=41bc5a1a-63e6-5668-9245-6176567cc3a8
+   mark_schemes skeleton (7 rows):
+     ms=63a50b20-120e-4bb6-910b-c5821bf4eab7 state=SUGGESTED label=1 qv=fceab265-6810-4e52-9faf-3eba0d5f40ea src=1cf11a41-f60f-51ba-90e3-b34c7ceefd74
+     ms=c83a94b3-eb68-497e-911e-4f3eba445975 state=SUGGESTED label=1 qv=e44caa5a-71e2-43a2-a3b0-bc3af51d5c0b src=1cf11a41-f60f-51ba-90e3-b34c7ceefd74
+     ms=90e7a8d0-0735-44a2-a30a-2febd52299eb state=SUGGESTED label=1 qv=a200ce7b-c0eb-4f0b-af30-3b3bc2bd19df src=1cf11a41-f60f-51ba-90e3-b34c7ceefd74
+     ms=7b9fe7ef-0ac0-4bb8-ad27-9a9f56467ec0 state=SUGGESTED label=1 qv=82e31fc6-56c5-49fe-a587-565cbbcd2c64 src=1cf11a41-f60f-51ba-90e3-b34c7ceefd74
+     ms=1a8ad933-28e2-4df1-b0ad-5e2f74a544f2 state=SUGGESTED label=1 qv=6302db2c-9cee-4233-a71a-fe7a35e59ff8 src=1cf11a41-f60f-51ba-90e3-b34c7ceefd74
+     ms=bcd019f9-f1e0-4402-94aa-67f0ebd22693 state=SUGGESTED label=1 qv=cf58a45d-c561-4f3b-9e5f-b7e4386b949f src=1cf11a41-f60f-51ba-90e3-b34c7ceefd74
+     ms=d0a6a8ea-e5cd-473c-a138-c36646d922a4 state=SUGGESTED label=1 qv=471bbefb-d4de-4a0b-8c4e-f82558b0bb85 src=1cf11a41-f60f-51ba-90e3-b34c7ceefd74
+   content_review_audit rows touching the shell: 2
+     2026-09-28 19:09:37.863976+00 exam_paper       FLAG         SUGGESTED->FLAGGED by Nawaf Al Hussain Khondokar
+     2026-09-28 21:19:36.373742+00 exam_paper       REJECT       FLAGGED->REJECTED by Nawaf Al Hussain Khondokar
+
+-- F. documents census by validation_state × kind --
+   REJECTED   MARK_SCHEME          docs=  68 chunks=   30
+   REJECTED   QUESTION_PAPER       docs=  79 chunks=   34
+   SUGGESTED  EXTERNAL_QUESTIONS   docs=  80 chunks=  747
+   SUGGESTED  MARK_SCHEME          docs=  31 chunks=  395
+   SUGGESTED  QUESTION_PAPER       docs=  32 chunks=  369
+   SUGGESTED  SYLLABUS             docs= 162 chunks=  162
+   VALIDATED  EXTERNAL_NOTES       docs= 112 chunks=  350
+   VALIDATED  EXTERNAL_QUESTIONS   docs= 299 chunks=  309
+   VALIDATED  MARK_SCHEME          docs=  78 chunks= 1214
+   VALIDATED  QUESTION_PAPER       docs=  78 chunks= 1062

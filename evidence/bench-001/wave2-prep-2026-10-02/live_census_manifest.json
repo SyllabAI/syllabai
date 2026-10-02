@@ -1,0 +1,16 @@
+{
+ "census": "live_census_chunks",
+ "captured_at_utc": "2026-10-02T07:38:25.198716+00:00",
+ "method": "SELECT-only live export over the sanctioned session-env read path (Render env-vars API -> SYLLABAI_DATABASE_URL; snap-006 lineage). Sanctioned as the wave-2 freeze alternative by F-PROD-3 (wave-1 PRODUCTION report): 'a FRESH snapshot re-freeze (or live probes)'.",
+ "identity": {
+  "db": "neondb",
+  "label": "T-C04-CAMPAIGN"
+ },
+ "active_curriculum_version": {
+  "id": "356840e6-81e2-49df-8182-93ab6504d591",
+  "code": "4CH1-2017"
+ },
+ "chunk_count": 4672,
+ "chunk_ref_contract": "content_sha256:chunk_index (identical to snap-006; gold-v5 evidence refs join directly)",
+ "gate_semantics": "owner PAPER -> paper.validation_state; SUBJECT_BRANCH -> documents.validation_state; UNPLACEABLE -> fail-closed"
+}
