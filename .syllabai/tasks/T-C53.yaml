@@ -6,7 +6,7 @@ task:
     'future review scheduler' tranche); computed never persisted per
     ADR-031 doctrine; honesty pin preserved (timing only, never mastery)"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
-  status: IN_PROGRESS
+  status: DONE
   priority: P1
   authority: "operator IM trace 1a0fb9ceb36d36d1 ('core-side scheduling feed
     from the rating trail') — GO on the follow-up flagged at the flashcard
@@ -35,15 +35,14 @@ task:
         FlashcardReviewScheduler — pure), FlashcardReviewScheduleController
         (GET /api/v1/learners/me/flashcard-review-schedule), DTOs,
         FlashcardRatingRepository trail query, LearnerProperties 5th
-        component + 4-arg compatibility constructor, application.yml
-        flashcard-review defaults"
+        component, application.yml flashcard-review defaults"
       - "syllabai-core: V59 migration — model_versions registry seed ONLY
         (learner.flashcard-review v1 ladder, data-only, no schema change;
         flyway-version lease claimed in locks.yaml before write)"
       - "tests: FlashcardReviewSchedulerTest (pure), LearnerPropertiesTest
         additions, FlashcardReviewScheduleFlowIT (Testcontainers, mirrors
         FlashcardRatingFlowIT)"
-      - "records: this task record, TODO/WORKLOG entries"
+      - "records: this task record, TODO/WORKLOG entries, knowledge-map §5 row"
     forbidden:
       - "NO schedule persistence (no review_schedules writes, no schedule
         table, no state flip — ADR-031 doctrine: computed at read, never
@@ -53,9 +52,60 @@ task:
         only), NO hub changes (hub consumption is a separate follow-up
         lane), NO migration renumbering of V1–V58 (core rule 1)"
   execution_record: >
-    2026-10-02 claim-first: this IN_PROGRESS record + the flyway-version
-    lease (V59) commit to master BEFORE any core content, per the
-    Session-144 race discipline. Content commit follows.
+    2026-10-02. Claim-first ledger 45313ab (IN_PROGRESS record + V59
+    flyway-version lease) pushed before any core content; rebased once over
+    the concurrent T-C50/T-C51 closeout lane (d6d92bf, no conflict).
+    CORE: branch t-c53-flashcard-review-feed off 1b6503a. New
+    learner/flashcard package (FlashcardReviewParams + pure stateless
+    FlashcardReviewScheduler, BktEngine pattern), FlashcardReviewSchedule-
+    Controller (GET /api/v1/learners/me/flashcard-review-schedule: full
+    card-grouped trail read, dueAt-ordered cards due-first stalest-first,
+    resolved anchor codes echoed honest-null, hub-style due/scheduled/
+    nextDueAt summary), FlashcardRatingRepository full chronological trail
+    query (id tiebreaker — deterministic even on occurred_at ties),
+    LearnerProperties 5th component + application.yml defaults with
+    doctrine comments, V59__flashcard_review_registry.sql DATA-ONLY
+    model_versions seed (learner.flashcard-review v1-hub-parity, id
+    60000000-…-0004, the V6 sequence's next slot). Ladder mirrored
+    bit-for-bit from hub lib/flashcard-review.ts (1·2·4·8·16, 32d cap);
+    hub TRAIL_CAP-10 parity documented (interval identical — any streak ≥
+    ladder length maps to the cap — reported streak may differ).
+    TESTS: FlashcardReviewSchedulerTest 8 pins (hand-derived constants,
+    ladder boundaries incl. cap, still-learning due-now, re-rate reset,
+    dueAt boundary inclusive, lenient params, empty-trail refusal);
+    LearnerPropertiesTest.flashcardLadderDefaults; FlashcardReviewSchedule-
+    FlowIT 5 pins on real Postgres (exact dueAt arithmetic — dueAt ==
+    lastRatedAt + intervalDays needs no clock tolerance, summary
+    coherence, anchor echo, learner isolation, honesty pin feed-edition:
+    queue serves while SkillState AND pendingReviews stay empty).
+    INCIDENT (caught by CI, fixed honestly): the first push (17bd018) added
+    a 4-arg LearnerProperties compatibility constructor (LearnerStateView
+    style) — the local unit suite stayed green (1,178 tests, direct
+    construction only) but EVERY context-booting IT failed: a
+    @ConfigurationProperties record binds through its CANONICAL constructor
+    only, a second overload boots "No default constructor found"
+    (ci run 36982883788). Fix 1e04a3d: overload removed, 26 test call
+    sites updated to the 5-arg form (+null, two multi-line sites
+    hand-fixed), binding constraint recorded in the class javadoc. Local
+    re-run 1178/0/2 (live-gated) BUILD SUCCESS.
+    CI: head 1e04a3d run SUCCESS (FlashcardReviewSchedulerTest 8/8,
+    FlashcardReviewScheduleFlowIT 5/5 on real Postgres, full battery 167
+    ITs + 1,178 unit green). PR #58 merged merge-commit method as core
+    ce0d7eb; the merge-commit run was CANCELLED (concurrent PR #59 landed
+    moments later) — superseded by the run on main tip 5b04069
+    (my merge + PR #59): SUCCESS. V59 uniquely mine — no serial collision.
+    Branch deleted (204). Local main synced to 5b04069.
+    Records: this yaml DONE, TODO section, WORKLOG Session 146, knowledge
+    map §5 new row (rule 9 — new cross-project canonical artifact).
+    Evidence labels: VERIFIED — CI runs (head + main tip), IT execution
+    logs, V59 uniqueness on main, ladder parity against hub fca83c8 source,
+    binding-incident root cause + fix; UNVERIFIED — V59 Flyway apply on
+    PRODUCTION (applies at next Render deploy, the standard channel; no
+    production probe in scope for a read-only endpoint + registry seed);
+    REPORTED — hub-side parity semantics (tranche 4.8 source read, not
+    re-executed); INFERRED — production scale of the feed read (full-trail
+    per learner: a deck count per V47's scale note, indexed
+    learner-scoped).
   next_safe_actions:
     - "hub consumption lane: merge the core feed into lib/flashcard-review.ts
       (core queue for the pilot course unioned with the device-local queue —
@@ -63,3 +113,5 @@ task:
       made, core holds every rating the account made)"
     - "widen core sync beyond the pilot course (flashcard-bridge gate) so the
       feed covers all 44 deck-bearing packs"
+    - "next Render deploy carries V59 (data-only registry seed) — verify
+      flyway_schema_history after deploy if production proof is wanted"

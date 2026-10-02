@@ -73,6 +73,7 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 | Recommendation system | `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`, `RECOMMENDATION_SYSTEM_AGENT_ADDENDUM.md`, ADR-017 |
 | Learner Interaction Memory | `LEARNER_INTERACTION_MEMORY_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.4_LEARNER_INTERACTION_MEMORY.md`, `AGENT_LEARNER_INTERACTION_MEMORY_ADDENDUM.md` |
 | Learner interaction implementation | `syllabai-core/docs/LEARNER_INTERACTION_MEMORY_IMPLEMENTATION.md` and core agent rules |
+| Flashcard rating evidence + review-schedule feed | `syllabai-core` V47 (append-only `flashcard_ratings` — self-report evidence class, NEVER mastery) + T-C53: `GET /api/v1/learners/me/flashcard-review-schedule` (Ebbinghaus ladder derived at READ, registry `learner.flashcard-review` V59; ADR-031 doctrine — computed never persisted). Hub mirror: `syllabai-hub` `lib/flashcard-review.ts` (device-local tranche 4.8) + `lib/flashcard-bridge.ts` (pilot-course sync) |
 
 **Invariant:** raw conversation is history/audit data; extracted interaction evidence is a candidate signal with provenance; learner patterns and mastery are derived through governed learner-model logic. Chat output does not directly mutate canonical KG or mastery.
 
