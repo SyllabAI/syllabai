@@ -6,7 +6,7 @@ task:
     census (155 notes / 175 union, T-DB-VERIFY 2026-10-02); re-scope the
     pack number before any bridge work builds on it"
   owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
-  status: IN_PROGRESS
+  status: DONE
   priority: P2
   authority: "operator IM trace 1a0fcb9aef3bc611 ('Okay, proceed') — go for the
     only unclaimed actionable item left after T-C60-EXEC (trace
@@ -53,7 +53,14 @@ task:
     - "downstream guidance recorded: frozen artifact governs bench §8(d);
       live spec_codes tags govern serving-side claims; the pack's '180
       bridged spec points' sentence re-scoped or corrected"
-  evidence: []
+  evidence:
+    - "bench/review/bridge-reconciliation-20261002/ (REPORT + tc64_bridge_recon.json
+      + SHA256SUMS; probe scripts/tc64_bridge_recon.py SELECT-only)"
+    - "verdict: pack '180 bridged' = bridge-time census of the C13 HV projection
+      artifact (210/209/164/181); live 155/175 = production spec_codes tag
+      instrument on the same chunks; 26-code tagger gap dispositioned; 4.15
+      live-only (store worklist row); normalization excluded; axis 194
+      supersedes 182; gold 76/76 artifact vs 67/76 live (bench unaffected)"
   notes:
     - "claim-first at registration (this commit); ID re-asked after the
       push per the T-C55 lesson. T-C61/T-C62/T-C63 taken by concurrent
