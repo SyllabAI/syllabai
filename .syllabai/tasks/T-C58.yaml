@@ -1,0 +1,77 @@
+version: 1
+task:
+  id: T-C58
+  title: "F-A2 verification wave — three-class verification of the 44
+    '(R)'-named files under plain-paper dirs in never-ingested specs
+    (the T-C56 finding register; the gate before any ingestion wave
+    trusts those folders)"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  priority: P1
+  authority: "operator IM trace 1a0fbf2dec8babe5: 'F-A2 verification wave'"
+  scope: "VERIFICATION-ONLY lane — zero corpus writes, zero DB writes;
+    any fix (replacing the mis-filed files with official plain papers)
+    is a SEPARATE mandate; secrets env-only (GH_PAT + RENDER_KEY, never
+    on disk or in any commit)"
+execution_record:
+  protocol_1_2_recon:
+    - "worklog tail re-read first (standing rule); F-A2 scope taken from
+      T-C56 REPORT finding register + TODO line: 44 files = 4ph1 1P/2P
+      QP x18 (2019-01..2024-06), 4EB0/4EB1 Paper 1 MS x11, 6PH0x unit
+      MS x6 (physics-2008), 4MA0/4MA1 QP x6, 4MB0/4MB1 QP x3"
+    - "three-class protocol pinned from the CORPUS-FIX-2026-09-28 doc:
+      (1) byte-exact DAM sha, (2) PMT '(R)' original_filename naming,
+      (3) pixel-render cover verification; registry claim check: T-C57
+      (hub flashcard lane, other session) was the only concurrent claim
+      — T-C58 free, taken claim-free"
+    - "corpus partial clone extended by sparse-checkout to all 44
+      affected dirs + their sibling R dirs (88+ PDF blobs fetched
+      on-demand; corpus HEAD still 029c6ec92 as pinned by T-C56)"
+  method:
+    - "class 1 (byte-exact DAM): attempted — content-dam serves an HTML
+      interstitial to anonymous clients (probe + docs/4SD0-2026-09-27.md
+      precedent) — NOT obtainable from this environment; recorded"
+    - "class 2 (naming): PMT '(R)' original_filename on all 44 +
+      manifest identification blocks; integrity guard sha256 == manifest
+      pin verified 44/44 before any analysis (fail-closed abort else)"
+    - "class 3 (cover-print): pymupdf text layer where present;
+      150-300dpi grayscale render + tesseract 5.5.0 OCR for the 7
+      image-only covers + 300dpi re-reads for the 2 broken-ToUnicode
+      garbles and the 1 low-confidence read"
+    - "complement + sibling sweeps: every affected dir's sibling
+      material (the non-'(R)' file) cover-verified, and every
+      same-session sibling R dir (4PH1-1PR/2PR, 4MA1-1FR/1HR/2FR/2HR,
+      4MB0-02R, 4MB1-01R/02R, 4EB0/4EB1-01R, 6PH0x-01R) characterized"
+  results:
+    - "44/44 RESOLVED: 43 CONFIRMED-MISFILED-R (cover prints the R
+      reference — 4PH1/1PR+4SD0/1PR-twin or 4PH1/2PR x18, Paper
+      01R/1R x11, Paper 01R x5 (6PH0x), Paper 1FR / 4MA0/1FR x1,
+      1FR/1HR/2FR/2HR x5, 02R x1, 01R/02R x2) + 1 GENUINE-PLAIN
+      (2013-06/6PH05-01 ms.pdf: cover prints 'Paper 01: Physics-
+      Creation/Collapse' + Publications Code UA036644 — the PMT '(R)'
+      filename is a naming artifact; the 2013-06/4PH0-2P/qp precedent)"
+    - "zero UNRESOLVED; zero UNPARSEABLE left standing"
+    - "siblings: 44/44 sibling materials genuine plain bytes — the
+      disease is confined to the '(R)'-named file per dir"
+    - "R dirs: 45 material cover-checks, ALL R-BYTES, zero swap shape;
+      0 byte-identical twins with the mis-filed copies (different
+      scans of the same regional papers)"
+    - "fix shape when mandated (NOT executed): the 09-28 precedent —
+      replace the 43 mis-filed files with official plain documents
+      (content-dam URLs recorded per material at wave time; the DAM
+      interstitial constraint requires the authenticated/URL-resolved
+      route), correction notes in identification.notes, benign
+      6PH05-2013 MS needs no byte change; then re-run the T-C56 L1/L2
+      checks on the touched specs"
+  evidence: "bench/review/fa2-verification-20261002/ (REPORT + verdicts +
+    inventory + 5 layer JSONs + stragglers + SHA256SUMS); scripts
+    fa2_*.py read-only in session workspace"
+  disclosure:
+    - "class 1 not obtainable (DAM interstitial) — verdicts rest on
+      classes 2+3, the same conclusive combination the 09-28 wave
+      accepted for 20/23 of its files"
+    - "R dirs' remaining materials (beyond the complement checks) and
+      the specs' other dirs were NOT audited here (out of F-A2 scope)"
+    - "worklog session number 151 chosen because the T-C57 lane
+      (different session) concurrently took 'Session 150' — append-only
+      ledger, no renumbering of their entry"

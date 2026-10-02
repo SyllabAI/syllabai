@@ -1,0 +1,138 @@
+{
+ "method": "300dpi grayscale render -> tesseract 5.5.0 (--psm 6)",
+ "results": [
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma0/past-papers/2015-06/4MA0-1F",
+   "file": "qp.pdf",
+   "role": "finding-300dpi-reocr",
+   "ocr_refs": [
+    "4MA0/1FR"
+   ],
+   "ocr_paper_forms": [
+    "1FR"
+   ],
+   "date": "Thursday 21 May 2015 \u2014 Morning",
+   "verdict": "R-BYTES",
+   "note": "cover prints 'Paper 1FR' + 'Paper Reference 4MA0/1FR' (layout splits the code; raw OCR line '4MA0O/1 FR')"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2015-06/4EB0-01",
+   "file": "qp.pdf",
+   "role": "sibling-of-finding",
+   "ocr_refs": [
+    "4EB0/01"
+   ],
+   "date": "Wednesday 10 June 2015 \u2014 Afternoon",
+   "verdict": "PLAIN-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-1FR",
+   "file": "qp.pdf",
+   "role": "r-dir",
+   "ocr_refs": [
+    "4MA1/1FR"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-1HR",
+   "file": "qp.pdf",
+   "role": "r-dir",
+   "ocr_refs": [
+    "4MA1/1HR"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-2FR",
+   "file": "qp.pdf",
+   "role": "r-dir",
+   "ocr_refs": [
+    "4MA1/2FR"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-2HR",
+   "file": "qp.pdf",
+   "role": "r-dir",
+   "ocr_refs": [
+    "4MA1/2HR"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb1/past-papers/2019-01/4MB1-01R",
+   "file": "qp.pdf",
+   "role": "r-dir",
+   "ocr_refs": [
+    "4MB1/01R"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb1/past-papers/2019-01/4MB1-02R",
+   "file": "qp.pdf",
+   "role": "r-dir",
+   "ocr_refs": [
+    "4MB1/02R"
+   ],
+   "verdict": "R-BYTES"
+  }
+ ],
+ "r_dir_materials_extra": [
+  {
+   "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2013-06/6PH05-01R",
+   "file": "qp.pdf",
+   "refs": [
+    "6PH05/01R"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2019-01/4EB1-01R",
+   "file": "qp.pdf",
+   "refs": [
+    "4EB1/01R"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma0/past-papers/2015-06/4MA0-1FR",
+   "file": "ms.pdf",
+   "paper_forms": [
+    "1FR"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb0/past-papers/2015-01/4MB0-02R",
+   "file": "ms.pdf",
+   "paper_forms": [
+    "02R"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2024-06/4PH1-2PR",
+   "file": "qp.pdf",
+   "refs": [
+    "4PH1/2PR"
+   ],
+   "verdict": "R-BYTES"
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2024-06/4PH1-2PR",
+   "file": "ms.pdf",
+   "paper_forms": [
+    "2PR"
+   ],
+   "verdict": "R-BYTES"
+  }
+ ],
+ "dam_probe": {
+  "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/exam-materials/4ph1-2pr-que-20240615.pdf",
+  "result": "HTML interstitial, not the PDF \u2014 byte-exact DAM class not obtainable anonymously",
+  "precedent": "docs/4SD0-2026-09-27.md: '/content/dam/secure/... serves an HTML interstitial to anonymous clients'"
+ }
+}

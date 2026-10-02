@@ -1,0 +1,1035 @@
+{
+ "wave": "F-A2 verification wave (T-C58)",
+ "corpus_head_pinned_by_T-C56": "029c6ec92",
+ "source": "/home/z/my-project/download/corpus-folder-mislabel-audit-20261002/l1_findings.json",
+ "count": 44,
+ "spec_counts": {
+  "physics-2008": 6,
+  "4eb0": 4,
+  "4eb1": 7,
+  "4ma0": 1,
+  "4ma1": 5,
+  "4mb0": 1,
+  "4mb1": 2,
+  "4ph1": 18
+ },
+ "missing_manifests": [],
+ "files": [
+  {
+   "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2013-06/6PH02-01",
+   "session": "2013-06",
+   "dir_name": "6PH02-01",
+   "official_reference": "6PH02/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2013 (R) MS - Unit 2 Edexcel Physics A-level.pdf",
+   "sha256": "017786b150decd2d0186d06126d0d9b8ae0a1d983b2fc5f7383950e691c92c81",
+   "size_bytes": 118319,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "6PH02",
+    "6PH02/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2013",
+   "identification_notes": [
+    "cover prints 'Paper 01R' for unit-style code 6PH02; unit refs are /01 (Pearson cover anomaly), ref set to /01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2013-06/6PH05-01",
+   "session": "2013-06",
+   "dir_name": "6PH05-01",
+   "official_reference": "6PH05/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2013 (R) MS - Unit 5 Edexcel Physics A-level.pdf",
+   "sha256": "81569b176dd56f3a624c7772eb2a596019459afa91dcc4854db32539bb18b0c8",
+   "size_bytes": 149990,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "6PH05",
+    "6PH05/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2013",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2014-06/6PH01-01",
+   "session": "2014-06",
+   "dir_name": "6PH01-01",
+   "official_reference": "6PH01/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2014 (R) MS - Unit 1 Edexcel Physics A-level.pdf",
+   "sha256": "ac323755653aac802b894764f0a739ae164d40609892ab56ae5434231d81fd38",
+   "size_bytes": 130687,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "6PH01",
+    "6PH01/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2014",
+   "identification_notes": [
+    "cover prints 'Paper 01R' for unit-style code 6PH01; unit refs are /01 (Pearson cover anomaly), ref set to /01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2014-06/6PH02-01",
+   "session": "2014-06",
+   "dir_name": "6PH02-01",
+   "official_reference": "6PH02/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2014 (R) MS - Unit 2 Edexcel Physics A-level.pdf",
+   "sha256": "396e47cae86839b2e5832e1de8fb670c7fc3eb984b98328257fc19a0e3c68837",
+   "size_bytes": 91637,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "6PH02",
+    "6PH02/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2014",
+   "identification_notes": [
+    "cover prints 'Paper 01R' for unit-style code 6PH02; unit refs are /01 (Pearson cover anomaly), ref set to /01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2014-06/6PH04-01",
+   "session": "2014-06",
+   "dir_name": "6PH04-01",
+   "official_reference": "6PH04/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2014 (R) MS - Unit 4 Edexcel Physics A-level.pdf",
+   "sha256": "3ff35a38e425169ebc228e10b8eee556e2b01d571ed004a8157cad133ccb8876",
+   "size_bytes": 115404,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "6PH04",
+    "6PH04/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2014",
+   "identification_notes": [
+    "cover prints 'Paper 01R' for unit-style code 6PH04; unit refs are /01 (Pearson cover anomaly), ref set to /01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/gce-a-level/physics/physics-2008/past-papers/2014-06/6PH05-01",
+   "session": "2014-06",
+   "dir_name": "6PH05-01",
+   "official_reference": "6PH05/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2014 (R) MS - Unit 5 Edexcel Physics A-level.pdf",
+   "sha256": "1b6cfa40655913bc7e229ed4112a374681d682a01c679c21df1af5195184fae0",
+   "size_bytes": 99177,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "6PH05",
+    "6PH05/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2014",
+   "identification_notes": [
+    "cover prints 'Paper 01R' for unit-style code 6PH05; unit refs are /01 (Pearson cover anomaly), ref set to /01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2014-06/4EB0-01",
+   "session": "2014-06",
+   "dir_name": "4EB0-01",
+   "official_reference": "4EB0/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2014 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "edba020d8e33298048f151bb840cc39958accda4d62f6afc585944cf84a4bf4d",
+   "size_bytes": 62870,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB0",
+    "4EB0/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "May 2014; June 2014",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2015-06/4EB0-01",
+   "session": "2015-06",
+   "dir_name": "4EB0-01",
+   "official_reference": "4EB0/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2015 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "f535643067e204835a867fff662e6370986a383d5a5b779c0756118d43b99ab8",
+   "size_bytes": 178467,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "date_rule",
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB0"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2015",
+   "identification_notes": [
+    "date rule -> 4EB0/01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2016-06/4EB0-01",
+   "session": "2016-06",
+   "dir_name": "4EB0-01",
+   "official_reference": "4EB0/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2016 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "046c87588e6190cf5555c5e2bc9df715dced2e448248c5925a44f6a37036b4a6",
+   "size_bytes": 331871,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB0",
+    "4EB0/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2016; June 2016",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2017-06/4EB0-01",
+   "session": "2017-06",
+   "dir_name": "4EB0-01",
+   "official_reference": "4EB0/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2017 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "dac91fe22d00b0020f1a29b39b5292cf6fc548a45b5f10a216e1b6fcaa3b8c21",
+   "size_bytes": 347949,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB0",
+    "4EB0/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2017; June 2017",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2018-06/4EB1-01",
+   "session": "2018-06",
+   "dir_name": "4EB1-01",
+   "official_reference": "4EB1/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2018 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "2f4e4c137d24dc4c8024365c1def0ea82c9f276a5d5b82a9b08c4b56c5029a9a",
+   "size_bytes": 119183,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB1"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2018",
+   "identification_notes": [
+    "date rule -> 4EB1/01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2019-01/4EB1-01",
+   "session": "2019-01",
+   "dir_name": "4EB1-01",
+   "official_reference": "4EB1/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "January 2019 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "7d41dd0dae6ca17cad26c676d76b8f071aba215d24f95e3481a069f3de5a4390",
+   "size_bytes": 211481,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB1",
+    "4EB1/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2019; January 2019",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2019-06/4EB1-01",
+   "session": "2019-06",
+   "dir_name": "4EB1-01",
+   "official_reference": "4EB1/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2019 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "1c429c85bcb4d878a4c31c37de9c50a31abae273bd2345de718195c877c502bf",
+   "size_bytes": 166506,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB1",
+    "4EB1/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2019",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2020-01/4EB1-01",
+   "session": "2020-01",
+   "dir_name": "4EB1-01",
+   "official_reference": "4EB1/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "January 2020 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "e3465ed8919d8342b6bac4f0e2d17ddd337615d5125fcfae30a477637355a3b6",
+   "size_bytes": 130671,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB1",
+    "4EB1/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2020; January 2020",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2022-01/4EB1-01",
+   "session": "2022-01",
+   "dir_name": "4EB1-01",
+   "official_reference": "4EB1/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "January 2022 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "d328557469624a9f21bc0dde5d18cd029803e3b3afab5f963dad24808bf934c0",
+   "size_bytes": 222495,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB1",
+    "4EB1/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2022; January 2022",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2023-06/4EB1-01",
+   "session": "2023-06",
+   "dir_name": "4EB1-01",
+   "official_reference": "4EB1/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2023 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "ffaa08913138b158c73e1eb7e458fb8d9d5e842b643993abf9860072acb6dc01",
+   "size_bytes": 206620,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB1",
+    "4EB1/01"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2023",
+   "identification_notes": [
+    "date rule -> 4EB1/01",
+    "2026-09-14 wave 8: additional material added from Paperlords (2026-09-14 wave 8)"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/english-language-b/4eb1/past-papers/2024-06/4EB1-01",
+   "session": "2024-06",
+   "dir_name": "4EB1-01",
+   "official_reference": "4EB1/01",
+   "file": "ms.pdf",
+   "pmt_original_filename": "June 2024 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf",
+   "sha256": "3d419a003d520e498f81c8e180241750950d7e2fdd2ef033d266a2313204550f",
+   "size_bytes": 251040,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4EB1"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2024; June 2024",
+   "identification_notes": [
+    "date rule -> 4EB1/01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma0/past-papers/2015-06/4MA0-1F",
+   "session": "2015-06",
+   "dir_name": "4MA0-1F",
+   "official_reference": "4MA0/1F",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2015 (R) QP.pdf",
+   "sha256": "41098ee37d8a18bebad5ee781f5702eacca9fc216a592a452b9ebb39fcb2a1db",
+   "size_bytes": 206105,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MA0"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2015",
+   "identification_notes": [
+    "date rule -> 4MA0/1F"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-1F",
+   "session": "2019-01",
+   "dir_name": "4MA1-1F",
+   "official_reference": "4MA1/1F",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2019 (R) QP.pdf",
+   "sha256": "ff5104107b5d860187a7d425167ed8a9e53bb959c851ab9f0fc2f68450381a82",
+   "size_bytes": 914371,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MA1"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2019; January 2019",
+   "identification_notes": [
+    "date rule -> 4MA1/1F"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-1H",
+   "session": "2019-01",
+   "dir_name": "4MA1-1H",
+   "official_reference": "4MA1/1H",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2019 (R) QP_2.pdf",
+   "sha256": "b0be58260973e46beca1273178b987fc8feba3f3c96442599bab48e9844d5f54",
+   "size_bytes": 534351,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MA1"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2019; January 2019",
+   "identification_notes": [
+    "date rule -> 4MA1/1H"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-2F",
+   "session": "2019-01",
+   "dir_name": "4MA1-2F",
+   "official_reference": "4MA1/2F",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2019 (R) QP.pdf",
+   "sha256": "1f971bd839278ea30d71a368f5ef72aa397e2b7a86545df3e3d7c2516f4609a8",
+   "size_bytes": 249607,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MA1"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2019; January 2019",
+   "identification_notes": [
+    "date rule -> 4MA1/2F"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-01/4MA1-2H",
+   "session": "2019-01",
+   "dir_name": "4MA1-2H",
+   "official_reference": "4MA1/2H",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2019 (R) QP_2.pdf",
+   "sha256": "09af571820b79991779af0e1c2c53f09e09cdb9c5d841c923614a0b78d23fc76",
+   "size_bytes": 378993,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MA1"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2019; January 2019",
+   "identification_notes": [
+    "date rule -> 4MA1/2H"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-a/4ma1/past-papers/2019-06/4MA1-2F",
+   "session": "2019-06",
+   "dir_name": "4MA1-2F",
+   "official_reference": "4MA1/2F",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2019 (R) QP.pdf",
+   "sha256": "a8e8a65f73f0c9e51f6eadb91b64f48ba572083ba2d94be598d265d35f45fc79",
+   "size_bytes": 1804529,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MA1"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2019",
+   "identification_notes": [
+    "date rule -> 4MA1/2F"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb0/past-papers/2015-01/4MB0-02",
+   "session": "2015-01",
+   "dir_name": "4MB0-02",
+   "official_reference": "4MB0/02",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2015 (R) QP_2.pdf",
+   "sha256": "e61ed413e73dc5af72cdb76ca1255808fe13ad0ee983712b7822a742f2438897",
+   "size_bytes": 291231,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MB0"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2015; January 2015",
+   "identification_notes": [
+    "date rule -> 4MB0/02"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb1/past-papers/2019-01/4MB1-01",
+   "session": "2019-01",
+   "dir_name": "4MB1-01",
+   "official_reference": "4MB1/01",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2019 (R) QP_2.pdf",
+   "sha256": "c69fe1513d48ad419cd2d476d8930926136286a41ae88a2f9bcc59d7bc96d1e0",
+   "size_bytes": 423821,
+   "verification_status": "OPERATOR-RATIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MB1"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2019; January 2019",
+   "identification_notes": [
+    "date rule -> 4MB1/01"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/mathematics-b/4mb1/past-papers/2019-01/4MB1-02",
+   "session": "2019-01",
+   "dir_name": "4MB1-02",
+   "official_reference": "4MB1/02",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2019 (R) QP_2.pdf",
+   "sha256": "294d64564b86def0b25af429746ef9e101bca6e3e15024b624130e7e4adbce75",
+   "size_bytes": 445590,
+   "verification_status": "OPERATOR-RATIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4MB1"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2019; January 2019",
+   "identification_notes": [
+    "date rule -> 4MB1/02"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2019-06/4PH1-1P",
+   "session": "2019-06",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2019 (R) QP.pdf",
+   "sha256": "0467ba33779fa826cf189545763356e3b4434dda3fec729bab087e634552aae7",
+   "size_bytes": 661165,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2019",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2019-06/4PH1-2P",
+   "session": "2019-06",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2019 (R) QP_2.pdf",
+   "sha256": "f4b799cf0da684594bfb37ffebc9f2ca57cc3b4454adb532d5137da661fb15be",
+   "size_bytes": 714808,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2019",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-01/4PH1-1P",
+   "session": "2020-01",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2020 (R) QP.pdf",
+   "sha256": "d910d0f64dfb533a07ed34ccdf6a96fe1b3c6c6de5ce62d2a2718909875c8abf",
+   "size_bytes": 795270,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2020; January 2020",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-01/4PH1-2P",
+   "session": "2020-01",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2020 (R) QP_2.pdf",
+   "sha256": "c09807d4443ac9f2468db475bfc7bf334c50c773424e7c9fd443ea8ad6629da2",
+   "size_bytes": 712749,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2020; January 2020",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-1P",
+   "session": "2020-06",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2020 (R) QP.pdf",
+   "sha256": "722e5cf84eebce6b3033e3b88b6f7c51389704b23295bc59e54371d411cbfcad",
+   "size_bytes": 244801,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 2,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "May 2020; June 2020",
+   "identification_notes": [
+    "2026-09-14 wave 8: MS prints November 2020; paired with June-2020 dir (COVID June/Nov reuse precedent, P-code pairing)"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-2P",
+   "session": "2020-06",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2020 (R) QP_2.pdf",
+   "sha256": "d1d9b8cfd9968aaf17ec3009d041092469f35052d226c28592fb613dbca0e512",
+   "size_bytes": 175180,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text",
+    "date_rule"
+   ],
+   "confidence_rank": 2,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2020; June 2020",
+   "identification_notes": [
+    "2026-09-14 wave 8: MS prints November 2020; paired with June-2020 dir (COVID June/Nov reuse precedent, P-code pairing)"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2021-01/4PH1-1P",
+   "session": "2021-01",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2021 (R) QP.pdf",
+   "sha256": "1d3dc574d13e53756b90ebe8419141fe5ed3e3cd0c911c55372df584e4a38aa0",
+   "size_bytes": 1178414,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2021; January 2021",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2021-01/4PH1-2P",
+   "session": "2021-01",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2021 (R) QP_2.pdf",
+   "sha256": "5360a1c336da0bb372698b3902e8427d062b20315b6e0dc620298f479ca30c7d",
+   "size_bytes": 692092,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2021; January 2021",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-01/4PH1-1P",
+   "session": "2022-01",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2022 (R) QP.pdf",
+   "sha256": "93aae9eae09660a83310d49e656844d9f071e709a177332f884809ed5a358e33",
+   "size_bytes": 1095722,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2022; January 2022",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-01/4PH1-2P",
+   "session": "2022-01",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2022 (R) QP_2.pdf",
+   "sha256": "bbaf11d93c97e40551d20e560c8e3f8ec919159f2e95cd00858ce8d35f0bf5c8",
+   "size_bytes": 814349,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2022; January 2022",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-06/4PH1-1P",
+   "session": "2022-06",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2022 (R) QP.pdf",
+   "sha256": "24e462d1992a366c434e70ac5dcb07c197ce3e70c180879237577cff80ccfd24",
+   "size_bytes": 1336439,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2022",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2022-06/4PH1-2P",
+   "session": "2022-06",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2022 (R) QP_2.pdf",
+   "sha256": "5b4adb75f34d9837c8286cc07b4ac585727629fa2f1862ed602810065fb34060",
+   "size_bytes": 1074766,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2022",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-01/4PH1-1P",
+   "session": "2023-01",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2023 (R) QP.pdf",
+   "sha256": "385be886d68c2e64c650e1b51e25a1c6caf7a28a02ae24365200d4185e4222fe",
+   "size_bytes": 1147204,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2023; January 2023",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-01/4PH1-2P",
+   "session": "2023-01",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "January 2023 (R) QP_2.pdf",
+   "sha256": "8ed1802f6751db05570c4fd35491071ca196696abcf1bcb1621d2b12e744e47d",
+   "size_bytes": 791356,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "January 2023; January 2023",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-06/4PH1-1P",
+   "session": "2023-06",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2023 (R) QP.pdf",
+   "sha256": "f1b378701709343c5ac3eaedeefa603183d5780467892dc8b7df27eedc7e62ad",
+   "size_bytes": 704782,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2023",
+   "identification_notes": [
+    "2026-09-14 wave 8: additional material added from Paperlords (2026-09-14 wave 8)"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2023-06/4PH1-2P",
+   "session": "2023-06",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2023 (R) QP_2.pdf",
+   "sha256": "33e57f7cd35bea82234d4a5226ba37d186ca14d5f42808da81c1a49d091b33fe",
+   "size_bytes": 548675,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2023",
+   "identification_notes": [
+    "2026-09-14 wave 8: additional material added from Paperlords (2026-09-14 wave 8)"
+   ]
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2024-06/4PH1-1P",
+   "session": "2024-06",
+   "dir_name": "4PH1-1P",
+   "official_reference": "4PH1/1P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2024 (R) QP.pdf",
+   "sha256": "a23f38512d6dcc002ee8d245dc879f26f958b49ac4f31d6cf44422c0b7f24853",
+   "size_bytes": 338498,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/1P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2024",
+   "identification_notes": []
+  },
+  {
+   "dir": "past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2024-06/4PH1-2P",
+   "session": "2024-06",
+   "dir_name": "4PH1-2P",
+   "official_reference": "4PH1/2P",
+   "file": "qp.pdf",
+   "pmt_original_filename": "June 2024 (R) QP_2.pdf",
+   "sha256": "5a4a18132a898c8da70953316f14613ea6b8ef50fbefbe39937be9184d72e50d",
+   "size_bytes": 431736,
+   "verification_status": "AI-IDENTIFIED",
+   "identification_methods": [
+    "pdf_text"
+   ],
+   "confidence_rank": 0,
+   "printed_references_seen": [
+    "4PH1",
+    "4PH1/2P"
+   ],
+   "stray_prints": [],
+   "session_printed": "June 2024",
+   "identification_notes": []
+  }
+ ]
+}
