@@ -66,9 +66,43 @@ task:
       recheck, exact searchServingEligible gate replica per curriculum,
       pre-ingest absence check). Claim registered c7fa75e7fdc3; T-C57/
       T-C58/T-C59 taken by concurrent lanes, T-C60 re-asked free."
+    - "LIVE VERIFICATION (T-DB-VERIFY, trace 1a0fc7bc5af92cd5): 09-28 embed
+      fix CONFIRMED live (4,672/4,672 chunks embed_rev=2, 0 NULL, gate 4,608);
+      gap-4 REATTRIBUTED (the 8 SUGGESTED docs are chunkless; the 64 embedded
+      chunks belong to 5 REJECTED docs); Jun-2020-2C label-drift item surfaced;
+      report download/chem-live-db-verification-2026-10-02.md."
+    - "EXECUTION batch tc60-papers-axis-completion-20261002 (operator Proceed
+      trace 1a0fc9695d27fdb5; T-C54 wave-2 instrument, neondb_owner, single
+      transaction): 8 SUGGESTED docs -> VALIDATED (0 chunks each, gate delta 0
+      asserted) + ep row 4CH1/1CR June 2025 INSERTED VALIDATED linking the
+      pre-existing checksum-matched VALIDATED docs (== ingest pins @
+      029c6ec92) + 9 content_review_audit rows; DRY_RUN_OK then APPLIED;
+      ALREADY_APPLIED idempotence proven; independent post-verify: gate 4,608
+      unchanged, ep 91V/13R, SUGGESTED surface 0. Pack: EXECUTION-REPORT.md +
+      5 machine-evidence JSONs."
+    - "LIVE RE-SCOPE: gap-4 CLOSED AS BY-DESIGN - all 5 chunk-bearing REJECTED
+      docs carry explicit section-D1 retire verdicts (2026-09-28, superseded by
+      better-proven OCR-lane content, operator delegation trace
+      1a0ea3c208e16699) and their supersedors are verified VALIDATED+linked
+      (Jun-2019 1C, Jun-2020 1C, Nov-2020 2C ver2); the prep acceptance line
+      'gate 4,608 -> 4,672' retired as mis-attributed. gap-3 heals: all 11
+      BLOCKED on ingest (pinned PDFs un-ingested; the .md-parsed SUGGESTED
+      docs' source paths left the corpus at 029c6ec92 - not
+      current-corpus-matched; per-row verdicts in EXECUTION-REPORT.md).
+      gap-2: 2025-06 4CH1/1CR ep row COMPLETED this batch; the other 4 papers
+      defer to the ingest wave. embed-state recheck item CLOSED (live-verified)."
   notes:
     - "claim-first at registration (this commit); ID re-asked after the
       push per the T-C55 lesson. T-C57/T-C58/T-C59 taken by concurrent
       lanes — T-C60 verified free at the claim parent."
     - "write phases are staged pending the T-C54-instrument credential;
       prep + read-only phases run immediately."
+    - "P5 prep drift resolved: 2 of 10 ingest-target checksums were already
+      present (4CH1-1CR-202506 pair, ingested 2026-09-21/22 pre-pack) -
+      converted into the ep-row backfill executed above."
+    - "Remaining lane scope = the ingest wave: 4 papers (2025-06 1C; 2026-06
+      1C/2C/2CR) + 4 ep rows + 11 heals + chunk/embed of the 8 validated .md
+      docs. BLOCKED in the current sandbox: no GLM-OCR markdown for the target
+      dirs at 029c6ec92 (PDFs + manifests only), no Maven/JDK-25 toolchain, no
+      JWT secret, no Gemini embedding key. Prerequisites recorded in
+      EXECUTION-REPORT.md; environment decisions belong to the operator."

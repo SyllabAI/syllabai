@@ -1,0 +1,24 @@
+{
+  "batch": "tc60-papers-axis-completion-20261002",
+  "batch_run_id": "5b8f739d-b9e0-4fd6-8801-1c984d1de538",
+  "started_at_utc": "2026-10-02T12:54:57.845834+00:00",
+  "operator_trace_id": "1a0fc9695d27fdb5",
+  "scope_trace_id": "1a0fc2a56bfb1a31",
+  "dry_run": false,
+  "credential_source": "secrets:neon_owner_uri (0600)",
+  "identity": {
+    "database": "neondb",
+    "role": "neondb_owner",
+    "campaign": "T-C04-CAMPAIGN"
+  },
+  "active_cv": {
+    "id": "356840e6-81e2-49df-8182-93ab6504d591",
+    "code": "4CH1-2017"
+  },
+  "status": "ALREADY_APPLIED",
+  "prior_audit_rows": 9,
+  "post": {
+    "suggested_remaining": 0,
+    "ep_row_present": true
+  }
+}

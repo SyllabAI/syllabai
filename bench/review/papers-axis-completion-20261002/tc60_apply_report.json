@@ -1,0 +1,40 @@
+{
+  "batch": "tc60-papers-axis-completion-20261002",
+  "batch_run_id": "1736b33d-1eed-4c29-a2e2-ed5d49f1278d",
+  "started_at_utc": "2026-10-02T12:53:38.786625+00:00",
+  "operator_trace_id": "1a0fc9695d27fdb5",
+  "scope_trace_id": "1a0fc2a56bfb1a31",
+  "dry_run": false,
+  "credential_source": "secrets:neon_owner_uri (0600)",
+  "identity": {
+    "database": "neondb",
+    "role": "neondb_owner",
+    "campaign": "T-C04-CAMPAIGN"
+  },
+  "active_cv": {
+    "id": "356840e6-81e2-49df-8182-93ab6504d591",
+    "code": "4CH1-2017"
+  },
+  "pre": {
+    "gate": 4608,
+    "audit_rows": 2788,
+    "events": 0,
+    "unlinked_chem_ep": 11
+  },
+  "audit_constraints": "present (document + VALIDATE allowed; no DDL performed)",
+  "flip_fidelity": "8/8 PASS (id, document_id, kind, SUGGESTED, checksum, ver, 0 chunks)",
+  "docs_flipped": 8,
+  "ep_row_inserted": "4CH1/1CR June 2025",
+  "audit_rows_written": 9,
+  "post": {
+    "gate": 4608,
+    "gate_delta": 0,
+    "ep_census": {
+      "REJECTED": 13,
+      "VALIDATED": 91
+    },
+    "suggested_remaining": 0
+  },
+  "status": "APPLIED",
+  "finished_at_utc": "2026-10-02T12:53:48.686165+00:00"
+}

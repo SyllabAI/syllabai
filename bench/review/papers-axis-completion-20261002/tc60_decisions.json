@@ -1,0 +1,185 @@
+{
+ "batch": "tc60-papers-axis-completion-20261002",
+ "composed_at_utc": "2026-10-02T12:55:00Z",
+ "composed_from": {
+  "prep_pack": "coordination bench/review/papers-axis-completion-20261002 (f146d8f48273)",
+  "live_probe": "scripts/neon_work/tc60_probe_live.json (t0_readonly, 2026-10-02 12:42Z)",
+  "reject_audit": "scripts/neon_work/reject_audit_rows.json",
+  "ingest_pins": "scripts/tc60_ingest_pins.json (corpus @ 029c6ec92)"
+ },
+ "decision_authority": {
+  "operator": "Nawaf Al Hussain Khondokar",
+  "scope_message": "operator message quoting the coverage-probe findings verbatim: (2) 5 late 4CH1 papers missing ep rows (2025-06 1C+1CR; 2026-06 1C+2C+2CR); (3) 11 VALIDATED ep rows missing a QP or MS doc link; (4) 64 valid-but-not-serving chunks",
+  "scope_trace_id": "1a0fc2a56bfb1a31",
+  "instrument_message": "Proceed",
+  "instrument_trace_id": "1a0fc9695d27fdb5",
+  "instrument_precedent": "T-C54 wave-2 (trace 1a0fb9dd09110041 'Proceed' + in-session Neon API key) \u2014 governed SQL batch, operator as deciding actor"
+ },
+ "live_rescope": {
+  "gap4_adjudication": "CLOSED AS BY-DESIGN \u2014 all 5 chunk-bearing REJECTED docs carry explicit section-D1 retire verdicts (2026-09-28, 'retired candidate superseded by better-proven content in the OCR lane', operator 'Proceed with next' delegation trace 1a0ea3c208e16699). Supersedors verified live: 4CH1-1C-201906 QP parses -> VALIDATED doc linked at ep 0924a1fe (June 2019); 4CH1-1C-202006 MS -> VALIDATED doc linked at ep 060f40c2 (June 2020); 4CH1-2C-202006 pair -> the 2020-06<->2020-11 label drift resolved by the ver2 re-ingest linked at ep e6c96a2e (November 2020). The 64 embedded chunks stay dark intentionally. ZERO promotions. The prep acceptance line 'gate 4608 -> 4672' is retired as based on the pack's mis-attribution.",
+  "gap3_heals": "ALL 11 BLOCKED ON INGEST \u2014 none of the pinned heal-target checksums exist as documents (live probe D2/D4b). The 8 SUGGESTED docs are .md parses of corpus paths no longer present at 029c6ec92 (corpus/igcse-chemistry-4ch0-1c-<session>/.md layout) \u2014 identity-consistent by source_uri but NOT current-corpus-matched by checksum, below the acceptance bar. 2 of the 8 (specimen2017 pair) are ALREADY linked at ep fd1bf331. Per-row verdicts recorded in the evidence pack; heals execute in the ingest wave.",
+  "gap2_backfill": "1 of 6 executable now \u2014 2025-06 4CH1/1CR: QP+MS documents pre-exist VALIDATED (doc_version 1, checksums == ingest pins e366b168/54a0a9f6, source_uri 4CH1-1CR-202506/*, unlinked). Prep pack's P5 'expect absent' assumption drifted: the pair was ingested 2026-09-21/22 (pre-pack). The other 5 papers' docs are un-ingested (environment lacks OCR markdown, Maven/JDK25 toolchain, JWT secret, Gemini embedding key) \u2014 ep-row creation deferred to the ingest wave to avoid adding docless rows.",
+  "prep_p5_drift": "2 of 10 ingest-target checksums present (4CH1-1CR-202506 pair) \u2014 resolved as the ep-row backfill opportunity, not a corpus problem."
+ },
+ "worklist": {
+  "flips": [
+   {
+    "row_id": "cec03512-eaf9-4781-bb2b-a8bddbe14f54",
+    "document_id": "b6405e20-09b1-5494-9495-45a6bafb11e5",
+    "kind": "MARK_SCHEME",
+    "file_name": "MS.md",
+    "source_uri": "corpus/igcse-chemistry-4ch0-1c-2018jan/MS.md",
+    "checksum": "7758a51c10e111a7f8408a407ff71062133ab6984ec9e478b489d09e3fbd01e7",
+    "doc_version": 1,
+    "chunks_expected": 0,
+    "created_at": "2026-09-14 11:33:26.521756+00"
+   },
+   {
+    "row_id": "ec387610-b909-44bd-8f50-79c9f5746c5a",
+    "document_id": "495454e3-da2c-5ae9-8066-0ed7efe2b7a7",
+    "kind": "MARK_SCHEME",
+    "file_name": "MS.md",
+    "source_uri": "corpus/igcse-chemistry-4ch0-1c-2020janr/MS.md",
+    "checksum": "0ddf2b7914dcf6a3ada123843fe696139928cdf33c790d82f26bbfc0426446ad",
+    "doc_version": 1,
+    "chunks_expected": 0,
+    "created_at": "2026-09-14 11:36:54.538851+00"
+   },
+   {
+    "row_id": "69c39487-0b20-4fb5-818f-1763da0a2433",
+    "document_id": "d42eedc9-21aa-5a28-8a67-7e38e6f2156f",
+    "kind": "MARK_SCHEME",
+    "file_name": "MS.md",
+    "source_uri": "corpus/igcse-chemistry-4ch0-1c-2021janr/MS.md",
+    "checksum": "f5b6cd140f2521ff3ae9acd12c4276adcdaa488b1a0815a5fef10829d269bfab",
+    "doc_version": 1,
+    "chunks_expected": 0,
+    "created_at": "2026-09-14 11:39:43.245054+00"
+   },
+   {
+    "row_id": "953fcbcb-d272-4335-a6f2-ae6745a05c41",
+    "document_id": "67999dd9-9be7-5c64-b0d0-5670539d60d8",
+    "kind": "MARK_SCHEME",
+    "file_name": "MS.md",
+    "source_uri": "corpus/igcse-chemistry-4ch0-1c-specimen2017/MS.md",
+    "checksum": "76975a69298b6202ca8b952310f585e1b315ff2b495d5e8f1625682ba379dce3",
+    "doc_version": 1,
+    "chunks_expected": 0,
+    "created_at": "2026-09-14 11:48:47.845283+00"
+   },
+   {
+    "row_id": "b2387b37-463b-437b-b3b2-c3b7bfcb5f1f",
+    "document_id": "caf179e0-8543-5dc5-9862-25644f9d1184",
+    "kind": "QUESTION_PAPER",
+    "file_name": "QP.md",
+    "source_uri": "corpus/igcse-chemistry-4ch0-1c-2018jan/QP.md",
+    "checksum": "cca430dc43b49bba0cd069829891ed1dd3055f79f66f9eb0d47535ced9bcf0c8",
+    "doc_version": 1,
+    "chunks_expected": 0,
+    "created_at": "2026-09-14 11:33:25.845218+00"
+   },
+   {
+    "row_id": "3d1bc7fd-378d-415e-be5a-971ac3acd17b",
+    "document_id": "27c8bd91-eed0-5606-96cd-f046a45a633f",
+    "kind": "QUESTION_PAPER",
+    "file_name": "QP.md",
+    "source_uri": "corpus/igcse-chemistry-4ch0-1c-2020janr/QP.md",
+    "checksum": "ac34c8d685845706cdcfd31f7e0271db307c62a06197177bc317e6ba5c10490c",
+    "doc_version": 1,
+    "chunks_expected": 0,
+    "created_at": "2026-09-14 11:36:53.869448+00"
+   },
+   {
+    "row_id": "1b37abca-21c7-471c-b91b-aad65aef3565",
+    "document_id": "3f246010-2896-5c73-9463-1ec98665eba3",
+    "kind": "QUESTION_PAPER",
+    "file_name": "QP.md",
+    "source_uri": "corpus/igcse-chemistry-4ch0-1c-2021janr/QP.md",
+    "checksum": "2b7d591fa30eb959b5d68425e2967eebab790da7124e12d6c1163255df1ecd1c",
+    "doc_version": 1,
+    "chunks_expected": 0,
+    "created_at": "2026-09-14 11:39:42.619274+00"
+   },
+   {
+    "row_id": "470919f8-9061-4fb8-a9a7-656fc495b2ee",
+    "document_id": "1477fa77-bf39-5148-8099-3b0a969d6ec2",
+    "kind": "QUESTION_PAPER",
+    "file_name": "QP.md",
+    "source_uri": "corpus/igcse-chemistry-4ch0-1c-specimen2017/QP.md",
+    "checksum": "ae36e95e784562e7007033bf5b75afee612189d7cc429799dcb32feed9830536",
+    "doc_version": 1,
+    "chunks_expected": 0,
+    "created_at": "2026-09-14 11:48:46.989738+00"
+   }
+  ],
+  "flip_count_expected": 8,
+  "flip_gate_delta_expected": 0,
+  "ep_insert": {
+   "id": "80263901-10ce-4bf2-9346-0c1613c9f5b5",
+   "subject_id": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b",
+   "title": "4CH1 4CH1/1CR June 2025",
+   "board": "Edexcel",
+   "qualification": "4CH1",
+   "unit": null,
+   "session_label": "June 2025",
+   "paper_code": "4CH1/1CR",
+   "question_paper_document_id": "d218677f-4f1d-59d6-843e-e70bc7f820f2",
+   "question_paper_checksum": "e366b168b09e20992a45c7499e4b5721ba01b96c8f664eba3c586320d7116481",
+   "mark_scheme_document_id": "bb59e1af-6efd-56d0-ab35-bfa9fb7f7c84",
+   "mark_scheme_checksum": "54a0a9f6198c4f1c9dd6aa39e6754a551ad4c06da51ac2067a68b10a06eac61a",
+   "validation_state": "VALIDATED",
+   "provenance": "PAST_PAPER",
+   "extraction_method": "tc60-governed-batch-v1 (ep-row backfill; QP/MS docs pre-existing pdflane, checksum-matched)",
+   "created_by": "8f9839ee-2959-4b49-b104-fef78373aa15",
+   "series": "JUN",
+   "year": 2025
+  },
+  "flips_by_kind": {
+   "MARK_SCHEME": 4,
+   "QUESTION_PAPER": 4
+  }
+ },
+ "scope_guards": {
+  "expected_database": "neondb",
+  "expected_campaign_label": "T-C04-CAMPAIGN",
+  "expected_role": "neondb_owner",
+  "active_curriculum_version_id": "356840e6-81e2-49df-8182-93ab6504d591",
+  "active_curriculum_code": "4CH1-2017",
+  "subject_id_4ch1": "e56dc9ee-aa74-426f-94a6-4b72d3dc346b"
+ },
+ "serving_gate": {
+  "current_embed_rev": 2,
+  "expected_pre": 4608,
+  "expected_delta": 0,
+  "rationale": "zero serving delta is the honest expectation: the 8 flipped docs are chunkless; the 64 embedded chunks stay on intentionally-retired docs"
+ },
+ "non_interference": {
+  "documents_census_pre": {
+   "VALIDATED|EXTERNAL_NOTES": 112,
+   "VALIDATED|EXTERNAL_QUESTIONS": 379,
+   "REJECTED|MARK_SCHEME": 67,
+   "SUGGESTED|MARK_SCHEME": 4,
+   "VALIDATED|MARK_SCHEME": 105,
+   "REJECTED|QUESTION_PAPER": 78,
+   "SUGGESTED|QUESTION_PAPER": 4,
+   "VALIDATED|QUESTION_PAPER": 106,
+   "VALIDATED|SYLLABUS": 162
+  },
+  "ep_census_pre": {
+   "VALIDATED": 90,
+   "REJECTED": 13
+  },
+  "chunks_pre": {
+   "2": {
+    "chunks": 4672,
+    "embedded": 4672
+   }
+  },
+  "teacher_validation_events_delta": 0,
+  "unlinked_chem_validated_ep_rows_pre": 11,
+  "unlinked_chem_validated_ep_rows_post": 11
+ },
+ "audit_row_shape": {
+  "actor_label": "superz governed batch tc60 (operator 'Proceed' IM trace 1a0fc9695d27fdb5; scope items named IM trace 1a0fc2a56bfb1a31; agent asserts no validation of its own)"
+ }
+}

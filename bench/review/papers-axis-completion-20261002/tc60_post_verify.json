@@ -1,0 +1,84 @@
+{
+ "docs_census": [
+  {
+   "validation_state": "VALIDATED",
+   "kind": "EXTERNAL_NOTES",
+   "n": "112"
+  },
+  {
+   "validation_state": "VALIDATED",
+   "kind": "EXTERNAL_QUESTIONS",
+   "n": "379"
+  },
+  {
+   "validation_state": "REJECTED",
+   "kind": "MARK_SCHEME",
+   "n": "67"
+  },
+  {
+   "validation_state": "VALIDATED",
+   "kind": "MARK_SCHEME",
+   "n": "109"
+  },
+  {
+   "validation_state": "REJECTED",
+   "kind": "QUESTION_PAPER",
+   "n": "78"
+  },
+  {
+   "validation_state": "VALIDATED",
+   "kind": "QUESTION_PAPER",
+   "n": "110"
+  },
+  {
+   "validation_state": "VALIDATED",
+   "kind": "SYLLABUS",
+   "n": "162"
+  }
+ ],
+ "ep_census": [
+  {
+   "validation_state": "REJECTED",
+   "n": "13"
+  },
+  {
+   "validation_state": "VALIDATED",
+   "n": "91"
+  }
+ ],
+ "new_row": [
+  {
+   "id": "80263901-10ce-4bf2-9346-0c1613c9f5b5",
+   "paper_code": "4CH1/1CR",
+   "session_label": "June 2025",
+   "validation_state": "VALIDATED",
+   "title": "4CH1 4CH1/1CR June 2025",
+   "question_paper_document_id": "d218677f-4f1d-59d6-843e-e70bc7f820f2",
+   "mark_scheme_document_id": "bb59e1af-6efd-56d0-ab35-bfa9fb7f7c84",
+   "series": "JUN",
+   "year": 2025
+  }
+ ],
+ "audit_batch": [
+  {
+   "action": "VALIDATE",
+   "target_type": "document",
+   "n": "8"
+  },
+  {
+   "action": "VALIDATE",
+   "target_type": "exam_paper",
+   "n": "1"
+  }
+ ],
+ "gate": [
+  {
+   "serving_eligible": "4608"
+  }
+ ],
+ "unlinked_heal_rows": [
+  {
+   "n": "11"
+  }
+ ]
+}
