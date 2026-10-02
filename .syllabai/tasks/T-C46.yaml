@@ -1,0 +1,66 @@
+version: 1
+task:
+  id: T-C46
+  title: "Re-land the Run005C paired embed_rev re-stamp on main (bench replay
+    tooling) — the orphaned unique content of the retired replay-only branch
+    tc40-min-cosine-050; stale-branch hygiene closeout"
+  owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
+  status: DONE
+  priority: P2
+  authority: "operator IM trace 1a0fb2dcf8d26099 ('orphaned Run005C re-stamp on
+    the replay-only branch') — executes residue item 1 of the independent
+    verification pass over the T-C43/PR #44 close-out (download/
+    PR44_TC43_VERIFICATION_2026-10-02.md)"
+  base:
+    repo: "syllabai (master pack) @ a89d17d; syllabai-core base 6a52613
+      (post PR #50/#51)"
+  basis: >
+    The T-C42 flip addendum deliberately retired the replay-only branch from
+    the flip path ('stays replay-only; its Run005C loader pairing commit is
+    bench tooling') — leaving the paired embed_rev re-stamp as that branch's
+    ONLY unique content never landed on main. Without it, any future
+    fresh-freeze replay of Run005C from main reproduces the T-C23
+    zero-funnel trap in miniature: the bench loader's inserts land at the V33
+    default embed_rev=1 while both serving arms gate at
+    ChunkVectorRepository.CURRENT_EMBED_REV=2 — every chunk invisible
+    (r8's first attempt measured exactly this: 120/120 zero-result before the
+    paired stamp was added).
+  scope:
+    allowed:
+      - "syllabai-core: the +22-line Run005C block re-land, byte-identical to
+        06297f2; branch hygiene (delete the retired replay-only branch and the
+        merged PR head)"
+      - "master-pack: this task record, TODO/WORKLOG entries"
+    forbidden:
+      - "NO production-code change, NO migration (AGENT.md core rule 1
+        untouched), NO campaign-data writes (rule 2 untouched — Run005C
+        targets the disposable bench DB), NO serving-boundary or state flips
+        (rule 6 untouched), NO change to any other test or IT"
+  execution_record: >
+    2026-10-02. Block re-applied via `git cherry-pick --no-commit 06297f2`
+    onto a fresh branch `t-c46-run005c-restamp` off core main 6a52613 —
+    clean auto-merge, pure insertion (+22/−0), byte-identical to the
+    r8-execution-proven block (diff of applied hunk vs 06297f2: empty).
+    Refs verified on current main post PR #50/#51: CURRENT_EMBED_REV=2
+    (ChunkVectorRepository.java:64), dbChunks census (Run005C:172),
+    insertion context unchanged. Commit f136301; PR #52; CI run 36971436005
+    on the PR head — SUCCESS; merged (merge-commit method per the PR
+    #41/#44 precedent) as core 51f5db8; merge-commit CI run 36972002177 —
+    SUCCESS. Branch hygiene: t-c46-run005c-restamp deleted by this lane
+    (HTTP 204, verified gone). tc40-min-cosine-050 was found ALREADY
+    DELETED from origin between the merge and this lane's own deletion call
+    (which never executed — the merge-response parse aborted first):
+    deleting actor UNVERIFIED (concurrent lane housekeeping or operator);
+    end state matches the mandated disposition; content preservation is
+    moot (byte-identical block now on main via 51f5db8). Evidence labels:
+    VERIFIED — byte-identity, ref presence, both CI runs, merged state,
+    t-c46 branch deletion; UNVERIFIED — the deleting actor of
+    tc40-min-cosine-050; REPORTED — r8 execution provenance (T-C41 record,
+    run-005-c-r8 double-pass determinism PASS).
+  next_safe_actions:
+    - "the sibling superseded branch t-c42-min-cosine-050-flip @ 9649e52 is
+      also fully landed (via PR #44) — its owning lane may delete it for
+      hygiene (not this lane's call)"
+    - "wave-2 fresh-freeze replays of Run005C from main are now safe from the
+      rev-invisibility trap by construction; the F-PROD-2 kit poststate patch
+      remains the other wave-2 precondition"
