@@ -1,0 +1,53 @@
+version: 1
+task:
+  id: T-C45
+  title: "Engine-grade grid-layout lane — pdflane parse_ms grammar v2
+    (capped groups, level-marked grids, displaced cells) + first-hand
+    verification of the unrecorded 2026-10-01T20:25Z v2-shaped fill
+    (17 schemes / 86 points / 3 marks repairs, writer left no records)
+    + gated fill attempt for the remaining 26 structural sparse qv"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: "operator IM trace 1a0f8fb15fc9ea49: 'engine-grade grid-layout
+    lane' — the named Remaining-open item of the three-lane closeout
+    (structural parse residue ~26 qv, 2015-2019 mark-grid layouts) as
+    sharpened by the bank-defect lane closeout (3 echo-pinned qv:
+    1CR-2016 Q9=13, Q11=15, 2CR-2016 Q6=8 vs bank 1)"
+  base:
+    repo: syllabai
+    commit: 6f7fddbde
+  scope:
+    allowed:
+      - "tools/pdflane/parse_ms.py + new fixture tests in syllabai-parser
+        (grammar v2 mechanisms, engine-grade: deterministic, fail-closed
+        accounting preserved)"
+      - "read-only probes against production DB (Neon via Render env)"
+      - "one fail-closed apply transaction filling mark_schemes
+        (SUGGESTED, house shape) + mark_points for qv whose printed
+        evidence passes the gates; no state flips; no audit rows"
+      - "evidence pack under bench/review/psaxis-review-2026-09-28/
+        grid-layout-lane-20261002/ + TODO.md + WORKLOG.md + this record"
+    forbidden:
+      - "no re-execution of the already-inserted 17 schemes / 86 points /
+        3 marks repairs (they are verified, not duplicated)"
+      - "no question_spec_points writes (499-backfill pins qsp 2637 /
+        qt 1725 stay intact)"
+      - "no validation-state flips, no teacher_validation_events"
+  acceptance:
+    - "every pre-existing 20:25Z entry verified first-hand against
+      sha-matched printed MS/QP PDFs (verbatim point texts, per-scheme
+      sum == printed total == qv.marks, variant-pinned source docs);
+      the missing records for them completed by this lane"
+    - "parser grammar v2 committed with fixture tests built from the
+      real failing pages; failsafe accounting (unclassified bucket)
+      preserved"
+    - "each new fill double-evidenced (printed MS rows complete ==
+      QP echo == qv.marks) and fail-closed (plan sha pinned pre-write,
+      dry-run green, fresh-connection verify)"
+    - "census bundle recorded AFTER all writes; drift table explains
+      every delta vs census_bundle_bankdefect_20261002.json"
+  evidence: []
+  notes:
+    - "claim-first per the T-C44 precedent; closes to DONE only with
+      the evidence pack landed and the census re-pinned"
