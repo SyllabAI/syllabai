@@ -5,7 +5,12 @@ task:
     20→40) — pre-registered BEFORE the run, then one measured datapoint vs
     §8.1 v1.1 + (d) recovery ledger on the r9 frozen basis"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: IN_PROGRESS # claim-first: pre-registration committed BEFORE any run (spec §9); run-005-f execution next; renumbered T-C66→T-C67 (first-pushed protocol)
+  status: DONE # claim-first prereg d34e038 BEFORE the run (spec §9); run-005-f-r1 RECORDED (pack + run005f_verify.py, 0 failures / 3 findings); renumbered T-C66→T-C67 (first-pushed protocol)
+  # EXECUTION 2026-10-02: per-arm depth 20→40 (BENCH_PER_ARM_LIMIT=40, reranker/weights ABSENT, r9 frozen basis, code e657b9a, determinism PASS, (f) 0/0).
+  # HEADLINE (recorded independently of promotion): (d) 0.4607→0.5056 full (+4.49pp) / 0.7857→0.8571 micro (+7.14pp) — recompute EXACT vs recorded, monotone vs r9, PARTIAL vs the r8 ceiling 0.5618/0.9167; 45/89 full, 72/84 points; all recall axes byte-identical to r9 (recall@20 pin HELD 4th run at 0.1612); recovery is pool-deep (added refs concentrate at fused ranks 21–40: 1759 vs 38 at 41–80).
+  # PER-FLIP LEDGER (mechanical, 9 flips from r8×r9 bytes): 4 REVERTED (g2-042/048/050/053, carriers EXTERNAL_NOTES), 5 MISS at depth 40 (g2-011/016/056/059/112 — out-of-pool at either arm's top-40), g2-061 partial loss RECOVERED (1→0→1).
+  # FINDINGS: (1) superset invariant 88/89 — g2-024 dropped 4 refs (declared HNSW/tie risk fired; (d)-harmless, 1/1 full both runs); (2) 5 flips missed → pool COMPOSITION is the next lever family, not more depth; (3) (g) exam_question MRR −25.2% (0.6607→0.494) — the preregistered paper-anchored dilution, recall untouched; MRR 0.0700→0.0626 (−10.6%) / nDCG@10 0.1113→0.1057 (−5.0%) in the declared no-guarantee zone. VERDICT: NOT PROMOTED per §8.1 v1.1 (fresh evaluation; (a2) PASS held).
+  # (e) latency: p50 308.0/p95 322.0 ms vs r9 301.5/313.6 (+2–3% retrieval-only).
   priority: P1
   authority: "operator IM trace 1a0fcfde05f2ff95 ('tranche 4 — pool-side (d)
     recovery design'); the T-C63 charter lever family ('per-arm depth / pool
@@ -71,7 +76,14 @@ task:
     REPORTED: []
     UNVERIFIED: []
   next_safe_actions:
-    - "execute run-005-f per the pre-registration; record the pack + verdict +
-      (d) recovery ledger honestly"
-    - "if depth 40 misses the carriers (per-flip ledger), the recorded next
-      lever family is pool COMPOSITION (own pre-registration each)"
+    - "DONE: run-005-f-r1 recorded (pack + verify + closeout, this repo). The
+      (d) mechanism ledger is three-lever complete: reorder levers freeze
+      (d), set-growth recovers it."
+    - "pool COMPOSITION lever family (each its own dated pre-registration +
+      run, one lever at a time): per-kind quotas inside an arm's list FIRST
+      (the 5 missed flips' carriers are notes-kind chunks outranked within
+      their arm by paper mass), then MIN_COSINE floor moves, re-ingest
+      dedup, arm-composition changes"
+    - "serving-side depth is an owning-lane decision after a §8-passing
+      verdict — NOT a next_safe_action from this lane (no bar passed that
+      would justify it; (a2) alone is insufficient per §8.1 v1.1 dual-view)"

@@ -1,0 +1,59 @@
+== 0. manifest posture
+  r9 per_arm_limit=20  f per_arm_limit=40
+  f fusion_weights: unweighted (null map — the recorded r9/d-r1 posture; the 3-arg ctor)
+  f determinism: PASS — scoring recomputed twice in-process (second full retr...
+== 1. superset invariant (per query, f-pool SET >= r9-pool SET)
+  held: 88/89
+  VIOLATION g2-024: refs in r9-pool missing from f-pool: ['222019063953cef895736c575d38b4e3fcd6e3af5eb0e964c3ef14b81af81e62:9', '4c844e4f7e5dbc7386b9845ca3dc455f760764e08605bb4f1b493b49ce22a8cb:15', '60c22d347a219cfedc2582b31bf12a2ec15d7fdb60d086239b364b5ff372a943:5', 'f3c860dbd4640525faed752960b2132b78833f4323043712bce63a1772d9a733:5']
+== 2. (d) recompute from frozen bytes + monotonicity
+  r8 recorded 0.5618/0.9167  recomputed 0.5618/0.9167  self-check OK
+  r9 recorded 0.4607/0.7857  recomputed 0.4607/0.7857  self-check OK
+  f  recorded 0.5056/0.8571  recomputed 0.5056/0.8571  (45/89 full, 72/84 points)
+  monotonicity vs r9: 0.4607->0.5056 / 0.7857->0.8571  HOLDS
+  r8 ceiling 0.5618/0.9167: f below ceiling (partial recovery)
+  recovery: full +4.49pp, micro +7.14pp (vs r8-fully-reverted ceiling: full 0.5618, micro 0.9167)
+== 3. per-flip recovery ledger (r8 vs r9 vs f, derived from bytes)
+  mechanically derived r9-lost flips: 9 ['g2-011', 'g2-016', 'g2-042', 'g2-048', 'g2-050', 'g2-053', 'g2-056', 'g2-059', 'g2-112']
+  mechanically derived r9-gained flips: 0 []
+  g2-011: MISS  covered 0/1 -> 0/1
+  g2-016: MISS  covered 0/1 -> 0/1
+  g2-042: REVERTED (full 0->1)  covered 1/2 -> 2/2  re-entered carriers: 2 ['EXTERNAL_NOTES']
+  g2-048: REVERTED (full 0->1)  covered 1/3 -> 3/3  re-entered carriers: 2 ['EXTERNAL_NOTES']
+  g2-050: REVERTED (full 0->1)  covered 0/1 -> 1/1  re-entered carriers: 1 ['EXTERNAL_NOTES']
+  g2-053: REVERTED (full 0->1)  covered 1/2 -> 2/2  re-entered carriers: 1 ['EXTERNAL_NOTES']
+  g2-056: MISS  covered 1/2 -> 1/2
+  g2-059: MISS  covered 1/2 -> 1/2
+  g2-112: MISS  covered 1/2 -> 1/2
+  ledger totals: reverted 4 / carrier-reentry-partial 0 / miss 5 (of 9 lost flips)
+  partial-loss queries (r9 < r8 covered points, neither full): [('g2-061', 1, 0, 1)]
+  g2-061: r8 1 -> r9 0 -> f 1 — matches the prereg's named partial-loss query
+== 4. per-query covered-point monotonicity (superset-held subset)
+  point-drops on held subset: 0
+== 5. (a)-(c) served-view deltas vs r9
+  recall@5: 0.0616 -> 0.0616 (+0.0%)
+  recall@10: 0.1043 -> 0.1043 (+0.0%)
+  recall@20: 0.1612 -> 0.1612 (+0.0%)
+  mrr: 0.07 -> 0.0626 (-10.6%)
+  ndcg@10: 0.1113 -> 0.1057 (-5.0%)
+  evidence_precision@10: 0.0303 -> 0.0303 (+0.0%)
+  false_positive_rate@10: 0.9697 -> 0.9697 (+0.0%)
+  PIN: recall@20 pin HELD (0.1612 -> 0.1612) — prereg declared a break a finding, not failure
+  gate a_recall@10: 0.1043 vs 0.192 -> FAIL
+  gate b_mrr: 0.0626 vs 0.1237 -> FAIL
+  gate c_ndcg@10: 0.1057 vs 0.2316 -> FAIL
+  gate a2_validated_recall@10: 0.1043 vs 0.0734 -> PASS
+  gate b2_validated_mrr: 0.0626 vs 0.1184 -> FAIL
+  gate c2_validated_ndcg@10: 0.1057 vs 0.1683 -> FAIL
+  f boundary: {'note': 'zero violations', 'pass': True, 'served_violations': 0}
+  VERDICT recorded: NOT PROMOTED
+== 6. (g) per-class deltas vs r9 (flag >15% relative, both directions)
+  exam_question mrr: 0.6607 -> 0.494 (-25.2%)  [REGRESSION]
+== 7. what depth 40 added (refs in f-pool beyond r9's pool)
+  added refs by kind: {'EXTERNAL_NOTES': 182, 'EXTERNAL_QUESTIONS': 340, 'MARK_SCHEME': 683, 'QUESTION_PAPER': 592}
+  added refs by f-rank band: {'21-40': 1759, '41-80': 38}
+== FINDINGS ==
+  FINDING: r9 vs f fusion_weights text differs (both must be unweighted)
+  FINDING: SUPERSET VIOLATIONS: 1 queries
+  FINDING: 5 flips STILL MISSED at depth 40 — pool-COMPOSITION lever is the recorded next family, not more depth
+== FAILURES ==
+  none — all pre-registered checks recorded above
