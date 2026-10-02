@@ -1,0 +1,150 @@
+{
+ "total_ka_rag_rows": 548,
+ "windows": {
+  "PRE_FLIP_015": {
+   "asks": 548,
+   "refusals": 178,
+   "pct": 32.5
+  }
+ },
+ "daily": [
+  {
+   "day": "2026-10-02",
+   "asks": "14",
+   "refusals": "6"
+  },
+  {
+   "day": "2026-10-01",
+   "asks": "15",
+   "refusals": "6"
+  },
+  {
+   "day": "2026-09-30",
+   "asks": "54",
+   "refusals": "25"
+  },
+  {
+   "day": "2026-09-29",
+   "asks": "35",
+   "refusals": "10"
+  },
+  {
+   "day": "2026-09-28",
+   "asks": "59",
+   "refusals": "13"
+  },
+  {
+   "day": "2026-09-27",
+   "asks": "179",
+   "refusals": "68"
+  },
+  {
+   "day": "2026-09-26",
+   "asks": "39",
+   "refusals": "0"
+  },
+  {
+   "day": "2026-09-25",
+   "asks": "12",
+   "refusals": "3"
+  },
+  {
+   "day": "2026-09-24",
+   "asks": "4",
+   "refusals": "2"
+  },
+  {
+   "day": "2026-09-23",
+   "asks": "4",
+   "refusals": "0"
+  },
+  {
+   "day": "2026-09-22",
+   "asks": "4",
+   "refusals": "0"
+  },
+  {
+   "day": "2026-09-21",
+   "asks": "5",
+   "refusals": "1"
+  }
+ ],
+ "post_flip_hourly": [],
+ "refusal_providers": [
+  {
+   "provider": "deterministic-paper-refusal",
+   "n": "89"
+  },
+  {
+   "provider": "NULL/EMPTY",
+   "n": "89"
+  }
+ ],
+ "prompt_versions": [
+  {
+   "pv": "tutor-grounded/v2",
+   "n": "192"
+  },
+  {
+   "pv": "tutor-grounded/v5",
+   "n": "176"
+  },
+  {
+   "pv": "tutor-grounded/v6",
+   "n": "172"
+  },
+  {
+   "pv": "tutor-grounded/v3",
+   "n": "7"
+  },
+  {
+   "pv": "tutor-grounded/v4",
+   "n": "1"
+  }
+ ],
+ "refusal_class_by_day": [
+  {
+   "day": "2026-10-02",
+   "provider": "deterministic-paper-refusal",
+   "n": "6"
+  },
+  {
+   "day": "2026-10-01",
+   "provider": "deterministic-paper-refusal",
+   "n": "6"
+  },
+  {
+   "day": "2026-09-30",
+   "provider": "deterministic-paper-refusal",
+   "n": "25"
+  },
+  {
+   "day": "2026-09-29",
+   "provider": "deterministic-paper-refusal",
+   "n": "10"
+  },
+  {
+   "day": "2026-09-28",
+   "provider": "deterministic-paper-refusal",
+   "n": "13"
+  },
+  {
+   "day": "2026-09-27",
+   "provider": "(untagged)",
+   "n": "39"
+  },
+  {
+   "day": "2026-09-27",
+   "provider": "deterministic-paper-refusal",
+   "n": "29"
+  }
+ ],
+ "d2_tag_lifetime": {
+  "first_tagged": "2026-09-27 20:07:00.282002+00",
+  "last_tagged": "2026-10-02 00:04:45.17047+00"
+ },
+ "session_turns_corroboration": {
+  "asks": "17",
+  "refusals": "0"
+ }
+}

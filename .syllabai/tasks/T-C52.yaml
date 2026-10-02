@@ -1,22 +1,93 @@
 version: 1
 task:
   id: T-C52
-  title: "Refusal-rate watch at the MIN_COSINE 0.50 floor — claim-first ledger
-    (content commit follows immediately; two ID races lost this session)"
+  title: "Refusal-rate watch at the MIN_COSINE 0.50 floor — deploy boundary
+    pinned (0.50 live 2026-10-02T07:14:19Z), instrument persisted
+    (bench/refusal_watch.py), pre-flip baseline refreshed with class split;
+    post-flip cell empty (zero traffic)"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
-  status: IN_PROGRESS
+  status: DONE
   priority: P2
   authority: "operator IM trace 1a0fb7a95cefc455 ('refusal-rate watch') — the
-    watch item carried by T-C42/T-C43/T-C48 next_safe_actions"
+    watch item carried by T-C42/T-C43/T-C48 next_safe_actions ('watch the
+    tutor retrieval refusal rate at the 0.50 floor post-deploy — baseline
+    27–31% under the no-op 0.15 floor expected to rise, designed behavior').
+    TASK ID: re-registered T-C49 -> T-C50 after an ID-allocation collision —
+    the ruling-v57-census lane (session web-23eb7684, trace 1a0fb59f90143ad1)
+    landed their re-pointed T-C49 first (3313b1e) while this lane's watch
+    commit was still local; house precedent (Session 140/143) = honest
+    renumber, content unchanged."
   base:
-    repo: "syllabai (master pack) @ a2f6145"
-  note: >
-    Claim-first ledger per the house discipline this lane watched the
-    ruling-v57-census and web-backport lanes use under today's ID-allocation
-    races (T-C48/T-C49/T-C50/T-C51). The full lane content — deploy boundary
-    pinned (0.50 floor live 2026-10-02T07:14:19Z migrations / 07:16:30Z
-    serving), class-split instrument bench/refusal_watch.py, refreshed
-    pre-flip baseline 32.5% with 100% paper-guard class split, post-flip cell
-    empty (zero asks), pack evidence/bench-001/refusal-watch-2026-10-02/ —
-    lands in the immediately following commit renumbered from its two prior
-    local registrations (T-C49, then T-C50).
+    repo: "syllabai (master pack) @ b507039"
+  basis: >
+    The T-C42 flip decision (MIN_COSINE 0.15 -> 0.50, core 5ef132b) carried a
+    post-deploy watch obligation. The baseline number (27–31%) came from
+    TUTOR_CURRENT_STATE_AUDIT_2026-09-28.md §10 counting KA_RAG_COMPLETED
+    research telemetry (77/287 refusals) — the tutor pipeline's append-only
+    record — with no refreshed number recorded since (RAG-review R4 note).
+    The watch also had no pinned deploy boundary and no refusal-class
+    decomposition; D2 (audit tranche-1 rider, live since 2026-09-27T20:07Z)
+    serializes the refusal provider into the payload, making the class split
+    measurable.
+  scope:
+    allowed:
+      - "master-pack bench/refusal_watch.py (read-only watch instrument,
+        env-driven credentials, aggregates only)"
+      - "master-pack evidence/bench-001/refusal-watch-2026-10-02/ (WATCH.md +
+        refusal-watch.json + SHA256SUMS)"
+      - "records: this task record, TODO/WORKLOG entries"
+    forbidden:
+      - "NO production-code change, NO migration (core rule 1 untouched), NO
+        campaign-data writes (rule 2 untouched — read-only SELECTs only), NO
+        serving-boundary or state flips (rule 6 untouched), NO learner-content
+        selection (the telemetry payload's question text is never read), NO
+        flip-back or threshold change proposed (any such decision needs
+        post-flip data that does not exist yet)"
+  execution_record: >
+    2026-10-02. ID-allocation collision resolved by renumber (see authority).
+    Deploy-boundary reconciliation with the concurrent ruling-v57-census lane
+    (Session 143): this lane's flyway read pins the V56 migration install at
+    07:14:19Z; that lane's deploy record pins the deploy LIVE (health-green,
+    dep-davlig8ae00c73dmg5fg) at 07:16:30Z, after 5 crash-gated boot attempts
+    05:09–06:52Z — zero tutor asks occurred in between, so the watch windows
+    are unaffected; the conservative lower edge (07:14:19Z) is kept as
+    WATCH_FLIP_AT.
+    Deploy boundary pinned from flyway_schema_history (read-only):
+    first successful post-flip deploy 2026-10-02T07:14:19–23Z (V56+V57+V58
+    installed together; overnight deploys crash-gated on the original V56 per
+    core cd5288f; previous successful install V55 2026-10-01T05:48Z) — the
+    0.50 floor is live from 2026-10-02T07:14:19Z. Census (KA_RAG_COMPLETED,
+    548 rows to date vs 287 at the audit): pre-flip window 178/548 = 32.5%
+    (refreshed baseline vs the audit's 26.8%; recent daily band 22.0–46.3%,
+    last days 40–46%) — the drift happened BEFORE the flip. KEY FINDING: since
+    D2 tagging (2026-09-27T20:07Z), 100% of tagged refusals (89/89) are
+    `deterministic-paper-refusal` (fail-open guard on unbound paper identity,
+    floor-INDEPENDENT); grounding-gate refusals (`deterministic-refusal`, the
+    only class the floor can move) = 0 — at the no-op 0.15 floor the gate
+    structurally never fires. zero_evidence == refusals == 178 exactly.
+    POST-FLIP CELL EMPTY: zero tutor asks since 07:14:19Z — the floor's
+    learner-visible effect is not yet measurable; no flip-back or
+    threshold-action consideration is possible from current data. Instrument
+    persisted (bench/refusal_watch.py): re-runnable, env-driven credentials,
+    aggregates only (payload question text never selected), class-split
+    daily/window census + D2 tag lifetime + secondary session-store
+    corroboration. Watch gates proposed in WATCH.md: first decision-relevant
+    read at >= 50 post-flip asks or 72 h; compare grounding-gate rate +
+    zero-evidence rate pre/post; track paper-guard separately (feeds
+    F-PROD-1/F-PROD-3). Evidence labels: VERIFIED — flyway tail, 548-row
+    census, window split, class split, D2 tag lifetime, zero post-flip
+    volume, audit baseline numbers (§10); UNVERIFIED — post-flip refusal
+    behavior (zero traffic), Render deploy internals (boundary inferred from
+    flyway installs + merge chronology, the audit's own method); REPORTED —
+    the 09-27 39 untagged refusals (pre-D2 rows, class unknown, likely
+    paper-guard but not provable).
+  next_safe_actions:
+    - "re-run bench/refusal_watch.py when post-flip traffic exists (>= 50
+      asks or 72 h); the decision metric is the grounding-gate class +
+      zero-evidence rate, NOT the headline rate (paper-guard dominance
+      would misattribute)"
+    - "the paper-guard refusal trend is F-PROD-1/F-PROD-3 surface evidence
+      (unplaced ingest-era papers + unresolved bridge findings) — route to
+      those lanes, not to any floor action"
+    - "credential rotation remains operator-held (Neon API key first —
+      DB-credential-equivalent via the reveal_password quirk)"
