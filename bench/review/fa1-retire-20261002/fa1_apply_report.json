@@ -1,0 +1,36 @@
+{
+  "batch": "fa1-orphan-retire-2026-10-02",
+  "batch_run_id": "cae83ab6-6ec9-4101-a780-fe59cf7862ec",
+  "started_at_utc": "2026-10-02T13:29:25.581817+00:00",
+  "operator_trace_id": "1a0fc4b91fc4c965",
+  "dry_run": false,
+  "divergence_note": "T-C56's 0/18-referenced record rested on the wrong ep join column; live topology: 16 of the 18 are ep-linked R-paper generations with mis-URI'd source_uri (bytes == corpus R dirs) \u2014 NOT retired; only the registered-predicate orphan a7a0e028 (VALIDATED, 0 refs, superseded) is flipped.",
+  "identity": {
+    "database": "neondb",
+    "label": "T-C04-CAMPAIGN"
+  },
+  "target": {
+    "row_id": "a7a0e028-ea16-4a31-a279-2a401a74142f",
+    "document_id": "b09a8700-914c-5502-9c71-1e77c5c9b0c0",
+    "kind": "QUESTION_PAPER",
+    "source_uri": "4CH1-1C-202206/qp.pdf",
+    "state": "VALIDATED",
+    "chunks": 15,
+    "ep_refs": 0
+  },
+  "superseding_generation": {
+    "sha16": "222019063953cef8",
+    "state": "VALIDATED",
+    "ep_refs": 1
+  },
+  "pre_audit_rows": 2797,
+  "gate": {
+    "pre": 4608,
+    "expected_delta": -15,
+    "embed_rev": 2,
+    "post": 4593
+  },
+  "audit_rows_written": 1,
+  "status": "APPLIED",
+  "finished_at_utc": "2026-10-02T13:29:32.595952+00:00"
+}

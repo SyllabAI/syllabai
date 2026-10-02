@@ -1,0 +1,3532 @@
+{
+ "2013-06|6PH02-01|ms.pdf": {
+  "old": {
+   "sha256": "017786b150decd2d0186d06126d0d9b8ae0a1d983b2fc5f7383950e691c92c81",
+   "size": 118319,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 3466,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2013 gce physics (6ph02) paper 01r: physics at work pmt edexcel and btec qualifications edexcel and btec qualifications come from pearson, the world\u2019s leading learning company. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information, please visit our website at www.edexcel.co"
+   }
+  },
+  "accepted": {
+   "url": "/content/dam/pdf/A Level/Physics/2013/Exam materials/6PH02_01_msc_20130815.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog-title (no text refs; title-session=True)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2013"
+   ],
+   "furniture_ok": true,
+   "sha256": "b4ed6e0d2072ace8401fe1467ff1c637c8ee88ecae2525dc7ca7c8443fdb2eaa",
+   "size": 234891,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2013"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2013 gce physics (6ph02) paper 01: physics at work edexcel and btec qualifications edexcel and btec qualifications come from pearson, the world\u2019s leading learning company. we provide a wide ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/6PH02-01/2013-06/6PH02-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/6PH02_01_que_20130118.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "c9d60298f54e33d87e070dc2931c4bda74650c61ab360a0b0b491e4c126eabba",
+    "size": 985897,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "6ph02/01"
+    ],
+    "sessions_seen": [
+     "january 2013"
+    ],
+    "norm_excerpt": "centre number candidate number write your name here surname other names total marks paper reference turn over p41628a \u00a92013 pearson education ltd. 1/1/1/1/1/ *p41628a0128* edexcel gce physics advanced subsidiary unit 2: "
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/6PH02_01_que_20120307.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "0dbc8a7021ed82baf4e5880e6166c1faff91e8b374d5f5eb3b976da73650d5a5",
+    "size": 322491,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "6ph02/01"
+    ],
+    "sessions_seen": [
+     "january 2012"
+    ],
+    "norm_excerpt": "you do not need any other materials. centre number candidate number write your name here surname other names total marks paper reference turn over instructions t use black ink or ball-point pen. t fill in the boxes at th"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/A-Level/Physics/2013/Exam-materials/6PH02_01_que_20170609.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "27265c12f6723c93bdf68dd742995882fabb6a339c58b8c75f32c5a449ba0878",
+    "size": 838651,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "6ph02/01"
+    ],
+    "sessions_seen": [
+     "june 2017"
+    ],
+    "norm_excerpt": "centre number candidate number write your name here surname other names total marks paper reference physics advanced subsidiary unit 2: physics at work thursday 8 june 2017 \u2013 afternoon time: 1 hour 30 minutes 6ph02/01 yo"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/A-Level/Physics/2013/Exam-materials/6PH02_01_que_20160609.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "5dc970833de08eeb5ab980968f545c6c782d4b9c4b7ffd11145c66de93ba82ac",
+    "size": 936565,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "6ph02/01",
+     "nergy/ev"
+    ],
+    "sessions_seen": [
+     "june 2016"
+    ],
+    "norm_excerpt": "centre number candidate number write your name here surname other names total marks paper reference turn over p46647a \u00a92016 pearson education ltd. 1/1/1/ *p46647a0128* physics advanced subsidiary unit 2: physics at work "
+   },
+   {
+    "url": "/content/dam/pdf/A Level/Physics/2013/Exam materials/6PH02_01_msc_20130815.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog-title (no text refs; title-session=True)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2013"
+    ],
+    "furniture_ok": true,
+    "sha256": "b4ed6e0d2072ace8401fe1467ff1c637c8ee88ecae2525dc7ca7c8443fdb2eaa",
+    "size": 234891,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2013"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2013 gce physics (6ph02) paper 01: physics at work edexcel and btec qualifications edexcel and btec qualifications come from pearson, the world\u2019s leading learning company. we provide a wide "
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2014-06|6PH01-01|ms.pdf": {
+  "old": {
+   "sha256": "ac323755653aac802b894764f0a739ae164d40609892ab56ae5434231d81fd38",
+   "size": 130687,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2681,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph01) paper 01r physics on the go pmt edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualifications"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/Mark-scheme-Unit-1-(6PH01)-June-2014.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2014"
+   ],
+   "furniture_ok": true,
+   "sha256": "4b5d73b1a46a9673bfa3f5f4f1fb34fa7c9c8144da54fc41b3c124079522358c",
+   "size": 299866,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2014"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph01) paper 01 physics on the go edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body.",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/6PH01-01/2014-06/6PH01-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/Mark-scheme-Unit-1-(6PH01)-June-2014.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2014"
+    ],
+    "furniture_ok": true,
+    "sha256": "4b5d73b1a46a9673bfa3f5f4f1fb34fa7c9c8144da54fc41b3c124079522358c",
+    "size": 299866,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2014"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph01) paper 01 physics on the go edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body."
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2014-06|6PH02-01|ms.pdf": {
+  "old": {
+   "sha256": "396e47cae86839b2e5832e1de8fb670c7fc3eb984b98328257fc19a0e3c68837",
+   "size": 91637,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2680,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph02) paper 01r physics at work pmt edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualifications w"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/Mark-scheme-Unit-2-(6PH02)-June-2014.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2014"
+   ],
+   "furniture_ok": true,
+   "sha256": "4bb5a363f41e430cbba57a86dc7697fe13e60084ce691d3e953ca79ea4f7e7c6",
+   "size": 205001,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2014"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph02) paper 01 physics at work edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. w",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/6PH02-01/2014-06/6PH02-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/Mark-scheme-Unit-2-(6PH02)-June-2014.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2014"
+    ],
+    "furniture_ok": true,
+    "sha256": "4bb5a363f41e430cbba57a86dc7697fe13e60084ce691d3e953ca79ea4f7e7c6",
+    "size": 205001,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2014"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph02) paper 01 physics at work edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. w"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2014-06|6PH04-01|ms.pdf": {
+  "old": {
+   "sha256": "3ff35a38e425169ebc228e10b8eee556e2b01d571ed004a8157cad133ccb8876",
+   "size": 115404,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2684,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph04) paper 01r physics on the move pmt edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualificatio"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/Mark-scheme-Unit-4-(6PH04)-June-2014.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2014"
+   ],
+   "furniture_ok": true,
+   "sha256": "2ddafcdeeb1cbf1c964c5716d49c00705ddaa91e047b1dda654904e68d65bbca",
+   "size": 265308,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2014"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph04) paper 01 physics on the move edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding bod",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/6PH04-01/2014-06/6PH04-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/Mark-scheme-Unit-4-(6PH04)-June-2014.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2014"
+    ],
+    "furniture_ok": true,
+    "sha256": "2ddafcdeeb1cbf1c964c5716d49c00705ddaa91e047b1dda654904e68d65bbca",
+    "size": 265308,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2014"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph04) paper 01 physics on the move edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding bod"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2014-06|6PH05-01|ms.pdf": {
+  "old": {
+   "sha256": "1b6cfa40655913bc7e229ed4112a374681d682a01c679c21df1af5195184fae0",
+   "size": 99177,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2697,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph05) paper 01r physics from creation to collapse pmt edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit ou"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/Mark-scheme-Unit-5-(6PH05)-June-2014.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2014"
+   ],
+   "furniture_ok": true,
+   "sha256": "9b74dbef77e93105caffd041a887ff46d5fe27ebae47053aa01e82231f7e7c0f",
+   "size": 217178,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2014"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph05) paper 01 physics from creation to collapse edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s larges",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/6PH05-01/2014-06/6PH05-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2013/Exam%20materials/Mark-scheme-Unit-5-(6PH05)-June-2014.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2014"
+    ],
+    "furniture_ok": true,
+    "sha256": "9b74dbef77e93105caffd041a887ff46d5fe27ebae47053aa01e82231f7e7c0f",
+    "size": 217178,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2014"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel gce in physics (6ph05) paper 01 physics from creation to collapse edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s larges"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2014-06|4EB0-01|ms.pdf": {
+  "old": {
+   "sha256": "edba020d8e33298048f151bb840cc39958accda4d62f6afc585944cf84a4bf4d",
+   "size": 62870,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2762,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel international gcse in english language b (4eb0) paper 01r pmt 1 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our quali"
+   }
+  },
+  "accepted": null,
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140829.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140829.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140828.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140828.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140827.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140827.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140826.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140826.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140825.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140825.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140824.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140824.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140823.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140823.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140822.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140821.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140820.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140820.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140819.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140819.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140818.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140818.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140817.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140817.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140816.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140816.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140815.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140815.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140822.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140821.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/Mark-scheme-Paper-1-(4EB0)-June-2014.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "/content/dam/pdf/International GCSE/English Language A/2011/Exam materials/4EA0_02R_msc_20140821.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog-title (no text refs; title-session=True, fn-token=False, paper-in-title=False)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2014"
+    ],
+    "furniture_ok": true,
+    "sha256": "abd95b21f7c2e0e50c6978f48b42b46b3815a1d2ed30c826ad844e48ab029509",
+    "size": 97483,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2014"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2014 pearson edexcel international gcse in english (4ea0) paper 02r 1 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. "
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Teaching%20and%20learning%20materials/4EB0%2001%20January%202014%20Exemplars.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "0b848ec6486c8f4ad4958d32bac16e1176185f7233119679266de5606fa8bc26",
+    "size": 4739441,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4eb0/01"
+    ],
+    "sessions_seen": [
+     "january 2014"
+    ],
+    "norm_excerpt": "pearson edexcel international gcse 4eb0/01 english language b paper 1 the purpose of this pack is to provide centres with a set of exemplars with commentaries. included in this pack: \u2022 questions 4, 5, 9, 10, 11, 12 from "
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Teaching%20and%20learning%20materials/Exemplar_Materials_4EB0_01_June_2014_Questions_12c.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2014"
+    ],
+    "furniture_ok": false,
+    "sha256": "2f0aa74f247fd571d440060141b729d8c13a0403ffa19aa0aee94c432314182a",
+    "size": 5438992,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4eb0/01"
+    ],
+    "sessions_seen": [
+     "june 2014"
+    ],
+    "norm_excerpt": "june 2014 pearson edexcel international gcse 4eb0/01 english language b the purpose of this pack is to provide centres with a set of exemplars with commentaries. included in this pack: \uf0b7 question 12c from the june 2014 p"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_pef_20140306.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "6083fe45bdbcf7622805dbcc8f723e4561aed818c4a8dc7cd1ff8cf467878537",
+    "size": 122100,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2014"
+    ],
+    "norm_excerpt": "examiners\u2019 report/ principal examiner feedback january 2014 pearson edexcel international gcse in english language (4eb0) paper 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, t"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_que_20140115.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "764656dc1e2f937c389673f4d32aeecfef9c1a140631d997c7bbd9a66d425ad0",
+    "size": 272320,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4eb0/01"
+    ],
+    "sessions_seen": [
+     "january 2014"
+    ],
+    "norm_excerpt": "centre number candidate number write your name here surname other names total marks paper reference turn over you must have: extracts booklet (enclosed) english language b paper 1 4eb0/01 wednesday 15 january 2014 \u2013 afte"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140815.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140815.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140816.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140816.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140817.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140817.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140818.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140818.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140819.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140819.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140820.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140820.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140821.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140821.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140822.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140822.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140823.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140823.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140824.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140824.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140825.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140825.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140826.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140826.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140827.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140827.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140828.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140828.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20140829.pdf",
+    "result": "not-pdf"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_rms_20140829.pdf",
+    "result": "not-pdf"
+   }
+  ],
+  "status": "UNRESOLVED"
+ },
+ "2015-06|4EB0-01|ms.pdf": {
+  "old": {
+   "sha256": "f535643067e204835a867fff662e6370986a383d5a5b779c0756118d43b99ab8",
+   "size": 178467,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2920,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2015 pearson edexcel international gcse in english language (4eb0) paper 01r pmt edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualifica"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20150819.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2015"
+   ],
+   "furniture_ok": true,
+   "sha256": "31b10b8ac948beb5803bdab0e5ba395af60556731d2f13b03eefc15adf45d2db",
+   "size": 242691,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2015"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2015 pearson edexcel international gcse in english language (4eb0) paper 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB0-01/2015-06/4EB0-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_21050305.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "f3e43157592485edffc4d188ec1e4eeb0342a54e32a990a5ce587e927b3f1e1b",
+    "size": 231572,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4eb0/01"
+    ],
+    "sessions_seen": [
+     "january 2015"
+    ],
+    "norm_excerpt": "1 4eb0_01 1501 mark scheme (results) january 2015 international gcse english language b 4eb0/01) 2 4eb0_01 1501 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awa"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Teaching%20and%20learning%20materials/Exemplar_Materials_top%20marks_4EB0%2001_Jan_2015.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "461fc0fd1e2fc076176b7eeea88aa158c9fd7d70ad3508d69ea85b30c2c08fc9",
+    "size": 5705775,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4eb0/01"
+    ],
+    "sessions_seen": [
+     "january 2015"
+    ],
+    "norm_excerpt": "january 2015 pearson edexcel international gcse 4eb0/01 english language b paper 1 the purpose of this pack is to provide centres with exemplification of a top mark answer. this candidate has hit the criteria and receive"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_pef_20150305.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": false,
+    "sha256": "29277ba08efe22f6063718e28d0cdb44cc160c87ac9f99072831ce51f810dfc3",
+    "size": 75177,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2015"
+    ],
+    "norm_excerpt": " examiners\u2019 report/ principal examiner feedback january 2015 pearson edexcel international gcse in english language b (4eb0) paper 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2009/Exam%20materials/4EB0_01_msc_20150819.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2015"
+    ],
+    "furniture_ok": true,
+    "sha256": "31b10b8ac948beb5803bdab0e5ba395af60556731d2f13b03eefc15adf45d2db",
+    "size": 242691,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2015"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2015 pearson edexcel international gcse in english language (4eb0) paper 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding "
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2016-06|4EB0-01|ms.pdf": {
+  "old": {
+   "sha256": "046c87588e6190cf5555c5e2bc9df715dced2e448248c5925a44f6a37036b4a6",
+   "size": 331871,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2717,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (pre-standardisation) summer 2016 pearson edexcel international gcse in english language b (4eb0) paper 01r pmt 1 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information vis"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2009/Exam materials/4EB0_01_rms_20160824.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2016"
+   ],
+   "furniture_ok": true,
+   "sha256": "2c83c5bc2ab3ad37760a0bbb3dd9a07bef0e03839e30b548e9bd8005aabf8582",
+   "size": 354291,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2016"
+   ],
+   "norm_excerpt": " mark scheme (pre-standardisation) summer 2016 pearson edexcel international gcse in english language b (4eb0) paper 01 1 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s l",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB0-01/2016-06/4EB0-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2009/Exam materials/4EB0_01_rms_20160824.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2016"
+    ],
+    "furniture_ok": true,
+    "sha256": "2c83c5bc2ab3ad37760a0bbb3dd9a07bef0e03839e30b548e9bd8005aabf8582",
+    "size": 354291,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2016"
+    ],
+    "norm_excerpt": " mark scheme (pre-standardisation) summer 2016 pearson edexcel international gcse in english language b (4eb0) paper 01 1 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s l"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2017-06|4EB0-01|ms.pdf": {
+  "old": {
+   "sha256": "dac91fe22d00b0020f1a29b39b5292cf6fc548a45b5f10a216e1b6fcaa3b8c21",
+   "size": 347949,
+   "evidence": {
+    "sessions": [
+     "june 2017"
+    ],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2819,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) june 2017 pearson edexcel international gcse in english language (4eb0) paper 01r pmt 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualifica"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2009/Exam materials/4EB0_01_rms_20170823.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2017"
+    ],
+    "furniture_ok": true,
+    "sha256": "f4bd63b7367f4397c6685cd850943e1283446c478b9d68d19768a59affc10dd2",
+    "size": 450301,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "june 2017"
+    ],
+    "norm_excerpt": " mark scheme (results) june 2017 pearson edexcel international gcse in english language (4eb0) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding "
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2009/Exam materials/4EB0_01_rms_20170823.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "june 2017"
+   ],
+   "furniture_ok": true,
+   "sha256": "f4bd63b7367f4397c6685cd850943e1283446c478b9d68d19768a59affc10dd2",
+   "size": 450301,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "june 2017"
+   ],
+   "norm_excerpt": " mark scheme (results) june 2017 pearson edexcel international gcse in english language (4eb0) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB0-01/2017-06/4EB0-01_ms.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2018-06|4EB1-01|ms.pdf": {
+  "old": {
+   "sha256": "2f4e4c137d24dc4c8024365c1def0ea82c9f276a5d5b82a9b08c4b56c5029a9a",
+   "size": 119183,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 2765,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2018 pearson edexcel international gcse in english language b (4eb1) paper 01r pmt 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our quali"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2016/exam-materials/4EB1_01_rms_20180822.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2018"
+   ],
+   "furniture_ok": true,
+   "sha256": "565bc8a37bd6628c4c6031548ec267c599bc179cd1187222231db8ede2796037",
+   "size": 142998,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2018"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2018 pearson edexcel international gcse in english language (4eb1) paper 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB1-01/2018-06/4EB1-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2016/exam-materials/4EB1_01_rms_20180822.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2018"
+    ],
+    "furniture_ok": true,
+    "sha256": "565bc8a37bd6628c4c6031548ec267c599bc179cd1187222231db8ede2796037",
+    "size": 142998,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2018"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2018 pearson edexcel international gcse in english language (4eb1) paper 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding "
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2019-01|4EB1-01|ms.pdf": {
+  "old": {
+   "sha256": "7d41dd0dae6ca17cad26c676d76b8f071aba215d24f95e3481a069f3de5a4390",
+   "size": 211481,
+   "evidence": {
+    "sessions": [
+     "january 2019"
+    ],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 3167,
+    "method": "pdf_text",
+    "norm_excerpt": "mark scheme (results) january 2019 pearson edexcel international gcse in english language b (4eb1) paper 01r pmt 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our quali"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2016/exam-materials/4EB1_01_msc_20190307.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "7e196d091d80b1893e97fb18b4670cbb13af6a3f3d4ffb0d7dbc916b09cf876a",
+    "size": 321194,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2019"
+    ],
+    "norm_excerpt": " mark scheme (results) january 2019 pearson edexcel international gcse in english language b (4eb1) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awar"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2016/exam-materials/4EB1_01_msc_20190307.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "7e196d091d80b1893e97fb18b4670cbb13af6a3f3d4ffb0d7dbc916b09cf876a",
+   "size": 321194,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "january 2019"
+   ],
+   "norm_excerpt": " mark scheme (results) january 2019 pearson edexcel international gcse in english language b (4eb1) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awar",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB1-01/2019-01/4EB1-01_ms.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-06|4EB1-01|ms.pdf": {
+  "old": {
+   "sha256": "1c429c85bcb4d878a4c31c37de9c50a31abae273bd2345de718195c877c502bf",
+   "size": 166506,
+   "evidence": {
+    "sessions": [
+     "june 2019"
+    ],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 3158,
+    "method": "pdf_text",
+    "norm_excerpt": "mark scheme (results) summer 2019 pearson edexcel international gcse in english language (4eb1) paper 01r pmt 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualific"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2016/exam-materials/4EB1_01_rms_20190822.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "8a15c46f435f265cbc27bd820d8e655b509e1e04fa6266756c138b6f4924767b",
+    "size": 304623,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "june 2019"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2019 pearson edexcel international gcse in english language (4eb1) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awardin"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2016/exam-materials/4EB1_01_rms_20190822.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "june 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "8a15c46f435f265cbc27bd820d8e655b509e1e04fa6266756c138b6f4924767b",
+   "size": 304623,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "june 2019"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2019 pearson edexcel international gcse in english language (4eb1) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awardin",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB1-01/2019-06/4EB1-01_ms.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2020-01|4EB1-01|ms.pdf": {
+  "old": {
+   "sha256": "e3465ed8919d8342b6bac4f0e2d17ddd337615d5125fcfae30a477637355a3b6",
+   "size": 130671,
+   "evidence": {
+    "sessions": [
+     "january 2020"
+    ],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "1r"
+    ],
+    "text_chars": 3311,
+    "method": "pdf_text",
+    "norm_excerpt": "mark scheme (final) january 2020 pearson edexcel international gcse in english language b (4eb1) paper 1r pmt edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualificat"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2016/exam-materials/4EB1_01_rms_20200305.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2020"
+    ],
+    "furniture_ok": true,
+    "sha256": "6b49181320fc01f2132b86a34a26919685074a57e4cc67b0c6a0091784999c42",
+    "size": 277380,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2020"
+    ],
+    "norm_excerpt": " mark scheme (final) january 2020 pearson edexcel international gcse in english language b (4eb1) paper 1 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding "
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2016/exam-materials/4EB1_01_rms_20200305.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2020"
+   ],
+   "furniture_ok": true,
+   "sha256": "6b49181320fc01f2132b86a34a26919685074a57e4cc67b0c6a0091784999c42",
+   "size": 277380,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "january 2020"
+   ],
+   "norm_excerpt": " mark scheme (final) january 2020 pearson edexcel international gcse in english language b (4eb1) paper 1 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB1-01/2020-01/4EB1-01_ms.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2022-01|4EB1-01|ms.pdf": {
+  "old": {
+   "sha256": "d328557469624a9f21bc0dde5d18cd029803e3b3afab5f963dad24808bf934c0",
+   "size": 222495,
+   "evidence": {
+    "sessions": [
+     "january 2022"
+    ],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 3718,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) january 2022 pearson edexcel international gcse in english language (4eb1) paper 01r pmt edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualific"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2016/exam-materials/4EB1_01_rms_20220303.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2022"
+    ],
+    "furniture_ok": true,
+    "sha256": "8b0326dabe76dcedd9018eda7b1beffd483f1187b000b1de04a38612b598713d",
+    "size": 322731,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2022"
+    ],
+    "norm_excerpt": " mark scheme (results) january 2022 pearson edexcel international gcse in english language (4eb1) paper: 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awardin"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/English Language B/2016/exam-materials/4EB1_01_rms_20220303.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2022"
+   ],
+   "furniture_ok": true,
+   "sha256": "8b0326dabe76dcedd9018eda7b1beffd483f1187b000b1de04a38612b598713d",
+   "size": 322731,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "january 2022"
+   ],
+   "norm_excerpt": " mark scheme (results) january 2022 pearson edexcel international gcse in english language (4eb1) paper: 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awardin",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB1-01/2022-01/4EB1-01_ms.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2023-06|4EB1-01|ms.pdf": {
+  "old": {
+   "sha256": "ffaa08913138b158c73e1eb7e458fb8d9d5e842b643993abf9860072acb6dc01",
+   "size": 206620,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 3845,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) summer 2023 pearson edexcel international gcse in english language b (4eb1) paper 01r pmt 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our quali"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/English-Language-B/2016/Exam-materials/4eb1-01-rms-20230824.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2023"
+   ],
+   "furniture_ok": true,
+   "sha256": "521bcae0f0099d9d0c29d50d3c8b805985d559843a72b7a8925b0d34be7a99d2",
+   "size": 291081,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2023"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2023 pearson edexcel international gcse in english language b (4eb1) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest award",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB1-01/2023-06/4EB1-01_ms.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Language%20B/2016/exam-materials/4eb1-01-rms-20230302.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "5579808cd9ebe154a470a7b7df3137a06ab07f9cd8f28fa314ef234749885ef4",
+    "size": 197685,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2023"
+    ],
+    "norm_excerpt": "mark scheme (results) january 2023 pearson edexcel international gcse in english language b (4eb1) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest award"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/English-Language-B/2016/Exam-materials/4eb1-01-rms-20240125.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "5a19073d5f5f0fe22a1205ae83a44d55820acd83a8afb819f95c674e00d011ab",
+    "size": 252880,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "november 2023"
+    ],
+    "norm_excerpt": " mark scheme (results) november 2023 pearson edexcel international gcse in english language b (4eb1) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awa"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/English-Language-B/2016/Exam-materials/4eb1-01-rms-20230824.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2023"
+    ],
+    "furniture_ok": true,
+    "sha256": "521bcae0f0099d9d0c29d50d3c8b805985d559843a72b7a8925b0d34be7a99d2",
+    "size": 291081,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2023"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2023 pearson edexcel international gcse in english language b (4eb1) paper 01 2 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest award"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2024-06|4EB1-01|ms.pdf": {
+  "old": {
+   "sha256": "3d419a003d520e498f81c8e180241750950d7e2fdd2ef033d266a2313204550f",
+   "size": 251040,
+   "evidence": {
+    "sessions": [
+     "june 2024"
+    ],
+    "slash_refs": [],
+    "paper_form_tokens": [
+     "01r"
+    ],
+    "text_chars": 3904,
+    "method": "pdf_text",
+    "norm_excerpt": " mark scheme (results) june 2024 pearson edexcel international gcse in english language (4eb1) paper 01r pmt edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we provide a wide range of qualifications including academic, vocational, occupational and specific programmes for employers. for further information visit our qualificati"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/English-Language-B/2016/Exam-materials/4eb1-01-rms-20240822.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2024"
+    ],
+    "furniture_ok": true,
+    "sha256": "583690c8f13acb4af1d75e155e4418a24178d481fe1159f26ae420900d018443",
+    "size": 470736,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "june 2024"
+    ],
+    "norm_excerpt": " mark scheme (results) june 2024 pearson edexcel international gcse in english language (4eb1) paper 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding bo"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/English-Language-B/2016/Exam-materials/4eb1-01-rms-20240822.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "june 2024"
+   ],
+   "furniture_ok": true,
+   "sha256": "583690c8f13acb4af1d75e155e4418a24178d481fe1159f26ae420900d018443",
+   "size": 470736,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "june 2024"
+   ],
+   "norm_excerpt": " mark scheme (results) june 2024 pearson edexcel international gcse in english language (4eb1) paper 01 edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding bo",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4EB1-01/2024-06/4EB1-01_ms.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2015-06|4MA0-1F|qp.pdf": {
+  "old": {
+   "sha256": "41098ee37d8a18bebad5ee781f5702eacca9fc216a592a452b9ebb39fcb2a1db",
+   "size": 206105,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [],
+    "text_chars": 2911,
+    "method": "pdf_text",
+    "norm_excerpt": "\u0003\u0017#.*\u0017 \b1\"\u0012\u0017* \u0003\u0011#\u0016 \u0016\u0011.\u0017 \b1\"\u0012\u0017* \u000f* .\u0017 4%1* #\u0011\"\u0017 \u0017*\u0017 1*#\u0011\"\u0017 . \u0017* #\u0011\"\u0017+ %.\u0011! \u0007\u0011* + \u0011'\u0017* \u0017\u0019\u0017*\u0017#\u0013\u0017 \u0001\u0007\u0005\u0003 \u0004\b\u0002\u0005 \u001b\u001b/$5\u0001 \u001505&\u001a \u0017\u0011*+%# \u0004\u00161\u0013\u0011. %# \u0006.\u0016( \u001a,&,&,&,&, \u0006$\u000f\u000f\u000e\u0014 \u0015 \u0006 \u0007\u000f)\u0018\u0014 \u000f)\u0019\u0011$ \u0001 \u000f!\u0014# \u0004 \u0004 , \u0013\u000f)\u0019 \u0019\u0014# 1*+\u0016\u00114 0& \u0007\u00114 05&\u001a \u0018 \u0007%*# # \u0019 \u0014\u0012 + \u0018 ,#$ \u000e , ,$) \u0018\u000f-\u0014\u0012 1!\u0017* *\u0011\u00161\u0011.\u0017\u0016 # \u0013\u0017#. \"\u0017.*\u0017+ \u0011#\u0016 \" !! \"\u0017.*\u0017+\u0014 '*%.*\u0011\u0013.%*\u0014 \u0013%\"'\u0011++\u0017+\u0014 '\u0017#\u0014 \u0005\u0002 '\u0017#\u0013 !\u0014 \u0017*\u0011+\u0017*\u0014 \u0013\u0011!\u00131!\u0011.%*( *\u0011\u0013 # '\u0011'\u0017* \"\u00114 \u0012\u0017 1+\u0017\u0016( \u0002 \u000f \u0010\u0004\u000f\b t \u000e+\u0017 \u0010\u001b\u000f\u0011\u001a "
+   }
+  },
+  "accepted": {
+   "url": "/content/dam/pdf/Edexcel Certificate/Mathematics/2011/exam-materials/4MA0_1F_que_20150521.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "may 2015"
+   ],
+   "furniture_ok": true,
+   "sha256": "bc08215d96a0f06e980a50ce644ac61aa9d6ed54c95169de237920f28053ac84",
+   "size": 4525739,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ma0/1f",
+    "kma0/1f"
+   ],
+   "sessions_seen": [
+    "may 2015"
+   ],
+   "norm_excerpt": "centre number candidate number write your name here surname other names total marks paper reference turn over p44386a \u00a92015 pearson education ltd. 1/1/1/ *p44386a0128* mathematics a paper 1f foundation tier thursday 21 m",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MA0-1F/2015-06/4MA0-1F_qp.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/Edexcel%20Certificate/Mathematics%20A/2009/Exam%20materials/4MA0_1FR_pef_20150819.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "no-evidence",
+    "r_form_hits": [
+     "1fr"
+    ],
+    "session_matched": [
+     "summer 2015"
+    ],
+    "furniture_ok": true,
+    "sha256": "b282f592bfa3addb521371d23b646e8916931a5c00a023c2e970d85dfff491d5",
+    "size": 113904,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2015"
+    ],
+    "norm_excerpt": " examiners\u2019 report/ principal examiner feedback summer 2015 pearson edexcel international gcse mathematics a (4ma0) paper 1fr edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Mathematics%20A/2009/Exam%20materials/4MA0_1F_pef_20120307.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "82643668d55372504880ec982c07a14b37f06c17a47cf6fa8da9fb70410e0137",
+    "size": 214666,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2012",
+     "november 2010"
+    ],
+    "norm_excerpt": " examiners\u2019 report/ principal examiner feedback january 2012 international gcse mathematics a (4ma0) paper 1f edexcel and btec qualifications edexcel and btec qualifications come from pearson, the world\u2019s leading learnin"
+   },
+   {
+    "url": "/content/dam/pdf/Edexcel Certificate/Mathematics/2011/exam-materials/4MA0_1F_que_20150521.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "may 2015"
+    ],
+    "furniture_ok": true,
+    "sha256": "bc08215d96a0f06e980a50ce644ac61aa9d6ed54c95169de237920f28053ac84",
+    "size": 4525739,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma0/1f",
+     "kma0/1f"
+    ],
+    "sessions_seen": [
+     "may 2015"
+    ],
+    "norm_excerpt": "centre number candidate number write your name here surname other names total marks paper reference turn over p44386a \u00a92015 pearson education ltd. 1/1/1/ *p44386a0128* mathematics a paper 1f foundation tier thursday 21 m"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2019-01|4MA1-1F|qp.pdf": {
+  "old": {
+   "sha256": "ff5104107b5d860187a7d425167ed8a9e53bb959c851ab9f0fc2f68450381a82",
+   "size": 914371,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [],
+    "text_chars": 1243,
+    "method": "pdf_text",
+    "norm_excerpt": "pmt pmt 2 *p59021a0228* do not write in this area do not write in this area do not write in this area do not write in this area do not write in this area do not write in this area international gcse mathematics formulae sheet \u2013 foundation tier area of trapezium = 1 2 (a + b)h b a h volume of prism = area of cross section \u00d7 length cross section length volume of cylinder = \u03c0r2h curved surface area o"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Mathematics%20A/2016/exam-materials/4MA1_1F_msc_20190307.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "404216bc3731cccd274364a85c407f12a1d5be3d6a67ffa320d7bdcfa8fe05a9",
+    "size": 757016,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2019"
+    ],
+    "norm_excerpt": "mark scheme (results) january 2019 pearson edexcel international gcse in mathematics a (4ma1) foundation tier paper 1f edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s larg"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Mathematics%20A/2016/exam-materials/4MA1_1F_msc_20190307.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "404216bc3731cccd274364a85c407f12a1d5be3d6a67ffa320d7bdcfa8fe05a9",
+   "size": 757016,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "january 2019"
+   ],
+   "norm_excerpt": "mark scheme (results) january 2019 pearson edexcel international gcse in mathematics a (4ma1) foundation tier paper 1f edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s larg",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MA1-1F/2019-01/4MA1-1F_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-01|4MA1-1H|qp.pdf": {
+  "old": {
+   "sha256": "b0be58260973e46beca1273178b987fc8feba3f3c96442599bab48e9844d5f54",
+   "size": 534351,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [],
+    "text_chars": 1122,
+    "method": "pdf_text",
+    "norm_excerpt": "pmt pmt 2 *p59022a0228* do not write in this area do not write in this area do not write in this area international gcse mathematics formulae sheet \u2013 higher tier arithmetic series sum to n terms, sn = n 2 [2a + (n \u2013 1)d] area of trapezium = 1 2 (a + b)h b a h the quadratic equation the solutions of ax2 + bx + c = 0 where a \u00b9 0 are given by: x b b ac a = \u2212 \u00b1 \u2212 2 4 2 trigonometry a b c b a c in any "
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Mathematics-A/2016/Exam-materials/4ma1-1h-que-20230520.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "d392fddea7059cb7a166dbaa9f371ab2fd2cf8078dac68cecd7b10795a01e0bb",
+    "size": 1096843,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma1/1h"
+    ],
+    "sessions_seen": [
+     "may 2023"
+    ],
+    "norm_excerpt": "*p72790a0128* turn over p72790a \u00a92023 pearson education ltd. n:1/1/1/1/ \uf0c0 \uf0c0 please check the examination details below before entering your candidate information candidate surname other names centre number candidate numb"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Mathematics%20A/2016/exam-materials/4MA1_1HR_que_20190522.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [
+     "1hr",
+     "4ma1/1hr"
+    ],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "3a31bf3204a0981ba2bc935bdc5f5c4ddc37c253cefd7a30f1676db9be35ed02",
+    "size": 356877,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma1/1hr"
+    ],
+    "sessions_seen": [
+     "may 2019"
+    ],
+    "norm_excerpt": "p60260a \u00a92019 pearson education ltd. 1/1/1/ *p60260a0124* instructions \u2022 use black ink or ball-point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answer all quest"
+   },
+   {
+    "url": "/content/dam/pdf/International GCSE/Mathematics A/2016/exam-materials/4MA1_1H_que_20190110.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "2dca74847dc2974d80fd8baf7696405932101cba80161760eb8b4927a50d2821",
+    "size": 741046,
+    "page_count": null,
+    "method": "ocr",
+    "refs_seen": [
+     "4ma1/1h"
+    ],
+    "sessions_seen": [
+     "january 2019"
+    ],
+    "norm_excerpt": " \\ please check the examination details below before entering your candidate information (< ndidate surname other names \u00bb centre number candidate number pearson edexcel international gcse \u2018monday 7 january 2019 - morning"
+   }
+  ],
+  "accepted": {
+   "url": "/content/dam/pdf/International GCSE/Mathematics A/2016/exam-materials/4MA1_1H_que_20190110.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "2dca74847dc2974d80fd8baf7696405932101cba80161760eb8b4927a50d2821",
+   "size": 741046,
+   "page_count": null,
+   "method": "ocr",
+   "refs_seen": [
+    "4ma1/1h"
+   ],
+   "sessions_seen": [
+    "january 2019"
+   ],
+   "norm_excerpt": " \\ please check the examination details below before entering your candidate information (< ndidate surname other names \u00bb centre number candidate number pearson edexcel international gcse \u2018monday 7 january 2019 - morning",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MA1-1H/2019-01/4MA1-1H_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-01|4MA1-2F|qp.pdf": {
+  "old": {
+   "sha256": "1f971bd839278ea30d71a368f5ef72aa397e2b7a86545df3e3d7c2516f4609a8",
+   "size": 249607,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [],
+    "text_chars": 988,
+    "method": "pdf_text",
+    "norm_excerpt": "pmt pmt 2 *p59023a0224* do not write in this area do not write in this area do not write in this area international gcse mathematics formulae sheet \u2013 foundation tier area of trapezium = 1 2 (a + b)h b a h volume of prism = area of cross section \u00d7 length cross section length volume of cylinder = \u03c0r2h curved surface area of cylinder = 2\u03c0rh r h pmt pmt 3 *p59023a0324* turn over do not write in this a"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Mathematics-A/2016/Exam-materials/4ma1-2f-que-20231111.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "5516afbba4ce1c891b10634a50546865c64a75ff1985c41c948473c4d48d24ba",
+    "size": 1611319,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma1/2f"
+    ],
+    "sessions_seen": [
+     "november 2023"
+    ],
+    "norm_excerpt": "*p73467a0124* turn over p73467a \u00a92023 pearson education ltd. z:1/1/1/1/1/1/1/ \uf0ee \uf0ee please check the examination details below before entering your candidate information candidate surname other names centre number candidat"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Mathematics-A/2016/Exam-materials/4ma1-2f-que-20241109.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "a580b3bbd601e2019aa866c5b3c44e41aa6fc5ba29b934416a1e7c10fb152917",
+    "size": 1091639,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma1/2f"
+    ],
+    "sessions_seen": [
+     "november 2024"
+    ],
+    "norm_excerpt": "*p75935a0124* turn over p75935a \u00a92024 pearson education ltd. v:1/1/1/1/1/ \uf0c2 \uf0c2 please check the examination details below before entering your candidate information candidate surname other names centre number candidate nu"
+   },
+   {
+    "url": "/content/dam/pdf/International GCSE/Mathematics A/2016/exam-materials/4MA1_2F_que_20190116.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "cd58ae7b3524b2bdb20428aa5ccb514970834ed4e00b77d064dc452d408b610f",
+    "size": 562662,
+    "page_count": null,
+    "method": "ocr",
+    "refs_seen": [
+     "4ma1/2f"
+    ],
+    "sessions_seen": [
+     "january 2019"
+    ],
+    "norm_excerpt": " please check the examination details below before entering your candidate information (ces surname other names centre number candidate number pearson edexcel international gcse \u2018tuesday 15 january 2019 \u2018 morning (time: "
+   }
+  ],
+  "accepted": {
+   "url": "/content/dam/pdf/International GCSE/Mathematics A/2016/exam-materials/4MA1_2F_que_20190116.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "cd58ae7b3524b2bdb20428aa5ccb514970834ed4e00b77d064dc452d408b610f",
+   "size": 562662,
+   "page_count": null,
+   "method": "ocr",
+   "refs_seen": [
+    "4ma1/2f"
+   ],
+   "sessions_seen": [
+    "january 2019"
+   ],
+   "norm_excerpt": " please check the examination details below before entering your candidate information (ces surname other names centre number candidate number pearson edexcel international gcse \u2018tuesday 15 january 2019 \u2018 morning (time: ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MA1-2F/2019-01/4MA1-2F_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-01|4MA1-2H|qp.pdf": {
+  "old": {
+   "sha256": "09af571820b79991779af0e1c2c53f09e09cdb9c5d841c923614a0b78d23fc76",
+   "size": 378993,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [],
+    "text_chars": 1398,
+    "method": "pdf_text",
+    "norm_excerpt": "pmt pmt 2 *p59024a0224* do not write in this area do not write in this area do not write in this area international gcse mathematics formulae sheet \u2013 higher tier arithmetic series sum to n terms, sn = n 2 [2a + (n \u2013 1)d] area of trapezium = 1 2 (a + b)h b a h the quadratic equation the solutions of ax2 + bx + c = 0 where a \u00b9 0 are given by: x b b ac a = \u2212 \u00b1 \u2212 2 4 2 trigonometry a b c b a c in any "
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Mathematics%20A/2016/exam-materials/4MA1_2H_rms_20190822.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "8cf870590c9cf8c5003a88ded6b082278bff783937758c13559370e89bd497d4",
+    "size": 651066,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [],
+    "norm_excerpt": " mark scheme (results) summer 2019 pearson edexcel international gcse in mathematics a (4ma1) paper 2h edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding bod"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Mathematics%20A/2016/exam-materials/4MA1_2H_que_20220118.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "e4b171fed7875e56f4b7885d7a714cc8f501ec0dc1d8683d42444eead56cc8ff",
+    "size": 1509475,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma1/2h"
+    ],
+    "sessions_seen": [],
+    "norm_excerpt": "centre number candidate number *p69203a0128* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference instructions \u2022 use bl"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Mathematics-A/2016/Exam-materials/4ma1-2h-que-20230608.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "431080374ad7af71e5f508f8ac4894d3d6426324e9a260a93d354656efe2a07f",
+    "size": 1578087,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma1/2h"
+    ],
+    "sessions_seen": [
+     "june 2023"
+    ],
+    "norm_excerpt": "*p72828a0128* turn over \uf0c0 \uf0c0 please check the examination details below before entering your candidate information candidate surname other names centre number candidate number pearson edexcel international gcse wednesday "
+   },
+   {
+    "url": "/content/dam/pdf/International GCSE/Mathematics A/2016/exam-materials/4MA1_2H_que_20190116.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "b3f5d011606b3f2d14a8290f2846873f67a823c44cc5d8329fc740bac610d05f",
+    "size": 460437,
+    "page_count": null,
+    "method": "ocr",
+    "refs_seen": [
+     "4ma1/2h"
+    ],
+    "sessions_seen": [
+     "january 2019"
+    ],
+    "norm_excerpt": " please check the examination details below before entering your candidate information (ces surname other names centre number candidate number pearson edexcel international gcse \u2018tuesday 15 january 2019 \u2018 morning (time: "
+   }
+  ],
+  "accepted": {
+   "url": "/content/dam/pdf/International GCSE/Mathematics A/2016/exam-materials/4MA1_2H_que_20190116.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "b3f5d011606b3f2d14a8290f2846873f67a823c44cc5d8329fc740bac610d05f",
+   "size": 460437,
+   "page_count": null,
+   "method": "ocr",
+   "refs_seen": [
+    "4ma1/2h"
+   ],
+   "sessions_seen": [
+    "january 2019"
+   ],
+   "norm_excerpt": " please check the examination details below before entering your candidate information (ces surname other names centre number candidate number pearson edexcel international gcse \u2018tuesday 15 january 2019 \u2018 morning (time: ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MA1-2H/2019-01/4MA1-2H_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-06|4MA1-2F|qp.pdf": {
+  "old": {
+   "sha256": "a8e8a65f73f0c9e51f6eadb91b64f48ba572083ba2d94be598d265d35f45fc79",
+   "size": 1804529,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [
+     "4ma1/2fr"
+    ],
+    "paper_form_tokens": [
+     "2fr"
+    ],
+    "text_chars": 2280,
+    "method": "ocr",
+    "norm_excerpt": " please check the examination details below before entering your candidate information ) (os surname other names \u00bb j centre number candidate number pearson edexcel international gcse ( \u2018 ' y j f \u2018 morning (time: 2 hours) paper reference 4ma1/2fr mathematics a = oe, level 1/2 faesy/ paper 2fr ls] | foundation tier j (you must have: total marks } ruler graduated in centimetres and millimetres, protr"
+   }
+  },
+  "accepted": {
+   "url": "/content/dam/pdf/International GCSE/Mathematics A/2016/exam-materials/4MA1_2F_que_20190607.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "june 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "10a6400baec26c7a01ac759a77bcb3c18f0575cc1ad8173a42d640adea9a250d",
+   "size": 1974630,
+   "page_count": null,
+   "method": "ocr",
+   "refs_seen": [
+    "4ma1/2f"
+   ],
+   "sessions_seen": [
+    "june 2019"
+   ],
+   "norm_excerpt": " please check the examination details below before entering your candidate information (os surname other names \u00bb j centre number candidate number pearson edexcel international gcse ( \u2018 thursday 6 june 2019 | - ~ morning ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MA1-2F/2019-06/4MA1-2F_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Mathematics-A/2016/Exam-materials/4ma1-2f-que-20231111.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "5516afbba4ce1c891b10634a50546865c64a75ff1985c41c948473c4d48d24ba",
+    "size": 1611319,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma1/2f"
+    ],
+    "sessions_seen": [
+     "november 2023"
+    ],
+    "norm_excerpt": "*p73467a0124* turn over p73467a \u00a92023 pearson education ltd. z:1/1/1/1/1/1/1/ \uf0ee \uf0ee please check the examination details below before entering your candidate information candidate surname other names centre number candidat"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Mathematics-A/2016/Exam-materials/4ma1-2f-que-20241109.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "a580b3bbd601e2019aa866c5b3c44e41aa6fc5ba29b934416a1e7c10fb152917",
+    "size": 1091639,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ma1/2f"
+    ],
+    "sessions_seen": [
+     "november 2024"
+    ],
+    "norm_excerpt": "*p75935a0124* turn over p75935a \u00a92024 pearson education ltd. v:1/1/1/1/1/ \uf0c2 \uf0c2 please check the examination details below before entering your candidate information candidate surname other names centre number candidate nu"
+   },
+   {
+    "url": "/content/dam/pdf/International GCSE/Mathematics A/2016/exam-materials/4MA1_2F_que_20190607.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "10a6400baec26c7a01ac759a77bcb3c18f0575cc1ad8173a42d640adea9a250d",
+    "size": 1974630,
+    "page_count": null,
+    "method": "ocr",
+    "refs_seen": [
+     "4ma1/2f"
+    ],
+    "sessions_seen": [
+     "june 2019"
+    ],
+    "norm_excerpt": " please check the examination details below before entering your candidate information (os surname other names \u00bb j centre number candidate number pearson edexcel international gcse ( \u2018 thursday 6 june 2019 | - ~ morning "
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2015-01|4MB0-02|qp.pdf": {
+  "old": {
+   "sha256": "e61ed413e73dc5af72cdb76ca1255808fe13ad0ee983712b7822a742f2438897",
+   "size": 291231,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [],
+    "text_chars": 8882,
+    "method": "pdf_text",
+    "norm_excerpt": "\u0003\u0017#.)\u0017 0\"\u0012\u0017) \u0003\u0011#\u0016 \u0016\u0011.\u0017 0\"\u0012\u0017) \u0010) .\u0017 3$0) #\u0011\"\u0017 \u0017)\u0017 0)#\u0011\"\u0017 . \u0017) #\u0011\"\u0017* \u000e$.\u0011! \b\u0011) * \u0011&\u0017) \u0017\u0019\u0017)\u0017#\u0013\u0017 \u0001\u0007\u0005\u0003 \u0004\b\u0002\u0005 \u0007 '\u0016\u0012\u001a '\u0017\u000f\" \u0001 \b \u0012! ) \b$#\u0016\u00113 %/ \u0006\u0011#0\u0011)3 /4%\u001a \u0018 \u0001\u0019.\u0017)#$$# \u0017\u001a\u0012\u0010 ) \u0016 *!\" (. \u001a\u0017\u001b*'\u0012\" \u0015\u0007\u0001.%.) * \u001a*\"' \u0016 +\u0012\u0010 0!\u0017) )\u0011\u00160\u0011.\u0017\u0016 # \u0013\u0017#. \"\u0017.)\u0017* \u0011#\u0016 \" !! \"\u0017.)\u0017*\u0014 &)$.)\u0011\u0013.$)\u0014 \u0013$\"&\u0011**\u0017*\u0014 &\u0017#\u0014 \u0005\u0002 &\u0017#\u0013 !\u0014 \u0017)\u0011*\u0017)\u0014 \u0013\u0011!\u00130!\u0011.$)' \u000e)\u0011\u0013 # &\u0011&\u0017) \"\u00113 \u0012\u0017 0*\u0017\u0016' \u0002 \u000f \u0010\u0004\u000f\b t \u000f*\u0017 \u000e\u0019 \u000f\u0018 # $) \u0012\u0011!! &$ #. &\u0017#' t \u0004\u0017\u0019\u0019 \u0017\u001b '\u0016\u0012 \u000e ,\u0012\" \u0011. ."
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Mathematics B/2009/Exam materials/4MB0_02_que_20150112.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2015"
+    ],
+    "furniture_ok": true,
+    "sha256": "6d57b6d369b9ad7a3a86b3fe1603b4e30dd4651ee8c0e00d43da9bae94874b69",
+    "size": 349930,
+    "page_count": null,
+    "method": "ocr",
+    "refs_seen": [
+     "4mb0/02"
+    ],
+    "sessions_seen": [
+     "january 2015"
+    ],
+    "norm_excerpt": " write your name here er other names \u00bb js centre number candidate number pearson edexcel international gcse \u2018mathematics b paper 2 monday 12 january 2015 - afternoon paper reference \\ time: 2 hours 30 minutes 4mb0/02 yy,"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Mathematics B/2009/Exam materials/4MB0_02_que_20150112.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2015"
+   ],
+   "furniture_ok": true,
+   "sha256": "6d57b6d369b9ad7a3a86b3fe1603b4e30dd4651ee8c0e00d43da9bae94874b69",
+   "size": 349930,
+   "page_count": null,
+   "method": "ocr",
+   "refs_seen": [
+    "4mb0/02"
+   ],
+   "sessions_seen": [
+    "january 2015"
+   ],
+   "norm_excerpt": " write your name here er other names \u00bb js centre number candidate number pearson edexcel international gcse \u2018mathematics b paper 2 monday 12 january 2015 - afternoon paper reference \\ time: 2 hours 30 minutes 4mb0/02 yy,",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MB0-02/2015-01/4MB0-02_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-01|4MB1-01|qp.pdf": {
+  "old": {
+   "sha256": "c69fe1513d48ad419cd2d476d8930926136286a41ae88a2f9bcc59d7bc96d1e0",
+   "size": 423821,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [],
+    "text_chars": 1078,
+    "method": "pdf_text",
+    "norm_excerpt": "pmt 2 *p60794a0224* do not write in this area do not write in this area do not write in this area do not write in this area do not write in this area do not write in this area answer all twenty eight questions. write your answers in the spaces provided. you must write down all the stages in your working. 1 express 15 centimetres as a percentage of 3 metres. % (total for question 1 is 2 marks) 2 a "
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Mathematics B/2016/exam-materials/4MB1_01_que_20190110.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "79ecd1c184eda0d8187701ff6712269fef667c34ae2a97a24ae96904cf974a1f",
+    "size": 747227,
+    "page_count": null,
+    "method": "ocr",
+    "refs_seen": [
+     "4mb1/01"
+    ],
+    "sessions_seen": [
+     "january 2019"
+    ],
+    "norm_excerpt": " please check the examination details below before entering your candidate information (one surname other names \u00bb centre number candidate number pearson edexcel international gcse 4 \\ monday 7 january 2019 \\. j 4 > morni"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Mathematics B/2016/exam-materials/4MB1_01_que_20190110.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "79ecd1c184eda0d8187701ff6712269fef667c34ae2a97a24ae96904cf974a1f",
+   "size": 747227,
+   "page_count": null,
+   "method": "ocr",
+   "refs_seen": [
+    "4mb1/01"
+   ],
+   "sessions_seen": [
+    "january 2019"
+   ],
+   "norm_excerpt": " please check the examination details below before entering your candidate information (one surname other names \u00bb centre number candidate number pearson edexcel international gcse 4 \\ monday 7 january 2019 \\. j 4 > morni",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MB1-01/2019-01/4MB1-01_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-01|4MB1-02|qp.pdf": {
+  "old": {
+   "sha256": "294d64564b86def0b25af429746ef9e101bca6e3e15024b624130e7e4adbce75",
+   "size": 445590,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [],
+    "paper_form_tokens": [],
+    "text_chars": 803,
+    "method": "pdf_text",
+    "norm_excerpt": "pmt 2 *p60795a0236* do not write in this area do not write in this area do not write in this area answer all eleven questions. write your answers in the spaces provided. you must write down all the stages in your working. 1 diagram not accurately drawn z x y h cm figure 1 in figure 1, \uf021xyz has base xy and height h cm. the length of xy is 7.2 cm, to 2 significant figures. (a) write down the lower b"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Mathematics B/2016/exam-materials/4MB1_02_que_20190116.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "c17befeaaecf9d1cc205828e9f2e09077222903ba94f016b3d3dd0e70a246ade",
+    "size": 354937,
+    "page_count": null,
+    "method": "ocr",
+    "refs_seen": [
+     "4mb1/02"
+    ],
+    "sessions_seen": [
+     "january 2019"
+    ],
+    "norm_excerpt": " please check the examination details below before entering your candidate information (oc surname other names \u00bb centre number candidate number pearson edexcel international gcse \u2018tuesday 15 january 2019 r morning (time:"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Mathematics B/2016/exam-materials/4MB1_02_que_20190116.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "c17befeaaecf9d1cc205828e9f2e09077222903ba94f016b3d3dd0e70a246ade",
+   "size": 354937,
+   "page_count": null,
+   "method": "ocr",
+   "refs_seen": [
+    "4mb1/02"
+   ],
+   "sessions_seen": [
+    "january 2019"
+   ],
+   "norm_excerpt": " please check the examination details below before entering your candidate information (oc surname other names \u00bb centre number candidate number pearson edexcel international gcse \u2018tuesday 15 january 2019 r morning (time:",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4MB1-02/2019-01/4MB1-02_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-06|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "0467ba33779fa826cf189545763356e3b4434dda3fec729bab087e634552aae7",
+   "size": 661165,
+   "evidence": {
+    "sessions": [
+     "may 2019"
+    ],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2331,
+    "method": "pdf_text",
+    "norm_excerpt": "p60184a \u00a92019 pearson education ltd. 1/1/1/1/1/1/ *p60184a0136* instructions \u2022 use black ink or ball-point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answer all questions. \u2022 answer the questions in the spaces provided \u2013 there may be more space than you need. \u2022 show all the steps in any calculations and state the units. \u2022 some questions mu"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_1P_que_20190523.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "may 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "08f3ebee56b9957cf3794a3f529deecee9796d90222df94c2347abf2dfd1660d",
+    "size": 1331120,
+    "page_count": null,
+    "method": "ocr",
+    "refs_seen": [
+     "4ph1/1p",
+     "4sd0/1"
+    ],
+    "sessions_seen": [
+     "may 2019"
+    ],
+    "norm_excerpt": " se please check the examination details below before entering your candidate information (os surname other names centre number candidate number pearson edexcel international gcse (9-1) wednesday 22 may 2019 ( afternoon "
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_1P_que_20190523.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "may 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "08f3ebee56b9957cf3794a3f529deecee9796d90222df94c2347abf2dfd1660d",
+   "size": 1331120,
+   "page_count": null,
+   "method": "ocr",
+   "refs_seen": [
+    "4ph1/1p",
+    "4sd0/1"
+   ],
+   "sessions_seen": [
+    "may 2019"
+   ],
+   "norm_excerpt": " se please check the examination details below before entering your candidate information (os surname other names centre number candidate number pearson edexcel international gcse (9-1) wednesday 22 may 2019 ( afternoon ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-1P/2019-06/4PH1-1P_qp.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "status": "VERIFIED"
+ },
+ "2019-06|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "f4b799cf0da684594bfb37ffebc9f2ca57cc3b4454adb532d5137da661fb15be",
+   "size": 714808,
+   "evidence": {
+    "sessions": [
+     "june 2019"
+    ],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2542,
+    "method": "pdf_text",
+    "norm_excerpt": "candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information you must have: ruler, calculator physics unit: 4ph1 paper: 2pr paper reference 4ph1/2pr morning (time: 1 hour 15 minutes) friday 14 june 2019 pearson edexcel international gcse (9\u20131) *p60185a0128* p60185a \u00a92019 pearson education ltd. 1/1/1/1"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_2P_que_20190615.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2019"
+    ],
+    "furniture_ok": true,
+    "sha256": "0530e035df5f00bee35041e467a5ffab2256ae86908911ef4ac7ac5d483d438b",
+    "size": 764097,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [
+     "june 2019"
+    ],
+    "norm_excerpt": "please check the examination details below before entering your candidate information candidate surname other names centre number candidate number pearson edexcel international gcse (9\u20131) friday 14 june 2019 morning (tim"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_2P_que_20190615.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "june 2019"
+   ],
+   "furniture_ok": true,
+   "sha256": "0530e035df5f00bee35041e467a5ffab2256ae86908911ef4ac7ac5d483d438b",
+   "size": 764097,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/2p"
+   ],
+   "sessions_seen": [
+    "june 2019"
+   ],
+   "norm_excerpt": "please check the examination details below before entering your candidate information candidate surname other names centre number candidate number pearson edexcel international gcse (9\u20131) friday 14 june 2019 morning (tim",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-2P/2019-06/4PH1-2P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2020-01|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "d910d0f64dfb533a07ed34ccdf6a96fe1b3c6c6de5ce62d2a2718909875c8abf",
+   "size": 795270,
+   "evidence": {
+    "sessions": [
+     "january 2020"
+    ],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2166,
+    "method": "pdf_text",
+    "norm_excerpt": "p62042a \u00a92020 pearson education ltd. 1/1/1/1/1/ *p62042a0128* instructions \u2022 use black ink or ball-point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answer all questions. \u2022 answer the questions in the spaces provided \u2013 there may be more space than you need. \u2022 show all the steps in any calculations and state the units. \u2022 some questions must"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_1P_que_20200305.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2020"
+    ],
+    "furniture_ok": true,
+    "sha256": "3ac1cfeed07669509e36628c29f10ac9cfc5b5ba244917104c9df4c452a4131d",
+    "size": 1494299,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/1p",
+     "4sd0/1p"
+    ],
+    "sessions_seen": [
+     "january 2020"
+    ],
+    "norm_excerpt": "candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information pearson edexcel international gcse (9\u20131) monday 13 january 20"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_1P_que_20200305.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2020"
+   ],
+   "furniture_ok": true,
+   "sha256": "3ac1cfeed07669509e36628c29f10ac9cfc5b5ba244917104c9df4c452a4131d",
+   "size": 1494299,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/1p",
+    "4sd0/1p"
+   ],
+   "sessions_seen": [
+    "january 2020"
+   ],
+   "norm_excerpt": "candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information pearson edexcel international gcse (9\u20131) monday 13 january 20",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-1P/2020-01/4PH1-1P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2020-01|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "c09807d4443ac9f2468db475bfc7bf334c50c773424e7c9fd443ea8ad6629da2",
+   "size": 712749,
+   "evidence": {
+    "sessions": [
+     "january 2020"
+    ],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 3329,
+    "method": "pdf_text",
+    "norm_excerpt": "candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information you must have: ruler, calculator physics unit: 4ph1 paper: 2pr paper reference 4ph1/2pr afternoon (time: 1 hour 15 minutes) thursday 16 january 2020 pearson edexcel international gcse (9\u20131) *p62044a0120* p62044a \u00a92020 pearson education ltd. "
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_2P_que_20200305.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2020"
+    ],
+    "furniture_ok": true,
+    "sha256": "94798b2297c903911c9c78c55352300d3bbfc1800f1356b67c2206b8df281002",
+    "size": 1353024,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [
+     "january 2020"
+    ],
+    "norm_excerpt": "candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information pearson edexcel international gcse (9\u20131) thursday 16 january "
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_2P_que_20200305.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2020"
+   ],
+   "furniture_ok": true,
+   "sha256": "94798b2297c903911c9c78c55352300d3bbfc1800f1356b67c2206b8df281002",
+   "size": 1353024,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/2p"
+   ],
+   "sessions_seen": [
+    "january 2020"
+   ],
+   "norm_excerpt": "candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information pearson edexcel international gcse (9\u20131) thursday 16 january ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-2P/2020-01/4PH1-2P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2020-06|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "722e5cf84eebce6b3033e3b88b6f7c51389704b23295bc59e54371d411cbfcad",
+   "size": 244801,
+   "evidence": {
+    "sessions": [
+     "may 2020"
+    ],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2153,
+    "method": "pdf_text",
+    "norm_excerpt": "*p65065a0136* p65065a \u00a92020 pearson education ltd. 1/1/1/1 turn over instructions \u2022 use black ink or ball-point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answer all questions. \u2022 answer the questions in the spaces provided \u2013 there may be more space than you need. \u2022 show all the steps in any calculations and state the units. \u2022 some questio"
+   }
+  },
+  "accepted": null,
+  "status": "UNRESOLVED",
+  "unresolvable_reason": "June 2020 sitting plain papers are not on the public DAM: the only catalog candidates (4PH1_1P_que_20201114 / 4PH1_2P_que_20201124, catalog-titled November 2020) are DIFFERENT papers from the mis-filed June-2020 R copies (page counts 32 vs 36 and 24 vs 20; the R copies' own covers print May/June 2020). Substituting a different sitting would mis-file by session \u2014 recorded unresolvable, fail-closed.",
+  "candidates_tried": []
+ },
+ "2020-06|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "d1d9b8cfd9968aaf17ec3009d041092469f35052d226c28592fb613dbca0e512",
+   "size": 175180,
+   "evidence": {
+    "sessions": [
+     "june 2020"
+    ],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2391,
+    "method": "pdf_text",
+    "norm_excerpt": "*p65067a0120* p65067a \u00a92020 pearson education ltd. 1/1/1/1/1 turn over instructions \u2022 use black ink or ball-point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answer all questions. \u2022 answer the questions in the spaces provided \u2013 there may be more space than you need. \u2022 show all the steps in any calculations and state the units. \u2022 some quest"
+   }
+  },
+  "accepted": null,
+  "status": "UNRESOLVED",
+  "unresolvable_reason": "June 2020 sitting plain papers are not on the public DAM: the only catalog candidates (4PH1_1P_que_20201114 / 4PH1_2P_que_20201124, catalog-titled November 2020) are DIFFERENT papers from the mis-filed June-2020 R copies (page counts 32 vs 36 and 24 vs 20; the R copies' own covers print May/June 2020). Substituting a different sitting would mis-file by session \u2014 recorded unresolvable, fail-closed.",
+  "candidates_tried": []
+ },
+ "2021-01|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "1d3dc574d13e53756b90ebe8419141fe5ed3e3cd0c911c55372df584e4a38aa0",
+   "size": 1178414,
+   "evidence": {
+    "sessions": [
+     "january 2021"
+    ],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 1993,
+    "method": "pdf_text",
+    "norm_excerpt": "*p68387a0132* turn over candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information p68387a \u00a92021 pearson education ltd. 1/1/1/ instructions \u2022 use black ink or ball\u2011point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answer all questions. \u2022 ans"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_1P_que_20210304.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2021"
+    ],
+    "furniture_ok": true,
+    "sha256": "7cae0df7d5f4dfb542f6420d8f6865b5bc9d20c01f690212b56c09c2c5554df6",
+    "size": 2056364,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/1p",
+     "4sd0/1p"
+    ],
+    "sessions_seen": [
+     "january 2021"
+    ],
+    "norm_excerpt": "*p68386a0132* turn over candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information pearson edexcel international gcse (9"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_1P_que_20210304.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2021"
+   ],
+   "furniture_ok": true,
+   "sha256": "7cae0df7d5f4dfb542f6420d8f6865b5bc9d20c01f690212b56c09c2c5554df6",
+   "size": 2056364,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/1p",
+    "4sd0/1p"
+   ],
+   "sessions_seen": [
+    "january 2021"
+   ],
+   "norm_excerpt": "*p68386a0132* turn over candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information pearson edexcel international gcse (9",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-1P/2021-01/4PH1-1P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2021-01|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "5360a1c336da0bb372698b3902e8427d062b20315b6e0dc620298f479ca30c7d",
+   "size": 692092,
+   "evidence": {
+    "sessions": [
+     "january 2021"
+    ],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2220,
+    "method": "pdf_text",
+    "norm_excerpt": "*p68389a0120* turn over candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information instructions \u2022 use black ink or ball-point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answer all questions. \u2022 answer the questions in the spaces provided \u2013 t"
+   }
+  },
+  "accepted": {
+   "url": "/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_2P_que_20210304.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2021"
+   ],
+   "furniture_ok": true,
+   "sha256": "d73e09fcc0916fac832918f4b84232bebe2aff01658d8e1fa57e48eeb17e1ff2",
+   "size": 1158980,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/2p"
+   ],
+   "sessions_seen": [
+    "january 2021"
+   ],
+   "norm_excerpt": "*p68388a0124* turn over candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information instructions \u2022 use black ink or ball-",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-2P/2021-01/4PH1-2P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-2p-que-20210430.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "d4d9ca11727fd59ae9309a0c59a4794bde39c6d56b4198def1681f709c40231d",
+    "size": 1078792,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [],
+    "norm_excerpt": "*p67161a0124* turn over candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information time paper reference p67161a \u00a92021 pe"
+   },
+   {
+    "url": "/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_2P_que_20210304.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2021"
+    ],
+    "furniture_ok": true,
+    "sha256": "d73e09fcc0916fac832918f4b84232bebe2aff01658d8e1fa57e48eeb17e1ff2",
+    "size": 1158980,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [
+     "january 2021"
+    ],
+    "norm_excerpt": "*p68388a0124* turn over candidate surname other names total marks centre number candidate number please check the examination details below before entering your candidate information instructions \u2022 use black ink or ball-"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2022-01|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "93aae9eae09660a83310d49e656844d9f071e709a177332f884809ed5a358e33",
+   "size": 1095722,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 1805,
+    "method": "pdf_text",
+    "norm_excerpt": "centre number candidate number *p70712a0132* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf098 \uf098 p70712a \u00a92022 pearson education ltd. l:1/1/1/ instructions \u2022 use black ink or ball\u2011point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answe"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_1P_que_20220113.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [],
+   "furniture_ok": true,
+   "sha256": "3dd03eab2e82185ea98aeb124ef3ab642d5b6440c61f26c1af920dcdaadf1f84",
+   "size": 1679525,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/1p",
+    "4sd0/1p"
+   ],
+   "sessions_seen": [],
+   "norm_excerpt": "centre number candidate number *p70705a0136* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf098 \uf098 p70705a \u00a92022 pea",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-1P/2022-01/4PH1-1P_qp.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International GCSE/Physics/2017/exam-materials/4PH1_1P_que_20220113.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "3dd03eab2e82185ea98aeb124ef3ab642d5b6440c61f26c1af920dcdaadf1f84",
+    "size": 1679525,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/1p",
+     "4sd0/1p"
+    ],
+    "sessions_seen": [],
+    "norm_excerpt": "centre number candidate number *p70705a0136* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf098 \uf098 p70705a \u00a92022 pea"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2022-01|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "bbaf11d93c97e40551d20e560c8e3f8ec919159f2e95cd00858ce8d35f0bf5c8",
+   "size": 814349,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 4302,
+    "method": "pdf_text",
+    "norm_excerpt": "centre number candidate number *p70714a0124* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf098 \uf098 p70714a \u00a92022 pearson education ltd. l:1/1/1/1/ instructions \u2022 use black ink or ball\u2011point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 ans"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4PH1_2P_que_20220119.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "d5eb57419f98e3c4040e9fa9f9392e485ba2dea73b88688e48fba4a04c63aec0",
+    "size": 1334929,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [],
+    "norm_excerpt": "centre number candidate number *p70707a0124* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf098 \uf098 p70707a \u00a92022 pea"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-2p-pef-20220825.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "362e9de898fefe4d9a9c802fc07ea75f6646e396c85abd4fd71c52bd885e05e8",
+    "size": 1497922,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "june 2022"
+    ],
+    "norm_excerpt": "examiners\u2019 report june 2022 international gcse physics 4ph1 2p edexcel and btec qualifications edexcel and btec qualifications come from pearson, the uk's largest awarding body. we provide a wide range of qualifications "
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4PH1_2P_rms_20220303.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2022"
+    ],
+    "furniture_ok": true,
+    "sha256": "89418a641feb778b3357061e1dab0edcdf74e0b09586e5a54f341ae169289191",
+    "size": 670575,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2022"
+    ],
+    "norm_excerpt": " mark scheme (results) january 2022 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4PH1_2P_rms_20220303.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2022"
+   ],
+   "furniture_ok": true,
+   "sha256": "89418a641feb778b3357061e1dab0edcdf74e0b09586e5a54f341ae169289191",
+   "size": 670575,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "january 2022"
+   ],
+   "norm_excerpt": " mark scheme (results) january 2022 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-2P/2022-01/4PH1-2P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2022-06|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "24e462d1992a366c434e70ac5dcb07c197ce3e70c180879237577cff80ccfd24",
+   "size": 1336439,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 3499,
+    "method": "pdf_text",
+    "norm_excerpt": "centre number candidate number *p70952a0128* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf0bf \uf0bf pearson edexcel international gcse (9\u20131) instructions \u2022 use black ink or ball\u2011point pen. \u2022 fill in the boxes at the top of this page with your name, centre number and candidate number. \u2022 answer all"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-1p-que-20220610.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [],
+   "furniture_ok": true,
+   "sha256": "beca36c265719dc119b02e95d8721e4ee06f1b79058cb6b549f363e0bc0c50cb",
+   "size": 2562086,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/1p",
+    "4sd0/1p"
+   ],
+   "sessions_seen": [],
+   "norm_excerpt": "centre number candidate number *p70951a0132* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf0bf \uf0bf p70951a \u00a92022 pea",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-1P/2022-06/4PH1-1P_qp.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-1p-que-20220610.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "beca36c265719dc119b02e95d8721e4ee06f1b79058cb6b549f363e0bc0c50cb",
+    "size": 2562086,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/1p",
+     "4sd0/1p"
+    ],
+    "sessions_seen": [],
+    "norm_excerpt": "centre number candidate number *p70951a0132* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf0bf \uf0bf p70951a \u00a92022 pea"
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2022-06|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "5b4adb75f34d9837c8286cc07b4ac585727629fa2f1862ed602810065fb34060",
+   "size": 1074766,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2057,
+    "method": "pdf_text",
+    "norm_excerpt": "centre number candidate number *p70954a0124* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf0bf \uf0bf you must have: ruler, calculator, equation booklet (enclosed) p70954a \u00a92022 pearson education ltd. q:1/1/1/1/ instructions \u2022 use black ink or ball-point pen. \u2022 fill in the boxes at the top of this "
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4PH1_2P_que_20220119.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "d5eb57419f98e3c4040e9fa9f9392e485ba2dea73b88688e48fba4a04c63aec0",
+    "size": 1334929,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [],
+    "norm_excerpt": "centre number candidate number *p70707a0124* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf098 \uf098 p70707a \u00a92022 pea"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-2p-pef-20220825.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2022"
+    ],
+    "furniture_ok": true,
+    "sha256": "362e9de898fefe4d9a9c802fc07ea75f6646e396c85abd4fd71c52bd885e05e8",
+    "size": 1497922,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "june 2022"
+    ],
+    "norm_excerpt": "examiners\u2019 report june 2022 international gcse physics 4ph1 2p edexcel and btec qualifications edexcel and btec qualifications come from pearson, the uk's largest awarding body. we provide a wide range of qualifications "
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-2p-pef-20220825.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "june 2022"
+   ],
+   "furniture_ok": true,
+   "sha256": "362e9de898fefe4d9a9c802fc07ea75f6646e396c85abd4fd71c52bd885e05e8",
+   "size": 1497922,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "june 2022"
+   ],
+   "norm_excerpt": "examiners\u2019 report june 2022 international gcse physics 4ph1 2p edexcel and btec qualifications edexcel and btec qualifications come from pearson, the uk's largest awarding body. we provide a wide range of qualifications ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-2P/2022-06/4PH1-2P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2023-01|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "385be886d68c2e64c650e1b51e25a1c6caf7a28a02ae24365200d4185e4222fe",
+   "size": 1147204,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 1881,
+    "method": "pdf_text",
+    "norm_excerpt": "centre number candidate number *p71897a0132* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf098 \uf098 p71897a \u00a92023 pearson education ltd. j:1/1/1/ instructions \u2022 use black ink or ball-point pen. \u2022 if pencil is used for diagrams/sketches/graphs it must be dark (hb or b). \u2022 fill in the boxes at the "
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-1p-rms-20230824.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "48a8e20e744a5205bb4b160bf6a436f8cc967660698eaffb8139d5f723c8c58d",
+    "size": 631125,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [],
+    "norm_excerpt": " mark scheme (results) summer 2023 pearson edexcel international gcse in physics (4ph1) paper 1p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we "
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-1p-rms-20230302.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2023"
+    ],
+    "furniture_ok": true,
+    "sha256": "3b918a27572f26a77fa4caf1dacb5d4f19bcf0b763e1c12e80939f9214a60420",
+    "size": 1155090,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2023"
+    ],
+    "norm_excerpt": " mark scheme (results) january 2023 pearson edexcel international gcse in physics (4ph1) paper 1p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-1p-rms-20230302.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2023"
+   ],
+   "furniture_ok": true,
+   "sha256": "3b918a27572f26a77fa4caf1dacb5d4f19bcf0b763e1c12e80939f9214a60420",
+   "size": 1155090,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "january 2023"
+   ],
+   "norm_excerpt": " mark scheme (results) january 2023 pearson edexcel international gcse in physics (4ph1) paper 1p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-1P/2023-01/4PH1-1P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2023-01|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "8ed1802f6751db05570c4fd35491071ca196696abcf1bcb1621d2b12e744e47d",
+   "size": 791356,
+   "evidence": {
+    "sessions": [],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2110,
+    "method": "pdf_text",
+    "norm_excerpt": "centre number candidate number *p71899a0124* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf098 \uf098 p71899a \u00a92023 pearson education ltd. j:1/1/1/1/1/ instructions \u2022 use black ink or ball\u2011point pen. \u2022 if pencil is used for diagrams/sketches/graphs it must be dark (hb or b). \u2022 fill in the boxes at "
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2p-que-20231123.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "4a08ebd92a86e394455d222adfce72985db96c24a7f66dd693a519454a82ad62",
+    "size": 529305,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [
+     "november 2023"
+    ],
+    "norm_excerpt": "*p73429a0128* turn over \uf0ee \uf0ee please check the examination details below before entering your candidate information candidate surname other names centre number candidate number pearson edexcel international gcse (9\u20131) wedn"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2p-rms-20230824.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "d3f4ae817cbdad3c3d604bbb9d77db375f2055c60128bfaf2bbec317443150d1",
+    "size": 374658,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [],
+    "norm_excerpt": " mark scheme (results) summer 2023 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we "
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2p-rms-20240125.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "d08d4eedf4489f472d4a6c5ff7c72e8d8c56ca7ecb6e6dbe9b13456d0ae1bcdd",
+    "size": 393441,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "november 2023"
+    ],
+    "norm_excerpt": " mark scheme (results) november 2023 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. w"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-2p-rms-20230302.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "january 2023"
+    ],
+    "furniture_ok": true,
+    "sha256": "5dbfd59819453a067f85d258bb58a692d2a6f860372a447cec09631e169fe38c",
+    "size": 913483,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2023"
+    ],
+    "norm_excerpt": " mark scheme (results) january 2023 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-2p-rms-20230302.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "january 2023"
+   ],
+   "furniture_ok": true,
+   "sha256": "5dbfd59819453a067f85d258bb58a692d2a6f860372a447cec09631e169fe38c",
+   "size": 913483,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "january 2023"
+   ],
+   "norm_excerpt": " mark scheme (results) january 2023 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-2P/2023-01/4PH1-2P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2023-06|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "f1b378701709343c5ac3eaedeefa603183d5780467892dc8b7df27eedc7e62ad",
+   "size": 704782,
+   "evidence": {
+    "sessions": [
+     "may 2023"
+    ],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 1933,
+    "method": "pdf_text",
+    "norm_excerpt": "centre number candidate number *p71956a0132* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf0c0 \uf0c0 p71956a \u00a92023 pearson education ltd. n:1/1/1/1/ instructions \u2022 use black ink or ball-point pen. \u2022 if pencil is used for diagrams/sketches/graphs it must be dark (hb or b). \u2022 fill in the boxes at th"
+   }
+  },
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-1p-rms-20230824.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-unit+paper-form (GCE cover style)",
+   "r_form_hits": [],
+   "session_matched": [
+    "summer 2023"
+   ],
+   "furniture_ok": true,
+   "sha256": "48a8e20e744a5205bb4b160bf6a436f8cc967660698eaffb8139d5f723c8c58d",
+   "size": 631125,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "summer 2023"
+   ],
+   "norm_excerpt": " mark scheme (results) summer 2023 pearson edexcel international gcse in physics (4ph1) paper 1p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-1P/2023-06/4PH1-1P_qp.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-1p-rms-20230824.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [
+     "summer 2023"
+    ],
+    "furniture_ok": true,
+    "sha256": "48a8e20e744a5205bb4b160bf6a436f8cc967660698eaffb8139d5f723c8c58d",
+    "size": 631125,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "summer 2023"
+    ],
+    "norm_excerpt": " mark scheme (results) summer 2023 pearson edexcel international gcse in physics (4ph1) paper 1p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we "
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2023-06|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "33e57f7cd35bea82234d4a5226ba37d186ca14d5f42808da81c1a49d091b33fe",
+   "size": 548675,
+   "evidence": {
+    "sessions": [
+     "june 2023"
+    ],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 3607,
+    "method": "pdf_text",
+    "norm_excerpt": "centre number candidate number *p71958ra0124* turn over total marks candidate surname other names please check the examination details below before entering your candidate information paper reference \uf0c0 \uf0c0 p71958ra \u00a92023 pearson education ltd. n:1/1/1/1/1/ instructions \u2022 use black ink or ball-point pen. \u2022 if pencil is used for diagrams/sketches/graphs it must be dark (hb or b). \u2022 fill in the boxes a"
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2p-que-20231123.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "4a08ebd92a86e394455d222adfce72985db96c24a7f66dd693a519454a82ad62",
+    "size": 529305,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [
+     "november 2023"
+    ],
+    "norm_excerpt": "*p73429a0128* turn over \uf0ee \uf0ee please check the examination details below before entering your candidate information candidate surname other names centre number candidate number pearson edexcel international gcse (9\u20131) wedn"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2p-rms-20230824.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "d3f4ae817cbdad3c3d604bbb9d77db375f2055c60128bfaf2bbec317443150d1",
+    "size": 374658,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [],
+    "norm_excerpt": " mark scheme (results) summer 2023 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we "
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2p-rms-20240125.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "d08d4eedf4489f472d4a6c5ff7c72e8d8c56ca7ecb6e6dbe9b13456d0ae1bcdd",
+    "size": 393441,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "november 2023"
+    ],
+    "norm_excerpt": " mark scheme (results) november 2023 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. w"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Physics/2017/exam-materials/4ph1-2p-rms-20230302.pdf",
+    "result": "fail",
+    "plain_ref_present": false,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "5dbfd59819453a067f85d258bb58a692d2a6f860372a447cec09631e169fe38c",
+    "size": 913483,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "january 2023"
+    ],
+    "norm_excerpt": " mark scheme (results) january 2023 pearson edexcel international gcse in physics (4ph1) paper 2p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. we"
+   },
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2pr-pef-20230824.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "catalog+session+furniture (ref not in text layer)",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2023"
+    ],
+    "furniture_ok": true,
+    "sha256": "84e119c1038044926309a156b1720ab8d93891aae75730dbb426eb97f57d95c5",
+    "size": 2306307,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "june 2023"
+    ],
+    "norm_excerpt": "examiners\u2019 report june 2023 int gcse physics 4ph1 2pr edexcel and btec qualifications edexcel and btec qualifications come from pearson, the uk's largest awarding body. we provide a wide range of qualifications including"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2pr-pef-20230824.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "catalog+session+furniture (ref not in text layer)",
+   "r_form_hits": [],
+   "session_matched": [
+    "june 2023"
+   ],
+   "furniture_ok": true,
+   "sha256": "84e119c1038044926309a156b1720ab8d93891aae75730dbb426eb97f57d95c5",
+   "size": 2306307,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [],
+   "sessions_seen": [
+    "june 2023"
+   ],
+   "norm_excerpt": "examiners\u2019 report june 2023 int gcse physics 4ph1 2pr edexcel and btec qualifications edexcel and btec qualifications come from pearson, the uk's largest awarding body. we provide a wide range of qualifications including",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-2P/2023-06/4PH1-2P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ },
+ "2024-06|4PH1-1P|qp.pdf": {
+  "old": {
+   "sha256": "a23f38512d6dcc002ee8d245dc879f26f958b49ac4f31d6cf44422c0b7f24853",
+   "size": 338498,
+   "evidence": {
+    "sessions": [
+     "may 2024"
+    ],
+    "slash_refs": [
+     "4ph1/1pr",
+     "4sd0/1pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2053,
+    "method": "pdf_text",
+    "norm_excerpt": "*p73428a0136* turn over p73428a \u00a92024 pearson education ltd. f:1/1/1/1/1/1/ \uf0a2 \uf0a2 please check the examination details below before entering your candidate information candidate surname other names centre number candidate number pearson edexcel international gcse (9\u20131) wednesday 22 may 2024 morning (time: 2 hours) 4ph1/1pr 4sd0/1pr paper reference total marks physics unit: 4ph1 science (double award"
+   }
+  },
+  "accepted": {
+   "url": "/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-1p-que-20240523.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "may 2024"
+   ],
+   "furniture_ok": true,
+   "sha256": "3c1e2eea09258259ce0ae86d6adf24da26a1320e297317c60f64c272839b8454",
+   "size": 1266863,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/1p",
+    "4sd0/1p"
+   ],
+   "sessions_seen": [
+    "may 2024"
+   ],
+   "norm_excerpt": "*p75826a0132* turn over p75826a \u00a92024 pearson education ltd. f:1/1/1/1/1/1/ \uf0a2 \uf0a2 please check the examination details below before entering your candidate information candidate surname other names centre number candidate ",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-1P/2024-06/4PH1-1P_qp.pdf",
+   "session_source": "old-cover-sitting"
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-1p-rms-20250123.pdf",
+    "result": "fail",
+    "plain_ref_present": true,
+    "evidence_class": "cover-unit+paper-form (GCE cover style)",
+    "r_form_hits": [],
+    "session_matched": [],
+    "furniture_ok": true,
+    "sha256": "1c3ba7a401902e2a8a5a2d83ff97eaab513ede612ed3afcd04b15b93b697ab16",
+    "size": 417192,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [],
+    "sessions_seen": [
+     "november 2024"
+    ],
+    "norm_excerpt": " mark scheme (results) november 2024 pearson edexcel international gcse in physics (4ph1) paper 1p edexcel and btec qualifications edexcel and btec qualifications are awarded by pearson, the uk\u2019s largest awarding body. w"
+   },
+   {
+    "url": "/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-1p-que-20240523.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "may 2024"
+    ],
+    "furniture_ok": true,
+    "sha256": "3c1e2eea09258259ce0ae86d6adf24da26a1320e297317c60f64c272839b8454",
+    "size": 1266863,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/1p",
+     "4sd0/1p"
+    ],
+    "sessions_seen": [
+     "may 2024"
+    ],
+    "norm_excerpt": "*p75826a0132* turn over p75826a \u00a92024 pearson education ltd. f:1/1/1/1/1/1/ \uf0a2 \uf0a2 please check the examination details below before entering your candidate information candidate surname other names centre number candidate "
+   }
+  ],
+  "status": "VERIFIED"
+ },
+ "2024-06|4PH1-2P|qp.pdf": {
+  "old": {
+   "sha256": "5a4a18132a898c8da70953316f14613ea6b8ef50fbefbe39937be9184d72e50d",
+   "size": 431736,
+   "evidence": {
+    "sessions": [
+     "june 2024"
+    ],
+    "slash_refs": [
+     "4ph1/2pr"
+    ],
+    "paper_form_tokens": [],
+    "text_chars": 2279,
+    "method": "pdf_text",
+    "norm_excerpt": "*p73430a0124* turn over p73430a \u00a92024 pearson education ltd. f:1/1/1/1/1/1/ \uf0a2 \uf0a2 please check the examination details below before entering your candidate information candidate surname other names centre number candidate number pearson edexcel international gcse (9\u20131) friday 14 june 2024 afternoon (time: 1 hour 15 minutes) 4ph1/2pr paper reference total marks physics unit: 4ph1 paper: 2pr you must "
+   }
+  },
+  "candidates_tried": [
+   {
+    "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2p-que-20240615.pdf",
+    "result": "PASS",
+    "plain_ref_present": true,
+    "evidence_class": "cover-ref",
+    "r_form_hits": [],
+    "session_matched": [
+     "june 2024"
+    ],
+    "furniture_ok": true,
+    "sha256": "e5920b0b4f8478d915b434aac97cc945e99517a2f823cc1a31675af7fdcbf9eb",
+    "size": 1415592,
+    "page_count": null,
+    "method": "pdf_text",
+    "refs_seen": [
+     "4ph1/2p"
+    ],
+    "sessions_seen": [
+     "june 2024"
+    ],
+    "norm_excerpt": "*p75828a0124* turn over p75828a \u00a92024 pearson education ltd. f:1/1/1/1/1/ \uf0a2 \uf0a2 please check the examination details below before entering your candidate information candidate surname other names centre number candidate nu"
+   }
+  ],
+  "accepted": {
+   "url": "https://qualifications.pearson.com/content/dam/pdf/International-GCSE/Physics/2017/Exam-materials/4ph1-2p-que-20240615.pdf",
+   "plain_ref_present": true,
+   "evidence_class": "cover-ref",
+   "r_form_hits": [],
+   "session_matched": [
+    "june 2024"
+   ],
+   "furniture_ok": true,
+   "sha256": "e5920b0b4f8478d915b434aac97cc945e99517a2f823cc1a31675af7fdcbf9eb",
+   "size": 1415592,
+   "page_count": null,
+   "method": "pdf_text",
+   "refs_seen": [
+    "4ph1/2p"
+   ],
+   "sessions_seen": [
+    "june 2024"
+   ],
+   "norm_excerpt": "*p75828a0124* turn over p75828a \u00a92024 pearson education ltd. f:1/1/1/1/1/ \uf0a2 \uf0a2 please check the examination details below before entering your candidate information candidate surname other names centre number candidate nu",
+   "bytes": "/home/z/my-project/recon/fa2fix_files/4PH1-2P/2024-06/4PH1-2P_qp.pdf",
+   "session_source": "dir-session"
+  },
+  "status": "VERIFIED"
+ }
+}

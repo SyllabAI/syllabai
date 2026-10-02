@@ -3,69 +3,69 @@ task:
   id: T-C62
   title: "F-A2 fix wave + F-A1 orphan retirement — replace the 43 confirmed
     mis-filed '(R)' files with official plain papers (authenticated/
-    URL-resolved content-dam route; the 09-28 precedent), governed retire
-    of the 18 orphaned pre-repair document generations (F-PROD-4
-    precedent), census re-pin"
+    URL-resolved content-dam route), governed retire of the F-A1 orphans,
+    census re-pin"
   owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
-  status: IN_PROGRESS
+  status: DONE
   priority: P1
   authority: "operator IM trace 1a0fc4b91fc4c965: '① F-A2 fix mandate
     (replace the 43 with official plain papers — needs the authenticated
-    content-dam route), ② F-A1 orphan retirement' — exactly the two
-    remaining opens registered by T-C58 (Session 151). ID T-C62 chosen
-    because locks.yaml already carries a T-C61 lease (core-web-contract
-    lane) — the T-C49/T-C55 collision-avoidance protocol."
-  base:
-    repo: "syllabai records @ main at claim time; corpus
-      syllabai-pastpapers @ 029c6ec92 (T-C56/T-C58 pin, re-verified at
-      claim); F-A2 scope = T-C58 verdicts.json 43 CONFIRMED-MISFILED-R;
-      F-A1 scope = T-C56 findings register 18 (16x4CH0 bytes->4CH0-1CR/
-      2CR dirs + 2x4CH1 QP quarantined bytes; the d4 pack's two 4CH1 ms
-      rows reconciled as BENIGN SDA byte-twins 4SD0-1C/1CR-202011,
-      excluded); DB state re-derived live at execution (fail-closed)."
-  scope:
-    allowed:
-      - "corpus syllabai-pastpapers: replace the 43 mis-filed PDFs with
-        official plain documents (content-dam URLs recorded per material),
-        manifest material blocks + identification.notes correction notes
-        per the 09-28 format, docs/ wave record, single fix commit to
-        main; benign 2013-06/6PH05-01 ms.pdf byte-untouched"
-      - "post-fix verification: T-C56 L1/L2 re-run on the touched specs
-        (C1/C2b/C3/C4 + sha-vs-pin + cover-print identity)"
-      - "live-DB governed retire: documents.validation_state VALIDATED ->
-        REJECTED for exactly the 17 VALIDATED members of the pinned 18
-        (the 1 already-REJECTED member documented, no flip) under the
-        T-C54 wave-2 instrument pattern: single transaction, identity
-        gate, idempotence, per-row reference guards (0 exam_papers
-        refs in-tx), per-doc fidelity, census + chunks non-interference
-        asserts, one content_review_audit row per flipped document with
-        batch_run_id + operator trace verbatim"
-      - "census re-pin after the DB write (census-last; T-C60's pending
-        DB writes will owe a further re-pin when they land)"
-    forbidden:
-      - "no corpus writes beyond the 43 replacements + their manifests +
-        the wave doc"
-      - "no DB writes beyond the governed retire + audit rows"
-      - "no ingestion of the 8 never-ingested specs (still gated until
-        this wave's post-fix verification lands)"
-      - "no secrets on disk in any git-tracked path or in any commit
-        (env-only, never echoed)"
-  acceptance:
-    - "43/43 replaced files are official plain documents whose covers
-      print the dir's plain reference and session, sha-recorded, with
-      DAM URLs + new sha256/size per material; benign 6PH05-2013 MS
-      byte-identical"
-    - "T-C56 L1/L2 re-run on the 9 touched specs: 0 C3 findings, 0
-      sha-vs-pin mismatches, C1/C4 clean on touched dirs"
-    - "F-A1: exactly the pinned 18 rows retired/document (17 flips +
-      1 already-terminal), 0 ep refs at flip time, audit +17, chunks
-      snapshot unchanged, census delta exactly V-17/R+17"
-    - "census bundle re-pinned and recorded"
-    - "full evidence pack + YAML closure + WORKLOG session entry"
-  notes:
-    - "claim-first at registration (this commit). The DAM interstitial
-      constraint means per-material URL resolution through the Pearson
-      qualifications portal listing (the URL-resolved route the 09-28
-      and 4SD0 waves used); any material whose official plain document
-      cannot be resolved gets a documented unresolvable verdict — no
-      fabrication, fail-closed."
+    content-dam route), ② F-A1 orphan retirement'. ID T-C62 chosen because
+    locks.yaml already carried a T-C61 lease (core-web-contract lane)."
+execution_record:
+  fa2_fix_wave:
+    - "resolution: Pearson public course catalog (qualifications-uk_LIVE_
+      master-content Algolia index) + search-indexed DAM URLs; the DAM serves
+      bytes anonymously for correct resolved URLs (interstitial only on
+      unknown paths — probed against the 09-28 wave's recorded URLs first)"
+    - "verification per candidate (fail-closed): PDF parse; plain slash-ref
+      on pp1-3 (text or 200dpi OCR); R-form absent token-level incl.
+      4SD0/1PR SDA-twin furniture; sitting in {dir session + replaced copy's
+      own cover prints} (GCE Summer-2014 forms, day-month dates); furniture;
+      sha guards; URL filename token; catalog-title R-variant rejection.
+      TWO MIS-ACCEPTS CAUGHT AND REVERTED BY THE GUARDS: November-2020 files
+      for the June-2020 sitting; a 4EA0_02R file for the 4EB0 slot"
+    - "outcome: corpus commit f0ea3a1f9 on syllabai-pastpapers main (base
+      029c6ec92): 40/43 replaced (URL + sha256 + size recorded per material,
+      09-28-format source blocks + correction notes); 3 documented
+      unresolvable with do-not-ingest notes (4EB0-01 2014-06 ms — official
+      MS absent from the public DAM; 4PH1-1P/2P 2020-06 qp — June 2020
+      sitting not on the public DAM, the catalog November 2020 files are
+      different papers); benign 6PH05-2013 ms untouched"
+    - "post-push T-C56 L1/L2 re-run on the touched dirs: C1 43/43, C4 43/43,
+      L2 sha==pin 93/93 fresh-fetched files, 0 mismatches; C3 residue
+      exactly the 3 recorded dirs"
+  fa1_retirement:
+    - "DIVERGENCE (fail-closed catch): T-C56's 0/18-referenced record rested
+      on the wrong ep join column (documents.id row-uuid vs document_id).
+      Correct-join topology: 16 of the 18 ARE ep-linked (VALIDATED
+      4CH0/1CR|2CR-titled rows, both slots) and their bytes MATCH the
+      current corpus R dirs — R-paper generations with mis-URI'd source_uri,
+      NOT orphans; retiring them would break live paper rows. Governed
+      source_uri relabel recorded as a follow-up ruling, NOT executed"
+    - "executed: only a7a0e028 (4CH1-1C-202206/qp, VALIDATED, 15 chunks, 0
+      ep refs, superseded by the ep-linked 22201906 generation) satisfied
+      the registered predicate — retired VALIDATED->REJECTED 13:29:32Z,
+      batch_run_id cae83ab6-6ec9-4101-a780-fe59cf7862ec; 97f4da13 (201906/qp)
+      already REJECTED (terminal, no action); T-C54 instrument pattern,
+      dry-run first, all asserts green (gate 4,608->4,593 = exactly -15;
+      chunks 4,672/4,672 rev2 unchanged; audit 2,797->2,798 with the
+      operator's trace + verbatim decision text; independent fresh-connection
+      verify PASS)"
+    - "census re-pin: census_bundle_fa1_20261002.json — docs 1017 (871V/146R),
+      chunks 4,672/4,672 rev2, ep 104 (91V/13R), audit 2,798, gate 4,593;
+      bank axis unchanged vs T-C55. Concurrent drift recorded (8 chunkless
+      S->V flips + ep 103->104 from concurrent activity); a further re-pin
+      is owed when T-C60-EXEC lands"
+  evidence: "bench/review/fa2-fix-20261002/ + bench/review/fa1-retire-20261002/
+    (REPORTs + packs + SHA256SUMS); WORKLOG Session 156"
+  disclosure:
+    - "the 43 registered replacements resolved to 40 executable + 3 fail-closed
+      unresolvable (no fabrication; each unresolvable documented in its
+      manifest with the reason)"
+    - "F-A1's registered 18-orphan story was corrected by live evidence: the
+      batch retired exactly the rows satisfying the predicate (1) and
+      preserved the 16 ep-linked generations untouched"
+    - "secrets env-only (GH_PAT + RENDER_KEY), never on disk in any git-
+      tracked path, never in any commit — revocation remains operator-held
+      and is still owed"

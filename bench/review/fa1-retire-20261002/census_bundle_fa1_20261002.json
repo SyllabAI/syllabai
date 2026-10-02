@@ -1,0 +1,55 @@
+{
+ "target_state": "REJECTED",
+ "audit_row": {
+  "action": "REJECT",
+  "from": "VALIDATED",
+  "to": "REJECTED",
+  "batch_run_id": "cae83ab6-6ec9-4101-a780-fe59cf7862ec",
+  "operator_trace_id": "1a0fc4b91fc4c965",
+  "decision_text_verbatim": true,
+  "actor_label_head": "operator \u2014 Nawaf Al Hussain Khondokar (F-A1 orphan retiremen"
+ },
+ "ch0_untouched": 16,
+ "census_bundle": {
+  "name": "census_bundle_fa1_20261002.json",
+  "base": "post fa1-orphan-retire-2026-10-02 (run cae83ab6) + corpus F-A2 wave f0ea3a1f9",
+  "pins": {
+   "docs_state_x_kind": {
+    "REJECTED|MARK_SCHEME": 67,
+    "VALIDATED|QUESTION_PAPER": 109,
+    "VALIDATED|EXTERNAL_QUESTIONS": 379,
+    "VALIDATED|MARK_SCHEME": 109,
+    "VALIDATED|EXTERNAL_NOTES": 112,
+    "REJECTED|QUESTION_PAPER": 79,
+    "VALIDATED|SYLLABUS": 162
+   },
+   "docs_total": 1017,
+   "chunks_by_rev": {
+    "2": {
+     "chunks": 4672,
+     "embedded": 4672
+    }
+   },
+   "ep_rows": 104,
+   "ep_states": {
+    "REJECTED": 13,
+    "VALIDATED": 91
+   },
+   "audit_rows": 2798,
+   "teacher_validation_events": 0,
+   "schemes_total": 1504,
+   "mark_points": 5883,
+   "question_spec_points": 2620,
+   "question_totals": "ERR UndefinedTable",
+   "knowledge_nodes": 435,
+   "ing_orphans": "ERR UndefinedColumn",
+   "schemes_states": {
+    "SUGGESTED": 144,
+    "VALIDATED": 1360
+   },
+   "search_serving_eligible_gate": 4593
+  },
+  "note": "census-last for this lane; T-C60 (papers-axis completion) is IN_PROGRESS with staged DB writes \u2014 when those land, a further census re-pin is owed"
+ },
+ "status": "VERIFIED"
+}
