@@ -193,6 +193,17 @@ The report cuts by nodeId only, today. Honest order of operations:
    in the same pass) — until it ships, *no per-format constant decision is even
    expressible*, which includes the C5 review. This cut is the first implementation
    ask this protocol generates.
+   **LANDED 2026-10-02** — core PR #56 merged as main @ `6a51839` (branch
+   `feat/calibration-format-cut`, head `1586d7d`; CI 162 ITs green): the report
+   now carries per-format `FormatSegments` in the fixed taxonomy
+   MCQ_SINGLE{2-3, 4, 5+, malformed}/SHORT_ANSWER/STRUCTURED/UNTYPED beside the
+   pooled numbers — pooled statistics bit-identical to the pre-cut report (same
+   accumulation order), skipped/legacy rows counted globally and never
+   attributed (pre-contract rows carry no honest format), empty segments render
+   honest zeros (an empty segment is no evidence, per §2's coverage rule), the
+   `nodeId` filter cuts segments too. The C3 guard's paper-path degradation is
+   now observable as the `malformed` bucket. Item 3 is unblocked and fires on
+   §7's trigger (`sampleCount ≥ 300` or 14 days post-deploy, whichever first).
 3. **First report review** — C5 review trigger + C6 slip answer, per §5.6/5.7.
 4. **Ship the gap cut before any τ-band or τ_s proposal** (already the ADR's
    precondition); zero-gap stratum must match the raw-latent curve or the decay
