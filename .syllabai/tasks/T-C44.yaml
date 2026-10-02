@@ -52,5 +52,21 @@ task:
     - "surface attribution: ADR-029 — hub is the production product
       frontend (promoted from demo 2026-09-28); web is the internal
       teacher/ops console and already renders these shapes correctly"
-  merge_status: "PR OPEN (awaiting explicit merge word per lane
-    convention)"
+    - "implementer deltas over the web original (both found by the verify
+      gate, both latent in web's s142): rule 2 collapses the \\[…\\] body
+      onto one line (a multi-line \\$…\\$ block let the line-based rule 6
+      nest \\$…\\$ inside the display — KaTeX 'Can't use function \\$');
+      rules 3/4 (bare \\ce wrap) run only BETWEEN \\$…\\$ display spans
+      (wrapping \\ce inside a display corrupts the real \\boxed{\\ce{…}}
+      shape)"
+  merge_status: "PR syllabai-hub#6 OPEN (fix/tutor-math-normalize, head
+    0f88609, base a61b0d3) — awaiting explicit merge word. Scope note: the
+    render-boundary wrap covers the four model-content surfaces (tutor
+    message-item x2 sites, note-cla, question-cla-overlay,
+    assistant-client) — the s142 web precedent ('Tutor + every CLA
+    surface'); corpus surfaces untouched. CI run 36970473759: build job
+    fully GREEN (lint + production build + the new Tutor math normalize
+    verify step 17/17 + ADR-021 selftest); e2e failure at the Deck-flow
+    step is PRE-EXISTING on main a61b0d3 (run 36912705568, identical step,
+    flashcard deck surface — disjoint from this diff). PR comment carries
+    the full evidence."
