@@ -1,0 +1,1317 @@
+{
+ "snapshot_version": "snap-007",
+ "generated": "2026-10-02T09:58:06Z",
+ "lineage": "snap-001 -> snap-002 -> snap-003 -> snap-004 -> snap-005 -> snap-006 -> snap-007 (wave-2 re-record generation)",
+ "files_sha256": {
+  "spec_points.json": "b95361eff3ac5a70040e0bc79af7b5f5666704db350505830ca409ead607d6fb",
+  "graph_edges.json": "f31e560b101af88ac7d82f97bce4c4b02175c98e7f42dc361076a61a246daf0a",
+  "misconceptions.json": "a2be42f50505d94758c8d12f509753a0999cb196629cd735cb47ea2185da5148",
+  "question_anchors.json": "1c400ed09a6cfdfdea682a0a00bfe316084546fa213e6f7f469f6667fbc5ef8a",
+  "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
+  "graph_code.json": "6c6cdbf0c77e1389c5ec41e1facf1630ebd7c97576085be6b528dffabee86ee5",
+  "chunk_spec_hv.json": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+  "chunks.jsonl.gz": "0b83861909609a72930158c4aa45cb51ad9e03eb7556c8c3d48df0785d7b2d64"
+ },
+ "counts": {
+  "chunks": 4510,
+  "chunks_by_kind": {
+   "EXTERNAL_NOTES": 350,
+   "EXTERNAL_QUESTIONS": 1056,
+   "MARK_SCHEME": 1639,
+   "QUESTION_PAPER": 1465
+  },
+  "chunks_by_paper_state": {
+   "EXTERNAL_NOTES": {
+    "VALIDATED": 350
+   },
+   "MARK_SCHEME": {
+    "VALIDATED": 1609,
+    "REJECTED": 30
+   },
+   "QUESTION_PAPER": {
+    "VALIDATED": 1431,
+    "REJECTED": 34
+   },
+   "EXTERNAL_QUESTIONS": {
+    "VALIDATED": 1056
+   }
+  },
+  "chunks_added_vs_snap006": 329,
+  "chunks_flipped_suggested_to_validated_vs_snap006": 3162,
+  "concept_attachments": 117,
+  "edges": 270,
+  "hv_projection": {
+   "rows": 210,
+   "rows_with_refs": 209,
+   "distinct_chunk_refs": 164,
+   "distinct_spec_codes": 181,
+   "anchor_kinds": {
+    "CLEAN": 205,
+    "MULTI": 4,
+    "SPAN": 0,
+    "MISS": 1
+   }
+  },
+  "misconceptions": 30,
+  "question_anchors": 988,
+  "spec_points": 194
+ },
+ "deltas_vs_snap-006": {
+  "SNAP7-F1_reingest_additive_delta": {
+   "finding": "the +chunks delta since snap-006: the 09-28T20:18-20:24Z chemistry re-ingest created correct document generations for the repaired files (T-C56 corpus audit) \u2014 their chunks join the corpus. Every added chunk's document carries created_at in the re-ingest window (verified programmatically). Zero snap-006 chunk_refs removed (the F-PROD-4 shell removed 0-chunk rows only).",
+   "added_chunks": 329,
+   "added_by_kind": {
+    "QUESTION_PAPER": 184,
+    "MARK_SCHEME": 145
+   },
+   "added_documents": 20
+  },
+  "SNAP7-F2_validation_flips": {
+   "finding": "validation-state flips since the snap-006 freeze, captured at freeze time as-is: validation wave-1 (teacher surface, 2026-10-02 \u2014 the four wave units' QP/MS surfaces were already teacher-VALIDATED; recorded in the wave-1 PRODUCTION report) + validation wave-2 (operator directive trace 1a0fb9dd09110041 'Proceed. Here is neon api if you need it.', governed SQL batch, 297 documents SUGGESTED->VALIDATED, batch_run_id 14cb8ae4\u2026, 2026-10-02T08:31:44Z, T-C54). Any other flip is recorded; any VALIDATED->X regression aborts (SNAP7-D1).",
+   "chunks_flipped_to_validated": 3162,
+   "flips_by_kind_paper_code": {
+    "MARK_SCHEME|4CH1/1CR": 203,
+    "QUESTION_PAPER|4CH1/1CR": 146,
+    "EXTERNAL_QUESTIONS|4CH1/1C": 120,
+    "MARK_SCHEME|4CH0/2C": 176,
+    "EXTERNAL_QUESTIONS|4CH1/1CR": 96,
+    "MARK_SCHEME|4CH1/2C": 175,
+    "MARK_SCHEME|4CH0/1C": 342,
+    "QUESTION_PAPER|4CH0/2C": 178,
+    "QUESTION_PAPER|4CH1/2C": 153,
+    "QUESTION_PAPER|4CH1/1C": 218,
+    "EXTERNAL_QUESTIONS|4CH0/2C": 117,
+    "EXTERNAL_QUESTIONS|4CH1/2CR": 65,
+    "QUESTION_PAPER|4CH0/1C": 314,
+    "MARK_SCHEME|4CH1/2CR": 152,
+    "QUESTION_PAPER|4CH1/2CR": 103,
+    "EXTERNAL_QUESTIONS|4CH1/2C": 87,
+    "EXTERNAL_QUESTIONS|4CH0/2CR": 27,
+    "EXTERNAL_QUESTIONS|4CH0/1C": 187,
+    "EXTERNAL_QUESTIONS|4CH0/1CR": 48,
+    "MARK_SCHEME|4CH1/1C": 255
+   },
+   "documents_with_promoted_chunks": 246,
+   "paper_state_by_kind": {
+    "EXTERNAL_NOTES": {
+     "VALIDATED": 350
+    },
+    "MARK_SCHEME": {
+     "VALIDATED": 1609,
+     "REJECTED": 30
+    },
+    "QUESTION_PAPER": {
+     "VALIDATED": 1431,
+     "REJECTED": 34
+    },
+    "EXTERNAL_QUESTIONS": {
+     "VALIDATED": 1056
+    }
+   },
+   "no_validated_regressions": true,
+   "row_set_identity": "snap-006's 4,181 chunk_refs carried with IDENTICAL contents, kinds and spec_codes; paper_state (and metadata-only paper_code stamps, if any) are the only permitted value deltas on the carried set, verified programmatically"
+  },
+  "SNAP7-F3_rejected_flips": {
+   "finding": "SUGGESTED->REJECTED flips since snap-006: teacher REJECT decisions on the named documents (content_review_audit rows re-verified at freeze time; snap-006 carried zero REJECTED chunks). REJECTED chunks never serve in either bench view's compliant gate; in the ALL-denominator served view they remain corpus rows with unchanged content.",
+   "chunks_flipped_to_rejected": 54,
+   "by_kind": {
+    "MARK_SCHEME": 30,
+    "QUESTION_PAPER": 24
+   },
+   "documents": {
+    "3797f4918e2288921963bcce55be4136e7464640a99fd9ff0d87c19a7c4e3c2b": [
+     {
+      "decision": "REJECT",
+      "at": "2026-09-28T22:06:36.472307+00:00",
+      "reason": "retired candidate superseded by better-proven content in the OCR lane (trace 1a0e9c4c5305d55d); holds 19 chunks on a SUGGESTED (non-serving) doc; \u00a7D1 retire dec"
+     }
+    ],
+    "3a280ff330b75f3ca8853c572ff39361d0bd7add2475647916f44b27bdd36943": [
+     {
+      "decision": "REJECT",
+      "at": "2026-09-28T22:06:36.472307+00:00",
+      "reason": "retired candidate superseded by better-proven content in the OCR lane (trace 1a0e9c4c5305d55d); holds 11 chunks on a SUGGESTED (non-serving) doc; \u00a7D1 retire dec"
+     }
+    ],
+    "b9c1824d22915c00099422acaf921f3ae9713739337a75bdb52015455034227a": [
+     {
+      "decision": "REJECT",
+      "at": "2026-09-28T22:06:36.472307+00:00",
+      "reason": "retired candidate superseded by better-proven content in the OCR lane (trace 1a0e9c4c5305d55d); holds 11 chunks on a SUGGESTED (non-serving) doc; \u00a7D1 retire dec"
+     }
+    ],
+    "dab46d233def98fa0496d7b22298a660b3a98cc951665d33d9dc22c8d35252f6": [
+     {
+      "decision": "REJECT",
+      "at": "2026-09-28T22:06:36.472307+00:00",
+      "reason": "retired candidate superseded by better-proven content in the OCR lane (trace 1a0e9c4c5305d55d); holds 13 chunks on a SUGGESTED (non-serving) doc; \u00a7D1 retire dec"
+     }
+    ]
+   }
+  },
+  "SNAP7-F4_chunk_paper_code_stamps": {
+   "finding": "metadata-only paper_code stamps since snap-006 (any stamps recorded).",
+   "rows_stamped": 0,
+   "by_kind": {}
+  },
+  "SNAP7-F5_f_prod4_shell_removal": {
+   "finding": "the F-PROD-4 governed removal (2026-10-02T07:34:18Z, wave2-prep lane): the 4CH1/2C REJECTED ingest shell (1 paper + 2 REJECTED 0-chunk docs + question/version/scheme/topic/part/mark_point rows, 111 rows total, full archive wave2_shell_archive.json) no longer conflates sessions per code. Effect on this freeze: ZERO chunk deltas (the shell carried 0 chunks); visible only in the audit trail and document census.",
+   "chunks_removed": 0
+  },
+  "SNAP7-M1_method_note": {
+   "finding": "unchanged read path: sanctioned Neon connection (console.neon.tech control plane, Session 136/147 lineage), READ-ONLY (set_session(readonly=True)), SELECT-only, rolled back; zero writes to any production table"
+  },
+  "SNAP7-A1_audit_census_since_snap006": {
+   "finding": "content_review_audit rows created after the snap-006 freeze (2026-09-28T15:41:20Z), grouped by decision type \u2014 the provenance census for every state delta this freeze records.",
+   "census": [
+    {
+     "action": "FLAG",
+     "target_type": "exam_paper",
+     "rows": 49,
+     "first": "2026-09-28T19:09:37.863976+00:00",
+     "last": "2026-09-28T19:09:37.863976+00:00"
+    },
+    {
+     "action": "PLACE",
+     "target_type": "exam_paper",
+     "rows": 97,
+     "first": "2026-09-28T19:33:33.137831+00:00",
+     "last": "2026-09-29T07:56:08.409171+00:00"
+    },
+    {
+     "action": "REJECT",
+     "target_type": "document",
+     "rows": 147,
+     "first": "2026-09-28T22:06:36.472307+00:00",
+     "last": "2026-09-28T23:19:53.104184+00:00"
+    },
+    {
+     "action": "REJECT",
+     "target_type": "exam_paper",
+     "rows": 2,
+     "first": "2026-09-28T21:19:36.373742+00:00",
+     "last": "2026-10-02T07:34:18.759274+00:00"
+    },
+    {
+     "action": "UNFLAG",
+     "target_type": "exam_paper",
+     "rows": 48,
+     "first": "2026-09-28T19:33:33.137831+00:00",
+     "last": "2026-09-28T21:19:36.373742+00:00"
+    },
+    {
+     "action": "VALIDATE",
+     "target_type": "document",
+     "rows": 431,
+     "first": "2026-09-28T19:09:37.863976+00:00",
+     "last": "2026-10-02T08:30:33.011041+00:00"
+    },
+    {
+     "action": "VALIDATE",
+     "target_type": "exam_paper",
+     "rows": 78,
+     "first": "2026-09-28T19:09:37.863976+00:00",
+     "last": "2026-09-29T07:56:08.409171+00:00"
+    },
+    {
+     "action": "VALIDATE",
+     "target_type": "mark_scheme",
+     "rows": 677,
+     "first": "2026-09-28T19:09:37.863976+00:00",
+     "last": "2026-09-29T07:56:08.409171+00:00"
+    },
+    {
+     "action": "VALIDATE",
+     "target_type": "question_version",
+     "rows": 781,
+     "first": "2026-09-28T19:09:37.863976+00:00",
+     "last": "2026-09-29T07:56:08.409171+00:00"
+    },
+    {
+     "action": "VALIDATE_ALL",
+     "target_type": "exam_paper",
+     "rows": 1,
+     "first": "2026-10-01T19:16:19.631528+00:00",
+     "last": "2026-10-01T19:16:19.631528+00:00"
+    }
+   ],
+   "wave2_batch_rows_with_batch_run_id_marker": 297
+  },
+  "SNAP7-H1_chunk_spec_hv_substrate": {
+   "finding": "the \u00a78(d) substrate chunk_spec_hv.json copied BYTE-IDENTICAL from snap-006 (projection sha256 pinned). Drift gate: every mapping's quote containment re-verified over the FROZEN chunk bytes (now including the +329 re-ingest chunks) against the pinned resources store (1245df009712216b309f163aacdd1c6d8ef39f1b, store sha256_16 e8b58a7109104bb7); anchor kinds recomputed {\"CLEAN\": 205, \"MULTI\": 4, \"SPAN\": 0, \"MISS\": 1}. The re-ingest chunks carry no HV projection rows (the pinned projection predates them) \u2014 \u00a78(d) coverage is unchanged by design.",
+   "projection_sha256": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+   "drift_gate_failures": 0
+  },
+  "SNAP7-G1b_kg_edge_remodel": {
+   "finding": "12 snap-006 VALIDATED semantic edges no longer satisfy the producer filter; the gone rows are a GOVERNED RE-MODEL, not data loss: the practicals' REQUIRES_PREREQUISITE edges were replaced by the KG drill-down/teaching-coverage lanes with a PART_OF structure (successor edge set recorded below). Census-only for this run \u2014 the C hybrid arm reads chunks, not the graph.",
+   "gone_rows": [
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-01",
+     "target": "4CH1-CON-SATURATED-SOLUTION",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-01",
+     "target": "4CH1-CON-SOLUBILITY",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-02",
+     "target": "4CH1-CON-CHROMATOGRAPHY",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-02",
+     "target": "4CH1-CON-RF-VALUE",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-03",
+     "target": "4CH1-CON-EXP-FORMULA-DEDUCTION",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-04",
+     "target": "4CH1-CON-AQUEOUS-DISCHARGE",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-04",
+     "target": "4CH1-CON-ELECTROLYSIS",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-09",
+     "target": "4CH1-CON-CALORIMETRY",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-10",
+     "target": "4CH1-CON-RATE-EXPERIMENTS",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-10",
+     "target": "4CH1-CON-RATE-FACTORS",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-11",
+     "target": "4CH1-CON-CATALYST",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "source": "4CH1-PR-11",
+     "target": "4CH1-CON-RATE-EXPERIMENTS",
+     "current_status": "ROW_GONE",
+     "edge_created_at": null
+    }
+   ],
+   "successor_edges_for_affected_sources": [
+    [
+     "4CH1-PR-01",
+     "PART_OF",
+     "4CH1-1.7C",
+     "VALIDATED"
+    ],
+    [
+     "4CH1-PR-02",
+     "PART_OF",
+     "4CH1-1.13",
+     "VALIDATED"
+    ],
+    [
+     "4CH1-PR-03",
+     "PART_OF",
+     "4CH1-1.36",
+     "VALIDATED"
+    ],
+    [
+     "4CH1-PR-04",
+     "PART_OF",
+     "4CH1-1.60C",
+     "VALIDATED"
+    ],
+    [
+     "4CH1-PR-09",
+     "PART_OF",
+     "4CH1-3.8",
+     "VALIDATED"
+    ],
+    [
+     "4CH1-PR-10",
+     "PART_OF",
+     "4CH1-3.15",
+     "VALIDATED"
+    ],
+    [
+     "4CH1-PR-11",
+     "PART_OF",
+     "4CH1-3.16",
+     "VALIDATED"
+    ]
+   ]
+  },
+  "SNAP7-G1_kg_edge_growth": {
+   "finding": "knowledge_edges (VALIDATED, semantic relations) grew 152 -> 270 since the snap-006 freeze: the teaching-coverage / KG drill-down lanes' curriculum work landed on production after 09-28. Gold pairing unaffected (spec_points BYTE-IDENTICAL; the C hybrid arm reads chunks, not the graph). Recorded as a manifest-bound delta with created_at provenance.",
+   "edges_snap006": 152,
+   "edges_snap007": 270,
+   "added": 130,
+   "removed": 12,
+   "added_edges_created_after_snap006": [
+    {
+     "relation": "EXPLAINED_BY",
+     "status": "VALIDATED",
+     "rows": 2,
+     "first": "2026-09-30T20:37:06.482003+00:00",
+     "last": "2026-09-30T20:37:07.097833+00:00"
+    },
+    {
+     "relation": "PART_OF",
+     "status": "SUGGESTED",
+     "rows": 94,
+     "first": "2026-09-30T20:36:34.983761+00:00",
+     "last": "2026-09-30T20:37:05.867487+00:00"
+    },
+    {
+     "relation": "RELATED_TO",
+     "status": "VALIDATED",
+     "rows": 1,
+     "first": "2026-09-30T20:37:08.130606+00:00",
+     "last": "2026-09-30T20:37:08.130606+00:00"
+    },
+    {
+     "relation": "REMEDIATED_BY",
+     "status": "VALIDATED",
+     "rows": 11,
+     "first": "2026-09-30T20:37:08.846587+00:00",
+     "last": "2026-09-30T20:37:11.695713+00:00"
+    },
+    {
+     "relation": "REQUIRES_PREREQUISITE",
+     "status": "VALIDATED",
+     "rows": 94,
+     "first": "2026-09-30T20:37:12.001152+00:00",
+     "last": "2026-09-30T20:37:42.711225+00:00"
+    },
+    {
+     "relation": "WRONG_ANSWER_PATTERN",
+     "status": "VALIDATED",
+     "rows": 11,
+     "first": "2026-09-30T20:37:43.429697+00:00",
+     "last": "2026-09-30T20:37:46.180704+00:00"
+    }
+   ]
+  },
+  "SNAP7-G2_misconception_growth": {
+   "finding": "MISCONCEPTION knowledge_nodes grew 19 -> 30 since snap-006 (KG drill-down lanes). Zero removals; additions recorded.",
+   "rows_snap006": 19,
+   "rows_snap007": 30,
+   "added_codes": [
+    "4CH1-MIS-CUO-COLOUR",
+    "4CH1-MIS-ENDPOINT-PH-ABOVE-7",
+    "4CH1-MIS-G1-SHELL-EXPLANATION",
+    "4CH1-MIS-GLOWING-SPLINT-HYDROGEN",
+    "4CH1-MIS-HALIDE-TEST-HCL",
+    "4CH1-MIS-HALOGEN-HALIDE",
+    "4CH1-MIS-ION-OXIDE-REASONING",
+    "4CH1-MIS-KEROSENE-DOUBLE-BONDS",
+    "4CH1-MIS-POLYMER-DOUBLE-BOND",
+    "4CH1-MIS-PRECIPITATE-IN-FILTRATE",
+    "4CH1-MIS-PROPANOL-POSITION"
+   ],
+   "removed_codes": []
+  },
+  "SNAP7-F6_question_anchor_delta": {
+   "finding": "the VALIDATED question_versions anchor set vs snap-006: the superset discipline is REFINED into an explicit ledger \u2014 field mutations, stem re-extractions (re-extracted rows born in the re-ingest window), and unmatched rows consistent with the coverage lanes' delete-and-re-extract question lineage, all recorded. Anchors are a census input for this run (no gate reads them); gold pairing is chunk/SP-based and unaffected.",
+   "rows_snap006": 731,
+   "rows_snap007": 988,
+   "added_rows": 448,
+   "added_distinct": 448,
+   "mutated_rows": 75,
+   "stem_reextracted_rows": 1,
+   "stem_mutation_sample": [
+    {
+     "anchor_code": "4CH1-S1-e",
+     "paper_code": "4CH0/2C",
+     "snap006_marks": 7,
+     "snap007_marks": 7,
+     "stem_head": "Magnesium chloride can be made by reacting excess magnesium "
+    }
+   ],
+   "mutation_sample": [
+    {
+     "anchor_code": "4CH1-S1-b",
+     "paper_code": null,
+     "snap006": {
+      "command_word": "name",
+      "marks": 5,
+      "paper_code": null
+     },
+     "snap007": {
+      "command_word": "deduce",
+      "marks": 7,
+      "paper_code": null
+     }
+    },
+    {
+     "anchor_code": "4CH1-S1-d",
+     "paper_code": null,
+     "snap006": {
+      "command_word": "identify",
+      "marks": 11,
+      "paper_code": null
+     },
+     "snap007": {
+      "command_word": "state",
+      "marks": 14,
+      "paper_code": null
+     }
+    },
+    {
+     "anchor_code": "4CH1-S1-e",
+     "paper_code": null,
+     "snap006": {
+      "command_word": null,
+      "marks": 14,
+      "paper_code": null
+     },
+     "snap007": {
+      "command_word": null,
+      "marks": 7,
+      "paper_code": null
+     }
+    },
+    {
+     "anchor_code": "4CH1-S1-e",
+     "paper_code": null,
+     "snap006": {
+      "command_word": "explain",
+      "marks": 11,
+      "paper_code": null
+     },
+     "snap007": {
+      "command_word": null,
+      "marks": 7,
+      "paper_code": null
+     }
+    },
+    {
+     "anchor_code": "4CH1-S1-e",
+     "paper_code": null,
+     "snap006": {
+      "command_word": null,
+      "marks": 12,
+      "paper_code": null
+     },
+     "snap007": {
+      "command_word": null,
+      "marks": 7,
+      "paper_code": null
+     }
+    },
+    {
+     "anchor_code": "4CH1-S1-e",
+     "paper_code": null,
+     "snap006": {
+      "command_word": null,
+      "marks": 8,
+      "paper_code": null
+     },
+     "snap007": {
+      "command_word": null,
+      "marks": 7,
+      "paper_code": null
+     }
+    },
+    {
+     "anchor_code": "4CH1-S1-e",
+     "paper_code": null,
+     "snap006": {
+      "command_word": "describe",
+      "marks": 15,
+      "paper_code": null
+     },
+     "snap007": {
+      "command_word": null,
+      "marks": 7,
+      "paper_code": null
+     }
+    },
+    {
+     "anchor_code": "4CH1-S1-e",
+     "paper_code": null,
+     "snap006": {
+      "command_word": null,
+      "marks": 13,
+      "paper_code": null
+     },
+     "snap007": {
+      "command_word": null,
+      "marks": 7,
+      "paper_code": null
+     }
+    }
+   ],
+   "deletions": [
+    {
+     "anchor_code": "4CH1-S1-b",
+     "paper_code": "4CH0/2C",
+     "stem": "The box contains the names of some substances. Choose a substance from the box t"
+    },
+    {
+     "anchor_code": "4CH1-S1-e",
+     "paper_code": null,
+     "stem": "Alcohol **A** has the structural formula, CH<sub>3</sub>CH<sub>2</sub>OH.\n\nWhich"
+    },
+    {
+     "anchor_code": "4CH1-S1-f",
+     "paper_code": null,
+     "stem": "Choose a substance that is a liquid at 25 \u00b0C."
+    },
+    {
+     "anchor_code": "4CH1-S1-f",
+     "paper_code": null,
+     "stem": "Choose a substance that is a metal."
+    },
+    {
+     "anchor_code": "4CH1-S1-f",
+     "paper_code": null,
+     "stem": "Choose a substance that is an ionic compound."
+    },
+    {
+     "anchor_code": "4CH1-S1-f",
+     "paper_code": null,
+     "stem": "The table shows some properties of four substances, **P**, **Q**, **R** and **S*"
+    },
+    {
+     "anchor_code": "4CH1-S2-e",
+     "paper_code": null,
+     "stem": "This question is about metals.\n\nWhich statement describes metallic bonding?"
+    },
+    {
+     "anchor_code": "4CH1-S2-f",
+     "paper_code": null,
+     "stem": "Ethanoic acid is a carboxylic acid used in vinegar.\n\nWhich of these statements i"
+    },
+    {
+     "anchor_code": "4CH1-S2-f",
+     "paper_code": null,
+     "stem": "When a bottle of wine is left open, ethanoic acid and water can form as a result"
+    },
+    {
+     "anchor_code": "4CH1-S2-g",
+     "paper_code": "4CH0/2C",
+     "stem": "Oxides can be made by burning elements in air. The table gives some information "
+    },
+    {
+     "anchor_code": "4CH1-S2-g",
+     "paper_code": null,
+     "stem": "Sulfuric acid can be used to make a soluble salt when reacted with a base.\n\nAll "
+    },
+    {
+     "anchor_code": "4CH1-S2-g",
+     "paper_code": null,
+     "stem": "Sulfuric acid reacts with copper(II) oxide to form a salt.  What is the name of "
+    },
+    {
+     "anchor_code": "4CH1-S2-g",
+     "paper_code": null,
+     "stem": "Which piece of apparatus can be used to measure the volume of a liquid?"
+    },
+    {
+     "anchor_code": "4CH1-S3-a",
+     "paper_code": null,
+     "stem": "Oxygen can be prepared from hydrogen peroxide using a catalyst.\n\nWhich is a corr"
+    },
+    {
+     "anchor_code": "4CH1-S3-c",
+     "paper_code": null,
+     "stem": "The reaction between ethanoic acid and ethanol will reach dynamic equilibrium.\n\n"
+    },
+    {
+     "anchor_code": "4CH1-S3-c",
+     "paper_code": "4CH0/2C",
+     "stem": "When nitrogen dioxide gas $ \\mathrm{(N O_{2})} $ is placed in a sealed flask, it"
+    },
+    {
+     "anchor_code": "4CH1-S4-a",
+     "paper_code": null,
+     "stem": "Alkanes are hydrocarbons. The structure of a molecule of butane is shown.\n\n![But"
+    },
+    {
+     "anchor_code": "4CH1-S4-d",
+     "paper_code": null,
+     "stem": "Ethene is bubbled through bromine water until there is no further colour change."
+    },
+    {
+     "anchor_code": "4CH1-S4-e",
+     "paper_code": "4CH0/2C",
+     "stem": "Ethanol can be produced when yeast is added to a glucose solution. This apparatu"
+    },
+    {
+     "anchor_code": "ING-4CH02CJANUARY2016",
+     "paper_code": "4CH0/2C",
+     "stem": "A student investigates the temperature rise of water in a copper can placed abov"
+    },
+    {
+     "anchor_code": "ING-4CH02CJANUARY2016",
+     "paper_code": "4CH0/2C",
+     "stem": "A student prepares a solution of the soluble salt lithium sulfate, using the neu"
+    },
+    {
+     "anchor_code": "ING-4CH02CJANUARY2016",
+     "paper_code": "4CH0/2C",
+     "stem": "An industrial chemical company has supplies of ethene and ethanol. The company c"
+    },
+    {
+     "anchor_code": "ING-4CH02CJANUARY2016",
+     "paper_code": "4CH0/2C",
+     "stem": "Potassium chloride, KCl, is very similar to sodium chloride, NaCl. They have the"
+    },
+    {
+     "anchor_code": "ING-4CH02CJANUARY2016",
+     "paper_code": "4CH0/2C",
+     "stem": "The table shows the electronic configurations of four elements."
+    },
+    {
+     "anchor_code": "ING-4CH02CJANUARY2016",
+     "paper_code": "4CH0/2C",
+     "stem": "The table shows the names of some common pieces of laboratory apparatus used to "
+    },
+    {
+     "anchor_code": "ING-4CH02CJANUARY2016",
+     "paper_code": "4CH0/2C",
+     "stem": "The table shows the names of some substances. It also shows whether each substan"
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "A metal is added to copper(II) sulfate solution. $\\mathrm {m e t a l} + \\mathrm "
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "Ammonium chloride decomposes in a reversible reaction. The equation for this rea"
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "Many different salts can be prepared from acids."
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "Substances can be classified as elements, compounds or mixtures."
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "The copper(II) carbonate in the mineral, malachite, reacts with hydrochloric aci"
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "The diagram shows the structure of an atom."
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "The flow chart shows how ethene can be obtained industrially from crude oil."
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "The percentage by volume of oxygen in air can be found by using the rusting of i"
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "This question is about hydrocarbons."
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "This question is about the elements in Group 1 of the Periodic Table and their r"
+    },
+    {
+     "anchor_code": "ING-4CH11CSPECIMEN2017",
+     "paper_code": "4CH1/1C",
+     "stem": "When aqueous solutions of potassium hydroxide and nitric acid are mixed together"
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "(a) A scientist finds an unlabelled bottle on a shelf. She thinks the bottle con"
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "(a) Table 1 gives some information about three subatomic particles. (i) Complete"
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "(a) The diagram shows the apparatus a teacher uses to determine the formula of a"
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "A student investigates the reaction between magnesium and hydrochloric acid. He "
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "A student uses paper chromatography in an experiment to separate the dyes in fou"
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "A student uses this apparatus to investigate the rate of reaction between marble"
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "Some sugar is added to cold water in a beaker. After some time, all the sugar di"
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "This question is about alkanes and alkenes. ( a ) ( i ) Complete the boxes by gi"
+    },
+    {
+     "anchor_code": "ING-4CH11CSUMMER2021",
+     "paper_code": "4CH1/1C",
+     "stem": "This question is about some of the Group 1 elements and their compounds."
+    },
+    {
+     "anchor_code": "ING-4CH12CJANUARY2021",
+     "paper_code": "4CH1/2C",
+     "stem": "The diagram shows an atom of an element."
+    },
+    {
+     "anchor_code": "ING-4CH12CJANUARY2021",
+     "paper_code": "4CH1/2C",
+     "stem": "This question is about carboxylic acids. Solutions of carboxylic acids react wit"
+    },
+    {
+     "anchor_code": "ING-4CH12CJANUARY2021",
+     "paper_code": "4CH1/2C",
+     "stem": "This question is about gases."
+    },
+    {
+     "anchor_code": "ING-4CH12CJANUARY2021",
+     "paper_code": "4CH1/2C",
+     "stem": "This question is about octane $ \\left( \\mathrm{C}_{8} \\mathrm{H}_{1 8} \\right) $"
+    },
+    {
+     "anchor_code": "ING-4CH12CJANUARY2021",
+     "paper_code": "4CH1/2C",
+     "stem": "This question is about sodium and potassium. A trough is filled with water and a"
+    },
+    {
+     "anchor_code": "ING-4CH12CJANUARY2021",
+     "paper_code": "4CH1/2C",
+     "stem": "This question is about the insoluble salt silver chloride (AgCl). Silver chlorid"
+    },
+    {
+     "anchor_code": "ING-4CH12CJANUARY2021",
+     "paper_code": "4CH1/2C",
+     "stem": "This question is about the metal aluminium."
+    },
+    {
+     "anchor_code": "ING-4CH12CNOVEMBER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "(a) The box lists words that may be used to explain the term saturated solution."
+    },
+    {
+     "anchor_code": "ING-4CH12CNOVEMBER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "Hydrogen gas and iodine gas react together to form hydrogen iodide gas. $\\mathrm"
+    },
+    {
+     "anchor_code": "ING-4CH12CNOVEMBER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "Metals are found in the Earth's crust either as uncombined elements or in metal "
+    },
+    {
+     "anchor_code": "ING-4CH12CNOVEMBER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "Sulfur dioxide $ \\left( \\mathrm{S O}_{2} \\right) $ and hydrogen sulfide $ \\left("
+    },
+    {
+     "anchor_code": "ING-4CH12CNOVEMBER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "This question is about alcohols, carboxylic acids and esters."
+    },
+    {
+     "anchor_code": "ING-4CH12CNOVEMBER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "This question is about ionic compounds."
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2020",
+     "paper_code": "4CH1/2CR",
+     "stem": "(a) Ethanol, $ \\mathrm{C_{2} H_{5} O H} $ , can be produced by the fermentation "
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2020",
+     "paper_code": "4CH1/2CR",
+     "stem": "Chromatography is used to analyse mixtures. She places four known dyes, A, B, C "
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2020",
+     "paper_code": "4CH1/2CR",
+     "stem": "Solutions of silver nitrate and potassium chloride react together to make the in"
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2020",
+     "paper_code": "4CH1/2CR",
+     "stem": "Substances can be classified as elements, mixtures or compounds."
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2020",
+     "paper_code": "4CH1/2CR",
+     "stem": "This question is about Group 1 metals and their reactions."
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2020",
+     "paper_code": "4CH1/2CR",
+     "stem": "This question is about ethane and ethene."
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2020",
+     "paper_code": "4CH1/2CR",
+     "stem": "This question is about the metal, lead."
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2022",
+     "paper_code": "4CH1/2CR",
+     "stem": "(a) Two substances are needed to cause iron to rust. Name these two substances."
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2022",
+     "paper_code": "4CH1/2CR",
+     "stem": "A student does a titration to find the concentration of a solution of dilute sul"
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2022",
+     "paper_code": "4CH1/2CR",
+     "stem": "A teacher prepares the insoluble salt lead(II) bromide $ \\mathrm{(P b B r_{2})} "
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2022",
+     "paper_code": "4CH1/2CR",
+     "stem": "Crude oil is a mixture of hydrocarbons."
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2022",
+     "paper_code": "4CH1/2CR",
+     "stem": "The reaction between hydrogen and chlorine is exothermic. This is the equation f"
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2022",
+     "paper_code": "4CH1/2CR",
+     "stem": "This question is about alcohols, carboxylic acids and their reactions."
+    },
+    {
+     "anchor_code": "ING-4CH12CRJANUARY2022",
+     "paper_code": "4CH1/2CR",
+     "stem": "This question is about three stages in the manufacture of sulfuric acid."
+    },
+    {
+     "anchor_code": "ING-4CH12CSPECIMEN2017",
+     "paper_code": "4CH1/2C",
+     "stem": "A technician finds a white solid in an unlabelled beaker. She knows that the sol"
+    },
+    {
+     "anchor_code": "ING-4CH12CSPECIMEN2017",
+     "paper_code": "4CH1/2C",
+     "stem": "Ammonia is manufactured on a large scale and is used to make fertilisers such as"
+    },
+    {
+     "anchor_code": "ING-4CH12CSPECIMEN2017",
+     "paper_code": "4CH1/2C",
+     "stem": "Astatine, bromine, chlorine, fluorine and iodine are all halogens. They are foun"
+    },
+    {
+     "anchor_code": "ING-4CH12CSPECIMEN2017",
+     "paper_code": "4CH1/2C",
+     "stem": "Grapes contain glucose that can be fermented to make ethanol."
+    },
+    {
+     "anchor_code": "ING-4CH12CSPECIMEN2017",
+     "paper_code": "4CH1/2C",
+     "stem": "Polymers can be classified as addition polymers or condensation polymers."
+    },
+    {
+     "anchor_code": "ING-4CH12CSPECIMEN2017",
+     "paper_code": "4CH1/2C",
+     "stem": "The mineral nesquehonite is a form of hydrated magnesium carbonate. The formula,"
+    },
+    {
+     "anchor_code": "ING-4CH12CSPECIMEN2017",
+     "paper_code": "4CH1/2C",
+     "stem": "This is a method used to measure the solubility of a solid in water: add an exce"
+    },
+    {
+     "anchor_code": "ING-4CH12CSPECIMEN2017",
+     "paper_code": "4CH1/2C",
+     "stem": "Zinc metal is obtained from sulfide ores. The most common ore of zinc is sphaler"
+    },
+    {
+     "anchor_code": "ING-4CH12CSUMMER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "A student does a titration to find the concentration of a solution of phosphoric"
+    },
+    {
+     "anchor_code": "ING-4CH12CSUMMER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "A student investigates the rusting of iron."
+    },
+    {
+     "anchor_code": "ING-4CH12CSUMMER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "A student investigates the solubility of potassium nitrate in water. She measure"
+    },
+    {
+     "anchor_code": "ING-4CH12CSUMMER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "Ethanol, $ \\mathrm{C_{2} H_{5} O H} $ is a member of the homologous series of al"
+    },
+    {
+     "anchor_code": "ING-4CH12CSUMMER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "The diagram shows how hydrogen gas and chlorine gas can be prepared in the labor"
+    },
+    {
+     "anchor_code": "ING-4CH12CSUMMER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "The diagram shows the industrial equipment used to separate crude oil into fract"
+    },
+    {
+     "anchor_code": "ING-4CH12CSUMMER2021",
+     "paper_code": "4CH1/2C",
+     "stem": "Use the Periodic Table to help you answer this question."
+    },
+    {
+     "anchor_code": "ING-JUNE2014",
+     "paper_code": null,
+     "stem": "(a) Ethanol can be manufactured by two different processes. Process 1 sucrose $ "
+    },
+    {
+     "anchor_code": "ING-JUNE2014",
+     "paper_code": null,
+     "stem": "A student does some experiments to find the heat energy released when natural ga"
+    },
+    {
+     "anchor_code": "ING-JUNE2014",
+     "paper_code": null,
+     "stem": "Neon is an element with atomic number 10."
+    },
+    {
+     "anchor_code": "ING-JUNE2014",
+     "paper_code": null,
+     "stem": "Solutions of lead(II) nitrate and sodium sulfate react together to form the inso"
+    },
+    {
+     "anchor_code": "ING-JUNE2014",
+     "paper_code": null,
+     "stem": "The thermite reaction is used on railways to produce molten iron for joining rai"
+    },
+    {
+     "anchor_code": "ING-JUNE2014",
+     "paper_code": null,
+     "stem": "This question is about the reactions of some metals and their compounds."
+    },
+    {
+     "anchor_code": "ING-SUMMER2015",
+     "paper_code": null,
+     "stem": "A student uses this apparatus to measure the temperature change when lithium iod"
+    },
+    {
+     "anchor_code": "ING-SUMMER2015",
+     "paper_code": null,
+     "stem": "Magnesium and its compounds have many uses. Magnesium is never found as an eleme"
+    },
+    {
+     "anchor_code": "ING-SUMMER2015",
+     "paper_code": null,
+     "stem": "The equation for the thermal decomposition of copper(II) carbonate is $\\mathrm {"
+    },
+    {
+     "anchor_code": "ING-SUMMER2015",
+     "paper_code": null,
+     "stem": "The scheme shows some reactions involving ethanol."
+    },
+    {
+     "anchor_code": "ING-SUMMER2015",
+     "paper_code": null,
+     "stem": "The table shows the numbers of protons, neutrons and electrons in some atoms and"
+    },
+    {
+     "anchor_code": "ING-SUMMER2015",
+     "paper_code": null,
+     "stem": "This question is about halogens and halides."
+    },
+    {
+     "anchor_code": "ING-SUMMER2016",
+     "paper_code": null,
+     "stem": "But-1-ene is a member of the homologous series of alkenes. The displayed formula"
+    },
+    {
+     "anchor_code": "ING-SUMMER2016",
+     "paper_code": null,
+     "stem": "Crude oil is a complex mixture of organic compounds called hydrocarbons. It is s"
+    },
+    {
+     "anchor_code": "ING-SUMMER2016",
+     "paper_code": null,
+     "stem": "Crystals of copper(II) nitrate, $ \\mathrm{C u} \\left( \\mathrm{N O}_{3} \\right)_{"
+    },
+    {
+     "anchor_code": "ING-SUMMER2016",
+     "paper_code": null,
+     "stem": "The apparatus in the diagram was set up to demonstrate the rusting of iron. afte"
+    },
+    {
+     "anchor_code": "ING-SUMMER2016",
+     "paper_code": null,
+     "stem": "The diagram shows the apparatus a student uses to separate a mixture of salt and"
+    },
+    {
+     "anchor_code": "ING-SUMMER2016",
+     "paper_code": null,
+     "stem": "The diagram shows the elements in Period 3 of the Periodic Table."
+    },
+    {
+     "anchor_code": "ING-SUMMER2016",
+     "paper_code": null,
+     "stem": "This apparatus can be used in a method to find the volume of sulfuric acid requi"
+    },
+    {
+     "anchor_code": "ING-SUMMER2016",
+     "paper_code": null,
+     "stem": "This is a recipe for making Irish soda bread. add 170g of wholemeal flour, 170g "
+    },
+    {
+     "anchor_code": "ING-SUMMER2019",
+     "paper_code": null,
+     "stem": "Crude oil is an important source of organic compounds. (i) Name the process used"
+    },
+    {
+     "anchor_code": "ING-SUMMER2019",
+     "paper_code": null,
+     "stem": "Hydrogen gas can be produced by reacting a mixture of methane and steam in the p"
+    },
+    {
+     "anchor_code": "ING-SUMMER2019",
+     "paper_code": null,
+     "stem": "The diagram represents an atom of boron."
+    },
+    {
+     "anchor_code": "ING-SUMMER2019",
+     "paper_code": null,
+     "stem": "This question is about gases in the atmosphere."
+    },
+    {
+     "anchor_code": "ING-SUMMER2019",
+     "paper_code": null,
+     "stem": "This question is about the halogens and their compounds."
+    },
+    {
+     "anchor_code": "ING-SUMMER2019",
+     "paper_code": null,
+     "stem": "This question is about the reactions of carboxylic acids."
+    },
+    {
+     "anchor_code": "ING-SUMMER2019",
+     "paper_code": null,
+     "stem": "When a bottle of wine is left open for several days, some of the ethanol in the "
+    }
+   ],
+   "qv_state_census_4ch1_now": {
+    "VALIDATED": 980
+   },
+   "flag_for_owning_lanes": "the unmatched rows are consistent with the coverage lanes' delete-and-re-extract question lineage (all 4CH1-anchored qv rows are now VALIDATED with zero non-VALIDATED residue; +448 new VALIDATED anchors vs snap-006). Not a bench gate input (anchors feed the census only); recorded in full for the owning lanes' review."
+  },
+  "SNAP7-G3_graph_code_delta": {
+   "finding": "graph_code re-emitted from the PINNED concepts.yaml (24fa91ac\u2026, byte-verified) over the LIVE CONCEPT/MISCONCEPTION node list: the KG drill-down lanes added nodes since snap-006. Concepts growing past the pinned YAML carry the YAML's shape where present; node-set growth recorded here (SNAP7-G2 records the misconception axis). Zero removals expected.",
+   "concepts_snap006": 98,
+   "concepts_snap007": 167,
+   "added_concept_codes": [
+    "4CH1-CON-ACID-ALKALI-IONS",
+    "4CH1-CON-ACID-RAIN-CAUSES",
+    "4CH1-CON-ACID-REACTIONS",
+    "4CH1-CON-ADDITION-POLYMERS",
+    "4CH1-CON-AIR-COMPOSITION",
+    "4CH1-CON-ALCOHOLS",
+    "4CH1-CON-ALKANE-HALOGEN-SUBSTITUTION",
+    "4CH1-CON-ALKANES",
+    "4CH1-CON-ALKENES",
+    "4CH1-CON-ALLOY-HARDNESS",
+    "4CH1-CON-ALLOYS",
+    "4CH1-CON-ANION-TESTS",
+    "4CH1-CON-BASES-ALKALIS",
+    "4CH1-CON-BROMINE-WATER-TEST",
+    "4CH1-CON-CARBOXYLIC-ACID-REACTIONS",
+    "4CH1-CON-CARBOXYLIC-ACIDS",
+    "4CH1-CON-CATION-TESTS",
+    "4CH1-CON-CO-POISONING",
+    "4CH1-CON-CO2-FROM-CARBONATES",
+    "4CH1-CON-CO2-GREENHOUSE",
+    "4CH1-CON-COMBUSTION-O2",
+    "4CH1-CON-CONDENSATION-POLYMERS",
+    "4CH1-CON-CRACKING",
+    "4CH1-CON-CRUDE-OIL",
+    "4CH1-CON-CRUDE-OIL-FRACTIONS",
+    "4CH1-CON-ESTERS",
+    "4CH1-CON-ETHANOL-MANUFACTURE",
+    "4CH1-CON-ETHANOL-OXIDATION",
+    "4CH1-CON-EXTRACTION-EVALUATION",
+    "4CH1-CON-EXTRACTION-METHOD",
+    "4CH1-CON-FLAME-TEST",
+    "4CH1-CON-FUELS-COMBUSTION",
+    "4CH1-CON-G1-FAMILY-EVIDENCE",
+    "4CH1-CON-G1-PREDICTION",
+    "4CH1-CON-G1-REACTIVITY-ECONFIG",
+    "4CH1-CON-G1-TREND",
+    "4CH1-CON-G7-DISPLACEMENT",
+    "4CH1-CON-G7-PREDICTION",
+    "4CH1-CON-G7-PROPERTIES",
+    "4CH1-CON-G7-REACTIVITY-ECONFIG",
+    "4CH1-CON-GAS-TESTS",
+    "4CH1-CON-HOMOLOGOUS-SERIES",
+    "4CH1-CON-HYDROCARBON",
+    "4CH1-CON-INDICATORS",
+    "4CH1-CON-ISOMERS",
+    "4CH1-CON-IUPAC-NAMING",
+    "4CH1-CON-METAL-DISPLACEMENT",
+    "4CH1-CON-METAL-USES",
+    "4CH1-CON-NEUTRALISATION",
+    "4CH1-CON-O2-PERCENT-DETERMINATION",
+    "4CH1-CON-ORES",
+    "4CH1-CON-ORGANIC-FORMULAE",
+    "4CH1-CON-ORGANIC-REACTION-CLASSES",
+    "4CH1-CON-OX-RED-AGENTS",
+    "4CH1-CON-PH-SCALE",
+    "4CH1-CON-POLYMER-DISPOSAL",
+    "4CH1-CON-PROTON-TRANSFER",
+    "4CH1-CON-REACT-ARRANGE",
+    "4CH1-CON-REACT-ORDER",
+    "4CH1-CON-RUST-PREVENTION",
+    "4CH1-CON-RUSTING",
+    "4CH1-CON-SALT-INSOLUBLE-REACTANT",
+    "4CH1-CON-SALT-PRECIPITATION",
+    "4CH1-CON-SALT-TITRATION-ROUTE",
+    "4CH1-CON-SOLUBILITY-RULES",
+    "4CH1-CON-TITRATION",
+    "4CH1-CON-UNIVERSAL-INDICATOR",
+    "4CH1-CON-WATER-CUSO4-TEST",
+    "4CH1-CON-WATER-PURITY-TEST"
+   ],
+   "removed_concept_codes": [],
+   "changed_concept_rows": [],
+   "counts_snap006": {
+    "concepts": 98,
+    "concepts_with_spec_attachment": 98,
+    "misconceptions": 19,
+    "total_spec_attachments": 117
+   },
+   "counts_snap007": {
+    "concepts": 167,
+    "concepts_with_spec_attachment": 167,
+    "misconceptions": 30,
+    "total_spec_attachments": 211
+   }
+  },
+  "SNAP7-G4_serving_pair_growth": {
+   "finding": "PART_OF SUGGESTED serving pairs grew 117 -> 211 since snap-006 (KG drill-down lanes' attachment work). The ratified 117-row HUMAN_VALIDATED c19 record is UNCHANGED (byte-identity anchor holds); the extra pairs are agent-lane SUGGESTED attachments recorded here as a census delta, never silently merged into the ratified set.",
+   "db_pairs_snap006": 117,
+   "db_pairs_snap007": 211,
+   "extra_pairs_since_snap006": 94,
+   "extra_pair_sample": [
+    [
+     "4CH1-CON-ACID-ALKALI-IONS",
+     "4CH1-2.31"
+    ],
+    [
+     "4CH1-CON-ACID-RAIN-CAUSES",
+     "4CH1-4.14"
+    ],
+    [
+     "4CH1-CON-ACID-RAIN-CAUSES",
+     "4CH1-4.16"
+    ],
+    [
+     "4CH1-CON-ACID-REACTIONS",
+     "4CH1-2.37"
+    ],
+    [
+     "4CH1-CON-ADDITION-POLYMERS",
+     "4CH1-4.44"
+    ],
+    [
+     "4CH1-CON-ADDITION-POLYMERS",
+     "4CH1-4.45"
+    ],
+    [
+     "4CH1-CON-ADDITION-POLYMERS",
+     "4CH1-4.46"
+    ],
+    [
+     "4CH1-CON-AIR-COMPOSITION",
+     "4CH1-2.9"
+    ],
+    [
+     "4CH1-CON-ALCOHOLS",
+     "4CH1-4.29C"
+    ],
+    [
+     "4CH1-CON-ALCOHOLS",
+     "4CH1-4.30C"
+    ]
+   ]
+  }
+ },
+ "r9_gate": {
+  "note": "recorded by the freeze run: the serving set this eval scores is post-wave-1 + post-wave-2 production truth; the compliant (VALIDATED-gated) view's pool grows by every recorded up-flip; the \u00a78.1 v1.1 VALIDATED bars govern the gold-v5-paired run",
+  "operator_traces": {
+   "wave2_proceed": "1a0fb9dd09110041",
+   "rerecord_directive": "1a0fbeaf2695af79"
+  },
+  "batch": "wave-2 governed SQL batch_run_id 14cb8ae4\u2026 (T-C54)"
+ },
+ "graph_as_code_source": {
+  "head": "1245df009712216b309f163aacdd1c6d8ef39f1b",
+  "repo": "SyllabAI/syllabai-resources"
+ },
+ "chunk_spec_hv": {
+  "sha256": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+  "source": "records 94d0d405c bench/evidence/chunk-sp-substrate-2026-09-27/",
+  "drift_gate": "re-verified over frozen bytes at export; anchor census {\"CLEAN\": 205, \"MULTI\": 4, \"SPAN\": 0, \"MISS\": 1}"
+ }
+}

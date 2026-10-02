@@ -1,0 +1,110 @@
+version: 1
+task:
+  id: T-C59
+  title: "Run005C re-record against the §8.1 VALIDATED bars — the wave-2 (ID RENUMERATED T-C57→T-C59: the concurrent hub lane's first-pushed T-C57 flashcard claim owns the ID per the T-C49/T-C55 protocol) — the wave-2
+    generation: snap-007 freeze + preload-r9 artifact + gold-r9 re-pair +
+    run-005-c-r9, the first main-line replay (T-C46 re-stamp on main)"
+  owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
+  status: DONE
+  priority: P1
+  authority: "operator IM trace 1a0fbeaf2695af79 ('Run005C re-record against
+    the §8.1 VALIDATED bars') — executes the alternating-wave step recorded
+    as next-lane in T-C54's closeout ('Run005C re-record vs §8.1 VALIDATED
+    bars (needs snap-007 freeze + maven)') and in the wave2-prep REPORT's
+    operator-remaining list"
+  base:
+    repo: "syllabai master pack; syllabai-core main c4b67e8 (the run pin)"
+  scope:
+    allowed:
+      - "snap-007 freeze (SELECT-only, identity-gated Neon read path) from
+        the frozen snap006_export.py template with all producer queries
+        verbatim; delta gates adapted to the wave era and every delta
+        manifest-bound with audit-trail provenance"
+      - "bench/inputs/snapshot-r9 + evidence/bench-001/snapshots/snap-007 +
+        bench/inputs/gold-r9 + bench/inputs/embeddings/preload-r9 + the
+        run record under evidence/bench-001/runs/run-005-c-r9/ + this task
+        record + TODO/WORKLOG entries"
+      - "user-space execution environment (JDK 25.0.4.1, Maven 3.9.9,
+        Debian-native PostgreSQL 17.11 + pgvector 0.8.0 via apt-get
+        download + dpkg -x — no root, no docker), disposable cluster,
+        zero production writes"
+    forbidden:
+      - "NO production write of any kind (the read path is
+        set_session(readonly=True) SELECT-only, rolled back); NO embedding
+        API calls (bit-identity proof replaced re-computation); NO change
+        to core code, migrations, serving semantics, or the §8.1 bars (the
+        gold-v5 set is NOT re-frozen, so §8.1 rule 1's re-baseline trigger
+        does not fire); NO verdict re-judging of r1..r8"
+  execution_record: >
+    2026-10-02. (1) snap-007 frozen via scripts/snap007_export.py (all
+    checks PASS): 4,510 chunks = 4,181 carried byte-identical + 329 added
+    (145 MS + 184 QP, 20 documents, every created_at in the 09-28T20:18+
+    re-ingest window — T-C56 lineage); 3,162 chunk up-flips SUGGESTED->
+    VALIDATED (wave-1 + wave-2 + wave-1-era teacher work, audit census
+    recorded); 30 MS + 34 QP chunks SUGGESTED->REJECTED with teacher REJECT
+    audit rows re-verified per document (SNAP7-D1); zero removed refs, zero
+    content/kind/spec-code drift; HV projection drift gate 0 divergences
+    (census 210/209/164/181, kinds 205/4/0/1 pinned); spec_points
+    BYTE-IDENTICAL (194); curriculum-axis growth manifest-bound: graph_edges
+    152->270 (+130/-12, the 12 gone rows = the practicals'
+    REQUIRES_PREREQUISITE->PART_OF re-model with successor edges recorded),
+    misconceptions 19->30, question_anchors 731->988 (+448/75 mutated/115
+    unmatched rows flagged for the coverage lanes with the qv state census),
+    PART_OF pairs 117->211 with the ratified c19 record byte-identical.
+    (2) gold-r9: gold-v5 set byte-identical, pairing pins re-issued to
+    snap-007; gold_check.py PASS (120 anchors resolve). (3) preload-r9:
+    4,181 rows byte-carried from embed-backfill-snap-006-preload-copy +
+    329 rows exported SELECT-only from production (zero API calls); ALL
+    4,181 shared refs proven float32-bit-identical live-vs-frozen before
+    the copy; manifest re-pinned (snapshot/gold SHA256SUMS echo), 120
+    query vectors byte-copied. (4) run-005-c-r9 EXECUTED end-to-end in the
+    records lane's sandbox on the disposable cluster: Flyway V1->V59,
+    artifact fail-closed verification, snap-007 through the production
+    loader, 4,510 frozen vectors applied, paired embed_rev stamp 4,510 ->
+    rev 2 (the T-C46 block ON MAIN — first main-line replay),
+    double-pass determinism PASS. RESULT (r8 -> r9): recall@5 0.0386 ->
+    0.0616 (+59.6%), recall@10 0.0515 -> 0.1043 (+102.5%), recall@20
+    0.0717 -> 0.1612 (+124.8%), MRR 0.0559 -> 0.0700 (+25.2%), nDCG@10
+    0.0871 -> 0.1113 (+27.8%); exam_question recall@10 0.50 -> 1.00;
+    served view = compliant view (production arms gate serving-eligibility
+    internally; recorded as observed); violations 0, zero-result 0/120,
+    compliant-starved 0. §8.1 v1.1 dual-view verdict: (a2) VALIDATED
+    recall@10 0.1043 vs floor 0.0734 -> PASS (first bar PASS in the
+    series); (a) 0.1043 vs 0.1920 FAIL, (b) 0.0700 vs 0.1237 FAIL, (c)
+    0.1113 vs 0.2316 FAIL, (b2) 0.0700 vs 0.1184 FAIL, (c2) 0.1113 vs
+    0.1683 FAIL; (f) PASS (0 violations); (g) satisfied with honest
+    tradeoff notes (vague_learner R@10 0.125->0.000 pool-composition;
+    why_wrong -11.8% inside allowance); (d) SCORED vs the r8 baseline:
+    full-coverage 0.5618 -> 0.4607 (-10.11pp), micro 0.9167 -> 0.7857
+    (-13.10pp) — beyond the 1pp allowance as a raw delta, read with the
+    pre-registered coverage/competition interpretation (r7 records
+    09a624728) and the UNCHANGED projection (drift gate 0); owning-lane
+    decision recorded as data, not resolved here. VERDICT: NOT PROMOTED
+    (the honest scoreboard — the wall softened, the bars stand).
+  evidence_labels:
+    VERIFIED:
+      - "snap-007 freeze: all exporter checks PASS (chunks, flips, REJECTED
+        provenance, HV drift gate, byte-identity anchors, deltas)"
+      - "gold_check PASS (120 records, quotas, anchors resolve into snap-007)"
+      - "bit-identity: 4,181/4,181 shared refs float32-identical"
+      - "run determinism: double-pass byte-identical aggregates (harness
+        fail-closed check)"
+      - "r8->r9 numbers and the six §8.1 gate entries (read from
+        results.json, cross-checked against the harness output)"
+    REPORTED:
+      - "r8 provenance (T-C41 record, Session 134) — inherited, not re-verified"
+      - "the coverage/KG lanes' production changes recorded as deltas are
+        their lanes' facts (audit census + created_at provenance captured;
+        ownership left to the owning lanes)"
+    UNVERIFIED:
+      - "none material — every delta this freeze records carries live
+        audit-trail or created_at provenance captured at freeze time"
+  next_safe_actions:
+    - "the rank-quality gap is now the binding constraint (MRR 0.0700 with
+      recall@20 0.1612: evidence found at depth ~14 on the median hit) —
+      arm D (EvidenceReranker port) or the fusion-weights lane are the
+      recorded levers; more validation volume alone will not close (b)/(c)"
+    - "(d) ruling question for the spec owner: mapping fidelity vs top-rank
+      resolution compositionality (see the run report's reading)"
+    - "archify line-refs re-pin and the standing operator items are unchanged
+      (refusal-rate watch on the 4,608-chunk pool; F-PROD-1 teacher review)"

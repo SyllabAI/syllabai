@@ -1,0 +1,2570 @@
+{
+ "concepts": [
+  {
+   "aliases": [
+    "hydrogen ions in solution",
+    "hydroxide ions in solution",
+    "what makes a solution acidic or alkaline"
+   ],
+   "code": "4CH1-CON-ACID-ALKALI-IONS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.31"
+   ],
+   "title": "Acids as hydrogen-ion sources and alkalis as hydroxide-ion sources in aqueous solution"
+  },
+  {
+   "aliases": [
+    "acid rain",
+    "nitrogen oxides",
+    "sulfur dioxide",
+    "NOx"
+   ],
+   "code": "4CH1-CON-ACID-RAIN-CAUSES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.14",
+    "4CH1-4.16"
+   ],
+   "title": "Nitrogen oxides and sulfur dioxide as acid-rain causes"
+  },
+  {
+   "aliases": [
+    "acid and metal reaction",
+    "acid and base reaction",
+    "acid and metal carbonate reaction",
+    "chloride sulfate nitrate salt families"
+   ],
+   "code": "4CH1-CON-ACID-REACTIONS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.37"
+   ],
+   "title": "Reactions of acids with metals, bases and metal carbonates to form salts"
+  },
+  {
+   "aliases": [
+    "activation energy",
+    "Ea",
+    "minimum amount of energy",
+    "activation energy barrier"
+   ],
+   "code": "4CH1-CON-ACTIVATION-ENERGY",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.14C"
+   ],
+   "title": "Activation energy (minimum energy for reaction; Ea)"
+  },
+  {
+   "aliases": [
+    "addition polymer",
+    "addition polymers",
+    "addition polymerisation",
+    "repeat unit",
+    "monomer",
+    "polyethene",
+    "polypropene",
+    "poly(chloroethene)",
+    "PVC",
+    "poly(tetrafluoroethene)",
+    "PTFE"
+   ],
+   "code": "4CH1-CON-ADDITION-POLYMERS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.44",
+    "4CH1-4.45",
+    "4CH1-4.46"
+   ],
+   "title": "Addition polymers (monomers joined by C=C opening, the repeat unit with extension bonds and subscript n, deducing the monomer)"
+  },
+  {
+   "aliases": [
+    "composition of air",
+    "composition of the atmosphere",
+    "percentages of gases in air",
+    "dry air composition"
+   ],
+   "code": "4CH1-CON-AIR-COMPOSITION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.9"
+   ],
+   "title": "Composition of dry air (approximate percentages of the four most abundant gases)"
+  },
+  {
+   "aliases": [
+    "alcohol",
+    "alcohols",
+    "hydroxyl group",
+    "ethanol family"
+   ],
+   "code": "4CH1-CON-ALCOHOLS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.29C",
+    "4CH1-4.30C"
+   ],
+   "title": "Alcohols (the hydroxyl -OH functional group, the first four members, neutral solutions and fuels)"
+  },
+  {
+   "aliases": [
+    "alkane halogenation",
+    "photochemical substitution",
+    "halogenoalkanes"
+   ],
+   "code": "4CH1-CON-ALKANE-HALOGEN-SUBSTITUTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.22"
+   ],
+   "title": "Alkane substitution reactions with halogens under ultraviolet radiation"
+  },
+  {
+   "aliases": [
+    "alkane",
+    "saturated hydrocarbons",
+    "CnH2n+2"
+   ],
+   "code": "4CH1-CON-ALKANES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.19",
+    "4CH1-4.20",
+    "4CH1-4.21"
+   ],
+   "title": "Alkanes (general formula, saturated hydrocarbons, first five members)"
+  },
+  {
+   "aliases": [
+    "alkene",
+    "alkenes",
+    "unsaturated hydrocarbons",
+    "carbon-carbon double bond"
+   ],
+   "code": "4CH1-CON-ALKENES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.23",
+    "4CH1-4.24",
+    "4CH1-4.25",
+    "4CH1-4.26"
+   ],
+   "title": "Alkenes (the C=C functional group, the general formula CnH2n, unsaturated hydrocarbons, the first four members)"
+  },
+  {
+   "aliases": [
+    "alloy hardness",
+    "why alloys are harder",
+    "distorted layers",
+    "alloys harder than pure metals"
+   ],
+   "code": "4CH1-CON-ALLOY-HARDNESS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.27C"
+   ],
+   "title": "Why alloys are harder than pure metals (distorted layers resist sliding)"
+  },
+  {
+   "aliases": [
+    "alloy",
+    "alloys",
+    "alloy definition",
+    "brass",
+    "steel as an alloy",
+    "mixture of metals"
+   ],
+   "code": "4CH1-CON-ALLOYS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.26C"
+   ],
+   "title": "Alloys as mixtures of a metal with other elements"
+  },
+  {
+   "aliases": [
+    "acidified silver nitrate halide test",
+    "barium chloride sulfate test",
+    "carbonate limewater test",
+    "silver halide precipitate colours",
+    "anion tests"
+   ],
+   "code": "4CH1-CON-ANION-TESTS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.48"
+   ],
+   "title": "Tests for aqueous anions (halides, sulfate, carbonate)"
+  },
+  {
+   "aliases": [
+    "anode",
+    "cathode",
+    "anions",
+    "cations"
+   ],
+   "code": "4CH1-CON-ANODE-CATHODE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.57C"
+   ],
+   "title": "Anions and cations (negative and positive ions) and their migration to cathode and anode"
+  },
+  {
+   "aliases": [
+    "discharged",
+    "selective discharge",
+    "product prediction"
+   ],
+   "code": "4CH1-CON-AQUEOUS-DISCHARGE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.58C"
+   ],
+   "title": "Selective discharge in aqueous electrolysis (halide preference at the anode; hydrogen vs metal at the cathode)"
+  },
+  {
+   "aliases": [
+    "relative atomic mass",
+    "Ar"
+   ],
+   "code": "4CH1-CON-AR",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.26",
+    "4CH1-1.28"
+   ],
+   "title": "Relative atomic mass (Ar)"
+  },
+  {
+   "aliases": [
+    "atom",
+    "atoms"
+   ],
+   "code": "4CH1-CON-ATOM",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.14"
+   ],
+   "title": "Atom (definition and subatomic composition)"
+  },
+  {
+   "aliases": [
+    "atomic number",
+    "proton number"
+   ],
+   "code": "4CH1-CON-ATOMIC-NUMBER",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.16"
+   ],
+   "title": "Atomic number"
+  },
+  {
+   "aliases": [
+    "Avogadro's constant"
+   ],
+   "code": "4CH1-CON-AVOGADRO-CONST",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.27"
+   ],
+   "title": "Avogadro constant"
+  },
+  {
+   "aliases": [],
+   "code": "4CH1-CON-AVOGADRO-LAW",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.35C"
+   ],
+   "title": "Avogadro's Law"
+  },
+  {
+   "aliases": [
+    "base versus alkali",
+    "all alkalis are bases",
+    "ammonia solution as a base"
+   ],
+   "code": "4CH1-CON-BASES-ALKALIS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.38"
+   ],
+   "title": "Bases and alkalis (metal oxides/hydroxides/ammonia as bases; alkalis = soluble bases)"
+  },
+  {
+   "aliases": [
+    "bond breaking",
+    "bond making",
+    "bond-breaking",
+    "bond-making",
+    "endothermic bond breaking",
+    "exothermic bond making"
+   ],
+   "code": "4CH1-CON-BOND-BREAKING-MAKING",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.6C"
+   ],
+   "title": "Bond-breaking endothermic, bond-making exothermic"
+  },
+  {
+   "aliases": [
+    "bond energy",
+    "bond energies",
+    "bond energy calculation",
+    "bond energy table"
+   ],
+   "code": "4CH1-CON-BOND-ENERGY-CALC",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.7C"
+   ],
+   "title": "Bond energy calculations (enthalpy change from bond energies)"
+  },
+  {
+   "aliases": [
+    "bromine water test",
+    "testing for alkenes",
+    "bromination of alkenes",
+    "dibromoalkane addition"
+   ],
+   "code": "4CH1-CON-BROMINE-WATER-TEST",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.27",
+    "4CH1-4.28"
+   ],
+   "title": "The bromine-water test for alkenes (addition of halogens across C=C, decolourisation vs the saturated alkane)"
+  },
+  {
+   "aliases": [
+    "calorimetry",
+    "calorimeter",
+    "simple calorimetry",
+    "solution calorimetry",
+    "combustion calorimetry"
+   ],
+   "code": "4CH1-CON-CALORIMETRY",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.2"
+   ],
+   "title": "Simple calorimetry experiments (reactions in solution and combustion)"
+  },
+  {
+   "aliases": [
+    "carboxylic acid reactions",
+    "ethanoate salts",
+    "-anoate salts"
+   ],
+   "code": "4CH1-CON-CARBOXYLIC-ACID-REACTIONS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.36C"
+   ],
+   "title": "Reactions of carboxylic acids (with metals and carbonates; the -anoate salts)"
+  },
+  {
+   "aliases": [
+    "carboxylic acid",
+    "carboxylic acids",
+    "carboxyl group",
+    "ethanoic acid",
+    "vinegar"
+   ],
+   "code": "4CH1-CON-CARBOXYLIC-ACIDS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.34C",
+    "4CH1-4.35C",
+    "4CH1-4.37C"
+   ],
+   "title": "Carboxylic acids (the carboxyl -COOH functional group, formulae and naming, vinegar)"
+  },
+  {
+   "aliases": [
+    "catalyst",
+    "catalysts",
+    "catalysis",
+    "alternative pathway"
+   ],
+   "code": "4CH1-CON-CATALYST",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.12",
+    "4CH1-3.13"
+   ],
+   "title": "Catalysts (increase rate, chemically unchanged; alternative pathway at lower activation energy)"
+  },
+  {
+   "aliases": [
+    "sodium hydroxide precipitate test",
+    "Fe2+ pale green precipitate",
+    "Fe3+ brown precipitate",
+    "Cu2+ blue precipitate",
+    "ammonium ion test",
+    "NH4+ test"
+   ],
+   "code": "4CH1-CON-CATION-TESTS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.47"
+   ],
+   "title": "Tests for aqueous cations (sodium hydroxide precipitate colours; ammonium ion via ammonia gas)"
+  },
+  {
+   "aliases": [
+    "chromatogram",
+    "chromatogram interpretation"
+   ],
+   "code": "4CH1-CON-CHROMATOGRAM-INTERPRETATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.11"
+   ],
+   "title": "Interpreting chromatograms"
+  },
+  {
+   "aliases": [
+    "paper chromatography",
+    "chromatography"
+   ],
+   "code": "4CH1-CON-CHROMATOGRAPHY",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.10"
+   ],
+   "title": "Paper chromatography (separation by differential solubility)"
+  },
+  {
+   "aliases": [
+    "carbon monoxide poisoning",
+    "CO binds haemoglobin",
+    "carboxyhaemoglobin"
+   ],
+   "code": "4CH1-CON-CO-POISONING",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.13"
+   ],
+   "title": "Why carbon monoxide is poisonous (blood oxygen transport)"
+  },
+  {
+   "aliases": [
+    "thermal decomposition of metal carbonates",
+    "carbon dioxide from carbonates",
+    "copper(II) carbonate decomposition"
+   ],
+   "code": "4CH1-CON-CO2-FROM-CARBONATES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.12"
+   ],
+   "title": "Carbon dioxide from thermal decomposition of metal carbonates"
+  },
+  {
+   "aliases": [
+    "greenhouse gas",
+    "greenhouse effect",
+    "carbon dioxide greenhouse",
+    "climate change"
+   ],
+   "code": "4CH1-CON-CO2-GREENHOUSE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.13"
+   ],
+   "title": "Carbon dioxide as a greenhouse gas and the climate-change link"
+  },
+  {
+   "aliases": [
+    "collision theory",
+    "particle collision theory",
+    "successful collisions",
+    "effective collision",
+    "collision frequency"
+   ],
+   "code": "4CH1-CON-COLLISION-THEORY",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.11"
+   ],
+   "title": "Collision-theory explanations of rate changes (frequency and success of collisions)"
+  },
+  {
+   "aliases": [
+    "combustion",
+    "burning in oxygen",
+    "combustion of magnesium",
+    "combustion of hydrogen",
+    "combustion of sulfur"
+   ],
+   "code": "4CH1-CON-COMBUSTION-O2",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.11"
+   ],
+   "title": "Combustion of elements in oxygen (magnesium, hydrogen, sulfur)"
+  },
+  {
+   "aliases": [
+    "compounds"
+   ],
+   "code": "4CH1-CON-COMPOUND",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.8"
+   ],
+   "title": "Compound"
+  },
+  {
+   "aliases": [
+    "concentration calculations",
+    "amount of substance from concentration"
+   ],
+   "code": "4CH1-CON-CONC-CALC",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.34C"
+   ],
+   "title": "Concentration calculation (mol/dm3)"
+  },
+  {
+   "aliases": [
+    "concentration"
+   ],
+   "code": "4CH1-CON-CONCENTRATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.34C"
+   ],
+   "title": "Concentration of a solution"
+  },
+  {
+   "aliases": [
+    "condensation polymerisation",
+    "condensation polymers",
+    "polyester",
+    "polyesters",
+    "terylene",
+    "ester link",
+    "biopolyesters",
+    "hydrolysis"
+   ],
+   "code": "4CH1-CON-CONDENSATION-POLYMERS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.48C",
+    "4CH1-4.49C",
+    "4CH1-4.50C"
+   ],
+   "title": "Condensation polymerisation and polyesters (dicarboxylic acid + diol, the ester link with one water per link, deducing the monomers, biopolyesters)"
+  },
+  {
+   "aliases": [
+    "conservation of mass"
+   ],
+   "code": "4CH1-CON-CONSERVATION-MASS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.25",
+    "4CH1-1.26"
+   ],
+   "title": "Law of Conservation of Mass"
+  },
+  {
+   "aliases": [
+    "covalent bond",
+    "covalent bonding",
+    "bonding electrons"
+   ],
+   "code": "4CH1-CON-COVALENT-BOND",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.44",
+    "4CH1-1.45"
+   ],
+   "title": "Covalent bond (shared pair of electrons; electrostatic attraction between the shared pair and the nuclei)"
+  },
+  {
+   "aliases": [
+    "covalent conductivity",
+    "electrical insulators"
+   ],
+   "code": "4CH1-CON-COVALENT-CONDUCTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.51",
+    "4CH1-1.55C"
+   ],
+   "title": "Covalent compounds do not conduct electricity (no freely moving charged particles)"
+  },
+  {
+   "aliases": [
+    "cracking",
+    "catalytic cracking",
+    "thermal decomposition of hydrocarbons"
+   ],
+   "code": "4CH1-CON-CRACKING",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.17",
+    "4CH1-4.18"
+   ],
+   "title": "Catalytic cracking of long-chain fractions (process and why it is necessary)"
+  },
+  {
+   "aliases": [
+    "crude oil",
+    "petroleum",
+    "unrefined crude oil"
+   ],
+   "code": "4CH1-CON-CRUDE-OIL",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.7"
+   ],
+   "title": "Crude oil as a mixture of hydrocarbons"
+  },
+  {
+   "aliases": [
+    "fractions",
+    "refinery gases",
+    "gasoline",
+    "kerosene",
+    "diesel",
+    "fuel oil",
+    "bitumen",
+    "fractionating column"
+   ],
+   "code": "4CH1-CON-CRUDE-OIL-FRACTIONS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.8",
+    "4CH1-4.9",
+    "4CH1-4.10"
+   ],
+   "title": "Fractional distillation of crude oil \u2014 the fractions, their uses and their trends"
+  },
+  {
+   "aliases": [
+    "crystallisation"
+   ],
+   "code": "4CH1-CON-CRYSTALLISATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.10"
+   ],
+   "title": "Crystallisation"
+  },
+  {
+   "aliases": [
+    "diamond",
+    "graphite",
+    "fullerene",
+    "buckminsterfullerene",
+    "allotropes"
+   ],
+   "code": "4CH1-CON-DIAMOND-GRAPHITE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.50"
+   ],
+   "title": "Structures and properties of diamond, graphite and C60 fullerene (allotropes of carbon)"
+  },
+  {
+   "aliases": [
+    "diffusion",
+    "diffusing"
+   ],
+   "code": "4CH1-CON-DIFFUSION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.3"
+   ],
+   "title": "Diffusion in gases and liquids"
+  },
+  {
+   "aliases": [
+    "dilution",
+    "diluted"
+   ],
+   "code": "4CH1-CON-DILUTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.3"
+   ],
+   "title": "Dilution of coloured solutions"
+  },
+  {
+   "aliases": [
+    "covalent dot and cross diagrams",
+    "simple molecules"
+   ],
+   "code": "4CH1-CON-DOT-CROSS-COVALENT",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.46"
+   ],
+   "title": "Dot-and-cross diagrams for covalent substances (diatomic, inorganic and organic molecules)"
+  },
+  {
+   "aliases": [
+    "dot and cross diagram",
+    "dot-and-cross diagrams",
+    "ionic bonding diagrams"
+   ],
+   "code": "4CH1-CON-DOT-CROSS-IONIC",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.40"
+   ],
+   "title": "Dot-and-cross diagrams for ionic compounds (electron transfer)"
+  },
+  {
+   "aliases": [
+    "dynamic equilibrium",
+    "equilibrium",
+    "state of equilibrium",
+    "closed system",
+    "sealed container"
+   ],
+   "code": "4CH1-CON-DYNAMIC-EQUILIBRIUM",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.19C",
+    "4CH1-3.20C"
+   ],
+   "title": "Dynamic equilibrium (sealed container; equal forward and reverse rates; constant concentrations)"
+  },
+  {
+   "aliases": [
+    "half equation",
+    "half equations",
+    "electrode reactions"
+   ],
+   "code": "4CH1-CON-ELECTRODE-HALF-EQUATIONS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.59C"
+   ],
+   "title": "Ionic half-equations for the electrode reactions during electrolysis"
+  },
+  {
+   "aliases": [
+    "electrolysis",
+    "electrolyte",
+    "electrolysis of molten compounds"
+   ],
+   "code": "4CH1-CON-ELECTROLYSIS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.58C"
+   ],
+   "title": "Electrolysis (decomposition by direct current: molten binary compounds and their element products, using inert electrodes)"
+  },
+  {
+   "aliases": [
+    "electronic configuration",
+    "electronic structure",
+    "electron shells"
+   ],
+   "code": "4CH1-CON-ELECTRONIC-CONFIGURATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.19",
+    "4CH1-1.22"
+   ],
+   "title": "Electronic configuration of the first 20 elements (shells 2, 8, 8; configuration and Periodic Table position)"
+  },
+  {
+   "aliases": [
+    "elements"
+   ],
+   "code": "4CH1-CON-ELEMENT",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.8"
+   ],
+   "title": "Element"
+  },
+  {
+   "aliases": [
+    "empirical formula calculation",
+    "molecular formula calculation",
+    "deducing formulae of hydrated salts"
+   ],
+   "code": "4CH1-CON-EMP-MOL-CALC",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.33"
+   ],
+   "title": "Empirical and molecular formula calculation"
+  },
+  {
+   "aliases": [
+    "simplest whole number ratio formula"
+   ],
+   "code": "4CH1-CON-EMPIRICAL-FORMULA",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.32",
+    "4CH1-1.33"
+   ],
+   "title": "Empirical formula"
+  },
+  {
+   "aliases": [
+    "energy level diagram",
+    "energy level diagrams",
+    "energy diagram",
+    "reaction energy level diagram"
+   ],
+   "code": "4CH1-CON-ENERGY-LEVEL-DIAGRAM",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.5C"
+   ],
+   "title": "Energy level diagrams for exothermic and endothermic reactions"
+  },
+  {
+   "aliases": [
+    "position of equilibrium",
+    "equilibrium position",
+    "shifts to the right",
+    "shifts to the left",
+    "Le Chatelier's principle"
+   ],
+   "code": "4CH1-CON-EQ-POSITION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.21C",
+    "4CH1-3.22C"
+   ],
+   "title": "Position of equilibrium (temperature and pressure effects; catalyst does not affect it)"
+  },
+  {
+   "aliases": [
+    "state symbol"
+   ],
+   "code": "4CH1-CON-EQ-STATE-SYM",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.25"
+   ],
+   "title": "State symbols (s), (l), (g), (aq)"
+  },
+  {
+   "aliases": [
+    "symbol equation",
+    "chemical equation",
+    "balanced equation",
+    "balancing equations"
+   ],
+   "code": "4CH1-CON-EQ-SYMBOL",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.25"
+   ],
+   "title": "Balanced symbol (chemical) equation"
+  },
+  {
+   "aliases": [
+    "word equations"
+   ],
+   "code": "4CH1-CON-EQ-WORD",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.25"
+   ],
+   "title": "Word equation"
+  },
+  {
+   "aliases": [
+    "ester",
+    "esters",
+    "esterification",
+    "ethyl ethanoate",
+    "ester functional group",
+    "food flavourings",
+    "perfumes"
+   ],
+   "code": "4CH1-CON-ESTERS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.38C",
+    "4CH1-4.39C",
+    "4CH1-4.40C",
+    "4CH1-4.41C",
+    "4CH1-4.42C"
+   ],
+   "title": "Esters (the R-COO-R functional group, esterification of alcohols with carboxylic acids, ethyl ethanoate, the -yl/-oate naming, volatile sweet-smelling uses)"
+  },
+  {
+   "aliases": [
+    "hydration of ethene",
+    "fermentation of glucose",
+    "ethanol manufacture",
+    "anaerobic respiration"
+   ],
+   "code": "4CH1-CON-ETHANOL-MANUFACTURE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.32C",
+    "4CH1-4.33C"
+   ],
+   "title": "Manufacture of ethanol (hydration of ethene and fermentation with their conditions)"
+  },
+  {
+   "aliases": [
+    "oxidation of ethanol",
+    "aerobic oxidation",
+    "microbial oxidation",
+    "ethanol + [O]"
+   ],
+   "code": "4CH1-CON-ETHANOL-OXIDATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.31C"
+   ],
+   "title": "Oxidation of ethanol (combustion, aerobic oxidation, treatment with an oxidising agent)"
+  },
+  {
+   "aliases": [
+    "evaporation",
+    "boiling",
+    "evaporating"
+   ],
+   "code": "4CH1-CON-EVAPORATION-BOILING",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.2"
+   ],
+   "title": "Evaporation and its distinction from boiling"
+  },
+  {
+   "aliases": [
+    "exothermic",
+    "endothermic",
+    "exothermic reaction",
+    "endothermic reaction",
+    "heat energy change"
+   ],
+   "code": "4CH1-CON-EXO-ENDO",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.1"
+   ],
+   "title": "Exothermic and endothermic reactions (heat energy given out or taken in)"
+  },
+  {
+   "aliases": [
+    "deducing formulae by experiment",
+    "formula from mass measurements"
+   ],
+   "code": "4CH1-CON-EXP-FORMULA-DEDUCTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.31",
+    "4CH1-1.36"
+   ],
+   "title": "Experimental formula deduction (mass-difference method)"
+  },
+  {
+   "aliases": [
+    "commenting on extraction processes",
+    "evaluating extraction",
+    "extraction process evaluation",
+    "given information"
+   ],
+   "code": "4CH1-CON-EXTRACTION-EVALUATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.24C"
+   ],
+   "title": "Commenting on a metal extraction process from given information"
+  },
+  {
+   "aliases": [
+    "extraction method",
+    "extracting metals",
+    "extraction and the reactivity series",
+    "carbon extraction",
+    "electrolysis extraction",
+    "blast furnace"
+   ],
+   "code": "4CH1-CON-EXTRACTION-METHOD",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.23C"
+   ],
+   "title": "Extraction method related to reactivity-series position (electrolysis above carbon; carbon reduction below)"
+  },
+  {
+   "aliases": [
+    "filtration",
+    "filtering"
+   ],
+   "code": "4CH1-CON-FILTRATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.10"
+   ],
+   "title": "Filtration"
+  },
+  {
+   "aliases": [
+    "flame test colours",
+    "nichrome wire loop",
+    "lithium red flame",
+    "sodium yellow flame",
+    "potassium lilac flame",
+    "calcium orange-red flame",
+    "copper blue-green flame"
+   ],
+   "code": "4CH1-CON-FLAME-TEST",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.45",
+    "4CH1-2.46"
+   ],
+   "title": "Flame tests for metal cations (technique and flame colours)"
+  },
+  {
+   "aliases": [
+    "fractional distillation"
+   ],
+   "code": "4CH1-CON-FRACTIONAL-DISTILLATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.10"
+   ],
+   "title": "Fractional distillation"
+  },
+  {
+   "aliases": [
+    "fuel",
+    "fossil fuels",
+    "complete combustion",
+    "incomplete combustion"
+   ],
+   "code": "4CH1-CON-FUELS-COMBUSTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.11",
+    "4CH1-4.12"
+   ],
+   "title": "Fuels and the products of complete and incomplete combustion"
+  },
+  {
+   "aliases": [
+    "alkali metals family",
+    "Group 1 family",
+    "family of elements",
+    "alkali metal reactions with water"
+   ],
+   "code": "4CH1-CON-G1-FAMILY-EVIDENCE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.1"
+   ],
+   "title": "Group 1 water-reaction similarities as family evidence (alkali metals)"
+  },
+  {
+   "aliases": [
+    "predicting properties in Group 1",
+    "predicting alkali metal properties",
+    "rubidium caesium francium predictions"
+   ],
+   "code": "4CH1-CON-G1-PREDICTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.3"
+   ],
+   "title": "Predicting alkali-metal properties from Group 1 trends"
+  },
+  {
+   "aliases": [
+    "Group 1 reactivity electronic configuration",
+    "why Group 1 reactivity increases down the group",
+    "outer electron lost more easily"
+   ],
+   "code": "4CH1-CON-G1-REACTIVITY-ECONFIG",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.4C"
+   ],
+   "title": "Group 1 reactivity trend explained by electronic configurations"
+  },
+  {
+   "aliases": [
+    "Group 1 reactivity trend",
+    "trend in reactivity in Group 1",
+    "alkali metals trend"
+   ],
+   "code": "4CH1-CON-G1-TREND",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.2"
+   ],
+   "title": "Group 1 reactivity trend from air/water reaction differences"
+  },
+  {
+   "aliases": [
+    "displacement reactions",
+    "halogen displacement",
+    "halogen displacement reactions",
+    "chlorine displaces bromine iodine"
+   ],
+   "code": "4CH1-CON-G7-DISPLACEMENT",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.7"
+   ],
+   "title": "Halogen displacement reactions (evidence for the Group 7 reactivity trend)"
+  },
+  {
+   "aliases": [
+    "predicting properties in Group 7",
+    "predicting halogen properties",
+    "metal halides",
+    "hydrogen halides"
+   ],
+   "code": "4CH1-CON-G7-PREDICTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.6"
+   ],
+   "title": "Predicting halogen properties from Group 7 trends (metal and non-metal halides)"
+  },
+  {
+   "aliases": [
+    "halogens",
+    "Group 7 properties",
+    "halogen colours and states",
+    "diatomic halogens"
+   ],
+   "code": "4CH1-CON-G7-PROPERTIES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.5"
+   ],
+   "title": "Halogen colours, states and physical-property trends (Group 7)"
+  },
+  {
+   "aliases": [
+    "Group 7 reactivity electronic configuration",
+    "why halogen reactivity decreases down the group",
+    "halide ion formation electron gain"
+   ],
+   "code": "4CH1-CON-G7-REACTIVITY-ECONFIG",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.8C"
+   ],
+   "title": "Group 7 reactivity trend explained by electronic configurations"
+  },
+  {
+   "aliases": [
+    "pop test",
+    "squeaky pop test",
+    "glowing splint relight test",
+    "limewater test for carbon dioxide",
+    "damp litmus gas tests",
+    "chlorine bleaches litmus"
+   ],
+   "code": "4CH1-CON-GAS-TESTS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.44"
+   ],
+   "title": "Chemical tests for gases (hydrogen, oxygen, carbon dioxide, ammonia, chlorine)"
+  },
+  {
+   "aliases": [
+    "calculating gas volumes",
+    "converting moles into volumes"
+   ],
+   "code": "4CH1-CON-GAS-VOL-CALC",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.35C"
+   ],
+   "title": "Gas volume calculation"
+  },
+  {
+   "aliases": [
+    "giant covalent structure",
+    "giant lattices",
+    "macromolecules"
+   ],
+   "code": "4CH1-CON-GIANT-COVALENT",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.49"
+   ],
+   "title": "Giant covalent structures (solids with high melting and boiling points)"
+  },
+  {
+   "aliases": [
+    "same group",
+    "similar chemical properties"
+   ],
+   "code": "4CH1-CON-GROUP-SIMILARITY",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.23"
+   ],
+   "title": "Why elements in the same group have similar chemical properties"
+  },
+  {
+   "aliases": [
+    "Q=mc\u0394T",
+    "heat energy calculation",
+    "specific heat capacity calculation",
+    "temperature change calculation"
+   ],
+   "code": "4CH1-CON-HEAT-CALC",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.3"
+   ],
+   "title": "Heat energy change calculation (Q = mc\u0394T)"
+  },
+  {
+   "aliases": [
+    "heating to constant mass",
+    "constant mass"
+   ],
+   "code": "4CH1-CON-HEATING-CONSTANT-MASS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.7C"
+   ],
+   "title": "Heating to constant mass"
+  },
+  {
+   "aliases": [
+    "homologous series",
+    "functional group",
+    "family of organic compounds"
+   ],
+   "code": "4CH1-CON-HOMOLOGOUS-SERIES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.3"
+   ],
+   "title": "Homologous series and functional groups"
+  },
+  {
+   "aliases": [
+    "hydrocarbons",
+    "organic compound containing only H and C"
+   ],
+   "code": "4CH1-CON-HYDROCARBON",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.1"
+   ],
+   "title": "Hydrocarbon (a compound of hydrogen and carbon only)"
+  },
+  {
+   "aliases": [
+    "two-colour indicators",
+    "acid-alkali indicator colours",
+    "litmus colour in acid and alkali",
+    "phenolphthalein endpoint colour",
+    "methyl orange endpoint colour"
+   ],
+   "code": "4CH1-CON-INDICATORS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.28"
+   ],
+   "title": "Indicators for distinguishing acidic and alkaline solutions (litmus, phenolphthalein, methyl orange)"
+  },
+  {
+   "aliases": [
+    "ion",
+    "ions",
+    "cation",
+    "anion"
+   ],
+   "code": "4CH1-CON-ION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.37"
+   ],
+   "title": "Ion (formation by electron loss or gain)"
+  },
+  {
+   "aliases": [
+    "common ions",
+    "ion charges",
+    "compound ions"
+   ],
+   "code": "4CH1-CON-ION-CHARGE-RULES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.38"
+   ],
+   "title": "Common ion charges (group-based and named-ion table, with the deduction rule)"
+  },
+  {
+   "aliases": [
+    "ionic bond",
+    "ionic bonding"
+   ],
+   "code": "4CH1-CON-IONIC-BOND",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.41"
+   ],
+   "title": "Ionic bonding (electrostatic attraction between oppositely charged ions)"
+  },
+  {
+   "aliases": [
+    "conductivity of ionic compounds",
+    "ionic conductivity"
+   ],
+   "code": "4CH1-CON-IONIC-CONDUCTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.43",
+    "4CH1-1.56C"
+   ],
+   "title": "Ionic conduction (solid insulator; molten and aqueous conductor via mobile ions)"
+  },
+  {
+   "aliases": [
+    "ionic formula",
+    "formula of ionic compounds",
+    "swap-and-drop"
+   ],
+   "code": "4CH1-CON-IONIC-FORMULA",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.39"
+   ],
+   "title": "Writing formulae for ionic compounds (charge cancellation and swap-and-drop)"
+  },
+  {
+   "aliases": [
+    "giant ionic lattice",
+    "giant lattice structure",
+    "ionic lattice"
+   ],
+   "code": "4CH1-CON-IONIC-LATTICE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.42"
+   ],
+   "title": "Giant ionic lattice and why ionic compounds have high melting and boiling points"
+  },
+  {
+   "aliases": [
+    "isomerism",
+    "isomers",
+    "possible structural formulae"
+   ],
+   "code": "4CH1-CON-ISOMERS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.5"
+   ],
+   "title": "Isomers and drawing possible structures from a molecular formula"
+  },
+  {
+   "aliases": [
+    "isotope",
+    "isotopes"
+   ],
+   "code": "4CH1-CON-ISOTOPES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.16",
+    "4CH1-1.17"
+   ],
+   "title": "Isotopes and relative atomic mass from isotopic abundances"
+  },
+  {
+   "aliases": [
+    "naming organic compounds",
+    "nomenclature",
+    "IUPAC rules"
+   ],
+   "code": "4CH1-CON-IUPAC-NAMING",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.4"
+   ],
+   "title": "IUPAC naming of organic compounds (stems and suffixes)"
+  },
+  {
+   "aliases": [
+    "mass number"
+   ],
+   "code": "4CH1-CON-MASS-NUMBER",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.16"
+   ],
+   "title": "Mass number"
+  },
+  {
+   "aliases": [
+    "metal displacement",
+    "displacement reactions of metals",
+    "thermite reaction",
+    "metal displacement reactions",
+    "more reactive metal displaces less reactive"
+   ],
+   "code": "4CH1-CON-METAL-DISPLACEMENT",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.16"
+   ],
+   "title": "Metal displacement reactions as reactivity-series evidence (metal + metal oxide; metal + salt solution)"
+  },
+  {
+   "aliases": [
+    "metal",
+    "non-metal",
+    "metals and non-metals"
+   ],
+   "code": "4CH1-CON-METAL-NONMETAL",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.20",
+    "4CH1-1.21"
+   ],
+   "title": "Classifying elements as metals or non-metals (by properties and by Periodic Table position)"
+  },
+  {
+   "aliases": [
+    "malleability",
+    "metal properties",
+    "properties of metals"
+   ],
+   "code": "4CH1-CON-METAL-PROPERTIES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.54C"
+   ],
+   "title": "Typical physical properties of metals (electrical conductivity and malleability) and their explanations"
+  },
+  {
+   "aliases": [
+    "uses of metals",
+    "metals and their uses",
+    "uses of aluminium",
+    "uses of copper",
+    "uses of steel"
+   ],
+   "code": "4CH1-CON-METAL-USES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.25C"
+   ],
+   "title": "Uses of aluminium, copper, iron and steel explained by their properties"
+  },
+  {
+   "aliases": [
+    "metallic bond",
+    "metallic bonding",
+    "delocalised electrons",
+    "sea of electrons"
+   ],
+   "code": "4CH1-CON-METALLIC-BOND",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.52C",
+    "4CH1-1.53C"
+   ],
+   "title": "Metallic bonding (positive metal ions and delocalised electrons; the 2-D metallic lattice representation)"
+  },
+  {
+   "aliases": [
+    "semi-metal",
+    "metalloid"
+   ],
+   "code": "4CH1-CON-METALLOID",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.21"
+   ],
+   "title": "Semi-metals (metalloids) \u2014 elements bordering the metal/non-metal divide"
+  },
+  {
+   "aliases": [
+    "mixtures"
+   ],
+   "code": "4CH1-CON-MIXTURE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.8"
+   ],
+   "title": "Mixture"
+  },
+  {
+   "aliases": [
+    "molar enthalpy change",
+    "enthalpy change per mole",
+    "\u0394H",
+    "energy released per mole",
+    "enthalpy change in kJ/mol"
+   ],
+   "code": "4CH1-CON-MOLAR-ENTHALPY",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.4"
+   ],
+   "title": "Molar enthalpy change (\u0394H = Q/n)"
+  },
+  {
+   "aliases": [
+    "molar volume",
+    "molar gas volume"
+   ],
+   "code": "4CH1-CON-MOLAR-GAS-VOL",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.35C"
+   ],
+   "title": "Molar gas volume at RTP (24 dm3)"
+  },
+  {
+   "aliases": [
+    "mass of 1 mole"
+   ],
+   "code": "4CH1-CON-MOLAR-MASS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.28"
+   ],
+   "title": "Molar mass"
+  },
+  {
+   "aliases": [
+    "mole ratio",
+    "ratio of amounts"
+   ],
+   "code": "4CH1-CON-MOLAR-RATIO",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.29"
+   ],
+   "title": "Molar ratio from balanced equations"
+  },
+  {
+   "aliases": [
+    "amount of substance",
+    "chemical amount",
+    "mol"
+   ],
+   "code": "4CH1-CON-MOLE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.27"
+   ],
+   "title": "The mole (unit of amount of substance)"
+  },
+  {
+   "aliases": [
+    "converting between moles and grams",
+    "moles and mass calculations"
+   ],
+   "code": "4CH1-CON-MOLE-MASS-CONV",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.28"
+   ],
+   "title": "Mole-mass conversion"
+  },
+  {
+   "aliases": [],
+   "code": "4CH1-CON-MOLECULAR-FORMULA",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.32",
+    "4CH1-1.33"
+   ],
+   "title": "Molecular formula"
+  },
+  {
+   "aliases": [
+    "molecule",
+    "molecules"
+   ],
+   "code": "4CH1-CON-MOLECULE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.14"
+   ],
+   "title": "Molecule"
+  },
+  {
+   "aliases": [
+    "relative molecular mass",
+    "relative formula mass",
+    "Mr"
+   ],
+   "code": "4CH1-CON-MR",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.26",
+    "4CH1-1.28"
+   ],
+   "title": "Relative formula mass (Mr)"
+  },
+  {
+   "aliases": [
+    "acid-base neutralisation",
+    "neutralisation reaction",
+    "not all reactions of acids are neutralisations"
+   ],
+   "code": "4CH1-CON-NEUTRALISATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.32"
+   ],
+   "title": "Neutralisation (alkalis neutralise acids; H+ + OH- -> water)"
+  },
+  {
+   "aliases": [
+    "noble gases",
+    "Group 0",
+    "inert gases"
+   ],
+   "code": "4CH1-CON-NOBLE-GAS-INERTNESS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.24"
+   ],
+   "title": "Why the noble gases (Group 0) do not readily react"
+  },
+  {
+   "aliases": [
+    "percentage of oxygen in air",
+    "oxygen percentage determination",
+    "phosphorus bell jar experiment",
+    "iron wool burette experiment"
+   ],
+   "code": "4CH1-CON-O2-PERCENT-DETERMINATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.10"
+   ],
+   "title": "Determining the percentage of oxygen in air (metal and non-metal routes)"
+  },
+  {
+   "aliases": [
+    "ores",
+    "metal ores",
+    "ore",
+    "uncombined element",
+    "native metals",
+    "sources of metals"
+   ],
+   "code": "4CH1-CON-ORES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.22C"
+   ],
+   "title": "Ores and native (uncombined) metals as sources of metals"
+  },
+  {
+   "aliases": [
+    "organic formulae",
+    "displayed formula",
+    "structural formula",
+    "general formula",
+    "condensed structural formula"
+   ],
+   "code": "4CH1-CON-ORGANIC-FORMULAE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.2"
+   ],
+   "title": "Representing organic molecules (empirical, molecular, general, structural, displayed formulae)"
+  },
+  {
+   "aliases": [
+    "substitution reaction",
+    "addition reaction",
+    "organic reaction classification"
+   ],
+   "code": "4CH1-CON-ORGANIC-REACTION-CLASSES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.6"
+   ],
+   "title": "Classifying organic reactions (substitution, addition, combustion)"
+  },
+  {
+   "aliases": [
+    "oxidation and reduction terms",
+    "oxidising agent",
+    "reducing agent",
+    "redox reactions",
+    "oxygen gain oxygen loss"
+   ],
+   "code": "4CH1-CON-OX-RED-AGENTS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.20"
+   ],
+   "title": "Oxidation, reduction, oxidising and reducing agents (oxygen and electron frameworks)"
+  },
+  {
+   "aliases": [
+    "percentage yield calculation"
+   ],
+   "code": "4CH1-CON-PERCENT-YIELD",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.30"
+   ],
+   "title": "Percentage yield"
+  },
+  {
+   "aliases": [
+    "Periodic Table",
+    "group",
+    "period"
+   ],
+   "code": "4CH1-CON-PERIODIC-TABLE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.18"
+   ],
+   "title": "Periodic Table arrangement (atomic-number order, groups and periods)"
+  },
+  {
+   "aliases": [
+    "pH classification",
+    "strongly acidic 0-3",
+    "pH 7 neutral",
+    "weak and strong acids and alkalis"
+   ],
+   "code": "4CH1-CON-PH-SCALE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.29"
+   ],
+   "title": "The pH scale 0-14 and the acidity/alkalinity classification bands"
+  },
+  {
+   "aliases": [
+    "polymer disposal",
+    "disposal of polymers",
+    "non-biodegradable polymers",
+    "landfill",
+    "incineration"
+   ],
+   "code": "4CH1-CON-POLYMER-DISPOSAL",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-4.47"
+   ],
+   "title": "Disposal of addition polymers (landfill non-biodegradability; incineration products \u2014 carbon dioxide, toxic hydrogen chloride, carbon monoxide)"
+  },
+  {
+   "aliases": [
+    "acid as proton donor",
+    "base as proton acceptor",
+    "acids and bases in terms of protons"
+   ],
+   "code": "4CH1-CON-PROTON-TRANSFER",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.35",
+    "4CH1-2.36"
+   ],
+   "title": "Acids and bases as proton transfer (donor and acceptor)"
+  },
+  {
+   "aliases": [
+    "pure",
+    "purity",
+    "pure substance"
+   ],
+   "code": "4CH1-CON-PURE-SUBSTANCE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.9"
+   ],
+   "title": "Pure substance (chemical sense) and fixed melting/boiling points"
+  },
+  {
+   "aliases": [
+    "rate experiments",
+    "measuring rates of reaction",
+    "investigating rate of reaction",
+    "downward displacement",
+    "disappearing cross"
+   ],
+   "code": "4CH1-CON-RATE-EXPERIMENTS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.9"
+   ],
+   "title": "Rate-of-reaction experiments (gas collection, disappearing cross, timing methods)"
+  },
+  {
+   "aliases": [
+    "rate of reaction",
+    "factors affecting rate",
+    "rate factors",
+    "effect of concentration on rate",
+    "effect of temperature on rate"
+   ],
+   "code": "4CH1-CON-RATE-FACTORS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.10"
+   ],
+   "title": "Factors affecting the rate of reaction (surface area, concentration and pressure, temperature, catalyst)"
+  },
+  {
+   "aliases": [
+    "reactivity series arrangement",
+    "arranging metals by reactions",
+    "metal reactions with water and acids",
+    "order from observations"
+   ],
+   "code": "4CH1-CON-REACT-ARRANGE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.15"
+   ],
+   "title": "Arranging metals into a reactivity series from water and dilute-acid reactions"
+  },
+  {
+   "aliases": [
+    "order of reactivity",
+    "reactivity order",
+    "order of reactivity of metals",
+    "K Na Li Ca Mg Al Zn Fe Cu Ag Au"
+   ],
+   "code": "4CH1-CON-REACT-ORDER",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.17"
+   ],
+   "title": "The order of reactivity of the named metals (K to Au)"
+  },
+  {
+   "aliases": [
+    "calculating reacting masses",
+    "mass calculations from equations"
+   ],
+   "code": "4CH1-CON-REACTING-MASS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.29"
+   ],
+   "title": "Reacting mass calculation"
+  },
+  {
+   "aliases": [
+    "reaction profile",
+    "reaction profiles",
+    "reaction profile diagram",
+    "energy profile"
+   ],
+   "code": "4CH1-CON-REACTION-PROFILE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.14C"
+   ],
+   "title": "Reaction profile diagrams (showing \u0394H and activation energy)"
+  },
+  {
+   "aliases": [
+    "oxidation",
+    "reduction",
+    "oxidised",
+    "reduced"
+   ],
+   "code": "4CH1-CON-REDOX-ELECTRONS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.59C"
+   ],
+   "title": "Oxidation and reduction in terms of electron loss and gain"
+  },
+  {
+   "aliases": [
+    "reversible reaction",
+    "reversible reactions",
+    "forward and reverse reactions",
+    "reversible arrow",
+    "half-arrowhead symbol"
+   ],
+   "code": "4CH1-CON-REVERSIBLE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.17"
+   ],
+   "title": "Reversible reactions and the \u21cc notation"
+  },
+  {
+   "aliases": [
+    "dehydration of hydrated copper(II) sulfate",
+    "thermal decomposition of ammonium chloride",
+    "hydrated copper(II) sulfate",
+    "anhydrous copper(II) sulfate"
+   ],
+   "code": "4CH1-CON-REVERSIBLE-EXAMPLES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-3.18"
+   ],
+   "title": "Named reversible reactions (ammonium chloride; hydrated copper(II) sulfate)"
+  },
+  {
+   "aliases": [
+    "Rf value",
+    "retention factor"
+   ],
+   "code": "4CH1-CON-RF-VALUE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.12"
+   ],
+   "title": "Retention factor (Rf)"
+  },
+  {
+   "aliases": [
+    "rust prevention",
+    "sacrificial protection",
+    "galvanising",
+    "barrier methods",
+    "preventing rust"
+   ],
+   "code": "4CH1-CON-RUST-PREVENTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.19"
+   ],
+   "title": "Preventing rusting (barrier methods, sacrificial protection, galvanising)"
+  },
+  {
+   "aliases": [
+    "rusting",
+    "rusting of iron",
+    "conditions for rusting",
+    "iron rusts",
+    "rust conditions"
+   ],
+   "code": "4CH1-CON-RUSTING",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.18"
+   ],
+   "title": "Rusting of iron (both oxygen and water required; the control-tube investigation)"
+  },
+  {
+   "aliases": [
+    "making soluble salts",
+    "excess insoluble base method",
+    "soluble salt from acid and insoluble base"
+   ],
+   "code": "4CH1-CON-SALT-INSOLUBLE-REACTANT",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.39"
+   ],
+   "title": "Preparing a pure, dry soluble salt from an insoluble reactant (excess-base route)"
+  },
+  {
+   "aliases": [
+    "precipitation reaction",
+    "insoluble salt preparation",
+    "double decomposition reaction"
+   ],
+   "code": "4CH1-CON-SALT-PRECIPITATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.41C"
+   ],
+   "title": "Preparing a pure, dry insoluble salt from two soluble reactants (precipitation)"
+  },
+  {
+   "aliases": [
+    "salt preparation by titration",
+    "soluble salt from acid and alkali"
+   ],
+   "code": "4CH1-CON-SALT-TITRATION-ROUTE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.40C"
+   ],
+   "title": "Preparing a pure, dry soluble salt from an acid and alkali (titration route)"
+  },
+  {
+   "aliases": [
+    "saturated",
+    "saturation"
+   ],
+   "code": "4CH1-CON-SATURATED-SOLUTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.4",
+    "4CH1-1.10"
+   ],
+   "title": "Saturated solution"
+  },
+  {
+   "aliases": [
+    "simple distillation",
+    "distillation"
+   ],
+   "code": "4CH1-CON-SIMPLE-DISTILLATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.10"
+   ],
+   "title": "Simple distillation"
+  },
+  {
+   "aliases": [
+    "simple molecular structure",
+    "intermolecular forces",
+    "simple molecules"
+   ],
+   "code": "4CH1-CON-SIMPLE-MOLECULAR",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.47",
+    "4CH1-1.48"
+   ],
+   "title": "Simple molecular structures (weak intermolecular forces; low melting and boiling points; the relative-molecular-mass trend)"
+  },
+  {
+   "aliases": [
+    "solubility"
+   ],
+   "code": "4CH1-CON-SOLUBILITY",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.5C"
+   ],
+   "title": "Solubility (g per 100 g of solvent)"
+  },
+  {
+   "aliases": [
+    "solubility curve",
+    "solubility graph",
+    "solubility graphs",
+    "solubility curves"
+   ],
+   "code": "4CH1-CON-SOLUBILITY-CURVE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.6C"
+   ],
+   "title": "Solubility curves (plotting and interpreting)"
+  },
+  {
+   "aliases": [
+    "general solubility rules",
+    "predicting solubility of ionic compounds",
+    "which salts are soluble or insoluble"
+   ],
+   "code": "4CH1-CON-SOLUBILITY-RULES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.34"
+   ],
+   "title": "Solubility rules for ionic compounds in water (the salt-preparation method-selection frame)"
+  },
+  {
+   "aliases": [
+    "solution",
+    "solute",
+    "solvent"
+   ],
+   "code": "4CH1-CON-SOLUTION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.4"
+   ],
+   "title": "Solution, solute and solvent"
+  },
+  {
+   "aliases": [
+    "changes of state",
+    "interconversion",
+    "melting",
+    "freezing",
+    "condensation",
+    "sublimation"
+   ],
+   "code": "4CH1-CON-STATE-CHANGES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.2"
+   ],
+   "title": "Interconversions between the three states (melting, freezing, boiling, condensation, sublimation)"
+  },
+  {
+   "aliases": [
+    "kinetic theory of matter"
+   ],
+   "code": "4CH1-CON-STATE-PARTICLE-MODEL",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.1",
+    "4CH1-1.3"
+   ],
+   "title": "Particle arrangement, movement and energy in the three states"
+  },
+  {
+   "aliases": [
+    "states of matter",
+    "three states of matter"
+   ],
+   "code": "4CH1-CON-STATES-THREE",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.1"
+   ],
+   "title": "The three states of matter (solid, liquid, gas)"
+  },
+  {
+   "aliases": [
+    "subatomic particle",
+    "protons",
+    "neutrons",
+    "electrons"
+   ],
+   "code": "4CH1-CON-SUBATOMIC-PARTICLES",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.15"
+   ],
+   "title": "Subatomic particles (proton, neutron, electron \u2014 positions, relative masses, relative charges)"
+  },
+  {
+   "aliases": [],
+   "code": "4CH1-CON-THEOR-YIELD",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.30"
+   ],
+   "title": "Theoretical yield"
+  },
+  {
+   "aliases": [
+    "carrying out a titration",
+    "rough titration",
+    "concordant results",
+    "titre volume"
+   ],
+   "code": "4CH1-CON-TITRATION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.33C"
+   ],
+   "title": "Acid-alkali titration technique (pipette, burette, endpoint, concordant titres)"
+  },
+  {
+   "aliases": [
+    "wide range indicator",
+    "estimating pH of an unknown solution",
+    "universal indicator colour chart"
+   ],
+   "code": "4CH1-CON-UNIVERSAL-INDICATOR",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.30"
+   ],
+   "title": "Universal indicator as approximate pH measurement (colour-chart matching)"
+  },
+  {
+   "aliases": [
+    "converting cm3 to dm3"
+   ],
+   "code": "4CH1-CON-VOL-CONVERSION",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.34C"
+   ],
+   "title": "Volume unit conversion (cm3/dm3)"
+  },
+  {
+   "aliases": [
+    "hydrated salt",
+    "water of crystallisation"
+   ],
+   "code": "4CH1-CON-WATER-CRYST",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.31"
+   ],
+   "title": "Water of crystallisation and hydrated salts"
+  },
+  {
+   "aliases": [
+    "anhydrous copper(II) sulfate water test",
+    "white to blue colour change",
+    "copper sulfate water test"
+   ],
+   "code": "4CH1-CON-WATER-CUSO4-TEST",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.49"
+   ],
+   "title": "Chemical test for water (anhydrous copper(II) sulfate turns white to blue)"
+  },
+  {
+   "aliases": [
+    "boiling point purity test",
+    "pure water boiling point",
+    "impurity raises the boiling point"
+   ],
+   "code": "4CH1-CON-WATER-PURITY-TEST",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-2.50"
+   ],
+   "title": "Physical test for water purity (boiling point exactly 100 C)"
+  },
+  {
+   "aliases": [
+    "actual yield",
+    "yield of a reaction"
+   ],
+   "code": "4CH1-CON-YIELD",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.30"
+   ],
+   "title": "Yield (actual yield)"
+  },
+  {
+   "aliases": [
+    "reasons for less than 100 percent yield",
+    "yield losses"
+   ],
+   "code": "4CH1-CON-YIELD-FACTORS",
+   "family": "CONCEPT",
+   "spec_points": [
+    "4CH1-1.30"
+   ],
+   "title": "Factors reducing yield"
+  }
+ ],
+ "counts": {
+  "concepts": 167,
+  "concepts_with_spec_attachment": 167,
+  "misconceptions": 30,
+  "total_spec_attachments": 211
+ },
+ "misconceptions": [
+  {
+   "aliases": [
+    "wrong number of bonds",
+    "ignoring balancing numbers",
+    "bond-counting mistakes"
+   ],
+   "code": "4CH1-MIS-BOND-ENERGY-COUNT",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Counting the wrong number or type of bonds in bond-energy calculations (ignoring balancing numbers)"
+  },
+  {
+   "aliases": [
+    "catalyst gives particles more energy",
+    "catalyst speeds up particles",
+    "particles move faster because of the catalyst"
+   ],
+   "code": "4CH1-MIS-CATALYST-PARTICLE-ENERGY",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Explaining a catalyst's effect as particles gaining energy or moving more quickly"
+  },
+  {
+   "aliases": [
+    "failing to divide by 1000"
+   ],
+   "code": "4CH1-MIS-CONC-UNIT",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Failing to convert cm3 to dm3 in concentration calculations"
+  },
+  {
+   "aliases": [
+    "covalent bonds broken on melting"
+   ],
+   "code": "4CH1-MIS-COVALENT-BONDS-BROKEN",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Saying covalent bonds are broken when simple molecular substances melt or boil (instead of weak intermolecular forces)"
+  },
+  {
+   "aliases": [
+    "evaporating to dryness"
+   ],
+   "code": "4CH1-MIS-CRYSTALLISATION-DRYNESS",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Obtaining crystals by evaporating to dryness"
+  },
+  {
+   "aliases": [
+    "copper oxide colour error",
+    "CuO colour",
+    "brown copper oxide answer"
+   ],
+   "code": "4CH1-MIS-CUO-COLOUR",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Stating a colour other than black for the copper(II) oxide decomposition product"
+  },
+  {
+   "aliases": [
+    "endpoint above pH 7 answer",
+    "neutralisation completion error"
+   ],
+   "code": "4CH1-MIS-ENDPOINT-PH-ABOVE-7",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Identifying complete neutralisation as the pH changing to any value above 7 (instead of the temperature maximum / pH reaching 7)"
+  },
+  {
+   "aliases": [
+    "molar enthalpy in J instead of kJ",
+    "forgetting the J to kJ conversion",
+    "50 000 instead of 50"
+   ],
+   "code": "4CH1-MIS-ENTHALPY-UNIT-J",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Quoting the molar enthalpy change as the unconverted joule value (e.g. 50 000) instead of kilojoules"
+  },
+  {
+   "aliases": [
+    "pressure shifts to the fewer-moles side",
+    "fewer molecules side on pressure decrease"
+   ],
+   "code": "4CH1-MIS-EQ-PRESSURE-FEWER",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Predicting that a pressure change shifts equilibrium to the side with fewer gas molecules in the wrong direction"
+  },
+  {
+   "aliases": [
+    "changing formula subscripts to balance"
+   ],
+   "code": "4CH1-MIS-EQ-SUBSCRIPT",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Balancing equations by altering subscripts"
+  },
+  {
+   "aliases": [
+    "temperature increase favours the exothermic reaction",
+    "heating shifts equilibrium the wrong way"
+   ],
+   "code": "4CH1-MIS-EQ-TEMP-EXO",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Predicting that raising the temperature shifts equilibrium in the exothermic direction"
+  },
+  {
+   "aliases": [
+    "shielding explanation Group 1",
+    "more shells answer",
+    "larger atomic radius answer"
+   ],
+   "code": "4CH1-MIS-G1-SHELL-EXPLANATION",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Explaining Group 1 reactivity via more shells / larger radius / shielding instead of outer-electron distance and weaker attraction"
+  },
+  {
+   "aliases": [
+    "touching circles in gas diagrams"
+   ],
+   "code": "4CH1-MIS-GAS-PARTICLES-TOUCH",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Drawing gas particles touching each other or joined by bonds"
+  },
+  {
+   "aliases": [
+    "glowing splint hydrogen error",
+    "hydrogen oxygen splint confusion",
+    "squeaky pop without the method"
+   ],
+   "code": "4CH1-MIS-GLOWING-SPLINT-HYDROGEN",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Testing for hydrogen with a glowing splint or an unflamed splint, or naming only the squeaky pop (instead of a burning splint at the tube mouth)"
+  },
+  {
+   "aliases": [
+    "bonds between graphite layers"
+   ],
+   "code": "4CH1-MIS-GRAPHITE-LAYER-BONDS",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Saying graphite layers are held together by bonds (instead of weak forces of attraction between the layers)"
+  },
+  {
+   "aliases": [
+    "hydrochloric acid halide test error",
+    "wrong acid for the silver nitrate test"
+   ],
+   "code": "4CH1-MIS-HALIDE-TEST-HCL",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Acidifying the halide test with hydrochloric acid (instead of nitric acid)"
+  },
+  {
+   "aliases": [
+    "halogen halide conflation",
+    "halide reactivity answer",
+    "same reactivity as a halide"
+   ],
+   "code": "4CH1-MIS-HALOGEN-HALIDE",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Treating a halogen and its halide ion as having the same (or different) reactivity in displacement reasoning"
+  },
+  {
+   "aliases": [
+    "ions and oxides answer",
+    "oxide reasoning displacement",
+    "ion reasoning displacement",
+    "wrong displacement explanation"
+   ],
+   "code": "4CH1-MIS-ION-OXIDE-REASONING",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Explaining a metal-oxide displacement outcome by references to ions and oxides instead of the reactivity comparison"
+  },
+  {
+   "aliases": [
+    "ionic bonding as intermolecular forces"
+   ],
+   "code": "4CH1-MIS-IONIC-BOND-ATOMS",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Describing ionic bonding as attraction between atoms or molecules (or as intermolecular forces)"
+  },
+  {
+   "aliases": [
+    "electrons carry the charge in ionic conduction"
+   ],
+   "code": "4CH1-MIS-IONIC-CONDUCTION-ELECTRONS",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Believing ionic compounds conduct electricity because electrons move and carry the charge"
+  },
+  {
+   "aliases": [
+    "isotopes differ in protons"
+   ],
+   "code": "4CH1-MIS-ISOTOPES-DIFFER-PROTONS",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Believing isotopes of an element differ in their number of protons"
+  },
+  {
+   "aliases": [
+    "kerosene has double bonds",
+    "fractions are unsaturated"
+   ],
+   "code": "4CH1-MIS-KEROSENE-DOUBLE-BONDS",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Claiming kerosene (a crude-oil fraction) contains double bonds"
+  },
+  {
+   "aliases": [
+    "double-bonded repeat unit",
+    "polymer drawn with double bond",
+    "repeat unit with C=C",
+    "double bond not opened"
+   ],
+   "code": "4CH1-MIS-POLYMER-DOUBLE-BOND",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Drawing a double-bonded product for the addition-polymer repeat unit (the C=C not opened to a single bond)"
+  },
+  {
+   "aliases": [
+    "filtrate contains the precipitate error",
+    "residue versus filtrate confusion"
+   ],
+   "code": "4CH1-MIS-PRECIPITATE-IN-FILTRATE",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Recovering the insoluble salt from the filtrate instead of the residue in a precipitation preparation"
+  },
+  {
+   "aliases": [
+    "propan-1-ol for propan-2-ol",
+    "1-propanol position error",
+    "alcohol position naming error"
+   ],
+   "code": "4CH1-MIS-PROPANOL-POSITION",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Naming propan-2-ol as propan-1-ol (ignoring the -OH position in the name)"
+  },
+  {
+   "aliases": [
+    "mass number for relative atomic mass"
+   ],
+   "code": "4CH1-MIS-RAM-MASS-NUMBER",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Calling the Periodic Table relative atomic mass the mass number"
+  },
+  {
+   "aliases": [],
+   "code": "MIS-T1.1-01",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Moles and grams are interchangeable"
+  },
+  {
+   "aliases": [],
+   "code": "MIS-T2.1-01",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Isotopes of the same element differ chemically"
+  },
+  {
+   "aliases": [],
+   "code": "MIS-T3.1-01",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "Ionic compounds form discrete molecule pairs"
+  },
+  {
+   "aliases": [],
+   "code": "MIS-T3.2-01",
+   "family": "MISCONCEPTION",
+   "spec_points": [],
+   "title": "The octet rule is an absolute law"
+  }
+ ],
+ "source": {
+  "date": "2026-10-02T09:58:05Z",
+  "files_sha256": {
+   "concepts.yaml": "24fa91ac7149682b1083ff47112362a11180bcfb7899c1343c6f536682447e3f"
+  },
+  "head": "1245df009712216b309f163aacdd1c6d8ef39f1b",
+  "repo": "SyllabAI/syllabai-resources"
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "anti_leakage": "queries authored without executing any retrieval arm; set frozen + hashed before any recorded run; records generated deterministically from the snap-003 freeze (v2, 2026-09-26) and carried byte-identical into v3; the v3 snapshot pairing pins were re-issued against snap-004 per spec \u00a73/\u00a74 set+snapshot pair discipline (see pairing.repin_basis) v4 (2026-09-28): set carried byte-identical into v4; re-pinned to snap-005 per the set+snapshot pair discipline; still never executed against any retrieval arm before a recorded run.",
+ "audit_findings": {
+  "non_spec_question_anchors": "717/720 VALIDATED question anchors carry primary_topic_node_id pointing at non-spec nodes (623 at 4CH1-S* bank/session nodes + 94 at ING-* paper-scrape nodes); such anchors are quarantined OUT of gold_spec_points and recorded per-record as provenance.anchor_code_non_spec (v1 finding updated for the snap-003 anchor census)"
+ },
+ "counts": {
+  "calculation": 10,
+  "conceptual": 15,
+  "diagram_dependent": 5,
+  "exam_question": 10,
+  "factual": 15,
+  "mark_scheme": 8,
+  "misconception": 10,
+  "multi_spec_point": 7,
+  "prerequisite": 12,
+  "revision_note": 10,
+  "vague_learner": 8,
+  "why_wrong": 10
+ },
+ "files_sha256": {
+  "class_calculation.json": "6e92e1ad2f2fc6d101e39c25b970abd4b190f77962869ffe879eaa8da9596561",
+  "class_conceptual.json": "b8fbffcdbd98424f4df846bee98458eace2b41db637be1f4a7e867ce9fbe5836",
+  "class_diagram_dependent.json": "1b42d6ba0e0ae21d469b8bf1fe02b4cb58cfcc89ffe4fd694a7d3a195b1518b8",
+  "class_exam_question.json": "1d1fdeed5d4d2cd626bf073cf44d1a843ebe6bbeef1328aab0a16d3d7fab650c",
+  "class_factual.json": "46c76030dfb428056690d5b64a26017293cd8cfc70410fdb913c5a563e167ab0",
+  "class_mark_scheme.json": "87ff1a214faf07513eeb5eea9127d80cfcab6ed0cc686a89f900d3c05017ee5a",
+  "class_misconception.json": "8e1eb3d05f30c9892fbe8f20af80979c4fd9eff60b2b59b13183acee2d2800ad",
+  "class_multi_spec_point.json": "a4e11972a4b66c558989abe2dbe4e0de1af3c8a585c1ee0b15d35a7012238a0f",
+  "class_prerequisite.json": "aac30ffa1962a0850edfc90d7cf5308d184f5fbd86406ed70b6e1644dd1561ca",
+  "class_revision_note.json": "e3491e18e94b8d9159ec95a021e3de1e9ef04cdabbfe0597880e72a4124d64ec",
+  "class_vague_learner.json": "41ff7f4df6fe103969dbbb36305bda9c3381c52f42a55757261b634b6cdd65b7",
+  "class_why_wrong.json": "0ff6384f90a104463caccdfac2a537dac28ab594083fc4a246db7b840642f3ea"
+ },
+ "frozen": "2026-09-27",
+ "label_rules": {
+  "R1-stem-verbatim": "normalized stem prefix (>=40 chars) contained verbatim in chunk content -> tier 2",
+  "R2-term-cooccurrence": "gte 2 of 3 distinctive title terms (df-filtered 2..300) co-occur in chunk -> tier 1, cap 5",
+  "R3-paper-cohort": "same-paper same-kind chunks -> tier 1, cap 5",
+  "none-substrate-absent": "no chunk substrate (notes_mirror / figures); gold = spec anchors only"
+ },
+ "pairing": {
+  "card_axis": "UNCHANGED BASIS, updated state: R2 evidence labels may anchor to EXTERNAL_QUESTIONS card chunks (kind-unfiltered R2 path). At the snap-007 freeze: the wave-1 (teacher surface) + wave-2 (governed SQL batch 14cb8ae4, 297 documents, T-C54) validation waves landed \u2014 EQ 1056/1056 chunks VALIDATED, MS 1609 VALIDATED + 30 REJECTED, QP 1431 VALIDATED + 34 REJECTED, EN 350 VALIDATED (all by document state); the 210 HV chunk->spec mappings remain reachable in the served view and SS8(d) stays scoreable-with-coverage.",
+  "generated_from": "evidence/bench-001/snapshots/snap-007 (FREEZE_RECORD identical bytes: bench/inputs/snapshot-r9)",
+  "prior_pairing": "evidence/bench-001/snapshots/snap-006 (FREEZE_RECORD 2026-09-28, the r7 serving-set eval freeze)",
+  "governing_bars": "spec \u00a78.1 v1.1 dual-view bars (ALL + VALIDATED), unchanged \u2014 gold-v5 is NOT re-frozen, so no re-baseline re-derivation is triggered (\u00a78.1 rule 1's trigger is a GOLD re-freeze)."
+ },
+ "quota": {
+  "calculation": 10,
+  "conceptual": 15,
+  "diagram_dependent": 5,
+  "exam_question": 10,
+  "factual": 15,
+  "mark_scheme": 8,
+  "misconception": 10,
+  "multi_spec_point": 7,
+  "prerequisite": 12,
+  "revision_note": 10,
+  "vague_learner": 8,
+  "why_wrong": 10
+ },
+ "quota_amendments": {
+  "calculation": "command_word was unpopulated at t0 (119/119 NULL) and is now populated on 237/720 VALIDATED versions (bank wave); the v1 cue-word-stem selector is RETAINED UNCHANGED for v2 (anti-tuning rule \u2014 no re-selection on the newly populated column); v1's numeric-stem fill selector remains as fallback fill"
+ },
+ "set_version": "gold-v5",
+ "snapshot": {
+  "version": "snap-007",
+  "files_sha256": {
+   "chunk_spec_hv.json": "b5b20ffa96b620bd1d2f27b698eefd325c6f62299f85b15bb16cd141518a32e3",
+   "chunks.jsonl.gz": "0b83861909609a72930158c4aa45cb51ad9e03eb7556c8c3d48df0785d7b2d64",
+   "concept_attachments.json": "bff866bc4d28edbaa1765af1a748d1aeebe47dab1ed97c354b329030467acd1b",
+   "graph_code.json": "6c6cdbf0c77e1389c5ec41e1facf1630ebd7c97576085be6b528dffabee86ee5",
+   "graph_edges.json": "f31e560b101af88ac7d82f97bce4c4b02175c98e7f42dc361076a61a246daf0a",
+   "misconceptions.json": "a2be42f50505d94758c8d12f509753a0999cb196629cd735cb47ea2185da5148",
+   "question_anchors.json": "1c400ed09a6cfdfdea682a0a00bfe316084546fa213e6f7f469f6667fbc5ef8a",
+   "spec_points.json": "b95361eff3ac5a70040e0bc79af7b5f5666704db350505830ca409ead607d6fb"
+  },
+  "note": "re-paired per the \u00a73/\u00a74 set+snapshot pair discipline (the gold-v3->v4->v5 mechanism): the SET is byte-identical gold-v5; the pairing pins advance to snap-007 (the wave-2 re-record generation freeze). All 120 anchors must resolve into snap-007 (gold_check.py PASS is the gate)."
+ },
+ "total": 120
+}
