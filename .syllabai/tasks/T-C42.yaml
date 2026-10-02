@@ -86,3 +86,15 @@ task:
       poststate to the resolveActive-mirroring version first (F-PROD-2)"
     - "governance: remove the 4CH1/2C REJECTED 0-chunk ingest shell
       (7d40476f…) in a governed lane (F-PROD-4)"
+    - "DOC-DRIFT FOLLOW-THROUGH DONE 2026-10-02 (operator trace 1a0fb2a9bd10558d
+      'merge it once CI passes'): the 8 stale pre-calibration 'cosine floor
+      0.15' bench narratives flagged by the 2026-10-02 check are fixed — core
+      PR #51 (fix/t-c42-bench-floor-doc-drift @ c6e3861, text-only, 4 files
+      +21/-11) MERGED as 6a52613; PR-head CI run 36970563440 green
+      (2.5 min), merge-commit CI run 36971043249 green on the combined main
+      state (concurrent PR #50 perf lane). Harness javadocs anchored to
+      ContentVectorRetriever#MIN_COSINE with era stamps for the archived
+      records; Run004A generated templates era-aware — a post-T-C42
+      re-record can no longer stamp 0.15 into fresh results.json /
+      RUN_REPORT.md; ArmAReplayIT mechanics stated number-freely. Exactly 6
+      '0.15' mentions remain in bench sources as deliberate era stamps."
