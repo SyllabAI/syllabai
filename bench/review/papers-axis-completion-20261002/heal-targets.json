@@ -1,0 +1,63 @@
+{
+ "date": "2026-10-02",
+ "refined_finding": "the 11 VALIDATED ep rows have NO QP/MS document links at all (both sides null), not partial links",
+ "targets": [
+  {
+   "identity": "4CH0-1C 2016-01",
+   "qp_sha": "aa7b893cb3afe12c4159daadd01d3a52416e4826efae34459fa97515a2f0eba1",
+   "ms_sha": "a07762fac3f6a0c55d230e0e7505a7a188b1b72e7fd47af30aa983391cc7bdc2"
+  },
+  {
+   "identity": "4CH0-1C 2018-01",
+   "qp_sha": "c56f36fe5189e39c11867c3abe2e0c7291fcc3930911575bbee738db8a93d4df",
+   "ms_sha": "4085e363ba33f3f0ab148875f0cc72dc6de56c3af608b836c828507b160bcf94"
+  },
+  {
+   "identity": "4CH1-1C 2023-11",
+   "qp_sha": "180909048496d940c72e0e669173a52d0a3fa2f6e69c43c453d1ddcc20e06048",
+   "ms_sha": "08caaccc01f8e42a3f066685916e2fac75cf5263a690ae1e0eaba104c3f072ed"
+  },
+  {
+   "identity": "4CH1-2C 2023-11",
+   "qp_sha": "240272b2a0e8b434c99b19434a629a01eabfa25788fd8ce48f8465675f61841a",
+   "ms_sha": "07baeebd0ffcc6eb5b792e2433d8bb6aa67e9b456bca4eab6b48211d5164ae78"
+  },
+  {
+   "identity": "4CH1-1C 2024-11",
+   "qp_sha": "81f416f2c32d849ec99796c546aa21b76bbab50b2131c29f623f1298fdaed7a0",
+   "ms_sha": "297a4aa6badfa7eba21dde5fd6cfab84d848f92949c614a4e8ed3de475f0933e"
+  },
+  {
+   "identity": "4CH1-2C 2024-11",
+   "qp_sha": "ab746dd318eecaafeeaa9adac917360a6f4159b0f84d54f4328a0ac6b61542e6",
+   "ms_sha": "4474a87ae2117b5154fcbbb7049fd98b7675f4c117e1794644c4ef3f42554276"
+  },
+  {
+   "identity": "4CH1-1C 2025-11",
+   "qp_sha": "7076dc7916f2515197f71d09d2e5685b305cc0a58ba1eed9166a2646b0969883",
+   "ms_sha": "c8962567547f6f72b0d1edff2e0f56084b0e6ec44f5390497f58e22239c2e0da"
+  },
+  {
+   "identity": "4CH1-2C 2025-11",
+   "qp_sha": "1963af3aa5a42b5ab0ed8da4231dd615d9efd47098f22a057dcfcaaf6632a95b",
+   "ms_sha": "54f77a4de78c9f67c2419ddf56d191ccc76247c187b71eb0696dd657b59a9054"
+  },
+  {
+   "identity": "4CH1-1CR 2020-01",
+   "qp_sha": "ffa46da2cff84c1c4ae92af32069a14f5f75c858878d7435d44f56c1b672156d",
+   "ms_sha": "2e38b75e195dd6f15c4fb2d9590bd26d573537dee4937ecf38207aa3c4189d70"
+  },
+  {
+   "identity": "4CH1-1CR 2021-01",
+   "qp_sha": "e8bf13d2517fcc66854cea62eecae20c2b613c85bc3cf440ff1f026fa6289f37",
+   "ms_sha": "dbc179805f43912bb4f697ea473f9b46266893a875285eface4b4d8caaaa009a"
+  },
+  {
+   "identity": "4CH1-2C 2025-06",
+   "qp_sha": "24d7789716fa324e17428967b7a215d4ef1179a6002c931a38348cccbcb50bf8",
+   "ms_sha": "5738e79ef6ad0ce86bcaa4605e5210a80827945951537f6799badb874083e6b7",
+   "note": "same dir as ingest-target 2025-06/4CH1-2C \u2014 heals via that ingest"
+  }
+ ],
+ "source": "corpus manifests @ 029c6ec92 (sparse checkout, this session)"
+}
