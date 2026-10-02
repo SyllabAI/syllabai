@@ -1,0 +1,45 @@
+{
+ "guard": {
+  "S1_4EB0_2014-06_ms": {
+   "url": "https://raw.githubusercontent.com/SyllabAI/syllabai-pastpapers/f0ea3a1f9/past-papers/pearson-edexcel/international-gcse/english-language-b/4eb0/past-papers/2014-06/4EB0-01/ms.pdf",
+   "status": 200,
+   "bytes": 62870,
+   "sha256": "edba020d8e33298048f151bb840cc39958accda4d62f6afc585944cf84a4bf4d",
+   "matches_pin": true
+  },
+  "S2_4PH1-1P_2020-06_qp": {
+   "url": "https://raw.githubusercontent.com/SyllabAI/syllabai-pastpapers/f0ea3a1f9/past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-1P/qp.pdf",
+   "status": 200,
+   "bytes": 244801,
+   "sha256": "722e5cf84eebce6b3033e3b88b6f7c51389704b23295bc59e54371d411cbfcad",
+   "matches_pin": true
+  },
+  "S3_4PH1-2P_2020-06_qp": {
+   "url": "https://raw.githubusercontent.com/SyllabAI/syllabai-pastpapers/f0ea3a1f9/past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-06/4PH1-2P/qp.pdf",
+   "status": 200,
+   "bytes": 175180,
+   "sha256": "d1d9b8cfd9968aaf17ec3009d041092469f35052d226c28592fb613dbca0e512",
+   "matches_pin": true
+  },
+  "XCHECK_1P_NOV": {
+   "url": "https://raw.githubusercontent.com/SyllabAI/syllabai-pastpapers/f0ea3a1f9/past-papers/pearson-edexcel/international-gcse/physics/4ph1/past-papers/2020-11/4PH1-1P/qp.pdf",
+   "status": 200,
+   "bytes": 373317,
+   "sha256": "e6da3465b62dbec9c3a3e33600262aee0a9b338336594022d51808f319e4e51d",
+   "matches_pin": true
+  }
+ },
+ "pmt": {
+  "index": {
+   "url": "https://www.physicsandmathstutor.com/past-papers/edexcel-igcses/",
+   "error": "<HTTPError 403: 'Forbidden'>"
+  }
+ },
+ "xtreme": {
+  "dir_listing": {
+   "url": "https://papers.xtremepape.rs/Edexcel/International%20GCSE/Physics/2020%20Nov/Question-paper/",
+   "error": "<HTTPError 403: 'Forbidden'>"
+  }
+ },
+ "dam": {}
+}

@@ -1,0 +1,35 @@
+# T-C71 — F-A2 slot completion (2 of 3) + 4EB0 residue recorded
+version: 1
+task:
+  id: T-C71
+  title: "F-A2 slot completion — execute the remaining unresolvable F-A2 slots per
+    the operator's sourcing guidance (trace 1a0fdbc82e010361): 4PH1-1P/2P 2020-06
+    qp from the official DAM (June/Nov-2020 ruling); 4EB0-01 2014-06 ms via PMT
+    (blocked — route undiscoverable from the sandbox)"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  status_note: "the lane's executable scope is complete; the 4EB0 residue is an
+    operator-input block recorded in TODO (not an unfinished agent action)"
+  priority: P1
+  authority: "operator IM trace 1a0fdbc82e010361 ('2014 one, you will find in
+    PMT. and 2020-06 papers are basically 2020 november ones.') under the
+    standing F-A2 fix mandate (trace 1a0fc4b91fc4c965) and the Session 162
+    open-② close options ((a) sanctioned-source bytes subject to T-C62
+    evidence-class verification)"
+  base:
+    repo: "syllabai-pastpapers main f0ea3a1f9 (the T-C62 pin); records main at
+      claim time"
+  result:
+    corpus_commit: "15291f50c7b1e05078c4ee5223ffac742bca5147"
+    replaced:
+      - "2020-06/4PH1-1P/qp.pdf <- DAM 4PH1_1P_que_20201114.pdf (sha 28e1f5bc…, 598762 B)"
+      - "2020-06/4PH1-2P/qp.pdf <- DAM 4PH1_2P_que_20201124.pdf (sha c10b9517…, 4224950 B)"
+    untouched: "4EB0-01 2014-06 ms (blocked; byte-verified unchanged post-push 3/3)"
+    verification: "pre-commit verbatim-block asserts + edited-YAML re-parse;
+      post-push re-fetch 7/7 (bench/review/fa2-slots-20261003/fa2s_postverify.json)"
+  evidence: "bench/review/fa2-slots-20261003/"
+  next_safe_actions:
+    - "4EB0-01 2014-06 ms: operator supplies the direct PMT URL or the bytes, or
+      rules (b)/(c) per the Session 162 close-out options"
+    - "optional (outside F-A2): corpus 2020-11/4PH1-2P dir still lacks qp.pdf
+      (pre-existing hole; the DAM has 4PH1_2P_que_20201124.pdf which pairs)"

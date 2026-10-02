@@ -1,0 +1,98 @@
+{
+ "dir_2020-06_1P_ms": {
+  "bytes": 484290,
+  "sha256": "1f2fdf9eceacbe15cf5ffb9a355a80ab5a2a02b50e3d4a76db2883ae41dea791",
+  "pages": 16,
+  "pcodes": [],
+  "sittings": {
+   "November 2020": 1
+  },
+  "fingerprint": {
+   "Total for Question": 11
+  },
+  "anchors": [
+   "2.668 V"
+  ]
+ },
+ "dir_2020-06_2P_ms": {
+  "bytes": 373190,
+  "sha256": "d1ff61a39541dda7788e123126bf5a198c3d19554e01330b49ff0e99e4946bc6",
+  "pages": 12,
+  "pcodes": [],
+  "sittings": {
+   "November 2020": 1
+  },
+  "fingerprint": {
+   "Total for Question": 8,
+   "equation": 3
+  },
+  "anchors": []
+ },
+ "corpus_2020-11_1P_qp": {
+  "bytes": 373317,
+  "sha256": "e6da3465b62dbec9c3a3e33600262aee0a9b338336594022d51808f319e4e51d",
+  "pages": 32,
+  "pcodes": [
+   "P65064A"
+  ],
+  "sittings": {},
+  "fingerprint": {
+   "Turn over": 14,
+   "Total for Question": 11,
+   "Answer ALL": 1,
+   "Centre Number": 1,
+   "candidate number": 1,
+   "calculator": 1,
+   "equation": 1
+  },
+  "anchors": [
+   "1.8 m",
+   "6.0 V"
+  ]
+ },
+ "dam_1P_nov_qp": {
+  "bytes": 598762,
+  "sha256": "28e1f5bc19c5c8472931d9c5f502f1e94d43a60e36e64a6f36ca4b32fe9d918c",
+  "pages": 32,
+  "pcodes": [
+   "P65064A"
+  ],
+  "sittings": {},
+  "fingerprint": {
+   "Turn over": 14,
+   "Total for Question": 11,
+   "Answer ALL": 1,
+   "Centre Number": 1,
+   "candidate number": 1,
+   "calculator": 1,
+   "equation": 1
+  },
+  "anchors": [
+   "1.8 m",
+   "6.0 V"
+  ]
+ },
+ "dam_2P_nov_qp": {
+  "bytes": 4222950,
+  "sha256": "c10b95175e0fbb0b82853de916c95d36f8bdc4981d693b716e7711df56ea3879",
+  "pages": 24,
+  "pcodes": [
+   "P65066A"
+  ],
+  "sittings": {
+   "June 2020": 1
+  },
+  "fingerprint": {
+   "Turn over": 11,
+   "Total for Question": 8,
+   "Answer ALL": 1,
+   "Centre Number": 1,
+   "candidate number": 1,
+   "calculator": 1
+  },
+  "anchors": [
+   "1.2 m",
+   "4.5 kg"
+  ]
+ }
+}
