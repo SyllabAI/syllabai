@@ -55,7 +55,17 @@ task:
     - "embed-state recheck: every ep-linked QP/MS document's chunks at
       the current embed_rev, VERIFIED live (not carried from T-C54)"
     - "full evidence pack + governed-batch audit rows + YAML closure"
-  evidence: []
+  evidence:
+    - "prep pack bench/review/papers-axis-completion-20261002/ (commit
+      f146d8f48273): corpus gate PASSED for the 5 ingest-target papers
+      (10/10 sha-vs-pin @ 029c6ec92, complete QP+MS pairs, print-verified
+      manifests); 11 heal identities pinned (refined: the 11 rows have NO
+      doc links on either side; 2025-06/4CH1-2C heals via the ingest);
+      probe set P1-P5 staged SELECT-only (tc60_probe.py — census +
+      SUGGESTED itemization, heal-checksum join, embed_rev/embedded_at
+      recheck, exact searchServingEligible gate replica per curriculum,
+      pre-ingest absence check). Claim registered c7fa75e7fdc3; T-C57/
+      T-C58/T-C59 taken by concurrent lanes, T-C60 re-asked free."
   notes:
     - "claim-first at registration (this commit); ID re-asked after the
       push per the T-C55 lesson. T-C57/T-C58/T-C59 taken by concurrent
