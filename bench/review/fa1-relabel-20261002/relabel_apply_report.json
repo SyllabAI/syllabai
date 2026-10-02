@@ -1,0 +1,30 @@
+{
+  "batch": "fa1-relabel-2026-10-02",
+  "batch_run_id": "bf3485f8-e504-47bc-b1ce-a29fbbdb725d",
+  "started_at_utc": "2026-10-02T14:34:54.880302+00:00",
+  "operator_trace_id": "1a0fcf4d0a035c8d",
+  "dry_run": false,
+  "plan_sha256": "ee6324c157d16449ec5a15892044b21c37d5ad1d9a34c95ea1d73f42e6debe1d",
+  "target_documents": 16,
+  "expected_gate_delta": 0,
+  "identity": {
+    "database": "neondb",
+    "label": "T-C04-CAMPAIGN"
+  },
+  "pre": {
+    "docs": 1017,
+    "ep": 104,
+    "audit": 2798,
+    "tve": 0
+  },
+  "pre_gate_eligible": 4593,
+  "rows_relabeled": 16,
+  "audit_rows_written": 16,
+  "post_gate_eligible": 4593,
+  "audit_rows_total": 2814,
+  "teacher_validation_events": 0,
+  "docs_total": 1017,
+  "ep_total": 104,
+  "status": "APPLIED",
+  "finished_at_utc": "2026-10-02T14:35:10.412818+00:00"
+}
