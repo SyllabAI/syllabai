@@ -7,7 +7,13 @@ task:
     ledger miscount — registry-derived truth is 49 registered / 37
     deck-bearing / 1 core-anchor-eligible today)"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
-  status: IN_PROGRESS # claim-first; DONE at closeout with receipts
+  status: DONE # implementation + verification complete; the hub half's MERGE stays on the operator's word (T-C55 precedent)
+  merge_status: "PARTIAL — core half MERGED: core PR #68 merged as 50d6b77
+    (head d09d085, CI build SUCCESS incl. the Testcontainers ITs). Hub half
+    OPEN + merge-HELD: hub PR #19 (t-c66-flashcard-sync-widening, head
+    a8aa2b4) with build + e2e + Vercel all SUCCESS and mergeable clean —
+    per the T-C55/T-C57/T-C61 precedent the hub PR merges only on the
+    operator's explicit word."
   priority: P1
   authority: "operator IM trace 1a0fcf454aacec35 ('① the 44-pack bridge-gate
     widening (now merge-safe with receipts)') — GO on T-C57
@@ -138,20 +144,110 @@ task:
          full-trail reads (FlashcardReviewScheduleController.java,
          FlashcardRatingTrailController.java)"
       - "uq_knowledge_node_code exists (V2__curriculum_knowledge.sql:44) —
-         duplicate node codes are DB-impossible"
+         duplicate node codes are DB-impossible; pinned in the FlowIT
+         (saveAndFlush on an existing code →
+         DataIntegrityViolationException)"
       - "registry derivation: 49 registered / 37 deck-bearing / 12 empty
          flashcards.json / 1 curriculumCode; pilot anchors 32/32
          charset-safe + course-prefixed; '44' not reproducible at any
          registry state (34 → 37)"
+      - "HUB gates on head a8aa2b4: verify_flashcard_sync_courses ok
+         [igcse-chemistry-19] with 49/49 per-course exclusion receipts;
+         verify_flashcard_unified ALL GREEN incl. the 7 new T-C66 pins;
+         tsc --noEmit exit 0; bun run build green (prebuild chain green);
+         eslint 0 errors; e2e 30/30 (mock); lib/flashcard-review.ts diff
+         EMPTY (byte-frozen proven); CI build + e2e + Vercel all SUCCESS"
+      - "CORE gates: mvn test-compile exit 0 (JDK 25.0.4.1 + Maven 3.9.9
+         re-provisioned after the sandbox snapshot restore wiped the
+         T-C41 toolchain); offline unit suite 1212 / 0 failures / 2
+         skipped; CI build SUCCESS on PR #68 head d09d085 (ITs execute in
+         CI); merged as 50d6b77"
+      - "multi-course pins recorded in the merged ITs: disjoint
+         attribution across 4CH1/4PH1 anchors; duplicate-code fail-closed;
+         one queue derives across two courses with SkillState empty"
     INFERRED:
       - "boardCode rule (curriculumCode minus trailing -<year>) from the
          single observed pair (4CH1-2017 → 4CH1 anchors); generalized for
          future courses, unverifiable until a second curriculum lands"
+      - "cross-course cardId collision in the feed grouping is
+         measure-zero in practice (hub card ids are fl_+16 random chars;
+         ≈1e-13 at 24k cards) but structurally unguarded — the feed groups
+         by cardId alone across courses; becomes a real contract item only
+         if content ids ever turn deterministic"
     REPORTED:
       - "core ITs compile offline; they EXECUTE in CI (Testcontainers —
-         no Docker in the sandbox)"
+         no Docker in the sandbox; the offline suite's 2 skips are the
+         Docker-gated hooks)"
+      - "the deck player's honesty chip (tranche 4.4 'does rating here
+         also record to the account?') was discovered mid-lane as a THIRD
+         consumer of the same gate and widened with it — scope addition
+         recorded here (the lease comment said two gates; the chip is the
+         write gate's honest-disclosure surface and could not stay
+         narrow)"
     UNVERIFIED:
       - "the widened gate against a LIVE signed-in account (inherits
          T-C57/T-C61's live-probe gap; the eligible set is unchanged today
          so no new live surface is exposed)"
-  next_safe_actions: []
+  execution_record: >
+    2026-10-02. Sequenced after the T-C61 closeout (merge hub#14, trace
+    1a0fccf62d9db3d1 — executed first this session as promised: pre-merge
+    protocol on the moved base, merge commit 2030ef6, closeout 95a74dd,
+    WORKLOG Session 154). Claim-first ledger 8aa9b21 pushed (this yaml +
+    the hub flashcard-sync-gate lease) BEFORE any lane content.
+    SCOPING RECEIPTS: core read first-hand — the ingest is course-agnostic
+    fail-closed (anchor → KnowledgeNode resolve, 404 unknown, structure-
+    level gate), the feed (T-C53) and trail (T-C61) are full-trail reads;
+    NO core gate exists to widen. Hazard receipts: non-pilot corpus
+    anchors are core-UNSAFE today (bare numeric codes "1.1"/"3.5" shared
+    across courses — cross-course misattribution if ever sent; charset-
+    unsafe codes "IGCSE_ACCOUNTING:S4.173", "ial-physics-T4.4:SUB_" —
+    guaranteed 400s); a naive widen-to-all-deck-bearing was rejected on
+    these receipts. The ledger's "44 deck-bearing packs" (T-C53
+    next_safe_action wording, copied through T-C57/T-C61) could not be
+    reproduced from any registry state (34 deck-bearing at the 39-course
+    era, 37 since the 49-course import) — recorded as a ledger miscount;
+    the widening is PREDICATE-defined.
+    HUB: branch t-c66-flashcard-sync-widening off 6fde7c9, pushed a8aa2b4,
+    PR #19. NEW src/lib/flashcard-sync-eligibility.ts (FLASHCARD_SYNC_
+    COURSES + isFlashcardSyncCourse; the four conditions documented in the
+    module; today exactly {igcse-chemistry-19} so behavior is
+    byte-identical). NEW scripts/verify_flashcard_sync_courses.ts
+    (prebuild-wired after the corpus gate; re-derives from content/,
+    fails the build on drift, prints per-course exclusion receipts).
+    Gate rewiring: flashcard-bridge.ts (write), flashcard-unified.ts
+    (read hook), deck-player.tsx (the tranche-4.4 honesty chip — third
+    consumer, discovered mid-lane): PILOT_COURSE_SLUG imports gone from
+    all three; one shared predicate; reason string "not the pilot course"
+    → "not a core-sync course"; the widen-both-or-neither doc rule is now
+    structural. verify_flashcard_unified.ts +7 T-C66 pins (incl. the
+    three-consumer source pins). package.json: verify:flashcard-sync
+    script + prebuild chain. lib/flashcard-review.ts BYTE-UNTOUCHED.
+    GATES: see VERIFIED. CI on head a8aa2b4: build + e2e + Vercel all
+    SUCCESS; mergeable True/clean; merge HELD for the operator's word.
+    CORE: branch t-c66-multi-course-anchor-pins off e657b9a, pushed
+    d09d085, PR #68. FlashcardRatingFlowIT: disjoint multi-course
+    attribution (4PH1/4PH1-S1-a beside the 4CH1 fixture; the node follows
+    the resolved anchor; the learner-state slice carries both under their
+    own nodeIds) + duplicate-code fail-closed (saveAndFlush →
+    DataIntegrityViolationException). FlashcardReviewScheduleFlowIT: one
+    queue derives across two courses' anchors, summary coherent, honesty
+    pin multi-course edition (SkillState empty). FlashcardRatingController
+    javadoc: the MULTI-COURSE ANCHOR CONTRACT where the next
+    curriculum-commissioning lane will read it. Tests+javadoc ONLY (no
+    production-code change, no migration). Toolchain note: the sandbox
+    snapshot restore had wiped the T-C41 JDK25/Maven tarballs —
+    re-provisioned (Corretto 25.0.4.1 + Maven 3.9.9 into /home/z/tools).
+    GATES: test-compile exit 0; offline suite 1212/0/2; CI build SUCCESS
+    on d09d085; merged as 50d6b77 on green CI (core precedent: agent
+    merge, #63/#67 lineage).
+    Records: this yaml (DONE + merge_status + claims + this record), the
+    locks.yaml lease annotation, TODO dated section, WORKLOG Session 160,
+    agent worklog.
+  next_safe_actions:
+    - "operator merge word for hub PR #19 (a8aa2b4, 3/3 CI green,
+       mergeable clean) — the only remaining step of this lane"
+    - "when the ingestion lanes commission the next curriculum
+       (curriculumCode + core-safe anchors): courses.json gains the code,
+       the sync verifier fails on drift, the manifest regenerates — sync
+       flips on for that course with zero code change (the widening's
+       whole design)"

@@ -103,3 +103,9 @@ lease_schema:
 #  registry-derived eligibility predicate — the T-C61/ADR-034 receipts
 #  keep the widened sync merge-safe per the operator's word, trace
 #  1a0fcf454aacec35.)
+
+# (T-C66 lease status 2026-10-02: CORE half fulfilled — PR #68 merged as
+#  50d6b77 on CI build SUCCESS. HUB half OPEN: PR #19 (a8aa2b4) 3/3 CI
+#  green, mergeable clean, merge HELD for the operator's explicit word per
+#  the T-C55 precedent — the lease stays active until that merge or its
+#  2026-10-04T00:00Z expiry, whichever first.)
