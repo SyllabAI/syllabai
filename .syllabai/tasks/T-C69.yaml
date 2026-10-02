@@ -6,7 +6,12 @@ task:
     the run; one measured datapoint vs §8.1 v1.1 + the admission ledger on the
     run-005-f frozen basis"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: IN_PROGRESS # claim-first: pre-registration committed BEFORE any run (spec §9); seam + run next (merge operator-gated, T-C55/T-C65 precedent)
+  status: DONE # both phases executed: seam MERGED (8d7880b) + run-005-g RECORDED and verified; verdict NOT PROMOTED (a finding — the admission ledger is the headline)
+  merge_status: "MERGED — core PR #69 as 8d7880b (2026-10-02, operator word
+    trace 1a0fd788c28089e5 'T-C69 training pool setup and operation' — the
+    prereg-pinned operator-gated step; head a70d000, CI build SUCCESS,
+    local offline suite 1223/0/2 on the exact head, zero production code:
+    +530/−18 across 3 bench files). Post-merge main CI build SUCCESS."
   priority: P1
   authority: "operator IM trace 1a0fd5ec313c556d ('pool-composition prereg
     (per-kind quotas first)'); the T-C67 closeout next_safe_action (pool
@@ -90,13 +95,82 @@ task:
     REPORTED: []
     UNVERIFIED:
       - "the carriers' arm ranks beyond 40 (not recorded anywhere — admission
-        within floor 5 is an EXPECTATION the run tests, not a theorem)"
+        within floor 5 is an EXPECTATION the run tests, not a theorem) —
+        the run's ANSWER is now recorded: 4/5 flips MISS-AT-FLOOR, i.e. the
+        carriers sit beyond the floor's reach in arm-rank terms; the exact
+        arm ranks themselves remain unrecorded (no artifact carries them)"
       - "whether the fused top-20 stays stable under pure-additive RRF
-        admission (declared expectation, no guarantee)"
+        admission (declared expectation, no guarantee) — RESOLVED by the
+        run: the top-20 SET was byte-stable (recall@5/10/20 and
+        evidence_precision@10 identical to f); MRR/nDCG moved via
+        intra-top-20 ORDER tie re-execution, recorded below"
+  execution_record: >
+    2026-10-02, two lanes on one task record. SEAM (session web-123877e4,
+    operator trace 1a0fd67335761761 'start the seam'): branch
+    feat/t-c69-notes-floor off 50d6b77, head a70d000, PR syllabai-core#69
+    (+530/−18, 3 files, src/test/java/com/syllabai/bench/ ONLY —
+    NotesFloorRetrieval.java NEW, Run005C.java rewiring, 11-test
+    Run005CNotesFloorTest; absent-path byte-identity by construction,
+    fail-closed spec parser, three-way one-lever guard with the two-arg
+    overload preserved, deterministic probe-doubling discovery with
+    REF-based base membership per the g2-024 precedent). CI build SUCCESS;
+    local offline suite 1223/0/2 (1212 recorded + 11 new); recorded in
+    7f49c55. MERGE + RUN (session web-9d2144ad, operator trace
+    1a0fd788c28089e5 'T-C69 training pool setup and operation' — the
+    prereg-pinned operator-gated merge + the run phase): pre-merge gates
+    re-executed first-hand (base unmoved at 50d6b77; head CI SUCCESS;
+    offline suite 1223/0/2 re-run on the exact head under Corretto
+    25.0.4.1 + Maven 3.9.9 re-provisioned after the third sandbox
+    snapshot-rollback wiped the toolchain) → MERGED as 8d7880b
+    (merge_method=merge, the core-lineage precedent); post-merge main CI
+    build SUCCESS. run-005-g EXECUTED on merged main code (code_version
+    8d7880b…, BENCH_RUN_ID=run-005-g BENCH_PER_ARM_LIMIT=40
+    BENCH_NOTES_FLOOR=5, reranker/weights ABSENT) over the frozen basis
+    snap-007 × gold-r9 × preload-r9 (fail-closed artifact verification
+    echoed the SHAs; NO re-freeze, NO API calls) — environment: user-space
+    PostgreSQL 17.11 (PGDG debs) + pgvector 0.8.0 BUILT FROM SOURCE
+    (version-exact vs the T-C59 recipe pin; the Docker image route was
+    unavailable — Docker Hub anonymous auth returns empty-access tokens
+    from this workspace; deviation recorded, versions pinned) + Flyway
+    V1→V59 + the production loader + paired embed_rev stamp 4510 → rev 2.
+    Determinism double-pass PASS; (f) 0/0 both views.
+    RESULT (vs f): superset invariant 89/89 (premise holds — the (d)
+    conditional theorem holds unconditionally); (d) full 0.5056 → 0.5169
+    (45 → 46/89), micro 0.8571 → 0.8690 (72 → 73/84) — monotone, below the
+    r8 ceiling (partial recovery +1.13pp/+1.19pp). Admission ledger of the
+    5 f-lost flips: g2-056 ADMITTED+REVERTED (1 covering EXTERNAL_NOTES
+    carrier admitted; full 0→1); g2-011/g2-016/g2-059/g2-112
+    MISS-AT-FLOOR (4) — the carriers' arm ranks exceed the floor's reach
+    (the prereg's own next-lever rule: arm-composition / MIN_COSINE, NOT a
+    bigger floor). Non-regression: zero f-full losses, g2-061 unchanged,
+    zero covered-point drops. Floor admission: 72 EXTERNAL_NOTES refs over
+    44 queries, all at fused ranks 41+; fused top-20 SET byte-stable
+    (recall@5/10/20 + evidence_precision identical to f; the 5th
+    consecutive run holds recall@20 at exactly 0.1612); 4 QUESTION_PAPER
+    refs beyond f's pools are ORDER-BY tie re-executions at the arms'
+    limit-40 boundary (additive-only; recorded as observed mechanism, not
+    lever effect — the same re-execution explains MRR 0.0626 → 0.0700 and
+    exam_question MRR 0.494 → 0.6607 recovering EXACTLY to their r9-era
+    values via intra-top-20 order swaps). Notes share 15.3% → 16.9%
+    (r9 20.4%); expectation deviation recorded: g's per-query notes max 24
+    exceeds the declared r9-era range top (f max 21; arithmetically
+    consistent with +N=5 on one query). Latency p50 308.2 → 1080.0 ms
+    (the probe-doubling re-asks; retrieval-only). §8.1 v1.1 dual-view:
+    (a2) PASS held, (a)/(b)/(c)/(b2)/(c2) FAIL — VERDICT: NOT PROMOTED
+    (recorded honestly; the admission ledger is the headline).
+    Pack: evidence/bench-001/runs/run-005-g-r1/ (results.json recorded
+    bytes + authored RUN_REPORT.md additions + run005g_verify.py +
+    verify_output.txt — 0 failures / 1 finding / machinery self-checks
+    byte-exact on r8/r9/f — + SHA256SUMS). Records: this yaml (DONE +
+    merge_status + expanded claims + this record), TODO dated section,
+    WORKLOG Session 165.
   next_safe_actions:
-    - "seam phase: branch + BENCH_NOTES_FLOOR implementation + unit tests +
-      local offline suite + PR (merge awaits the operator's word)"
-    - "run phase (after merge): run-005-g per the pre-registration; record
-      pack + verdict + admission ledger honestly"
-    - "if the ledger shows MISS-AT-FLOOR: the next lever is arm-composition /
-      MIN_COSINE (own dated pre-registration), NOT a bigger floor"
+    - "CLOSED: seam merged (8d7880b) + run-005-g recorded and verified —
+      both phases executed"
+    - "the ledger's 4 MISS-AT-FLOOR flips are the recorded signal: the next
+      lever is arm-composition / MIN_COSINE (own dated pre-registration +
+      run, one lever at a time), NOT a bigger floor"
+    - "promotion question stays with the owning lane + owner acceptance per
+      harness spec §9; the (d) mechanism ledger is now FOUR-lever complete:
+      reorder levers freeze (d), set-growth levers recover it — depth
+      recovered 4/9+partial, the floor 1/5 of the remainder"

@@ -1,0 +1,62 @@
+== 0. manifest posture
+  r9 per_arm_limit=20  f per_arm_limit=40  g per_arm_limit=40
+  g notes_floor: 5   g fusion_weights: unweighted (null map — the recorded r9/d-r1 posture; the 3-arg ctor)
+  g determinism: PASS — scoring recomputed twice in-process (second full retr...
+  g code_version: 8d7880b58d686b58fb09a81eb45fa82ee8ac936c
+== 1. superset invariant (per query, g-pool SET >= f-pool SET)
+  held: 89/89
+  per-query superset HOLDS 89/89 (pure-additive admission; the re-execution risk did not fire)
+== 2. (d) recompute from frozen bytes + monotonicity + r8 ceiling
+  r8 recorded 0.5618/0.9167  recomputed 0.5618/0.9167  self-check OK
+  r9 recorded 0.4607/0.7857  recomputed 0.4607/0.7857  self-check OK
+  f  recorded 0.5056/0.8571  recomputed 0.5056/0.8571  self-check OK
+  g  recorded 0.5169/0.869  recomputed 0.5169/0.869  (46/89 full, 73/84 points)
+  monotonicity vs f: 0.5056->0.5169 / 0.8571->0.869  HOLDS (conditional theorem: premise 89/89 => unconditional)
+  r8 ceiling 0.5618/0.9167: g below ceiling (partial recovery)
+  recovery vs f: full +1.13pp, micro +1.19pp (ceiling: exact r8 reversion 0.5618/0.9167)
+== 3. per-flip admission ledger (r8 vs f vs g, derived from bytes)
+  f-lost flips (r8-full -> f-not-full): 5 ['g2-011', 'g2-016', 'g2-056', 'g2-059', 'g2-112']
+  f-gained flips (r8-not-full -> f-full): 0 []
+  g2-011: MISS-AT-FLOOR  covered 0/1 -> 0/1  admitted 2 refs
+  g2-016: MISS-AT-FLOOR  covered 0/1 -> 0/1  admitted 0 refs
+  g2-056: ADMITTED+REVERTED (full 0->1)  covered 1/2 -> 2/2  admitted 2 refs; covering carriers admitted: 1 ['EXTERNAL_NOTES']
+  g2-059: MISS-AT-FLOOR  covered 1/2 -> 1/2  admitted 1 refs
+  g2-112: MISS-AT-FLOOR  covered 1/2 -> 1/2  admitted 1 refs
+  ledger totals of 5 f-lost flips: admitted+reverted 1 / admitted+partial 0 / miss-at-floor 4
+== 3b. non-regression watch
+  f-full queries that lost full coverage in g: 0
+  g2-061 covered points: f 1 -> g 1 (non-regression OK)
+== 4. per-query covered-point monotonicity (superset-held subset)
+  point-drops on held subset: 0
+== 5. notes-share ledger (EXTERNAL_NOTES share of the union pools)
+  r9: 368/1806 = 0.2038 (20.4%)
+  f: 550/3599 = 0.1528 (15.3%)
+  g: 622/3675 = 0.1693 (16.9%)
+  reading: r9 0.2038 -> f 0.1528 -> g 0.1693 (the floor re-admits notes; the share recovers only partially)
+== 6. what the floor admitted (refs in g-pool beyond f-pool)
+  admitted refs total: 76 over 44 queries (mean 0.85, max 6)
+  by kind: {'EXTERNAL_NOTES': 72, 'QUESTION_PAPER': 4}
+  by g-rank band: {'1-10': 4, '41+': 72}
+== 7. (a)-(c) served-view deltas vs f
+  recall@5: 0.0616 -> 0.0616 (+0.0%)
+  recall@10: 0.1043 -> 0.1043 (+0.0%)
+  recall@20: 0.1612 -> 0.1612 (+0.0%)
+  mrr: 0.0626 -> 0.07 (+11.8%)
+  ndcg@10: 0.1057 -> 0.1095 (+3.6%)
+  evidence_precision@10: 0.0303 -> 0.0303 (+0.0%)
+  false_positive_rate@10: 0.9697 -> 0.9697 (+0.0%)
+  PIN: recall@20 pin (4-run hold at 0.1612) HELD (0.1612 -> 0.1612)
+  gate a_recall@10: 0.1043 vs 0.192 -> FAIL
+  gate b_mrr: 0.07 vs 0.1237 -> FAIL
+  gate c_ndcg@10: 0.1095 vs 0.2316 -> FAIL
+  gate a2_validated_recall@10: 0.1043 vs 0.0734 -> PASS
+  gate b2_validated_mrr: 0.07 vs 0.1184 -> FAIL
+  gate c2_validated_ndcg@10: 0.1095 vs 0.1683 -> FAIL
+  g boundary: {'note': 'zero violations', 'pass': True, 'served_violations': 0}
+  latency: f p50 308.2 ms -> g p50 1080.0 ms (the probe-doubling cost, retrieval-only, recorded)
+== 8. (g) per-class deltas vs f (flag >15% relative, both directions)
+  exam_question mrr: 0.494 -> 0.6607 (+33.7%)  [RECOVERY]
+== FINDINGS ==
+  FINDING: 4 flips MISS-AT-FLOOR — the carriers' arm ranks exceed the floor's reach; next lever is arm-composition / MIN_COSINE (own dated pre-registration), NOT a bigger floor
+== FAILURES ==
+  none — all pre-registered checks recorded above
