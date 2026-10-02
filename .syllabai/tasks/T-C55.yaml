@@ -46,22 +46,14 @@ task:
       110539038918, identical step, same signature) — NOT introduced by
       the T-C44..T-C51 math lane (its diffs are disjoint from the learner
       surface)"
-  merge_status: "PR syllabai-hub#8 OPEN (fix/kg-deep-link-self-destruct,
-    head 6d64381, base fca83c8) — awaiting explicit merge word per lane
-    convention. Root cause found + reproduced locally (deterministic):
-    the KG course view's address-bar effect called history.replaceState
-    deleting ?course= for the pilot; Next 16 patches replaceState to
-    sync the App Router state, so useSearchParams() re-rendered empty
-    and the page self-flipped onto the landing picker within one
-    hydration tick — the drawer chip unmounted under the e2e's click.
-    Surfaced at 429e4ad (first red run 77): before it, null fell back
-    to the pilot so the delete was self-consistent; after it, null is
-    the honest picker. Non-pilot branch was a no-op. Fix: effect
-    removed (param-ful URL is the canonical deep-link form) + a new
-    deck-flow regression pin guarding BOTH sides of the 429e4ad
-    contract (deep link holds; param-less still lands on the picker).
-    Local gates on the head: full e2e 30/30 (incl. both formerly-red
-    learner tests + the new pin), eslint clean, math verify 26/26
-    (untouched), production build green. PR CI run 36985152152: build
-    AND e2e both SUCCESS — the e2e job is green for the first time
-    since 429e4ad."
+  merge_status: "MERGED — operator merge word given 2026-10-02 (trace
+    1a0fbdbf32a310c5). PR syllabai-hub#8 (fix/kg-deep-link-self-destruct)
+    merge commit c2345d9ce7a2 (parents base fca83c8dae, head 6d6438149 —
+    verified), main ref updated. Pre-merge guards: open, head/base pinned
+    to the ledger, mergeable, mergeable_state=clean; head checks build +
+    e2e + Vercel preview comments all SUCCESS. Post-merge main CI: hub-ci
+    run 36987830837 SUCCESS — build AND e2e both green on main c2345d9ce;
+    the e2e lane is green for the first time since 429e4ad, and the new
+    deck-flow regression pin (guarding both sides of the 429e4ad deep-
+    link contract) is now permanent in the suite (30 specs). PR closed
+    with evidence comment. The hub Deck-flow e2e lane is closed."
