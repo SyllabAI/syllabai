@@ -1,0 +1,64 @@
+version: 1
+task:
+  id: T-C60
+  title: "Papers-axis completion — ingest the 5 corpus-only 4CH1 papers,
+    heal the 11 half-linked VALIDATED ep rows, promote the 8 SUGGESTED
+    docs (64 non-serving chunks), and recheck the 09-28 repaired
+    generations' embed state"
+  owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: "operator message (zai-web, 2026-10-02, trace
+    1a0fc2a56bfb1a31) quoting the coverage-probe findings verbatim —
+    items (2) 5 late 4CH1 papers, (3) 11 VALIDATED ep rows missing a QP
+    or MS doc link, (4) 64 valid-but-not-serving chunks, plus the
+    live-DB recheck of the 09-28 repaired generations' embed state. The
+    message names the gaps; the lane claims them. The probe base is
+    PROBE-CHEM-EMBED-COVERAGE (this session, trace 1a0fbf23107a07f9),
+    built on T-C56's L3 evidence pack (2026-10-02) + the corpus tree @
+    029c6ec92."
+  base:
+    repo: "syllabai (records) at the claim commit's parent; corpus
+      syllabai-pastpapers @ 029c6ec92; papers-axis DB state = T-C56 L3
+      (docs 864V/8S/145R = 1017, ep 103 rows 90V coded + 13
+      NULL/AUDIT-rejected, chunks 4,672/4,672 rev2, gate 4,608)"
+  scope:
+    allowed:
+      - "bench/review/papers-axis-completion-20261002/ — worklists,
+        corpus verification of the 5 target dirs (T-C58-style three-
+        class identity gate), heal-plan JSON, governed-batch scripts"
+      - "live-DB SELECT probes (read-only) for the embed-state recheck
+        and worklist re-derivation at execution time"
+      - "parser ingestion of the 5 papers + governed SQL batches for the
+        link heals and the 8-doc validation promotion — ONLY under the
+        T-C54 wave-2 instrument: operator-supplied Neon credential,
+        env-only, batch_run_id + audit rows recording the operator as
+        the deciding actor, fail-closed pre/post gate replicas"
+    forbidden:
+      - "no validation acts of the lane's own authority — the 8-doc
+        promotion applies the operator's named instruction, same as
+        wave-2 (the agent asserts no validation of its own)"
+      - "no corpus writes (the 5 target dirs are already canonical)"
+      - "no serving-semantics change; the gate replica pre/post must
+        move by exactly the audited delta"
+      - "no secrets on disk or in any commit (env-only, never echoed)"
+  acceptance:
+    - "5 papers (2025-06 4CH1-1C, 2025-06 4CH1-1CR, 2026-06 4CH1-1C,
+      2026-06 4CH1-2C, 2026-06 4CH1-2CR) exist as ep rows VALIDATED with
+      QP+MS links to current-corpus-matched documents, chunks embedded
+      rev2 and serving"
+    - "the 11 half-linked rows carry QP+MS links to identity-consistent,
+      current-corpus-matched generations (or a documented unresolvable
+      verdict per row)"
+    - "8 SUGGESTED docs VALIDATED via the governed batch; gate replica
+      4,608 -> 4,672 exactly (+64, all rev2)"
+    - "embed-state recheck: every ep-linked QP/MS document's chunks at
+      the current embed_rev, VERIFIED live (not carried from T-C54)"
+    - "full evidence pack + governed-batch audit rows + YAML closure"
+  evidence: []
+  notes:
+    - "claim-first at registration (this commit); ID re-asked after the
+      push per the T-C55 lesson. T-C57/T-C58/T-C59 taken by concurrent
+      lanes — T-C60 verified free at the claim parent."
+    - "write phases are staged pending the T-C54-instrument credential;
+      prep + read-only phases run immediately."
