@@ -63,3 +63,10 @@ task:
   notes:
     - "claim-first per the T-C47 precedent. Closes to DONE only with
       the PR merged (operator word)."
+  merge_status: "PR syllabai-demo#1 OPEN (fix/tutor-math-mhchem, head
+    c995d3e, base 648e2ae) — awaiting explicit merge word per lane
+    convention. Local gates (demo has no PR CI): verify gate 26/26 on
+    first run, eslint clean on all touched files, production build
+    green. Renderer swap + normalizer + 4 surface wraps + gate; deps
+    added. Evidence in the PR body. The s144 sanitize hardening stays
+    operator-gated on the T-C44 card (out of this lane)."

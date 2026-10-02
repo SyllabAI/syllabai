@@ -46,3 +46,12 @@ task:
   notes:
     - "claim-first per the T-C47 precedent. Closes to DONE only with
       the PR merged and the gate wired."
+  merge_status: "PR syllabai-web#13 OPEN (fix/normalizer-evolution-backport,
+    head 50710a5, base b17f6ff) — awaiting explicit merge word per lane
+    convention. web-ci build job fully GREEN at step level (lint +
+    production build + the NEW CLA math normalize verify step) on head
+    50710a5; gate 30 passed / 0 failed locally (20 prior + 10
+    backport checks); normalizer diff-identical to hub main
+    fca83c8dae88; Vercel preview success. First push d99221e recorded
+    a workflow-parse failure (multi-line step name broke YAML — fixed,
+    no code impact). Evidence comment 5947670801 on the PR."
