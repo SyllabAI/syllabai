@@ -1,0 +1,102 @@
+version: 1
+task:
+  id: T-C69
+  title: "Rank-quality lane — tranche 5: pool composition, per-kind quota in FLOOR
+    form (per-arm EXTERNAL_NOTES floor N=5 at depth 40) — pre-registered BEFORE
+    the run; one measured datapoint vs §8.1 v1.1 + the admission ledger on the
+    run-005-f frozen basis"
+  owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
+  status: IN_PROGRESS # claim-first: pre-registration committed BEFORE any run (spec §9); seam + run next (merge operator-gated, T-C55/T-C65 precedent)
+  priority: P1
+  authority: "operator IM trace 1a0fd5ec313c556d ('pool-composition prereg
+    (per-kind quotas first)'); the T-C67 closeout next_safe_action (pool
+    COMPOSITION lever family — per-kind quotas FIRST); the T-C63 charter lever
+    family. ID note: T-C68 taken by the relabel lane (trace
+    1a0fcf4d0a035c8d), T-C67 by this session's tranche 4 — T-C69 next free at
+    claim time (first-pushed protocol)."
+  base:
+    repo: "records main at the T-C67 closeout (7aa2307 + the T-C62 recon
+      3cafda2); syllabai-core main 50d6b77 (PR #68 merged) — the seam is a NEW
+      bench-scoped env gate (the T-C65 shape), PR merge operator-gated"
+  scope:
+    allowed:
+      - "this pre-registration: evidence/bench-001/rank-quality-lane-2026-10-02/
+        POOL-COMPOSITION-PREREGISTRATION.md + its grounding script
+        tc69_prereg_grounding.py (committed BEFORE any run)"
+      - "one bench-scoped seam on core: BENCH_NOTES_FLOOR env gate in Run005C
+        (absent path byte-identical, unknown spec fail-closed, one-lever guard
+        extended to three mutually exclusive gates) + unit tests — branch +
+        PR, CI green, MERGE OPERATOR-GATED"
+      - "one recorded run: evidence/bench-001/runs/run-005-g-r1/ (results.json
+        + authored RUN_REPORT.md + run005g_verify.py + SHA256SUMS) at
+        BENCH_RUN_ID=run-005-g BENCH_PER_ARM_LIMIT=40 BENCH_NOTES_FLOOR=5,
+        reranker/weights env ABSENT, the f frozen basis (snap-007 x gold-r9 x
+        preload-r9, no re-freeze), executed on MERGED main code only"
+      - "this task record + TODO/WORKLOG entries"
+    forbidden:
+      - "no production serving change (nothing in production reads
+        BENCH_NOTES_FLOOR; serving's candidate selection untouched)"
+      - "no cap-form quota, no other N, no MIN_COSINE move, no re-ingest
+        dedup, no arm-composition change (each = dated new pre-registration)"
+      - "no stacking with the arm-D reranker or fusion weights (one lever at
+        a time; the guard is fail-closed three-way)"
+      - "no frozen artifact mutation (snap-007, gold-r9, preload-r9 untouched)"
+      - "no recorded verdict re-judged (r9/d-r1/e-r1/f verdicts stand; g's
+        bars are evaluated fresh)"
+      - "no gold knowledge, no query-kind awareness, no per-query parameters
+        in the mechanism (same N=5 for every query and both arms)"
+      - "run execution on anything but merged main code (the T-C65/T-C67
+        convention)"
+  dependencies:
+    - "T-C67 (run-005-f recorded: the depth-40 posture is this tranche's
+      comparison basis; the 5 missed flips + the notes-share dilution are the
+      recorded mechanism ledger this lever targets)"
+    - "T-C63 (charter + the (d) displacement ledger)"
+    - "T-C59 (the frozen basis + execution recipe)"
+  shared_resources:
+    - "records repo bench inputs (frozen, read-only); run output dir
+      run-005-g-r1 — coordinated via git; locks.yaml empty at claim time
+      (PR #19 hub merge is ANOTHER agent's lane — out of scope here)"
+  acceptance:
+    - "pre-registration committed and pushed to the records repo BEFORE the
+      run executes (spec §9 anti-gaming); grounding census shipped beside it"
+    - "core seam PR: CI green + full offline suite green locally; absent-path
+      byte-identity preserved; three-way one-lever guard tested"
+    - "recorded run-005-g-r1: full §8.1 v1.1 dual-view gate + (d)(e)(f)(g);
+      manifest per_arm_limit=40 + notes_floor=5; determinism double-pass
+      PASS; (f) 0/0"
+    - "verify script ships in the pack: per-query superset check vs f (89/89
+      expected; violations = findings per the g2-024 precedent), (d) recompute
+      with r8/r9/f self-checks, mechanically derived admission ledger,
+      monotonicity over the invariant-held subset, notes-share ledger"
+    - "verdict recorded honestly — NOT PROMOTED is a finding; the admission
+      ledger + notes-share reading are the headline regardless of promotion"
+  tests:
+    - "bench unit tests for the floor selection (deterministic order, absent-
+      path identity, fail-closed spec parsing, three-way one-lever guard);
+      the existing suite guards everything else"
+  evidence_required:
+    - "records repo: pre-registration + grounding script + this yaml + run
+      pack + TODO/WORKLOG"
+  claims:
+    VERIFIED:
+      - "the 5 depth-40-missed flips' covering refs are ALL EXTERNAL_NOTES
+        (census from the frozen HV projection + snapshot kinds; each in the
+        r8 pool, none in r9/f) — tc69_prereg_grounding.py"
+      - "notes share fell 20.4% (r9) -> 15.3% (f) — same census"
+      - "full floor success = exact r8 reversion: 50/89 = 0.5618,
+        77/84 = 0.9167 (arithmetic from the recorded per-query booleans)"
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED:
+      - "the carriers' arm ranks beyond 40 (not recorded anywhere — admission
+        within floor 5 is an EXPECTATION the run tests, not a theorem)"
+      - "whether the fused top-20 stays stable under pure-additive RRF
+        admission (declared expectation, no guarantee)"
+  next_safe_actions:
+    - "seam phase: branch + BENCH_NOTES_FLOOR implementation + unit tests +
+      local offline suite + PR (merge awaits the operator's word)"
+    - "run phase (after merge): run-005-g per the pre-registration; record
+      pack + verdict + admission ledger honestly"
+    - "if the ledger shows MISS-AT-FLOOR: the next lever is arm-composition /
+      MIN_COSINE (own dated pre-registration), NOT a bigger floor"
