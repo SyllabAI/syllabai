@@ -1,4 +1,4 @@
-# VERIFY OUTPUTS — T-C54 (G3 lane, 2026-10-02) — verbatim session captures
+# VERIFY OUTPUTS — T-C55 (G3 lane, 2026-10-02) — verbatim session captures
 
 ## 1. Protocol-② live probe (g3_probe_20261002.py, SELECT-only, fresh conn)
 
