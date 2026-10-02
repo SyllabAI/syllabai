@@ -9,7 +9,10 @@ task:
     auto-mark, structured self-mark, ai-suggested tier) + PaperRunResult v3 +
     attempt-bridge submissions at grading time (4CH1 pilot, verified joins)"
   owner: "superz (main agent, zai session — discord DM trace 1a0fdd7bf6392825)"
-  status: EXECUTING
+  status: VERIFYING # implementation complete + CI green (hub PR #26 head 81db1ea:
+    build SUCCESS, e2e SUCCESS, Vercel preview OK); remaining exit evidence:
+    a real full-paper run walkthrough (desktop + mobile) on the preview or
+    production, then DONE
   priority: P1
   authority: "operator IM trace 1a0fdd7bf6392825 ('open the tranche'); design
     of record PAST_PAPER_RUN_MODE_DESIGN.md v2 (merged b206985 via PR #18);
@@ -21,6 +24,21 @@ task:
     repo: "syllabai records main b206985 (PR #18 merge); syllabai-hub main
       d57f6ca (PR #23). Feature work branches in syllabai-hub off d57f6ca;
       CI build+e2e is the merge gate."
+  evidence:
+    - "pilot paper selected by the pre-registered default (max playable-set
+      overlap): June 2019 4CH1/1C (2019-06:4CH1-1C) — complete 15/15
+      reconstruction coverage, 110/110 blueprint marks, 3 attested-key MCQ
+      parts, 48 bridgeable parts (scripts/tc70_pick_pilot.py)"
+    - "manifest curation content-verified: QP footer marks 14/14 == blueprint
+      (q7 blueprint-inferred, matching the existing extraction gap); part
+      marks sum == blueprint total 110; keys == parsed-corpus
+      choices.isCorrect (Q1a=B, Q1c=A, Q5a=C); image-layer pages (6 found)
+      degrade to paper-only honestly; 8 MCQ zones + 38 dotted-line answer
+      areas + 14 paper-only parts"
+    - "hub PR #26 (branch t-c70-paper-run-p0): tsc clean, eslint clean,
+      bun run build SUCCESS (standalone emitted), prerendered
+      igcse-chemistry-19 past-papers page carries the Run chip on exactly the
+      pilot row; CI on head 81db1ea: build SUCCESS + e2e SUCCESS"
   scope:
     allowed:
       - "syllabai-hub paper-run slice: src/lib/paper-run/* (manifest v2 +
