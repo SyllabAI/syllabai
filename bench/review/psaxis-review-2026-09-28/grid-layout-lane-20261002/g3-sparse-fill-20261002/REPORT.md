@@ -1,4 +1,4 @@
-# REPORT — T-C54: G3 grammar (col-0 scored leads + cell-less block residual) + the 2 sparse-qv scheme fills (2026-10-02)
+# REPORT — T-C55: G3 grammar (col-0 scored leads + cell-less block residual) + the 2 sparse-qv scheme fills (2026-10-02)
 
 **Authorization:** operator IM trace `1a0fb848d5b29681` — "Proceed with Remaining
 opens: 1CR-2016 Q10 a(ii) (2 marks), scheme-fill mandates for the 2 sparse qv" —
@@ -6,7 +6,7 @@ the last two named Remaining-open items of the grid-layout lane (T-C45) /
 ruling-v57 closeout (T-C49): the `q10-5273dfa3` structural residue ("needs an
 engine-level fix or an operator ruling") and the explicit scheme-fill mandates
 for `q03-51fea326` + `q10-5273dfa3` (the 2 sparse qv of the 26-qv grid lane
-universe). Task record: `.syllabai/tasks/T-C54.yaml`.
+universe). Task record: `.syllabai/tasks/T-C55.yaml`.
 
 ## 0. The defect, root-caused first-hand (not "displaced" — ABSENT)
 
