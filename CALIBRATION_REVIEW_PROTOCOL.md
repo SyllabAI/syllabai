@@ -208,6 +208,23 @@ The report cuts by nodeId only, today. Honest order of operations:
 4. **Ship the gap cut before any τ-band or τ_s proposal** (already the ADR's
    precondition); zero-gap stratum must match the raw-latent curve or the decay
    path is regressed.
+   **LANDED 2026-10-02** — core PR #60 merged as main @ `c4b67e8` (branch
+   `feat/calibration-gap-cut`, head `b5284bb`; CI 162 ITs green): the report now
+   carries per-gap-band `GapSegments` in the τ-aligned taxonomy {0, 1-30, 31-90,
+   91-365, 366+} beside the format segments — zero-gap as its own stratum, with
+   the bit-identity leg made readable by `meanAnchor` (the mean raw ADR-031
+   anchor over the segment's rows; within zero-gap its divergence from the
+   decayed latent mean IS the decay-path regression alarm, and a healthy
+   divergence is bounded by same-day decay alone, since a gap < 1 day records as
+   0 and first-practice rows are exact identity); UNKNOWN as the defensive tail
+   for missing/unparseable/negative gapDays (the publisher always writes
+   `gapDays` beside `decayedPrior`, so a populated UNKNOWN stratum is itself a
+   contract finding); pooled statistics bit-identical (same accumulation order,
+   existing pins untouched); gap segments partition the contract rows exactly as
+   the format segments do, skipped/legacy rows never attributed. Both mandatory
+   axes of §2 are now cuttable in one call — this sequencing's implementation
+   asks are complete, and the first report review (item 3) fires on §7's trigger
+   fully expressible.
 
 ## 7. Cadence and recording
 
