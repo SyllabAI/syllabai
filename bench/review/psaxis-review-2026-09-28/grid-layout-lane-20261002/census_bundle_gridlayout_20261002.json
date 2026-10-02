@@ -1,0 +1,68 @@
+{
+ "audit_max_id": 4048,
+ "documents": {
+  "REJECTED": 147,
+  "SUGGESTED": 305,
+  "VALIDATED": 567
+ },
+ "drift": {},
+ "expectation": {
+  "audit_max_id": 4048,
+  "mark_points_total": 5902,
+  "papers": {
+   "REJECTED": 14,
+   "VALIDATED": 90
+  },
+  "qsp_total": 2637,
+  "qt_total": 1725,
+  "questions_active": 961,
+  "qv_pool": 1533,
+  "scheme_states": {
+   "SUGGESTED": 149,
+   "VALIDATED": 1360
+  },
+  "schemes_total": 1509,
+  "teacher_validation_events": 0
+ },
+ "generated_at": "2026-10-02T06:33:58Z",
+ "ing_nodes_remaining": 57,
+ "knowledge_edges": 730,
+ "knowledge_nodes": 492,
+ "lane": {
+  "extraction_method": "ms-print-gated-extraction-v3",
+  "fill_marks": 233,
+  "fill_points": 164,
+  "fill_qv": 24,
+  "new_defect_candidates": 1,
+  "plan_sha256": "5bb1b6d709ab3e7f8d53db9484a0ca987e227db360a521b33a3452a8a5379c7c",
+  "sparse_26_to": 2,
+  "structural_residue": 1
+ },
+ "lane_universe_sparse": [
+  "q03-51fea326",
+  "q10-5273dfa3"
+ ],
+ "mark_points_total": 5902,
+ "papers": {
+  "REJECTED": 14,
+  "VALIDATED": 90
+ },
+ "qsp_total": 2637,
+ "qt_total": 1725,
+ "questions_active": 961,
+ "questions_total": 1533,
+ "qv_pool": 1533,
+ "qv_states": {
+  "REJECTED": 2,
+  "SUGGESTED": 66,
+  "VALIDATED": 1465
+ },
+ "review_schedules_total": 154,
+ "scheme_states": {
+  "SUGGESTED": 149,
+  "VALIDATED": 1360
+ },
+ "schemes_total": 1509,
+ "skill_states_total": 185,
+ "teacher_validation_events": 0
+}
