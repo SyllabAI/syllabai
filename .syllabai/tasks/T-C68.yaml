@@ -1,0 +1,92 @@
+version: 1
+task:
+  id: T-C68
+  title: "4CH0 R-generation source_uri relabel — the 16 ep-linked generations
+    corrected to their true 4CH0-{1C,2C}R-YYYYMM identities (executes the
+    T-C62/F-A1 follow-up ruling #1), census re-pin"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  id_note: "renumbered T-C66->T-C68 (first-pushed owns the ID, T-C49/T-C55/
+    T-C59/T-C64/T-C65 protocol): T-C66 was claimed by the concurrent
+    flashcard bridge-gate lane (trace 1a0fcf454aacec35) and T-C67 by the
+    rank-quality tranche-4 lane, both discovered at this lane's pre-push
+    collision guard AFTER the governed batch had already applied (14:35:10Z)
+    — the as-run artifacts below therefore carry the T-C66 string in
+    actor_label/detail (records-side label only); the authoritative join
+    keys in the DB audit rows are batch_run_id bf3485f8-e504-47bc-b1ce-
+    a29fbbdb725d + operator trace 1a0fcf4d0a035c8d"
+  priority: P1
+  authority: "operator IM trace 1a0fcf4d0a035c8d: '① Relabel source_uri on
+    line' — the T-C62/F-A1 follow-up ruling recorded in
+    bench/review/fa1-retire-20261002/REPORT.md §5.1 (16 ep-linked 4CH0
+    R-paper generations with mis-URI'd source_uri; bytes already correct
+    for the 4CH0/1CR|2CR-titled ep rows; data fix, no serving change)"
+  base:
+    repo: "records SyllabAI/syllabai main @ Session 157 head; corpus
+      syllabai-pastpapers @ f0ea3a1f9; papers-axis DB state = T-C62/fa1
+      census baseline (docs 1017 = 871V/146R + 0 SUGGESTED, ep 104 =
+      91V/13R, chunks 4,672/4,672 rev2, audit 2,798, gate 4,593)"
+  scope:
+    allowed:
+      - "bench/review/fa1-relabel-20261002/ — plan, governed-batch scripts,
+        apply/verify reports, census bundle, SHA256SUMS"
+      - "live-DB read-only probes + the single governed relabel transaction
+        (T-C54 wave-2 instrument: identity gate, idempotence, scope/drift/
+        reference/collision guards, census+gate non-interference, no DDL)"
+    forbidden:
+      - "no validation acts of the lane's own authority (validation_state
+        untouched by construction — from_state = to_state = VALIDATED)"
+      - "no corpus writes (corpus already canonical at f0ea3a1f9)"
+      - "no serving-semantics change (gate replica delta asserted exactly 0)"
+      - "no secrets on disk or in any commit (env-only, never echoed)"
+  execution_record:
+    - "protocol ①②: worklog Sessions 156–157 re-read; ruling scope pinned
+      from fa1 REPORT §5.1 + T-C62.yaml; locks/TODO/task registry re-read —
+      T-C66 free, no conflicting leases; latest audit row at probe time was
+      T-C62's own 13:29:27Z batch, i.e. ZERO concurrent writes between the
+      fa1 census re-pin and this batch (census read back exactly on baseline)"
+    - "live probe (fa_relabel_probe.py, SELECT-only): 16/16 rows still at the
+      old plain-C URIs with the exact checksums pinned in fa1_ep_topology.json;
+      ep topology = 8 VALIDATED exam_papers rows (4CH0/1CR|2CR × June
+      2013/2014/2016/2017, both slots, 16 refs, join on documents.document_id);
+      generation map: each old URI held 2 generations (old R-byte ep-linked +
+      09-28T20:18–20:24Z plain-byte); 0 live rows at any target URI"
+    - "corpus proof @ f0ea3a1f9 (fa_relabel_plan.py): all 16 checksums pin at
+      the 8 R-dir manifests; targets DERIVED from each manifest's own
+      paper.official_reference (4CH0/1CR|2CR) + series.normalized (YYYY-MM) +
+      material path — matching the live house convention already carried by 42
+      R-suffix rows (4CH1-1CR-201906/qp.pdf …); plan sha256 ee6324c1…"
+    - "DRY_RUN_OK (run 168321e3-2698-4565-8234-162b79594928) on the identical
+      assert chain, then APPLIED 2026-10-02T14:35:10Z, batch_run_id
+      bf3485f8-e504-47bc-b1ce-a29fbbdb725d: 16 identity-guarded UPDATEs
+      (rowcount exactly 1 each), 16 content_review_audit rows in-transaction
+      (action PLACE = the app's factual-association-update verb; from/to =
+      VALIDATED unchanged by design; detail carries the operator trace +
+      verbatim decision text + old/new URI + checksum + corpus pin path)"
+    - "in-transaction asserts ALL PASS: census state×kind unchanged, chunks
+      4,672/4,672 rev2 unchanged, docs 1017, ep 104, tve Δ0, audit
+      2,798→2,814 (+16), ep refs 16 pre/post, gate replica 4,593→4,593
+      (delta exactly 0)"
+    - "independent fresh-connection verify (fa_relabel_verify.py): 16/16 at
+      target with sha/state/kind/chunks intact; old URIs released (each held
+      only by the 09-28 plain generation now); unique holder per target URI;
+      16 PLACE audit rows readable with verbatim operator text; ep topology
+      intact; target codes == corpus official_references; census-last re-pin
+      census_bundle_fa1_relabel_20261002.json — every pin equals the T-C62/fa1
+      baseline except audit (+16)"
+  disclosure:
+    - "the operator message is terse and possibly truncated ('① Relabel
+      source_uri on line'); the executed scope is exactly the registered
+      16-row ruling — the only source_uri relabel ruling in the records; if
+      the operator intended additional rows, none are recorded and none were
+      touched (noted in REPORT §7)"
+    - "action vocabulary: ck_cra_action allows only
+      VALIDATE/VALIDATE_ALL/REJECT/FLAG/UNFLAG/PLACE/MAP_TOPICS; PLACE chosen
+      per ContentReviewService.placePaper's own definition (factual association
+      update, states + serving boundary untouched); from_state=to_state
+      asserts the no-state-change property in the audit rows themselves"
+    - "secrets env-only (GH_PAT + RENDER_KEY), never on disk in any git-
+      tracked path, never in any commit — revocation remains operator-held
+      and is still owed"
+  evidence: "bench/review/fa1-relabel-20261002/ (REPORT + plan + apply/verify
+    reports + census bundle + scripts + SHA256SUMS); WORKLOG Session 159"
