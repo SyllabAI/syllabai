@@ -1,0 +1,42 @@
+version: 1
+task:
+  id: T-C54
+  title: "Wave-2 execution — governed SQL batch: 297 corpus documents
+    SUGGESTED->VALIDATED (1,673 subject-branch chunks enter the serving pool,
+    gate 2935->4608), closing F-PROD-3's actionable surface"
+  owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
+  status: IN_PROGRESS
+  priority: P1
+  authority: >
+    Operator IM trace 1a0fb9dd09110041, verbatim: "Proceed. Here is neon api
+    if you need it." — answering the wave-2 prep REPORT's single open
+    operator decision (the execution instrument for the 297
+    document-validate acts): the in-session Neon API key sanctions the
+    governed-SQL-batch instrument (notes-axis precedent 9ea54e1, batch
+    notes-axis-promotion-2026-09-28), not the teacher-endpoint product
+    route. The worklist instrument is
+    evidence/bench-001/wave2-prep-2026-10-02/worklist2.json
+    (sha256 74f0291662566319a21f9f970e8a02e4906b862420b824f65ddbdf18e031dbef,
+    297 actionable documents / 1,673 SUGGESTED chunks, all subject-branch,
+    all ACTIVE scope). The agent asserts no validation of its own — it
+    applies the operator's named instruction, audit rows record the
+    operator as the deciding actor.
+  base:
+    repo: "syllabai (master pack) @ e0fba66"
+  scope:
+    allowed:
+      - "bench/review/wave2-validation-2026-10-02/ (decisions JSON, fail-closed
+        runner, RUNBOOK, dry-run + run reports)"
+      - "evidence/bench-001/wave2-validation-2026-10-02/ (run records +
+        SHA256SUMS)"
+      - "records: this task record, TODO/WORKLOG entries"
+    forbidden:
+      - "NO content/chunk/embedding writes (document_chunks receives zero
+        UPDATEs unless the dry-run proves a re-stamp required — then disclosed
+        as instrumental and reversible, notes-axis discipline)"
+      - "NO teacher_validation_events writes (delta 0 enforced in-transaction)"
+      - "NO scope beyond the 297 worklist documents (per-doc fidelity asserts)"
+      - "NO core-code change, NO migration, NO DDL (ck_cra_target_type already
+        widened by the 09-28 batch — if absent on production, abort for manual
+        review instead of re-widening)"
+  execution_record: "PENDING (claim-first; content follows immediately)"
