@@ -1,4 +1,4 @@
-# VERIFY_OUTPUTS — T-C48: ruling defect fix + V57 deployment + census re-pin (2026-10-02, trace 1a0fb59f90143ad1)
+# VERIFY_OUTPUTS — T-C49: ruling defect fix + V57 deployment + census re-pin (2026-10-02, trace 1a0fb59f90143ad1)
 
 ## 1. Protocol-② live-state probe (SELECT-only, rolled back) — target untouched
 
