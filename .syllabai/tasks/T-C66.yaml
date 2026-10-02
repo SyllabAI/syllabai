@@ -7,13 +7,16 @@ task:
     ledger miscount — registry-derived truth is 49 registered / 37
     deck-bearing / 1 core-anchor-eligible today)"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
-  status: DONE # implementation + verification complete; the hub half's MERGE stays on the operator's word (T-C55 precedent)
-  merge_status: "PARTIAL — core half MERGED: core PR #68 merged as 50d6b77
-    (head d09d085, CI build SUCCESS incl. the Testcontainers ITs). Hub half
-    OPEN + merge-HELD: hub PR #19 (t-c66-flashcard-sync-widening, head
-    a8aa2b4) with build + e2e + Vercel all SUCCESS and mergeable clean —
-    per the T-C55/T-C57/T-C61 precedent the hub PR merges only on the
-    operator's explicit word."
+  status: DONE # both halves merged; lane closed
+  merge_status: "MERGED — BOTH HALVES. Core: PR #68 as 50d6b77 (head
+    d09d085, CI build SUCCESS incl. the Testcontainers ITs). Hub: PR #19
+    as 70206e3 (2026-10-02, operator word trace 1a0fd60287e38145 'merge
+    hub#19'; head a8aa2b4; merge_method=merge, the #8/#9/#11/#10/#14
+    precedent) — pre-merge protocol on the moved base 6fde7c9→dcbceb4
+    (PR #20 landed mid-hold): zero file overlap, mergeable True/clean,
+    head CI 3/3 SUCCESS, local merge sim + tsc --noEmit exit 0;
+    post-merge main CI build + e2e both SUCCESS. flashcard-review.ts
+    byte-untouched at merge (API file list: no entry)."
   priority: P1
   authority: "operator IM trace 1a0fcf454aacec35 ('① the 44-pack bridge-gate
     widening (now merge-safe with receipts)') — GO on T-C57
@@ -243,9 +246,25 @@ task:
     Records: this yaml (DONE + merge_status + claims + this record), the
     locks.yaml lease annotation, TODO dated section, WORKLOG Session 160,
     agent worklog.
+    CLOSEOUT 2026-10-02 (this session's second continuation — the first
+    ended at the held merge): operator word arrived, trace
+    1a0fd60287e38145 ('merge hub#19'). Sandbox had snapshot-rolled back
+    AGAIN (hub clone gone; master .git at e34fcd1, core at 06297f2) —
+    remotes were intact; recovery: backup/t-c40-replay-r8 re-pinned,
+    master reset to origin/main 3cafda2, core reset to origin/main
+    50d6b77 (5a8d57f verified ancestor), hub re-cloned (tip then
+    dcbceb4). Full pre-merge protocol on the moved base: base had
+    advanced 6fde7c9→dcbceb4 (PR #20, citation chips — 3 files, zero
+    overlap with PR #19's 7; disjoint domains); GitHub mergeable
+    True/clean; head CI at a8aa2b4 build+e2e+Vercel all SUCCESS;
+    local merge sim (a8aa2b4 + origin/main = fd9c595) auto-merged clean
+    and tsc --noEmit exit 0 (bun 1.3.14, 886 pkgs). MERGED as 70206e3
+    (merge_method=merge). Post-merge main CI: build SUCCESS, e2e
+    SUCCESS. flashcard-review.ts byte-untouched re-verified from the
+    PR file list. WORKLOG Session 164 (renumbered per the first-pushed protocol — Session 163 taken by the T-C69 claim ee3e019 mid-rebase).
   next_safe_actions:
-    - "operator merge word for hub PR #19 (a8aa2b4, 3/3 CI green,
-       mergeable clean) — the only remaining step of this lane"
+    - "CLOSED: the operator merge word for hub PR #19 was given and
+       executed (70206e3) — no remaining step in this lane"
     - "when the ingestion lanes commission the next curriculum
        (curriculumCode + core-safe anchors): courses.json gains the code,
        the sync verifier fails on drift, the manifest regenerates — sync

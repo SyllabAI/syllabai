@@ -109,3 +109,9 @@ lease_schema:
 #  green, mergeable clean, merge HELD for the operator's explicit word per
 #  the T-C55 precedent — the lease stays active until that merge or its
 #  2026-10-04T00:00Z expiry, whichever first.)
+
+# (T-C66 lease CLOSED 2026-10-02: BOTH halves merged — hub PR #19 as
+#  70206e3 on the operator's explicit word, trace 1a0fd60287e38145 ("merge
+#  hub#19"; pre-merge protocol on the moved base 6fde7c9→dcbceb4, head CI
+#  3/3, tsc gate 0, post-merge main CI build+e2e SUCCESS), core PR #68 as
+#  50d6b77 — released per the reclaim rule, well inside the window.)
