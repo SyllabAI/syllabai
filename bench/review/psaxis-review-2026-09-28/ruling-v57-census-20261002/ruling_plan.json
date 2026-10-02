@@ -1,0 +1,83 @@
+{
+ "after": {
+  "q.marks": 8,
+  "qv.marks": 8
+ },
+ "authorization": "operator IM trace 1a0fb59f90143ad1: '② Authorize the new defect fix for the ruling (2C-2013 Q3, bank 1 vs. dual evidence 8); ③ Repin census after V57 deployment'",
+ "before": {
+  "q.marks": 1,
+  "qv.marks": 1
+ },
+ "classification": "REPAIR (Task-66-TX-B marks-arithmetic / laneD mechanics precedent): attribution own variant + QP echo == MS corroboration (double) + bank differs",
+ "evidence": {
+  "engine": "pdflane parse_ms G2 rerun 2026-10-02: 8 rows x 1 mark, sum 8",
+  "engine_rows": [
+   {
+    "marks": 1,
+    "part": "a",
+    "sub": "i",
+    "text": "- at least two layers of circles drawn with the"
+   },
+   {
+    "marks": 1,
+    "part": "a",
+    "sub": "i",
+    "text": "- no regular pattern overall"
+   },
+   {
+    "marks": 1,
+    "part": "a",
+    "sub": "ii",
+    "text": "(particles/they are) more closely packed"
+   },
+   {
+    "marks": 1,
+    "part": "b",
+    "sub": "i",
+    "text": "- bright/brilliant/blinding/white flame"
+   },
+   {
+    "marks": 1,
+    "part": "b",
+    "sub": "i",
+    "text": "- white powder / solid / smoke / ash"
+   },
+   {
+    "marks": 1,
+    "part": "b",
+    "sub": "ii",
+    "text": "MgO"
+   },
+   {
+    "marks": 1,
+    "part": "c",
+    "sub": "i",
+    "text": "base/alkali"
+   },
+   {
+    "marks": 1,
+    "part": "c",
+    "sub": "ii",
+    "text": "OH⎯ / hydroxide"
+   }
+  ],
+  "laneB_chunk_route": "doc 5d50040c-b23e-4ce2-b132-45304c0e1fa5 totals [8] (doc since removed from live DB; historical corroboration, honestly noted)",
+  "ms_block_total": "grid total row 'Total 8' + 8 mark rows x 1 — pdf/201301_2c_ms.pdf sha256 1e9c53b548acbd20327796d50a79a1f514d2a967a4ceb1818e9952dd2afb8213 == documents 2b53b180-78d6-5ca8-bbf5-46e3e86033a5 (MARK_SCHEME)",
+  "plan_doc": "grid-layout-lane plan aa38b698… new_defect_candidates[0] (documented-not-repared pending this mandate)",
+  "qp_echo": "(Total for Question 3 = 8 marks) — pdf/201301_2c_qp.pdf sha256 fe7ab0651205882098a01263fa8f6fb67774a2809d3267f454b70b5bc1ef496e == documents ba3b57e8-0dd1-5939-a2f2-ae06a583f880 (QUESTION_PAPER)"
+ },
+ "gates_at_build": {
+  "engine_sum": 8,
+  "ms_total_ok": true,
+  "pdf_sha_match": true,
+  "qp_echo_ok": true
+ },
+ "lane": "ruling-defect-fix-20261002 (T-C48 item 2)",
+ "mechanics": "one fail-closed tx; double-condition-guarded UPDATE x2 tables (questions.marks, question_versions.marks, WHERE id AND before-value=1, rowcount must be 1 each); no state flips; no audit rows; parts untouched; no scheme fill (sparse state out of this mandate's scope)",
+ "paper": "4CH0/2C",
+ "plan_sha256": "5fa4222f3b653c55cd9258476166e9f4d95bcd3ab11ec72a0d852b67cc0c54ea",
+ "qn": 3,
+ "qv_id": "e6a160c7-cb91-46dc-bc3d-cbe15c3df826",
+ "ref": "q03-51fea326",
+ "session": "January 2013"
+}
