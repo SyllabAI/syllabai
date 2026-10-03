@@ -1,0 +1,61 @@
+version: 1
+task:
+  id: T-C78
+  title: "Surface-map correction — the learner agenda panel lands on syllabai-hub (the product frontend); syllabai-web PR #14 reverted (ADR-029 frozen surface restored)"
+  owner: Super Z
+  status: EXECUTING
+  priority: P1
+  base:
+    repo: SyllabAI/syllabai (master governance)
+    commit: 2ffbbb3
+  background: |
+    The T-C76 executive-half lane's UI leg (Session 179) merged the learner
+    agenda panel into syllabai-web PR #14 (merge 29f979c) — the ADR-029-demoted
+    internal teacher/ops console whose product-surface development is FROZEN
+    (repo README banner b17f6ff, audit F-5). syllabai-hub is the product
+    frontend (ADR-029 promotion 2026-09-28, live at syllabai-hub.vercel.app)
+    and its learner dashboard (src/app/dashboard/) already consumes the
+    sibling read models (/learners/me/state, /course-stats, /recommendations)
+    but had ZERO consumers of GET /api/v1/learners/me/agenda (core PR #74,
+    merged ebc3f072). The operator's checkpoint ("syllabai-hub repo is our
+    main frontend", trace 1a103437eb395a25) caught the surface-map miss;
+    the operator's "Proceed" (trace 1a103437eb395a25 follow-up) authorized
+    the corrective lane including the stated recommendation: revert the
+    frozen-console panel.
+  scope:
+    allowed:
+      - "hub: api.learnerAgenda() consumer + AgendaView type (reusing the existing ReviewView / LearnerAssignmentView types) + SetWorkCard in src/app/dashboard/ + formatDue port into lib/format.ts"
+      - "web: revert merge 29f979c (PR #14) via git revert -m 1 — no other change to the frozen console"
+      - "master: T-C78.yaml + locks lease take/release + TODO dated section + WORKLOG Session 184"
+    forbidden:
+      - "any core change (the agenda endpoint is merged and untouched)"
+      - "any new derived server vocabulary (overdue stays client-side presentation over dueAt, per the T-C76 AgendaView contract)"
+      - "any syllabai-web surface change beyond the revert"
+  dependencies:
+    - "T-C76 (core agenda endpoint merged ebc3f072; web panel PR #14 merged 29f979c — the revert target)"
+  shared_resources:
+    - "core-web-contract lease (consumer-side only; no core change)"
+  acceptance:
+    - "hub PR: agenda card renders on the product dashboard — signed-out renders nothing (account data), core-down degrades to an honest in-card line (never breaks the dashboard), empty roster shows the explanatory empty state; facts-not-advice posture; account provenance labelled"
+    - "hub local gates: eslint clean + tsc --noEmit clean (hub-ci build is the full CI gate)"
+    - "web PR: git revert -m 1 of 29f979c restores the frozen console's pre-T-C76 panel content; web-ci green"
+    - "both PRs merged; T-C78.yaml -> DONE; lease released; WORKLOG Session 184 records the miss and the correction honestly"
+  tests:
+    - "hub: bun run lint + bunx tsc --noEmit in-sandbox"
+    - "web: web-ci on the revert branch"
+  evidence_required:
+    - "PR urls + CI run ids recorded in WORKLOG Session 184"
+  claims:
+    VERIFIED:
+      - "syllabai-hub is the product frontend (master README + ADR-029)"
+      - "syllabai-web product-surface development is frozen (web README banner b17f6ff, audit F-5)"
+      - "hub HEAD 77ce08a has zero /learners/me/agenda consumers (grep first-hand)"
+      - "web 29f979c is a two-parent merge (651928c + a454028) — revert -m 1 is the correct shape"
+      - "hub already types ReviewView (types.ts) and LearnerAssignmentView (types.ts) matching the agenda wire shape; dueAt is NOT NULL (V49, the CI-caught fact of Session 179) — the card treats every row as dated"
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED:
+      - "hub-ci / web-ci outcomes (watched after push)"
+  next_safe_actions:
+    - "merge both PRs on CI green; T-C78 DONE; lease released"
+    - "if the operator prefers the web panel kept with a recorded exception instead of the revert, the revert PR is closed and the exception note added to the web README banner (operator's stated preference was not given; revert is the lane's recommendation)"
