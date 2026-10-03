@@ -9,11 +9,11 @@ task:
     via the pdflane direct-PDF route, plus the T-C60 content residuals: the
     2025-06 1CR ep-row backfill and the 11 VALIDATED-ep doc-link heals"
   owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
-  status: READY
-  status_note: "registered (claim-first) with the route decision recorded; W1 (parse)
-    is toolchain-complete in-sandbox (pdftotext + PyMuPDF verified present
-    2026-10-04; the opendataloader CLI jar is optional — run_paper's odl branch is
-    conditional) and needs no credentials; W2-W5 are blocked on (1) core JWT secret
+  status: IN_PROGRESS
+  status_note: "W1 (parse wave) CLAIMED and executing 2026-10-04 — operator word
+    'run T-C75 W1' (trace 1a1032937d19bf51); corpus lease taken in locks.yaml
+    (syllabai-pastpapers at pin 1f7e8355); W1 is credential-free and is the only
+    wave unlocked by this word. W2-W5 remain blocked on (1) core JWT secret
     (2) Gemini embedding key (3) Neon key re-provision; every DB-write batch is
     operator-gated (T-C54 wave-2 / T-C60 instrument precedents)"
   priority: P1
