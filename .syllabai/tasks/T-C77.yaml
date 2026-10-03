@@ -10,8 +10,9 @@ task:
     scoring channel; one measured datapoint vs the UNCHANGED §8.1 v1.1 bars
     + Ruling-7 gate reading (Ruling 8's named family, operator-commissioned)"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: READY # claim-first prereg committed; seam + run phases await the
-    # operator's words (the T-C69/T-C72 two-word pattern)
+  status: IN_PROGRESS # seam phase LANDED: core PR #77 opened (head 1815fd7,
+    # CI pass, offline suite 1253/0/2 on the exact head) — the merge + the
+    # run await the operator's words (the T-C69/T-C72 two-word pattern)
   priority: P1
   authority: "operator IM trace 1a10328970d5440d ('commission the
     rank-bounded kind-admission tranche') — the NEW operator word Ruling 8
@@ -110,6 +111,32 @@ task:
     - "records repo: pre-registration + grounding script + this yaml + run
       pack + TODO/WORKLOG"
   claims:
+    SEAM-OPENED:
+      - "core PR #77 (feat/t-c77-notes-rank-cap @ 1815fd7, base main ebc3f07,
+        opened on the operator's 'start the seam' word trace 1a1033eaf8aa968d)
+        — BENCH_NOTES_RANK_CAP env gate + NotesRankCapRetrieval (the
+        post-fusion TWO-ARM HORIZON PARTITION: prefix = two-arm refs by the
+        STRIPPED two-arm RRF score with chunk_ref ASC ties, tail =
+        kind-arm-only refs by kind-arm rank; set-preservation fail-closed on
+        every call; the strip mirrors the view's own filtered kind ranks —
+        term-for-term the contribution the shipped fuser added;
+        dichotomy breach fail-closed; H under-fill recorded honestly via
+        results.notes_rank_cap_underfill) + the FIVE-way one-lever guard
+        (RANK_CAP requires KIND_ARM fail-closed; the kind-arm + its bound =
+        ONE lever, exclusive with FLOOR x RERANKER x WEIGHTS; the 2/3/4-arg
+        overload contracts kept) + the NotesArmRetrieval per-stripped-text
+        memo (the O(1) post-hoc read behind the pre-registered (e) claim;
+        transparent for every recorded posture) + posture-aware
+        manifest/report rendering (fabric.notes_rank_cap always rendered,
+        0 = absent — the T-C65 manifest-vintage precedent; absent texts
+        byte-identical); Run005CRankCapTest 11 tests incl. the
+        contribution-stripping cross-check against a REAL ReciprocalRankFusion
+        fusion (the kind-boosted ref drops back to its two-arm position);
+        offline suite on the exact head 1253 tests / 0 failures / 0 errors /
+        2 skipped (JDK 25.0.4.1 Corretto + Maven 3.9.9, the T-C59 recipe);
+        existing bench suites untouched and green (KindArm 14 / Floor 11 /
+        Weights 5); head CI pass (4m44s); bench-scoped only — nothing in
+        production reads BENCH_NOTES_RANK_CAP; MERGE OPERATOR-GATED"
     VERIFIED:
       - "fresh-displacement census recomputed from recorded packs: pool(h) \\"
         " pool(f) = +797 EXTERNAL_NOTES + 4 re-execution refs; fresh-note h
@@ -137,6 +164,10 @@ task:
         fresh admissions; recorded so the pinned form's necessity is
         evidence-based, not aesthetic"
   next_safe_actions:
-    - "await the operator's word to start the seam (branch + PR on core)"
-    - "await the operator's merge word, then execute run-005-i on merged main
-      only (the T-C69/T-C72 two-word pattern)"
+    - "SEAM PR OPENED (core #77): await the operator's merge word — merge,
+      then execute run-005-i on merged main only over the frozen basis
+      (the T-C69/T-C72 two-word pattern; posture BENCH_PER_ARM_LIMIT=40
+      BENCH_NOTES_KIND_ARM=15 BENCH_NOTES_RANK_CAP=20, output run-005-i-r1)"
+    - "after the run: the promotion/horizon reading rides on the prereg's
+      pinned predictions (NOT PROMOTED expected; the question is
+      SEPARABILITY)"
