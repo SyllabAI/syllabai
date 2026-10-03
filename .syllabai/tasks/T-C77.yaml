@@ -1,0 +1,142 @@
+version: 1
+task:
+  id: T-C77
+  title: "Rank-quality lane — tranche 7: rank-bounded kind-admission, TWO-ARM
+    HORIZON PARTITION form (the rank-bound on the recorded kind-arm posture,
+    protected horizon H=20: the kind-arm admits to the SET, its scoring
+    contributions are stripped from the fused ranking, its exclusive mass
+    serves below the entire two-arm surface) — pre-registered BEFORE any
+    implementation with the byte-level grounding that discovered the
+    scoring channel; one measured datapoint vs the UNCHANGED §8.1 v1.1 bars
+    + Ruling-7 gate reading (Ruling 8's named family, operator-commissioned)"
+  owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
+  status: READY # claim-first prereg committed; seam + run phases await the
+    # operator's words (the T-C69/T-C72 two-word pattern)
+  priority: P1
+  authority: "operator IM trace 1a10328970d5440d ('commission the
+    rank-bounded kind-admission tranche') — the NEW operator word Ruling 8
+    required (spec §10 Ruling 8, records 2bfb358: 'any future lever (the
+    named-but-not-ordered RANK-BOUNDED KIND-ADMISSION family included) = NEW
+    operator word + dated new prereg under the UNCHANGED bars'). ID note:
+    next free after T-C76 (the executive-half lane); T-C75 is the ingest-wave
+    card (renumbered), T-C70/T-C71 taken per the first-pushed protocol."
+  base:
+    repo: "records main at e3a566d (F-PROD-1b status lane closeout);
+      syllabai-core main c346d64 (PR #70 merged, the kind-arm seam on main)
+      — the seam is a NEW bench-scoped env gate BENCH_NOTES_RANK_CAP
+      extending Run005C's five-gate guard, PR merge operator-gated"
+  scope:
+    allowed:
+      - "this pre-registration: evidence/bench-001/rank-quality-lane-2026-10-02/
+        RANK-BOUNDED-KIND-ADMISSION-PREREGISTRATION.md + its grounding script
+        tc77_prereg_grounding.py (committed BEFORE any implementation)"
+      - "one bench-scoped seam on core: BENCH_NOTES_RANK_CAP env gate in
+        Run005C — the post-fusion two-arm horizon partition transform
+        (contribution-stripping + re-partition + deterministic tiebreaks),
+        applied identically to both fabrics; absent path byte-identical;
+        unknown/non-integer fail-closed; REQUIRES BENCH_NOTES_KIND_ARM;
+        the one-lever guard extended to FIVE gates (RANK_CAP requires
+        KIND_ARM, mutually exclusive with FLOOR x RERANKER x WEIGHTS,
+        fail-closed) + unit tests — branch + PR, CI green, MERGE
+        OPERATOR-GATED"
+      - "one recorded run: evidence/bench-001/runs/run-005-i-r1/ (results.json
+        + authored RUN_REPORT.md + run005i_verify.py + SHA256SUMS) at
+        BENCH_RUN_ID=run-005-i BENCH_PER_ARM_LIMIT=40 BENCH_NOTES_KIND_ARM=15
+        BENCH_NOTES_RANK_CAP=20, floor/reranker/weights env ABSENT, the
+        frozen basis (snap-007 x gold-r9 x preload-r9, no re-freeze),
+        executed on MERGED main code only"
+      - "this task record + TODO/WORKLOG entries"
+    forbidden:
+      - "no production serving change (nothing in production reads
+        BENCH_NOTES_RANK_CAP; serving's candidate selection and fusion
+        untouched)"
+      - "no graded/budget/contribution-retaining shape, no other H, no K
+        variation, no MIN_COSINE revival, no floor (each = dated new
+        pre-registration; the naive fresh-only cap is MEASURED-incomplete in
+        the grounding — recall@10 0.0762 vs 0.1043 — and may not be
+        re-litigated as unexplored)"
+      - "no stacking with the arm-D reranker, fusion weights, or
+        BENCH_NOTES_FLOOR (the guard is fail-closed FIVE-way; RANK_CAP
+        composes with KIND_ARM only)"
+      - "no frozen artifact mutation (snap-007, gold-r9, preload-r9 untouched;
+        the grounding READS the frozen embeddings + recorded packs,
+        SHA-verified, and mutates nothing)"
+      - "no recorded verdict re-judged (r9/d-r1/e-r1/f/g/h stand exactly as
+        scored; i's bars are evaluated fresh under the UNCHANGED bars)"
+      - "no gold knowledge, no per-query parameters in the mechanism (the
+        transform reads arm membership and scores only; H=20 for every
+        query)"
+      - "run execution on anything but merged main code (the T-C65/T-C67/
+        T-C69/T-C72 convention)"
+  dependencies:
+    - "T-C72 (run-005-h recorded: the kind-arm posture this tranche bounds;
+      the recorded tension — (d) beyond r8 while all six gates FAIL — is the
+      tranche's question; the reach census method is reused)"
+    - "T-C69/T-C67 (the frozen basis + the depth-40 posture line); T-C63
+      (charter); T-C59 (the execution recipe)"
+    - "spec §10 Ruling 7 (the ruled (d) metric) + Ruling 8 (the conjunction
+      promotion rule + the named family + the unchanged bars)"
+  shared_resources:
+    - "records repo bench inputs (frozen, read-only; the grounding reads
+      preload-r9 + the recorded packs); run output dir run-005-i-r1 —
+      coordinated via git; locks.yaml empty at claim time"
+  acceptance:
+    - "pre-registration committed and pushed to the records repo BEFORE the
+      seam or run executes (spec §9 anti-gaming); the grounding script
+      shipped beside it (0 failures; its 4 findings recorded in the prereg)"
+    - "core seam PR: CI green + full offline suite green locally; absent-path
+      byte-identity preserved; FIVE-way one-lever guard tested incl. the
+      RANK_CAP-requires-KIND_ARM dependency edge"
+    - "recorded run-005-i-r1: full §8.1 v1.1 dual-view gate + (d)(e)(f)(g);
+      manifest per_arm_limit=40 + notes_kind_arm=15 + notes_rank_cap=20;
+      determinism double-pass PASS; (f) 0/0"
+    - "verify script ships in the pack: per-query SET identity vs h + superset
+      vs f (89/89 expected; violations = findings per the g2-024 precedent),
+      (d) recompute with r8/r9/f/g/h self-checks, the 0-in-horizon H=20
+      assertion, the 797-demotion ledger, rank-slice recompute with the
+      byte-stability predictions (recall slices EXACT predicted; mrr/ndcg@10
+      inside the recorded f-g band) and top-20 identity vs f's recorded
+      lists, (a2) recompute, non-regression watch"
+    - "verdict recorded honestly — NOT PROMOTED is the pinned expectation; the
+      separability reading ((d) at h's maximum with the pre-kind-arm horizon
+      restored, (a2) PASS predicted) is the headline regardless of promotion"
+  tests:
+    - "bench unit tests for the rank-bound transform (set-preservation,
+      deterministic order + tiebreaks, contribution-stripping correctness,
+      absent-path identity, fail-closed spec parsing, RANK_CAP-requires-
+      KIND_ARM edge, FIVE-way one-lever guard, under-fill edge, double-pass
+      byte-identity); the existing suite guards everything else"
+  evidence_required:
+    - "records repo: pre-registration + grounding script + this yaml + run
+      pack + TODO/WORKLOG"
+  claims:
+    VERIFIED:
+      - "fresh-displacement census recomputed from recorded packs: pool(h) \\"
+        " pool(f) = +797 EXTERNAL_NOTES + 4 re-execution refs; fresh-note h
+        fused-rank bands 124/346/325/2 across 1-10/11-20/21-40/41+; 83/89
+        queries carry >=1 fresh note — tc77_prereg_grounding.py"
+      - "KIND-ARM RECONSTRUCTION byte-validated: per-query top-15 EXTERNAL_NOTES
+        by exact cosine on the SHA-verified frozen preload-r9 — 3596/3596
+        f-pool refs satisfy h_score - f_score in {0, 1/(60+r_kind)} (the
+        two-arm surface is byte-identical across the f and h executions; the
+        kind-arm's only effect on existing refs is the additive term);
+        797/797 fresh refs score their 1/(60+r_kind) contribution alone;
+        3 tie-noise-shape mismatches (g2-024 x2, g2-077 x1) = the recorded
+        g2-024 precedent, findings not failures"
+      - "PARTITION SIMULATION on recorded bytes: SET == h's SET 89/89; 0
+        kind-arm-only refs in the simulated top-20 (min two-arm prefix 40);
+        top-20 set-identity vs f 87/89, order-identity 86/89 (g2-024, g2-086
+        — the declared re-execution band); recall@5/@10/@20 + prec@10 EXACT
+        vs f (0.0616/0.1043/0.1612/0.0303); mrr 0.07 / ndcg@10 0.1095 inside
+        the recorded f-g band; (d) 52/89 · 79/84 byte-exact vs h; demotion
+        ledger 797 (min 0 / max 15 per query)"
+      - "the SCORING-CHANNEL negative, measured: a fresh-only in-place
+        demotion (the naive cap form) recovers only half the rank-slice
+        damage (recall@10 0.0762 vs f 0.1043) — the kind-arm's boost of
+        dual-listed pre-existing notes re-sorts the horizon independently of
+        fresh admissions; recorded so the pinned form's necessity is
+        evidence-based, not aesthetic"
+  next_safe_actions:
+    - "await the operator's word to start the seam (branch + PR on core)"
+    - "await the operator's merge word, then execute run-005-i on merged main
+      only (the T-C69/T-C72 two-word pattern)"
