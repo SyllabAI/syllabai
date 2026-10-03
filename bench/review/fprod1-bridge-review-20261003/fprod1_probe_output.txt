@@ -1,0 +1,8 @@
+endpoint ep-rough-silence-a5mrnxqf host ep-rough-silence-a5mrnxqf.us-east-2.aws.neon.tech — proceeding; /sql retry loop absorbs compute wake-up
+== F-PROD-1 bridge probe — READ-ONLY on review branch br-purple-sun-a5906j1t (ep ep-rough-silence-a5mrnxqf.us-east-2.aws.neon.tech) ==
+identity: db=neondb
+identity row: label=T-C04-CAMPAIGN claimed_at=2026-09-13 16:11:22.166939+00 last_seen=2026-10-03 11:46:32.449741+00
+bridge records by status: [{'st': 'REVIEW_REQUIRED', 'n': 25}, {'st': 'OK', 'n': 34}]
+papers by code/state/bridge (57 rows)
+REVIEW_REQUIRED records: 25
+finding counts: {'2b0bc48c-2964-46fd-9241-c24e81fc9cf7': 77, '6dfa1ff6-7b8e-44b7-bf02-bee8331909b2': 110, 'a9388337-ec52-4412-af95-e979040896b4': 120, '8ffe0f38-e993-46de-90ba-22d1a80cb10a': 76, 'f77ad7bb-a290-4c44-94a4-ecea6fa78b12': 143, '01097b1d-2ccd-4abe-8666-9d8393543df7': 34, '476be1f7-7a01-4dbf-8d44-0421129ee16a': 157, 'c248bd86-ffe8-4f8a-94e1-d682f8959539': 29, '3a268d6f-4cb5-408a-82c7-ce777a5d07bd': 34, '3aa10d9b-9186-4346-ac48-9238e5c20df1': 23, '55c3f8fe-382d-4d87-bd29-6cc5f2eb9527': 123, 'f5248d45-e6d4-4724-9880-9a5b784dcb0e': 66, '2812e1c3-72fc-4fb8-8b9a-caeac7532b69': 18, '40d11d8c-129d-4744-862e-d38f65dc00e9': 31, '276b471c-df33-4858-a95f-5be3a8ae718c': 18, 'e920ac9f-baed-4995-9574-208279d4ce58': 31, 'ca119b22-8528-4c97-ba93-fd62c567172b': 36, '0e8cfd65-1e35-4143-9a51-fa7739a81c46': 42, 'cd250f7b-132a-49fa-b3f7-9b797aa4997b': 46, 'f3984d0a-55eb-4a6a-80a3-22419e3a6490': 67, 'e5271ea7-1fae-4ad4-989c-99bd3eacf9b3': 19, '8f6ff0a6-1c5d-4344-abd4-12981c9c3b73': 21, '1d77797f-af71-4a14-9ad3-4b98c110b193': 14, '1f17e883-68c5-4fc5-aa8d-6901c6d6a12d': 15, 'e50d14e2-0ba2-480c-86b9-44452d464c94': 16}
