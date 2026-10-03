@@ -1,0 +1,38 @@
+# T-C73 — F-A2 slot completion FINAL (3 of 3): 4EB0-01 2014-06 ms <- plain MS via the operator-supplied direct PMT URL
+version: 1
+task:
+  id: T-C73
+  title: "Replace the 4EB0-01 2014-06 mis-filed (R) MS (the 4EB0/01R regional paper,
+    sha edba020d…) with the official plain MS — the T-C71 residue, unblocked by the
+    operator pasting the direct PMT URL (trace 1a10278c4e1f2171)"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  priority: P1
+  authority: "operator IM trace 1a10278c4e1f2171 (direct PMT URL) under the standing
+    F-A2 fix mandate (trace 1a0fc4b91fc4c965) + sourcing guidance (trace
+    1a0fdbc82e010361 '2014 one, you will find in PMT') + Session 162 close-out
+    option (a) (sanctioned-source bytes subject to T-C62 evidence-class verification)"
+  base:
+    repo: "syllabai-pastpapers main 15291f50c (the T-C71 commit); records main
+      3e62afbf0 at recon"
+  result:
+    corpus_commit: "1f7e83554b7ae6a1eab41715a240d0a15d919663"
+    replaced:
+      - "2014-06/4EB0-01/ms.pdf <- PMT 'June 2014 MS - Paper 1 Edexcel (B) English
+         Language IGCSE.pdf' (sha 0796517f…, 63157 B, operator-supplied source_url recorded)"
+    identity_evidence:
+      - "cover 'Paper 01' (plain) vs mis-filed 'Paper 01R' — both covers render-verified"
+      - "Publications Code UG038775 vs the R file's UG038773"
+      - "no '01R' token in the extracted text; session print 'Summer 2014' (June series)"
+      - "QP pairing: Section A 30 == Q1–Q10 sum 30; grids 10+20+5=35 == Q11;
+         25+10=35 == Q12; QP Total Marks 100"
+    verification: "pre-commit verbatim-block asserts + edited-YAML re-parse (qp/insert
+      untouched); post-push re-fetch ALL PASS (3 PDFs at pins + manifest deep-checks +
+      docs 3-of-3 section)"
+    fa2_wave: "COMPLETE — 3 of 3 (4PH1-1P/2P 2020-06 qp: T-C71 15291f50c; 4EB0-01
+      2014-06 ms: T-C73 1f7e8355)"
+  evidence: "bench/review/fa2-resolved4eb0-20261003/"
+  next_safe_actions:
+    - "the 4EB0 2014-06 dir's do-not-ingest note is RESOLVED — the dir may be ingested
+       normally"
+    - "standing operator items unchanged: secrets revocation (GH_PAT + RENDER_KEY)"

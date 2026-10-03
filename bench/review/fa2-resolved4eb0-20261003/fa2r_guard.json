@@ -1,0 +1,27 @@
+{
+ "guards": {
+  "G1_corpus_head": {
+   "sha": "15291f50c7b1e05078c4ee5223ffac742bca5147",
+   "is_tc71_commit": true
+  },
+  "G2_slot_bytes": {
+   "bytes": 62870,
+   "sha256": "edba020d8e33298048f151bb840cc39958accda4d62f6afc585944cf84a4bf4d",
+   "matches_pin": true
+  },
+  "G3_records_head": {
+   "sha": "3e62afbf03f0fbf560cfc3108bca9871d7ee7d47"
+  },
+  "G3_records_state": {
+   "head": "3e62afbf03f0fbf560cfc3108bca9871d7ee7d47",
+   "worklog_ends_session166_tc71": false,
+   "residue_bullet_open": true
+  },
+  "G4_tc72": {
+   "state": "EXISTS: version: 1\ntask:\n  id: T-C72\n  title: \"Rank-quality lane \u2014 tranche 6: arm composition, per-kind arm in KIND-ARM\n    form (a dedicated EXTERNAL_NOTES fusion arm, K=15, at the recorded depth-40\n    post"
+  },
+  "G4_tc71_status": "DONE"
+ },
+ "slot_manifest": "paper_id: pearson-edexcel:international-gcse:english-language-b:4eb0:2014-06:4EB0/01\nexam_board:\n  id: pearson-edexcel\n  name: Pearson Edexcel\nqualification:\n  family: international-gcse\n  name: International GCSE\nsubject: english-language-b\nspecification:\n  folder: 4eb0\n  title: Edexcel International GCSE English Language B (4EB0)\nseries:\n  normalized: 2014-06\n  year: '2014'\n  session_month: '06'\n  printed: May 2014; June 2014\n  source: pdf+filename\npaper:\n  official_reference: 4EB0/01\n  unit_code: 4EB0\n  paper_number_variant: '01'\nvariant: null\nmaterials:\n- type: insert\n  path: insert.pdf\n  sha256: 67525a7faeb35411cc5e152a72ff41400793d9a3a1e0440052e9e1acded356bc\n  size_bytes: 43361\n  original_filename: June 2014 IN - Paper 1 Edexcel (B) English Language IGCSE.pdf\n  source:\n    source_type: third-party-archive\n    archive: PhysicsAndMathsTutor.com\n    source_url: null\n    collected_by: operator (download date not recorded)\n    note: official Pearson Edexcel document obtained via PMT; PMT watermark may be present in the file\n- type: mark-scheme\n  path: ms.pdf\n  sha256: edba020d8e33298048f151bb840cc39958accda4d62f6afc585944cf84a4bf4d\n  size_bytes: 62870\n  original_filename: June 2014 (R) MS - Paper 1 Edexcel (B) English Language IGCSE.pdf\n  source:\n    source_type: third-party-archive\n    archive: PhysicsAndMathsTutor.com\n    source_url: null\n    collected_by: operator (download date not recorded)\n    note: official Pearson Edexcel document obtained via PMT; PMT watermark may be present in the file\n- type: question-paper\n  path: qp.pdf\n  sha256: d76c222a61f36cdc47f8de0b0ad2577d0d253cd3cbdcdcd2f0822b01d96bb4fc\n  size_bytes: 358815\n  original_filename: June 2014 QP - Paper 1 Edexcel (B) English Language IGCSE.pdf\n  source:\n    source_type: third-party-archive\n    archive: PhysicsAndMathsTutor.com\n    source_url: null\n    collected_by: operator (download date not recorded)\n    note: official Pearson Edexcel document obtained via PMT; PMT watermark may be present in the file\nidentification:\n  methods:\n  - pdf_text\n  confidence_rank: 0\n  printed_references_seen:\n  - 4EB0\n  - 4EB0/01\n  stray_prints: []\n  session_printed: May 2014; June 2014\n  notes:\n  - '2026-10-02 corpus-fix wave (F-A2): ms.pdf is VERIFIED as the PMT ''(R)'' file \u2014 the 4EB0/01R regional paper mis-filed under this dir (T-C58 three-class verification) \u2014 but the official plain document\n    for this sitting is NOT obtainable from the public Pearson content-dam, so the bytes are left unchanged pending an authenticated source; do not ingest this dir off folder names alone.'\ningestion:\n  agent: SyllabAI ingestion agent\n  run_date: '2026-09-11'\n  source_repo: SyllabAI/Past-Papers (IGCSE/ + IAL/)\n  verification_status: AI-IDENTIFIED\n",
+ "pmt_download": {}
+}

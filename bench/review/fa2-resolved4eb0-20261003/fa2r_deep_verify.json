@@ -1,0 +1,79 @@
+{
+ "r_ms": {
+  "sha256": "edba020d8e33298048f151bb840cc39958accda4d62f6afc585944cf84a4bf4d",
+  "chars": 35841
+ },
+ "plain_ms": {
+  "chars": 34933
+ },
+ "pages": {
+  "plain": "18",
+  "R": "18"
+ },
+ "refs": {
+  "plain": {
+   "refs": [],
+   "paper01": [
+    ""
+   ],
+   "pub_codes": [
+    "UG038775"
+   ]
+  },
+  "R": {
+   "refs": [],
+   "paper01": [
+    "",
+    "R"
+   ],
+   "pub_codes": [
+    "UG038773"
+   ]
+  }
+ },
+ "furniture": {
+  "plain_ms": {
+   "total_lines": [],
+   "n_marks_parens": 8,
+   "marks_sample": [
+    "30",
+    "4",
+    "2",
+    "10",
+    "20",
+    "5",
+    "25",
+    "10"
+   ]
+  },
+  "R_ms": {
+   "total_lines": [],
+   "n_marks_parens": 8,
+   "marks_sample": [
+    "30",
+    "4",
+    "2",
+    "10",
+    "20",
+    "5",
+    "25",
+    "10"
+   ]
+  },
+  "plain_qp": {
+   "total_lines": [
+    "You must have:                                                           Total Marks",
+    "(Total for Question 1 = 1 mark)",
+    "(Total for Question 2 = 3 marks)",
+    "(Total for Question 3 = 3 marks)",
+    "(Total for Question 4 = 2 marks)",
+    "(Total for Question 5 = 3 marks)",
+    "(Total for Question 6 = 3 marks)",
+    "(Total for Question 7 = 2 marks)"
+   ],
+   "n_marks_parens": 0,
+   "marks_sample": []
+  }
+ },
+ "plain_vs_R_head_similarity": 0.9685
+}

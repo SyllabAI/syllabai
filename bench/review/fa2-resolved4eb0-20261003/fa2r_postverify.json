@@ -1,0 +1,38 @@
+{
+ "commit": "1f7e83554b7ae6a1eab41715a240d0a15d919663",
+ "files": {
+  "ms.pdf": {
+   "bytes": 63157,
+   "sha256": "0796517f320979c5a788a82ddd8cdd72a9ebf1d6a0d66829ad7a112b78c373b0",
+   "matches_pin": true
+  },
+  "qp.pdf": {
+   "bytes": 358815,
+   "sha256": "d76c222a61f36cdc47f8de0b0ad2577d0d253cd3cbdcdcd2f0822b01d96bb4fc",
+   "matches_pin": true
+  },
+  "insert.pdf": {
+   "bytes": 43361,
+   "sha256": "67525a7faeb35411cc5e152a72ff41400793d9a3a1e0440052e9e1acded356bc",
+   "matches_pin": true
+  }
+ },
+ "checks": {
+  "manifest_has_new_sha": true,
+  "manifest_has_source_url": true,
+  "manifest_has_resolved_note": true,
+  "manifest_has_no_old_sha": true,
+  "manifest_has_no_old_R_filename": true,
+  "manifest_has_no_do_not_ingest_unresolved": true,
+  "qp_untouched_block": true,
+  "insert_untouched_block": true,
+  "yaml_ms_sha": true,
+  "yaml_ms_source_url": true,
+  "yaml_ms_collected_by": true,
+  "yaml_3_materials": true,
+  "doc_3of3_section": true,
+  "doc_wave_complete": true,
+  "doc_new_sha": true
+ },
+ "all_pass": true
+}
