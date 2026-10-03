@@ -18,13 +18,12 @@
 # released per the reclaim rule. Merge of PR #14 stays HELD on the
 # pre-existing c12 C3 main red — owning lane to repair.)
 version: 1
-locks:
-  - resource: core-web-contract
-    owner: Super Z
-    task: T-C78
-    base_commit: 77ce08a (hub main base) — web side is a revert of merge 29f979c on web main
-    acquired_at: 2026-10-03T19:39:44Z
-    expires_at: 2026-10-05T23:59:00Z
+locks: []
+
+# (T-C78's core-web-contract lease was fulfilled 2026-10-04 — consumer-side
+#  only, no core change: hub PR #30 merged 5f138a0 (hub-ci 37149123696
+#  SUCCESS) + web PR #15 merged cae30ea (web-ci 37149125283 SUCCESS, the
+#  revert of web 29f979c); released per the reclaim rule.)
 
 
 # (T-C75 W1's syllabai-pastpapers lease was fulfilled 2026-10-04 — 4/4 papers

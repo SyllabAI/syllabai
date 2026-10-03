@@ -3,7 +3,7 @@ task:
   id: T-C78
   title: "Surface-map correction — the learner agenda panel lands on syllabai-hub (the product frontend); syllabai-web PR #14 reverted (ADR-029 frozen surface restored)"
   owner: Super Z
-  status: EXECUTING
+  status: DONE
   priority: P1
   base:
     repo: SyllabAI/syllabai (master governance)
@@ -36,26 +36,25 @@ task:
   shared_resources:
     - "core-web-contract lease (consumer-side only; no core change)"
   acceptance:
-    - "hub PR: agenda card renders on the product dashboard — signed-out renders nothing (account data), core-down degrades to an honest in-card line (never breaks the dashboard), empty roster shows the explanatory empty state; facts-not-advice posture; account provenance labelled"
-    - "hub local gates: eslint clean + tsc --noEmit clean (hub-ci build is the full CI gate)"
-    - "web PR: git revert -m 1 of 29f979c restores the frozen console's pre-T-C76 panel content; web-ci green"
-    - "both PRs merged; T-C78.yaml -> DONE; lease released; WORKLOG Session 184 records the miss and the correction honestly"
+    - "DONE — hub PR #30 merged 5f138a0 (hub-ci run 37149123696 SUCCESS on head 12f14c5; local gates eslint clean + tsc --noEmit exit 0)"
+    - "DONE — web PR #15 merged cae30ea (web-ci run 37149125283 SUCCESS on head 632f2e0); revert restores the frozen console's pre-PR-14 content (4 files, 188 deletions)"
+    - "DONE — lease released; WORKLOG Session 184 records the miss and the correction honestly"
   tests:
-    - "hub: bun run lint + bunx tsc --noEmit in-sandbox"
-    - "web: web-ci on the revert branch"
+    - "hub: bun run lint (clean) + bunx tsc --noEmit (exit 0) in-sandbox; hub-ci run 37149123696 SUCCESS (includes the corpus-verify prebuild gate + full type-checked build)"
+    - "web: web-ci run 37149125283 SUCCESS on the revert head"
   evidence_required:
     - "PR urls + CI run ids recorded in WORKLOG Session 184"
   claims:
     VERIFIED:
       - "syllabai-hub is the product frontend (master README + ADR-029)"
       - "syllabai-web product-surface development is frozen (web README banner b17f6ff, audit F-5)"
-      - "hub HEAD 77ce08a has zero /learners/me/agenda consumers (grep first-hand)"
-      - "web 29f979c is a two-parent merge (651928c + a454028) — revert -m 1 is the correct shape"
-      - "hub already types ReviewView (types.ts) and LearnerAssignmentView (types.ts) matching the agenda wire shape; dueAt is NOT NULL (V49, the CI-caught fact of Session 179) — the card treats every row as dated"
+      - "hub HEAD 77ce08a had zero /learners/me/agenda consumers (grep first-hand)"
+      - "web 29f979c was a two-parent merge (651928c + a454028) — revert -m 1 applied cleanly (632f2e0)"
+      - "hub already typed ReviewView and LearnerAssignmentView matching the agenda wire shape; dueAt is NOT NULL (V49, the CI-caught fact of Session 179) — the card treats every row as dated"
+      - "hub-ci 37149123696 SUCCESS on 12f14c5; web-ci 37149125283 SUCCESS on 632f2e0; hub PR #30 merged 5f138a0; web PR #15 merged cae30ea"
     INFERRED: []
     REPORTED: []
-    UNVERIFIED:
-      - "hub-ci / web-ci outcomes (watched after push)"
+    UNVERIFIED: []
   next_safe_actions:
-    - "merge both PRs on CI green; T-C78 DONE; lease released"
-    - "if the operator prefers the web panel kept with a recorded exception instead of the revert, the revert PR is closed and the exception note added to the web README banner (operator's stated preference was not given; revert is the lane's recommendation)"
+    - "none — lane closed; ADR-035's D1 (exam-date ownership) remains the standing operator gate on the R2 executive layer"
+    - "hub deployment to Vercel is automatic on merge (not observable from the sandbox — one dashboard check owed, honest limitation as in Session 129)"
