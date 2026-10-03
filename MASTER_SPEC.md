@@ -989,6 +989,7 @@ POST   /api/v1/attempts/{id}/submit
 GET    /api/v1/learners/me/state
 GET    /api/v1/learners/me/knowledge-graph
 GET    /api/v1/learners/me/recommendations
+GET    /api/v1/learners/me/agenda
 
 POST   /api/v1/tutor/query
 GET    /api/v1/tutor/sessions/{id}

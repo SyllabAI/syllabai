@@ -115,3 +115,13 @@ lease_schema:
 #  hub#19"; pre-merge protocol on the moved base 6fde7c9→dcbceb4, head CI
 #  3/3, tsc gate 0, post-merge main CI build+e2e SUCCESS), core PR #68 as
 #  50d6b77 — released per the reclaim rule, well inside the window.)
+
+# (T-C76's core-web-contract lease: owner superz, base core ab33709 / web
+#  origin/main at lane start, expiry 2026-10-06T00:00Z or until both lane
+#  PRs merge — whichever first. Scope: core GET /api/v1/learners/me/agenda
+#  (read-only composition, no migration) + the web agenda panel consuming
+#  it. The NBA engine, LearnerStateController and the V51 visibility
+#  contract are byte-untouched upstream dependencies; ADR-035 (Proposed,
+#  operator-gated) records the executive-layer decision request. Single
+#  owner holds BOTH halves in one lane — the T-C61 coordination pattern
+#  with one actor.)

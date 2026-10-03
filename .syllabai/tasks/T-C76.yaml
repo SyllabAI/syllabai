@@ -1,0 +1,54 @@
+# Copy this template to .syllabai/tasks/T-XXX.yaml for active work.
+version: 1
+task:
+  id: T-C76
+  title: "Executive-half lane (operator 'go', trace 1a1030b349bc03c9): R1 learner agenda read model (core PR #74) + R2 ADR-035 draft (operator-gated) + R3 parked with preconditions"
+  owner: superz
+  status: VERIFYING # core PR #74 open, CI running; master records land this session
+  priority: P1
+  base:
+    repo: syllabai-core
+    commit: ab33709 # origin/main at branch time (Merge PR #73, prompt v8)
+  scope:
+    allowed:
+      - "core: new read-only endpoint GET /api/v1/learners/me/agenda (learner module, composition of existing read services)"
+      - "core: AgendaView DTO + AgendaFlowIT; NO migration, NO write path, NO change to LearnerStateController/NextBestActionService bytes"
+      - "master: ADR-035 (Proposed — decision request, no code), T-C76 record, TODO dated row, §22 route row, locks lease, WORKLOG Session 179"
+    forbidden:
+      - "any notification/delivery infrastructure (no channel exists; needs its own ADR)"
+      - "streaks or any nudge that writes derived state (engagement is evidence, not competence)"
+      - "learner-entered timetables; plan persistence; exam-date ownership decisions (operator gate D1)"
+      - "parent surface implementation (parked — Role has no PARENT, no linkage, no consent model)"
+  dependencies:
+    - "T-033 NBA engine (nba-rules/v1.3, unchanged by this lane)"
+    - "V49/V51 assignment visibility contract (reused verbatim as THE authorization inside the composition)"
+  shared_resources:
+    - "core-web-contract lease (locks.yaml): producer core PR #74 + consumer web agenda panel, same lane, same owner"
+  acceptance:
+    - "AgendaView: dueReviews (PENDING, due-soonest, titles resolved) + assignments (V51 filter, hand-in trail, due-soonest/undated-last) + actions (NextBestActionsView when rootId given, null when omitted)"
+    - "zero derivation beyond ordering; zero writes; zero new persistence; anonymous-safe by authn (anyRequest().authenticated())"
+    - "honest cold start pinned; cross-learner isolation pinned; class visibility inside composition pinned"
+  tests:
+    - "AgendaFlowIT (4 tests, Testcontainers — validates in CI; locally Docker-less so skipped, unit suite is the offline gate)"
+    - "offline unit suite: 1242 run / 0 failures / 2 skipped pre-existing skips (JDK 25.0.4.1, Maven 3.9.9, sandbox-provisioned)"
+  evidence_required:
+    - "core PR #74 CI run (build + ITs) on head f380fe8"
+    - "this file + TODO row + §22 row + WORKLOG 179 pushed to syllabai main"
+  claims:
+    VERIFIED:
+      - "no exam-date entity exists in core main ab33709 (rg: examDate|exam_date|ExamSession → 0 production hits)"
+      - "assignments are not an NBA input (Assignment: 0 mentions in NextBestActionService)"
+      - "no notification channel exists (no SMTP/push/email; SSE is tutor-stream only)"
+      - "Role enum = LEARNER/TEACHER/ADMIN — no PARENT, no guardian/parent-child linkage anywhere"
+      - "dashboard already surfaces due reviews (DashboardView 'Due reviews — the forgetting-decay schedule')"
+      - "unit suite 1242 green offline on the branch (mvn test exit 0)"
+    INFERRED:
+      - "NBA actionsFor on a childless subject root returns empty actions rather than throwing (read of actionsFor assembly; AgendaFlowIT pins it in CI)"
+    REPORTED: []
+    UNVERIFIED:
+      - "AgendaFlowIT in-CI result (Docker-less sandbox — verified when the PR check-run lands)"
+  next_safe_actions:
+    - "operator ruling D1 (ADR-035): who owns exam dates — teacher-per-class / curriculum-import / per-learner(rejected); D2: core vs hub surface"
+    - "on CI green: merge core PR #74 (the T-C66 core-side precedent — operator-directed lane, green = merge); then web agenda panel as the consumer half"
+    - "on D1 ruling: NBA v2.0 card (tier multiplier + assignments seam + reason-code family) under a fresh prereg per the anti-gaming rules"
+    - "R3 parent surface: PARKED with named preconditions in ADR-035 — reopen only when a pilot school asks AND the new-actor ADR exists"
