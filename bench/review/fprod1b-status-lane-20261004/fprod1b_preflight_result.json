@@ -1,0 +1,113 @@
+{
+ "preflight_utc": "2026-10-03T18:44:45.859253+00:00",
+ "rehearsal_branch": "br-noisy-sky-a5xlg7q8",
+ "endpoint": "ep-snowy-unit-a5y7og2y.us-east-2.aws.neon.tech",
+ "production_branch": "br-muddy-bar-a5huwldd",
+ "census_by_status": [
+  {
+   "st": "OK",
+   "n": 34
+  },
+  {
+   "st": "REVIEW_REQUIRED",
+   "n": 25
+  }
+ ],
+ "drift_ids": [
+  "6dfa1ff6-7b8e-44b7-bf02-bee8331909b2",
+  "3555ee7f-92dd-491c-8fae-68d040d1e7f3",
+  "cbcafac1-abf8-46e4-8dd9-83960efc1773",
+  "beda7973-4fc1-46c6-8adf-5fead7715888",
+  "2b0bc48c-2964-46fd-9241-c24e81fc9cf7",
+  "a9388337-ec52-4412-af95-e979040896b4",
+  "b73725f0-ebe9-4c32-88d6-6991156898f3",
+  "f77ad7bb-a290-4c44-94a4-ecea6fa78b12",
+  "01097b1d-2ccd-4abe-8666-9d8393543df7",
+  "c248bd86-ffe8-4f8a-94e1-d682f8959539",
+  "3aa10d9b-9186-4346-ac48-9238e5c20df1",
+  "8ffe0f38-e993-46de-90ba-22d1a80cb10a",
+  "2bdec7e8-f17d-4b32-98e4-fd7614601414",
+  "476be1f7-7a01-4dbf-8d44-0421129ee16a",
+  "3a268d6f-4cb5-408a-82c7-ce777a5d07bd",
+  "e920ac9f-baed-4995-9574-208279d4ce58",
+  "c7400d08-5873-434c-a1e7-37211563cdad",
+  "37653d14-dd73-44a7-9b7d-a0220435b171",
+  "e32caf87-3790-4331-bc8c-85f95f8b0ebf",
+  "ca119b22-8528-4c97-ba93-fd62c567172b",
+  "cd250f7b-132a-49fa-b3f7-9b797aa4997b",
+  "e5271ea7-1fae-4ad4-989c-99bd3eacf9b3",
+  "1d77797f-af71-4a14-9ad3-4b98c110b193",
+  "0e8cfd65-1e35-4143-9a51-fa7739a81c46",
+  "88ab4866-3b10-44e3-8adf-3e22c1ff2020",
+  "f3984d0a-55eb-4a6a-80a3-22419e3a6490",
+  "8f6ff0a6-1c5d-4344-abd4-12981c9c3b73",
+  "55c3f8fe-382d-4d87-bd29-6cc5f2eb9527",
+  "2812e1c3-72fc-4fb8-8b9a-caeac7532b69",
+  "78893b04-532c-405c-8c18-c2cdc6df8d0d",
+  "276b471c-df33-4858-a95f-5be3a8ae718c",
+  "c972e82f-eec4-46fa-9153-a3f4a5899825",
+  "1521a565-9159-4985-8206-898ced5085cf",
+  "f5248d45-e6d4-4724-9880-9a5b784dcb0e",
+  "40d11d8c-129d-4744-862e-d38f65dc00e9",
+  "5d807afb-cf86-4407-b32d-ffaf26927e92",
+  "60d335c3-4f5c-48ef-a1a2-243810e205a5",
+  "1f17e883-68c5-4fc5-aa8d-6901c6d6a12d",
+  "e50d14e2-0ba2-480c-86b9-44452d464c94",
+  "c29e3d5d-f9c5-4d4d-bb67-c21331b7bb97",
+  "738d41c1-7c3c-40f3-8936-7030baef067e",
+  "65dd845a-be2f-423d-bda7-da148e7d72e8",
+  "342d73b8-f34e-4fb3-8f1f-35446b120bdb",
+  "c3effb9c-d69b-4501-8d9d-469cb42a7668",
+  "e8088c97-2351-4489-bfd4-7f9562747eca",
+  "288c27f3-739b-448b-b13f-8cd619a1260d",
+  "7081afdc-d85a-4146-b5ff-7ede1f5ca18f",
+  "d2188c94-2418-43ee-ad15-e166843894a5",
+  "e91f9a59-d282-4829-96f1-510970558079"
+ ],
+ "drift_by_status": {
+  "REVIEW_REQUIRED": 25,
+  "OK": 24
+ },
+ "undrifted_ids": [
+  "5226e575-3409-4d47-9ad2-2d10fd10ae33",
+  "26adabc6-d742-4fe9-8785-87e4003e82b8",
+  "0878d24f-dafc-4583-a55f-8c88dc1f257e",
+  "01bbfa9b-332d-474c-95c1-adfc09847b70",
+  "2ec866c1-976f-4fab-b84a-3b1d031d8634",
+  "fa3f6d69-42ff-47af-9759-6355b6198c1a",
+  "a4ff79dd-54e1-4ea6-80f3-68c6c98a72d4",
+  "08633ad8-7b41-496b-b985-b382f044509c",
+  "2934d1a0-b141-4252-b8a8-3f7eb6169cfe",
+  "5a14881c-b2f8-415b-9506-56f6568077c0"
+ ],
+ "status_domain": [
+  {
+   "data_type": "character varying",
+   "udt_name": "varchar",
+   "check_n": 15
+  }
+ ],
+ "serving_truth": "skipped (row-id column shape differs)",
+ "status_check_constraint": {
+  "name": "ck_glm_ocr_reconciliation_status",
+  "def": "CHECK (((reconciliation_status)::text = ANY ((ARRAY['OK'::character varying, 'REVIEW_REQUIRED'::character varying])::text[])))"
+ },
+ "post_rehearsal_census": [
+  {
+   "st": "OK",
+   "n": 10
+  },
+  {
+   "st": "SUPERSEDED",
+   "n": 49
+  }
+ ],
+ "rehearsal": {
+  "updated": 49,
+  "collateral": 0,
+  "payload_changes": 0,
+  "constraint_name": "ck_glm_ocr_reconciliation_status",
+  "new_constraint": "CHECK (((reconciliation_status)::text = ANY ((ARRAY['OK'::character varying, 'REVIEW_REQUIRED'::character varying, 'SUPERSEDED'::character varying])::text[])))"
+ },
+ "preflight": "PASS"
+}

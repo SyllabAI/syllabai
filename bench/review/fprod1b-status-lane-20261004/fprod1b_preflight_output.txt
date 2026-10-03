@@ -1,0 +1,21 @@
+== F-PROD-1b status lane PREFLIGHT == 2026-10-03T18:44:45.859253+00:00
+project billowing-cherry-15418366; production br-muddy-bar-a5huwldd (READ-ONLY parent)
+A. rehearsal branch created: br-noisy-sky-a5xlg7q8 (child of br-muddy-bar-a5huwldd)
+  API POST /projects/billowing-cherry-15418366/branches/br-noisy-sky-a5xlg7q8/roles/neondb_owner/reset_password -> 423, retry in 15s (1/6)
+A. throwaway neondb_owner password reset on the rehearsal branch only
+A. endpoint ep-snowy-unit-a5y7og2y.us-east-2.aws.neon.tech
+B. identity gates PASS (neondb / T-C04-CAMPAIGN claimed 2026-09-13 16:11:22.166939+00)
+C. bridge records by status: [{'st': 'OK', 'n': 34}, {'st': 'REVIEW_REQUIRED', 'n': 25}]
+C. drift predicate count: 49 (gate: exactly 49)
+C. drifted by status: {'REVIEW_REQUIRED': 25, 'OK': 24} (gate: 25 RR + 24 OK)
+C. undrifted (untouched) records: 10 (expect 10)
+C. reconciliation_status domain: [{'data_type': 'character varying', 'udt_name': 'varchar', 'check_n': 15}]
+C. serving-docs aggregate skipped (non-gating): /sql failed: 400 b'{"message":"column p.question_paper_document_row_id does not exist","code":"42703","detail":null,"hint":null,"position":"335","internalPositi
+D. status CHECK constraint: ck_glm_ocr_reconciliation_status :: CHECK (((reconciliation_status)::text = ANY ((ARRAY['OK'::character varying, 'REVIEW_REQUIRED'::character varying])::text[])))
+D. constraint dropped: []
+D. constraint re-added with 'SUPERSEDED' appended to the domain
+D. rehearsal UPDATE rows: 49 (gate: exactly 49)
+D. post-rehearsal census: [{'st': 'OK', 'n': 10}, {'st': 'SUPERSEDED', 'n': 49}] (gate: 0 RR / 49 SUPERSEDED / 10 OK)
+D. rows whose status changed outside the 49: 0 (gate 0)
+D. rows whose findings/doc-id payload changed: 0 (gate 0)
+E. rehearsal branch DELETED — the throwaway credential is dead

@@ -1,0 +1,21 @@
+{
+ "v60": {
+  "version": "60",
+  "description": "fprod1b bridge superseded",
+  "success": "true",
+  "installed_on": "2026-10-03 18:56:25.633295"
+ },
+ "census": [
+  {
+   "st": "OK",
+   "n": 10
+  },
+  {
+   "st": "SUPERSEDED",
+   "n": 49
+  }
+ ],
+ "constraint": "CHECK (((reconciliation_status)::text = ANY ((ARRAY['OK'::character varying, 'REVIEW_REQUIRED'::character varying, 'SUPERSEDED'::character varying])::text[])))",
+ "postflight_utc": "2026-10-03T19:01:34.346368+00:00",
+ "postflight": "PASS"
+}

@@ -1,0 +1,8 @@
+== F-PROD-1b status lane POST-FLIGHT poll == 2026-10-03T19:01:11.431988+00:00
+  API POST /projects/billowing-cherry-15418366/branches/br-aged-dust-a51nbu69/roles/neondb_owner/reset_password -> 423, retry in 15s (1/6)
+  poll 1: V60 APPLIED success=true at 2026-10-03 18:56:25.633295
+  poll 1: census [{'st': 'OK', 'n': 10}, {'st': 'SUPERSEDED', 'n': 49}]
+  poll 1: drift-predicate set {'drifted': 49, 'drifted_superseded': 49, 'qp_drifted': 39, 'ms_drifted': 49} (gates: drifted=49, drifted_superseded=49; qp/ms split informational)
+  poll 1: REVIEW_REQUIRED remaining: 0 (expect 0)
+  poll 1: live constraint now: CHECK (((reconciliation_status)::text = ANY ((ARRAY['OK'::character varying, 'REVIEW_REQUIRED'::character varying, 'SUPE
+  poll 1: branch br-aged-dust-a51nbu69 deleted (credential dead)
