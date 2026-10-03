@@ -7,10 +7,15 @@ task:
     T-C69's declared unknown; one measured datapoint vs §8.1 v1.1 + the
     admission ledger on the run-005-f frozen basis"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: RUN-RECORDED # merge + run phase executed in the owner lane (operator
-    # trace 1a10277a0d19ccfd "merge #70, then run run-005-h on merged main
-    # (depth 40 + kind-arm 15, frozen basis)"): PR #70 (feat/t-c72-notes-kind-arm
-    # @ 553261c; offline suite 1237/0/2 re-executed first-hand on the exact head;
+  status: DONE # both phases executed in the owner lane + the operator's
+    # promotion/horizon ruling RECORDED as spec §10 Ruling 8 (trace
+    # 1a102c04b49afd49, 2026-10-04): NOT PROMOTED stands (the promotion rule
+    # is a CONJUNCTION — Ruling 7's (d) 1pp condition is necessary, not
+    # sufficient); the campaign's horizon is REACHED and the rank-quality
+    # lane's lever campaign CLOSED at run-005-h-r1; no bar moved, no run
+    # re-judged; the merge + run phases (operator trace 1a10277a0d19ccfd
+    # "merge #70, then run run-005-h on merged main (depth 40 + kind-arm
+    # 15, frozen basis)"): PR #70 (feat/t-c72-notes-kind-arm @ 553261c; offline suite 1237/0/2 re-executed first-hand on the exact head;
     # diff reviewed line-by-line against the prereg) MERGED as core c346d64
     # (2026-10-03T16:01:36Z, post-merge main CI build SUCCESS); run-005-h
     # EXECUTED + RECORDED on merged main over the frozen basis (PostgreSQL
@@ -217,6 +222,22 @@ task:
     offline suite 1237/0/2 re-run first-hand on the exact head before
     merging), then the run phase (see RUN-OUTCOME)."
   next_safe_actions:
+    - "RULING-DISPOSITION 2026-10-04 (operator trace 1a102c04b49afd49
+      'promotion/horizon ruling'): recorded as spec §10 Ruling 8 +
+      ../governance/PROMOTION-HORIZON-RULING-2026-10-04.md — (1) the
+      promotion rule is a CONJUNCTION (§8.1 v1.1 dual-view bars + Ruling-7
+      (d) 1pp + (e)/(f)/(g)); run-005-h clears one conjunct → NOT PROMOTED
+      stands, no waiver, no bar movement (a post-hoc re-index aimed at a
+      known candidate result is the forbidden direction); (2) the campaign's
+      horizon is REACHED — the lever family is closed by the census's own
+      arithmetic (K≥20 = zero (d) gain, MIN_COSINE incapable, floor
+      superseded) and §9's anti-tuning rule; (3) any future lever (the
+      named-but-not-ordered RANK-BOUNDED KIND-ADMISSION family included —
+      the (d)-preserving, rank-shape-bounding design the h ledger points
+      at) = a NEW operator word + a dated new prereg under the UNCHANGED
+      bars; (4) the binding constraint on any future promotion is the
+      served surface's RANK-SLICE quality, not (d). T-C72 → DONE; the lane's
+      standing decision surface is discharged."
     - "DONE WORD 2 (2026-10-03, operator trace 1a10277a0d19ccfd 'merge #70,
       then run run-005-h on merged main (depth 40 + kind-arm 15, frozen
       basis)'): the merge + run phases executed in the owner lane — PR #70
