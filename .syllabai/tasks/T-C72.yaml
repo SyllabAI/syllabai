@@ -141,7 +141,33 @@ task:
         excludes every kind-arm ref; observed deltas = existing-arm
         re-execution only)"
       - "latency shape at K=15 (expected >= g's 1080.0 ms p50)"
+  merge_disposition: "2026-10-03, merge-execution session (operator trace
+    1a1027c676d03071 'merge PR #71. Check other lanes as well'): the T-C72
+    seam is ALREADY LANDED on core main — the twin PR syllabai-core#70
+    (feat/t-c72-notes-kind-arm @ 553261c, SAME prereg 8340542) was merged
+    2026-10-03T16:01:36Z as c346d64 (merge_method=merge, merged_by SyllabAI),
+    post-merge main CI build SUCCESS. PR #71 (this record's seam head
+    ce27437) computes mergeable=dirty against c346d64: the two heads are
+    DIFFERENT implementations of the same gate (tree diff ce27437<->553261c
+    = 4 files, +735/-540 — the landed 481-line Run005CKindArmTest vs this
+    head's 295-line Run005CNotesKindArmTest; divergent NotesArmRetrieval /
+    Run005C wiring), so merging #71 would overwrite the landed variant, not
+    add to it. PR #71 CLOSED as superseded-by-#70 with a full receipt
+    comment (reopen-able on the operator's word; any residual delta = a
+    dated follow-up PR against current main). The ce27437 evidence (head CI
+    SUCCESS, offline 1233/0/2, records Session 170) stands acknowledged.
+    UNVERIFIED (rule 4): the operator word that gated #70's merge at
+    16:01:36Z is not yet recorded in this repo (the owner lane's record
+    pending). Sandbox rollback #5 observed this session (hub clone absent,
+    tools/.m2 wiped, master behind, core parked on the tc40 branch — the
+    local-only 06297f2 chain intact on branch tc40-min-cosine-050); remote
+    authoritative, zero remote loss; no build executed (API + git only)."
   next_safe_actions:
+    - "DISPOSITION 2026-10-03 (operator trace 1a1027c676d03071): seam
+      LANDED via the twin PR #70 as core c346d64 (post-merge main CI
+      SUCCESS); PR #71 closed superseded with receipts (see
+      merge_disposition) — word 2 (run-005-h on merged main c346d64)
+      remains operator-gated with the owner lane"
     - "DONE WORD 1: 'start the seam' (operator trace 1a101928cfa23925
       'arm-composition/MIN_COSINE') — branch feat/t-c70-kind-arm @ ce27437 off
       core main 8d7880b: NotesArmRetrieval kind-scoped delegate (arm A's
