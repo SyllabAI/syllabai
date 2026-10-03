@@ -26,6 +26,10 @@
 - §8(d): the 9 flipped queries' carriers (r8 ranks 7–20) are the recovery candidates; partial recovery expected, not guaranteed — the (d) 1pp rule is evaluated against the r8 baseline as recorded, with the spec-owner ruling still pending (the S8D-RULING-REVIEW pack is the ruling input; under the compositionality reading the raw movement counts as recorded).
 - (g): any per-class regression >15% relative gets its written tradeoff note; (f) must stay 0/0.
 
+## Amendment 2026-10-03 — the ruling question is DISCHARGED: §10 Ruling 7 rules (ii) compositionality
+
+The expectation bullet above ("the spec-owner ruling still pending") is discharged. The spec owner ruled §8(d) = **top-rank resolution compositionality** (spec §10 Ruling 7, 2026-10-03, owner delegation trace `1a0fff15610885a5`; full record `../governance/S8D-RULING-2026-10-03.md`). Consequences for this lane: the charter's contingency is now the operative reading — the r9 movement and every subsequent (d) movement count as recorded against the r8 paired baseline (full-coverage gate reading; micro reported beside); the tranche sequence this charter commissioned (rerank → weights → depth → floor → kind-arm) is thereby the ruled metric's recovery path, exactly as the lever ledger showed (reorder levers freeze (d), set-growth levers recover it). No tranche verdict changes; every NOT PROMOTED stands; promotion remains blocked until (d) is within 1pp of r8 (0.5618/0.9167) on the gate reading.
+
 ## Evaluation protocol (tranche 2)
 
 `BENCH_RUN_ID=run-005-d BENCH_ARM_D_RERANKER=lexical_precision` over the SAME frozen inputs as r9 (snap-007 × gold-r9 × preload-r9 — no re-freeze: the comparison basis is the recorded r9 fabric), output `evidence/bench-001/runs/run-005-d-r1/`, full §8.1 v1.1 dual-view gate + (d)(e)(f)(g), verdict recorded honestly (NOT PROMOTED is a finding, not an argument). Environment recipe per T-C59: JDK 25.0.4.1 + Maven 3.9.9 + user-space PostgreSQL 17.11 + pgvector 0.8.0 (Debian-native debs, apt-get download + dpkg -x), disposable cluster, Flyway V1→V59.
