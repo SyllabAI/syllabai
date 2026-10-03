@@ -1,0 +1,49 @@
+{
+ "overall": "PASS",
+ "failed_gates": [],
+ "gates": {
+  "G1": "PASS",
+  "G2": "PASS",
+  "G3": "PASS",
+  "G4": "PASS",
+  "G5": "PASS",
+  "G6": "PASS"
+ },
+ "census": {
+  "qp_questions": 6,
+  "qp_sum_totals": 70,
+  "qp_witnesses": [
+   {
+    "page": 1,
+    "value": 70,
+    "text": "\u2022\tThe total mark for this paper is 70."
+   },
+   {
+    "page": 17,
+    "value": 70,
+    "text": "TOTAL FOR PAPER = 70 MARKS"
+   }
+  ],
+  "ms_questions": 6,
+  "ms_point_labels": 36,
+  "ms_label_buckets": {
+   "point": 82,
+   "guidance": 1,
+   "unclassified": 0,
+   "continuation": 16,
+   "furniture_pages": 3
+  },
+  "ms_total_rows": 6
+ },
+ "v2": {
+  "schema": "syllabai.pastpaper.atoms/1.1",
+  "questionCount": 6,
+  "totalMarks": 70,
+  "marksVerified": true,
+  "validation": "PASS",
+  "flagged": []
+ },
+ "flags": [],
+ "escalations": 0,
+ "review_queue": 45
+}

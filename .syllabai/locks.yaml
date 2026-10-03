@@ -18,12 +18,12 @@
 # released per the reclaim rule. Merge of PR #14 stays HELD on the
 # pre-existing c12 C3 main red — owning lane to repair.)
 version: 1
-locks:
-  - resource: "syllabai-pastpapers (parsed/ product writes + push, 4CH1 2025-06/4CH1-1C + 2026-06/{1C,2C,2CR})"
-    owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
-    task: "T-C75 W1 (parse wave) — operator trace 1a1032937d19bf51"
-    base_commit: "syllabai-pastpapers 1f7e8355; records e3a566d"
-    expires: "2026-10-06T23:59:59Z"
+locks: []
+
+# (T-C75 W1's syllabai-pastpapers lease was fulfilled 2026-10-04 — 4/4 papers
+# parsed at pin 1f7e8355, products committed and pushed as corpus b8d53f7,
+# evidence pack bench/review/ingest-wave-20261004/; released per the reclaim
+# rule. W2-W5 need no corpus lease until operator credentials arrive.)
 
 # (HUB-ANSWER-BOX wave 4's core-web-contract lease was fulfilled — core aee2af1
 #  (rebased over 905e85b) + hub fb2b1ae/9096b72 pushed on bases core 9a83511 /

@@ -10,10 +10,15 @@ task:
     2025-06 1CR ep-row backfill and the 11 VALIDATED-ep doc-link heals"
   owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
   status: IN_PROGRESS
-  status_note: "W1 (parse wave) CLAIMED and executing 2026-10-04 — operator word
-    'run T-C75 W1' (trace 1a1032937d19bf51); corpus lease taken in locks.yaml
-    (syllabai-pastpapers at pin 1f7e8355); W1 is credential-free and is the only
-    wave unlocked by this word. W2-W5 remain blocked on (1) core JWT secret
+  status_note: "W1 (parse wave) COMPLETE 2026-10-04 — 4/4 papers parsed
+    (2025-06 1C: 10q/110 G1 FAIL review-flagged; 2026-06 1C: 9q/110
+    PASS_WITH_FLAGS; 2026-06 2C: 6q/70 clean PASS; 2026-06 2CR: 7q/70 G1 FAIL
+    review-flagged), products landed on syllabai-pastpapers main b8d53f7
+    (12 files, products-only layout), evidence pack
+    bench/review/ingest-wave-20261004/ (REPORT + gates x4 + review-flag ledger
+    63/58/45/41 + SHA256SUMS x2); inputs sha-verified 8/8 vs manifests at pin
+    1f7e8355; ODL 2.5.7 second opinion present x4 (jar restored from the pinned
+    release, sha 74f0d797…). W2-W5 remain blocked on (1) core JWT secret
     (2) Gemini embedding key (3) Neon key re-provision; every DB-write batch is
     operator-gated (T-C54 wave-2 / T-C60 instrument precedents)"
   priority: P1
@@ -124,19 +129,35 @@ task:
       - "T-C60 decisions/pins as recorded in
          bench/review/papers-axis-completion-20261002/tc60_decisions.json"
       - "pdftotext + PyMuPDF present in the current sandbox (2026-10-04)"
+      - "W1 EXECUTED 2026-10-04: 8/8 input PDFs sha256-match manifest pins at
+         1f7e8355; 4/4 products (atoms/1.1, V1-V4 PASS, marksVerified=true)
+         landed at corpus b8d53f7; gate outcomes 1 clean PASS (2C) /
+         1 PASS_WITH_FLAGS (1C-2026) / 2 G1 FAILs (1C-2025 Q5/Q7 MS-total
+         mismatch; 2CR all-7-questions MS-total-rows-absent, ms_total_rows=0);
+         G6 printed-ref match x4 + expected IDENTITY-SESSION-DRIFT on both 1C
+         papers (May-printed covers, Pearson coded-date convention,
+         paper-repair-2026-09-26 precedent); review-flag ledger 63/58/45/41
+         rows (6 x MS-UNCLASSIFIED-ROW disclosed); zero DB writes"
     INFERRED:
       - "born-digital text layer present for the 5 papers (session recency;
          subject to G6/G1 verification at parse time)"
     REPORTED:
       - "T-C60 live-probe numbers as recorded in tc60_decisions.json"
     UNVERIFIED:
-      - "whether any of the 5 PDFs carry rasterized pages (deterministic at parse)"
       - "2025-06 1C doc absence in production (T-C60 recorded 1CR present, others
          un-ingested; re-probe at execution with the Neon key)"
+      - "(resolved by W1: rasterized-page risk — all 4 papers parsed born-digital,
+         S0 probe SCANNED-escalation count 0, full text extraction x4)"
   next_safe_actions:
-    - "operator word to start W1 (parse) — no credentials needed; the products +
-       gates report land as the wave's first evidence pack"
+    - "W1 DONE — products + gates reports + review-flag ledger are the wave's
+       first evidence pack (bench/review/ingest-wave-20261004/)"
     - "operator supplies (1)(2)(3) credentials → W2-W5 execute as governed
-       operator-gated batches (one word per batch)"
-    - "if W1 hits rasterized pages → tesseract sub-lane or route A/B per-paper
-       fallback decision"
+       operator-gated batches (one word per batch); W2 ingests the 4 products
+       with the G8 review-flag posture (G1-unverified = search-substrate
+       grade, bank untouched)"
+    - "optional future card (NOT this wave): S2 llm-structured accepted-run lane
+       for the 2CR MS (0 recognizable total rows) and the 2 unmatched totals on
+       2025-06 1C — the designed cure for PRINTED-QP-MS-TOTAL-DISCREPANCY;
+       plus a grammar-wave pass over the 6 MS-UNCLASSIFIED-ROW items"
+    - "if W2 hits corpus drift → re-pin per-paper checksums at ingest time (G6
+       re-pin discipline)"

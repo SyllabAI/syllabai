@@ -1,0 +1,60 @@
+{
+ "overall": "PASS_WITH_FLAGS",
+ "failed_gates": [],
+ "gates": {
+  "G1": "PASS",
+  "G2": "PASS",
+  "G3": "PASS",
+  "G4": "PASS",
+  "G5": "PASS",
+  "G6": "PASS_WITH_FLAGS"
+ },
+ "census": {
+  "qp_questions": 9,
+  "qp_sum_totals": 110,
+  "qp_witnesses": [
+   {
+    "page": 1,
+    "value": 110,
+    "text": "\u2022\tThe total mark for this paper is 110."
+   },
+   {
+    "page": 25,
+    "value": 110,
+    "text": "TOTAL FOR PAPER = 110 MARKS"
+   }
+  ],
+  "ms_questions": 9,
+  "ms_point_labels": 56,
+  "ms_label_buckets": {
+   "point": 130,
+   "guidance": 1,
+   "unclassified": 0,
+   "continuation": 25,
+   "furniture_pages": 3
+  },
+  "ms_total_rows": 9
+ },
+ "v2": {
+  "schema": "syllabai.pastpaper.atoms/1.1",
+  "questionCount": 9,
+  "totalMarks": 110,
+  "marksVerified": true,
+  "validation": "PASS",
+  "flagged": []
+ },
+ "flags": [
+  {
+   "code": "IDENTITY-SESSION-DRIFT",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "expected_session": "June 2026",
+    "printed_date": "2026-05-18",
+    "printed_session_hint": "May 2026",
+    "note": "month/year of printed exam date differs from the claimed session (COVID June/Nov reuse precedent, P-code pairing) \u2014 confirm pairing before ingest"
+   }
+  }
+ ],
+ "escalations": 0,
+ "review_queue": 58
+}

@@ -2704,3 +2704,55 @@ HEAD
 - **Consequences:** F-PROD-1b discharged end-to-end (design → rehearsal → migration → deploy → verification). The 62 print-dependent review rows REMAIN OWED (P1 7 mismatch → P2 23 identity → P3 32 banked parse-side; worksheet v2). Fresh bridges only on future re-ingests. Standing: secrets revocation (GH_PAT + RENDER_KEY + Neon); T-C75 W1 awaits the operator's word. (Super Z, F-PROD-1b status lane)
 
 - **Session 179 CLOSE-OUT (same day):** CI run 37145594701 FAILED first — and the failures were three REAL facts the IT draft had violated, not flakes: (1) `assignments.due_at` is NOT NULL (V49) so "undated assignments" cannot exist — the nullsLast comparator and every "undated last" claim removed from controller/DTO javadocs; (2) `class_members` carries `fk_cmember_class` — the visibility test now creates a REAL classes row; (3) the Testcontainers DB is shared across methods and a V49 whole-cohort row is legitimately visible to every learner — cold-start now pins VISIBILITY CORRECTNESS (a membership-less learner sees only cohort rows, never a foreign hand-in) and ordering pins filter to per-test ids. Fix `e18085c` → CI SUCCESS → core PR #74 merged `ebc3f072`. Web side: lint caught synchronous setState-in-effect → `a454028` → web-ci SUCCESS → web PR #14 merged `29f979c3`. T-C76 → DONE; lease released; ADR-035's D1 (exam-date ownership) remains the standing operator gate.
+---
+Task ID: T-C75 W1 (parse wave)
+Agent: Super Z (main)
+Task: Execute T-C75 W1 — the pdflane direct-PDF parse of the 4 un-ingested late 4CH1
+papers (2025-06 4CH1-1C; 2026-06 4CH1-1C, 2C, 2CR) per the registered card
+(ef61d57). Operator word "run T-C75 W1" (trace 1a1032937d19bf51).
+
+Work Log:
+- Claim-first: T-C75.yaml → IN_PROGRESS + corpus lease in locks.yaml, pushed as
+  records 592eea7 (race-safe fetch-first; origin had not moved past e3a566d).
+- Pre-flight: sparse-fetch of the 4 target dirs into the blob:none corpus clone
+  (pastpapers-probe, HEAD == pin 1f7e8355 == origin/main, no race); 8/8 PDFs
+  sha256-match manifest pins; QP covers read (2025-06 1C "Mon 19 May 2025";
+  2026-06 1C "Mon 18 May 2026"; 2C/2CR "Fri 12 June 2026"); identity args =
+  canonical June sessions per the paper-repair-2026-09-26 precedent (expected
+  drift flags on the May-printed 1C papers).
+- Toolchain: pdftotext 25.03.0 + PyMuPDF 1.26.7 verified; OpenDataLoader CLI
+  2.5.7 restored from the pinned GitHub release (opendataloader-project/
+  opendataloader-pdf v2.5.7; jar sha256 74f0d797bea8088bd4a58137e372eb38a5fa246
+  39e06b633cef7f78eba14cd62) → ODL second opinion PRESENT on all 4 parses.
+- Parse x4 via tools/pdflane/run_paper.py (driver script persisted at
+  scripts/tc75_w1_parse.sh): results — 2025-06 1C 10q/110 G1 FAIL (Q5/Q7 MS
+  total rows absent); 2026-06 1C 9q/110 PASS_WITH_FLAGS (drift only); 2026-06
+  2C 6q/70 clean PASS; 2026-06 2CR 7q/70 G1 FAIL (ms_total_rows=0 — MS layout
+  unrecognizable to the deterministic classifier). V1–V4 PASS x4,
+  marksVerified=true x4, G6 printed-ref match x4, zero SCANNED escalations
+  (all born-digital; the tesseract/route-A-B fallbacks never triggered).
+- Review-flag ledger: 63/58/45/41 rows — by-design furniture/prune classes
+  dominate; 6 x MS-UNCLASSIFIED-ROW (5 on 2025-06 1C, 1 on 2C) disclosed as
+  HARNESS-DEFECT review items; 2 x GATE-FAIL escalations on the G1 papers.
+- Products committed to the corpus (products-only layout, 12 files) and pushed:
+  syllabai-pastpapers main 1f7e835..b8d53f7 (fetch-first race check; remote
+  URL cleaned after push). No assets/ dirs (zero referenced raster crops).
+- Evidence pack assembled at bench/review/ingest-wave-20261004/ (REPORT.md,
+  gates x4 [gates summary + paper.json + review-queue.jsonl + escalations.jsonl
+  each], review-flag-ledger.json, SHA256SUMS-products.txt, SHA256SUMS — self
+  verify 18/18 OK) via scripts/tc75_w1_evidence.py.
+- Closeout: T-C75.yaml W1 completion note + W1 VERIFIED claims +
+  next_safe_actions (incl. the optional S2/grammar follow-up card note);
+  rasterized-page UNVERIFIED claim resolved (born-digital x4); lease released
+  per the reclaim rule; TODO dated DONE section; this worklog entry.
+
+Stage Summary:
+- W1 COMPLETE: 4/4 papers parsed, products live at corpus b8d53f7, evidence
+  pack on records. Wave posture exactly per card: review-flagged
+  search-substrate products (2 G1 FAILs disclosed, bank untouched, zero DB
+  writes). W2 (canonical→ingest→embed→ep), W3 (1CR ep backfill), W4 (11
+  heals), W5 (gate re-probe) remain blocked on JWT secret + Gemini embedding
+  key + Neon key re-provision; each DB batch = one operator word.
+- Sandbox state worth keeping: pastpapers-probe sparse clone now carries the
+  4 parsed/ dirs + 2024-06/4CH1-1C reference; ODL jar restored at
+  tc17-work/jars/odl-cli/; parse staging + logs under work/tc75-w1/.

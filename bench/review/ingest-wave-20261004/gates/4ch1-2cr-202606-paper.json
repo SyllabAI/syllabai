@@ -1,0 +1,646 @@
+{
+ "slug": "4ch1-2cr-202606",
+ "inputs": {
+  "QP": {
+   "sha256": "5ee0d5b49eac889dbc2dc3f7894a4dc3eff8c0808e3ee94f9425e27c0169f980",
+   "probe": {
+    "pdf": "/home/z/my-project/work/pastpapers-probe/past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2026-06/4CH1-2CR/qp.pdf",
+    "page_count": 20,
+    "scanned_like_pages": [],
+    "verdict": "DIGITAL_NATIVE",
+    "route": "deterministic"
+   }
+  },
+  "MS": {
+   "sha256": "a005acd5e9b80355d7b11492adb598083664f10e076ce557002b2d1911c52b05",
+   "probe": {
+    "pdf": "/home/z/my-project/work/pastpapers-probe/past-papers/pearson-edexcel/international-gcse/chemistry/4ch1/past-papers/2026-06/4CH1-2CR/ms.pdf",
+    "page_count": 12,
+    "scanned_like_pages": [],
+    "verdict": "DIGITAL_NATIVE",
+    "route": "deterministic"
+   }
+  }
+ },
+ "routing": {
+  "QP": "deterministic",
+  "MS": "deterministic"
+ },
+ "engines": {
+  "pymupdf": "1.26.7",
+  "pdftotext": "pdftotext version 25.03.0",
+  "opendataloader_cli": "opendataloader-pdf-cli-2.5.7.jar"
+ },
+ "engine_outputs": {
+  "pymupdf": {
+   "qp": {
+    "md": "_meta/pymupdf/QP/QP.md",
+    "blocks": "_meta/pymupdf/QP/qp-blocks.json",
+    "assets_dir": "_meta/pymupdf/QP/assets",
+    "assets": [
+     "assets/QP_p02_01.png",
+     "assets/QP_p03_02.png",
+     "assets/QP_p04_03.png",
+     "assets/QP_p05_04.png",
+     "assets/QP_p06_05.png",
+     "assets/QP_p07_06.png",
+     "assets/QP_p08_07.png",
+     "assets/QP_p09_08.png",
+     "assets/QP_p10_09.png",
+     "assets/QP_p11_10.png",
+     "assets/QP_p12_11.png",
+     "assets/QP_p13_12.png",
+     "assets/QP_p14_13.png",
+     "assets/QP_p15_14.png",
+     "assets/QP_p16_15.png",
+     "assets/QP_p17_16.png",
+     "assets/QP_p18_17.png",
+     "assets/QP_p19_18.png",
+     "assets/QP_p20_19.png"
+    ],
+    "pages": 20,
+    "asset_count": 19,
+    "total_rows": 0
+   },
+   "ms": {
+    "md": "_meta/pymupdf/MS/MS.md",
+    "blocks": "_meta/pymupdf/MS/ms-blocks.json",
+    "assets_dir": "_meta/pymupdf/MS/assets",
+    "assets": [
+     "assets/MS_p01_01.png",
+     "assets/MS_p09_02.png"
+    ],
+    "pages": 12,
+    "asset_count": 2,
+    "total_rows": 0
+   }
+  },
+  "pdftotext": {
+   "qp": {
+    "md": "_meta/pdftotext/QP-layout.md",
+    "txt": "_meta/pdftotext/qp-layout.txt",
+    "pages_json": "_meta/pdftotext/qp-layout-pages.json",
+    "pages": 20,
+    "chars": 120529
+   },
+   "ms": {
+    "md": "_meta/pdftotext/MS-layout.md",
+    "txt": "_meta/pdftotext/ms-layout.txt",
+    "pages_json": "_meta/pdftotext/ms-layout-pages.json",
+    "pages": 12,
+    "chars": 18922
+   }
+  },
+  "opendataloader": {
+   "qp": {
+    "md": "_meta/opendataloader/QP/qp.md",
+    "json": "_meta/opendataloader/QP/qp.json",
+    "images": [
+     "images/imageFile1.png",
+     "images/imageFile10.png",
+     "images/imageFile11.png",
+     "images/imageFile12.png",
+     "images/imageFile13.png",
+     "images/imageFile14.png",
+     "images/imageFile15.png",
+     "images/imageFile16.png",
+     "images/imageFile17.png",
+     "images/imageFile18.png",
+     "images/imageFile19.png",
+     "images/imageFile2.png",
+     "images/imageFile3.png",
+     "images/imageFile4.png",
+     "images/imageFile5.png",
+     "images/imageFile6.png",
+     "images/imageFile7.png",
+     "images/imageFile8.png",
+     "images/imageFile9.png"
+    ]
+   },
+   "ms": {
+    "md": "_meta/opendataloader/MS/ms.md",
+    "json": "_meta/opendataloader/MS/ms.json",
+    "images": [
+     "images/imageFile1.png",
+     "images/imageFile2.png"
+    ]
+   }
+  }
+ },
+ "gates": {
+  "overall": "FAIL",
+  "failed": [
+   "G1"
+  ],
+  "detail": {
+   "G1": "FAIL",
+   "G2": "PASS",
+   "G3": "PASS",
+   "G4": "PASS",
+   "G5": "PASS",
+   "G6": "PASS"
+  }
+ },
+ "census": {
+  "qp_questions": 7,
+  "qp_sum_totals": 70,
+  "qp_witnesses": [
+   {
+    "page": 1,
+    "value": 70,
+    "text": "•\tThe total mark for this paper is 70."
+   },
+   {
+    "page": 20,
+    "value": 70,
+    "text": "TOTAL FOR PAPER = 70 MARKS"
+   }
+  ],
+  "ms_questions": 7,
+  "ms_point_labels": 35,
+  "ms_label_buckets": {
+   "point": 67,
+   "guidance": 0,
+   "unclassified": 0,
+   "continuation": 5,
+   "furniture_pages": 3
+  },
+  "ms_total_rows": 0
+ },
+ "escalations": [
+  {
+   "unit": "G1",
+   "code": "GATE-FAIL",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": {
+    "checks": {
+     "qp_totals_present": {
+      "ok": true,
+      "missing": []
+     },
+     "qp_sum_vs_witness": {
+      "ok": true,
+      "sum": 70,
+      "witnesses": [
+       70
+      ]
+     },
+     "ms_total_rows_present": {
+      "ok": false,
+      "missing": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      "found": 7
+     },
+     "ms_point_arithmetic": {
+      "ok": true,
+      "mismatch": []
+     },
+     "cross_engine_totals": {
+      "ok": true,
+      "odl_match": true,
+      "odl_totals": {
+       "1": 6,
+       "2": 7,
+       "3": 8,
+       "4": 12,
+       "5": 13,
+       "6": 10,
+       "7": 14
+      }
+     },
+     "ms_totals_vs_layout_sequence": {
+      "ok": false,
+      "layout_sequence": {}
+     }
+    }
+   }
+  }
+ ],
+ "reviewQueue": [
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 2,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p02_01.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 3,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p03_02.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 4,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p04_03.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 5,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p05_04.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 6,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p06_05.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 7,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p07_06.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 8,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p08_07.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 9,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p09_08.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 10,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p10_09.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 11,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p11_10.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 12,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p12_11.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 13,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p13_12.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 14,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p14_13.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 15,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p15_14.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 16,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p16_15.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 17,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p17_16.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 18,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p18_17.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 19,
+    "bbox": {
+     "x0": -28.3,
+     "y0": 34.4,
+     "x1": -4.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p19_18.png)"
+   }
+  },
+  {
+   "code": "QP-IMAGE-FURNITURE-DROPPED",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "page": 20,
+    "bbox": {
+     "x0": 566.9,
+     "y0": 34.4,
+     "x1": 590.6,
+     "y1": 796.1
+    },
+    "asset": "![figure](assets/QP_p20_19.png)"
+   }
+  },
+  {
+   "code": "PRINTED-QP-MS-TOTAL-DISCREPANCY",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": [
+    {
+     "question": 1,
+     "qp_printed": 6,
+     "ms_printed": null
+    },
+    {
+     "question": 2,
+     "qp_printed": 7,
+     "ms_printed": null
+    },
+    {
+     "question": 3,
+     "qp_printed": 8,
+     "ms_printed": null
+    },
+    {
+     "question": 4,
+     "qp_printed": 12,
+     "ms_printed": null
+    },
+    {
+     "question": 5,
+     "qp_printed": 13,
+     "ms_printed": null
+    },
+    {
+     "question": 6,
+     "qp_printed": 10,
+     "ms_printed": null
+    },
+    {
+     "question": 7,
+     "qp_printed": 14,
+     "ms_printed": null
+    }
+   ]
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/MS_p01_01.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/MS_p09_02.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p02_01.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p03_02.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p04_03.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p05_04.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p06_05.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p07_06.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p08_07.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p09_08.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p10_09.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p11_10.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p12_11.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p13_12.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p14_13.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p15_14.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p16_15.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p17_16.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p18_17.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p19_18.png not referenced by any atom"
+  },
+  {
+   "code": "FRONT-MATTER-ASSET-PRUNED",
+   "taxonomy": "HARNESS-DEFECT",
+   "detail": "assets/QP_p20_19.png not referenced by any atom"
+  }
+ ],
+ "provenance": {
+  "lane": "pdflane deterministic phase-1",
+  "provenance_classes": [
+   "pdf-parsed"
+  ]
+ }
+}

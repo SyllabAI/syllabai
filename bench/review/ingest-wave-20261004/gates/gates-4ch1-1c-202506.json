@@ -1,0 +1,80 @@
+{
+ "overall": "FAIL",
+ "failed_gates": [
+  "G1"
+ ],
+ "gates": {
+  "G1": "FAIL",
+  "G2": "PASS",
+  "G3": "PASS",
+  "G4": "PASS",
+  "G5": "PASS",
+  "G6": "PASS_WITH_FLAGS"
+ },
+ "census": {
+  "qp_questions": 10,
+  "qp_sum_totals": 110,
+  "qp_witnesses": [
+   {
+    "page": 1,
+    "value": 110,
+    "text": "\u2022\tThe total mark for this paper is 110."
+   },
+   {
+    "page": 25,
+    "value": 110,
+    "text": "TOTAL FOR PAPER = 110 MARKS"
+   }
+  ],
+  "ms_questions": 10,
+  "ms_point_labels": 49,
+  "ms_label_buckets": {
+   "point": 114,
+   "guidance": 4,
+   "unclassified": 0,
+   "continuation": 14,
+   "furniture_pages": 4
+  },
+  "ms_total_rows": 8
+ },
+ "v2": {
+  "schema": "syllabai.pastpaper.atoms/1.1",
+  "questionCount": 10,
+  "totalMarks": 110,
+  "marksVerified": true,
+  "validation": "PASS",
+  "flagged": [
+   6
+  ]
+ },
+ "flags": [
+  {
+   "code": "PRINTED-QP-MS-TOTAL-DISCREPANCY",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": [
+    {
+     "question": 5,
+     "qp_printed": 14,
+     "ms_printed": null
+    },
+    {
+     "question": 7,
+     "qp_printed": 12,
+     "ms_printed": null
+    }
+   ]
+  },
+  {
+   "code": "IDENTITY-SESSION-DRIFT",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": {
+    "expected_session": "June 2025",
+    "printed_date": "2025-05-19",
+    "printed_session_hint": "May 2025",
+    "note": "month/year of printed exam date differs from the claimed session (COVID June/Nov reuse precedent, P-code pairing) \u2014 confirm pairing before ingest"
+   }
+  }
+ ],
+ "escalations": 1,
+ "review_queue": 63
+}

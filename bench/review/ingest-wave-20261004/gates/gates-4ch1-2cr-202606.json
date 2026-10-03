@@ -1,0 +1,93 @@
+{
+ "overall": "FAIL",
+ "failed_gates": [
+  "G1"
+ ],
+ "gates": {
+  "G1": "FAIL",
+  "G2": "PASS",
+  "G3": "PASS",
+  "G4": "PASS",
+  "G5": "PASS",
+  "G6": "PASS"
+ },
+ "census": {
+  "qp_questions": 7,
+  "qp_sum_totals": 70,
+  "qp_witnesses": [
+   {
+    "page": 1,
+    "value": 70,
+    "text": "\u2022\tThe total mark for this paper is 70."
+   },
+   {
+    "page": 20,
+    "value": 70,
+    "text": "TOTAL FOR PAPER = 70 MARKS"
+   }
+  ],
+  "ms_questions": 7,
+  "ms_point_labels": 35,
+  "ms_label_buckets": {
+   "point": 67,
+   "guidance": 0,
+   "unclassified": 0,
+   "continuation": 5,
+   "furniture_pages": 3
+  },
+  "ms_total_rows": 0
+ },
+ "v2": {
+  "schema": "syllabai.pastpaper.atoms/1.1",
+  "questionCount": 7,
+  "totalMarks": 70,
+  "marksVerified": true,
+  "validation": "PASS",
+  "flagged": []
+ },
+ "flags": [
+  {
+   "code": "PRINTED-QP-MS-TOTAL-DISCREPANCY",
+   "taxonomy": "SOURCE-DISCREPANCY",
+   "detail": [
+    {
+     "question": 1,
+     "qp_printed": 6,
+     "ms_printed": null
+    },
+    {
+     "question": 2,
+     "qp_printed": 7,
+     "ms_printed": null
+    },
+    {
+     "question": 3,
+     "qp_printed": 8,
+     "ms_printed": null
+    },
+    {
+     "question": 4,
+     "qp_printed": 12,
+     "ms_printed": null
+    },
+    {
+     "question": 5,
+     "qp_printed": 13,
+     "ms_printed": null
+    },
+    {
+     "question": 6,
+     "qp_printed": 10,
+     "ms_printed": null
+    },
+    {
+     "question": 7,
+     "qp_printed": 14,
+     "ms_printed": null
+    }
+   ]
+  }
+ ],
+ "escalations": 1,
+ "review_queue": 41
+}
