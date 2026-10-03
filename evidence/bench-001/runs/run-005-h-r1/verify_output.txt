@@ -1,0 +1,104 @@
+# run-005-h verify — from recorded bytes only (T-C72 KIND-ARM form)
+# code c346d645d119708bcf0f5d9cac2ae15131654970 | run_id run-005-h | date 2026-10-03
+# posture: providers ['pgvector', 'bm25', 'notes-kind-arm'] | per_arm_limit 40 | notes_kind_arm 15 | notes_floor 0 | weights null
+# determinism: PASS — scoring recomputed twice in-process (second full retrieval pass), both views' agg...
+# kind-arm under-fill: 0 queries (expected 0 at universe 350)
+
+== 1. (d) recompute self-checks (recorded vs recomputed from pool bytes)
+  run-005-c-r8: full 50/89 = 0.5618 · micro 77/84 = 0.9167 · recorded 0.5618/0.9167 · OK
+  run-005-c-r9: full 41/89 = 0.4607 · micro 66/84 = 0.7857 · recorded 0.4607/0.7857 · OK
+  run-005-f-r1: full 45/89 = 0.5056 · micro 72/84 = 0.8571 · recorded 0.5056/0.8571 · OK
+  run-005-g-r1: full 46/89 = 0.5169 · micro 73/84 = 0.8690 · recorded 0.5169/0.869 · OK
+  run-005-h-r1: full 52/89 = 0.5843 (recorded 0.5843) · micro 79/84 = 0.9405 (recorded 0.9405) · OK
+  (d) chain: r8 0.5618/0.9167 -> r9 0.4607/0.7857 -> f 0.5056/0.8571 -> g 0.5169/0.8690 -> h 52/89=0.5843 / 79/84=0.9405
+  FINDING: (d) full 0.5843 EXCEEDS the r8 recorded reference 0.5618 (r8 = different basis: snap-006 + chunk vectors 1e22a202... — the prereg declared exceeding r8 not expected; recorded honestly, judged by the gates)
+  FINDING: (d) micro 0.9405 EXCEEDS the r8 recorded reference 0.9167
+
+== 2. superset invariant: h pool >= f pool, per query (expected 89/89)
+  superset held: 89/89 queries
+  h-vs-g ledger (no theorem — h floor ABSENT): 7 queries carry g-era refs absent from h (total 11 refs); h adds 736 refs g lacks
+
+== 3. per-flip admission ledger (mechanically derived) + census-vs-run
+  f-lost flips: 5 ['g2-011', 'g2-016', 'g2-056', 'g2-059', 'g2-112']
+  corpus 4510 embedded chunks · EXTERNAL_NOTES 350 (the kind-arm universe)
+  g2-011 (factual): missing point 4CH1-4.5 · covering refs 2 (2 fresh vs f) · ADMITTED+REVERTED
+    carrier 1930ea644d2cb3... kind=EXTERNAL_NOTES · census NOTES rank 8/350 · GLOBAL rank 56/4510 · cos 0.5811 · in h-pool: True · h fused rank 14
+    carrier 1930ea644d2cb3... kind=EXTERNAL_NOTES · census NOTES rank 13/350 · GLOBAL rank 89/4510 · cos 0.5758 · in h-pool: True · h fused rank 23
+  g2-016 (conceptual): missing point 4CH1-1.28 · covering refs 2 (2 fresh vs f) · ADMITTED+REVERTED
+    carrier 986612e9121b22... kind=EXTERNAL_NOTES · census NOTES rank 13/350 · GLOBAL rank 219/4510 · cos 0.5974 · in h-pool: True · h fused rank 26
+    carrier e4f05c98560452... kind=EXTERNAL_NOTES · census NOTES rank 4/350 · GLOBAL rank 66/4510 · cos 0.6131 · in h-pool: True · h fused rank 8
+  g2-056 (misconception): missing point 4CH1-1.3 · covering refs 1 (1 fresh vs f) · ADMITTED+REVERTED
+    carrier c439b2b0b452eb... kind=EXTERNAL_NOTES · census NOTES rank 6/350 · GLOBAL rank 48/4510 · cos 0.6036 · in h-pool: True · h fused rank 12
+  g2-059 (misconception): missing point 4CH1-1.17 · covering refs 1 (1 fresh vs f) · ADMITTED+REVERTED
+    carrier 5f588a4db6152c... kind=EXTERNAL_NOTES · census NOTES rank 8/350 · GLOBAL rank 106/4510 · cos 0.6061 · in h-pool: True · h fused rank 14
+  g2-112 (multi_spec_point): missing point 4CH1-1.3 · covering refs 1 (1 fresh vs f) · ADMITTED+REVERTED
+    carrier c439b2b0b452eb... kind=EXTERNAL_NOTES · census NOTES rank 11/350 · GLOBAL rank 66/4510 · cos 0.6336 · in h-pool: True · h fused rank 18
+  flip ledger summary: 5 ADMITTED+REVERTED · 0 ADMITTED+PARTIAL · 0 MISS-AT-ARM (predicted: 5 ADMITTED+REVERTED -> ceiling exactly)
+  FINDING: all 5 flips ADMITTED+REVERTED, yet (d) moved BEYOND the exact-reversion ceiling — the kind-arm recovered additional queries beyond the flip set (the ceiling framing counted only the 5 pre-registered flips)
+  beyond-flip recoveries (2): ['g2-061', 'g2-109']
+    g2-061 (misconception): newly covered points ['4CH1-1.28'] · fresh in-pool covering refs 1 e.g. 986612e9121b22... (EXTERNAL_NOTES)
+    g2-109 (multi_spec_point): newly covered points ['4CH1-1.34C'] · fresh in-pool covering refs 1 e.g. 54cfe5a8bc6c05... (EXTERNAL_NOTES)
+
+== 4. non-regression watch
+  f-full losses: 0 (zero — the lever removes nothing)
+  covered-point monotonicity on the superset-held subset (89/89): 0 drops
+  g2-061 covered points: f 1 -> h 2 (held)
+  g-era reverted flips ['g2-042', 'g2-048', 'g2-050', 'g2-053'] fresh covering refs all in-pool: 4/4
+
+== 5. notes-share ledger (pool SET share, scored queries)
+  run-005-c-r9: 368/1806 = 20.4%
+  run-005-f-r1: 550/3599 = 15.3%
+  run-005-g-r1: 622/3675 = 16.9%
+  run-005-h-r1: 1347/4400 = 30.6%
+  recorded chain: r9 20.4% -> f 15.3% -> g 16.9% -> h predicted ~30.6% (the declared overshoot) · observed h 30.6%
+  notes refs f -> h: 550 -> 1347 (+797; prereg predicted +797 notes refs)
+  pool growth f -> h: +801 refs total (797 EXTERNAL_NOTES, 4 other kinds via re-execution)
+  h pool sizes: min 40 · p50 50 · max 92
+
+== 6. what the kind-arm admitted (h-rank bands of the NEW notes refs)
+  by h fused-rank band: {'1-10': 124, '11-20': 346, '21-40': 325, '41+': 2}
+
+== 7. rank-slice movement (chunk_axis served view, vs f)
+  recall@5: 0.0616 -> 0.041 (-33.4%) · recorded 0.0616 -> 0.041 · OK
+  recall@10: 0.1043 -> 0.0612 (-41.3%) · recorded 0.1043 -> 0.0612 · OK
+  recall@20: 0.1612 -> 0.1178 (-26.9%) · recorded 0.1612 -> 0.1178 · OK
+  mrr: 0.0626 -> 0.0581 (-7.2%) · recorded 0.0626 -> 0.0581 · OK
+  ndcg@10: 0.1057 -> 0.0683 (-35.4%) · recorded 0.1057 -> 0.0683 · OK
+  evidence_precision@10: 0.0303 -> 0.018 (-40.6%) · recorded 0.0303 -> 0.018 · OK
+  false_positive_rate@10: 0.9697 -> 0.982 (+1.3%) · recorded 0.9697 -> 0.982 · OK
+  per-query movement: recall@5 moved on 5 · recall@10 moved on 10 · recall@20 moved on 8 · mrr moved on 8 · ndcg@10 moved on 14
+  PIN: recall@20 5-run pin (0.1612) declared AT-RISK BY DESIGN this tranche (the kind-arm's admissions are not rank-bounded) · observed 0.1178 — movement recorded as a finding, not a failure
+  FINDING: recall@20 5-run pin BROKE as declared at-risk: 0.1612 -> 0.1178 (the lever's shape, pre-declared)
+
+== 8. section-8.1 v1.1 gates (evaluated fresh, both views)
+  gate a_recall@10: 0.0612 vs 0.192 -> FAIL
+  gate b_mrr: 0.0581 vs 0.1237 -> FAIL
+  gate c_ndcg@10: 0.0683 vs 0.2316 -> FAIL
+  gate a2_validated_recall@10: 0.0612 vs 0.0734 -> FAIL
+  gate b2_validated_mrr: 0.0581 vs 0.1184 -> FAIL
+  gate c2_validated_ndcg@10: 0.0683 vs 0.1683 -> FAIL
+  compliant-vs-served (d): identical = True · compliant recall@10 0.0612 vs f 0.1043
+  FINDING: the prereg's compliant-view prediction (section 3.6: the kind-arm adds NOTHING to the compliant pools — every kind-arm ref on a SUGGESTED paper) is FALSIFIED by the run: the notes documents pass the central VALIDATED boundary via the subject-level document-validation branch (T-C07's second scope branch), so compliant == served exactly — and (a2) 0.1043 -> 0.0612 FAIL (the notes refs dilute the compliant top-20; recorded, not smoothed)
+  boundary: served violations 0 (T-C20 update: expected 0 on re-record) · compliant starved 0
+
+== 9. (e) latency + per-class flags
+  latency p50: g 1080.0 ms -> h 346.5 ms (prereg expected >= g's 1080.0 — the kind-arm adds one kind-filtered scan x double pass) — BELOW g (finding)
+  FINDING: (e) latency p50 346.5 ms < g's 1080.0 ms — the prereg expected >=; recorded honestly
+  [g-flag] calculation mrr: 0.25 -> 0.2111 (-15.6%)
+  [g-flag] conceptual recall@20: 0.1949 -> 0.1282 (-34.2%)
+  [g-flag] exam_question mrr: 0.494 -> 0.5833 (+18.1%)
+  [g-flag] factual ndcg@10: 0.1652 -> 0.0645 (-61.0%)
+  [g-flag] misconception recall@20: 0.12 -> 0.02 (-83.3%)
+  [g-flag] prerequisite recall@20: 0.0833 -> 0.0167 (-80.0%)
+  [g-flag] why_wrong mrr: 0.1091 -> 0.0727 (-33.4%)
+  [g-flag] why_wrong ndcg@10: 0.1533 -> 0.0808 (-47.3%)
+
+== FINDINGS ==
+  FINDING: (d) full 0.5843 EXCEEDS the r8 recorded reference 0.5618 (r8 = different basis: snap-006 + chunk vectors 1e22a202... — the prereg declared exceeding r8 not expected; recorded honestly, judged by the gates)
+  FINDING: (d) micro 0.9405 EXCEEDS the r8 recorded reference 0.9167
+  FINDING: all 5 flips ADMITTED+REVERTED, yet (d) moved BEYOND the exact-reversion ceiling — the kind-arm recovered additional queries beyond the flip set (the ceiling framing counted only the 5 pre-registered flips)
+  FINDING: recall@20 5-run pin BROKE as declared at-risk: 0.1612 -> 0.1178 (the lever's shape, pre-declared)
+  FINDING: the prereg's compliant-view prediction (section 3.6: the kind-arm adds NOTHING to the compliant pools — every kind-arm ref on a SUGGESTED paper) is FALSIFIED by the run: the notes documents pass the central VALIDATED boundary via the subject-level document-validation branch (T-C07's second scope branch), so compliant == served exactly — and (a2) 0.1043 -> 0.0612 FAIL (the notes refs dilute the compliant top-20; recorded, not smoothed)
+  FINDING: (e) latency p50 346.5 ms < g's 1080.0 ms — the prereg expected >=; recorded honestly
+== FAILURES ==
+  none — all pre-registered checks recorded above

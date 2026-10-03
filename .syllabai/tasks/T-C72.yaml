@@ -7,11 +7,22 @@ task:
     T-C69's declared unknown; one measured datapoint vs §8.1 v1.1 + the
     admission ledger on the run-005-f frozen basis"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: SEAM-BUILT # word 1 executed (operator trace 1a101928cfa23925
-    # "arm-composition/MIN_COSINE"): branch feat/t-c70-kind-arm @ ce27437 off
-    # core main 8d7880b, PR syllabai-core#71 open, head CI build SUCCESS,
-    # offline suite 1233/0/2 on the exact head; merge OPERATOR-GATED — word 2
-    # (post-merge run phase) awaits the operator (the T-C69 two-word pattern)
+  status: RUN-RECORDED # merge + run phase executed in the owner lane (operator
+    # trace 1a10277a0d19ccfd "merge #70, then run run-005-h on merged main
+    # (depth 40 + kind-arm 15, frozen basis)"): PR #70 (feat/t-c72-notes-kind-arm
+    # @ 553261c; offline suite 1237/0/2 re-executed first-hand on the exact head;
+    # diff reviewed line-by-line against the prereg) MERGED as core c346d64
+    # (2026-10-03T16:01:36Z, post-merge main CI build SUCCESS); run-005-h
+    # EXECUTED + RECORDED on merged main over the frozen basis (PostgreSQL
+    # 17.11 + pgvector 0.8.0 re-provisioned user-space after sandbox rollback
+    # #5 wiped the toolchain; PostgreSQL 17.11-1.pgdg13+2 = the Session-165
+    # version-exact pin) — pack run-005-h-r1 + run005h_verify.py (exit 0, 0
+    # failures): (d) 52/89=0.5843 full / 79/84=0.9405 micro (ABOVE the r8
+    # reference for the first time), superset 89/89, 5/5 flips
+    # ADMITTED+REVERTED + 2 beyond-flip recoveries (g2-061, g2-109), +797
+    # notes refs = the prereg's SET arithmetic byte-exact, recall@20 pin
+    # broke as declared at-risk, (a2) first FAIL (the falsified §3.6
+    # compliant-prediction), verdict NOT PROMOTED
   priority: P1
   authority: "operator IM trace 1a0fde1b4d9cdb69 ('arm-composition / MIN_COSINE
     claim it'); the T-C69 prereg's own next-lever rule (arm-composition /
@@ -141,6 +152,41 @@ task:
         excludes every kind-arm ref; observed deltas = existing-arm
         re-execution only)"
       - "latency shape at K=15 (expected >= g's 1080.0 ms p50)"
+    "RUN-OUTCOME 2026-10-03 (run-005-h + run005h_verify.py — resolves the UNVERIFIED set above)":
+      - "census fidelity CONFIRMED on the production path: all 5 flips
+        ADMITTED+REVERTED, every fresh carrier in-pool at fused ranks 8-26
+        (census NOTES ranks 4/6/8/8/11/13; K=15 reach complete, 0
+        MISS-AT-ARM, 0 under-fill)"
+      - "superset invariant 89/89 (zero re-execution findings); zero f-full
+        losses; zero covered-point drops on the held subset; g2-061 GAINS a
+        point (f 1 -> h 2); g-era reverted flips 4/4 in-pool"
+      - "SET arithmetic byte-exact: +797 notes refs predicted = +797
+        observed; notes share 15.3% -> 30.6% (predicted ~30.6%); pool growth
+        +801 total (797 EXTERNAL_NOTES + 4 re-execution refs)"
+      - "(d) 52/89 = 0.5843 full · 79/84 = 0.9405 micro — ABOVE the r8
+        recorded reference (0.5618/0.9167) for the first time on the series;
+        the 5-flip exact-reversion ceiling EXCEEDED via beyond-flip
+        recoveries g2-061 (4CH1-1.28 via shared carrier 986612e9...) and
+        g2-109 (4CH1-1.34C via 54cfe5a8...) — both EXTERNAL_NOTES, neither
+        reachable at depth 40 in f/g"
+      - "FALSIFIED: the §3.6 compliant-view prediction — the notes documents
+        pass the central VALIDATED boundary via the subject-level
+        document-validation branch (T-C07's second scope branch), so
+        compliant == served exactly; (a2) 0.1043 -> 0.0612 FAIL (the first
+        (a2) FAIL of the series — the gate consequence, recorded not
+        smoothed)"
+      - "rank-slice movement as declared at-risk: recall@20 0.1612 ->
+        0.1178 (the 5-run pin broke BY DESIGN), recall@5 -33.4%, recall@10
+        -41.3%, ndcg@10 -35.4%, evidence_precision@10 -40.6%; notes
+        admissions land inside the served horizon (124/346/325/2 across
+        fused-rank bands 1-10/11-20/21-40/41+)"
+      - "(e) latency p50 346.5 ms < g's 1080.0 ms — the prereg's expectation
+        inherited the floor's probe-doubling shape, which the KIND-ARM form
+        lacks (finding, recorded honestly)"
+      - "verdict NOT PROMOTED (all six §8.1 v1.1 gates FAIL); the promotion
+        tension ((d) beyond r8 on the Ruling-7 axis while the §8.1 gates
+        FAIL) is recorded for the operator's next ruling — horizon/shape
+        questions are operator-gated, any K/shape change = dated new prereg"
   merge_disposition: "2026-10-03, merge-execution session (operator trace
     1a1027c676d03071 'merge PR #71. Check other lanes as well'): the T-C72
     seam is ALREADY LANDED on core main — the twin PR syllabai-core#70
@@ -161,8 +207,25 @@ task:
     pending). Sandbox rollback #5 observed this session (hub clone absent,
     tools/.m2 wiped, master behind, core parked on the tc40 branch — the
     local-only 06297f2 chain intact on branch tc40-min-cosine-050); remote
-    authoritative, zero remote loss; no build executed (API + git only)."
+    authoritative, zero remote loss; no build executed (API + git only).
+    OWNER-LANE ADDENDUM (2026-10-03): the rule-4 UNVERIFIED above is now
+    resolved — the operator word that gated #70's merge was THIS owner lane's
+    directive (IM trace 1a10277a0d19ccfd 'merge #70, then run run-005-h on
+    merged main (depth 40 + kind-arm 15, frozen basis)'), executed by the
+    owner session: merge gates re-executed first-hand (base unmoved 8d7880b,
+    head CI SUCCESS at 553261c, diff reviewed line-by-line vs the prereg,
+    offline suite 1237/0/2 re-run first-hand on the exact head before
+    merging), then the run phase (see RUN-OUTCOME)."
   next_safe_actions:
+    - "DONE WORD 2 (2026-10-03, operator trace 1a10277a0d19ccfd 'merge #70,
+      then run run-005-h on merged main (depth 40 + kind-arm 15, frozen
+      basis)'): the merge + run phases executed in the owner lane — PR #70
+      MERGED as c346d64 (gates first-hand), run-005-h recorded over the
+      frozen basis (pack run-005-h-r1 + verify exit 0), (d) 0.5843/0.9405
+      ABOVE the r8 reference, 5/5 flips ADMITTED+REVERTED, verdict NOT
+      PROMOTED ((a2) first FAIL) — see RUN-OUTCOME; next: the operator's
+      promotion/horizon ruling (the (d)-vs-gates tension is the recorded
+      decision surface), any K/shape change = dated new prereg"
     - "DISPOSITION 2026-10-03 (operator trace 1a1027c676d03071): seam
       LANDED via the twin PR #70 as core c346d64 (post-merge main CI
       SUCCESS); PR #71 closed superseded with receipts (see
