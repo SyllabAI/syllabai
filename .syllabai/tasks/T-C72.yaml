@@ -7,7 +7,11 @@ task:
     T-C69's declared unknown; one measured datapoint vs §8.1 v1.1 + the
     admission ledger on the run-005-f frozen basis"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: CLAIMED # claim phase complete: prereg + grounding census recorded BEFORE any run; seam and run phases await the operator's words (the T-C69 two-word pattern)
+  status: SEAM-BUILT # word 1 executed (operator trace 1a101928cfa23925
+    # "arm-composition/MIN_COSINE"): branch feat/t-c70-kind-arm @ ce27437 off
+    # core main 8d7880b, PR syllabai-core#71 open, head CI build SUCCESS,
+    # offline suite 1233/0/2 on the exact head; merge OPERATOR-GATED — word 2
+    # (post-merge run phase) awaits the operator (the T-C69 two-word pattern)
   priority: P1
   authority: "operator IM trace 1a0fde1b4d9cdb69 ('arm-composition / MIN_COSINE
     claim it'); the T-C69 prereg's own next-lever rule (arm-composition /
@@ -138,14 +142,23 @@ task:
         re-execution only)"
       - "latency shape at K=15 (expected >= g's 1080.0 ms p50)"
   next_safe_actions:
-    - "AWAITING OPERATOR WORD 1: 'start the seam' — branch
-      feat/t-c70-kind-arm off core main 8d7880b, NotesArmRetrieval +
-      Run005C third-provider wiring + four-way guard + unit tests, full
-      offline suite green, PR (merge OPERATOR-GATED)"
+    - "DONE WORD 1: 'start the seam' (operator trace 1a101928cfa23925
+      'arm-composition/MIN_COSINE') — branch feat/t-c70-kind-arm @ ce27437 off
+      core main 8d7880b: NotesArmRetrieval kind-scoped delegate (arm A's
+      production vector SQL shape — same <=> operator, embedding column and
+      embed_rev stamp — LIMIT K, fully ordered distance/document_id/chunk_index
+      ASC, the same frozen query vector through the production EmbeddingProvider
+      port; the census universe is the embedded notes corpus, so the paper
+      VALIDATION-STATE gate is deliberately NOT part of this arm — the boundary
+      is enforced once, centrally, pre-fusion) + Run005C third-provider wiring
+      in BOTH fabrics + FOUR-way one-lever guard + posture-aware manifest/report
+      rendering; offline suite 1233/0/2 on the exact head (1223 recorded + 10
+      new); PR syllabai-core#71, head CI build SUCCESS"
     - "AWAITING OPERATOR WORD 2 (post-merge): the run phase — run-005-h on
       merged main (BENCH_RUN_ID=run-005-h BENCH_PER_ARM_LIMIT=40
       BENCH_NOTES_KIND_ARM=15, floor/reranker/weights ABSENT, frozen basis,
-      no re-freeze) + run005h_verify.py + honest verdict"
+      no re-freeze) + run005h_verify.py + honest verdict; the MERGE itself
+      stays operator-gated (the T-C55/T-C65/T-C69 precedent)"
     - "promotion question stays with the owning lane + owner acceptance per
       harness spec §9; the (d) mechanism ledger shape this tranche tests:
       a population-changing lever vs the count-based levers' recorded
