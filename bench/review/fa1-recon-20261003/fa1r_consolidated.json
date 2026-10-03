@@ -1,0 +1,142 @@
+{
+ "retired_doc": [
+  [
+   "a7a0e028-ea16-4a31-a279-2a401a74142f",
+   "b09a8700-914c-5502-9c71-1e77c5c9b0c0",
+   "QUESTION_PAPER",
+   "REJECTED",
+   "qp.pdf",
+   "36"
+  ]
+ ],
+ "retire_audit_rows": [
+  "2026-10-02 08:30:33.011041+00:00",
+  "2026-10-02 13:29:27.016447+00:00"
+ ],
+ "relabeled_docs": [
+  [
+   "4CH0-1CR-201306/ms.pdf",
+   "MARK_SCHEME",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-1CR-201306/qp.pdf",
+   "QUESTION_PAPER",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-1CR-201406/ms.pdf",
+   "MARK_SCHEME",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-1CR-201406/qp.pdf",
+   "QUESTION_PAPER",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-1CR-201606/ms.pdf",
+   "MARK_SCHEME",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-1CR-201606/qp.pdf",
+   "QUESTION_PAPER",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-1CR-201706/ms.pdf",
+   "MARK_SCHEME",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-1CR-201706/qp.pdf",
+   "QUESTION_PAPER",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-2CR-201306/ms.pdf",
+   "MARK_SCHEME",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-2CR-201306/qp.pdf",
+   "QUESTION_PAPER",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-2CR-201406/ms.pdf",
+   "MARK_SCHEME",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-2CR-201406/qp.pdf",
+   "QUESTION_PAPER",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-2CR-201606/ms.pdf",
+   "MARK_SCHEME",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-2CR-201606/qp.pdf",
+   "QUESTION_PAPER",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-2CR-201706/ms.pdf",
+   "MARK_SCHEME",
+   "VALIDATED",
+   "1"
+  ],
+  [
+   "4CH0-2CR-201706/qp.pdf",
+   "QUESTION_PAPER",
+   "VALIDATED",
+   "1"
+  ]
+ ],
+ "relabel_audit_rows_in_window": 16,
+ "ep_cr_link_census": {
+  "4CH0/1CR|doc=VALIDATED": 8,
+  "4CH0/2CR|doc=VALIDATED": 8
+ },
+ "ep_cr_rows": 8,
+ "doc_states": {
+  "REJECTED": 146,
+  "VALIDATED": 871
+ },
+ "ep_total": 104,
+ "chunks_total": 4672,
+ "gate_chunks": 4593,
+ "qv_total": 1526,
+ "qsp_total": 2620,
+ "audit_total": 2814,
+ "audit_rows_after_last_batch": 0,
+ "checks": {
+  "retired_doc_REJECTED": true,
+  "retire_audit_1_row": true,
+  "relabeled_16_all_VALIDATED": true,
+  "relabel_audit_16_rows": true,
+  "ep_cr_links_all_VALIDATED": true,
+  "gate_4593_matches_last_pin": true,
+  "audit_2814_matches_last_pin": true,
+  "zero_audit_rows_since_last_batch": true,
+  "ep_total_104": true
+ }
+}

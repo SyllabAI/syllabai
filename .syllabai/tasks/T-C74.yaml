@@ -1,0 +1,34 @@
+# T-C74 — F-A1 recon: retirement already executed; landing verified first-hand; ledger
+# corrections recorded (stale open-list superseded)
+version: 1
+task:
+  id: T-C74
+  title: "F-A1 recon (operator trace 1a10294d4523b921 'start the F-A1 recon'): establish
+    the F-A1 orphan-retirement scope and state before any action"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  status_note: "recon-only lane; zero writes; no execution was owed — the ledger already
+    had F-A1 executed, and the recon verified it first-hand"
+  priority: P1
+  authority: "operator IM trace 1a10294d4523b921"
+  base:
+    repo: "records main 2ff24131 (this session's T-C73 push); live DB at probe time"
+  result:
+    verdict: "F-A1 CLOSED — T-C62 retired the one true orphan (a7a0e028…, batch cae83ab6,
+      2026-10-02 13:29:27Z) after the fail-closed divergence catch; T-C68 relabeled the 16
+      ep-linked R-generations (batch bf3485f8, 14:34:56Z). Landing re-verified 2026-10-03:
+      9/9 checks green, gate 4,593 == last pin, audit 2,814 == last known, ZERO audit rows
+      after the last batch."
+    ledger_corrections:
+      - "F-A1 orphan retirement: DONE 2026-10-02 (was listed as 'next up' by a stale
+         session summary — recon-first prevented a double execution)"
+      - "ING-104 orphan cleanup: DONE 2026-10-01 (residue-closure lane)"
+      - "499 qt-primary backfill: DONE 2026-10-01 ('the 499 residue CLOSED')"
+      - "bank-defect + grid-layout + 2C-2013 Q3/V57/census: DONE 2026-10-02"
+      - "F-A2: DONE 3 of 3 2026-10-03 (T-C71 15291f50c + T-C73 1f7e8355)"
+    actually_open:
+      - "T-C72 seam phase 2 (other lane, in progress)"
+      - "F-PROD-1 teacher-review packet (awaiting operator)"
+      - "DEEP-AUDIT-DOC coordination ask"
+      - "operator standing items: secrets revocation, notes-axis promotion, AT_FLIP_RUNBOOK (if wanted)"
+  evidence: "bench/review/fa1-recon-20261003/"
