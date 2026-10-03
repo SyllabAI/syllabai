@@ -130,3 +130,8 @@ lease_schema:
 #  operator-gated) records the executive-layer decision request. Single
 #  owner holds BOTH halves in one lane — the T-C61 coordination pattern
 #  with one actor.)
+
+# (T-C76 lease FULFILLED + RELEASED 2026-10-04: core PR #74 merged as
+#  ebc3f072 on CI SUCCESS (head e18085c) and web PR #14 merged as 29f979c3
+#  on web-ci SUCCESS (head a454028) — both halves in one lane, single owner;
+#  released per the reclaim rule, well inside the 2026-10-06 expiry.)

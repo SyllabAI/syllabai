@@ -4,7 +4,7 @@ task:
   id: T-C76
   title: "Executive-half lane (operator 'go', trace 1a1030b349bc03c9): R1 learner agenda read model (core PR #74) + R2 ADR-035 draft (operator-gated) + R3 parked with preconditions"
   owner: superz
-  status: VERIFYING # core PR #74 open, CI running; master records land this session
+  status: DONE # core PR #74 merged as ebc3f072 (CI SUCCESS on e18085c); web PR #14 merged as 29f979c3 (web-ci SUCCESS on a454028)
   priority: P1
   base:
     repo: syllabai-core
@@ -45,10 +45,9 @@ task:
     INFERRED:
       - "NBA actionsFor on a childless subject root returns empty actions rather than throwing (read of actionsFor assembly; AgendaFlowIT pins it in CI)"
     REPORTED: []
-    UNVERIFIED:
-      - "AgendaFlowIT in-CI result (Docker-less sandbox — verified when the PR check-run lands)"
+    VERIFIED_ADDENDUM_2026_10_04:
+      - "CI run 37145594701 FAILED first (2 errors + 2 assertions) — three real facts caught: assignments.due_at NOT NULL (V49, 'undated' case impossible), fk_cmember_class (visibility test needs a REAL classes row), shared-container + V49 whole-cohort rows (global emptiness pins invalid — pinned on visibility correctness instead). Fixed e18085c; CI SUCCESS; merged ebc3f072. Web lint caught synchronous-setState-in-effect; fixed a454028; web-ci SUCCESS; merged 29f979c3."
   next_safe_actions:
     - "operator ruling D1 (ADR-035): who owns exam dates — teacher-per-class / curriculum-import / per-learner(rejected); D2: core vs hub surface"
-    - "on CI green: merge core PR #74 (the T-C66 core-side precedent — operator-directed lane, green = merge); then web agenda panel as the consumer half"
     - "on D1 ruling: NBA v2.0 card (tier multiplier + assignments seam + reason-code family) under a fresh prereg per the anti-gaming rules"
     - "R3 parent surface: PARKED with named preconditions in ADR-035 — reopen only when a pilot school asks AND the new-actor ADR exists"
