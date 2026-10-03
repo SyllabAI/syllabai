@@ -1,0 +1,142 @@
+# T-C75 — INGEST WAVE: 5 late 4CH1 papers via the pdflane route (G8 precedent) +
+# T-C60 content residuals (2025-06 1CR ep backfill + the 11 VALIDATED-ep doc-link
+# heals). Registration lane (claim-first); execution is toolchain/credential-gated
+# with governed operator words per DB batch.
+version: 1
+task:
+  id: T-C75
+  title: "Ingest wave for the 5 late 4CH1 papers (2025-06 1C+1CR; 2026-06 1C+2C+2CR)
+    via the pdflane direct-PDF route, plus the T-C60 content residuals: the
+    2025-06 1CR ep-row backfill and the 11 VALIDATED-ep doc-link heals"
+  owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
+  status: READY
+  status_note: "registered (claim-first) with the route decision recorded; W1 (parse)
+    is toolchain-complete in-sandbox (pdftotext + PyMuPDF verified present
+    2026-10-04; the opendataloader CLI jar is optional — run_paper's odl branch is
+    conditional) and needs no credentials; W2-W5 are blocked on (1) core JWT secret
+    (2) Gemini embedding key (3) Neon key re-provision; every DB-write batch is
+    operator-gated (T-C54 wave-2 / T-C60 instrument precedents)"
+  priority: P1
+  authority:
+    - "operator lane-comparison + route decision accepted: trace 1a102cc99807849d
+       ('Most of the papers used which lane? And which lane is actually the best?')"
+    - "operator directive to register: trace 1a102da6ac77f2c5 ('draft this route
+       decision into a T-C65 ingest-wave card', 2026-10-04)"
+    - "renumber honesty: the operator's message said T-C65; T-C65 is taken
+       (FUSION-WEIGHTS REPLAY, DONE, records 3880dd5) — registered as T-C75 (next
+       free ID; T-C74 is the current max) per the first-pushed protocol precedents
+       (T-C66→T-C67, T-C64→T-C65, T-C66→T-C68)"
+  base:
+    repo: "records main 2bfb358 (§10 Ruling 8); corpus syllabai-pastpapers main
+      1f7e8355 (T-C73 bumped the corpus; the G6 identity gate re-pins per-paper
+      checksums at parse time)"
+  route_decision:
+    chosen: "pdflane direct-PDF route (G8 precedent) — tools/pdflane/run_paper.py
+      over the corpus qp.pdf/ms.pdf; NOT the GLM-OCR markdown route"
+    grounds:
+      - "VERIFIED 2026-10-04 (contents API): all 5 target dirs are PDF-only —
+         exactly {manifest.yaml, qp.pdf, ms.pdf}; no parsed/, no OCR markdown"
+      - "VERIFIED 2026-10-04 (contents API): the GLM-OCR markdown corpus
+         (SyllabAI/Past-Papers, paper 1|2/<session>/ layout) ends at 2024-Jun —
+         route A (operator-supplied markdown) has no input for these papers
+         without new OCR runs"
+      - "RECORDED (bench/evidence/g8-backfill-2026-09-21/COVERAGE.md): the G8
+         pdflane batch produced 144 rev2 docs / 2,122 embedded chunks over 72
+         papers — 87% of the qp+ms universe (83/83 covered with the bridge lane),
+         89% of paper-axis chunks; post-G8 serving probes PASS"
+      - "RECORDED (bench/evidence/bw-bank-wave-2026-09-26/EVIDENCE.md): the bank's
+         current generation is majority pdflane-descended — atoms_to_draft over
+         g17 closure-verified atoms (REPLACE x11 / NEW x1 / MERGE x2 / REPOINT x1;
+         2021-01 teacher-VALIDATED rows untouched)"
+    fallbacks:
+      - "per-paper: if pdflane gates fail-loud (rasterized pages, layout
+         classification walls) → the tesseract sub-lane precedent
+         (bench/review/psaxis-review-2026-09-28/ocr-lane-2026-09-28/) or route
+         A/B (operator-supplied GLM-OCR markdown / OCR endpoint+key)"
+    honest_expectations:
+      - "products carry review flags (G8: 72/72 G1 marks-unverified at parse time;
+         G3/G5 classes; MS-UNCLASSIFIED-ROW on unknown layouts); flags are
+         disclosed in the evidence pack, never smoothed"
+      - "bank tables stay untouched by this wave (bank-grade G1 discipline, G8 §5
+         precedent); the wave delivers the search substrate + doc/chunk/ep state"
+  scope:
+    allowed:
+      - "W1 parse: run_paper.py x4 (2025-06 1C; 2026-06 1C, 2C, 2CR) → parsed/
+         products (atoms/1.1 questions.json + qp.md + ms.md) committed to
+         syllabai-pastpapers per the per-paper layout (corpus AGENT.md rules 1-6:
+         manifests canonical, pairing evidence preserved, task ID/base commit +
+         corpus commit recorded, reproducible durable reporting)"
+      - "W2 canonical+ingest: atoms_to_canonical.py (T-C06 pattern) → core
+         ContentIngestionService document lane → deterministic chunking → rev2
+         embed (gemini-embedding-001, single-model invariant) → ep rows created
+         WITH doc links (no docless rows, T-C60 discipline)"
+      - "W3 ep backfill (no parse needed): 2025-06 4CH1/1CR — QP+MS docs pre-exist
+         VALIDATED (doc_version 1, checksums == T-C60 ingest pins e366b168/
+         54a0a9f6, source_uri 4CH1-1CR-202506/*, unlinked) → ep insert + link
+         (T-C60 gap2 '1 of 6 executable now')"
+      - "W4 the 11 heals (T-C60 gap3, all previously BLOCKED ON INGEST): per-row —
+         the pinned heal-target checksum must exist as a document; the 8 SUGGESTED
+         legacy .md-parse docs (corpus/igcse-chemistry-4ch0-1c-<session>/ layout)
+         are identity-consistent by source_uri but NOT current-corpus-matched by
+         checksum (below the acceptance bar) → re-ingest from the current corpus
+         (new doc_version) or per-row deferral verdicts; 2 of the 8 (specimen2017
+         pair) already linked at ep fd1bf331 — dedupe before writing"
+      - "W5 verification: post-wave serving-gate re-probe (latest pin: 4,593 per
+         the T-C74 recon 2026-10-03; audit 2,814; ep total 104), chunk/embed
+         census, paper-coverage matrix update"
+    forbidden:
+      - "bank content additions (review lanes never invent bank content)"
+      - "the 26-code tagger gap (separate card — T-C64 closeout follow-up)"
+      - "F-PROD-1b bridge identity semantics (governance-blocked, operator
+         decision pending per the 2026-10-03 disposition)"
+      - "notes corpus writes (notes axis stays as T-C64 recorded: 155/175
+         live-tagged vs the 194 axis)"
+      - "frozen artifacts untouched (bench snapshots, historical evidence packs)"
+  dependencies:
+    - "W1: none beyond the in-repo toolchain (pdftotext + PyMuPDF verified present
+       in the sandbox 2026-10-04; opendataloader CLI jar optional — conditional
+       branch in run_paper)"
+    - "W2/W3/W4/W5: (1) core JWT secret (2) Gemini embedding key (3) Neon key
+       re-provision (the sandbox recycle lost the old key); JDK25+Maven only if
+       core is built/run from source in-sandbox (Corretto 25.0.4.1 + Maven 3.9.9
+       re-provision precedent, T-C66 2026-10-02)"
+  shared_resources:
+    - "syllabai-pastpapers (parsed/ product writes + push) — lease at execution"
+    - "production DB (ep-row governed batches) — operator-gated per batch"
+  acceptance:
+    - "4 papers parsed with gates reports + the review-flag ledger disclosed;
+       products land in the per-paper parsed/ layout at a pinned corpus commit"
+    - "5 ep rows exist with doc links (4 new + the 1CR backfill) — or per-row
+       recorded verdicts with traces"
+    - "new docs' rev2 chunks embedded (single model, dims clean) and counted"
+    - "11 heals executed or per-row verdicts recorded"
+    - "serving gate re-probed and recorded; coverage matrix updated"
+    - "evidence pack (bench/review/ingest-wave-<date>/) with SHA256SUMS"
+  evidence_required:
+    - "per-paper gates report (G1/G3/G5/G6) + review-flag ledger"
+    - "ingest result JSON (docs, chunks, embed stamps) + SHA256SUMS"
+    - "governed SQL batch records with operator instrument traces"
+  claims:
+    VERIFIED:
+      - "5/5 target dirs PDF-only (contents API, 2026-10-04)"
+      - "old Past-Papers GLM-OCR corpus ends 2024-Jun (contents API, 2026-10-04)"
+      - "corpus HEAD 1f7e8355; records main 2bfb358 at registration"
+      - "T-C60 decisions/pins as recorded in
+         bench/review/papers-axis-completion-20261002/tc60_decisions.json"
+      - "pdftotext + PyMuPDF present in the current sandbox (2026-10-04)"
+    INFERRED:
+      - "born-digital text layer present for the 5 papers (session recency;
+         subject to G6/G1 verification at parse time)"
+    REPORTED:
+      - "T-C60 live-probe numbers as recorded in tc60_decisions.json"
+    UNVERIFIED:
+      - "whether any of the 5 PDFs carry rasterized pages (deterministic at parse)"
+      - "2025-06 1C doc absence in production (T-C60 recorded 1CR present, others
+         un-ingested; re-probe at execution with the Neon key)"
+  next_safe_actions:
+    - "operator word to start W1 (parse) — no credentials needed; the products +
+       gates report land as the wave's first evidence pack"
+    - "operator supplies (1)(2)(3) credentials → W2-W5 execute as governed
+       operator-gated batches (one word per batch)"
+    - "if W1 hits rasterized pages → tesseract sub-lane or route A/B per-paper
+       fallback decision"
