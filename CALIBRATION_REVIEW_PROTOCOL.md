@@ -142,9 +142,12 @@ in any human-readable artifact (review notes, PR descriptions, dashboards):
 2. **Small-cell suppression (C7 hygiene, borrowed early):** any slice with **n < 5**
    is suppressed from all human-readable output, because a nodeId- or format-sliced
    band of 1–4 rows can be cross-read against class surfaces to infer an
-   individual. The controller javadoc records the full C7 disposition
-   (ADMIN-only vs class-scoped vs k-anonymity) as an open decision; the n < 5 floor
-   here is a floor, not the answer, and does not resolve C7.
+   individual. C7 was resolved 2026-10-04 for k-anonymity enforced by the API (core PR #62,
+   main @ `bbc438e`; ADR-033's challenge record carries the full disposition):
+   every cell under 5 distinct learners renders statistics `null` with
+   `suppressed: true` while counts stay visible — the unit is the learner, not
+   the row. This §4.2 n < 5 row floor remains the coarser citation guard,
+   distinct from the wire-enforced learner-unit rule.
 
 Every cited number must carry its **as-of timestamp and the constant set in effect**
 (slip, guess table, τ bands) — a number without its configuration is unfalsifiable.
@@ -246,9 +249,11 @@ The report cuts by nodeId only, today. Honest order of operations:
   research surfaces.
 - **No BDT/misconception gating.** Different stream, different emission; the
   pattern may be reused there later, under its own ADR.
-- **No resolution of C7** (research-surface authorization and small-cell design) —
-  §4.2 borrows the n < 5 floor only. C7's three-way choice (ADMIN-only,
-  class-scoped, k-anonymity) stays open.
+- **C7, resolved after this protocol shipped (2026-10-04, core PR #62):** the
+  three-way choice (ADMIN-only, class-scoped, k-anonymity) closed for
+  k-anonymity enforced by the API — the wire suppression lives in the service,
+  not in this protocol. §4.2's n < 5 row floor stays as the coarser citation
+  guard.
 
 ## Appendix: worked micro-example (the rules applied)
 
