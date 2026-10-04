@@ -1,0 +1,75 @@
+version: 1
+task:
+  id: T-C79
+  title: "Exam-series calendar (curriculum-imported) + learner-declared target series — the ADR-035 D1 foundation for the exam-aware study planner"
+  owner: Super Z
+  status: CLAIMED
+  priority: P1
+  base:
+    repo: SyllabAI/syllabai (master governance)
+    commit: 983430d
+  authority: |
+    ADR-035 (drafted 2026-10-04 as the T-C76 executive-half R2, Status: Proposed)
+    gated acceptance on D1 (exam-date ownership). The operator ruled 2026-10-04
+    (zai-web trace 1a10493e233cb521 — the ruling is quoted VERBATIM in ADR-035's
+    "Ruling 2026-10-04" section): the exam-series calendar is curriculum-imported
+    reference data (the ADR's option ②), and the learner makes one bounded, optional
+    declaration — which imported series a course targets — never entering dates.
+    ADR-035 Status -> Accepted the same day (original preamble preserved verbatim
+    in the document); the teacher-entry proposal §1 is superseded; the rejected ③
+    (learner-entered timetables/dates) STANDS. The operator's sequencing word
+    "T-C77 first" (trace 1a1049b6b711093d) placed this lane after the surface
+    correction (T-C78 — merged and first-hand re-verified post-sandbox-reset,
+    see claims).
+  background: |
+    ADR-035's recon: no exam-date entity exists anywhere (verified on core ab33709)
+    — the planner's central input has no source of truth and no owner. The ruled
+    design gives it both, without opening the garbage-in channel the ADR rejected:
+    (a) a reference calendar `exam_series` (board, qualification IGCSE|IAL, code e.g.
+    2027-may-june, label, window_start/window_end, optional entry_deadline and
+    results_date, published flag, source citation + retrieved-at) imported via the
+    ADR-021 content-package path — cadence is DATA (Pearson Edexcel IGCSE May/June +
+    November; IAL January + May/June + October/November), with per-subject availability
+    overrides, never hardcoded; (b) learner course gains ONE optional nullable
+    target-series reference (settable in hub's add-course overlay at enrolment,
+    editable and clearable thereafter); (c) countdowns (days_to_window) computed at
+    READ, never persisted (ADR-031 doctrine), exposed through the T-C76 agenda read
+    model and the T-C78 hub dashboard surface; (d) unpublished windows are absent or
+    flagged estimated and rendered honestly — no seed row without a citable Pearson
+    source. NBA v2.0 time-pressure multiplier + assignments->NBA seam + reason-code
+    family remain ADR-035-scoped follow-up lanes; the NBA engine is byte-untouched
+    this lane.
+  scope:
+    allowed:
+      - "core: Flyway migration (version pinned at BRANCH time under a flyway-version lease; core main stands at V60) — exam_series reference table + learner-course nullable target column (FK, at most one target series per enrolment); exam-calendar dataset import + fail-closed validation on the content-package path; derived-at-read countdown exposure in the agenda/learner-state read models; integration tests"
+      - "hub: optional exam-series picker in the add-course overlay (empty calendar -> honest disabled/hidden state, never a fake list); dashboard countdown chip over the exposed read model; CORE_MEASURED provenance labelling per the hub honesty posture"
+      - "content: exam-calendar dataset schema + importer validation; seed rows ONLY with a citable Pearson source (operator-provided key dates); absence ships as an honest empty state"
+      - "master: task record + locks + TODO dated section + WORKLOG session"
+    forbidden:
+      - "any learner-entered date/window/timetable free-text anywhere (the rejected ③ — no exceptions)"
+      - "NBA engine changes (NextBestActionService, RecommendationProperties, nba-rules — the v2.0 multiplier is a later lane under ADR-035's own scope)"
+      - "persisted countdowns or any derived schedule rows (ADR-031: derived is recomputed, never stored)"
+      - "notifications, streaks, plan persistence, parent-facing surface (ADR-035 Rejected/Parked stands)"
+  dependencies:
+    - "ADR-035 Accepted 2026-10-04 (D1 ruled, trace 1a10493e233cb521)"
+    - "T-C76 agenda endpoint (core PR #74, ebc3f072) + T-C78 hub dashboard surface (hub PR #30, 5f138a0) — the exposure surfaces this lane extends"
+    - "ADR-021 content-package import path (the curriculum-import lane the ruling names)"
+  shared_resources:
+    - "core-web-contract lease (taken 2026-10-04, base master 983430d / hub 5f138a0, expiry 2026-10-06T00:00Z or until the lane PRs merge) — hub picker + core read exposure in ONE lane, single owner, the T-C61/T-C76 single-actor pattern"
+    - "flyway-version lease to be taken at core branch time (V-number pinned then; core main stands at V60)"
+  acceptance:
+    - "PLANNED — core migration + dataset import + read exposure with ITs, CI green on the PR"
+    - "PLANNED — hub picker + countdown chip with honest degradation, hub-ci green on the PR"
+    - "PLANNED — dataset schema + import validation; zero seed rows without a provenance citation (UNVERIFIED until the operator cites Pearson key dates)"
+    - "PLANNED — WORKLOG session records the lane with rule-4 claim labels"
+  claims:
+    VERIFIED:
+      - "no exam-date entity exists on core (ADR-035 recon on ab33709; nothing in Sessions 135-186 contradicts — the ledger's lanes touched no learner-course exam field)"
+      - "hub add-course overlay exists on hub main (src/app/dashboard/add-course-overlay.tsx, 5f138a0 lineage) and api.learnerAgenda() is wired (src/lib/api.ts:620)"
+      - "T-C78 correction merged and first-hand re-verified 2026-10-04 post-reset: hub PR #30 merged 5f138a0 (SetWorkCard in src/app/dashboard/), web PR #15 merged cae30ea (revert restored the frozen console: 4 files, 188 deletions, zero /learners/me/agenda consumers on web main)"
+      - "T-C79 is the next free task id (registry ends at T-C78 + T-KG-B on master 983430d)"
+    UNVERIFIED:
+      - "Pearson key-dates citations for 2026-2028 series windows — operator-held; no seed rows until cited (the calendar ships schema + honest empty state if not)"
+  next_safe_actions:
+    - "operator word to start implementation (core lane first: flyway-version lease -> branch off core main -> migration + import + ITs -> PR)"
+    - "operator provides Pearson key-dates citations for the seed calendar (or the lane ships the schema + honest empty states and seeds later)"
