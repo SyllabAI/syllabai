@@ -31,20 +31,32 @@ version: 1
 #  released per the reclaim rule, well inside the 2026-10-06 expiry. Structured
 #  history row below.)
 locks:
-  - resource: hub-e2e
-    owner: superz
-    task: T-C55
-    base_commit: fca83c8
-    acquired_at: 2026-10-02
-    expires_at: '2026-10-08T00:00:00Z'
-    note: >-
-      RENEWAL recorded under T-COORD-3 R-C (operator directive trace
-      4acec4babbc5db5c842fa4bce379e604): the original prose lease expired
-      2026-10-04T00:00Z with the deck-flow fix lane still live
-      (T-C55-hub-deckflow, 2 of 29 tests red on main) — renewed instead of
-      silently lapsing, per the ledger's own reclaim rule. Scope unchanged:
-      openLearnerDrawer/dialog timing fix; the fix PR replaces this expiry
-      on merge.
+  # (T-C55's hub-e2e lease — the last active row — was FULFILLED + RELEASED
+  #  2026-10-05 (Session 200): the lane's own merge-condition ("the fix PR
+  #  replaces this expiry on merge") fired 2026-10-02 with hub PR #8 merged
+  #  as c2345d9; hub main e2e SUCCESS on ALL 15 main runs since run 107
+  #  (dcbceb4, 2026-10-02T14:57Z) through 93226a4 (2026-10-04T12:51Z);
+  #  first-hand re-verified 2026-10-05 on 93226a4 (run 37203559765, 30
+  #  passed / 0 failed incl. both formerly-red pinned tests). The T-COORD-3
+  #  renewal below was STALE WHEN WRITTEN — the "2 of 29 red" predated the
+  #  fix merge by two days; the discrepancy is named in the structured
+  #  history row and in T-C55's closure_verification, not silently
+  #  repaired. Released per the reclaim rule.)
+  # (superseded renewal row, retained verbatim for the record:)
+  # - resource: hub-e2e
+  #   owner: superz
+  #   task: T-C55
+  #   base_commit: fca83c8
+  #   acquired_at: 2026-10-02
+  #   expires_at: '2026-10-08T00:00:00Z'
+  #   note: >-
+  #     RENEWAL recorded under T-COORD-3 R-C (operator directive trace
+  #     4acec4babbc5db5c842fa4bce379e604): the original prose lease expired
+  #     2026-10-04T00:00Z with the deck-flow fix lane still live
+  #     (T-C55-hub-deckflow, 2 of 29 tests red on main) — renewed instead of
+  #     silently lapsing, per the ledger's own reclaim rule. Scope unchanged:
+  #     openLearnerDrawer/dialog timing fix; the fix PR replaces this expiry
+  #     on merge.
 
 # (T-C78's core-web-contract lease was fulfilled 2026-10-04 — consumer-side
 #  only, no core change: hub PR #30 merged 5f138a0 (hub-ci 37149123696
@@ -279,3 +291,21 @@ history:
       receipt). Recorded as superseded rather than fabricated as a fulfilled
       migration lease; the version-serialization purpose was honoured by the
       window, no collision occurred.
+  - resource: hub-e2e
+    task: T-C55
+    outcome: fulfilled_released
+    released_at: 2026-10-05
+    receipt: >-
+      The T-COORD-3 R-C renewal (2026-10-04) extended a lease whose own
+      merge-condition had already fired: hub PR #8 (fix/kg-deep-link-self-
+      destruct) merged 2026-10-02T09:06Z as c2345d9, and hub main e2e has
+      been SUCCESS on all 15 main runs since run 107 (dcbceb4,
+      2026-10-02T14:57Z) — the renewal note's "2 of 29 tests red on main"
+      cited the pre-fix fca83c8 evidence and was stale when written. The
+      2026-10-05 release is evidence-backed first-hand: hub-ci run
+      37203559765 on main 93226a4 — 30 passed / 0 failed, both formerly-red
+      pinned tests passing (deck-flow.spec.ts:125 deep-link 3.0s; :153
+      honest empty state 1.6s), build SUCCESS. Released per the reclaim
+      rule with the stale-renewal discrepancy named in T-C55's
+      closure_verification; the empty locks: map is the correct steady
+      state.

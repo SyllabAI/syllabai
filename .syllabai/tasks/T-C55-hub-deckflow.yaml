@@ -5,7 +5,7 @@ task:
     button[aria-haspopup=dialog] on the learner page (2 of 29 tests
     fail; pre-existing on main, disjoint from the math lane)"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: IN_PROGRESS
+  status: DONE
   priority: P1
   authority: "operator message (zai-web, 2026-10-02, trace
     1a0fbb36c18b5465) naming 'hub's Deck-flow e2e red (e2e lane)' as
@@ -57,3 +57,22 @@ task:
     deck-flow regression pin (guarding both sides of the 429e4ad deep-
     link contract) is now permanent in the suite (30 specs). PR closed
     with evidence comment. The hub Deck-flow e2e lane is closed."
+  closure_verification:
+    - "2026-10-05 (Session 200, operator trace 1a107e7de35f3a71): the
+      DONE flip executed with first-hand re-verification on hub main
+      93226a4 (post-T-C78 #30 + T-C79 #34): hub-ci run 37203559765
+      e2e SUCCESS — 30 passed / 0 failed (51.3s), incl. BOTH formerly-
+      red pinned tests passing: deck-flow.spec.ts:125 'the Flashcards
+      due section shows the deck, its due count, and deep-links to it'
+      (3.0s) and deck-flow.spec.ts:153 'rated-but-nothing-due shows the
+      honest empty state, never a fabricated queue' (1.6s); build
+      SUCCESS on the same run. main e2e has been SUCCESS on all 15
+      main-branch runs since run 107 (dcbceb4, 2026-10-02T14:57Z) —
+      i.e. continuously since the PR #8 merge (2026-10-02T09:06Z).
+      Reconciliation recorded honestly: the T-COORD-3 R-C renewal note
+      (2026-10-04, trace 4acec4babbc5db5c842fa4bce379e604) described
+      the lane as 'still live (2 of 29 tests red on main)' — that red
+      was STALE WHEN WRITTEN (the cited red state is the pre-fix
+      fca83c8 evidence; main had been green for two days); the renewal
+      extended a lease whose own merge-condition had already fired.
+      The lease is released with this discrepancy named, not silently."
