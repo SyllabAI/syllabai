@@ -18,6 +18,14 @@ locks.yaml (active leases):
   L4  lease task references an existing .syllabai/tasks/<task>.yaml
   L5  no duplicate active lease on a serialized resource
 
+locks.yaml (structured fulfilled-lease history, T-COORD-2 P2):
+  H1  required history row fields present (resource, task, outcome,
+      released_at, receipt)
+  H2  outcome within the legal vocabulary
+  H3  history task references an existing task packet (warn)
+  H4  released_at parses (warn)
+  H5  no duplicate (resource, task) history rows (warn)
+
 agent-registry.yaml:
   R1  agents' requires_coordination_for entries reference known shared
       resources
@@ -49,6 +57,8 @@ import yaml
 LEGAL_STATUSES = {"READY", "EXECUTING", "BLOCKED", "VERIFYING", "DONE"}
 LEGAL_CLAIM_LABELS = {"VERIFIED", "INFERRED", "REPORTED", "UNVERIFIED"}
 KNOWN_POLICIES = {"serialized", "coordinated", "operator-gated"}
+LEGAL_HISTORY_OUTCOMES = {"fulfilled_released", "expired_reclaimed", "superseded"}
+HISTORY_REQUIRED = ["resource", "task", "outcome", "released_at", "receipt"]
 
 
 class Report:
@@ -120,7 +130,12 @@ def load_yaml(path: Path, report: Report, subject: str):
 
 
 def parse_ts(value) -> dt.datetime | None:
-    """Parse an ISO-ish timestamp; tolerate 'Z' and missing seconds."""
+    """Parse an ISO-ish timestamp; tolerate 'Z', missing seconds and the
+    datetime.date/datetime objects YAML produces for bare ISO dates."""
+    if isinstance(value, dt.datetime):
+        return value if value.tzinfo else value.replace(tzinfo=dt.timezone.utc)
+    if isinstance(value, dt.date):
+        return dt.datetime.combine(value, dt.time.min, tzinfo=dt.timezone.utc)
     if not isinstance(value, str) or not value.strip():
         return None
     raw = value.strip().replace("Z", "+00:00")
@@ -209,6 +224,45 @@ def check_registry(registry: dict, report: Report, known_resources: set[str],
                         f"agent-registry says '{policy}' but locks.yaml resource_classes says '{lock_policies[name]}'")
 
 
+def check_history(locks_doc: dict, report: Report, task_ids: set[str]):
+    """Structured fulfilled-lease history (T-COORD-2 P2). Append-only block;
+    prose release annotations remain legal legacy records."""
+    history = locks_doc.get("history")
+    if history is None:
+        return  # legacy file without the block — nothing to check
+    if not isinstance(history, list):
+        report.error("H-FORMAT", ".syllabai/locks.yaml history", "history is not a list")
+        return
+    seen_pairs = {}
+    for i, row in enumerate(history):
+        subject = f".syllabai/locks.yaml history[{i}]"
+        if not isinstance(row, dict):
+            report.error("H-FORMAT", subject, "history row is not a mapping")
+            continue
+        missing = [k for k in HISTORY_REQUIRED if not row.get(k)]
+        if missing:
+            report.error("H1-SCHEMA", subject, f"missing required fields: {', '.join(missing)}")
+        outcome = str(row.get("outcome", ""))
+        if outcome and outcome not in LEGAL_HISTORY_OUTCOMES:
+            report.warn("H2-OUTCOME", subject,
+                        f"outcome '{outcome}' outside the vocabulary: "
+                        f"{', '.join(sorted(LEGAL_HISTORY_OUTCOMES))}")
+        task = str(row.get("task", ""))
+        if task and task not in task_ids:
+            report.warn("H3-TASKREF", subject,
+                        f"task '{task}' has no packet in .syllabai/tasks/")
+        if row.get("released_at") and parse_ts(row.get("released_at")) is None:
+            report.warn("H4-DATE", subject,
+                        f"released_at '{row.get('released_at')}' unparsable")
+        pair = (str(row.get("resource", "")), task)
+        if pair[0] and pair[1]:
+            if pair in seen_pairs:
+                report.warn("H5-DUP", subject,
+                            f"duplicate (resource, task) history pair with row {seen_pairs[pair]}")
+            else:
+                seen_pairs[pair] = f"history[{i}]"
+
+
 def check_tasks(tasks_dir: Path, report: Report) -> set[str]:
     task_ids: set[str] = set()
     if not tasks_dir.is_dir():
@@ -292,6 +346,7 @@ def main() -> int:
     # Tasks first so lease task-references can resolve.
     task_ids = check_tasks(syllabai / "tasks", report)
     check_locks(locks, report, known_resources, serialized, task_ids)
+    check_history(locks, report, task_ids)
     check_registry(registry, report, known_resources, lock_policies)
 
     print(report.render())
