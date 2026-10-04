@@ -3,7 +3,7 @@ task:
   id: T-COORD-3
   title: "Coordination tooling wave 3 — packaging the critical re-audit's R-A..R-F (branch protection, warning-baseline retirement, structured lease adoption, safe-merge ports, canonical-state refresh, P4 quickstart + P6 heartbeat)"
   owner: "superz (main agent, zai session — discord DM, operator trace 4acec4babbc5db5c842fa4bce379e604 'Package all of them')"
-  status: VERIFYING # PR #21 open, guard + advisory green on 8ceaf36; DONE on merge + close-out
+  status: DONE # merged 2026-10-04 as main 8ee7f892b4 (merge of PR #21; CI guard + advisory both SUCCESS on final head 2e8c92a)
   priority: P1
   base:
     repo: SyllabAI/syllabai (master governance)
@@ -47,11 +47,11 @@ task:
     - "core-web-contract: none taken by this packet (governance-only changes; the T-C79 row recorded under R-C pre-exists this packet's window)"
   acceptance:
     - "DONE — validator baseline 38 warnings -> 0 findings (verified locally pre-push); strict-flip clock unblocked, starts at merge"
-    - "PLANNED — PR #21 open with coordination guard + safe-merge advisory both reporting on it; guard green"
-    - "PLANNED — branch protection active on syllabai main with the audit config (receipt: API response captured in close-out)"
-    - "PLANNED — safe-merge verifier ported to core + hub as open PRs in those repos (copy-only, repo-agnostic)"
-    - "PLANNED — ADR-036 drafted PROPOSED with the verification gate; operator ACCEPT rides the PR #62 merge word"
-    - "PLANNED — worklog session records the wave; gen_views census regenerated"
+    - "DONE — PR #21 merged as main 8ee7f892b4 on the operator word 'review + merge' (trace 9aa1e8964a0df541a918c7dca12285f2); coordination guard + safe-merge advisory both SUCCESS on final head 2e8c92a (review-cycle fix: TODO-CURRENT regenerated after the VERIFYING flip — self-caught pre-merge)"
+    - "DONE — branch protection re-verified LIVE on syllabai main post-merge via API: required check 'guard', enforce_admins=false, allow_force_pushes=false, allow_deletions=false"
+    - "DONE — safe-merge verifier merged into core + hub: core#80 as da877abd1b, hub#32 as 319e94996d (copy-only held: +269/-0, 2 files each; each PR's own CI green; advisory verifier live on both repos)"
+    - "DONE (draft) — ADR-036 PROPOSED with the verification gate; the ACCEPT flip awaits the PR #62 merge word (kept open in next_safe_actions)"
+    - "DONE — worklog session records the wave (Task 9); gen_views census regenerated at close-out (9 open / 51 closed)"
   tests:
     - "python3 .syllabai/tools/validate_coordination.py --repo-root . --mode warn (expect: 0 findings)"
     - "python3 .syllabai/tools/validate_coordination.py --repo-root . --mode strict (expect exit 0 while clean)"
@@ -72,14 +72,18 @@ task:
       - "all 26 ops-*.yml workflows are workflow_dispatch-only (verified by trigger scan) — safe to archive under .github/workflows/archive/, which Actions does not index"
       - "the T-C55 legacy flag initially landed on T-C55-hub-deckflow.yaml (both files share task id T-C55; glob order picked the sub-task file) — caught by the validator's own 1-warning report and relocated to T-C55.yaml"
       - "no full-length PAT exists in the work tree or the last 200 commits (audit F-scan); this packet introduces none"
+      - "PR #21 merged as main 8ee7f892b4 on the operator's explicit word 'review + merge' (trace 9aa1e8964a0df541a918c7dca12285f2, 2026-10-04); coordination guard + safe-merge advisory both SUCCESS on final head 2e8c92a"
+      - "branch protection re-verified LIVE on syllabai main post-merge via API: required check 'guard', enforce_admins=false, allow_force_pushes=false, allow_deletions=false (R-A receipt)"
+      - "R-D ports merged: syllabai-core#80 as da877abd1b, syllabai-hub#32 as 319e94996d — copy-only held (+269/-0, 2 files each), each PR's own CI green, advisory verifier live on both repos"
+      - "close-out self-check: validator --mode strict 0 findings; gen_views IN SYNC; census 9 open / 51 closed"
     INFERRED:
       - "the strict-flip clock (2 clean weeks) can now actually be satisfied because the baseline is 0 rather than a frozen 38 — the flip decision itself remains the operator's"
     REPORTED: []
     UNVERIFIED:
-      - "branch protection behavior with enforce_admins=false against the non-admin collaborator's direct-push habits — enabled at close-out; rollback is one API call if a lane reports a block"
+      - "branch protection behavior with enforce_admins=false against the non-admin collaborator's direct-push habits — LIVE since 8ee7f89; rollback is one API call if a lane reports a block"
       - "whether the operator ratifies ADR-036 with the PR #62 merge word (the draft's verification gate)"
   next_safe_actions:
-    - "operator word to review + merge PR #21 (close-out commit flips T-COORD-3 DONE, regenerates TODO-CURRENT, records receipts)"
+    - "DONE 2026-10-04: PR #21 merged as main 8ee7f892b4; packet closed with receipts. R-D ports merged: core#80 da877abd1b, hub#32 319e94996d."
     - "operator: revoke the stale PAT (ghp_1KJHf2… prefix, referenced redacted in bench hygiene notes) AND the current session PAT after this wave — both shared/known outside the sandbox"
     - "operator: ADR-036 ACCEPT + PR #62 merge word (one session, per the verification gate)"
     - "after 2 clean scheduled guard weeks on main: operator decision on the strict-mode flip (coordination.yml comment documents the criteria)"
