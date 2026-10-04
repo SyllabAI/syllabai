@@ -11,12 +11,10 @@ _Packet census: 10 open / 50 closed / 60 total._
 
 ## Open packets
 
-### EXECUTING
-
-- **T-COORD-3** (`T-COORD-3.yaml`) — owner: superz (main agent, zai session — discord DM, operator trace 4acec4babbc5db5c842fa4bce379e604 'Package all of them') — Coordination tooling wave 3 — packaging the critical re-audit's R-A..R-F (branch protection, warning-baseline retirement, structured lease adoption, safe-merge …
 ### VERIFYING
 
 - **T-C70** (`T-C70.yaml`) — owner: superz (main agent, zai session — discord DM trace 1a0fdd7bf6392825) — Past Paper Run P0 — ONE curated 4CH1 paper end-to-end (Track A): PaperInteractivityManifest v2 (curated, integrity=practice) + ExamRunner shell (timer/palette/f…
+- **T-COORD-3** (`T-COORD-3.yaml`) — owner: superz (main agent, zai session — discord DM, operator trace 4acec4babbc5db5c842fa4bce379e604 'Package all of them') — Coordination tooling wave 3 — packaging the critical re-audit's R-A..R-F (branch protection, warning-baseline retirement, structured lease adoption, safe-merge …
 ### CLAIMED
 
 - **T-C79** (`T-C79.yaml`) — owner: Super Z — Exam-series calendar (curriculum-imported) + learner-declared target series — the ADR-035 D1 foundation for the exam-aware study planner
