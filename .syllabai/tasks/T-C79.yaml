@@ -69,7 +69,24 @@ task:
       - "T-C78 correction merged and first-hand re-verified 2026-10-04 post-reset: hub PR #30 merged 5f138a0 (SetWorkCard in src/app/dashboard/), web PR #15 merged cae30ea (revert restored the frozen console: 4 files, 188 deletions, zero /learners/me/agenda consumers on web main)"
       - "T-C79 is the next free task id (registry ends at T-C78 + T-KG-B on master 983430d)"
     UNVERIFIED:
-      - "Pearson key-dates citations for 2026-2028 series windows — operator-held; no seed rows until cited (the calendar ships schema + honest empty state if not)"
+      - "Pearson key-dates citations for 2026-2028 series windows — DISCHARGED 2026-10-04 by the operator's own directive (trace 1a10626076367841): official Pearson final timetables + Key Dates Table International 2026-2027 parsed first-hand; V63 carries the five published rows (not-yet-published series honestly absent)"
+      - "the adf1e19 CI run on PR #81 (in flight at Session 194 record time)"
+      - "V62/V63 production apply (Render deploy channel) + hub Vercel dashboard check"
+  continuation_log:
+    - date: 2026-10-04 (Session 194)
+      event: >-
+        Lane continued under the active lease after the originating
+        implementation session went silent (branches 44ac0d7 core / 45e1103
+        hub pushed 09:39/09:51Z; no session record, no PR comments, 2h+
+        silence at takeover 12:04Z — INFERRED session end). Core PR #81 head
+        build FAILURE root-caused first-hand from run 37192908646's log:
+        missing java.util.UUID imports (CourseExamTargetView.java:21,
+        ExamSeriesView.java:12; verify job already green). Repair pushed to
+        the same branch as adf1e19 (2 files, +2, compile-only). V63's five
+        Pearson seed rows re-verified date-for-date against the first-hand
+        retrieval record (5/5 exact). Hub PR #34 green (build+e2e+verify+
+        Vercel). Merge words stay operator-gated per the safe-merge advisory.
+        (operator trace 1a106c1dccbb5aa5)
   next_safe_actions:
-    - "operator word to start implementation (core lane first: flyway-version lease -> branch off core main -> migration + import + ITs -> PR)"
-    - "operator provides Pearson key-dates citations for the seed calendar (or the lane ships the schema + honest empty states and seeds later)"
+    - "operator merge word on core PR #81 once CI is green on adf1e19 (core-first order — hub PR #34's read exposure consumes it), then hub PR #34"
+    - "seed-extension follow-on when Pearson announces the not-yet-published series (2027-11 / 2028 placeholders documented in the rebuilt citation record)"
