@@ -1,0 +1,92 @@
+{
+  "postverify_utc": "2026-10-04T12:26:41.935117+00:00",
+  "mode": "READ_ONLY_INDEPENDENT",
+  "batch": "tc75-doc-validation-20261004",
+  "batch_report": "tc75_doc_validate_report.json",
+  "results": [
+    {
+      "check": "docs_total == 1023",
+      "pass": true,
+      "detail": "1023"
+    },
+    {
+      "check": "documents census == W2 poststate shifted by the 6 flips (0 SUGGESTED, QP 112V/79R, MS 112V/67R)",
+      "pass": true,
+      "detail": "{'REJECTED|MARK_SCHEME': 67, 'VALIDATED|QUESTION_PAPER': 112, 'VALIDATED|EXTERNAL_QUESTIONS': 379, 'VALIDATED|MARK_SCHEME': 112, 'VALIDATED|EXTERNAL_NOTES': 112, 'REJECTED|QUESTION_PAPER': 79, 'VALIDATED|SYLLABUS': 162}"
+    },
+    {
+      "check": "6/6 wave docs VALIDATED (doc_version 1, kind + chunk pins match the staged inventory)",
+      "pass": true,
+      "detail": "[('a03447d8-7c1b', 'VALIDATED', 1), ('b5742cb1-c413', 'VALIDATED', 1), ('e3252e22-9c18', 'VALIDATED', 1), ('b0660052-3ecc', 'VALIDATED', 1), ('c6fbb3ac-4056', 'VALIDATED', 1), ('ea685722-b453', 'VALIDATED', 1)]"
+    },
+    {
+      "check": "checksums == staging-inventory pins (6/6)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exactly 6 VALIDATE/document rows carry this batch id",
+      "pass": true,
+      "detail": "6"
+    },
+    {
+      "check": "audit rows re-derive: SUGGESTED->VALIDATED x6, one per wave doc, decision_text + operator trace verbatim, operator named as deciding actor",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "audit total 2829 -> 2835 (+6 exactly)",
+      "pass": true,
+      "detail": "2835"
+    },
+    {
+      "check": "exam_papers untouched: 108 = 95V/13R",
+      "pass": true,
+      "detail": "108 {'REJECTED': 13, 'VALIDATED': 95}"
+    },
+    {
+      "check": "paper-branch links intact: all 6 wave docs still linked from ep rows (4 wave rows: the 1C-2025 links pre-existing docs)",
+      "pass": true,
+      "detail": "6/6 linked"
+    },
+    {
+      "check": "document_chunks untouched: rev2 4740/4740 embedded",
+      "pass": true,
+      "detail": "{'2': (4740, 4740)}"
+    },
+    {
+      "check": "teacher_validation_events delta 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "check": "serving gate == 4,661 (delta 0 exactly as predicted \u2014 paper branch already covered the 68)",
+      "pass": true,
+      "detail": "4661"
+    },
+    {
+      "check": "subject-branch unlock re-derived live: 68/68 wave chunks serve subject-side (per-doc 11/18/9/10/9/11)",
+      "pass": true,
+      "detail": "{'a03447d8-7c1b-5fac-92e7-c2e91ca8db3d': 18, 'b0660052-3ecc-598f-b1c1-7e970eba8efb': 9, 'b5742cb1-c413-5a66-a782-24f90facda89': 10, 'c6fbb3ac-4056-5838-8732-b71993d7fe61': 11, 'e3252e22-9c18-5af2-890d-32275430eecd': 11, 'ea685722-b453-5c5f-8e19-1f4b868bc0b1': 9}"
+    },
+    {
+      "check": "app-side list GET: 6/6 wave docs present on the serving surface (checksum + chunkCount == pins; state itself not exposed by the DTO \u2014 DB live-read + subject-branch are the state proof)",
+      "pass": true,
+      "detail": "{'b0660052-3ecc': ('5ee0d5b49eac889dbc2dc3f7894a4dc3eff8c0808e3ee94f9425e27c0169f980', 9), 'ea685722-b453': ('713f1fccc169d6b716b0a2713bc07bbf1aa94a34a25e298fd2e6c3b449dcc9a3', 9), 'c6fbb3ac-4056': ('231c05743b0853aa408ae22103faf2645baca81e44fbc839972adc493abbede3', 11), 'e3252e22-9c18': ('a005acd5e9b80355d7b11492adb598083664f10e076ce557002b2d1911c52b05', 11), 'b5742cb1-c413': ('a42a22c48529469054"
+    },
+    {
+      "check": "search surface regression probe: 'ammonium carbonate' QP still returns the new 1C-2026 QP",
+      "pass": true,
+      "detail": "['a2015ed4-d604-5a45-8f8d-ba23166bd74a', '9b51cf89-ff6d-5c0c-81b3-7c3604925cee', '476c5950-3c89-53c7-8233-89f7349a226e', 'c6fbb3ac-4056-5838-8732-b71993d7fe61', '5f34eae2-bd3c-5e12-b95e-08b3b7f37d43', '40d34459-e45c-595d-a645-e8f722bcabeb', '4e469ae8-dd34-51f9-ba98-8ad1ea9c6696', '55445f5f-bb7f-5d74-929e-f56b830e4990', '1e6a27f5-5c2f-502f-b36f-d03e3a6414ce', '4b865d6f-f4eb-55c2-bd08-7ec828ed5ed6']"
+    }
+  ],
+  "gate": 4661,
+  "subject_branch": {
+    "a03447d8-7c1b-5fac-92e7-c2e91ca8db3d": 18,
+    "b0660052-3ecc-598f-b1c1-7e970eba8efb": 9,
+    "b5742cb1-c413-5a66-a782-24f90facda89": 10,
+    "c6fbb3ac-4056-5838-8732-b71993d7fe61": 11,
+    "e3252e22-9c18-5af2-890d-32275430eecd": 11,
+    "ea685722-b453-5c5f-8e19-1f4b868bc0b1": 9
+  }
+}

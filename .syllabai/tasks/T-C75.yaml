@@ -190,3 +190,33 @@ task:
     - "serving/new-surface verification (optional): teacher + learner spot-checks
        of the 2026-06 papers via the search surface (W5 probes already PASS
        server-side)"
+  follow_on_act_a:
+    status: EXECUTED
+    executed_at: "2026-10-04"
+    operator_word: "(a) doc-side VALIDATION (IM trace 1a106d1f681a80ad, 2026-10-04)"
+    batch: "tc75-doc-validation-20261004 (run db46ba93-d0bb-4c5a-a4c3-eeb072c5a308,
+      APPLIED 12:21:31Z)"
+    instrument: "T-C54 wave-2 governed doc-validation batch shape narrowed to the
+      6 wave docs (identity gate, idempotence, ACTIVE-cv scope guard, live drift
+      rule, per-doc fidelity 6/6, census shift check, chunks/tve/ep immutability,
+      exact searchServingEligible replica, no DDL, single transaction)"
+    acts: "documents.validation_state SUGGESTED -> VALIDATED x6 (3 QP + 3 MS
+      2026-06, doc_version 1, checksums == staging pins) + 6 content_review_audit
+      VALIDATE/document rows naming the operator as deciding actor"
+    serving_semantics: "gate delta EXACTLY 0 (4,661 -> 4,661 — the 68 wave chunks
+      already served ep-side via the 4 VALIDATED ep rows); the flip adds the
+      SUBJECT branch: subject-branch count 0 -> 68 (per-doc 11/18/9/10/9/11) —
+      subject-side serving unlocked on top of ep-side serving"
+    verification: "DRY_RUN_OK (after one caught runner bug, zero production
+      effect) -> APPLIED -> ALREADY_APPLIED proven; independent read-only
+      post-verify 15/15 (docs 1023 with 0 SUGGESTED, audit 2829 -> 2835,
+      ep/tve/chunks untouched, gate 4,661, subject-branch 68/68, app-side list
+      + search probes PASS); honest disclosure: the teacher API exposes no
+      document-state read (per-id route 404, list DTO lacks validationState) —
+      state proof is the DB live-read + audit re-derivation + the deployed
+      serving predicate"
+    evidence: "syllabai-coordination bench/review/doc-validation-20261004/
+      (RUNBOOK + instrument + verifier + reports, SHA256SUMS 5/5)"
+    residual: "the 2 G1 FAIL parse-flag review lanes stay with the disclosed
+      review-flag ledger / the optional future S2 llm-structured card (next_safe
+      action (b)); nothing else open on this card"
