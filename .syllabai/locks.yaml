@@ -40,6 +40,21 @@ locks:
       2026-10-04. First lease recorded in the structured layer after
       T-COORD-2 (the prose annotation above predates this row and stays for
       provenance).
+  - resource: syllabai-pastpapers
+    owner: superz
+    task: T-C75
+    base_commit: b8d53f7
+    acquired_at: 2026-10-04
+    expires_at: '2026-10-06T00:00:00Z'
+    note: >-
+      W2 ingest-wave execution lease (operator word 'run W2', trace
+      1a106209161c8e75): canonical staging reconstructed after the sandbox
+      recycle and byte-verified 12/12 against the W2-PREP
+      SHA256SUMS-canonical-staging pins; evidence-pack push to
+      syllabai-pastpapers on base b8d53f7. The production-DB ep batch itself
+      is gated by this same operator word per the card protocol
+      (production-db = operator-gated per batch, T-C54/T-C60 precedents).
+      Released on wave closeout.
   - resource: hub-e2e
     owner: superz
     task: T-C55
