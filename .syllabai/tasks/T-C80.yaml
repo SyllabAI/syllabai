@@ -7,7 +7,7 @@ task:
     completion (q10-5273dfa3 scheme fill via the G3 round-2 recovery;
     q03-51fea326 first-hand classification and laneD-standard repair)"
   owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
-  status: READY
+  status: DONE
   priority: P1
   authority: "operator IM trace 1a10622b96c017d5 — names the Session 188
     Remaining list verbatim minus the standing operator item: 'the 3
@@ -63,5 +63,29 @@ task:
       writes; post-flight SELECT-only verification recorded"
     - "records: pack + WORKLOG + TODO + this card; worksheet v3 stays
       byte-frozen (closure receipts live in the packs)"
-  evidence: []
-  merge_status: "pending"
+  evidence:
+    - "bench/review/fprod1-narrowed-closure-20261004/ (REPORT.md + 6 evidence
+      JSONs + 5 scripts + SHA256SUMS; credential-scanned clean)"
+    - "SyllabAI/syllabai-parser main 9c538ad (G4 grammar + 5 fixture tests;
+      pdflane suite 201 OK; 16-session regression single-diff)"
+  outcome:
+    - "Lane A: the 3 narrowed P2 rows CLOSED as ms-total-derived-agrees
+      (honest cell-derived tier) — 1C/1CR/2CR June 2016: 16/16, 12/12,
+      7/7 questions MS-derived == QP print; paper sums 120/120/60 == QP
+      printed; serving docs checksum == corpus prints; 35/35 banked rows
+      == QP prints; F-PROD-1 print debt 62/62 discharged"
+    - "Lane B1: T-C45's two residues FOUND ALREADY REPAIRED in production
+      by the unrecorded v4 writer (created 2026-10-02T08:13:23.372489Z,
+      method ms-print-gated-extraction-v4, source docs = serving
+      lineage) — verified first-hand (8/8 + 8/8 point-text containment
+      vs the G4 parse, sums == QP echo == qv.marks 8/15), never
+      re-executed; records completed; production census == post-V61
+      pins exactly (zero drift)"
+    - "Lane B2: parse_ms G4 round (colon-chain-tail guard G4.1 +
+      allow-alternative-method OR-route boundary G4.2) fixes 1CR-2016
+      Q7 13->12 (the print: f(i) single cell 3 for the main route);
+      5 verbatim-page fixtures; suite 201 OK; 16-session regression
+      single-diff; route-hint finding (2C 2017-06 Q5 19 vs QP 15)
+      recorded NOT fixed (needs the Total-row-conflict rule)"
+  merge_status: "parser direct-to-main 9c538ad (the parser-surface
+    convention); records pushed to main"
