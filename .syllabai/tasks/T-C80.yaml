@@ -1,0 +1,67 @@
+version: 1
+task:
+  id: T-C80
+  title: "F-PROD-1 narrowed-row closure — the 3 P2 June-2016 paper-total
+    rows (4CH0 1C/1CR/2CR June 2016, MS prints no totals) closed on
+    engine-derived print evidence + engine-grade grid-layout lane
+    completion (q10-5273dfa3 scheme fill via the G3 round-2 recovery;
+    q03-51fea326 first-hand classification and laneD-standard repair)"
+  owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
+  status: READY
+  priority: P1
+  authority: "operator IM trace 1a10622b96c017d5 — names the Session 188
+    Remaining list verbatim minus the standing operator item: 'the 3
+    narrowed 2016-family rows (MS prints no totals), the engine-grade
+    grid-layout lane'. Session 188 (fprod1-bank-repair-20261004) recorded
+    exactly: 'Remaining open: P2's 3 narrowed rows (2016-family MS prints
+    no totals), engine-grade grid-layout lane, secrets rotation (standing
+    operator item)'. For q03-51fea326 this word IS the mandate T-C45's
+    disposition required ('needs its own mandate'); classification is
+    re-derived first-hand BEFORE any write and the repair aborts
+    fail-closed if the recorded evidence does not reproduce."
+  base:
+    repo: syllabai
+    commit: ce43dbd
+  plan:
+    - "print substrate: syllabai-pastpapers chemistry @ 1f7e8355, manifest
+      sha256 pins verified for 2016-06 {1C,1CR,2CR} qp+ms + 2013-01 2C
+      qp+ms (G6 discipline); page-1 identity prints read on every paper"
+    - "production preflight: SELECT-ONLY probes via the M6-era Render-PAT
+      recipe (no Neon session key exists in this sandbox — the COW recipe
+      needs one; direct SELECT-only probes are the established read-only
+      alternative, zero writes outside Flyway): census pins post-V61, the
+      two grid-lane qv refs full state, the 4 papers' exam_paper rows +
+      serving doc ids + checksums, mark_schemes/mark_points schema"
+    - "engine: syllabai-parser main 0fc5c32 (G2 + G3 round 2) — parse_ms on
+      the three June-2016 MS prints + Jan 2013 2C MS; per-question derived
+      sums; QP echoes via pdftotext -layout; G3 fixture suite + 12-paper
+      regression spot checks re-run first-hand on the pinned corpus"
+    - "Lane A closure: the 3 narrowed rows close ONLY if the derived
+      per-question sums agree with the QP prints per-question AND the
+      paper totals derive to the QP printed 120/120/60; verdict tier named
+      honestly (ms totals cell-derived, block totals unprinted in this
+      format); any disagreement = fail-closed, new finding recorded, no
+      closure"
+    - "Lane B writes: core Flyway V62 (V60/V61 census-gated precedent) —
+      q10-5273dfa3 scheme+points INSERT (gates: derived sum == QP echo ==
+      qv.marks 15; source doc resolved by checksum join, not embedded id);
+      q03-51fea326 marks repair 1->8 + scheme fill IF the probe
+      reproduces bank 1 vs double-evidenced 8; campaign-identity no-op
+      gate, exact census pins, double-condition guards, after-image
+      asserts, RAISE = deploy abort"
+    - "Lane A records only (no production write expected — the papers serve
+      from the VALIDATED lineage); pack
+      bench/review/fprod1-narrowed-closure-20261004/"
+  acceptance:
+    - "the 3 narrowed rows closed with per-question print evidence any
+      human can re-verify in minutes, OR fail-closed with the
+      disagreement recorded"
+    - "grid-layout lane residue resolved: q10 filled or abort recorded;
+      q03 classified first-hand and repaired to the laneD standard or the
+      mismatch recorded — no silent outcomes"
+    - "all production writes via Flyway with census gates; zero direct
+      writes; post-flight SELECT-only verification recorded"
+    - "records: pack + WORKLOG + TODO + this card; worksheet v3 stays
+      byte-frozen (closure receipts live in the packs)"
+  evidence: []
+  merge_status: "pending"
