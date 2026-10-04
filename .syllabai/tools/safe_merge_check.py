@@ -194,7 +194,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY"),
                         help="owner/name (default: GITHUB_REPOSITORY)")
-    parser.add_argument("--pr", type=int, default=None,
+    parser.add_argument("--pr", type=int, default=os.environ.get("PR_NUMBER"),
                         help="PR number (default: PR_NUMBER env)")
     parser.add_argument("--api", default="https://api.github.com")
     parser.add_argument("--post", action="store_true",
