@@ -1,0 +1,82 @@
+version: 1
+task:
+  id: T-C81
+  title: "DEEP-AUDIT-DOC recovery — the lost 2026-09-28 deep-audit findings document
+    RECONSTRUCTED from commit archaeology and committed (25 audit-citing
+    syllabai-core commits, 2026-09-27..10-02); the retroactive lane entry the
+    registry never had"
+  owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
+  status: DONE
+  priority: P2
+  authority: |
+    Operator word trace 1a1064399ca6e989 ("DEEP-AUDIT-DOC recovery") executing the
+    open coordination ask recorded in TODO.md (operator directive trace
+    1a0e6b95154d5cb5): commit the deep-audit findings document (durability, not
+    location, is the requirement; canonical root beside
+    TUTOR_CURRENT_STATE_AUDIT_2026-09-28.md is the precedent location), enumerate ALL
+    findings incl. any not yet fixed, state per finding what remains open after the
+    landed fixes (for H2: claim-evidence entailment is explicitly out of the commit's
+    scope and must not read as closed), and register a task entry per the .syllabai
+    DAG convention.
+  base:
+    repo: SyllabAI/syllabai (records main)
+    commit: 75cbf98bf (Session 190 head at claim time)
+  background: |
+    The deep-audit 09-28 lane's fixes are landed and CI-green on core main (H1/H2/M1+
+    per the ask), but the audit document those commits cite was committed nowhere and
+    the lane has no registry entry. This recovery performed the archaeology first-hand:
+    full commit-message + file inventory of every core commit in the window whose
+    message cites the audit, tails extracted verbatim, cross-checked against the
+    anchor-sweep monitors and the registry. Deliverable: DEEP_AUDIT_2026-09-28.md
+    (repo root), honestly bannered as a RECONSTRUCTION (the commits remain the
+    authoritative record; the file makes the taxonomy discoverable).
+  scope:
+    allowed:
+      - "this document: DEEP_AUDIT_2026-09-28.md (records repo root, beside the
+        TUTOR_CURRENT_STATE_AUDIT_2026-09-28.md precedent)"
+      - "this task card + TODO.md resolution addendum + WORKLOG Session entry"
+    forbidden:
+      - "no code, DB, corpus, or serving change of any kind; r6 untouched
+        (WAITING_FOR_GENUINE_TEACHER_VALIDATION, trace 1a0e6753792f76fd)"
+      - "no re-judgment of any landed fix, no re-numbering imposed on the lane's
+        findings (the M1-M3 label collision between the two sweeps is presented as
+        observed, not resolved)"
+      - "no paraphrase of commit messages beyond structural editing; every finding's
+        semantics quoted or tightly paraphrased from the cited commits"
+  claims:
+    VERIFIED:
+      - "the finding set is COMPLETE within the searched corpus: every syllabai-core
+        commit 2026-09-27T12:00Z..2026-10-02T17:00Z (168 fetched) whose message cites
+        the audit was inventoried; NO H3+/M8+/L4+ finding code occurs in any lane
+        commit message (the '(L5)' strings in the 10-02 window are the
+        citation-surface lane's independent layer labels, not audit findings)"
+      - "the taxonomy: HIGH H1 (paraphrased paper-identity guard bypass; fixes
+        63df406 + ae15cf4 + anchors A4/A5 fc07389, matrix 9->11) and H2 (unfenced
+        untrusted input + blind citation-marker trust; fix e5cc266, prompt v6);
+        MEDIUM identity/boundary sweep M1-M7 (2f11707 + 84991b9; 1551c1a + df6ef7e;
+        795a7ac + 05f2621); MEDIUM serving sweep M1'-M3' (67709057/PR46; 7e29755a/PR45;
+        2b1b2e4f/PR48 + babf7fb8/PR50); LOW L1-L3 (d06dfeea/PR47; 396a7f56/PR49);
+        re-derivation R1-R19 (d77a0610, c37582df, 8292caa0, 5e4d155f) + residuals
+        (d9cb3ddc, operator trace 1a0e7c351ae6c9e5)"
+      - "the open residue is recorded verbatim-faithful: H2 claim-evidence entailment
+        explicitly NOT closed; M1 scale-out shared store out of scope single-instance;
+        R5 victim-exhaustion documented OWASP trade; anchor BY-DESIGN string-bounded
+        proofs (T-C39 ledger); H1 grammar-bounded closure"
+      - "M6 prod pre-flight was read-only with 0 orphans across all eight tables at
+        its execution time (2026-09-28, per the commit message); this recovery made
+        no DB connection at all"
+    INFERRED:
+      - "the per-section numbering reading of the M1-M3 collision (identity/boundary
+        section vs serving-path section) — the lost document's actual section
+        structure is unrecoverable; the collision is presented as observed"
+      - "fc07389's message cites the H1 fix as d133e41 — read as the same change's
+        pre-rebase SHA on the lane branch (main carries it as 63df406)"
+    REPORTED: []
+    UNVERIFIED: []
+  next_safe_actions:
+    - "DONE 2026-10-04 (trace 1a1064399ca6e989): DEEP_AUDIT_2026-09-28.md committed to
+      records main beside the precedent audit doc; TODO DEEP-AUDIT-DOC item resolved
+      with addendum; WORKLOG Session 191. No follow-up owed by this lane."
+    - "if the original document ever surfaces (lane session logs, operator archives),
+      it supersedes this reconstruction — diff against the cited commits and keep the
+      richer record; do not delete this file without a supersedence note."
