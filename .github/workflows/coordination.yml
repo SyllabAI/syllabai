@@ -1,0 +1,52 @@
+name: Coordination guard
+
+# Phase 1 = WARN-ONLY. Both tools exit 0 regardless of findings;
+# results land in the job summary for operator review.
+# Flip to --mode strict (validator) / --strict (gen_views) only after
+# two clean scheduled weeks, per the operator's explicit decision.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.syllabai/**'
+      - 'TODO.md'
+      - 'TODO-CURRENT.md'
+      - '.github/workflows/coordination.yml'
+  pull_request:
+    paths:
+      - '.syllabai/**'
+      - 'TODO.md'
+      - 'TODO-CURRENT.md'
+      - '.github/workflows/coordination.yml'
+  schedule:
+    - cron: '0 3 * * 1' # weekly Monday 03:00 UTC watch
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Validate coordination state (WARN-ONLY)
+        run: >
+          python3 .syllabai/tools/validate_coordination.py
+          --repo-root . --mode warn --summary "$GITHUB_STEP_SUMMARY"
+
+      - name: Generated views + parity report (check mode)
+        run: >
+          python3 .syllabai/tools/gen_views.py
+          --repo-root . --mode check --summary "$GITHUB_STEP_SUMMARY"
