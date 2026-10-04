@@ -1,0 +1,86 @@
+version: 1
+task:
+  id: T-COORD-3
+  title: "Coordination tooling wave 3 — packaging the critical re-audit's R-A..R-F (branch protection, warning-baseline retirement, structured lease adoption, safe-merge ports, canonical-state refresh, P4 quickstart + P6 heartbeat)"
+  owner: "superz (main agent, zai session — discord DM, operator trace 4acec4babbc5db5c842fa4bce379e604 'Package all of them')"
+  status: EXECUTING # opens EXECUTING; flips VERIFYING on PR CI-green, DONE on merge + close-out
+  priority: P1
+  base:
+    repo: SyllabAI/syllabai (master governance)
+    commit: 87f522ecd698b525781515f9b33b8deba6eb6c5a
+  authority: |
+    Critical re-audit delivered 2026-10-04 (scored 7.5/10, 8 findings) ended with
+    the offer "package R-A + R-B + R-C as the next task packet (T-COORD-3)"; the
+    operator replied "Package all of them" (discord DM, trace
+    4acec4babbc5db5c842fa4bce379e604) — read as ALL recommendations R-A..R-F in
+    one packet, consistent with the T-COORD-1 (P1+P3) / T-COORD-2 (P2+P5)
+    wave pattern. Branch protection (R-A) is a repo-settings change, authorized
+    here with the audit's stated config: required check 'guard' + enforce_admins
+    false (admin bypass during transition) — rollback is one API call if it
+    disrupts any lane.
+  background: |
+    The re-audit's headline: the tooling wave shipped and self-tested, but three
+    of the system's own rules were broken within hours of the tooling that checks
+    them — the structured lease layer was bypassed on its first use (T-C79),
+    three prose leases expired unreconciled (T-C44/T-C53/T-C55), and the
+    38-warning baseline made the strict-flip criterion unsatisfiable. This
+    packet retires the baseline, re-adopts the structured layer, ports the
+    verifier to where PRs actually live, refreshes the stale canonical ledger,
+    and lands the two deferred builds (P4 lean short-form, P6 heartbeat).
+  scope:
+    allowed:
+      - "master: validator enum extension + T4 grandfather rule + HB1/HB2 heartbeat checks; task-template enum; agent-registry canonicalization + hub agent entry + hub-e2e resource; locks.yaml structured active rows (T-C79, T-C55 renewal) + history rows (T-C44 fulfilled, T-C53 superseded) + hub-e2e resource_class; project-state.yaml refresh (R-E); coordination.yml pull_request trigger paths removal; .syllabai/QUICKSTART.md (P4); .syllabai/heartbeat.yaml seed (P6); ADR-036 draft (PROPOSED, R-D); legacy acceptance flags on 22 pre-template packets + acceptance fill on T-C70; claim-label remaps T-C72/T-C76/T-C77 (verbatim item moves, keys only); T-C77 status RUN-RECORDED -> DONE (run recorded, acceptance non-empty); ops-*.yml one-shot workflows -> .github/workflows/archive/ (all workflow_dispatch-only, verified); TODO-CURRENT regeneration"
+      - "GitHub settings (API, R-A): branch protection on syllabai main — required_status_checks ['guard'] (strict=false), enforce_admins=false, required_approving_review_count=0, no force-push/deletion"
+      - "syllabai-core + syllabai-hub (R-D, copy-only): .syllabai/tools/safe_merge_check.py + .github/workflows/safe-merge.yml as PRs in those repos"
+    forbidden:
+      - "flipping the validator to strict mode (2 clean weeks start at this packet's merge; the flip is a separate operator decision)"
+      - "editing another lane's packet content beyond: legacy flags, T-C70 acceptance (restated from its own exit_evidence), T-C72/76/77 claim-key renames (items verbatim), T-C77 status token"
+      - "accepting ADR-036 on the operator's behalf (drafts PROPOSED; the ACCEPT flip accompanies the PR #62 merge word)"
+      - "retro-transcribing pre-protocol lease releases or backfilling acceptance for legacy packets (transcription risk > value — the P2 principle)"
+      - "editing locks.yaml prose annotations (append-only history preserved)"
+      - "PAT rotation (operator-held; standing reminder in close-out)"
+  dependencies:
+    - "T-COORD-1 + T-COORD-2 DONE (validator, gen_views, history block, safe-merge verifier live)"
+    - "critical re-audit 2026-10-04 (findings F1-F8, recommendations R-A..R-F)"
+    - "ADR-029 (hub promotion — the registry gap this packet repairs), ADR-033 (the open follow-up ADR-036 drafts), ADR-035 (T-C79's lease authority)"
+  shared_resources:
+    - "core-web-contract: none taken by this packet (governance-only changes; the T-C79 row recorded under R-C pre-exists this packet's window)"
+  acceptance:
+    - "DONE — validator baseline 38 warnings -> 0 findings (verified locally pre-push); strict-flip clock unblocked, starts at merge"
+    - "PLANNED — PR #21 open with coordination guard + safe-merge advisory both reporting on it; guard green"
+    - "PLANNED — branch protection active on syllabai main with the audit config (receipt: API response captured in close-out)"
+    - "PLANNED — safe-merge verifier ported to core + hub as open PRs in those repos (copy-only, repo-agnostic)"
+    - "PLANNED — ADR-036 drafted PROPOSED with the verification gate; operator ACCEPT rides the PR #62 merge word"
+    - "PLANNED — worklog session records the wave; gen_views census regenerated"
+  tests:
+    - "python3 .syllabai/tools/validate_coordination.py --repo-root . --mode warn (expect: 0 findings)"
+    - "python3 .syllabai/tools/validate_coordination.py --repo-root . --mode strict (expect exit 0 while clean)"
+    - "python3 .syllabai/tools/gen_views.py --repo-root . --mode check (expect IN SYNC after regeneration)"
+    - "YAML parse of every touched packet (pyyaml safe_load — done during packaging)"
+  evidence_required:
+    - "validator before/after output (38 warnings -> 0 findings)"
+    - "git diff stat proving packets received only the scoped edits"
+    - "branch protection API receipt"
+    - "core/hub PR links for the safe-merge port"
+  claims:
+    VERIFIED:
+      - "validator baseline retired: 0 error(s), 0 warning(s) on the working tree after R-B (before: 0 errors / 38 warnings) — 9 T2-STATUS retired by the enum extension, 22 T4-ACCEPTANCE retired by acceptance_legacy flags (T-C70 got a real acceptance restated from its own exit_evidence instead), 3 T3-CLAIMS retired by verbatim item moves into VERIFIED (T-C72: 8 items; T-C76: 1; T-C77: 5), 3 R1-RESOURCE retired by canonicalization (shared-contracts -> core-web-contract + parser-core-contract; migrations -> flyway-version + database-schema; cross-repo-breaking-changes -> the stale-base registry rule)"
+      - "T-C77 status RUN-RECORDED -> DONE is honest: the packet's own acceptance is non-empty, its run phase executed on merged main with EXIT=0 and all pre-registered checks held, and its promotion question is already dispositioned by spec §10 Ruling 8"
+      - "structured lease layer re-adopted: locks.yaml now carries 2 active structured rows (T-C79 core-web-contract as recorded prose->row; T-C55 hub-e2e RENEWAL to 2026-10-08 replacing the expired prose window) + 2 new history rows (T-C44 fulfilled_released with hub PR #6 receipt — merged 2026-10-02 inside its window with the release never written; T-C53 superseded — the V59 pin expired with no migration under it, lane closed via core PR #58 ce0d7eb)"
+      - "agent-registry gained the missing hub agent (registry predated ADR-029) and the hub-e2e resource class, mirrored in locks.yaml resource_classes (R2-consistent)"
+      - "project-state.yaml refreshed: last_verified 2026-10-04 @ 87f522ecd698..., active_work mirrors the 9 open packets, resource_locks mirrors the 2 active leases"
+      - "all 26 ops-*.yml workflows are workflow_dispatch-only (verified by trigger scan) — safe to archive under .github/workflows/archive/, which Actions does not index"
+      - "the T-C55 legacy flag initially landed on T-C55-hub-deckflow.yaml (both files share task id T-C55; glob order picked the sub-task file) — caught by the validator's own 1-warning report and relocated to T-C55.yaml"
+      - "no full-length PAT exists in the work tree or the last 200 commits (audit F-scan); this packet introduces none"
+    INFERRED:
+      - "the strict-flip clock (2 clean weeks) can now actually be satisfied because the baseline is 0 rather than a frozen 38 — the flip decision itself remains the operator's"
+    REPORTED: []
+    UNVERIFIED:
+      - "branch protection behavior with enforce_admins=false against the non-admin collaborator's direct-push habits — enabled at close-out; rollback is one API call if a lane reports a block"
+      - "whether the operator ratifies ADR-036 with the PR #62 merge word (the draft's verification gate)"
+  next_safe_actions:
+    - "operator word to review + merge PR #21 (close-out commit flips T-COORD-3 DONE, regenerates TODO-CURRENT, records receipts)"
+    - "operator: revoke the stale PAT (ghp_1KJHf2… prefix, referenced redacted in bench hygiene notes) AND the current session PAT after this wave — both shared/known outside the sandbox"
+    - "operator: ADR-036 ACCEPT + PR #62 merge word (one session, per the verification gate)"
+    - "after 2 clean scheduled guard weeks on main: operator decision on the strict-mode flip (coordination.yml comment documents the criteria)"
+    - "consider porting branch protection to core/hub main (out of this packet's scope — the audit scoped R-A to the master repo)"

@@ -5,9 +5,15 @@ version: 1
 project:
   name: SyllabAI
   state: GREEN
-  state_basis: R3-4 canonical replay + retained evidence
-  last_verified_at: 2026-09-13
-  last_verified_main_commit: 760a3f908c99281e6be71b15b71c02bb8fc1bcb8
+  state_basis: >-
+    R3-4 canonical replay + retained evidence. Refreshed 2026-10-04 under
+    T-COORD-3 R-E (operator trace 4acec4babbc5db5c842fa4bce379e604): the
+    critical re-audit found this ledger 21 days stale (last_verified
+    2026-09-13 @ 760a3f9) with empty work/lock lists while 10 packets were
+    open — active_work/resource_locks below now mirror the packet registry
+    and locks.yaml; regenerate on close-out of any lane.
+  last_verified_at: 2026-10-04
+  last_verified_main_commit: 87f522ecd698b525781515f9b33b8deba6eb6c5a
   canonical_branch: main
   current_head_source: git-main
 
@@ -56,9 +62,20 @@ invariants:
   durable_milestone_evidence_required: true
   claims_must_be_labeled: true
 
-active_work: []
+active_work: # mirror of the open-packet frontier (T-COORD-3 R-E; authoritative source: .syllabai/tasks/*.yaml + TODO-CURRENT.md)
+  - T-C44
+  - T-C47
+  - T-C50
+  - T-C51
+  - T-C55
+  - T-C60
+  - T-C70
+  - T-C75
+  - T-C79
 blocked_work: []
-resource_locks: []
+resource_locks: # mirror of locks.yaml active leases (T-COORD-3 R-C)
+  - {resource: core-web-contract, task: T-C79, expires_at: '2026-10-06T00:00:00Z'}
+  - {resource: hub-e2e, task: T-C55, expires_at: '2026-10-08T00:00:00Z'}
 
 claim_status:
   VERIFIED: "Backed by reproducible checks and durable evidence."

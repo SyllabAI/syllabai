@@ -7,6 +7,7 @@ task:
     census re-pin"
   owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P1
   authority: "operator IM trace 1a0fc4b91fc4c965: '① F-A2 fix mandate
     (replace the 43 with official plain papers — needs the authenticated

@@ -59,6 +59,11 @@ task:
       - "no learner-model evidence re-weighting by mark provenance (N-5)"
       - "no archive-wide manifest generation or curation queue (P2 stays out)"
       - "no fillable-PDF generation (N-1/P3); no non-4CH1 wiring"
+  acceptance: # restated from this packet's own exit_evidence + scope (T-COORD-3 R-B)
+    - "a full Paper Run of one real 4CH1 paper on desktop + mobile viewport (timer, palette, capture, grading) without honesty regressions"
+    - "per-question marks land via core for verified joins; local SIMULATED surfaces otherwise; result v3 record carries how-marked counts, integrity, durationPolicy"
+    - "curated PaperInteractivityManifest v2 for exactly ONE pilot 4CH1 paper (provenance curatedBy: agent:T-C70; incremental probe first per design section 6)"
+    - "CI build + e2e green on the PR head (hub PR #26)"
   exit_evidence:
     - "a full Paper Run of one real 4CH1 paper on desktop + mobile viewport
       (timer, palette, capture, grading) without honesty regressions"

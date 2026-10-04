@@ -7,6 +7,7 @@ task:
     sync the wave-1 kit pack's poststate.sql"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P1
   authority: "operator IM trace 1a0fb6c3e4bb3d59 ('Proceed') executing the open
     item flagged in the T-C46 close-out: 'sole remaining wave-2 precondition is

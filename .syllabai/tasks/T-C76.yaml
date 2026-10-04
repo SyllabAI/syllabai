@@ -42,11 +42,10 @@ task:
       - "Role enum = LEARNER/TEACHER/ADMIN — no PARENT, no guardian/parent-child linkage anywhere"
       - "dashboard already surfaces due reviews (DashboardView 'Due reviews — the forgetting-decay schedule')"
       - "unit suite 1242 green offline on the branch (mvn test exit 0)"
+      - "CI run 37145594701 FAILED first (2 errors + 2 assertions) — three real facts caught: assignments.due_at NOT NULL (V49, 'undated' case impossible), fk_cmember_class (visibility test needs a REAL classes row), shared-container + V49 whole-cohort rows (global emptiness pins invalid — pinned on visibility correctness instead). Fixed e18085c; CI SUCCESS; merged ebc3f072. Web lint caught synchronous-setState-in-effect; fixed a454028; web-ci SUCCESS; merged 29f979c3."
     INFERRED:
       - "NBA actionsFor on a childless subject root returns empty actions rather than throwing (read of actionsFor assembly; AgendaFlowIT pins it in CI)"
     REPORTED: []
-    VERIFIED_ADDENDUM_2026_10_04:
-      - "CI run 37145594701 FAILED first (2 errors + 2 assertions) — three real facts caught: assignments.due_at NOT NULL (V49, 'undated' case impossible), fk_cmember_class (visibility test needs a REAL classes row), shared-container + V49 whole-cohort rows (global emptiness pins invalid — pinned on visibility correctness instead). Fixed e18085c; CI SUCCESS; merged ebc3f072. Web lint caught synchronous-setState-in-effect; fixed a454028; web-ci SUCCESS; merged 29f979c3."
   next_safe_actions:
     - "operator ruling D1 (ADR-035): who owns exam dates — teacher-per-class / curriculum-import / per-learner(rejected); D2: core vs hub surface"
     - "on D1 ruling: NBA v2.0 card (tier multiplier + assignments seam + reason-code family) under a fresh prereg per the anti-gaming rules"

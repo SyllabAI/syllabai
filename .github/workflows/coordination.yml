@@ -14,11 +14,9 @@ on:
       - 'TODO-CURRENT.md'
       - '.github/workflows/coordination.yml'
   pull_request:
-    paths:
-      - '.syllabai/**'
-      - 'TODO.md'
-      - 'TODO-CURRENT.md'
-      - '.github/workflows/coordination.yml'
+    # T-COORD-3 R-A: NO paths filter — the guard must report on EVERY PR so the
+    # required status check ('guard') never hangs as "Expected — Waiting" on a
+    # PR that touches no coordination paths.
   schedule:
     - cron: '0 3 * * 1' # weekly Monday 03:00 UTC watch
   workflow_dispatch:

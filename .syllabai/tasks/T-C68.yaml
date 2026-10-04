@@ -6,6 +6,7 @@ task:
     T-C62/F-A1 follow-up ruling #1), census re-pin"
   owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   id_note: "renumbered T-C66->T-C68 (first-pushed owns the ID, T-C49/T-C55/
     T-C59/T-C64/T-C65 protocol): T-C66 was claimed by the concurrent
     flashcard bridge-gate lane (trace 1a0fcf454aacec35) and T-C67 by the

@@ -6,7 +6,18 @@ agents:
   core:
     repo: syllabai-core
     owns: [backend, domain-modules, database-schema, flyway-migrations]
-    requires_coordination_for: [shared-contracts, migrations, cross-repo-breaking-changes]
+    # T-COORD-3 R-B: canonicalised to declared shared resources
+    # ('shared-contracts' -> core-web-contract + parser-core-contract;
+    #  'migrations' -> flyway-version + database-schema;
+    #  'cross-repo-breaking-changes' is governed by the stale-base rule below,
+    #  not a leaseable resource).
+    requires_coordination_for: [flyway-version, database-schema, core-web-contract, parser-core-contract]
+  hub:
+    repo: syllabai-hub
+    owns: [product-frontend, learner-surfaces, dashboard]
+    # T-COORD-3 R-B: registered per ADR-029 (hub = the product frontend since
+    # 2026-09-28); the registry predated the promotion and had no hub entry.
+    requires_coordination_for: [core-web-contract, hub-e2e]
   parser:
     repo: syllabai-parser
     owns: [offline-ingestion, extraction, parser-output-contracts]
@@ -38,6 +49,8 @@ shared_resources:
     allocation: coordinated
   core-web-contract:
     allocation: coordinated
+  hub-e2e:
+    allocation: coordinated # T-COORD-3 R-B/R-C: surface-level e2e red-fix lanes (declared alongside the T-C55 renewal)
   authoritative-kg-promotion:
     allocation: operator-gated
 

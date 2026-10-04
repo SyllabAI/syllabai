@@ -6,6 +6,7 @@ task:
     gate 2935->4608), closing F-PROD-3's actionable surface"
   owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P1
   authority: >
     Operator IM trace 1a0fb9dd09110041, verbatim: "Proceed. Here is neon api
