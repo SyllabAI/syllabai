@@ -1,0 +1,74 @@
+version: 1
+task:
+  id: T-C83
+  title: "Rank-quality lane — tranche 8: the MIN_COSINE production probe — the
+    precision-side cosine trim (a post-cut minimum-cosine floor on the
+    production vector arm's candidate list, θ = 0.60 by the declared
+    interior-boundary rule, at the recorded depth-40 posture) — the lever
+    the T-C72 prereg explicitly reserved for license ('a future
+    precision-side tranche (the paper flood) with its own dated prereg'),
+    executed under Ruling 8/9's standing rule: dated new prereg, UNCHANGED
+    bars. NOT PROMOTED is the pinned expected verdict — the tranche's
+    question is the precision-side exchange rate (does cosine separate gold
+    from flood, and at what (d) price), pre-registered with a byte-exact
+    arm-A reconstruction and trim census"
+  owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
+  status: IN_PROGRESS # CLAIM phase LANDED (prereg + grounding committed
+    # claim-first); seam + merge + run-005-j phases execute on the operator's
+    # probe word (trace 1a106cae2554db5d, "the MIN_COSINE production probe" —
+    # the T-C67 single-directive precedent: the probe word covers the merge
+    # as its prerequisite, executed only after CI green + suite green)
+  priority: P1
+  authority: "operator IM trace 1a106cae2554db5d ('the MIN_COSINE production
+    probe') — the NEW operator word Ruling 8/9 required for the MIN_COSINE
+    revival ('other H/K/MIN_COSINE/floor/contribution-retaining shapes =
+    dated new prereg each' — Ruling 9 §3; 'MIN_COSINE ... if ever licensed,
+    it is a future precision-side tranche (the paper flood) with its own
+    dated prereg' — T-C72 prereg §1). The item was a standing operator item
+    (T-C80 close-out, Session 193). ID note: RENUMBERED T-C82 -> T-C83
+    per the first-pushed protocol — the route-hint lane (origin 46d60f1)
+    took the T-C82 id first (their claim landed on main before this
+    lane's push); T-C83 was the next free id at rebase time."
+  base:
+    repo: "records main at 592900c (T-C80 renumber receipt); syllabai-core
+      main bbc438e (PR #77 merge fa2dddb is an ancestor) — the seam is a NEW
+      bench-scoped env gate BENCH_MIN_COSINE extending Run005C's five-gate
+      guard to six-way mutual exclusion"
+  scope:
+    allowed:
+      - "this pre-registration: evidence/bench-001/rank-quality-lane-2026-10-02/
+        MIN-COSINE-PREREGISTRATION.md + its grounding script
+        tc83_prereg_grounding.py (committed BEFORE any implementation)"
+      - "one bench-scoped seam on core: BENCH_MIN_COSINE env gate in Run005C —
+        the VectorMinCosineRetrieval provider wrapper (the vector arm's
+        post-cut candidates filtered to providerScore >= θ; under-fill
+        honest; absent path byte-identical), the six-way guard, posture-aware
+        rendering; PR merge as the probe word's prerequisite"
+      - "one run on MERGED main only: run-005-j (BENCH_PER_ARM_LIMIT=40
+        BENCH_MIN_COSINE=0.60, floor/reranker/weights/kind-arm/rank-cap
+        ABSENT) over the frozen basis, zero API calls; pack run-005-j-r1"
+    forbidden:
+      - "NO production change — nothing in production reads BENCH_MIN_COSINE;
+        the production constant stays 0.50 (ContentVectorRetriever#MIN_COSINE)"
+      - "NO frozen artifact mutation (fail-closed SHA echo); NO recorded
+        verdict re-judging (r9/d-r1/e-r1/f/g/h/i stand); NO threshold
+        movement in either direction (Ruling 8 conjunction)"
+      - "NO θ sweep: θ = 0.60 is pinned by the declared interior-boundary
+        rule; any other value or shape (pre-cut backfill, per-kind trims,
+        compliant-only trims) = a dated new prereg + a new run"
+      - "NO tuning against the frozen set (spec §9)"
+  acceptance:
+    - "the prereg's six pinned predictions verified by run005j_verify.py
+      (subset invariant 89/89; removed-ledger byte-exact 170 refs / 10
+      queries; (d) 44/89 · 71/84; pure-filter order 89/89; slice
+      byte-stability; top-20 5 queries / 0 carriers entering) — deviations
+      are FINDINGS with their exact ledger"
+    - "the honest §8.1 v1.1 conjunction verdict recorded at the UNCHANGED
+      bars (NOT PROMOTED is the pinned expected verdict); the exchange-rate
+      reading recorded against the pre-registered reading frame"
+  next_safe_actions:
+    - "the operator's reading word on the probe's result (a Ruling-10-shaped
+      reading is operator-gated; the lane records the verdict honestly and
+      stops)"
+    - "if the production-path fidelity findings deviate from the census: the
+      deviation ledger is the deliverable — no re-run without a new word"
