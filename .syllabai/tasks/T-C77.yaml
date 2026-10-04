@@ -10,10 +10,12 @@ task:
     scoring channel; one measured datapoint vs the UNCHANGED §8.1 v1.1 bars
     + Ruling-7 gate reading (Ruling 8's named family, operator-commissioned)"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: DONE # the run phase executed on MERGED main (fa2dddb, PR #77
-    # merged on the operator's 'merge' word trace 1a1047dc0e4fedbd): run-005-i-r1
-    # recorded + verified (EXIT=0, findings none) — NOT PROMOTED as pinned; the
-    # separability answer is YES; the promotion/horizon reading is operator-gated
+  status: DONE # TERMINAL — the run phase executed on MERGED main (fa2dddb, PR
+    # #77 merged on the operator's 'merge' word trace 1a1047dc0e4fedbd):
+    # run-005-i-r1 recorded + verified (EXIT=0, findings none) — NOT PROMOTED
+    # as pinned; the separability answer is YES; the reading word 'Proceed'
+    # (trace 1a106274e7013241) recorded spec §10 Ruling 9 — the card's last
+    # operator-gated item is discharged; no open items remain
   priority: P1
   authority: "operator IM trace 1a10328970d5440d ('commission the
     rank-bounded kind-admission tranche') — the NEW operator word Ruling 8
@@ -205,12 +207,34 @@ task:
         existing bench suites untouched and green (KindArm 14 / Floor 11 /
         Weights 5); head CI pass (4m44s); bench-scoped only — nothing in
         production reads BENCH_NOTES_RANK_CAP; MERGE OPERATOR-GATED"
+      - "READING RECORDED (operator word 'Proceed', IM trace
+        1a106274e7013241, 2026-10-04 — the reading word the card held open):
+        spec §10 Ruling 9 recorded in
+        evidence/bench-001/governance/TC77-SEPARABILITY-READING-2026-10-04.md
+        + the spec §10 paragraph/Status/heading/Provenance + the charter's
+        tranche-7 executed amendment. The reading, ADDITIVE (reads only; no
+        run, no re-judge, no threshold touched; the pack's SHA256SUMS
+        re-verified + core fa2dddb verified ancestor of core main bbc438e
+        first-hand pre-reading): (1) NOT PROMOTED stands — the Ruling-8
+        conjunction applied to run-005-i's recorded arithmetic: clears
+        (d)/(e)/(f) + (a2) restored by design, fails (a)/(b)/(c)/(b2)/(c2)
+        at the UNCHANGED bars 2-3x away; (2) SEPARABILITY confirmed as
+        MEASURED knowledge (the first (d)-beyond-r8 AND (a2)-PASS coexistence;
+        the two-channel account closed by the one severing mechanism; the
+        naive-cap negative stays recorded); (3) the family's pre-registered
+        form measured-complete; the Ruling-8 horizon HOLDS (§9's stop
+        condition applies as it did to the (d) family); (4) the binding
+        constraint re-confirmed — served-surface ALL-view rank-slice quality,
+        now measured twice; (5) production unchanged — five bench gates all
+        bench-scoped; the production posture remains run-005-c-r9's"
   next_safe_actions:
-    - "RUN-RECORDED (run-005-i-r1 on merged main fa2dddb): the promotion/horizon
-      reading is operator-gated — the tranche's pinned question (SEPARABILITY)
-      is answered YES; the §8.1 v1.1 bars stand UNCHANGED (NOT PROMOTED, the
-      pinned expected verdict); any promotion-shaped next step = new operator
-      word + dated new prereg (Ruling 8) with the binding constraint located
-      at the served-surface ALL-view rank-slice quality"
-    - "T-C77 remains open for the operator's reading word; no further lever
-      execution is authorized by this card"
+    - "READING RECORDED (operator word 'Proceed', trace 1a106274e7013241):
+      spec §10 Ruling 9 recorded (governance/TC77-SEPARABILITY-READING-2026-10-04.md)
+      — NOT PROMOTED stands under the unchanged conjunction; SEPARABILITY
+      confirmed as measured; the family's pre-registered form measured-complete;
+      the Ruling-8 horizon HOLDS; the binding constraint re-confirmed at the
+      served-surface ALL-view rank-slice quality. THE CARD IS TERMINAL — no
+      open items; any promotion-shaped next step = a NEW operator word + dated
+      new prereg under the UNCHANGED bars (Ruling 8/9)"
+    - "No further lever execution is authorized by this card (its own words,
+      now discharged); the lane's standing decision surface is empty"
