@@ -30,8 +30,34 @@ python3 .syllabai/tools/gen_views.py --repo-root . --mode write   # regenerate
 python3 .syllabai/tools/gen_views.py --repo-root . --mode check   # drift + parity report
 ```
 
+## safe_merge_check.py
+
+Advisory PR pre-verifier (T-COORD-2 P5). Posts/updates one comment with the
+merge-safety facts: task-packet reference + status (R1), CI on head (R2),
+mergeability (R3), base freshness (R4), active leases (R5). Never blocks —
+the operator's merge word remains the gate. Repo-agnostic: portable to
+`syllabai-core`/`syllabai-web`/`syllabai-hub` by copying the script +
+`.github/workflows/safe-merge.yml` (repos without `.syllabai/` degrade
+gracefully).
+
+```bash
+GITHUB_TOKEN=... GITHUB_REPOSITORY=SyllabAI/syllabai PR_NUMBER=42 \
+  python3 .syllabai/tools/safe_merge_check.py --repo-root . --post
+```
+
 ## CI
 
-`.github/workflows/coordination.yml` runs both on PRs/pushes touching
-`.syllabai/**` or `TODO.md`, weekly on a schedule, and via
-`workflow_dispatch` — WARN-ONLY in phase 1, results in the job summary.
+`.github/workflows/coordination.yml` runs the validator + view checks on
+PRs/pushes touching `.syllabai/**` or `TODO.md`, weekly on a schedule, and
+via `workflow_dispatch` — WARN-ONLY in phase 1, results in the job summary.
+
+`.github/workflows/safe-merge.yml` runs the pre-verifier on every PR
+(opened/synchronize/reopened) and updates its comment in place.
+
+## Structured lease history (locks.yaml `history:`)
+
+T-COORD-2 P2: fulfilled leases are recorded as structured rows in the
+append-only `history:` block (required: resource, task, outcome,
+released_at, receipt; outcome vocabulary: fulfilled_released |
+expired_reclaimed | superseded). The prose release annotations remain legal
+legacy records. Checked by the validator (H1–H5).

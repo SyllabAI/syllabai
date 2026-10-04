@@ -151,3 +151,49 @@ lease_schema:
 #  at core branch time (core main stands at V60). Ruling authority: operator
 #  trace 1a10493e233cb521; ADR-035 Accepted 2026-10-04. Single owner holds all
 #  halves — the T-C61/T-C76 pattern.)
+
+# ---------------------------------------------------------------------------
+# Structured fulfilled-lease history (T-COORD-2, P2) — append-only.
+# New lease releases land here as structured rows; the prose annotations
+# above remain the legacy record and stay legal forever. Four of the most
+# recent releases are backfilled below as the seed; older prose-only
+# releases are NOT retro-transcribed (transcription risk > value).
+# Required fields per row: resource, task, outcome, released_at, receipt.
+# outcome vocabulary: fulfilled_released | expired_reclaimed | superseded.
+# ---------------------------------------------------------------------------
+history:
+  - resource: flyway-version
+    task: T-C40
+    outcome: fulfilled_released
+    released_at: 2026-10-01
+    receipt: >-
+      V56__hnsw_filtered_scan_settings.sql landed with the core tranche
+      (branch tc40-rag-review-fixes, PR syllabai-core#38) after the concurrent
+      retarget lane took V54/V55; the V55 collision was caught fail-closed in
+      CI by Flyway's duplicate-version check. Released per the reclaim rule.
+  - resource: resources-kg-golden-gate
+    task: T-KG-B
+    outcome: fulfilled_released
+    released_at: 2026-10-01
+    receipt: >-
+      Reconciliation closed (syllabai-resources PR #14, gate step CI-GREEN);
+      operator ratification "ratify the 35 edges as point_edges.yaml (golden,
+      257/257)" executed as commit 0197d84; task DONE, released per the
+      reclaim rule.
+  - resource: core-web-contract
+    task: T-C78
+    outcome: fulfilled_released
+    released_at: 2026-10-04
+    receipt: >-
+      Consumer-side only, no core change: hub PR #30 merged 5f138a0
+      (hub-ci 37149123696 SUCCESS) + web PR #15 merged cae30ea (web-ci
+      37149125283 SUCCESS). Released per the reclaim rule.
+  - resource: syllabai-pastpapers
+    task: T-C75
+    outcome: fulfilled_released
+    released_at: 2026-10-04
+    receipt: >-
+      W1 parse wave: 4/4 papers parsed at pin 1f7e8355, products committed
+      and pushed as corpus b8d53f7, evidence pack
+      bench/review/ingest-wave-20261004/. Released per the reclaim rule.
+      W2-W5 need no corpus lease until operator credentials arrive.

@@ -7,13 +7,14 @@
 never replaced by this view. Agents may read this file first for the open-packet frontier,
 then consult `TODO.md` / the packet YAMLs for detail.
 
-_Packet census: 10 open / 48 closed / 58 total._
+_Packet census: 11 open / 48 closed / 59 total._
 
 ## Open packets
 
 ### VERIFYING
 
 - **T-C70** (`T-C70.yaml`) — owner: superz (main agent, zai session — discord DM trace 1a0fdd7bf6392825) — Past Paper Run P0 — ONE curated 4CH1 paper end-to-end (Track A): PaperInteractivityManifest v2 (curated, integrity=practice) + ExamRunner shell (timer/palette/f…
+- **T-COORD-2** (`T-COORD-2.yaml`) — owner: superz (main agent, zai session discord:47b28e0d-b18f-4986-8906-b3c8b1e40642) — Coordination tooling wave 2 — structured lease history (P2) + safe-merge pre-verifier (P5)
 ### CLAIMED
 
 - **T-C79** (`T-C79.yaml`) — owner: Super Z — Exam-series calendar (curriculum-imported) + learner-declared target series — the ADR-035 D1 foundation for the exam-aware study planner

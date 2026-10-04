@@ -1,0 +1,53 @@
+version: 1
+task:
+  id: T-COORD-2
+  title: "Coordination tooling wave 2 — structured lease history (P2) + safe-merge pre-verifier (P5)"
+  owner: "superz (main agent, zai session discord:47b28e0d-b18f-4986-8906-b3c8b1e40642)"
+  status: VERIFYING # PR open; advisory tooling, CI pending operator merge
+  priority: P2
+  base:
+    repo: syllabai (master pack) @ cb1ec06 (main, 2026-10-04; T-COORD-1 close-out commit)
+  basis: >
+    Operator directive (2026-10-04T02:48:37Z, message 1556135930086039595,
+    trace 688968658ece544f51d4e73569a4ecca): "Proceed" — on the agent's
+    next-safe-actions from T-COORD-1 (P2 structured lease history; P5
+    safe-merge pre-verifier). Same constraints as T-COORD-1: additive,
+    advisory-only, no protocol change, operator merge word untouched.
+  scope:
+    allowed:
+      - ".syllabai/locks.yaml — APPEND-ONLY: add the structured history:
+        block (4 backfilled seed rows transcribed from the existing release
+        annotations); existing prose comments and locks: untouched"
+      - ".syllabai/tools/validate_coordination.py — extend with H1-H5
+        history checks + YAML date-object fix in parse_ts"
+      - ".syllabai/tools/safe_merge_check.py (NEW — advisory PR verifier)"
+      - ".github/workflows/safe-merge.yml (NEW — advisory PR comment)"
+      - ".syllabai/tools/README.md — append P2/P5 usage docs"
+      - ".syllabai/tasks/T-COORD-2.yaml (NEW — this packet)"
+      - "TODO-CURRENT.md (regenerated projection)"
+    forbidden:
+      - "NO edits to active leases, agent-registry.yaml or project-state.yaml"
+      - "NO retro-transcription of pre-T-C40 prose release annotations (transcription risk > value)"
+      - "NO blocking enforcement — safe_merge_check posts an advisory comment; it is never a required check"
+      - "NO edits to TODO.md / PROGRESS.md / WORKLOG.md (zero conflict surface)"
+  dependencies: [T-COORD-1]
+  shared_resources: []
+  acceptance:
+    - "locks.yaml parses with locks: [] intact and 4 structured history rows; prose comments byte-untouched (append-only diff)"
+    - "validator passes the extended H1-H5 checks against the real repo state (0 errors); the YAML date-object bug (2026-10-01 parsed as datetime.date) is fixed in parse_ts"
+    - "safe_merge_check.py --dry-run computes a full R1-R5 verdict against real PR data (PR #19 used as the live fixture)"
+    - "the safe-merge workflow runs on this very PR and posts its advisory comment (live self-test); it never blocks"
+  evidence_required:
+    - "local run outputs of validator + safe_merge_check dry-run (embedded in the PR body)"
+    - "git diff showing locks.yaml is append-only"
+  claims:
+    VERIFIED: []
+    INFERRED: []
+    REPORTED: []
+    UNVERIFIED:
+      - "CI + the safe-merge advisory comment on this PR (pending first Actions run)"
+  next_safe_actions:
+    - "operator reviews the PR; merge word per the standard protocol"
+    - "port safe-merge.yml + safe_merge_check.py to syllabai-core / syllabai-web / syllabai-hub (copy-only; degrades gracefully without .syllabai)"
+    - "append new lease releases to locks.yaml history: as structured rows from now on (prose stays legal)"
+    - "after 2 clean weeks of coordination.yml, flip to --mode strict (separate operator decision)"
