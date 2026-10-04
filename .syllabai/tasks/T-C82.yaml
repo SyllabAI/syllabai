@@ -1,0 +1,59 @@
+version: 1
+task:
+  id: T-C82
+  title: "Route-hint lane — the Total-row-conflict rule: the T-C80 Lane-B
+    recorded-NOT-fixed finding (4CH0/2C June 2017 q5 parse sums 19 vs QP 15,
+    the `Route 1:   4` class) resolved at engine grade with first-hand print
+    archaeology, fixtures from the verbatim pages, and a fail-closed
+    grammar round (G5)"
+  owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
+  status: CLAIMED
+  priority: P1
+  authority: |
+    Operator word trace 1a106bb9581f530d ("Proceed with new route-hint
+    finding") — the finding recorded NOT fixed by T-C80 Lane B
+    (bench/review/fprod1-narrowed-closure-20261004/REPORT.md §"Lane finding
+    recorded, NOT fixed (out of mandate): the route-hint class"; claim
+    dd60112, DONE ab0670f): "distinguishing hint-vs-cell needs the
+    Total-row-conflict rule — its own designed change with its own
+    fixtures. Recorded here for that lane."
+  base:
+    repo: SyllabAI/syllabai (records main)
+    commit: 5aa8b20 (Session 194 head at claim time)
+    parser: SyllabAI/syllabai-parser main 9c538ad (G4 head)
+    corpus: SyllabAI/syllabai-pastpapers main 7e027cad
+  plan:
+    - "print archaeology FIRST (fail-closed doctrine: classify from the
+      prints, never from the regression diff): extract 4CH0-2C June 2017 +
+      Jan 2017 QP/MS from the pinned corpus, verify manifest sha256, read
+      the verbatim blocks (5(c) and 6(b)), and re-adjudicate the T-C80
+      hint-vs-cell framing against the full-page structure including the
+      'Alternative Method' page"
+    - "engine: design + implement the G5 grammar round in parse_ms
+      (syllabai-parser) — the Total-row-conflict rule with the observed
+      structural mint adjudicated first-hand; fail-closed at every gate
+      (exact over-sum, structural twin match, single demotion set);
+      fixtures built from the VERBATIM pages incl. the negative case (Jan
+      2017 q6(b) route cell must survive) and demotion-abort cases"
+    - "verification: full pdflane suite green (201 prior + new); 16-session
+      4CH0 corpus regression vs the G4 head 9c538ad — the expected diff set
+      is EXACTLY {2017-06/4CH0-2C q5: 19 -> 15 == QP == printed Total};
+      any further diff is print-adjudicated in the pack or the guard is
+      narrowed (the T-C80 discipline)"
+    - "production impact probe SELECT-ONLY (Render-PAT direct recipe): is
+      the artifact bank-level anywhere? (preflight pins the census; the
+      June-2017 2C bank rows' marks/schemes read for the 19-mark shape);
+      zero production writes expected or permitted — the artifact is an
+      engine-parse product, the bank predates the grid-layout lane"
+    - "pack: bench/review/route-hint-total-conflict-20261004/ (REPORT +
+      evidence JSONs + scripts + SHA256SUMS, credential-scanned)"
+  acceptance:
+    - "June-2017 2C q5 parses to 15 == printed Total == QP with the demotion
+      evidence recorded per-point (label, page, marks, twin); Jan-2017 2C
+      q6(b) route cell UNCHANGED (13 == Total == QP)"
+    - "suite green; regression diff set exactly the mandate or every extra
+      diff carries a print-adjudication receipt"
+    - "bank-impact probe recorded (expected: zero bank rows carry the
+      artifact — engine-level only); zero production writes"
+    - "records: T-C82 DONE + TODO dated section + WORKLOG Session entry +
+      TODO-CURRENT regenerated"
