@@ -1,0 +1,37 @@
+# Lane liveness ledger (T-COORD-3 P6). Open lanes update last_seen on progress;
+# the validator warns (HB2-STALE) at >72h silence. Seed = git last-touch of each
+# open packet at T-COORD-3 packaging time (2026-10-04). Sessions die silently -
+# this file is how the ledger notices.
+version: 1
+stale_after_hours: 72
+packets:
+  T-C44:
+    session: "superz (main agent, zai session web-98866c45)"
+    last_seen: '2026-10-04T02:24:27Z'
+  T-C47:
+    session: "superz (main agent, zai session web-98866c45)"
+    last_seen: '2026-10-04T02:24:27Z'
+  T-C50:
+    session: "superz (main agent, zai session web-98866c45)"
+    last_seen: '2026-10-04T02:24:27Z'
+  T-C51:
+    session: "superz (main agent, zai session web-98866c45)"
+    last_seen: '2026-10-04T02:24:27Z'
+  T-C55:
+    session: "superz (main agent, zai session web-98866c45)"
+    last_seen: '2026-10-04T02:24:27Z'
+  T-C60:
+    session: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-"
+    last_seen: '2026-10-04T02:24:27Z'
+  T-C70:
+    session: "superz (main agent, zai session — discord DM trace 1a0fdd7bf"
+    last_seen: '2026-10-04T02:38:43Z'
+  T-C75:
+    session: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-"
+    last_seen: '2026-10-04T02:24:27Z'
+  T-C79:
+    session: "Super Z"
+    last_seen: '2026-10-04T02:24:27Z'
+  T-COORD-3:
+    session: "superz (main agent, zai session — discord DM trace 4acec4babbc5db5c842fa4bce379e604)"
+    last_seen: '2026-10-04T06:46:12+00:00'

@@ -4,6 +4,7 @@ task:
   title: "Phase 2 step 3 residue — MasteryMap learner chips + PapersView detail scoping consume the T-C28 contract"
   owner: "superz (main agent, zai session web-98866c45)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P1
   base:
     repo: syllabai-web

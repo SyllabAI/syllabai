@@ -4,7 +4,7 @@ task:
   id: T-XXX
   title: ""
   owner: ""
-  status: READY # READY | EXECUTING | BLOCKED | VERIFYING | DONE
+  status: READY # READY | EXECUTING | BLOCKED | VERIFYING | DONE | CLAIMED | IN_PROGRESS | RUN-RECORDED (enum extended to match practice, T-COORD-3 R-B)
   priority: P1
   base:
     repo: ""
@@ -15,6 +15,12 @@ task:
   dependencies: []
   shared_resources: []
   acceptance: []
+  # acceptance_legacy: true  # T-COORD-3 R-B — set ONLY on pre-template packets whose
+  # receipts live in the packet body / TODO.md; retires the T4-ACCEPTANCE warning.
+  # Never set it on new packets: new work states its acceptance up front.
+  # Liveness: open lanes (CLAIMED/EXECUTING/IN_PROGRESS/RUN-RECORDED/VERIFYING)
+  # carry a heartbeat entry in .syllabai/heartbeat.yaml — update last_seen when
+  # the lane makes progress; the validator warns at >72h silence (P6).
   tests: []
   evidence_required: []
   claims:

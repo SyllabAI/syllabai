@@ -4,6 +4,7 @@ task:
   title: "Serving-emptiness observability — distinguish the three empty-causes on the teacher content search path (T-C23 recorded ticket candidate)"
   owner: "superz (main agent, zai session web-98866c45-9eb6-4100-a2b3-22cfb322258b)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P3
   base:
     repo: syllabai-core

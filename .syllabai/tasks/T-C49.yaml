@@ -6,6 +6,7 @@ task:
     census re-pin (kn 435)"
   owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P1
   authority: "operator IM trace 1a0fb59f90143ad1: '② Authorize the new defect fix
     for the ruling (2C-2013 Q3, bank 1 vs. dual evidence 8); ③ Repin census

@@ -7,6 +7,7 @@ task:
     the F-A1 orphan-retirement scope and state before any action"
   owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   status_note: "recon-only lane; zero writes; no execution was owed — the ledger already
     had F-A1 executed, and the recon verified it first-hand"
   priority: P1

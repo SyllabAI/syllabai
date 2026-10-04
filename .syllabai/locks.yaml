@@ -18,7 +18,42 @@
 # released per the reclaim rule. Merge of PR #14 stays HELD on the
 # pre-existing c12 C3 main red — owning lane to repair.)
 version: 1
-locks: []
+# T-COORD-3 R-C: active leases are structured rows again. The two rows below
+# are the complete live lease set (verified fleet-wide 2026-10-04 under
+# operator directive trace 4acec4babbc5db5c842fa4bce379e604): every other
+# historical lease is either released (see history + the prose annotations
+# above) or expired-and-resolved below. New leases MUST land here — prose-only
+# leases are legacy and no longer written.
+locks:
+  - resource: core-web-contract
+    owner: superz
+    task: T-C79
+    base_commit: 983430d
+    acquired_at: 2026-10-04
+    expires_at: '2026-10-06T00:00:00Z'
+    note: >-
+      Single-owner lane (the T-C61/T-C76 pattern): core exam-series read
+      exposure + hub picker/countdown on bases hub 5f138a0 / core
+      ebc3f072-lineage main. A flyway-version lease will be taken as its own
+      structured row at core branch time (core main stands at V60).
+      Ruling authority: operator trace 1a10493e233cb521, ADR-035 Accepted
+      2026-10-04. First lease recorded in the structured layer after
+      T-COORD-2 (the prose annotation above predates this row and stays for
+      provenance).
+  - resource: hub-e2e
+    owner: superz
+    task: T-C55
+    base_commit: fca83c8
+    acquired_at: 2026-10-02
+    expires_at: '2026-10-08T00:00:00Z'
+    note: >-
+      RENEWAL recorded under T-COORD-3 R-C (operator directive trace
+      4acec4babbc5db5c842fa4bce379e604): the original prose lease expired
+      2026-10-04T00:00Z with the deck-flow fix lane still live
+      (T-C55-hub-deckflow, 2 of 29 tests red on main) — renewed instead of
+      silently lapsing, per the ledger's own reclaim rule. Scope unchanged:
+      openLearnerDrawer/dialog timing fix; the fix PR replaces this expiry
+      on merge.
 
 # (T-C78's core-web-contract lease was fulfilled 2026-10-04 — consumer-side
 #  only, no core change: hub PR #30 merged 5f138a0 (hub-ci 37149123696
@@ -68,6 +103,8 @@ resource_classes:
     policy: coordinated
   authoritative-kg-promotion:
     policy: operator-gated
+  hub-e2e:
+    policy: coordinated # T-COORD-3: declared alongside the T-C55 renewal; mirrored in agent-registry shared_resources
 
 lease_schema:
   required: [resource, owner, task, base_commit, acquired_at, expires_at]
@@ -197,3 +234,30 @@ history:
       and pushed as corpus b8d53f7, evidence pack
       bench/review/ingest-wave-20261004/. Released per the reclaim rule.
       W2-W5 need no corpus lease until operator credentials arrive.
+  # --- T-COORD-3 R-C additions (2026-10-04, operator trace 4acec4babb...) ---
+  # The two rows below resolve the expired prose leases the critical re-audit
+  # found unreconciled (T-C44/T-C53/T-C55 prose windows all ended
+  # 2026-10-04T00:00Z). T-C55 is NOT here — its lane is live, so its lease was
+  # RENEWED as a structured active row above instead.
+  - resource: core-web-contract
+    task: T-C44
+    outcome: fulfilled_released
+    released_at: 2026-10-02
+    receipt: >-
+      Hub PR #6 merged 2026-10-02 (render model math as math — the s142 drift
+      normalizer port): the lease's own success condition ('until the fix PR
+      merges') was met inside the window, but the release annotation was never
+      written — the exact gap P2 structured history exists to close, recorded
+      here post-hoc under T-COORD-3. Packet T-C44 status remains the owning
+      lane's call.
+  - resource: flyway-version
+    task: T-C53
+    outcome: superseded
+    released_at: 2026-10-04
+    receipt: >-
+      The V59 pin expired 2026-10-04T00:00Z with no registry-seed migration
+      merged under that version — the lane closed instead via core PR #58
+      (ce0d7eb, flashcard-review-schedule endpoint; task DONE per TODO.md
+      receipt). Recorded as superseded rather than fabricated as a fulfilled
+      migration lease; the version-serialization purpose was honoured by the
+      window, no collision occurred.

@@ -4,6 +4,7 @@ task:
   title: "resolveActive N+1 — per-node KnowledgeNode reads on the serving-scope resolution path (T-C23 recorded ticket candidate 2)"
   owner: "superz (main agent, zai session web-98866c45)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P3
   base:
     repo: syllabai-core

@@ -137,27 +137,6 @@ task:
       - "r8 is a DIFFERENT basis (snap-006 + chunk vectors 1e22a202… vs
         snap-007 + 1fd6a617…, both SHA-echoed in the packs) — the ceiling,
         not a target"
-    INFERRED:
-      - "predicted SET effects at K=15 (exact-cosine assumptions): +797 notes
-        refs over 89 queries, notes share 15.3% -> ~30.6% (above the r9-era
-        20.4% — the declared overshoot); predicted (d) = the ceiling if all
-        5 flips revert"
-    REPORTED: []
-    UNVERIFIED:
-      - "the production kind-arm's fidelity to the exact-cosine census
-        (kind-scoped HNSW/ANN approximation, SQL scope, tie behavior) — the
-        run's test; a MISS-AT-ARM falsifies the census reach prediction for
-        that flip"
-      - "the superset invariant 89/89 (the existing arms' HNSW/tie
-        re-execution risk persists; the g2-024 precedent was additive-only)"
-      - "rank-slice movements (recall@5/10/20, MRR, nDCG@10) — no
-        byte-stability pin this tranche; the recall@20 0.1612 5-run pin is
-        declared at-risk BY DESIGN"
-      - "compliant-view pool stasis (prediction: the central VALIDATED gate
-        excludes every kind-arm ref; observed deltas = existing-arm
-        re-execution only)"
-      - "latency shape at K=15 (expected >= g's 1080.0 ms p50)"
-    "RUN-OUTCOME 2026-10-03 (run-005-h + run005h_verify.py — resolves the UNVERIFIED set above)":
       - "census fidelity CONFIRMED on the production path: all 5 flips
         ADMITTED+REVERTED, every fresh carrier in-pool at fused ranks 8-26
         (census NOTES ranks 4/6/8/8/11/13; K=15 reach complete, 0
@@ -192,6 +171,26 @@ task:
         tension ((d) beyond r8 on the Ruling-7 axis while the §8.1 gates
         FAIL) is recorded for the operator's next ruling — horizon/shape
         questions are operator-gated, any K/shape change = dated new prereg"
+    INFERRED:
+      - "predicted SET effects at K=15 (exact-cosine assumptions): +797 notes
+        refs over 89 queries, notes share 15.3% -> ~30.6% (above the r9-era
+        20.4% — the declared overshoot); predicted (d) = the ceiling if all
+        5 flips revert"
+    REPORTED: []
+    UNVERIFIED:
+      - "the production kind-arm's fidelity to the exact-cosine census
+        (kind-scoped HNSW/ANN approximation, SQL scope, tie behavior) — the
+        run's test; a MISS-AT-ARM falsifies the census reach prediction for
+        that flip"
+      - "the superset invariant 89/89 (the existing arms' HNSW/tie
+        re-execution risk persists; the g2-024 precedent was additive-only)"
+      - "rank-slice movements (recall@5/10/20, MRR, nDCG@10) — no
+        byte-stability pin this tranche; the recall@20 0.1612 5-run pin is
+        declared at-risk BY DESIGN"
+      - "compliant-view pool stasis (prediction: the central VALIDATED gate
+        excludes every kind-arm ref; observed deltas = existing-arm
+        re-execution only)"
+      - "latency shape at K=15 (expected >= g's 1080.0 ms p50)"
   merge_disposition: "2026-10-03, merge-execution session (operator trace
     1a1027c676d03071 'merge PR #71. Check other lanes as well'): the T-C72
     seam is ALREADY LANDED on core main — the twin PR syllabai-core#70
@@ -220,7 +219,7 @@ task:
     owner session: merge gates re-executed first-hand (base unmoved 8d7880b,
     head CI SUCCESS at 553261c, diff reviewed line-by-line vs the prereg,
     offline suite 1237/0/2 re-run first-hand on the exact head before
-    merging), then the run phase (see RUN-OUTCOME)."
+    merging), then the run phase (see the run-outcome items under VERIFIED)."
   next_safe_actions:
     - "RULING-DISPOSITION 2026-10-04 (operator trace 1a102c04b49afd49
       'promotion/horizon ruling'): recorded as spec §10 Ruling 8 +
@@ -244,7 +243,7 @@ task:
       MERGED as c346d64 (gates first-hand), run-005-h recorded over the
       frozen basis (pack run-005-h-r1 + verify exit 0), (d) 0.5843/0.9405
       ABOVE the r8 reference, 5/5 flips ADMITTED+REVERTED, verdict NOT
-      PROMOTED ((a2) first FAIL) — see RUN-OUTCOME; next: the operator's
+      PROMOTED ((a2) first FAIL) — see the run-outcome items under VERIFIED; next: the operator's
       promotion/horizon ruling (the (d)-vs-gates tension is the recorded
       decision surface), any K/shape change = dated new prereg"
     - "DISPOSITION 2026-10-03 (operator trace 1a1027c676d03071): seam

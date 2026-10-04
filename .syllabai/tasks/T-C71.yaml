@@ -8,6 +8,7 @@ task:
     (blocked — route undiscoverable from the sandbox)"
   owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   status_note: "the lane's executable scope is complete; the 4EB0 residue is an
     operator-input block recorded in TODO (not an unfinished agent action)"
   priority: P1

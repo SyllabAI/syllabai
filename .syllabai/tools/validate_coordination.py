@@ -35,11 +35,25 @@ agent-registry.yaml:
 tasks/*.yaml (task packets):
   T1  task.id matches the filename stem (or filename stem starts with
       the id + '-' for sub-task files)
-  T2  status is a legal enum value (READY|EXECUTING|BLOCKED|VERIFYING|DONE)
+  T2  status is a legal enum value (READY|EXECUTING|BLOCKED|VERIFYING|DONE
+      |CLAIMED|IN_PROGRESS|RUN-RECORDED — extended to match practice under
+      T-COORD-3 R-B; the template lists the same enum)
   T3  claims keys (if present) use only the 4 legal labels
-  T4  VERIFYING/DONE packets have non-empty acceptance
+  T4  VERIFYING/DONE packets have non-empty acceptance — skipped for
+      packets explicitly marked acceptance_legacy: true (T-COORD-3 R-B
+      grandfather: pre-template packets whose receipts live in the packet
+      body / TODO.md; backfilling them retroactively was ruled a bigger
+      transcription risk than the gap)
   T5  EXECUTING/VERIFYING/DONE packets have a non-empty owner
   T0  file parses as YAML at all
+
+heartbeat (optional .syllabai/heartbeat.yaml, T-COORD-3 P6):
+  HB1 open packets (CLAIMED/EXECUTING/IN_PROGRESS/RUN-RECORDED/VERIFYING)
+      have a heartbeat entry at all
+  HB2 open packets' last_seen is not older than 72h (stale lane signal —
+      the liveness gap the original audit identified; sessions die and
+      the ledger cannot tell). The check only fires when the heartbeat
+      file exists, so adoption is opt-in per repo.
 
 Exit codes: 0 = warn mode (always), 1 = strict mode with findings,
 2 = internal error (bad invocation, unreadable files).
@@ -54,7 +68,12 @@ from pathlib import Path
 
 import yaml
 
-LEGAL_STATUSES = {"READY", "EXECUTING", "BLOCKED", "VERIFYING", "DONE"}
+LEGAL_STATUSES = {
+    "READY", "EXECUTING", "BLOCKED", "VERIFYING", "DONE",  # template originals
+    "CLAIMED", "IN_PROGRESS", "RUN-RECORDED",  # T-COORD-3 R-B: legalised practice
+}
+OPEN_STATUSES = {"CLAIMED", "EXECUTING", "BLOCKED", "IN_PROGRESS", "RUN-RECORDED", "VERIFYING"}
+HEARTBEAT_STALE_HOURS = 72
 LEGAL_CLAIM_LABELS = {"VERIFIED", "INFERRED", "REPORTED", "UNVERIFIED"}
 KNOWN_POLICIES = {"serialized", "coordinated", "operator-gated"}
 LEGAL_HISTORY_OUTCOMES = {"fulfilled_released", "expired_reclaimed", "superseded"}
@@ -263,8 +282,8 @@ def check_history(locks_doc: dict, report: Report, task_ids: set[str]):
                 seen_pairs[pair] = f"history[{i}]"
 
 
-def check_tasks(tasks_dir: Path, report: Report) -> set[str]:
-    task_ids: set[str] = set()
+def check_tasks(tasks_dir: Path, report: Report) -> dict[str, str]:
+    task_ids: dict[str, str] = {}  # id -> status
     if not tasks_dir.is_dir():
         report.warn("T-DIR", ".syllabai/tasks", "directory missing")
         return task_ids
@@ -281,13 +300,13 @@ def check_tasks(tasks_dir: Path, report: Report) -> set[str]:
             continue
         stem = path.stem
         tid = str(task.get("id", "") or "")
+        status = str(task.get("status", "") or "")
         if tid:
-            task_ids.add(tid)
+            task_ids[tid] = status
             if tid != stem and not stem.startswith(tid + "-"):
                 report.warn("T1-ID", subject, f"id '{tid}' does not match filename stem '{stem}'")
         else:
             report.warn("T1-ID", subject, "missing task.id")
-        status = str(task.get("status", "") or "")
         if status and status not in LEGAL_STATUSES:
             report.warn("T2-STATUS", subject, f"illegal status '{status}'")
         claims = task.get("claims")
@@ -301,7 +320,9 @@ def check_tasks(tasks_dir: Path, report: Report) -> set[str]:
                                 f"claim labels outside the 4-tier vocabulary: {', '.join(map(str, bad))}")
         acceptance = task.get("acceptance")
         if status in {"VERIFYING", "DONE"}:
-            if not acceptance:
+            if task.get("acceptance_legacy"):
+                pass  # T-COORD-3 R-B grandfather — see module docstring
+            elif not acceptance:
                 report.warn("T4-ACCEPTANCE", subject,
                             f"status {status} but acceptance is empty")
             owner = task.get("owner")
@@ -310,6 +331,39 @@ def check_tasks(tasks_dir: Path, report: Report) -> set[str]:
         if status == "EXECUTING" and not task.get("owner"):
             report.warn("T5-OWNER", subject, "status EXECUTING but owner is empty")
     return task_ids
+
+
+def check_heartbeat(syllabai: Path, tasks: dict[str, str], report: Report):
+    """T-COORD-3 P6 — liveness signal for open packets (opt-in per repo:
+    only fires when .syllabai/heartbeat.yaml exists)."""
+    hb_path = syllabai / "heartbeat.yaml"
+    if not hb_path.exists():
+        return
+    hb = load_yaml(hb_path, report, ".syllabai/heartbeat.yaml")
+    if not isinstance(hb, dict):
+        if hb is not None:
+            report.error("HB-FORMAT", ".syllabai/heartbeat.yaml",
+                         "top level must be a mapping of task_id -> {last_seen, session}")
+        return
+    entries = hb.get("packets") if isinstance(hb.get("packets"), dict) else hb
+    now = dt.datetime.now(dt.timezone.utc)
+    for tid, status in tasks.items():
+        if status not in OPEN_STATUSES:
+            continue
+        entry = entries.get(tid)
+        if not isinstance(entry, dict) or not entry.get("last_seen"):
+            report.warn("HB1-NO-HEARTBEAT", f"heartbeat for {tid}",
+                        f"packet is open ({status}) but has no heartbeat entry")
+            continue
+        seen = parse_ts(entry.get("last_seen"))
+        if seen is None:
+            report.warn("HB2-STALE", f"heartbeat for {tid}",
+                        f"last_seen '{entry.get('last_seen')}' unparsable")
+        elif now - seen > dt.timedelta(hours=HEARTBEAT_STALE_HOURS):
+            hours = int((now - seen).total_seconds() // 3600)
+            report.warn("HB2-STALE", f"heartbeat for {tid}",
+                        f"no liveness signal for ~{hours}h (>{HEARTBEAT_STALE_HOURS}h) "
+                        "— reclaim, renew, or close the lane")
 
 
 def main() -> int:
@@ -344,10 +398,11 @@ def main() -> int:
     serialized = {n for n, p in lock_policies.items() if p == "serialized"}
 
     # Tasks first so lease task-references can resolve.
-    task_ids = check_tasks(syllabai / "tasks", report)
-    check_locks(locks, report, known_resources, serialized, task_ids)
-    check_history(locks, report, task_ids)
+    tasks = check_tasks(syllabai / "tasks", report)
+    check_locks(locks, report, known_resources, serialized, tasks)
+    check_history(locks, report, tasks)
     check_registry(registry, report, known_resources, lock_policies)
+    check_heartbeat(syllabai, tasks, report)
 
     print(report.render())
     report.write_summary()

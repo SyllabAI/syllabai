@@ -7,6 +7,7 @@ task:
     post-flip cell empty (zero traffic)"
   owner: "superz (main agent, zai session web-9d2144ad-f8b8-4e63-9039-989f45cb596f)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P2
   authority: "operator IM trace 1a0fb7a95cefc455 ('refusal-rate watch') — the
     watch item carried by T-C42/T-C43/T-C48 next_safe_actions ('watch the

@@ -6,6 +6,7 @@ task:
     run-005-c-r9, the first main-line replay (T-C46 re-stamp on main)"
   owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P1
   authority: "operator IM trace 1a0fbeaf2695af79 ('Run005C re-record against
     the §8.1 VALIDATED bars') — executes the alternating-wave step recorded

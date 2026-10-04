@@ -7,6 +7,7 @@ task:
     trusts those folders)"
   owner: "superz (main agent, zai session web-23eb7684-9eb6-4100-a2b3-22cfb322258b)"
   status: DONE
+  acceptance_legacy: true # T-COORD-3 R-B grandfather (pre-template packet; receipts live in the packet body + TODO.md - do not backfill retroactively)
   priority: P1
   authority: "operator IM trace 1a0fbf2dec8babe5: 'F-A2 verification wave'"
   scope: "VERIFICATION-ONLY lane — zero corpus writes, zero DB writes;
