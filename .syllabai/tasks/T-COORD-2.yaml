@@ -3,7 +3,7 @@ task:
   id: T-COORD-2
   title: "Coordination tooling wave 2 — structured lease history (P2) + safe-merge pre-verifier (P5)"
   owner: "superz (main agent, zai session discord:47b28e0d-b18f-4986-8906-b3c8b1e40642)"
-  status: VERIFYING # PR open; advisory tooling, CI pending operator merge
+  status: DONE # merged 2026-10-04 as main acd68f4 (merge of PR #20; CI guard + verify both SUCCESS on 3ab478d)
   priority: P2
   base:
     repo: syllabai (master pack) @ cb1ec06 (main, 2026-10-04; T-COORD-1 close-out commit)
@@ -41,13 +41,17 @@ task:
     - "local run outputs of validator + safe_merge_check dry-run (embedded in the PR body)"
     - "git diff showing locks.yaml is append-only"
   claims:
-    VERIFIED: []
+    VERIFIED:
+      - "locks.yaml parses with locks: [] intact + 4 structured history rows; append-only property verified (zero content deletions)"
+      - "validator H1-H5 clean against the real repo state (0 errors); parse_ts YAML date-object bug found and fixed"
+      - "safe_merge_check.py dry-run computed a full R1-R5 verdict against live PR #19/#20 API data"
+      - "CI guard + verify both SUCCESS on 3ab478d; the safe-merge workflow posted its own advisory comment on PR #20 (live self-test; first run caught the unwired PR_NUMBER env, fixed in 3ab478d)"
+      - "PR #20 merged as main acd68f4 on the operator's explicit word 'review + merge' (trace 5ef0242a5114f354abd57252184e7001, 2026-10-04T03:01:01Z)"
     INFERRED: []
     REPORTED: []
-    UNVERIFIED:
-      - "CI + the safe-merge advisory comment on this PR (pending first Actions run)"
+    UNVERIFIED: []
   next_safe_actions:
-    - "operator reviews the PR; merge word per the standard protocol"
+    - "DONE 2026-10-04: PR #20 merged as main acd68f4; packet closed with receipts."
     - "port safe-merge.yml + safe_merge_check.py to syllabai-core / syllabai-web / syllabai-hub (copy-only; degrades gracefully without .syllabai)"
     - "append new lease releases to locks.yaml history: as structured rows from now on (prose stays legal)"
     - "after 2 clean weeks of coordination.yml, flip to --mode strict (separate operator decision)"

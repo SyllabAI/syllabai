@@ -7,14 +7,13 @@
 never replaced by this view. Agents may read this file first for the open-packet frontier,
 then consult `TODO.md` / the packet YAMLs for detail.
 
-_Packet census: 11 open / 48 closed / 59 total._
+_Packet census: 10 open / 49 closed / 59 total._
 
 ## Open packets
 
 ### VERIFYING
 
 - **T-C70** (`T-C70.yaml`) — owner: superz (main agent, zai session — discord DM trace 1a0fdd7bf6392825) — Past Paper Run P0 — ONE curated 4CH1 paper end-to-end (Track A): PaperInteractivityManifest v2 (curated, integrity=practice) + ExamRunner shell (timer/palette/f…
-- **T-COORD-2** (`T-COORD-2.yaml`) — owner: superz (main agent, zai session discord:47b28e0d-b18f-4986-8906-b3c8b1e40642) — Coordination tooling wave 2 — structured lease history (P2) + safe-merge pre-verifier (P5)
 ### CLAIMED
 
 - **T-C79** (`T-C79.yaml`) — owner: Super Z — Exam-series calendar (curriculum-imported) + learner-declared target series — the ADR-035 D1 foundation for the exam-aware study planner
@@ -34,6 +33,7 @@ _Packet census: 11 open / 48 closed / 59 total._
 ## Closed packets
 
 - T-KG-B — Resources-side kg_export reconciliation vs the v75 golden sample — corpus-derived exporter + golden-sample regression ga…
+- T-COORD-2 — Coordination tooling wave 2 — structured lease history (P2) + safe-merge pre-verifier (P5)
 - T-COORD-1 — Coordination tooling wave 1 — WARN-ONLY validator CI gate (P1) + generated views (P3)
 - T-C78 — Surface-map correction — the learner agenda panel lands on syllabai-hub (the product frontend); syllabai-web PR #14 reve…
 - T-C76 — Executive-half lane (operator 'go', trace 1a1030b349bc03c9): R1 learner agenda read model (core PR #74) + R2 ADR-035 dra…
