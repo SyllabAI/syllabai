@@ -1,0 +1,324 @@
+{
+ "authority": "operator trace 1a1047d4ad41baf9 'repair the 4 bank entries'",
+ "built_utc": "2026-10-04T01:45:54.316542+00:00",
+ "census_pins": {
+  "audit_max_at_probe": 5586,
+  "audit_tail_note": "last rows PLACE@2026-10-02T14:34:56 \u2014 no bank-relevant audit movement since; V61 pins a monotonic audit floor (>= probe max), not an exact max, because teacher traffic may append benign rows between probe and deploy",
+  "bridge_by_status": {
+   "OK": 10,
+   "SUPERSEDED": 49
+  },
+  "mark_points": {
+   "n": 5883
+  },
+  "mark_schemes": {
+   "n": 1504,
+   "n_suggested": 144,
+   "n_validated": 1360
+  },
+  "papers_by_state": {
+   "REJECTED": 13,
+   "VALIDATED": 91
+  },
+  "question_parts": {
+   "marks": 9068,
+   "n": 7183
+  },
+  "question_versions": {
+   "n": 1526,
+   "n_rejected": 2,
+   "n_suggested": 59,
+   "n_validated": 1465
+  },
+  "questions": {
+   "n": 1526,
+   "n_active": 954
+  }
+ },
+ "lane": "F-PROD-1 bank-repair \u2014 the 4 print-pass defect rows (worksheet v3 defect(bank-repair lane))",
+ "precedent": "bench/review/psaxis-review-2026-09-28/bank-defect-lane-20261002/ (laneD method: variant-pinned printed evidence, double condition, fail-closed tx, parts untouched)",
+ "referrals": "fprod1-print-pass-20261004/REPORT.md P3 (4 defects) \u2014 records 2ffbbb3",
+ "targets": [
+  {
+   "after": {
+    "q_marks": 13,
+    "qv_marks": 13
+   },
+   "before": {
+    "n_mark_points": 2,
+    "n_parts": 10,
+    "n_schemes": 1,
+    "part_marks": 0,
+    "q_active": false,
+    "q_marks": 1,
+    "qv_marks": 1,
+    "qv_state": "VALIDATED",
+    "qv_version": 1
+   },
+   "evidence": {
+    "attribution": {
+     "alt_note": null,
+     "alternates": {
+      "4CH0/1CR June 2013": 0.5965
+     },
+     "gate": "own>=0.90 and margin>=0.02 where alternate chunk texts exist",
+     "margin": 0.386,
+     "metric": "normalized-token containment of bank stem+part prompts against each variant's INGESTED serving-QP chunk text (laneD substrate)",
+     "own": 0.9825,
+     "pdftotext_secondary": {
+      "2013-06_4CH0-1C": 0.9825,
+      "2013-06_4CH0-1CR": 0.6316
+     }
+    },
+    "ms_chunk_corroboration": {
+     "chunks": [
+      {
+       "chunk_id": "4c3a803d-5312-439d-866b-51b8cb171fe3",
+       "chunk_index": 21,
+       "value": 13
+      }
+     ],
+     "ms_doc_id": "af3f4f8d-01b8-5036-bbc5-1f6b464a5c22",
+     "serving_ms_doc_sha256": "5e73646769942e9cd5745673e2f1103233f2efd221e76ca89648187c8839ae9c",
+     "value": 13
+    },
+    "ms_local_print_block_total": 13,
+    "print_pass_value": 13,
+    "qp_echo": {
+     "qp_sha256": "d9e5ef81faaccb51026796af0f05b86bb5c4cef991e4ab8a11157512d45ff189",
+     "serving_qp_doc": "d5b3dc75-9d57-5caf-a823-2e0445096834",
+     "source": "corpus/2013-06_4CH0-1C/qp.pdf",
+     "value": 13
+    },
+    "qv_provenance": {
+     "extraction_confidence": "0.45",
+     "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "qv_created_at": "2026-09-14 11:27:01.882321+00",
+     "source_document_id": "d5b3dc75-9d57-5caf-a823-2e0445096834"
+    }
+   },
+   "paper": "4CH0/1C",
+   "paper_id": "31ad242a-43c6-4246-a158-bd79f586994a",
+   "qn": 10,
+   "question_id": "a7b97aad-1934-4c5f-8fc7-ae262dc41b26",
+   "qv_id": "f7f4d9f3-98d8-462d-9084-2a35402a25af",
+   "ref": "q10-6d968517",
+   "scope": "marks only \u2014 parts, mark_schemes, mark_points, states, audit untouched",
+   "session": "June 2013"
+  },
+  {
+   "after": {
+    "q_marks": 11,
+    "qv_marks": 11
+   },
+   "before": {
+    "n_mark_points": 4,
+    "n_parts": 5,
+    "n_schemes": 1,
+    "part_marks": 0,
+    "q_active": false,
+    "q_marks": 1,
+    "qv_marks": 1,
+    "qv_state": "VALIDATED",
+    "qv_version": 1
+   },
+   "evidence": {
+    "attribution": {
+     "alt_note": null,
+     "alternates": {
+      "4CH0/1CR June 2017": 0.7115
+     },
+     "gate": "own>=0.90 and margin>=0.02 where alternate chunk texts exist",
+     "margin": 0.2789,
+     "metric": "normalized-token containment of bank stem+part prompts against each variant's INGESTED serving-QP chunk text (laneD substrate)",
+     "own": 0.9904,
+     "pdftotext_secondary": {
+      "2017-06_4CH0-1C": 0.9904,
+      "2017-06_4CH0-1CR": 0.7115
+     }
+    },
+    "ms_chunk_corroboration": {
+     "chunks": [
+      {
+       "chunk_id": "1f18baf2-5ac5-4b5e-8b6b-49c46418ba9b",
+       "chunk_index": 22,
+       "value": 11
+      }
+     ],
+     "ms_doc_id": "83e11e07-ea10-5bef-8dec-28890d603b14",
+     "serving_ms_doc_sha256": "28008020cb90708bfe438195b02417a0bb7d57232e3094220ad808971aa29a75",
+     "value": 11
+    },
+    "ms_local_print_block_total": 11,
+    "print_pass_value": 11,
+    "qp_echo": {
+     "qp_sha256": "a4f7eb2c6d9b93fe678416af270b578acc567fd8a47cdfae1f3d98c9b6e4813b",
+     "serving_qp_doc": "c4a5619b-4230-5472-b746-000fa3c8a5f7",
+     "source": "corpus/2017-06_4CH0-1C/qp.pdf",
+     "value": 11
+    },
+    "qv_provenance": {
+     "extraction_confidence": "0.45",
+     "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "qv_created_at": "2026-09-14 11:33:17.733233+00",
+     "source_document_id": "c4a5619b-4230-5472-b746-000fa3c8a5f7"
+    }
+   },
+   "paper": "4CH0/1C",
+   "paper_id": "e97797b8-6c19-4380-8f67-ee39a703b76e",
+   "qn": 11,
+   "question_id": "78a997c3-181d-4045-97f0-fc9a6cc40086",
+   "qv_id": "27255b93-53eb-4d6d-a960-e1429829da2c",
+   "ref": "q11-8b9f4957",
+   "scope": "marks only \u2014 parts, mark_schemes, mark_points, states, audit untouched",
+   "session": "June 2017"
+  },
+  {
+   "after": {
+    "q_marks": 11,
+    "qv_marks": 11
+   },
+   "before": {
+    "n_mark_points": 10,
+    "n_parts": 12,
+    "n_schemes": 1,
+    "part_marks": 0,
+    "q_active": false,
+    "q_marks": 1,
+    "qv_marks": 1,
+    "qv_state": "VALIDATED",
+    "qv_version": 1
+   },
+   "evidence": {
+    "attribution": {
+     "alt_note": "no 4CH0/1CR June 2018 print bytes exist in the corpus AND no such exam_papers row exists in the DB (probe2 family census) \u2014 the cross-variant discriminator is structurally absent; attribution rests on the own-print score + qv.source_document_id provenance",
+     "alternates": {},
+     "gate": "own>=0.90 and margin>=0.02 where alternate chunk texts exist",
+     "margin": null,
+     "metric": "normalized-token containment of bank stem+part prompts against each variant's INGESTED serving-QP chunk text (laneD substrate)",
+     "own": 1.0,
+     "pdftotext_secondary": {
+      "2018-06_4CH0-1C": 1.0
+     }
+    },
+    "ms_chunk_corroboration": {
+     "chunks": [
+      {
+       "chunk_id": "a5455b90-bbc3-431c-bc09-8f09a8d12a15",
+       "chunk_index": 24,
+       "value": 11
+      }
+     ],
+     "ms_doc_id": "1e2fa40b-1aea-5ddf-ac79-c1533fa2d132",
+     "serving_ms_doc_sha256": "5381d95189fe3d5b4958ac2d2ab5636735aa458e7dffbca94b44b16f1eaa9b30",
+     "value": 11
+    },
+    "ms_local_print_block_total": 11,
+    "print_pass_value": 11,
+    "qp_echo": {
+     "qp_sha256": "1ff0f7955d3fa61a03d10af626a3a4daa733cd719a987d3be7a784839e8905ae",
+     "serving_qp_doc": "55445f5f-bb7f-5d74-929e-f56b830e4990",
+     "source": "corpus/2018-06_4CH0-1C/qp.pdf",
+     "value": 11
+    },
+    "qv_provenance": {
+     "extraction_confidence": "0.45",
+     "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "qv_created_at": "2026-09-14 11:33:32.144016+00",
+     "source_document_id": "55445f5f-bb7f-5d74-929e-f56b830e4990"
+    }
+   },
+   "paper": "4CH0/1C",
+   "paper_id": "90975a33-63b4-4d32-bbe0-eed99a60ab26",
+   "qn": 12,
+   "question_id": "51b434af-7735-47f0-bef1-d6142871dfb6",
+   "qv_id": "a8e9c7d3-d70b-4485-a24c-aaddf28fded4",
+   "ref": "q12-23323bab",
+   "scope": "marks only \u2014 parts, mark_schemes, mark_points, states, audit untouched",
+   "session": "June 2018"
+  },
+  {
+   "after": {
+    "q_marks": 9,
+    "qv_marks": 9
+   },
+   "before": {
+    "n_mark_points": 8,
+    "n_parts": 11,
+    "n_schemes": 1,
+    "part_marks": 0,
+    "q_active": false,
+    "q_marks": 1,
+    "qv_marks": 1,
+    "qv_state": "VALIDATED",
+    "qv_version": 1
+   },
+   "evidence": {
+    "attribution": {
+     "alt_note": null,
+     "alternates": {
+      "4CH0/1C June 2017": 0.5424
+     },
+     "gate": "own>=0.90 and margin>=0.02 where alternate chunk texts exist",
+     "margin": 0.4576,
+     "metric": "normalized-token containment of bank stem+part prompts against each variant's INGESTED serving-QP chunk text (laneD substrate)",
+     "own": 1.0,
+     "pdftotext_secondary": {
+      "2017-06_4CH0-1C": 0.5763,
+      "2017-06_4CH0-1CR": 1.0
+     }
+    },
+    "ms_chunk_corroboration": {
+     "chunks": [
+      {
+       "chunk_id": "2972f17f-4b85-4d52-9678-d62b82c4c969",
+       "chunk_index": 17,
+       "value": 9
+      }
+     ],
+     "ms_doc_id": "7195d701-ad3b-5667-8d4c-1dd743021e27",
+     "serving_ms_doc_sha256": "f1b6e819adc5bfbdfb64c095c7b53d18b4b95dcdc1c5b6a63218c52e1d300eac",
+     "value": 9
+    },
+    "ms_local_print_block_total": 9,
+    "print_pass_value": 9,
+    "qp_echo": {
+     "qp_sha256": "fa8769bea3b6ef523b0e2c6a3f339fab8502ddf317ba7d9444cb8da034bc1c5b",
+     "serving_qp_doc": "c6437e05-c992-5844-b3d2-a71991795044",
+     "source": "corpus/2017-06_4CH0-1CR/qp.pdf",
+     "value": 9
+    },
+    "qv_provenance": {
+     "extraction_confidence": "0.45",
+     "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "qv_created_at": "2026-09-14 11:33:22.453589+00",
+     "source_document_id": "c6437e05-c992-5844-b3d2-a71991795044"
+    }
+   },
+   "paper": "4CH0/1CR",
+   "paper_id": "a29dfbd8-54c4-41b0-97ec-8fa8fe94b966",
+   "qn": 11,
+   "question_id": "f970bb4c-16ac-4e12-9db8-4d8a1820b4b5",
+   "qv_id": "d3733399-d8ed-496f-9b52-49ea4e249743",
+   "ref": "q11-b4e24b82",
+   "scope": "marks only \u2014 parts, mark_schemes, mark_points, states, audit untouched",
+   "session": "June 2017"
+  }
+ ],
+ "write_shape": {
+  "delta_marks_total": 40,
+  "guards": [
+   "external_ref pinned",
+   "id pinned",
+   "marks = 1 pre-condition",
+   "exam_paper join pinned by paper_code + session_label",
+   "census pins exact (papers/qv/questions/parts/schemes/mp/bridge)",
+   "audit floor monotonic",
+   "fresh-DB no-op on empty questions table"
+  ],
+  "no_audit_rows": true,
+  "no_state_flips": true,
+  "parts_untouched": true,
+  "transport": "core Flyway V61 (V60 census-gated precedent) \u2014 one tx, double-condition-guarded UPDATEs x2 tables, in-tx before/after sum self-measurement (delta must equal +40 exactly), RAISE on any drift aborts the deploy"
+ }
+}

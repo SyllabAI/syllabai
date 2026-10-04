@@ -1,0 +1,51 @@
+== bank-repair lane PROBE (SELECT-only) == 2026-10-04T01:41:47.088613+00:00
+project billowing-cherry-15418366; production br-muddy-bar-a5huwldd (READ-ONLY parent)
+A. probe branch created: br-twilight-mode-a5v74um9 (child of br-muddy-bar-a5huwldd)
+  API POST /projects/billowing-cherry-15418366/branches/br-twilight-mode-a5v74um9/roles/neondb_owner/reset_password -> 423, retry in 15s (1/6)
+A. throwaway neondb_owner password reset on the probe branch only
+A. endpoint ep-fragrant-mud-a5hf9fqx.us-east-2.aws.neon.tech
+B. identity PASS (neondb / T-C04-CAMPAIGN)
+C. table shapes captured
+   questions: id, external_ref, question_type, stem, marks, difficulty, expected_time_seconds, command_word, primary_topic_node_id, provenance, active, version, created_at, exam_paper_id, difficulty_source
+   question_versions: id, question_id, version, stem, marks, difficulty, expected_time_seconds, command_word, validation_state, source_document_id, extraction_confidence, extraction_method, created_at
+   question_parts: id, question_version_id, label, prompt, command_word, marks, ordering, created_at
+   mark_schemes: id, question_version_id, version_label, source_document_id, validation_state, extraction_method, created_at, general_guidance
+   mark_points: id, mark_scheme_id, question_part_id, ref, ordering, text, marks, acceptance_criteria, extraction_confidence, created_at
+   documents: id, document_id, schema_version, doc_version, kind, source_uri, file_name, mime_type, checksum, checksum_algorithm, page_count, element_count, text_element_count, chunk_count, source_engine, source_engine_version, extracted_at, canonical_json, ingested_by, created_at, validation_state
+   document_chunks: id, document_row_id, chunk_index, content, page_start, page_end, element_ids, token_estimate, embedding, embedding_model, embedded_at, created_at, content_tsv, kind, subject_id, series, year, paper_code, atom_number, spec_codes, embed_rev
+   exam_papers: id, subject_id, title, board, qualification, unit, session_label, paper_code, question_paper_document_id, mark_scheme_document_id, validation_state, provenance, extraction_method, created_by, created_at, series, year
+   glm_ocr_bridge_records: id, paper_id, bridge, qp_document_id, ms_document_id, qp_document_row_id, ms_document_row_id, qp_checksum, ms_checksum, extraction_methods, reconciliation_status, review_findings, qp_draft, ms_draft, reconciliation, created_by, created_at
+D. 4CH0/1C June 2013: 11 question(s); serving qp=d5b3dc75-9d57-5caf-a823-2e0445096834 ms=af3f4f8d-01b8-5036-bbc5-1f6b464a5c22
+D. 4CH0/1C June 2017: 11 question(s); serving qp=c4a5619b-4230-5472-b746-000fa3c8a5f7 ms=83e11e07-ea10-5bef-8dec-28890d603b14
+D. 4CH0/1C June 2018: 15 question(s); serving qp=55445f5f-bb7f-5d74-929e-f56b830e4990 ms=1e2fa40b-1aea-5ddf-ac79-c1533fa2d132
+D. 4CH0/1CR June 2017: 15 question(s); serving qp=c6437e05-c992-5844-b3d2-a71991795044 ms=7195d701-ad3b-5667-8d4c-1dd743021e27
+E. census: papers=[('REJECTED', 13), ('VALIDATED', 91)] qv={'n': 1526, 'n_validated': 1465, 'n_suggested': 59, 'n_rejected': 2} questions={'n': 1526, 'n_active': 954} parts={'n': 7183, 'marks': 9068} schemes={'n': 1504, 'n_validated': 1360, 'n_suggested': 144} mp={'n': 5883} audit_max=5586
+   bridge=[('OK', 10), ('SUPERSEDED', 49)]
+F1. documents matching the 8 corpus checksums: 8
+    f1b6e819adc5… doc_id=7195d701-ad3b-5667-8d4c-1dd743021e27 kind=MARK_SCHEME state=VALIDATED chunks=24/24@rev2
+    5381d95189fe… doc_id=1e2fa40b-1aea-5ddf-ac79-c1533fa2d132 kind=MARK_SCHEME state=VALIDATED chunks=31/31@rev2
+    d9e5ef81faac… doc_id=d5b3dc75-9d57-5caf-a823-2e0445096834 kind=QUESTION_PAPER state=VALIDATED chunks=26/26@rev2
+    5e7364676994… doc_id=af3f4f8d-01b8-5036-bbc5-1f6b464a5c22 kind=MARK_SCHEME state=VALIDATED chunks=26/26@rev2
+    a4f7eb2c6d9b… doc_id=c4a5619b-4230-5472-b746-000fa3c8a5f7 kind=QUESTION_PAPER state=VALIDATED chunks=19/19@rev2
+    28008020cb90… doc_id=83e11e07-ea10-5bef-8dec-28890d603b14 kind=MARK_SCHEME state=VALIDATED chunks=23/23@rev2
+    fa8769bea3b6… doc_id=c6437e05-c992-5844-b3d2-a71991795044 kind=QUESTION_PAPER state=VALIDATED chunks=21/21@rev2
+    1ff0f7955d3f… doc_id=55445f5f-bb7f-5d74-929e-f56b830e4990 kind=QUESTION_PAPER state=VALIDATED chunks=18/18@rev2
+F2. bridge rows for the 4 papers: 4
+    4CH0/1C June 2013 bridge=a9388337… status=SUPERSEDED qp=REJECTED ms=REJECTED
+    4CH0/1C June 2017 bridge=c248bd86… status=SUPERSEDED qp=REJECTED ms=REJECTED
+    4CH0/1C June 2018 bridge=3aa10d9b… status=SUPERSEDED qp=REJECTED ms=REJECTED
+    4CH0/1CR June 2017 bridge=3a268d6f… status=SUPERSEDED qp=REJECTED ms=REJECTED
+F3. 4CH0/1C June 2013 ms doc af3f4f8d-01b8-…: state=VALIDATED chunks=26 checksum-match-corpus=True
+F3. 4CH0/1C June 2013 qp doc d5b3dc75-9d57-…: state=VALIDATED chunks=26 checksum-match-corpus=True
+F3. 4CH0/1C June 2017 ms doc 83e11e07-ea10-…: state=VALIDATED chunks=23 checksum-match-corpus=True
+F3. 4CH0/1C June 2017 qp doc c4a5619b-4230-…: state=VALIDATED chunks=19 checksum-match-corpus=True
+F3. 4CH0/1C June 2018 ms doc 1e2fa40b-1aea-…: state=VALIDATED chunks=31 checksum-match-corpus=True
+F3. 4CH0/1C June 2018 qp doc 55445f5f-bb7f-…: state=VALIDATED chunks=18 checksum-match-corpus=True
+F3. 4CH0/1CR June 2017 ms doc 7195d701-ad3b-…: state=VALIDATED chunks=24 checksum-match-corpus=True
+F3. 4CH0/1CR June 2017 qp doc c6437e05-c992-…: state=VALIDATED chunks=21 checksum-match-corpus=True
+G. 4CH0/1C June 2013 q10: 1 candidate ref(s) ['q10-6d968517']
+G. 4CH0/1C June 2017 q11: 1 candidate ref(s) ['q11-8b9f4957']
+G. 4CH0/1C June 2018 q12: 1 candidate ref(s) ['q12-23323bab']
+G. 4CH0/1CR June 2017 q11: 1 candidate ref(s) ['q11-b4e24b82']
+G. stems captured for 4 targets
+TEARDOWN: probe branch DELETED (credential dead)

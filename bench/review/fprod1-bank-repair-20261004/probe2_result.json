@@ -1,0 +1,306 @@
+{
+ "probe2_utc": "2026-10-04T01:45:54.316542+00:00",
+ "branch": "br-floral-feather-a5pfu3z4",
+ "provenance": [
+  {
+   "ref": "q10-6d968517",
+   "paper": "4CH0/1C June 2013",
+   "rows": [
+    {
+     "question_id": "a7b97aad-1934-4c5f-8fc7-ae262dc41b26",
+     "external_ref": "q10-6d968517",
+     "q_prov": "PAST_PAPER",
+     "q_created": "2026-09-14 11:27:01.881898+00",
+     "qv_id": "f7f4d9f3-98d8-462d-9084-2a35402a25af",
+     "source_document_id": "d5b3dc75-9d57-5caf-a823-2e0445096834",
+     "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "extraction_confidence": 0.45,
+     "qv_created": "2026-09-14 11:27:01.882321+00"
+    }
+   ]
+  },
+  {
+   "ref": "q11-8b9f4957",
+   "paper": "4CH0/1C June 2017",
+   "rows": [
+    {
+     "question_id": "78a997c3-181d-4045-97f0-fc9a6cc40086",
+     "external_ref": "q11-8b9f4957",
+     "q_prov": "PAST_PAPER",
+     "q_created": "2026-09-14 11:33:17.733115+00",
+     "qv_id": "27255b93-53eb-4d6d-a960-e1429829da2c",
+     "source_document_id": "c4a5619b-4230-5472-b746-000fa3c8a5f7",
+     "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "extraction_confidence": 0.45,
+     "qv_created": "2026-09-14 11:33:17.733233+00"
+    }
+   ]
+  },
+  {
+   "ref": "q12-23323bab",
+   "paper": "4CH0/1C June 2018",
+   "rows": [
+    {
+     "question_id": "51b434af-7735-47f0-bef1-d6142871dfb6",
+     "external_ref": "q12-23323bab",
+     "q_prov": "PAST_PAPER",
+     "q_created": "2026-09-14 11:33:32.143946+00",
+     "qv_id": "a8e9c7d3-d70b-4485-a24c-aaddf28fded4",
+     "source_document_id": "55445f5f-bb7f-5d74-929e-f56b830e4990",
+     "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "extraction_confidence": 0.45,
+     "qv_created": "2026-09-14 11:33:32.144016+00"
+    }
+   ]
+  },
+  {
+   "ref": "q11-b4e24b82",
+   "paper": "4CH0/1CR June 2017",
+   "rows": [
+    {
+     "question_id": "f970bb4c-16ac-4e12-9db8-4d8a1820b4b5",
+     "external_ref": "q11-b4e24b82",
+     "q_prov": "PAST_PAPER",
+     "q_created": "2026-09-14 11:33:22.453482+00",
+     "qv_id": "d3733399-d8ed-496f-9b52-49ea4e249743",
+     "source_document_id": "c6437e05-c992-5844-b3d2-a71991795044",
+     "extraction_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "extraction_confidence": 0.45,
+     "qv_created": "2026-09-14 11:33:22.453589+00"
+    }
+   ]
+  }
+ ],
+ "family_papers": [
+  {
+   "paper_code": "4CH0/1C",
+   "session_label": "June 2013",
+   "validation_state": "VALIDATED",
+   "id": "31ad242a-43c6-4246-a158-bd79f586994a"
+  },
+  {
+   "paper_code": "4CH0/1C",
+   "session_label": "June 2017",
+   "validation_state": "VALIDATED",
+   "id": "e97797b8-6c19-4380-8f67-ee39a703b76e"
+  },
+  {
+   "paper_code": "4CH0/1C",
+   "session_label": "June 2018",
+   "validation_state": "VALIDATED",
+   "id": "90975a33-63b4-4d32-bbe0-eed99a60ab26"
+  },
+  {
+   "paper_code": "4CH0/1CR",
+   "session_label": "June 2013",
+   "validation_state": "VALIDATED",
+   "id": "b2c9ec49-9e47-4ec5-83be-3b5d787322c4"
+  },
+  {
+   "paper_code": "4CH0/1CR",
+   "session_label": "June 2017",
+   "validation_state": "VALIDATED",
+   "id": "a29dfbd8-54c4-41b0-97ec-8fa8fe94b966"
+  }
+ ],
+ "mark_points_detail": [
+  {
+   "ref": "q10-6d968517",
+   "paper": "4CH0/1C June 2013",
+   "points": [
+    {
+     "ref": "10-a",
+     "marks": 1,
+     "text_head": "air/atmosphere",
+     "ordering": 0
+    },
+    {
+     "ref": "10-c",
+     "marks": 1,
+     "text_head": "Increased (rate)",
+     "ordering": 1
+    }
+   ]
+  },
+  {
+   "ref": "q11-8b9f4957",
+   "paper": "4CH0/1C June 2017",
+   "points": [
+    {
+     "ref": "11-a-i",
+     "marks": 3,
+     "text_head": "(moles route)",
+     "ordering": 0
+    },
+    {
+     "ref": "11-a-ii",
+     "marks": 2,
+     "text_head": "M1carbondioxideis(an)acidic(oxide)",
+     "ordering": 1
+    },
+    {
+     "ref": "11-b",
+     "marks": 3,
+     "text_head": "Time to collect100cm3of gasin seconds\nTemperature in\u2103",
+     "ordering": 2
+    },
+    {
+     "ref": "11-c",
+     "marks": 3,
+     "text_head": "M1particles have more energy\nM2more collisions have energy equal to/greater than the activ",
+     "ordering": 3
+    }
+   ]
+  },
+  {
+   "ref": "q12-23323bab",
+   "paper": "4CH0/1C June 2018",
+   "points": [
+    {
+     "ref": "12-a",
+     "marks": 1,
+     "text_head": "A(boiling point)\nThe only correct answer is A because the property of hydrocarbons used to",
+     "ordering": 0
+    },
+    {
+     "ref": "12-b-i",
+     "marks": 1,
+     "text_head": "camping gas/bottled gas/calor gas",
+     "ordering": 1
+    },
+    {
+     "ref": "12-b-ii",
+     "marks": 1,
+     "text_head": "fuel for(aero)planes",
+     "ordering": 2
+    },
+    {
+     "ref": "12-b-iii",
+     "marks": 1,
+     "text_head": "bitumen",
+     "ordering": 3
+    },
+    {
+     "ref": "12-c-i",
+     "marks": 1,
+     "text_head": "silica/alumina",
+     "ordering": 4
+    },
+    {
+     "ref": "12-c-ii",
+     "marks": 1,
+     "text_head": "600-700(\u2103)",
+     "ordering": 5
+    },
+    {
+     "ref": "12-c-iii",
+     "marks": 1,
+     "text_head": "C14H30\u2192C2H4+C12H26",
+     "ordering": 6
+    },
+    {
+     "ref": "12-c-iv",
+     "marks": 1,
+     "text_head": "C=CH",
+     "ordering": 7
+    },
+    {
+     "ref": "12-c-v",
+     "marks": 1,
+     "text_head": "poly(ethene)/polyethene/polythene",
+     "ordering": 8
+    },
+    {
+     "ref": "12-c-vi",
+     "marks": 2,
+     "text_head": "M1 it is inertM2(so) does not biodegrade",
+     "ordering": 9
+    }
+   ]
+  },
+  {
+   "ref": "q11-b4e24b82",
+   "paper": "4CH0/1CR June 2017",
+   "points": [
+    {
+     "ref": "11-a-i",
+     "marks": 1,
+     "text_head": "D(CnH2n+2)",
+     "ordering": 0
+    },
+    {
+     "ref": "11-a-ii",
+     "marks": 1,
+     "text_head": "C(CnH2n)",
+     "ordering": 1
+    },
+    {
+     "ref": "11-a-iii",
+     "marks": 2,
+     "text_head": "Any two from:\nM1 similar/same chemical properties\nM2 graded physical properties / trend in",
+     "ordering": 2
+    },
+    {
+     "ref": "11-b-i",
+     "marks": 1,
+     "text_head": "(the molecule) contains only single bonds",
+     "ordering": 3
+    },
+    {
+     "ref": "11-b-ii",
+     "marks": 1,
+     "text_head": "Chemical structure of the molecule",
+     "ordering": 4
+    },
+    {
+     "ref": "11-b-iii",
+     "marks": 1,
+     "text_head": "Chemical structure of the molecule",
+     "ordering": 5
+    },
+    {
+     "ref": "11-c-i",
+     "marks": 1,
+     "text_head": "ultraviolet/uv (light/radiation)",
+     "ordering": 6
+    },
+    {
+     "ref": "11-c-ii",
+     "marks": 1,
+     "text_head": "Chemical structure of the molecule",
+     "ordering": 7
+    }
+   ]
+  }
+ ],
+ "audit_tail": {
+  "max": 5586,
+  "last5": [
+   {
+    "id": "5586",
+    "action": "PLACE",
+    "occurred_at": "2026-10-02 14:34:56.512595+00"
+   },
+   {
+    "id": "5585",
+    "action": "PLACE",
+    "occurred_at": "2026-10-02 14:34:56.512595+00"
+   },
+   {
+    "id": "5584",
+    "action": "PLACE",
+    "occurred_at": "2026-10-02 14:34:56.512595+00"
+   },
+   {
+    "id": "5583",
+    "action": "PLACE",
+    "occurred_at": "2026-10-02 14:34:56.512595+00"
+   },
+   {
+    "id": "5582",
+    "action": "PLACE",
+    "occurred_at": "2026-10-02 14:34:56.512595+00"
+   }
+  ]
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "postflight_utc": "2026-10-04T02:18:45.505029+00:00",
+ "branch": "br-polished-math-a56bav4e",
+ "v61_applied": true,
+ "v61_installed_on": "2026-10-04 02:14:31.791607",
+ "after_values": [
+  {
+   "ref": "q10-6d968517",
+   "expect": 13,
+   "got": [
+    {
+     "qv_marks": 13,
+     "q_marks": 13,
+     "version": 1,
+     "validation_state": "VALIDATED",
+     "active": false
+    }
+   ],
+   "pass": true
+  },
+  {
+   "ref": "q11-8b9f4957",
+   "expect": 11,
+   "got": [
+    {
+     "qv_marks": 11,
+     "q_marks": 11,
+     "version": 1,
+     "validation_state": "VALIDATED",
+     "active": false
+    }
+   ],
+   "pass": true
+  },
+  {
+   "ref": "q12-23323bab",
+   "expect": 11,
+   "got": [
+    {
+     "qv_marks": 11,
+     "q_marks": 11,
+     "version": 1,
+     "validation_state": "VALIDATED",
+     "active": false
+    }
+   ],
+   "pass": true
+  },
+  {
+   "ref": "q11-b4e24b82",
+   "expect": 9,
+   "got": [
+    {
+     "qv_marks": 9,
+     "q_marks": 9,
+     "version": 1,
+     "validation_state": "VALIDATED",
+     "active": false
+    }
+   ],
+   "pass": true
+  }
+ ],
+ "post_pins": {
+  "qv": {
+   "n": 1526,
+   "n_validated": 1465,
+   "n_suggested": 59,
+   "n_rejected": 2,
+   "marks_sum": 11713
+  },
+  "questions": {
+   "n": 1526,
+   "n_active": 954,
+   "marks_sum": 11713
+  },
+  "parts": {
+   "n": 7183,
+   "marks": 9068
+  },
+  "schemes": {
+   "n": 1504,
+   "n_validated": 1360,
+   "n_suggested": 144
+  },
+  "mark_points": {
+   "n": 5883
+  },
+  "papers": {
+   "n_validated": 91,
+   "n_rejected": 13
+  },
+  "bridge": {
+   "n_ok": 10,
+   "n_superseded": 49,
+   "n_rr": 0
+  }
+ },
+ "invariants": [
+  {
+   "check": "qv count 1526",
+   "pass": true
+  },
+  {
+   "check": "qv 1465V/59S/2R",
+   "pass": true
+  },
+  {
+   "check": "questions 1526/954",
+   "pass": true
+  },
+  {
+   "check": "parts 7183/9068 unchanged",
+   "pass": true
+  },
+  {
+   "check": "schemes 1504 (1360V/144S)",
+   "pass": true
+  },
+  {
+   "check": "mp 5883",
+   "pass": true
+  },
+  {
+   "check": "papers 91V/13R",
+   "pass": true
+  },
+  {
+   "check": "bridge 10 OK + 49 SUP + 0 RR",
+   "pass": true
+  },
+  {
+   "check": "qv sum == q sum",
+   "pass": true
+  }
+ ],
+ "all_pass": true
+}

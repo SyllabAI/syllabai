@@ -1,0 +1,24 @@
+== bank-repair POST-FLIGHT == 2026-10-04T02:18:45.505029+00:00
+  API retry 423 (1)
+A. postflight branch br-polished-math-a56bav4e ep ep-empty-scene-a5w1k2we.us-east-2.aws.neon.tech
+B. identity PASS
+1. V61 applied: success=True installed_on=2026-10-04 02:14:31.791607
+2. q10-6d968517: qv=13 q=13 (expect 13) state=VALIDATED PASS
+2. q11-8b9f4957: qv=11 q=11 (expect 11) state=VALIDATED PASS
+2. q12-23323bab: qv=11 q=11 (expect 11) state=VALIDATED PASS
+2. q11-b4e24b82: qv=9 q=9 (expect 9) state=VALIDATED PASS
+3. qv={'n': 1526, 'n_validated': 1465, 'n_suggested': 59, 'n_rejected': 2, 'marks_sum': 11713}
+   questions={'n': 1526, 'n_active': 954, 'marks_sum': 11713}
+   parts={'n': 7183, 'marks': 9068} schemes={'n': 1504, 'n_validated': 1360, 'n_suggested': 144} mp={'n': 5883}
+   papers={'n_validated': 91, 'n_rejected': 13} bridge={'n_ok': 10, 'n_superseded': 49, 'n_rr': 0}
+4. qv count 1526: PASS
+4. qv 1465V/59S/2R: PASS
+4. questions 1526/954: PASS
+4. parts 7183/9068 unchanged: PASS
+4. schemes 1504 (1360V/144S): PASS
+4. mp 5883: PASS
+4. papers 91V/13R: PASS
+4. bridge 10 OK + 49 SUP + 0 RR: PASS
+4. qv sum == q sum: PASS
+POST-FLIGHT: ALL PASS
+TEARDOWN: postflight branch DELETED (credential dead)

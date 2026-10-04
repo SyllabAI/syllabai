@@ -1,0 +1,19 @@
+== probe2 (SELECT-only) == 2026-10-04T01:45:54.316542+00:00
+  API retry 423 (1)
+A. probe2 branch br-floral-feather-a5pfu3z4 ep ep-sparkling-star-a5437wiz.us-east-2.aws.neon.tech
+B. identity PASS
+1. q10-6d968517: src_doc=d5b3dc75-9d57-5caf-a823-2e0445096834 method=glm-ocr-qp-v1+glm-ocr-ms-v1 conf=0.45 qv_created=2026-09-14 11:27:01.882321+00
+1. q11-8b9f4957: src_doc=c4a5619b-4230-5472-b746-000fa3c8a5f7 method=glm-ocr-qp-v1+glm-ocr-ms-v1 conf=0.45 qv_created=2026-09-14 11:33:17.733233+00
+1. q12-23323bab: src_doc=55445f5f-bb7f-5d74-929e-f56b830e4990 method=glm-ocr-qp-v1+glm-ocr-ms-v1 conf=0.45 qv_created=2026-09-14 11:33:32.144016+00
+1. q11-b4e24b82: src_doc=c6437e05-c992-5844-b3d2-a71991795044 method=glm-ocr-qp-v1+glm-ocr-ms-v1 conf=0.45 qv_created=2026-09-14 11:33:22.453589+00
+2. 4CH0/1C June 2013: VALIDATED id=31ad242a-43c6-4246-a158-bd79f586994a
+2. 4CH0/1C June 2017: VALIDATED id=e97797b8-6c19-4380-8f67-ee39a703b76e
+2. 4CH0/1C June 2018: VALIDATED id=90975a33-63b4-4d32-bbe0-eed99a60ab26
+2. 4CH0/1CR June 2013: VALIDATED id=b2c9ec49-9e47-4ec5-83be-3b5d787322c4
+2. 4CH0/1CR June 2017: VALIDATED id=a29dfbd8-54c4-41b0-97ec-8fa8fe94b966
+3. q10-6d968517: 2 mark_points
+3. q11-8b9f4957: 4 mark_points
+3. q12-23323bab: 10 mark_points
+3. q11-b4e24b82: 8 mark_points
+4. audit_max=5586; last: 5586:PLACE@2026-10-02 14:34:56; 5585:PLACE@2026-10-02 14:34:56; 5584:PLACE@2026-10-02 14:34:56; 5583:PLACE@2026-10-02 14:34:56; 5582:PLACE@2026-10-02 14:34:56
+TEARDOWN: probe2 branch DELETED (credential dead)
