@@ -1,0 +1,86 @@
+{
+ "engine": {
+  "g4_head": "9c538ad",
+  "g5_head": "c507ff1"
+ },
+ "print_pin_ms": {
+  "corpus_path": "2017-06/4CH0-2C/ms.pdf",
+  "computed_sha256": "6204523f27e12b63aa27ef58623199dd2cb90deba968e3240a9d1aeeaba398e0",
+  "manifest_sha256": "6204523f27e12b63aa27ef58623199dd2cb90deba968e3240a9d1aeeaba398e0",
+  "match": true
+ },
+ "g4_q5": {
+  "sum": 19,
+  "total_row": 15,
+  "n_points": 7,
+  "conflict": null
+ },
+ "g5_q5": {
+  "sum": 15,
+  "total_row": 15,
+  "n_points": 6,
+  "conflict": {
+   "total_row": 15,
+   "raw_sum": 19,
+   "demoted": [
+    {
+     "label": "M1",
+     "part": "b",
+     "sub": "ii",
+     "marks": 4,
+     "page": 16
+    }
+   ],
+   "page": 18
+  }
+ },
+ "g5_all_questions": {
+  "1": {
+   "sum": 4,
+   "total_row": 4
+  },
+  "2": {
+   "sum": 11,
+   "total_row": 11
+  },
+  "3": {
+   "sum": 11,
+   "total_row": 11
+  },
+  "4": {
+   "sum": 19,
+   "total_row": 19
+  },
+  "5": {
+   "sum": 15,
+   "total_row": 15
+  }
+ },
+ "qp_printed_totals": {
+  "1": 4,
+  "2": 11,
+  "3": 11,
+  "4": 19,
+  "5": 15
+ },
+ "paper_sum_g5": 60,
+ "qp_paper_total_witness": 60,
+ "paper_closes": true,
+ "all_questions_match_qp_prints": true,
+ "jan2017_control": {
+  "g4_q6": {
+   "sum": 13,
+   "total_row": 13,
+   "n_points": 7,
+   "conflict": null
+  },
+  "g5_q6": {
+   "sum": 13,
+   "total_row": 13,
+   "n_points": 7,
+   "conflict": null
+  },
+  "unchanged": true,
+  "b_cell_survives": true
+ }
+}

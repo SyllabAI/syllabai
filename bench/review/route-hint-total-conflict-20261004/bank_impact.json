@@ -1,0 +1,329 @@
+{
+ "print_pins": {
+  "4CH0-2C-201701/ms.pdf": "d4690be69076196d6be0702ef94cf65b9ce50d1ec3882e35a4f2f427daf1875d",
+  "4CH0-2C-201701/qp.pdf": "c71dfc1b6c8080931e8d94b3402d147329ea7689390a9399042738fff60f6cad",
+  "4CH0-2C-201706/ms.pdf": "6204523f27e12b63aa27ef58623199dd2cb90deba968e3240a9d1aeeaba398e0",
+  "4CH0-2C-201706/qp.pdf": "f5b49ec7c1b8cebf7b98299d46f13957677f955d095b52fd37202a124c447085"
+ },
+ "mode": "SELECT-ONLY",
+ "flyway_head": [
+  {
+   "version": "61",
+   "description": "fprod1 bank marks repair",
+   "success": true
+  },
+  {
+   "version": "60",
+   "description": "fprod1b bridge superseded",
+   "success": true
+  },
+  {
+   "version": "59",
+   "description": "flashcard review registry",
+   "success": true
+  }
+ ],
+ "ep_linkage": [
+  {
+   "id": "1e935cfc-6ed2-424f-9c66-72d6d3532bd6",
+   "subject": "4CH0CHEMISTRY",
+   "series": "JAN",
+   "year": 2016,
+   "paper": "4CH0/1C",
+   "state": "VALIDATED",
+   "questions": 15
+  },
+  {
+   "id": "dcba6a4a-75c2-4608-90aa-f965ca33385c",
+   "subject": "4CH0CHEMISTRY",
+   "series": "JUN",
+   "year": 2016,
+   "paper": "4CH0/2C",
+   "state": "VALIDATED",
+   "questions": 8
+  },
+  {
+   "id": "21041891-11f6-4168-9136-771e666cd8fa",
+   "subject": "4CH0CHEMISTRY",
+   "series": "JAN",
+   "year": 2017,
+   "paper": "4CH0/2C",
+   "state": "VALIDATED",
+   "questions": 8
+  },
+  {
+   "id": "2f6675a3-925b-40ea-9407-e6d2a3c9ed46",
+   "subject": "4CH1",
+   "series": "JAN",
+   "year": 2016,
+   "paper": "4CH0/2C",
+   "state": "VALIDATED",
+   "questions": 7
+  },
+  {
+   "id": "1db58ecb-d735-40de-8062-bc031fd37d5b",
+   "subject": "4CH1",
+   "series": "JUN",
+   "year": 2016,
+   "paper": "4CH0/1C",
+   "state": "VALIDATED",
+   "questions": 16
+  },
+  {
+   "id": "1995f447-d824-4ae7-bf9a-590ff2cff5b3",
+   "subject": "4CH1",
+   "series": "JUN",
+   "year": 2016,
+   "paper": "4CH0/1CR",
+   "state": "VALIDATED",
+   "questions": 12
+  },
+  {
+   "id": "c41dad58-957f-4254-94ed-f26cf1d7b5ed",
+   "subject": "4CH1",
+   "series": "JUN",
+   "year": 2016,
+   "paper": "4CH0/2CR",
+   "state": "VALIDATED",
+   "questions": 7
+  },
+  {
+   "id": "6b5dc788-7de9-4148-a24e-afedaae165fb",
+   "subject": "4CH1",
+   "series": "JUN",
+   "year": 2016,
+   "paper": null,
+   "state": "REJECTED",
+   "questions": 8
+  },
+  {
+   "id": "31236989-60fe-4dd9-b7c8-b86160f8a14e",
+   "subject": "4CH1",
+   "series": "JAN",
+   "year": 2017,
+   "paper": "4CH0/1C",
+   "state": "VALIDATED",
+   "questions": 11
+  },
+  {
+   "id": "e97797b8-6c19-4380-8f67-ee39a703b76e",
+   "subject": "4CH1",
+   "series": "JUN",
+   "year": 2017,
+   "paper": "4CH0/1C",
+   "state": "VALIDATED",
+   "questions": 11
+  },
+  {
+   "id": "a29dfbd8-54c4-41b0-97ec-8fa8fe94b966",
+   "subject": "4CH1",
+   "series": "JUN",
+   "year": 2017,
+   "paper": "4CH0/1CR",
+   "state": "VALIDATED",
+   "questions": 15
+  },
+  {
+   "id": "0a94f411-b2c4-4db8-ba22-150a4560c31c",
+   "subject": "4CH1",
+   "series": "JUN",
+   "year": 2017,
+   "paper": "4CH0/2C",
+   "state": "VALIDATED",
+   "questions": 5
+  },
+  {
+   "id": "c2dab965-b9e9-4ca9-a37c-74a557e9b3b5",
+   "subject": "4CH1",
+   "series": "JUN",
+   "year": 2017,
+   "paper": "4CH0/2CR",
+   "state": "VALIDATED",
+   "questions": 8
+  },
+  {
+   "id": "fd1bf331-138c-4872-a92e-17d613c11924",
+   "subject": "4CH1",
+   "series": null,
+   "year": 2017,
+   "paper": "4CH1/1C",
+   "state": "VALIDATED",
+   "questions": 11
+  },
+  {
+   "id": "23ef5e6e-7cd2-4180-94d5-f180af2cca22",
+   "subject": "4CH1",
+   "series": null,
+   "year": 2017,
+   "paper": "4CH1/2C",
+   "state": "VALIDATED",
+   "questions": 9
+  }
+ ],
+ "serving_docs": [
+  {
+   "id": "5e313f96-d63b-46fe-aa91-9104261ef3e5",
+   "kind": "QUESTION_PAPER",
+   "state": "VALIDATED",
+   "checksum": "f5b49ec7c1b8cebf7b98299d46f13957677f955d095b52fd37202a124c447085",
+   "source_uri": "4CH0-2C-201706/qp.pdf",
+   "matches_corpus_print_pin": true
+  },
+  {
+   "id": "3ea9e88e-ad73-42f0-8610-5429253568ca",
+   "kind": "MARK_SCHEME",
+   "state": "VALIDATED",
+   "checksum": "6204523f27e12b63aa27ef58623199dd2cb90deba968e3240a9d1aeeaba398e0",
+   "source_uri": "4CH0-2C-201706/ms.pdf",
+   "matches_corpus_print_pin": true
+  },
+  {
+   "id": "ec426ff1-b277-4e23-ba70-7c8038f13ead",
+   "kind": "QUESTION_PAPER",
+   "state": "VALIDATED",
+   "checksum": "c71dfc1b6c8080931e8d94b3402d147329ea7689390a9399042738fff60f6cad",
+   "source_uri": "4CH0-2C-201701/qp.pdf",
+   "matches_corpus_print_pin": true
+  },
+  {
+   "id": "d5bbb49c-0048-43c6-92da-db3072c7e317",
+   "kind": "MARK_SCHEME",
+   "state": "VALIDATED",
+   "checksum": "d4690be69076196d6be0702ef94cf65b9ce50d1ec3882e35a4f2f427daf1875d",
+   "source_uri": "4CH0-2C-201701/ms.pdf",
+   "matches_corpus_print_pin": true
+  }
+ ],
+ "bank_201706_2c": [
+  {
+   "ep": "0a94f411-b2c4-4db8-ba22-150a4560c31c",
+   "rows": [
+    {
+     "q": "bf316990-b4e3-4b92-a27e-f5b3565443ec",
+     "ref": "q01-dbac910c",
+     "q_marks": 4,
+     "active": false,
+     "qv": "9b114d97-06ad-48c4-b57c-d692de46f9b9",
+     "qv_marks": 4,
+     "qv_state": "VALIDATED",
+     "ms": "ec9102f6-4616-457a-94a1-76bce9692855",
+     "ms_state": "VALIDATED",
+     "ms_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "n_points": 6,
+     "points_sum": 10
+    },
+    {
+     "q": "eb1642fa-4e43-4fe6-a4c6-b6d2cc930c20",
+     "ref": "q02-dbac910c",
+     "q_marks": 1,
+     "active": false,
+     "qv": "32d7dd15-6dbf-4448-b90e-59e0fa1b29e1",
+     "qv_marks": 1,
+     "qv_state": "VALIDATED",
+     "ms": "2b261835-b0a4-4271-b593-5a5fc5918062",
+     "ms_state": "VALIDATED",
+     "ms_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "n_points": 7,
+     "points_sum": 11
+    },
+    {
+     "q": "63c70757-7d04-4284-a0c7-bd3d4113dd27",
+     "ref": "q03-dbac910c",
+     "q_marks": 11,
+     "active": false,
+     "qv": "bf848943-ba77-469f-b907-0b69f4ff1abd",
+     "qv_marks": 11,
+     "qv_state": "VALIDATED",
+     "ms": "fc643d5d-982d-4e74-9f3d-835924486656",
+     "ms_state": "VALIDATED",
+     "ms_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "n_points": 8,
+     "points_sum": 12
+    },
+    {
+     "q": "4998ec7a-5d74-4d5a-aafa-f8fe22c636eb",
+     "ref": "q04-dbac910c",
+     "q_marks": 1,
+     "active": false,
+     "qv": "bb4a1ed2-ec69-47cb-b62a-f5bc94453932",
+     "qv_marks": 1,
+     "qv_state": "VALIDATED",
+     "ms": "c36d3f65-c4e8-4dfa-a08a-79599f0affbc",
+     "ms_state": "VALIDATED",
+     "ms_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "n_points": 4,
+     "points_sum": 10
+    },
+    {
+     "q": "6edc3f68-54e6-4eb8-8270-00dce81f6a1e",
+     "ref": "q05-dbac910c",
+     "q_marks": 15,
+     "active": false,
+     "qv": "49b9c1cd-829b-49de-b269-b010af822962",
+     "qv_marks": 15,
+     "qv_state": "VALIDATED",
+     "ms": "a2a67193-6b62-47c2-a0fe-39abfa3b0f1d",
+     "ms_state": "VALIDATED",
+     "ms_method": "glm-ocr-qp-v1+glm-ocr-ms-v1",
+     "n_points": 4,
+     "points_sum": 12
+    }
+   ]
+  }
+ ],
+ "bank_201701_2c": [
+  {
+   "ep": "21041891-11f6-4168-9136-771e666cd8fa",
+   "rows": [
+    {
+     "ref": "4ch0-2c-201701#q1",
+     "q_marks": 5,
+     "active": true
+    },
+    {
+     "ref": "4ch0-2c-201701#q2",
+     "q_marks": 6,
+     "active": true
+    },
+    {
+     "ref": "4ch0-2c-201701#q3",
+     "q_marks": 8,
+     "active": true
+    },
+    {
+     "ref": "4ch0-2c-201701#q4",
+     "q_marks": 5,
+     "active": true
+    },
+    {
+     "ref": "4ch0-2c-201701#q5",
+     "q_marks": 8,
+     "active": true
+    },
+    {
+     "ref": "4ch0-2c-201701#q6",
+     "q_marks": 13,
+     "active": true
+    },
+    {
+     "ref": "4ch0-2c-201701#q7",
+     "q_marks": 7,
+     "active": true
+    },
+    {
+     "ref": "4ch0-2c-201701#q8",
+     "q_marks": 8,
+     "active": true
+    }
+   ]
+  }
+ ],
+ "census": {
+  "exam_papers": 108,
+  "questions": 1526,
+  "question_versions": 1526,
+  "mark_schemes": 1504,
+  "mark_points": 5883
+ },
+ "bank_rows_reading_19": 0
+}

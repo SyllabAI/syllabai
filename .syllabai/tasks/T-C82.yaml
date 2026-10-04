@@ -7,7 +7,7 @@ task:
     archaeology, fixtures from the verbatim pages, and a fail-closed
     grammar round (G5)"
   owner: "superz (main agent, zai session web-fc62c099-f5e6-4c87-a8d1-f1b6af33e168)"
-  status: CLAIMED
+  status: DONE
   priority: P1
   authority: |
     Operator word trace 1a106bb9581f530d ("Proceed with new route-hint
@@ -57,3 +57,26 @@ task:
       artifact — engine-level only); zero production writes"
     - "records: T-C82 DONE + TODO dated section + WORKLOG Session entry +
       TODO-CURRENT regenerated"
+outcome: |
+  EXECUTED 2026-10-04 (same session as the claim). Key results:
+    - Print archaeology re-adjudicated the T-C80 framing: BOTH Route-1
+      lines are REAL merged block cells; the June-2017 mint is the
+      standalone 'Alternative Method' full-page reprint of q5(b)(ii)
+      carrying the SAME printed cell 4 (p16).
+    - Engine: parser main c507ff1 (G5) — the Alternative-Method divider
+      tag + the Total-row-conflict reconciliation (gates: exact over-sum,
+      single earlier twin (part,sub,marks), distinct twins, no capped
+      membership; fail-closed everywhere; text preserved as guidance;
+      receipt in _total_row_conflict).
+    - Fixtures: 9 verbatim-page tests; full pdflane suite 210 OK (the one
+      pre-existing CorpusSmoke failure fails identically on the G4 base —
+      sparse-checkout materialization, not code).
+    - 16-session 4CH0 regression (40 variants) vs G4 9c538ad: ONLY diff
+      2017-06/4CH0-2C q5 19 -> 15 == printed Total == QP; the paper closes
+      4/11/11/19/15 = 60 == TOTAL FOR PAPER; Jan-2017 q6 = 13 unchanged.
+    - Bank impact SELECT-ONLY: 0 bank rows read 19; the June-2017 2C bank
+      rows are an inactive glm-ocr segmentation (schemes 10/11/12/10/12);
+      census == post-V61 pins exactly; flyway head V61 at probe time.
+      Zero production writes.
+    - Pack: bench/review/route-hint-total-conflict-20261004/ (REPORT + 4
+      evidence JSONs + 3 scripts + SHA256SUMS, credential-scanned clean).
