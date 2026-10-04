@@ -10,9 +10,10 @@ task:
     scoring channel; one measured datapoint vs the UNCHANGED §8.1 v1.1 bars
     + Ruling-7 gate reading (Ruling 8's named family, operator-commissioned)"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: IN_PROGRESS # seam phase LANDED: core PR #77 opened (head 1815fd7,
-    # CI pass, offline suite 1253/0/2 on the exact head) — the merge + the
-    # run await the operator's words (the T-C69/T-C72 two-word pattern)
+  status: RUN-RECORDED # the run phase executed on MERGED main (fa2dddb, PR #77
+    # merged on the operator's 'merge' word trace 1a1047dc0e4fedbd): run-005-i-r1
+    # recorded + verified (EXIT=0, findings none) — NOT PROMOTED as pinned; the
+    # separability answer is YES; the promotion/horizon reading is operator-gated
   priority: P1
   authority: "operator IM trace 1a10328970d5440d ('commission the
     rank-bounded kind-admission tranche') — the NEW operator word Ruling 8
@@ -111,6 +112,50 @@ task:
     - "records repo: pre-registration + grounding script + this yaml + run
       pack + TODO/WORKLOG"
   claims:
+    RUN-RECORDED:
+      - "PR #77 MERGED as fa2dddbdf57af2c1f2906d3bc3cf0876f7970553 on the
+        operator's word trace 1a1047dc0e4fedbd (merge API, full 40-char sha,
+        dense message); merge gates first-hand: head CI SUCCESS at 1815fd7,
+        diff reviewed line-by-line vs the prereg, offline suite re-run on the
+        exact head 1253/0/0/2 (JDK 25.0.4.1 Temurin — the T-C59 recipe's
+        upstream 25.0.4.1, corretto.aws unavailable, recorded honestly — +
+        Maven 3.9.9); base moved ebc3f07 -> 18d228b (PR #76, tutor-only, zero
+        overlap, mergeable clean — recorded); post-merge main CI SUCCESS"
+      - "run-005-i executed on MERGED main code only:
+        BENCH_RUN_ID=run-005-i BENCH_RUN_DATE=2026-10-04
+        BENCH_PER_ARM_LIMIT=40 BENCH_NOTES_KIND_ARM=15 BENCH_NOTES_RANK_CAP=20
+        (floor/reranker/weights ABSENT) over the frozen basis snap-007 x
+        gold-r9 x preload-r9 (SHA256SUMS clean 0 non-OK lines per dir before
+        the run; the run's own fail-closed echo passed); Flyway V1->V60 +
+        production loader + paired embed_rev stamp (4510 chunks -> rev 2);
+        zero API calls; output evidence/bench-001/runs/run-005-i-r1/
+        (results.json + authored RUN_REPORT.md + run005i_verify.py +
+        verify_output.txt + SHA256SUMS)"
+    RUN-OUTCOME:
+      - "VERIFY EXIT=0, findings none, failures none — every pre-registered
+        check held: (d) 52/89 = 0.5843 full / 79/84 = 0.9405 micro BYTE-EXACT
+        vs h (the theorem-shaped prediction; self-checks r8/r9/f/g/h OK);
+        SET-preservation 89/89 (primary endpoint) + superset vs f 89/89; the
+        H=20 horizon assertion 0 kind-arm-only refs at ranks 1..20 on all 89
+        queries; the 797-demotion ledger byte-exact (min 0 / max 15, 83
+        queries carry >0); rank-slice byte-stability pins ALL HELD
+        (0.0616/0.1043/0.1612/0.0303 — the recall@20 pin holds a 6th run);
+        mrr 0.07 / ndcg@10 0.1095 at the band tops (inside the recorded f-g
+        band); top-20 identity vs f == the simulation's predicted shape
+        exactly (87/89 set, 86/89 order — g2-024/g2-086/g2-077, the
+        grounding's three named queries)"
+      - "SEPARABILITY ANSWER: YES — run-005-i is the first recorded posture
+        where (d) beyond the r8 reference AND (a2) PASS coexist ((a2)
+        restored 0.1043 >= 0.0734; compliant == served; the SET gain and the
+        ORDER cost are severable on the production path). Gates (a)/(b)/(c)/
+        (b2)/(c2) FAIL at the UNCHANGED bars -> VERDICT NOT PROMOTED (the
+        pinned expected outcome; the tranche's question was separability, not
+        promotion). Non-regression total (f-full losses 0; 5/5 flips stay
+        reverted; g2-061/g2-109 held). (e) p50 343.8 ms ~ h's shape; (g) one
+        >15% flag: exam_question mrr f 0.494 -> i 0.6607 (g2-077, tier-2 rank
+        3 -> 1 under the deterministic stripped-order surface — the
+        re-execution band shape, recorded not smoothed); determinism
+        double-pass PASS; (f) 0/0"
     SEAM-OPENED:
       - "core PR #77 (feat/t-c77-notes-rank-cap @ 1815fd7, base main ebc3f07,
         opened on the operator's 'start the seam' word trace 1a1033eaf8aa968d)
@@ -164,10 +209,11 @@ task:
         fresh admissions; recorded so the pinned form's necessity is
         evidence-based, not aesthetic"
   next_safe_actions:
-    - "SEAM PR OPENED (core #77): await the operator's merge word — merge,
-      then execute run-005-i on merged main only over the frozen basis
-      (the T-C69/T-C72 two-word pattern; posture BENCH_PER_ARM_LIMIT=40
-      BENCH_NOTES_KIND_ARM=15 BENCH_NOTES_RANK_CAP=20, output run-005-i-r1)"
-    - "after the run: the promotion/horizon reading rides on the prereg's
-      pinned predictions (NOT PROMOTED expected; the question is
-      SEPARABILITY)"
+    - "RUN-RECORDED (run-005-i-r1 on merged main fa2dddb): the promotion/horizon
+      reading is operator-gated — the tranche's pinned question (SEPARABILITY)
+      is answered YES; the §8.1 v1.1 bars stand UNCHANGED (NOT PROMOTED, the
+      pinned expected verdict); any promotion-shaped next step = new operator
+      word + dated new prereg (Ruling 8) with the binding constraint located
+      at the served-surface ALL-view rank-slice quality"
+    - "T-C77 remains open for the operator's reading word; no further lever
+      execution is authorized by this card"

@@ -1,0 +1,74 @@
+# run-005-i verify — from recorded bytes only (T-C77 RANK-CAP form)
+# code fa2dddbdf57af2c1f2906d3bc3cf0876f7970553 | run_id run-005-i | date 2026-10-04
+# posture: providers ['pgvector', 'bm25', 'notes-kind-arm'] | per_arm_limit 40 | notes_kind_arm 15 | notes_rank_cap 20 | notes_floor 0 | weights null
+# determinism: PASS — scoring recomputed twice in-process (second full retrieval pass), both views' agg...
+# rank-cap under-fill: served 0 / compliant 0 at H=20 (expected 0/0; grounding min two-arm prefix 40)
+
+== 1. (d) recompute self-checks (recorded vs recomputed from pool bytes)
+  run-005-c-r8: full 50/89 = 0.5618 · micro 77/84 = 0.9167 · recorded 0.5618/0.9167 · OK
+  run-005-c-r9: full 41/89 = 0.4607 · micro 66/84 = 0.7857 · recorded 0.4607/0.7857 · OK
+  run-005-f-r1: full 45/89 = 0.5056 · micro 72/84 = 0.8571 · recorded 0.5056/0.8571 · OK
+  run-005-g-r1: full 46/89 = 0.5169 · micro 73/84 = 0.8690 · recorded 0.5169/0.869 · OK
+  run-005-h-r1: full 52/89 = 0.5843 (recorded 0.5843) · micro 79/84 = 0.9405 (recorded 0.9405) · OK
+  run-005-i-r1: full 52/89 = 0.5843 (recorded 0.5843) · micro 79/84 = 0.9405 (recorded 0.9405) · OK
+  byte-exact vs h (the theorem-shaped prediction): i 52/89 · 79/84 vs h 52/89 · 79/84 · IDENTICAL
+  (d) chain: r8 0.5618/0.9167 -> r9 0.4607/0.7857 -> f 0.5056/0.8571 -> g 0.5169/0.8690 -> h 0.5843/0.9405 -> i 0.5843/0.9405
+
+== 2. SET-preservation: i pool == h pool per query (primary endpoint)
+  set-identity held: 89/89 queries
+  superset vs f held: 89/89 queries
+
+== 3. H=20 horizon assertion + demotion ledger (kind-arm-only refs)
+  kind-arm-only refs (h-era fresh admissions, EXTERNAL_NOTES): 797 (predicted 797)
+  kind-arm-only refs at fused ranks 1..20: 0 (asserted 0 on all 89 queries)
+  two-arm-before-kind-only order (the partition definition): 89/89 queries clean
+  per-query demotions: min 0 · max 15 (predicted 0/15) · queries carrying >0: 83
+
+== 4. top-20 set/order identity vs f's recorded lists
+  top-20 set-identity 87/89 (simulation: 87/89) · order-identity 86/89 (simulation: 86/89) · exact-order matches 86
+    g2-024: f-only ['1378d3e64f2e80ce736aacde70c3c1d37477447087c2505d5279ca4c7b1217be:1', '2429332c17d9919019eb51b5f0a06f2be5c8863992a7442e62aa6b9e146f92e6:10', 'd9e5ef81faaccb51026796af0f05b86bb5c4cef991e4ab8a11157512d45ff189:24', 'f25bac612af935d73235818fc6eec8a6429d15f3d4babddc681fe3ba4be2c2e8:0', 'e52c013ee9c648b7da65859f001624ea0c2712abe2e0b8e224d845aecb5e258b:1'] i-only ['37247459b838d799b1059dd3b1aba296043104a56323c656e71eb1fca589396f:11', 'f3c860dbd4640525faed752960b2132b78833f4323043712bce63a1772d9a733:5', '60c22d347a219cfedc2582b31bf12a2ec15d7fdb60d086239b364b5ff372a943:5', '222019063953cef895736c575d38b4e3fcd6e3af5eb0e964c3ef14b81af81e62:9', '4c844e4f7e5dbc7386b9845ca3dc455f760764e08605bb4f1b493b49ce22a8cb:15']
+    g2-086: f-only ['f25bac612af935d73235818fc6eec8a6429d15f3d4babddc681fe3ba4be2c2e8:6'] i-only ['02edf8f94c29e606dbde7cf65f9e5732a8ac775b43de5518470f8150bb271189:0']
+    g2-077: f-only [] i-only []
+  run identity == the simulation's predicted shape exactly (the grounding's three named queries ['g2-024', 'g2-086', 'g2-077'] — the declared re-execution band; confirmation, not a finding)
+
+== 5. rank-slice recompute (chunk_axis served view) + pins
+  recall@5: f 0.0616 -> i 0.0616 · recorded 0.0616 -> 0.0616 · OK
+  recall@10: f 0.1043 -> i 0.1043 · recorded 0.1043 -> 0.1043 · OK
+  recall@20: f 0.1612 -> i 0.1612 · recorded 0.1612 -> 0.1612 · OK
+  mrr: f 0.0626 -> i 0.07 · recorded 0.0626 -> 0.07 · OK
+  ndcg@10: f 0.1057 -> i 0.1095 · recorded 0.1057 -> 0.1095 · OK
+  evidence_precision@10: f 0.0303 -> i 0.0303 · recorded 0.0303 -> 0.0303 · OK
+  false_positive_rate@10: f 0.9697 -> i 0.9697 · recorded 0.9697 -> 0.9697 · OK
+  per-query movement vs f: recall@5 moved on 0 · recall@10 moved on 0 · recall@20 moved on 0 · mrr moved on 1 · ndcg@10 moved on 1
+  BYTE-STABILITY PIN recall@5: recorded 0.0616 vs pre-kind-arm 0.0616 · HELD
+  BYTE-STABILITY PIN recall@10: recorded 0.1043 vs pre-kind-arm 0.1043 · HELD
+  BYTE-STABILITY PIN recall@20: recorded 0.1612 vs pre-kind-arm 0.1612 · HELD
+  BYTE-STABILITY PIN evidence_precision@10: recorded 0.0303 vs pre-kind-arm 0.0303 · HELD
+  BAND mrr: recorded 0.07 inside [0.0626, 0.07] · HELD
+  BAND ndcg@10: recorded 0.1095 inside [0.1057, 0.1095] · HELD
+
+== 6. section-8.1 v1.1 gates (evaluated fresh, both views; UNCHANGED bars)
+  gate a_recall@10: 0.1043 vs 0.192 -> FAIL
+  gate b_mrr: 0.07 vs 0.1237 -> FAIL
+  gate c_ndcg@10: 0.1095 vs 0.2316 -> FAIL
+  gate a2_validated_recall@10: 0.1043 vs 0.0734 -> PASS
+  gate b2_validated_mrr: 0.07 vs 0.1184 -> FAIL
+  gate c2_validated_ndcg@10: 0.1095 vs 0.1683 -> FAIL
+  (a2) restoration: compliant recall@10 0.1043 vs floor 0.0734 -> PASS RESTORED (h failed it at 0.0612)
+  compliant-vs-served (d): identical = True (the §2 prediction: the compliant pool equals the served pool — the recorded subject-level-branch shape)
+  s8 verdict: NOT PROMOTED (NOT PROMOTED is the pinned expected outcome)
+
+== 7. non-regression watch
+  f-full losses: 0 (zero — the lever removes nothing)
+  f-lost flips ['g2-011', 'g2-016', 'g2-056', 'g2-059', 'g2-112']: reverted in i 5/5
+  g2-061 covered points: f 1 -> h 2 -> i 2 (held)
+  g2-109 covered points: f 1 -> h 2 -> i 2 (held)
+
+== 8. (e) latency + (g) per-class flags
+  latency p50: h 346.5 ms -> i 343.8 ms (expected ~= h's shape; the transform adds one O(n) partition pass per query per view — the memo keeps the kind-arm read O(1))
+  [g-flag] exam_question mrr: f 0.494 -> i 0.6607 (+33.7%)
+
+== FINDINGS ==
+  none
+== FAILURES ==
+  none — all pre-registered checks recorded above
