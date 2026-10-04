@@ -1,0 +1,62 @@
+# run-005-j verification — the MIN_COSINE production probe (T-C83)
+# posture: providers ['pgvector', 'bm25'] | per_arm_limit 40 | min_cosine 0.6
+# code_version 6cad6ef9463e8d21f1555456561a4caaf7e89395
+
+== 1. (d) recompute + the byte-exact prediction
+  run-005-f-r1: 45/89 · 72/84 recorded 0.5056/0.8571 OK
+  run-005-h-r1: 52/89 · 79/84 recorded 0.5843/0.9405 OK
+  run-005-j-r1: 44/89 · 71/84 — predicted 44/89 · 71/84 BYTE-EXACT
+
+== 2. subset invariant: run pool ⊆ f pool per query
+  subset holds on 88/89 queries
+  FINDING: subset violation g2-024: 4 refs not in f pool (re-execution band): ['222019063953cef8', '4c844e4f7e5dbc73', '60c22d347a219cfe', 'f3c860dbd4640525']
+
+== 3. removed-ref ledger vs the recomputed census
+  predicted 170 removed on 10 queries; observed 170 on 10 queries
+  removed-ref ledger BYTE-EXACT vs the census on all queries
+
+== 4. pure-filter order: j order == f order minus removals
+  order byte-exact on 87/89 queries
+  FINDING: order deviation g2-024 (the declared re-execution band)
+  FINDING: order deviation g2-077 (the declared re-execution band)
+
+== 5. rank-slice byte-stability pins (predicted byte-stable vs f)
+  recall@5: 0.0616 vs f 0.0616 · BYTE-STABLE
+  recall@10: 0.1043 vs f 0.1043 · BYTE-STABLE
+  recall@20: 0.1612 vs f 0.1612 · BYTE-STABLE
+  mrr: 0.07 vs f 0.0626 · MOVED
+  FINDING: slice moved: mrr 0.07 != pinned 0.0626
+  ndcg@10: 0.1095 vs f 0.1057 · MOVED
+  FINDING: slice moved: ndcg@10 0.1095 != pinned 0.1057
+  evidence_precision@10: 0.0303 vs f 0.0303 · BYTE-STABLE
+
+== 6. top-20 ledger (predicted: 5 queries changed, 0 carriers entering)
+  top-20 changed on 7 queries (predicted 5); gold carriers entering: 0 (predicted 0)
+  FINDING: top-20 changed on 7 queries != predicted 5
+
+== 7. the results min_cosine_removed ledger (recomputed over ALL 120 queries)
+  recorded theta 0.6 / affected 15 / removed 295; recomputed over 120 queries: 15 / 295 OK (the scored-89 subset: 10 / 170 — section 3)
+
+== 8. §8.1 v1.1 conjunction (Ruling 8) — UNCHANGED bars
+  (a) 0.1043 vs bar 0.192 -> FAIL
+  (b) 0.07 vs bar 0.1237 -> FAIL
+  (c) 0.1095 vs bar 0.2316 -> FAIL
+  (a2) 0.1043 vs bar 0.0734 -> PASS
+  (b2) 0.07 vs bar 0.1184 -> FAIL
+  (c2) 0.1095 vs bar 0.1683 -> FAIL
+  (d) 0.4944/0.8452 vs the r8 reference 0.5618/0.9167 +-1pp -> FAIL
+  (f) violations 0 -> PASS
+  VERDICT: NOT PROMOTED (as pinned)
+
+== 9. (e) latency + (g) per-class flags vs f
+  (e) served p50 302.8 ms (f 308.2 ms)
+  (g) no per-class regression >15% relative vs f
+
+# verification verdict: 0 failures, 6 findings
+# FINDING: subset violation g2-024: 4 refs not in f pool (re-execution band): ['222019063953cef8', '4c844e4f7e5dbc73', '60c22d347a219cfe', 'f3c860dbd4640525']
+# FINDING: order deviation g2-024 (the declared re-execution band)
+# FINDING: order deviation g2-077 (the declared re-execution band)
+# FINDING: slice moved: mrr 0.07 != pinned 0.0626
+# FINDING: slice moved: ndcg@10 0.1095 != pinned 0.1057
+# FINDING: top-20 changed on 7 queries != predicted 5
+# VERIFY OK — the pre-registered invariants hold on the recorded bytes

@@ -13,11 +13,14 @@ task:
     from flood, and at what (d) price), pre-registered with a byte-exact
     arm-A reconstruction and trim census"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: IN_PROGRESS # CLAIM phase LANDED (prereg + grounding committed
-    # claim-first); seam + merge + run-005-j phases execute on the operator's
-    # probe word (trace 1a106cae2554db5d, "the MIN_COSINE production probe" —
-    # the T-C67 single-directive precedent: the probe word covers the merge
-    # as its prerequisite, executed only after CI green + suite green)
+  status: RUN-RECORDED # END-TO-END on the operator's probe word (trace
+    # 1a106cae2554db5d): seam = core PR #83 (head 6b19c07, CI build 6m36s +
+    # verify pass; full offline suite on the exact head 1270/0/0/2) MERGED as
+    # 6cad6ef; run-005-j-r1 recorded + verified (run005j_verify.py EXIT=0,
+    # 0 failures / 6 findings — every core prediction held: (d) 44/89 · 71/84
+    # BYTE-EXACT, removed-ledger byte-exact per-query 170/10 on the scored
+    # set, 0 gold carriers entering the horizon, NOT PROMOTED as pinned;
+    # the precision-side license is DISCHARGED by measurement)
   priority: P1
   authority: "operator IM trace 1a106cae2554db5d ('the MIN_COSINE production
     probe') — the NEW operator word Ruling 8/9 required for the MIN_COSINE
