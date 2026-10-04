@@ -10,17 +10,29 @@ task:
     2025-06 1CR ep-row backfill and the 11 VALIDATED-ep doc-link heals"
   owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
   status: IN_PROGRESS
-  status_note: "W1 (parse wave) COMPLETE 2026-10-04 — 4/4 papers parsed
-    (2025-06 1C: 10q/110 G1 FAIL review-flagged; 2026-06 1C: 9q/110
-    PASS_WITH_FLAGS; 2026-06 2C: 6q/70 clean PASS; 2026-06 2CR: 7q/70 G1 FAIL
-    review-flagged), products landed on syllabai-pastpapers main b8d53f7
-    (12 files, products-only layout), evidence pack
-    bench/review/ingest-wave-20261004/ (REPORT + gates x4 + review-flag ledger
-    63/58/45/41 + SHA256SUMS x2); inputs sha-verified 8/8 vs manifests at pin
-    1f7e8355; ODL 2.5.7 second opinion present x4 (jar restored from the pinned
-    release, sha 74f0d797…). W2-W5 remain blocked on (1) core JWT secret
-    (2) Gemini embedding key (3) Neon key re-provision; every DB-write batch is
-    operator-gated (T-C54 wave-2 / T-C60 instrument precedents)"
+  status_note: "W2-PREP COMPLETE 2026-10-04 (operator supplied the 3 blockers
+    IM trace 1a1049721c466009; zero DB writes, zero product writes): Neon key
+    VALIDATED (console.neon.tech/api/v2; pooled URI == T-C54 pin
+    ep-ancient-cake-a52e4kfd-pooler/neondb/neondb_owner; read-only probes ran),
+    JWT secret VALIDATED (deployed core 200 with minted admin token — V46 ver
+    claim required, admin row ver=1), Gemini key AUTHENTIC-partial (project
+    182305873196 resolved; geo-blocked for direct in-sandbox embeds; production
+    serving key LIVE via read-only search probe 200/3 hits — supplied key =
+    rotation spare). Live re-derivation CORRECTS the wave scope: all four
+    2025-06 docs pre-exist VALIDATED (W2 ingest shrinks to the 3 x 2026-06
+    papers, 6 docs / 68 chunks, dup-checked absent); W3 (1CR ep backfill)
+    already executed by T-C60; all 11 heal-target checksums NOW match live
+    VALIDATED docs (T-C60 D2/D4b false-negative erratum — rows unchanged
+    since), heals executable as pure ep-link UPDATEs; gate 4,593 (T-C74 pin,
+    -15 vs T-C60 = one QP doc V->R since, recorded); ep 104 (91V/13R), 11
+    unlinked heal rows re-derive 1:1. Instruments staged
+    (bench/review/ingest-wave-20261004/w2-prep/): tc75_w2_ingest.py (kind=
+    explicit, embed via production app, dry-run/execute, idempotent-resumable)
+    + tc75_ep_batch.py (4 ep INSERTs + 11 heals + 15 audit rows, T-C54 shape,
+    fail-closed re-derivation + chunks/census immutability + predicted-delta
+    gate assert, DRY_RUN verified to the 2026-report boundary). Every DB-write
+    batch awaits the operator word per the card protocol: run W2 -> dry-run ->
+    apply -> post-verify -> W5 re-probe (4,593 -> 4,661 predicted)"
   priority: P1
   authority:
     - "operator lane-comparison + route decision accepted: trace 1a102cc99807849d

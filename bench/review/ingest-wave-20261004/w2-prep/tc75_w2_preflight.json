@@ -1,0 +1,271 @@
+{
+ "active_cv": [
+  {
+   "code": "4CH1-2017",
+   "id": "356840e6-81e2-49df-8182-93ab6504d591",
+   "status": "ACTIVE"
+  }
+ ],
+ "admin_identity": {
+  "email": "admin@syllabai.dev",
+  "roles": [
+   "ADMIN",
+   "TEACHER"
+  ],
+  "token_version": 1,
+  "uid": "8f9839ee-2959-4b49-b104-fef78373aa15"
+ },
+ "chunks_census": {
+  "rev2|embedded": 4672
+ },
+ "documents_census": {
+  "EXTERNAL_NOTES|VALIDATED": 112,
+  "EXTERNAL_QUESTIONS|VALIDATED": 379,
+  "MARK_SCHEME|REJECTED": 67,
+  "MARK_SCHEME|VALIDATED": 109,
+  "QUESTION_PAPER|REJECTED": 79,
+  "QUESTION_PAPER|VALIDATED": 109,
+  "SYLLABUS|VALIDATED": 162
+ },
+ "ep_4ch1_2025_2026": [
+  {
+   "id": "80263901-10ce-4bf2-9346-0c1613c9f5b5",
+   "ms_link": true,
+   "paper": "4CH1/1CR",
+   "qp_link": true,
+   "session": "June 2025",
+   "state": "VALIDATED",
+   "year": 2025
+  },
+  {
+   "id": "3945c4af-ca19-4688-9958-a235870f6045",
+   "ms_link": true,
+   "paper": "4CH1/2CR",
+   "qp_link": true,
+   "session": "June 2025",
+   "state": "VALIDATED",
+   "year": 2025
+  }
+ ],
+ "exam_papers_census": {
+  "4CH0CHEMISTRY|VALIDATED": 8,
+  "4CH1CHEMISTRY|VALIDATED": 27,
+  "4CH1|REJECTED": 10,
+  "4CH1|VALIDATED": 56,
+  "IGCSECHEMISTRY|REJECTED": 3
+ },
+ "generated_utc_probe": "2026-10-04",
+ "heal_targets": [
+  {
+   "identity": "4CH0-1C 2016-01",
+   "ms": {
+    "doc": "0dc856dc\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "c08f4425\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH0-1C 2018-01",
+   "ms": {
+    "doc": "6f5b9383\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "0dbb2b82\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-1C 2023-11",
+   "ms": {
+    "doc": "cb62257b\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "c6b2e8e8\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-2C 2023-11",
+   "ms": {
+    "doc": "8e805176\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "6a8b4505\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-1C 2024-11",
+   "ms": {
+    "doc": "05ef041a\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "eb2f1eb3\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-2C 2024-11",
+   "ms": {
+    "doc": "5ab5747b\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "878478d7\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-1C 2025-11",
+   "ms": {
+    "doc": "4c854bc8\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "ae0cb403\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-2C 2025-11",
+   "ms": {
+    "doc": "1074003c\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "1e9abddf\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-1CR 2020-01",
+   "ms": {
+    "doc": "39a7499c\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "9b51cf89\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-1CR 2021-01",
+   "ms": {
+    "doc": "958dffb5\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "114f204a\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  },
+  {
+   "identity": "4CH1-2C 2025-06",
+   "ms": {
+    "doc": "74a057e1\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   },
+   "qp": {
+    "doc": "c04c3f7c\u2026",
+    "present": true,
+    "state": "VALIDATED"
+   }
+  }
+ ],
+ "identity": {
+  "campaign_rows": [
+   "T-C04-CAMPAIGN/neondb"
+  ],
+  "database": "neondb",
+  "user": "neondb_owner"
+ },
+ "scope": "READ_ONLY_SELECT",
+ "serving_gate_replica": 4593,
+ "target_paper_docs": [
+  {
+   "checksum": "a3e855a616c73d1d\u2026",
+   "doc_version": 1,
+   "kind": "MARK_SCHEME",
+   "source_uri": "4CH1-1C-202506/ms.pdf",
+   "state": "VALIDATED"
+  },
+  {
+   "checksum": "d860cbae11a72b38\u2026",
+   "doc_version": 1,
+   "kind": "QUESTION_PAPER",
+   "source_uri": "4CH1-1C-202506/qp.pdf",
+   "state": "VALIDATED"
+  },
+  {
+   "checksum": "54a0a9f6198c4f1c\u2026",
+   "doc_version": 1,
+   "kind": "MARK_SCHEME",
+   "source_uri": "4CH1-1CR-202506/ms.pdf",
+   "state": "VALIDATED"
+  },
+  {
+   "checksum": "e366b168b09e2099\u2026",
+   "doc_version": 1,
+   "kind": "QUESTION_PAPER",
+   "source_uri": "4CH1-1CR-202506/qp.pdf",
+   "state": "VALIDATED"
+  },
+  {
+   "checksum": "5738e79ef6ad0ce8\u2026",
+   "doc_version": 1,
+   "kind": "MARK_SCHEME",
+   "source_uri": "4CH1-2C-202506/ms.pdf",
+   "state": "VALIDATED"
+  },
+  {
+   "checksum": "24d7789716fa324e\u2026",
+   "doc_version": 1,
+   "kind": "QUESTION_PAPER",
+   "source_uri": "4CH1-2C-202506/qp.pdf",
+   "state": "VALIDATED"
+  },
+  {
+   "checksum": "f0b3d9b1c446b203\u2026",
+   "doc_version": 1,
+   "kind": "MARK_SCHEME",
+   "source_uri": "4CH1-2CR-202506/ms.pdf",
+   "state": "VALIDATED"
+  },
+  {
+   "checksum": "f0094e30d88274dc\u2026",
+   "doc_version": 1,
+   "kind": "QUESTION_PAPER",
+   "source_uri": "4CH1-2CR-202506/qp.pdf",
+   "state": "VALIDATED"
+  }
+ ],
+ "unlinked_validated_4ch1_both_sides_null": 0
+}
