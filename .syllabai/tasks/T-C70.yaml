@@ -10,9 +10,9 @@ task:
     attempt-bridge submissions at grading time (4CH1 pilot, verified joins)"
   owner: "superz (main agent, zai session — discord DM trace 1a0fdd7bf6392825)"
   status: VERIFYING # implementation complete + CI green (hub PR #26 head 81db1ea:
-    build SUCCESS, e2e SUCCESS, Vercel preview OK); remaining exit evidence:
-    a real full-paper run walkthrough (desktop + mobile) on the preview or
-    production, then DONE
+    #build SUCCESS, e2e SUCCESS, Vercel preview OK); remaining exit evidence:
+    #a real full-paper run walkthrough (desktop + mobile) on the preview or
+    #production, then DONE
   priority: P1
   authority: "operator IM trace 1a0fdd7bf6392825 ('open the tranche'); design
     of record PAST_PAPER_RUN_MODE_DESIGN.md v2 (merged b206985 via PR #18);

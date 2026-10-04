@@ -183,8 +183,8 @@ task:
         Weights 5); head CI pass (4m44s); bench-scoped only — nothing in
         production reads BENCH_NOTES_RANK_CAP; MERGE OPERATOR-GATED"
     VERIFIED:
-      - "fresh-displacement census recomputed from recorded packs: pool(h) \\"
-        " pool(f) = +797 EXTERNAL_NOTES + 4 re-execution refs; fresh-note h
+      - "fresh-displacement census recomputed from recorded packs: pool(h) \\
+        pool(f) = +797 EXTERNAL_NOTES + 4 re-execution refs; fresh-note h
         fused-rank bands 124/346/325/2 across 1-10/11-20/21-40/41+; 83/89
         queries carry >=1 fresh note — tc77_prereg_grounding.py"
       - "KIND-ARM RECONSTRUCTION byte-validated: per-query top-15 EXTERNAL_NOTES
