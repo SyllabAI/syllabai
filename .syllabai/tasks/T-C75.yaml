@@ -9,30 +9,37 @@ task:
     via the pdflane direct-PDF route, plus the T-C60 content residuals: the
     2025-06 1CR ep-row backfill and the 11 VALIDATED-ep doc-link heals"
   owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
-  status: IN_PROGRESS
-  status_note: "W2-PREP COMPLETE 2026-10-04 (operator supplied the 3 blockers
-    IM trace 1a1049721c466009; zero DB writes, zero product writes): Neon key
-    VALIDATED (console.neon.tech/api/v2; pooled URI == T-C54 pin
-    ep-ancient-cake-a52e4kfd-pooler/neondb/neondb_owner; read-only probes ran),
-    JWT secret VALIDATED (deployed core 200 with minted admin token — V46 ver
-    claim required, admin row ver=1), Gemini key AUTHENTIC-partial (project
-    182305873196 resolved; geo-blocked for direct in-sandbox embeds; production
-    serving key LIVE via read-only search probe 200/3 hits — supplied key =
-    rotation spare). Live re-derivation CORRECTS the wave scope: all four
-    2025-06 docs pre-exist VALIDATED (W2 ingest shrinks to the 3 x 2026-06
-    papers, 6 docs / 68 chunks, dup-checked absent); W3 (1CR ep backfill)
-    already executed by T-C60; all 11 heal-target checksums NOW match live
-    VALIDATED docs (T-C60 D2/D4b false-negative erratum — rows unchanged
-    since), heals executable as pure ep-link UPDATEs; gate 4,593 (T-C74 pin,
-    -15 vs T-C60 = one QP doc V->R since, recorded); ep 104 (91V/13R), 11
-    unlinked heal rows re-derive 1:1. Instruments staged
-    (bench/review/ingest-wave-20261004/w2-prep/): tc75_w2_ingest.py (kind=
-    explicit, embed via production app, dry-run/execute, idempotent-resumable)
-    + tc75_ep_batch.py (4 ep INSERTs + 11 heals + 15 audit rows, T-C54 shape,
-    fail-closed re-derivation + chunks/census immutability + predicted-delta
-    gate assert, DRY_RUN verified to the 2026-report boundary). Every DB-write
-    batch awaits the operator word per the card protocol: run W2 -> dry-run ->
-    apply -> post-verify -> W5 re-probe (4,593 -> 4,661 predicted)"
+  status: DONE
+  status_note: "W2 (+W5) EXECUTED 2026-10-04 on the operator word 'run W2'
+    (IM trace 1a106209161c8e75) — ALL FIVE WAVES COMPLETE: W1 parse (bcbc595),
+    W2 canonical+ingest (this closeout), W3 1CR ep backfill (by T-C60,
+    re-verified), W4 the 11 heals (W2 batch act 2), W5 re-probe (gate 4,661).
+    Post-recycle honesty: the sandbox recycle lost the locally-staged
+    instruments + canonical JSONs (never committed); both REBUILT from the
+    committed W2-PREP record and the staging proved byte-identical (12/12
+    SHA256 vs SHA256SUMS-canonical-staging.txt; parser main 0fc5c32, engine
+    1.2.0). Execution: ingest 6 docs / 68 chunks embedded rev2
+    gemini-embedding-001 via kind-explicit POST + production-app embed,
+    documentIds == the staged pins, all SUGGESTED by design; governed ep batch
+    tc75-ingest-wave-20261004 (run 3507fb0f) on the T-C54 wave-2 pattern:
+    DRY_RUN_OK -> APPLIED -> ALREADY_APPLIED proven; 4 ep INSERTs (incl.
+    4CH1/1C June 2025 linking live-resolved G8-era docs by checksum == M pins)
+    + 11 heals (rowcount==1 both-null guards, L pins matched) + 15 audit rows
+    naming the operator as deciding actor. Independent read-only post-verify
+    26/26 PASS: docs 1023 (3QP+3MS SUGGESTED exactly the wave docs), chunks
+    4740/4740 rev2 embedded, ep 108 = 95V/13R, audit 2829, tve 0, unlinked
+    chem VALIDATED 11 -> 0, SERVING GATE 4,593 -> 4,661 (the predicted +68
+    realized exactly); W5 search probes return the new 2026-06 papers on both
+    QP and MS kinds; coverage matrix regenerated. Zero bank writes;
+    teacher_validation_events untouched. Evidence pack
+    syllabai-pastpapers bench/review/ingest-wave-20261004/w2/ (SHA256SUMS
+    8/8), pushed as corpus 7e027cad. Remaining honest gaps (per card, NOT this
+    wave): doc-side VALIDATION of the 6 new 2026-06 docs (subject-side
+    serving) = a separate operator-gated act; the 2 G1 FAIL parse-flag review
+    lanes stay with the disclosed review-flag ledger / the optional future S2
+    llm-structured card. Neon API deltas recorded: /projects requires org_id;
+    connection_uri moved to query-param GET; the /sql HTTP endpoint ignores
+    session options (read-only enforced on libpq sessions instead)"
   priority: P1
   authority:
     - "operator lane-comparison + route decision accepted: trace 1a102cc99807849d
@@ -150,26 +157,36 @@ task:
          papers (May-printed covers, Pearson coded-date convention,
          paper-repair-2026-09-26 precedent); review-flag ledger 63/58/45/41
          rows (6 x MS-UNCLASSIFIED-ROW disclosed); zero DB writes"
+      - "W2 EXECUTED 2026-10-04 (operator word 'run W2', trace
+         1a106209161c8e75): staging reconstructed post-recycle byte-identical
+         12/12 vs the W2-PREP pins; 6 docs ingested (201 x6, duplicate=false,
+         documentIds == staged inventory) + 68/68 chunks embedded rev2
+         gemini-embedding-001 via the production app; governed ep batch
+         3507fb0f DRY_RUN_OK -> APPLIED -> ALREADY_APPLIED; independent
+         post-verify 26/26 (docs 1023, chunks 4740/4740, ep 108 = 95V/13R,
+         audit 2829, unlinked 0, gate 4,661 == 4,593 + predicted 68); W5
+         search probes return the new papers QP+MS; zero bank writes,
+         tve untouched; evidence pack corpus 7e027cad (SHA256SUMS 8/8)"
     INFERRED:
       - "born-digital text layer present for the 5 papers (session recency;
          subject to G6/G1 verification at parse time)"
     REPORTED:
       - "T-C60 live-probe numbers as recorded in tc60_decisions.json"
     UNVERIFIED:
-      - "2025-06 1C doc absence in production (T-C60 recorded 1CR present, others
-         un-ingested; re-probe at execution with the Neon key)"
+      - "(resolved by W2-PREP live re-derivation: the 2025-06 1C docs PRE-EXIST
+         VALIDATED v1 — checksums d860cbae…/a3e855a6…, document_ids
+         3c8fbea8…/acc7d673…; the W2 ep INSERT for 4CH1/1C June 2025 links
+         them live-resolved by checksum)"
       - "(resolved by W1: rasterized-page risk — all 4 papers parsed born-digital,
          S0 probe SCANNED-escalation count 0, full text extraction x4)"
   next_safe_actions:
-    - "W1 DONE — products + gates reports + review-flag ledger are the wave's
-       first evidence pack (bench/review/ingest-wave-20261004/)"
-    - "operator supplies (1)(2)(3) credentials → W2-W5 execute as governed
-       operator-gated batches (one word per batch); W2 ingests the 4 products
-       with the G8 review-flag posture (G1-unverified = search-substrate
-       grade, bank untouched)"
-    - "optional future card (NOT this wave): S2 llm-structured accepted-run lane
-       for the 2CR MS (0 recognizable total rows) and the 2 unmatched totals on
-       2025-06 1C — the designed cure for PRINTED-QP-MS-TOTAL-DISCREPANCY;
-       plus a grammar-wave pass over the 6 MS-UNCLASSIFIED-ROW items"
-    - "if W2 hits corpus drift → re-pin per-paper checksums at ingest time (G6
-       re-pin discipline)"
+    - "wave COMPLETE (W1-W5) — the follow-on surfaces, each its own operator-gated
+       act: (a) doc-side VALIDATION of the 6 new 2026-06 SUGGESTED docs (unlocks
+       subject-side serving on top of the ep-side serving delivered today); (b)
+       optional future card: S2 llm-structured accepted-run lane for the 2CR MS
+       (0 recognizable total rows) and the 2 unmatched totals on 2025-06 1C —
+       the designed cure for PRINTED-QP-MS-TOTAL-DISCREPANCY; plus a grammar-wave
+       pass over the 6 MS-UNCLASSIFIED-ROW items"
+    - "serving/new-surface verification (optional): teacher + learner spot-checks
+       of the 2026-06 papers via the search surface (W5 probes already PASS
+       server-side)"

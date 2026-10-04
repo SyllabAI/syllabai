@@ -40,21 +40,6 @@ locks:
       2026-10-04. First lease recorded in the structured layer after
       T-COORD-2 (the prose annotation above predates this row and stays for
       provenance).
-  - resource: syllabai-pastpapers
-    owner: superz
-    task: T-C75
-    base_commit: b8d53f7
-    acquired_at: 2026-10-04
-    expires_at: '2026-10-06T00:00:00Z'
-    note: >-
-      W2 ingest-wave execution lease (operator word 'run W2', trace
-      1a106209161c8e75): canonical staging reconstructed after the sandbox
-      recycle and byte-verified 12/12 against the W2-PREP
-      SHA256SUMS-canonical-staging pins; evidence-pack push to
-      syllabai-pastpapers on base b8d53f7. The production-DB ep batch itself
-      is gated by this same operator word per the card protocol
-      (production-db = operator-gated per batch, T-C54/T-C60 precedents).
-      Released on wave closeout.
   - resource: hub-e2e
     owner: superz
     task: T-C55
@@ -249,6 +234,18 @@ history:
       and pushed as corpus b8d53f7, evidence pack
       bench/review/ingest-wave-20261004/. Released per the reclaim rule.
       W2-W5 need no corpus lease until operator credentials arrive.
+  - resource: syllabai-pastpapers
+    task: T-C75
+    outcome: fulfilled_released
+    released_at: 2026-10-04
+    receipt: >-
+      W2 ingest-wave execution: canonical staging rebuilt post-recycle and
+      byte-verified 12/12 vs the W2-PREP pins; 6 docs / 68 chunks ingested +
+      embedded rev2; governed ep batch tc75-ingest-wave-20261004 (run
+      3507fb0f) DRY_RUN_OK -> APPLIED -> ALREADY_APPLIED proven (4 ep INSERTs +
+      11 heals + 15 audit rows); independent post-verify 26/26 with the
+      serving gate 4,593 -> 4,661; evidence pack pushed as corpus 7e027cad
+      (base b8d53f7). Card DONE. Released per the reclaim rule.
   # --- T-COORD-3 R-C additions (2026-10-04, operator trace 4acec4babb...) ---
   # The two rows below resolve the expired prose leases the critical re-audit
   # found unreconciled (T-C44/T-C53/T-C55 prose windows all ended

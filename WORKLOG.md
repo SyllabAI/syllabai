@@ -2838,3 +2838,48 @@ Stage Summary:
 - **Archaeology first-hand:** full message + file inventory of the 168-commit window (09-27T12:00Z..10-02T17:00Z); 25 audit-citing commits extracted with tails verbatim; the finding set proven complete within that corpus (no H3+/M8+/L4+ anywhere; the "(L5)" hits are the citation-surface lane's own labels). Sandbox-reset disclosure: this lane's earlier local artifacts (sme499_*/fa2r_* scripts) were lost to a sandbox reset — that loss forced the re-derivation that (a) caught the stale "defect queue pending" premise fail-closed BEFORE any write this session, and (b) is the same failure mode that lost the original audit doc; the reconstruction banner records the lesson.
 - **Deliverable:** DEEP_AUDIT_2026-09-28.md (records root) — per-finding findings/mechanics/fixes/open-residue, receipts table (finding -> commit -> date), scope-boundary section separating adjacent instruments (anchor-sweep B-series/T-C39, MED-2/ADR-032, S1/ADR-031, T-C40 V56 incident, L1-L5 surface labels); TODO resolved with addendum; T-C81 DONE.
 - **Discipline:** docs-only push, single race-guarded commit on records main; zero code/DB/corpus/serving change; r6 untouched; secrets env-only.
+
+## Session 192 — 2026-10-04: T-C75 W2 (+W5) EXECUTED — the ingest wave lands: 6 docs / 68 chunks embedded, governed ep batch APPLIED (4 ep INSERTs + the 11 T-C60 heals + 15 audit rows), serving gate 4,593 → 4,661 exactly as the W2-PREP predicted, all five waves complete (Super Z, operator word "run W2" trace 1a106209161c8e75)
+
+The sandbox recycle had lost the locally-staged W2 instruments + canonical
+staging (never committed — the W2-PREP commit carried the pins, not the
+artifacts). Reconstruction first: canonical staging regenerated from corpus
+b8d53f7 products via parser atoms_to_canonical.py (ENGINE 1.2.0, parser main
+0fc5c32) over the three 2026-06 paper dirs staged under renamed slugs —
+12/12 SHA256 == SHA256SUMS-canonical-staging.txt (byte-identity: same
+documentIds, checksums, chunk counts the prep verified). Instruments rebuilt
+to the W2-PREP spec with three live-API deltas discovered and recorded: Neon
+/projects requires org_id scoping and connection_uri moved to a query-param
+GET (pin unchanged); the Neon /sql HTTP endpoint ignores session options, so
+read-only was enforced on real libpq sessions (options= +
+set_session(readonly=True)); Neon /users/me/organizations used to resolve the
+single org. Credentials re-validated live (credcheck): pooled URI == T-C54
+pin ep-ancient-cake-a52e4kfd-pooler…; read-only census == W2-PREP pins
+(1017 docs / 104 ep 91V-13R / 4672 rev2 embedded / 2814 audit / 11 unlinked /
+gate 4593); admin JWT (G8 recipe + V46 ver claim) → 200, list len 1017.
+
+Execution per the card protocol: corpus lease claimed first (records 0aa1998,
+rebased over the concurrent T-C77 reading + T-C80 claim — disjoint lanes);
+ingest EXECUTE=1: 6 × POST kind= explicit → 201 duplicate=false,
+documentIds == staged pins, chunks == staged counts; 6 × POST /{id}/embed →
+68/68 embedded rev2 gemini-embedding-001, zero partials. ep batch DRY_RUN
+(three honest aborts while rebuilding the prestate guards: the batch's census
+pins had to move to the post-ingest boundary 1023/4740; the M map pins the
+CANONICAL document_id not the row uuid; exam_papers.created_at needs an
+explicit now()) → DRY_RUN_OK with the gate replica asserting 4593 → 4661
+in-transaction → EXECUTE=1 APPLIED (run 3507fb0f: ACT 1 four VALIDATED ep
+INSERTs incl. 1C-2025 live-resolved by checksum == M pins; ACT 2 the 11 heals
+with fail-closed re-derivation == exactly the 11 pinned rows and rowcount==1
+both-null guards; ACT 3 fifteen audit rows naming the operator as deciding
+actor) → re-run ALREADY_APPLIED proven. Independent post-verify (separate
+read-only libpq session): 26/26 PASS — docs 1023, chunks 4740/4740, ep 108 =
+95V/13R, audit 2829, tve 0, unlinked 0, gate 4,661. W5: search probes return
+the new papers on both kinds (server-side serving proof); coverage matrix
+regenerated; the APPLIED report was overwritten by the idempotence re-run and
+was recovered from the append-only audit trail (the durable record). Evidence
+pack → corpus bench/review/ingest-wave-20261004/w2/ (SHA256SUMS 8/8), pushed
+as corpus 7e027cad; card DONE + lease released + TODO dated section.
+Remaining (NOT this wave): doc-side VALIDATION of the 6 new docs (separate
+operator-gated act); the 2 G1 FAIL review lanes stay disclosed.
+(Session 192 per the first-pushed protocol: the T-C81 docs lane's push took
+191 while this lane was closing; renumbered at rebase, content unchanged.)
