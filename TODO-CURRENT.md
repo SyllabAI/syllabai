@@ -7,13 +7,13 @@
 never replaced by this view. Agents may read this file first for the open-packet frontier,
 then consult `TODO.md` / the packet YAMLs for detail.
 
-_Packet census: 11 open / 47 closed / 58 total._
+_Packet census: 10 open / 48 closed / 58 total._
 
 ## Open packets
 
 ### VERIFYING
 
-- **T-COORD-1** (`T-COORD-1.yaml`) — owner: superz (main agent, zai session discord:47b28e0d-b18f-4986-8906-b3c8b1e40642) — Coordination tooling wave 1 — WARN-ONLY validator CI gate (P1) + generated views (P3)
+- **T-C70** (`T-C70.yaml`) — owner: superz (main agent, zai session — discord DM trace 1a0fdd7bf6392825) — Past Paper Run P0 — ONE curated 4CH1 paper end-to-end (Track A): PaperInteractivityManifest v2 (curated, integrity=practice) + ExamRunner shell (timer/palette/f…
 ### CLAIMED
 
 - **T-C79** (`T-C79.yaml`) — owner: Super Z — Exam-series calendar (curriculum-imported) + learner-declared target series — the ADR-035 D1 foundation for the exam-aware study planner
@@ -26,14 +26,14 @@ _Packet census: 11 open / 47 closed / 58 total._
 - **T-C55** (`T-C55-hub-deckflow.yaml`) — owner: superz (main agent, zai session web-98866c45) — Hub Deck-flow e2e red — openLearnerDrawer times out waiting for button[aria-haspopup=dialog] on the learner page (2 of 29 tests fail; pre-existing on main, disj…
 - **T-C60** (`T-C60.yaml`) — owner: superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422) — Papers-axis completion — ingest the 5 corpus-only 4CH1 papers, heal the 11 half-linked VALIDATED ep rows, promote the 8 SUGGESTED docs (64 non-serving chunks), …
 - **T-C75** (`T-C75.yaml`) — owner: superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422) — Ingest wave for the 5 late 4CH1 papers (2025-06 1C+1CR; 2026-06 1C+2C+2CR) via the pdflane direct-PDF route, plus the T-C60 content residuals: the 2025-06 1CR e…
-### UNPARSEABLE
+### RUN-RECORDED
 
-- **T-C70** (`T-C70.yaml`) — (yaml parse error)
-- **T-C77** (`T-C77.yaml`) — (yaml parse error)
+- **T-C77** (`T-C77.yaml`) — owner: superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e) — Rank-quality lane — tranche 7: rank-bounded kind-admission, TWO-ARM HORIZON PARTITION form (the rank-bound on the recorded kind-arm posture, protected horizon H…
 
 ## Closed packets
 
 - T-KG-B — Resources-side kg_export reconciliation vs the v75 golden sample — corpus-derived exporter + golden-sample regression ga…
+- T-COORD-1 — Coordination tooling wave 1 — WARN-ONLY validator CI gate (P1) + generated views (P3)
 - T-C78 — Surface-map correction — the learner agenda panel lands on syllabai-hub (the product frontend); syllabai-web PR #14 reve…
 - T-C76 — Executive-half lane (operator 'go', trace 1a1030b349bc03c9): R1 learner agenda read model (core PR #74) + R2 ADR-035 dra…
 - T-C74 — F-A1 recon (operator trace 1a10294d4523b921 'start the F-A1 recon'): establish the F-A1 orphan-retirement scope and stat…

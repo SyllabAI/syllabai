@@ -3,7 +3,7 @@ task:
   id: T-COORD-1
   title: "Coordination tooling wave 1 — WARN-ONLY validator CI gate (P1) + generated views (P3)"
   owner: "superz (main agent, zai session discord:47b28e0d-b18f-4986-8906-b3c8b1e40642)"
-  status: VERIFYING # PR open; WARN-ONLY CI pending operator merge
+  status: DONE # merged 2026-10-04 as main bcffd2e (merge of PR #19; CI guard SUCCESS on 341df87)
   priority: P2
   base:
     repo: syllabai (master pack) @ e1f1a128344eae66cf15cc6febe3d823e41706e3 (main, 2026-10-04)
@@ -41,13 +41,14 @@ task:
     VERIFIED:
       - "validate_coordination.py + gen_views.py executed against the full repo checkout @ e1f1a12; outputs recorded verbatim in the PR body"
       - "git diff vs main touches only the 6 allowed NEW paths"
+      - "CI guard run SUCCESS on 341df87 (check-run, warn mode, exit 0)"
+      - "PR #19 merged as main bcffd2e on the operator's explicit word 'review + merge' (trace a4fe16cbf8a6557d949ccc73e9e8e7b1, 2026-10-04T02:44:31Z)"
     INFERRED:
       - "the V55-class Flyway collision class is already CI-backstopped in core; this validator adds the pre-merge coordination layer without overlap"
     REPORTED: []
-    UNVERIFIED:
-      - "CI run green on the PR branch (pending first Actions run at PR open)"
+    UNVERIFIED: []
   next_safe_actions:
-    - "operator reviews the PR; merge word per the standard protocol"
+    - "DONE 2026-10-04: PR #19 merged as main bcffd2e; packet closed with receipts."
     - "after 2 clean scheduled weeks, flip coordination.yml to --mode strict (validator) and consider --strict (gen_views)"
     - "P2 structured lease history (locks.yaml history: block) as a separate packet"
     - "P5 safe-merge pre-verifier as a separate packet"
