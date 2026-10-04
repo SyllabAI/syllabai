@@ -3,7 +3,7 @@ task:
   id: T-COORD-3
   title: "Coordination tooling wave 3 — packaging the critical re-audit's R-A..R-F (branch protection, warning-baseline retirement, structured lease adoption, safe-merge ports, canonical-state refresh, P4 quickstart + P6 heartbeat)"
   owner: "superz (main agent, zai session — discord DM, operator trace 4acec4babbc5db5c842fa4bce379e604 'Package all of them')"
-  status: EXECUTING # opens EXECUTING; flips VERIFYING on PR CI-green, DONE on merge + close-out
+  status: VERIFYING # PR #21 open, guard + advisory green on 8ceaf36; DONE on merge + close-out
   priority: P1
   base:
     repo: SyllabAI/syllabai (master governance)
