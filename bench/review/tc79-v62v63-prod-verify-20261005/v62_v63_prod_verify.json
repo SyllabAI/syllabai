@@ -1,0 +1,85 @@
+{
+ "checks": [
+  [
+   "flyway V62 present+success",
+   true,
+   "[('60', 'fprod1b bridge superseded', True, datetime.datetime(2026, 10, 3, 18, 56, 25, 633295)), ('61', 'fprod1 bank marks repair', True, datetime.datetime(2026, 10, 4, 2, 14, 31, 791607)), ('62', 'exam series calendar', True, datetime.datetime(2026, 10, 4, 12, 53, 26, 701601)), ('63', 'exam series s"
+  ],
+  [
+   "flyway V63 present+success",
+   true,
+   "[('60', 'fprod1b bridge superseded', True, datetime.datetime(2026, 10, 3, 18, 56, 25, 633295)), ('61', 'fprod1 bank marks repair', True, datetime.datetime(2026, 10, 4, 2, 14, 31, 791607)), ('62', 'exam series calendar', True, datetime.datetime(2026, 10, 4, 12, 53, 26, 701601)), ('63', 'exam series s"
+  ],
+  [
+   "flyway max version == 63",
+   true,
+   "max=63"
+  ],
+  [
+   "V62 tables exist",
+   true,
+   "[('exam_series',), ('learner_course_enrolments',)]"
+  ],
+  [
+   "exam_series columns match V62",
+   true,
+   "['id', 'board', 'qualification', 'series_code', 'label', 'window_start', 'window_end', 'entry_deadline', 'results_date', 'published', 'estimated', 'source_url', 'retrieved_at', 'created_at', 'updated_at']"
+  ],
+  [
+   "learner_course_enrolments columns match V62",
+   true,
+   "['id', 'learner_id', 'course_slug', 'target_series_id', 'created_at', 'updated_at']"
+  ],
+  [
+   "exam_series constraints (uq + ck)",
+   true,
+   "['ck_exam_series_window', 'uq_exam_series']"
+  ],
+  [
+   "exam_series row count == 5",
+   true,
+   "5"
+  ],
+  [
+   "5/5 seed rows date-for-date (ids, windows, entry, results, published, not-estimated, retrieved 2026-10-04)",
+   true,
+   "all 5 exact"
+  ],
+  [
+   "learner_course_enrolments exists (count readable)",
+   true,
+   "rows=0"
+  ],
+  [
+   "documents census 1023 / 0 SUGGESTED",
+   true,
+   "(1023, 0)"
+  ],
+  [
+   "chunks 4740 total, 4740 embedded, 4740 rev2 gemini-embedding-001",
+   true,
+   "total=4740 embedded=4740 model=4740 rev2=4740"
+  ],
+  [
+   "ep 108 = 95V/13R",
+   true,
+   "(108, 95, 13)"
+  ],
+  [
+   "audit 2835",
+   true,
+   "2835"
+  ],
+  [
+   "tve 0",
+   true,
+   "0"
+  ],
+  [
+   "serving gate (VALIDATED-doc leg) == 4,661",
+   true,
+   "4661"
+  ]
+ ],
+ "failures": []
+}

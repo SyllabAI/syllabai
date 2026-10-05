@@ -72,9 +72,10 @@ task:
       - "hub add-course overlay exists on hub main (src/app/dashboard/add-course-overlay.tsx, 5f138a0 lineage) and api.learnerAgenda() is wired (src/lib/api.ts:620)"
       - "T-C78 correction merged and first-hand re-verified 2026-10-04 post-reset: hub PR #30 merged 5f138a0 (SetWorkCard in src/app/dashboard/), web PR #15 merged cae30ea (revert restored the frozen console: 4 files, 188 deletions, zero /learners/me/agenda consumers on web main)"
       - "T-C79 is the next free task id (registry ends at T-C78 + T-KG-B on master 983430d)"
+      - "PROD-VERIFY 2026-10-05 (operator trace 1a10ab67883fadad, Render key): production DB 16/16 PASS — flyway V62 'exam series calendar' success installed 2026-10-04T12:53:26.701601Z + V63 'exam series seed pearson 2026 2027' success 12:53:28.965773Z (~2 min after the 12:51:10Z merge, auto-deploy apply); V62 objects exact (exam_series + learner_course_enrolments, columns/constraints == the migration SQL); 5/5 seed rows DATE-FOR-DATE vs the V63 SQL (windows/entry/results/published/estimated/retrieved); zero collateral (docs 1023/0 SUGGESTED, chunks 4740/4740 rev2 embedded, ep 108 = 95V/13R, audit 2835, tve 0, serving gate 4,661 reproduced on the VALIDATED-doc leg); API GET /api/v1/learners/me/exam-series HTTP 200 with 5/5 published series (shape == ExamSeriesView; countdowns live on CourseExamTargetView by design — ADR-031 derived-at-read); Render latest deploy commit == core main 6cad6ef. Pack bench/review/tc79-v62v63-prod-verify-20261005/ (REPORT + 16-check JSON + probe JSON + SHA256SUMS); all secrets env-only, evidence leak-scanned"
     UNVERIFIED:
       - "Pearson key-dates citations for 2026-2028 series windows — DISCHARGED 2026-10-04 by the operator's own directive (trace 1a10626076367841): official Pearson final timetables + Key Dates Table International 2026-2027 parsed first-hand; V63 carries the five published rows (not-yet-published series honestly absent)"
-      - "V62/V63 production apply on the Render deploy channel (automatic on merge; not observable from the sandbox — no Render credential in this container, honest limitation as in Session 129/184)"
+      - "V62/V63 production apply on the Render deploy channel — OBSERVED+VERIFIED 2026-10-05 (operator trace 1a10ab67883fadad): flyway rows success at 2026-10-04T12:53:26/28Z; the Session 129/184-pattern credential limitation is discharged (see the PROD-VERIFY claim + evidence pack)"
       - "hub Vercel production deploy + the signed-in dashboard check of the picker (one owed, honest limitation)"
       - "the adf1e19/c814462 CI runs resolved VERIFIED post-record (build+verify green on c814462; main green on 113bcf9) — listed here only as the Session-194 in-flight note now closed"
   continuation_log:
@@ -105,7 +106,7 @@ task:
         (CI 4/4 pre-merge; post-merge main build+e2e SUCCESS). Lease released
         per the reclaim rule.
   next_safe_actions:
-    - "after the Render deploy: production post-flight SELECT-ONLY probe of V62/V63 (exam_series census == the 5 cited rows; uq constraints live) — the V61 post-flight pattern"
+    - "EXECUTED 2026-10-05 (trace 1a10ab67883fadad): the production post-flight SELECT-ONLY probe of V62/V63 ran — 16/16 checks PASS incl. the exam_series census == the 5 cited rows + the uq/ck constraints live — the V61 post-flight pattern honored; pack bench/review/tc79-v62v63-prod-verify-20261005/"
     - "signed-in dashboard check of the picker + countdown chip on the Vercel deploy (the owed honest limitation)"
     - "seed-extension follow-on when Pearson announces the not-yet-published series (2027-11 / 2028 placeholders documented in the rebuilt citation record)"
     - "ADR-035-scoped follow-up lanes stay parked: NBA v2.0 time-pressure multiplier, assignments->NBA seam, reason-code family (each its own lane, NBA engine byte-untouched this lane)"
