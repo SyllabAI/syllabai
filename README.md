@@ -4,13 +4,16 @@ Research-informed adaptive learning platform for IGCSE/IAL exam preparation, bui
 
 This is the **main repository**: the master project pack (specification, decisions, backlog, research dossiers, papers). Code lives in the sibling repositories below.
 
+> **2026-10-13 CUTOVER + RETIREMENT (of record — read `CUTOVER_RETIREMENT_2026-10-13.md` first):** `syllabai-v2` is the **only system of record** (api `syllabai-v2.vercel.app`, hub `syllabai-hub-v2.vercel.app`); `syllabai-core` and `syllabai-hub` are **archived read-only** (never deleted); Render retirement ordered (the service-disable console act is the operator residual). The map below is annotated inline; historical rows describe the archived lineage. (T-C84)
+
 ## Repository map
 
 | Repo | Role | Stack |
 |---|---|---|
 | `syllabai` (this) | Master project pack: spec, ADRs, backlog, research, papers | Markdown + spreadsheet |
-| `syllabai-core` | Backend modular monolith — all domain modules | Java 25 · Spring Boot 4.1 · Spring AI 2.0 |
-| `syllabai-hub` | **Product frontend** (ADR-029, promoted from syllabai-demo 2026-09-28): per-subject Learning Hubs, grounded tutor, CLA, learner model surfaces, teacher workspace; all AI through core; live at `syllabai-hub.vercel.app` | Next.js 16 · React 19 · TypeScript · Vercel |
+| `syllabai-v2` | **SYSTEM OF RECORD (cutover 2026-10-13)** — the v2 port: TypeScript API (`apps/api`, api-of-record `syllabai-v2.vercel.app`) + product hub (`apps/hub`, hub-of-record `syllabai-hub-v2.vercel.app`); all migration law, receipts and the `.syllabai` channel live there | Node · Next.js 16 · TypeScript · Neon Postgres · Vercel |
+| `syllabai-core` | Backend modular monolith — all domain modules — **ARCHIVED read-only 2026-10-13** (retired with the v2 cutover; never deleted, evidence stays resolvable; see `CUTOVER_RETIREMENT_2026-10-13.md`) | Java 25 · Spring Boot 4.1 · Spring AI 2.0 |
+| `syllabai-hub` | ~~Product frontend~~ **RETIRED — ARCHIVED read-only 2026-10-13** (ADR-029 lineage, promoted from syllabai-demo 2026-09-28; superseded by `syllabai-v2` `apps/hub`; the `syllabai-hub.vercel.app` URL no longer serves of record) | Next.js 16 · React 19 · TypeScript · Vercel |
 | `syllabai-web` | Internal teacher/ops console (demoted from product frontend per ADR-029; Smart Mark / marking queue home; product-surface development frozen) | Next.js 16 · React 19 · TypeScript · Vercel |
 | `syllabai-demo` | Frozen prototype playground (per ADR-029; received the pre-promotion corpus/UX waves — ported to the hub by tranche 4.3) | Next.js 16 · React 19 · TypeScript · Vercel |
 | `syllabai-parser` | Offline content pipeline (polyglot) | Java (opendataloader-pdf in-process) · GLM-OCR Python tooling (MinerU/Surya deferred) |
@@ -21,7 +24,7 @@ This is the **main repository**: the master project pack (specification, decisio
 
 **Polyglot policy (ADR-011):** Java is preferred and owns the domain core (course requirement); other languages are welcome where they are clearly better — TypeScript for the frontend, Python/Rust for OCR/ML parsing tooling.
 
-**Platform:** Neon PostgreSQL + pgvector (data) · Render free tier (Java) · Vercel Hobby (web) · Cloudflare R2 (binaries) · Free LLM chain Groq → Gemini 2.5 Flash → OpenRouter (ADR-009). **$0 total, no credit card.**
+**Platform:** Neon PostgreSQL + pgvector (data) · ~~Render free tier (Java)~~ (Render retired 2026-10-13 — traffic rides `syllabai-v2` on Vercel; the console disable is the operator residual) · Vercel Hobby (web) · Cloudflare R2 (binaries) · Free LLM chain Groq → Gemini 2.5 Flash → OpenRouter (ADR-009). **$0 total, no credit card.**
 
 ## Start here
 

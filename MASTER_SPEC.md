@@ -112,16 +112,20 @@ Never introduce a paid-only infrastructure dependency when an equivalent free/op
 
 SyllabAI is a multi-repository project. Repositories are separated only where a component has an independent responsibility, lifecycle, runtime, language, test strategy, or deployment model.
 
+> **Amendment 2026-10-13 (T-C84, cutover doc-sync — of record):** §3 and the §5 runtime diagrams describe the pre-cutover topology and stand as the record of the archived lineage. Since 2026-10-13: **`SyllabAI/syllabai-v2` is the only system of record** (api-of-record `syllabai-v2.vercel.app`, hub-of-record `syllabai-hub-v2.vercel.app`); **`syllabai-core` and `syllabai-hub` are archived read-only** (never deleted); **Render retirement is ordered** (the service-disable console act is the operator residual). Authoritative sources: `CUTOVER_RETIREMENT_2026-10-13.md` (this repo) and `syllabai-v2` `docs/MIGRATION_REPORT.md` §7/§8 + the W7-CUTOVER receipts. The register below is annotated inline — no body rewrite; the README repo map remains the authoritative list.
+
 ```text
-SyllabAI GitHub account (github.com/SyllabAI) — 11 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`; amended 2026-09-13: the content-ops repositories `syllabai-pastpapers` + `syllabai-resources` complete the then-7-repo set; amended 2026-09-15: `syllabai-teacher-workbench` (teacher validation workbench: staged decision importer, evidence packs, release/verification tooling) joins as the 8th repository; amended 2026-10-01 (documentation accuracy audit F-2): ADR-029 (2026-09-28) promoted `syllabai-demo` to the product frontend as the new repo `syllabai-hub` (`syllabai-web` demoted to the internal teacher/ops console; `syllabai-demo` frozen), and `syllabai-ops` (automation & ops) joined — the README repo map remains the authoritative list)
+SyllabAI GitHub account (github.com/SyllabAI) — 11 repositories (ADR-012 amended 2026-09-03: the public `Past-Papers` corpus repo joins `syllabai` (control), `syllabai-core`, `syllabai-web`, `syllabai-parser`; amended 2026-09-13: the content-ops repositories `syllabai-pastpapers` + `syllabai-resources` complete the then-7-repo set; amended 2026-09-15: `syllabai-teacher-workbench` (teacher validation workbench: staged decision importer, evidence packs, release/verification tooling) joins as the 8th repository; amended 2026-10-01 (documentation accuracy audit F-2): ADR-029 (2026-09-28) promoted `syllabai-demo` to the product frontend as the new repo `syllabai-hub` (`syllabai-web` demoted to the internal teacher/ops console; `syllabai-demo` frozen), and `syllabai-ops` (automation & ops) joined — the README repo map remains the authoritative list; amended 2026-10-13 (T-C84 cutover): `syllabai-v2` joins as the 12th repository and the SYSTEM OF RECORD, while `syllabai-core` and `syllabai-hub` are ARCHIVED read-only — see CUTOVER_RETIREMENT_2026-10-13.md)
 │
 ├── syllabai  (this repo — the "main repo")
 │   └── master project pack: spec, ADRs, backlog, research dossiers, papers
 │
 ├── syllabai-hub  (public)
+│   └── [ARCHIVED read-only 2026-10-13, T-C84]
 │   └── PRODUCT FRONTEND (ADR-029, promoted from syllabai-demo
 │       2026-09-28): Next.js 16 / React 19 / TypeScript
 │       (Vercel, syllabai-hub.vercel.app)
+│       superseded by syllabai-v2 apps/hub
 │
 ├── syllabai-web
 │   └── internal teacher/ops console (demoted per ADR-029):
@@ -132,7 +136,15 @@ SyllabAI GitHub account (github.com/SyllabAI) — 11 repositories (ADR-012 amend
 ├── syllabai-demo  (public)
 │   └── frozen prototype playground (per ADR-029)
 │
+├── syllabai-v2  (public)
+│   └── SYSTEM OF RECORD (cutover 2026-10-13, T-C84):
+│       TypeScript API apps/api (syllabai-v2.vercel.app)
+│       + product hub apps/hub (syllabai-hub-v2.vercel.app);
+│       migration law + receipts + .syllabai channel
+│
 ├── syllabai-core
+│   └── [ARCHIVED read-only 2026-10-13, T-C84 — superseded as
+│       serving implementation by syllabai-v2 apps/api]
 │   └── Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith
 │       modules: identity, curriculum, knowledge, content, assessment,
 │       smartmark, learner (BKT/BDT/decay), tutor (KA-RAG), diagnostic,
@@ -216,7 +228,7 @@ The former `syllabai-knowledge` / `-assessment` / `-learner-model` / `-ai` / `-r
                                anydoc / pdf-inspector
 ```
 
-The three labels above the data layer (`Assessment module`, `Learner/Diagnosis modules`, `Tutor/AI modules`) are **bounded-context modules inside `syllabai-core`**, not separate repositories — ADR-012 consolidated the former `syllabai-assessment` / `syllabai-learner-model` / `syllabai-ai` spec-v1.0 repositories as modules of the monolith. The current repository set is `syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser`, the content-ops repositories `syllabai-pastpapers` and `syllabai-resources`, plus the public `Past-Papers` corpus repository (section 3). Never describe internal modules as deployable repositories.
+The three labels above the data layer (`Assessment module`, `Learner/Diagnosis modules`, `Tutor/AI modules`) are **bounded-context modules inside `syllabai-core`**, not separate repositories — ADR-012 consolidated the former `syllabai-assessment` / `syllabai-learner-model` / `syllabai-ai` spec-v1.0 repositories as modules of the monolith. The current repository set is `syllabai`, `syllabai-core`, `syllabai-web`, `syllabai-parser`, the content-ops repositories `syllabai-pastpapers` and `syllabai-resources`, plus the public `Past-Papers` corpus repository (section 3). Never describe internal modules as deployable repositories. *(Cutover note 2026-10-13, T-C84: since the cutover the repository set includes `syllabai-v2` — the system of record — and `syllabai-core` is archived read-only; this diagram stands as the record of the archived lineage.)*
 
 ---
 

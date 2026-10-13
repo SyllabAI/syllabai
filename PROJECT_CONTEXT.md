@@ -48,8 +48,9 @@ The current repository set is:
 | Repo | Contains |
 |---|---|
 | `syllabai` | this pack — spec, ADRs, backlog, research, papers |
-| `syllabai-core` | Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith (all domain modules) |
-| `syllabai-hub` | **Product frontend** (ADR-029, promoted from syllabai-demo 2026-09-28): per-subject Learning Hubs, grounded tutor + CLA through core proxies, 4CH1 real learner-model bridge, teacher workspace; live at `syllabai-hub.vercel.app` (Next.js 16 / React 19 / TypeScript / Vercel) |
+| `syllabai-v2` | **SYSTEM OF RECORD (cutover 2026-10-13, T-C84)** — the v2 port: TypeScript API `apps/api` (api-of-record `syllabai-v2.vercel.app`) + product hub `apps/hub` (hub-of-record `syllabai-hub-v2.vercel.app`); migration law, receipts and the `.syllabai` channel live there (see `CUTOVER_RETIREMENT_2026-10-13.md`) |
+| `syllabai-core` | Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith (all domain modules) — **ARCHIVED read-only 2026-10-13** (retired with the v2 cutover; never deleted, evidence stays resolvable) |
+| `syllabai-hub` | **Product frontend** (ADR-029, promoted from syllabai-demo 2026-09-28): per-subject Learning Hubs, grounded tutor + CLA through core proxies, 4CH1 real learner-model bridge, teacher workspace; live at `syllabai-hub.vercel.app` (Next.js 16 / React 19 / TypeScript / Vercel) — **RETIRED / ARCHIVED read-only 2026-10-13**, superseded by `syllabai-v2` `apps/hub` |
 | `syllabai-web` | Internal teacher/ops console (demoted per ADR-029; Smart Mark / marking queue home; product-surface development frozen; Next.js 16 / React 19 / TypeScript / Vercel) |
 | `syllabai-demo` | Frozen prototype playground (per ADR-029); its pre-promotion corpus/UX waves were ported to the hub by tranche 4.3 |
 | `syllabai-parser` | polyglot offline content pipeline (opendataloader-pdf in-process; GLM-OCR Markdown/QP-MS tooling; MinerU/Surya/anydoc/pdf-inspector adapters **deferred** behind the DocumentParser port — corrected 2026-10-01 per the parser README, audit F-10) |
@@ -59,14 +60,14 @@ The current repository set is:
 | `syllabai-teacher-workbench` | public teacher validation workbench: staged decision importer, evidence packs, release/verification tooling; Vercel readonly mirror mode |
 | `syllabai-ops` | public automation & ops repo: dashboard refresh + Discord pulse via GitHub Actions (public account: Actions minutes are free here); Drive mirror + monitor tooling *(row added 2026-10-01 — documentation accuracy audit F-8; it was the only repo missing from this table)* |
 
-Domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live **inside `syllabai-core`** as strongly-separated packages and graduate to repositories only when a genuine runtime/lifecycle boundary appears.
+Domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live **inside `syllabai-core`** as strongly-separated packages and graduate to repositories only when a genuine runtime/lifecycle boundary appears. *(Cutover note 2026-10-13, T-C84: describes the archived lineage's layout; the serving implementation of record is `syllabai-v2/apps/api`.)*
 
 ## Approved technology direction
 
-- Backend: **Java 25 + Spring Boot 4.1.x + Spring AI 2.0.x** (Maven, Spring Security, JPA, Flyway).
+- Backend: **Java 25 + Spring Boot 4.1.x + Spring AI 2.0.x** (Maven, Spring Security, JPA, Flyway). *(Cutover note 2026-10-13, T-C84: the Java core is ARCHIVED; the backend of record is the TypeScript port in `syllabai-v2/apps/api` on Vercel.)*
 - Frontend: **Next.js 16.x + React 19.x + TypeScript** on **Vercel**.
 - Data: **Neon PostgreSQL + pgvector**; KG as relational graph tables behind `KnowledgeGraphRepository` (Neo4j-portable).
-- Java hosting: **Render free Docker** (cold starts accepted; no local filesystem state).
+- Java hosting: **Render free Docker** (cold starts accepted; no local filesystem state). *(Cutover note 2026-10-13, T-C84: Render retired — the console disable is the operator residual; see `CUTOVER_RETIREMENT_2026-10-13.md`.)*
 - Object storage: **Cloudflare R2** (free tier, no credit card).
 - LLM: **free-tier chain Groq (llama-3.3-70b) → Gemini 2.5 Flash → OpenRouter** behind `LlmProvider` (ADR-009); embeddings via Gemini embedding API.
 - Core architecture: modular monolith; multi-repo only for web/parser/main pack/corpus.

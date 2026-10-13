@@ -7,7 +7,7 @@
 never replaced by this view. Agents may read this file first for the open-packet frontier,
 then consult `TODO.md` / the packet YAMLs for detail.
 
-_Packet census: 7 open / 57 closed / 64 total._
+_Packet census: 7 open / 58 closed / 65 total._
 
 ## Open packets
 
@@ -31,6 +31,7 @@ _Packet census: 7 open / 57 closed / 64 total._
 - T-COORD-3 — Coordination tooling wave 3 — packaging the critical re-audit's R-A..R-F (branch protection, warning-baseline retirement…
 - T-COORD-2 — Coordination tooling wave 2 — structured lease history (P2) + safe-merge pre-verifier (P5)
 - T-COORD-1 — Coordination tooling wave 1 — WARN-ONLY validator CI gate (P1) + generated views (P3)
+- T-C84 — Cutover doc-sync — align the front-door living docs with the 2026-10-13 retirement of record (syllabai-v2 = system of re…
 - T-C82 — Route-hint lane — the Total-row-conflict rule: the T-C80 Lane-B recorded-NOT-fixed finding (4CH0/2C June 2017 q5 parse s…
 - T-C81 — DEEP-AUDIT-DOC recovery — the lost 2026-09-28 deep-audit findings document RECONSTRUCTED from commit archaeology and com…
 - T-C80 — F-PROD-1 narrowed-row closure — the 3 P2 June-2016 paper-total rows (4CH0 1C/1CR/2CR June 2016, MS prints no totals) clo…

@@ -140,7 +140,8 @@ Operational evidence must not be confused with architectural intent. A feature c
 | Repository | Durable knowledge owned there |
 |---|---|
 | `SyllabAI/syllabai` | Master architecture, ADRs, research, backlog, cross-project contracts and project knowledge map |
-| `SyllabAI/syllabai-core` | Backend implementation, domain contracts, migrations, AI/tutor/learner/assessment implementation evidence |
+| `SyllabAI/syllabai-v2` | **SYSTEM OF RECORD (cutover 2026-10-13, T-C84)** — the serving implementation of record: TypeScript API `apps/api` + product hub `apps/hub`; migration law, MIGRATION_REPORT §7/§8, W7-CUTOVER receipts and the `.syllabai` channel |
+| `SyllabAI/syllabai-core` | Backend implementation, domain contracts, migrations, AI/tutor/learner/assessment implementation evidence — **ARCHIVED read-only 2026-10-13** (evidence paths remain resolvable read-only; superseded as serving implementation by `SyllabAI/syllabai-v2`) |
 | `SyllabAI/syllabai-web` | Frontend implementation and UI contracts |
 | `SyllabAI/syllabai-parser` | Offline parsing/OCR/document-processing implementation and evidence |
 | `SyllabAI/syllabai-resources` | Validated content corpus, specification/resource mappings and corpus QA |

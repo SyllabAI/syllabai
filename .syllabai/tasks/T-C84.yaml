@@ -1,0 +1,53 @@
+version: 1
+task:
+  id: T-C84
+  title: "Cutover doc-sync — align the front-door living docs with the 2026-10-13 retirement of record (syllabai-v2 = system of record; syllabai-core + syllabai-hub archived)"
+  owner: "r0 (Super Z, zai session web-df0238cc-641e-4e8e-ae60-bc44c2aeec2e, chat 0283e086-b297-4875-912b-a9f4fd722dc5)"
+  status: DONE
+  priority: P1
+  base:
+    repo: SyllabAI/syllabai
+    commit: 7e75626be9131d4d1da89ffa1fa0cce2c60615b7
+  scope:
+    allowed:
+      - README.md
+      - AGENT.md
+      - PROJECT_CONTEXT.md
+      - PROJECT_KNOWLEDGE_MAP.md
+      - MASTER_SPEC.md
+      - .syllabai/tasks/T-C84.yaml
+      - .syllabai/locks.yaml
+      - .syllabai/heartbeat.yaml
+      - .syllabai/evidence/t-c84/
+      - TODO-CURRENT.md   # regenerated view only (gen_views.py)
+    forbidden:
+      - dated/append-only records (PROGRESS.md, TODO.md, DECISIONS.md, audit docs) — history is never rewritten
+      - MASTER_SPEC.md body sections outside the annotated §3/§5 registers (no silent spec rewrite)
+      - any write to the archived repos syllabai-core / syllabai-hub (read-only of record)
+  dependencies: []
+  shared_resources:
+    - master-doc front-door living docs (README/AGENT/PROJECT_CONTEXT/KNOWLEDGE_MAP/MASTER_SPEC §3)
+  operator_word:
+    trace: 1a1351d796a0f295
+    word: "Go"
+    context: "operator approved the staged surgical fix (chat 0283e086, 2026-10-13): 'Say go and I'll land it' -> 'Go'"
+  acceptance:
+    - "Every front-door living doc states syllabai-v2 as the system of record with the api/hub URLs of record"
+    - "Every syllabai-core / syllabai-hub current-state row or claim carries the ARCHIVED read-only 2026-10-13 annotation and a pointer to CUTOVER_RETIREMENT_2026-10-13.md"
+    - "No dated/append-only record rewritten; MASTER_SPEC amended via dated amendment note + inline annotations only"
+    - "Coordination files updated per QUICKSTART law (packet + locks history + heartbeat) and both validators pass"
+  tests: []
+  evidence_required:
+    - .syllabai/evidence/t-c84/RECEIPT.md
+  claims:
+    VERIFIED:
+      - "origin/main base = 7e75626 (fetch-first race-guard, tip unchanged at claim time)"
+      - "The bulletin CUTOVER_RETIREMENT_2026-10-13.md is at HEAD and EFFECTIVE (read first-hand)"
+      - "Stale inventory: README.md repo map + platform line; AGENT.md repo list + module-layout sentence; PROJECT_CONTEXT.md repo table + module/backend/Render lines; PROJECT_KNOWLEDGE_MAP.md §9 repo table; MASTER_SPEC.md §3 register + tree + §5 note — all pre-cutover, zero syllabai-v2 mentions before this task"
+      - "syllabai-core @ 6cad6ef and syllabai-hub @ 93226a43 are archived read-only (verified first-hand 2026-10-13, HTML banner + ls-remote byte-exact)"
+    INFERRED: []
+    REPORTED:
+      - "No push credential is held lane-side; the landing commit is prepared locally and pushes after the operator credential handoff (the established handoff law)"
+    UNVERIFIED: []
+  next_safe_actions:
+    - "Push the prepared commit via .syllabai-only main after credential handoff; verify receipt on origin/main"

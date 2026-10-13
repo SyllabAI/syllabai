@@ -309,3 +309,14 @@ history:
       rule with the stale-renewal discrepancy named in T-C55's
       closure_verification; the empty locks: map is the correct steady
       state.
+  - resource: master-doc-front-door
+    task: T-C84
+    outcome: fulfilled_released
+    released_at: 2026-10-13
+    receipt: >-
+      Acquired and fulfilled atomically in the same landing commit (base
+      7e75626): the cutover doc-sync touches the five front-door living
+      docs in one pass, so no lease ever spans sessions. Released with the
+      landing; the receipt lives in .syllabai/evidence/t-c84/RECEIPT.md
+      and the packet is .syllabai/tasks/T-C84.yaml (operator word trace
+      1a1351d796a0f295 'Go').

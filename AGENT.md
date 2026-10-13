@@ -71,12 +71,15 @@ The Master Spec is the engineering source of truth. Research papers remain autho
 
 ## Project repositories
 
+> **2026-10-13 cutover (of record — T-C84):** `syllabai-v2` is the **only system of record**; `syllabai-core` and `syllabai-hub` are **archived read-only** (writes to them are void — the C1 law is now physical). Every agent: read `CUTOVER_RETIREMENT_2026-10-13.md` in this repo first; the migration law and receipts live in `syllabai-v2` (`docs/MIGRATION_REPORT.md`, `.syllabai/`).
+
 ```text
 syllabai                 main repo: spec, ADRs, backlog, research dossiers, papers
-syllabai-hub             Next.js 16 / React 19 / TypeScript PRODUCT frontend (ADR-029, promoted from syllabai-demo 2026-09-28; the Vercel project keeps the historical syllabai-web name)
+syllabai-v2              SYSTEM OF RECORD (cutover 2026-10-13): TypeScript API apps/api (syllabai-v2.vercel.app) + product hub apps/hub (syllabai-hub-v2.vercel.app); migration law + receipts + .syllabai channel
+syllabai-hub             [ARCHIVED read-only 2026-10-13] former Next.js 16 / React 19 / TypeScript PRODUCT frontend (ADR-029, promoted from syllabai-demo 2026-09-28; the Vercel project keeps the historical syllabai-web name) — superseded by syllabai-v2 apps/hub
 syllabai-web             internal teacher/ops console (demoted per ADR-029; Smart Mark / marking queue home; product-surface development frozen)
 syllabai-demo            frozen prototype playground (per ADR-029)
-syllabai-core            Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith
+syllabai-core            [ARCHIVED read-only 2026-10-13] Java 25 / Spring Boot 4.1 / Spring AI 2.0 modular monolith — superseded as serving implementation by syllabai-v2 apps/api
 syllabai-parser          polyglot offline content pipeline
 syllabai-pastpapers      canonical exam corpus: manifests, provenance, ledgers
 Past-Papers              official QP/MS corpus source repository
@@ -85,9 +88,9 @@ syllabai-teacher-workbench teacher validation workbench / staged decision import
 syllabai-ops             automation & ops: dashboard refresh + Discord pulse (GitHub Actions)
 ```
 
-*(list corrected to the full 11-repo set on 2026-10-01 — documentation accuracy audit F-2; the T-C38 sweep of 2026-09-30 had corrected `syllabai-hub` only, leaving web/demo/ops unlisted.)*
+*(list corrected to the full 11-repo set on 2026-10-01 — documentation accuracy audit F-2; the T-C38 sweep of 2026-09-30 had corrected `syllabai-hub` only, leaving web/demo/ops unlisted. Amended 2026-10-13 (T-C84): `syllabai-v2` joins as the 12th repository and the system of record; `syllabai-core` + `syllabai-hub` archived read-only.)*
 
-All domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live inside `syllabai-core` unless a real runtime/lifecycle boundary justifies separation.
+All domain modules (identity, curriculum, knowledge, content, assessment, smartmark, learner, tutor, diagnostic, recommendation, teacher, research/telemetry, infrastructure) live inside `syllabai-core` unless a real runtime/lifecycle boundary justifies separation. *(Cutover note 2026-10-13, T-C84: that sentence describes the archived lineage's module layout; the serving implementation of record is the v2 port in `syllabai-v2/apps/api` — see `CUTOVER_RETIREMENT_2026-10-13.md`.)*
 
 ## Technology constraints
 
