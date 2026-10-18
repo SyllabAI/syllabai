@@ -68,7 +68,7 @@ If two canonical artifacts conflict, **do not silently choose one**. Record the 
 
 | Area | Canonical artifact(s) |
 |---|---|
-| Question Attempt / Learning Log | `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md` |
+| Question Attempt / Learning Log | `QUESTION_ATTEMPT_AND_LEARNING_EVIDENCE.md`; `docs/research/VERIFICATION_EVIDENCE_GATE_PROPOSAL.md` (PROPOSED; v2 PoC PR #190) |
 | Agent implementation rules | `LEARNING_EVIDENCE_AGENT_ADDENDUM.md` |
 | Recommendation system | `RECOMMENDATION_SYSTEM_ARCHITECTURE.md`, `RECOMMENDATION_SYSTEM_AGENT_ADDENDUM.md`, ADR-017 |
 | Learner Interaction Memory | `LEARNER_INTERACTION_MEMORY_ARCHITECTURE.md`, `MASTER_SPEC_ADDENDUM_1.4_LEARNER_INTERACTION_MEMORY.md`, `AGENT_LEARNER_INTERACTION_MEMORY_ADDENDUM.md` |
