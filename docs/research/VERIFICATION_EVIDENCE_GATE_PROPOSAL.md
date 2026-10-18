@@ -16,7 +16,7 @@ Should SyllabAI maintain an explicit, provenance-backed verification-evidence vi
 - The v2 tutor reads the governed learner model; deterministic NBA selects bounded next actions; InterventionRun preserves diagnosis/state references and bounded intervention execution.
 - The model updater documents a concurrency seam: optimistic-lock conflict handling is not ported, so concurrent updates may lose a version bump. This is a separate hardening issue, not solved by this proposal.
 
-The implementation evidence and detailed gap analysis are recorded in the linked v2 PoC. These statements describe source inspection, not a claim of CI or production verification for the PoC.
+The implementation evidence and detailed gap analysis are recorded in the linked v2 PoC. The PoC branch's full v2 CI passed in run [39108437035](https://github.com/SyllabAI/syllabai-v2/actions/runs/39108437035), including typecheck, full API/package tests, golden self-check, retrieval eval harness, zero-core census gate and Hub build. This is code/CI verification only, not evidence of educational outcome gains or production integration.
 
 ## Proposed semantics
 
