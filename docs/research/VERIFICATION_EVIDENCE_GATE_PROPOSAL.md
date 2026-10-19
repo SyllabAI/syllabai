@@ -197,3 +197,7 @@ Exposure becomes a first-class, append-only event class. Two event kinds are req
 ### H. Non-goals of this addendum
 
 No migrations, endpoint changes, production wiring, classifier integration, or mastery-policy changes are authorized. The PoC remains PROTOTYPE / DO-NOT-MERGE. Nothing here merges v2 PR #190, changes the deploy posture, or alters BKT/BDT.
+
+### I. S2 record (2026-10-19) — gate S2 discharged: PARTIAL
+
+Gate S2 (producer inventory and event coverage) was executed against v2 `origin/main` @ `6c84af6f` (addendum basis `6eaeaa21` re-verified; zero producer-path drift in the 49-commit window) and PoC PR #190 @ `3c908519`. **Verdict: PARTIAL** — grading (MCQ), identity, and anchor substrates have real application-controlled producers; assistance served, answer/solution exposure, and transfer designation have **no producer anywhere in the implementation**; graded-lane evidence publication is a claim-true noop; telemetry lacks idempotency keys, quarantine, and producer identity. Per §G/S2's own law the classifier stays at PROTOTYPE. Full coverage matrix, producer traces, verified gaps (V1–V8), and S3 prerequisites: [VERIFICATION_EVIDENCE_S2_PRODUCER_INVENTORY.md](./VERIFICATION_EVIDENCE_S2_PRODUCER_INVENTORY.md). F.1–F.5 remain UNRESOLVED.
