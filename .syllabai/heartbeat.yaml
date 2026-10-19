@@ -2,36 +2,18 @@
 # the validator warns (HB2-STALE) at >72h silence. Seed = git last-touch of each
 # open packet at T-COORD-3 packaging time (2026-10-04). Sessions die silently -
 # this file is how the ledger notices.
+# (2026-10-19, T-C85 reconciliation: the ledger was re-derived from the packet
+#  census — the closed lanes T-C44/T-C47/T-C50/T-C51/T-C55/T-C60/T-C75/T-C79/
+#  T-C84 were removed (they had survived the wholesale seed unpruned), and the
+#  RUN-RECORDED T-C83 was ADDED (it is an open lane per the T-COORD-3 enum and
+#  had been missing since its 2026-10-04 run). The correct open set after the
+#  reconciliation is exactly: T-C70 (VERIFYING) + T-C83 (RUN-RECORDED).)
 version: 1
 stale_after_hours: 72
 packets:
-  T-C44:
-    session: "superz (main agent, zai session web-98866c45)"
-    last_seen: '2026-10-04T02:24:27Z'
-  T-C47:
-    session: "superz (main agent, zai session web-98866c45)"
-    last_seen: '2026-10-04T02:24:27Z'
-  T-C50:
-    session: "superz (main agent, zai session web-98866c45)"
-    last_seen: '2026-10-04T02:24:27Z'
-  T-C51:
-    session: "superz (main agent, zai session web-98866c45)"
-    last_seen: '2026-10-04T02:24:27Z'
-  T-C55:
-    session: "superz (main agent, zai session web-98866c45)"
-    last_seen: '2026-10-04T02:24:27Z'
-  T-C60:
-    session: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-"
-    last_seen: '2026-10-04T02:24:27Z'
   T-C70:
-    session: "superz (main agent, zai session — discord DM trace 1a0fdd7bf"
-    last_seen: '2026-10-04T02:38:43Z'
-  T-C75:
-    session: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-"
-    last_seen: '2026-10-04T02:24:27Z'
-  T-C79:
-    session: "Super Z"
-    last_seen: '2026-10-04T02:24:27Z'
-  T-C84:
-    session: "r0 (Super Z, zai session web-df0238cc-641e-4e8e-ae60-bc44c2aeec2e)"
-    last_seen: '2026-10-13T01:30:00Z'
+    session: "superz (main agent, zai session — discord DM trace 1a0fdd7bf; re-scoped 2026-10-19 T-C85, zai session web-da4ab8b1)"
+    last_seen: '2026-10-19T09:00:25Z'
+  T-C83:
+    session: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e; cutover amendment 2026-10-19 T-C85, zai session web-da4ab8b1)"
+    last_seen: '2026-10-19T09:00:25Z'

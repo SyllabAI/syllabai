@@ -5,7 +5,7 @@ task:
     found 4 more raw-render shapes (2 RED, 2 degraded); harden
     src/lib/mathNormalize.ts + extend the verify gate"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: IN_PROGRESS
+  status: DONE # flipped 2026-10-19, T-C85 reconciliation (trace 1a1535dcb8257991) — merge_status below recorded MERGED since 2026-10-02; first-hand API re-verification: hub PR #7 merged=true fca83c8da
   priority: P1
   authority: "operator question (zai-web, 2026-10-02, trace
     1a0fb4b888cb507d): 'And are there more issues like this?' — asked
@@ -62,6 +62,13 @@ task:
       answer-editor is a structured MathLive/KaTeX editor, not a
       markdown passthrough"
   notes:
+    - '2026-10-19 (T-C85 post-cutover reconciliation, operator trace
+      1a1535dcb8257991): status flipped IN_PROGRESS -> DONE — merge_status
+      recorded MERGED (hub PR #7, fca83c8, gate 26/26) since 2026-10-02;
+      first-hand API re-verification this pass: merged=true,
+      merge_commit_sha fca83c8da. The 4 residual-shape fixes are carried in
+      the system of record (syllabai-v2 packages/shared mathNormalize +
+      tests) — VERIFIED first-hand on the v2 tree. Nothing owed.'
     - "claim-first; same session owns T-C44 (PR hub#6 merged ec6bd5e
       with this session's operator merge word). Closes to DONE only
       with the PR merged and the gate extended."

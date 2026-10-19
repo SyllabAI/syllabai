@@ -5,7 +5,7 @@ task:
     normalizer so \\[…\\] / \\ce{} / \\(\\) tutor answers render as math,
     not raw LaTeX"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: IN_PROGRESS
+  status: DONE # flipped 2026-10-19, T-C85 reconciliation (trace 1a1535dcb8257991) — merge_status below recorded MERGED since 2026-10-02; first-hand API re-verification: hub PR #6 merged=true ec6bd5e15
   priority: P1
   authority: "operator report (zai-web, 2026-10-02, trace
     1a0fb115064e11f5): a live tutor reply (2020 January GCSE Chemistry
@@ -76,3 +76,15 @@ task:
     step is PRE-EXISTING on main a61b0d3 (run 36912705568, identical step,
     flashcard deck surface — disjoint from this diff). PR comment carries
     the full evidence."
+  notes:
+    - '2026-10-19 (T-C85 post-cutover reconciliation, operator trace
+      1a1535dcb8257991): status flipped IN_PROGRESS -> DONE — the
+      merge_status above recorded the operator merge word + verified merge
+      commit (hub PR #6, ec6bd5e) since 2026-10-02; the packet was complete
+      and merely unflipped. First-hand API re-verification this pass:
+      state=closed, merged=true, merge_commit_sha ec6bd5e15. Cutover
+      placement: the base repo syllabai-hub is ARCHIVED read-only
+      (2026-10-13); the work is carried in the system of record —
+      syllabai-v2 apps/hub imports the archived tree and
+      packages/shared/src/mathNormalize.ts (+ 17 tests, katex dep) is
+      VERIFIED first-hand on the v2 tree. Nothing owed.'

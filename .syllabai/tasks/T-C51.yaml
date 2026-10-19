@@ -6,7 +6,7 @@ task:
     model-content surfaces, add a verify gate (the T-C44 card's demo
     follow-up)"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: IN_PROGRESS
+  status: DONE # flipped 2026-10-19, T-C85 reconciliation (trace 1a1535dcb8257991) — merge_status recorded MERGED (demo PR #1 e5491877) and the 2026-10-02 operator retirement ruling stands in notes
   priority: P2
   authority: "operator message (zai-web, 2026-10-02, trace
     1a0fb8042f7d9045) naming the T-C44 card's two filed follow-ups as
@@ -61,6 +61,15 @@ task:
       note-cla.tsx line 328; node_modules lacks every dep the mhchem
       plugin needs (all 4 must be added)"
   notes:
+    - '2026-10-19 (T-C85 post-cutover reconciliation, operator trace
+      1a1535dcb8257991): status flipped IN_PROGRESS -> DONE on two
+      of-record legs: (1) the work completed — merge_status records the
+      operator merge word + verified merge commit (syllabai-demo PR #1,
+      e5491877, gate 26/26 local gates); first-hand API re-verification
+      this pass: merged=true, merge_commit_sha e5491877e. (2) The surface
+      retired — the notes above carry the 2026-10-02 operator ruling
+      (trace 1a0fbeb9dcfff209: syllabai-demo is retired) + ADR-029 + the
+      2026-10-13 cutover leave the frozen demo with nothing owed.'
     - "claim-first per the T-C47 precedent. Closes to DONE only with
       the PR merged (operator word)."
     - "2026-10-02 (operator, zai-web, trace 1a0fbeb9dcfff209):

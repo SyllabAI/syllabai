@@ -13,7 +13,7 @@ task:
     from flood, and at what (d) price), pre-registered with a byte-exact
     arm-A reconstruction and trim census"
   owner: "superz (main agent, zai session web-123877e4-3cca-4eba-b72d-52233419378e)"
-  status: RUN-RECORDED # END-TO-END on the operator's probe word (trace
+  status: RUN-RECORDED # cutover amendment 2026-10-19, T-C85 reconciliation (trace 1a1535dcb8257991) — the retired-stack probe stands; any v2-era production flip = new dated prereg + re-measurement on the v2 harness
     # 1a106cae2554db5d): seam = core PR #83 (head 6b19c07, CI build 6m36s +
     # verify pass; full offline suite on the exact head 1270/0/0/2) MERGED as
     # 6cad6ef; run-005-j-r1 recorded + verified (run005j_verify.py EXIT=0,
@@ -75,3 +75,17 @@ task:
       stops)"
     - "if the production-path fidelity findings deviate from the census: the
       deviation ledger is the deliverable — no re-run without a new word"
+  notes:
+    - '2026-10-19 (T-C85 post-cutover reconciliation, operator trace
+      1a1535dcb8257991): cutover amendment, status RUN-RECORDED unchanged.
+      The recorded run (run-005-j-r1, seam = core PR #83 merged as
+      6cad6ef, NOT PROMOTED as pinned) stands as measured on the RETIRED
+      stack — syllabai-core is ARCHIVED read-only (2026-10-13) with
+      evidence resolvable per the retirement act. The probe production
+      question does not transfer silently: the v2 system of record runs
+      its own retrieval geometry (syllabai-v2 carries golden/retrieval-
+      eval). Any v2-era production flip of a MIN_COSINE-class floor = a
+      NEW dated prereg + re-measurement on the v2 harness under the
+      unchanged-bars rule + a new operator word. The reading word on the
+      recorded probe remains operator-gated (next_safe_actions above) —
+      the lane records honestly and stops.'

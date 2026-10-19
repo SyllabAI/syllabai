@@ -6,7 +6,7 @@ task:
     (2 T-C44 deltas + 4 T-C47 residual fixes), extend the s142 gate
     with the new shapes, wire the gate into web-ci"
   owner: "superz (main agent, zai session web-98866c45)"
-  status: IN_PROGRESS
+  status: DONE # flipped 2026-10-19, T-C85 reconciliation (trace 1a1535dcb8257991) — merge_status below recorded the lane closed since 2026-10-02; first-hand API re-verification: web PR #13 merged=true 651928ce1
   priority: P1
   authority: "operator message (zai-web, 2026-10-02, trace
     1a0fb8042f7d9045) naming the T-C44 card's two filed follow-ups —
@@ -44,6 +44,15 @@ task:
       web-ci after build; eslint + production build green; CI green"
   evidence: []
   notes:
+    - '2026-10-19 (T-C85 post-cutover reconciliation, operator trace
+      1a1535dcb8257991): status flipped IN_PROGRESS -> DONE — the packet
+      own merge_status closed the lane verbatim (the web backport lane is
+      closed; web normalizer diff-identical to hub main fca83c8dae88, gate
+      30/30 wired into web-ci) — merely unflipped. First-hand API
+      re-verification this pass: syllabai-web PR #13 merged=true,
+      merge_commit_sha 651928ce1. syllabai-web remains an ACTIVE repo
+      (internal teacher/ops console, ADR-029) — the wired gate stands
+      there. Nothing owed.'
     - "claim-first per the T-C47 precedent. Closes to DONE only with
       the PR merged and the gate wired."
   merge_status: "MERGED — operator merge word given 2026-10-02 (trace

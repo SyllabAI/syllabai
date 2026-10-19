@@ -1,0 +1,112 @@
+version: 1
+task:
+  id: T-C85
+  title: "Post-cutover packet-queue reconciliation — the syllabai packet
+    ledger re-based onto the v2 system of record: the 7 open packets
+    audited first-hand against GitHub PR states + the v2 tree; 5 dormant
+    packets closed on merge/absorption evidence (T-C44/T-C47/T-C50/T-C51
+    merged-PR verification, T-C60 absorption by the closed T-C75 ingest
+    wave), T-C70 re-scoped (implementation orphaned on the unmerged
+    archived-hub PR #26), T-C83 cutover amendment (the retired-stack
+    probe stands; any v2-era production flip = new dated prereg)"
+  owner: "superz (main agent, zai session web-da4ab8b1)"
+  status: DONE # same-commit landing per the T-C84 precedent; operator word of record trace 1a1535dcb8257991
+  priority: P1
+  authority: "operator message (zai-web, 2026-10-19, trace
+    1a1535dcb8257991): 'run that reconciliation pass and write the dated
+    TODO/PROGRESS entries in the syllabai repo' — issued after the
+    operator's 2026-10-19 state review established that the packet queue
+    went dormant at the cutover (last Session 202, 2026-10-05) while
+    execution moved to the syllabai-v2 board"
+  base:
+    repo: "syllabai (this repo) main 36223c6 (T-C84 cutover doc-sync);
+      syllabai-v2 main 8339720 (r7a worklog state-census run-002);
+      syllabai-hub ARCHIVED read-only @ 93226a43 (retirement of record
+      2026-10-13); syllabai-core ARCHIVED read-only @ 6cad6ef"
+  scope:
+    allowed:
+      - "this packet + dated notes appended to the 7 audited packet YAMLs
+        (T-C44/T-C47/T-C50/T-C51/T-C60/T-C70/T-C83) — status flips and
+        re-scope amendments only, every flip citing first-hand or
+        of-record evidence"
+      - ".syllabai/heartbeat.yaml — the 5 closed lanes leave the liveness
+        ledger; T-C70/T-C83 last_seen refreshed"
+      - ".syllabai/locks.yaml — one fulfilled_released history row for this
+        records lane (atomic same-commit landing, T-C84 precedent)"
+      - "TODO.md dated section + PROGRESS.md Session 203 entry + WORKLOG.md
+        Session 203 entry + evidence receipt .syllabai/evidence/t-c85/"
+      - "TODO-CURRENT.md regenerated via .syllabai/tools/gen_views.py;
+        validate_coordination.py run before push"
+    forbidden:
+      - "no code changes in any repo; no DB writes anywhere (the v2 Neon
+        system of record is untouched — no DATABASE_URL in this sandbox and
+        none requested)"
+      - "no writes to the archived read-only repos (syllabai-hub,
+        syllabai-core — the C1 law is physical)"
+      - "no operator-gated flips taken unilaterally: T-C83's reading word,
+        T-C70's walkthrough, the Books VALIDATED service flip and PR #190
+        promotion remain the operator's"
+      - "no history rewrites in the prose ledgers (append-only dated
+        sections; the Session 202 records-hygiene rules stand)"
+  acceptance:
+    - "every status flip carries first-hand evidence recorded in the packet
+      (GitHub API PR state + merge_commit_sha) or an of-record closed-receipt
+      citation (T-C75 TODO.md 2026-10-04 DONE entry), with claim labels
+      VERIFIED/REPORTED used honestly (no DATABASE_URL in this sandbox: DB
+      legs are REPORTED, never VERIFIED)"
+    - "the T-C70 finding is stated first-hand: hub PR #26 state=open
+      merged=false (head 81db1ea15) and the paper-run slice is absent from
+      the v2 hub tree — the implementation exists only on the unmerged PR
+      branch of an archived repo"
+    - "post-reconciliation census: 2 open (T-C70 VERIFYING, T-C83
+      RUN-RECORDED) / 63 closed / 65 total; TODO-CURRENT regenerated to
+      match"
+    - "validators clean: coordination-guard (warn mode) introduces no NEW
+      warnings; gen_views check passes after regeneration"
+    - "all records land atomically in ONE commit on this repo (no force,
+      fetch-first race-guard at push)"
+  evidence:
+    - "VERIFIED (GitHub REST API, 2026-10-19, this session): hub PR #6
+      merged=true merge_commit_sha ec6bd5e15 (T-C44); hub PR #7 merged=true
+      fca83c8da (T-C47); web PR #13 merged=true 651928ce1 (T-C50); demo PR
+      #1 merged=true e5491877e (T-C51); hub PR #26 state=open merged=false
+      head 81db1ea15 branch t-c70-paper-run-p0 (T-C70)"
+    - "VERIFIED (v2 tree, this session): syllabai-v2 apps/hub carries the
+      math-normalizer evolution (packages/shared/src/mathNormalize.ts +
+      mathNormalize.test.ts, 17 test cases; katex in apps/hub deps) — the
+      T-C44/T-C47/T-C50 normalizer work is IN the system of record; and
+      apps/hub contains NO paper-run/exam-runner surface (grep for
+      paper-run|PaperRun|exam-runner|ExamRunner across apps/hub/src: 0
+      files) — the T-C70 slice is absent from the system of record"
+    - "REPORTED (of-record receipts, not re-executed here): T-C60's
+      remaining legs executed under closed T-C75 (TODO.md 2026-10-04 DONE:
+      6 docs / 68 chunks ingested + embedded, governed ep batch 4 INSERTs +
+      the 11 heals + 15 audit rows, gate 4,593 -> 4,661 predicted +68
+      exact); corpus state carried to v2 Neon under the migration's §Z
+      census gate (LIVE=0) + fresh union golden replay 223/223 PASS
+      (run 38307013191) — the retirement-of-record evidence chain"
+  claims:
+    VERIFIED:
+      - "the five PR merge states listed above (first-hand API checks,
+        2026-10-19)"
+      - "the v2 hub normalizer presence and paper-run absence (first-hand
+        tree checks, 2026-10-19)"
+      - "the packet queue went dormant at Session 202 (2026-10-05) + cutover
+        bookkeeping (T-C84); TODO-CURRENT census 7/58/65 before this pass"
+    REPORTED:
+      - "T-C60's DB-state closure legs (T-C75 receipt + the §Z census gate;
+        no first-hand DB re-probe — no DATABASE_URL in this sandbox)"
+      - "T-C83's run-005-j-r1 measurements (of-record on the retired stack;
+        evidence resolvable in the archived repos per the retirement act)"
+    INFERRED: []
+    UNVERIFIED: []
+  next_safe_actions:
+    - "operator: T-C70 disposition — re-home the Paper Run P0 lane onto the
+      v2 board (port from the resolvable PR #26 branch, or re-implement on
+      syllabai-v2 apps/hub); the walkthrough exit evidence can only be
+      produced on the v2 surface"
+    - "operator: T-C83 reading word on the recorded probe; any v2-era
+      production flip = new dated prereg + re-measurement on the v2
+      retrieval harness (syllabai-v2 golden/retrieval-eval)"
+    - "future reconciliations should run at every cutover-shaped boundary —
+      this pass found 5 of 7 'open' packets were actually complete"

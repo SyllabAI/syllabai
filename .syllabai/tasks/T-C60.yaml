@@ -6,7 +6,7 @@ task:
     docs (64 non-serving chunks), and recheck the 09-28 repaired
     generations' embed state"
   owner: "superz (main agent, zai session web-98866c45-e4fe-46b3-b477-af00c7d7a422)"
-  status: IN_PROGRESS
+  status: DONE # flipped 2026-10-19, T-C85 reconciliation (trace 1a1535dcb8257991) — executed legs closed 2026-10-02; the remaining ingest wave absorbed by the closed T-C75 (2026-10-04)
   priority: P1
   authority: "operator message (zai-web, 2026-10-02, trace
     1a0fc2a56bfb1a31) quoting the coverage-probe findings verbatim —
@@ -92,6 +92,24 @@ task:
       gap-2: 2025-06 4CH1/1CR ep row COMPLETED this batch; the other 4 papers
       defer to the ingest wave. embed-state recheck item CLOSED (live-verified)."
   notes:
+    - '2026-10-19 (T-C85 post-cutover reconciliation, operator trace
+      1a1535dcb8257991): status flipped IN_PROGRESS -> DONE by absorption.
+      The lane execution batch closed 2026-10-02 (8 SUGGESTED docs ->
+      VALIDATED gate delta 0 + the 2025-06 4CH1/1CR ep-row backfill + live
+      embed-state recheck + gap-4 closed as by-design). The remaining scope
+      in the notes above — the ingest wave (4 papers + 4 ep rows + 11
+      heals + chunk/embed of the 8 validated .md docs) — was executed and
+      closed under T-C75 on 2026-10-04 (TODO.md DONE of record: 6 docs /
+      68 chunks ingested + embedded, governed ep batch 4 ep INSERTs + the
+      11 heals + 15 audit rows, serving gate 4,593 -> 4,661 predicted +68
+      exact). DB legs here are REPORTED (the T-C75 closed receipt + the v2
+      migration census gate LIVE=0 + union golden replay 223/223 which
+      carried the corpus state to the v2 Neon system of record): the
+      reconciliation sandbox held no DATABASE_URL, so no first-hand
+      v2-Neon re-probe was executed. The chunk/embed residual for the 8
+      validated .md docs is re-homed to the v2 board operator-gated
+      Gemini-key embeddings gate (same gate as the Books embeddings).
+      Nothing further on this packet.'
     - "claim-first at registration (this commit); ID re-asked after the
       push per the T-C55 lesson. T-C57/T-C58/T-C59 taken by concurrent
       lanes — T-C60 verified free at the claim parent."

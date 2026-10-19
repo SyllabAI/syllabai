@@ -320,3 +320,17 @@ history:
       landing; the receipt lives in .syllabai/evidence/t-c84/RECEIPT.md
       and the packet is .syllabai/tasks/T-C84.yaml (operator word trace
       1a1351d796a0f295 'Go').
+  - resource: syllabai-packet-ledger
+    task: T-C85
+    outcome: fulfilled_released
+    released_at: 2026-10-19
+    receipt: >-
+      Acquired and fulfilled atomically in the same landing commit (base
+      36223c6): the post-cutover packet-queue reconciliation touches the 7
+      audited packet YAMLs + heartbeat + locks + the three prose ledgers +
+      TODO-CURRENT in one pass, so no lease ever spans sessions. Records
+      only — no code, no DB writes, no archived-repo writes. Released with
+      the landing; the receipt lives in .syllabai/evidence/t-c85/RECEIPT.md
+      and the packet is .syllabai/tasks/T-C85.yaml (operator word trace
+      1a1535dcb8257991 'run that reconciliation pass and write the dated
+      TODO/PROGRESS entries in the syllabai repo').

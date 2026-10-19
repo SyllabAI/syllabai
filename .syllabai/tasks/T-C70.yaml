@@ -9,7 +9,7 @@ task:
     auto-mark, structured self-mark, ai-suggested tier) + PaperRunResult v3 +
     attempt-bridge submissions at grading time (4CH1 pilot, verified joins)"
   owner: "superz (main agent, zai session — discord DM trace 1a0fdd7bf6392825)"
-  status: VERIFYING # implementation complete + CI green (hub PR #26 head 81db1ea:
+  status: VERIFYING # re-scoped 2026-10-19, T-C85 reconciliation (trace 1a1535dcb8257991) — implementation ORPHANED on the unmerged archived-hub PR #26 (first-hand); exit evidence must be produced on the v2 system of record
     #build SUCCESS, e2e SUCCESS, Vercel preview OK); remaining exit evidence:
     #a real full-paper run walkthrough (desktop + mobile) on the preview or
     #production, then DONE
@@ -71,3 +71,25 @@ task:
       surfaces otherwise; result v3 record carries how-marked counts,
       integrity, durationPolicy"
     - "CI build + e2e green on the PR head"
+  notes:
+    - '2026-10-19 (T-C85 post-cutover reconciliation, operator trace
+      1a1535dcb8257991): RE-SCOPED, status VERIFYING unchanged. First-hand
+      this pass (GitHub REST API): syllabai-hub PR #26 state=open,
+      merged=false, head 81db1ea15, branch t-c70-paper-run-p0, base moved
+      (mergeable_state blocked), last updated 2026-10-02 — the
+      implementation NEVER received its merge word and NEVER landed on hub
+      main. Consequence verified on the v2 tree: the v2 hub import
+      (@ 93226a43 = hub main at the freeze) contains NO paper-run surface
+      (0 grep hits for paper-run / PaperRun / exam-runner / ExamRunner in
+      syllabai-v2 apps/hub/src) — the Paper Run P0 slice exists ONLY on the
+      unmerged PR branch of an ARCHIVED repo. The exit evidence as written
+      (a real full-paper run walkthrough on the preview or production) is
+      therefore UNPRODUCIBLE as scoped: the legacy hub preview/production
+      no longer serves of record. RE-SCOPE: the lane implementation
+      evidence (PR #26 head 81db1ea) remains resolvable as the port
+      source; the exit evidence must be produced on the v2 system of
+      record (syllabai-v2 apps/hub at syllabai-hub-v2.vercel.app) after
+      the slice is carried there. New v2 feature work sits on the
+      operator-reopened v2 board (the T-MIG-13x feature wave) — the
+      re-home is an operator disposition, recorded in T-C85
+      next_safe_actions. This packet is NOT closable from records alone.'
