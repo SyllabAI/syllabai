@@ -154,7 +154,7 @@ Exposure becomes a first-class, append-only event class. Two event kinds are req
 
 **D.5 Boundary to BKT/BDT and learner state.** The evidence ladder is a parallel view: classification never writes mastery (the PoC's `masteryMutation: "NONE"` is the law, not a stub). Assessment evidence reaches BKT/BDT through the existing governed publisher seam (`publishMcq` → `updateOnAssessmentEvidence`); any future wiring that lets evidence labels influence learner state must (a) stay inside the v2 application/learner-model layer, (b) carry provenance and audit, and (c) pass its own review gate (S3) — the ladder's existence must not silently change what BKT/BDT consume.
 
-**D.6 How exposure and assistance affect independent success.** `INDEPENDENT_SUCCESS` requires: an authoritative correct grade; assistance `NONE` backed by an authoritative none assertion; no `ANSWER_EXPOSURE_SERVED` for the question's content before the attempt (and none embedded in the submit itself — B.3), within the exposure window the policy defines (window definition is open decision F.1); anchors present. Any other correct attempt is `ATTEMPTED` or `SUPPORTED_SUCCESS`.
+**D.6 How exposure and assistance affect independent success** *(precision revision of record 2026-10-19 per S1 rulings F.4 + F.1(b) — operator trace `1a154694538f9511`, recorded in §J.9; original text preserved verbatim in §J.9 for the audit trail)*. `INDEPENDENT_SUCCESS` requires: an authoritative correct grade; assistance `NONE` backed by an authoritative none assertion; no **pre-submit** `ANSWER_EXPOSURE_SERVED` for the question's content — including an answer embedded in the submit response before the learner finalizes it (B.3) — while the correct answer or solution served only **after irrevocable submission** is recorded as an exposure event (B.3) that feeds later attempts and does **not** retroactively invalidate the attempt it follows; and, per ruling F.1(b), a re-attempt of the same question after that question's recorded exposure cannot establish `INDEPENDENT_SUCCESS` — independence after exposure requires a fresh unassisted, unexposed attempt, preferably on a distinct item (a distinct item alone is not a transfer claim — D.7 governs transfer). Anchors present. Any other correct attempt is `ATTEMPTED` or `SUPPORTED_SUCCESS`.
 
 **D.7 Transfer supply and validation.** `TRANSFER_SUCCESS` additionally requires:
 
@@ -417,4 +417,40 @@ Trade-off: adding a first-class type may improve integrity and prevent ambiguous
 
 **Status after intake (2026-10-19): unchanged.** F.1–F.5 remain **UNRESOLVED**; **ACCEPTED: none**. The record now carries two PROPOSED positions per decision — the §J.1–J.5 lane recommendations and this §J.8 operator-channel review — **converged on F.2, F.3, F.4, F.5** and **divergent on F.1** (attempt-local-now vs a stricter retake law recorded at S1). The divergence is a governance-timing and finality choice that belongs to the §F-named reviewers; both positions stand before them. Neither position is policy until a named reviewer records a decision of their own; a ratified F.1 of the reviewed shape is a recorded contract revision with the classifier/S3/S4 consequences listed above (§G/S1 law), never a silent override.
 
-**Stop state:** S1 prepared for human adjudication — F.1–F.5 UNRESOLVED, recommendations PROPOSED, no decision made or implied by this lane. S3 has not been started.
+#### J.9 S1 rulings of record (2026-10-19) — F.1–F.5 DECIDED via operator channel (trace `1a154694538f9511`)
+
+**Provenance.** Rulings received 2026-10-19 via operator message (trace `1a154694538f9511`, chat `1148fa2b`), in response to the S1 adjudication packet carried by PR #25 (§J.1–J.5 briefs + §J.8 operator-channel review). Transcribed verbatim below. Authority of record: the operator channel, which issued these as decisions in its own name; if the §F-named reviewer roles are held by distinct persons, their countersignature of the same rulings should be recorded as a follow-on — nothing here invents attribution. Per §G/S1's own law, every consequence below that contradicts a PoC-encoded candidate is a **recorded contract revision**, never a silent override.
+
+**Rulings verbatim:**
+
+1. **F.1 — (b) No.** Once a student has seen the answer to a question, retaking that same question cannot establish independent success. They need a fresh, unassisted attempt, ideally on a different item.
+2. **F.2 — No.** A previously incorrect answer cannot serve as the baseline success for a later transfer claim. It remains useful diagnostic evidence, but it is not evidence of prior successful performance.
+3. **F.3 —** Require a genuinely different question, no assistance or disqualifying answer exposure, and a delayed assessment. Put both 24 hours and 7 days into the S9 experiment as candidate delays to evaluate, not fixed policy thresholds. Transfer must be tied to the relevant canonical SpecificationPoint and supported by qualifying prior success.
+4. **F.4 — No.** The correct answer shown only after submission is feedback, not exposure that retroactively invalidates that attempt. Rewrite the ambiguous D.6 wording to explicitly distinguish pre-submit answer exposure from post-submit feedback.
+5. **F.5 —** Make SpecificationPoints a first-class canonical data type, subject to completing the data-path audit first. Do not silently map them to an unrelated existing node type. The curriculum/KG authority must approve the representation and migration contract.
+
+**Disposition of record (what each ruling adopts, and what it changes):**
+
+| Ruling | Adopts | vs §J.1–J.5 | vs PoC candidates (@ `26d98da`) | Recorded consequence |
+|---|---|---|---|---|
+| F.1 — (b) | The §J.8 review position: the stricter retake law | Supersedes J.1's PROPOSED "attempt-local now; machinery reserved" | **Contract revision of record**: the attempt-local classifier law (`verification-evidence.ts:89-104`) is superseded for same-question retakes — implementation needs per-learner, per-question exposure chronology (D.4 event instants) plus question-identity comparison; new executable test pins required | D.6 revised of record (above); S3/S4 classifier scope recorded |
+| F.2 — no | The converged position (J.2 + J.8) | Ratifies J.2 | Matches the encoded prior gate (`:127-134`, test pin `:105`) — no classifier change | Contract text records the eligibility law; past failures remain diagnostic evidence in the learner's history |
+| F.3 | The converged structure; numeric values → evaluation, not policy | Ratifies J.3 | Matches the encoded transfer-gate structure (`:126` distinct question; `:135-138` SP overlap + chronology; `:43-49` versioned delay) | S9 preregistration must test **24 hours and 7 days as candidate delays**; SP relationship = curriculum semantics (never embedding similarity alone); qualifying prior success per the F.2 ruling |
+| F.4 — no | The converged reading (b) + the pre-submit/post-submit split | Ratifies J.4 | Matches the encoded field semantics (`:35-36` "exposed **before** this attempt"); the pre-finalization case is B.3's own law | **D.6 precision revision executed of record** (above, dated and marked; original preserved below) |
+| F.5 — first-class | The converged direction, audit-gated | Ratifies J.5 (the REVISE shape) | Not encoded (representation debt, not classifier logic) | **Data-path audit is the first S3 action** (graph-as-code assets → loader/type mapping → DB constraints/rows → API/Hub reads → anchor references); the curriculum/KG authority approves the representation and migration contract; **no silent mapping** to an unrelated node type |
+
+**Status of record after rulings (2026-10-19):**
+
+| Decision | Status | Decided by |
+|---|---|---|
+| F.1 | **DECIDED — (b):** same-question retakes after recorded exposure cannot establish independence; fresh unassisted attempt required, distinct item preferred | Operator of record, trace `1a154694538f9511` |
+| F.2 | **DECIDED — no:** past failure cannot serve as the transfer baseline | Same |
+| F.3 | **DECIDED:** distinct question + no assistance/exposure + delay; 24h/7d are S9 evaluation candidates, not policy | Same |
+| F.4 | **DECIDED — no:** post-submit feedback is not exposure; D.6 revised of record | Same |
+| F.5 | **DECIDED:** first-class canonical type, data-path-audit-gated; curriculum/KG authority owns representation + migration | Same |
+
+**Original D.6 text (superseded by the revision above; preserved verbatim):** "**D.6 How exposure and assistance affect independent success.** `INDEPENDENT_SUCCESS` requires: an authoritative correct grade; assistance `NONE` backed by an authoritative none assertion; no `ANSWER_EXPOSURE_SERVED` for the question's content before the attempt (and none embedded in the submit itself — B.3), within the exposure window the policy defines (window definition is open decision F.1); anchors present. Any other correct attempt is `ATTEMPTED` or `SUPPORTED_SUCCESS`."
+
+**Prior stop state (superseded; preserved verbatim):** "S1 prepared for human adjudication — F.1–F.5 UNRESOLVED, recommendations PROPOSED, no decision made or implied by this lane. S3 has not been started."
+
+**Stop state (updated 2026-10-19):** S1 rulings of record (§J.9) — F.1–F.5 **DECIDED** via operator trace `1a154694538f9511`; the D.6 precision revision is executed; ruling F.1(b) supersedes the PoC's attempt-local candidate as a recorded contract revision. Implementation — the retake-law classifier change and test pins, the B.3 exposure/assistance producers, and the F.5 data-path audit + migration — is S3/S4 scope: **not started by this lane**. The classifier remains PROTOTYPE per gate S2's law until S3 design and S4 producers land.
