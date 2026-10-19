@@ -201,3 +201,150 @@ No migrations, endpoint changes, production wiring, classifier integration, or m
 ### I. S2 record (2026-10-19) — gate S2 discharged: PARTIAL
 
 Gate S2 (producer inventory and event coverage) was executed against v2 `origin/main` @ `6c84af6f` (addendum basis `6eaeaa21` re-verified; zero producer-path drift in the 49-commit window) and PoC PR #190 @ `3c908519`. **Verdict: PARTIAL** — grading (MCQ), identity, and anchor substrates have real application-controlled producers; assistance served, answer/solution exposure, and transfer designation have **no producer anywhere in the implementation**; graded-lane evidence publication is a claim-true noop; telemetry lacks idempotency keys, quarantine, and producer identity. Per §G/S2's own law the classifier stays at PROTOTYPE. Full coverage matrix, producer traces, verified gaps (V1–V8), and S3 prerequisites: [VERIFICATION_EVIDENCE_S2_PRODUCER_INVENTORY.md](./VERIFICATION_EVIDENCE_S2_PRODUCER_INVENTORY.md). F.1–F.5 remain UNRESOLVED.
+
+### J. S1 decision preparation (2026-10-19) — F.1–F.5 briefs for human adjudication — PROPOSED
+
+**Status:** PROPOSED decision-preparation record for gate S1 (§G: "Contract review and educational-policy decisions"). It **decides nothing**: F.1–F.5 remain **UNRESOLVED**; every recommendation below is labeled **PROPOSED** and becomes policy only when the §F-named reviewers record a decision of their own. No agent may impersonate a human reviewer or make binding educational decisions. Per §G/S1's own law, a reviewer decision contradicting a PoC-encoded candidate is recorded as a contract revision, never a silent override.
+**Prepared by:** lane w0a, session web-e79a3bd8-5bc9-4aae-abe2-eb5f5d3964dd, operator trace 1a1536e9184645dd, 2026-10-19.
+
+**Sources of record (exact SHAs, refreshed first-hand at preparation start):**
+
+| Artifact | SHA | Method class |
+|---|---|---|
+| Canonical proposal + addendum (§F wording quoted verbatim from here) | PR #23 head `e71c131`; carried at `8c32913` (PR #24 head, branch `s2-producer-inventory`) | Direct repository evidence |
+| S2 producer-inventory record | `8c32913` (`VERIFICATION_EVIDENCE_S2_PRODUCER_INVENTORY.md`) | Direct repository evidence |
+| v2 classifier source, schema, tests (merged PoC) | v2 `origin/main` `26d98da` (merged PoC head `3c90851` verified ancestor first-hand) | Direct repository evidence |
+| Decision-existence sweep | canonical `origin/main` `3e84070` (`git grep`: zero F-resolution markers); PR #23 + PR #24 conversation pages fetched 2026-10-19: zero formal reviews, zero F-rulings, both DRAFT | Direct repository/page evidence |
+| Operator governance acts (context, not re-litigated) | v2 PR #190 merge `7d19dbe` @ 2026-10-19T08:53:48Z under operator promotion order trace `1a1535a2687b6c39`; promotion receipt `2cfef43` | Repository evidence of operator acts |
+
+**The v2 PoC merge is not educational-policy acceptance.** PR #190's merge integrated PROTOTYPE code under an operator promotion order; the classifier's own header still reads "PROPOSED proof of concept" (`verification-evidence.ts:2` @ `26d98da`) and its candidates remain candidates. `masteryMutation: "NONE"` is intact (`:55`); BKT/BDT are untouched.
+
+**J.0 Brief format.** Each brief states: the exact §F question (verbatim); educational stakes; source evidence (file:line at the SHAs above); options with consequences and failure modes (including defer); the **PROPOSED** recommendation with rationale and its explicit relation to the PoC's encoded candidates (RATIFY = aligns with the encoded behavior; REVISE = a contract revision per §G/S1); required reviewers exactly as documented in §F (roles only — no names invented); acceptance criteria that make the decision implementable; and a semantics classification (curriculum / learner-evidence / technical representation).
+
+#### J.1 — F.1 Independence after assistance or exposure
+
+**Exact question (§F.1, verbatim):** "What qualifies as independent success once a learner has received assistance or seen the answer — a cooling-off period, a distinct-question rule, a different question family?" Required reviewers: educational-policy owner + curriculum authority.
+
+**Why it matters.** `INDEPENDENT_SUCCESS` is the label the decision question (top of this proposal) expects product and recommendation layers to trust most, so its decay rule defines the ladder's reporting value. Ruled too strictly, the label permanently punishes scaffolding that pedagogy intends to fade; ruled too loosely, exposure washes out instantly and the label inflates — the base proposal's own failure-mode list warns against fabricated confidence. The ruling also fixes the retake law: what the recorded exposure of question Q means for later attempts on Q.
+
+**Source evidence.** D.6 (independence requires no exposure "within the exposure window the policy defines (window definition is open decision F.1)"); PoC per-attempt law: exposure or support on the current attempt → `SUPPORTED_SUCCESS` (`verification-evidence.ts:89-104`), `UNKNOWN` assistance → `ATTEMPTED` fail-closed (`:106-112`); prior-attempt exposure/`UNKNOWN` blocks `TRANSFER_SUCCESS` (`:133-134`) — but past assistance/exposure does **not** otherwise constrain a later attempt's independent label (the encoded law is attempt-local); C.1 (absence of a recorded hint is `UNKNOWN`, never `NONE`); B.3 (submit-embedded exposure is a first-class exposure event linked to its attempt); S2 record R4/R5 (no assistance/exposure producers exist — every real attempt is `UNKNOWN` → `ATTEMPTED` today, so this ruling is unexercisable until S4 producers land).
+
+**Options and consequences.**
+- **A. Attempt-local (PoC status quo).** Independence is judged per attempt; history matters only through the transfer gate. Pro: fail-closed, simple, no new parameters, already adversarially tested. Con/failure: no scaffolding-fade story — a learner aided yesterday is "independent" today on the same SpecificationPoint once producers exist (reporting-inflation risk); mitigated only by the B.3 exposure record being queryable per learner (the contract already requires it).
+- **B. Cooling-off window.** A versioned window after the latest exposure/assistance event during which independence is blocked on that SpecificationPoint. Pro: the pedagogically standard fading-scaffolding shape; parameterizable; S9-evaluable. Con: needs event chronology (D.4) plus a per-learner, per-SP exposure/assistance query (producer + S3 retention/audit work); window too short inflates, too long starves the label; adds a second versioned parameter beside the F.3 delay.
+- **C. Distinct-question rule (no time dimension).** Independence requires a question different from the assisted/exposed one. Pro: simple; canonical question ids exist. Con: variant leakage — no question variant/family fields exist in the v2 schema or contracts (first-hand grep @ `26d98da`), so "distinct" cannot exclude near-duplicates; effectively defers the real rule.
+- **D. Defer / unresolved.** Behaviorally identical to A but leaves D.6's F.1 pointer dangling and S3 unsizable — strictly worse than A.
+
+**PROPOSED recommendation: A now, with B's machinery explicitly reserved (RATIFY).** Ratify the PoC's encoded per-attempt law as the recorded v1 semantics, and record that any window or family upgrade path (B/C) must arrive as a versioned, evaluated experiment parameter (the F.3 pattern) at S9 evaluation — never as an implicit behavior change. Rationale: with zero producers in place (S2), every attempt is `UNKNOWN` → `ATTEMPTED` regardless of the ruling; ratifying the encoded law unblocks S3 design while keeping the educational question open and measurable. Explicitly NOT a decision: this recommendation lapses entirely when the named reviewers rule otherwise.
+
+**Acceptance criteria:** D.6's "(window definition is open decision F.1)" replaced by the decided rule (or by an explicit "per-attempt-local; window machinery reserved to a versioned parameter, pending" sentence); a written retake law — whether the recorded submit-embedded exposure of question Q may block later attempts on Q (recommended shape: yes, resolved by D.4 chronology on event instants, never by assumption); an S9 false-positive measurement plan for the chosen rule.
+
+**Semantics classification:** learner-evidence semantics (label meaning); touches assessment retake policy (product); the reserved window parameter is technical representation.
+
+#### J.2 — F.2 Prior-evidence eligibility for transfer
+
+**Exact question (§F.2, verbatim):** "Does a prior graded-but-incorrect attempt count as prior evidence for a transfer claim? The PoC patch encodes 'no' as a candidate; no authoritative contract exists." Required reviewers: educational-policy owner.
+
+**Why it matters.** The transfer claim's evidentiary base decides what `TRANSFER_SUCCESS` can be cited for downstream. A "yes" ruling makes transfer labels ride partly on failure evidence; a "no" keeps transfer rare but precise. Either way the ruling must be authoritative before S3 sizes the prior-evidence contract and S5 writes its adversarial cases.
+
+**Source evidence.** D.7 bullet 4 (a prior must be "itself trusted success evidence"; the earlier provenance audit's F-5 finding — distinct from decision F.5 — that a graded-incorrect, answer-exposed, or assistance-UNKNOWN prior cannot ground transfer; PoC patch commit `804b3622` encoded the fail-closed prior rule as a candidate; "the educational ruling itself remains open (F.2)"); merged classifier fail-closed prior law `verification-evidence.ts:127-134` (`prior.correct !== true → rejected`, covering both ungraded-null and incorrect priors; exposed and `UNKNOWN` priors rejected), executable test pin "an incorrect, exposed, or provenance-unknown prior can never ground transfer" (`verification-evidence.test.ts:105`); S2 R1 (graded-lane evidence publication is a claim-true noop — today only MCQ priors could ever be trusted successes, so F.2's practical scope is MCQ-until-S4).
+
+**Options and consequences.**
+- **A. "No" — only a trusted prior SUCCESS grounds transfer (PoC candidate).** Pro: fail-closed (invariant 4); transfer claims rest on verified success; zero code delta (already encoded and tested). Con: ignores instruction-gain narratives (fail → reteach → independent transfer yields no transfer label); labels stay rare.
+- **B. "Yes with conditions" — a graded-incorrect prior counts as evidence the SpecificationPoint was taught, so transfer measures post-teaching generalization.** Pro: matches teach→retest cycles; richer signal. Con: `TRANSFER_SUCCESS` partly grounded in failure evidence — semantically strained; inflates the label; requires rewriting D.7's requirement text (recorded contract revision) + classifier change + new S5 adversarial cases; risks rewarding "failed fast, moved on" patterns.
+- **C. Remediation-gated eligibility — an incorrect prior counts only when followed by recorded remediation.** Pro: principled middle; ties eligibility to evidence of intervention. Con: depends on an attempt/SP-level remediation-linkage producer that does not exist today (InterventionRun exists as orchestration; the linkage is unbuilt — S2 found no such producer); heaviest S3/S4 lift.
+- **D. Defer.** Leaves D.7's open parenthetical in place; S3 cannot size the prior contract; worst option.
+
+**PROPOSED recommendation: A (RATIFY).** Adopt the PoC's fail-closed prior law as the recorded v1 contract; record B as the primary S9 evaluation candidate (run both eligibility laws over the frozen held-out evaluation and compare false-positive profiles) and C as a producer-dependent future extension. Rationale: invariant 4 (fail closed); the encoded candidate is already adversarially tested; switching later is exactly the recorded-contract-revision path §G/S1 provides. A reviewer choice of B or C is a contract revision + classifier revision (S3/S4 scope), never a silent override.
+
+**Acceptance criteria:** D.7 bullet 4's closing sentence ("the educational ruling itself remains open (F.2)") replaced by the decided eligibility law; if A: no classifier change — the existing test pin remains the law's executable form; if B/C: contract revision text + classifier change + enumerated S5 adversarial cases (remediation linkage, regraded priors, contested grades).
+
+**Semantics classification:** learner-evidence semantics (pure); no curriculum or technical-representation change.
+
+#### J.3 — F.3 Transfer delay and question distinctness
+
+**Exact question (§F.3, verbatim):** "What minimum delay and distinctness rules are required? The delay must become a versioned, evaluated experiment parameter; no scientific threshold is declared here." Required reviewers: educational-policy owner + learner-model owner.
+
+**Why it matters.** The delay separates "remembering the specific answer" from "having the skill"; distinctness defines what counts as a different question. Together they decide whether `TRANSFER_SUCCESS` is measurable at all — promotion gate 4 requires an S9 false-positive measurement for transfer, which cannot run without a decided distinctness law and a (possibly "unset") delay parameter.
+
+**Source evidence.** Base §Proposed semantics ("The delay is an experiment parameter requiring versioning and evaluation; this proposal does not declare a scientifically correct threshold"); D.7 (versioned parameter; "a different canonical question id"; canonical SpecificationPoint overlap via `question_spec_points`); classifier `:43-49` (`minimumTransferDelayMs` — "Proposed experiment parameter. No scientific default is imposed here; callers must choose and version this threshold before evaluation"), `:126` (question-id distinctness), `:135-138` (strict prior chronology + delay + SP overlap); first-hand grep @ `26d98da`: **no question variant/family fields exist** in the v2 schema or contracts, so variant-level distinctness has no data model today; F.1 interplay (any cooling-off window shares this exact machinery — see J.1).
+
+**Options and consequences.**
+- **A. Pick a numeric threshold now.** Contradicts the proposal's own law (no scientific threshold declared; gate 4 demands evaluation first); any number picked today is decoration, not policy.
+- **B. Ratify the structure, parameterize the value.** Decide the LAW (distinct canonical question id + at least one shared SpecificationPoint + strictly-earlier trusted prior + minimum delay as a named, versioned, owned parameter) and record the numeric value as **experiment configuration for the S9 evaluation** with an explicit not-a-scientific-claim label. Pro: implementable now; honest; S9-runnable. Con: until a value is chosen, `TRANSFER_SUCCESS` cannot fire (acceptably fail-closed); parameter governance must exist (learner-model owner).
+- **C. Stronger distinctness (variant/family ban).** Not implementable today (no variant metadata exists — fact above); would require content-model work (S3, invariant 8) plus a curation decision. Record as a future revision only if variant metadata ever lands.
+- **D. Defer.** Leaves the gate unmeasurable and S3 unsizable.
+
+**PROPOSED recommendation: B (RATIFY the structure, parameterize the value).** The PoC encodes exactly this structure, so ratification requires no classifier change; the numeric choice is delegated to the named reviewers as a versioned experiment decision with an S9 evaluation plan attached. Candidate starting points for the reviewers' choice — 24h and 7d — are offered as evaluation seeds only, not recommendations and not policy. This is the recommendation shape the base proposal itself mandates.
+
+**Acceptance criteria:** named parameter with owner (learner-model owner) and versioning home; an initial value recorded as experiment configuration, or an explicit "transfer disabled until a value is chosen" state; D.7's requirement text marked decided; an S9 evaluation plan naming the transfer false-positive metric under the chosen value.
+
+**Semantics classification:** the structure = learner-evidence semantics; the numeric value = versioned experiment parameter (explicitly not educational-policy truth, per the base proposal's own words); the distinctness law = learner-evidence + technical representation.
+
+#### J.4 — F.4 The exact submit-time exposure event
+
+**Exact question (§F.4, verbatim):** "What precisely constitutes answer exposure when the answer is embedded in the submit response (B.3) — the `correctOptionLabel` field alone, or also the marks breakdown and implication reveal?" Required reviewers: educational-policy owner + assessment product owner.
+
+**Why it matters.** B.3 makes the submit-embedded answer a first-class exposure; the boundary of "exposure" drives the SUPPORTED/INDEPENDENT boundary (F.1) and any future window. Too narrow a definition → exposure escapes the record and independence inflates (false positives); too broad → every MCQ attempt is recorded as "exposed" and the ladder collapses toward `ATTEMPTED`/`SUPPORTED_SUCCESS` for all of MCQ, destroying the label's value.
+
+**Source evidence.** B.1 (`REQUESTED` vs `SERVED`; only `SERVED` grounds the classifier), B.2 (exposure-type enum opens with `SUBMIT_RESPONSE_CORRECT_OPTION` and `MARK_SCHEME_REVEAL`), B.3 (verbatim law: the exposure event must be emitted "under exactly the same condition that makes the field non-null"), the two surfaces `submit.ts:278-286` + `history.ts:249` (S2 R5), and D.6's independence requirement — which carries a **temporal ambiguity the reviewers must resolve**: quoted, independence requires "no `ANSWER_EXPOSURE_SERVED` for the question's content before the attempt (and none embedded in the submit itself — B.3), within the exposure window the policy defines". Two readings: **(a)** the attempt's own submit-embedded reveal counts as exposure *for that attempt* — then every MCQ attempt whose response carries `correctOptionLabel` at scoring time is `SUPPORTED_SUCCESS`, and MCQ can never be `INDEPENDENT_SUCCESS`; **(b)** the attempt's own post-response result reveal does not block its own independence — the response was committed before the reveal and the classifier's field is "exposed **before** this attempt" (`verification-evidence.ts:35-36`) — while the recorded B.3 event feeds later attempts, retakes, and the F.1 window. The merged PoC encodes reading (b) via field semantics; D.6's parenthetical as literally written leans toward (a). Surfaced here per the no-silent-reinterpretation law: **either reading requires a one-sentence D.6 precision revision, recorded as a contract revision (§G/S1), before S3 fixes the exposure contract.**
+
+**Options and consequences.**
+- **A. Narrow content: `correctOptionLabel` alone.** Pro: minimal; exactly what B.3 names. Con: if marks breakdowns or per-option markers also discriminate the answer, exposure escapes the record → false independence.
+- **B. Broad content: label + marks breakdown + implication reveals.** Pro: safe-side capture. Con: over-capture — a marks total that does not discriminate would still be recorded as exposure, inflating `SUPPORTED_SUCCESS`/`ATTEMPTED` and starving the ladder; per-surface judgment is unavoidable anyway.
+- **C. Enumerated-per-surface content contract.** Define exposure as "response content from which the correct answer or its direct implication is derivable", enumerated per surface at producer review (the B.6 pattern: fixed per surface at S4, never improvised per caller). Initial enumeration for the MCQ submit surface: `correctOptionLabel`; per-option correctness markers; marks breakdown **only when it discriminates the correct option** (e.g., per-option marks). Attempt history mirrors the submit surface; mark-scheme reveal is already `SERVED`-typed content (B.1).
+- **D. Defer.** Leaves B.2's enum with one member and the S4 producer contract unsizable.
+
+**PROPOSED recommendation: C for content, temporal reading (b) for the attempt's own result-reveal (RATIFY the PoC's field semantics), with the D.6 precision revision recorded either way.** Rationale: C is the only shape both safe-side and extensible without re-litigating per caller; reading (b) preserves the ladder's meaning for MCQ (whose result reveal is inherent to scoring) while the recorded B.3 event still feeds retakes and the F.1 window. If the reviewers rule reading (a), that is a contract revision that also re-scopes the classifier's exposure-input semantics (S3/S4) — and MCQ independence becomes impossible by law, which must then be an explicit, accepted consequence.
+
+**Acceptance criteria:** a per-surface enumeration table (initial: MCQ submit, attempt history, mark-scheme reveal) fixed at S4 producer review; D.6 revised to the decided temporal reading (recorded revision); B.3's "same condition" emission law wired to the enumeration; the B.7 retention policy named (see J.7 riders).
+
+**Semantics classification:** learner-evidence semantics + assessment product policy (what a response carries); the enumeration contract itself is technical representation.
+
+#### J.5 — F.5 SpecificationPoint representation
+
+**Exact question (§F.5, verbatim):** "How should the canonical SpecificationPoint concept be represented when the knowledge-node type enum does not include `SPEC_POINT`? The DB constraint admits SUBJECT/UNIT/TOPIC/SUBTOPIC/MISCONCEPTION/CONCEPT while the graph-as-code resources declare a SPEC_POINT node family and `question_spec_points` references knowledge-node rows — the node type under which spec points legally ride is unrecorded architecture debt." Required reviewers: curriculum/KG authority.
+
+**Why it matters.** Transfer's SP-overlap law (D.7; classifier `:138`) and the anchors' canonicality (standing invariant 2: "SpecificationPoints remain canonical anchors") are only as meaningful as the underlying representation. With the carrier type unrecorded, anchor sets cannot be validated *as spec points*, overlap computations cannot be defended as canonical, and the S2 V5 gap (validation-state carriage) has no settled representation to close into.
+
+**Source evidence (first-hand @ `26d98da`).** The DB check constraint `ck_node_type` admits exactly SUBJECT/UNIT/TOPIC/SUBTOPIC/MISCONCEPTION/CONCEPT — no `SPEC_POINT` (`packages/db/src/schema/schema.ts:33`); the graph-as-code asset self-declares `node_families: [TOPIC, SUBTOPIC, SPEC_POINT]` with `spec_points: 182` (`apps/api/src/services/teacher/concept-graph/specification_points.yaml` meta block); hub-side retrieval/citation vocabularies carry a `SPEC_POINT` kind (`apps/hub/src/lib/ai/retrieval.ts:38`, `apps/hub/src/lib/citation-map.ts:54`); `question_spec_points` references `knowledge_nodes` rows (S2 R3). The concept is real across content and citation layers while its canonical DB representation is genuinely unrecorded. **Which node_type the 182 anchors actually ride in seeded data was NOT established in this preparation** — that data audit is the F.5 review's first input (it needs DB read access or the seed-loader mapping; neither was exercised here, keeping this task read-only on learner state and schema).
+
+**Options and consequences.**
+- **A. Ratify an existing type as the legal carrier.** Requires the data audit above to know what is actually in use. Pro: zero schema change; debt recorded. Con: the enum cannot distinguish spec points from genuine topics/subtopics; nothing enforces spec-point-ness; the debt becomes permanent structure.
+- **B. Extend the enum with `SPEC_POINT`.** Pro: first-class representation matching the graph-as-code truth and the hub vocabularies; enforceable. Con: migration + backfill for existing anchor rows; touches the curation pipeline's output contract (loader + validators); must follow invariant-8 discipline (canonical data-model work, reviewed — S3 scope, not this task).
+- **C. Separate canonical `spec_points` table.** Pro: cleanest separation from the KG hierarchy. Con: largest restructure; `question_spec_points` FK re-targeting; departs from the current graph-as-code resource shape.
+- **D. Defer.** The debt stays unrecorded; S3 cannot size anchor validation or close S2 V5.
+
+**PROPOSED recommendation: B as the durable direction, gated on the data audit (REVISE — this one requires contract/schema work, not ratification).** Record the F.5 ruling shape as: "SPEC_POINT becomes a first-class node type via S3 canonical data-model work; interim: the data audit names what the anchors ride today, and that mapping is documented in the ADR that lands the migration." Explicitly NOT authorized to implement here (no schema work in this task). A curriculum/KG authority ruling for A is equally legitimate — the requirement is only that the carrier type becomes recorded canonical semantics rather than folklore.
+
+**Acceptance criteria:** a written data-model sentence (ADR or schema review note) naming the canonical representation; if B/C: migration scope enumerated for S3, with the S2 V5 gap (anchor validation-state carriage) closed in the same pass; `question_spec_points` semantics documented against the named representation.
+
+**Semantics classification:** curriculum semantics (what a SpecificationPoint is) + technical representation (enum/table); the ruling directs S3 and changes no behavior by itself.
+
+#### J.6 Cross-checks (required review topics vs what the sources settle)
+
+| Review topic | Settled by the canonical sources | Still open |
+|---|---|---|
+| Authoritative correctness incl. pending/ungraded + later corrections | D.1 evidence states (grading derived from the marking-state lifecycle; the `correct` placeholder must never be read as a grade); immutable-attempt law (invariant 5); S2 R1/V8 (the placeholder is real; graded lanes publish nothing) | Nothing at F-level — the derivation law is contract text awaiting S3 implementation; no educational ruling owed |
+| Independent vs supported success | D.6 + classifier `:89-112` (exposure dominates; support → `SUPPORTED_SUCCESS`; `UNKNOWN` → `ATTEMPTED` fail-closed) | F.1 (past-support decay/window); the D.6 temporal ambiguity surfaced in J.4 |
+| Assistance/exposure representation when missing or only partially observed | C.1 (`UNKNOWN` honest default; absence ≠ `NONE`), D.4 (missing/late/contradictory/malformed laws), B.1/B.6 (`REQUESTED` vs `SERVED`; partial/failed reveals record outcomes, never `SERVED`) | F.4 (exact submit-time exposure content + temporal reading); producer coverage itself (S2: `NO_PRODUCER_FOUND` ×3) |
+| Evidence sufficient to claim transfer (distinct questions, SP overlap, delay, prior eligibility) | D.7 + classifier transfer gate `:123-148` (distinct question, SP overlap, strict chronology, trusted prior, explicit designation) | F.2 (prior eligibility), F.3 (delay value, distinctness depth), F.5 (representation) |
+| Educational policy vs versioned experiment parameter vs technical detail | Base §Proposed semantics + F.3's own text (delay = experiment parameter); D.1–D.4 = technical laws; §F = the policy questions | The per-rule classification itself is what S1 ratifies — J.1–J.5 propose a classification each; the reviewers confirm or correct |
+
+#### J.7 Status table and S1 checklist
+
+| Decision | Status of record | Recommendation | Authority of record |
+|---|---|---|---|
+| F.1 | **UNRESOLVED** | PROPOSED: attempt-local now (ratify PoC); window machinery reserved (J.1) | None — no authorized reviewer decision exists (PR #23/#24 zero reviews; main @ `3e84070` zero F-markers) |
+| F.2 | **UNRESOLVED** | PROPOSED: ratify the fail-closed "no" (J.2) | None — same evidence |
+| F.3 | **UNRESOLVED** | PROPOSED: ratify structure, parameterize the value (J.3) | None — same evidence |
+| F.4 | **UNRESOLVED** | PROPOSED: enumerated-per-surface exposure; temporal reading (b) with a recorded D.6 revision (J.4) | None — same evidence |
+| F.5 | **UNRESOLVED** | PROPOSED: `SPEC_POINT` as first-class type via S3, gated on a data audit (J.5) | None — same evidence |
+| ACCEPTED | — | — | **None.** No F.1–F.5 item carries an authorized decision of record as of 2026-10-19. |
+
+**S1 checklist riders (from the proposal's own text, not new F-items):**
+1. Gate S1's first clause — "This addendum reviewed" — means §B–§E themselves require the named reviewers' review; this preparation does not substitute for it.
+2. B.7 requires the S1 review to **name the platform learner-data retention policy** for exposure events; §F names no reviewer role for it — the S1 chair must assign one from SyllabAI's governance roster (not invented here).
+3. Every accepted decision that contradicts a PoC-encoded candidate is a recorded contract revision (§G/S1 law) and must be paired with the contract/classifier change it entails (S3/S4 scope) — never a silent override.
+
+**Stop state:** S1 prepared for human adjudication — F.1–F.5 UNRESOLVED, recommendations PROPOSED, no decision made or implied by this lane. S3 has not been started.
