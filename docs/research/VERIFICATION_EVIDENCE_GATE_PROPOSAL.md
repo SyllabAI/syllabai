@@ -347,4 +347,74 @@ Gate S2 (producer inventory and event coverage) was executed against v2 `origin/
 2. B.7 requires the S1 review to **name the platform learner-data retention policy** for exposure events; §F names no reviewer role for it — the S1 chair must assign one from SyllabAI's governance roster (not invented here).
 3. Every accepted decision that contradicts a PoC-encoded candidate is a recorded contract revision (§G/S1 law) and must be paired with the contract/classifier change it entails (S3/S4 scope) — never a silent override.
 
+#### J.8 Operator-channel review intake (2026-10-19, post PR #25) — five PROPOSED recommendations — status unchanged
+
+**Provenance.** Received via operator message (trace `1a15449eb2951bd1`, chat `1148fa2b`) after PR #25 publication (head `eaa52ab`). Recorded post-rollback from origin (the local clone was destroyed after publication; the pushed branch is the record of §J.0–J.7). The message carries its own decision-status table keeping F.1–F.5 **UNRESOLVED** — honored of record — and was delivered with external research citation metadata (PubMed) supporting the F.3 delay-threshold caution; recorded as provenance, neither endorsed nor adjudicated by this lane. Freshness re-check at intake: PR #23, #24, #25 all draft with **zero formal reviews** (re-verified first-hand post-rollback); no authorized reviewer decision exists. The five recommendations below are transcribed verbatim from the message (paste artifacts — favicon markup, a stray "+1" fragment — removed; wording otherwise untouched). This intake does not establish whether the operator channel holds any §F-named reviewer role; that attribution is for the reviewers and operator to record.
+
+**F.1 — When is success independent?** PROPOSED.
+Recommendation: require a new, unassisted attempt after exposure; waiting alone is insufficient.
+- A hint was given: the assisted answer is `SUPPORTED_SUCCESS`, not independent success.
+- The correct answer was revealed: repeating the same question later is not enough to prove independent performance.
+- To earn `INDEPENDENT_SUCCESS`, require a subsequent correct response with no assistance and no answer exposure before or during that attempt.
+- Prefer a genuinely different question when the aim is to establish capability beyond remembering the answer to a specific item.
+Why: repeating a question after seeing its answer can measure memory for the answer rather than independent problem-solving. However, a new question is not automatically a transfer test; it must still be educationally aligned.
+Trade-off: this is stricter than the prototype's attempt-local rule and requires a clear distinction between evidence of answering independently now and evidence of broader learning.
+
+**F.2 — Can a past failure be the transfer baseline?** PROPOSED.
+Recommendation: no — not as positive evidence of previously demonstrated competence.
+An incorrect attempt can establish that the student attempted the skill and did not demonstrate correctness on that occasion. It should not count as a qualifying prior success when claiming later transfer.
+A later correct answer on a new question may still be valid positive evidence. It should be classified according to what the student actually demonstrated, rather than treating the earlier failure as proof that a skill was previously mastered.
+Important distinction: a past failure remains useful diagnostic evidence. Rejecting it as a successful transfer baseline does not mean discarding it from the learner's history.
+
+**F.3 — What counts as real transfer?** PROPOSED.
+Recommendation: require both meaningful item difference and a delayed, independent demonstration — but leave the exact time threshold for evidence-based evaluation.
+A transfer claim should require:
+1. A distinct question, not a reworded copy or merely shuffled answer choices.
+2. A defensible relationship to the same canonical SpecificationPoint or intended skill, established through curriculum semantics rather than embedding similarity alone.
+3. An independent, correct response with no disqualifying assistance or answer exposure.
+4. A meaningful delay between the relevant learning/exposure event and the transfer assessment.
+5. A qualifying prior success, if the intended policy defines transfer as evidence of carrying an already demonstrated skill into a new context.
+Treat 24 hours and 7 days as possible evaluation conditions, not settled educational law. Research supports the importance of testing across different examples and contexts, but it does not establish a universal delay that proves transfer in every subject.
+Trade-off: a rule that is too weak overclaims learning; one that is too strict can leave learners without sufficient opportunities to demonstrate it. S9 should evaluate candidate thresholds and item-distinctness criteria before numeric values become policy.
+
+**F.4 — Does the result's answer count as exposure?** PROPOSED — needs explicit resolution.
+Recommendation: distinguish answer exposure before submission from feedback delivered after submission.
+- If the student sees the correct answer before submitting, the attempt is answer-exposed and should not qualify as independent success.
+- If the system reveals the correct answer only after the response has been irrevocably submitted, that later feedback should not retroactively invalidate the response just submitted.
+- The response must nevertheless record the answer-exposure event so that later attempts can be classified correctly.
+- If the submit response contains the correct answer before the student can finalize their answer, it is exposure for that attempt.
+Why this distinction matters: if every MCQ result includes the correct option only after submission, treating post-submit feedback as pre-submit exposure would make ordinary MCQ assessment unable to demonstrate independent correctness. Conversely, ignoring answers actually shown before submission would overstate independence.
+The canonical wording reportedly contains a temporal ambiguity. This recommendation must therefore be treated as a proposed precision revision to D.6, not a silent reinterpretation of the existing text.
+
+**F.5 — Where should SpecificationPoints live?** PROPOSED.
+Recommendation: make SpecificationPoints first-class canonical curriculum entities, with an explicit persisted representation and stable identity.
+They should not be represented merely as text labels, embeddings, inferred retrieval nodes, or an undocumented use of an unrelated node type. Assessment and learning evidence should refer to stable SpecificationPoint identities, preserving provenance and validation status.
+Before changing the schema, require a data-path audit tracing real SpecificationPoints through: canonical graph-as-code assets; the loader and its type mapping; database constraints and persisted rows; API and Hub reads; assessment/evidence anchor references.
+Then the curriculum/KG authority should decide the canonical representation and migration contract. A dedicated `SPEC_POINT` type is my preferred proposal, conditional on confirming the actual persisted representation and migration implications.
+Trade-off: adding a first-class type may improve integrity and prevent ambiguous anchors, but a schema change without a verified migration and compatibility plan could break existing content and evidence references.
+
+**Decision status as delivered (verbatim from the message):**
+
+| Decision | Recommendation | Official status |
+|---|---|---|
+| F.1 | New unassisted attempt; prefer a distinct item for stronger evidence | `UNRESOLVED` |
+| F.2 | Past failure cannot qualify as prior successful evidence | `UNRESOLVED` |
+| F.3 | Distinct item + independent correctness + meaningful delay; thresholds evaluated | `UNRESOLVED` |
+| F.4 | Distinguish pre-submit exposure from post-submit feedback; explicitly revise ambiguous wording | `UNRESOLVED` |
+| F.5 | First-class canonical SpecificationPoint identity, after data-path audit | `UNRESOLVED` |
+
+**Central principle, verbatim:** "SyllabAI must not confuse a correct answer, independent performance, and transfer of learning. They are different claims and need different evidence. The classifier can help encode an approved contract; it cannot decide that contract on behalf of the curriculum, assessment, or learner-model authorities."
+
+**Cross-check against §J.1–J.5 and the PoC's encoded candidates (this lane's analysis, PROPOSED — adds no decision):**
+
+| Decision | vs §J recommendation | vs PoC encoded candidate | Consequence if this position is ratified |
+|---|---|---|---|
+| F.1 | **DIVERGES.** J.1 proposed ratifying the attempt-local law now and reserving window/retake machinery; the review wants the stricter retake law recorded at S1 itself (same-question repeat after recorded exposure insufficient; a new unassisted attempt required; a distinct item preferred for capability claims). J.1's acceptance criteria already carried the retake-law shape as a deliverable, so the divergence is timing and finality, not shape. | Supersedes the attempt-local candidate for the same-question retake case — the encoded law has no question-identity memory (`verification-evidence.ts:89-104` @ `26d98da`). | Contract revision to §F.1/D.6; classifier change: per-learner, per-question exposure chronology (D.4 machinery) plus question-identity comparison; test pins updated; S3/S4 scope grows. Unexercisable either way until S4 producers exist (S2: zero assistance/exposure producers — every real attempt is `UNKNOWN` → `ATTEMPTED`). |
+| F.2 | **ALIGNS** with J.2 (ratify the fail-closed "no"); adds the diagnostic-preservation note. | Matches the encoded prior gate (`:127-134`) and its test pin (`verification-evidence.test.ts:105`). | No classifier change; contract text records the eligibility law. |
+| F.3 | **ALIGNS** with J.3 (structure ratified, value parameterized). The five conditions map onto the encoded transfer gate (`:126` distinct question; `:135-138` SP overlap + chronology; `:127-134` trusted prior; `:43-49` versioned delay). "24 hours and 7 days as possible evaluation conditions, not settled educational law" restates the versioned-parameter law. | Matches; additionally pins curriculum semantics — not embedding similarity — as the source of the SP relationship (the invariant law). | No structural change; S9 evaluation design for candidate thresholds and item-distinctness criteria. |
+| F.4 | **ALIGNS** with J.4: temporal reading (b) — post-submit feedback does not retroactively invalidate its own attempt — plus a recorded D.6 precision revision, which the review states explicitly ("not a silent reinterpretation"). Adds the pre-finalization case as exposure for that attempt. | Matches the encoded field semantics ("exposed **before** this attempt", `:35-36`); the pre-finalization case is B.3's own law (exposure event under exactly the condition that makes the field non-null). | D.6 one-sentence precision revision recorded (required either way per J.4); B.3 producer design unchanged. |
+| F.5 | **ALIGNS** with J.5 (first-class `SPEC_POINT` preferred, gated on a data audit); the review specifies the full audit chain (graph-as-code → loader/type mapping → DB constraints/rows → API/Hub reads → anchor references) and the migration-contract caution — a richer scope than J.5's "first input" framing. | Not encoded (representation debt, not classifier logic). | Data-path audit first (F.5 review's first input per J.5); curriculum/KG authority decides representation and migration contract; schema work is S3 scope, outside this record's authority. |
+
+**Status after intake (2026-10-19): unchanged.** F.1–F.5 remain **UNRESOLVED**; **ACCEPTED: none**. The record now carries two PROPOSED positions per decision — the §J.1–J.5 lane recommendations and this §J.8 operator-channel review — **converged on F.2, F.3, F.4, F.5** and **divergent on F.1** (attempt-local-now vs a stricter retake law recorded at S1). The divergence is a governance-timing and finality choice that belongs to the §F-named reviewers; both positions stand before them. Neither position is policy until a named reviewer records a decision of their own; a ratified F.1 of the reviewed shape is a recorded contract revision with the classifier/S3/S4 consequences listed above (§G/S1 law), never a silent override.
+
 **Stop state:** S1 prepared for human adjudication — F.1–F.5 UNRESOLVED, recommendations PROPOSED, no decision made or implied by this lane. S3 has not been started.
