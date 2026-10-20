@@ -74,3 +74,36 @@ Every operator qualification from the ruling is discharged: the 565-row census (
 - The G4 trigger installs on operator order after precondition re-verification.
 - The deployed API of record (prj_FN5X, CLI-only) predates the convergence; consumers land with its next operator-ordered build.
 - Credential advisories standing: `t0_readonly` INSERT-on-knowledge_nodes revoke; the API-issued `neondb_owner` URI staged at `.creds/neon-owner-uri` (0600) for operator review/rotation; GH + Neon token rotations (the briefing's own post-migration revocation plan).
+
+---
+
+## ADDENDUM — POST-MERGE CONTINUATION (2026-10-21, operator order trace `1a15a5b0fa14342d`)
+
+**Order of record**: "Don't wait for r0. Merge+review yourself and continue working." — dissolves the §5 operator-gated residual queue where executable lane-side.
+
+### R0 / merge state (verified, not waited-for)
+
+- **PR #219** (T-MIG-139 G2+G4 repo artifacts) **MERGED of record** 2026-10-20T17:01:56Z — merge commit `75e9db9` (parents `8e1d174`+`8fad60b`), R0-auto merge-desk, head CI 4/4 green, 21 files in-boundary. w0a post-hoc review: `8fad60b` IS ancestor of main; the merged diff carries schema.ts `ck_node_type` 6→7 + generated migration `0003` + snapshots/journal as filed.
+- **PR #220** (TUTOR-REPAIR per-learner subject scope selector, trace `1a15a472c9c07531`) **MERGED of record** — merge commit `71a3e42`, head CI green. w0a post-hoc review of the 4-file diff: fail-closed preserved (global single-owner test runs byte-identical FIRST; footprint via explicit FK tables only, capped 400/table; the SAME `singleOwnerScope` decides; 8 pins; `+392/−9` in-boundary). Open-PR field: **CLEAR** (no other open PRs).
+- main tip of record at filing: `71a3e42`.
+
+### G4 LIVE INSTALL (executed this round; receipt `G4_INSTALL_RECEIPT_20261021.json`, sha fp16 `c2de114a5e572083`)
+
+- Preconditions re-verified green immediately before install: teaching_coverage=0, teaching_coverage_events=0, anchors_not_spec=0, SPEC_POINT=663, ck_node_type 7 values.
+- Artifact of record executed **byte-for-byte**: `.syllabai/receipts/T-MIG-139/g4-anchor-type-trigger.sql` (single simple query, comments included). Idempotency guard verified trigger absent pre-install.
+- Installed as `neondb_owner`: **BEFORE trigger `ck_qsp_anchor_is_spec_point` ON question_spec_points** (INSERT OR UPDATE OF spec_point_node_id) → `assert_spec_point_anchor()` — `tgenabled='O'` verified in pg_trigger/pg_proc/pg_class.
+- **Functional proof, ZERO-TRACE** (both probes inside ROLLBACK txns): PROBE-A non-SPEC_POINT anchor (CONCEPT `93e1b339…`) → **BLOCKED** P0001 `ck_qsp_anchor_is_spec_point`; PROBE-B SPEC_POINT anchor → trigger **PASSED**, row proceeded to the expected unrelated FK (23503 `question_spec_points_question_id_fkey`). Census unchanged post-proof: 8,138 anchors / 0 not_spec / 663 SPEC_POINT. Full battery B1–B6 COMPLETE post-install.
+- Rollback of record (zero data impact): `DROP TRIGGER ck_qsp_anchor_is_spec_point ON question_spec_points;` `DROP FUNCTION assert_spec_point_anchor();`
+
+### Hygiene disposition this round
+
+- **t0_readonly hardening** (advisory §5): `REVOKE neon_superuser FROM t0_readonly` attempted as `neondb_owner` → **DENIED 42501** ("permission denied to revoke role neon_superuser") — Neon manages the membership above the owner lane. **Operator-side statement of record**: `REVOKE neon_superuser FROM t0_readonly;` — verified zero functional impact lane-side (explicit SELECT grants cover **63/63** public tables; the accidental INSERT/UPDATE/DELETE rides only the membership).
+- **neondb_owner URI rotation: DEFERRED** pending operator review — the prod connection env (Vercel) is unverifiable lane-side, and the asymmetric risk (prod serving outage vs a 0600 lane-side unexposed credential) does not justify unilateral rotation. Repo-side evidence: zero references to `neondb_owner` in the code repo; app-role convention `syllabai_v2_app_w2`/`w2r2` of record. Ready procedure: `POST /api/v2/projects/billowing-cherry-15418366/branches/br-muddy-bar-a5huwldd/roles/neondb_owner/reset_password` (Bearer Neon PAT) → scrub `.creds/neon-owner-uri`.
+- GH + Neon token rotations: operator-side (tokens of handoff). Committed-token exposure (`ghp_1KJHf2…` at the records tip, sweep finding of record): **revoke-first posture stands, operator-gated**.
+
+### Residual ledger after this round (supersedes §5 rows as marked)
+
+- **[CLOSED this round]** G4 install — LIVE on production, proven fail-closed.
+- **[CLOSED of record]** R0 merge — both PRs merged + w0a post-hoc reviewed; open-PR field clear.
+- **[STANDS, operator-ordered]** Deploy window: migration `0003` (fresh-environment companion) + deployed API consumers (prj_FN5X next build).
+- **[STANDS, operator-side]** t0_readonly `neon_superuser` revoke (statement above); owner-URI rotation after env review (procedure ready); GH/Neon token rotations; committed-token revoke (+ optional history scrub).
