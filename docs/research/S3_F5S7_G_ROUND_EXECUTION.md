@@ -107,3 +107,35 @@ Every operator qualification from the ruling is discharged: the 565-row census (
 - **[CLOSED of record]** R0 merge — both PRs merged + w0a post-hoc reviewed; open-PR field clear.
 - **[STANDS, operator-ordered]** Deploy window: migration `0003` (fresh-environment companion) + deployed API consumers (prj_FN5X next build).
 - **[STANDS, operator-side]** t0_readonly `neon_superuser` revoke (statement above); owner-URI rotation after env review (procedure ready); GH/Neon token rotations; committed-token revoke (+ optional history scrub).
+
+---
+
+## ADDENDUM 2 — DEPLOY WINDOW (2026-10-21, operator order trace `1a15a7064a133d4d`)
+
+**Order of record**: "deploy window (migration 0003 + prj_FN5X build)," — the first `[STANDS, operator-ordered]` residual of Addendum 1. Receipt: `DEPLOY_WINDOW_20261021_MIGVAL_RECEIPT.json`, sha fp16 `96c68eaf3c74f912`.
+
+### Migration leg — EXECUTED AND CLOSED (validated, fixed, merged)
+
+- **Premise under test**: §5 called migration `0003` "the fresh-environment companion". Validation **disproved the premise**: the chain 0000→0003 could not build a schema from zero. Production itself was never at risk: it has **no drizzle tracking table** (probed of record — zero drizzle/migration tables; schemas `public` + `neon_auth`) and no `migrate` runner is wired anywhere (db scripts: pull/generate/check only).
+- **Method**: five isolated temp Neon databases on the production branch (`w0a_migval…w0a_migval5_20261021`) — created via the API, `neondb_owner` URI minted via the route of record, `drizzle-kit migrate` (strict), full diff vs production, destroyed (every drop HTTP 200; zero production contact throughout).
+- **Findings → fixes** (one file, `0000_organic_mauler.sql`, +4/−7): the 0000 baseline was a commented `db:pull` artifact (the 42601 — drizzle splits *inside* the comment, chunk 1 carries an unterminated `/*`); missing `CREATE EXTENSION IF NOT EXISTS "vector"` (the 42704; prod carries `vector@0.8.6`); `ux_class_teacher_course_name` transcribed `teacher_id text_ops` where the column is uuid (the 42804 — the only true mismatch of the full opclass cross-check); `flyway_schema_history` PK renamed `flyway_schema_history_pk` to byte-match production.
+- **FINAL GREEN of record**: migrate exit 0; **63/63 public tables EXACT** vs production; **174/174 indexes EXACT** (zero deltas both directions); `ck_node_type` 7 values incl `SPEC_POINT`; 4 migrations recorded; G4 trigger correctly **absent** on fresh envs — the out-of-band artifact (`.syllabai/receipts/T-MIG-139/g4-anchor-type-trigger.sql`) must be applied manually in fresh-environment setup (drift-discipline disclosure).
+- **Filed**: PR #223 (head `d1f9e66`, CI 3/3 green) — **merged `4535b5c`** (w0a self-merge per the standing order, trace `1a15a5b0fa14342d`).
+
+### Build leg — STAGED, TOKEN-GATED (the single remaining input)
+
+- Target: prj_FN5X production build — ships T-MIG-139 consumers + the TUTOR-REPAIR per-learner subject selector (the `/tutor` refusal-outage fix) + the #223 rider.
+- Gate of record: **no Vercel token lane-side** (lost in recycle #6, never re-delivered to this lane); `t097-refusal-verify.yml`: "deploy (vercel CLI) is token-gated — CI is the lane-executable serving"; no deploy workflow in-tree; check-runs on main's #219/#220 merge commits carry **no Vercel production check** ⇒ git-integration production auto-deploy is OFF (previews only).
+- Recipe of record: CLI deploy via the 093 recipe (`deploy_bundle_build.py`, lane-local tooling) fired by a token-bearing lane (precedent: the r9-hubx run-002 staged handoff).
+- **Operator options**: **(A)** re-deliver a Vercel token to a lane — deploy fires at main tip immediately; **(B)** enable Vercel git-integration production deploys on main (project settings) — the durable fix: production rides every main merge, no token needed, and a redeploy of the current tip can be fired from the Vercel UI the moment it is enabled.
+- Fingerprinting note: `/actuator/health` is a static parity shape (no version/commit marker) — deployed-bundle verification after the build will need either the Vercel deployment metadata (token lane) or a behavior probe (e.g., the tutor selector) keyed by the operator.
+
+### Cross-lane confirmation of record
+
+T-MIG-139 run-002 (main `264e038`, trace `1a15a68f77ec7da9`) independently verified the w0a G4 install **byte-identical + enforcing** and filed it "DISCHARGED-AS-ALREADY-INSTALLED" — the F.5 §7 five gates are **ALL LIVE/VERIFIED** of record.
+
+### Residual ledger after this addendum
+
+- **[CLOSED this round]** Migration leg — fresh-environment companion premise repaired and PROVEN (63/63 tables, 174/174 indexes, ck7); PR #223 merged.
+- **[STAGED — awaiting one input]** Build leg (prj_FN5X) — operator option A (token) or B (git-integration flip).
+- **[STANDS, operator-side]** `REVOKE neon_superuser FROM t0_readonly` (42501 lane-denied); owner-URI rotation after Vercel env review (procedure ready); GH/Neon token rotations; committed-token `ghp_1KJHf2…` revoke-first (+ optional history scrub).
