@@ -11,10 +11,10 @@
       600
     ],
     "repository": {
-      "url": "https://github.com/SyllabAI/syllabai-core",
+      "url": "https://github.com/SyllabAI/syllabai-v2",
       "provider": "github",
       "link_mode": "web",
-      "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd"
+      "revision": "d07267ae3d57974c202bf2f4141b9a3ba00a8ee8"
     },
     "views": [
       {
@@ -80,7 +80,7 @@
       "id": "parser",
       "type": "backend",
       "label": "syllabai-parser — pdflane",
-      "sublabel": "canonical QP/MS JSON · v1.1.1",
+      "sublabel": "canonical QP/MS JSON · cross-repo",
       "tag": "IMPLEMENTED · cross-repo",
       "pos": [
         250,
@@ -107,27 +107,27 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/ingestion/GlmOcrIngestionService.java",
-          "line": 27,
-          "label": "T-C02 bridge contract"
+          "path": "apps/api/src/services/ingestion/glm-ocr.ts",
+          "line": 2,
+          "label": "GlmOcr bridge — T-C02 controlled bridge"
         },
         {
-          "path": "src/main/java/com/syllabai/content/ContentIngestionService.java",
-          "line": 25,
-          "label": "T-013 chunking"
+          "path": "apps/api/src/services/ingestion/glm-ocr.ts",
+          "line": 8,
+          "label": "ONE entry point, ONE transaction"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/ingestion/GlmOcrBridgeRecord.java",
-          "line": 36,
-          "label": "bridge record (V13)"
+          "path": "apps/api/src/services/ingestion/glm-ocr.ts",
+          "line": 11,
+          "label": "V13 bridge record — verbatim preservation"
         }
       ]
     },
     {
       "id": "curriculum_ingest",
       "type": "backend",
-      "label": "Curriculum bridge (T-010)",
-      "sublabel": "whole-draft tx · no derived prereqs",
+      "label": "Curriculum & KG seed",
+      "sublabel": "lane-side seeding · idempotent",
       "tag": "IMPLEMENTED",
       "pos": [
         910,
@@ -139,19 +139,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/ingestion/CurriculumIngestionService.java",
-          "line": 21,
-          "label": "T-010 bridge"
+          "path": "apps/api/src/services/teacher/concept-seed.ts",
+          "line": 2,
+          "label": "teacher-side 4CH1 concept-graph seed (T-MIG-053)"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/ingestion/CurriculumIngestionService.java",
-          "line": 28,
-          "label": "no derived prerequisites"
-        },
-        {
-          "path": "src/main/java/com/syllabai/teacher/ingestion/CurriculumIngestionService.java",
-          "line": 30,
-          "label": "idempotent re-ingest"
+          "path": "apps/api/src/services/curriculum/bundle-seed.ts",
+          "line": 80,
+          "label": "curriculum bundle nodes"
         }
       ]
     },
@@ -171,19 +166,19 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/ingestion/PastPaperIngestionService.java",
-          "line": 40,
-          "label": "SUGGESTED + anchor topic"
+          "path": "apps/api/src/services/ingestion/past-paper.ts",
+          "line": 28,
+          "label": "everything lands SUGGESTED"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/ingestion/PastPaperIngestionService.java",
-          "line": 46,
-          "label": "ingestion service"
+          "path": "apps/api/src/services/ingestion/past-paper.ts",
+          "line": 39,
+          "label": "INGESTION-ANCHOR TOPIC (UNVALIDATED)"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/ingestion/PastPaperIngestionService.java",
-          "line": 78,
-          "label": "ingest()"
+          "path": "apps/api/src/services/ingestion/glm-ocr.ts",
+          "line": 95,
+          "label": "toPastPaperDraft"
         }
       ]
     },
@@ -203,14 +198,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/assessment/ExamPaper.java",
-          "line": 24,
-          "label": "ExamPaper + states"
+          "path": "apps/api/src/services/content/review-repos.ts",
+          "line": 165,
+          "label": "mark_points by scheme"
         },
         {
-          "path": "src/main/java/com/syllabai/assessment/MarkScheme.java",
-          "line": 32,
-          "label": "scheme states"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 75,
+          "label": "MARKING_STATES lifecycle"
         }
       ]
     },
@@ -230,19 +225,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/ConceptGraphSeedService.java",
-          "line": 24,
-          "label": "V15 pinned seed"
+          "path": "apps/api/src/services/knowledge/index.ts",
+          "line": 101,
+          "label": "parseCoverageStatus — per-row validation"
         },
         {
-          "path": "src/main/java/com/syllabai/knowledge/KnowledgeNode.java",
-          "line": 25,
-          "label": "ValidationStatus"
-        },
-        {
-          "path": "src/main/java/com/syllabai/knowledge/KnowledgeEdge.java",
-          "line": 55,
-          "label": "edges UNVALIDATED default"
+          "path": "apps/api/src/services/teacher/concept-seed.ts",
+          "line": 2,
+          "label": "seed lands ACTIVE (V6 precedent)"
         }
       ]
     },
@@ -262,14 +252,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/curriculum/CurriculumVersion.java",
-          "line": 20,
-          "label": "DRAFT/ACTIVE versions"
+          "path": "apps/api/src/services/curriculum/versions.ts",
+          "line": 25,
+          "label": "DRAFT | ACTIVE | ARCHIVED"
         },
         {
-          "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java",
-          "line": 41,
-          "label": "4CH1-2017 serving scope"
+          "path": "apps/api/src/services/content/scope.ts",
+          "line": 46,
+          "label": "V53 per-course serving scope (ADR-030)"
         }
       ]
     },
@@ -289,19 +279,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 139,
-          "label": "package ingest"
+          "path": "apps/api/src/services/sme/package.ts",
+          "line": 220,
+          "label": "parsePackage"
         },
         {
-          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 53,
-          "label": "schemes VALIDATED"
-        },
-        {
-          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 272,
-          "label": "QuestionSpecPoint"
+          "path": "apps/api/src/services/sme/index.ts",
+          "line": 437,
+          "label": "scheme lands VALIDATED"
         }
       ]
     },
@@ -321,19 +306,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/ContentReviewService.java",
-          "line": 53,
-          "label": "review service"
+          "path": "apps/api/src/services/content/review.ts",
+          "line": 5,
+          "label": "write surfaces: validate-* · reject · flag"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/ContentReviewService.java",
-          "line": 138,
-          "label": "paper.validate"
-        },
-        {
-          "path": "src/main/java/com/syllabai/teacher/ContentReviewService.java",
-          "line": 243,
-          "label": "scheme.validate"
+          "path": "apps/api/src/services/content/review-writes.ts",
+          "line": 395,
+          "label": "mark_points per-point acceptance (ADR-037 v0.7)"
         }
       ]
     },
@@ -341,8 +321,8 @@
       "id": "content_store",
       "type": "database",
       "label": "Content corpus & chunks",
-      "sublabel": "JSONB docs · deterministic chunks",
-      "tag": "IMPLEMENTED · ingestion paused",
+      "sublabel": "JSONB docs · chunks · checksum dedup",
+      "tag": "IMPLEMENTED",
       "pos": [
         480,
         460
@@ -353,14 +333,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/content/Document.java",
-          "line": 26,
-          "label": "documents"
+          "path": "apps/api/src/services/ingestion/canonical.ts",
+          "line": 132,
+          "label": "ingestCanonicalDocument (T-013)"
         },
         {
-          "path": "src/main/java/com/syllabai/content/ContentIngestionService.java",
-          "line": 65,
-          "label": "V33 identity mirror"
+          "path": "apps/api/src/services/ingestion/canonical.ts",
+          "line": 71,
+          "label": "findDocumentByChecksum — dedup"
         }
       ]
     },
@@ -380,19 +360,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/content/EmbeddingConfig.java",
-          "line": 19,
-          "label": "one provider by design"
+          "path": "apps/api/src/services/content/retrieval.ts",
+          "line": 165,
+          "label": "resolveEmbeddingProvider"
         },
         {
-          "path": "src/main/java/com/syllabai/content/EmbeddingConfig.java",
-          "line": 47,
-          "label": "pgvector 768 (V11)"
-        },
-        {
-          "path": "src/main/java/com/syllabai/content/ContentDocumentController.java",
-          "line": 101,
-          "label": "/embed endpoint"
+          "path": "apps/api/src/routes/content/index.ts",
+          "line": 297,
+          "label": "POST /documents/:id/embed"
         }
       ]
     }
@@ -400,7 +375,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core @ 9385011 — ingestion fabric",
+      "label": "syllabai-v2 @ d07267a — ingestion fabric",
       "wraps": [
         "bridge",
         "curriculum_ingest",
@@ -411,7 +386,9 @@
         "sme_ingest",
         "promotion",
         "content_store",
-        "embedding_lane"
+        "embedding_lane",
+        "corpus",
+        "parser"
       ],
       "pad": 20
     },
@@ -551,7 +528,7 @@
       "id": "content-to-embedding",
       "from": "content_store",
       "to": "embedding_lane",
-      "label": "/embed · paused pending v2",
+      "label": "/embed · re-runnable",
       "variant": "dashed",
       "fromSide": "right",
       "toSide": "left",
@@ -563,9 +540,9 @@
       "dot": "cyan",
       "title": "How to read status",
       "items": [
-        "Core nodes carry line-anchored sources verified at syllabai-core 9385011",
-        "syllabai-parser (pdflane, engine 1.1.1 @ eef89fb) and the normalized-papers repo of record (syllabai-pastpapers @ 6354773) are cross-repo text-cited",
-        "The corpus node is source data, not code"
+        "Core nodes carry line-anchored sources verified at syllabai-v2 d07267a",
+        "syllabai-parser (cross-repo @ 00901e1) and the corpus repos stay text-cited: past-papers provenance lives in syllabai-pastpapers @ 87b6b98",
+        "Status vocabulary is project-vocabulary text on the nodes"
       ]
     },
     {
@@ -591,9 +568,9 @@
       "dot": "violet",
       "title": "Paused & prepared",
       "items": [
-        "Content ingestion remained paused as of the 2026-10-02 record — the Embedding v2 wait is resolved (rev2 validated + serving in production); the V33 identity mirror is in the ingest path",
-        "The semantic lane serves embed_rev 2 in production (wave-1 2026-10-02): exactly one Gemini 768-dim provider by design, /embed is re-runnable, and content lands even with zero API keys",
-        "Serving-side consumption of these stores is diagrammed separately — see syllabai-retrieval-architecture.html"
+        "v2 content posture: the books band (ADR-BOOK-0001, migration 0005) and the ADR-037 v0.7 official-paper lane (markPoints persist per point) deliver content through lane-side tooling and this fabric; the books vector arm is APPLY-READY of record (Session 207)",
+        "Content embedding lane serving rev2; /embed stays re-runnable; T-C20 keeps search VALIDATED-only",
+        "The V33 identity mirror law carries over from the frozen-core port"
       ]
     }
   ]

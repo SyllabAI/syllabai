@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "browser-check",
+  "evidenceKind": "automated-browser",
+  "status": "fail",
+  "visualReview": "not-requested",
+  "provenance": "mismatch",
+  "deliveryReceiptId": "bbdf2cd0-6060-4949-ae6c-ce1915fc90a5",
+  "artifact": {
+    "path": "/home/z/my-project/syllabai-repo/docs/archify/syllabai-assessment-marking.html",
+    "sha256": "e9705f5ef396517816e34b5973a7966a4634ff6e02f0e235fcc816f1fc2823d6",
+    "bytes": 849343
+  },
+  "error": "The artifact bytes do not match their delivery provenance.",
+  "diagnostics": [
+    {
+      "code": "delivery/provenance-mismatch",
+      "severity": "error",
+      "message": "The artifact bytes do not match their delivery provenance.",
+      "subject": {
+        "artifact": "/home/z/my-project/syllabai-repo/docs/archify/syllabai-assessment-marking.html",
+        "provenance": "/home/z/my-project/syllabai-repo/docs/archify/syllabai-assessment-marking.delivery.json"
+      },
+      "evidence": {
+        "expectedSha256": "90aac928d235fe43da9db4cf2c1e1602f91684e26732e7f977e45876232c4880",
+        "actualSha256": "e9705f5ef396517816e34b5973a7966a4634ff6e02f0e235fcc816f1fc2823d6",
+        "expectedBytes": 842329,
+        "actualBytes": 849343
+      },
+      "supportedFixes": [
+        "restore the delivered artifact or rerun deliver to create a matching artifact and provenance pair"
+      ]
+    }
+  ],
+  "containment": {
+    "status": "fail",
+    "policy": "fit-or-reader-declared-readable-vertical-scroll",
+    "viewports": []
+  },
+  "captures": {
+    "status": "not-requested",
+    "screenshots": [],
+    "contactSheet": null
+  },
+  "sidecars": {
+    "directory": "/home/z/my-project/syllabai-repo/docs/archify/tools/refresh2-browser-check",
+    "receipt": "syllabai-assessment-marking.browser-check.json",
+    "files": []
+  }
+}

@@ -11,10 +11,10 @@
       600
     ],
     "repository": {
-      "url": "https://github.com/SyllabAI/syllabai-core",
+      "url": "https://github.com/SyllabAI/syllabai-v2",
       "provider": "github",
       "link_mode": "web",
-      "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd"
+      "revision": "d07267ae3d57974c202bf2f4141b9a3ba00a8ee8"
     },
     "views": [
       {
@@ -70,7 +70,7 @@
       "id": "teacher_web",
       "type": "frontend",
       "label": "syllabai-web — Teacher",
-      "sublabel": "marking queue v2 · test builder",
+      "sublabel": "marking queue v2 · internal console",
       "tag": "IMPLEMENTED · cross-repo",
       "pos": [
         20,
@@ -97,19 +97,19 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
-          "line": 56,
-          "label": "marking routes"
+          "path": "apps/api/src/routes/teachermarking.ts",
+          "line": 266,
+          "label": "GET /queue-v2"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
-          "line": 204,
-          "label": "queue-v2"
+          "path": "apps/api/src/routes/teachermarking.ts",
+          "line": 279,
+          "label": "POST /smart-mark-batch"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingController.java",
-          "line": 231,
-          "label": "smart-mark-batch"
+          "path": "apps/api/src/routes/teachermarking.ts",
+          "line": 313,
+          "label": "POST /answers/:id/human-mark"
         }
       ]
     },
@@ -129,19 +129,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
-          "line": 51,
-          "label": "queue service"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 57,
+          "label": "G-5 dual-shape pagination bounds"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
-          "line": 109,
-          "label": "markingQueue (G-5 pagination)"
-        },
-        {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingQueueService.java",
-          "line": 340,
-          "label": "smartMarkBatch"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 61,
+          "label": "SMART_MARK_BATCH_LIMIT 50"
         }
       ]
     },
@@ -149,7 +144,7 @@
       "id": "smartmark",
       "type": "backend",
       "label": "Smart Mark engine",
-      "sublabel": "pipeline 1.2.1 · partial marks",
+      "sublabel": "pipeline 1.3.0 · partial marks",
       "tag": "IMPLEMENTED · VALIDATED-only (G-2)",
       "pos": [
         710,
@@ -161,19 +156,19 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
-          "line": 106,
-          "label": "VALIDATED-only selection"
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 460,
+          "label": "SmartMarkService — VALIDATED-only (G-2)"
         },
         {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
-          "line": 185,
-          "label": "honest refusal row"
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 667,
+          "label": "honest SCHEME_NOT_VALIDATED row"
         },
         {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkResult.java",
-          "line": 40,
-          "label": "pipeline version 1.2.1"
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 454,
+          "label": "PIPELINE_VERSION 1.3.0"
         }
       ]
     },
@@ -181,7 +176,7 @@
       "id": "llm_chain",
       "type": "external",
       "label": "LLM failover chain",
-      "sublabel": "groq → gemini → openrouter",
+      "sublabel": "groq → gemini-3.6 → openrouter",
       "tag": "IMPLEMENTED",
       "pos": [
         940,
@@ -193,14 +188,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/infrastructure/llm/LlmChainProperties.java",
-          "line": 64,
-          "label": "provider order"
+          "path": "apps/api/src/services/llmchain/index.ts",
+          "line": 39,
+          "label": "chain order of record"
         },
         {
-          "path": "src/main/java/com/syllabai/smartmark/LlmMarkingCandidateGenerator.java",
-          "line": 80,
-          "label": "chain.generate"
+          "path": "apps/api/src/services/llmchain/index.ts",
+          "line": 15,
+          "label": "groq model binding"
         }
       ]
     },
@@ -220,14 +215,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingService.java",
-          "line": 85,
-          "label": "recordHumanMark"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 150,
+          "label": "per_point_decisions row shape"
         },
         {
-          "path": "src/main/java/com/syllabai/smartmark/HumanMark.java",
-          "line": 45,
-          "label": "perPointDecisions jsonb"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 194,
+          "label": "perPointDecisions view shape"
         }
       ]
     },
@@ -247,14 +242,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/smartmark/KappaAgreementService.java",
-          "line": 22,
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 327,
           "label": "cohenKappa"
         },
         {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkAgreementEvaluation.java",
-          "line": 23,
-          "label": "threshold 0.60"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 63,
+          "label": "KAPPA_DEFAULT_THRESHOLD 0.6"
         }
       ]
     },
@@ -274,14 +269,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
-          "line": 136,
-          "label": "authoritative after gate"
-        },
-        {
-          "path": "src/main/java/com/syllabai/smartmark/StudentSmartMarkService.java",
-          "line": 95,
-          "label": "reveal policy"
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 688,
+          "label": "StudentSmartMarkService — reveal policy"
         }
       ]
     },
@@ -289,7 +279,7 @@
       "id": "evidence",
       "type": "messagebus",
       "label": "Learning evidence",
-      "sublabel": "AssessmentEvidenceRecordedEvent",
+      "sublabel": "evidence once-guard (DECISION_016)",
       "tag": "IMPLEMENTED · fires once",
       "pos": [
         20,
@@ -301,14 +291,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java",
-          "line": 51,
-          "label": "publishGraded once"
-        },
-        {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingService.java",
-          "line": 110,
-          "label": "override never re-fires"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 752,
+          "label": "evidence once-guard (DECISION_016)"
         }
       ]
     },
@@ -328,14 +313,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/ContentReviewService.java",
-          "line": 243,
-          "label": "scheme.validate"
+          "path": "apps/api/src/services/content/review.ts",
+          "line": 5,
+          "label": "review reads; write surfaces listed in header"
         },
         {
-          "path": "src/main/java/com/syllabai/assessment/MarkScheme.java",
-          "line": 125,
-          "label": "flagged never backs"
+          "path": "apps/api/src/services/content/review-writes.ts",
+          "line": 395,
+          "label": "mark_points per point (ADR-037 v0.7)"
         }
       ]
     },
@@ -355,14 +340,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/assessment/Answer.java",
-          "line": 34,
-          "label": "MarkingState lifecycle"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 75,
+          "label": "MARKING_STATES lifecycle"
         },
         {
-          "path": "src/main/java/com/syllabai/assessment/MarkScheme.java",
-          "line": 32,
-          "label": "ValidationState"
+          "path": "apps/api/src/services/content/review-repos.ts",
+          "line": 165,
+          "label": "mark_points by scheme"
         }
       ]
     },
@@ -382,14 +367,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 139,
-          "label": "package ingest"
+          "path": "apps/api/src/services/sme/package.ts",
+          "line": 220,
+          "label": "parsePackage"
         },
         {
-          "path": "src/main/java/com/syllabai/sme/SmeQuestionIngestService.java",
-          "line": 53,
-          "label": "schemes VALIDATED"
+          "path": "apps/api/src/services/sme/index.ts",
+          "line": 437,
+          "label": "scheme lands VALIDATED"
         }
       ]
     }
@@ -397,7 +382,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core @ 9385011 — marking fabric",
+      "label": "syllabai-v2 @ d07267a — marking fabric",
       "wraps": [
         "marking_api",
         "marking_queue",
@@ -408,7 +393,9 @@
         "evidence",
         "scheme_review",
         "assessment",
-        "sme_ingest"
+        "sme_ingest",
+        "teacher_web",
+        "llm_chain"
       ],
       "pad": 20
     }
@@ -557,9 +544,9 @@
       "dot": "cyan",
       "title": "How to read status",
       "items": [
-        "IMPLEMENTED nodes carry line-anchored sources verified at syllabai-core 9385011",
-        "syllabai-web — Teacher is cross-repo text-cited (no pin-verified path from this diagram's repository pin)",
-        "Statuses use the project vocabulary; nothing here is upgraded beyond its evidence"
+        "IMPLEMENTED nodes carry line-anchored sources verified at syllabai-v2 d07267a",
+        "syllabai-web — Teacher is cross-repo text-cited @ cae30ea (internal console; no pin-verified path from this diagram's repo)",
+        "Status vocabulary is project-vocabulary text on the nodes; never read PROPOSED/UNVERIFIED as live capability"
       ]
     },
     {

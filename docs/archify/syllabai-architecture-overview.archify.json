@@ -4,17 +4,17 @@
   "meta": {
     "title": "SyllabAI — Source-Backed Architecture Overview",
     "locale": "en",
-    "quality_profile": "showcase",
+    "quality_profile": "standard",
     "output": "docs/archify/syllabai-architecture-overview.html",
     "viewBox": [
       2350,
       1580
     ],
     "repository": {
-      "url": "https://github.com/SyllabAI/syllabai-core",
+      "url": "https://github.com/SyllabAI/syllabai-v2",
       "provider": "github",
       "link_mode": "web",
-      "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd"
+      "revision": "d07267ae3d57974c202bf2f4141b9a3ba00a8ee8"
     },
     "views": [
       {
@@ -66,7 +66,7 @@
           "embedding_lane",
           "kappa_gate"
         ],
-        "note": "Local Intelligence Layer proposed; pgvector lane serving rev2; κ gate fail-closed — G-4 human round κ=1.0 PASSED (s118)."
+        "note": "LIL proposed (T-LIL open); pgvector lane serving rev2; κ gate fail-closed — G-4 κ=1.0 PASSED (s118)."
       }
     ]
   },
@@ -74,8 +74,8 @@
     {
       "id": "learner_web",
       "type": "frontend",
-      "label": "syllabai-web — Learner",
-      "sublabel": "Next.js · Exam Questions · Assistant",
+      "label": "syllabai-v2 apps/hub — Learner",
+      "sublabel": "Next.js 16 · Practice · Tutor · Books rail",
       "tag": "IMPLEMENTED · VERIFIED",
       "pos": [
         90,
@@ -84,14 +84,21 @@
       "size": [
         220,
         66
+      ],
+      "sources": [
+        {
+          "path": "apps/hub/src/app/tutor/page.tsx",
+          "line": 1,
+          "label": "hub learner surface — pinned in this repo"
+        }
       ]
     },
     {
       "id": "teacher_web",
       "type": "frontend",
-      "label": "syllabai-web — Teacher",
-      "sublabel": "marking queue · test builder",
-      "tag": "IMPLEMENTED",
+      "label": "syllabai-web — Teacher (internal)",
+      "sublabel": "Smart Mark queue · ops console",
+      "tag": "IMPLEMENTED · cross-repo",
       "pos": [
         420,
         64
@@ -134,8 +141,8 @@
     {
       "id": "api_core",
       "type": "backend",
-      "label": "syllabai-core REST API",
-      "sublabel": "Spring Boot · /api/v1 · identity · rate-limited",
+      "label": "syllabai-v2 apps/api — API of record",
+      "sublabel": "Hono · /api/v1 · identity · rate-limited",
       "tag": "IMPLEMENTED · VERIFIED",
       "pos": [
         90,
@@ -147,13 +154,13 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/SyllabAiApplication.java",
-          "line": 18,
-          "label": "boot entrypoint"
+          "path": "apps/api/src/index.ts",
+          "line": 40,
+          "label": "Hono app — Vercel fetch handler"
         },
         {
-          "path": "src/main/java/com/syllabai/ratelimit/RateLimitFilter.java",
-          "line": 62,
+          "path": "apps/api/src/middleware/ratelimit.ts",
+          "line": 13,
           "label": "boundary rate limiting (auth + LLM tiers)"
         }
       ]
@@ -161,9 +168,9 @@
     {
       "id": "retrieval",
       "type": "backend",
-      "label": "Retrieval fabric",
-      "sublabel": "lexical Bm25 · authoritative-KG",
-      "tag": "IMPLEMENTED · benchmark-gated",
+      "label": "Hybrid retrieval (serving)",
+      "sublabel": "KG arm · vector arm · RRF fusion",
+      "tag": "IMPLEMENTED · SERVING",
       "pos": [
         410,
         480
@@ -174,14 +181,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/retrieval/Bm25Retriever.java",
-          "line": 45,
-          "label": "lexical provider"
+          "path": "apps/api/src/services/tutor/kg-retriever.ts",
+          "line": 181,
+          "label": "kgRetrieve — deterministic KG arm"
         },
         {
-          "path": "src/main/java/com/syllabai/retrieval/AuthoritativeKgRetrievalProvider.java",
-          "line": 16,
-          "label": "KG provider"
+          "path": "apps/api/src/services/tutor/rrf.ts",
+          "line": 68,
+          "label": "fuse — reciprocal rank fusion"
         }
       ]
     },
@@ -189,8 +196,8 @@
       "id": "content",
       "type": "database",
       "label": "Content corpus & chunks",
-      "sublabel": "documents · ingestion",
-      "tag": "IMPLEMENTED · ingestion paused",
+      "sublabel": "documents · canonical store · chunks",
+      "tag": "IMPLEMENTED",
       "pos": [
         760,
         480
@@ -201,9 +208,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/content/ContentRetrievalService.java",
-          "line": 15,
-          "label": "chunk reads"
+          "path": "apps/api/src/services/ingestion/canonical.ts",
+          "line": 132,
+          "label": "ingestCanonicalDocument (T-013)"
         }
       ]
     },
@@ -223,9 +230,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/revisionnotes/RevisionNoteService.java",
-          "line": 21,
-          "label": "notes service"
+          "path": "apps/api/src/services/revision-notes/index.ts",
+          "line": 20,
+          "label": "notes module (learner + ingest)"
         }
       ]
     },
@@ -245,9 +252,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/assessment/Answer.java",
-          "line": 32,
-          "label": "answer + marking state"
+          "path": "apps/api/src/services/assessment/submit.ts",
+          "line": 19,
+          "label": "attempt insert · markingState AUTO_GRADED"
         }
       ]
     },
@@ -267,9 +274,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java",
-          "line": 58,
-          "label": "scope resolver"
+          "path": "apps/api/src/services/content/scope.ts",
+          "line": 46,
+          "label": "V53 per-course resolution (ADR-030)"
         }
       ]
     },
@@ -289,9 +296,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/knowledge/KnowledgeGraphService.java",
-          "line": 25,
-          "label": "KG service"
+          "path": "apps/api/src/services/knowledge/graphs.ts",
+          "line": 435,
+          "label": "classGraph — authoritative KG reads"
         }
       ]
     },
@@ -311,9 +318,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/retrieval/PgVectorRetrievalProvider.java",
-          "line": 16,
-          "label": "pgvector provider"
+          "path": "apps/api/src/services/content/retrieval.ts",
+          "line": 165,
+          "label": "resolveEmbeddingProvider"
+        },
+        {
+          "path": "apps/api/src/routes/content/index.ts",
+          "line": 297,
+          "label": "POST /documents/:id/embed"
         }
       ]
     },
@@ -333,14 +345,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingService.java",
-          "line": 85,
-          "label": "recordHumanMark"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 752,
+          "label": "evidence once-guard on authoritative mark"
         },
         {
-          "path": "src/main/java/com/syllabai/teacher/TeacherMarkingService.java",
-          "line": 160,
-          "label": "evaluateAgreement"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 327,
+          "label": "cohenKappa"
         }
       ]
     },
@@ -360,9 +372,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java",
-          "line": 21,
-          "label": "evidence publisher"
+          "path": "apps/api/src/services/assessment/submit.ts",
+          "line": 78,
+          "label": "evidence fires at first authoritative marking"
         }
       ]
     },
@@ -382,9 +394,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/recommendation/NextBestActionService.java",
-          "line": 76,
-          "label": "NBA service"
+          "path": "apps/api/src/services/learner-me/nba.ts",
+          "line": 75,
+          "label": "NBA_POLICY nba-rules/v1.3"
         }
       ]
     },
@@ -404,9 +416,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/intervention/InterventionRunService.java",
-          "line": 23,
-          "label": "run service"
+          "path": "apps/api/src/services/intervention/index.ts",
+          "line": 2,
+          "label": "intervention-run services (T-MIG-061)"
         }
       ]
     },
@@ -426,19 +438,19 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
-          "line": 84,
-          "label": "markAnswer"
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 460,
+          "label": "SmartMarkService"
         },
         {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkPipeline.java",
-          "line": 57,
-          "label": "pipeline run"
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 217,
+          "label": "SmartMarkPipeline"
         },
         {
-          "path": "src/main/java/com/syllabai/smartmark/LlmMarkingCandidateGenerator.java",
-          "line": 41,
-          "label": "marking prompt v3"
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 454,
+          "label": "PIPELINE_VERSION 1.3.0"
         }
       ]
     },
@@ -446,7 +458,7 @@
       "id": "llm_chain",
       "type": "external",
       "label": "LLM failover chain",
-      "sublabel": "Groq → Gemini → OpenRouter",
+      "sublabel": "Groq → Gemini 3.6 Flash → OpenRouter",
       "tag": "IMPLEMENTED",
       "pos": [
         2080,
@@ -458,14 +470,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/infrastructure/llm/FailoverLlmChain.java",
-          "line": 41,
-          "label": "failover chain"
+          "path": "apps/api/src/services/llmchain/index.ts",
+          "line": 39,
+          "label": "chain order (groq → gemini → openrouter)"
         },
         {
-          "path": "src/main/java/com/syllabai/infrastructure/llm/LlmChainProperties.java",
-          "line": 16,
-          "label": "provider order"
+          "path": "apps/api/src/services/llmchain/index.ts",
+          "line": 15,
+          "label": "groq model binding"
         }
       ]
     },
@@ -485,13 +497,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/learner/LearnerModelService.java",
-          "line": 36,
-          "label": "model service"
+          "path": "apps/api/src/services/learner-model/model-update.ts",
+          "line": 150,
+          "label": "resolveBktParams (ADR-033)"
         },
         {
-          "path": "src/main/java/com/syllabai/learner/bkt/BktEngine.java",
-          "label": "BKT engine"
+          "path": "apps/api/src/services/learner-model/model-update.ts",
+          "line": 114,
+          "label": "LearnerBktParams"
         }
       ]
     },
@@ -511,9 +524,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/diagnostic/StruggleInferenceService.java",
-          "line": 37,
-          "label": "struggle service"
+          "path": "apps/api/src/services/learner-model/struggle-inference.ts",
+          "line": 85,
+          "label": "STRUGGLE_MODEL_VERSION rules-v0.2"
+        },
+        {
+          "path": "apps/api/src/services/learner-model/struggle-inference.ts",
+          "line": 141,
+          "label": "inferStrugglesOnAssessmentEvidence"
         }
       ]
     },
@@ -524,7 +542,7 @@
       "sublabel": "fusion · memory · paper anchors",
       "tag": "IMPLEMENTED · UNVERIFIED",
       "pos": [
-        760,
+        1000,
         1080
       ],
       "size": [
@@ -533,14 +551,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/tutor/KaRagService.java",
-          "line": 44,
-          "label": "KaRAG service"
+          "path": "apps/api/src/services/tutor/karag.ts",
+          "line": 6,
+          "label": "KaRAG pipeline contract"
         },
         {
-          "path": "src/main/java/com/syllabai/tutor/ReciprocalRankFusion.java",
-          "line": 22,
-          "label": "RRF fusion"
+          "path": "apps/api/src/services/tutor/context.ts",
+          "line": 252,
+          "label": "memoryDigest"
         }
       ]
     },
@@ -551,7 +569,7 @@
       "sublabel": "EXPLAIN · HINT · CHECK · read-only",
       "tag": "IMPLEMENTED · VERIFIED",
       "pos": [
-        1080,
+        1240,
         1080
       ],
       "size": [
@@ -560,9 +578,9 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/cla/ClaService.java",
-          "line": 90,
-          "label": "CLA service"
+          "path": "apps/api/src/services/cla/service.ts",
+          "line": 252,
+          "label": "buildClaService"
         }
       ]
     },
@@ -582,22 +600,22 @@
       ],
       "sources": [
         {
-          "path": "src/main/java/com/syllabai/smartmark/KappaAgreementService.java",
-          "line": 22,
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 327,
           "label": "cohenKappa"
         },
         {
-          "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java",
-          "line": 207,
-          "label": "kappaGatePassed"
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 63,
+          "label": "KAPPA_DEFAULT_THRESHOLD 0.6"
         }
       ]
     },
     {
       "id": "postgres",
       "type": "database",
-      "label": "PostgreSQL (production)",
-      "sublabel": "Flyway-managed schema",
+      "label": "Neon PostgreSQL (production)",
+      "sublabel": "drizzle-managed schema · v2-native migrations",
       "tag": "IMPLEMENTED · PRODUCTION",
       "pos": [
         90,
@@ -609,9 +627,14 @@
       ],
       "sources": [
         {
-          "path": "src/main/resources/db/migration/V8__multipart_assessment.sql",
-          "line": 1,
-          "label": "flyway migration"
+          "path": "packages/db/drizzle/0001_faithful_lila_cheney.sql",
+          "line": 44,
+          "label": "attempts identity index (frozen-core schema)"
+        },
+        {
+          "path": "packages/db/drizzle/0005_book-rail-tables.sql",
+          "line": 19,
+          "label": "book rail tables (T-BOOK-002, v2-native)"
         }
       ]
     },
@@ -659,6 +682,33 @@
         210,
         62
       ]
+    },
+    {
+      "id": "books_rail",
+      "type": "frontend",
+      "label": "Books rail (interactive)",
+      "sublabel": "ADR-BOOK-0001 · blocks · glossary",
+      "tag": "IMPLEMENTED · demo gate c01–c05",
+      "pos": [
+        978,
+        64
+      ],
+      "size": [
+        220,
+        66
+      ],
+      "sources": [
+        {
+          "path": "apps/api/src/services/books.ts",
+          "line": 81,
+          "label": "railBlocksForChapter — VALIDATED block stream"
+        },
+        {
+          "path": "packages/db/drizzle/0005_book-rail-tables.sql",
+          "line": 19,
+          "label": "book rail tables (T-BOOK-002, v2-native)"
+        }
+      ]
     }
   ],
   "boundaries": [
@@ -668,7 +718,8 @@
       "wraps": [
         "learner_web",
         "teacher_web",
-        "workbench"
+        "workbench",
+        "books_rail"
       ],
       "pad": 18
     },
@@ -682,7 +733,7 @@
     },
     {
       "kind": "region",
-      "label": "syllabai-core · Spring Boot modular monolith",
+      "label": "syllabai-v2 apps/api — TypeScript port of record (cutover 2026-10-13)",
       "wraps": [
         "curriculum",
         "knowledge",
@@ -719,7 +770,8 @@
       "wraps": [
         "retrieval",
         "embedding_lane",
-        "content"
+        "content",
+        "knowledge"
       ],
       "pad": 14
     },
@@ -837,7 +889,7 @@
     {
       "from": "api_core",
       "to": "postgres",
-      "label": "JPA · Flyway",
+      "label": "drizzle · SQL",
       "fromSide": "left",
       "toSide": "top",
       "via": [
@@ -1127,6 +1179,18 @@
         1365,
         182
       ]
+    },
+    {
+      "from": "books_rail",
+      "to": "api_core",
+      "label": "HTTPS · /api/v1/books",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        1035,
+        185
+      ]
     }
   ],
   "cards": [
@@ -1134,8 +1198,9 @@
       "dot": "cyan",
       "title": "How to read status",
       "items": [
+        "2026-10-13 CUTOVER (T-C84): this diagram pins syllabai-v2 — the system of record; syllabai-core + syllabai-hub are archived read-only, never deleted",
         "IMPLEMENTED = code exists in the pinned repository/commit; VERIFIED adds acceptance evidence from project records",
-        "sources[] = file:line verified at the pinned syllabai-core commit; cross-repo nodes cite repo@SHA here only",
+        "sources[] = file:line verified at the pinned syllabai-v2 commit; cross-repo nodes cite repo@SHA here only",
         "PROPOSED / PREPARED · UNVERIFIED / gate closed are explicit: never read them as live capability"
       ]
     },
@@ -1168,11 +1233,12 @@
       "dot": "amber",
       "title": "Cross-repository evidence (text-cited)",
       "items": [
-        "syllabai-web @ bfc9850 (main) — learner/teacher surfaces",
-        "syllabai-teacher-workbench @ 39ad5d8 (main) — SME validation tooling",
-        "syllabai-parser @ eef89fb (tc17-work) — offline parsing",
-        "syllabai-pastpapers @ 6354773 (main) — normalized corpus + provenance",
-        "SyllabAI/syllabai @ f1a7eb2 (main) — specs, ADRs, knowledge map"
+        "2026-10-13 cutover: api of record = syllabai-v2.vercel.app (apps/api); hub of record = syllabai-hub-v2.vercel.app (apps/hub)",
+        "syllabai-web @ cae30ea (main) — internal teacher/ops console (Smart Mark queue home; product-surface dev frozen per ADR-029)",
+        "syllabai-teacher-workbench @ eb997d6 (main) — teacher validation workbench (readonly mirror mode)",
+        "syllabai-parser @ 00901e1 (main) — offline QP/MS parsing · OCR tooling",
+        "syllabai-pastpapers @ 87b6b98 (main) — canonical exam-material corpus (SHA-256 provenance)",
+        "syllabai-resources @ aa0b4de (main) — RAG revision-note corpus + registry/graph QA"
       ]
     }
   ]

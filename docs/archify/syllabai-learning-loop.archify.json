@@ -6,12 +6,15 @@
     "locale": "en",
     "quality_profile": "showcase",
     "output": "docs/archify/syllabai-learning-loop.html",
-    "viewBox": [1130, 580],
+    "viewBox": [
+      1130,
+      580
+    ],
     "repository": {
-      "url": "https://github.com/SyllabAI/syllabai-core",
+      "url": "https://github.com/SyllabAI/syllabai-v2",
       "provider": "github",
       "link_mode": "web",
-      "revision": "93850118819053a8a7404902d5a7a83ab09d0dbd"
+      "revision": "d07267ae3d57974c202bf2f4141b9a3ba00a8ee8"
     },
     "views": [
       {
@@ -60,9 +63,22 @@
       "type": "frontend",
       "label": "Learner interaction (web)",
       "sublabel": "Practice · Tutor chat · Next actions",
-      "tag": "IMPLEMENTED · cross-repo",
-      "pos": [20, 80],
-      "size": [170, 70]
+      "tag": "IMPLEMENTED · VERIFIED",
+      "pos": [
+        20,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ],
+      "sources": [
+        {
+          "path": "apps/hub/src/app/tutor/page.tsx",
+          "line": 1,
+          "label": "hub learner surface — pinned in this repo"
+        }
+      ]
     },
     {
       "id": "interaction_api",
@@ -71,12 +87,30 @@
       "sublabel": "/attempts · /tutor · engagement",
       "tag": "IMPLEMENTED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/assessment/AttemptController.java", "line": 24, "label": "attempts API" },
-        { "path": "src/main/java/com/syllabai/tutor/TutorController.java", "line": 66, "label": "tutor API" },
-        { "path": "src/main/java/com/syllabai/learner/TutorEngagementRecorder.java", "line": 32, "label": "engagement recorder" }
+        {
+          "path": "apps/api/src/routes/assessment/index.ts",
+          "line": 231,
+          "label": "POST /api/v1/attempts"
+        },
+        {
+          "path": "apps/api/src/routes/tutor.ts",
+          "line": 260,
+          "label": "POST /api/v1/tutor/ask"
+        },
+        {
+          "path": "apps/api/src/services/tutor/context.ts",
+          "line": 235,
+          "label": "TutorTopicEngagementRow — engagement signal"
+        }
       ],
-      "pos": [250, 80],
-      "size": [170, 70]
+      "pos": [
+        250,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "assessment_smartmark",
@@ -85,12 +119,30 @@
       "sublabel": "attempts · parts · per-part pipeline",
       "tag": "IMPLEMENTED · κ-gated release",
       "sources": [
-        { "path": "src/main/java/com/syllabai/assessment/Answer.java", "line": 32, "label": "answer + marking state" },
-        { "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java", "line": 84, "label": "markAnswer" },
-        { "path": "src/main/java/com/syllabai/smartmark/SmartMarkPipeline.java", "line": 57, "label": "pipeline run" }
+        {
+          "path": "apps/api/src/services/assessment/submit.ts",
+          "line": 19,
+          "label": "attempt insert · markingState AUTO_GRADED"
+        },
+        {
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 460,
+          "label": "SmartMarkService"
+        },
+        {
+          "path": "apps/api/src/services/smartmark/index.ts",
+          "line": 217,
+          "label": "SmartMarkPipeline"
+        }
       ],
-      "pos": [480, 80],
-      "size": [170, 70]
+      "pos": [
+        480,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "kappa_gate",
@@ -99,11 +151,25 @@
       "sublabel": "κ ≥ 0.60 · fail-closed",
       "tag": "IMPLEMENTED · fail-closed",
       "sources": [
-        { "path": "src/main/java/com/syllabai/smartmark/KappaAgreementService.java", "line": 22, "label": "cohenKappa" },
-        { "path": "src/main/java/com/syllabai/smartmark/SmartMarkService.java", "line": 207, "label": "kappaGatePassed" }
+        {
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 327,
+          "label": "cohenKappa"
+        },
+        {
+          "path": "apps/api/src/services/teachermarking/index.ts",
+          "line": 63,
+          "label": "KAPPA_DEFAULT_THRESHOLD 0.6"
+        }
       ],
-      "pos": [710, 80],
-      "size": [170, 70]
+      "pos": [
+        710,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "evidence",
@@ -112,11 +178,25 @@
       "sublabel": "first authoritative mark · once",
       "tag": "IMPLEMENTED · VERIFIED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/assessment/EvidencePublisher.java", "line": 51, "label": "publishGraded" },
-        { "path": "src/main/java/com/syllabai/shared/events/AssessmentEvidenceRecordedEvent.java", "line": 44, "label": "evidence event" }
+        {
+          "path": "apps/api/src/services/assessment/submit.ts",
+          "line": 78,
+          "label": "evidence fires at first authoritative marking"
+        },
+        {
+          "path": "apps/api/src/services/assessment/submit.ts",
+          "line": 86,
+          "label": "once-only guarded update (evidence_emitted)"
+        }
       ],
-      "pos": [940, 80],
-      "size": [170, 70]
+      "pos": [
+        940,
+        80
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "learner_model",
@@ -125,11 +205,25 @@
       "sublabel": "BKT mastery · BDT · fluency",
       "tag": "IMPLEMENTED · overlay only",
       "sources": [
-        { "path": "src/main/java/com/syllabai/learner/LearnerModelService.java", "line": 72, "label": "onAssessmentEvidence" },
-        { "path": "src/main/java/com/syllabai/learner/bkt/BktEngine.java", "line": 36, "label": "BKT update" }
+        {
+          "path": "apps/api/src/services/learner-model/model-update.ts",
+          "line": 150,
+          "label": "resolveBktParams (ADR-033)"
+        },
+        {
+          "path": "apps/api/src/services/learner-model/model-update.ts",
+          "line": 123,
+          "label": "LEARNER_BKT_PAPER_DEFAULTS"
+        }
       ],
-      "pos": [940, 270],
-      "size": [170, 70]
+      "pos": [
+        940,
+        270
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "patterns",
@@ -138,11 +232,25 @@
       "sublabel": "struggle rules v0.2 · 7-day expiry",
       "tag": "IMPLEMENTED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/diagnostic/StruggleInferenceService.java", "line": 54, "label": "evidence listener" },
-        { "path": "src/main/java/com/syllabai/diagnostic/StruggleInferenceService.java", "line": 38, "label": "rules-v0.2" }
+        {
+          "path": "apps/api/src/services/learner-model/struggle-inference.ts",
+          "line": 85,
+          "label": "STRUGGLE_MODEL_VERSION rules-v0.2"
+        },
+        {
+          "path": "apps/api/src/services/learner-model/struggle-inference.ts",
+          "line": 141,
+          "label": "inferStrugglesOnAssessmentEvidence"
+        }
       ],
-      "pos": [710, 270],
-      "size": [170, 70]
+      "pos": [
+        710,
+        270
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "remediation",
@@ -151,12 +259,25 @@
       "sublabel": "plans in tutor/CLA context",
       "tag": "IMPLEMENTED · run ledger not wired",
       "sources": [
-        { "path": "src/main/java/com/syllabai/tutor/TutorPolicyService.java", "line": 55, "label": "select plan" },
-        { "path": "src/main/java/com/syllabai/tutor/TutorPolicyService.java", "line": 97, "label": "InterventionType" },
-        { "path": "src/main/java/com/syllabai/intervention/InterventionRunService.java", "line": 38, "label": "run ledger" }
+        {
+          "path": "apps/api/src/services/tutor/context.ts",
+          "line": 147,
+          "label": "selectIntervention — plan in tutor context"
+        },
+        {
+          "path": "apps/api/src/services/intervention/index.ts",
+          "line": 2,
+          "label": "intervention-run services (T-MIG-061)"
+        }
       ],
-      "pos": [480, 270],
-      "size": [170, 70]
+      "pos": [
+        480,
+        270
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "recommendation",
@@ -165,11 +286,25 @@
       "sublabel": "nba-rules/v1.3 · no LLM",
       "tag": "IMPLEMENTED · VERIFIED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/recommendation/NextBestActionService.java", "line": 76, "label": "NBA service" },
-        { "path": "src/main/java/com/syllabai/recommendation/NextBestActionService.java", "line": 78, "label": "policy id" }
+        {
+          "path": "apps/api/src/services/learner-me/nba.ts",
+          "line": 75,
+          "label": "NBA_POLICY nba-rules/v1.3"
+        },
+        {
+          "path": "apps/api/src/services/learner-me/nba.ts",
+          "line": 420,
+          "label": "nbaActionsFor"
+        }
       ],
-      "pos": [480, 460],
-      "size": [170, 70]
+      "pos": [
+        480,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "next_action",
@@ -178,10 +313,20 @@
       "sublabel": "GET /learners/me/recommendations",
       "tag": "IMPLEMENTED · VERIFIED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/recommendation/LearnerRecommendationController.java", "line": 29, "label": "recommendations" }
+        {
+          "path": "apps/api/src/routes/learnerme.ts",
+          "line": 221,
+          "label": "GET /recommendations"
+        }
       ],
-      "pos": [250, 460],
-      "size": [170, 70]
+      "pos": [
+        250,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ]
     },
     {
       "id": "curriculum",
@@ -190,17 +335,31 @@
       "sublabel": "canonical truth · versioned",
       "tag": "IMPLEMENTED",
       "sources": [
-        { "path": "src/main/java/com/syllabai/curriculum/CurriculumScopeResolver.java", "line": 58, "label": "scope resolver" },
-        { "path": "src/main/java/com/syllabai/curriculum/CurriculumController.java", "line": 21, "label": "curriculum API" }
+        {
+          "path": "apps/api/src/services/content/scope.ts",
+          "line": 46,
+          "label": "V53 per-course resolution (ADR-030)"
+        },
+        {
+          "path": "apps/api/src/services/curriculum/index.ts",
+          "line": 37,
+          "label": "buildCurriculumModule"
+        }
       ],
-      "pos": [710, 460],
-      "size": [170, 70]
+      "pos": [
+        710,
+        460
+      ],
+      "size": [
+        170,
+        70
+      ]
     }
   ],
   "boundaries": [
     {
       "kind": "region",
-      "label": "syllabai-core · Spring Boot — pinned at 9385011",
+      "label": "syllabai-v2 apps/api — pinned at d07267a",
       "wraps": [
         "interaction_api",
         "assessment_smartmark",
@@ -252,8 +411,20 @@
       "label": "human marks · always authoritative",
       "fromSide": "top",
       "toSide": "top",
-      "via": [[565, 14], [1025, 14]],
-      "labelAt": [795, 14]
+      "via": [
+        [
+          565,
+          14
+        ],
+        [
+          1025,
+          14
+        ]
+      ],
+      "labelAt": [
+        795,
+        14
+      ]
     },
     {
       "from": "evidence",
@@ -314,8 +485,8 @@
       "title": "How to read status",
       "items": [
         "IMPLEMENTED = code exists in the pinned repository/commit; VERIFIED adds acceptance evidence from project records",
-        "sources[] = file:line verified at syllabai-core @ 9385011 via Archify evidence verification",
-        "gate closed / not wired / overlay only are explicit statuses — never read them as live capability"
+        "sources[] = file:line verified at syllabai-v2 @ d07267a via the Archify evidence workflow",
+        "Learner surfaces moved into the pinned monorepo (apps/hub) at the 2026-10-13 cutover — no longer cross-repo"
       ]
     },
     {
@@ -341,8 +512,9 @@
       "dot": "cyan",
       "title": "Cross-repo nodes",
       "items": [
-        "Learner interaction surfaces live in syllabai-web @ bfc9850: PracticeView.tsx, TutorChatView.tsx, NextBestActionsCard.tsx",
-        "One repository per Archify diagram — this diagram pins syllabai-core, so web surfaces are text-cited here, not file:line verified"
+        "Learner interaction surfaces live in the pinned monorepo: apps/hub (Next.js 16) — Practice · Tutor chat · Next actions cards",
+        "The legacy syllabai-web learner surface is retired: syllabai-web is now the internal teacher/ops console (ADR-029); syllabai-hub (v1) archived read-only at the cutover",
+        "One repository per Archify diagram — this diagram pins syllabai-v2 @ d07267a"
       ]
     }
   ]

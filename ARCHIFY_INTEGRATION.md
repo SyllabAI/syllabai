@@ -136,6 +136,13 @@ Key rules baked into this workflow:
 | `docs/archify/tools/visual_evidence_refresh.py` | Refresh browser-evidence script (new-fact DOM presence + containment) |
 | `docs/archify/tools/refresh-manual-browser-evidence.json` | Refresh evidence results (5/5 PASS, SHA-256-bound to committed artifacts) |
 | `docs/archify/tools/qg-browser-check/` | Packaged browser-check receipts attempted on post-QG bytes (environmental fail, recorded) |
+| `docs/archify/T-ARCHIFY-REFRESH2-EVIDENCE-REPORT.md` | Evidence report for the 2026-10-21 refresh-2 (re-pin to `syllabai-v2`, port re-anchoring, §11) |
+| `docs/archify/tools/visual_evidence_refresh2.py` | Refresh-2 browser-evidence script (v2-cutover new-fact DOM presence + containment) |
+| `docs/archify/tools/refresh2-manual-browser-evidence.json` | Refresh-2 evidence results (5/5 PASS, SHA-256-bound to committed post-QG artifacts) |
+| `docs/archify/tools/visual_screenshots_refresh2.py` | Refresh-2 screenshot capture script |
+| `docs/archify/tools/refresh2-screenshots.json` | Refresh-2 screenshot index (SHA-bound) |
+| `docs/archify/tools/refresh2-evidence/*.png` | 15 committed screenshots (5 artifacts × light/dark + full-page) |
+| `docs/archify/tools/refresh2-browser-check/` | Packaged browser-check receipts attempted on post-QG bytes (provenance-mismatch, recorded) |
 
 ## 5. Browser evidence status (honest record)
 
@@ -331,3 +338,32 @@ SHA-256-bound to the committed post-QG bytes); perceptual review performed on
 all five across both themes. Tracker note: this lane's record is Session 137 in
 WORKLOG.md (the concurrent lane held sessions 118–136; PROGRESS.md per-session
 sections end at 129 by its own header note).
+
+## 11. Refresh-2 to the system of record (2026-10-21)
+
+The 2026-10-13 cutover (T-C84) made §10's pin second-stale — `syllabai-core`
+is archived read-only and `syllabai-v2` is the only system of record. All five
+diagrams re-pinned to
+**`syllabai-v2 @ d07267ae3d57974c202bf2f4141b9a3ba00a8ee8`** and every
+`sources[]` anchor re-anchored to the TypeScript port (the port headers
+themselves cite the frozen `syllabai-core @ 6cad6ef`, keeping the two-legged
+evidence chain). **122 source references verified at the pin** by the v3
+deliver evidence gate (35/22/21/22/22 per artifact). Drift folded in honestly:
+api/hub of record relabels, learner surfaces moved into the pinned monorepo
+(`apps/hub`), NEW `books_rail` component (ADR-BOOK-0001 · migration 0005 ·
+demo gate c01–c05), pipeline 1.3.0, gemini-3.6-flash chain drift, ADR-037 v0.7
+markPoints per point, Neon+drizzle posture — and the **retrieval diagram
+shrinks 12 → 10 nodes**: the BM25 lexical arm and the RetrievalFabric
+orchestrator were NOT ported to v2 (verified absent at the pin; the Java arms
+were unwired by design, zero consumers, T-C13) — the not-serving card states
+the removal instead of pretending the arms exist. The overview returns to the
+documented §6 `standard` profile (its `showcase` meta was later drift; the
+strict 6px-projected desktop-readability floor cannot hold at viewBox 2350 for
+any wide map) and passes the strict final check 0-error. QG re-applied
+byte-stably; packaged `browser-check` on post-QG bytes = provenance-mismatch
+×5 (receipts committed, same record shape as §9); manual Playwright evidence
+**5/5 PASS** (new-fact DOM needles + 4-viewport containment, SHA-256-bound to
+the committed post-QG bytes) + 15 screenshots perceptually reviewed. Full
+change table, errata and receipts:
+`T-ARCHIFY-REFRESH2-EVIDENCE-REPORT.md`. Tracker note: this lane's record is
+Session 209 in WORKLOG.md.

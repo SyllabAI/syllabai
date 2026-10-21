@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "browser-check",
+  "evidenceKind": "automated-browser",
+  "status": "fail",
+  "visualReview": "not-requested",
+  "provenance": "mismatch",
+  "deliveryReceiptId": "2fff4fba-15ab-443d-adb6-d8a3881c94d9",
+  "artifact": {
+    "path": "/home/z/my-project/syllabai-repo/docs/archify/syllabai-architecture-overview.html",
+    "sha256": "dadaaa332a4c7aa6a0de61bd9905a72d22cf6e0e6dd08acee5f12ba3c9f42931",
+    "bytes": 897072
+  },
+  "error": "The artifact bytes do not match their delivery provenance.",
+  "diagnostics": [
+    {
+      "code": "delivery/provenance-mismatch",
+      "severity": "error",
+      "message": "The artifact bytes do not match their delivery provenance.",
+      "subject": {
+        "artifact": "/home/z/my-project/syllabai-repo/docs/archify/syllabai-architecture-overview.html",
+        "provenance": "/home/z/my-project/syllabai-repo/docs/archify/syllabai-architecture-overview.delivery.json"
+      },
+      "evidence": {
+        "expectedSha256": "58374fb874eadb6e33413c6ee9d4956dc2a9ea8d8878bf4aa7bcef5c7bb37809",
+        "actualSha256": "dadaaa332a4c7aa6a0de61bd9905a72d22cf6e0e6dd08acee5f12ba3c9f42931",
+        "expectedBytes": 890058,
+        "actualBytes": 897072
+      },
+      "supportedFixes": [
+        "restore the delivered artifact or rerun deliver to create a matching artifact and provenance pair"
+      ]
+    }
+  ],
+  "containment": {
+    "status": "fail",
+    "policy": "fit-or-reader-declared-readable-vertical-scroll",
+    "viewports": []
+  },
+  "captures": {
+    "status": "not-requested",
+    "screenshots": [],
+    "contactSheet": null
+  },
+  "sidecars": {
+    "directory": "/home/z/my-project/syllabai-repo/docs/archify/tools/refresh2-browser-check",
+    "receipt": "syllabai-architecture-overview.browser-check.json",
+    "files": []
+  }
+}
