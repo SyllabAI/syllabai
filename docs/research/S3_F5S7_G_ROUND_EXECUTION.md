@@ -139,3 +139,39 @@ T-MIG-139 run-002 (main `264e038`, trace `1a15a68f77ec7da9`) independently verif
 - **[CLOSED this round]** Migration leg — fresh-environment companion premise repaired and PROVEN (63/63 tables, 174/174 indexes, ck7); PR #223 merged.
 - **[STAGED — awaiting one input]** Build leg (prj_FN5X) — operator option A (token) or B (git-integration flip).
 - **[STANDS, operator-side]** `REVOKE neon_superuser FROM t0_readonly` (42501 lane-denied); owner-URI rotation after Vercel env review (procedure ready); GH/Neon token rotations; committed-token `ghp_1KJHf2…` revoke-first (+ optional history scrub).
+
+---
+
+## ADDENDUM 3 — DEPLOY WINDOW BUILD-LEG DISCHARGE (2026-10-21, token handoff trace `1a15acf3fcb38bd1`, re-fire order trace `1a15bc1035148509`)
+
+**Order of record**: "Try again" — re-fire the prj_FN5X production deploy staged by Addendum 2. This addendum closes the `[STAGED — awaiting one input]` build-leg residual. Receipt (lane-side): `DEPLOY_WINDOW_RECEIPT_w1b_20261021.json`, sha fp16 `baa58490e0de6c78`.
+
+### Token lane — HANDED AND VERIFIED
+
+- Vercel PAT re-delivered (trace `1a15acf3fcb38bd1`), staged 0600, used memory-only: sha fp16 **`d254bbfaac004354` = the standing Task-25 PAT identity, UNROTATED** (matches the r1c/r7a pinned fingerprints). Env of record pulled FIRST-HAND from the platform (`v10/projects/prj_FN5X…/env?decrypt=true`): 9 production keys; **`DATABASE_URL` fp16 `b289a2298e707904` MATCH** (DSN of record, run-009 lineage — unrotated).
+
+### First fire attempt — BLOCKED PLATFORM-SIDE (fail-safe held)
+
+- `vercel deploy --prod` (CLI-upload, 093 recipe, 2-file stage) → **`api-deployments-free-per-day`** ("more than 100"): hobby-plan daily cap, `GET /v2/teams` first-hand plan=hobby. NOT a code error, NOT the run-005 alias-flip class: no deployment registered, alias carrier `dpl_ENEw3fhfz2NXdXfVP73DmZJpd8pd` READY unchanged, live `/actuator/health` 200 UP. Earliest-retry anchor of record 2026-10-21T19:53Z (platform-controlled estimate).
+
+### Sandbox rollback + first-hand reconstruction
+
+- Between the blocked fire and the re-fire order the workspace lost: the deploy stage, the window scripts, the w1a receipt, the staged Vercel token, the worklog entry, and the local `26e11d8` objects (checkout rolled back to `bf37ed8` dirty). Everything was rebuilt first-hand this window: token re-staged from the conversation record; `origin/main` fetched anonymously (`6ebf124`, `26e11d8` IS ancestor); worktree at **`26e11d8`** — `6ebf124` REJECTED as deploy target (delta touches `apps/api` cla-threads + `packages/db` migration `0004_cla_thread_sync_tier`, NOT applied to prod).
+- Recipe re-derived from surviving of-record scripts: `bundle-api.js` build-time pin gate (6 snapshots verified against 9 pin references extracted from BOTH source bands, 3 cross-band — PASS) + `w0a-entry.cjs` global-shim entry (readFileSync asset interception, `globalThis.Bun` shim) + the 093 path-parity adapter (`x-forwarded-host`/`x-forwarded-proto` URL rebuild) + `import.meta.dir`→`__dirname` swap. Bundle: **2,552,453 bytes, fp16 `6cc1af632c38af7e`**; needles singleOwnerScope 4 / learnerSubjectScope 2 / spec_point_node_id 33 (bounded 32..40 — pooling-sensitive; source truth 40 sites).
+- Localgate 5/5 on the real bundle with the env of record (memory-only): health 200 UP; register malformed 400 `malformed_body`; cron unauthed 401 **CONFIGURED-law** (CRON_SECRET present — the platform-staged one); unknown path 401; login wrong-creds 401 (DB SELECT, read-only). Boot-loud pins silent.
+
+### Re-fire — EXECUTED TO GREEN (rate limit CLEARED)
+
+- Fire admitted 2026-10-21T00:16..00:17Z — the daily cap reset was observed EARLIER than the platform-controlled 19:53Z anchor. `vercel deploy --prod --yes` (CLI 65.0.0): **Ready in 1m, aliased**.
+- **New carrier of record: `dpl_GfV24BcbF8jwnzLp7b1gVRodVBBV`** (production, READY, created 2026-10-21T00:17:36.032Z, project `prj_FN5XQUMbpqKhZXFXpT80OdsKveJZ`), @ `26e11d8` tree, bundle fp16 `6cc1af632c38af7e`.
+- **Alias flip AUTHORITATIVE** (v4/aliases first-hand): `syllabai-v2.vercel.app` AND `syllabai-v2-syllab-ai.vercel.app` → `dpl_GfV24Bcb…`. Prior carrier `dpl_ENEw3fhfz2NXdXfVP73DmZJpd8pd` (run-009-r7a) superseded, READY, not deleted.
+- **Live chain 6/6** on the alias: `/actuator/health` 200 `{status:UP}`; register malformed 400 `malformed_body`; cron unauthed 401 with the CONFIGURED-law body of record ("the hub seam forwards the Vercel Cron bearer verbatim"); unknown path 401 (auth-wall-before-404); login wrong-creds 401 `invalid_credentials` (prod DB SELECT, read-only); path parity both rewrites live.
+- Addendum-2's fingerprinting caveat (health = static parity shape) answered: deployed-bundle verification ran on Vercel deployment metadata (token lane) + alias resolution + behavior probes.
+- Integrity: zero prod DDL; zero DB writes (read-only failed-login SELECT legs only); `flyway_schema_history` untouched (63 rows); migration-0003 fresh-env-only disposition unchanged.
+
+### Residual ledger after this addendum
+
+- **[CLOSED this addendum]** Build leg (prj_FN5X) — production serves the `26e11d8` bundle via `dpl_GfV24BcbF8jwnzLp7b1gVRodVBBV`, live 200 UP, dual-alias confirmed.
+- **[STANDS — prerequisite for the next build]** migration `0004_cla_thread_sync_tier` (on main `6ebf124`) must be prod-applied (fresh-env-proven, G1-style discipline) BEFORE any deploy beyond `26e11d8` — the cla-threads API surface it feeds is not yet deployed.
+- **[STANDS, operator-side]** t0_readonly `neon_superuser` revoke; owner-URI rotation after env review; token rotations (Vercel + Neon + GH — all transited plaintext chat, Session 204 note reiterated); committed-token revoke.
+- **[DISCLOSED]** w1a-lane artifacts (stage/scripts/receipt/worklog entry) lost to the sandbox rollback and reconstructed here from first-hand evidence; nothing re-executed beyond the staged deploy itself.
