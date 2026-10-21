@@ -432,3 +432,51 @@ After the ADR-028 import landed (web `f041237`), the operator judged the adapted
 **Date:** 2026-09-30
 
 The tutor surface was chemistry-only regardless of the course being browsed (operator-reported): the ask contract `{question, history, sessionId}` carries no course, `CurriculumScopeResolver.resolveActive()` is a global single-scope resolution that silently yields the only surface-owning curriculum (4CH1-2017) for every ask, and `tutor_sessions` (V42) has no course column. Decisions on the record: (1) **V53** (V51/V52 are consumed by classroom foundation + teaching coverage) adds `tutor_sessions.course_ref VARCHAR(64) NULL` — opaque, no FK, NULL legitimate for legacy/anonymous rows; (2) `TutorAskRequest` gains optional `courseRef` (max 64, never parsed by core); (3) new `CurriculumScopeResolver.resolveForCourse(ref)` matches **exact** `curriculum_versions.code` + ACTIVE + the existing ownsSurface test — exactly one candidate resolves, zero or ambiguous refuse (fail-closed, deterministic copy naming the ref); this is a lookup in core's OWN curriculum registry, so the V47/V48/V49/V51 "course refs are opaque, hub-owned" ruling is preserved verbatim; (4) absent ref keeps the legacy `resolveActive()` path byte-identical (pilot compatibility); (5) the hub registry (courses.json) gains a nullable hub-maintained `curriculumCode` per course — the mapping is explicitly hub data because `YCH11 → IAL-CHEM-2018` is not derivable — `/tutor?course=<slug>` resolves slug → curriculumCode through it, and a course without a mapping gets the tutor honestly gated ("not yet available"), never a silent wrong-corpus fallback; (6) retrieval layer, learner model, and CLA are untouched (scope is already a parameterized seam); (7) non-goals recorded: no per-learner selector (the resolver's learnerId hook stays reserved), no subject_enrollments authorization (target-EERD G1) in this tranche. Rejected: core-side slug registry table (second registry, violates the opaque ruling); prefix/normalized matching (no rule exists, hidden registry in code); do-nothing (the day a second curriculum gains surface, the global resolver fail-closes ALL asks and breaks the pilot). Risk made visible: unmapped courses become gated, not wrong. Full rationale, verification plan, and provenance states in `ADR-030-PER_COURSE_TUTOR_SCOPING.md`; schema delta in `docs/` ERD update (`V53_TUTOR_COURSE_ERD.md`).
+## ADR-031: Forgetting decay is computed at read, never persisted — `skill_states.mastery` is the post-practice anchor P₀
+
+**Status:** Accepted (2026-10-01). The nightly decay job persisted its own output, compounding decay superlinearly (each night re-applied the full elapsed exponent to an already-decayed value), while every learner-facing read surface already computes decay at read. The fix makes the stored value the post-practice posterior P₀ — decay exists only as a read-time computation. Implemented on `syllabai-core` (NightlyDecayJob / SkillState / EbbinghausDecayService), merged via PR #39 (`f1a3a5e`, 1075 tests green); resolves deep-audit finding **S1** and, by declaration, the S3-1 raw-vs-effective banding split. Full record: `ADR-031-DECAY_IS_COMPUTED_NEVER_PERSISTED.md` (standalone file remains the authority).
+
+
+> Ledger entry backfilled 2026-10-21 from the standalone file (docs reconciliation pass, operator directive trace `1a15e714070287a9`; the standalone file remains the authority). No decision content changed.
+
+## ADR-032: Misconception evidence ages toward the base rate — BDT posteriors are anchors, relaxation is computed at read
+
+**Status:** Accepted (2026-10-02). A BDT posterior was written once per evidence event and frozen forever, so stale diagnoses fired at full strength; the fix treats posteriors as anchors and computes relaxation toward the base rate at read (no job, no migration, immediate effect on first post-deploy read). Implemented on `syllabai-core` branch `fix/med2-misconception-staleness` (+537/−136), merged via PR #43 (`4ecbdc0`, 1110 tests green, IT suite green in CI); resolves deep-audit finding **MED-2** and applies the S3-1 "one semantics everywhere" rule to misconception banding. Full record: `ADR-032-MISCONCEPTION_EVIDENCE_AGES_TOWARD_THE_PRIOR.md` (standalone file remains the authority).
+
+
+> Ledger entry backfilled 2026-10-21 from the standalone file (docs reconciliation pass, operator directive trace `1a15e714070287a9`; the standalone file remains the authority). No decision content changed.
+
+## ADR-033: BKT emission is format-aware — guess priced per question format; decay enters the practice update; the calibration instrument ships
+
+**Status:** Accepted (2026-10-02, rebuilt with design-challenge amendments). BKT emission priced the guess at the raw `1/optionCount` without format awareness, updated from the raw anchor instead of the posterior, and binned raw priors in the calibration report; the rebuild prices guess per question format, folds decay into the practice update, and ships the calibration instrument whose gate defers the remaining τ-band/threshold retunes. Implemented on `syllabai-core` branch `fix/s2-format-aware-emission-v2` @ `42ea7d0` (the unmerged `-v1` branch is superseded), 1131 tests green; resolves the instrumentable core of deep-audit finding **S2**. Full record: `ADR-033-BKT_EMISSION_IS_FORMAT_AWARE.md` (standalone file remains the authority).
+
+
+> Ledger entry backfilled 2026-10-21 from the standalone file (docs reconciliation pass, operator directive trace `1a15e714070287a9`; the standalone file remains the authority). No decision content changed.
+
+## ADR-034: Cross-device trail merge is receipt-based — the raw rating trail is served bounded, and sync receipts (not timestamps) are the cross-side identity
+
+**Status:** Accepted (2026-10-02). T-C57's newest-evidence-wins rule gave a two-device learner only one side's flashcard history; serving the RAW append-only V47 trail (bounded, keyset-read) makes a true chronological merge honest — the merge of two event streams invents nothing, and sync receipts are the cross-side identity. Both implementation PRs merged green: `syllabai-core` PR #63 (`5a8d57f`) and `syllabai-hub` PR #14 (`2030ef6`, operator trace 1a0fccf62d9db3d1); the Ebbinghaus derivation ladder stays bit-for-bit frozen (ADR-031 semantics), only the derivation input changes. Full record: `ADR-034-TRAIL_MERGE_IS_RECEIPT_BASED.md` (standalone file remains the authority).
+
+
+> Ledger entry backfilled 2026-10-21 from the standalone file (docs reconciliation pass, operator directive trace `1a15e714070287a9`; the standalone file remains the authority). No decision content changed.
+
+## ADR-035: The executive layer — exam-aware next-best-action (the study planner), and what deliberately stays out of scope
+
+**Status:** **Accepted — 2026-10-04.** The operator ruled on **D1 (exam-date ownership)** the same day the ADR was drafted (trace 1a10493e233cb521; sequencing word "T-C77 first", trace 1a1049b6b711093d), meeting the D1 gate; implementation proceeds via T-C79 (claim-first). The NBA engine remains byte-untouched at `nba-rules/v1.3` until its own lane. Scope: recommendation-module tier ordering and reason codes, a teacher-facing exam-entry surface, one Master Spec §22 route row, the assignments→NBA seam — with notifications, learner-entered timetables, streaks, plan persistence and the parent surface explicitly out of scope. Full record: `ADR-035-EXECUTIVE_LAYER_EXAM_AWARE_NBA.md` (standalone file remains the authority).
+
+
+> Ledger entry backfilled 2026-10-21 from the standalone file (docs reconciliation pass, operator directive trace `1a15e714070287a9`; the standalone file remains the authority). No decision content changed.
+
+## ADR-036: Research endpoint k-anonymity on the wire (the C7 resolution)
+
+**Status:** **Proposed** (drafted 2026-10-04 under T-COORD-3 R-D, operator directive trace 4acec4babbc5db5c842fa4bce379e604). Carries ADR-033's open follow-up that is not gated on data: the research endpoint spans all learners and is nodeId-filterable, so small-cell exposure needs k-anonymity enforcement on the wire. The operator's ACCEPT flip is the ratification step; this ADR does not self-accept. Full record: `ADR-036-RESEARCH_ENDPOINT_K_ANONYMITY.md` (standalone file remains the authority).
+
+
+> Ledger entry backfilled 2026-10-21 from the standalone file (docs reconciliation pass, operator directive trace `1a15e714070287a9`; the standalone file remains the authority). No decision content changed.
+
+## ADR-037: Official-paper questions are EXTRACTED, never regenerated — the past-paper → serving-schema conversion is verbatim-first with fail-closed gates, and LLM output is confined to tagging and linking
+
+**Status:** Proposal v0.2 (drafted 2026-10-20, trace 1a15a8439ed5ed31) with full-corpus evidence attached: all 16 series of 4CH1/1C converted (14/16 all-gates PASS, 169 questions, 930 parts, 1754/1760 marks, MCQs keyed except two honest 2020-01 refusals, negative controls 3/3 per series, independent cross-diff 161/161). **Execution divergence on the record (2026-10-21):** the wiring half has been executed in the system of record — converter v0.6/v0.7 waves wired the 16 official question sets into the v2 hub bundle and made markPoints persist per point (`SyllabAI/syllabai-v2` PRs #239 + #249, merged 2026-10-21; 169/169 questions anchored), with the wiring record at `syllabai-v2/docs/ADR-037-OFFICIAL_PAPERS_WIRING.md` (restored 2026-10-21 after an accidental 404-body overwrite at `045bcd7040`; original content preserved at `743b53e5b8`). The GO-gated items in the standalone file — the tracker row claim (satisfied in part by this tracker backfill, F-178) and the remaining 4CH1 variants (2C–4C) plus new-course scheduling — remain open pending operator adjudication. Full record: `ADR-037-OFFICIAL_PAPER_QUESTION_EXTRACTION.md` (standalone file remains the authority).
+
+
+> Ledger entry backfilled 2026-10-21 from the standalone file (docs reconciliation pass, operator directive trace `1a15e714070287a9`; the standalone file remains the authority). No decision content changed.
