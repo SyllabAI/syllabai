@@ -1,8 +1,9 @@
 # ADR-036: Research endpoint k-anonymity on the wire (the C7 resolution)
 
-**Status: Proposed** (drafted 2026-10-04 under T-COORD-3 R-D, operator directive
-trace 4acec4babbc5db5c842fa4bce379e604). The operator's ACCEPT flip is the
-ratification step; this ADR does not self-accept.
+**Status: Accepted** (ACCEPT recorded 2026-10-23 by the operator's ACCEPT word, chat
+trace 1a169835f503b151; drafted 2026-10-04 under T-COORD-3 R-D, operator directive
+trace 4acec4babbc5db5c842fa4bce379e604). The operator's ACCEPT flip was the
+ratification step; this ADR does not self-accept. See "ACCEPT of record" below.
 
 ## Context
 
@@ -51,3 +52,36 @@ protocol due at its merge word per the fleet census in `TODO.md`).
 2. Moved-base protocol: rebase/merge onto current core main, core-ci green.
 3. Operator merge word on PR #62 with this ADR's ACCEPT recorded in the same
    session (the T-C72/T-C76 pattern: decision, merge, and receipt in one trace).
+
+## ACCEPT of record (2026-10-23)
+
+The operator's ACCEPT word is chat trace `1a169835f503b151` (2026-10-23). The
+T-C72/T-C76 pattern — decision, merge, and receipt in one session — completes here:
+the decision is this banner + section, the merge of record is **syllabai-core PR #62**
+(merge `bbc438e86ec4739709f40c0f393bc9ee3ee18153`, 2026-10-04), and the receipt is the
+verification-gate evidence below.
+
+Verification gate, leg by leg:
+
+1. **Implementation review — PASS.** The merged learner-unit rule on core main
+   (`LearnerModelCalibrationService.java`) counts DISTINCT learners, not rows: per-cell
+   `Set<UUID> learners` and per-bin `Set<UUID> binLearners` accumulators gate every wire
+   statistic on `MIN_REPORTABLE_LEARNERS`. `k = 5` is a code constant, deliberately not
+   configuration (a privacy floor, not a tuneable). Sub-k cells render all outcome
+   statistics `null` with `suppressed: true` while counts stay visible (sampleCount,
+   learnerCount, bin counts, skippedRows); empty segments render honest zeros with
+   `suppressed: false` (no evidence, never hidden evidence); suppressed bins still
+   contribute to segment aggregates (excluding them would select-bias the statistic).
+   Wire surface: `GET /api/v1/research/learner-model/calibration`. Tests: the PR's
+   +365/−122 battery on `LearnerModelCalibrationServiceTest`.
+2. **Moved-base protocol — SATISFIED.** PR #62 merged onto core main 2026-10-04, and
+   core-ci is green on the current core main head carrying the merged code
+   (`6cad6ef9463e`, run 37204223285 success).
+3. **Operator merge word + ACCEPT in one session — THIS SESSION.** The merge word is
+   the ACCEPT trace itself; the merge of record predates it (2026-10-04, owning lane)
+   and is ratified here.
+
+Consequences now of record: ADR-033's open follow-up is closed; the C4 §4.2 "floor,
+not the answer" note is resolved. The F-186 battle wave's matchmaking/brackets gate
+(operator ruling trace `1a1693693b033a2d`) cites an ACCEPTED ADR on its ADR-036 arm;
+its realtime-infra arm is unchanged.
