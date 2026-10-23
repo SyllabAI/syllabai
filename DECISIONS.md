@@ -469,7 +469,7 @@ The tutor surface was chemistry-only regardless of the course being browsed (ope
 
 ## ADR-036: Research endpoint k-anonymity on the wire (the C7 resolution)
 
-**Status:** **Proposed** (drafted 2026-10-04 under T-COORD-3 R-D, operator directive trace 4acec4babbc5db5c842fa4bce379e604). Carries ADR-033's open follow-up that is not gated on data: the research endpoint spans all learners and is nodeId-filterable, so small-cell exposure needs k-anonymity enforcement on the wire. The operator's ACCEPT flip is the ratification step; this ADR does not self-accept. Full record: `ADR-036-RESEARCH_ENDPOINT_K_ANONYMITY.md` (standalone file remains the authority).
+**Status:** **ACCEPTED — 2026-10-23** (operator ACCEPT word, chat trace 1a169835f503b151; the T-C72/T-C76 pattern — decision, merge, and receipt in one session; the merge of record is syllabai-core PR #62, merge `bbc438e86ec4`, 2026-10-04). Carries ADR-033's open follow-up that is not gated on data: the research endpoint spans all learners and is nodeId-filterable, so small-cell exposure needs k-anonymity enforcement on the wire — resolved as k-anonymity on the wire with the unit as the learner (k = 5, distinct learners; sub-k cells hide outcomes, keep counts). The operator's ACCEPT flip was the ratification step; this ADR does not self-accept. Full record: `ADR-036-RESEARCH_ENDPOINT_K_ANONYMITY.md` (standalone file remains the authority).
 
 
 > Ledger entry backfilled 2026-10-21 from the standalone file (docs reconciliation pass, operator directive trace `1a15e714070287a9`; the standalone file remains the authority). No decision content changed.
