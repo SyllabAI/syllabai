@@ -1,13 +1,14 @@
 # ADR-038: The realtime plane is standalone, ephemeral, and boundary-strict — Bun-native WebSocket transport outside the serverless request plane, the identity law reused at the upgrade, and primitives that never decide
 
-**Status: PROPOSED** (filed 2026-10-24 with the build opening of record already
-LANDED — v2 PR #340, merge `684d9d8f994d61c6e4367a75068c26d3df501d25`, base
-`69a4d21b1c`, head `c5b3b1d8f8`; operator words of record: initiation trace
+**Status: ACCEPTED** (ACCEPT recorded 2026-10-24 by the operator's ACCEPT word,
+chat trace 1a16a360694c0d8d; filed 2026-10-24 with the build opening of record
+already LANDED — v2 PR #340, merge `684d9d8f994d61c6e4367a75068c26d3df501d25`,
+base `69a4d21b1c`, head `c5b3b1d8f8`; operator words of record: initiation trace
 `1a169faf8411d2cd` = "Initiate a real-time infrastructure project", build
 opening trace `1a16a048c1b94319` = "Proceed"). The implementation is the
-decision's working evidence; **the ACCEPT word stays the operator's** (the
-ADR-036 precedent — this ADR does not self-accept). Until ACCEPT, this file is
-the design posture of record for the F-188 line and its consumers.
+decision's working evidence; the operator's ACCEPT flip was the ratification
+step (the ADR-036 precedent — this ADR does not self-accept). See "ACCEPT of
+record" below.
 
 ## Context
 
@@ -123,3 +124,61 @@ to the realtime lane; the upstream reds are not this lane's content to fix.
   durability needs are their own lines), best-effort envelopes (their delivery
   guarantees are their own laws), and the identity-minimal wire (their
   surfacing stays ADR-036 k=5 governed).
+
+## ACCEPT of record (2026-10-24)
+
+The operator's ACCEPT word is chat trace `1a16a360694c0d8d` (2026-10-24). The
+build-opening pattern — implementation of record first, operator ratification
+second — completes here: the decision is this banner + section, the merge of
+record is **v2 PR #340** (merge `684d9d8f994d61c6e4367a75068c26d3df501d25`,
+2026-10-24), and the receipt is the verification gate below.
+
+Verification gate, leg by leg:
+
+1. **Implementation review — PASS (re-verified first-hand 2026-10-24 on the
+   current v2 main head `b1ec5db73c`, which carries the plane as an ancestor
+   merge).** All build artifacts on main: `apps/api/src/realtime/{protocol,state,server}.ts`,
+   `apps/api/test/realtime/{state,wire}.test.ts`, `docs/F188-REALTIME-PLAN.md`,
+   the run-001 receipt, the `dev:realtime` script. The laws spot-check against
+   the merged code: **R1** — standalone `Bun.serve` boot of record, path
+   `/realtime` (non-matching paths 404), `REALTIME_PORT` default 8081; **R2** —
+   the upgrade composes `createJwtAuthenticator` and answers failures with the
+   Boot-shaped 401 body, no socket resources on failure; **R3** — state is
+   `Map`-only in-memory (conns/rooms/queues/pending envelopes), the module's
+   only persistence mention is the law comment itself ("no persistence, no
+   gradebook surface, no settlement math"), the deterministic sweep drops stale
+   conns past `STALE_MS` 90 s and envelopes past `ENVELOPE_TTL_MS` 600 s; **R4**
+   — `queue.take` returns the n oldest ids and removes them (the code comment
+   pins "primitives that never decide"), envelopes relay byte-identical with
+   `stored: true` delivery and a server-carried `from`; **R5** — the caps of
+   record are all present in the `RT` block and fail-closed in the handlers:
+   `MAX_FRAME_BYTES` 65_536 (adapter backstop, close 1009), `ENVELOPE_BYTES`
+   16_384, `ROOM_CAP` 32 (`room_full`) + `MAX_ROOMS` 1024 (`room_cap`),
+   `QUEUE_CAP`/`MAX_QUEUES` 256, `PENDING_PER_TARGET` 64, `BURST_PER_SEC` 30,
+   `HELLO_WINDOW_MS` 10_000; **Q8b** — `protocol.ts`/`state.ts` import only
+   `zod` + `./protocol`; `server.ts` imports the identity law only
+   (`middleware/auth`, `JwtService`, the users repository, the db url).
+2. **Moved-base protocol — SATISFIED.** v2 PR #340 merged onto main 2026-10-24
+   (`684d9d8f99`); the plane rides the current main head `b1ec5db73c` (advanced
+   since only by other-lane work — the T-RULE-T3 re-harvest). CI on that head
+   (run 40009095222): verify lane SUCCESS; the hub lane's single failed step is
+   `Build hub (corpus-verify prebuild + next build)` — the same upstream
+   corpus-verify gate already red at the build's base and disclosed at the
+   diff-only-red merge judgment (run 40006281988 proved it pre-existing; zero
+   realtime files in the failing lane). The verify-side red named at the build
+   merge (`cie-phase4 roster floors`) has since gone green on main via upstream
+   lanes.
+3. **Operator ACCEPT word in-session — THIS TRACE.** The build merge predates
+   it (2026-10-24, owning lane) and is ratified here.
+
+Consequences now of record: the design posture — standalone transport,
+ephemeral state, primitives that never decide, the identity law reused at the
+upgrade — is BINDING for the F-188 line and every consumer line; the REJECT
+path this ADR named at filing (pulling the fully-fenced module) is extinguished
+by this ACCEPT. The realtime-infra arm of the matchmaking/brackets gate
+(operator ruling trace `1a1693693b033a2d`) REMAINS STANDING: the lift condition
+is the plane SERVING in a deployment of record (the operator's hosting
+decision + a serving receipt) — an ACCEPTED design does not serve by itself.
+Consumers (the descoped F-186 territory, descope terms trace
+`1a169e8c0e52bebd`) inherit the disclosures, not exceptions, and any
+class-level surfacing they build stays ADR-036 k=5 governed.
