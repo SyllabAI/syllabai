@@ -136,7 +136,10 @@ def validate_anchors(artifact_text: str, artifact_id: str,
       SIB-ANCH-003 INFO    registry absent (resolution not attempted)
       SIB-ANCH-004 INFO    resolved (registry hit) -- provenance of resolution
     """
-    rep = report or ValidationReport(subject_unit=artifact_id)
+    # NOTE: an empty ValidationReport has __len__()==0 and is therefore FALSY;
+    # `report or ...` would silently discard all anchor findings for otherwise-
+    # clean artifacts. Identity check, not truthiness.
+    rep = report if report is not None else ValidationReport(subject_unit=artifact_id)
     reg = registry or AnchorRegistry(None)
     if not reg.present:
         rep.add(Codes.ANCHOR_REGISTRY_ABSENT, SEVERITY_INFO,

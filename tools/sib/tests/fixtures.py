@@ -5,7 +5,54 @@ no PyYAML (the suite must run on stdlib-only environments).
 """
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+import sys
+from contextlib import contextmanager
+from typing import Dict, Iterator, List, Optional
+
+
+@contextmanager
+def no_pyyaml() -> Iterator[None]:
+    """Force the stdlib-only code paths for the duration of the block.
+
+    CI runners (setup-python images) ship no PyYAML, so the validator's
+    fallback parser is the PRIMARY parser there. This helper makes the
+    no-PyYAML behavior testable on PyYAML-equipped machines by masking the
+    module (``sys.modules['yaml'] = None`` makes ``import yaml`` raise
+    ImportError). The previous state is always restored.
+    """
+    saved = sys.modules.get("yaml")
+    had_yaml = "yaml" in sys.modules
+    sys.modules["yaml"] = None
+    try:
+        yield
+    finally:
+        if had_yaml:
+            sys.modules["yaml"] = saved
+        else:
+            sys.modules.pop("yaml", None)
+
+
+def v2_provenance(
+    source_manifest: str = "src-man-4ch1-2017",
+    generation_run_id: str = "SIB-CHEMISTRY_4CH1-RUN-001",
+    provider: str = "z.ai",
+    model: str = "glm-test-model",
+    agent_version: str = "SIB-GEN-r0",
+    source_revisions: str = ('  source_revisions:\n'
+                              '    syllabai_resources: "ba7815576c4e7f116f06ced7635596159585d245"\n'
+                              '    syllabai_pastpapers: "3632b0e6aaaa1111222233334444555566667777"\n'),
+    indent: str = "  ",
+) -> str:
+    """Schema v2 generator-shape provenance block (body of `provenance:`)."""
+    return (
+        f"{indent}source_manifest: \"{source_manifest}\"\n"
+        f"{indent}generation_run_id: \"{generation_run_id}\"\n"
+        f"{indent}generator:\n"
+        f"{indent}  provider: \"{provider}\"\n"
+        f"{indent}  model: \"{model}\"\n"
+        f"{indent}  agent_version: \"{agent_version}\"\n"
+        f"{source_revisions}"
+    )
 
 
 def artifact_text(
@@ -24,6 +71,7 @@ def artifact_text(
     generated_at: str = "2026-10-01",
     notebook: str = "nb-chem-4ch1",
     source_manifest: str = "src-man-4ch1-2017",
+    provenance_block: Optional[str] = None,
     extra_metadata: str = "",
     sections: str = "_default_",
     records: str = "_default_",
@@ -67,6 +115,10 @@ def artifact_text(
           f"  legacy: {str(temporal_legacy).lower()}\n")
     ss = "source_scope:\n" + "".join(
         f"  {k}: {str(v).lower()}\n" for k, v in source_scope.items())
+    if provenance_block is None:
+        provenance_block = (
+            f"  notebook: \"{notebook}\"\n"
+            f"  source_manifest: \"{source_manifest}\"\n")
     return (
         "---\n"
         "sib_protocol: SIB-1.0\n"
@@ -89,8 +141,7 @@ def artifact_text(
         f"generated_at: {generated_at}\n"
         "\n"
         "provenance:\n"
-        f"  notebook: \"{notebook}\"\n"
-        f"  source_manifest: \"{source_manifest}\"\n"
+        f"{provenance_block}"
         f"{extra_metadata}"
         "---\n"
         f"# {artifact_id} — Misconception Atlas\n\n"

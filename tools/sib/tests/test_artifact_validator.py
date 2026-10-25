@@ -221,5 +221,167 @@ class TestInvalidArtifacts(unittest.TestCase):
         self._expect(validate_artifact(text), Codes.PROV_UNDATEABLE)
 
 
+class TestProvenanceOneOfV2(unittest.TestCase):
+    """Schema v2 provenance one-of (SIB_ARTIFACT_SCHEMA_V2 §3): v1 notebook-shape
+    stays valid; v2 generator-shape valid; mixing/neither/provider-mismatch fail."""
+
+    def _expect(self, rep, code, severity=None):
+        hits = [i for i in rep.issues if i.code == code]
+        self.assertTrue(hits, f"expected {code}, got: {rep.to_json()}")
+        if severity:
+            self.assertTrue(all(i.severity == severity for i in hits),
+                            f"{code} severity mismatch: {rep.to_json()}")
+        self.assertFalse(rep.qa_passed)
+
+    def _v2_text(self, **kw):
+        from tools.sib.tests.fixtures import v2_provenance
+        kw.setdefault("generated_by", "zai_agent")
+        kw["provenance_block"] = kw.pop("prov", v2_provenance())
+        return artifact_text(**kw)
+
+    def test_valid_v2_generator_shape(self):
+        rep = validate_artifact(self._v2_text(),
+                                filename="CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md")
+        self.assertTrue(rep.qa_passed, f"expected clean QA, got: {rep.to_json()}")
+
+    def test_valid_v2_without_source_revisions(self):
+        from tools.sib.tests.fixtures import v2_provenance
+        rep = validate_artifact(
+            self._v2_text(prov=v2_provenance(source_revisions="")))
+        self.assertTrue(rep.qa_passed, f"expected clean QA, got: {rep.to_json()}")
+
+    def test_zai_agent_in_vocabulary(self):
+        # zai_agent + v2 shape is the canonical new-run combination
+        rep = validate_artifact(self._v2_text())
+        self.assertNotIn(Codes.META_INVALID, _codes(rep))
+
+    def test_v2_missing_generator(self):
+        from tools.sib.tests.fixtures import v2_provenance
+        block = v2_provenance().replace(
+            '  generator:\n    provider: "z.ai"\n    model: "glm-test-model"\n'
+            '    agent_version: "SIB-GEN-r0"\n', "")
+        self._expect(validate_artifact(self._v2_text(prov=block)), Codes.PROV_MISSING)
+
+    def test_v2_placeholder_model_rejected(self):
+        from tools.sib.tests.fixtures import v2_provenance
+        rep = validate_artifact(
+            self._v2_text(prov=v2_provenance(model="<actual model identifier>")))
+        self._expect(rep, Codes.PROV_MISSING)
+
+    def test_v2_bad_source_revision_sha(self):
+        from tools.sib.tests.fixtures import v2_provenance
+        rep = validate_artifact(
+            self._v2_text(prov=v2_provenance(
+                source_revisions='  source_revisions:\n'
+                                 '    syllabai_resources: "not-a-sha"\n')))
+        self._expect(rep, Codes.PROV_MISSING)
+
+    def test_zai_agent_with_v1_shape_rejected(self):
+        # provider/shape mismatch: zai_agent requires the v2 generator-shape
+        rep = validate_artifact(artifact_text(generated_by="zai_agent"))
+        self._expect(rep, Codes.PROV_MISSING)
+
+    def test_mixed_shapes_rejected(self):
+        text = artifact_text(generated_by="zai_agent",
+                             provenance_block=(
+                                 '  notebook: "nb-chem-4ch1"\n'
+                                 '  source_manifest: "src-man-4ch1-2017"\n'
+                                 '  generation_run_id: "SIB-CHEMISTRY_4CH1-RUN-001"\n'
+                                 '  generator:\n'
+                                 '    provider: "z.ai"\n'
+                                 '    model: "glm-test-model"\n'
+                                 '    agent_version: "SIB-GEN-r0"\n'))
+        self._expect(validate_artifact(text), Codes.PROV_MISSING)
+
+    def test_neither_shape_rejected(self):
+        text = artifact_text(provenance_block='  source_manifest: "src-man-4ch1-2017"\n')
+        self._expect(validate_artifact(text), Codes.PROV_MISSING)
+
+    def test_v1_notebooklm_still_valid(self):
+        # the historical shape is untouched by v2
+        rep = validate_artifact(artifact_text())
+        self.assertTrue(rep.qa_passed, f"legacy v1 shape must stay valid: {rep.to_json()}")
+
+    def test_v2_source_manifest_crosscheck_still_applies(self):
+        rep = validate_artifact(self._v2_text(),
+                                source_manifest_ids=["other-manifest"])
+        self._expect(rep, Codes.PROV_UNKNOWN)
+
+
+class TestAnchorReportIntegration(unittest.TestCase):
+    """Regression: an empty shared ValidationReport is falsy (__len__==0); the
+    anchor validator must not silently discard findings for clean artifacts."""
+
+    def test_anchor_findings_survive_clean_shared_report(self):
+        from tools.sib.anchors import validate_anchors, build_registry
+        from tools.sib.errors import ValidationReport
+        text = artifact_text()  # contains '**Specification Points:** 1.4, 1.5' records
+        shared = ValidationReport('MIS-01')
+        ret = validate_anchors(text, 'MIS-01', registry=build_registry(["9.99"]), report=shared)
+        self.assertIs(ret, shared)
+        self.assertTrue(any(i.code == Codes.ANCHOR_UNRESOLVED for i in shared.issues),
+                        "anchor findings must not be dropped for clean artifacts")
+
+    def test_anchor_findings_surfaced_by_validate_artifact(self):
+        from tools.sib.anchors import build_registry
+        rep = validate_artifact(artifact_text(), registry=build_registry(["9.99"]))
+        self.assertTrue(any(i.code == Codes.ANCHOR_UNRESOLVED for i in rep.issues),
+                        "validate_artifact must surface anchor findings")
+
+
+class TestStdlibOnlyParseParity(unittest.TestCase):
+    """The validator must QA identically with and without PyYAML -- CI
+    runners (setup-python images) are stdlib-only, so the yamlmini fallback
+    in frontmatter.parse_front_matter is the PRIMARY parser there.
+
+    Regression for the SIB-GEN r0 CI failure (runs 40191937682 /
+    40191981272): the previous one-level builtin fallback silently
+    flattened the nested v2 ``provenance.generator`` mapping, failing both
+    pilot artifacts with SIB-PROV-001 in CI while the PyYAML path stayed
+    green locally.
+    """
+
+    def test_v2_generator_shape_qa_passes_without_pyyaml(self):
+        from tools.sib.tests.fixtures import no_pyyaml, v2_provenance
+        text = artifact_text(generated_by="zai_agent",
+                             provenance_block=v2_provenance())
+        with no_pyyaml():
+            rep = validate_artifact(
+                text, filename="CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md")
+        self.assertTrue(rep.qa_passed, f"stdlib-only QA failed: {rep.to_json()}")
+        self.assertNotIn(Codes.PROV_MISSING, _codes(rep))
+
+    def test_v2_shape_rejections_intact_without_pyyaml(self):
+        # the one-of law must hold on the fallback path too
+        from tools.sib.tests.fixtures import no_pyyaml
+        with no_pyyaml():
+            mixed = validate_artifact(artifact_text(
+                generated_by="zai_agent",
+                provenance_block=('  notebook: "nb-chem-4ch1"\n'
+                                  '  source_manifest: "src-man-4ch1-2017"\n'
+                                  '  generation_run_id: "SIB-CHEMISTRY_4CH1-RUN-001"\n'
+                                  '  generator:\n'
+                                  '    provider: "z.ai"\n'
+                                  '    model: "glm-test-model"\n'
+                                  '    agent_version: "SIB-GEN-r0"\n')))
+            neither = validate_artifact(
+                artifact_text(provenance_block='  source_manifest: "src-man-4ch1-2017"\n'))
+        self._expect_code(mixed, Codes.PROV_MISSING)
+        self._expect_code(neither, Codes.PROV_MISSING)
+
+    def test_v1_notebook_shape_qa_passes_without_pyyaml(self):
+        from tools.sib.tests.fixtures import no_pyyaml
+        text = artifact_text()
+        with no_pyyaml():
+            rep = validate_artifact(text)
+        self.assertTrue(rep.qa_passed, f"stdlib-only QA failed: {rep.to_json()}")
+
+    @staticmethod
+    def _expect_code(rep, code):
+        hits = [i for i in rep.issues if i.code == code]
+        assert hits, f"expected {code}, got: {rep.to_json()}"
+        assert not rep.qa_passed, rep.to_json()
+
+
 if __name__ == "__main__":
     unittest.main()
