@@ -2,8 +2,12 @@
 
 **Status:** PROPOSED  
 **Scope:** Cross-subject research-generation protocol for SyllabAI  
-**Primary research tool:** NotebookLM / Gemini Notebook-class workflow  
-**Durable authority:** SyllabAI repository research artifacts; NotebookLM is an authoring/research instrument, not the runtime source of truth.
+**Generator of record (2026-10-25, SIB-GEN, trace `1a1726b6684c4055`):** the
+provider-neutral Z.ai agent pipeline — `SIB_ZAI_PROMPTS_V1.md` prompts, `SIB_ARTIFACT_SCHEMA_V2.md`
+provenance, SIB source resolver + evidence packs + run manifests. NotebookLM / Gemini
+Notebook remains an **OPTIONAL-HIS research path** (`SIB_NOTEBOOKLM_PROMPTS_V1.md`).  
+**Durable authority:** SyllabAI repository research artifacts; any generator — NotebookLM
+or the Z.ai agent — is an authoring/research instrument, not the runtime source of truth.
 
 ## 1. Purpose
 
@@ -15,7 +19,7 @@ The intended pipeline is:
 
 ```
 official/trusted subject corpus
-  -> NotebookLM subject research
+  -> SIB generation run (Z.ai agent, evidence-pack grounded; NotebookLM = OPTIONAL-HIS path)
   -> research artifacts
   -> artifact QA
   -> SyllabAI staging
@@ -26,11 +30,14 @@ official/trusted subject corpus
 
 SIB does **not** replace canonical curriculum/KG truth. Research artifacts provide subject intelligence and evidence. SpecificationPoints, curriculum semantics, validated assessment identity, learner state and governed learner evidence remain authoritative SyllabAI concerns.
 
-## 2. Subject notebook contract
+## 2. Subject source contract
 
-Use one NotebookLM notebook per subject/qualification context.
+Use one governed source context per subject/qualification: for a Z.ai-agent run this
+is the library's `source_manifest.yaml` resolved at pinned revisions by the SIB
+source resolver into a run-scoped evidence pack; for an OPTIONAL-HIS NotebookLM
+run it is the notebook `4CH1-SIB-NOTEBOOK-001` pattern.
 
-A notebook may contain:
+The source context may contain:
 - current specification;
 - current student/textbook sources;
 - current official QP/MS corpus;
@@ -182,7 +189,7 @@ Later artifacts may use earlier generated artifacts as research context, but sou
 
 ## 5. Artifact status lifecycle
 
-NotebookLM-generated output begins as:
+Generator output begins as:
 
 GENERATED
 
@@ -249,4 +256,15 @@ These are coverage/process metrics, not educational quality scores.
 
 **PROPOSED:** Adopt SIB v1 as the standard cross-subject research-generation protocol.
 
-NotebookLM/Gemini Notebook is an offline research accelerator. The durable research corpus belongs to SyllabAI. SyllabAI owns ingestion, metadata, provenance, retrieval semantics, serving boundaries and learner integration.
+NotebookLM/Gemini Notebook is an offline research accelerator, and the Z.ai agent
+pipeline is a receipted generation runner: neither is the durable corpus. SyllabAI
+owns ingestion, metadata, provenance, retrieval semantics, serving boundaries and
+learner integration.
+
+## 11. Amendments of record
+
+- **2026-10-25 (SIB-GEN, trace `1a1726b6684c4055`):** generation provider changed
+  from NotebookLM-only to provider-neutral. Generator of record = the Z.ai agent
+  pipeline (§ header); NotebookLM demoted to OPTIONAL-HIS; schema provenance now
+  governed by `SIB_ARTIFACT_SCHEMA_V2.md` (V1 notebook shape retained for the
+  historical path); research contracts §3–§10 unchanged in substance.

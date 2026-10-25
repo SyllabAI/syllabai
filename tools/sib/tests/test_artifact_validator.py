@@ -221,5 +221,99 @@ class TestInvalidArtifacts(unittest.TestCase):
         self._expect(validate_artifact(text), Codes.PROV_UNDATEABLE)
 
 
+class TestProvenanceV2(unittest.TestCase):
+    """Schema V2 generator-shape provenance (SIB-GEN, 2026-10-25).
+
+    Pins the shape law: zai_agent/agent -> V2 fields required; notebooklm ->
+    V1 unchanged; operator/human -> source_manifest sufficient; placeholders
+    rejected in both shapes; source-manifest cross-check unchanged.
+    """
+
+    def _expect(self, rep, code, severity=None):
+        hits = [i for i in rep.issues if i.code == code]
+        self.assertTrue(hits, f"expected {code}, got: {rep.to_json()}")
+        if severity:
+            self.assertTrue(all(i.severity == severity for i in hits),
+                            f"{code} severity mismatch: {rep.to_json()}")
+        self.assertFalse(rep.qa_passed)
+
+    def test_v2_zai_agent_passes(self):
+        rep = validate_artifact(artifact_text(generated_by="zai_agent",
+                                              provenance_mode="v2"))
+        self.assertTrue(rep.qa_passed, rep.to_json())
+
+    def test_v2_agent_spelling_passes(self):
+        rep = validate_artifact(artifact_text(generated_by="agent",
+                                              provenance_mode="v2"))
+        self.assertTrue(rep.qa_passed, rep.to_json())
+
+    def test_v2_missing_generator_fields(self):
+        text = artifact_text(generated_by="zai_agent", provenance_mode="v2",
+                             generation_run_id="", generator_provider="",
+                             generator_model="")
+        rep = validate_artifact(text)
+        for field in ("generation_run_id", "generator_provider",
+                      "generator_model"):
+            hits = [i for i in rep.issues
+                    if i.code == Codes.PROV_MISSING
+                    and i.field == f"provenance.{field}"]
+            self.assertTrue(hits, f"expected PROV_MISSING for {field}: "
+                                  f"{rep.to_json()}")
+
+    def test_v2_notebook_only_fails(self):
+        # a zai_agent artifact with V1 notebook-shape provenance lacks the
+        # generator fields -> PROV_MISSING (shape law enforced)
+        text = artifact_text(generated_by="zai_agent", provenance_mode="v1")
+        self._expect(validate_artifact(text), Codes.PROV_MISSING)
+
+    def test_v2_placeholder_model_rejected(self):
+        text = artifact_text(generated_by="zai_agent", provenance_mode="v2",
+                             generator_model="<actual model identifier>")
+        self._expect(validate_artifact(text), Codes.PROV_MISSING)
+
+    def test_v2_placeholder_run_id_rejected(self):
+        text = artifact_text(generated_by="zai_agent", provenance_mode="v2",
+                             generation_run_id="<run identifier>")
+        self._expect(validate_artifact(text), Codes.PROV_MISSING)
+
+    def test_v2_source_manifest_crosscheck(self):
+        rep = validate_artifact(
+            artifact_text(generated_by="zai_agent", provenance_mode="v2"),
+            source_manifest_ids=["other-manifest"])
+        self._expect(rep, Codes.PROV_UNKNOWN)
+
+    def test_v2_notebooklm_still_v1(self):
+        # the OPTIONAL-HIS path keeps the V1 notebook-shape requirement
+        text = artifact_text(generated_by="notebooklm", provenance_mode="v1")
+        rep = validate_artifact(text)
+        self.assertTrue(rep.qa_passed, rep.to_json())
+        text = artifact_text(generated_by="notebooklm", provenance_mode="v2",
+                             notebook="")
+        self._expect(validate_artifact(text), Codes.PROV_MISSING)
+
+    def test_operator_drop_source_manifest_only(self):
+        # deliberate V2 relaxation: operator/human drops need source_manifest;
+        # notebook is optional (was mandatory under V1's NotebookLM era)
+        text = artifact_text(generated_by="operator", provenance_mode="v2")
+        rep = validate_artifact(text)
+        self.assertTrue(rep.qa_passed, rep.to_json())
+        text = artifact_text(generated_by="human", provenance_mode="v2")
+        rep = validate_artifact(text)
+        self.assertTrue(rep.qa_passed, rep.to_json())
+
+    def test_unknown_generated_by_rejected(self):
+        text = artifact_text(generated_by="skynet", provenance_mode="v2")
+        self._expect(validate_artifact(text), Codes.META_INVALID)
+
+    def test_v2_run_record_fields_optional(self):
+        # recommended pins (agent_version, repo revisions) are accepted but
+        # never required
+        text = artifact_text(generated_by="zai_agent", provenance_mode="v2",
+                             generator_agent_version="",
+                             resources_revision="", pastpapers_revision="")
+        rep = validate_artifact(text)
+        self.assertTrue(rep.qa_passed, rep.to_json())
+
+
 if __name__ == "__main__":
     unittest.main()

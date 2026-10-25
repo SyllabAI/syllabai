@@ -211,3 +211,33 @@ sorted-key and byte-stable for identical input.
 | SIB chunk metadata model | IMPLEMENTED (deterministic) |
 | 4CH1 SIB artifact generation | BLOCKED (explicitly out of scope; awaits PR #13 acceptance) |
 | Subject Tutor retrieval integration | BLOCKED (separate runtime decision) |
+
+## Appendix — SIB-GEN provenance V2 implementation record (2026-10-25)
+
+**Run of record:** SIB-GEN, trace `1a1726b6684c4055`, operator order "Execute SIB-GEN".
+**Schema:** `SIB_ARTIFACT_SCHEMA_V2.md` (provider-neutral generator-shape provenance;
+NotebookLM path retained OPTIONAL-HIS). Protocol version unchanged (`SIB-1.0`).
+
+What changed in `tools/sib/artifact_validator.py`:
+
+1. `generated_by` vocabulary extended: `("notebooklm", "operator", "agent", "human",
+   "zai_agent")` — no value removed.
+2. `REQUIRED_PROVENANCE_FIELDS` (V1, notebook + source_manifest) preserved as
+   `REQUIRED_PROVENANCE_FIELDS_V1`; added `REQUIRED_PROVENANCE_FIELDS_V2`
+   (source_manifest, generation_run_id, generator_provider, generator_model).
+3. Shape law enforced in `_validate_provenance` by `generated_by`: notebooklm → V1;
+   zai_agent/agent → V2; operator/human (and empty) → `source_manifest` required,
+   `notebook` optional — a deliberate, tested relaxation of the V1 NotebookLM-era
+   requirement (operator drops are not NotebookLM drops).
+4. Placeholder set extracted to `_PROV_PLACEHOLDERS` and extended with the V2
+   template tokens (`<run identifier>`, `<model identifier>`, `<provider>`, …).
+5. `provenance.source_manifest` cross-check against the operator manifest ids is
+   unchanged and applies to both shapes.
+
+Tests: `tools/sib/tests/test_artifact_validator.py::TestProvenanceV2` (11 cases:
+V2 passes for zai_agent/agent; missing generator fields per-field PROV_MISSING;
+notebook-shape under zai_agent fails; V2 placeholders rejected; source-manifest
+cross-check; notebooklm V1 behavior unchanged both directions; operator/human
+source-manifest-only passes; unknown vocabulary rejected; optional pins accepted).
+Suite of record at this change: **137 passed / 0 failed** (126 pre-existing + 11 new),
+run on the SIB-GEN working branch pre-merge.

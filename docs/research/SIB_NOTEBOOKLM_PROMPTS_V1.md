@@ -1,6 +1,10 @@
 # SIB NotebookLM Prompt Protocol v1
 
-**Status:** PROPOSED  
+**Status:** PROPOSED — retained as an OPTIONAL-HIS reference; the runtime generation
+dependency was superseded 2026-10-25 by `SIB_ZAI_PROMPTS_V1.md` (SIB-GEN run of
+record, trace `1a1726b6684c4055`, schema V2 provenance). The research contract
+(§1–§15) remains the wording authority incorporated by reference there; §2–§13
+family prompts stay verbatim-valid for any future NotebookLM-path run.  
 **Protocol:** SIB-1.0
 
 This document defines reusable prompts. Replace bracketed variables only. Do not rewrite the research contract per subject.

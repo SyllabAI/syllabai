@@ -24,6 +24,13 @@ def artifact_text(
     generated_at: str = "2026-10-01",
     notebook: str = "nb-chem-4ch1",
     source_manifest: str = "src-man-4ch1-2017",
+    provenance_mode: str = "v1",
+    generation_run_id: str = "SIB-CHEMISTRY_4CH1-MIS-01-RUN-001",
+    generator_provider: str = "z.ai",
+    generator_model: str = "glm-test-model",
+    generator_agent_version: str = "SIB_ZAI_PROMPTS_V1",
+    resources_revision: str = "",
+    pastpapers_revision: str = "",
     extra_metadata: str = "",
     sections: str = "_default_",
     records: str = "_default_",
@@ -67,6 +74,26 @@ def artifact_text(
           f"  legacy: {str(temporal_legacy).lower()}\n")
     ss = "source_scope:\n" + "".join(
         f"  {k}: {str(v).lower()}\n" for k, v in source_scope.items())
+    if provenance_mode == "v2":
+        prov = (
+            "provenance:\n"
+            f"  source_manifest: \"{source_manifest}\"\n"
+            f"  generation_run_id: \"{generation_run_id}\"\n"
+            f"  generator_provider: \"{generator_provider}\"\n"
+            f"  generator_model: \"{generator_model}\"\n"
+        )
+        if generator_agent_version:
+            prov += f"  generator_agent_version: \"{generator_agent_version}\"\n"
+        if resources_revision:
+            prov += f"  resources_revision: \"{resources_revision}\"\n"
+        if pastpapers_revision:
+            prov += f"  pastpapers_revision: \"{pastpapers_revision}\"\n"
+    else:
+        prov = (
+            "provenance:\n"
+            f"  notebook: \"{notebook}\"\n"
+            f"  source_manifest: \"{source_manifest}\"\n"
+        )
     return (
         "---\n"
         "sib_protocol: SIB-1.0\n"
@@ -88,9 +115,7 @@ def artifact_text(
         f"generated_by: {generated_by}\n"
         f"generated_at: {generated_at}\n"
         "\n"
-        "provenance:\n"
-        f"  notebook: \"{notebook}\"\n"
-        f"  source_manifest: \"{source_manifest}\"\n"
+        f"{prov}"
         f"{extra_metadata}"
         "---\n"
         f"# {artifact_id} — Misconception Atlas\n\n"

@@ -40,8 +40,12 @@ REQUIRED_METADATA_FIELDS: Tuple[str, ...] = (
     "generated_by", "generated_at", "provenance",
 )
 
-REQUIRED_PROVENANCE_FIELDS: Tuple[str, ...] = (
+REQUIRED_PROVENANCE_FIELDS_V1: Tuple[str, ...] = (
     "notebook", "source_manifest",
+)
+
+REQUIRED_PROVENANCE_FIELDS_V2: Tuple[str, ...] = (
+    "source_manifest", "generation_run_id", "generator_provider", "generator_model",
 )
 
 REQUIRED_SECTIONS: Tuple[Tuple[str, str], ...] = (
@@ -70,7 +74,21 @@ _SOURCE_SCOPE_KEYS = (
     "examiner_reports", "supplementary",
 )
 
-_GENERATED_BY_VALUES = ("notebooklm", "operator", "agent", "human")
+_GENERATED_BY_VALUES = ("notebooklm", "operator", "agent", "human", "zai_agent")
+
+# generated_by values that require the V2 generator-shape provenance
+# (SIB_ARTIFACT_SCHEMA_V2.md §3; schema V2, 2026-10-25 SIB-GEN)
+_V2_GENERATED_BY = ("zai_agent", "agent")
+
+# provenance placeholder tokens that are NOT concrete references
+_PROV_PLACEHOLDERS = {
+    "none", "unknown", "tbd",
+    "<subject notebook identifier>", "<source manifest identifier>",
+    "<run identifier>", "<generation run id>", "<model identifier>",
+    "<provider>", "<prompt pack version>",
+    "<actual model identifier>", "<syllabai-resources git commit sha>",
+    "<syllabai-pastpapers git commit sha, if used>",
+}
 
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -413,18 +431,35 @@ def _validate_provenance(meta: Dict[str, Any], rep: ValidationReport, aid: str,
         return
     if not isinstance(prov, dict):
         rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
-                "provenance must be a mapping (notebook, source_manifest)",
+                "provenance must be a mapping (V1: notebook + source_manifest; "
+                "V2: source_manifest + generation_run_id + generator_provider + "
+                "generator_model)",
                 artifact_id=aid, field="provenance")
         return
-    for field_name in REQUIRED_PROVENANCE_FIELDS:
+
+    # shape law (SIB_ARTIFACT_SCHEMA_V2.md §3): notebooklm -> V1 notebook-shape;
+    # zai_agent / agent -> V2 generator-shape; operator / human -> source_manifest
+    # required, notebook optional (deliberate, tested relaxation of the V1
+    # NotebookLM-era requirement); empty/absent generated_by -> source_manifest
+    # required at minimum.
+    generated_by = str(meta.get("generated_by") or "").strip()
+    if generated_by == "notebooklm":
+        required = REQUIRED_PROVENANCE_FIELDS_V1
+    elif generated_by in _V2_GENERATED_BY:
+        required = REQUIRED_PROVENANCE_FIELDS_V2
+    else:
+        required = ("source_manifest",)
+
+    for field_name in required:
         value = prov.get(field_name)
         if value in (None, ""):
             rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
-                    f"required provenance field missing: {field_name}",
+                    f"required provenance field missing: {field_name} "
+                    f"(generated_by {generated_by!r})",
                     artifact_id=aid, field=f"provenance.{field_name}")
             continue
         value = str(value)
-        if len(value.strip()) < 2 or value.strip().lower() in {"none", "unknown", "tbd", "<subject notebook identifier>", "<source manifest identifier>"}:
+        if len(value.strip()) < 2 or value.strip().lower() in _PROV_PLACEHOLDERS:
             rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
                     f"provenance.{field_name} is not a concrete reference "
                     f"({value!r}); template placeholders are insufficient",
