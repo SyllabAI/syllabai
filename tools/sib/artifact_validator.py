@@ -40,8 +40,19 @@ REQUIRED_METADATA_FIELDS: Tuple[str, ...] = (
     "generated_by", "generated_at", "provenance",
 )
 
-REQUIRED_PROVENANCE_FIELDS: Tuple[str, ...] = (
+REQUIRED_PROVENANCE_FIELDS_V1: Tuple[str, ...] = (
     "notebook", "source_manifest",
+)
+
+REQUIRED_PROVENANCE_FIELDS_V2: Tuple[str, ...] = (
+    "source_manifest", "generation_run_id", "generator",
+)
+
+# legacy alias: the v1 shape remains the historical default
+REQUIRED_PROVENANCE_FIELDS = REQUIRED_PROVENANCE_FIELDS_V1
+
+REQUIRED_GENERATOR_SUBFIELDS: Tuple[str, ...] = (
+    "provider", "model", "agent_version",
 )
 
 REQUIRED_SECTIONS: Tuple[Tuple[str, str], ...] = (
@@ -70,7 +81,9 @@ _SOURCE_SCOPE_KEYS = (
     "examiner_reports", "supplementary",
 )
 
-_GENERATED_BY_VALUES = ("notebooklm", "operator", "agent", "human")
+_GENERATED_BY_VALUES = ("notebooklm", "zai_agent", "operator", "agent", "human")
+
+_GIT_SHA_RE = re.compile(r"^[0-9a-f]{7,64}$")
 
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -405,26 +418,30 @@ def _validate_source_scope(meta: Dict[str, Any], rep: ValidationReport,
 # -- provenance --------------------------------------------------------------------
 
 
-def _validate_provenance(meta: Dict[str, Any], rep: ValidationReport, aid: str,
-                         source_manifest_ids: Optional[List[str]]) -> None:
-    prov = meta.get("provenance")
-    if prov in (None, ""):
-        # covered by META_MISSING; nothing further possible
-        return
-    if not isinstance(prov, dict):
-        rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
-                "provenance must be a mapping (notebook, source_manifest)",
-                artifact_id=aid, field="provenance")
-        return
-    for field_name in REQUIRED_PROVENANCE_FIELDS:
+def _is_placeholder(value: str) -> bool:
+    v = value.strip()
+    if len(v) < 2 or v.lower() in {"none", "unknown", "tbd"}:
+        return True
+    if v.lower() in {"<subject notebook identifier>", "<source manifest identifier>"}:
+        return True
+    return v.startswith("<") and v.endswith(">")
+
+
+def _validate_provenance_fields(prov: Dict[str, Any], rep: ValidationReport, aid: str,
+                                 field_names: Tuple[str, ...], shape_name: str,
+                                 source_manifest_ids: Optional[List[str]]) -> None:
+    for field_name in field_names:
         value = prov.get(field_name)
         if value in (None, ""):
             rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
-                    f"required provenance field missing: {field_name}",
+                    f"required provenance field missing ({shape_name}): {field_name}",
                     artifact_id=aid, field=f"provenance.{field_name}")
             continue
+        if field_name == "generator":
+            # mapping sub-shape, validated separately
+            continue
         value = str(value)
-        if len(value.strip()) < 2 or value.strip().lower() in {"none", "unknown", "tbd", "<subject notebook identifier>", "<source manifest identifier>"}:
+        if _is_placeholder(value):
             rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
                     f"provenance.{field_name} is not a concrete reference "
                     f"({value!r}); template placeholders are insufficient",
@@ -437,6 +454,97 @@ def _validate_provenance(meta: Dict[str, Any], rep: ValidationReport, aid: str,
                         "by the operator source manifest; refusing to invent "
                         "an identifier",
                         artifact_id=aid, field="provenance.source_manifest")
+
+
+def _validate_generator(prov: Dict[str, Any], rep: ValidationReport, aid: str) -> None:
+    gen = prov.get("generator")
+    if gen in (None, ""):
+        rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+                "required provenance field missing (v2 generator-shape): generator",
+                artifact_id=aid, field="provenance.generator")
+        return
+    if not isinstance(gen, dict):
+        rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+                "provenance.generator must be a mapping "
+                "(provider, model, agent_version)",
+                artifact_id=aid, field="provenance.generator")
+        return
+    for sub in REQUIRED_GENERATOR_SUBFIELDS:
+        val = gen.get(sub)
+        if val in (None, "") or _is_placeholder(str(val)):
+            rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+                    f"provenance.generator.{sub} is not a concrete runtime-reported "
+                    f"value ({val!r})",
+                    artifact_id=aid, field=f"provenance.generator.{sub}")
+    revs = prov.get("source_revisions")
+    if revs in (None, ""):
+        return
+    if not isinstance(revs, dict):
+        rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+                "provenance.source_revisions must be a mapping of "
+                "repository name -> git commit sha",
+                artifact_id=aid, field="provenance.source_revisions")
+        return
+    for repo_name, sha in revs.items():
+        sha_str = str(sha).strip().lower()
+        if not _GIT_SHA_RE.fullmatch(sha_str):
+            rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+                    f"provenance.source_revisions.{repo_name} is not a git "
+                    f"commit sha ({sha!r})",
+                    artifact_id=aid,
+                    field=f"provenance.source_revisions.{repo_name}")
+
+
+def _validate_provenance(meta: Dict[str, Any], rep: ValidationReport, aid: str,
+                         source_manifest_ids: Optional[List[str]]) -> None:
+    prov = meta.get("provenance")
+    if prov in (None, ""):
+        # covered by META_MISSING; nothing further possible
+        return
+    if not isinstance(prov, dict):
+        rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+                "provenance must be a mapping (one-of: v1 notebook-shape "
+                "[notebook, source_manifest] | v2 generator-shape "
+                "[source_manifest, generation_run_id, generator])",
+                artifact_id=aid, field="provenance")
+        return
+
+    def _present(key: str) -> bool:
+        v = prov.get(key)
+        return v not in (None, "") and (not isinstance(v, str) or bool(v.strip()))
+
+    has_v1 = _present("notebook")
+    has_v2 = _present("generation_run_id") or _present("generator")
+
+    if has_v1 and has_v2:
+        rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+                "provenance matches BOTH shapes (notebook + generation_run_id/"
+                "generator present); exactly one-of is required "
+                "(SIB_ARTIFACT_SCHEMA_V2 §3)",
+                artifact_id=aid, field="provenance")
+        return
+    if has_v1:
+        generated_by = str(meta.get("generated_by") or "")
+        if generated_by == "zai_agent":
+            rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+                    "provenance/provider mismatch: generated_by zai_agent "
+                    "requires the v2 generator-shape provenance, found the v1 "
+                    "notebook-shape",
+                    artifact_id=aid, field="provenance")
+            return
+        _validate_provenance_fields(prov, rep, aid, REQUIRED_PROVENANCE_FIELDS_V1,
+                                     "v1 notebook-shape", source_manifest_ids)
+        return
+    if has_v2:
+        _validate_provenance_fields(prov, rep, aid, REQUIRED_PROVENANCE_FIELDS_V2,
+                                     "v2 generator-shape", source_manifest_ids)
+        _validate_generator(prov, rep, aid)
+        return
+    rep.add(Codes.PROV_MISSING, SEVERITY_ERROR,
+            "provenance matches NEITHER shape: v1 notebook-shape "
+            "[notebook, source_manifest] or v2 generator-shape "
+            "[source_manifest, generation_run_id, generator] required",
+            artifact_id=aid, field="provenance")
 
 
 # -- records --------------------------------------------------------------------------
