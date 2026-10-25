@@ -329,6 +329,59 @@ class TestAnchorReportIntegration(unittest.TestCase):
                         "validate_artifact must surface anchor findings")
 
 
+class TestStdlibOnlyParseParity(unittest.TestCase):
+    """The validator must QA identically with and without PyYAML -- CI
+    runners (setup-python images) are stdlib-only, so the yamlmini fallback
+    in frontmatter.parse_front_matter is the PRIMARY parser there.
+
+    Regression for the SIB-GEN r0 CI failure (runs 40191937682 /
+    40191981272): the previous one-level builtin fallback silently
+    flattened the nested v2 ``provenance.generator`` mapping, failing both
+    pilot artifacts with SIB-PROV-001 in CI while the PyYAML path stayed
+    green locally.
+    """
+
+    def test_v2_generator_shape_qa_passes_without_pyyaml(self):
+        from tools.sib.tests.fixtures import no_pyyaml, v2_provenance
+        text = artifact_text(generated_by="zai_agent",
+                             provenance_block=v2_provenance())
+        with no_pyyaml():
+            rep = validate_artifact(
+                text, filename="CHEMISTRY_4CH1_MIS-01_MISCONCEPTION_ATLAS.md")
+        self.assertTrue(rep.qa_passed, f"stdlib-only QA failed: {rep.to_json()}")
+        self.assertNotIn(Codes.PROV_MISSING, _codes(rep))
+
+    def test_v2_shape_rejections_intact_without_pyyaml(self):
+        # the one-of law must hold on the fallback path too
+        from tools.sib.tests.fixtures import no_pyyaml
+        with no_pyyaml():
+            mixed = validate_artifact(artifact_text(
+                generated_by="zai_agent",
+                provenance_block=('  notebook: "nb-chem-4ch1"\n'
+                                  '  source_manifest: "src-man-4ch1-2017"\n'
+                                  '  generation_run_id: "SIB-CHEMISTRY_4CH1-RUN-001"\n'
+                                  '  generator:\n'
+                                  '    provider: "z.ai"\n'
+                                  '    model: "glm-test-model"\n'
+                                  '    agent_version: "SIB-GEN-r0"\n')))
+            neither = validate_artifact(
+                artifact_text(provenance_block='  source_manifest: "src-man-4ch1-2017"\n'))
+        self._expect_code(mixed, Codes.PROV_MISSING)
+        self._expect_code(neither, Codes.PROV_MISSING)
+
+    def test_v1_notebook_shape_qa_passes_without_pyyaml(self):
+        from tools.sib.tests.fixtures import no_pyyaml
+        text = artifact_text()
+        with no_pyyaml():
+            rep = validate_artifact(text)
+        self.assertTrue(rep.qa_passed, f"stdlib-only QA failed: {rep.to_json()}")
+
+    @staticmethod
+    def _expect_code(rep, code):
+        hits = [i for i in rep.issues if i.code == code]
+        assert hits, f"expected {code}, got: {rep.to_json()}"
+        assert not rep.qa_passed, rep.to_json()
+
 
 if __name__ == "__main__":
     unittest.main()

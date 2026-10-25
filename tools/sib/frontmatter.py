@@ -3,16 +3,12 @@
 Strategy:
 1. If PyYAML is importable, use ``yaml.safe_load`` (dicts preserve insertion
    order on Python 3.7+; determinism is enforced downstream by sorted output).
-2. Otherwise fall back to a small built-in parser that handles exactly the
-   SIB front-matter subset:
-     * ``key: value`` scalars (str / bool / int),
-     * one-level nested mappings (``temporal_scope:``, ``source_scope:``,
-       ``provenance:``),
-     * inline comments, quoted scalars.
-
-The SIB schema's front matter is a constrained subset, so the fallback is
-sufficient for protocol-defined metadata; anything richer is flagged by the
-artifact validator rather than guessed at here.
+2. Otherwise fall back to ``yamlmini.parse`` -- the same deterministic
+   stdlib parser backing ``yamlmini.load_yaml`` -- so both parse paths
+   handle the identical SIB front-matter subset, including nested
+   mappings of any depth (schema v2 ``provenance.generator``), and
+   anything outside the subset surfaces as a parse error, never a
+   silent misparse.
 """
 from __future__ import annotations
 
@@ -22,8 +18,6 @@ from typing import Any, Dict, List, Optional, Tuple
 
 FRONTMATTER_DELIM = "---"
 
-_LINE_RE = re.compile(
-    r"^(?P<indent>[ ]*)(?P<key>[^#:\s][^:]*?):(?P<value>.*)$")
 _BOOL_TRUE = {"true", "True", "TRUE"}
 _BOOL_FALSE = {"false", "False", "FALSE"}
 
@@ -61,8 +55,8 @@ def _coerce_scalar(raw: str) -> Any:
 
 def _canonicalize(value: Any) -> Any:
     """Canonicalize PyYAML parse results to the subset semantics shared with
-    the builtin parser: date/timestamp scalars become ISO strings so that
-    both parse paths yield identical metadata for identical input."""
+    the stdlib fallback (yamlmini): date/timestamp scalars become ISO strings
+    so that both parse paths yield identical metadata for identical input."""
     import datetime
     if isinstance(value, dict):
         return {k: _canonicalize(v) for k, v in value.items()}
@@ -71,43 +65,6 @@ def _canonicalize(value: Any) -> Any:
     if isinstance(value, (datetime.date, datetime.datetime)):
         return value.isoformat()
     return value
-
-
-def _builtin_parse(lines: List[str]) -> Dict[str, Any]:
-    """Parse the SIB front-matter subset deterministically."""
-    meta: Dict[str, Any] = {}
-    current_map: Optional[Dict[str, Any]] = None
-    current_key: Optional[str] = None
-
-    for raw in lines:
-        line = raw.rstrip("\n")
-        if not line.strip() or line.strip().startswith("#"):
-            continue
-        m = _LINE_RE.match(line)
-        if not m:
-            # continuation or unsupported syntax -- surface as scalar-less key
-            raise ValueError(f"unsupported front-matter line: {line!r}")
-        indent = len(m.group("indent"))
-        key = m.group("key").strip()
-        value = m.group("value").strip()
-        value = re.sub(r"\s+#.*$", "", value)  # trailing comment
-
-        if indent == 0:
-            if value == "":
-                current_map = {}
-                meta[key] = current_map
-                current_key = key
-            else:
-                meta[key] = _coerce_scalar(value)
-                current_map = None
-                current_key = None
-        else:
-            if current_map is None:
-                raise ValueError(
-                    f"nested value outside a mapping near: {line!r}")
-            current_map[key] = _coerce_scalar(value)
-            _ = current_key  # retained for clarity; single-level maps only
-    return meta
 
 
 def parse_front_matter(text: str) -> FrontMatterResult:
@@ -144,8 +101,14 @@ def parse_front_matter(text: str) -> FrontMatterResult:
         pass
     except Exception as exc:  # yaml syntax error
         return FrontMatterResult({}, body, "pyyaml", f"yaml parse error: {exc}")
+    from . import yamlmini
     try:
-        meta = _builtin_parse(fm_lines)
-        return FrontMatterResult(meta, body, "builtin", None)
-    except ValueError as exc:
+        meta = yamlmini.parse("\n".join(fm_lines))
+    except ValueError as exc:  # YamlMiniError: outside the supported subset
         return FrontMatterResult({}, body, "builtin", str(exc))
+    if meta is None:
+        meta = {}
+    if not isinstance(meta, dict):
+        return FrontMatterResult({}, body, "builtin",
+                                 "front matter is not a mapping")
+    return FrontMatterResult(meta, body, "builtin", None)

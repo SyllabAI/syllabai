@@ -5,7 +5,31 @@ no PyYAML (the suite must run on stdlib-only environments).
 """
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+import sys
+from contextlib import contextmanager
+from typing import Dict, Iterator, List, Optional
+
+
+@contextmanager
+def no_pyyaml() -> Iterator[None]:
+    """Force the stdlib-only code paths for the duration of the block.
+
+    CI runners (setup-python images) ship no PyYAML, so the validator's
+    fallback parser is the PRIMARY parser there. This helper makes the
+    no-PyYAML behavior testable on PyYAML-equipped machines by masking the
+    module (``sys.modules['yaml'] = None`` makes ``import yaml`` raise
+    ImportError). The previous state is always restored.
+    """
+    saved = sys.modules.get("yaml")
+    had_yaml = "yaml" in sys.modules
+    sys.modules["yaml"] = None
+    try:
+        yield
+    finally:
+        if had_yaml:
+            sys.modules["yaml"] = saved
+        else:
+            sys.modules.pop("yaml", None)
 
 
 def v2_provenance(
